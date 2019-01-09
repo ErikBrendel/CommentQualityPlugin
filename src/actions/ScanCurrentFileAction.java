@@ -3,6 +3,7 @@ package actions;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import core.CommentFinder;
+import core.QualityComment;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -19,10 +20,10 @@ public class ScanCurrentFileAction extends AnAction {
 
     @Override
     public void actionPerformed(@NotNull AnActionEvent anActionEvent) {
-        List<String> comments = CommentFinder.CommentsInCurrentFile(anActionEvent);
+        List<QualityComment> comments = CommentFinder.CommentsInCurrentFile(anActionEvent);
         System.out.println("Comments: " + comments.size());
-        for (String comment : comments) {
-            System.out.println(comment);
+        for (QualityComment comment : comments) {
+            System.out.println(comment.fullText());
         }
     }
 }
