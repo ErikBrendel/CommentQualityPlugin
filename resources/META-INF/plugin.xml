@@ -1,0 +1,29 @@
+<idea-plugin>
+  <id>com.hpi.cg.commentQualityPlugin</id>
+  <name>Comment Quality Checker</name>
+  <version>1.0</version>
+  <vendor>HPI CG Group</vendor>
+
+  <description><![CDATA[
+      Checks the quality of your comments.
+      Does so by traversing the AST, extracting comments, and measuring them with machine learning approaches.
+    ]]></description>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+  </actions>
+
+</idea-plugin>
