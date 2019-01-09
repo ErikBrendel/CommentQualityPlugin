@@ -1,5 +1,5 @@
 <idea-plugin>
-  <id>com.hpi.cg.commentQualityPlugin</id>
+  <id>CommentQuality</id>
   <name>Comment Quality Checker</name>
   <version>1.0</version>
   <vendor>HPI CG Group</vendor>
@@ -23,7 +23,10 @@
   </extensions>
 
   <actions>
-    <!-- Add your actions here -->
+    <group id="CommentQuality.MainMenu" text="_Comment Quality" description="Comment Quality">
+      <add-to-group group-id="MainMenu" anchor="last"/>
+      <action id="ScanCurrentFileAction" class="actions.ScanCurrentFileAction" text="_Scan Current File" description="Scans the comments of the current file."/>
+    </group>
   </actions>
 
 </idea-plugin>
