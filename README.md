@@ -4,7 +4,7 @@ The Jetbrains Plugin for checking the quality of your comments
 
 ## Contributing
 
-Refer to [this guide](http://www.jetbrains.org/intellij/sdk/docs/welcome.html) for developing this plugin.
+Refer to [this guide](http://www.jetbrains.org/intellij/sdk/docs/welcome.html) for developing this plugin, especially the [PSI documentation](http://www.jetbrains.org/intellij/sdk/docs/basics/architectural_overview/psi.html)
 
 ## Manual Installation
 

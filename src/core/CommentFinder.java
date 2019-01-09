@@ -17,7 +17,7 @@ public class CommentFinder {
         FindComments(file, psiComments);
 
         List<String> comments = new ArrayList<>();
-        for (PsiComment comment: psiComments) {
+        for (PsiComment comment : psiComments) {
             comments.add(comment.getText());
         }
 
@@ -28,7 +28,7 @@ public class CommentFinder {
         if (element instanceof PsiComment) {
             comments.add((PsiComment) element);
         }
-        for (PsiElement child: element.getChildren()) {
+        for (PsiElement child : element.getChildren()) {
             FindComments(child, comments);
         }
     }
