@@ -3,6 +3,7 @@ package actions;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import core.CommentFinder;
+import core.LanguageProcessor;
 import core.QualityComment;
 import org.jetbrains.annotations.NotNull;
 
@@ -23,7 +24,8 @@ public class ScanCurrentFileAction extends AnAction {
         List<QualityComment> comments = CommentFinder.CommentsInCurrentFile(anActionEvent);
         System.out.println("Comments: " + comments.size());
         for (QualityComment comment : comments) {
-            System.out.println(comment.fullText());
+            System.out.println("----");
+            System.out.println(LanguageProcessor.normalizedWordList(comment.contentString()));
         }
     }
 }
