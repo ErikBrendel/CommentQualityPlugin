@@ -1,6 +1,9 @@
 package core;
 
+import com.intellij.psi.PsiClass;
 import com.intellij.psi.PsiComment;
+import com.intellij.psi.PsiElement;
+import com.intellij.psi.PsiMethod;
 import org.jetbrains.annotations.NotNull;
 
 /**
@@ -8,10 +11,29 @@ import org.jetbrains.annotations.NotNull;
  */
 public class QualityComment {
 
+    enum Position {
+        Unknown,
+        BeforeClass,
+        BeforeMethod,
+        BeforeCodeBlock,
+        InCodeBlock,
+    }
+
     private final PsiComment psiComment;
+
+    public final Position position;
 
     public QualityComment(@NotNull PsiComment psiComment) {
         this.psiComment = psiComment;
+
+        Position pos = Position.Unknown;
+        PsiElement parent = psiComment.getParent();
+        if (parent instanceof PsiClass) {
+            pos = Position.BeforeClass;
+        } else if (parent instanceof PsiMethod) {
+            pos = Position.BeforeMethod;
+        }
+        position = pos;
     }
 
     /**
@@ -57,5 +79,9 @@ public class QualityComment {
             System.err.println("Cannot determine on how to strip the comment content from psi node!");
         }
         return full;
+    }
+
+    public String relatedCodeText() {
+        return ""; //todo extract code words as string
     }
 }
