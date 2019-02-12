@@ -21,11 +21,12 @@ public class ScanCurrentFileAction extends AnAction {
 
     @Override
     public void actionPerformed(@NotNull AnActionEvent anActionEvent) {
-        List<QualityComment> comments = CommentFinder.CommentsInCurrentFile(anActionEvent);
+        List<QualityComment> comments = CommentFinder.commentsInCurrentFile(anActionEvent);
         System.out.println("Comments: " + comments.size());
         for (QualityComment comment : comments) {
             System.out.println("----");
-            System.out.println(LanguageProcessor.normalizedWordList(comment.contentString()));
+            System.out.println(comment.position + ": " + LanguageProcessor.normalizedWordList(comment.contentString()));
+            System.out.println(LanguageProcessor.normalizedWordList(comment.relatedCodeText()));
         }
     }
 }

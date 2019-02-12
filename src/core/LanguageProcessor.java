@@ -12,7 +12,7 @@ public class LanguageProcessor {
      * camelCases, newlines, sentence-ends and other common word-separators.
      * Makes everything lowercase.
      *
-     * @param content e.g. "We'll not take that road. The other-road is better."
+     * @param content e.g. "We'll not take that road.   The other-road is better."
      * @return e.g. [we will not take that road the other road is better]
      */
     public static List<String> normalizedWordList(String content) {

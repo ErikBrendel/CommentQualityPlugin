@@ -1,10 +1,10 @@
 package core;
 
-import com.intellij.psi.PsiClass;
-import com.intellij.psi.PsiComment;
-import com.intellij.psi.PsiElement;
-import com.intellij.psi.PsiMethod;
+import com.intellij.psi.*;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.Collections;
+import java.util.List;
 
 /**
  * our model class that represents one comment in the code base that can get quality-analysed
@@ -13,6 +13,7 @@ public class QualityComment {
 
     enum Position {
         Unknown,
+        LicenseHeader,
         BeforeClass,
         BeforeMethod,
         BeforeCodeBlock,
@@ -20,20 +21,13 @@ public class QualityComment {
     }
 
     private final PsiComment psiComment;
-
     public final Position position;
+    private final List<PsiElement> relatedCodeRoots;
 
     public QualityComment(@NotNull PsiComment psiComment) {
         this.psiComment = psiComment;
-
-        Position pos = Position.Unknown;
-        PsiElement parent = psiComment.getParent();
-        if (parent instanceof PsiClass) {
-            pos = Position.BeforeClass;
-        } else if (parent instanceof PsiMethod) {
-            pos = Position.BeforeMethod;
-        }
-        position = pos;
+        position = CommentFinder.classifyPositionOf(psiComment);
+        relatedCodeRoots = findRelatedCodeRoots();
     }
 
     /**
@@ -82,6 +76,20 @@ public class QualityComment {
     }
 
     public String relatedCodeText() {
-        return ""; //todo extract code words as string
+        return Utils.commentFreeTextOf(relatedCodeRoots);
+    }
+
+    @NotNull
+    private List<PsiElement> findRelatedCodeRoots() {
+        switch (position) {
+            case BeforeClass:
+            case BeforeMethod:
+            case InCodeBlock:
+                return Collections.singletonList(Utils.statementParentOf(psiComment.getParent()));
+            case BeforeCodeBlock:
+                return Utils.allNextSiblingsOf(psiComment);
+            default:
+                return Collections.emptyList();
+        }
     }
 }
