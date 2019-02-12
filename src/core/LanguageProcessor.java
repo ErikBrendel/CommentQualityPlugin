@@ -7,6 +7,9 @@ import java.util.regex.Pattern;
 
 public class LanguageProcessor {
 
+    // https://stackoverflow.com/questions/7593969/regex-to-split-camelcase-or-titlecase-advanced
+    private static String CamelCaseRegex = "(?<!(^|[A-Z]))(?=[A-Z])|(?<!^)(?=[A-Z][a-z])";
+
     /**
      * transforms raw text to a list of words in it, splitting at spaces,
      * camelCases, newlines, sentence-ends and other common word-separators.
@@ -21,8 +24,10 @@ public class LanguageProcessor {
 
         List<String> words = new ArrayList<>();
         while (matcher.find()) {
-            String word = matcher.group(0);
-            words.add(word.toLowerCase());
+            String identified = matcher.group(0);
+            for (String word : identified.split(CamelCaseRegex)) {
+                words.add(word.toLowerCase());
+            }
         }
         return words;
     }
