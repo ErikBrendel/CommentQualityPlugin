@@ -92,4 +92,9 @@ public class QualityComment {
                 return Collections.emptyList();
         }
     }
+
+    @NotNull
+    public CommentQualityAnalysisResult analyzeQuality() {
+        return new CommentQualityAnalysisResult(CommentQualityAnalysisResult.Result.BAD, "Cannot get analyzed - not implemented");
+    }
 }
