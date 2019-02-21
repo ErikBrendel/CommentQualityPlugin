@@ -1,5 +1,6 @@
 package core;
 
+import com.intellij.openapi.editor.Document;
 import com.intellij.psi.*;
 
 import java.util.ArrayList;
@@ -47,6 +48,24 @@ public class Utils {
         return elements;
     }
 
+    public static PsiElement previousNonWhitespaceElement(PsiElement element) {
+        PsiElement current = element;
+        while (current != null) {
+            current = current.getPrevSibling();
+            if (!(current instanceof PsiWhiteSpace)) return current;
+        }
+        return null;
+    }
+
+    public static PsiElement nextNonWhitespaceElement(PsiElement element) {
+        PsiElement current = element;
+        while (current != null) {
+            current = current.getNextSibling();
+            if (!(current instanceof PsiWhiteSpace)) return current;
+        }
+        return null;
+    }
+
     public static String commentFreeTextOf(List<PsiElement> roots) {
         StringBuilder s = new StringBuilder();
         for (PsiElement root : roots) {
@@ -78,5 +97,12 @@ public class Utils {
             current = current.getParent();
         }
         return element;
+    }
+
+    public static int lineNumberOf(PsiElement element) {
+        PsiFile containingFile = element.getContainingFile();
+        Document document = PsiDocumentManager.getInstance(containingFile.getProject()).getDocument(containingFile);
+        if (document == null) return 0;
+        return document.getLineNumber(element.getTextOffset());
     }
 }

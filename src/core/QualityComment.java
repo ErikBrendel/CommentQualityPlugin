@@ -3,6 +3,7 @@ package core;
 import com.intellij.psi.*;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -20,13 +21,16 @@ public class QualityComment {
         InCodeBlock,
     }
 
-    private final PsiComment psiComment;
+    private final PsiComment[] psiComments;
     public final Position position;
     private final List<PsiElement> relatedCodeRoots;
 
-    public QualityComment(@NotNull PsiComment psiComment) {
-        this.psiComment = psiComment;
-        position = CommentFinder.classifyPositionOf(psiComment);
+    /**
+     * @param psiComments can be multiple, but they all should be siblings and passed in order
+     */
+    public QualityComment(@NotNull PsiComment... psiComments) {
+        this.psiComments = psiComments;
+        position = CommentFinder.classifyPositionOf(psiComments[0]);
         relatedCodeRoots = findRelatedCodeRoots();
     }
 
@@ -34,16 +38,20 @@ public class QualityComment {
      * @return the whole content of this comment, including the comment-creating characters
      */
     public String fullText() {
-        return psiComment.getText();
+        return Arrays.stream(psiComments).map(PsiElement::getText).reduce((s1, s2) -> s1 + "\n" + s2).orElse("");
     }
 
     /**
      * @return just the text that lies within the comment, inside the comment-creating characters
      */
     public String contentString() {
+        return Arrays.stream(psiComments).map(QualityComment::contentStringOf).reduce((s1, s2) -> s1 + "\n" + s2).orElse("");
+    }
+
+    private static String contentStringOf(PsiComment comment) {
         // this sadly omits all the @param, @author and all these tags, so we cannot use it
-        //if (psiComment instanceof PsiDocComment) {
-        //    PsiElement[] descriptionElements = ((PsiDocComment) psiComment).getDescriptionElements();
+        //if (comment instanceof PsiDocComment) {
+        //    PsiElement[] descriptionElements = ((PsiDocComment) comment).getDescriptionElements();
         //    String result = "";
         //    for (PsiElement e : descriptionElements) {
         //        result = result.trim() + " " + e.getText();
@@ -51,8 +59,7 @@ public class QualityComment {
         //    return result.trim();
         //}
 
-
-        String full = fullText().trim();
+        String full = comment.getText();
         if (full.startsWith("/*") && full.endsWith("*/")) {
             String withoutEnds = full.substring("/*".length(), full.length() - "*/".length()).trim();
             String[] lines = withoutEnds.split("\\n");
@@ -85,9 +92,9 @@ public class QualityComment {
             case BeforeClass:
             case BeforeMethod:
             case InCodeBlock:
-                return Collections.singletonList(Utils.statementParentOf(psiComment.getParent()));
+                return Collections.singletonList(Utils.statementParentOf(psiComments[0].getParent()));
             case BeforeCodeBlock:
-                return Utils.allNextSiblingsOf(psiComment);
+                return Utils.allNextSiblingsOf(psiComments[psiComments.length - 1]);
             default:
                 return Collections.emptyList();
         }
@@ -95,6 +102,6 @@ public class QualityComment {
 
     @NotNull
     public CommentQualityAnalysisResult analyzeQuality() {
-        return new CommentQualityAnalysisResult(CommentQualityAnalysisResult.Result.BAD, "Cannot get analyzed - not implemented");
+        return new CommentQualityAnalysisResult(CommentQualityAnalysisResult.Result.BAD, String.join(", ", LanguageProcessor.normalizedWordList(contentString())));
     }
 }

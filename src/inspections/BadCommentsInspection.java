@@ -7,9 +7,15 @@ import com.intellij.codeInspection.ProblemsHolder;
 import com.intellij.psi.PsiComment;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiElementVisitor;
+import com.intellij.util.SmartList;
 import core.CommentQualityAnalysisResult;
 import core.QualityComment;
+import core.Utils;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * Code Inspection that adds a warning to comments that get classified as bad
@@ -46,12 +52,36 @@ public class BadCommentsInspection extends LocalInspectionTool {
             @Override
             public void visitElement(PsiElement element) {
                 super.visitElement(element);
-                if (element instanceof PsiComment) {
-                    CommentQualityAnalysisResult result = new QualityComment((PsiComment) element).analyzeQuality();
-                    if (result.isBad()) {
-                        holder.registerProblem(element, result.fullMessage(), ProblemHighlightType.WARNING);
-                    }
+                if (!(element instanceof PsiComment)) return;
+
+                PsiComment comment = (PsiComment) element;
+                if (isPartOfComment(comment)) return;
+
+                CommentQualityAnalysisResult result = new QualityComment(includingOtherParts(comment)).analyzeQuality();
+                if (result.isBad()) {
+                    holder.registerProblem(element, result.fullMessage(), ProblemHighlightType.WARNING);
                 }
+            }
+
+            private boolean isPartOfComment(PsiComment comment) {
+                // if a single-line comment is directly under another one, they are one
+                PsiElement prev = Utils.previousNonWhitespaceElement(comment);
+                if (!(prev instanceof PsiComment)) return false;
+
+                return Utils.lineNumberOf(prev) == Utils.lineNumberOf(comment) - 1;
+            }
+
+            private PsiComment[] includingOtherParts(PsiComment mainComment) {
+                // if a single-line comment is directly under another one, they are one
+                List<PsiComment> comments = new ArrayList<>();
+                PsiElement current = mainComment;
+                int currentLine = Utils.lineNumberOf(mainComment);
+                while (current instanceof PsiComment && Utils.lineNumberOf(current) == currentLine) {
+                    comments.add((PsiComment) current);
+                    current = Utils.nextNonWhitespaceElement(current);
+                    currentLine++;
+                }
+                return comments.toArray(new PsiComment[0]);
             }
         };
     }
