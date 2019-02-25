@@ -1,34 +1,18 @@
 package training;
 
-import com.intellij.lang.*;
-import com.intellij.lang.java.JavaParserDefinition;
-import com.intellij.lang.java.parser.FileParser;
-import com.intellij.lang.java.parser.JavaParser;
-import com.intellij.lang.java.parser.JavaParserUtil;
-import com.intellij.lexer.Lexer;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.project.ProjectManager;
-import com.intellij.pom.java.LanguageLevel;
-import com.intellij.psi.*;
-import com.intellij.psi.impl.PsiParserFacadeImpl;
-import com.intellij.psi.tree.IElementType;
-import com.intellij.psi.tree.IFileElementType;
-import com.intellij.psi.tree.TokenSet;
-import com.intellij.psi.util.PsiUtil;
+import com.intellij.openapi.vfs.LocalFileSystem;
+import com.intellij.openapi.vfs.VirtualFile;
+import com.intellij.psi.PsiComment;
+import com.intellij.psi.PsiFile;
+import com.intellij.psi.PsiManager;
+import core.CommentFinder;
 import core.QualityComment;
-import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.NoSuchFileException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-
-import static com.intellij.lang.java.parser.JavaParserUtil.setLanguageLevel;
 
 public class GitRepo {
 
@@ -57,29 +41,31 @@ public class GitRepo {
 
         int parsedFiles = 0;
 
+        Project proj = ProjectManager.getInstance().getOpenProjects()[0];
         File root = rootDirectory();
         for (String filename : filesFound) {
             if ("".equals(filename)) continue;
             System.out.println(filename);
             try {
-                //todo: extract psi of that file, find comments, classify them
                 // https://intellij-support.jetbrains.com/hc/en-us/community/posts/360003230920-Retrieve-PSI-tree-of-external-file
                 File file = new File(root, filename.trim().substring(2));
-                String fileContent = String.join("\n", Files.readAllLines(file.toPath()));
+                VirtualFile vFile = LocalFileSystem.getInstance().findFileByIoFile(file);
 
-                ParserDefinition def = new JavaParserDefinition();
-                LanguageLevel level = LanguageLevel.HIGHEST;
-                Lexer lexer = JavaParserDefinition.createLexer(level);
-                PsiBuilderFactory factory = PsiBuilderFactory.getInstance();
-                PsiBuilder builder = factory.createBuilder(def, lexer, fileContent);
-                JavaParserUtil.setLanguageLevel(builder, level);
-                FileParser fileParser = JavaParser.INSTANCE.getFileParser();
-                fileParser.parse(builder);
+                if (vFile == null) {
+                    System.err.println("Cannot find virtual file, skipping...");
+                    continue;
+                }
+                PsiFile psiFile = PsiManager.getInstance(proj).findFile(vFile);
+
+                if (psiFile == null) {
+                    System.err.println("Cannot find psi file file, skipping...");
+                    continue;
+                }
+                List<PsiComment> psiComments = CommentFinder.findComments(psiFile);
+                System.out.println(psiComments.size());
 
                 //todo: and add the comments and classifications to the result list
                 parsedFiles++;
-            } catch (NoSuchFileException e) {
-                System.err.println("Cannot find file, skipping...");
             } catch (Exception e) {
                 e.printStackTrace();
             }

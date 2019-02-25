@@ -27,6 +27,7 @@
     <group id="CommentQuality.MainMenu" text="_Comment Quality" description="Comment Quality">
       <add-to-group group-id="MainMenu" anchor="last"/>
       <action id="ScanCurrentFileAction" class="plugin.ScanCurrentFileAction" text="_Scan Current File" description="Scans the comments of the current file."/>
+      <action id="TrainAction" class="plugin.TrainAction" text="_Train" description="Trains on open source projects."/>
     </group>
   </actions>
 

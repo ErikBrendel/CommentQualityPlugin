@@ -17,8 +17,7 @@ public class CommentFinder {
             return Collections.emptyList();
         }
 
-        List<PsiComment> psiComments = new ArrayList<>();
-        findComments(file, psiComments);
+        List<PsiComment> psiComments = findComments(file);
 
         List<QualityComment> comments = new ArrayList<>();
         for (PsiComment psiComment : psiComments) {
@@ -26,6 +25,12 @@ public class CommentFinder {
         }
 
         return comments;
+    }
+
+    public static List<PsiComment> findComments(@NotNull PsiElement file) {
+        List<PsiComment> psiComments = new ArrayList<>();
+        findComments(file, psiComments);
+        return psiComments;
     }
 
     private static void findComments(@NotNull PsiElement element, @NotNull List<PsiComment> comments) {
