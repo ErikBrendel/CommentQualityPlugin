@@ -24,4 +24,8 @@ public class TrainingResults {
     public String exportString() {
         return samples.stream().map(TrainingSample::toString).collect(Collectors.joining("\n"));
     }
+
+    public int trainingSampleAmount() {
+        return samples.size();
+    }
 }

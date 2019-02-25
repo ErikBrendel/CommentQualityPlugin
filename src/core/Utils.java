@@ -69,13 +69,23 @@ public class Utils {
     public static String commentFreeTextOf(List<PsiElement> roots) {
         StringBuilder s = new StringBuilder();
         for (PsiElement root : roots) {
-            if (!(root instanceof PsiComment)) {
-                PsiElement copy = root.copy();
-                deleteCommentsIn(copy);
-                s.append(" ").append(copy.getText());
-            }
+            s.append("\n");
+            readCommentFreeTextOf(root, s);
         }
-        return s.toString();
+        return s.toString().trim();
+    }
+
+    private static void readCommentFreeTextOf(PsiElement element, StringBuilder s) {
+        if (element instanceof PsiComment) return;
+
+        if (element.getChildren().length == 0) {
+            s.append(element.getText());
+            return;
+        }
+
+        for (PsiElement child : element.getChildren()) {
+            readCommentFreeTextOf(child, s);
+        }
     }
 
     private static void deleteCommentsIn(PsiElement element) {

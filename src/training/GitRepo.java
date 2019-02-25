@@ -18,7 +18,7 @@ import java.util.List;
 
 public class GitRepo {
 
-    private static final DecimalFormat PERCENT_FORMAT = new DecimalFormat("###.#");
+    private static final DecimalFormat PERCENT_FORMAT = new DecimalFormat("00.0");
 
     private final String name;
 
@@ -50,7 +50,7 @@ public class GitRepo {
             fileIndex++;
             if ("".equals(filename)) continue;
 
-            System.out.println(print_start + PERCENT_FORMAT.format(fileIndex / totalFiles) + "%  " + filename);
+            System.out.println(print_start + PERCENT_FORMAT.format(fileIndex * 100f / totalFiles) + "%  " + filename);
             try {
                 result.addAll(allCommentsIn(filename));
             } catch (Exception e) {

@@ -34,9 +34,10 @@ public class CommentFinder {
     private static void findComments(@NotNull PsiElement element, @NotNull List<PsiComment> comments) {
         if (element instanceof PsiComment) {
             comments.add((PsiComment) element);
-        }
-        for (PsiElement child : element.getChildren()) {
-            findComments(child, comments);
+        } else {
+            for (PsiElement child : element.getChildren()) {
+                findComments(child, comments);
+            }
         }
     }
 

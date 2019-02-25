@@ -7,7 +7,6 @@ import com.intellij.psi.PsiComment;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiElementVisitor;
 import core.CommentQualityAnalysisResult;
-import core.LanguageProcessor;
 import core.QualityComment;
 import core.Utils;
 import org.jetbrains.annotations.NotNull;
@@ -87,6 +86,6 @@ public class BadCommentsInspection extends LocalInspectionTool {
 
     @NotNull
     private CommentQualityAnalysisResult analyzeQualityOf(QualityComment comment) {
-        return new CommentQualityAnalysisResult(CommentQualityAnalysisResult.Result.BAD, String.join(", ", LanguageProcessor.normalizedWordList(comment.commentText())));
+        return new CommentQualityAnalysisResult(CommentQualityAnalysisResult.Result.BAD, String.join(", ", comment.relatedCodeWordList()));
     }
 }

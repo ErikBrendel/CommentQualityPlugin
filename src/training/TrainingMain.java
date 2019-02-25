@@ -21,6 +21,6 @@ public class TrainingMain {
             results.trainOnRepo(repoName, repoCount, totalRepos);
             repoCount++;
         }
-        System.out.println(results.exportString().split("\n").length);
+        System.out.println(results.trainingSampleAmount());
     }
 }
