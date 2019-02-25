@@ -25,8 +25,8 @@ public class ScanCurrentFileAction extends AnAction {
         System.out.println("Comments: " + comments.size());
         for (QualityComment comment : comments) {
             System.out.println("----");
-            System.out.println(comment.position + ": " + LanguageProcessor.normalizedWordList(comment.contentString()));
-            System.out.println(LanguageProcessor.normalizedWordList(comment.relatedCodeText()));
+            System.out.println(comment.position + ": " + LanguageProcessor.normalizedWordList(comment.commentText()));
+            System.out.println(comment.relatedCodeWordList());
         }
     }
 }

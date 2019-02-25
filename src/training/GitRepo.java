@@ -4,17 +4,21 @@ import com.intellij.openapi.project.Project;
 import com.intellij.openapi.project.ProjectManager;
 import com.intellij.openapi.vfs.LocalFileSystem;
 import com.intellij.openapi.vfs.VirtualFile;
-import com.intellij.psi.PsiComment;
 import com.intellij.psi.PsiFile;
 import com.intellij.psi.PsiManager;
 import core.CommentFinder;
+import core.CommentQualityAnalysisResult;
+import core.LanguageProcessor;
 import core.QualityComment;
 
 import java.io.File;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
 public class GitRepo {
+
+    private static final DecimalFormat PERCENT_FORMAT = new DecimalFormat("###.#");
 
     private final String name;
 
@@ -29,62 +33,76 @@ public class GitRepo {
         } else {
             System.out.println("updating " + name + "...");
             ExternalProgram.WorkingDirectory = rootDirectory();
-            ExternalProgram.run("git pull");
+            System.out.println(ExternalProgram.run("git pull"));
         }
     }
 
-    public List<QualityComment> allComments() {
+    public List<TrainingSample> allComments(int repoIndex, int totalRepos) {
         String foundFiles = ExternalProgram.runArgs("find", ".", "-name", "*.java");
         String[] filesFound = foundFiles.split("\n");
 
-        List<QualityComment> result = new ArrayList<>();
+        List<TrainingSample> result = new ArrayList<>();
 
-        int parsedFiles = 0;
-
-        Project proj = ProjectManager.getInstance().getOpenProjects()[0];
-        File root = rootDirectory();
+        String print_start = "[" + (repoIndex + 1) + "/" + totalRepos + "] ";
+        int fileIndex = 0;
+        float totalFiles = filesFound.length;
         for (String filename : filesFound) {
+            fileIndex++;
             if ("".equals(filename)) continue;
-            System.out.println(filename);
+
+            System.out.println(print_start + PERCENT_FORMAT.format(fileIndex / totalFiles) + "%  " + filename);
             try {
-                // https://intellij-support.jetbrains.com/hc/en-us/community/posts/360003230920-Retrieve-PSI-tree-of-external-file
-                File file = new File(root, filename.trim().substring(2));
-                VirtualFile vFile = LocalFileSystem.getInstance().findFileByIoFile(file);
-
-                if (vFile == null) {
-                    System.err.println("Cannot find virtual file, skipping...");
-                    continue;
-                }
-                PsiFile psiFile = PsiManager.getInstance(proj).findFile(vFile);
-
-                if (psiFile == null) {
-                    System.err.println("Cannot find psi file file, skipping...");
-                    continue;
-                }
-                List<PsiComment> psiComments = CommentFinder.findComments(psiFile);
-                System.out.println(psiComments.size());
-
-                //todo: and add the comments and classifications to the result list
-                parsedFiles++;
+                result.addAll(allCommentsIn(filename));
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
 
-        System.out.println("Parsing results: parsed " + parsedFiles + " of " + filesFound.length + " files.");
-
         return result;
+    }
+
+    private List<TrainingSample> allCommentsIn(String filename) {
+        PsiFile file = parsePsi(filename);
+
+        List<QualityComment> comments = CommentFinder.findComments(file);
+
+        List<TrainingSample> samples = new ArrayList<>();
+
+        for (QualityComment comment : comments) {
+            samples.add(new TrainingSample(comment.commentWordList(), comment.relatedCodeWordList(),
+                    CommentQualityAnalysisResult.Result.BAD));
+        }
+
+        //todo: and add the comments and classifications to the result list
+        return samples;
+    }
+
+    private PsiFile parsePsi(String localFilePath) {
+        // https://intellij-support.jetbrains.com/hc/en-us/community/posts/360003230920-Retrieve-PSI-tree-of-external-file
+        File file = new File(rootDirectory(), localFilePath);
+        VirtualFile vFile = LocalFileSystem.getInstance().findFileByIoFile(file);
+        if (vFile == null) throw new RuntimeException("Cannot find virtual file, skipping...");
+
+        Project proj = ProjectManager.getInstance().getOpenProjects()[0];
+        PsiFile psiFile = PsiManager.getInstance(proj).findFile(vFile);
+        if (psiFile == null) throw new RuntimeException("Cannot find psi file file, skipping...");
+
+        return psiFile;
     }
 
     private void cloneRepo() {
         File root = rootDirectory();
         FileUitls.mkdirs(root);
         String gitUrl = TrainingMain.REPO_URL_START + name + TrainingMain.REPO_URL_END;
-        ExternalProgram.runArgs("git", "clone", gitUrl, root.getAbsolutePath());
+        System.out.println(ExternalProgram.runArgs("git", "clone", gitUrl, root.getAbsolutePath()));
     }
 
+    private File _rootDirectory = null;
     private File rootDirectory() {
-        return new File(TrainingMain.REPO_CLONE_PATH + name.replaceAll("/", "-") + "/");
+        if (_rootDirectory == null) {
+            _rootDirectory = new File(TrainingMain.REPO_CLONE_PATH + name.replaceAll("/", "-") + "/");
+        }
+        return _rootDirectory;
     }
 
     private boolean isCloned() {

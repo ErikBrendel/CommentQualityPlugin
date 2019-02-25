@@ -1,20 +1,18 @@
 package plugin;
 
-import com.intellij.codeInspection.InspectionsBundle;
 import com.intellij.codeInspection.LocalInspectionTool;
 import com.intellij.codeInspection.ProblemHighlightType;
 import com.intellij.codeInspection.ProblemsHolder;
 import com.intellij.psi.PsiComment;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiElementVisitor;
-import com.intellij.util.SmartList;
 import core.CommentQualityAnalysisResult;
+import core.LanguageProcessor;
 import core.QualityComment;
 import core.Utils;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -57,7 +55,8 @@ public class BadCommentsInspection extends LocalInspectionTool {
                 PsiComment comment = (PsiComment) element;
                 if (isPartOfComment(comment)) return;
 
-                CommentQualityAnalysisResult result = new QualityComment(includingOtherParts(comment)).analyzeQuality();
+                QualityComment qualityComment = new QualityComment(includingOtherParts(comment));
+                CommentQualityAnalysisResult result = analyzeQualityOf(qualityComment);
                 if (result.isBad()) {
                     holder.registerProblem(element, result.fullMessage(), ProblemHighlightType.WARNING);
                 }
@@ -84,5 +83,10 @@ public class BadCommentsInspection extends LocalInspectionTool {
                 return comments.toArray(new PsiComment[0]);
             }
         };
+    }
+
+    @NotNull
+    private CommentQualityAnalysisResult analyzeQualityOf(QualityComment comment) {
+        return new CommentQualityAnalysisResult(CommentQualityAnalysisResult.Result.BAD, String.join(", ", LanguageProcessor.normalizedWordList(comment.commentText())));
     }
 }

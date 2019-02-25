@@ -37,14 +37,14 @@ public class QualityComment {
     /**
      * @return the whole content of this comment, including the comment-creating characters
      */
-    public String fullText() {
+    public String fullCommentText() {
         return Arrays.stream(psiComments).map(PsiElement::getText).reduce((s1, s2) -> s1 + "\n" + s2).orElse("");
     }
 
     /**
      * @return just the text that lies within the comment, inside the comment-creating characters
      */
-    public String contentString() {
+    public String commentText() {
         return Arrays.stream(psiComments).map(QualityComment::contentStringOf).reduce((s1, s2) -> s1 + "\n" + s2).orElse("");
     }
 
@@ -86,6 +86,14 @@ public class QualityComment {
         return Utils.commentFreeTextOf(relatedCodeRoots);
     }
 
+    public List<String> commentWordList() {
+        return LanguageProcessor.normalizedWordList(commentText());
+    }
+
+    public List<String> relatedCodeWordList() {
+        return LanguageProcessor.normalizedWordList(relatedCodeText());
+    }
+
     @NotNull
     private List<PsiElement> findRelatedCodeRoots() {
         switch (position) {
@@ -98,10 +106,5 @@ public class QualityComment {
             default:
                 return Collections.emptyList();
         }
-    }
-
-    @NotNull
-    public CommentQualityAnalysisResult analyzeQuality() {
-        return new CommentQualityAnalysisResult(CommentQualityAnalysisResult.Result.BAD, String.join(", ", LanguageProcessor.normalizedWordList(contentString())));
     }
 }

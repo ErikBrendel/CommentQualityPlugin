@@ -22,7 +22,6 @@ public class ExternalProgram {
 
             List<String> outputLines = new ArrayList<>();
             while ((line = br.readLine()) != null) {
-                System.out.println(line);
                 outputLines.add(line);
             }
             return String.join("\n", outputLines);

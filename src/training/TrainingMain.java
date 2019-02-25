@@ -15,9 +15,12 @@ public class TrainingMain {
 
         TrainingResults results = new TrainingResults();
 
+        int totalRepos = REPOS.length;
+        int repoCount = 0;
         for (String repoName : REPOS) {
-            results.trainOnRepo(repoName);
+            results.trainOnRepo(repoName, repoCount, totalRepos);
+            repoCount++;
         }
-        System.out.println(results.exportString());
+        System.out.println(results.exportString().split("\n").length);
     }
 }

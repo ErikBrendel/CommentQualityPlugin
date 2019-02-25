@@ -17,20 +17,18 @@ public class CommentFinder {
             return Collections.emptyList();
         }
 
-        List<PsiComment> psiComments = findComments(file);
+        return findComments(file);
+    }
+
+    public static List<QualityComment> findComments(@NotNull PsiElement file) {
+        List<PsiComment> psiComments = new ArrayList<>();
+        findComments(file, psiComments);
 
         List<QualityComment> comments = new ArrayList<>();
         for (PsiComment psiComment : psiComments) {
             comments.add(new QualityComment(psiComment));
         }
-
         return comments;
-    }
-
-    public static List<PsiComment> findComments(@NotNull PsiElement file) {
-        List<PsiComment> psiComments = new ArrayList<>();
-        findComments(file, psiComments);
-        return psiComments;
     }
 
     private static void findComments(@NotNull PsiElement element, @NotNull List<PsiComment> comments) {
