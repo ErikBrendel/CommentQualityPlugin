@@ -1,4 +1,4 @@
-package inspections;
+package plugin;
 
 import com.intellij.codeInspection.InspectionsBundle;
 import com.intellij.codeInspection.LocalInspectionTool;

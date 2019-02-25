@@ -1,4 +1,4 @@
-package inspections;
+package plugin;
 
 import com.intellij.codeInspection.InspectionToolProvider;
 import org.jetbrains.annotations.NotNull;
