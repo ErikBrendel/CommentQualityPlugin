@@ -2,17 +2,18 @@ package training;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ExternalProgram {
 
     public static File WorkingDirectory = null;
 
-    public static String run(String command) {
+    public static List<String> run(String command) {
         return runArgs(command.split(" "));
     }
 
-    public static String runArgs(String... args) {
+    public static List<String> runArgs(String... args) {
         try {
             Process process = new ProcessBuilder(args).directory(WorkingDirectory).start();
             InputStream is = process.getInputStream();
@@ -24,11 +25,19 @@ public class ExternalProgram {
             while ((line = br.readLine()) != null) {
                 outputLines.add(line);
             }
-            return String.join("\n", outputLines);
+            return outputLines;
         } catch (IOException e) {
             e.printStackTrace();
-            return "";
+            return Collections.emptyList();
         }
+    }
+
+    public static String runArgsJoined(String... args) {
+        return String.join("\n", runArgs(args));
+    }
+
+    public static String runJoined(String command) {
+        return String.join("\n", run(command));
     }
 
 }

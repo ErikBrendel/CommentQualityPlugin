@@ -32,8 +32,11 @@ public class CsvWriter {
             s.append(word.replaceAll(",", "_"));
         }
 
-        writeCell(s.toString());
-        return this;
+        return writeCell(s.toString());
+    }
+
+    public CsvWriter writeCell(int data) {
+        return writeCell(data + "");
     }
 
     public CsvWriter writeCell(String data) {
