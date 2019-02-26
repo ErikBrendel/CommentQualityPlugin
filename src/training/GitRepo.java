@@ -7,14 +7,10 @@ import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.psi.PsiFile;
 import com.intellij.psi.PsiManager;
 import core.CommentFinder;
-import core.CommentQualityAnalysisResult;
-import core.LanguageProcessor;
 import core.QualityComment;
 
 import java.io.File;
 import java.text.DecimalFormat;
-import java.util.ArrayList;
-import java.util.List;
 
 public class GitRepo {
 
@@ -37,11 +33,10 @@ public class GitRepo {
         }
     }
 
-    public List<TrainingSample> allComments(int repoIndex, int totalRepos) {
+    public void findAllComments(int repoIndex, int totalRepos) {
         String foundFiles = ExternalProgram.runArgs("find", ".", "-name", "*.java");
         String[] filesFound = foundFiles.split("\n");
 
-        List<TrainingSample> result = new ArrayList<>();
 
         String print_start = "[" + (repoIndex + 1) + "/" + totalRepos + "] ";
         int fileIndex = 0;
@@ -50,33 +45,38 @@ public class GitRepo {
             fileIndex++;
             if ("".equals(filename)) continue;
 
+            if (filename.startsWith("./")) {
+                filename = filename.substring(2);
+            }
+
             System.out.println(print_start + PERCENT_FORMAT.format(fileIndex * 100f / totalFiles) + "%  " + filename);
             try {
-                result.addAll(allCommentsIn(filename));
+                allCommentsIn(filename);
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
-
-        return result;
     }
 
-    private List<TrainingSample> allCommentsIn(String filename) {
+    private void allCommentsIn(String filename) {
         PsiFile file = parsePsi(filename);
 
-        List<QualityComment> comments = CommentFinder.findComments(file);
+        CsvWriter export = new CsvWriter(new File(rootDirectory(), "commentMetrics/" + filename + ".csv"));
+        export.writeCell("# identity").writeCell("comment").writeCell("code").endLine();
 
-        List<TrainingSample> samples = new ArrayList<>();
-
-        for (QualityComment comment : comments) {
-            if (comment.position != QualityComment.Position.LicenseHeader) {
-                samples.add(new TrainingSample(comment.commentWordList(), comment.relatedCodeWordList(),
-                        CommentQualityAnalysisResult.Result.BAD));
+        for (QualityComment comment : CommentFinder.findComments(file)) {
+            if (comment.position == QualityComment.Position.BeforeMethod) {
+                export
+                        .writeCell(comment.relatedCodeIdentity())
+                        .writeCell(comment.commentWordList())
+                        .writeCell(comment.relatedCodeWordList())
+                        .endLine();
             }
         }
 
+        export.close();
+
         //todo: and add the comments and classifications to the result list
-        return samples;
     }
 
     private PsiFile parsePsi(String localFilePath) {
@@ -94,7 +94,7 @@ public class GitRepo {
 
     private void cloneRepo() {
         File root = rootDirectory();
-        FileUitls.mkdirs(root);
+        FileUtil.mkdirs(root);
         String gitUrl = TrainingMain.REPO_URL_START + name + TrainingMain.REPO_URL_END;
         System.out.println(ExternalProgram.runArgs("git", "clone", gitUrl, root.getAbsolutePath()));
     }

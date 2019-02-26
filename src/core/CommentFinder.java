@@ -49,7 +49,7 @@ public class CommentFinder {
             return QualityComment.Position.BeforeMethod;
         } else if (parent instanceof PsiFile && comment == parent.getFirstChild()) {
             return QualityComment.Position.LicenseHeader;
-        } else if (Utils.isAtStartOfContainingBlock(comment)) {
+        } else if (Utils.isAtStartOfContainingBlock(comment) || Utils.isInSingleLineCodeBlock(comment)) {
             return QualityComment.Position.InCodeBlock;
         } else if (Utils.isFollowedByCode(comment)) {
             return QualityComment.Position.BeforeCodeBlock;

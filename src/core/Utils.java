@@ -23,6 +23,11 @@ public class Utils {
         return true;
     }
 
+    public static boolean isInSingleLineCodeBlock(PsiComment comment) {
+        PsiElement parent = comment.getParent();
+        return lineNumberOf(parent) == lineNumberOfEnd(parent);
+    }
+
     private static boolean isIgnorable(PsiElement element) {
         return element instanceof PsiWhiteSpace || element instanceof PsiJavaToken;
     }
@@ -88,6 +93,25 @@ public class Utils {
         }
     }
 
+    public static String nonBlockChildTextOf(PsiElement element) {
+        StringBuilder s = new StringBuilder();
+        readNonBlockChildTextOf(s, element);
+        return s.toString().trim();
+    }
+
+    private static void readNonBlockChildTextOf(StringBuilder s, PsiElement element) {
+        PsiElement[] children = element.getChildren();
+        if (children.length == 0) {
+            s.append(element.getText());
+        } else {
+            for (PsiElement child : children) {
+                if (!(child instanceof PsiCodeBlock) && !(child instanceof PsiComment)) {
+                    readNonBlockChildTextOf(s, child);
+                }
+            }
+        }
+    }
+
     private static void deleteCommentsIn(PsiElement element) {
         for (PsiElement child : element.getChildren()) {
             if (child instanceof PsiComment) {
@@ -110,9 +134,21 @@ public class Utils {
     }
 
     public static int lineNumberOf(PsiElement element) {
-        PsiFile containingFile = element.getContainingFile();
-        Document document = PsiDocumentManager.getInstance(containingFile.getProject()).getDocument(containingFile);
-        if (document == null) return 0;
-        return document.getLineNumber(element.getTextOffset());
+        return lineNumberIn(element, element.getTextRange().getStartOffset());
+    }
+
+    public static int lineNumberOfEnd(PsiElement element) {
+        return lineNumberIn(element, element.getTextRange().getEndOffset());
+    }
+
+    private static int lineNumberIn(PsiElement container, int offset) {
+        try {
+            PsiFile containingFile = container.getContainingFile();
+            Document document = PsiDocumentManager.getInstance(containingFile.getProject()).getDocument(containingFile);
+            if (document == null) return 0;
+            return document.getLineNumber(offset);
+        } catch (IndexOutOfBoundsException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

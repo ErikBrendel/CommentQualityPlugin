@@ -107,4 +107,24 @@ public class QualityComment {
                 return Collections.emptyList();
         }
     }
+
+    public String relatedCodeIdentity() {
+        String data = null;
+
+        if (position == Position.BeforeMethod) {
+            PsiElement methodNode = relatedCodeRoots.get(0);
+            assert methodNode instanceof PsiMethod;
+            data = Utils.nonBlockChildTextOf(methodNode);
+
+        }
+
+        if (data == null) {
+            data = relatedCodeText();
+            if (relatedCodeText().length() > 50) {
+                data = data.substring(0, 50);
+            }
+        }
+
+        return data.replaceAll("\n", " ").trim();
+    }
 }

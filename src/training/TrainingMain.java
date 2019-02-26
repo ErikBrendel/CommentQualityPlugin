@@ -13,14 +13,13 @@ public class TrainingMain {
     public static void execute() {
         System.out.println(ExternalProgram.run("pwd"));
 
-        TrainingResults results = new TrainingResults();
-
         int totalRepos = REPOS.length;
         int repoCount = 0;
         for (String repoName : REPOS) {
-            results.trainOnRepo(repoName, repoCount, totalRepos);
+            GitRepo repo = new GitRepo(repoName);
+            repo.Update();
+            repo.findAllComments(repoCount, totalRepos);
             repoCount++;
         }
-        System.out.println(results.trainingSampleAmount());
     }
 }
