@@ -49,7 +49,7 @@ public class LanguageProcessor {
 
         word = word.toLowerCase();
 
-        if (StopWords.contains(word)) return null;
+        // if (StopWords.contains(word)) return null;
 
         return word;
     }

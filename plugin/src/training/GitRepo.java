@@ -57,6 +57,7 @@ public class GitRepo {
                 e.printStackTrace();
             }
         }
+        System.out.println("Done!");
     }
 
     private void allCommentsIn(String filename) {
