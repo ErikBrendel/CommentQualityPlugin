@@ -3,6 +3,7 @@ package core;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.LangDataKeys;
 import com.intellij.psi.*;
+import com.intellij.psi.javadoc.PsiDocComment;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
@@ -43,9 +44,9 @@ public class CommentFinder {
 
     public static QualityComment.Position classifyPositionOf(PsiComment comment) {
         PsiElement parent = comment.getParent();
-        if (parent instanceof PsiClass) {
+        if (parent instanceof PsiClass && comment instanceof PsiDocComment) {
             return QualityComment.Position.BeforeClass;
-        } else if (parent instanceof PsiMethod) {
+        } else if (parent instanceof PsiMethod && comment instanceof PsiDocComment) {
             return QualityComment.Position.BeforeMethod;
         } else if (parent instanceof PsiFile && comment == parent.getFirstChild()) {
             return QualityComment.Position.LicenseHeader;

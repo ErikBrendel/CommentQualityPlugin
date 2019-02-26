@@ -38,7 +38,10 @@ for filename in glob.iglob(metrics_files, recursive=True):
 
             old_comment = row_data['commentWords']
             old_code = row_data['codeWords']
-    print('.')
+    print(filename)
+
+print()
+print()
 
 result = pd.DataFrame(result, columns=['id', 'timestamp', 'commentWords', 'codeWords', 'label'])
 result.to_csv(sys.stdout, sep=';')
