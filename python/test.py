@@ -13,6 +13,7 @@ result = []
 
 for filename in glob.iglob(metrics_files, recursive=True):
     df = pd.read_csv(filename, sep=';').rename(columns={"# id": "id"})
+    df.fillna('', inplace=True)
     # data.to_csv(sys.stdout, sep=";")
     comment_ids = df["id"].unique()
     for comment_id in comment_ids:
@@ -22,7 +23,8 @@ for filename in glob.iglob(metrics_files, recursive=True):
         old_code = versions_data.iloc[0]['codeWords']
         old_timestamp = versions_data.iloc[0]['timestamp']
         for key, row_data in versions_data.iloc[1:].iterrows():
-            if row_data['commentWords'] != old_comment and row_data['codeWords'] == old_code:
+            if row_data['commentWords'] != old_comment and row_data['codeWords'] == old_code \
+                    and abs(len(row_data['commentWords']) - len(old_comment)) > 3:
                 result.append({
                     'id': comment_id,
                     'timestamp': old_timestamp,
