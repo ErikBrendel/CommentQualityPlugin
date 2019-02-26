@@ -11,6 +11,14 @@ metrics_files = os.path.join(REPO_ROOT, "**", "*.csv")
 
 result = []
 
+
+def same_except_label(d1, d2):
+    if d1 is None or d2 is None:
+        return False
+    return {k: v for k, v in d1.items() if k != 'label'} == \
+           {k: v for k, v in d2.items() if k != 'label'}
+
+
 for filename in glob.iglob(metrics_files, recursive=True):
     df = pd.read_csv(filename, sep=';').rename(columns={"# id": "id"})
     df.fillna('', inplace=True)
@@ -31,6 +39,8 @@ for filename in glob.iglob(metrics_files, recursive=True):
                     'commentWords': old_comment,
                     'codeWords': old_code,
                     'label': 'bad'})
+                if len(result) >= 2 and same_except_label(result[-2], result[-1]):
+                    result.pop(-2)
                 result.append({
                     'id': comment_id,
                     'timestamp': row_data['timestamp'],
@@ -40,6 +50,7 @@ for filename in glob.iglob(metrics_files, recursive=True):
 
             old_comment = row_data['commentWords']
             old_code = row_data['codeWords']
+            old_timestamp = row_data['timestamp']
     print(filename)
 
 print()
