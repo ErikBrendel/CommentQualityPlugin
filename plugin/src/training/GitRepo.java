@@ -61,7 +61,7 @@ public class GitRepo {
     }
 
     private void allCommentsIn(String filename) {
-        List<String> versionsAndDates = ExternalProgram.runArgs("git", "log", "--format=%H %at", "--reverse", filename);
+        List<String> versionsAndDates = ExternalProgram.runArgs("git", "log", "--format=%H %ct", "--reverse", "--first-parent", filename);
 
         if (versionsAndDates.size() <= 2) return;
 
