@@ -3,12 +3,12 @@ import glob
 import os
 import sys
 
-REPO_ROOT = "/home/erik/Documents/repos/qualityCommentRepos/"
+REPO_ROOT =  "commentMetrics"
 
-for file in os.listdir(REPO_ROOT):
-    metrics_files = os.path.join(REPO_ROOT, file, "commentMetrics", "**", "*.csv")
+metrics_files = os.path.join(REPO_ROOT, "**", "*.csv")
 
-    for filename in glob.iglob(metrics_files, recursive=True):
-        data = pd.read_csv(filename, sep=';').rename(columns={"# id": "id"}).set_index(['id', 'timestamp'])
-        data.to_csv(sys.stdout)
-        print(filename)
+for filename in glob.iglob(metrics_files, recursive=True):
+    data = pd.read_csv(filename, sep=';').rename(columns={"# id": "id"}).set_index(
+        ['id', 'timestamp'])
+    data.to_csv(sys.stdout)
+    print(filename)
