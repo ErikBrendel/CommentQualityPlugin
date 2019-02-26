@@ -7,10 +7,10 @@ public class TrainingMain {
     public static String REPO_URL_END = ".git";
     private static String[] REPOS = { // their clone url is REPO_URL_START + this string + REPO_URL_END
             "apache/flink",
-            "apache/camel"
+            //"apache/camel"
     };
 
-    public static void main(String[] args) {
+    public static void execute() {
         System.out.println(ExternalProgram.run("pwd"));
 
         TrainingResults results = new TrainingResults();

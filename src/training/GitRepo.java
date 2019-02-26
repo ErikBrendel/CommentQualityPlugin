@@ -69,8 +69,10 @@ public class GitRepo {
         List<TrainingSample> samples = new ArrayList<>();
 
         for (QualityComment comment : comments) {
-            samples.add(new TrainingSample(comment.commentWordList(), comment.relatedCodeWordList(),
-                    CommentQualityAnalysisResult.Result.BAD));
+            if (comment.position != QualityComment.Position.LicenseHeader) {
+                samples.add(new TrainingSample(comment.commentWordList(), comment.relatedCodeWordList(),
+                        CommentQualityAnalysisResult.Result.BAD));
+            }
         }
 
         //todo: and add the comments and classifications to the result list

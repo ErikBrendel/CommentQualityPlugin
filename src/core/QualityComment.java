@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class QualityComment {
 
-    enum Position {
+    public enum Position {
         Unknown,
         LicenseHeader,
         BeforeClass,

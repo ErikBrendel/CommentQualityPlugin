@@ -86,6 +86,6 @@ public class BadCommentsInspection extends LocalInspectionTool {
 
     @NotNull
     private CommentQualityAnalysisResult analyzeQualityOf(QualityComment comment) {
-        return new CommentQualityAnalysisResult(CommentQualityAnalysisResult.Result.BAD, String.join(", ", comment.relatedCodeWordList()));
+        return new CommentQualityAnalysisResult(CommentQualityAnalysisResult.Result.BAD, comment.position + " - " + String.join(", ", comment.relatedCodeWordList()));
     }
 }
