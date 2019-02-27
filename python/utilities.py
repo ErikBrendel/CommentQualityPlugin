@@ -5,6 +5,8 @@ import os
 import sys
 import pandas as pd
 from pandas import DataFrame
+import difflib
+from math import inf as INFINITY
 
 
 def to_textblob_format(x: DataFrame, y: DataFrame) -> List[Tuple[str, str]]:
@@ -25,7 +27,7 @@ def to_textblob_format(x: DataFrame, y: DataFrame) -> List[Tuple[str, str]]:
     return result
 
 
-def read_and_cache_data(*, repo_root, read_cache) -> DataFrame:
+def read_and_cache_data(number_of_items=INFINITY, *, repo_root, read_cache) -> DataFrame:
     metrics_files = os.path.join(repo_root, "**", "*.csv")
     comment_frame = None
     comment_list = []
@@ -33,6 +35,8 @@ def read_and_cache_data(*, repo_root, read_cache) -> DataFrame:
     for filename in glob.iglob(metrics_files, recursive=True):
         if os.path.isfile('cache') and read_cache:
             comment_frame = pd.read_pickle('cache')
+            break
+        if len(comment_list) > number_of_items:
             break
         print(filename)
         df = pd.read_csv(filename, sep=';').rename(columns={"# id": "id"})
@@ -46,19 +50,20 @@ def read_and_cache_data(*, repo_root, read_cache) -> DataFrame:
         for comment_id in comment_ids:
             versions_data = df.loc[df["id"] == comment_id]
 
-            old_comment = versions_data.iloc[0]['commentWords']
-            old_code = versions_data.iloc[0]['codeWords']
+            old_comment_words = versions_data.iloc[0]['commentWords']
+            old_code_words = versions_data.iloc[0]['codeWords']
             old_comment_text = versions_data.iloc[0]['commentText']
             old_code_text = versions_data.iloc[0]['codeText']
             old_timestamp = versions_data.iloc[0]['timestamp']
+
             for key, row_data in versions_data.iloc[1:].iterrows():
-                if row_data['commentWords'] != old_comment and row_data['codeWords'] == old_code \
-                        and abs(len(row_data['commentWords']) - len(old_comment)) > 3:
+                if row_data['commentWords'] != old_comment_words and row_data['codeWords'] == old_code_words \
+                        and are_reasonably_different(row_data['commentWords'],old_comment_words):
                     comment_list.append({
                         'id': comment_id,
                         'timestamp': old_timestamp,
-                        'commentWords': old_comment,
-                        'codeWords': old_code,
+                        'commentWords': old_comment_words,
+                        'codeWords': old_code_words,
                         'commentText': old_comment_text,
                         'codeText': old_code_text,
                         'label': 'bad'})
@@ -68,13 +73,13 @@ def read_and_cache_data(*, repo_root, read_cache) -> DataFrame:
                         'id': comment_id,
                         'timestamp': row_data['timestamp'],
                         'commentWords': row_data['commentWords'],
-                        'codeWords': old_code,
+                        'codeWords': old_code_words,
                         'commentText': row_data['commentText'],
                         'codeText': old_code_text,
                         'label': 'good'})
 
-                old_comment = row_data['commentWords']
-                old_code = row_data['codeWords']
+                old_comment_words = row_data['commentWords']
+                old_code_words = row_data['codeWords']
                 old_comment_text = row_data['commentText']
                 old_code_text = row_data['codeText']
                 old_timestamp = row_data['timestamp']
@@ -92,3 +97,7 @@ def read_and_cache_data(*, repo_root, read_cache) -> DataFrame:
 
     comment_frame.to_pickle('cache')
     return comment_frame
+
+def are_reasonably_different(s1: str, s2: str) -> bool:
+    ratio = difflib.SequenceMatcher(None, s1, s2).quick_ratio()
+    return ratio < 0.85

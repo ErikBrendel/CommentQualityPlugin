@@ -7,10 +7,10 @@ from textblob.classifiers import DecisionTreeClassifier
 from utilities import to_textblob_format, read_and_cache_data
 
 REPO_ROOT = "commentMetrics"
-SHOULD_CACHE = True
+SHOULD_CACHE = False
 
 data_frame = read_and_cache_data(read_cache=SHOULD_CACHE, repo_root=REPO_ROOT)
-
+print(data_frame.count())
 comment_and_code_text = data_frame[['commentText', 'codeText']]
 comment_and_code_words = data_frame[['commentWords', 'codeWords']]
 
