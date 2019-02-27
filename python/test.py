@@ -1,9 +1,12 @@
 import pandas as pd
+from pandas import DataFrame
 import glob
 import os
 import sys
-from textblob import TextBlob
+from sklearn.model_selection import train_test_split
+from textblob import classifiers
 from textblob.classifiers import DecisionTreeClassifier
+from utilities import to_textblob_format
 
 REPO_ROOT = "commentMetrics"
 SHOULD_CACHE = True
@@ -61,8 +64,26 @@ print()
 
 cols = ['id', 'timestamp', 'label', 'commentWords', 'codeWords', 'commentText', 'codeText']
 comment_frame = comment_frame if comment_frame is not None else pd.DataFrame(comment_list,
-                                                                          columns=cols)
+                                                                             columns=cols)
 comment_frame.to_pickle('cache')
-data = comment_frame[['commentWords', 'codeWords', 'label']]
+comment_and_code_text = comment_frame[['commentText', 'codeText']]
+labels = comment_frame[['label']]
+x_train, x_test, y_train, y_test = train_test_split(comment_and_code_text, labels,
+                                                    test_size=0.33,
+                                                    random_state=42)
+print('good:', len(labels[labels['label'] == 'good']), 'bad:',
+      len(labels[labels['label'] == 'bad']))
+train = to_textblob_format(x_train, y_train)
+test = to_textblob_format(x_test, y_test)
 
-data.to_csv(sys.stdout, sep=';')
+
+def feature_extractor(text: str):
+    a, b = text.split(' |||| ')
+    return {'a': a, 'b': b}
+
+
+dtree_model = DecisionTreeClassifier(train)
+print(dtree_model.pprint())
+print(dtree_model.accuracy(test))
+
+# print(train)
