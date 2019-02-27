@@ -9,11 +9,12 @@ public class TrainingMain {
     public static String REPO_URL_START = "https://github.com/";
     public static String REPO_URL_END = ".git";
     private static String[] REPOS = { // their clone url is REPO_URL_START + this string + REPO_URL_END
-            "apache/flink",
-            "apache/camel",
+            //"apache/flink",
+            //"apache/camel",
             //"elastic/elasticsearch",
             //"spring-projects/spring-boot",
             //"spring-projects/spring-framework",
+            "square/okhttp", // that's a small one
     };
     // find more at:
     // https://github.com/search?l=Java&o=desc&q=pushed%3A%3E2019-02-25&s=stars&type=Repositories
@@ -22,7 +23,7 @@ public class TrainingMain {
         TrainingTaskList taskList = new TrainingTaskList();
 
         List<TrainingWorker> workers = new ArrayList<>();
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i < 4; i++) {
             TrainingWorker worker = new TrainingWorker(taskList);
             worker.start();
             workers.add(worker);

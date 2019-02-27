@@ -26,20 +26,24 @@ public class TrainingWorker extends Thread {
     @Override
     public void run() {
         while (!taskList.isFinished()) {
-            TrainingTaskList.Task nextTask = taskList.next();
-            if (nextTask == null) {
-                try {
-                    Thread.sleep(10);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            } else {
-                try {
-                    extractComments(nextTask);
+            try {
+                TrainingTaskList.Task nextTask = taskList.next();
+                if (nextTask == null) {
+                    try {
+                        Thread.sleep(10);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                } else {
+                    try {
+                        extractComments(nextTask);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                     taskList.done();
-                } catch (Exception e) {
-                    e.printStackTrace();
                 }
+            } catch (Exception ex) {
+                ex.printStackTrace();
             }
         }
         running = false;

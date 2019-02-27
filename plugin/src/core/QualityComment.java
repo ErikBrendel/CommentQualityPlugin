@@ -105,6 +105,7 @@ public class QualityComment {
         switch (position) {
             case BeforeClass:
             case BeforeMethod:
+                return Collections.singletonList(psiComments[0].getParent());
             case InCodeBlock:
                 return Collections.singletonList(Utils.statementParentOf(psiComments[0].getParent()));
             case BeforeCodeBlock:
@@ -120,7 +121,9 @@ public class QualityComment {
 
             if (position == Position.BeforeMethod) {
                 PsiElement methodNode = relatedCodeRoots.get(0);
-                assert methodNode instanceof PsiMethod;
+                if (!(methodNode instanceof PsiMethod)) {
+                    throw new RuntimeException("Non-method method comment parent!");
+                }
                 data = new StringBuilder(Utils.nonBlockChildTextOf(methodNode));
 
                 PsiElement parent = relatedCodeRoots.get(0).getParent();
