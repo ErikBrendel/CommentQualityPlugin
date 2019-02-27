@@ -18,8 +18,13 @@ for filename in glob.iglob(metrics_files, recursive=True):
     if os.path.isfile('cache') and SHOULD_CACHE:
         comment_frame = pd.read_pickle('cache')
         break
+    print(filename)
     df = pd.read_csv(filename, sep=';').rename(columns={"# id": "id"})
     df.fillna('', inplace=True)
+
+    # needed until pandas 24.2: https://github.com/pandas-dev/pandas/issues/25406
+    df['id'] = df['id'].apply(lambda cid: "_" + cid)
+
     # data.to_csv(sys.stdout, sep=";")
     comment_ids = df["id"].unique()
     for comment_id in comment_ids:
@@ -57,10 +62,13 @@ for filename in glob.iglob(metrics_files, recursive=True):
             old_comment_text = row_data['commentText']
             old_code_text = row_data['codeText']
             old_timestamp = row_data['timestamp']
-    print(filename)
 
 print()
 print()
+
+if len(comment_list) == 0:
+    print("No data found, exiting...")
+    sys.exit(0)
 
 cols = ['id', 'timestamp', 'label', 'commentWords', 'codeWords', 'commentText', 'codeText']
 comment_frame = comment_frame if comment_frame is not None else pd.DataFrame(comment_list,
