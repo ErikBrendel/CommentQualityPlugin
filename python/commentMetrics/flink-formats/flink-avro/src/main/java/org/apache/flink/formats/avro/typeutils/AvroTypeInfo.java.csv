@@ -1,0 +1,3 @@
+# id;timestamp;commentText;codeText;commentWords;codeWords
+AvroTypeInfo -> public AvroTypeInfo(Class<T> typeClass);1509991007;Creates a new Avro type info for the given class.;public AvroTypeInfo(Class<T> typeClass) {_		this(typeClass, false)__	};creates,a,new,avro,type,info,for,the,given,class;public,avro,type,info,class,t,type,class,this,type,class,false
+AvroTypeInfo -> public AvroTypeInfo(Class<T> typeClass);1540907751;Creates a new Avro type info for the given class.;public AvroTypeInfo(Class<T> typeClass) {_		super(typeClass, generateFieldsFromAvroSchema(typeClass))__	};creates,a,new,avro,type,info,for,the,given,class;public,avro,type,info,class,t,type,class,super,type,class,generate,fields,from,avro,schema,type,class
