@@ -103,7 +103,8 @@ public class TrainingWorker extends Thread {
 
         if (foundComments.isEmpty()) return;
 
-        CsvWriter export = new CsvWriter(new File(rootDirectory, "commentMetrics/" + filename + ".csv"));
+        String repoName = rootDirectory.getName();
+        CsvWriter export = new CsvWriter(new File(rootDirectory, "../__commentMetrics/" + repoName + "/" + filename + ".csv"));
 
         export.writeCell("# id").writeCell("timestamp")
                 .writeCell("commentText").writeCell("codeText")

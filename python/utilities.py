@@ -6,6 +6,7 @@ import sys
 import pandas as pd
 from pandas import DataFrame
 import difflib
+from math import log10 as log
 from math import inf as INFINITY
 
 
@@ -14,7 +15,7 @@ def to_textblob_format(x: DataFrame, y: DataFrame) -> List[Tuple[str, str]]:
     for _, x_row in x.iterrows():
         comment = x_row[0]
         code = x_row[1]
-        text_line = comment + ' |||| ' + code
+        text_line = [comment, code]
         texts.append(text_line)
     labels = []
     for _, y_row in y.iterrows():
@@ -58,7 +59,7 @@ def read_and_cache_data(number_of_items=INFINITY, *, repo_root, read_cache) -> D
 
             for key, row_data in versions_data.iloc[1:].iterrows():
                 if row_data['commentWords'] != old_comment_words and row_data['codeWords'] == old_code_words \
-                        and are_reasonably_different(row_data['commentWords'],old_comment_words):
+                        and are_reasonably_different(row_data['commentWords'], old_comment_words):
                     comment_list.append({
                         'id': comment_id,
                         'timestamp': old_timestamp,
@@ -98,6 +99,31 @@ def read_and_cache_data(number_of_items=INFINITY, *, repo_root, read_cache) -> D
     comment_frame.to_pickle('cache')
     return comment_frame
 
+
 def are_reasonably_different(s1: str, s2: str) -> bool:
     ratio = difflib.SequenceMatcher(None, s1, s2).quick_ratio()
     return ratio < 0.85
+
+
+def export_csv(data_frame: DataFrame):
+    data_frame['code_length'] = [log(len(x.split(','))) for x in data_frame['codeWords']]
+    data_frame['comment_length'] = [log(len(x.split(','))) for x in data_frame['commentWords']]
+    data_frame['code_set'] = [set(x.split(',')) for x in data_frame['codeWords']]
+    data_frame['comment_set'] = [set(x.split(',')) for x in data_frame['commentWords']]
+
+    data_frame['code_length_unique'] = [log(len(x)) for x in data_frame['code_set']]
+    data_frame['comment_length_unique'] = [log(len(x)) for x in data_frame['comment_set']]
+    data_frame['code_uniqueness'] = data_frame['code_length_unique'] / data_frame['code_length']
+    data_frame['comment_uniqueness'] = data_frame['comment_length_unique'] / data_frame['comment_length']
+
+    data_frame['intersection_set_length'] = [len(x.intersection(y)) for key, [x, y] in
+                                             data_frame[['code_set', 'comment_set']].iterrows()]
+
+    data_frame['lengths'] = data_frame['comment_length'] / data_frame['code_length']
+    data_frame['uniqueLengths'] = data_frame['comment_length_unique'] / data_frame['code_length_unique']
+    data_frame['uniqueness'] = data_frame['comment_uniqueness'] / data_frame['code_uniqueness']
+    data_frame['overlap1'] = data_frame['intersection_set_length'] / data_frame['code_length_unique']
+    data_frame['overlap2'] = data_frame['intersection_set_length'] / data_frame['comment_length_unique']
+
+    data_frame[['label', 'lengths', 'uniqueLengths', 'uniqueness', 'overlap1', 'overlap2']].to_csv("out.csv", sep=';')
+    sys.exit(0)
