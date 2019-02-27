@@ -7,7 +7,7 @@ from textblob.classifiers import DecisionTreeClassifier
 from utilities import to_textblob_format, read_and_cache_data
 
 REPO_ROOT = "commentMetrics"
-SHOULD_CACHE = False
+SHOULD_CACHE = True
 
 data_frame = read_and_cache_data(read_cache=SHOULD_CACHE, repo_root=REPO_ROOT)
 
