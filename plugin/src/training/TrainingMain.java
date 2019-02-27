@@ -31,8 +31,9 @@ public class TrainingMain {
         for (String repoName : REPOS) {
             GitRepo repo = new GitRepo(repoName);
             repo.Update();
-            repo.findAllComments(taskList);
+            repo.enqueueTasks(taskList);
         }
+        taskList.setListComplete();
 
         for (TrainingWorker worker : workers) {
             while (worker.running) {

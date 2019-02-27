@@ -21,7 +21,7 @@ public class GitRepo {
         }
     }
 
-    public void findAllComments(TrainingTaskList tasks) {
+    public void enqueueTasks(TrainingTaskList tasks) {
         List<String> foundFiles = new ExternalProgram(rootDirectory()).runArgs("find", ".", "-name", "*.java");
 
         for (String filename : foundFiles) {
