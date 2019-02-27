@@ -10,12 +10,15 @@ public class TrainingMain {
     public static String REPO_URL_END = ".git";
     private static String[] REPOS = { // their clone url is REPO_URL_START + this string + REPO_URL_END
             "apache/flink",
-            "apache/camel"
+            "apache/camel",
+            //"elastic/elasticsearch",
+            //"spring-projects/spring-boot",
+            //"spring-projects/spring-framework",
     };
+    // find more at:
+    // https://github.com/search?l=Java&o=desc&q=pushed%3A%3E2019-02-25&s=stars&type=Repositories
 
     public static void execute() {
-        System.out.println(ExternalProgram.Anywhere.run("pwd"));
-
         TrainingTaskList taskList = new TrainingTaskList();
 
         List<TrainingWorker> workers = new ArrayList<>();
