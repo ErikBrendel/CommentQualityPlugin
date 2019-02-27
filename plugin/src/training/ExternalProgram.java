@@ -7,15 +7,21 @@ import java.util.List;
 
 public class ExternalProgram {
 
-    public static File WorkingDirectory = null;
+    public static final ExternalProgram Anywhere = new ExternalProgram(null);
 
-    public static List<String> run(String command) {
+    private File workingDirectory = null;
+
+    public ExternalProgram(File workingDirectory) {
+        this.workingDirectory = workingDirectory;
+    }
+
+    public List<String> run(String command) {
         return runArgs(command.split(" "));
     }
 
-    public static List<String> runArgs(String... args) {
+    public List<String> runArgs(String... args) {
         try {
-            Process process = new ProcessBuilder(args).directory(WorkingDirectory).start();
+            Process process = new ProcessBuilder(args).directory(workingDirectory).start();
             InputStream is = process.getInputStream();
             InputStreamReader isr = new InputStreamReader(is);
             BufferedReader br = new BufferedReader(isr);
@@ -32,11 +38,11 @@ public class ExternalProgram {
         }
     }
 
-    public static String runArgsJoined(String... args) {
+    public String runArgsJoined(String... args) {
         return String.join("\n", runArgs(args));
     }
 
-    public static String runJoined(String command) {
+    public String runJoined(String command) {
         return String.join("\n", run(command));
     }
 

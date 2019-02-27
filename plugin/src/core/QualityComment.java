@@ -1,6 +1,11 @@
 package core;
 
-import com.intellij.psi.*;
+import com.intellij.openapi.application.ApplicationManager;
+import com.intellij.openapi.util.Computable;
+import com.intellij.psi.PsiClass;
+import com.intellij.psi.PsiComment;
+import com.intellij.psi.PsiElement;
+import com.intellij.psi.PsiMethod;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Arrays;
@@ -83,7 +88,8 @@ public class QualityComment {
     }
 
     public String relatedCodeText() {
-        return Utils.commentFreeTextOf(relatedCodeRoots);
+        return ApplicationManager.getApplication().runReadAction(
+                (Computable<String>) () -> Utils.commentFreeTextOf(relatedCodeRoots));
     }
 
     public List<String> commentWordList() {
@@ -109,34 +115,36 @@ public class QualityComment {
     }
 
     public String relatedCodeIdentity() {
-        StringBuilder data = null;
+        return ApplicationManager.getApplication().runReadAction((Computable<String>) () -> {
+            StringBuilder data = null;
 
-        if (position == Position.BeforeMethod) {
-            PsiElement methodNode = relatedCodeRoots.get(0);
-            assert methodNode instanceof PsiMethod;
-            data = new StringBuilder(Utils.nonBlockChildTextOf(methodNode));
+            if (position == Position.BeforeMethod) {
+                PsiElement methodNode = relatedCodeRoots.get(0);
+                assert methodNode instanceof PsiMethod;
+                data = new StringBuilder(Utils.nonBlockChildTextOf(methodNode));
 
-            PsiElement parent = relatedCodeRoots.get(0).getParent();
-            while (parent != null) {
-                if (parent instanceof PsiMethod) {
-                    PsiMethod methodParent = (PsiMethod) parent;
-                    //data.insert(0, methodParent.getReturnTypeElement().getText() + " " + methodParent.getName() + " " + methodParent.getParameterList().getText() + " -> ");
-                    data.insert(0, Utils.nonBlockChildTextOf(parent) + " -> ");
-                } else if (parent instanceof PsiClass) {
-                    PsiClass classParent = (PsiClass) parent;
-                    data.insert(0, classParent.getName() + " -> ");
+                PsiElement parent = relatedCodeRoots.get(0).getParent();
+                while (parent != null) {
+                    if (parent instanceof PsiMethod) {
+                        PsiMethod methodParent = (PsiMethod) parent;
+                        //data.insert(0, methodParent.getReturnTypeElement().getText() + " " + methodParent.getName() + " " + methodParent.getParameterList().getText() + " -> ");
+                        data.insert(0, Utils.nonBlockChildTextOf(parent) + " -> ");
+                    } else if (parent instanceof PsiClass) {
+                        PsiClass classParent = (PsiClass) parent;
+                        data.insert(0, classParent.getName() + " -> ");
+                    }
+                    parent = parent.getParent();
                 }
-                parent = parent.getParent();
             }
-        }
 
-        if (data == null) {
-            data = new StringBuilder(relatedCodeText());
-            if (relatedCodeText().length() > 50) {
-                data = new StringBuilder(data.substring(0, 50));
+            if (data == null) {
+                data = new StringBuilder(relatedCodeText());
+                if (relatedCodeText().length() > 50) {
+                    data = new StringBuilder(data.substring(0, 50));
+                }
             }
-        }
 
-        return data.toString().replaceAll("\n", " ").trim();
+            return data.toString().replaceAll("\n", " ").trim();
+        });
     }
 }
