@@ -66,13 +66,14 @@ for filename in glob.iglob(metrics_files, recursive=True):
 print()
 print()
 
-if len(comment_list) == 0:
-    print("No data found, exiting...")
-    sys.exit(0)
-
 cols = ['id', 'timestamp', 'label', 'commentWords', 'codeWords', 'commentText', 'codeText']
 comment_frame = comment_frame if comment_frame is not None else pd.DataFrame(comment_list,
                                                                              columns=cols)
+
+if comment_frame.count == 0:
+    print("No data found, exiting...")
+    sys.exit(0)
+
 comment_frame.to_pickle('cache')
 comment_and_code_text = comment_frame[['commentText', 'codeText']]
 labels = comment_frame[['label']]
