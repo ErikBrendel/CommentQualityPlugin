@@ -48,7 +48,7 @@ public class CsvWriter {
             if (cellWritten) {
                 writer.write(";");
             }
-            writer.write(data.replaceAll(";", "_").replaceAll("\n", "_"));
+            writer.write(data.replaceAll(";", "_").replaceAll("\n", " "));
             cellWritten = true;
         } catch (IOException e) {
             throw new RuntimeException(e);
