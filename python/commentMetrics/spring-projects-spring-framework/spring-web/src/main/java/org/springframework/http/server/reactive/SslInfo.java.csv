@@ -1,0 +1,6 @@
+# id;timestamp;commentText;codeText;commentWords;codeWords
+SslInfo -> @Nullable 	X509Certificate[] getPeerCertificates()_;1512182320;Return SSL certificates associated with the request, if any.;@Nullable_	X509Certificate[] getPeerCertificates()_;return,ssl,certificates,associated,with,the,request,if,any;nullable,x509certificate,get,peer,certificates
+SslInfo -> @Nullable 	X509Certificate[] getPeerCertificates()_;1530174524;Return SSL certificates associated with the request, if any.;@Nullable_	X509Certificate[] getPeerCertificates()_;return,ssl,certificates,associated,with,the,request,if,any;nullable,x509certificate,get,peer,certificates
+SslInfo -> @Nullable 	String getSessionId()_;1510357070;Return the SSL session id, if any;@Nullable_	String getSessionId()_;return,the,ssl,session,id,if,any;nullable,string,get,session,id
+SslInfo -> @Nullable 	String getSessionId()_;1512182320;Return the SSL session id, if any;@Nullable_	String getSessionId()_;return,the,ssl,session,id,if,any;nullable,string,get,session,id
+SslInfo -> @Nullable 	String getSessionId()_;1530174524;Return the SSL session id, if any.;@Nullable_	String getSessionId()_;return,the,ssl,session,id,if,any;nullable,string,get,session,id

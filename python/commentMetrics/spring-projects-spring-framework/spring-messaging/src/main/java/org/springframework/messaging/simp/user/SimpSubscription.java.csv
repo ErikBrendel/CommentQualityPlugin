@@ -1,0 +1,16 @@
+# id;timestamp;commentText;codeText;commentWords;codeWords
+SimpSubscription -> SimpSession getSession()_;1431458952;Return the session of the subscription, never {@code null}.;SimpSession getSession()_;return,the,session,of,the,subscription,never,code,null;simp,session,get,session
+SimpSubscription -> SimpSession getSession()_;1437512314;Return the session of the subscription, never {@code null}.;SimpSession getSession()_;return,the,session,of,the,subscription,never,code,null;simp,session,get,session
+SimpSubscription -> SimpSession getSession()_;1498780456;Return the session of the subscription (never {@code null}).;SimpSession getSession()_;return,the,session,of,the,subscription,never,code,null;simp,session,get,session
+SimpSubscription -> SimpSession getSession()_;1500495740;Return the session of the subscription.;SimpSession getSession()_;return,the,session,of,the,subscription;simp,session,get,session
+SimpSubscription -> SimpSession getSession()_;1503132641;Return the session of the subscription.;SimpSession getSession()_;return,the,session,of,the,subscription;simp,session,get,session
+SimpSubscription -> String getDestination()_;1431458952;Return the subscription's destination, never {@code null}.;String getDestination()_;return,the,subscription,s,destination,never,code,null;string,get,destination
+SimpSubscription -> String getDestination()_;1437512314;Return the subscription's destination, never {@code null}.;String getDestination()_;return,the,subscription,s,destination,never,code,null;string,get,destination
+SimpSubscription -> String getDestination()_;1498780456;Return the subscription's destination (never {@code null}).;String getDestination()_;return,the,subscription,s,destination,never,code,null;string,get,destination
+SimpSubscription -> String getDestination()_;1500495740;Return the subscription's destination.;String getDestination()_;return,the,subscription,s,destination;string,get,destination
+SimpSubscription -> String getDestination()_;1503132641;Return the subscription's destination.;String getDestination()_;return,the,subscription,s,destination;string,get,destination
+SimpSubscription -> String getId()_;1431458952;Return the id associated of the subscription, never {@code null}.;String getId()_;return,the,id,associated,of,the,subscription,never,code,null;string,get,id
+SimpSubscription -> String getId()_;1437512314;Return the id associated of the subscription, never {@code null}.;String getId()_;return,the,id,associated,of,the,subscription,never,code,null;string,get,id
+SimpSubscription -> String getId()_;1498780456;Return the id associated of the subscription (never {@code null}).;String getId()_;return,the,id,associated,of,the,subscription,never,code,null;string,get,id
+SimpSubscription -> String getId()_;1500495740;Return the id associated of the subscription.;String getId()_;return,the,id,associated,of,the,subscription;string,get,id
+SimpSubscription -> String getId()_;1503132641;Return the id associated of the subscription.;String getId()_;return,the,id,associated,of,the,subscription;string,get,id

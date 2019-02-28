@@ -1,0 +1,10 @@
+# id;timestamp;commentText;codeText;commentWords;codeWords
+ProfileCollector -> public Collector getDelegate();1524684173;Return the wrapped collector.;public Collector getDelegate() {_        return in__    };return,the,wrapped,collector;public,collector,get,delegate,return,in
+ProfileCollector -> public Collector getDelegate();1536314350;Return the wrapped collector.;public Collector getDelegate() {_        return in__    };return,the,wrapped,collector;public,collector,get,delegate,return,in
+ProfileCollector -> public Collector getDelegate();1536611444;Return the wrapped collector.;public Collector getDelegate() {_        return in__    };return,the,wrapped,collector;public,collector,get,delegate,return,in
+ProfileCollector -> public long getTime();1524684173;Return the total time spent on this collector.;public long getTime() {_        return time__    };return,the,total,time,spent,on,this,collector;public,long,get,time,return,time
+ProfileCollector -> public long getTime();1536314350;Return the total time spent on this collector.;public long getTime() {_        return time__    };return,the,total,time,spent,on,this,collector;public,long,get,time,return,time
+ProfileCollector -> public long getTime();1536611444;Return the total time spent on this collector.;public long getTime() {_        return time__    };return,the,total,time,spent,on,this,collector;public,long,get,time,return,time
+ProfileCollector -> ProfileCollector(Collector in);1524684173;Sole constructor.;ProfileCollector(Collector in) {_        super(in)__    };sole,constructor;profile,collector,collector,in,super,in
+ProfileCollector -> ProfileCollector(Collector in);1536314350;Sole constructor.;ProfileCollector(Collector in) {_        super(in)__    };sole,constructor;profile,collector,collector,in,super,in
+ProfileCollector -> ProfileCollector(Collector in);1536611444;Sole constructor.;ProfileCollector(Collector in) {_        super(in)__    };sole,constructor;profile,collector,collector,in,super,in
