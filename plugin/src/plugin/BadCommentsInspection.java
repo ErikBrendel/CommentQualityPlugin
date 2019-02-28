@@ -10,7 +10,10 @@ import core.CommentQualityAnalysisResult;
 import core.QualityComment;
 import core.Utils;
 import org.jetbrains.annotations.NotNull;
+import training.CsvWriter;
+import training.ExternalProgram;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -55,10 +58,10 @@ public class BadCommentsInspection extends LocalInspectionTool {
                 if (isPartOfComment(comment)) return;
 
                 QualityComment qualityComment = new QualityComment(includingOtherParts(comment));
+                if (qualityComment.position != QualityComment.Position.BeforeMethod) return;
+
                 CommentQualityAnalysisResult result = analyzeQualityOf(qualityComment);
-                if (result.isBad()) {
-                    holder.registerProblem(element, result.fullMessage(), ProblemHighlightType.WARNING);
-                }
+                holder.registerProblem(element, result.fullMessage(), ProblemHighlightType.WEAK_WARNING);
             }
 
             private boolean isPartOfComment(PsiComment comment) {
@@ -84,8 +87,24 @@ public class BadCommentsInspection extends LocalInspectionTool {
         };
     }
 
+    private static final ExternalProgram PythonProgram = new ExternalProgram(new File("/home/erik/projects/CommentQualityPlugin/python"));
+
     @NotNull
     private CommentQualityAnalysisResult analyzeQualityOf(QualityComment comment) {
-        return new CommentQualityAnalysisResult(CommentQualityAnalysisResult.Result.BAD, comment.position + " - " + String.join(", ", comment.relatedCodeWordList()));
+        List<String> classification = PythonProgram.runArgs(
+                "venv/bin/python3",
+                "classify.py",
+                comment.fullCommentText(),
+                comment.relatedCodeText(),
+                CsvWriter.stringifyList(comment.commentWordList()),
+                CsvWriter.stringifyList(comment.relatedCodeWordList())
+        );
+
+        CommentQualityAnalysisResult.Result result = CommentQualityAnalysisResult.Result.valueOf(classification.remove(0));
+
+        String msg = String.join("\n", classification).trim();
+        if (msg.isEmpty()) msg = null;
+
+        return new CommentQualityAnalysisResult(result, msg);
     }
 }

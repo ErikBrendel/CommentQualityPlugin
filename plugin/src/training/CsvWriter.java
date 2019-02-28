@@ -21,6 +21,10 @@ public class CsvWriter {
     }
 
     public CsvWriter writeCell(List<String> wordList) {
+        return writeCell(stringifyList(wordList));
+    }
+
+    public static String stringifyList(List<String> wordList) {
         StringBuilder s = new StringBuilder();
 
         boolean firstDone = false;
@@ -32,7 +36,7 @@ public class CsvWriter {
             s.append(word.replaceAll(",", "_"));
         }
 
-        return writeCell(s.toString());
+        return s.toString();
     }
 
     public CsvWriter writeCell(int data) {
