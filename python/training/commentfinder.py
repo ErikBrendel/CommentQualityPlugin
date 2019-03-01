@@ -21,7 +21,8 @@ REPOS = [  # their clone url is REPO_URL_START + this string + REPO_URL_END
 
 
 def find_comment_versions(filename, program, versions_and_dates) -> Dict[str, List[Tuple[int, QualityComment]]]:
-    found_comments = {}  # Dictionary[comment_id, List[[timestamp, comment]]]
+    found_comments: Dict[str, List[Tuple[int, QualityComment]]] = {}
+    # List[[timestamp, comment]]]
     for versionAndDate in versions_and_dates:
         version_and_date_data = versionAndDate.split(" ")
         version = version_and_date_data[0]
@@ -51,7 +52,7 @@ def extract_comments(repo: GitRepo, filename: str) -> List:
     if len(found_comments) == 0:
         return []
 
-    for qc_id in found_comments.keys():
+    for qc_id in list(found_comments.keys()):
         if len(found_comments[qc_id]) < 2:
             del found_comments[qc_id]
     if len(found_comments) == 0:
