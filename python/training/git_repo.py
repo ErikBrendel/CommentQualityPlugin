@@ -3,7 +3,7 @@ from typing import *
 
 from .ExternalProgram import ExternalProgram
 
-REPO_CLONE_PATH = "/home/erik/Documents/repos/qualityCommentRepos/"
+REPO_CLONE_PATH = "repos/"
 REPO_URL_START = "https://github.com/"
 REPO_URL_END = ".git"
 
