@@ -1,3 +1,5 @@
+import random
+
 import numpy as np
 import matplotlib.pyplot as plt
 from pandas import DataFrame
@@ -17,7 +19,7 @@ def normalize(df):
 
 
 def cluster(frame: DataFrame):
-    plt.figure(figsize=(12, 12))
+    plt.figure(figsize=(20, 20))
     n_samples = 1500
     random_state = 170
     # X, y = make_blobs(n_samples=n_samples, centers=2, random_state=random_state, n_features=10)
@@ -25,10 +27,16 @@ def cluster(frame: DataFrame):
     # Incorrect number of clusters
     # y_pred = KMeans(n_clusters=2, random_state=random_state).fit_predict(frame)
 
-    frame['color'] = [[0, 0.6, 0, 0.2] if c else [1, 0, 0, 0.2] for c in frame['commented']]
-    # frame['loc_rnd'] = [x + np.random.random(-0.3, 0.3) for x in frame['loc']]
+    alpha = 0.2
+    frame['color'] = [[0, 0.8, 0, alpha] if c else [1, 0, 0, alpha] for c in frame['commented']]
+    frame['parameterAmount_rnd'] = [1 + x + random.uniform(-0.4, 0.4) for x in frame['parameterAmount']]
+    frame['loc_rnd'] = [1 + x + random.uniform(-0.4, 0.4) for x in frame['loc']]
 
-    plt.scatter(frame['loc'], frame['parameterAmount'], c=frame['color'], marker=".")
+    frame = frame.sample(frac=1).reset_index(drop=True)
+
+    plt.xscale('log')
+    plt.yscale('log')
+    plt.scatter(frame['loc_rnd'], frame['parameterAmount_rnd'], c=frame['color'], marker=".")
     # plt.scatter(X_Data.loc[:, 0], X_Data[:, 1], c=y_pred, marker="+")
 
     plt.title("trololol")
