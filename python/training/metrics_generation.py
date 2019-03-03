@@ -1,11 +1,17 @@
+import os
+import pandas as pd
+
 import lizard
 from pandas import DataFrame
 
 from training.cluster import cluster
 
 
-def add_metrics_to(frame: DataFrame) -> DataFrame:
+def add_metrics_to(frame: DataFrame, *read_cache) -> DataFrame:
     """modifies dataframe in place"""
+    if os.path.isfile('additional_metrics_cache') and read_cache:
+        cached_frame = pd.read_pickle('additional_metrics_cache')
+        return cached_frame
     frame['cc'] = frame.apply(
         lambda row: lizard.analyze_file.analyze_source_code(
             "placeholder.java",
@@ -16,6 +22,8 @@ def add_metrics_to(frame: DataFrame) -> DataFrame:
             "placeholder.java",
             row['code']).token_count,
         axis=1)
+    frame.to_pickle('additional_metrics_cache')
+    print('done adding metrics')
     return frame
 
 
