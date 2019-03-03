@@ -12,3 +12,4 @@ if __name__ == '__main__':
     frame = read_and_cache_csv(read_cache=SHOULD_CACHE, repo_root=REPO_ROOT)
     frame = add_metrics_to(frame)
     cluster(frame)
+
