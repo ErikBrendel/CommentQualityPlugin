@@ -80,6 +80,9 @@ public class TrainingWorker extends Thread {
                 };
                 cu.accept(visitor, export);
                 export.close();
+                if (export.getRowsWritten() < 2) {
+                    export.abort();
+                }
             });
         } catch (Exception ex) {
             throw new RuntimeException(ex);

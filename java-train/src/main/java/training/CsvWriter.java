@@ -7,10 +7,13 @@ public class CsvWriter {
 
     private final BufferedWriter writer;
     private final Closeable thingToClose;
+    private final File file;
     private boolean cellWritten = false;
+    private int rowsWritten = 0;
 
     public CsvWriter(File file) {
         try {
+            this.file = file;
             FileUtil.mkdirs(file.getParentFile());
             FileWriter writer = new FileWriter(file);
             thingToClose = writer;
@@ -64,6 +67,7 @@ public class CsvWriter {
         try {
             cellWritten = false;
             writer.write("\n");
+            rowsWritten++;
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -75,6 +79,18 @@ public class CsvWriter {
             thingToClose.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
+        }
+    }
+
+    public int getRowsWritten() {
+        return rowsWritten;
+    }
+
+    public void abort() {
+        if (file.exists()) {
+            if (!file.delete()) {
+                throw new RuntimeException("Could not delete file. Have you called close?");
+            }
         }
     }
 }

@@ -9,11 +9,11 @@ public class TrainingMain {
     public static String REPO_URL_START = "https://github.com/";
     public static String REPO_URL_END = ".git";
     private static String[] REPOS = { // their clone url is REPO_URL_START + this string + REPO_URL_END
-            //"apache/flink",
-            //"apache/camel",
-            //"elastic/elasticsearch",
-            //"spring-projects/spring-boot",
-            //"spring-projects/spring-framework",
+            "apache/flink",
+            "apache/camel",
+            "elastic/elasticsearch",
+            "spring-projects/spring-boot",
+            "spring-projects/spring-framework",
             "square/okhttp", // that's a small one
     };
     // find more at:
