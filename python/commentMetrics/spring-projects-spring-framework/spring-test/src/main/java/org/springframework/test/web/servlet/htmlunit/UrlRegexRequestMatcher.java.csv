@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public boolean matches(WebRequest request) {     String url = request.getUrl().toExternalForm().     return this.pattern.matcher(url).matches(). }

@@ -1,0 +1,50 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Collection<Field> fields() {     return fields.values(). }
+false;public;1;3;;public void globalForceSource(boolean globalForceSource) {     this.globalForceSource = globalForceSource. }
+false;;0;3;;boolean globalForceSource() {     return this.globalForceSource. }
+false;public;1;8;;public boolean forceSource(Field field) {     if (globalForceSource) {         return true.     }     Field _field = fields.get(field.field).     return _field == null ? false : _field.fieldOptions.forceSource. }
+false;public;0;3;;public String field() {     return field. }
+false;public;0;3;;public FieldOptions fieldOptions() {     return fieldOptions. }
+false;public;0;3;;public int fragmentCharSize() {     return fragmentCharSize. }
+false;public;0;3;;public int numberOfFragments() {     return numberOfFragments. }
+false;public;0;3;;public int fragmentOffset() {     return fragmentOffset. }
+false;public;0;3;;public String encoder() {     return encoder. }
+false;public;0;3;;public String[] preTags() {     return preTags. }
+false;public;0;3;;public String[] postTags() {     return postTags. }
+false;public;0;3;;public Boolean scoreOrdered() {     return scoreOrdered. }
+false;public;0;3;;public Boolean highlightFilter() {     return highlightFilter. }
+false;public;0;3;;public Boolean requireFieldMatch() {     return requireFieldMatch. }
+false;public;0;3;;public String highlighterType() {     return highlighterType. }
+false;public;0;3;;public String fragmenter() {     return fragmenter. }
+false;public;0;3;;public BoundaryScannerType boundaryScannerType() {     return boundaryScannerType. }
+false;public;0;3;;public int boundaryMaxScan() {     return boundaryMaxScan. }
+false;public;0;3;;public Character[] boundaryChars() {     return boundaryChars. }
+false;public;0;3;;public Locale boundaryScannerLocale() {     return boundaryScannerLocale. }
+false;public;0;3;;public Query highlightQuery() {     return highlightQuery. }
+false;public;0;3;;public int noMatchSize() {     return noMatchSize. }
+false;public;0;3;;public int phraseLimit() {     return phraseLimit. }
+false;public;0;3;;public Set<String> matchedFields() {     return matchedFields. }
+false;public;0;3;;public Map<String, Object> options() {     return options. }
+false;;1;4;;Builder fragmentCharSize(int fragmentCharSize) {     fieldOptions.fragmentCharSize = fragmentCharSize.     return this. }
+false;;1;4;;Builder numberOfFragments(int numberOfFragments) {     fieldOptions.numberOfFragments = numberOfFragments.     return this. }
+false;;1;4;;Builder fragmentOffset(int fragmentOffset) {     fieldOptions.fragmentOffset = fragmentOffset.     return this. }
+false;;1;4;;Builder encoder(String encoder) {     fieldOptions.encoder = encoder.     return this. }
+false;;1;4;;Builder preTags(String[] preTags) {     fieldOptions.preTags = preTags.     return this. }
+false;;1;4;;Builder postTags(String[] postTags) {     fieldOptions.postTags = postTags.     return this. }
+false;;1;4;;Builder scoreOrdered(boolean scoreOrdered) {     fieldOptions.scoreOrdered = scoreOrdered.     return this. }
+false;;1;4;;Builder highlightFilter(boolean highlightFilter) {     fieldOptions.highlightFilter = highlightFilter.     return this. }
+false;;1;4;;Builder requireFieldMatch(boolean requireFieldMatch) {     fieldOptions.requireFieldMatch = requireFieldMatch.     return this. }
+false;;1;4;;Builder highlighterType(String type) {     fieldOptions.highlighterType = type.     return this. }
+false;;1;4;;Builder forceSource(boolean forceSource) {     fieldOptions.forceSource = forceSource.     return this. }
+false;;1;4;;Builder fragmenter(String fragmenter) {     fieldOptions.fragmenter = fragmenter.     return this. }
+false;;1;4;;Builder boundaryScannerType(BoundaryScannerType boundaryScanner) {     fieldOptions.boundaryScannerType = boundaryScanner.     return this. }
+false;;1;4;;Builder boundaryMaxScan(int boundaryMaxScan) {     fieldOptions.boundaryMaxScan = boundaryMaxScan.     return this. }
+false;;1;4;;Builder boundaryChars(Character[] boundaryChars) {     fieldOptions.boundaryChars = boundaryChars.     return this. }
+false;;1;4;;Builder boundaryScannerLocale(Locale boundaryScannerLocale) {     fieldOptions.boundaryScannerLocale = boundaryScannerLocale.     return this. }
+false;;1;4;;Builder highlightQuery(Query highlightQuery) {     fieldOptions.highlightQuery = highlightQuery.     return this. }
+false;;1;4;;Builder noMatchSize(int noMatchSize) {     fieldOptions.noMatchSize = noMatchSize.     return this. }
+false;;1;4;;Builder phraseLimit(int phraseLimit) {     fieldOptions.phraseLimit = phraseLimit.     return this. }
+false;;1;4;;Builder matchedFields(Set<String> matchedFields) {     fieldOptions.matchedFields = matchedFields.     return this. }
+false;;1;4;;Builder options(Map<String, Object> options) {     fieldOptions.options = options.     return this. }
+false;;0;3;;FieldOptions build() {     return fieldOptions. }
+false;;1;60;;Builder merge(FieldOptions globalOptions) {     if (fieldOptions.preTags == null && globalOptions.preTags != null) {         fieldOptions.preTags = Arrays.copyOf(globalOptions.preTags, globalOptions.preTags.length).     }     if (fieldOptions.postTags == null && globalOptions.postTags != null) {         fieldOptions.postTags = Arrays.copyOf(globalOptions.postTags, globalOptions.postTags.length).     }     if (fieldOptions.highlightFilter == null) {         fieldOptions.highlightFilter = globalOptions.highlightFilter.     }     if (fieldOptions.scoreOrdered == null) {         fieldOptions.scoreOrdered = globalOptions.scoreOrdered.     }     if (fieldOptions.fragmentCharSize == -1) {         fieldOptions.fragmentCharSize = globalOptions.fragmentCharSize.     }     if (fieldOptions.numberOfFragments == -1) {         fieldOptions.numberOfFragments = globalOptions.numberOfFragments.     }     if (fieldOptions.encoder == null) {         fieldOptions.encoder = globalOptions.encoder.     }     if (fieldOptions.requireFieldMatch == null) {         fieldOptions.requireFieldMatch = globalOptions.requireFieldMatch.     }     if (fieldOptions.boundaryScannerType == null) {         fieldOptions.boundaryScannerType = globalOptions.boundaryScannerType.     }     if (fieldOptions.boundaryMaxScan == -1) {         fieldOptions.boundaryMaxScan = globalOptions.boundaryMaxScan.     }     if (fieldOptions.boundaryChars == null && globalOptions.boundaryChars != null) {         fieldOptions.boundaryChars = Arrays.copyOf(globalOptions.boundaryChars, globalOptions.boundaryChars.length).     }     if (fieldOptions.boundaryScannerLocale == null) {         fieldOptions.boundaryScannerLocale = globalOptions.boundaryScannerLocale.     }     if (fieldOptions.highlighterType == null) {         fieldOptions.highlighterType = globalOptions.highlighterType.     }     if (fieldOptions.fragmenter == null) {         fieldOptions.fragmenter = globalOptions.fragmenter.     }     if ((fieldOptions.options == null || fieldOptions.options.size() == 0) && globalOptions.options != null) {         fieldOptions.options = new HashMap<>(globalOptions.options).     }     if (fieldOptions.highlightQuery == null && globalOptions.highlightQuery != null) {         fieldOptions.highlightQuery = globalOptions.highlightQuery.     }     if (fieldOptions.noMatchSize == -1) {         fieldOptions.noMatchSize = globalOptions.noMatchSize.     }     if (fieldOptions.forceSource == null) {         fieldOptions.forceSource = globalOptions.forceSource.     }     if (fieldOptions.phraseLimit == -1) {         fieldOptions.phraseLimit = globalOptions.phraseLimit.     }     return this. }

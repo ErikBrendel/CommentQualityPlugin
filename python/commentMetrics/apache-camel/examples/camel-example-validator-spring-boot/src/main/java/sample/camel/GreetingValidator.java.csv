@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;10;;@Override public void validate(Message message, DataType type) throws ValidationException {     Object body = message.getBody().     LOG.info("Validating : [{}]", body).     if (body instanceof String && body.equals(greeting)) {         LOG.info("OK").     } else {         throw new ValidationException(message.getExchange(), "Wrong content").     } }

@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;public boolean matches(Exchange exchange) {     String body = exchange.getIn().getBody(String.class).     bodies.add(body).     return !"secret".equals(body). }
+false;public;0;3;;public List<String> getBodies() {     return bodies. }
+false;public;0;14;;@Test public void testFilterCustomPredicateAsFilter() throws Exception {     getMockEndpoint("mock:good").expectedBodiesReceived("Hello World", "Bye World").     template.sendBody("direct:start", "Hello World").     template.sendBody("direct:start", "secret").     template.sendBody("direct:start", "Bye World").     assertMockEndpointsSatisfied().     assertEquals("Hello World", filter.getBodies().get(0)).     assertEquals("secret", filter.getBodies().get(1)).     assertEquals("Bye World", filter.getBodies().get(2)). }
+false;public;0;8;;@Override public void configure() throws Exception {     from("direct:start").filter(filter).to("mock:good").end(). }
+false;protected;0;13;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").filter(filter).to("mock:good").end().         }     }. }

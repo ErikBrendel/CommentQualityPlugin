@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;15;;public CacheData getData(Long id) {     LOG.info("Creating data with ID = {}", id).     // simulating time-consuming calculation     try {         Thread.sleep(3000).     } catch (Exception e) {     }     CacheData data = new CacheData().     data.setId(id).     data.setValue(UUID.randomUUID().toString()).     data.setCreated(new Date()).     return data. }

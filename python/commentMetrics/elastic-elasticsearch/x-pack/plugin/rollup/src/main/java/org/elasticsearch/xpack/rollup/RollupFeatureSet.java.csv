@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String name() {     return XPackField.ROLLUP. }
+false;public;0;4;;@Override public String description() {     return "Time series pre-aggregation and rollup". }
+false;public;0;4;;@Override public boolean available() {     return licenseState != null && licenseState.isRollupAllowed(). }
+false;public;0;4;;@Override public boolean enabled() {     return enabled. }
+false;public;0;4;;@Override public Map<String, Object> nativeCodeInfo() {     return null. }
+false;public;1;5;;@Override public void usage(ActionListener<XPackFeatureSet.Usage> listener) {     // TODO expose the currently running rollup tasks on this node?  Unclear the best way to do that     listener.onResponse(new RollupFeatureSetUsage(available(), enabled())). }

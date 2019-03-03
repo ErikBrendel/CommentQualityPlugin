@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;14;;@Before public void start() throws Exception {     HttpHandler httpHandler = RouterFunctions.toHttpHandler(route(GET("/test"), request -> ServerResponse.ok().syncBody("It works!"))).     this.server = new ReactorHttpServer().     this.server.setHandler(httpHandler).     this.server.afterPropertiesSet().     this.server.start().     this.client = WebTestClient.bindToServer().baseUrl("http://localhost:" + this.server.getPort()).build(). }
+false;public;0;4;;@After public void stop() {     this.server.stop(). }
+false;public;0;7;;@Test public void test() {     this.client.get().uri("/test").exchange().expectStatus().isOk().expectBody(String.class).isEqualTo("It works!"). }

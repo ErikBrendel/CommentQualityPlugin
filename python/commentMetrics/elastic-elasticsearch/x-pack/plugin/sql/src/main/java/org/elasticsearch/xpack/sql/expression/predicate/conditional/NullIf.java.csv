@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected NodeInfo<? extends NullIf> info() {     return NodeInfo.create(this, NullIf::new, children().get(0), children().get(1)). }
+false;public;1;4;;@Override public Expression replaceChildren(List<Expression> newChildren) {     return new NullIf(source(), newChildren.get(0), newChildren.get(1)). }
+false;protected;0;5;;@Override protected TypeResolution resolveType() {     dataType = children().get(0).dataType().     return TypeResolution.TYPE_RESOLVED. }
+false;public;0;4;;@Override public DataType dataType() {     return dataType. }
+false;public;0;4;;@Override public boolean foldable() {     return Expressions.foldable(children()). }
+false;public;0;4;;@Override public Nullability nullable() {     return Nullability.UNKNOWN. }
+false;public;0;4;;@Override public Object fold() {     return NullIfProcessor.apply(children().get(0).fold(), children().get(1).fold()). }
+false;public;0;11;;@Override public ScriptTemplate asScript() {     ScriptTemplate left = asScript(children().get(0)).     ScriptTemplate right = asScript(children().get(1)).     String template = "{sql}.nullif(" + left.template() + "," + right.template() + ")".     ParamsBuilder params = paramsBuilder().     params.script(left.params()).     params.script(right.params()).     return new ScriptTemplate(formatTemplate(template), params.build(), dataType). }
+false;protected;0;5;;@Override protected Pipe makePipe() {     return new NullIfPipe(source(), this, Expressions.pipe(children().get(0)), Expressions.pipe(children().get(1))). }

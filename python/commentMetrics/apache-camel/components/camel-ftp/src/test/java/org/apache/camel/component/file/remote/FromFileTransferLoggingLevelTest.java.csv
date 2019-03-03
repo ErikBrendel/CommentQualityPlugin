@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;3;;protected String getFtpUrl() {     return "ftp://admin@localhost:" + getPort() + "/tmp2/camel?password=admin&transferLoggingLevel=INFO". }
+false;public;0;7;;@Test public void testTransferLoggingLevel() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMessageCount(2).     assertMockEndpointsSatisfied(). }
+false;public;0;4;;public void configure() throws Exception {     from(getFtpUrl()).to("mock:result").     from("file:src/main/data?noop=true").to(getFtpUrl()). }
+false;protected;0;8;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from(getFtpUrl()).to("mock:result").             from("file:src/main/data?noop=true").to(getFtpUrl()).         }     }. }

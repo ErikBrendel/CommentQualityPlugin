@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public Map<String, Object> parseMap(String json) {     return tryParse(() -> getObjectMapper().readValue(json, MAP_TYPE), Exception.class). }
+false;public;1;5;;@Override public List<Object> parseList(String json) {     return tryParse(() -> getObjectMapper().readValue(json, LIST_TYPE), Exception.class). }
+false;private;0;6;;private ObjectMapper getObjectMapper() {     if (this.objectMapper == null) {         this.objectMapper = new ObjectMapper().     }     return this.objectMapper. }

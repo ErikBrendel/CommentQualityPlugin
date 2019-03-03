@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public int getLineNumber() {     return location.map(l -> l.lineNumber).orElse(-1). }
+false;public;0;3;;public int getColumnNumber() {     return location.map(l -> l.columnNumber).orElse(-1). }
+false;public;0;4;;@Nullable public XContentLocation getLocation() {     return location.orElse(null). }
+false;public;0;4;;@Override public String getMessage() {     return location.map(l -> "[" + l.toString() + "] ").orElse("") + super.getMessage(). }

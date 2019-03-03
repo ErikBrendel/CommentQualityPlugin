@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected MatchNoneQueryBuilder doCreateTestQueryBuilder() {     return new MatchNoneQueryBuilder(). }
+false;protected;3;4;;@Override protected void doAssertLuceneQuery(MatchNoneQueryBuilder queryBuilder, Query query, SearchContext context) throws IOException {     assertThat(query, instanceOf(MatchNoDocsQuery.class)). }
+false;public;0;11;;public void testFromJson() throws IOException {     String json = "{\n" + "  \"match_none\" : {\n" + "    \"boost\" : 1.2\n" + "  }\n" + "}".     MatchNoneQueryBuilder parsed = (MatchNoneQueryBuilder) parseQuery(json).     checkGeneratedJson(json, parsed).     assertEquals(json, 1.2, parsed.boost(), 0.0001). }

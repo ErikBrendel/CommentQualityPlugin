@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;10;;@Override public AggregationProfileBreakdown getQueryBreakdown(Aggregator agg) {     List<String> path = getAggregatorPath(agg).     AggregationProfileBreakdown aggregationProfileBreakdown = profileBrakdownLookup.get(path).     if (aggregationProfileBreakdown == null) {         aggregationProfileBreakdown = super.getQueryBreakdown(agg).         profileBrakdownLookup.put(path, aggregationProfileBreakdown).     }     return aggregationProfileBreakdown. }
+false;public,static;1;8;;public static List<String> getAggregatorPath(Aggregator agg) {     LinkedList<String> path = new LinkedList<>().     while (agg != null) {         path.addFirst(agg.name()).         agg = agg.parent().     }     return path. }

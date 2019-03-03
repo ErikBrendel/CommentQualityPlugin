@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public Diff<T> diff(T previousState) {     if (this.get().equals(previousState)) {         return new CompleteDiff<>().     } else {         return new CompleteDiff<>(get()).     } }
+false;public,static;2;3;;public static <T extends Diffable<T>> Diff<T> readDiffFrom(Reader<T> reader, StreamInput in) throws IOException {     return new CompleteDiff<T>(reader, in). }
+false;public;1;9;;@Override public void writeTo(StreamOutput out) throws IOException {     if (part != null) {         out.writeBoolean(true).         part.writeTo(out).     } else {         out.writeBoolean(false).     } }
+false;public;1;8;;@Override public T apply(T part) {     if (this.part != null) {         return this.part.     } else {         return part.     } }
+false;public;0;4;;@SuppressWarnings("unchecked") public T get() {     return (T) this. }

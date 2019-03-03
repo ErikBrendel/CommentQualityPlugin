@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Bean @ConditionalOnBean(MeterRegistry.class) @ConditionalOnMissingBean public MetricsEndpoint metricsEndpoint(MeterRegistry registry) {     return new MetricsEndpoint(registry). }

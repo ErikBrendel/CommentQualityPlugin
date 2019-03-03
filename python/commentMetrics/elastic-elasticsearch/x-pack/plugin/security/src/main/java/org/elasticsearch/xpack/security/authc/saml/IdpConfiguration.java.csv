@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;3;/**  * The SAML identifier (as a URI) for the IDP  */ ;/**  * The SAML identifier (as a URI) for the IDP  */ String getEntityId() {     return entityId. }
+true;;0;3;/**  * A list of credentials that the IDP uses for signing messages.  * A trusted message should be signed with any one (or more) of these credentials.  */ ;/**  * A list of credentials that the IDP uses for signing messages.  * A trusted message should be signed with any one (or more) of these credentials.  */ List<Credential> getSigningCredentials() {     return signingCredentials.get(). }

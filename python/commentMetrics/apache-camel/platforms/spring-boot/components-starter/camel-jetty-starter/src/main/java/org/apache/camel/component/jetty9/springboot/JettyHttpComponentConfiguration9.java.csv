@@ -1,0 +1,67 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getSslKeyPassword() {     return sslKeyPassword. }
+false;public;1;3;;public void setSslKeyPassword(String sslKeyPassword) {     this.sslKeyPassword = sslKeyPassword. }
+false;public;0;3;;public String getSslPassword() {     return sslPassword. }
+false;public;1;3;;public void setSslPassword(String sslPassword) {     this.sslPassword = sslPassword. }
+false;public;0;3;;public String getKeystore() {     return keystore. }
+false;public;1;3;;public void setKeystore(String keystore) {     this.keystore = keystore. }
+false;public;0;3;;public String getErrorHandler() {     return errorHandler. }
+false;public;1;3;;public void setErrorHandler(String errorHandler) {     this.errorHandler = errorHandler. }
+false;public;0;3;;public String getSslSocketConnectors() {     return sslSocketConnectors. }
+false;public;1;3;;public void setSslSocketConnectors(String sslSocketConnectors) {     this.sslSocketConnectors = sslSocketConnectors. }
+false;public;0;3;;public String getSocketConnectors() {     return socketConnectors. }
+false;public;1;3;;public void setSocketConnectors(String socketConnectors) {     this.socketConnectors = socketConnectors. }
+false;public;0;3;;public Integer getHttpClientMinThreads() {     return httpClientMinThreads. }
+false;public;1;3;;public void setHttpClientMinThreads(Integer httpClientMinThreads) {     this.httpClientMinThreads = httpClientMinThreads. }
+false;public;0;3;;public Integer getHttpClientMaxThreads() {     return httpClientMaxThreads. }
+false;public;1;3;;public void setHttpClientMaxThreads(Integer httpClientMaxThreads) {     this.httpClientMaxThreads = httpClientMaxThreads. }
+false;public;0;3;;public Integer getMinThreads() {     return minThreads. }
+false;public;1;3;;public void setMinThreads(Integer minThreads) {     this.minThreads = minThreads. }
+false;public;0;3;;public Integer getMaxThreads() {     return maxThreads. }
+false;public;1;3;;public void setMaxThreads(Integer maxThreads) {     this.maxThreads = maxThreads. }
+false;public;0;3;;public String getThreadPool() {     return threadPool. }
+false;public;1;3;;public void setThreadPool(String threadPool) {     this.threadPool = threadPool. }
+false;public;0;3;;public Boolean getEnableJmx() {     return enableJmx. }
+false;public;1;3;;public void setEnableJmx(Boolean enableJmx) {     this.enableJmx = enableJmx. }
+false;public;0;3;;public String getJettyHttpBinding() {     return jettyHttpBinding. }
+false;public;1;3;;public void setJettyHttpBinding(String jettyHttpBinding) {     this.jettyHttpBinding = jettyHttpBinding. }
+false;public;0;3;;public String getHttpBinding() {     return httpBinding. }
+false;public;1;3;;public void setHttpBinding(String httpBinding) {     this.httpBinding = httpBinding. }
+false;public;0;3;;public String getHttpConfiguration() {     return httpConfiguration. }
+false;public;1;3;;public void setHttpConfiguration(String httpConfiguration) {     this.httpConfiguration = httpConfiguration. }
+false;public;0;3;;public String getMbContainer() {     return mbContainer. }
+false;public;1;3;;public void setMbContainer(String mbContainer) {     this.mbContainer = mbContainer. }
+false;public;0;3;;public String getSslSocketConnectorProperties() {     return sslSocketConnectorProperties. }
+false;public;1;4;;public void setSslSocketConnectorProperties(String sslSocketConnectorProperties) {     this.sslSocketConnectorProperties = sslSocketConnectorProperties. }
+false;public;0;3;;public String getSocketConnectorProperties() {     return socketConnectorProperties. }
+false;public;1;3;;public void setSocketConnectorProperties(String socketConnectorProperties) {     this.socketConnectorProperties = socketConnectorProperties. }
+false;public;0;3;;public Long getContinuationTimeout() {     return continuationTimeout. }
+false;public;1;3;;public void setContinuationTimeout(Long continuationTimeout) {     this.continuationTimeout = continuationTimeout. }
+false;public;0;3;;public Boolean getUseContinuation() {     return useContinuation. }
+false;public;1;3;;public void setUseContinuation(Boolean useContinuation) {     this.useContinuation = useContinuation. }
+false;public;0;3;;public String getSslContextParameters() {     return sslContextParameters. }
+false;public;1;3;;public void setSslContextParameters(String sslContextParameters) {     this.sslContextParameters = sslContextParameters. }
+false;public;0;3;;public Boolean getUseGlobalSslContextParameters() {     return useGlobalSslContextParameters. }
+false;public;1;4;;public void setUseGlobalSslContextParameters(Boolean useGlobalSslContextParameters) {     this.useGlobalSslContextParameters = useGlobalSslContextParameters. }
+false;public;0;3;;public Integer getResponseBufferSize() {     return responseBufferSize. }
+false;public;1;3;;public void setResponseBufferSize(Integer responseBufferSize) {     this.responseBufferSize = responseBufferSize. }
+false;public;0;3;;public Integer getRequestBufferSize() {     return requestBufferSize. }
+false;public;1;3;;public void setRequestBufferSize(Integer requestBufferSize) {     this.requestBufferSize = requestBufferSize. }
+false;public;0;3;;public Integer getRequestHeaderSize() {     return requestHeaderSize. }
+false;public;1;3;;public void setRequestHeaderSize(Integer requestHeaderSize) {     this.requestHeaderSize = requestHeaderSize. }
+false;public;0;3;;public Integer getResponseHeaderSize() {     return responseHeaderSize. }
+false;public;1;3;;public void setResponseHeaderSize(Integer responseHeaderSize) {     this.responseHeaderSize = responseHeaderSize. }
+false;public;0;3;;public String getProxyHost() {     return proxyHost. }
+false;public;1;3;;public void setProxyHost(String proxyHost) {     this.proxyHost = proxyHost. }
+false;public;0;3;;public Integer getProxyPort() {     return proxyPort. }
+false;public;1;3;;public void setProxyPort(Integer proxyPort) {     this.proxyPort = proxyPort. }
+false;public;0;3;;public Boolean getUseXForwardedForHeader() {     return useXForwardedForHeader. }
+false;public;1;3;;public void setUseXForwardedForHeader(Boolean useXForwardedForHeader) {     this.useXForwardedForHeader = useXForwardedForHeader. }
+false;public;0;3;;public Boolean getSendServerVersion() {     return sendServerVersion. }
+false;public;1;3;;public void setSendServerVersion(Boolean sendServerVersion) {     this.sendServerVersion = sendServerVersion. }
+false;public;0;3;;public Boolean getAllowJavaSerializedObject() {     return allowJavaSerializedObject. }
+false;public;1;3;;public void setAllowJavaSerializedObject(Boolean allowJavaSerializedObject) {     this.allowJavaSerializedObject = allowJavaSerializedObject. }
+false;public;0;3;;public String getHeaderFilterStrategy() {     return headerFilterStrategy. }
+false;public;1;3;;public void setHeaderFilterStrategy(String headerFilterStrategy) {     this.headerFilterStrategy = headerFilterStrategy. }
+false;public;0;3;;public Boolean getResolvePropertyPlaceholders() {     return resolvePropertyPlaceholders. }
+false;public;1;4;;public void setResolvePropertyPlaceholders(Boolean resolvePropertyPlaceholders) {     this.resolvePropertyPlaceholders = resolvePropertyPlaceholders. }

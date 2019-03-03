@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;// **************************************** // Properties // **************************************** public HealthCheckConfiguration getDefaultConfiguration() {     return defaultConfiguration. }
+false;public;1;3;;public void setDefaultConfiguration(HealthCheckConfiguration defaultConfiguration) {     this.defaultConfiguration = defaultConfiguration. }
+false;public;0;3;;public Set<String> getChecks() {     return checks. }
+false;public;1;3;;public void addCheck(String id) {     checks.add(id). }
+false;public;0;3;;public Map<String, HealthCheckConfiguration> getConfigurations() {     return configurations. }
+false;public;2;7;;public void addConfiguration(String id, HealthCheckConfiguration configuration) {     if (this.configurations == null) {         this.configurations = new HashMap<>().     }     this.configurations.put(id, configuration). }
+false;public;0;8;;// **************************************** // Copy // **************************************** @Override public ConsulHealthCheckRepositoryConfiguration copy() {     try {         return (ConsulHealthCheckRepositoryConfiguration) super.clone().     } catch (CloneNotSupportedException e) {         throw new RuntimeCamelException(e).     } }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;1;1;/**  * Returns the exit code that should be returned from the application.  * @param exception the exception causing the application to exit  * @return the exit code or {@code 0}.  */ ;/**  * Returns the exit code that should be returned from the application.  * @param exception the exception causing the application to exit  * @return the exit code or {@code 0}.  */ int getExitCode(Throwable exception).

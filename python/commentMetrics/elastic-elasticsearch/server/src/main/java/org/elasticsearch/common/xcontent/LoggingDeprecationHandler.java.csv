@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public void usedDeprecatedName(String usedName, String modernName) {     deprecationLogger.deprecated("Deprecated field [{}] used, expected [{}] instead", usedName, modernName). }
+false;public;2;4;;@Override public void usedDeprecatedField(String usedName, String replacedWith) {     deprecationLogger.deprecated("Deprecated field [{}] used, replaced by [{}]", usedName, replacedWith). }

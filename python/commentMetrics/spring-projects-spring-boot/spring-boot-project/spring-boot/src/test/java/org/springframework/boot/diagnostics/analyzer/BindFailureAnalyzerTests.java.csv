@@ -1,0 +1,20 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void analysisForUnboundElementsIsNull() {     FailureAnalysis analysis = performAnalysis(UnboundElementsFailureConfiguration.class, "test.foo.listValue[0]=hello", "test.foo.listValue[2]=world").     assertThat(analysis).isNull(). }
+false;public;0;6;;@Test public void analysisForValidationExceptionIsNull() {     FailureAnalysis analysis = performAnalysis(FieldValidationFailureConfiguration.class, "test.foo.value=1").     assertThat(analysis).isNull(). }
+false;public;0;8;;@Test public void bindExceptionDueToOtherFailure() {     FailureAnalysis analysis = performAnalysis(GenericFailureConfiguration.class, "test.foo.value=alpha").     assertThat(analysis.getDescription()).contains(failure("test.foo.value", "alpha", "\"test.foo.value\" from property source \"test\"", "failed to convert java.lang.String to int")). }
+false;public;0;8;;@Test public void bindExceptionForUnknownValueInEnumListsValidValuesInAction() {     FailureAnalysis analysis = performAnalysis(EnumFailureConfiguration.class, "test.foo.fruit=apple,strawberry").     for (Fruit fruit : Fruit.values()) {         assertThat(analysis.getAction()).contains(fruit.name()).     } }
+false;public;0;7;;@Test public void bindExceptionWithNestedFailureShouldDisplayNestedMessage() {     FailureAnalysis analysis = performAnalysis(NestedFailureConfiguration.class, "test.foo.value=hello").     assertThat(analysis.getDescription()).contains(failure("test.foo.value", "hello", "\"test.foo.value\" from property source \"test\"", "This is a failure")). }
+false;private,static;4;6;;private static String failure(String property, String value, String origin, String reason) {     return String.format("Property: %s%n    Value: %s%n    Origin: %s%n    Reason: %s", property, value, origin, reason). }
+false;private;2;6;;private FailureAnalysis performAnalysis(Class<?> configuration, String... environment) {     BeanCreationException failure = createFailure(configuration, environment).     assertThat(failure).isNotNull().     return new BindFailureAnalyzer().analyze(failure). }
+false;private;2;14;;private BeanCreationException createFailure(Class<?> configuration, String... environment) {     try {         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext().         addEnvironment(context, environment).         context.register(configuration).         context.refresh().         context.close().         return null.     } catch (BeanCreationException ex) {         return ex.     } }
+false;private;2;12;;private void addEnvironment(AnnotationConfigApplicationContext context, String[] environment) {     MutablePropertySources sources = context.getEnvironment().getPropertySources().     Map<String, Object> map = new HashMap<>().     for (String pair : environment) {         int index = pair.indexOf("=").         String key = (index > 0) ? pair.substring(0, index) : pair.         String value = (index > 0) ? pair.substring(index + 1) : "".         map.put(key.trim(), value.trim()).     }     sources.addFirst(new MapPropertySource("test", map)). }
+false;public;0;3;;public int getValue() {     return this.value. }
+false;public;1;3;;public void setValue(int value) {     this.value = value. }
+false;public;0;3;;public List<String> getListValue() {     return this.listValue. }
+false;public;1;3;;public void setListValue(List<String> listValue) {     this.listValue = listValue. }
+false;public;0;3;;public int getValue() {     return this.value. }
+false;public;1;3;;public void setValue(int value) {     this.value = value. }
+false;public;0;3;;public Set<Fruit> getFruit() {     return this.fruit. }
+false;public;1;3;;public void setFruit(Set<Fruit> fruit) {     this.fruit = fruit. }
+false;public;0;3;;public String getValue() {     return this.value. }
+false;public;1;3;;public void setValue(String value) {     throw new RuntimeException("This is a failure"). }

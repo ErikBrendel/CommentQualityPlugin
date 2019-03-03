@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void testClientInvocation() throws Exception {     // set the client's service access point     Client client = new Client("http://localhost:" + port + "/GreeterContext/SOAPMessageService").     // invoke the services     String response = client.invoke().     assertEquals("Get a wrong response", "Greetings from Apache Camel!!!! Request was  Hello Camel!!", response). }
+false;protected;0;7;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     port = AvailablePortFinder.getNextAvailable().     System.setProperty("port", String.valueOf(port)).     return new ClassPathXmlApplicationContext(new String[] { "/META-INF/spring/CamelCXFProviderRouteConfig.xml" }). }

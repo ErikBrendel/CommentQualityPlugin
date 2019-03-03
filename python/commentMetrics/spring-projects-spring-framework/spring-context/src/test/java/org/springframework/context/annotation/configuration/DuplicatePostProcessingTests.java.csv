@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void testWithFactoryBeanAndEventListener() {     new AnnotationConfigApplicationContext(Config.class).getBean(ExampleBean.class). }
+false;public;0;4;;@Bean public ExampleFactoryBean exampleFactory() {     return new ExampleFactoryBean(). }
+false;public,static;0;4;;@Bean public static ExampleBeanPostProcessor exampleBeanPostProcessor() {     return new ExampleBeanPostProcessor(). }
+false;public;0;4;;@Bean public ExampleApplicationEventListener exampleApplicationEventListener() {     return new ExampleApplicationEventListener(). }
+false;public;0;4;;@Override public ExampleBean getObject() {     return this.exampleBean. }
+false;public;0;4;;@Override public Class<?> getObjectType() {     return ExampleBean.class. }
+false;public;0;4;;@Override public boolean isSingleton() {     return true. }
+false;public;2;4;;@Override public Object postProcessBeforeInitialization(Object bean, String beanName) {     return bean. }
+false;public;2;7;;@Override public Object postProcessAfterInitialization(Object bean, String beanName) {     if (bean instanceof ExampleBean) {         this.applicationContext.publishEvent(new ExampleApplicationEvent(this)).     }     return bean. }
+false;public;1;4;;@Override public void setApplicationContext(ApplicationContext applicationContext) {     this.applicationContext = applicationContext. }
+false;public;1;4;;@Override public void onApplicationEvent(ExampleApplicationEvent event) {     this.beanFactory.getBean(ExampleBean.class). }
+false;public;1;4;;@Override public void setBeanFactory(BeanFactory beanFactory) {     this.beanFactory = beanFactory. }

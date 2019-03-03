@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public WordpressComponentConfiguration getConfiguration() {     return configuration. }
+false;public;0;4;;@Override public WordpressEndpoint getEndpoint() {     return (WordpressEndpoint) super.getEndpoint(). }
+false;public,final;1;12;;@Override public final void process(Exchange exchange) throws Exception {     if (this.getConfiguration().getId() == null) {         exchange.getMessage().setBody(this.processInsert(exchange)).     } else {         if (this.getEndpoint().getOperationDetail() == null) {             exchange.getMessage().setBody(this.processUpdate(exchange)).         } else {             exchange.getMessage().setBody(this.processDelete(exchange)).         }     } }
+false;protected,abstract;1;1;;protected abstract T processInsert(Exchange exchange).
+false;protected,abstract;1;1;;protected abstract T processUpdate(Exchange exchange).
+false;protected,abstract;1;1;;protected abstract T processDelete(Exchange exchange).

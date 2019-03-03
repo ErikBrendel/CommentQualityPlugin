@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;2;5;;@Override protected boolean isCandidateForProperty(Method method, Class<?> targetClass) {     Class<?> clazz = method.getDeclaringClass().     return (clazz != Object.class && clazz != Class.class && !ClassLoader.class.isAssignableFrom(targetClass)). }
+true;public,static;0;3;/**  * Create a new data-binding property accessor for read-only operations.  */ ;/**  * Create a new data-binding property accessor for read-only operations.  */ public static DataBindingPropertyAccessor forReadOnlyAccess() {     return new DataBindingPropertyAccessor(false). }
+true;public,static;0;3;/**  * Create a new data-binding property accessor for read-write operations.  */ ;/**  * Create a new data-binding property accessor for read-write operations.  */ public static DataBindingPropertyAccessor forReadWriteAccess() {     return new DataBindingPropertyAccessor(true). }

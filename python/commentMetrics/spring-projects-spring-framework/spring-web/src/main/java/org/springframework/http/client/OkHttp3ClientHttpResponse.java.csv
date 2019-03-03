@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public int getRawStatusCode() {     return this.response.code(). }
+false;public;0;4;;@Override public String getStatusText() {     return this.response.message(). }
+false;public;0;5;;@Override public InputStream getBody() throws IOException {     ResponseBody body = this.response.body().     return (body != null ? body.byteStream() : StreamUtils.emptyInput()). }
+false;public;0;14;;@Override public HttpHeaders getHeaders() {     HttpHeaders headers = this.headers.     if (headers == null) {         headers = new HttpHeaders().         for (String headerName : this.response.headers().names()) {             for (String headerValue : this.response.headers(headerName)) {                 headers.add(headerName, headerValue).             }         }         this.headers = headers.     }     return headers. }
+false;public;0;7;;@Override public void close() {     ResponseBody body = this.response.body().     if (body != null) {         body.close().     } }

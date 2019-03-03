@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void SPR8434() {     AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext().     ctx.register(UserServiceImpl.class, Foo.class).     ctx.refresh().     assertNotNull(ctx.getBean(UserServiceImpl.class).object). }
+false;public,abstract;1;1;;public abstract void setObject(D object).
+false;public;1;9;;@Override @Inject @Named("userObject") public void setObject(Foo object) {     if (this.object != null) {         throw new IllegalStateException("Already called").     }     this.object = object. }

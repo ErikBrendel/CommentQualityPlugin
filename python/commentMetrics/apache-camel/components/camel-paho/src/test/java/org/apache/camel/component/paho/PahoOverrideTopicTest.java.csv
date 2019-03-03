@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected boolean useJmx() {     return false. }
+false;public;0;8;;@Override public void doPreSetup() throws Exception {     super.doPreSetup().     broker = new BrokerService().     broker.setPersistent(false).     broker.addConnector("mqtt://localhost:" + mqttPort).     broker.start(). }
+false;public;0;6;;@Override @After public void tearDown() throws Exception {     super.tearDown().     broker.stop(). }
+false;public;0;6;;@Override public void configure() throws Exception {     from("direct:test").to("paho:queue?brokerUrl=tcp://localhost:" + mqttPort).     from("paho:myoverride?brokerUrl=tcp://localhost:" + mqttPort).to("mock:test"). }
+false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:test").to("paho:queue?brokerUrl=tcp://localhost:" + mqttPort).             from("paho:myoverride?brokerUrl=tcp://localhost:" + mqttPort).to("mock:test").         }     }. }
+false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry registry = super.createRegistry().     registry.bind("connectOptions", connectOptions).     return registry. }
+false;public;0;11;;// Tests @Test public void shouldOverride() throws InterruptedException {     // Given     getMockEndpoint("mock:test").expectedMessageCount(1).     // When     template.sendBodyAndHeader("direct:test", "Hello World", PahoConstants.CAMEL_PAHO_OVERRIDE_TOPIC, "myoverride").     // Then     assertMockEndpointsSatisfied(). }

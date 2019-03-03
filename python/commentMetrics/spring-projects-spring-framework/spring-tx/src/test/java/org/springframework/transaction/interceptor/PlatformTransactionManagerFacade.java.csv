@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public TransactionStatus getTransaction(@Nullable TransactionDefinition definition) {     return delegate.getTransaction(definition). }
+false;public;1;4;;@Override public void commit(TransactionStatus status) {     delegate.commit(status). }
+false;public;1;4;;@Override public void rollback(TransactionStatus status) {     delegate.rollback(status). }

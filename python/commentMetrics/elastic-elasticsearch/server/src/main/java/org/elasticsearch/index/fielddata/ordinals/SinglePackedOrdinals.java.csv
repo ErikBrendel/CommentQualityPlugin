@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public long ramBytesUsed() {     return RamUsageEstimator.NUM_BYTES_OBJECT_REF + reader.ramBytesUsed(). }
+false;public;0;4;;@Override public Collection<Accountable> getChildResources() {     return Collections.singleton(Accountables.namedAccountable("reader", reader)). }
+false;public;1;4;;@Override public SortedSetDocValues ordinals(ValuesHolder values) {     return (SortedSetDocValues) DocValues.singleton(new Docs(this, values)). }
+false;public;0;4;;@Override public int getValueCount() {     return maxOrd. }
+false;public;1;4;;@Override public BytesRef lookupOrd(int ord) {     return values.lookupOrd(ord). }
+false;public;0;4;;@Override public int ordValue() {     return currentOrd. }
+false;public;1;6;;@Override public boolean advanceExact(int docID) throws IOException {     currentDoc = docID.     currentOrd = (int) (reader.get(docID) - 1).     return currentOrd != -1. }
+false;public;0;4;;@Override public int docID() {     return currentDoc. }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void accessToHealthEndpointShouldNotBeRestricted() {     assertThat(AccessLevel.RESTRICTED.isAccessAllowed("health")).isTrue().     assertThat(AccessLevel.FULL.isAccessAllowed("health")).isTrue(). }
+false;public;0;5;;@Test public void accessToInfoEndpointShouldNotBeRestricted() {     assertThat(AccessLevel.RESTRICTED.isAccessAllowed("info")).isTrue().     assertThat(AccessLevel.FULL.isAccessAllowed("info")).isTrue(). }
+false;public;0;5;;@Test public void accessToDiscoveryEndpointShouldNotBeRestricted() {     assertThat(AccessLevel.RESTRICTED.isAccessAllowed("")).isTrue().     assertThat(AccessLevel.FULL.isAccessAllowed("")).isTrue(). }
+false;public;0;5;;@Test public void accessToAnyOtherEndpointShouldBeRestricted() {     assertThat(AccessLevel.RESTRICTED.isAccessAllowed("env")).isFalse().     assertThat(AccessLevel.FULL.isAccessAllowed("")).isTrue(). }

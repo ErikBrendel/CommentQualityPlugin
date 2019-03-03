@@ -1,0 +1,16 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public SimpleJdbcInsert withTableName(String tableName) {     setTableName(tableName).     return this. }
+false;public;1;5;;@Override public SimpleJdbcInsert withSchemaName(String schemaName) {     setSchemaName(schemaName).     return this. }
+false;public;1;5;;@Override public SimpleJdbcInsert withCatalogName(String catalogName) {     setCatalogName(catalogName).     return this. }
+false;public;1;5;;@Override public SimpleJdbcInsert usingColumns(String... columnNames) {     setColumnNames(Arrays.asList(columnNames)).     return this. }
+false;public;1;5;;@Override public SimpleJdbcInsert usingGeneratedKeyColumns(String... columnNames) {     setGeneratedKeyNames(columnNames).     return this. }
+false;public;0;5;;@Override public SimpleJdbcInsertOperations withoutTableColumnMetaDataAccess() {     setAccessTableColumnMetaData(false).     return this. }
+false;public;0;5;;@Override public SimpleJdbcInsertOperations includeSynonymsForTableColumnMetaData() {     setOverrideIncludeSynonymsDefault(true).     return this. }
+false;public;1;4;;@Override public int execute(Map<String, ?> args) {     return doExecute(args). }
+false;public;1;4;;@Override public int execute(SqlParameterSource parameterSource) {     return doExecute(parameterSource). }
+false;public;1;4;;@Override public Number executeAndReturnKey(Map<String, ?> args) {     return doExecuteAndReturnKey(args). }
+false;public;1;4;;@Override public Number executeAndReturnKey(SqlParameterSource parameterSource) {     return doExecuteAndReturnKey(parameterSource). }
+false;public;1;4;;@Override public KeyHolder executeAndReturnKeyHolder(Map<String, ?> args) {     return doExecuteAndReturnKeyHolder(args). }
+false;public;1;4;;@Override public KeyHolder executeAndReturnKeyHolder(SqlParameterSource parameterSource) {     return doExecuteAndReturnKeyHolder(parameterSource). }
+false;public;1;5;;@Override @SuppressWarnings("unchecked") public int[] executeBatch(Map<String, ?>... batch) {     return doExecuteBatch(batch). }
+false;public;1;4;;@Override public int[] executeBatch(SqlParameterSource... batch) {     return doExecuteBatch(batch). }

@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;3;;Index getIndex() {     return index. }
+false;;0;3;;String getPolicy() {     return policy. }
+false;;0;3;;Step.StepKey getCurrentStepKey() {     return currentStepKey. }
+false;;0;3;;ToXContentObject getStepInfo() {     return stepInfo. }
+false;public;1;19;;@Override public ClusterState execute(ClusterState currentState) throws IOException {     IndexMetaData idxMeta = currentState.getMetaData().index(index).     if (idxMeta == null) {         // Index must have been since deleted, ignore it         return currentState.     }     Settings indexSettings = idxMeta.getSettings().     LifecycleExecutionState indexILMData = LifecycleExecutionState.fromIndexMetadata(idxMeta).     if (policy.equals(LifecycleSettings.LIFECYCLE_NAME_SETTING.get(indexSettings)) && Objects.equals(currentStepKey, IndexLifecycleRunner.getCurrentStepKey(indexILMData))) {         return IndexLifecycleRunner.addStepInfoToClusterState(index, currentState, stepInfo).     } else {         // either case we don't want to do anything now         return currentState.     } }
+false;public;2;5;;@Override public void onFailure(String source, Exception e) {     throw new ElasticsearchException("policy [" + policy + "] for index [" + index.getName() + "] failed trying to set step info for step [" + currentStepKey + "].", e). }
+false;public;2;7;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     ElasticsearchException.generateThrowableXContent(builder, params, exception).     builder.endObject().     return builder. }

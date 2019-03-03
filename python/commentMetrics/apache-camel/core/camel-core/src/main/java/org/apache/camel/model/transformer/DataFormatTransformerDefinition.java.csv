@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getRef() {     return ref. }
+true;public;1;3;/**  * Set the reference of the DataFormat.  *  * @param ref reference of the DataFormat  */ ;/**  * Set the reference of the DataFormat.  *  * @param ref reference of the DataFormat  */ public void setRef(String ref) {     this.ref = ref. }
+false;public;0;3;;public DataFormatDefinition getDataFormatType() {     return dataFormatType. }
+true;public;1;3;/**  * The data format to be used  */ ;/**  * The data format to be used  */ public void setDataFormatType(DataFormatDefinition dataFormatType) {     this.dataFormatType = dataFormatType. }

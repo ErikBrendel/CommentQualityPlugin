@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;@Override public void close() throws IOException { }
+false;public;0;4;;@Override public long getFilePointer() {     return pos. }
+false;public;1;9;;@Override public void seek(long l) throws IOException {     if (l < 0) {         throw new IllegalArgumentException("Seeking to negative position: " + pos).     } else if (l > length) {         throw new EOFException("seek past EOF").     }     pos = (int) l. }
+false;public;0;4;;@Override public long length() {     return length. }
+false;public;3;9;;@Override public IndexInput slice(String sliceDescription, long offset, long length) throws IOException {     if (offset >= 0L && length >= 0L && offset + length <= this.length) {         return new ByteArrayIndexInput(sliceDescription, bytes, this.offset + (int) offset, (int) length).     } else {         throw new IllegalArgumentException("slice() " + sliceDescription + " out of bounds: offset=" + offset + ",length=" + length + ",fileLength=" + this.length + ": " + this).     } }
+false;public;0;7;;@Override public byte readByte() throws IOException {     if (pos >= offset + length) {         throw new EOFException("seek past EOF").     }     return bytes[offset + pos++]. }
+false;public;3;8;;@Override public void readBytes(final byte[] b, final int offset, int len) throws IOException {     if (pos + len > this.offset + length) {         throw new EOFException("seek past EOF").     }     System.arraycopy(bytes, this.offset + pos, b, offset, len).     pos += len. }

@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String type() {     return TYPE. }
+true;public;1;3;/**  * It's the responsibility of the trigger engine implementation to select the appropriate jobs  * from the given list of jobs  */ ;/**  * It's the responsibility of the trigger engine implementation to select the appropriate jobs  * from the given list of jobs  */ @Override public void start(Collection<Watch> jobs) { }
+false;public;0;3;;@Override public void stop() { }
+false;public;1;3;;@Override public void register(Consumer<Iterable<TriggerEvent>> consumer) { }
+false;public;1;3;;@Override public void add(Watch job) { }
+false;public;0;3;;@Override public void pauseExecution() { }
+false;public;1;4;;@Override public boolean remove(String jobId) {     return false. }
+false;public;3;15;;@Override public ManualTriggerEvent simulateEvent(String jobId, @Nullable Map<String, Object> data, TriggerService service) {     if (data == null) {         throw illegalArgument("could not simulate manual trigger event. missing required simulated trigger type").     }     if (data.size() == 1) {         String type = data.keySet().iterator().next().         return new ManualTriggerEvent(jobId, service.simulateEvent(type, jobId, data)).     }     Object type = data.get("type").     if (type instanceof String) {         return new ManualTriggerEvent(jobId, service.simulateEvent((String) type, jobId, data)).     }     throw illegalArgument("could not simulate manual trigger event. could not resolve simulated trigger type"). }
+false;public;2;4;;@Override public ManualTrigger parseTrigger(String context, XContentParser parser) throws IOException {     return ManualTrigger.parse(parser). }
+false;public;4;5;;@Override public ManualTriggerEvent parseTriggerEvent(TriggerService service, String watchId, String context, XContentParser parser) throws IOException {     return ManualTriggerEvent.parse(service, watchId, context, parser). }

@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;14;;// SPR-11692 @Test @SuppressWarnings("unchecked") public void expressionIsCacheBasedOnActualMethod() {     ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(SharedConfig.class, Spr11692Config.class).     BaseDao<User> userDao = (BaseDao<User>) context.getBean("userDao").     BaseDao<Order> orderDao = (BaseDao<Order>) context.getBean("orderDao").     userDao.persist(new User("1")).     orderDao.persist(new Order("2")).     context.close(). }
+false;public;0;4;;@Bean public BaseDao<User> userDao() {     return new UserDaoImpl(). }
+false;public;0;4;;@Bean public BaseDao<Order> orderDao() {     return new OrderDaoImpl(). }
+false;;1;1;;T persist(T t).
+false;public;1;5;;@Override @CachePut(value = "users", key = "#user.id") public User persist(User user) {     return user. }
+false;public;1;5;;@Override @CachePut(value = "orders", key = "#order.id") public Order persist(Order order) {     return order. }
+false;public;0;4;;@SuppressWarnings("unused") public String getId() {     return this.id. }
+false;public;0;4;;@SuppressWarnings("unused") public String getId() {     return this.id. }
+false;public;0;5;;@Override @Bean public CacheManager cacheManager() {     return new ConcurrentMapCacheManager(). }

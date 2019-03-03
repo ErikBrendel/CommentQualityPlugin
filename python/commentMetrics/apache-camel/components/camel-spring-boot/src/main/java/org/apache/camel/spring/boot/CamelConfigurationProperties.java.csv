@@ -1,0 +1,129 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;// Getters & setters public String getName() {     return name. }
+false;public;1;3;;public void setName(String name) {     this.name = name. }
+false;public;0;3;;public int getShutdownTimeout() {     return shutdownTimeout. }
+false;public;1;3;;public void setShutdownTimeout(int shutdownTimeout) {     this.shutdownTimeout = shutdownTimeout. }
+false;public;0;3;;public boolean isShutdownSuppressLoggingOnTimeout() {     return shutdownSuppressLoggingOnTimeout. }
+false;public;1;3;;public void setShutdownSuppressLoggingOnTimeout(boolean shutdownSuppressLoggingOnTimeout) {     this.shutdownSuppressLoggingOnTimeout = shutdownSuppressLoggingOnTimeout. }
+false;public;0;3;;public boolean isShutdownNowOnTimeout() {     return shutdownNowOnTimeout. }
+false;public;1;3;;public void setShutdownNowOnTimeout(boolean shutdownNowOnTimeout) {     this.shutdownNowOnTimeout = shutdownNowOnTimeout. }
+false;public;0;3;;public boolean isShutdownRoutesInReverseOrder() {     return shutdownRoutesInReverseOrder. }
+false;public;1;3;;public void setShutdownRoutesInReverseOrder(boolean shutdownRoutesInReverseOrder) {     this.shutdownRoutesInReverseOrder = shutdownRoutesInReverseOrder. }
+false;public;0;3;;public boolean isShutdownLogInflightExchangesOnTimeout() {     return shutdownLogInflightExchangesOnTimeout. }
+false;public;1;3;;public void setShutdownLogInflightExchangesOnTimeout(boolean shutdownLogInflightExchangesOnTimeout) {     this.shutdownLogInflightExchangesOnTimeout = shutdownLogInflightExchangesOnTimeout. }
+false;public;0;3;;public boolean isJmxEnabled() {     return jmxEnabled. }
+false;public;1;3;;public void setJmxEnabled(boolean jmxEnabled) {     this.jmxEnabled = jmxEnabled. }
+false;public;0;3;;public int getProducerTemplateCacheSize() {     return producerTemplateCacheSize. }
+false;public;1;3;;public void setProducerTemplateCacheSize(int producerTemplateCacheSize) {     this.producerTemplateCacheSize = producerTemplateCacheSize. }
+false;public;0;3;;public int getConsumerTemplateCacheSize() {     return consumerTemplateCacheSize. }
+false;public;1;3;;public void setConsumerTemplateCacheSize(int consumerTemplateCacheSize) {     this.consumerTemplateCacheSize = consumerTemplateCacheSize. }
+false;public;0;3;;public boolean isTypeConversion() {     return typeConversion. }
+false;public;1;3;;public void setTypeConversion(boolean typeConversion) {     this.typeConversion = typeConversion. }
+false;public;0;3;;public boolean isLoadTypeConverters() {     return loadTypeConverters. }
+false;public;1;3;;public void setLoadTypeConverters(boolean loadTypeConverters) {     this.loadTypeConverters = loadTypeConverters. }
+false;public;0;3;;public String getJavaRoutesIncludePattern() {     return javaRoutesIncludePattern. }
+false;public;1;3;;public void setJavaRoutesIncludePattern(String javaRoutesIncludePattern) {     this.javaRoutesIncludePattern = javaRoutesIncludePattern. }
+false;public;0;3;;public String getJavaRoutesExcludePattern() {     return javaRoutesExcludePattern. }
+false;public;1;3;;public void setJavaRoutesExcludePattern(String javaRoutesExcludePattern) {     this.javaRoutesExcludePattern = javaRoutesExcludePattern. }
+false;public;0;3;;public String getXmlRoutes() {     return xmlRoutes. }
+false;public;1;3;;public void setXmlRoutes(String xmlRoutes) {     this.xmlRoutes = xmlRoutes. }
+false;public;0;3;;public String getXmlRests() {     return xmlRests. }
+false;public;1;3;;public void setXmlRests(String xmlRests) {     this.xmlRests = xmlRests. }
+false;public;0;3;;public String getXmlRoutesReloadDirectory() {     return xmlRoutesReloadDirectory. }
+false;public;1;3;;public void setXmlRoutesReloadDirectory(String xmlRoutesReloadDirectory) {     this.xmlRoutesReloadDirectory = xmlRoutesReloadDirectory. }
+false;public;0;3;;public boolean isMainRunController() {     return mainRunController. }
+false;public;1;3;;public void setMainRunController(boolean mainRunController) {     this.mainRunController = mainRunController. }
+false;public;0;3;;public int getDurationMaxSeconds() {     return durationMaxSeconds. }
+false;public;1;3;;public void setDurationMaxSeconds(int durationMaxSeconds) {     this.durationMaxSeconds = durationMaxSeconds. }
+false;public;0;3;;public int getDurationMaxIdleSeconds() {     return durationMaxIdleSeconds. }
+false;public;1;3;;public void setDurationMaxIdleSeconds(int durationMaxIdleSeconds) {     this.durationMaxIdleSeconds = durationMaxIdleSeconds. }
+false;public;0;3;;public int getDurationMaxMessages() {     return durationMaxMessages. }
+false;public;1;3;;public void setDurationMaxMessages(int durationMaxMessages) {     this.durationMaxMessages = durationMaxMessages. }
+false;public;0;3;;public int getLogDebugMaxChars() {     return logDebugMaxChars. }
+false;public;1;3;;public void setLogDebugMaxChars(int logDebugMaxChars) {     this.logDebugMaxChars = logDebugMaxChars. }
+false;public;0;4;;@Deprecated public boolean isStreamCaching() {     return streamCachingEnabled. }
+false;public;1;4;;@Deprecated public void setStreamCaching(boolean streamCaching) {     this.streamCachingEnabled = streamCaching. }
+false;public;0;3;;public boolean isStreamCachingEnabled() {     return streamCachingEnabled. }
+false;public;1;3;;public void setStreamCachingEnabled(boolean streamCachingEnabled) {     this.streamCachingEnabled = streamCachingEnabled. }
+false;public;0;3;;public String getStreamCachingSpoolDirectory() {     return streamCachingSpoolDirectory. }
+false;public;1;3;;public void setStreamCachingSpoolDirectory(String streamCachingSpoolDirectory) {     this.streamCachingSpoolDirectory = streamCachingSpoolDirectory. }
+false;public;0;3;;public String getStreamCachingSpoolChiper() {     return streamCachingSpoolChiper. }
+false;public;1;3;;public void setStreamCachingSpoolChiper(String streamCachingSpoolChiper) {     this.streamCachingSpoolChiper = streamCachingSpoolChiper. }
+false;public;0;3;;public long getStreamCachingSpoolThreshold() {     return streamCachingSpoolThreshold. }
+false;public;1;3;;public void setStreamCachingSpoolThreshold(long streamCachingSpoolThreshold) {     this.streamCachingSpoolThreshold = streamCachingSpoolThreshold. }
+false;public;0;3;;public int getStreamCachingSpoolUsedHeapMemoryThreshold() {     return streamCachingSpoolUsedHeapMemoryThreshold. }
+false;public;1;3;;public void setStreamCachingSpoolUsedHeapMemoryThreshold(int streamCachingSpoolUsedHeapMemoryThreshold) {     this.streamCachingSpoolUsedHeapMemoryThreshold = streamCachingSpoolUsedHeapMemoryThreshold. }
+false;public;0;3;;public String getStreamCachingSpoolUsedHeapMemoryLimit() {     return streamCachingSpoolUsedHeapMemoryLimit. }
+false;public;1;3;;public void setStreamCachingSpoolUsedHeapMemoryLimit(String streamCachingSpoolUsedHeapMemoryLimit) {     this.streamCachingSpoolUsedHeapMemoryLimit = streamCachingSpoolUsedHeapMemoryLimit. }
+false;public;0;3;;public boolean isStreamCachingAnySpoolRules() {     return streamCachingAnySpoolRules. }
+false;public;1;3;;public void setStreamCachingAnySpoolRules(boolean streamCachingAnySpoolRules) {     this.streamCachingAnySpoolRules = streamCachingAnySpoolRules. }
+false;public;0;3;;public int getStreamCachingBufferSize() {     return streamCachingBufferSize. }
+false;public;1;3;;public void setStreamCachingBufferSize(int streamCachingBufferSize) {     this.streamCachingBufferSize = streamCachingBufferSize. }
+false;public;0;3;;public boolean isStreamCachingRemoveSpoolDirectoryWhenStopping() {     return streamCachingRemoveSpoolDirectoryWhenStopping. }
+false;public;1;3;;public void setStreamCachingRemoveSpoolDirectoryWhenStopping(boolean streamCachingRemoveSpoolDirectoryWhenStopping) {     this.streamCachingRemoveSpoolDirectoryWhenStopping = streamCachingRemoveSpoolDirectoryWhenStopping. }
+false;public;0;3;;public boolean isStreamCachingStatisticsEnabled() {     return streamCachingStatisticsEnabled. }
+false;public;1;3;;public void setStreamCachingStatisticsEnabled(boolean streamCachingStatisticsEnabled) {     this.streamCachingStatisticsEnabled = streamCachingStatisticsEnabled. }
+false;public;0;3;;public boolean isTracing() {     return tracing. }
+false;public;1;3;;public void setTracing(boolean tracing) {     this.tracing = tracing. }
+false;public;0;3;;public boolean isMessageHistory() {     return messageHistory. }
+false;public;1;3;;public void setMessageHistory(boolean messageHistory) {     this.messageHistory = messageHistory. }
+false;public;0;3;;public boolean isLogMask() {     return logMask. }
+false;public;1;3;;public void setLogMask(boolean logMask) {     this.logMask = logMask. }
+false;public;0;3;;public boolean isLogExhaustedMessageBody() {     return logExhaustedMessageBody. }
+false;public;1;3;;public void setLogExhaustedMessageBody(boolean logExhaustedMessageBody) {     this.logExhaustedMessageBody = logExhaustedMessageBody. }
+false;public;0;3;;public boolean isHandleFault() {     return handleFault. }
+false;public;1;3;;public void setHandleFault(boolean handleFault) {     this.handleFault = handleFault. }
+false;public;0;3;;public boolean isAutoStartup() {     return autoStartup. }
+false;public;1;3;;public void setAutoStartup(boolean autoStartup) {     this.autoStartup = autoStartup. }
+false;public;0;3;;public boolean isAllowUseOriginalMessage() {     return allowUseOriginalMessage. }
+false;public;1;3;;public void setAllowUseOriginalMessage(boolean allowUseOriginalMessage) {     this.allowUseOriginalMessage = allowUseOriginalMessage. }
+false;public;0;3;;public boolean isEndpointRuntimeStatisticsEnabled() {     return endpointRuntimeStatisticsEnabled. }
+false;public;1;3;;public void setEndpointRuntimeStatisticsEnabled(boolean endpointRuntimeStatisticsEnabled) {     this.endpointRuntimeStatisticsEnabled = endpointRuntimeStatisticsEnabled. }
+false;public;0;3;;public boolean isUseDataType() {     return useDataType. }
+false;public;1;3;;public void setUseDataType(boolean useDataType) {     this.useDataType = useDataType. }
+false;public;0;3;;public boolean isUseBreadcrumb() {     return useBreadcrumb. }
+false;public;1;3;;public void setUseBreadcrumb(boolean useBreadcrumb) {     this.useBreadcrumb = useBreadcrumb. }
+false;public;0;3;;public ManagementStatisticsLevel getJmxManagementStatisticsLevel() {     return jmxManagementStatisticsLevel. }
+false;public;1;3;;public void setJmxManagementStatisticsLevel(ManagementStatisticsLevel jmxManagementStatisticsLevel) {     this.jmxManagementStatisticsLevel = jmxManagementStatisticsLevel. }
+false;public;0;3;;public String getJmxManagementNamePattern() {     return jmxManagementNamePattern. }
+false;public;1;3;;public void setJmxManagementNamePattern(String jmxManagementNamePattern) {     this.jmxManagementNamePattern = jmxManagementNamePattern. }
+false;public;0;3;;public boolean isJmxCreateConnector() {     return jmxCreateConnector. }
+false;public;1;3;;public void setJmxCreateConnector(boolean jmxCreateConnector) {     this.jmxCreateConnector = jmxCreateConnector. }
+false;public;0;3;;public String getFileConfigurations() {     return fileConfigurations. }
+false;public;1;3;;public void setFileConfigurations(String fileConfigurations) {     this.fileConfigurations = fileConfigurations. }
+false;public;0;3;;public boolean isTraceFormatterShowBody() {     return traceFormatterShowBody. }
+false;public;1;3;;public void setTraceFormatterShowBody(boolean traceFormatterShowBody) {     this.traceFormatterShowBody = traceFormatterShowBody. }
+false;public;0;3;;public boolean isTracerFormatterShowBodyType() {     return tracerFormatterShowBodyType. }
+false;public;1;3;;public void setTracerFormatterShowBodyType(boolean tracerFormatterShowBodyType) {     this.tracerFormatterShowBodyType = tracerFormatterShowBodyType. }
+false;public;0;3;;public boolean isTraceFormatterShowBreadCrumb() {     return traceFormatterShowBreadCrumb. }
+false;public;1;3;;public void setTraceFormatterShowBreadCrumb(boolean traceFormatterShowBreadCrumb) {     this.traceFormatterShowBreadCrumb = traceFormatterShowBreadCrumb. }
+false;public;0;3;;public boolean isTraceFormatterShowExchangeId() {     return traceFormatterShowExchangeId. }
+false;public;1;3;;public void setTraceFormatterShowExchangeId(boolean traceFormatterShowExchangeId) {     this.traceFormatterShowExchangeId = traceFormatterShowExchangeId. }
+false;public;0;3;;public boolean isTraceFormatterShowHeaders() {     return traceFormatterShowHeaders. }
+false;public;1;3;;public void setTraceFormatterShowHeaders(boolean traceFormatterShowHeaders) {     this.traceFormatterShowHeaders = traceFormatterShowHeaders. }
+false;public;0;3;;public boolean isTraceFormatterShowProperties() {     return traceFormatterShowProperties. }
+false;public;1;3;;public void setTraceFormatterShowProperties(boolean traceFormatterShowProperties) {     this.traceFormatterShowProperties = traceFormatterShowProperties. }
+false;public;0;3;;public boolean isTraceFormatterShowNode() {     return traceFormatterShowNode. }
+false;public;1;3;;public void setTraceFormatterShowNode(boolean traceFormatterShowNode) {     this.traceFormatterShowNode = traceFormatterShowNode. }
+false;public;0;3;;public boolean isTraceFormatterShowExchangePattern() {     return traceFormatterShowExchangePattern. }
+false;public;1;3;;public void setTraceFormatterShowExchangePattern(boolean traceFormatterShowExchangePattern) {     this.traceFormatterShowExchangePattern = traceFormatterShowExchangePattern. }
+false;public;0;3;;public boolean isTraceFormatterShowException() {     return traceFormatterShowException. }
+false;public;1;3;;public void setTraceFormatterShowException(boolean traceFormatterShowException) {     this.traceFormatterShowException = traceFormatterShowException. }
+false;public;0;3;;public boolean isTraceFormatterShowRouteId() {     return traceFormatterShowRouteId. }
+false;public;1;3;;public void setTraceFormatterShowRouteId(boolean traceFormatterShowRouteId) {     this.traceFormatterShowRouteId = traceFormatterShowRouteId. }
+false;public;0;3;;public Integer getTracerFormatterBreadCrumbLength() {     return tracerFormatterBreadCrumbLength. }
+false;public;1;3;;public void setTracerFormatterBreadCrumbLength(Integer tracerFormatterBreadCrumbLength) {     this.tracerFormatterBreadCrumbLength = tracerFormatterBreadCrumbLength. }
+false;public;0;3;;public boolean isTraceFormatterShowShortExchangeId() {     return traceFormatterShowShortExchangeId. }
+false;public;1;3;;public void setTraceFormatterShowShortExchangeId(boolean traceFormatterShowShortExchangeId) {     this.traceFormatterShowShortExchangeId = traceFormatterShowShortExchangeId. }
+false;public;0;3;;public Integer getTracerFormatterNodeLength() {     return tracerFormatterNodeLength. }
+false;public;1;3;;public void setTracerFormatterNodeLength(Integer tracerFormatterNodeLength) {     this.tracerFormatterNodeLength = tracerFormatterNodeLength. }
+false;public;0;3;;public Integer getTracerFormatterMaxChars() {     return tracerFormatterMaxChars. }
+false;public;1;3;;public void setTracerFormatterMaxChars(Integer tracerFormatterMaxChars) {     this.tracerFormatterMaxChars = tracerFormatterMaxChars. }
+false;public;0;3;;public boolean isIncludeNonSingletons() {     return includeNonSingletons. }
+false;public;1;3;;public void setIncludeNonSingletons(boolean includeNonSingletons) {     this.includeNonSingletons = includeNonSingletons. }
+false;public;0;4;;@Deprecated public boolean isUseMDCLogging() {     return isUseMdcLogging(). }
+false;public;1;4;;@Deprecated public void setUseMDCLogging(boolean useMDCLogging) {     setUseMdcLogging(useMDCLogging). }
+false;public;0;3;;public boolean isUseMdcLogging() {     return useMdcLogging. }
+false;public;1;3;;public void setUseMdcLogging(boolean useMdcLogging) {     this.useMdcLogging = useMdcLogging. }
+false;public;0;3;;public String getThreadNamePattern() {     return threadNamePattern. }
+false;public;1;3;;public void setThreadNamePattern(String threadNamePattern) {     this.threadNamePattern = threadNamePattern. }

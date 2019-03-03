@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Before public void init() {     this.context.refresh().     MockServletContext servletContext = new MockServletContext().     this.context.setServletContext(servletContext).     servletContext.setAttribute(WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE, this.context). }
+false;public;0;10;;@Test public void viewResolvesHandlebars() throws Exception {     MustacheView view = new MustacheView().     view.setCompiler(Mustache.compiler()).     view.setUrl(this.templateUrl).     view.setApplicationContext(this.context).     view.render(Collections.singletonMap("World", "Spring"), this.request, this.response).     assertThat(this.response.getContentAsString()).isEqualTo("Hello Spring"). }

@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getJobId() {     return jobId. }
+false;public;0;3;;public String getSnapshotId() {     return snapshotId. }
+false;public;0;4;;@Override public ActionRequestValidationException validate() {     return null. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(jobId, snapshotId). }
+false;public;1;13;;@Override public boolean equals(Object obj) {     if (this == obj) {         return true.     }     if (obj == null || obj.getClass() != getClass()) {         return false.     }     DeleteModelSnapshotRequest other = (DeleteModelSnapshotRequest) obj.     return Objects.equals(jobId, other.jobId) && Objects.equals(snapshotId, other.snapshotId). }

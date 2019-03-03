@@ -1,0 +1,17 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Before public void setup() {     this.publisher.subscribe(this.subscriber). }
+false;public;0;8;;@Test public void twoReads() {     this.subscriber.getSubscription().request(2).     this.publisher.onDataAvailable().     assertEquals(2, this.publisher.getReadCalls()). }
+false;public;0;10;;// SPR-17410 @Test public void discardDataOnError() {     this.subscriber.getSubscription().request(2).     this.publisher.onDataAvailable().     this.publisher.onError(new IllegalStateException()).     assertEquals(2, this.publisher.getReadCalls()).     assertEquals(1, this.publisher.getDiscardCalls()). }
+false;public;0;10;;// SPR-17410 @Test public void discardDataOnCancel() {     this.subscriber.getSubscription().request(2).     this.subscriber.setCancelOnNext(true).     this.publisher.onDataAvailable().     assertEquals(1, this.publisher.getReadCalls()).     assertEquals(1, this.publisher.getDiscardCalls()). }
+false;public;0;3;;public int getReadCalls() {     return this.readCalls. }
+false;public;0;3;;public int getDiscardCalls() {     return this.discardCalls. }
+false;protected;0;4;;@Override protected void checkOnDataAvailable() { // no-op }
+false;protected;0;5;;@Override protected DataBuffer read() {     this.readCalls++.     return mock(DataBuffer.class). }
+false;protected;0;4;;@Override protected void readingPaused() { // No-op }
+false;protected;0;4;;@Override protected void discardData() {     this.discardCalls++. }
+false;public;0;3;;public Subscription getSubscription() {     return this.subscription. }
+false;public;1;3;;public void setCancelOnNext(boolean cancelOnNext) {     this.cancelOnNext = cancelOnNext. }
+false;public;1;4;;@Override public void onSubscribe(Subscription subscription) {     this.subscription = subscription. }
+false;public;1;6;;@Override public void onNext(DataBuffer dataBuffer) {     if (this.cancelOnNext) {         this.subscription.cancel().     } }
+false;public;1;3;;@Override public void onError(Throwable t) { }
+false;public;0;3;;@Override public void onComplete() { }

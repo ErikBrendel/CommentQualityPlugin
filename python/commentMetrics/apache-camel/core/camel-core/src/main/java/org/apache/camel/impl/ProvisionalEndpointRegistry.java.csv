@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public void start() throws Exception { // noop }
+false;public;0;4;;@Override public void stop() throws Exception { // noop }
+false;public;0;4;;@Override public int staticSize() {     return 0. }
+false;public;0;4;;@Override public int dynamicSize() {     return 0. }
+false;public;0;4;;@Override public int getMaximumCacheSize() {     return 0. }
+false;public;0;4;;@Override public void purge() { // noop }
+false;public;1;4;;@Override public boolean isStatic(String key) {     return false. }
+false;public;1;4;;@Override public boolean isDynamic(String key) {     return false. }
+false;public;0;4;;@Override public void cleanUp() { // noop }

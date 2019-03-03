@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getName() {     return "ilm_get_operation_mode_action". }
+false;protected;2;7;;@Override protected RestChannelConsumer prepareRequest(RestRequest restRequest, NodeClient client) {     GetStatusAction.Request request = new GetStatusAction.Request().     request.timeout(restRequest.paramAsTime("timeout", request.timeout())).     request.masterNodeTimeout(restRequest.paramAsTime("master_timeout", request.masterNodeTimeout())).     return channel -> client.execute(GetStatusAction.INSTANCE, request, new RestToXContentListener<>(channel)). }

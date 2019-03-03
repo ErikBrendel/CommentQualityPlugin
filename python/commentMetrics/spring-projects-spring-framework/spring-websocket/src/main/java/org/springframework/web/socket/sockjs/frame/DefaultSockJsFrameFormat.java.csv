@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public String format(SockJsFrame frame) {     return String.format(this.format, preProcessContent(frame.getContent())). }
+false;protected;1;3;;protected String preProcessContent(String content) {     return content. }

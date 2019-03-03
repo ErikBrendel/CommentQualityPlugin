@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Producer createProducer() throws Exception {     return new MyBatisBeanProducer(this). }
+false;public;1;4;;@Override public Consumer createConsumer(Processor processor) throws Exception {     throw new IllegalArgumentException("Consumer not support on this component (mybatis-bean), use mybatis instead."). }
+false;public;0;3;;public String getBeanName() {     return beanName. }
+true;public;1;3;/**  * Name of the bean with the MyBatis annotations.  * This can either by a type alias or a FQN class name.  */ ;/**  * Name of the bean with the MyBatis annotations.  * This can either by a type alias or a FQN class name.  */ public void setBeanName(String beanName) {     this.beanName = beanName. }
+false;public;0;3;;public String getMethodName() {     return methodName. }
+true;public;1;3;/**  * Name of the method on the bean that has the SQL query to be executed.  */ ;/**  * Name of the method on the bean that has the SQL query to be executed.  */ public void setMethodName(String methodName) {     this.methodName = methodName. }

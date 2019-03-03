@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public String getRequestCorrelationId(Object request) {     // correlation id is before the first colon     return StringHelper.before(request.toString(), ":"). }
+false;public;1;5;;@Override public String getResponseCorrelationId(Object response) {     // correlation id is before the first colon     return StringHelper.before(response.toString(), ":"). }
+false;public;2;7;;@Override public String getTimeoutResponse(String correlationId, Object request) {     // to the correlation id and the request message that was sent over the wire     return null. }

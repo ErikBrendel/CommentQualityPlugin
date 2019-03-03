@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Bean @ConditionalOnMissingBean(name = "elasticsearchHealthIndicator") public HealthIndicator elasticsearchHealthIndicator(Map<String, Client> clients) {     return createHealthIndicator(clients). }
+false;protected;1;7;;@Override protected ElasticsearchHealthIndicator createHealthIndicator(Client client) {     Duration responseTimeout = this.properties.getResponseTimeout().     return new ElasticsearchHealthIndicator(client, (responseTimeout != null) ? responseTimeout.toMillis() : 100, this.properties.getIndices()). }

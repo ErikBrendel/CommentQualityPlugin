@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected,static;1;3;;protected static int clearPersonTable(JdbcTemplate jdbcTemplate) {     return jdbcTemplate.update("DELETE FROM person"). }
+false;protected,static;1;3;;protected static int countRowsInPersonTable(JdbcTemplate jdbcTemplate) {     return jdbcTemplate.queryForObject("SELECT COUNT(0) FROM person", Integer.class). }
+false;protected,static;2;3;;protected static int addPerson(JdbcTemplate jdbcTemplate, String name) {     return jdbcTemplate.update("INSERT INTO person VALUES(?)", name). }
+false;protected,static;2;3;;protected static int deletePerson(JdbcTemplate jdbcTemplate, String name) {     return jdbcTemplate.update("DELETE FROM person WHERE name=?", name). }

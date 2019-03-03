@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void testContextShutdownRemovesHttpConnector() throws Exception {     context.stop().     assertEquals("Connector should have been removed", 0, JettyHttpComponent.CONNECTORS.size()). }
+false;public;0;3;;public void configure() throws Exception {     from("jetty:" + serverUri).to("mock:result"). }
+false;protected;0;7;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from("jetty:" + serverUri).to("mock:result").         }     }. }

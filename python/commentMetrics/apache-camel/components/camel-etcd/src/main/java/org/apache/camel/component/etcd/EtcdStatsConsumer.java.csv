@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public EtcdStatsEndpoint getEndpoint() {     return (EtcdStatsEndpoint) super.getEndpoint(). }
+false;protected;0;18;;@Override protected int poll() throws Exception {     EtcdStatsEndpoint endpoint = getEndpoint().     Object answer = endpoint.getStats(getClient()).     if (answer != null) {         Exchange exchange = endpoint.createExchange().         exchange.getIn().setHeader(EtcdConstants.ETCD_NAMESPACE, endpoint.getNamespace()).         exchange.getIn().setHeader(EtcdConstants.ETCD_PATH, endpoint.getPath()).         exchange.getIn().setBody(answer).         getProcessor().process(exchange).         return 1.     }     return 0. }

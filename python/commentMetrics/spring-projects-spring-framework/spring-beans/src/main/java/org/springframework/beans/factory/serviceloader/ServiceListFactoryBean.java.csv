@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;8;;@Override protected Object getObjectToExpose(ServiceLoader<?> serviceLoader) {     List<Object> result = new LinkedList<>().     for (Object loaderObject : serviceLoader) {         result.add(loaderObject).     }     return result. }
+false;public;0;4;;@Override public Class<?> getObjectType() {     return List.class. }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;8;;protected void assertExchange(Exchange exchange) {     assertNotNull(exchange).     assertTrue(exchange.hasOut()).     Message out = exchange.getOut().     assertHeaders(out.getHeaders()).     assertBody(out.getBody(String.class)). }
+false;protected;1;5;;protected void assertHeaders(Map<String, Object> headers) {     assertEquals(HttpStatus.SC_OK, headers.get(Exchange.HTTP_RESPONSE_CODE)).     assertEquals("12", headers.get("Content-Length")).     assertNotNull("Should have Content-Type header", headers.get("Content-Type")). }
+false;protected;1;3;;protected void assertBody(String body) {     assertEquals(getExpectedContent(), body). }
+false;protected;0;3;;protected String getExpectedContent() {     return "camel rocks!". }

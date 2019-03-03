@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected NodeInfo<BinaryStringStringPipe> info() {     return NodeInfo.create(this, BinaryStringStringPipe::new, expression(), left(), right(), operation). }
+false;public;0;3;;public BinaryStringStringOperation operation() {     return operation. }
+false;protected;2;4;;@Override protected BinaryPipe replaceChildren(Pipe left, Pipe right) {     return new BinaryStringStringPipe(source(), expression(), left, right, operation). }
+false;public;0;4;;@Override public BinaryStringStringProcessor asProcessor() {     return new BinaryStringStringProcessor(left().asProcessor(), right().asProcessor(), operation). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(super.hashCode(), operation). }
+false;public;1;8;;@Override public boolean equals(Object obj) {     if (super.equals(obj)) {         BinaryStringStringPipe other = (BinaryStringStringPipe) obj.         return Objects.equals(operation, other.operation).     }     return false. }

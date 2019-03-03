@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * Returns the converted value.  */ ;/**  * Returns the converted value.  */ T getValue().
+true;;0;1;/**  * Returns the key for the source binding.  */ ;/**  * Returns the key for the source binding.  */ Key<String> getSourceKey().
+true;;0;2;/**  * Returns a singleton set containing only the converted key.  */ ;/**  * Returns a singleton set containing only the converted key.  */ @Override Set<Dependency<?>> getDependencies().

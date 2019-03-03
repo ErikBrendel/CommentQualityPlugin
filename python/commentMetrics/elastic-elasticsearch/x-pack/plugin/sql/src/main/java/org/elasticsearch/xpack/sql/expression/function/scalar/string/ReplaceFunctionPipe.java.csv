@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,final;1;7;;@Override public final Pipe replaceChildren(List<Pipe> newChildren) {     if (newChildren.size() != 3) {         throw new IllegalArgumentException("expected [3] children but received [" + newChildren.size() + "]").     }     return replaceChildren(newChildren.get(0), newChildren.get(1), newChildren.get(2)). }
+false;public,final;1;10;;@Override public final Pipe resolveAttributes(AttributeResolver resolver) {     Pipe newSource = source.resolveAttributes(resolver).     Pipe newPattern = pattern.resolveAttributes(resolver).     Pipe newReplacement = replacement.resolveAttributes(resolver).     if (newSource == source && newPattern == pattern && newReplacement == replacement) {         return this.     }     return replaceChildren(newSource, newPattern, newReplacement). }
+false;public;0;4;;@Override public boolean supportedByAggsOnlyQuery() {     return source.supportedByAggsOnlyQuery() && pattern.supportedByAggsOnlyQuery() && replacement.supportedByAggsOnlyQuery(). }
+false;public;0;4;;@Override public boolean resolved() {     return source.resolved() && pattern.resolved() && replacement.resolved(). }
+false;protected;3;4;;protected Pipe replaceChildren(Pipe newSource, Pipe newPattern, Pipe newReplacement) {     return new ReplaceFunctionPipe(source(), expression(), newSource, newPattern, newReplacement). }
+false;public,final;1;6;;@Override public final void collectFields(SqlSourceBuilder sourceBuilder) {     source.collectFields(sourceBuilder).     pattern.collectFields(sourceBuilder).     replacement.collectFields(sourceBuilder). }
+false;protected;0;4;;@Override protected NodeInfo<ReplaceFunctionPipe> info() {     return NodeInfo.create(this, ReplaceFunctionPipe::new, expression(), source, pattern, replacement). }
+false;public;0;4;;@Override public ReplaceFunctionProcessor asProcessor() {     return new ReplaceFunctionProcessor(source.asProcessor(), pattern.asProcessor(), replacement.asProcessor()). }
+false;public;0;3;;public Pipe src() {     return source. }
+false;public;0;3;;public Pipe pattern() {     return pattern. }
+false;public;0;3;;public Pipe replacement() {     return replacement. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(source, pattern, replacement). }
+false;public;1;15;;@Override public boolean equals(Object obj) {     if (this == obj) {         return true.     }     if (obj == null || getClass() != obj.getClass()) {         return false.     }     ReplaceFunctionPipe other = (ReplaceFunctionPipe) obj.     return Objects.equals(source, other.source) && Objects.equals(pattern, other.pattern) && Objects.equals(replacement, other.replacement). }

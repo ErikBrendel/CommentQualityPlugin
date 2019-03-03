@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public long toMillis() {     return timeUnit.toMillis(number). }
+false;public;0;3;;public long getNumber() {     return number. }
+false;public;0;3;;public TimeUnit getTimeUnit() {     return timeUnit. }
+false;public;0;4;;@Override public String toString() {     return number + " " + timeUnit.toString().toLowerCase(Locale.ENGLISH). }

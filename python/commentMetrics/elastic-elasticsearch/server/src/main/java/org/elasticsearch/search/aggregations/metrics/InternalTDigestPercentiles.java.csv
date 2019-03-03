@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getWriteableName() {     return NAME. }
+false;public;0;4;;@Override public Iterator<Percentile> iterator() {     return new Iter(keys, state). }
+false;public;1;4;;@Override public double percentile(double percent) {     return state.quantile(percent / 100). }
+false;public;1;4;;@Override public String percentileAsString(double percent) {     return valueAsString(String.valueOf(percent)). }
+false;public;1;4;;@Override public double value(double key) {     return percentile(key). }
+false;protected;6;5;;@Override protected AbstractInternalTDigestPercentiles createReduced(String name, double[] keys, TDigestState merged, boolean keyed, List<PipelineAggregator> pipelineAggregators, Map<String, Object> metaData) {     return new InternalTDigestPercentiles(name, keys, merged, keyed, format, pipelineAggregators, metaData). }
+false;public;0;4;;@Override public boolean hasNext() {     return i < percents.length. }
+false;public;0;6;;@Override public Percentile next() {     final Percentile next = new Percentile(percents[i], state.quantile(percents[i] / 100)).     ++i.     return next. }
+false;public,final;0;4;;@Override public final void remove() {     throw new UnsupportedOperationException(). }

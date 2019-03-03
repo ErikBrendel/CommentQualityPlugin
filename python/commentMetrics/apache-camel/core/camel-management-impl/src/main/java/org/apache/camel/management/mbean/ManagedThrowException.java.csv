@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getMessage() {     return processor.getMessage(). }
+false;public;0;10;;@Override public String getExceptionType() {     if (processor.getType() != null) {         return ObjectHelper.name(processor.getType()).     } else if (processor.getException() != null) {         return ObjectHelper.className(processor.getException()).     } else {         return null.     } }

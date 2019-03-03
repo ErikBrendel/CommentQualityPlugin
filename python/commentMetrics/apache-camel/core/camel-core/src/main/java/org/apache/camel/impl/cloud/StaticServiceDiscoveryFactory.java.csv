@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;// ************************************************************************* // Properties // ************************************************************************* public List<String> getServers() {     return servers. }
+false;public;1;3;;public void setServers(List<String> servers) {     this.servers = servers. }
+false;public;1;9;;// ************************************************************************* // Factory // ************************************************************************* @Override public ServiceDiscovery newInstance(CamelContext camelContext) throws Exception {     StaticServiceDiscovery serviceDiscovery = new StaticServiceDiscovery().     if (servers != null) {         serviceDiscovery.setServers(servers).     }     return serviceDiscovery. }

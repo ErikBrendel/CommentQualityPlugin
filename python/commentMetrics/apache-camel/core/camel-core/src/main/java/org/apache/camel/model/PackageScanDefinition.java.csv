@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public List<String> getExcludes() {     return excludes. }
+false;public;0;3;;public List<String> getIncludes() {     return includes. }
+false;public;0;3;;public List<String> getPackages() {     return packages. }
+true;public;1;3;/**  * Sets the java package names to use for scanning for route builder classes  */ ;/**  * Sets the java package names to use for scanning for route builder classes  */ public void setPackages(List<String> packages) {     this.packages = packages. }
+true;public;1;3;/**  * Exclude finding route builder from these java package names.  */ ;/**  * Exclude finding route builder from these java package names.  */ public void setExcludes(List<String> excludes) {     this.excludes = excludes. }
+true;public;1;3;/**  * Include finding route builder from these java package names.  */ ;/**  * Include finding route builder from these java package names.  */ public void setIncludes(List<String> includes) {     this.includes = includes. }
+false;protected;0;5;;protected void clear() {     packages.clear().     excludes.clear().     includes.clear(). }

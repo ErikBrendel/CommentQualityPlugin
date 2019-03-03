@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Returns a description of the failure.  * @return the description  */ ;/**  * Returns a description of the failure.  * @return the description  */ public String getDescription() {     return this.description. }
+true;public;0;3;/**  * Returns the action, if any, to be taken to address the failure.  * @return the action or {@code null}  */ ;/**  * Returns the action, if any, to be taken to address the failure.  * @return the action or {@code null}  */ public String getAction() {     return this.action. }
+true;public;0;3;/**  * Returns the cause of the failure.  * @return the cause  */ ;/**  * Returns the cause of the failure.  * @return the cause  */ public Throwable getCause() {     return this.cause. }

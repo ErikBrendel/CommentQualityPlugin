@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void toStringWithPid() {     assertThat(new ApplicationPid("123").toString()).isEqualTo("123"). }
+false;public;0;4;;@Test public void toStringWithoutPid() {     assertThat(new ApplicationPid(null).toString()).isEqualTo("???"). }
+false;public;0;7;;@Test public void throwIllegalStateWritingMissingPid() {     ApplicationPid pid = new ApplicationPid(null).     assertThatIllegalStateException().isThrownBy(() -> pid.write(this.temporaryFolder.newFile())).withMessageContaining("No PID available"). }
+false;public;0;7;;@Test public void writePid() throws Exception {     ApplicationPid pid = new ApplicationPid("123").     File file = this.temporaryFolder.newFile().     pid.write(file).     assertThat(contentOf(file)).isEqualTo("123"). }
+false;public;0;9;;@Test public void writeNewPid() throws Exception {     // gh-10784     ApplicationPid pid = new ApplicationPid("123").     File file = this.temporaryFolder.newFile().     file.delete().     pid.write(file).     assertThat(contentOf(file)).isEqualTo("123"). }
+false;public;0;4;;@Test public void getPidFromJvm() {     assertThat(new ApplicationPid().toString()).isNotEmpty(). }

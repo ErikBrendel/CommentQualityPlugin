@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;4;15;;@Override public void foo(InE in, InE in1, Holder<InE> out, Holder<InE> out1) {     LOG.info("Executing operation foo").     LOG.info("{}", in).     LOG.info("{}", in1).     try {         InE outValue = in.         out.value = outValue.         InE out1Value = in1.         out1.value = out1Value.     } catch (Exception ex) {         ex.printStackTrace().         throw new RuntimeException(ex).     } }

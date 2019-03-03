@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;12;;@AfterTransaction public void afterTransaction() {     if ("test01".equals(testName.getMethodName())) {         try {             assertNumUsers(99).             fail("Should throw a BadSqlGrammarException after test01, assuming 'drop-schema.sql' was executed").         } catch (BadSqlGrammarException e) {         /* expected */         }     } }
+false;public;0;9;;@Test @SqlGroup({ //  @Sql({ "schema.sql", "data.sql" }), //  @Sql(scripts = "drop-schema.sql", executionPhase = AFTER_TEST_METHOD) }) public // test## is required for @FixMethodOrder. void test01() {     assertNumUsers(1). }
+false;public;0;6;;@Test @Sql({ "schema.sql", "data.sql", "data-add-dogbert.sql" }) public // test## is required for @FixMethodOrder. void test02() {     assertNumUsers(2). }
+false;protected;1;3;;protected void assertNumUsers(int expected) {     assertEquals("Number of rows in the 'user' table.", expected, countRowsInTable("user")). }

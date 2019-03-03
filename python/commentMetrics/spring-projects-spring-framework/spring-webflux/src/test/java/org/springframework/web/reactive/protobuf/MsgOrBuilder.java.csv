@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * <code>optional string foo = 1.</code>  */ ;// optional string foo = 1. /**  * <code>optional string foo = 1.</code>  */ boolean hasFoo().
+true;;0;1;/**  * <code>optional string foo = 1.</code>  */ ;/**  * <code>optional string foo = 1.</code>  */ String getFoo().
+true;;0;2;/**  * <code>optional string foo = 1.</code>  */ ;/**  * <code>optional string foo = 1.</code>  */ com.google.protobuf.ByteString getFooBytes().
+true;;0;1;/**  * <code>optional .SecondMsg blah = 2.</code>  */ ;// optional .SecondMsg blah = 2. /**  * <code>optional .SecondMsg blah = 2.</code>  */ boolean hasBlah().
+true;;0;1;/**  * <code>optional .SecondMsg blah = 2.</code>  */ ;/**  * <code>optional .SecondMsg blah = 2.</code>  */ SecondMsg getBlah().
+true;;0;1;/**  * <code>optional .SecondMsg blah = 2.</code>  */ ;/**  * <code>optional .SecondMsg blah = 2.</code>  */ SecondMsgOrBuilder getBlahOrBuilder().

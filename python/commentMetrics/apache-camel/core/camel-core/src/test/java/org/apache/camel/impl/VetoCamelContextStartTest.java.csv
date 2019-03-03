@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void testVetoCamelContextStart() throws Exception {     // context is veto'ed but appears as started     assertEquals(false, context.getStatus().isStarted()).     assertEquals(true, context.getStatus().isStopped()).     assertEquals(0, context.getRoutes().size()). }
+false;public;0;4;;@Override public void configure() throws Exception {     from("direct:start").to("mock:result"). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").to("mock:result").         }     }. }
+false;protected;0;6;;@Override protected CamelContext createCamelContext() throws Exception {     CamelContext context = super.createCamelContext().     context.addLifecycleStrategy(veto).     return context. }
+false;public;1;5;;@Override public void onContextStart(CamelContext context) throws VetoCamelContextStartException {     // we just want camel context to not startup, but do not rethrow exception     throw new VetoCamelContextStartException("Forced", context, false). }

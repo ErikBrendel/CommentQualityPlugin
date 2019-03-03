@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected String executor() {     return ThreadPool.Names.SAME. }
+false;protected;0;4;;@Override protected PutJobAction.Response newResponse() {     return new PutJobAction.Response(). }
+false;protected;3;4;;@Override protected void masterOperation(UpdateJobAction.Request request, ClusterState state, ActionListener<PutJobAction.Response> listener) {     jobManager.updateJob(request, listener). }
+false;protected;2;4;;@Override protected ClusterBlockException checkBlock(UpdateJobAction.Request request, ClusterState state) {     return state.blocks().globalBlockedException(ClusterBlockLevel.METADATA_WRITE). }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private,static;2;8;;private static DefaultWebFilterChain initChain(List<WebFilter> filters, WebHandler handler) {     DefaultWebFilterChain chain = new DefaultWebFilterChain(filters, handler, null, null).     ListIterator<? extends WebFilter> iterator = filters.listIterator(filters.size()).     while (iterator.hasPrevious()) {         chain = new DefaultWebFilterChain(filters, handler, iterator.previous(), chain).     }     return chain. }
+false;public;0;3;;public List<WebFilter> getFilters() {     return this.allFilters. }
+false;public;0;3;;public WebHandler getHandler() {     return this.handler. }
+false;public;1;7;;@Override public Mono<Void> filter(ServerWebExchange exchange) {     return Mono.defer(() -> this.currentFilter != null && this.next != null ? this.currentFilter.filter(exchange, this.next) : this.handler.handle(exchange)). }

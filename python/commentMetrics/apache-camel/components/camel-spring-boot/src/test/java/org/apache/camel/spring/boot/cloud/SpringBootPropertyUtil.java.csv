@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;14;;public static String getDiscoveryServices() {     StringBuffer dservice = new StringBuffer().     dservice.append(HOSTNAME).     dservice.append(PORT1).     dservice.append(",").     dservice.append(HOSTNAME).     dservice.append(PORT2).     dservice.append(",").     dservice.append(HOSTNAME).     dservice.append(PORT3).     return dservice.toString(). }
+false;public,static;0;8;;public static String getServiceFilterBlacklist() {     StringBuffer filterBlacklistString = new StringBuffer().     filterBlacklistString.append(HOSTNAME).     filterBlacklistString.append(PORT2).     return filterBlacklistString.toString(). }

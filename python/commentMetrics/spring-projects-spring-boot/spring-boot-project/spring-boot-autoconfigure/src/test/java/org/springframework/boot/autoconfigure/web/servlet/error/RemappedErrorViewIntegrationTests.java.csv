@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void directAccessToErrorPage() {     String content = this.template.getForObject("http://localhost:" + this.port + "/spring/error", String.class).     assertThat(content).contains("error").     assertThat(content).contains("999"). }
+false;public;0;7;;@Test public void forwardToErrorPage() {     String content = this.template.getForObject("http://localhost:" + this.port + "/spring/", String.class).     assertThat(content).contains("error").     assertThat(content).contains("500"). }
+false;public;0;4;;@RequestMapping("/") public String home() {     throw new RuntimeException("Planned!"). }
+false;public;1;4;;@Override public void registerErrorPages(ErrorPageRegistry errorPageRegistry) {     errorPageRegistry.addErrorPages(new ErrorPage("/spring/error")). }
+true;public,static;1;4;// For manual testing ;// For manual testing public static void main(String[] args) {     new SpringApplicationBuilder(TestConfiguration.class).properties("spring.mvc.servlet.path:spring/*").run(args). }

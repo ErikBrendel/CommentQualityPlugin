@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Map<String, Object> getExporters() {     return exporters == null ? Collections.emptyMap() : Collections.unmodifiableMap(exporters). }
+false;public;1;8;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeMap(exporters).     if (out.getVersion().onOrAfter(Version.V_6_3_0)) {         out.writeOptionalBoolean(collectionEnabled).     } }
+false;protected;2;10;;@Override protected void innerXContent(XContentBuilder builder, Params params) throws IOException {     super.innerXContent(builder, params).     if (collectionEnabled != null) {         builder.field("collection_enabled", collectionEnabled).     }     if (exporters != null) {         builder.field("enabled_exporters", exporters).     } }

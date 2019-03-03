@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Return the source Java method.  * @return the method  */ ;/**  * Return the source Java method.  * @return the method  */ public Method getMethod() {     return this.method. }
+true;public;0;3;/**  * Return the operation type.  * @return the operation type  */ ;/**  * Return the operation type.  * @return the operation type  */ public OperationType getOperationType() {     return this.operationType. }
+true;public;0;3;/**  * Return the operation parameters.  * @return the operation parameters  */ ;/**  * Return the operation parameters.  * @return the operation parameters  */ public OperationParameters getParameters() {     return this.operationParameters. }
+false;public;0;5;;@Override public String toString() {     return "Operation " + this.operationType.name().toLowerCase(Locale.ENGLISH) + " method " + this.method. }

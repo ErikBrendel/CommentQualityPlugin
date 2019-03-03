@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@Test(expected = IllegalArgumentException.class) public void unregisterFormatFactory() {     FactoryRegistry reg = new DefaultFactoryRegistry().     FormattingOptions formattingOptions = new FormattingOptions().forClazz(String.class).     assertNotNull(reg.findForFormattingOptions(formattingOptions)).     reg.unregister(StringFormatFactory.class).     reg.findForFormattingOptions(formattingOptions). }

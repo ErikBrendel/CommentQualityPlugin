@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;5;;protected Cache<Object, Object> getCacheFromEndpoint(String endpoint) throws Exception {     return resolveMandatoryEndpoint(endpoint, JCacheEndpoint.class).getManager().getCache(). }
+false;protected;0;3;;protected String randomString() {     return UUID.randomUUID().toString(). }
+false;protected;1;8;;protected Map<Object, Object> generateRandomMap(int size) {     Map<Object, Object> map = new HashMap<>().     for (int i = 0. i < size. i++) {         map.put(randomString(), randomString()).     }     return map. }

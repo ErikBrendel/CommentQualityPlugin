@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;3;/**  * Set the name of the ServletContext attribute to expose.  */ ;/**  * Set the name of the ServletContext attribute to expose.  */ public void setAttributeName(String attributeName) {     this.attributeName = attributeName. }
+false;public;1;10;;@Override public void setServletContext(ServletContext servletContext) {     if (this.attributeName == null) {         throw new IllegalArgumentException("Property 'attributeName' is required").     }     this.attribute = servletContext.getAttribute(this.attributeName).     if (this.attribute == null) {         throw new IllegalStateException("No ServletContext attribute '" + this.attributeName + "' found").     } }
+false;public;0;5;;@Override @Nullable public Object getObject() throws Exception {     return this.attribute. }
+false;public;0;4;;@Override public Class<?> getObjectType() {     return (this.attribute != null ? this.attribute.getClass() : null). }
+false;public;0;4;;@Override public boolean isSingleton() {     return true. }

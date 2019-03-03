@@ -1,0 +1,16 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void defaultConfiguration() {     registerAndRefresh(AuditAutoConfiguration.class).     assertThat(this.context.getBean(AuditEventRepository.class)).isNotNull().     assertThat(this.context.getBean(AuthenticationAuditListener.class)).isNotNull().     assertThat(this.context.getBean(AuthorizationAuditListener.class)).isNotNull(). }
+false;public;0;7;;@Test public void ownAuditEventRepository() {     registerAndRefresh(CustomAuditEventRepositoryConfiguration.class, AuditAutoConfiguration.class).     assertThat(this.context.getBean(AuditEventRepository.class)).isInstanceOf(TestAuditEventRepository.class). }
+false;public;0;7;;@Test public void ownAuthenticationAuditListener() {     registerAndRefresh(CustomAuthenticationAuditListenerConfiguration.class, AuditAutoConfiguration.class).     assertThat(this.context.getBean(AbstractAuthenticationAuditListener.class)).isInstanceOf(TestAuthenticationAuditListener.class). }
+false;public;0;7;;@Test public void ownAuthorizationAuditListener() {     registerAndRefresh(CustomAuthorizationAuditListenerConfiguration.class, AuditAutoConfiguration.class).     assertThat(this.context.getBean(AbstractAuthorizationAuditListener.class)).isInstanceOf(TestAuthorizationAuditListener.class). }
+false;public;0;7;;@Test public void ownAuditListener() {     registerAndRefresh(CustomAuditListenerConfiguration.class, AuditAutoConfiguration.class).     assertThat(this.context.getBean(AbstractAuditListener.class)).isInstanceOf(TestAuditListener.class). }
+false;private;1;4;;private void registerAndRefresh(Class<?>... annotatedClasses) {     this.context.register(annotatedClasses).     this.context.refresh(). }
+false;public;0;4;;@Bean public TestAuditEventRepository testAuditEventRepository() {     return new TestAuditEventRepository(). }
+false;public;0;4;;@Bean public TestAuthenticationAuditListener authenticationAuditListener() {     return new TestAuthenticationAuditListener(). }
+false;public;1;3;;@Override public void setApplicationEventPublisher(ApplicationEventPublisher publisher) { }
+false;public;1;3;;@Override public void onApplicationEvent(AbstractAuthenticationEvent event) { }
+false;public;0;4;;@Bean public TestAuthorizationAuditListener authorizationAuditListener() {     return new TestAuthorizationAuditListener(). }
+false;public;1;3;;@Override public void setApplicationEventPublisher(ApplicationEventPublisher publisher) { }
+false;public;1;3;;@Override public void onApplicationEvent(AbstractAuthorizationEvent event) { }
+false;public;0;4;;@Bean public TestAuditListener testAuditListener() {     return new TestAuditListener(). }
+false;protected;1;4;;@Override protected void onAuditEvent(AuditEvent event) { }

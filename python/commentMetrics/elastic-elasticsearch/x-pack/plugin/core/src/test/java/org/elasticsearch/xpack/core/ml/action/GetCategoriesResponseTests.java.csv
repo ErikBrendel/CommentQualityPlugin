@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;7;;@Override protected GetCategoriesAction.Response createTestInstance() {     CategoryDefinition definition = new CategoryDefinition(randomAlphaOfLength(10)).     QueryPage<CategoryDefinition> queryPage = new QueryPage<>(Collections.singletonList(definition), 1L, CategoryDefinition.RESULTS_FIELD).     return new GetCategoriesAction.Response(queryPage). }
+false;protected;0;4;;@Override protected GetCategoriesAction.Response createBlankInstance() {     return new GetCategoriesAction.Response(). }

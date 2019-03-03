@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public State getState() {     return state. }
+false;public;0;3;;public void suspend() {     state = State.Suspended. }
+false;public;0;3;;public void activate() {     state = State.Active. }
+false;public;3;3;;public void beforeProcess(Exchange exchange, Processor processor, NamedNode definition) { // noop }
+false;public;4;3;;public void afterProcess(Exchange exchange, Processor processor, NamedNode definition, long timeTaken) { // noop }
+false;public;3;3;;public void onEvent(Exchange exchange, ExchangeEvent event, NamedNode definition) { // noop }

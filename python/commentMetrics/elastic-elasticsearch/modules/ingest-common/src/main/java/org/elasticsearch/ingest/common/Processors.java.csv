@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static long bytes(String value) {     return BytesProcessor.apply(value). }
+false;public,static;1;3;;public static String lowercase(String value) {     return LowercaseProcessor.apply(value). }
+false;public,static;1;3;;public static String uppercase(String value) {     return UppercaseProcessor.apply(value). }
+false;public,static;1;3;;public static Object json(Object fieldValue) {     return JsonProcessor.apply(fieldValue). }
+false;public,static;2;3;;public static void json(Map<String, Object> ctx, String field) {     JsonProcessor.apply(ctx, field). }
+false;public,static;1;3;;public static String urlDecode(String value) {     return URLDecodeProcessor.apply(value). }

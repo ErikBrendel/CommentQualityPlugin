@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Secured("ROLE_USER") public String secure() {     return "Hello Security". }
+false;public;0;4;;@PreAuthorize("true") public String authorized() {     return "Hello World". }
+false;public;0;4;;@PreAuthorize("false") public String denied() {     return "Goodbye World". }

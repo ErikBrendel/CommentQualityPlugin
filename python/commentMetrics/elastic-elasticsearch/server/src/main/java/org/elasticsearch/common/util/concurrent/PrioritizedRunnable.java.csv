@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;2;3;;public static WrappedRunnable wrap(Runnable runnable, Priority priority) {     return new Wrapped(runnable, priority). }
+false;public;0;3;;public long getCreationDateInNanos() {     return creationDate. }
+true;public;0;3;/**  * The elapsed time in milliseconds since this instance was created,  * as calculated by the difference between {@link System#nanoTime()}  * at the time of creation, and {@link System#nanoTime()} at the  * time of invocation of this method  *  * @return the age in milliseconds calculated  */ ;/**  * The elapsed time in milliseconds since this instance was created,  * as calculated by the difference between {@link System#nanoTime()}  * at the time of creation, and {@link System#nanoTime()} at the  * time of invocation of this method  *  * @return the age in milliseconds calculated  */ public long getAgeInMillis() {     return TimeUnit.MILLISECONDS.convert(relativeTimeProvider.getAsLong() - creationDate, TimeUnit.NANOSECONDS). }
+false;public;1;4;;@Override public int compareTo(PrioritizedRunnable pr) {     return priority.compareTo(pr.priority). }
+false;public;0;3;;public Priority priority() {     return priority. }
+false;public;0;4;;@Override public void run() {     runnable.run(). }
+false;public;0;4;;@Override public Runnable unwrap() {     return runnable. }

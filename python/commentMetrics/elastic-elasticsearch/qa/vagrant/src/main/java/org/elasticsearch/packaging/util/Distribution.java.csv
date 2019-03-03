@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;15;;public String filename(String version) {     String architecture = "".     if (version.startsWith("6.") == false) {         if (packaging == Packaging.DEB) {             architecture = "-amd64".         } else {             if (packaging != Packaging.RPM) {                 architecture = "-" + platform.toString().             }             architecture += "-x86_64".         }     }     return flavor.name + "-" + version + architecture + packaging.extension. }
+false;public;0;3;;public boolean isDefault() {     return flavor.equals(Flavor.DEFAULT). }
+false;public;0;3;;public boolean isOSS() {     return flavor.equals(Flavor.OSS). }
+false;public;0;3;;public String toString() {     return name().toLowerCase(Locale.ROOT). }

@@ -1,0 +1,16 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,static;0;3;/**  * Returns a new {@link StreamResequencerConfig} instance using default  * values for <code>capacity</code> (1000) and <code>timeout</code>  * (1000L). Elements of the sequence are compared using the  * default {@link ExpressionResultComparator}.  *  * @return a default {@link StreamResequencerConfig}.  */ ;/**  * Returns a new {@link StreamResequencerConfig} instance using default  * values for <code>capacity</code> (1000) and <code>timeout</code>  * (1000L). Elements of the sequence are compared using the  * default {@link ExpressionResultComparator}.  *  * @return a default {@link StreamResequencerConfig}.  */ public static StreamResequencerConfig getDefault() {     return new StreamResequencerConfig(). }
+false;public;0;3;;public int getCapacity() {     return capacity. }
+true;public;1;3;/**  * Sets the capacity of the resequencer's inbound queue.  */ ;/**  * Sets the capacity of the resequencer's inbound queue.  */ public void setCapacity(int capacity) {     this.capacity = capacity. }
+false;public;0;3;;public long getTimeout() {     return timeout. }
+true;public;1;3;/**  * Sets minimum time to wait for missing elements (messages).  */ ;/**  * Sets minimum time to wait for missing elements (messages).  */ public void setTimeout(long timeout) {     this.timeout = timeout. }
+false;public;0;3;;public Long getDeliveryAttemptInterval() {     return deliveryAttemptInterval. }
+true;public;1;3;/**  * Sets the interval in milli seconds the stream resequencer will at most wait  * while waiting for condition of being able to deliver.  */ ;/**  * Sets the interval in milli seconds the stream resequencer will at most wait  * while waiting for condition of being able to deliver.  */ public void setDeliveryAttemptInterval(Long deliveryAttemptInterval) {     this.deliveryAttemptInterval = deliveryAttemptInterval. }
+false;public;0;3;;public Boolean getIgnoreInvalidExchanges() {     return ignoreInvalidExchanges. }
+true;public;1;3;/**  * Whether to ignore invalid exchanges  */ ;/**  * Whether to ignore invalid exchanges  */ public void setIgnoreInvalidExchanges(Boolean ignoreInvalidExchanges) {     this.ignoreInvalidExchanges = ignoreInvalidExchanges. }
+false;public;0;3;;public ExpressionResultComparator getComparator() {     return comparator. }
+true;public;1;3;/**  * To use a custom comparator  */ ;/**  * To use a custom comparator  */ public void setComparator(ExpressionResultComparator comparator) {     this.comparator = comparator. }
+false;public;0;3;;public String getComparatorRef() {     return comparatorRef. }
+true;public;1;3;/**  * To use a custom comparator  */ ;/**  * To use a custom comparator  */ public void setComparatorRef(String comparatorRef) {     this.comparatorRef = comparatorRef. }
+true;public;1;3;/**  * If true, throws an exception when messages older than the last delivered message are processed  */ ;/**  * If true, throws an exception when messages older than the last delivered message are processed  */ public void setRejectOld(boolean value) {     this.rejectOld = value. }
+false;public;0;3;;public Boolean getRejectOld() {     return rejectOld. }

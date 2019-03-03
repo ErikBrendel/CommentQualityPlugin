@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean isUseRouteBuilder() {     return false. }
+false;public;0;18;;@Test public void testCustomName() throws Exception {     context.start().     int port = AvailablePortFinder.getNextAvailable(24400).     Component custom = new HttpComponent().     context.addComponent("http-foo", custom).     ServiceHelper.startService(custom).     String uri = "http-foo://www.somewhere.com:" + port + "?q=Camel".     Endpoint endpoint = context.getEndpoint(uri).     assertNotNull(endpoint).     // the endpoint uri should use the custom component name as scheme     assertEquals(uri, endpoint.getEndpointUri()).     context.stop(). }

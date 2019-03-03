@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;public ModulesBuilder add(Module... newModules) {     Collections.addAll(modules, newModules).     return this. }
+false;public;0;4;;@Override public Iterator<Module> iterator() {     return modules.iterator(). }
+false;public;0;8;;public Injector createInjector() {     Injector injector = Guice.createInjector(modules).     ((InjectorImpl) injector).clearCache().     // in ES, we always create all instances as if they are eager singletons     // this allows for considerable memory savings (no need to store construction info) as well as cycles     ((InjectorImpl) injector).readOnlyAllSingletons().     return injector. }

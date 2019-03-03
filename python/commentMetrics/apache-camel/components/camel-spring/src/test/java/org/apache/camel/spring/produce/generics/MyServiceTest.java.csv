@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Test public void testInvokeMyService() throws Exception {     Double value = 31.7D.     Double actual = invoker.invokeService(value).     Double expected = Math.sqrt(value).     assertEquals("The result should be the square root", expected, actual). }

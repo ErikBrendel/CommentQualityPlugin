@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;3;;public static TokensInvalidationResult emptyResult() {     return new TokensInvalidationResult(Collections.emptyList(), Collections.emptyList(), Collections.emptyList(), 0). }
+false;public;0;3;;public List<String> getInvalidatedTokens() {     return invalidatedTokens. }
+false;public;0;3;;public List<String> getPreviouslyInvalidatedTokens() {     return previouslyInvalidatedTokens. }
+false;public;0;3;;public List<ElasticsearchException> getErrors() {     return errors. }
+false;public;0;3;;public int getAttemptCount() {     return attemptCount. }
+false;public;2;18;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().field("invalidated_tokens", invalidatedTokens.size()).field("previously_invalidated_tokens", previouslyInvalidatedTokens.size()).field("error_count", errors.size()).     if (errors.isEmpty() == false) {         builder.field("error_details").         builder.startArray().         for (ElasticsearchException e : errors) {             builder.startObject().             ElasticsearchException.generateThrowableXContent(builder, params, e).             builder.endObject().         }         builder.endArray().     }     return builder.endObject(). }
+false;public;1;7;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeStringCollection(invalidatedTokens).     out.writeStringCollection(previouslyInvalidatedTokens).     out.writeCollection(errors, StreamOutput::writeException).     out.writeVInt(attemptCount). }

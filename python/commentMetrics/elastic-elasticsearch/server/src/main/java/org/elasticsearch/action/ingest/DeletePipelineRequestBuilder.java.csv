@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;4;/**  * Sets the id of the pipeline to delete.  */ ;/**  * Sets the id of the pipeline to delete.  */ public DeletePipelineRequestBuilder setId(String id) {     request.setId(id).     return this. }

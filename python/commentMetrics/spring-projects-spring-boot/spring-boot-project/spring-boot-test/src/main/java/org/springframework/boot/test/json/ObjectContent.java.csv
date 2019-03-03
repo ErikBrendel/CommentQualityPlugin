@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public ObjectContentAssert<T> assertThat() {     return new ObjectContentAssert<>(this.object). }
+true;public;0;3;/**  * Return the actual object content.  * @return the object content  */ ;/**  * Return the actual object content.  * @return the object content  */ public T getObject() {     return this.object. }
+false;public;0;5;;@Override public String toString() {     String createdFrom = (this.type != null) ? " created from " + this.type : "".     return "ObjectContent " + this.object + createdFrom. }

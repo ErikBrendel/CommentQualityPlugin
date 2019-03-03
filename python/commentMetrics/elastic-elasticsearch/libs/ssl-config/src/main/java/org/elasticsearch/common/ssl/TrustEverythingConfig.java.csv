@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;3;;@Override public void checkClientTrusted(X509Certificate[] x509Certificates, String s, Socket socket) { }
+false;public;3;3;;@Override public void checkServerTrusted(X509Certificate[] x509Certificates, String s, Socket socket) { }
+false;public;3;3;;@Override public void checkClientTrusted(X509Certificate[] x509Certificates, String s, SSLEngine sslEngine) { }
+false;public;3;3;;@Override public void checkServerTrusted(X509Certificate[] x509Certificates, String s, SSLEngine sslEngine) { }
+false;public;2;3;;@Override public void checkClientTrusted(X509Certificate[] x509Certificates, String s) { }
+false;public;2;3;;@Override public void checkServerTrusted(X509Certificate[] x509Certificates, String s) { }
+false;public;0;4;;@Override public X509Certificate[] getAcceptedIssuers() {     return new X509Certificate[0]. }
+false;public;0;4;;@Override public Collection<Path> getDependentFiles() {     return Collections.emptyList(). }
+false;public;0;4;;@Override public X509ExtendedTrustManager createTrustManager() {     return TRUST_MANAGER. }
+false;public;0;4;;@Override public String toString() {     return "trust everything". }

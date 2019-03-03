@@ -1,0 +1,28 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;protected;0;6;/**  * Lazily initialize the target Writer.  */ ;/**  * Lazily initialize the target Writer.  */ protected PrintWriter getTargetWriter() throws IOException {     if (this.targetWriter == null) {         this.targetWriter = this.response.getWriter().     }     return this.targetWriter. }
+false;public;0;7;;@Override public void clear() throws IOException {     if (this.response.isCommitted()) {         throw new IOException("Response already committed").     }     this.response.resetBuffer(). }
+false;public;0;3;;@Override public void clearBuffer() throws IOException { }
+false;public;0;4;;@Override public void flush() throws IOException {     this.response.flushBuffer(). }
+false;public;0;4;;@Override public void close() throws IOException {     flush(). }
+false;public;0;4;;@Override public int getRemaining() {     return Integer.MAX_VALUE. }
+false;public;0;4;;@Override public void newLine() throws IOException {     getTargetWriter().println(). }
+false;public;3;4;;@Override public void write(char[] value, int offset, int length) throws IOException {     getTargetWriter().write(value, offset, length). }
+false;public;1;4;;@Override public void print(boolean value) throws IOException {     getTargetWriter().print(value). }
+false;public;1;4;;@Override public void print(char value) throws IOException {     getTargetWriter().print(value). }
+false;public;1;4;;@Override public void print(char[] value) throws IOException {     getTargetWriter().print(value). }
+false;public;1;4;;@Override public void print(double value) throws IOException {     getTargetWriter().print(value). }
+false;public;1;4;;@Override public void print(float value) throws IOException {     getTargetWriter().print(value). }
+false;public;1;4;;@Override public void print(int value) throws IOException {     getTargetWriter().print(value). }
+false;public;1;4;;@Override public void print(long value) throws IOException {     getTargetWriter().print(value). }
+false;public;1;4;;@Override public void print(Object value) throws IOException {     getTargetWriter().print(value). }
+false;public;1;4;;@Override public void print(String value) throws IOException {     getTargetWriter().print(value). }
+false;public;0;4;;@Override public void println() throws IOException {     getTargetWriter().println(). }
+false;public;1;4;;@Override public void println(boolean value) throws IOException {     getTargetWriter().println(value). }
+false;public;1;4;;@Override public void println(char value) throws IOException {     getTargetWriter().println(value). }
+false;public;1;4;;@Override public void println(char[] value) throws IOException {     getTargetWriter().println(value). }
+false;public;1;4;;@Override public void println(double value) throws IOException {     getTargetWriter().println(value). }
+false;public;1;4;;@Override public void println(float value) throws IOException {     getTargetWriter().println(value). }
+false;public;1;4;;@Override public void println(int value) throws IOException {     getTargetWriter().println(value). }
+false;public;1;4;;@Override public void println(long value) throws IOException {     getTargetWriter().println(value). }
+false;public;1;4;;@Override public void println(Object value) throws IOException {     getTargetWriter().println(value). }
+false;public;1;4;;@Override public void println(String value) throws IOException {     getTargetWriter().println(value). }

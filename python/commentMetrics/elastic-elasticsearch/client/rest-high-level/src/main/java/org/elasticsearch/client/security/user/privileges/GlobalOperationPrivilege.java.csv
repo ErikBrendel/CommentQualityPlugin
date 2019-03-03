@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getCategory() {     return category. }
+false;public;0;3;;public String getOperation() {     return operation. }
+false;public;0;3;;public Map<String, Object> getRaw() {     return privilege. }
+false;public,static;3;6;;public static GlobalOperationPrivilege fromXContent(String category, String operation, XContentParser parser) throws IOException {     // parser is still placed on the field name, advance to next token (field value)     assert parser.currentToken().equals(XContentParser.Token.FIELD_NAME).     parser.nextToken().     return new GlobalOperationPrivilege(category, operation, parser.map()). }
+false;public;1;11;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (false == (o instanceof GlobalOperationPrivilege)) {         return false.     }     final GlobalOperationPrivilege that = (GlobalOperationPrivilege) o.     return category.equals(that.category) && operation.equals(that.operation) && privilege.equals(that.privilege). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(category, operation, privilege). }

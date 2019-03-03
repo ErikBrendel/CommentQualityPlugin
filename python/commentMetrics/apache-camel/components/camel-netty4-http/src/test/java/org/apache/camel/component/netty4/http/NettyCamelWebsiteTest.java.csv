@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Test public void testCamel() throws Exception {     getMockEndpoint("mock:test").expectedMessageCount(1).     template.sendBody("direct:in", null).     assertMockEndpointsSatisfied(). }
+false;public;0;8;;@Override public void configure() throws Exception {     from("direct:in").setHeader(Exchange.HTTP_METHOD, constant("GET")).to("netty4-http:http://camel.apache.org/").to("log:test").to("mock:test"). }
+false;protected;0;13;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:in").setHeader(Exchange.HTTP_METHOD, constant("GET")).to("netty4-http:http://camel.apache.org/").to("log:test").to("mock:test").         }     }. }

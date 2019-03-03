@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;public Predicate createPredicate(String expression) {     expression = loadResource(expression).     return new SpelExpression(expression, Boolean.class, beanResolver). }
+false;public;1;4;;public Expression createExpression(String expression) {     expression = loadResource(expression).     return new SpelExpression(expression, Object.class, beanResolver). }
+false;public;0;11;;@Override public void start() throws Exception {     ObjectHelper.notNull(getCamelContext(), "CamelContext", this).     if (getCamelContext() instanceof SpringCamelContext) {         ApplicationContext applicationContext = ((SpringCamelContext) getCamelContext()).getApplicationContext().         beanResolver = new BeanFactoryResolver(applicationContext).     } else {         beanResolver = new RegistryBeanResolver(getCamelContext().getRegistry()).     } }
+false;public;0;4;;@Override public void stop() throws Exception { // noop }

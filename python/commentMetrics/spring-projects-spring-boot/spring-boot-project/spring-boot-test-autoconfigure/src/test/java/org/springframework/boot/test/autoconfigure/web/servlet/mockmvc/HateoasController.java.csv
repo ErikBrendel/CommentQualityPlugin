@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@RequestMapping("/resource") public EntityModel<Map<String, String>> resource() {     return new EntityModel<>(new HashMap<>(), new Link("self", "http://api.example.com")). }
+false;public;0;4;;@RequestMapping("/plain") public Map<String, String> plain() {     return new HashMap<>(). }

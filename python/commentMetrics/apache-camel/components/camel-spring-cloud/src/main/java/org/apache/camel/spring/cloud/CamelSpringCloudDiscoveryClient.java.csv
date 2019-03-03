@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String description() {     return description. }
+false;public;0;4;;@Deprecated public ServiceInstance getLocalServiceInstance() {     return this.localInstance. }
+false;public;1;6;;@Override public List<ServiceInstance> getInstances(String serviceId) {     return serviceDiscovery.getServices(serviceId).stream().map(s -> new DefaultServiceInstance(s.getName(), s.getHost(), s.getPort(), false, s.getMetadata())).collect(Collectors.toList()). }
+false;public;0;4;;@Override public List<String> getServices() {     return Collections.emptyList(). }

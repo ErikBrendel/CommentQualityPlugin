@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;2;4;;@Override protected boolean lessThan(B a, B b) {     // reverse, since we reverse again when adding to a list     return comparator.compare(a, b) > 0. }

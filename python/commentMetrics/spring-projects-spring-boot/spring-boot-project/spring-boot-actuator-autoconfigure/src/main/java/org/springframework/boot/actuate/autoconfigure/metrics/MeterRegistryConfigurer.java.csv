@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;1;10;;void configure(MeterRegistry registry) {     // Customizers must be applied before binders, as they may add custom     // tags or alter timer or summary configuration.     customize(registry).     addFilters(registry).     addBinders(registry).     if (this.addToGlobalRegistry && registry != Metrics.globalRegistry) {         Metrics.addRegistry(registry).     } }
+false;private;1;8;;@SuppressWarnings("unchecked") private void customize(MeterRegistry registry) {     LambdaSafe.callbacks(MeterRegistryCustomizer.class, asOrderedList(this.customizers), registry).withLogger(MeterRegistryConfigurer.class).invoke((customizer) -> customizer.customize(registry)). }
+false;private;1;3;;private void addFilters(MeterRegistry registry) {     this.filters.orderedStream().forEach(registry.config()::meterFilter). }
+false;private;1;3;;private void addBinders(MeterRegistry registry) {     this.binders.orderedStream().forEach((binder) -> binder.bindTo(registry)). }
+false;private;1;3;;private <T> List<T> asOrderedList(ObjectProvider<T> provider) {     return provider.orderedStream().collect(Collectors.toList()). }

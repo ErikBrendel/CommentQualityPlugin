@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getRestrictMethod() {     return handler.getConsumer().getEndpoint().getHttpMethodRestrict(). }
+false;public;0;4;;@Override public String getConsumerPath() {     return handler.getConsumer().getConfiguration().getPath(). }
+false;public;0;4;;@Override public HttpServerChannelHandler getConsumer() {     return handler. }
+false;public;0;4;;@Override public boolean isMatchOnUriPrefix() {     return handler.getConsumer().getEndpoint().getConfiguration().isMatchOnUriPrefix(). }
+false;public;0;4;;@Override public String toString() {     return getConsumerPath(). }

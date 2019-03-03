@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * Returns the name of the mappings described by this provider.  * @return the name of the mappings  */ ;/**  * Returns the name of the mappings described by this provider.  * @return the name of the mappings  */ String getMappingName().
+true;;1;1;/**  * Produce the descriptions of the mappings identified by this provider in the given  * {@code context}.  * @param context the application context to introspect  * @return the mapping descriptions  */ ;/**  * Produce the descriptions of the mappings identified by this provider in the given  * {@code context}.  * @param context the application context to introspect  * @return the mapping descriptions  */ Object describeMappings(ApplicationContext context).

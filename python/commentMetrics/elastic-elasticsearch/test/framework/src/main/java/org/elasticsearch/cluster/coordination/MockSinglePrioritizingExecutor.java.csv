@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Override public void run() {     try {         r.run().     } catch (KillWorkerError kwe) {     // hacks everywhere     } }
+false;public;0;4;;@Override public String toString() {     return r.toString(). }
+false;public;0;18;;@Override public void start() {     deterministicTaskQueue.scheduleNow(new Runnable() {          @Override         public void run() {             try {                 r.run().             } catch (KillWorkerError kwe) {             // hacks everywhere             }         }          @Override         public String toString() {             return r.toString().         }     }). }
+false;protected;2;6;;@Override protected void afterExecute(Runnable r, Throwable t) {     super.afterExecute(r, t).     // kill worker so that next one will be scheduled     throw new KillWorkerError(). }
+false;public;2;5;;@Override public boolean awaitTermination(long timeout, TimeUnit unit) {     // ensures we don't block     return false. }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;1;1;/**  * Write this into the {@linkplain StreamOutput}.  */ ;/**  * Write this into the {@linkplain StreamOutput}.  */ void writeTo(StreamOutput out) throws IOException.
+true;;2;1;/**  * Write {@code V}-type {@code value} to the {@code out}put stream.  *  * @param out Output to write the {@code value} too  * @param value The value to add  */ ;/**  * Write {@code V}-type {@code value} to the {@code out}put stream.  *  * @param out Output to write the {@code value} too  * @param value The value to add  */ void write(StreamOutput out, V value) throws IOException.
+true;;1;1;/**  * Read {@code V}-type value from a stream.  *  * @param in Input to read the value from  */ ;/**  * Read {@code V}-type value from a stream.  *  * @param in Input to read the value from  */ V read(StreamInput in) throws IOException.

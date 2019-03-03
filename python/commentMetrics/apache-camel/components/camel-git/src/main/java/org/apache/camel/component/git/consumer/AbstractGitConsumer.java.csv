@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;6;;@Override protected void doStart() throws Exception {     super.doStart().     this.repo = getLocalRepository().     this.git = new Git(repo). }
+false;protected;0;6;;@Override protected void doStop() throws Exception {     super.doStop().     repo.close().     git.close(). }
+false;private;0;13;;private Repository getLocalRepository() throws IOException {     FileRepositoryBuilder builder = new FileRepositoryBuilder().     Repository repo = null.     try {         repo = // scan environment GIT_* variables         builder.setGitDir(new File(endpoint.getLocalPath(), ".git")).readEnvironment().findGitDir().build().     } catch (IOException e) {         log.error("There was an error, cannot open {} repository", endpoint.getLocalPath()).         throw e.     }     return repo. }
+false;protected;0;3;;protected Repository getRepository() {     return repo. }
+false;protected;0;3;;protected Git getGit() {     return git. }
+false;protected,abstract;0;1;;protected abstract int poll() throws Exception.

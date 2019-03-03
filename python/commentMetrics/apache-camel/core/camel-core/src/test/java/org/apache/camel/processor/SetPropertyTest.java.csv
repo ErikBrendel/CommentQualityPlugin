@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;16;;@Test public void testSetExchangePropertyMidRoute() throws Exception {     end.expectedMessageCount(1).     template.sendBody("direct:start", "<blah/>").     // make sure we got the message     assertMockEndpointsSatisfied().     // lets get the property value     List<Exchange> exchanges = end.getExchanges().     Exchange exchange = exchanges.get(0).     String actualPropertyValue = exchange.getProperty(propertyName, String.class).     assertEquals(expectedPropertyValue, actualPropertyValue). }
+false;public;0;6;;@Override @Before public void setUp() throws Exception {     super.setUp().     end = getMockEndpoint("mock:end"). }
+false;public;0;5;;public void configure() {     from("direct:start").setProperty(propertyName).constant(expectedPropertyValue).to("mock:end"). }
+false;protected;0;9;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("direct:start").setProperty(propertyName).constant(expectedPropertyValue).to("mock:end").         }     }. }

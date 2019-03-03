@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected PutJobRequest createTestInstance() {     return new PutJobRequest(JobTests.createRandomizedJob()). }
+false;protected;1;4;;@Override protected PutJobRequest doParseInstance(XContentParser parser) {     return new PutJobRequest(Job.PARSER.apply(parser, null).build()). }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return false. }

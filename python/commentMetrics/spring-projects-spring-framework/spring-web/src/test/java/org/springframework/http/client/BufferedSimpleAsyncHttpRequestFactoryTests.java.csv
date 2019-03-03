@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;8;;@SuppressWarnings("deprecation") @Override protected AsyncClientHttpRequestFactory createRequestFactory() {     SimpleClientHttpRequestFactory requestFactory = new SimpleClientHttpRequestFactory().     AsyncListenableTaskExecutor taskExecutor = new SimpleAsyncTaskExecutor().     requestFactory.setTaskExecutor(taskExecutor).     return requestFactory. }
+false;public;0;11;;@Override @Test public void httpMethods() throws Exception {     super.httpMethods().     try {         assertHttpMethod("patch", HttpMethod.PATCH).     } catch (ProtocolException ex) {     // Currently HttpURLConnection does not support HTTP PATCH     } }

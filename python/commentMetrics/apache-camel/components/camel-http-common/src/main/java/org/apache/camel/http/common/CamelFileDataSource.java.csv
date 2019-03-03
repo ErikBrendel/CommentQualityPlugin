@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;public String getContentType() {     if (typeMap == null) {         return FileTypeMap.getDefaultFileTypeMap().getContentType(fileName).     } else {         return typeMap.getContentType(fileName).     } }
+false;public;1;3;;public void setFileTypeMap(FileTypeMap map) {     typeMap = map. }
+false;public;0;7;;public String getName() {     if (fileName != null) {         return fileName.     } else {         return super.getName().     } }

@@ -1,0 +1,16 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getApplication() {     return application. }
+false;public;0;3;;public String getName() {     return name. }
+false;public;0;3;;public Set<String> getActions() {     return actions. }
+false;public;0;3;;public Map<String, Object> getMetadata() {     return metadata. }
+false;public;1;10;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     ApplicationPrivilege that = (ApplicationPrivilege) o.     return Objects.equals(application, that.application) && Objects.equals(name, that.name) && Objects.equals(actions, that.actions) && Objects.equals(metadata, that.metadata). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(application, name, actions, metadata). }
+false;static;1;3;;static ApplicationPrivilege fromXContent(XContentParser parser) throws IOException {     return PARSER.parse(parser, null). }
+false;public,static;0;3;;public static Builder builder() {     return new Builder(). }
+false;public;1;4;;public Builder application(String applicationName) {     this.applicationName = Objects.requireNonNull(applicationName, "application name must be provided").     return this. }
+false;public;1;4;;public Builder privilege(String privilegeName) {     this.privilegeName = Objects.requireNonNull(privilegeName, "privilege name must be provided").     return this. }
+false;public;1;4;;public Builder actions(String... actions) {     this.actions = Arrays.asList(Objects.requireNonNull(actions)).     return this. }
+false;public;1;4;;public Builder actions(Collection<String> actions) {     this.actions = Objects.requireNonNull(actions).     return this. }
+false;public;1;4;;public Builder metadata(Map<String, Object> metadata) {     this.metadata = metadata.     return this. }
+false;public;0;3;;public ApplicationPrivilege build() {     return new ApplicationPrivilege(applicationName, privilegeName, actions, metadata). }
+false;public;2;11;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().field(APPLICATION.getPreferredName(), application).field(NAME.getPreferredName(), name).field(ACTIONS.getPreferredName(), actions).     if (metadata != null && metadata.isEmpty() == false) {         builder.field(METADATA.getPreferredName(), metadata).     }     return builder.endObject(). }

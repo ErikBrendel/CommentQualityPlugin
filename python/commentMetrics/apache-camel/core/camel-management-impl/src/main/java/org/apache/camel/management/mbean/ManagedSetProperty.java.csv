@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public SetPropertyDefinition getDefinition() {     return (SetPropertyDefinition) super.getDefinition(). }
+false;public;0;4;;@Override public String getPropertyName() {     return processor.getPropertyName(). }
+false;public;0;4;;@Override public String getExpressionLanguage() {     return getDefinition().getExpression().getLanguage(). }
+false;public;0;4;;@Override public String getExpression() {     return getDefinition().getExpression().getExpression(). }

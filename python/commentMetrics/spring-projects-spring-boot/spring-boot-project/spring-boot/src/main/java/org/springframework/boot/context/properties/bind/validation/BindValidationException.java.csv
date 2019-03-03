@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Return the validation errors that caused the exception.  * @return the validationErrors the validation errors  */ ;/**  * Return the validation errors that caused the exception.  * @return the validationErrors the validation errors  */ public ValidationErrors getValidationErrors() {     return this.validationErrors. }
+false;private,static;1;9;;private static String getMessage(ValidationErrors errors) {     StringBuilder message = new StringBuilder("Binding validation errors").     if (errors != null) {         message.append(" on ").append(errors.getName()).         errors.getAllErrors().forEach((error) -> message.append(String.format("%n   - %s", error))).     }     return message.toString(). }

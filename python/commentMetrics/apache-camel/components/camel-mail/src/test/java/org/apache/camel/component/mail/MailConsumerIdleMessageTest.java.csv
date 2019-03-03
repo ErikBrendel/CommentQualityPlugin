@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void testConsumeIdleMessages() throws Exception {     Thread.sleep(110).     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMinimumMessageCount(2).     assertMockEndpointsSatisfied().     assertTrue(mock.getExchanges().get(0).getIn().getBody() == null).     assertTrue(mock.getExchanges().get(1).getIn().getBody() == null). }
+false;public;0;4;;public void configure() {     from("pop3://james@localhost?password=foo&consumer.initialDelay=100&consumer.delay=100&sendEmptyMessageWhenIdle=true").to("mock:result"). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("pop3://james@localhost?password=foo&consumer.initialDelay=100&consumer.delay=100&sendEmptyMessageWhenIdle=true").to("mock:result").         }     }. }

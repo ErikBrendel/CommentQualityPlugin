@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Override public UUID generateId() {     long leastSigBits = this.leastSigBits.incrementAndGet().     if (leastSigBits == 0) {         this.mostSigBits.incrementAndGet().     }     return new UUID(this.mostSigBits.get(), leastSigBits). }

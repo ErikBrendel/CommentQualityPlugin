@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected CookieManager getCookieManager(Exchange exchange) {     return getCookieManagerInternal(). }
+false;private;0;6;;private CookieManager getCookieManagerInternal() {     if (cookieHandler == null) {         cookieHandler = new CookieManager().     }     return cookieHandler. }
+false;public;1;4;;@Override public void setCookiePolicy(CookiePolicy cookiePolicy) {     getCookieManagerInternal().setCookiePolicy(cookiePolicy). }

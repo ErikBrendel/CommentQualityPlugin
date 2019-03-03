@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;5;5;;@Override protected InternalGeoTileGrid createInternalGeoGrid(String name, int size, List<InternalGeoGridBucket> buckets, List<PipelineAggregator> pipelineAggregators, Map<String, Object> metaData) {     return new InternalGeoTileGrid(name, size, buckets, pipelineAggregators, metaData). }
+false;protected;0;4;;@Override protected Writeable.Reader<InternalGeoTileGrid> instanceReader() {     return InternalGeoTileGrid::new. }
+false;protected;3;4;;@Override protected InternalGeoTileGridBucket createInternalGeoGridBucket(Long key, long docCount, InternalAggregations aggregations) {     return new InternalGeoTileGridBucket(key, docCount, aggregations). }
+false;protected;3;4;;@Override protected long longEncode(double lng, double lat, int precision) {     return GeoTileUtils.longEncode(lng, lat, precision). }
+false;protected;0;5;;@Override protected int randomPrecision() {     // precision values below 8 can lead to parsing errors     return randomIntBetween(8, GeoTileUtils.MAX_ZOOM). }

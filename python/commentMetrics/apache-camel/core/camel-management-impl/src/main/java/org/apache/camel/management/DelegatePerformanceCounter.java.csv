@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;public void setCounter(PerformanceCounter counter) {     this.counter = counter.     // init statistics based on the real counter based on how we got initialized     this.counter.setStatisticsEnabled(statisticsEnabled). }
+false;public;1;5;;public void processExchange(Exchange exchange) {     if (counter != null) {         counter.processExchange(exchange).     } }
+false;public;2;5;;public void completedExchange(Exchange exchange, long time) {     if (counter != null) {         counter.completedExchange(exchange, time).     } }
+false;public;1;3;;public void failedExchange(Exchange exchange) {     counter.failedExchange(exchange). }
+false;public;0;5;;public boolean isStatisticsEnabled() {     // otherwise we do not want to gather statistics (we are just a delegate with none to delegate to)     return counter != null && counter.isStatisticsEnabled(). }
+false;public;1;7;;public void setStatisticsEnabled(boolean statisticsEnabled) {     if (counter != null) {         counter.setStatisticsEnabled(statisticsEnabled).     } else {         this.statisticsEnabled = statisticsEnabled.     } }
+false;public;0;4;;@Override public String toString() {     return counter != null ? counter.toString() : super.toString(). }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     return super.toXContent(builder, params). }
+false;public,static;1;3;;public static CancelTasksResponse fromXContent(XContentParser parser) {     return PARSER.apply(parser, null). }
+false;public;0;4;;@Override public String toString() {     return Strings.toString(this, true, true). }

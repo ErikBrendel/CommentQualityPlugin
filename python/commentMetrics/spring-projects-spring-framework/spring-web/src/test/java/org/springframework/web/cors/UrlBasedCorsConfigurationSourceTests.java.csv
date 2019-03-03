@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void empty() {     MockHttpServletRequest request = new MockHttpServletRequest(HttpMethod.GET.name(), "/bar/test.html").     assertNull(this.configSource.getCorsConfiguration(request)). }
+false;public;0;11;;@Test public void registerAndMatch() {     CorsConfiguration config = new CorsConfiguration().     this.configSource.registerCorsConfiguration("/bar/**", config).     MockHttpServletRequest request = new MockHttpServletRequest("GET", "/foo/test.html").     assertNull(this.configSource.getCorsConfiguration(request)).     request.setRequestURI("/bar/test.html").     assertEquals(config, this.configSource.getCorsConfiguration(request)). }
+false;public;0;4;;@Test(expected = UnsupportedOperationException.class) public void unmodifiableConfigurationsMap() {     this.configSource.getCorsConfigurations().put("/**", new CorsConfiguration()). }

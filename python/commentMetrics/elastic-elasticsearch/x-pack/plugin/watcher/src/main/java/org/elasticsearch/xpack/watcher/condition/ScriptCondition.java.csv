@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Script getScript() {     return script. }
+false;public,static;3;9;;public static ScriptCondition parse(ScriptService scriptService, String watchId, XContentParser parser) throws IOException {     try {         Script script = Script.parse(parser).         return new ScriptCondition(script, scriptService).     } catch (ElasticsearchParseException pe) {         throw new ElasticsearchParseException("could not parse [{}] condition for watch [{}]. failed to parse script", pe, TYPE, watchId).     } }
+false;public;1;4;;@Override public Result execute(WatchExecutionContext ctx) {     return doExecute(ctx). }
+false;public;1;4;;public Result doExecute(WatchExecutionContext ctx) {     WatcherConditionScript conditionScript = scriptFactory.newInstance(script.getParams(), ctx).     return conditionScript.execute() ? MET : UNMET. }
+false;public;2;4;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     return script.toXContent(builder, params). }
+false;public;1;9;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     ScriptCondition condition = (ScriptCondition) o.     return script.equals(condition.script). }
+false;public;0;4;;@Override public int hashCode() {     return script.hashCode(). }
+false;public;0;4;;@Override public String type() {     return TYPE. }

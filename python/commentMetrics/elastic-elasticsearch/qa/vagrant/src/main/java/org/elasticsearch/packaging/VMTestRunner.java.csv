@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;8;;public static void main(String[] args) {     if (Files.exists(Paths.get("/is_vagrant_vm"))) {         JUnitCore.main(args).     } else {         throw new RuntimeException("This filesystem does not have an expected marker file indicating it's a virtual machine. These " + "tests should only run in a virtual machine because they're destructive.").     } }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Consume(uri = "direct:end") public String greet(Map<String, Object> headers, String name) {     return headers.get("greeter") + name. }

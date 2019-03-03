@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;11;;@Override public Instant deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException {     try {         Long unixTimestamp = Long.parseLong(jsonParser.getText()).         return Instant.ofEpochSecond(unixTimestamp).     } catch (Exception e) {         log.warn("Unable to deserialize the unix timestamp {}", jsonParser.getText(), e).         return null.     } }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void testGlobalOptionsOverrideProperties() {     assertEquals(3, context.getGlobalOptions().size()).     assertEquals("VALUE_1", context.getGlobalOptions().get("KEY_1")).     assertEquals("VALUE_2", context.getGlobalOptions().get("KEY_2")).     assertEquals("VALUE_3", context.getGlobalOptions().get("KEY_3")). }
+false;protected;0;4;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/spring/camelGlobalOptions.xml"). }

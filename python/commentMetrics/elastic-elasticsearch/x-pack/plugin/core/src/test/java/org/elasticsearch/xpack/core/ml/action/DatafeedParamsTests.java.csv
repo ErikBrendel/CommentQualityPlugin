@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected StartDatafeedAction.DatafeedParams doParseInstance(XContentParser parser) throws IOException {     return StartDatafeedAction.DatafeedParams.parseRequest(null, parser). }
+false;public,static;0;18;;public static StartDatafeedAction.DatafeedParams createDatafeedParams() {     StartDatafeedAction.DatafeedParams params = new StartDatafeedAction.DatafeedParams(randomAlphaOfLength(10), randomNonNegativeLong()).     if (randomBoolean()) {         params.setEndTime(randomNonNegativeLong()).     }     if (randomBoolean()) {         params.setTimeout(TimeValue.timeValueMillis(randomNonNegativeLong())).     }     if (randomBoolean()) {         params.setJobId(randomAlphaOfLength(10)).     }     if (randomBoolean()) {         params.setDatafeedIndices(Arrays.asList(randomAlphaOfLength(10), randomAlphaOfLength(10))).     }     return params. }
+false;protected;0;4;;@Override protected StartDatafeedAction.DatafeedParams createTestInstance() {     return createDatafeedParams(). }
+false;protected;0;4;;@Override protected Writeable.Reader<StartDatafeedAction.DatafeedParams> instanceReader() {     return StartDatafeedAction.DatafeedParams::new. }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }

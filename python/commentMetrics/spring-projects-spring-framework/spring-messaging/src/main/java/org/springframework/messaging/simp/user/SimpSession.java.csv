@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * Return the session id.  */ ;/**  * Return the session id.  */ String getId().
+true;;0;1;/**  * Return the user associated with the session.  */ ;/**  * Return the user associated with the session.  */ SimpUser getUser().
+true;;0;1;/**  * Return the subscriptions for this session.  */ ;/**  * Return the subscriptions for this session.  */ Set<SimpSubscription> getSubscriptions().

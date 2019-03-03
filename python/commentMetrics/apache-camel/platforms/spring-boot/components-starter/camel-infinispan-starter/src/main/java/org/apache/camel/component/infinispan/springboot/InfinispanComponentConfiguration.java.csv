@@ -1,0 +1,35 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public InfinispanConfigurationNestedConfiguration getConfiguration() {     return configuration. }
+false;public;1;4;;public void setConfiguration(InfinispanConfigurationNestedConfiguration configuration) {     this.configuration = configuration. }
+false;public;0;3;;public String getCacheContainer() {     return cacheContainer. }
+false;public;1;3;;public void setCacheContainer(String cacheContainer) {     this.cacheContainer = cacheContainer. }
+false;public;0;3;;public Boolean getResolvePropertyPlaceholders() {     return resolvePropertyPlaceholders. }
+false;public;1;4;;public void setResolvePropertyPlaceholders(Boolean resolvePropertyPlaceholders) {     this.resolvePropertyPlaceholders = resolvePropertyPlaceholders. }
+false;public;0;5;;@Deprecated @DeprecatedConfigurationProperty public String getCommand() {     return command. }
+false;public;1;4;;@Deprecated public void setCommand(String command) {     this.command = command. }
+false;public;0;3;;public InfinispanOperation getOperation() {     return operation. }
+false;public;1;3;;public void setOperation(InfinispanOperation operation) {     this.operation = operation. }
+false;public;0;3;;public String getHosts() {     return hosts. }
+false;public;1;3;;public void setHosts(String hosts) {     this.hosts = hosts. }
+false;public;0;3;;public BasicCacheContainer getCacheContainer() {     return cacheContainer. }
+false;public;1;3;;public void setCacheContainer(BasicCacheContainer cacheContainer) {     this.cacheContainer = cacheContainer. }
+false;public;0;3;;public Boolean getSync() {     return sync. }
+false;public;1;3;;public void setSync(Boolean sync) {     this.sync = sync. }
+false;public;0;3;;public Boolean getClusteredListener() {     return clusteredListener. }
+false;public;1;3;;public void setClusteredListener(Boolean clusteredListener) {     this.clusteredListener = clusteredListener. }
+false;public;0;3;;public Set getEventTypes() {     return eventTypes. }
+false;public;1;3;;public void setEventTypes(Set eventTypes) {     this.eventTypes = eventTypes. }
+false;public;0;3;;public InfinispanCustomListener getCustomListener() {     return customListener. }
+false;public;1;3;;public void setCustomListener(InfinispanCustomListener customListener) {     this.customListener = customListener. }
+false;public;0;3;;public InfinispanQueryBuilder getQueryBuilder() {     return queryBuilder. }
+false;public;1;3;;public void setQueryBuilder(InfinispanQueryBuilder queryBuilder) {     this.queryBuilder = queryBuilder. }
+false;public;0;3;;public Flag[] getFlags() {     return flags. }
+false;public;1;3;;public void setFlags(Flag[] flags) {     this.flags = flags. }
+false;public;0;3;;public String getConfigurationUri() {     return configurationUri. }
+false;public;1;3;;public void setConfigurationUri(String configurationUri) {     this.configurationUri = configurationUri. }
+false;public;0;3;;public Map getConfigurationProperties() {     return configurationProperties. }
+false;public;1;3;;public void setConfigurationProperties(Map configurationProperties) {     this.configurationProperties = configurationProperties. }
+false;public;0;3;;public Object getCacheContainerConfiguration() {     return cacheContainerConfiguration. }
+false;public;1;4;;public void setCacheContainerConfiguration(Object cacheContainerConfiguration) {     this.cacheContainerConfiguration = cacheContainerConfiguration. }
+false;public;0;3;;public Object getResultHeader() {     return resultHeader. }
+false;public;1;3;;public void setResultHeader(Object resultHeader) {     this.resultHeader = resultHeader. }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;5;;@Bean @Conditional(OnHazelcastAndJpaCondition.class) public static HazelcastInstanceJpaDependencyPostProcessor hazelcastInstanceJpaDependencyPostProcessor() {     return new HazelcastInstanceJpaDependencyPostProcessor(). }

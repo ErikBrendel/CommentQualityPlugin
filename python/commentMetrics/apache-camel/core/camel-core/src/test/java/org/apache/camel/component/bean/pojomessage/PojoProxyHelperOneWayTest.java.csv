@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;14;;@Test public void testOneWay() throws Exception {     Endpoint personEndpoint = context.getEndpoint("direct:person").     MockEndpoint result = context.getEndpoint("mock:result", MockEndpoint.class).     Person person = new Person("Chris").     result.expectedBodiesReceived(person).     PersonHandler sender = PojoProxyHelper.createProxy(personEndpoint, PersonHandler.class).     sender.onPerson(person).     result.assertIsSatisfied().     assertEquals(1, receiver.receivedPersons.size()).     assertEquals(person.getName(), receiver.receivedPersons.get(0).getName()). }
+false;public;0;4;;@Override public void configure() throws Exception {     from("direct:person").to("mock:result").bean(receiver). }
+false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:person").to("mock:result").bean(receiver).         }     }. }
+false;public;1;4;;@Override public void onPerson(Person person) {     receivedPersons.add(person). }
+false;;1;1;;void onPerson(Person person).

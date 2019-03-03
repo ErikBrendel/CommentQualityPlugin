@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;11;;@Override protected CamelContext createCamelContext() throws Exception {     final CamelContext camelContext = super.createCamelContext().     final Component delegate = ((DefaultCamelContext) camelContext).getComponentResolver().resolveComponent(componentName, camelContext).     IntrospectionSupport.setProperty(delegate, "sslContextParameters", createHttpsParameters(camelContext)).     camelContext.addComponent(componentName, delegate).     return camelContext. }

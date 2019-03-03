@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,static;0;3;/**  * Sets a new default filesystem for testing  */ ;/**  * Sets a new default filesystem for testing  */ public static void setup() {     installMock(LuceneTestCase.createTempDir().getFileSystem()). }
+true;public,static;1;3;/**  * Installs a mock filesystem for testing  */ ;/**  * Installs a mock filesystem for testing  */ public static void installMock(FileSystem mock) {     PathUtils.DEFAULT = mock. }
+true;public,static;0;3;/**  * Resets filesystem back to the real system default  */ ;/**  * Resets filesystem back to the real system default  */ public static void teardown() {     PathUtils.DEFAULT = PathUtils.ACTUAL_DEFAULT. }

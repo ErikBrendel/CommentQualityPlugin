@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Override public void configure() throws Exception {     getContext().addComponent("my-timer", new TimerComponent()).     from("my-timer://test-timer?period=1000").to("mock://result"). }

@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void setDataSource(DataSource ds) {     this.jdbc = new JdbcTemplate(ds). }
+false;public;1;9;;public boolean add(String key) {     // check we already have it because eager option can have been turned on     if (contains(key)) {         return false.     }     jdbc.update("INSERT INTO ProcessedPayments (paymentIdentifier) VALUES (?)", key).     return true. }
+false;public;1;4;;public boolean contains(String key) {     int numMatches = jdbc.queryForObject("SELECT count(0) FROM ProcessedPayments where paymentIdentifier = ?", Integer.class, key).     return numMatches > 0. }
+false;public;1;4;;public boolean remove(String key) {     jdbc.update("DELETE FROM ProcessedPayments WHERE paymentIdentifier = ?", key).     return true. }
+false;public;1;3;;public boolean confirm(String key) {     return true. }
+false;public;0;3;;public void clear() {     jdbc.update("DELETE * FROM ProcessedPayments"). }
+false;public;0;3;;public void start() throws Exception { // noop }
+false;public;0;3;;public void stop() throws Exception { // noop }

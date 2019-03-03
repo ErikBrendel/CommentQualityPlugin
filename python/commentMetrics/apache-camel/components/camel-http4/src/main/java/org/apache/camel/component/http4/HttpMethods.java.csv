@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;7;;public HttpRequestBase createMethod(final String url) {     try {         return clazz.getDeclaredConstructor(String.class).newInstance(url).     } catch (Exception e) {         throw new RuntimeException(e).     } }
+false;public,final;0;3;;public final boolean isEntityEnclosing() {     return entity. }
+false;public;2;3;;public <T> T evaluate(Exchange exchange, Class<T> type) {     return ExpressionBuilder.constantExpression(name()).evaluate(exchange, type). }

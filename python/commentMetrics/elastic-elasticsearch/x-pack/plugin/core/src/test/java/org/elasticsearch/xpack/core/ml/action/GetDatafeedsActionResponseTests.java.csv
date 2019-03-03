@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;9;;@Override protected Response createTestInstance() {     int listSize = randomInt(10).     List<DatafeedConfig> datafeedList = new ArrayList<>(listSize).     for (int j = 0. j < listSize. j++) {         datafeedList.add(DatafeedConfigTests.createRandomizedDatafeedConfig(randomAlphaOfLength(10))).     }     return new Response(new QueryPage<>(datafeedList, datafeedList.size(), DatafeedConfig.RESULTS_FIELD)). }
+false;protected;0;4;;@Override protected Response createBlankInstance() {     return new Response(). }
+false;protected;0;5;;@Override protected NamedWriteableRegistry getNamedWriteableRegistry() {     SearchModule searchModule = new SearchModule(Settings.EMPTY, false, Collections.emptyList()).     return new NamedWriteableRegistry(searchModule.getNamedWriteables()). }

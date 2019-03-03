@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public HttpHeaders getHeaders() {     return (this.headersWritten ? HttpHeaders.readOnlyHttpHeaders(this.headers) : this.headers). }
+true;public;0;3;/**  * Return a copy of the actual headers written at the time of the call to  * getResponseBody, i.e. ignoring any further changes that may have been made to  * the underlying headers, e.g. via a previously obtained instance.  */ ;/**  * Return a copy of the actual headers written at the time of the call to  * getResponseBody, i.e. ignoring any further changes that may have been made to  * the underlying headers, e.g. via a previously obtained instance.  */ public HttpHeaders getWrittenHeaders() {     return writtenHeaders. }
+false;public;0;5;;@Override public OutputStream getBody() throws IOException {     writeHeaders().     return body. }
+false;public;0;4;;public byte[] getBodyAsBytes() {     writeHeaders().     return body.toByteArray(). }
+false;public;1;4;;public String getBodyAsString(Charset charset) {     byte[] bytes = getBodyAsBytes().     return new String(bytes, charset). }
+false;private;0;7;;private void writeHeaders() {     if (this.headersWritten) {         return.     }     this.headersWritten = true.     this.writtenHeaders.putAll(this.headers). }

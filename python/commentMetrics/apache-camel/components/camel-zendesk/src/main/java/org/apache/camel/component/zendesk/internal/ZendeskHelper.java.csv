@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;8;;public static Zendesk create(ZendeskConfiguration configuration) {     return new Zendesk.Builder(configuration.getServerUrl()).setUsername(configuration.getUsername()).setToken(configuration.getToken()).setOauthToken(configuration.getOauthToken()).setPassword(configuration.getPassword()).build(). }

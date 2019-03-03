@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;6;;@Override public void handleUncaughtException(Throwable ex, Method method, Object... params) {     if (logger.isErrorEnabled()) {         logger.error("Unexpected exception occurred invoking async method: " + method, ex).     } }

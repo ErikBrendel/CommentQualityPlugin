@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void setExpression(@Nullable String expression) {     this.pointcut.setExpression(expression). }
+false;public;0;4;;@Nullable public String getExpression() {     return this.pointcut.getExpression(). }
+false;public;1;3;;public void setLocation(@Nullable String location) {     this.pointcut.setLocation(location). }
+false;public;0;4;;@Nullable public String getLocation() {     return this.pointcut.getLocation(). }
+false;public;1;3;;public void setParameterNames(String... names) {     this.pointcut.setParameterNames(names). }
+false;public;1;3;;public void setParameterTypes(Class<?>... types) {     this.pointcut.setParameterTypes(types). }
+false;public;1;4;;@Override public void setBeanFactory(BeanFactory beanFactory) {     this.pointcut.setBeanFactory(beanFactory). }
+false;public;0;4;;@Override public Pointcut getPointcut() {     return this.pointcut. }

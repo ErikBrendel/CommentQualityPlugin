@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public void run() {     HelloCamelServer.this.stop(). }
+false;private;0;12;;private void start() throws IOException {     /* The port on which the server should run */     int port = 8080.     server = ServerBuilder.forPort(port).addService(new HelloCamelImpl()).build().start().     LOG.info("Server started. I'm listening on " + port).     Runtime.getRuntime().addShutdownHook(new Thread() {          @Override         public void run() {             HelloCamelServer.this.stop().         }     }). }
+false;private;0;5;;private void stop() {     if (server != null) {         server.shutdown().     } }
+false;private;0;5;;private void blockUntilShutdown() throws InterruptedException {     if (server != null) {         server.awaitTermination().     } }
+true;public,static;1;5;/**  * Main needed to launch server from command line  */ ;/**  * Main needed to launch server from command line  */ public static void main(String[] args) throws IOException, InterruptedException {     final HelloCamelServer server = new HelloCamelServer().     server.start().     server.blockUntilShutdown(). }
+false;public;2;6;;@Override public void sayHelloToCamel(CamelHelloRequest req, StreamObserver<CamelHelloReply> responseObserver) {     CamelHelloReply reply = CamelHelloReply.newBuilder().setMessage("Hello " + req.getName()).build().     responseObserver.onNext(reply).     responseObserver.onCompleted(). }

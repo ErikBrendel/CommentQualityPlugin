@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Bean @ConditionalOnMissingBean(name = "redisHealthIndicator") public ReactiveHealthIndicator redisHealthIndicator() {     return createHealthIndicator(this.redisConnectionFactories). }

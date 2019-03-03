@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Response newResponse() {     throw new UnsupportedOperationException("usage of Streamable is to be replaced by Writeable"). }
+false;public;0;4;;@Override public Writeable.Reader<Response> getResponseReader() {     return Response::new. }
+false;public;0;3;;public boolean isKilled() {     return killed. }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeBoolean(killed). }
+false;public;1;7;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     Response response = (Response) o.     return killed == response.killed. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(killed). }

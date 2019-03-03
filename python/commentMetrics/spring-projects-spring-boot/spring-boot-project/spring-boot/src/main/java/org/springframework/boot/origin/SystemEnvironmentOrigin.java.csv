@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getProperty() {     return this.property. }
+false;public;1;11;;@Override public boolean equals(Object obj) {     if (this == obj) {         return true.     }     if (obj == null || getClass() != obj.getClass()) {         return false.     }     SystemEnvironmentOrigin other = (SystemEnvironmentOrigin) obj.     return ObjectUtils.nullSafeEquals(this.property, other.property). }
+false;public;0;4;;@Override public int hashCode() {     return ObjectUtils.nullSafeHashCode(this.property). }
+false;public;0;4;;@Override public String toString() {     return "System Environment Property \"" + this.property + "\"". }

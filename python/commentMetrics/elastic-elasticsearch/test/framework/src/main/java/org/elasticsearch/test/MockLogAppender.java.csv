@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void addExpectation(LoggingExpectation expectation) {     expectations.add(expectation). }
+false;public;1;6;;@Override public void append(LogEvent event) {     for (LoggingExpectation expectation : expectations) {         expectation.match(event).     } }
+false;public;0;5;;public void assertAllExpectationsMatched() {     for (LoggingExpectation expectation : expectations) {         expectation.assertMatched().     } }
+false;;1;1;;void match(LogEvent event).
+false;;0;1;;void assertMatched().
+false;public;1;14;;@Override public void match(LogEvent event) {     if (event.getLevel().equals(level) && event.getLoggerName().equals(logger) && innerMatch(event)) {         if (Regex.isSimpleMatchPattern(message)) {             if (Regex.simpleMatch(message, event.getMessage().getFormattedMessage())) {                 saw = true.             }         } else {             if (event.getMessage().getFormattedMessage().contains(message)) {                 saw = true.             }         }     } }
+false;public;1;3;;public boolean innerMatch(final LogEvent event) {     return true. }
+false;public;0;4;;@Override public void assertMatched() {     assertThat("expected to see " + name + " but did not", saw, equalTo(false)). }
+false;public;0;4;;@Override public void assertMatched() {     assertThat("expected to see " + name + " but did not", saw, equalTo(true)). }
+false;public;1;6;;@Override public boolean innerMatch(final LogEvent event) {     return event.getThrown() != null && event.getThrown().getClass() == clazz && event.getThrown().getMessage().equals(exceptionMessage). }
+false;public;1;8;;@Override public void match(LogEvent event) {     if (event.getLevel().equals(level) && event.getLoggerName().equals(logger)) {         if (Pattern.matches(pattern, event.getMessage().getFormattedMessage())) {             saw = true.         }     } }
+false;public;0;4;;@Override public void assertMatched() {     assertThat(name, saw, equalTo(true)). }
+false;private,static;1;6;;private static String getLoggerName(String name) {     if (name.startsWith("org.elasticsearch.")) {         name = name.substring("org.elasticsearch.".length()).     }     return COMMON_PREFIX + name. }

@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;public FilterPath matchProperty(String name) {     if ((next != null) && (simpleWildcard || doubleWildcard || Glob.globMatch(segment, name))) {         return next.     }     return null. }
+false;public;0;3;;public boolean matches() {     return next == null. }
+false;;0;3;;boolean isDoubleWildcard() {     return doubleWildcard. }
+false;;0;3;;boolean isSimpleWildcard() {     return simpleWildcard. }
+false;;0;3;;String getSegment() {     return segment. }
+false;;0;3;;FilterPath getNext() {     return next. }
+false;public,static;1;16;;public static FilterPath[] compile(Set<String> filters) {     if (filters == null || filters.isEmpty()) {         return null.     }     List<FilterPath> paths = new ArrayList<>().     for (String filter : filters) {         if (filter != null) {             filter = filter.trim().             if (filter.length() > 0) {                 paths.add(parse(filter, filter)).             }         }     }     return paths.toArray(new FilterPath[paths.size()]). }
+false;private,static;2;17;;private static FilterPath parse(final String filter, final String segment) {     int end = segment.length().     for (int i = 0. i < end. ) {         char c = segment.charAt(i).         if (c == '.') {             String current = segment.substring(0, i).replaceAll("\\\\.", ".").             return new FilterPath(filter, current, parse(filter, segment.substring(i + 1))).         }         ++i.         if ((c == '\\') && (i < end) && (segment.charAt(i) == '.')) {             ++i.         }     }     return new FilterPath(filter, segment.replaceAll("\\\\.", "."), EMPTY). }
+false;public;0;4;;@Override public String toString() {     return "FilterPath [filter=" + filter + ", segment=" + segment + "]". }

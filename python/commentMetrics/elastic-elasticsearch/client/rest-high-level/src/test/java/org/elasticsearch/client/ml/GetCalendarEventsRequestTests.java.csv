@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;18;;@Override protected GetCalendarEventsRequest createTestInstance() {     String calendarId = randomAlphaOfLengthBetween(1, 10).     GetCalendarEventsRequest request = new GetCalendarEventsRequest(calendarId).     if (randomBoolean()) {         request.setPageParams(new PageParams(1, 2)).     }     if (randomBoolean()) {         request.setEnd(randomAlphaOfLength(10)).     }     if (randomBoolean()) {         request.setStart(randomAlphaOfLength(10)).     }     if (randomBoolean()) {         request.setJobId(randomAlphaOfLength(10)).     }     return request. }
+false;protected;1;4;;@Override protected GetCalendarEventsRequest doParseInstance(XContentParser parser) {     return GetCalendarEventsRequest.PARSER.apply(parser, null). }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return false. }

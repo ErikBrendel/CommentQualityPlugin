@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getProductToken() {     return productToken. }
+true;public;1;3;/**  * The unique token to use  */ ;/**  * The unique token to use  */ public void setProductToken(String productToken) {     this.productToken = productToken. }
+false;public;0;3;;public String getDefaultFrom() {     return defaultFrom. }
+true;public;1;3;/**  * This is the sender name. The maximum length is 11 characters.  */ ;/**  * This is the sender name. The maximum length is 11 characters.  */ public void setDefaultFrom(final String defaultFrom) {     this.defaultFrom = defaultFrom. }
+false;public;0;3;;public int getDefaultMaxNumberOfParts() {     return defaultMaxNumberOfParts. }
+true;public;1;3;/**  * If it is a multipart message forces the max number. Message can be truncated.  * Technically the gateway will first check if a message is larger than 160 characters,  * if so, the message will be cut into multiple 153 characters parts limited by these parameters.  */ ;/**  * If it is a multipart message forces the max number. Message can be truncated.  * Technically the gateway will first check if a message is larger than 160 characters,  * if so, the message will be cut into multiple 153 characters parts limited by these parameters.  */ public void setDefaultMaxNumberOfParts(final int defaultMaxNumberOfParts) {     this.defaultMaxNumberOfParts = defaultMaxNumberOfParts. }
+false;public;0;3;;public boolean isTestConnectionOnStartup() {     return testConnectionOnStartup. }
+true;public;1;3;/**  * Whether to test the connection to the SMS Gateway on startup  */ ;/**  * Whether to test the connection to the SMS Gateway on startup  */ public void setTestConnectionOnStartup(final boolean testConnectionOnStartup) {     this.testConnectionOnStartup = testConnectionOnStartup. }

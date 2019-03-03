@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public String getMessageGroupId(Exchange exchange) {     return exchange.getProperty(SqsConstants.MESSAGE_GROUP_ID_PROPERTY, String.class). }

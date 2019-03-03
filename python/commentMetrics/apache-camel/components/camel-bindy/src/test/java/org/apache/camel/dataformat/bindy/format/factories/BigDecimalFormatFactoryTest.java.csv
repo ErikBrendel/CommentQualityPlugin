@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void canBuild() throws Exception {     assertThat(new BigDecimalFormatFactory().canBuild(formattingOptions), is(true)).     assertThat(new BigDecimalFormatFactory().canBuild(wrongClass), is(false)).     assertThat(new BigDecimalFormatFactory().canBuild(hasPattern), is(false)). }
+false;public;0;4;;@Test public void build() throws Exception { }

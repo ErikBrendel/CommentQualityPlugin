@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Before public void setUp() throws Exception {     when(redisTemplate.opsForSet()).thenReturn(setOperations).     when(redisTemplate.getConnectionFactory()).thenReturn(redisConnectionFactory).     when(redisTemplate.getConnectionFactory().getConnection()).thenReturn(redisConnection).     idempotentRepository = RedisIdempotentRepository.redisIdempotentRepository(redisTemplate, REPOSITORY). }
+false;public;0;5;;@Test public void shouldAddKey() {     idempotentRepository.add(KEY).     verify(setOperations).add(REPOSITORY, KEY). }
+false;public;0;5;;@Test public void shoulCheckForMembers() {     idempotentRepository.contains(KEY).     verify(setOperations).isMember(REPOSITORY, KEY). }
+false;public;0;5;;@Test public void shouldRemoveKey() {     idempotentRepository.remove(KEY).     verify(setOperations).remove(REPOSITORY, KEY). }
+false;public;0;5;;@Test public void shouldClearRepository() {     idempotentRepository.clear().     verify(redisConnection).flushDb(). }
+false;public;0;5;;@Test public void shouldReturnProcessorName() {     String processorName = idempotentRepository.getProcessorName().     assertEquals(REPOSITORY, processorName). }

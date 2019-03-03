@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void updateState(CamelNodeState state) {     singleton.update(state). }
+false;protected;0;8;;@Override protected void doStart() throws Exception {     super.doStart().     this.singleton = createGroup(clusterPath).     this.singleton.add(this).     singleton.start(). }
+false;protected;0;5;;@Override protected void doStop() throws Exception {     IOHelper.close(singleton).     super.doStop(). }
+false;public;0;3;;public String getClusterPath() {     return clusterPath. }
+false;public;0;3;;public Group<CamelNodeState> getGroup() {     return singleton. }
+false;public;2;31;;@Override public void groupEvent(Group group, GroupEvent event) {     switch(event) {         case CONNECTED:             break.         case CHANGED:             if (singleton.isConnected()) {                 if (singleton.isMaster()) {                     if (LOG.isDebugEnabled()) {                         LOG.debug("Master/Standby endpoint is Master for:  " + endpoint + " in " + endpoint.getCamelContext()).                     }                     onLockOwned().                 } else {                     if (LOG.isDebugEnabled()) {                         LOG.debug("Master/Standby endpoint is Standby for: " + endpoint + " in " + endpoint.getCamelContext()).                     }                 }             }             break.         case DISCONNECTED:             try {                 LOG.info("Disconnecting as master. Stopping consumer: {}", endpoint).                 onDisconnected().             } catch (Exception e) {                 LOG.warn("Failed to stop master consumer for: " + endpoint + ". This exception is ignored.", e).             }             break.         default:     } }
+false;protected;0;3;;protected void onDisconnected() {     onDisconnected.run(). }
+false;protected;0;3;;protected void onLockOwned() {     onLockAcquired.run(). }

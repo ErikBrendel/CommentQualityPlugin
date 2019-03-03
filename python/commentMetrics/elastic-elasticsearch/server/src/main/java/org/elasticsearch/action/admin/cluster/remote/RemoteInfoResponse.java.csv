@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public List<RemoteConnectionInfo> getInfos() {     return infos. }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeList(infos). }
+false;public;1;5;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     infos = in.readList(RemoteConnectionInfo::new). }
+false;public;2;9;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     for (RemoteConnectionInfo info : infos) {         info.toXContent(builder, params).     }     builder.endObject().     return builder. }

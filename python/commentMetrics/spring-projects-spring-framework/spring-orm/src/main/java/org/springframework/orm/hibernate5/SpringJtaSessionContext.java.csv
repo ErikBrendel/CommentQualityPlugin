@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;9;;@Override @SuppressWarnings("deprecation") protected Session buildOrObtainSession() {     Session session = super.buildOrObtainSession().     if (TransactionSynchronizationManager.isCurrentTransactionReadOnly()) {         session.setFlushMode(FlushMode.MANUAL).     }     return session. }

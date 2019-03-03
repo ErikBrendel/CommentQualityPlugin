@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;public void testNullIndices() {     expectThrows(NullPointerException.class, () -> new IndexUpgradeInfoRequest((String[]) null)).     expectThrows(NullPointerException.class, () -> new IndexUpgradeInfoRequest().indices((String[]) null)). }

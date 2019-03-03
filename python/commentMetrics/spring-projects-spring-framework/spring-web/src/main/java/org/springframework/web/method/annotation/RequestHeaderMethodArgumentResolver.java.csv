@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public boolean supportsParameter(MethodParameter parameter) {     return (parameter.hasParameterAnnotation(RequestHeader.class) && !Map.class.isAssignableFrom(parameter.nestedIfOptional().getNestedParameterType())). }
+false;protected;1;6;;@Override protected NamedValueInfo createNamedValueInfo(MethodParameter parameter) {     RequestHeader ann = parameter.getParameterAnnotation(RequestHeader.class).     Assert.state(ann != null, "No RequestHeader annotation").     return new RequestHeaderNamedValueInfo(ann). }
+false;protected;3;11;;@Override @Nullable protected Object resolveName(String name, MethodParameter parameter, NativeWebRequest request) throws Exception {     String[] headerValues = request.getHeaderValues(name).     if (headerValues != null) {         return (headerValues.length == 1 ? headerValues[0] : headerValues).     } else {         return null.     } }
+false;protected;2;4;;@Override protected void handleMissingValue(String name, MethodParameter parameter) throws ServletRequestBindingException {     throw new MissingRequestHeaderException(name, parameter). }

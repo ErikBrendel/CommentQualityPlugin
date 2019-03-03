@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;2;4;;@Override protected T copyInstance(T instance, Version version) throws IOException {     return copyWriteable(instance, getNamedWriteableRegistry(), instanceReader(), version). }

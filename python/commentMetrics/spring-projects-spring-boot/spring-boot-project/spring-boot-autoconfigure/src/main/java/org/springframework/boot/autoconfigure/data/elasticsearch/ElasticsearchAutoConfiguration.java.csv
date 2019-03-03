@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Bean @ConditionalOnMissingBean public TransportClient elasticsearchClient() throws Exception {     TransportClientFactoryBean factory = new TransportClientFactoryBean().     factory.setClusterNodes(this.properties.getClusterNodes()).     factory.setProperties(createProperties()).     factory.afterPropertiesSet().     return factory.getObject(). }
+false;private;0;6;;private Properties createProperties() {     Properties properties = new Properties().     properties.put("cluster.name", this.properties.getClusterName()).     properties.putAll(this.properties.getProperties()).     return properties. }

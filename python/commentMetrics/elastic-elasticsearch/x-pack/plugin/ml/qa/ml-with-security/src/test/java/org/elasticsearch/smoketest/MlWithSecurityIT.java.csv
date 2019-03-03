@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;3;;protected String[] getCredentials() {     return new String[] { "ml_admin", "x-pack-test-password" }. }
+false;protected;0;8;;@Override protected Settings restClientSettings() {     String[] creds = getCredentials().     String token = basicAuthHeaderValue(creds[0], new SecureString(creds[1].toCharArray())).     return Settings.builder().put(ThreadContext.PREFIX + ".Authorization", token).build(). }
+false;protected;0;7;;@Override protected Settings restAdminSettings() {     String token = basicAuthHeaderValue(TEST_ADMIN_USERNAME, SecuritySettingsSourceField.TEST_PASSWORD_SECURE_STRING).     return Settings.builder().put(ThreadContext.PREFIX + ".Authorization", token).build(). }
+false;protected;0;4;;protected Map<String, String> getApiCallHeaders() {     return Collections.singletonMap("Authorization", basicAuthHeaderValue(TEST_ADMIN_USERNAME, SecuritySettingsSourceField.TEST_PASSWORD_SECURE_STRING)). }
+false;protected;0;4;;@Override protected boolean isMonitoringTest() {     return false. }
+false;protected;0;4;;@Override protected boolean isWatcherTest() {     return false. }
+false;protected;0;4;;@Override protected boolean isMachineLearningTest() {     return true. }

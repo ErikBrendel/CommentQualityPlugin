@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void testDefaultSettings() {     assertThat(SpringApplication.exit(SpringApplication.run(SampleBatchApplication.class))).isEqualTo(0).     assertThat(this.output.toString()).contains("completed with the following parameters"). }

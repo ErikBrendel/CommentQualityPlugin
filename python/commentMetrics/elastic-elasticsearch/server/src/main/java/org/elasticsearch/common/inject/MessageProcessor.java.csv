@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;13;;@Override public Boolean visit(Message message) {     // ES_GUICE: don't log failures using jdk logging     // if (message.getCause() != null) {     // String rootMessage = getRootMessage(message.getCause()).     // logger.log(Level.INFO,     // "An exception was caught and reported. Message: " + rootMessage,     // message.getCause()).     // }     errors.addMessage(message).     return true. }
+false;public,static;1;4;;public static String getRootMessage(Throwable t) {     Throwable cause = t.getCause().     return cause == null ? t.toString() : getRootMessage(cause). }

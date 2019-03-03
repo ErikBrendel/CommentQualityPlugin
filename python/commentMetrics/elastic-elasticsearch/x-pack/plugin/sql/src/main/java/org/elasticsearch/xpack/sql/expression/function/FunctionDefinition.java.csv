@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;3;1;;Function build(UnresolvedFunction uf, boolean distinct, Configuration configuration).
+false;public;0;3;;public String name() {     return name. }
+false;public;0;3;;public List<String> aliases() {     return aliases. }
+false;public;0;3;;public FunctionType type() {     return type. }
+false;;0;3;;Class<? extends Function> clazz() {     return clazz. }
+false;;0;3;;Builder builder() {     return builder. }
+true;;0;3;/**  * Is this a datetime function compatible with {@code EXTRACT}.  */ ;/**  * Is this a datetime function compatible with {@code EXTRACT}.  */ boolean extractViable() {     return extractViable. }
+false;public;0;4;;@Override public String toString() {     return format(Locale.ROOT, "%s(%s)", name, aliases.isEmpty() ? "" : aliases.size() == 1 ? aliases.get(0) : aliases). }

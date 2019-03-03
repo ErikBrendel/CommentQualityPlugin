@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;13;;@Test public void testOrderError() throws Exception {     MockEndpoint error = getMockEndpoint("mock:error").     error.expectedBodiesReceived("Order ERROR").     MockEndpoint result = getMockEndpoint("mock:result").     result.expectedMessageCount(0).     Object out = template.requestBodyAndHeader("direct:start", "Order: kaboom", "customerid", "555").     assertEquals("Order ERROR", out).     assertMockEndpointsSatisfied(). }
+false;protected;0;3;;protected CamelContext createCamelContext() throws Exception {     return createSpringCamelContext(this, "/org/apache/camel/spring/processor/onexception/onExceptionNotNormalizedClassNameTest.xml"). }

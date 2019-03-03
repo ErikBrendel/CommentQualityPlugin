@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void testExtensions() {     String result = template().requestBody("direct:extensions", "<dummy/>", String.class).     assertNotNull(result).     assertEquals(XSLT_RESULT, result). }
+false;protected;1;5;;@Override protected void bindToRegistry(Registry registry) throws Exception {     registry.bind("function1", new MyExtensionFunction1()).     registry.bind("function2", new MyExtensionFunction2()). }
+false;public;0;6;;@Override public void configure() throws Exception {     from("direct:extensions").toF("xslt:%s?saxonExtensionFunctions=#function1,#function2", XSLT_PATH).to("log:org.apache.camel.component.xslt.extensions?level=INFO"). }
+false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:extensions").toF("xslt:%s?saxonExtensionFunctions=#function1,#function2", XSLT_PATH).to("log:org.apache.camel.component.xslt.extensions?level=INFO").         }     }. }

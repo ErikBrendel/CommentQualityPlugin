@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static boolean isRequest(byte value) {     return (value & STATUS_REQRES) == 0. }
+false;public,static;1;4;;public static byte setRequest(byte value) {     value &= ~STATUS_REQRES.     return value. }
+false;public,static;1;4;;public static byte setResponse(byte value) {     value |= STATUS_REQRES.     return value. }
+false;public,static;1;3;;public static boolean isError(byte value) {     return (value & STATUS_ERROR) != 0. }
+false;public,static;1;4;;public static byte setError(byte value) {     value |= STATUS_ERROR.     return value. }
+false;public,static;1;3;;public static boolean isCompress(byte value) {     return (value & STATUS_COMPRESS) != 0. }
+false;public,static;1;4;;public static byte setCompress(byte value) {     value |= STATUS_COMPRESS.     return value. }
+false;static;1;3;;static boolean isHandshake(byte value) {     // pkg private since it's only used internally     return (value & STATUS_HANDSHAKE) != 0. }
+false;static;1;4;;static byte setHandshake(byte value) {     // pkg private since it's only used internally     value |= STATUS_HANDSHAKE.     return value. }

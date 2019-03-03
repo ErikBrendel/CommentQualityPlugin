@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Before public void setup() {     ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext(getClass().getSimpleName() + ".xml", getClass()).     noMethodsBean = (NoMethodsBean) ctx.getBean("noMethodsBean").     counter = (Counter) ctx.getBean("counter").     counter.reset(). }
+false;public;0;4;;@Test public void testIntroductionWasMade() {     assertTrue("Introduction must have been made", noMethodsBean instanceof ICounter). }
+false;public;0;5;;@Test public void testIntroductionDelegation() {     ((ICounter) noMethodsBean).increment().     assertEquals("Delegate's counter should be updated", 1, counter.getCount()). }

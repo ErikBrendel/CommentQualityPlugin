@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;3;6;/**  * This implementation always returns {@code true}.  */ ;/**  * This implementation always returns {@code true}.  */ @Override public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {     return true. }
+true;public;4;4;/**  * This implementation is empty.  */ ;/**  * This implementation is empty.  */ @Override public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, @Nullable ModelAndView modelAndView) throws Exception { }
+true;public;4;4;/**  * This implementation is empty.  */ ;/**  * This implementation is empty.  */ @Override public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, @Nullable Exception ex) throws Exception { }
+true;public;3;4;/**  * This implementation is empty.  */ ;/**  * This implementation is empty.  */ @Override public void afterConcurrentHandlingStarted(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception { }

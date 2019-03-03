@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public BarEndpoint getEndpoint() {     return (BarEndpoint) super.getEndpoint(). }
+false;public;1;11;;@Override public void process(Exchange exchange) throws Exception {     // is there a header with the drink     String drink = exchange.getIn().getHeader(BarConstants.DRINK, String.class).     if (drink == null) {         drink = getEndpoint().getDrink().     }     String order = exchange.getIn().getBody(String.class) + " ordered " + drink.     exchange.getIn().setBody(order). }

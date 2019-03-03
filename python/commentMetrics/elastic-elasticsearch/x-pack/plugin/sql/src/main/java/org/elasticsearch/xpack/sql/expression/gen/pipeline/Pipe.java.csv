@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Expression expression() {     return expression. }
+false;public;0;4;;@Override public boolean resolved() {     return Resolvables.resolved(children()). }
+false;public;1;4;;@Override public void collectFields(SqlSourceBuilder sourceBuilder) {     children().forEach(c -> c.collectFields(sourceBuilder)). }
+false;public;0;10;;@Override public boolean supportedByAggsOnlyQuery() {     for (Pipe pipe : children()) {         if (pipe.supportedByAggsOnlyQuery()) {             return true.         }     }     return false. }
+false;public,abstract;0;1;;public abstract Processor asProcessor().
+true;public;1;8;/**  * Resolve {@link Attribute}s which are unprocessable into  * {@link Pipe}s that are.  *  * @return {@code this} if the resolution doesn't change the  *      definition, a new {@link Pipe} otherwise  */ ;/**  * Resolve {@link Attribute}s which are unprocessable into  * {@link Pipe}s that are.  *  * @return {@code this} if the resolution doesn't change the  *      definition, a new {@link Pipe} otherwise  */ public Pipe resolveAttributes(AttributeResolver resolver) {     List<Pipe> newPipes = new ArrayList<>(children().size()).     for (Pipe p : children()) {         newPipes.add(p.resolveAttributes(resolver)).     }     return children().equals(newPipes) ? this : replaceChildren(newPipes). }
+false;;1;1;;FieldExtraction resolve(Attribute attribute).

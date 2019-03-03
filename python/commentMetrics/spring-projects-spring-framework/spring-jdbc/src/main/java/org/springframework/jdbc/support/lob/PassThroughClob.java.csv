@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public long length() throws SQLException {     return this.contentLength. }
+false;public;0;14;;@Override public Reader getCharacterStream() throws SQLException {     if (this.content != null) {         return new StringReader(this.content).     } else if (this.characterStream != null) {         return this.characterStream.     } else {         return new InputStreamReader((this.asciiStream != null ? this.asciiStream : StreamUtils.emptyInput()), StandardCharsets.US_ASCII).     } }
+false;public;0;18;;@Override public InputStream getAsciiStream() throws SQLException {     try {         if (this.content != null) {             return new ByteArrayInputStream(this.content.getBytes(StandardCharsets.US_ASCII)).         } else if (this.characterStream != null) {             String tempContent = FileCopyUtils.copyToString(this.characterStream).             return new ByteArrayInputStream(tempContent.getBytes(StandardCharsets.US_ASCII)).         } else {             return (this.asciiStream != null ? this.asciiStream : StreamUtils.emptyInput()).         }     } catch (IOException ex) {         throw new SQLException("Failed to read stream content: " + ex).     } }
+false;public;2;4;;@Override public Reader getCharacterStream(long pos, long length) throws SQLException {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public Writer setCharacterStream(long pos) throws SQLException {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public OutputStream setAsciiStream(long pos) throws SQLException {     throw new UnsupportedOperationException(). }
+false;public;2;4;;@Override public String getSubString(long pos, int length) throws SQLException {     throw new UnsupportedOperationException(). }
+false;public;2;4;;@Override public int setString(long pos, String str) throws SQLException {     throw new UnsupportedOperationException(). }
+false;public;4;4;;@Override public int setString(long pos, String str, int offset, int len) throws SQLException {     throw new UnsupportedOperationException(). }
+false;public;2;4;;@Override public long position(String searchstr, long start) throws SQLException {     throw new UnsupportedOperationException(). }
+false;public;2;4;;@Override public long position(Clob searchstr, long start) throws SQLException {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public void truncate(long len) throws SQLException {     throw new UnsupportedOperationException(). }
+false;public;0;4;;@Override public void free() throws SQLException { // no-op }

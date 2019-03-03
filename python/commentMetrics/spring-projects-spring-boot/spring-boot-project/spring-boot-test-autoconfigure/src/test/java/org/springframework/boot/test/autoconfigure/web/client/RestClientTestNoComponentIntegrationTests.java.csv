@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test(expected = NoSuchBeanDefinitionException.class) public void exampleRestClientIsNotInjected() {     this.applicationContext.getBean(ExampleRestClient.class). }
+false;public;0;7;;@Test public void manuallyCreateBean() {     ExampleRestClient client = new ExampleRestClient(this.restTemplateBuilder).     this.server.expect(requestTo("/test")).andRespond(withSuccess("hello", MediaType.TEXT_HTML)).     assertThat(client.test()).isEqualTo("hello"). }

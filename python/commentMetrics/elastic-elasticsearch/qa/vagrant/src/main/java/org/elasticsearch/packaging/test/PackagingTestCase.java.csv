@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Before public void setup() {     assumeTrue("only compatible distributions", distribution().packaging.compatible).     logger.info("[" + testNameRule.getMethodName() + "]: before test"). }
+false;public,static;0;5;;@BeforeClass public static void cleanup() {     installation = null.     cleanEverything(). }
+true;protected,abstract;0;1;/**  * The {@link Distribution} that should be tested in this case  */ ;/**  * The {@link Distribution} that should be tested in this case  */ protected abstract Distribution distribution().

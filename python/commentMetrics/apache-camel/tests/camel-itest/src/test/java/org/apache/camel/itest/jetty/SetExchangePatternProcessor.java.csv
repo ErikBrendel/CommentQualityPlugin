@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;9;;public void process(Exchange exchange) throws Exception {     // Override the exchange pattern     exchange.setPattern(ExchangePattern.InOnly).     // Convert the input stream into a string     String result = exchange.getIn().getBody(String.class).     exchange.getIn().setBody(result). }

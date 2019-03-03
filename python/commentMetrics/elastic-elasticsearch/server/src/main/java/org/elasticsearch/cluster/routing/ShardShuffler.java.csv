@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,abstract;0;1;/**  * Return a new seed.  */ ;/**  * Return a new seed.  */ public abstract int nextSeed().
+true;public,abstract;2;1;/**  * Return a shuffled view over the list of shards. The behavior of this method must be deterministic: if the same list and the same seed  * are provided twice, then the result needs to be the same.  */ ;/**  * Return a shuffled view over the list of shards. The behavior of this method must be deterministic: if the same list and the same seed  * are provided twice, then the result needs to be the same.  */ public abstract List<ShardRouting> shuffle(List<ShardRouting> shards, int seed).
+true;public;1;3;/**  * Equivalent to calling <code>shuffle(shards, nextSeed())</code>.  */ ;/**  * Equivalent to calling <code>shuffle(shards, nextSeed())</code>.  */ public List<ShardRouting> shuffle(List<ShardRouting> shards) {     return shuffle(shards, nextSeed()). }

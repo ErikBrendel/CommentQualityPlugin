@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public List<CamelContextFactoryBean> getContexts() {     return contexts. }
+false;public;1;3;;public void setContexts(List<CamelContextFactoryBean> contexts) {     this.contexts = contexts. }
+false;public;0;3;;public List<ErrorHandlerDefinition> getErrorHandlers() {     return errorHandlers. }
+false;public;1;3;;public void setErrorHandlers(List<ErrorHandlerDefinition> errorHandlers) {     this.errorHandlers = errorHandlers. }
+false;public;0;3;;public List<ImportDefinition> getImports() {     return imports. }
+false;public;1;3;;public void setImports(List<ImportDefinition> imports) {     this.imports = imports. }
+false;public;0;3;;public List<RestContextDefinition> getRestContexts() {     return restContexts. }
+false;public;1;3;;public void setRestContexts(List<RestContextDefinition> restContexts) {     this.restContexts = restContexts. }
+false;public;0;3;;public List<RouteContextDefinition> getRouteContexts() {     return routeContexts. }
+false;public;1;3;;public void setRouteContexts(List<RouteContextDefinition> routeContexts) {     this.routeContexts = routeContexts. }
+false;public;0;3;;public List<AbstractCamelFactoryBean<?>> getBeans() {     return beans. }
+false;public;1;3;;public void setBeans(List<AbstractCamelFactoryBean<?>> beans) {     this.beans = beans. }

@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public boolean isOverrideEnabled() {     return overrideEnabled. }
+false;public;0;3;;public TemplateScript.Factory getField() {     return field. }
+false;public;0;3;;public ValueSource getValue() {     return value. }
+false;public;1;7;;@Override public IngestDocument execute(IngestDocument document) {     if (overrideEnabled || document.hasField(field) == false || document.getFieldValue(field, Object.class) == null) {         document.setFieldValue(field, value).     }     return document. }
+false;public;0;4;;@Override public String getType() {     return TYPE. }
+false;public;3;14;;@Override public SetProcessor create(Map<String, Processor.Factory> registry, String processorTag, Map<String, Object> config) throws Exception {     String field = ConfigurationUtils.readStringProperty(TYPE, processorTag, config, "field").     Object value = ConfigurationUtils.readObject(TYPE, processorTag, config, "value").     boolean overrideEnabled = ConfigurationUtils.readBooleanProperty(TYPE, processorTag, config, "override", true).     TemplateScript.Factory compiledTemplate = ConfigurationUtils.compileTemplate(TYPE, processorTag, "field", field, scriptService).     return new SetProcessor(processorTag, compiledTemplate, ValueSource.wrap(value, scriptService), overrideEnabled). }

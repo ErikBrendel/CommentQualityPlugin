@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;14;;@Override protected GetFiltersRequest createTestInstance() {     GetFiltersRequest request = new GetFiltersRequest().     if (randomBoolean()) {         request.setFilterId(randomAlphaOfLength(10)).     }     if (randomBoolean()) {         request.setSize(randomInt(100)).     }     if (randomBoolean()) {         request.setFrom(randomInt(100)).     }     return request. }
+false;protected;1;4;;@Override protected GetFiltersRequest doParseInstance(XContentParser parser) throws IOException {     return GetFiltersRequest.PARSER.apply(parser, null). }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return false. }

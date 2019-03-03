@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;11;;@ReadOperation public ApplicationConditionEvaluation applicationConditionEvaluation() {     Map<String, ContextConditionEvaluation> contextConditionEvaluations = new HashMap<>().     ConfigurableApplicationContext target = this.context.     while (target != null) {         contextConditionEvaluations.put(target.getId(), new ContextConditionEvaluation(target)).         target = getConfigurableParent(target).     }     return new ApplicationConditionEvaluation(contextConditionEvaluations). }
+false;private;1;8;;private ConfigurableApplicationContext getConfigurableParent(ConfigurableApplicationContext context) {     ApplicationContext parent = context.getParent().     if (parent instanceof ConfigurableApplicationContext) {         return (ConfigurableApplicationContext) parent.     }     return null. }
+false;public;0;3;;public Map<String, ContextConditionEvaluation> getContexts() {     return this.contexts. }
+false;private;2;11;;private void add(String source, ConditionAndOutcomes conditionAndOutcomes) {     String name = ClassUtils.getShortName(source).     if (conditionAndOutcomes.isFullMatch()) {         conditionAndOutcomes.forEach((conditionAndOutcome) -> this.positiveMatches.add(name, new MessageAndCondition(conditionAndOutcome))).     } else {         this.negativeMatches.put(name, new MessageAndConditions(conditionAndOutcomes)).     } }
+false;public;0;3;;public Map<String, List<MessageAndCondition>> getPositiveMatches() {     return this.positiveMatches. }
+false;public;0;3;;public Map<String, MessageAndConditions> getNegativeMatches() {     return this.negativeMatches. }
+false;public;0;3;;public List<String> getExclusions() {     return this.exclusions. }
+false;public;0;3;;public Set<String> getUnconditionalClasses() {     return this.unconditionalClasses. }
+false;public;0;3;;public String getParentId() {     return this.parentId. }
+false;public;0;3;;public List<MessageAndCondition> getNotMatched() {     return this.notMatched. }
+false;public;0;3;;public List<MessageAndCondition> getMatched() {     return this.matched. }
+false;public;0;3;;public String getCondition() {     return this.condition. }
+false;public;0;3;;public String getMessage() {     return this.message. }

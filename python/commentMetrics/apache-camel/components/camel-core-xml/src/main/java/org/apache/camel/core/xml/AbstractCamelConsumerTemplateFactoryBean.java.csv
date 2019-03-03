@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;12;;public ConsumerTemplate getObject() throws Exception {     template = new DefaultConsumerTemplate(getCamelContext()).     // set custom cache size if provided     if (maximumCacheSize != null) {         template.setMaximumCacheSize(maximumCacheSize).     }     // must start it so its ready to use     ServiceHelper.startService(template).     return template. }
+false;public;0;3;;public Class<ConsumerTemplate> getObjectType() {     return ConsumerTemplate.class. }
+false;public;0;3;;public void destroy() throws Exception {     ServiceHelper.stopService(template). }
+false;public;0;3;;// Properties // ------------------------------------------------------------------------- public Integer getMaximumCacheSize() {     return maximumCacheSize. }
+false;public;1;3;;public void setMaximumCacheSize(Integer maximumCacheSize) {     this.maximumCacheSize = maximumCacheSize. }

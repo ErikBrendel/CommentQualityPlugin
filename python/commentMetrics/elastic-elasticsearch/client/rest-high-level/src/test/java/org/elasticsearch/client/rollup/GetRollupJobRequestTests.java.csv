@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;public void testRequiresJob() {     final NullPointerException e = expectThrows(NullPointerException.class, () -> new GetRollupJobRequest(null)).     assertEquals("jobId is required", e.getMessage()). }
+false;public;0;4;;public void testDoNotUseAll() {     final IllegalArgumentException e = expectThrows(IllegalArgumentException.class, () -> new GetRollupJobRequest("_all")).     assertEquals("use the default ctor to ask for all jobs", e.getMessage()). }

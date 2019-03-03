@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void testMessagesSentToConsumerArrive() throws Exception {     String body = "<hello>world!</hello>".     resultEndpoint.expectedBodiesReceived(body).     template.sendBody("direct:start", body).     resultEndpoint.assertIsSatisfied(). }
+false;public;0;7;;@Override @Before public void setUp() throws Exception {     super.setUp().     resultEndpoint = getMockEndpoint("mock:result"). }
+false;protected;0;3;;protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/spring/example/pojoConsumer.xml"). }

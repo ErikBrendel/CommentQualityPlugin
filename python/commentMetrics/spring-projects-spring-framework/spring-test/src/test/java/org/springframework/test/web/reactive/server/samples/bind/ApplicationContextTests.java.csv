@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Before public void setUp() throws Exception {     AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext().     context.register(WebConfig.class).     context.refresh().     this.client = WebTestClient.bindToApplicationContext(context).build(). }
+false;public;0;7;;@Test public void test() throws Exception {     this.client.get().uri("/test").exchange().expectStatus().isOk().expectBody(String.class).isEqualTo("It works!"). }
+false;public;0;4;;@Bean public TestController controller() {     return new TestController(). }
+false;public;0;4;;@GetMapping("/test") public String handle() {     return "It works!". }

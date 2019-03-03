@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Iterator<Map.Entry<String, String>> iterator() {     throw new UnsupportedOperationException("CamelHeadersInjectAdapter should only be used with Tracer.inject()"). }
+false;public;2;7;;@Override public void put(String key, String value) {     // Assume any header property that begins with 'Camel' is for internal use     if (!key.startsWith("Camel")) {         this.map.put(key, value).     } }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;6;// tag::configuration[] ;// tag::configuration[] @Bean @Primary @ConfigurationProperties("app.datasource.first") public DataSourceProperties firstDataSourceProperties() {     return new DataSourceProperties(). }
+false;public;0;7;;@Bean @Primary @ConfigurationProperties("app.datasource.first.configuration") public HikariDataSource firstDataSource() {     return firstDataSourceProperties().initializeDataSourceBuilder().type(HikariDataSource.class).build(). }
+false;public;0;5;;@Bean @ConfigurationProperties("app.datasource.second") public BasicDataSource secondDataSource() {     return DataSourceBuilder.create().type(BasicDataSource.class).build(). }

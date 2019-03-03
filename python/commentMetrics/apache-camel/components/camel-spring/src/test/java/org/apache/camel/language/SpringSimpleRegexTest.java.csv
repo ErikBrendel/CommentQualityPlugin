@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/language/springSimpleRegexContext.xml"). }
+false;public;0;8;;@Test public void testSimpleRegex() {     String result = template.requestBody("direct:start", "Something is wrong", String.class).     assertEquals("Let's keep looking.", result).     result = template.requestBody("direct:start", "12.34.5678", String.class).     assertEquals("Found the result.", result). }

@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,final;1;7;;@Override public final Pipe replaceChildren(List<Pipe> newChildren) {     if (newChildren.size() != 3) {         throw new IllegalArgumentException("expected [3] children but received [" + newChildren.size() + "]").     }     return replaceChildren(newChildren.get(0), newChildren.get(1), newChildren.get(2)). }
+false;public,final;1;10;;@Override public final Pipe resolveAttributes(AttributeResolver resolver) {     Pipe newSource = source.resolveAttributes(resolver).     Pipe newStart = start.resolveAttributes(resolver).     Pipe newLength = length.resolveAttributes(resolver).     if (newSource == source && newStart == start && newLength == length) {         return this.     }     return replaceChildren(newSource, newStart, newLength). }
+false;public;0;4;;@Override public boolean supportedByAggsOnlyQuery() {     return source.supportedByAggsOnlyQuery() && start.supportedByAggsOnlyQuery() && length.supportedByAggsOnlyQuery(). }
+false;public;0;4;;@Override public boolean resolved() {     return source.resolved() && start.resolved() && length.resolved(). }
+false;protected;3;4;;protected Pipe replaceChildren(Pipe newSource, Pipe newStart, Pipe newLength) {     return new SubstringFunctionPipe(source(), expression(), newSource, newStart, newLength). }
+false;public,final;1;6;;@Override public final void collectFields(SqlSourceBuilder sourceBuilder) {     source.collectFields(sourceBuilder).     start.collectFields(sourceBuilder).     length.collectFields(sourceBuilder). }
+false;protected;0;4;;@Override protected NodeInfo<SubstringFunctionPipe> info() {     return NodeInfo.create(this, SubstringFunctionPipe::new, expression(), source, start, length). }
+false;public;0;4;;@Override public SubstringFunctionProcessor asProcessor() {     return new SubstringFunctionProcessor(source.asProcessor(), start.asProcessor(), length.asProcessor()). }
+false;public;0;3;;public Pipe src() {     return source. }
+false;public;0;3;;public Pipe start() {     return start. }
+false;public;0;3;;public Pipe length() {     return length. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(source, start, length). }
+false;public;1;13;;@Override public boolean equals(Object obj) {     if (this == obj) {         return true.     }     if (obj == null || getClass() != obj.getClass()) {         return false.     }     SubstringFunctionPipe other = (SubstringFunctionPipe) obj.     return Objects.equals(source, other.source) && Objects.equals(start, other.start) && Objects.equals(length, other.length). }

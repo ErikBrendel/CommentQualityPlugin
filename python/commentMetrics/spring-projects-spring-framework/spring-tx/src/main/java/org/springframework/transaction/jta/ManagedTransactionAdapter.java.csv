@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,final;0;3;/**  * Return the JTA TransactionManager that this adapter delegates to.  */ ;/**  * Return the JTA TransactionManager that this adapter delegates to.  */ public final TransactionManager getTransactionManager() {     return this.transactionManager. }
+false;public;0;5;;@Override public void commit() throws RollbackException, HeuristicMixedException, HeuristicRollbackException, SecurityException, SystemException {     this.transactionManager.commit(). }
+false;public;0;4;;@Override public void rollback() throws SystemException {     this.transactionManager.rollback(). }
+false;public;0;4;;@Override public void setRollbackOnly() throws SystemException {     this.transactionManager.setRollbackOnly(). }
+false;public;0;4;;@Override public int getStatus() throws SystemException {     return this.transactionManager.getStatus(). }
+false;public;1;4;;@Override public boolean enlistResource(XAResource xaRes) throws RollbackException, SystemException {     return this.transactionManager.getTransaction().enlistResource(xaRes). }
+false;public;2;4;;@Override public boolean delistResource(XAResource xaRes, int flag) throws SystemException {     return this.transactionManager.getTransaction().delistResource(xaRes, flag). }
+false;public;1;4;;@Override public void registerSynchronization(Synchronization sync) throws RollbackException, SystemException {     this.transactionManager.getTransaction().registerSynchronization(sync). }

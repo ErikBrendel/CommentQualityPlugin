@@ -1,0 +1,28 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Ends the configuration of this response message  */ ;/**  * Ends the configuration of this response message  */ public RestOperationResponseMsgDefinition endResponseHeader() {     return response. }
+false;public;0;3;;public String getName() {     return name. }
+false;public;1;3;;public void setName(String name) {     this.name = name. }
+false;public;0;3;;public String getDescription() {     return description. }
+false;public;1;3;;public void setDescription(String description) {     this.description = description. }
+false;public;0;3;;public CollectionFormat getCollectionFormat() {     return collectionFormat. }
+true;public;1;3;/**  * Sets the Swagger Parameter collection format.  */ ;/**  * Sets the Swagger Parameter collection format.  */ public void setCollectionFormat(CollectionFormat collectionFormat) {     this.collectionFormat = collectionFormat. }
+false;public;0;3;;public String getArrayType() {     return arrayType. }
+true;public;1;3;/**  * Sets the Swagger Parameter array type.  * Required if data type is "array". Describes the type of items in the array.  */ ;/**  * Sets the Swagger Parameter array type.  * Required if data type is "array". Describes the type of items in the array.  */ public void setArrayType(String arrayType) {     this.arrayType = arrayType. }
+false;public;0;3;;public String getDataType() {     return dataType. }
+true;public;1;3;/**  * Sets the Swagger header data type.  */ ;/**  * Sets the Swagger header data type.  */ public void setDataType(String dataType) {     this.dataType = dataType. }
+false;public;0;3;;public String getDataFormat() {     return dataFormat. }
+true;public;1;3;/**  * Sets the Swagger Parameter data format.  */ ;/**  * Sets the Swagger Parameter data format.  */ public void setDataFormat(String dataFormat) {     this.dataFormat = dataFormat. }
+false;public;0;7;;public List<String> getAllowableValues() {     if (allowableValues != null) {         return allowableValues.     }     return new ArrayList<>(). }
+false;public;0;3;;public String getExample() {     return example. }
+true;public;1;3;/**  * Sets the Swagger example  */ ;/**  * Sets the Swagger example  */ public void setExample(String example) {     this.example = example. }
+true;public;1;3;/**  * Sets the Swagger Parameter list of allowable values.  */ ;/**  * Sets the Swagger Parameter list of allowable values.  */ public void setAllowableValues(List<String> allowableValues) {     this.allowableValues = allowableValues. }
+true;public;1;4;/**  * Name of the parameter.  * <p>  * This option is mandatory.  */ ;/**  * Name of the parameter.  * <p>  * This option is mandatory.  */ public RestOperationResponseHeaderDefinition name(String name) {     setName(name).     return this. }
+true;public;1;4;/**  * Description of the parameter.  */ ;/**  * Description of the parameter.  */ public RestOperationResponseHeaderDefinition description(String name) {     setDescription(name).     return this. }
+true;public;1;4;/**  * Sets the collection format.  */ ;/**  * Sets the collection format.  */ public RestOperationResponseHeaderDefinition collectionFormat(CollectionFormat collectionFormat) {     setCollectionFormat(collectionFormat).     return this. }
+true;public;1;4;/**  * The data type of the array data type  */ ;/**  * The data type of the array data type  */ public RestOperationResponseHeaderDefinition arrayType(String arrayType) {     setArrayType(arrayType).     return this. }
+true;public;1;4;/**  * The data type of the header such as <tt>string</tt>, <tt>integer</tt>, <tt>boolean</tt>  */ ;/**  * The data type of the header such as <tt>string</tt>, <tt>integer</tt>, <tt>boolean</tt>  */ public RestOperationResponseHeaderDefinition dataType(String type) {     setDataType(type).     return this. }
+true;public;1;4;/**  * The data format of the parameter such as <tt>binary</tt>, <tt>date</tt>, <tt>date-time</tt>, <tt>password</tt>.  * The format is usually derived from the dataType alone. However you can set this option for more fine grained control  * of the format in use.  */ ;/**  * The data format of the parameter such as <tt>binary</tt>, <tt>date</tt>, <tt>date-time</tt>, <tt>password</tt>.  * The format is usually derived from the dataType alone. However you can set this option for more fine grained control  * of the format in use.  */ public RestOperationResponseHeaderDefinition dataFormat(String type) {     setDataFormat(type).     return this. }
+true;public;1;4;/**  * Allowed values of the header when its an enum type  */ ;/**  * Allowed values of the header when its an enum type  */ public RestOperationResponseHeaderDefinition allowableValues(List<String> allowableValues) {     setAllowableValues(allowableValues).     return this. }
+true;public;1;4;/**  * Allowed values of the parameter when its an enum type  */ ;/**  * Allowed values of the parameter when its an enum type  */ public RestOperationResponseHeaderDefinition allowableValues(String... allowableValues) {     setAllowableValues(Arrays.asList(allowableValues)).     return this. }
+true;public;1;4;/**  * Sets an example of this header.  */ ;/**  * Sets an example of this header.  */ public RestOperationResponseHeaderDefinition example(String example) {     setExample(example).     return this. }
+true;public;0;6;/**  * Ends the configuration of this header  */ ;/**  * Ends the configuration of this header  */ public RestOperationResponseMsgDefinition endHeader() {     // name and type is mandatory     StringHelper.notEmpty(name, "name").     StringHelper.notEmpty(dataType, "dataType").     return response. }

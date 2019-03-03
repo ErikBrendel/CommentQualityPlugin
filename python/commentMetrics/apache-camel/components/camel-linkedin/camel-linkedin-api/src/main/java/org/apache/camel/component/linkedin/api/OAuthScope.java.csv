@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getValue() {     return value. }
+false;public,static;1;8;;public static OAuthScope fromValue(String value) {     for (OAuthScope scope : values()) {         if (scope.value.equals(value)) {             return scope.         }     }     throw new IllegalArgumentException(value). }
+false;public,static;1;11;;public static OAuthScope[] fromValues(String... values) {     if (values == null || values.length == 0) {         return new OAuthScope[0].     }     final OAuthScope[] result = new OAuthScope[values.length].     int i = 0.     for (String value : values) {         result[i++] = fromValue(value).     }     return result. }

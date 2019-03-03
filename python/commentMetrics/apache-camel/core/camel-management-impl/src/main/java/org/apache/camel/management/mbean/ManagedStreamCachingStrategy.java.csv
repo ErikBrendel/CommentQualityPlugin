@@ -1,0 +1,27 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public CamelContext getCamelContext() {     return camelContext. }
+false;public;0;3;;public StreamCachingStrategy getStreamCachingStrategy() {     return streamCachingStrategy. }
+false;public;0;3;;public boolean isEnabled() {     return streamCachingStrategy.isEnabled(). }
+false;public;0;3;;public String getSpoolDirectory() {     return streamCachingStrategy.getSpoolDirectory().getPath(). }
+false;public;0;3;;public String getSpoolChiper() {     return streamCachingStrategy.getSpoolChiper(). }
+false;public;1;3;;public void setSpoolThreshold(long threshold) {     streamCachingStrategy.setSpoolThreshold(threshold). }
+false;public;0;3;;public long getSpoolThreshold() {     return streamCachingStrategy.getSpoolThreshold(). }
+false;public;1;3;;public void setSpoolUsedHeapMemoryThreshold(int percentage) {     streamCachingStrategy.setSpoolUsedHeapMemoryThreshold(percentage). }
+false;public;0;3;;public int getSpoolUsedHeapMemoryThreshold() {     return streamCachingStrategy.getSpoolUsedHeapMemoryThreshold(). }
+false;public;1;18;;public void setSpoolUsedHeapMemoryLimit(SpoolUsedHeapMemoryLimit limit) {     StreamCachingStrategy.SpoolUsedHeapMemoryLimit l.     if (limit == null) {         l = null.     } else {         switch(limit) {             case Committed:                 l = StreamCachingStrategy.SpoolUsedHeapMemoryLimit.Committed.                 break.             case Max:                 l = StreamCachingStrategy.SpoolUsedHeapMemoryLimit.Max.                 break.             default:                 throw new IllegalStateException().         }     }     streamCachingStrategy.setSpoolUsedHeapMemoryLimit(l). }
+false;public;0;15;;public SpoolUsedHeapMemoryLimit getSpoolUsedHeapMemoryLimit() {     StreamCachingStrategy.SpoolUsedHeapMemoryLimit l = streamCachingStrategy.getSpoolUsedHeapMemoryLimit().     if (l == null) {         return null.     } else {         switch(l) {             case Committed:                 return SpoolUsedHeapMemoryLimit.Committed.             case Max:                 return SpoolUsedHeapMemoryLimit.Max.             default:                 throw new IllegalStateException().         }     } }
+false;public;1;3;;public void setBufferSize(int bufferSize) {     streamCachingStrategy.setBufferSize(bufferSize). }
+false;public;0;3;;public int getBufferSize() {     return streamCachingStrategy.getBufferSize(). }
+false;public;1;3;;public void setRemoveSpoolDirectoryWhenStopping(boolean remove) {     streamCachingStrategy.setRemoveSpoolDirectoryWhenStopping(remove). }
+false;public;0;3;;public boolean isRemoveSpoolDirectoryWhenStopping() {     return streamCachingStrategy.isRemoveSpoolDirectoryWhenStopping(). }
+false;public;1;3;;public void setAnySpoolRules(boolean any) {     streamCachingStrategy.setAnySpoolRules(any). }
+false;public;0;3;;public boolean isAnySpoolRules() {     return streamCachingStrategy.isAnySpoolRules(). }
+false;public;0;3;;public long getCacheMemoryCounter() {     return streamCachingStrategy.getStatistics().getCacheMemoryCounter(). }
+false;public;0;3;;public long getCacheMemorySize() {     return streamCachingStrategy.getStatistics().getCacheMemorySize(). }
+false;public;0;3;;public long getCacheMemoryAverageSize() {     return streamCachingStrategy.getStatistics().getCacheMemoryAverageSize(). }
+false;public;0;3;;public long getCacheSpoolCounter() {     return streamCachingStrategy.getStatistics().getCacheSpoolCounter(). }
+false;public;0;3;;public long getCacheSpoolSize() {     return streamCachingStrategy.getStatistics().getCacheSpoolSize(). }
+false;public;0;3;;public long getCacheSpoolAverageSize() {     return streamCachingStrategy.getStatistics().getCacheSpoolAverageSize(). }
+false;public;0;3;;public boolean isStatisticsEnabled() {     return streamCachingStrategy.getStatistics().isStatisticsEnabled(). }
+false;public;1;3;;public void setStatisticsEnabled(boolean enabled) {     streamCachingStrategy.getStatistics().setStatisticsEnabled(enabled). }
+false;public;0;3;;public void resetStatistics() {     streamCachingStrategy.getStatistics().reset(). }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public void onResponse(DiscoveryNode node) {     super.onResponse(node).     onNodeAck(ackListener, node, null). }
+false;public;2;8;;@Override public void onFailure(DiscoveryNode node, Exception e) {     try {         super.onFailure(node, e).     } finally {         onNodeAck(ackListener, node, e).     } }
+false;private;3;8;;private void onNodeAck(final Discovery.AckListener ackListener, DiscoveryNode node, Exception e) {     try {         ackListener.onNodeAck(node, e).     } catch (Exception inner) {         inner.addSuppressed(e).         logger.debug(() -> new ParameterizedMessage("error while processing ack for node [{}]", node), inner).     } }

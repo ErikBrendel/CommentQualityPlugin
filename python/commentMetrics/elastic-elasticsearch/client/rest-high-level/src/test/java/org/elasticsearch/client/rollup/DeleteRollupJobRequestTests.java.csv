@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Before public void setUpOptionalId() {     jobId = randomAlphaOfLengthBetween(1, 10). }
+false;protected;0;4;;@Override protected DeleteRollupJobRequest createTestInstance() {     return new DeleteRollupJobRequest(jobId). }
+false;protected;1;4;;@Override protected DeleteRollupJobRequest doParseInstance(final XContentParser parser) throws IOException {     return DeleteRollupJobRequest.fromXContent(parser). }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return false. }
+false;public;0;4;;public void testRequireConfiguration() {     final NullPointerException e = expectThrows(NullPointerException.class, () -> new DeleteRollupJobRequest(null)).     assertEquals("id parameter must not be null", e.getMessage()). }

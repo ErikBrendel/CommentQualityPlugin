@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getFilterName() {     return this.filterName. }
+false;public;0;4;;@Override public ServletContext getServletContext() {     return this.servletContext. }
+false;public;2;4;;public void addInitParameter(String name, String value) {     Assert.notNull(name, "Parameter name must not be null").     this.initParameters.put(name, value). }
+false;public;1;5;;@Override public String getInitParameter(String name) {     Assert.notNull(name, "Parameter name must not be null").     return this.initParameters.get(name). }
+false;public;0;4;;@Override public Enumeration<String> getInitParameterNames() {     return Collections.enumeration(this.initParameters.keySet()). }

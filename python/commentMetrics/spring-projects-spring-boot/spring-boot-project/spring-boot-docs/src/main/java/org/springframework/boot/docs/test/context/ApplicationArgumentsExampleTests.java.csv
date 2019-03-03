@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void applicationArgumentsPopulated() {     assertThat(this.args.getOptionNames()).containsOnly("app.test").     assertThat(this.args.getOptionValues("app.test")).containsOnly("one"). }

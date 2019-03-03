@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;11;;@Before public void setup() {     this.cacheManager = getCachingProvider().getCacheManager().     this.cacheManager.createCache(CACHE_NAME, new MutableConfiguration<>()).     this.cacheManager.createCache(CACHE_NAME_NO_NULL, new MutableConfiguration<>()).     this.nativeCache = this.cacheManager.getCache(CACHE_NAME).     this.cache = new JCacheCache(this.nativeCache).     Cache<Object, Object> nativeCacheNoNull = this.cacheManager.getCache(CACHE_NAME_NO_NULL).     this.cacheNoNull = new JCacheCache(nativeCacheNoNull, false). }
+false;protected;0;3;;protected CachingProvider getCachingProvider() {     return Caching.getCachingProvider("org.ehcache.jcache.JCacheCachingProvider"). }
+false;public;0;6;;@After public void shutdown() {     if (this.cacheManager != null) {         this.cacheManager.close().     } }
+false;protected;0;4;;@Override protected JCacheCache getCache() {     return getCache(true). }
+false;protected;1;4;;@Override protected JCacheCache getCache(boolean allowNull) {     return allowNull ? this.cache : this.cacheNoNull. }
+false;protected;0;4;;@Override protected Object getNativeCache() {     return this.nativeCache. }

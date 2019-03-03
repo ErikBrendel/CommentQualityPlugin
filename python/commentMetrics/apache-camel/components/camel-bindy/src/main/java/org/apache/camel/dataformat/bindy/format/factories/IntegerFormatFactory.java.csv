@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public boolean canBuild(FormattingOptions formattingOptions) {     return super.canBuild(formattingOptions) && ObjectHelper.isEmpty(formattingOptions.getPattern()). }
+false;public;1;4;;@Override public Format<?> build(FormattingOptions formattingOptions) {     return integerFormat. }
+false;public;1;3;;public String format(Integer object) throws Exception {     return object.toString(). }
+false;public;1;3;;public Integer parse(String string) throws Exception {     return new Integer(string). }

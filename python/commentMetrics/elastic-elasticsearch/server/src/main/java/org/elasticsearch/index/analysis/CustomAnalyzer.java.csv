@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * The name of the tokenizer as configured by the user.  */ ;/**  * The name of the tokenizer as configured by the user.  */ public String getTokenizerName() {     return tokenizerName. }
+false;public;0;3;;public TokenizerFactory tokenizerFactory() {     return tokenizerFactory. }
+false;public;0;3;;public TokenFilterFactory[] tokenFilters() {     return tokenFilters. }
+false;public;0;3;;public CharFilterFactory[] charFilters() {     return charFilters. }
+false;public;1;4;;@Override public int getPositionIncrementGap(String fieldName) {     return this.positionIncrementGap. }
+false;public;1;7;;@Override public int getOffsetGap(String field) {     if (offsetGap < 0) {         return super.getOffsetGap(field).     }     return this.offsetGap. }
+false;protected;1;9;;@Override protected TokenStreamComponents createComponents(String fieldName) {     Tokenizer tokenizer = tokenizerFactory.create().     TokenStream tokenStream = tokenizer.     for (TokenFilterFactory tokenFilter : tokenFilters) {         tokenStream = tokenFilter.create(tokenStream).     }     return new TokenStreamComponents(tokenizer, tokenStream). }
+false;protected;2;9;;@Override protected Reader initReader(String fieldName, Reader reader) {     if (charFilters != null && charFilters.length > 0) {         for (CharFilterFactory charFilter : charFilters) {             reader = charFilter.create(reader).         }     }     return reader. }
+false;protected;2;7;;@Override protected Reader initReaderForNormalization(String fieldName, Reader reader) {     for (CharFilterFactory charFilter : charFilters) {         reader = charFilter.normalize(reader).     }     return reader. }
+false;protected;2;8;;@Override protected TokenStream normalize(String fieldName, TokenStream in) {     TokenStream result = in.     for (TokenFilterFactory filter : tokenFilters) {         result = filter.normalize(result).     }     return result. }

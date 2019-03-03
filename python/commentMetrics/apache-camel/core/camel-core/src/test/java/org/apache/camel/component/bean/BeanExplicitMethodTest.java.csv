@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry jndi = super.createRegistry().     jndi.bind("foo", new MyOtherFooBean()).     return jndi. }
+false;public;0;9;;@Test public void testStringEcho() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedBodiesReceived("WorldWorld").     template.sendBody("direct:start", "World").     assertMockEndpointsSatisfied(). }
+false;public;0;9;;@Test public void testIntegerEcho() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedBodiesReceived(25).     template.sendBody("direct:start", 5).     assertMockEndpointsSatisfied(). }
+false;public;0;6;;@Override public void configure() throws Exception {     from("direct:start").bean("foo", "echo").to("mock:result"). }
+false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").bean("foo", "echo").to("mock:result").         }     }. }

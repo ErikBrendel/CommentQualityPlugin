@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;static;1;11;;static QueryExplanation createRandomQueryExplanation(boolean isValid) {     String index = "index_" + randomInt(1000).     int shard = randomInt(100).     Boolean valid = isValid.     String errorField = null.     if (!valid) {         errorField = randomAlphaOfLength(randomIntBetween(10, 100)).     }     String explanation = randomAlphaOfLength(randomIntBetween(10, 100)).     return new QueryExplanation(index, shard, valid, explanation, errorField). }
+false;static;0;3;;static QueryExplanation createRandomQueryExplanation() {     return createRandomQueryExplanation(randomBoolean()). }
+false;protected;1;4;;@Override protected QueryExplanation doParseInstance(XContentParser parser) throws IOException {     return QueryExplanation.fromXContent(parser). }
+false;protected;0;4;;@Override protected QueryExplanation createBlankInstance() {     return new QueryExplanation(). }
+false;protected;0;4;;@Override protected QueryExplanation createTestInstance() {     return createRandomQueryExplanation(). }

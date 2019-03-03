@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void runShouldCreateIndicator() {     this.contextRunner.run((context) -> assertThat(context).hasSingleBean(HeapDumpWebEndpoint.class)). }
+false;public;0;7;;@Test public void runWhenDisabledShouldNotCreateIndicator() {     this.contextRunner.withPropertyValues("management.endpoint.heapdump.enabled:false").run((context) -> assertThat(context).doesNotHaveBean(HeapDumpWebEndpoint.class)). }

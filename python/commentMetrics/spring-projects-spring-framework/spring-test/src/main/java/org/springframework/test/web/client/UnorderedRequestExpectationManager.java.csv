@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected void afterExpectationsDeclared() {     this.remainingExpectations.addAllExpectations(getExpectations()). }
+false;public;1;9;;@Override public RequestExpectation matchRequest(ClientHttpRequest request) throws IOException {     RequestExpectation expectation = this.remainingExpectations.findExpectation(request).     if (expectation == null) {         throw createUnexpectedRequestError(request).     }     this.remainingExpectations.update(expectation).     return expectation. }
+false;public;0;5;;@Override public void reset() {     super.reset().     this.remainingExpectations.reset(). }

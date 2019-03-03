@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;12;;@Override public boolean equals(final Object obj) {     if (obj == this) {         return true.     }     if (!(obj instanceof ApprovalRequests)) {         return false.     }     return ((ApprovalRequests) obj).requests.equals(requests). }
+false;public;0;3;;public List<ApprovalRequest> getRequests() {     return requests. }
+false;public;0;4;;@Override public int hashCode() {     return requests.hashCode(). }
+false;public;0;4;;@Override public String toString() {     return requests.toString(). }

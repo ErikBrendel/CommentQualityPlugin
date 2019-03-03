@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void testStreamCaching() throws Exception {     AbstractApplicationContext appContext = new ClassPathXmlApplicationContext(new String[] { "org/apache/camel/spring/streamCaching.xml" }).     CamelContext camelContext = appContext.getBean("camelContext", CamelContext.class).     assertFalse("StreamCaching should not be enabled", camelContext.isStreamCaching()).     // we're done so let's properly close the application context     IOHelper.close(appContext). }

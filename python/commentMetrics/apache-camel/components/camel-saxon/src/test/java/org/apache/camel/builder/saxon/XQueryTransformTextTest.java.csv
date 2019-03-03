@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void testSendMatchingMessage() throws Exception {     // saxon converts all quotes to "     resultEndpoint.expectedBodiesReceived("Jonathan").     template.sendBody("direct:start", "<people><person>Jonathan</person></people>").     resultEndpoint.assertIsSatisfied(). }
+false;public;0;8;;@Override @Before public void setUp() throws Exception {     super.setUp().     startEndpoint = resolveMandatoryEndpoint("direct:start").     resultEndpoint = getMockEndpoint("mock:result"). }
+false;public;0;7;;public void configure() {     // START SNIPPET: example     from("direct:start").transform().xquery("/people/person/text()", String.class).to("mock:result"). // END SNIPPET: example }
+false;protected;0;11;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             // START SNIPPET: example             from("direct:start").transform().xquery("/people/person/text()", String.class).to("mock:result").         // END SNIPPET: example         }     }. }

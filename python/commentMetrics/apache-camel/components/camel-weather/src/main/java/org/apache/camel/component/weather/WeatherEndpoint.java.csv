@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;10;;@Override public Consumer createConsumer(Processor processor) throws Exception {     WeatherConsumer answer = new WeatherConsumer(this, processor, this.configuration.getQuery()).     // ScheduledPollConsumer default delay is 500 millis and that is too often for polling a feed, so we override     // with a new default value. End user can override this value by providing a consumer.delay parameter     answer.setDelay(WeatherConsumer.DEFAULT_CONSUMER_DELAY).     configureConsumer(answer).     return answer. }
+false;public;0;4;;@Override public Producer createProducer() throws Exception {     return new WeatherProducer(this, configuration.getQuery()). }
+false;public;0;4;;@Override public boolean isSingleton() {     return true. }
+false;public;0;3;;public WeatherConfiguration getConfiguration() {     return configuration. }

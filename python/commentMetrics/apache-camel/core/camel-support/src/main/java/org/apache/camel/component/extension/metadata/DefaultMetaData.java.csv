@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public Object getAttribute(String name) {     return attributes.get(name). }
+false;public;0;4;;@Override public Map<String, Object> getAttributes() {     return Collections.unmodifiableMap(attributes). }
+false;public;2;9;;@Override public <T> T getAttribute(String name, Class<T> type) {     Object value = attributes.get(name).     if (camelContext != null) {         return camelContext.getTypeConverter().convertTo(type, value).     }     throw new IllegalStateException("Unable to perform conversion as CamelContext is not set"). }
+false;public;0;4;;@Override public Object getPayload() {     return payload. }
+false;public;1;8;;@Override public <T> T getPayload(Class<T> type) {     if (camelContext != null) {         return camelContext.getTypeConverter().convertTo(type, payload).     }     throw new IllegalStateException("Unable to perform conversion as CamelContext is not set"). }

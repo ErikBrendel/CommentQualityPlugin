@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;5;;@Test void applicationContextInjected() {     assertNotNull(applicationContext, "ApplicationContext should have been injected by Spring").     assertEquals(this.dilbert, applicationContext.getBean("dilbert", Person.class)). }
+false;;0;8;;@Test void beansInjected() {     assertNotNull(this.dilbert, "Dilbert should have been @Autowired by Spring").     assertEquals("Dilbert", this.dilbert.getName(), "Person's name").     assertNotNull(this.dog, "Dogbert should have been @Autowired by Spring").     assertEquals("Dogbert", this.dog.getName(), "Dog's name"). }
+false;;0;5;;@Test void propertyPlaceholderInjected() {     assertNotNull(this.enigma, "Enigma should have been injected via @Value by Spring").     assertEquals(Integer.valueOf(42), this.enigma, "enigma"). }
+false;;0;4;;@Test void testInfoInjected() {     assertNotNull(this.testInfo, "TestInfo should have been injected by JUnit"). }

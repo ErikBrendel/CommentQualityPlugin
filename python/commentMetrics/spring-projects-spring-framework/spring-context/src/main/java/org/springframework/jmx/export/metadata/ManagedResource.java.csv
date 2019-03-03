@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;3;/**  * Set the JMX ObjectName of this managed resource.  */ ;/**  * Set the JMX ObjectName of this managed resource.  */ public void setObjectName(@Nullable String objectName) {     this.objectName = objectName. }
+true;public;0;4;/**  * Return the JMX ObjectName of this managed resource.  */ ;/**  * Return the JMX ObjectName of this managed resource.  */ @Nullable public String getObjectName() {     return this.objectName. }
+false;public;1;3;;public void setLog(boolean log) {     this.log = log. }
+false;public;0;3;;public boolean isLog() {     return this.log. }
+false;public;1;3;;public void setLogFile(@Nullable String logFile) {     this.logFile = logFile. }
+false;public;0;4;;@Nullable public String getLogFile() {     return this.logFile. }
+false;public;1;3;;public void setPersistPolicy(@Nullable String persistPolicy) {     this.persistPolicy = persistPolicy. }
+false;public;0;4;;@Nullable public String getPersistPolicy() {     return this.persistPolicy. }
+false;public;1;3;;public void setPersistPeriod(int persistPeriod) {     this.persistPeriod = persistPeriod. }
+false;public;0;3;;public int getPersistPeriod() {     return this.persistPeriod. }
+false;public;1;3;;public void setPersistName(@Nullable String persistName) {     this.persistName = persistName. }
+false;public;0;4;;@Nullable public String getPersistName() {     return this.persistName. }
+false;public;1;3;;public void setPersistLocation(@Nullable String persistLocation) {     this.persistLocation = persistLocation. }
+false;public;0;4;;@Nullable public String getPersistLocation() {     return this.persistLocation. }

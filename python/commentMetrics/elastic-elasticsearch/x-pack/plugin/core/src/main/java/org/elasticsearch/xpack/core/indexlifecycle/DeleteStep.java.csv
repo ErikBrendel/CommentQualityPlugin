@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;6;;@Override public void performDuringNoSnapshot(IndexMetaData indexMetaData, ClusterState currentState, Listener listener) {     getClient().admin().indices().delete(new DeleteIndexRequest(indexMetaData.getIndex().getName()), ActionListener.wrap(response -> listener.onResponse(true), listener::onFailure)). }
+false;public;0;4;;@Override public boolean indexSurvives() {     return false. }

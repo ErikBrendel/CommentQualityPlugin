@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void notMXBean() throws Exception {     assertFalse("MXBean annotation not detected correctly", JmxUtils.isMBean(FooNotX.class)). }
+false;public;0;4;;@Test public void annotatedMXBean() throws Exception {     assertTrue("MXBean annotation not detected correctly", JmxUtils.isMBean(FooX.class)). }
+false;;0;1;;String getName().
+false;public;0;4;;@Override public String getName() {     return "Rob Harrop". }
+false;;0;1;;String getName().
+false;public;0;4;;@Override public String getName() {     return "Rob Harrop". }

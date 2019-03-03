@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected String getBlueprintDescriptor() {     return "org/apache/camel/test/blueprint/configadmin-loadfile.xml". }
+true;protected;0;6;// START SNIPPET: e1 ;// START SNIPPET: e1 @Override protected String[] loadConfigAdminConfigurationFile() {     // String[1] = tell Camel the persistence-id of the cm:property-placeholder in the blueprint XML file     return new String[] { "src/test/resources/etc/stuff.cfg", "stuff" }. }
+false;public;0;8;;// END SNIPPET: e1 @Test public void testConfigAdmin() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("Bye World").     template.sendBody("direct:start", "World").     assertMockEndpointsSatisfied(). }

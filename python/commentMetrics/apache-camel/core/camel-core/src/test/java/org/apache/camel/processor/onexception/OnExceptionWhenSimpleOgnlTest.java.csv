@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Test public void testOnExceptionWhenSimpleOgnl() throws Exception {     getMockEndpoint("mock:three").expectedMessageCount(1).     template.sendBody("direct:start", "Hello World").     assertMockEndpointsSatisfied(). }
+false;public;0;11;;@Override public void configure() throws Exception {     onException(MyException.class).onWhen(simple("${exception.info.state} == 3")).handled(true).to("mock:three").     from("direct:start").throwException(new MyException(3)). }
+false;protected;0;16;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             onException(MyException.class).onWhen(simple("${exception.info.state} == 3")).handled(true).to("mock:three").             from("direct:start").throwException(new MyException(3)).         }     }. }
+false;public;0;3;;public MyExceptionInfo getInfo() {     return info. }
+false;public;0;3;;public int getState() {     return state. }

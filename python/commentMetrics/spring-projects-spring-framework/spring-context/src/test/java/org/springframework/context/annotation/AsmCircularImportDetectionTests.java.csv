@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;10;;@Override protected ConfigurationClassParser newParser() {     return new ConfigurationClassParser(new CachingMetadataReaderFactory(), new FailFastProblemReporter(), new StandardEnvironment(), new DefaultResourceLoader(), new AnnotationBeanNameGenerator(), new DefaultListableBeanFactory()). }
+false;protected;1;4;;@Override protected String loadAsConfigurationSource(Class<?> clazz) throws Exception {     return clazz.getName(). }

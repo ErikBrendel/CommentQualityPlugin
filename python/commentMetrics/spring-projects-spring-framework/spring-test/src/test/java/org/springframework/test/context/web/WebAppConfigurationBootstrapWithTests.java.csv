@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void webApplicationContextIsLoaded() {     // from: src/test/webapp/resources/Spring.js     Resource resource = wac.getResource("/resources/Spring.js").     assertNotNull(resource).     assertTrue(resource.exists()). }
+false;protected;1;4;;@Override protected MergedContextConfiguration processMergedContextConfiguration(MergedContextConfiguration mergedConfig) {     return new WebMergedContextConfiguration(mergedConfig, "src/test/webapp"). }

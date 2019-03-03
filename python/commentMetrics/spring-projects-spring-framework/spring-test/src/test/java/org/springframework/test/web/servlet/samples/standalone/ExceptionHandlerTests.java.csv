@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void testExceptionHandlerMethod() throws Exception {     standaloneSetup(new PersonController()).build().perform(get("/person/Clyde")).andExpect(status().isOk()).andExpect(forwardedUrl("errorView")). }
+false;public;0;7;;@Test public void testGlobalExceptionHandlerMethod() throws Exception {     standaloneSetup(new PersonController()).setControllerAdvice(new GlobalExceptionHandler()).build().perform(get("/person/Bonnie")).andExpect(status().isOk()).andExpect(forwardedUrl("globalErrorView")). }
+false;public;0;7;;@Test public void testGlobalExceptionHandlerMethodUsingClassArgument() throws Exception {     standaloneSetup(PersonController.class).setControllerAdvice(GlobalExceptionHandler.class).build().perform(get("/person/Bonnie")).andExpect(status().isOk()).andExpect(forwardedUrl("globalErrorView")). }
+false;public;1;10;;@GetMapping("/person/{name}") public String show(@PathVariable String name) {     if (name.equals("Clyde")) {         throw new IllegalArgumentException("simulated exception").     } else if (name.equals("Bonnie")) {         throw new IllegalStateException("simulated exception").     }     return "person/show". }
+false;public;1;4;;@ExceptionHandler public String handleException(IllegalArgumentException exception) {     return "errorView". }
+false;public;1;4;;@ExceptionHandler public String handleException(IllegalStateException exception) {     return "globalErrorView". }

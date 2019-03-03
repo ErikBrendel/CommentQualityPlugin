@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;6;;public void sent(Connection session, byte[] message, String destination) {     String newCorrelationID = UUID.randomUUID().toString().     if (newCorrelationID != null) {         replyManager.updateCorrelationId(correlationId, newCorrelationID, requestTimeout).     } }

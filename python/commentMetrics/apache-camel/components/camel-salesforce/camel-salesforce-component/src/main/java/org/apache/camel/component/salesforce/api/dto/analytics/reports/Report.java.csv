@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@JsonProperty("Description") public String getDescription() {     return this.Description. }
+false;public;1;4;;@JsonProperty("Description") public void setDescription(String Description) {     this.Description = Description. }
+false;public;0;4;;@JsonProperty("DeveloperName") public String getDeveloperName() {     return this.DeveloperName. }
+false;public;1;4;;@JsonProperty("DeveloperName") public void setDeveloperName(String DeveloperName) {     this.DeveloperName = DeveloperName. }
+false;public;0;4;;@JsonProperty("NamespacePrefix") public String getNamespacePrefix() {     return this.NamespacePrefix. }
+false;public;1;4;;@JsonProperty("NamespacePrefix") public void setNamespacePrefix(String NamespacePrefix) {     this.NamespacePrefix = NamespacePrefix. }
+false;public;0;4;;@JsonProperty("LastRunDate") public ZonedDateTime getLastRunDate() {     return this.LastRunDate. }
+false;public;1;4;;@JsonProperty("LastRunDate") public void setLastRunDate(ZonedDateTime LastRunDate) {     this.LastRunDate = LastRunDate. }
+false;public;0;4;;@JsonProperty("Format") public FormatEnum getFormat() {     return this.Format. }
+false;public;1;4;;@JsonProperty("Format") public void setFormat(FormatEnum Format) {     this.Format = Format. }

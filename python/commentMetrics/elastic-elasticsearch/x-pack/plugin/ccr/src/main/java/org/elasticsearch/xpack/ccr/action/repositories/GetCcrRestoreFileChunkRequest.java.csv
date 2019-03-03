@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public ActionRequestValidationException validate() {     return null. }
+false;public;1;7;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeString(sessionUUID).     out.writeString(fileName).     out.writeVInt(size). }
+false;public;1;4;;@Override public void readFrom(StreamInput in) throws IOException {     throw new UnsupportedOperationException(). }
+false;;0;3;;String getSessionUUID() {     return sessionUUID. }
+false;;0;3;;String getFileName() {     return fileName. }
+false;;0;3;;int getSize() {     return size. }
+false;public;0;5;;@Override public DiscoveryNode getPreferredTargetNode() {     assert node != null : "Target node is null".     return node. }

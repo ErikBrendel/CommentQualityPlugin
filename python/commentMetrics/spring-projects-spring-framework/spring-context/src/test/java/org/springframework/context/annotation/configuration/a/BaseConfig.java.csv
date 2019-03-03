@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;4;// ---- reproduce ---- ;// ---- reproduce ---- @Bean Bar packagePrivateBar() {     return new Bar(). }
+false;public;0;3;;public Bar reproBar() {     return packagePrivateBar(). }
+true;protected;0;4;// ---- workaround ---- ;// ---- workaround ---- @Bean protected Bar protectedBar() {     return new Bar(). }
+false;public;0;3;;public Bar workaroundBar() {     return protectedBar(). }

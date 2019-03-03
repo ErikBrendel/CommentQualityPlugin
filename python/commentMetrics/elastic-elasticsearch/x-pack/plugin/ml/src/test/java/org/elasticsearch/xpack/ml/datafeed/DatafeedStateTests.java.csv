@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;public void testFromString() {     assertEquals(DatafeedState.fromString("started"), DatafeedState.STARTED).     assertEquals(DatafeedState.fromString("stopped"), DatafeedState.STOPPED). }
+false;public;0;4;;public void testToString() {     assertEquals("started", DatafeedState.STARTED.toString()).     assertEquals("stopped", DatafeedState.STOPPED.toString()). }
+false;public;0;6;;public void testValidOrdinals() {     assertEquals(0, DatafeedState.STARTED.ordinal()).     assertEquals(1, DatafeedState.STOPPED.ordinal()).     assertEquals(2, DatafeedState.STARTING.ordinal()).     assertEquals(3, DatafeedState.STOPPING.ordinal()). }

@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void testReceive() throws Exception {     String body = consumer.receiveBody("http://localhost:{{port}}/test", String.class).     assertEquals("Bye World", body). }
+false;public;0;5;;@Test public void testReceiveTimeout() throws Exception {     String body = consumer.receiveBody("http://localhost:{{port}}/test", 5000, String.class).     assertEquals("Bye World", body). }
+false;public;0;9;;@Test public void testReceiveTimeoutTriggered() throws Exception {     try {         consumer.receiveBody("http://localhost:{{port}}/test", 250, String.class).         fail("Should have thrown an exception").     } catch (RuntimeCamelException e) {         assertIsInstanceOf(SocketTimeoutException.class, e.getCause()).     } }
+false;public;0;5;;@Override public void configure() throws Exception {     from("jetty://http://localhost:{{port}}/test").delay(2000).transform(constant("Bye World")). }
+false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("jetty://http://localhost:{{port}}/test").delay(2000).transform(constant("Bye World")).         }     }. }

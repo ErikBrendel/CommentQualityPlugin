@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,final;0;3;;public final String[] nodesIds() {     return nodesIds. }
+false;public,final;1;5;;@SuppressWarnings("unchecked") public final Request nodesIds(String... nodesIds) {     this.nodesIds = nodesIds.     return (Request) this. }
+false;public;0;3;;public TimeValue timeout() {     return this.timeout. }
+false;public,final;1;5;;@SuppressWarnings("unchecked") public final Request timeout(TimeValue timeout) {     this.timeout = timeout.     return (Request) this. }
+false;public,final;1;5;;@SuppressWarnings("unchecked") public final Request timeout(String timeout) {     this.timeout = TimeValue.parseTimeValue(timeout, null, getClass().getSimpleName() + ".timeout").     return (Request) this. }
+false;public;0;3;;public DiscoveryNode[] concreteNodes() {     return concreteNodes. }
+false;public;1;3;;public void setConcreteNodes(DiscoveryNode[] concreteNodes) {     this.concreteNodes = concreteNodes. }
+false;public;0;4;;@Override public ActionRequestValidationException validate() {     return null. }
+false;public;1;7;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     nodesIds = in.readStringArray().     concreteNodes = in.readOptionalArray(DiscoveryNode::new, DiscoveryNode[]::new).     timeout = in.readOptionalTimeValue(). }
+false;public;1;7;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeStringArrayNullable(nodesIds).     out.writeOptionalArray(concreteNodes).     out.writeOptionalTimeValue(timeout). }

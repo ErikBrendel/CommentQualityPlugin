@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;default;1;4;;@Override default boolean isWrapperFor(Class<?> iface) throws SQLException {     return iface != null && iface.isAssignableFrom(getClass()). }
+false;default;1;8;;@SuppressWarnings("unchecked") @Override default <T> T unwrap(Class<T> iface) throws SQLException {     if (isWrapperFor(iface)) {         return (T) this.     }     throw new SQLException(). }

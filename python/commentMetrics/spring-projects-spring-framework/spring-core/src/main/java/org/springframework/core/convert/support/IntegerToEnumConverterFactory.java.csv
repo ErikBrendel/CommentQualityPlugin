@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public <T extends Enum> Converter<Integer, T> getConverter(Class<T> targetType) {     return new IntegerToEnum(ConversionUtils.getEnumType(targetType)). }
+false;public;1;4;;@Override public T convert(Integer source) {     return this.enumType.getEnumConstants()[source]. }

@@ -1,0 +1,18 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;3;;public boolean addConnectBehavior(TransportAddress transportAddress, GetConnectionBehavior connectBehavior) {     return getConnectionBehaviors.put(transportAddress, connectBehavior) == null. }
+false;public;1;5;;public boolean setDefaultGetConnectionBehavior(GetConnectionBehavior behavior) {     GetConnectionBehavior prior = defaultGetConnectionBehavior.     defaultGetConnectionBehavior = behavior.     return prior == null. }
+false;public;2;3;;public boolean addNodeConnectedBehavior(TransportAddress transportAddress, NodeConnectedBehavior behavior) {     return nodeConnectedBehaviors.put(transportAddress, behavior) == null. }
+false;public;1;5;;public boolean setDefaultNodeConnectedBehavior(NodeConnectedBehavior behavior) {     NodeConnectedBehavior prior = defaultNodeConnectedBehavior.     defaultNodeConnectedBehavior = behavior.     return prior == null. }
+false;public;0;6;;public void clearBehaviors() {     defaultGetConnectionBehavior = ConnectionManager::getConnection.     getConnectionBehaviors.clear().     defaultNodeConnectedBehavior = ConnectionManager::nodeConnected.     nodeConnectedBehaviors.clear(). }
+false;public;1;4;;public void clearBehavior(TransportAddress transportAddress) {     getConnectionBehaviors.remove(transportAddress).     nodeConnectedBehaviors.remove(transportAddress). }
+false;public;2;4;;@Override public Transport.Connection openConnection(DiscoveryNode node, ConnectionProfile connectionProfile) {     return delegate.openConnection(node, connectionProfile). }
+false;public;1;6;;@Override public Transport.Connection getConnection(DiscoveryNode node) {     TransportAddress address = node.getAddress().     GetConnectionBehavior behavior = getConnectionBehaviors.getOrDefault(address, defaultGetConnectionBehavior).     return behavior.getConnection(delegate, node). }
+false;public;1;6;;@Override public boolean nodeConnected(DiscoveryNode node) {     TransportAddress address = node.getAddress().     NodeConnectedBehavior behavior = nodeConnectedBehaviors.getOrDefault(address, defaultNodeConnectedBehavior).     return behavior.nodeConnected(delegate, node). }
+false;public;1;4;;@Override public void addListener(TransportConnectionListener listener) {     delegate.addListener(listener). }
+false;public;1;4;;@Override public void removeListener(TransportConnectionListener listener) {     delegate.removeListener(listener). }
+false;public;3;6;;@Override public void connectToNode(DiscoveryNode node, ConnectionProfile connectionProfile, CheckedBiConsumer<Transport.Connection, ConnectionProfile, IOException> connectionValidator) throws ConnectTransportException {     delegate.connectToNode(node, connectionProfile, connectionValidator). }
+false;public;1;4;;@Override public void disconnectFromNode(DiscoveryNode node) {     delegate.disconnectFromNode(node). }
+false;public;0;4;;@Override public int size() {     return delegate.size(). }
+false;public;0;4;;@Override public void close() {     delegate.close(). }
+false;;2;1;;Transport.Connection getConnection(ConnectionManager connectionManager, DiscoveryNode discoveryNode).
+false;;2;1;;boolean nodeConnected(ConnectionManager connectionManager, DiscoveryNode discoveryNode).

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected DataFormat createDataFormat(RouteContext routeContext) {     return new org.apache.camel.impl.StringDataFormat(charset). }
+false;public;0;3;;public String getCharset() {     return charset. }
+true;public;1;3;/**  * Sets an encoding to use.  * <p/>  * Will by default use the JVM platform default charset.  */ ;/**  * Sets an encoding to use.  * <p/>  * Will by default use the JVM platform default charset.  */ public void setCharset(String charset) {     this.charset = charset. }

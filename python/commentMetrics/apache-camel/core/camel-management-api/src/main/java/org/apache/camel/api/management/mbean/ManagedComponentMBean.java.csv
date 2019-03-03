@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;2;;@ManagedAttribute(description = "Component Name") String getComponentName().
+false;;0;2;;@ManagedAttribute(description = "Component State") String getState().
+false;;0;2;;@ManagedAttribute(description = "Camel ID") String getCamelId().
+false;;0;2;;@ManagedAttribute(description = "Camel ManagementName") String getCamelManagementName().
+false;;0;2;;@ManagedOperation(description = "Component information as JSon") String informationJson().
+false;;1;2;;@ManagedOperation(description = "Explain how this component is configured") TabularData explain(boolean allOptions).
+false;;0;2;;@ManagedAttribute(description = "Whether this component support verification (parameters or connectivity)") boolean isVerifySupported().
+false;;2;2;;@ManagedOperation(description = "Verify options against a given scope") ComponentVerifierExtension.Result verify(String scope, Map<String, String> options).

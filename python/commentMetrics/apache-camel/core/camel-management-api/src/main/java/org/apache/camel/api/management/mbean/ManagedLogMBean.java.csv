@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;2;;@ManagedAttribute(description = "The log message (uses simple language)") String getMessage().
+false;;0;2;;@ManagedAttribute(description = "The logging level") String getLoggingLevel().
+false;;0;2;;@ManagedAttribute(description = "The name of the logger") String getLogName().
+false;;0;2;;@ManagedAttribute(description = "To use slf4j marker") String getMarker().

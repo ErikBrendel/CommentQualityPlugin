@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Test public void testLanguage() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("Hello World").     template.sendBodyAndHeader("direct:start", "World", Exchange.LANGUAGE_SCRIPT, "Hello ${body}").     assertMockEndpointsSatisfied(). }
+false;public;0;4;;@Override public void configure() throws Exception {     from("direct:start").to("language:simple").to("mock:result"). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").to("language:simple").to("mock:result").         }     }. }

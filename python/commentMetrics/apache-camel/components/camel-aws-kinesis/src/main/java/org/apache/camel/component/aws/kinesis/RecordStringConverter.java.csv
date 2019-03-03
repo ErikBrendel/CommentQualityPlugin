@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;14;;@Converter public static String toString(Record record) {     Charset charset = Charset.forName("UTF-8").     ByteBuffer buffer = record.getData().     if (buffer.hasArray()) {         byte[] bytes = record.getData().array().         return new String(bytes, charset).     } else {         byte[] bytes = new byte[buffer.remaining()].         buffer.get(bytes).         return new String(bytes, charset).     } }

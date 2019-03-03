@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void onFailure(Node node) {     hosts.add(node.getHost()). }
+false;;1;7;;void assertCalled(List<Node> nodes) {     HttpHost[] hosts = new HttpHost[nodes.size()].     for (int i = 0. i < nodes.size(). i++) {         hosts[i] = nodes.get(i).getHost().     }     assertCalled(hosts). }
+false;;1;5;;void assertCalled(HttpHost... hosts) {     assertEquals(hosts.length, this.hosts.size()).     assertThat(this.hosts, containsInAnyOrder(hosts)).     this.hosts.clear(). }
+false;;0;3;;void assertNotCalled() {     assertEquals(0, hosts.size()). }

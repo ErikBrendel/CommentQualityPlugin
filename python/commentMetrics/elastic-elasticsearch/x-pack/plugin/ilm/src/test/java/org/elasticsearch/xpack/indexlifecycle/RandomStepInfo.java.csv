@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;7;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(key, value).     builder.endObject().     return builder. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(key, value). }
+false;public;1;11;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     RandomStepInfo other = (RandomStepInfo) obj.     return Objects.equals(key, other.key) && Objects.equals(value, other.value). }
+false;public;0;4;;@Override public String toString() {     return Strings.toString(this). }

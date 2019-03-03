@@ -1,0 +1,38 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test(expected = AssertionError.class) public void valueWithMismatch() throws Exception {     new JsonPathRequestMatchers("$.str").value("bogus").match(request). }
+false;public;0;4;;@Test public void valueWithDirectMatch() throws Exception {     new JsonPathRequestMatchers("$.str").value("foo").match(request). }
+false;public;0;4;;// SPR-14498 @Test public void valueWithNumberConversion() throws Exception {     new JsonPathRequestMatchers("$.num").value(5.0f).match(request). }
+false;public;0;4;;@Test public void valueWithMatcher() throws Exception {     new JsonPathRequestMatchers("$.str").value(equalTo("foo")).match(request). }
+false;public;0;4;;// SPR-14498 @Test public void valueWithMatcherAndNumberConversion() throws Exception {     new JsonPathRequestMatchers("$.num").value(equalTo(5.0f), Float.class).match(request). }
+false;public;0;4;;@Test(expected = AssertionError.class) public void valueWithMatcherAndMismatch() throws Exception {     new JsonPathRequestMatchers("$.str").value(equalTo("bogus")).match(request). }
+false;public;0;4;;@Test public void exists() throws Exception {     new JsonPathRequestMatchers("$.str").exists().match(request). }
+false;public;0;4;;@Test public void existsForAnEmptyArray() throws Exception {     new JsonPathRequestMatchers("$.emptyArray").exists().match(request). }
+false;public;0;4;;@Test public void existsForAnEmptyMap() throws Exception {     new JsonPathRequestMatchers("$.emptyMap").exists().match(request). }
+false;public;0;4;;@Test(expected = AssertionError.class) public void existsNoMatch() throws Exception {     new JsonPathRequestMatchers("$.bogus").exists().match(request). }
+false;public;0;4;;@Test public void doesNotExist() throws Exception {     new JsonPathRequestMatchers("$.bogus").doesNotExist().match(request). }
+false;public;0;4;;@Test(expected = AssertionError.class) public void doesNotExistNoMatch() throws Exception {     new JsonPathRequestMatchers("$.str").doesNotExist().match(request). }
+false;public;0;4;;@Test(expected = AssertionError.class) public void doesNotExistForAnEmptyArray() throws Exception {     new JsonPathRequestMatchers("$.emptyArray").doesNotExist().match(request). }
+false;public;0;4;;@Test(expected = AssertionError.class) public void doesNotExistForAnEmptyMap() throws Exception {     new JsonPathRequestMatchers("$.emptyMap").doesNotExist().match(request). }
+false;public;0;4;;@Test public void isEmptyForAnEmptyString() throws Exception {     new JsonPathRequestMatchers("$.emptyString").isEmpty().match(request). }
+false;public;0;4;;@Test public void isEmptyForAnEmptyArray() throws Exception {     new JsonPathRequestMatchers("$.emptyArray").isEmpty().match(request). }
+false;public;0;4;;@Test public void isEmptyForAnEmptyMap() throws Exception {     new JsonPathRequestMatchers("$.emptyMap").isEmpty().match(request). }
+false;public;0;4;;@Test public void isNotEmptyForString() throws Exception {     new JsonPathRequestMatchers("$.str").isNotEmpty().match(request). }
+false;public;0;4;;@Test public void isNotEmptyForNumber() throws Exception {     new JsonPathRequestMatchers("$.num").isNotEmpty().match(request). }
+false;public;0;4;;@Test public void isNotEmptyForBoolean() throws Exception {     new JsonPathRequestMatchers("$.bool").isNotEmpty().match(request). }
+false;public;0;4;;@Test public void isNotEmptyForArray() throws Exception {     new JsonPathRequestMatchers("$.arr").isNotEmpty().match(request). }
+false;public;0;4;;@Test public void isNotEmptyForMap() throws Exception {     new JsonPathRequestMatchers("$.colorMap").isNotEmpty().match(request). }
+false;public;0;4;;@Test(expected = AssertionError.class) public void isNotEmptyForAnEmptyString() throws Exception {     new JsonPathRequestMatchers("$.emptyString").isNotEmpty().match(request). }
+false;public;0;4;;@Test(expected = AssertionError.class) public void isNotEmptyForAnEmptyArray() throws Exception {     new JsonPathRequestMatchers("$.emptyArray").isNotEmpty().match(request). }
+false;public;0;4;;@Test(expected = AssertionError.class) public void isNotEmptyForAnEmptyMap() throws Exception {     new JsonPathRequestMatchers("$.emptyMap").isNotEmpty().match(request). }
+false;public;0;4;;@Test public void isArray() throws Exception {     new JsonPathRequestMatchers("$.arr").isArray().match(request). }
+false;public;0;4;;@Test public void isArrayForAnEmptyArray() throws Exception {     new JsonPathRequestMatchers("$.emptyArray").isArray().match(request). }
+false;public;0;4;;@Test(expected = AssertionError.class) public void isArrayNoMatch() throws Exception {     new JsonPathRequestMatchers("$.str").isArray().match(request). }
+false;public;0;4;;@Test public void isMap() throws Exception {     new JsonPathRequestMatchers("$.colorMap").isMap().match(request). }
+false;public;0;4;;@Test public void isMapForAnEmptyMap() throws Exception {     new JsonPathRequestMatchers("$.emptyMap").isMap().match(request). }
+false;public;0;4;;@Test(expected = AssertionError.class) public void isMapNoMatch() throws Exception {     new JsonPathRequestMatchers("$.str").isMap().match(request). }
+false;public;0;4;;@Test public void isBoolean() throws Exception {     new JsonPathRequestMatchers("$.bool").isBoolean().match(request). }
+false;public;0;4;;@Test(expected = AssertionError.class) public void isBooleanNoMatch() throws Exception {     new JsonPathRequestMatchers("$.str").isBoolean().match(request). }
+false;public;0;4;;@Test public void isNumber() throws Exception {     new JsonPathRequestMatchers("$.num").isNumber().match(request). }
+false;public;0;4;;@Test(expected = AssertionError.class) public void isNumberNoMatch() throws Exception {     new JsonPathRequestMatchers("$.str").isNumber().match(request). }
+false;public;0;4;;@Test public void isString() throws Exception {     new JsonPathRequestMatchers("$.str").isString().match(request). }
+false;public;0;4;;@Test(expected = AssertionError.class) public void isStringNoMatch() throws Exception {     new JsonPathRequestMatchers("$.arr").isString().match(request). }

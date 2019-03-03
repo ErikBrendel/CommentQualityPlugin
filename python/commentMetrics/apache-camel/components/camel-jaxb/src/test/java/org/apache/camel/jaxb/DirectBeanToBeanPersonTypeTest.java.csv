@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void testBeanToBean() throws Exception {     getMockEndpoint("mock:person").expectedMessageCount(1).     getMockEndpoint("mock:person").message(0).body().isInstanceOf(PersonType.class).     template.sendBody("direct:start", null).     assertMockEndpointsSatisfied(). }
+false;public;0;6;;@Override public void configure() throws Exception {     from("direct:start").bean(MyPersonService.class, "createPerson").bean(MyPersonService.class, "sendPerson"). }
+false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").bean(MyPersonService.class, "createPerson").bean(MyPersonService.class, "sendPerson").         }     }. }

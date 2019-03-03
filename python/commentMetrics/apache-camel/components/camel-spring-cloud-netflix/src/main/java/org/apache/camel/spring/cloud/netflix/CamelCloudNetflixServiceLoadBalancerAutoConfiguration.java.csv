@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@ConditionalOnBean(LoadBalancerClient.class) @ConditionalOnMissingBean @Bean("netflix-client-load-balancer-adapter") public CamelSpringCloudServiceLoadBalancer.LoadBalancerClientAdapter netflixClientLoadBalancerAdapter(List<ConversionService> conversionServices) {     return client -> new CamelCloudNetflixServiceLoadBalancer(client, conversionServices). }

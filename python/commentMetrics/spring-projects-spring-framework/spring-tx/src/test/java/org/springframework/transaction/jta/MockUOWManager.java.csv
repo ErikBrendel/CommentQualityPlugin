@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;17;;@Override public void runUnderUOW(int type, boolean join, UOWAction action) throws UOWActionException, UOWException {     this.type = type.     this.joined = join.     try {         this.status = UOW_STATUS_ACTIVE.         action.run().         this.status = (this.rollbackOnly ? UOW_STATUS_ROLLEDBACK : UOW_STATUS_COMMITTED).     } catch (Error | RuntimeException ex) {         this.status = UOW_STATUS_ROLLEDBACK.         throw ex.     } catch (Exception ex) {         this.status = UOW_STATUS_ROLLEDBACK.         throw new UOWActionException(ex).     } }
+false;public;0;4;;@Override public int getUOWType() {     return this.type. }
+false;public;0;3;;public boolean getJoined() {     return this.joined. }
+false;public;0;4;;@Override public long getLocalUOWId() {     return 0. }
+false;public;2;4;;@Override public void setUOWTimeout(int uowType, int timeout) {     this.timeout = timeout. }
+false;public;0;4;;@Override public int getUOWTimeout() {     return this.timeout. }
+false;public;0;4;;@Override public void setRollbackOnly() {     this.rollbackOnly = true. }
+false;public;0;4;;@Override public boolean getRollbackOnly() {     return this.rollbackOnly. }
+false;public;1;3;;public void setUOWStatus(int status) {     this.status = status. }
+false;public;0;4;;@Override public int getUOWStatus() {     return this.status. }
+false;public;2;4;;@Override public void putResource(Object key, Object value) {     this.resources.put(key, value). }
+false;public;1;4;;@Override public Object getResource(Object key) throws NullPointerException {     return this.resources.get(key). }
+false;public;1;4;;@Override public void registerInterposedSynchronization(Synchronization sync) {     this.synchronizations.add(sync). }
+false;public;0;3;;public List<Synchronization> getSynchronizations() {     return this.synchronizations. }

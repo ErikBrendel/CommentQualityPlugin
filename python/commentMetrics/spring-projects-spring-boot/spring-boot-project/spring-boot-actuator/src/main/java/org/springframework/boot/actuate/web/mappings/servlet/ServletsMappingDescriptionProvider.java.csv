@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;11;;@Override public List<ServletRegistrationMappingDescription> describeMappings(ApplicationContext context) {     if (!(context instanceof WebApplicationContext)) {         return Collections.emptyList().     }     return ((WebApplicationContext) context).getServletContext().getServletRegistrations().values().stream().map(ServletRegistrationMappingDescription::new).collect(Collectors.toList()). }
+false;public;0;4;;@Override public String getMappingName() {     return "servlets". }

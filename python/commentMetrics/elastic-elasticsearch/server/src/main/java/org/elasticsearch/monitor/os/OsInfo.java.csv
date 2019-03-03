@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;12;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeLong(refreshInterval).     out.writeInt(availableProcessors).     out.writeInt(allocatedProcessors).     out.writeOptionalString(name).     if (out.getVersion().onOrAfter(Version.V_6_6_0)) {         out.writeOptionalString(prettyName).     }     out.writeOptionalString(arch).     out.writeOptionalString(version). }
+false;public;0;3;;public long getRefreshInterval() {     return this.refreshInterval. }
+false;public;0;3;;public int getAvailableProcessors() {     return this.availableProcessors. }
+false;public;0;3;;public int getAllocatedProcessors() {     return this.allocatedProcessors. }
+false;public;0;3;;public String getName() {     return name. }
+false;public;0;3;;public String getPrettyName() {     return prettyName. }
+false;public;0;3;;public String getArch() {     return arch. }
+false;public;0;3;;public String getVersion() {     return version. }
+false;public;2;21;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject(Fields.OS).     builder.humanReadableField(Fields.REFRESH_INTERVAL_IN_MILLIS, Fields.REFRESH_INTERVAL, new TimeValue(refreshInterval)).     if (name != null) {         builder.field(Fields.NAME, name).     }     if (prettyName != null) {         builder.field(Fields.PRETTY_NAME, prettyName).     }     if (arch != null) {         builder.field(Fields.ARCH, arch).     }     if (version != null) {         builder.field(Fields.VERSION, version).     }     builder.field(Fields.AVAILABLE_PROCESSORS, availableProcessors).     builder.field(Fields.ALLOCATED_PROCESSORS, allocatedProcessors).     builder.endObject().     return builder. }

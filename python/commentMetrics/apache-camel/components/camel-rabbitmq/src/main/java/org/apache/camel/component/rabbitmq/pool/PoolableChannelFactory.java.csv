@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Channel makeObject() throws Exception {     return connection.createChannel(). }
+false;public;1;8;;@Override public void destroyObject(Channel t) throws Exception {     try {         t.close().     } catch (Exception e) {     // no-op     } }
+false;public;1;4;;@Override public boolean validateObject(Channel t) {     return t.isOpen(). }
+false;public;1;3;;@Override public void activateObject(Channel t) throws Exception { }
+false;public;1;3;;@Override public void passivateObject(Channel t) throws Exception { }

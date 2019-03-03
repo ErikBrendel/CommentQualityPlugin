@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;5;;@Override public BatchedResultsIterator<T> timeRange(long startEpochMs, long endEpochMs) {     wasTimeRangeCalled = true.     return this. }
+false;public;1;5;;@Override public BatchedResultsIterator<T> includeInterim(boolean includeInterim) {     this.includeInterim = includeInterim.     return this. }
+false;public;0;11;;@Override public Deque<Result<T>> next() {     if (requireIncludeInterim != null && requireIncludeInterim != includeInterim) {         throw new IllegalStateException("Required include interim value [" + requireIncludeInterim + "]. actual was [" + includeInterim + "]").     }     if ((!wasTimeRangeCalled) || !hasNext()) {         throw new NoSuchElementException().     }     return batches.get(index++). }
+false;protected;1;4;;@Override protected Result<T> map(SearchHit hit) {     return null. }
+false;public;0;4;;@Override public boolean hasNext() {     return index != batches.size(). }
+false;public;0;4;;@Nullable public Boolean isIncludeInterim() {     return includeInterim. }
+false;public;1;3;;public void requireIncludeInterim(boolean value) {     this.requireIncludeInterim = value. }

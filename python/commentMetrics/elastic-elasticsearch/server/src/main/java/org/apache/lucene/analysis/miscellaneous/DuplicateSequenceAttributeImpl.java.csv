@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public void clear() {     numPriorUsesInASequence = 0. }
+false;public;1;5;;@Override public void copyTo(AttributeImpl target) {     DuplicateSequenceAttributeImpl t = (DuplicateSequenceAttributeImpl) target.     t.numPriorUsesInASequence = numPriorUsesInASequence. }
+false;public;0;4;;@Override public short getNumPriorUsesInASequence() {     return numPriorUsesInASequence. }
+false;public;1;4;;@Override public void setNumPriorUsesInASequence(short len) {     numPriorUsesInASequence = len. }
+false;public;1;4;;@Override public void reflectWith(AttributeReflector reflector) {     reflector.reflect(DuplicateSequenceAttribute.class, "sequenceLength", numPriorUsesInASequence). }

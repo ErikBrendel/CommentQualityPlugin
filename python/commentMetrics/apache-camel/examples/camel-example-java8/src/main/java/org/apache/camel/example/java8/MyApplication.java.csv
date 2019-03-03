@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;5;;public static void main(String[] args) throws Exception {     Main main = new Main().     main.addRouteBuilder(new MyRouteBuilder()).     main.run(args). }
+false;public;0;25;;@Override public void configure() throws Exception {     from("timer:simple?period=503").id("simple-route").transform().exchange(this::dateToTime).process().message(this::log).process().body(this::log).choice().when().body(Integer.class, b -> (b & 1) == 0).log("Received even number").when().body(Integer.class, (b, h) -> h.containsKey("skip") ? false : (b & 1) == 0).log("Received odd number").when().body(Objects::isNull).log("Received null body").when().body(Integer.class, b -> (b & 1) != 0).log("Received odd number").endChoice(). }
+false;private;1;3;;private Long dateToTime(Exchange e) {     return e.getProperty(Exchange.TIMER_FIRED_TIME, Date.class).getTime(). }
+false;private;1;3;;private void log(Object b) {     LOGGER.info("body is: {}", b). }
+false;private;1;3;;private void log(Message m) {     LOGGER.info("message is: {}", m). }

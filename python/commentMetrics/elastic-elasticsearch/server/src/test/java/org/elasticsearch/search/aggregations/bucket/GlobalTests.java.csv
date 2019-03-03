@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected GlobalAggregationBuilder createTestAggregatorBuilder() {     return new GlobalAggregationBuilder(randomAlphaOfLengthBetween(3, 20)). }

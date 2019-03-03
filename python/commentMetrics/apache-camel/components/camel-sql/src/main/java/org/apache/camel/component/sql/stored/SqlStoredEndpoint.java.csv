@@ -1,0 +1,24 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Producer createProducer() throws Exception {     return new SqlStoredProducer(this). }
+false;public;1;4;;@Override public Consumer createConsumer(Processor processor) throws Exception {     throw new UnsupportedOperationException("Consumer not supported"). }
+false;protected;0;5;;@Override protected String createEndpointUri() {     // Make sure it's properly encoded     return "sql-stored:" + UnsafeUriCharactersEncoder.encode(this.template). }
+false;protected;0;5;;@Override protected void doStart() throws Exception {     this.wrapperFactory = new CallableStatementWrapperFactory(jdbcTemplate, new TemplateParser(getCamelContext().getClassResolver()), isFunction()).     super.doStart(). }
+false;protected;0;7;;@Override protected void doStop() throws Exception {     super.doStop().     if (this.wrapperFactory != null) {         this.wrapperFactory.shutdown().     } }
+false;public;0;3;;public JdbcTemplate getJdbcTemplate() {     return jdbcTemplate. }
+false;public;1;3;;public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {     this.jdbcTemplate = jdbcTemplate. }
+false;public;0;3;;public boolean isBatch() {     return batch. }
+false;public;1;3;;public void setBatch(boolean batch) {     this.batch = batch. }
+false;public;0;3;;public boolean isUseMessageBodyForTemplate() {     return useMessageBodyForTemplate. }
+false;public;1;3;;public void setUseMessageBodyForTemplate(boolean useMessageBodyForTemplate) {     this.useMessageBodyForTemplate = useMessageBodyForTemplate. }
+false;public;0;3;;public boolean isNoop() {     return noop. }
+false;public;1;3;;public void setNoop(boolean noop) {     this.noop = noop. }
+false;public;0;3;;public String getOutputHeader() {     return outputHeader. }
+false;public;1;3;;public void setOutputHeader(String outputHeader) {     this.outputHeader = outputHeader. }
+false;public;0;3;;public String getTemplate() {     return template. }
+false;public;1;3;;public void setTemplate(String template) {     this.template = template. }
+false;public;0;3;;public DataSource getDataSource() {     return dataSource. }
+false;public;1;3;;public void setDataSource(DataSource dataSource) {     this.dataSource = dataSource. }
+false;public;0;3;;public boolean isFunction() {     return function. }
+false;public;1;3;;public void setFunction(boolean function) {     this.function = function. }
+false;public;0;4;;@Override public boolean isSingleton() {     return false. }
+false;public;0;3;;public CallableStatementWrapperFactory getWrapperFactory() {     return wrapperFactory. }

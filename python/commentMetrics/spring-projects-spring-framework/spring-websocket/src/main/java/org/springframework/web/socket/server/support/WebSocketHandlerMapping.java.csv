@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;8;;@Override protected void initServletContext(ServletContext servletContext) {     for (Object handler : getUrlMap().values()) {         if (handler instanceof ServletContextAware) {             ((ServletContextAware) handler).setServletContext(servletContext).         }     } }
+false;public;0;11;;@Override public void start() {     if (!isRunning()) {         this.running = true.         for (Object handler : getUrlMap().values()) {             if (handler instanceof Lifecycle) {                 ((Lifecycle) handler).start().             }         }     } }
+false;public;0;11;;@Override public void stop() {     if (isRunning()) {         this.running = false.         for (Object handler : getUrlMap().values()) {             if (handler instanceof Lifecycle) {                 ((Lifecycle) handler).stop().             }         }     } }
+false;public;0;4;;@Override public boolean isRunning() {     return this.running. }

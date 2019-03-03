@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;12;;@Override protected TokenStreamComponents createComponents(String s) {     final Tokenizer tokenizer = new PatternTokenizer(pattern, -1).     TokenStream stream = tokenizer.     if (lowercase) {         stream = new LowerCaseFilter(stream).     }     if (stopWords != null) {         stream = new StopFilter(stream, stopWords).     }     return new TokenStreamComponents(tokenizer, stream). }
+false;protected;2;8;;@Override protected TokenStream normalize(String fieldName, TokenStream in) {     TokenStream stream = in.     if (lowercase) {         stream = new LowerCaseFilter(stream).     }     return stream. }

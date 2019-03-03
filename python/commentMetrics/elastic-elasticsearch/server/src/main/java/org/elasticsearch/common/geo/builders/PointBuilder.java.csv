@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;public PointBuilder coordinate(Coordinate coordinate) {     this.coordinates.set(0, coordinate).     return this. }
+false;public;0;3;;public double longitude() {     return coordinates.get(0).x. }
+false;public;0;3;;public double latitude() {     return coordinates.get(0).y. }
+true;public,static;2;3;/**  * Create a new point  *  * @param longitude longitude of the point  * @param latitude latitude of the point  * @return a new {@link PointBuilder}  */ ;/**  * Create a new point  *  * @param longitude longitude of the point  * @param latitude latitude of the point  * @return a new {@link PointBuilder}  */ public static PointBuilder newPoint(double longitude, double latitude) {     return new PointBuilder().coordinate(new Coordinate(longitude, latitude)). }
+false;public;2;8;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(ShapeParser.FIELD_TYPE.getPreferredName(), TYPE.shapeName()).     builder.field(ShapeParser.FIELD_COORDINATES.getPreferredName()).     toXContent(builder, coordinates.get(0)).     return builder.endObject(). }
+false;public;0;4;;@Override public Point buildS4J() {     return SPATIAL_CONTEXT.makePoint(coordinates.get(0).x, coordinates.get(0).y). }
+false;public;0;4;;@Override public org.elasticsearch.geo.geometry.Point buildGeometry() {     return new org.elasticsearch.geo.geometry.Point(coordinates.get(0).y, coordinates.get(0).x). }
+false;public;0;4;;@Override public GeoShapeType type() {     return TYPE. }
+false;public;0;4;;@Override public int numDimensions() {     return Double.isNaN(coordinates.get(0).z) ? 2 : 3. }

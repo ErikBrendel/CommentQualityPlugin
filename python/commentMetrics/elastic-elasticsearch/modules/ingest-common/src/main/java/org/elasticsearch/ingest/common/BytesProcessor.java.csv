@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static long apply(String value) {     return ByteSizeValue.parseBytesSizeValue(value, null, "Ingest Field").getBytes(). }
+false;protected;1;4;;@Override protected Long process(String value) {     return apply(value). }
+false;public;0;4;;@Override public String getType() {     return TYPE. }
+false;protected;5;5;;@Override protected BytesProcessor newProcessor(String tag, Map<String, Object> config, String field, boolean ignoreMissing, String targetField) {     return new BytesProcessor(tag, field, ignoreMissing, targetField). }

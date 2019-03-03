@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;10;;@Bean @Order(0) public MeterFilter metricsHttpClientUriTagFilter(MetricsProperties properties) {     String metricName = properties.getWeb().getClient().getRequestsMetricName().     MeterFilter denyFilter = new OnlyOnceLoggingDenyMeterFilter(() -> String.format("Reached the maximum number of URI tags for '%s'. Are you using " + "'uriVariables'?", metricName)).     return MeterFilter.maximumAllowableTags(metricName, "uri", properties.getWeb().getClient().getMaxUriTags(), denyFilter). }

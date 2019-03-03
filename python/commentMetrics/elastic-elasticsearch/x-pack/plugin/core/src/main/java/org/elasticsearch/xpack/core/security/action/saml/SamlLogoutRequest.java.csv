@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Override public ActionRequestValidationException validate() {     ActionRequestValidationException validationException = null.     if (Strings.isNullOrEmpty(token)) {         validationException = addValidationError("token is missing", validationException).     }     return validationException. }
+false;public;0;3;;public String getToken() {     return token. }
+false;public;1;3;;public void setToken(String token) {     this.token = token. }
+false;public;0;3;;public String getRefreshToken() {     return refreshToken. }
+false;public;1;3;;public void setRefreshToken(String refreshToken) {     this.refreshToken = refreshToken. }

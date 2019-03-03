@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;public void testConstructor() {     String jobId = randomAlphaOfLength(5).     assertEquals(jobId, new StopRollupJobRequest(jobId).getJobId()). }
+false;public;0;5;;public void testEqualsAndHash() {     EqualsHashCodeTestUtils.checkEqualsAndHashCode(new StopRollupJobRequest(randomAlphaOfLength(5)), orig -> new StopRollupJobRequest(orig.getJobId()), orig -> new StopRollupJobRequest(orig.getJobId() + "_suffix")). }
+false;public;0;4;;public void testRequireJobId() {     final NullPointerException e = expectThrows(NullPointerException.class, () -> new StopRollupJobRequest(null)).     assertEquals("id parameter must not be null", e.getMessage()). }

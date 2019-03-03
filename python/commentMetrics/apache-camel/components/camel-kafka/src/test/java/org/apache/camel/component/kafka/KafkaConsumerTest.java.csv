@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test(expected = IllegalArgumentException.class) public void consumerRequiresBootstrapServers() throws Exception {     when(endpoint.getComponent()).thenReturn(component).     when(endpoint.getConfiguration()).thenReturn(configuration).     when(endpoint.getConfiguration().getGroupId()).thenReturn("groupOne").     new KafkaConsumer(endpoint, processor). }
+false;public;0;7;;@Test public void consumerOnlyRequiresBootstrapServers() throws Exception {     when(endpoint.getComponent()).thenReturn(component).     when(endpoint.getConfiguration()).thenReturn(configuration).     when(endpoint.getConfiguration().getBrokers()).thenReturn("localhost:2181").     new KafkaConsumer(endpoint, processor). }

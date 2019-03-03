@@ -1,0 +1,23 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;11;;@Test public void withStaticBeanMethod() {     MyBeanImpl.initialized = false.     ApplicationContext ctx = new AnnotationConfigApplicationContext(ConfigWithStatic.class).     MyBean bean = ctx.getBean("myBean", MyBean.class).     assertFalse(MyBeanImpl.initialized).     bean.doIt().     assertTrue(MyBeanImpl.initialized). }
+false;public;0;11;;@Test public void withStaticBeanMethodAndInterface() {     MyBeanImpl.initialized = false.     ApplicationContext ctx = new AnnotationConfigApplicationContext(ConfigWithStaticAndInterface.class).     MyBean bean = ctx.getBean("myBean", MyBean.class).     assertFalse(MyBeanImpl.initialized).     bean.doIt().     assertTrue(MyBeanImpl.initialized). }
+false;public;0;11;;@Test public void withNonStaticBeanMethod() {     MyBeanImpl.initialized = false.     ApplicationContext ctx = new AnnotationConfigApplicationContext(ConfigWithNonStatic.class).     MyBean bean = ctx.getBean("myBean", MyBean.class).     assertFalse(MyBeanImpl.initialized).     bean.doIt().     assertTrue(MyBeanImpl.initialized). }
+false;public;0;11;;@Test public void withNonStaticBeanMethodAndInterface() {     MyBeanImpl.initialized = false.     ApplicationContext ctx = new AnnotationConfigApplicationContext(ConfigWithNonStaticAndInterface.class).     MyBean bean = ctx.getBean("myBean", MyBean.class).     assertFalse(MyBeanImpl.initialized).     bean.doIt().     assertTrue(MyBeanImpl.initialized). }
+false;public;0;1;;public String doIt().
+false;public;0;4;;@Override public String doIt() {     return "From implementation". }
+false;public;0;3;;@PreDestroy public void destroy() { }
+false;public;0;6;;@Bean public BeanNameAutoProxyCreator lazyInitAutoProxyCreator() {     BeanNameAutoProxyCreator autoProxyCreator = new BeanNameAutoProxyCreator().     autoProxyCreator.setCustomTargetSourceCreators(lazyInitTargetSourceCreator()).     return autoProxyCreator. }
+false;public;0;4;;@Bean public LazyInitTargetSourceCreator lazyInitTargetSourceCreator() {     return new StrictLazyInitTargetSourceCreator(). }
+false;public,static;0;5;;@Bean @Lazy public static MyBean myBean() {     return new MyBeanImpl(). }
+false;public;0;6;;@Bean public BeanNameAutoProxyCreator lazyInitAutoProxyCreator() {     BeanNameAutoProxyCreator autoProxyCreator = new BeanNameAutoProxyCreator().     autoProxyCreator.setCustomTargetSourceCreators(lazyInitTargetSourceCreator()).     return autoProxyCreator. }
+false;public;0;4;;@Bean public LazyInitTargetSourceCreator lazyInitTargetSourceCreator() {     return new StrictLazyInitTargetSourceCreator(). }
+false;public,static;0;5;;@Bean @Lazy public static MyBean myBean() {     return new MyBeanImpl(). }
+false;public;1;3;;@Override public void onApplicationEvent(ApplicationContextEvent event) { }
+false;public;0;6;;@Bean public BeanNameAutoProxyCreator lazyInitAutoProxyCreator() {     BeanNameAutoProxyCreator autoProxyCreator = new BeanNameAutoProxyCreator().     autoProxyCreator.setCustomTargetSourceCreators(lazyInitTargetSourceCreator()).     return autoProxyCreator. }
+false;public;0;4;;@Bean public LazyInitTargetSourceCreator lazyInitTargetSourceCreator() {     return new StrictLazyInitTargetSourceCreator(). }
+false;public;0;5;;@Bean @Lazy public MyBean myBean() {     return new MyBeanImpl(). }
+false;public;0;6;;@Bean public BeanNameAutoProxyCreator lazyInitAutoProxyCreator() {     BeanNameAutoProxyCreator autoProxyCreator = new BeanNameAutoProxyCreator().     autoProxyCreator.setCustomTargetSourceCreators(lazyInitTargetSourceCreator()).     return autoProxyCreator. }
+false;public;0;4;;@Bean public LazyInitTargetSourceCreator lazyInitTargetSourceCreator() {     return new StrictLazyInitTargetSourceCreator(). }
+false;public;0;5;;@Bean @Lazy public MyBean myBean() {     return new MyBeanImpl(). }
+false;public;1;3;;@Override public void onApplicationEvent(ApplicationContextEvent event) { }
+false;protected;2;7;;@Override protected AbstractBeanFactoryBasedTargetSource createBeanFactoryBasedTargetSource(Class<?> beanClass, String beanName) {     if ("myBean".equals(beanName)) {         assertEquals(MyBean.class, beanClass).     }     return super.createBeanFactoryBasedTargetSource(beanClass, beanName). }

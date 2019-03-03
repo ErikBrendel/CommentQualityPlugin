@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;2;;@ManagedAttribute(description = "Current size of inflight exchanges.") int getSize().
+false;;1;2;;@ManagedOperation(description = "Current size of inflight exchanges which are from the given route.") int size(String routeId).
+false;;0;2;;@ManagedOperation(description = "Lists all the exchanges which are currently inflight") TabularData browse().
+false;;2;2;;@ManagedOperation(description = "Lists all the exchanges which are currently inflight, limited and sorted") TabularData browse(int limit, boolean sortByLongestDuration).
+false;;3;2;;@ManagedOperation(description = "List all the exchanges that origins from the given route, which are currently inflight, limited and sorted") TabularData browse(String fromRouteId, int limit, boolean sortByLongestDuration).

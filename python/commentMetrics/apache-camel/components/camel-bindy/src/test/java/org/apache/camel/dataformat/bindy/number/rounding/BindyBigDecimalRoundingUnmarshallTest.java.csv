@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;14;;@Test public void testBigDecimalRoundingUp() throws Exception {     record = "'12345.789'".     String bigDecimal = "12345.79".     template.sendBody(record).     result.expectedMessageCount(1).     result.assertIsSatisfied().     NumberModel bd = (NumberModel) result.getExchanges().get(0).getIn().getBody().     Assert.assertEquals(bigDecimal, bd.getRoundingUp().toString()). }
+false;public;0;11;;@Override public void configure() throws Exception {     BindyDataFormat bindy = new BindyDataFormat().     bindy.setType(BindyType.Csv).     bindy.setClassType(NumberModel.class).     bindy.setLocale("en").     from(URI_DIRECT_START).unmarshal(bindy).to(URI_MOCK_RESULT). }
+false;protected;0;18;;@Override protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             BindyDataFormat bindy = new BindyDataFormat().             bindy.setType(BindyType.Csv).             bindy.setClassType(NumberModel.class).             bindy.setLocale("en").             from(URI_DIRECT_START).unmarshal(bindy).to(URI_MOCK_RESULT).         }     }. }
+false;public;0;3;;public BigDecimal getRoundingUp() {     return roundingUp. }
+false;public;1;3;;public void setRoundingUp(BigDecimal roundingUp) {     this.roundingUp = roundingUp. }
+false;public;0;4;;@Override public String toString() {     return "BigDecimal rounding : " + this.roundingUp. }

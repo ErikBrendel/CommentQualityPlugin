@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     throw new UnsupportedOperationException(). }
+false;public;0;4;;@Override public Map<String, Object> getKey() {     return key. }
+false;public;0;4;;@Override public String getKeyAsString() {     return key.toString(). }
+false;public;0;4;;@Override public long getDocCount() {     return count. }
+false;public;0;4;;@Override public Aggregations getAggregations() {     return aggs. }

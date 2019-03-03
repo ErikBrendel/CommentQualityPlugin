@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void runShouldHaveEndpointBean() {     this.contextRunner.run((context) -> assertThat(context).hasSingleBean(FlywayEndpoint.class)). }
+false;public;0;6;;@Test public void runWhenEnabledPropertyIsFalseShouldNotHaveEndpointBean() {     this.contextRunner.withPropertyValues("management.endpoint.flyway.enabled:false").run((context) -> assertThat(context).doesNotHaveBean(FlywayEndpoint.class)). }
+false;public;0;4;;@Bean public Flyway flyway() {     return mock(Flyway.class). }

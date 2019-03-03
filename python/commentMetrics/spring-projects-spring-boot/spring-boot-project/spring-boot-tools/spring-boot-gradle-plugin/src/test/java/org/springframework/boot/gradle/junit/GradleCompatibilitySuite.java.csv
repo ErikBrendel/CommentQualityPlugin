@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private,static;1;7;;private static List<Runner> createRunners(Class<?> clazz) throws InitializationError {     List<Runner> runners = new ArrayList<>().     for (String version : GRADLE_VERSIONS) {         runners.add(new GradleCompatibilityClassRunner(clazz, version)).     }     return runners. }
+false;protected;0;6;;@Override protected Object createTest() throws Exception {     Object test = super.createTest().     configureTest(test).     return test. }
+false;private;1;7;;private void configureTest(Object test) throws Exception {     GradleBuild gradleBuild = new GradleBuild().     if (!"default".equals(this.gradleVersion)) {         gradleBuild = gradleBuild.gradleVersion(this.gradleVersion).     }     test.getClass().getField("gradleBuild").set(test, gradleBuild). }
+false;protected;0;4;;@Override protected String getName() {     return "Gradle " + this.gradleVersion. }
+false;protected;1;4;;@Override protected String testName(FrameworkMethod method) {     return method.getName() + " [" + getName() + "]". }

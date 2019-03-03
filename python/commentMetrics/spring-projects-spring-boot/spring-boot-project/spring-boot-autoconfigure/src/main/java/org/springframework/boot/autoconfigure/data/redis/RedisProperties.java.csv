@@ -1,0 +1,43 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public int getDatabase() {     return this.database. }
+false;public;1;3;;public void setDatabase(int database) {     this.database = database. }
+false;public;0;3;;public String getUrl() {     return this.url. }
+false;public;1;3;;public void setUrl(String url) {     this.url = url. }
+false;public;0;3;;public String getHost() {     return this.host. }
+false;public;1;3;;public void setHost(String host) {     this.host = host. }
+false;public;0;3;;public String getPassword() {     return this.password. }
+false;public;1;3;;public void setPassword(String password) {     this.password = password. }
+false;public;0;3;;public int getPort() {     return this.port. }
+false;public;1;3;;public void setPort(int port) {     this.port = port. }
+false;public;0;3;;public boolean isSsl() {     return this.ssl. }
+false;public;1;3;;public void setSsl(boolean ssl) {     this.ssl = ssl. }
+false;public;1;3;;public void setTimeout(Duration timeout) {     this.timeout = timeout. }
+false;public;0;3;;public Duration getTimeout() {     return this.timeout. }
+false;public;0;3;;public Sentinel getSentinel() {     return this.sentinel. }
+false;public;1;3;;public void setSentinel(Sentinel sentinel) {     this.sentinel = sentinel. }
+false;public;0;3;;public Cluster getCluster() {     return this.cluster. }
+false;public;1;3;;public void setCluster(Cluster cluster) {     this.cluster = cluster. }
+false;public;0;3;;public Jedis getJedis() {     return this.jedis. }
+false;public;0;3;;public Lettuce getLettuce() {     return this.lettuce. }
+false;public;0;3;;public int getMaxIdle() {     return this.maxIdle. }
+false;public;1;3;;public void setMaxIdle(int maxIdle) {     this.maxIdle = maxIdle. }
+false;public;0;3;;public int getMinIdle() {     return this.minIdle. }
+false;public;1;3;;public void setMinIdle(int minIdle) {     this.minIdle = minIdle. }
+false;public;0;3;;public int getMaxActive() {     return this.maxActive. }
+false;public;1;3;;public void setMaxActive(int maxActive) {     this.maxActive = maxActive. }
+false;public;0;3;;public Duration getMaxWait() {     return this.maxWait. }
+false;public;1;3;;public void setMaxWait(Duration maxWait) {     this.maxWait = maxWait. }
+false;public;0;3;;public List<String> getNodes() {     return this.nodes. }
+false;public;1;3;;public void setNodes(List<String> nodes) {     this.nodes = nodes. }
+false;public;0;3;;public Integer getMaxRedirects() {     return this.maxRedirects. }
+false;public;1;3;;public void setMaxRedirects(Integer maxRedirects) {     this.maxRedirects = maxRedirects. }
+false;public;0;3;;public String getMaster() {     return this.master. }
+false;public;1;3;;public void setMaster(String master) {     this.master = master. }
+false;public;0;3;;public List<String> getNodes() {     return this.nodes. }
+false;public;1;3;;public void setNodes(List<String> nodes) {     this.nodes = nodes. }
+false;public;0;3;;public Pool getPool() {     return this.pool. }
+false;public;1;3;;public void setPool(Pool pool) {     this.pool = pool. }
+false;public;0;3;;public Duration getShutdownTimeout() {     return this.shutdownTimeout. }
+false;public;1;3;;public void setShutdownTimeout(Duration shutdownTimeout) {     this.shutdownTimeout = shutdownTimeout. }
+false;public;0;3;;public Pool getPool() {     return this.pool. }
+false;public;1;3;;public void setPool(Pool pool) {     this.pool = pool. }

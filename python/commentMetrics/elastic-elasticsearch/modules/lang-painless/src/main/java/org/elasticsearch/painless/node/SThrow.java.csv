@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;1;4;;@Override void extractVariables(Set<String> variables) {     expression.extractVariables(variables). }
+false;;1;11;;@Override void analyze(Locals locals) {     expression.expected = Exception.class.     expression.analyze(locals).     expression = expression.cast(locals).     methodEscape = true.     loopEscape = true.     allEscape = true.     statementCount = 1. }
+false;;2;6;;@Override void write(MethodWriter writer, Globals globals) {     writer.writeStatementOffset(location).     expression.write(writer, globals).     writer.throwException(). }
+false;public;0;4;;@Override public String toString() {     return singleLineToString(expression). }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     clusterName = new ClusterName(in).     node = in.readOptionalWriteable(DiscoveryNode::new). }
+false;public;1;6;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     clusterName.writeTo(out).     out.writeOptionalWriteable(node). }
+false;public;0;3;;public ClusterName getClusterName() {     return clusterName. }
+false;public;0;3;;public DiscoveryNode getDiscoveryNode() {     return node. }

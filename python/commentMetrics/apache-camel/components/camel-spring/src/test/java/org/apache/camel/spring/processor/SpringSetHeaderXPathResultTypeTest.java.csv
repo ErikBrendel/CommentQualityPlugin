@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;13;;@Test public void testXPathResultType() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMessageCount(1).     mock.message(0).header("foo").isInstanceOf(Boolean.class).     mock.message(0).header("foo").isEqualTo(true).     mock.message(0).header("bar").isInstanceOf(Boolean.class).     mock.message(0).header("bar").isEqualTo(false).     template.sendBody("direct:start", "<hello>World</hello>").     assertMockEndpointsSatisfied(). }
+false;protected;0;4;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/spring/processor/SpringSetHeaderXPathResultTypeTest.xml"). }

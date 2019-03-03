@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeOptionalWriteable(address).     out.writeOptionalString(action). }
+true;public;0;3;/**  * The target address to invoke the action on.  */ ;/**  * The target address to invoke the action on.  */ public TransportAddress address() {     return address. }
+true;public;0;3;/**  * The action to invoke.  */ ;/**  * The action to invoke.  */ public String action() {     return action. }
+false;private,static;4;16;;private static String buildMessage(String name, TransportAddress address, String action, String msg) {     StringBuilder sb = new StringBuilder().     if (name != null) {         sb.append('[').append(name).append(']').     }     if (address != null) {         sb.append('[').append(address).append(']').     }     if (action != null) {         sb.append('[').append(action).append(']').     }     if (msg != null) {         sb.append(" ").append(msg).     }     return sb.toString(). }

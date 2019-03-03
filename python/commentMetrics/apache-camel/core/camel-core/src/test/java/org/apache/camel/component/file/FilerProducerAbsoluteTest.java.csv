@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Override @Before public void setUp() throws Exception {     File dir = new File("target/data/reports/absolute").     path = dir.getAbsolutePath().     deleteDirectory(dir).     super.setUp(). }
+false;public;0;10;;@Test public void testProduceAbsoluteFile() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMessageCount(1).     mock.expectedFileExists(path + "/hello.txt").     template.sendBodyAndHeader("direct:report", "Hello World", Exchange.FILE_NAME, "hello.txt").     assertMockEndpointsSatisfied(). }
+false;public;0;3;;public void configure() throws Exception {     from("direct:report").to("file://" + path, "mock:result"). }
+false;protected;0;7;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from("direct:report").to("file://" + path, "mock:result").         }     }. }

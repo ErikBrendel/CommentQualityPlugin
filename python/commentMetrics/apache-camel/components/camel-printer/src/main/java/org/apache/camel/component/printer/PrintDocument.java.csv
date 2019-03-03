@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public DocFlavor getDocFlavor() {     return docFlavor. }
+false;public;0;3;;public DocAttributeSet getAttributes() {     return null. }
+false;public;0;3;;public Object getPrintData() throws IOException {     return getStreamForBytes(). }
+false;public;0;24;;public Reader getReaderForText() throws IOException {     synchronized (this) {         if (reader != null) {             return reader.         }         if (docFlavor.getMediaType().equalsIgnoreCase("image")) {             reader = null.         } else if ((docFlavor.getMediaType().equalsIgnoreCase("text")) || ((docFlavor.getMediaType().equalsIgnoreCase("application")) && (docFlavor.getMediaSubtype().equalsIgnoreCase("xml")))) {             buffer = new byte[stream.available()].             int n = stream.available().             for (int i = 0. i < n. i++) {                 buffer[i] = (byte) stream.read().             }             reader = new StringReader(new String(buffer)).             stream = new ByteArrayInputStream(buffer).         }         return reader.     } }
+false;public;0;3;;public InputStream getStreamForBytes() throws IOException {     return stream. }

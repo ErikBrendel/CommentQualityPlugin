@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Override public Producer createProducer() throws Exception {     Bigquery bigquery = getConfiguration().getConnectionFactory().getDefaultClient().     GoogleBigQueryProducer producer = new GoogleBigQueryProducer(bigquery, this, configuration).     return producer. }
+false;public;1;3;;public Consumer createConsumer(Processor processor) throws Exception {     throw new UnsupportedOperationException("Cannot consume from the BigQuery endpoint: " + getEndpointUri()). }
+false;public;0;3;;public boolean isSingleton() {     return true. }
+false;public;0;3;;public GoogleBigQueryConfiguration getConfiguration() {     return configuration. }
+false;public;0;4;;@Override public GoogleBigQueryComponent getComponent() {     return (GoogleBigQueryComponent) super.getComponent(). }

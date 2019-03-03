@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test(expected = IllegalArgumentException.class) public void createWithNullScript() throws Exception {     new StaticScriptSource(null). }
+false;public;0;4;;@Test(expected = IllegalArgumentException.class) public void createWithEmptyScript() throws Exception {     new StaticScriptSource(""). }
+false;public;0;4;;@Test(expected = IllegalArgumentException.class) public void createWithWhitespaceOnlyScript() throws Exception {     new StaticScriptSource("   \n\n\t  \t\n"). }
+false;public;0;4;;@Test public void isModifiedIsTrueByDefault() throws Exception {     assertTrue("Script must be flagged as 'modified' when first created.", source.isModified()). }
+false;public;0;5;;@Test public void gettingScriptTogglesIsModified() throws Exception {     source.getScriptAsString().     assertFalse("Script must be flagged as 'not modified' after script is read.", source.isModified()). }
+false;public;0;6;;@Test public void gettingScriptViaToStringDoesNotToggleIsModified() throws Exception {     boolean isModifiedState = source.isModified().     source.toString().     assertEquals("Script's 'modified' flag must not change after script is read via toString().", isModifiedState, source.isModified()). }
+false;public;0;5;;@Test public void isModifiedToggledWhenDifferentScriptIsSet() throws Exception {     source.setScript("use warnings.").     assertTrue("Script must be flagged as 'modified' when different script is passed in.", source.isModified()). }
+false;public;0;5;;@Test public void isModifiedNotToggledWhenSameScriptIsSet() throws Exception {     source.setScript(SCRIPT_TEXT).     assertFalse("Script must not be flagged as 'modified' when same script is passed in.", source.isModified()). }

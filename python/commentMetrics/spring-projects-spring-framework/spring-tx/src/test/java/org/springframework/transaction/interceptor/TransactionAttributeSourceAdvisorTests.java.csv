@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void serializability() throws Exception {     TransactionInterceptor ti = new TransactionInterceptor().     ti.setTransactionAttributes(new Properties()).     TransactionAttributeSourceAdvisor tas = new TransactionAttributeSourceAdvisor(ti).     SerializationTestUtils.serializeAndDeserialize(tas). }

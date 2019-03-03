@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;2;7;;public static ActionRequestValidationException addValidationError(String error, ActionRequestValidationException validationException) {     if (validationException == null) {         validationException = new ActionRequestValidationException().     }     validationException.addValidationError(error).     return validationException. }

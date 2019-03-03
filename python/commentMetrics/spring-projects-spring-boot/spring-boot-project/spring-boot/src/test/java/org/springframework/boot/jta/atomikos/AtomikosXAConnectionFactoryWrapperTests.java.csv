@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void wrap() {     XAConnectionFactory connectionFactory = mock(XAConnectionFactory.class).     AtomikosXAConnectionFactoryWrapper wrapper = new AtomikosXAConnectionFactoryWrapper().     ConnectionFactory wrapped = wrapper.wrapConnectionFactory(connectionFactory).     assertThat(wrapped).isInstanceOf(AtomikosConnectionFactoryBean.class).     assertThat(((AtomikosConnectionFactoryBean) wrapped).getXaConnectionFactory()).isSameAs(connectionFactory). }

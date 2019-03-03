@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getName() {     return "ml_update_model_snapshot_action". }
+false;protected;2;11;;@Override protected RestChannelConsumer prepareRequest(RestRequest restRequest, NodeClient client) throws IOException {     XContentParser parser = restRequest.contentParser().     UpdateModelSnapshotAction.Request updateModelSnapshot = UpdateModelSnapshotAction.Request.parseRequest(restRequest.param(Job.ID.getPreferredName()), restRequest.param(ModelSnapshotField.SNAPSHOT_ID.getPreferredName()), parser).     return channel -> client.execute(UpdateModelSnapshotAction.INSTANCE, updateModelSnapshot, new RestStatusToXContentListener<>(channel)). }

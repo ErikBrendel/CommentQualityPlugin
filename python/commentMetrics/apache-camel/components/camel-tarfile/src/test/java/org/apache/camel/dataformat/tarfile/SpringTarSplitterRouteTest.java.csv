@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Test public void testSplitter() throws InterruptedException {     MockEndpoint processTarEntry = getMockEndpoint("mock:processTarEntry").     processTarEntry.expectedBodiesReceivedInAnyOrder("chau", "hi", "hola", "hello", "greetings").     assertMockEndpointsSatisfied(). }
+false;protected;0;4;;@Override protected ClassPathXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/dataformat/tarfile/SpringTarSplitterRouteTest.xml"). }

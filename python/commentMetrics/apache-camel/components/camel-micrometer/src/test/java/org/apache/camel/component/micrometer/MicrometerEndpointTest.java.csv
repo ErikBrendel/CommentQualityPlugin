@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Producer createProducer() {     return null. }
+false;protected;0;4;;@Override protected String createEndpointUri() {     return "not real endpoint". }
+false;public;0;15;;@Before public void setUp() {     endpoint = new MicrometerEndpoint(null, null, registry, Meter.Type.COUNTER, METRICS_NAME, Tags.empty()) {          @Override         public Producer createProducer() {             return null.         }          @Override         protected String createEndpointUri() {             return "not real endpoint".         }     }.     inOrder = Mockito.inOrder(registry, processor, exchange, in). }
+false;public;0;4;;@After public void tearDown() {     inOrder.verifyNoMoreInteractions(). }
+false;public;0;5;;@Test public void testAbstractMetricsEndpoint() {     assertThat(endpoint.getMetricsName(), is(METRICS_NAME)).     assertThat(endpoint.getRegistry(), is(registry)). }
+false;public;0;4;;@Test(expected = RuntimeCamelException.class) public void testCreateConsumer() {     endpoint.createConsumer(processor). }
+false;public;0;4;;@Test public void testIsSingleton() {     assertThat(endpoint.isSingleton(), is(true)). }
+false;public;0;4;;@Test public void testGetRegistry() {     assertThat(endpoint.getRegistry(), is(registry)). }
+false;public;0;4;;@Test public void testGetMetricsName() {     assertThat(endpoint.getMetricsName(), is(METRICS_NAME)). }

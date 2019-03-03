@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,final;0;3;/**  * Return the wrapped BeanDefinition object.  */ ;/**  * Return the wrapped BeanDefinition object.  */ public final BeanDefinition getBeanDefinition() {     return this.beanDefinition. }
+false;public;0;4;;@Override public boolean exists() {     return false. }
+false;public;0;4;;@Override public boolean isReadable() {     return false. }
+false;public;0;5;;@Override public InputStream getInputStream() throws IOException {     throw new FileNotFoundException("Resource cannot be opened because it points to " + getDescription()). }
+false;public;0;4;;@Override public String getDescription() {     return "BeanDefinition defined in " + this.beanDefinition.getResourceDescription(). }
+true;public;1;5;/**  * This implementation compares the underlying BeanDefinition.  */ ;/**  * This implementation compares the underlying BeanDefinition.  */ @Override public boolean equals(Object other) {     return (this == other || (other instanceof BeanDefinitionResource && ((BeanDefinitionResource) other).beanDefinition.equals(this.beanDefinition))). }
+true;public;0;4;/**  * This implementation returns the hash code of the underlying BeanDefinition.  */ ;/**  * This implementation returns the hash code of the underlying BeanDefinition.  */ @Override public int hashCode() {     return this.beanDefinition.hashCode(). }

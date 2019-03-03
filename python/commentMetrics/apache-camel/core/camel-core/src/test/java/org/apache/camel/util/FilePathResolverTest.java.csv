@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@Test public void testFilePathResolver() throws Exception {     assertEquals("/foo/bar", FilePathResolver.resolvePath("/foo/bar")).     String tmp = System.getProperty("java.io.tmpdir").     assertEquals(tmp + "foo", FilePathResolver.resolvePath("${java.io.tmpdir}foo")).     System.setProperty("beer", "Carlsberg").     assertEquals(tmp + "foo/Carlsberg", FilePathResolver.resolvePath("${java.io.tmpdir}foo/${beer}")). }

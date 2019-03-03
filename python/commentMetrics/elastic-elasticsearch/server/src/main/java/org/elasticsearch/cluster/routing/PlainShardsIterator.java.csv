@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public void reset() {     index = 0. }
+false;public;0;4;;@Override public int remaining() {     return shards.size() - index. }
+false;public;0;8;;@Override public ShardRouting nextOrNull() {     if (index == shards.size()) {         return null.     } else {         return shards.get(index++).     } }
+false;public;0;4;;@Override public int size() {     return shards.size(). }
+false;public;0;10;;@Override public int sizeActive() {     int count = 0.     for (ShardRouting shard : shards) {         if (shard.active()) {             count++.         }     }     return count. }
+false;public;0;4;;@Override public List<ShardRouting> getShardRoutings() {     return Collections.unmodifiableList(shards). }
+false;public;0;4;;@Override public Iterator<ShardRouting> iterator() {     return shards.iterator(). }

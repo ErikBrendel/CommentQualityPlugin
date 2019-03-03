@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public Processor createProcessor(RouteContext routeContext) throws Exception {     ObjectHelper.notNull(definition.getHeaderName(), "headerName", this).     return new RemoveHeaderProcessor(definition.getHeaderName()). }

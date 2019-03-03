@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;12;;@Test public void testDefaultSettings() {     try {         SampleRedisApplication.main(new String[0]).     } catch (Exception ex) {         if (!redisServerRunning(ex)) {             return.         }     }     assertThat(this.output.toString()).contains("Found key spring.boot.redis.test"). }
+false;private;1;7;;private boolean redisServerRunning(Throwable ex) {     System.out.println(ex.getMessage()).     if (ex instanceof RedisConnectionFailureException) {         return false.     }     return (ex.getCause() == null || redisServerRunning(ex.getCause())). }

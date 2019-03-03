@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Return the underlying task (typically a {@link CronTask},  * {@link FixedRateTask} or {@link FixedDelayTask}).  * @since 5.0.2  */ ;/**  * Return the underlying task (typically a {@link CronTask},  * {@link FixedRateTask} or {@link FixedDelayTask}).  * @since 5.0.2  */ public Task getTask() {     return this.task. }
+true;public;0;6;/**  * Trigger cancellation of this scheduled task.  */ ;/**  * Trigger cancellation of this scheduled task.  */ public void cancel() {     ScheduledFuture<?> future = this.future.     if (future != null) {         future.cancel(true).     } }
+false;public;0;4;;@Override public String toString() {     return this.task.toString(). }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String toString() {     return "SetFaultBody[" + getExpression() + "]". }
+false;public;0;4;;@Override public String getShortName() {     return "setFaultBody". }
+false;public;0;4;;@Override public String getLabel() {     return "setFaultBody[" + getExpression() + "]". }
+true;public;1;4;/**  * Expression that returns the new fault body to use  */ ;/**  * Expression that returns the new fault body to use  */ @Override public void setExpression(ExpressionDefinition expression) {     super.setExpression(expression). }

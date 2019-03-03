@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@BeforeTransaction public void beforeTransaction() {     assertNumUsers(0). }
+false;public;0;5;;@Test @SqlGroup(@Sql(scripts = "data-add-dogbert.sql", config = @SqlConfig(transactionMode = TransactionMode.ISOLATED))) public void methodLevelScripts() {     assertNumUsers(1). }
+false;public;0;4;;@AfterTransaction public void afterTransaction() {     assertNumUsers(1). }
+false;protected;1;3;;protected void assertNumUsers(int expected) {     assertEquals("Number of rows in the 'user' table.", expected, countRowsInTable("user")). }

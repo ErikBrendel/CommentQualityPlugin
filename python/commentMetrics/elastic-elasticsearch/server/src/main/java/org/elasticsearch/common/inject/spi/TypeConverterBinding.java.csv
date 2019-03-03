@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Object getSource() {     return source. }
+false;public;0;3;;public Matcher<? super TypeLiteral<?>> getTypeMatcher() {     return typeMatcher. }
+false;public;0;3;;public TypeConverter getTypeConverter() {     return typeConverter. }
+false;public;1;4;;@Override public <T> T acceptVisitor(ElementVisitor<T> visitor) {     return visitor.visit(this). }
+false;public;1;4;;@Override public void applyTo(Binder binder) {     binder.withSource(getSource()).convertToTypes(typeMatcher, typeConverter). }

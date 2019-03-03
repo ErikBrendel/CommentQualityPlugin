@@ -1,0 +1,32 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public CamelContext getCamelContext() {     return camelContext. }
+false;public;1;3;;public void setCamelContext(CamelContext camelContext) {     this.camelContext = camelContext. }
+false;public;0;3;;public String getFeedbackHost() {     return feedbackHost. }
+false;public;1;3;;public void setFeedbackHost(String feedbackHost) {     this.feedbackHost = feedbackHost. }
+false;public;0;3;;public String getGatewayHost() {     return gatewayHost. }
+false;public;1;3;;public void setGatewayHost(String gatewayHost) {     this.gatewayHost = gatewayHost. }
+false;public;0;3;;public int getGatewayPort() {     return gatewayPort. }
+false;public;1;3;;public void setGatewayPort(int gatewayPort) {     this.gatewayPort = gatewayPort. }
+false;public;0;3;;public int getFeedbackPort() {     return feedbackPort. }
+false;public;1;3;;public void setFeedbackPort(int feedbackPort) {     this.feedbackPort = feedbackPort. }
+false;public;0;3;;public int getPoolSize() {     return poolSize. }
+false;public;1;3;;public void setPoolSize(int poolSize) {     this.poolSize = poolSize. }
+false;public;0;3;;public String getCertificatePath() {     return certificatePath. }
+false;public;1;3;;public void setCertificatePath(String certificatePath) {     this.certificatePath = certificatePath. }
+false;public;0;3;;public String getCertificatePassword() {     return certificatePassword. }
+false;public;1;3;;public void setCertificatePassword(String certificatePassword) {     this.certificatePassword = certificatePassword. }
+false;public;0;3;;public ReconnectionPolicy getReconnectionPolicy() {     return reconnectionPolicy. }
+false;public;1;3;;public void setReconnectionPolicy(ReconnectionPolicy reconnectionPolicy) {     this.reconnectionPolicy = reconnectionPolicy. }
+false;public;0;3;;public ConnectionStrategy getConnectionStrategy() {     return connectionStrategy. }
+false;public;1;3;;public void setConnectionStrategy(ConnectionStrategy connectionStrategy) {     this.connectionStrategy = connectionStrategy. }
+false;public;0;3;;public SSLContextParameters getSslContextParameters() {     return sslContextParameters. }
+false;public;1;3;;public void setSslContextParameters(SSLContextParameters sslContextParameters) {     this.sslContextParameters = sslContextParameters. }
+false;public;0;3;;public ApnsDelegate getApnsDelegate() {     return apnsDelegate. }
+false;public;1;3;;public void setApnsDelegate(ApnsDelegate apnsDelegate) {     this.apnsDelegate = apnsDelegate. }
+false;public;0;19;;public ApnsService getApnsService() {     ApnsServiceBuilder builder = APNS.newService().     builder = configureServiceBuilder(builder).     configureConnectionStrategy(builder).     configureReconnectionPolicy(builder).     configureApnsDelegate(builder).     configureApnsDestinations(builder).     try {         configureApnsCertificate(builder).     } catch (IOException e) {         throw RuntimeCamelException.wrapRuntimeCamelException(e).     } catch (GeneralSecurityException e) {         throw RuntimeCamelException.wrapRuntimeCamelException(e).     }     ApnsService apnsService = builder.build().     return apnsService. }
+false;protected;1;3;;protected ApnsServiceBuilder configureServiceBuilder(ApnsServiceBuilder serviceBuilder) {     return serviceBuilder. }
+false;private;1;18;;private void configureApnsCertificate(ApnsServiceBuilder builder) throws IOException, GeneralSecurityException {     if (getSslContextParameters() != null) {         builder.withSSLContext(getSslContextParameters().createSSLContext(getCamelContext())).         return.     }     ObjectHelper.notNull(getCamelContext(), "camelContext").     StringHelper.notEmpty(getCertificatePath(), "certificatePath").     StringHelper.notEmpty(getCertificatePassword(), "certificatePassword").     InputStream certificateInputStream = null.     try {         certificateInputStream = ResourceHelper.resolveMandatoryResourceAsInputStream(camelContext, getCertificatePath()).         builder.withCert(certificateInputStream, getCertificatePassword()).     } finally {         ResourceUtils.close(certificateInputStream).     } }
+false;private;1;11;;private void configureApnsDestinations(ApnsServiceBuilder builder) {     ParamUtils.checkDestination(getGatewayHost(), getGatewayPort(), "gateway").     ParamUtils.checkDestination(getFeedbackHost(), getFeedbackPort(), "feedback").     if (ObjectHelper.isNotEmpty(getGatewayHost())) {         builder.withGatewayDestination(getGatewayHost(), getGatewayPort()).     }     if (ObjectHelper.isNotEmpty(getFeedbackHost())) {         builder.withFeedbackDestination(getFeedbackHost(), getFeedbackPort()).     } }
+false;private;1;5;;private void configureApnsDelegate(ApnsServiceBuilder builder) {     if (apnsDelegate != null) {         builder.withDelegate(apnsDelegate).     } }
+false;private;1;21;;private void configureConnectionStrategy(ApnsServiceBuilder builder) {     if (getConnectionStrategy() == ConnectionStrategy.POOL) {         AssertUtils.isTrue(poolSize >= MIN_POOL_SIZE, "Pool size needs to be greater than: " + MIN_POOL_SIZE).         AssertUtils.isTrue(poolSize <= MAX_POOL_SIZE, "Pool size needs to be lower than: " + MAX_POOL_SIZE).     }     if (getConnectionStrategy() == null) {         return.     }     switch(getConnectionStrategy()) {         case QUEUE:             builder.asQueued().             break.         case POOL:             builder.asPool(getPoolSize()).             break.         default:             break.     } }
+false;private;1;17;;private void configureReconnectionPolicy(ApnsServiceBuilder builder) {     if (getReconnectionPolicy() == null) {         return.     }     switch(getReconnectionPolicy()) {         case EVERY_HALF_HOUR:             builder.withReconnectPolicy(ReconnectPolicy.Provided.EVERY_HALF_HOUR).             break.         case EVERY_NOTIFICATION:             builder.withReconnectPolicy(ReconnectPolicy.Provided.EVERY_NOTIFICATION).             break.         default:             builder.withReconnectPolicy(ReconnectPolicy.Provided.NEVER).             break.     } }

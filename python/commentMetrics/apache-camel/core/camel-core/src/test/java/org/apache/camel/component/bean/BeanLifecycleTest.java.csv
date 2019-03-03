@@ -1,0 +1,17 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Override @Before public void setUp() throws Exception {     statefulInstance = new MyBean().     statefulInstanceInRegistry = new MyBean().     statefulInstanceInRegistryNoCache = new MyBean().     super.setUp(). }
+false;public;0;10;;@Override @After public void tearDown() throws Exception {     super.tearDown().     assertEquals("stopped", statefulInstance.getStatus()).     assertEquals("stopped", statefulInstanceInRegistry.getStatus()).     assertNull(statefulInstanceInRegistryNoCache.getStatus()).     assertEquals(2, MyStatefulBean.INSTANCES.get()). }
+false;public;0;14;;@Test public void testBeanLifecycle() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMessageCount(1).     assertEquals("started", statefulInstance.getStatus()).     assertEquals("started", statefulInstanceInRegistry.getStatus()).     assertNull(statefulInstanceInRegistryNoCache.getStatus()).     assertEquals(2, MyStatefulBean.INSTANCES.get()).     template.sendBody("direct:foo", null).     mock.assertIsSatisfied(). }
+false;protected;0;7;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry jndi = super.createRegistry().     jndi.bind("statefulInstanceInRegistry", statefulInstanceInRegistry).     jndi.bind("statefulInstanceInRegistryNoCache", statefulInstanceInRegistryNoCache).     return jndi. }
+false;public;0;11;;@Override public void configure() throws Exception {     from("direct:foo").routeId("foo").bean(statefulInstance, "doSomething").bean(MyStatefulBean.class, "doSomething").bean(MyStatefulBean.class.getName(), "doSomething", true).bean(MyStatelessBean.class.getName(), "doSomething", false).to("bean:statefulInstanceInRegistry?method=doSomething&cache=true").to("bean:statefulInstanceInRegistryNoCache?method=doSomething&cache=false").to("mock:result"). }
+false;protected;0;16;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:foo").routeId("foo").bean(statefulInstance, "doSomething").bean(MyStatefulBean.class, "doSomething").bean(MyStatefulBean.class.getName(), "doSomething", true).bean(MyStatelessBean.class.getName(), "doSomething", false).to("bean:statefulInstanceInRegistry?method=doSomething&cache=true").to("bean:statefulInstanceInRegistryNoCache?method=doSomething&cache=false").to("mock:result").         }     }. }
+false;public;0;3;;public String getStatus() {     return status. }
+false;public;1;3;;public void doSomething(Exchange exchange) { // noop }
+false;public;0;4;;@Override public void start() throws Exception {     status = "started". }
+false;public;0;4;;@Override public void stop() throws Exception {     status = "stopped". }
+false;public;1;3;;public void doSomething(Exchange exchange) { // noop }
+false;public;0;4;;@Override public void start() throws Exception {     fail("Should not be invoked"). }
+false;public;0;4;;@Override public void stop() throws Exception {     fail("Should not be invoked"). }
+false;public;1;3;;public void doSomething(Exchange exchange) { // noop }
+false;public;0;3;;@Override public void start() throws Exception { }
+false;public;0;3;;@Override public void stop() throws Exception { }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;4;;@Deployment public static Archive<?> createSpringBootPackage() throws Exception {     return ArquillianPackager.springBootPackage(createTestConfig()). }
+false;public,static;0;12;;public static ITestConfig createTestConfig() {     return new ITestConfigBuilder().module(inferModuleName(CamelSjmsTest.class)).exclusion("com.atomikos:transactions-jta").build(). }
+false;public;0;7;;@Test public void componentTests() throws Exception {     this.runComponentTest(config). // Unit tests can be enabled if required // this.runModuleUnitTestsIfEnabled(config). }

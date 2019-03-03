@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeStringArray(indices).     indicesOptions.writeIndicesOptions(out). }
+false;public;0;4;;@Override public String[] indices() {     return indices. }
+false;public;1;5;;@Override public IndicesExistsRequest indices(String... indices) {     this.indices = indices.     return this. }
+false;public;0;4;;@Override public IndicesOptions indicesOptions() {     return indicesOptions. }
+false;public;1;5;;public IndicesExistsRequest expandWilcardsOpen(boolean expandWildcardsOpen) {     this.indicesOptions = IndicesOptions.fromOptions(indicesOptions.ignoreUnavailable(), indicesOptions.allowNoIndices(), expandWildcardsOpen, indicesOptions.expandWildcardsClosed()).     return this. }
+false;public;1;5;;public IndicesExistsRequest expandWilcardsClosed(boolean expandWildcardsClosed) {     this.indicesOptions = IndicesOptions.fromOptions(indicesOptions.ignoreUnavailable(), indicesOptions.allowNoIndices(), indicesOptions.expandWildcardsOpen(), expandWildcardsClosed).     return this. }
+false;public;0;8;;@Override public ActionRequestValidationException validate() {     ActionRequestValidationException validationException = null.     if (indices == null || indices.length == 0) {         validationException = addValidationError("index/indices is missing", validationException).     }     return validationException. }
+false;public;1;4;;@Override public void readFrom(StreamInput in) throws IOException {     throw new UnsupportedOperationException("usage of Streamable is to be replaced by Writeable"). }

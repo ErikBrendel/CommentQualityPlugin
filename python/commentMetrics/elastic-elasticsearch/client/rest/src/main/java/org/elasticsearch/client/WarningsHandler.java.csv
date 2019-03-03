@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;1;1;;boolean warningsShouldFailRequest(List<String> warnings).
+false;public;1;4;;@Override public boolean warningsShouldFailRequest(List<String> warnings) {     return false. }
+false;public;0;4;;@Override public String toString() {     return "permissive". }
+false;public;1;4;;@Override public boolean warningsShouldFailRequest(List<String> warnings) {     return false == warnings.isEmpty(). }
+false;public;0;4;;@Override public String toString() {     return "strict". }

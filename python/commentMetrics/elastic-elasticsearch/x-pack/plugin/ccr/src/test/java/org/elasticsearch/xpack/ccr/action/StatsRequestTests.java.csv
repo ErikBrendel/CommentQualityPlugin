@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected Writeable.Reader<FollowStatsAction.StatsRequest> instanceReader() {     return FollowStatsAction.StatsRequest::new. }
+false;protected;0;8;;@Override protected FollowStatsAction.StatsRequest createTestInstance() {     FollowStatsAction.StatsRequest statsRequest = new FollowStatsAction.StatsRequest().     if (randomBoolean()) {         statsRequest.setIndices(generateRandomStringArray(8, 4, false)).     }     return statsRequest. }

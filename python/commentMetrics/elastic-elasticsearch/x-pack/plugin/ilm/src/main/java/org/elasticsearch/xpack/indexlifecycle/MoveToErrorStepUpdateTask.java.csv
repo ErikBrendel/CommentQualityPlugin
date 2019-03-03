@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;3;;Index getIndex() {     return index. }
+false;;0;3;;String getPolicy() {     return policy. }
+false;;0;3;;Step.StepKey getCurrentStepKey() {     return currentStepKey. }
+false;;0;3;;Exception getCause() {     return cause. }
+false;public;1;19;;@Override public ClusterState execute(ClusterState currentState) throws IOException {     IndexMetaData idxMeta = currentState.getMetaData().index(index).     if (idxMeta == null) {         // Index must have been since deleted, ignore it         return currentState.     }     Settings indexSettings = idxMeta.getSettings().     LifecycleExecutionState indexILMData = LifecycleExecutionState.fromIndexMetadata(idxMeta).     if (policy.equals(LifecycleSettings.LIFECYCLE_NAME_SETTING.get(indexSettings)) && currentStepKey.equals(IndexLifecycleRunner.getCurrentStepKey(indexILMData))) {         return IndexLifecycleRunner.moveClusterStateToErrorStep(index, currentState, currentStepKey, cause, nowSupplier).     } else {         // either case we don't want to do anything now         return currentState.     } }
+false;public;2;5;;@Override public void onFailure(String source, Exception e) {     throw new ElasticsearchException("policy [" + policy + "] for index [" + index.getName() + "] failed trying to move from step [" + currentStepKey + "] to the ERROR step.", e). }

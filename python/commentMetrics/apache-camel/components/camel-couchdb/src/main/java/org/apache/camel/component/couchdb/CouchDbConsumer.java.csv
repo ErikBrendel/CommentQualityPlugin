@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;9;;@Override protected void doStart() throws Exception {     super.doStart().     log.info("Starting CouchDB consumer").     executor = endpoint.getCamelContext().getExecutorServiceManager().newFixedThreadPool(this, endpoint.getEndpointUri(), 1).     task = new CouchDbChangesetTracker(endpoint, this, couchClient).     executor.submit(task). }
+false;protected;0;12;;@Override protected void doStop() throws Exception {     super.doStop().     log.info("Stopping CouchDB consumer").     if (task != null) {         task.stop().     }     if (executor != null) {         endpoint.getCamelContext().getExecutorServiceManager().shutdownNow(executor).         executor = null.     } }

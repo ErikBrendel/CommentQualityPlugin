@@ -1,0 +1,17 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public int getLoadOnStartup() {     return loadOnStartup. }
+false;public;1;4;;@Override public void setLoadOnStartup(int loadOnStartup) {     this.loadOnStartup = loadOnStartup. }
+false;public;1;4;;@Override public void setRunAsRole(String roleName) {     this.roleName = roleName. }
+false;public;1;5;;@Override public Set<String> addMapping(String... urlPatterns) {     mappings.addAll(Arrays.asList(urlPatterns)).     return mappings. }
+false;public;0;4;;@Override public Collection<String> getMappings() {     return mappings. }
+false;public;0;4;;@Override public String getRunAsRole() {     return roleName. }
+false;public;1;4;;@Override public void setAsyncSupported(boolean isAsyncSupported) {     this.asyncSupported = isAsyncSupported. }
+false;public;0;3;;public boolean isAsyncSupported() {     return this.asyncSupported. }
+false;public;0;4;;// not implemented @Override public String getName() {     return null. }
+false;public;1;3;;@Override public void setMultipartConfig(MultipartConfigElement multipartConfig) { }
+false;public;1;4;;@Override public Set<String> setServletSecurity(ServletSecurityElement constraint) {     return null. }
+false;public;0;4;;@Override public String getClassName() {     return null. }
+false;public;2;4;;@Override public boolean setInitParameter(String name, String value) {     return false. }
+false;public;1;4;;@Override public String getInitParameter(String name) {     return null. }
+false;public;1;4;;@Override public Set<String> setInitParameters(Map<String, String> initParameters) {     return null. }
+false;public;0;4;;@Override public Map<String, String> getInitParameters() {     return null. }

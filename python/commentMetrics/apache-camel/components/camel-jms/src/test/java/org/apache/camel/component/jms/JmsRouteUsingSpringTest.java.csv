@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;5;;@Override protected CamelContext createCamelContext() throws Exception {     applicationContext = createApplicationContext().     return SpringCamelContext.springCamelContext(applicationContext, true). }
+false;protected;0;3;;protected ClassPathXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/component/jms/jmsRouteUsingSpring.xml"). }
+false;public;0;6;;@Override @After public void tearDown() throws Exception {     super.tearDown().     IOHelper.close(applicationContext). }

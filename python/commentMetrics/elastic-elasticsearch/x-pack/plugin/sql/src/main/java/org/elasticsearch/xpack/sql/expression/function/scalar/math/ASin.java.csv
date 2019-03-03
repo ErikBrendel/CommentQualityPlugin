@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected NodeInfo<ASin> info() {     return NodeInfo.create(this, ASin::new, field()). }
+false;protected;1;4;;@Override protected ASin replaceChild(Expression newChild) {     return new ASin(source(), newChild). }
+false;protected;0;4;;@Override protected MathOperation operation() {     return MathOperation.ASIN. }

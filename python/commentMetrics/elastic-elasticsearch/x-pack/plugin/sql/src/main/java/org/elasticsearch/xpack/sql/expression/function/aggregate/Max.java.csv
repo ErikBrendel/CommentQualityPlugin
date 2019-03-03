@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected NodeInfo<Max> info() {     return NodeInfo.create(this, Max::new, field()). }
+false;public;1;4;;@Override public Max replaceChildren(List<Expression> newChildren) {     return new Max(source(), newChildren.get(0)). }
+false;public;0;4;;@Override public DataType dataType() {     return field().dataType(). }
+false;public;0;4;;@Override public String innerName() {     return "max". }
+false;protected;0;8;;@Override protected TypeResolution resolveType() {     if (field().dataType().isString()) {         return TypeResolution.TYPE_RESOLVED.     } else {         return isNumericOrDate(field(), sourceText(), ParamOrdinal.DEFAULT).     } }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void testSendMessage() throws Exception {     MockEndpoint endpoint = getMockEndpoint("mock:result").     endpoint.expectedBodiesReceived("Hello World").     template.sendBody(endpointUri, "Hello World").     endpoint.assertIsSatisfied(). }
+false;protected;0;8;;protected CamelContext createCamelContext() throws Exception {     CamelContext camelContext = super.createCamelContext().     ConnectionFactory connectionFactory = CamelJmsTestHelper.createConnectionFactory().     camelContext.addComponent("activemq", jmsComponentAutoAcknowledge(connectionFactory)).     return camelContext. }
+false;public;0;3;;public void configure() throws Exception {     from(endpointUri).to("mock:result"). }
+false;protected;0;7;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from(endpointUri).to("mock:result").         }     }. }

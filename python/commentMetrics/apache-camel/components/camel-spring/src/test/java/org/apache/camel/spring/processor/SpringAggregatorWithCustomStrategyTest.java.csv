@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;14;;@Test public void testSendingMessagesWithCustomAggregator() throws Exception {     MockEndpoint resultEndpoint = resolveMandatoryEndpoint("mock:result", MockEndpoint.class).     resultEndpoint.expectedBodiesReceived("message:1 message:2 message:3").     // lets send a large batch of messages     for (int i = 1. i <= 3. i++) {         String body = "message:" + i.         template.sendBodyAndHeader("direct:start", body, "cheese", 123).     }     resultEndpoint.assertIsSatisfied(). }
+false;protected;0;3;;protected CamelContext createCamelContext() throws Exception {     return createSpringCamelContext(this, "org/apache/camel/spring/processor/aggregator-custom-strategy.xml"). }

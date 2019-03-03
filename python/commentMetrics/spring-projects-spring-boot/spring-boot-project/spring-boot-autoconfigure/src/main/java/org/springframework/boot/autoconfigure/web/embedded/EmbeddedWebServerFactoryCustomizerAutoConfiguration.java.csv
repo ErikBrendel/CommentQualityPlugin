@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;5;;@Bean public TomcatWebServerFactoryCustomizer tomcatWebServerFactoryCustomizer(Environment environment, ServerProperties serverProperties) {     return new TomcatWebServerFactoryCustomizer(environment, serverProperties). }
+false;public;2;5;;@Bean public JettyWebServerFactoryCustomizer jettyWebServerFactoryCustomizer(Environment environment, ServerProperties serverProperties) {     return new JettyWebServerFactoryCustomizer(environment, serverProperties). }
+false;public;2;5;;@Bean public UndertowWebServerFactoryCustomizer undertowWebServerFactoryCustomizer(Environment environment, ServerProperties serverProperties) {     return new UndertowWebServerFactoryCustomizer(environment, serverProperties). }
+false;public;2;5;;@Bean public NettyWebServerFactoryCustomizer nettyWebServerFactoryCustomizer(Environment environment, ServerProperties serverProperties) {     return new NettyWebServerFactoryCustomizer(environment, serverProperties). }

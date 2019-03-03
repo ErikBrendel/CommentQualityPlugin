@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Before public void setup() {     this.metadataSources = new MetadataSources(createServiceRegistry()).     this.metadataSources.addAnnotatedClass(TelephoneNumber.class).     this.metadata = this.metadataSources.getMetadataBuilder().applyPhysicalNamingStrategy(new SpringPhysicalNamingStrategy()).build(). }
+false;private;0;4;;private StandardServiceRegistry createServiceRegistry() {     return new StandardServiceRegistryBuilder().applySetting(AvailableSettings.DIALECT, H2Dialect.class).build(). }
+false;public;0;6;;@Test public void tableNameShouldBeLowercaseUnderscore() {     PersistentClass binding = this.metadata.getEntityBinding(TelephoneNumber.class.getName()).     assertThat(binding.getTable().getQuotedName()).isEqualTo("telephone_number"). }
+false;public;0;9;;@Test public void tableNameShouldNotBeLowerCaseIfCaseSensitive() {     this.metadata = this.metadataSources.getMetadataBuilder().applyPhysicalNamingStrategy(new TestSpringPhysicalNamingStrategy()).build().     PersistentClass binding = this.metadata.getEntityBinding(TelephoneNumber.class.getName()).     assertThat(binding.getTable().getQuotedName()).isEqualTo("Telephone_Number"). }
+false;protected;1;4;;@Override protected boolean isCaseInsensitive(JdbcEnvironment jdbcEnvironment) {     return false. }

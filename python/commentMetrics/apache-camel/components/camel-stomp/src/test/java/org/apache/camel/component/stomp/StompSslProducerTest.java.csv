@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected boolean isUseSsl() {     return true. }
+false;public;0;4;;public void configure() {     from("direct:foo").toF("stomp:test?brokerURL=ssl://localhost:%d&sslContextParameters=#sslContextParameters", getPort()). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("direct:foo").toF("stomp:test?brokerURL=ssl://localhost:%d&sslContextParameters=#sslContextParameters", getPort()).         }     }. }

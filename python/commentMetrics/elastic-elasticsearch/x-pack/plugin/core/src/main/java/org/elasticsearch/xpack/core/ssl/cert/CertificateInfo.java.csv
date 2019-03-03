@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;10;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeString(path).     out.writeString(format).     out.writeOptionalString(alias).     out.writeString(subjectDn).     out.writeString(serialNumber).     out.writeBoolean(hasPrivateKey).     out.writeLong(expiry.toInstant().toEpochMilli()). }
+false;public;0;3;;public String path() {     return path. }
+false;public;0;3;;public String format() {     return format. }
+false;public;0;3;;public String alias() {     return alias. }
+false;public;0;3;;public String subjectDn() {     return subjectDn. }
+false;public;0;3;;public String serialNumber() {     return serialNumber. }
+false;public;0;3;;public ZonedDateTime expiry() {     return expiry. }
+false;public;0;3;;public boolean hasPrivateKey() {     return hasPrivateKey. }
+false;public;2;12;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     return builder.startObject().field("path", path).field("format", format).field("alias", alias).field("subject_dn", subjectDn).field("serial_number", serialNumber).field("has_private_key", hasPrivateKey).timeField("expiry", expiry).endObject(). }
+false;public;1;18;;@Override public boolean equals(Object other) {     if (this == other) {         return true.     }     if (other == null || getClass() != other.getClass()) {         return false.     }     final CertificateInfo that = (CertificateInfo) other.     return this.path.equals(that.path) && this.format.equals(that.format) && this.hasPrivateKey == that.hasPrivateKey && Objects.equals(this.alias, that.alias) && Objects.equals(this.serialNumber, that.serialNumber) && Objects.equals(this.subjectDn, that.subjectDn) && Objects.equals(this.expiry, that.expiry). }
+false;public;0;7;;@Override public int hashCode() {     int result = path.hashCode().     result = 31 * result + (alias != null ? alias.hashCode() : 0).     result = 31 * result + (serialNumber != null ? serialNumber.hashCode() : 0).     return result. }

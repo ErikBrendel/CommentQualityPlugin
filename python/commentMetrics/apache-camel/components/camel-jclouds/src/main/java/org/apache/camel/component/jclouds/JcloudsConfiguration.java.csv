@@ -1,0 +1,27 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public JcloudsCommand getCommand() {     return command. }
+true;public;1;3;/**  * What command to execute such as blobstore or compute.  */ ;/**  * What command to execute such as blobstore or compute.  */ public void setCommand(JcloudsCommand command) {     this.command = command. }
+false;public;0;3;;public String getProviderId() {     return providerId. }
+true;public;1;3;/**  * The name of the cloud provider that provides the target service (e.g. aws-s3 or aws_ec2).  */ ;/**  * The name of the cloud provider that provides the target service (e.g. aws-s3 or aws_ec2).  */ public void setProviderId(String providerId) {     this.providerId = providerId. }
+false;public;0;3;;public String getImageId() {     return imageId. }
+true;public;1;3;/**  * The imageId that will be used for creating a node. Values depend on the actual cloud provider.  */ ;/**  * The imageId that will be used for creating a node. Values depend on the actual cloud provider.  */ public void setImageId(String imageId) {     this.imageId = imageId. }
+false;public;0;3;;public String getLocationId() {     return locationId. }
+true;public;1;3;/**  * The location that will be used for creating a node. Values depend on the actual cloud provider.  */ ;/**  * The location that will be used for creating a node. Values depend on the actual cloud provider.  */ public void setLocationId(String locationId) {     this.locationId = locationId. }
+false;public;0;3;;public String getHardwareId() {     return hardwareId. }
+true;public;1;3;/**  * The hardware that will be used for creating a node. Values depend on the actual cloud provider.  */ ;/**  * The hardware that will be used for creating a node. Values depend on the actual cloud provider.  */ public void setHardwareId(String hardwareId) {     this.hardwareId = hardwareId. }
+false;public;0;3;;public String getOperation() {     return operation. }
+true;public;1;3;/**  * Specifies the type of operation that will be performed to the blobstore.  */ ;/**  * Specifies the type of operation that will be performed to the blobstore.  */ public void setOperation(String operation) {     this.operation = operation. }
+false;public;0;3;;public String getNodeState() {     return nodeState. }
+true;public;1;3;/**  * To filter by node status to only select running nodes etc.  */ ;/**  * To filter by node status to only select running nodes etc.  */ public void setNodeState(String nodeState) {     this.nodeState = nodeState. }
+false;public;0;3;;public String getNodeId() {     return nodeId. }
+true;public;1;3;/**  * The id of the node that will run the script or destroyed.  */ ;/**  * The id of the node that will run the script or destroyed.  */ public void setNodeId(String nodeId) {     this.nodeId = nodeId. }
+false;public;0;3;;public String getGroup() {     return group. }
+true;public;1;3;/**  * The group that will be assigned to the newly created node. Values depend on the actual cloud provider.  */ ;/**  * The group that will be assigned to the newly created node. Values depend on the actual cloud provider.  */ public void setGroup(String group) {     this.group = group. }
+false;public;0;3;;public String getUser() {     return user. }
+true;public;1;3;/**  * The user on the target node that will run the script.  */ ;/**  * The user on the target node that will run the script.  */ public void setUser(String user) {     this.user = user. }
+false;public;0;3;;public String getContainer() {     return container. }
+true;public;1;3;/**  * The name of the blob container.  */ ;/**  * The name of the blob container.  */ public void setContainer(String container) {     this.container = container. }
+false;public;0;3;;public String getDirectory() {     return directory. }
+true;public;1;3;/**  * An optional directory name to use  */ ;/**  * An optional directory name to use  */ public void setDirectory(String directory) {     this.directory = directory. }
+false;public;0;3;;public String getBlobName() {     return blobName. }
+true;public;1;3;/**  * The name of the blob.  */ ;/**  * The name of the blob.  */ public void setBlobName(String blobName) {     this.blobName = blobName. }

@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Override public void close() throws IOException {     if (reader != null) {         reader.close().         reader = null.     } }
+false;public;0;4;;@Override public boolean hasNext() {     return next != null. }
+false;public;0;20;;@Override public Object next() {     Object answer = next.     if (answer == null) {         answer = reader.read().         // after read we may force a next         if (forceNext != null) {             answer = forceNext.             forceNext = null.         }     } else {         next = reader.read().         // after read we may force a next         if (forceNext != null) {             next = forceNext.             forceNext = null.         }     }     return answer. }
+false;public;0;4;;@Override public void remove() { // noop }
+true;public;1;3;/**  * Sets a custom object as the next, such as from a custom error handler  */ ;/**  * Sets a custom object as the next, such as from a custom error handler  */ public void setNext(Object next) {     this.forceNext = next. }

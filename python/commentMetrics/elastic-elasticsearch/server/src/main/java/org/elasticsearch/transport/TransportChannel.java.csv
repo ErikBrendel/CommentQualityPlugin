@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;1;;String getProfileName().
+false;;0;1;;String getChannelType().
+false;;1;1;;void sendResponse(TransportResponse response) throws IOException.
+false;;1;1;;void sendResponse(Exception exception) throws IOException.
+true;default;0;3;/**  * Returns the version of the other party that this channel will send a response to.  */ ;/**  * Returns the version of the other party that this channel will send a response to.  */ default Version getVersion() {     return Version.CURRENT. }

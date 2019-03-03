@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void testIsTopic() throws Exception {     DestinationNameParser parser = new DestinationNameParser().     assertTrue(parser.isTopic("topic:foo")).     assertFalse(parser.isTopic("queue:bar")).     assertFalse(parser.isTopic("bar")). }
+false;public;0;5;;@Test(expected = IllegalArgumentException.class) public void testIsTopicNullDestinationName() throws Exception {     DestinationNameParser parser = new DestinationNameParser().     parser.isTopic(null). }
+false;public;0;7;;@Test public void testGetShortName() throws Exception {     DestinationNameParser parser = new DestinationNameParser().     assertEquals("foo", parser.getShortName("topic:foo")).     assertFalse("bar", parser.isTopic("queue:bar")).     assertFalse("bar", parser.isTopic("bar")). }
+false;public;0;5;;@Test(expected = IllegalArgumentException.class) public void testGetShortNameNullDestinationName() throws Exception {     DestinationNameParser parser = new DestinationNameParser().     parser.getShortName(null). }

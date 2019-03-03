@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;3;5;;protected Endpoint createEndpoint(String uri, String remaining, Map<String, Object> parameters) throws Exception {     JsonValidatorEndpoint endpoint = new JsonValidatorEndpoint(uri, this, remaining).     setProperties(endpoint, parameters).     return endpoint. }

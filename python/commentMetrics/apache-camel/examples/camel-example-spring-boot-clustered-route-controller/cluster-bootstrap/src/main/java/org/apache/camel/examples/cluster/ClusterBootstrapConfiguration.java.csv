@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;11;;@Bean(destroyMethod = "shutdown") public AtomixReplica atomix() {     return AtomixReplica.builder(new Address(address)).withTransport(new NettyTransport()).withStorage(Storage.builder().withStorageLevel(StorageLevel.MEMORY).build()).build().bootstrap().join(). }

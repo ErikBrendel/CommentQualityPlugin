@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;11;;@Override public Boolean executeTest(ITestConfig config, String dataFormat) throws Exception {     logger.info("Getting Camel dataFormat: {}", dataFormat).     DataFormat df = context.resolveDataFormat(dataFormat).     assertNotNull("Cannot get dataformat with name: " + dataFormat, df).     logger.info("Found Camel dataformat: {} instance: {} with className: {}", dataFormat, df, df.getClass()).     return true. }

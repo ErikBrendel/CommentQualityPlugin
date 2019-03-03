@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void updateValue(long newValue) {     value.getAndAdd(newValue). }
+false;public;0;3;;public long getValue() {     return value.get(). }
+false;public;0;4;;@Override public String toString() {     return "" + value.get(). }
+false;public;0;3;;public void reset() {     value.set(0). }
+false;public;0;5;;@Override public boolean isUpdated() {     // this is okay     return true. }

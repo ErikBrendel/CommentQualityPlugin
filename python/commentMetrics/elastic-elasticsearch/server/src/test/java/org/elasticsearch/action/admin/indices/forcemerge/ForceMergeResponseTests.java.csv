@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;4;5;;@Override protected ForceMergeResponse createTestInstance(int totalShards, int successfulShards, int failedShards, List<DefaultShardOperationFailedException> failures) {     return new ForceMergeResponse(totalShards, successfulShards, failedShards, failures). }
+false;protected;1;4;;@Override protected ForceMergeResponse doParseInstance(XContentParser parser) {     return ForceMergeResponse.fromXContent(parser). }

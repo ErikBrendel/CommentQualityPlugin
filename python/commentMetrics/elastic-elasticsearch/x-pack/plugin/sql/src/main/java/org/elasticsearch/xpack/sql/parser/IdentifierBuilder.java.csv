@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;12;;@Override public TableIdentifier visitTableIdentifier(TableIdentifierContext ctx) {     if (ctx == null) {         return null.     }     Source source = source(ctx).     ParseTree tree = ctx.name != null ? ctx.name : ctx.TABLE_IDENTIFIER().     String index = tree.getText().     return new TableIdentifier(source, visitIdentifier(ctx.catalog), index). }
+false;public;1;4;;@Override public String visitIdentifier(IdentifierContext ctx) {     return ctx == null ? null : ctx.getText(). }
+false;public;1;8;;@Override public String visitQualifiedName(QualifiedNameContext ctx) {     if (ctx == null) {         return null.     }     return Strings.collectionToDelimitedString(visitList(ctx.identifier(), String.class), "."). }

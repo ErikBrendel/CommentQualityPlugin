@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Producer createProducer() throws Exception {     return new SpringIntegrationProducer((SpringCamelContext) getCamelContext(), this). }
+false;public;1;5;;public Consumer createConsumer(Processor processor) throws Exception {     SpringIntegrationConsumer answer = new SpringIntegrationConsumer(this, processor).     configureConsumer(answer).     return answer. }
+true;public;1;3;/**  * The Spring integration input channel name that this endpoint wants to consume from Spring integration.  */ ;/**  * The Spring integration input channel name that this endpoint wants to consume from Spring integration.  */ public void setInputChannel(String input) {     inputChannel = input. }
+false;public;0;3;;public String getInputChannel() {     return inputChannel. }
+true;public;1;3;/**  * The Spring integration output channel name that is used to send messages to Spring integration.  */ ;/**  * The Spring integration output channel name that is used to send messages to Spring integration.  */ public void setOutputChannel(String output) {     outputChannel = output. }
+false;public;0;3;;public String getOutputChannel() {     return outputChannel. }
+true;public;1;3;/**  * The default channel name which is used by the Spring Integration Spring context.  * It will equal to the inputChannel name for the Spring Integration consumer and the outputChannel name for the Spring Integration provider.  */ ;/**  * The default channel name which is used by the Spring Integration Spring context.  * It will equal to the inputChannel name for the Spring Integration consumer and the outputChannel name for the Spring Integration provider.  */ public void setDefaultChannel(String defaultChannel) {     this.defaultChannel = defaultChannel. }
+false;public;0;3;;public String getDefaultChannel() {     return defaultChannel. }
+false;public;0;4;;@Deprecated public MessageChannel getMessageChannel() {     return messageChannel. }
+false;public;0;3;;public boolean isSingleton() {     return false. }
+true;public;1;3;/**  * The exchange pattern that the Spring integration endpoint should use.  * If inOut=true then a reply channel is expected, either from the Spring Integration Message header or configured on the endpoint.  */ ;/**  * The exchange pattern that the Spring integration endpoint should use.  * If inOut=true then a reply channel is expected, either from the Spring Integration Message header or configured on the endpoint.  */ public void setInOut(boolean inOut) {     this.inOut = inOut. }
+false;public;0;3;;public boolean isInOut() {     return this.inOut. }

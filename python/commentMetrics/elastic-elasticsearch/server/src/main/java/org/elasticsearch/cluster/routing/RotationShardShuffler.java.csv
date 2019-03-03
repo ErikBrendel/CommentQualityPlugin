@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public int nextSeed() {     return seed.getAndIncrement(). }
+false;public;2;4;;@Override public List<ShardRouting> shuffle(List<ShardRouting> shards, int seed) {     return CollectionUtils.rotate(shards, seed). }

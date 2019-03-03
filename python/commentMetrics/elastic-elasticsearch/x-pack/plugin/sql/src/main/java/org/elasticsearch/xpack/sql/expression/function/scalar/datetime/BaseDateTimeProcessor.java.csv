@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeString(zoneId.getId()). }
+false;;0;3;;ZoneId zoneId() {     return zoneId. }
+false;public;1;12;;@Override public Object process(Object input) {     if (input == null) {         return null.     }     if (!(input instanceof ZonedDateTime)) {         throw new SqlIllegalArgumentException("A date is required. received {}", input).     }     return doProcess(((ZonedDateTime) input).withZoneSameInstant(zoneId)). }
+false;abstract;1;1;;abstract Object doProcess(ZonedDateTime dateTime).

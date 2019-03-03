@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected ApplicationContext getApplicationContext() {     return new AnnotationConfigApplicationContext(EnableCachingConfig.class). }
+false;public;0;10;;@Bean public CacheManager cacheManager() {     SimpleCacheManager cm = new SimpleCacheManager().     cm.setCaches(Arrays.asList(defaultCache(), new ConcurrentMapCache("primary"), new ConcurrentMapCache("secondary"), new ConcurrentMapCache("exception"))).     return cm. }
+false;public;0;4;;@Bean public AnnotatedJCacheableService cacheableService() {     return new AnnotatedJCacheableService(defaultCache()). }
+false;public;0;4;;@Bean public Cache defaultCache() {     return new ConcurrentMapCache("default"). }

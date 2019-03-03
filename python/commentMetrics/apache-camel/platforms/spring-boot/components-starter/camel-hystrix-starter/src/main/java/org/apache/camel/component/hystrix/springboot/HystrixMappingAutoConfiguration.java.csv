@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;1;9;;@Bean ServletRegistrationBean servletRegistrationBean(HystrixMappingConfiguration config) {     ServletRegistrationBean mapping = new ServletRegistrationBean().     mapping.setServlet(new HystrixEventStreamServlet()).     mapping.addUrlMappings(config.getPath()).     mapping.setName(config.getServletName()).     return mapping. }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public void afterPropertiesSet() {     this.service = createJaxWsService(). }
+false;public;0;5;;@Override @Nullable public Service getObject() {     return this.service. }
+false;public;0;4;;@Override public Class<? extends Service> getObjectType() {     return (this.service != null ? this.service.getClass() : Service.class). }
+false;public;0;4;;@Override public boolean isSingleton() {     return true. }

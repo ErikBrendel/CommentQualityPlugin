@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;7;;@Override protected CamelContext createCamelContext() throws Exception {     applicationContext = new AnnotationConfigApplicationContext(MongoBasicOperationsConfiguration.class).     @SuppressWarnings("deprecation")     CamelContext ctx = SpringCamelContext.springCamelContext(applicationContext, true).     return ctx. }
+false;public;0;5;;@Override public void configure() throws Exception { // Nothing, all routes are initialized by the Spring DSL context // file }
+false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {         // Nothing, all routes are initialized by the Spring DSL context         // file         }     }. }

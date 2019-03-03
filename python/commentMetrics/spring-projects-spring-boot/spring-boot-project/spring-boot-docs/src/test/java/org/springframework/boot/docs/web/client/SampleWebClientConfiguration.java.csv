@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@RequestMapping("/example") public ResponseEntity<String> example() {     return ResponseEntity.ok().location(URI.create("https://other.example.com/example")).body("test"). }

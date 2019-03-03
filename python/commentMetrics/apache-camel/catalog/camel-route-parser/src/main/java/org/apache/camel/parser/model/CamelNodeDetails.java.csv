@@ -1,0 +1,24 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;7;;public void addPreliminaryOutput(CamelNodeDetails output) {     if (outputs == null) {         outputs = new ArrayList<>().     }     // the parser walks the EIPs backwards so add from the top     outputs.add(0, output). }
+false;public;1;6;;public void addOutput(CamelNodeDetails output) {     if (outputs == null) {         outputs = new ArrayList<>().     }     outputs.add(output). }
+false;public;0;3;;public CamelNodeDetails getParent() {     return parent. }
+false;public;0;3;;public String getName() {     return name. }
+false;public;0;3;;public int getOrder() {     return order. }
+false;public;0;3;;public List<CamelNodeDetails> getOutputs() {     return outputs. }
+false;public;0;3;;public String getRouteId() {     return routeId. }
+false;public;1;3;;public void setRouteId(String routeId) {     this.routeId = routeId. }
+false;public;0;3;;public String getFileName() {     return fileName. }
+false;public;1;3;;public void setFileName(String fileName) {     this.fileName = fileName. }
+false;public;0;3;;public String getLineNumber() {     return lineNumber. }
+false;public;1;3;;public void setLineNumber(String lineNumber) {     this.lineNumber = lineNumber. }
+false;public;0;3;;public String getLineNumberEnd() {     return lineNumberEnd. }
+false;public;1;3;;public void setLineNumberEnd(String lineNumberEnd) {     this.lineNumberEnd = lineNumberEnd. }
+false;public;0;3;;public int getLinePosition() {     return linePosition. }
+false;public;1;3;;public void setLinePosition(int linePosition) {     this.linePosition = linePosition. }
+false;public;0;3;;public String getClassName() {     return className. }
+false;public;1;3;;public void setClassName(String className) {     this.className = className. }
+false;public;0;3;;public String getMethodName() {     return methodName. }
+false;public;1;3;;public void setMethodName(String methodName) {     this.methodName = methodName. }
+false;public;0;3;;public String toString() {     return name. }
+false;public;1;16;;public String dump(int level) {     StringBuilder sb = new StringBuilder().     sb.append(lineNumber).     sb.append("\t").     sb.append(padString(level)).     sb.append(name).     if (outputs != null) {         level++.         for (CamelNodeDetails child : outputs) {             String text = child.dump(level).             sb.append("\n").             sb.append(text).         }     }     return sb.toString(). }
+false;private,static;1;7;;private static String padString(int level) {     StringBuilder sb = new StringBuilder().     for (int i = 0. i < level. i++) {         sb.append("  ").     }     return sb.toString(). }

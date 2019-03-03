@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeGenericValue(constant). }
+false;public;0;4;;@Override public String getWriteableName() {     return NAME. }
+false;public;1;4;;@Override public Object extract(SearchHit hit) {     return constant. }
+false;public;1;4;;@Override public Object extract(Bucket bucket) {     return constant. }
+false;public;0;4;;@Override public String hitName() {     return null. }
+false;public;1;8;;@Override public boolean equals(Object obj) {     if (obj == null || obj.getClass() != getClass()) {         return false.     }     ConstantExtractor other = (ConstantExtractor) obj.     return Objects.equals(constant, other.constant). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hashCode(constant). }
+false;public;0;4;;@Override public String toString() {     return "^" + constant. }

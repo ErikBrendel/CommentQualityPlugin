@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;public void execute() {     DeleteDomainRequest request = new DeleteDomainRequest().withDomainName(determineDomainName()).     log.trace("Sending request [{}] for exchange [{}]...", request, exchange).     this.sdbClient.deleteDomain(request).     log.trace("Request sent"). }

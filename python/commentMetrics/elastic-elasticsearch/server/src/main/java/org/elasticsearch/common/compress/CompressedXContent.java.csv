@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void write(int b) throws IOException { // no-op }
+false;public;3;4;;@Override public void write(byte[] b, int off, int len) throws IOException { // no-op }
+false;private,static;1;20;;private static int crc32(BytesReference data) {     OutputStream dummy = new OutputStream() {          @Override         public void write(int b) throws IOException {         // no-op         }          @Override         public void write(byte[] b, int off, int len) throws IOException {         // no-op         }     }.     CRC32 crc32 = new CRC32().     try {         data.writeTo(new CheckedOutputStream(dummy, crc32)).     } catch (IOException bogus) {         // cannot happen         throw new Error(bogus).     }     return (int) crc32.getValue(). }
+false;private;0;4;;private void assertConsistent() {     assert CompressorFactory.compressor(new BytesArray(bytes)) != null.     assert this.crc32 == crc32(new BytesArray(uncompressed())). }
+true;public;0;3;/**  * Return the compressed bytes.  */ ;/**  * Return the compressed bytes.  */ public byte[] compressed() {     return this.bytes. }
+true;public;0;3;/**  * Return the compressed bytes as a {@link BytesReference}.  */ ;/**  * Return the compressed bytes as a {@link BytesReference}.  */ public BytesReference compressedReference() {     return new BytesArray(bytes). }
+true;public;0;7;/**  * Return the uncompressed bytes.  */ ;/**  * Return the uncompressed bytes.  */ public byte[] uncompressed() {     try {         return BytesReference.toBytes(CompressorFactory.uncompress(new BytesArray(bytes))).     } catch (IOException e) {         throw new IllegalStateException("Cannot decompress compressed string", e).     } }
+false;public;0;3;;public String string() {     return new BytesRef(uncompressed()).utf8ToString(). }
+false;public,static;1;6;;public static CompressedXContent readCompressedString(StreamInput in) throws IOException {     int crc32 = in.readInt().     byte[] compressed = new byte[in.readVInt()].     in.readBytes(compressed, 0, compressed.length).     return new CompressedXContent(compressed, crc32). }
+false;public;1;5;;public void writeTo(StreamOutput out) throws IOException {     out.writeInt(crc32).     out.writeVInt(bytes.length).     out.writeBytes(bytes). }
+false;public;1;17;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     CompressedXContent that = (CompressedXContent) o.     if (Arrays.equals(compressed(), that.compressed())) {         return true.     }     if (crc32 != that.crc32) {         return false.     }     return Arrays.equals(uncompressed(), that.uncompressed()). }
+false;public;0;4;;@Override public int hashCode() {     return crc32. }
+false;public;0;4;;@Override public String toString() {     return string(). }

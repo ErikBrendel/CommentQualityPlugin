@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void setOrder(int order) {     this.order = order. }
+false;public;0;9;;@Override public int getOrder() {     if (this.order != null) {         return this.order.     } else {         return this.advice.getOrder().     } }
+false;public;0;4;;@Override public boolean isPerInstance() {     return true. }
+false;public;0;4;;@Override public Advice getAdvice() {     return this.advice. }
+false;public;0;4;;@Override public Pointcut getPointcut() {     return this.pointcut. }
+true;public;0;3;/**  * Return the name of the aspect (bean) in which the advice was declared.  * @since 4.3.15  * @see AbstractAspectJAdvice#getAspectName()  */ ;/**  * Return the name of the aspect (bean) in which the advice was declared.  * @since 4.3.15  * @see AbstractAspectJAdvice#getAspectName()  */ public String getAspectName() {     return this.advice.getAspectName(). }
+false;public;1;11;;@Override public boolean equals(Object other) {     if (this == other) {         return true.     }     if (!(other instanceof AspectJPointcutAdvisor)) {         return false.     }     AspectJPointcutAdvisor otherAdvisor = (AspectJPointcutAdvisor) other.     return this.advice.equals(otherAdvisor.advice). }
+false;public;0;4;;@Override public int hashCode() {     return AspectJPointcutAdvisor.class.hashCode() * 29 + this.advice.hashCode(). }

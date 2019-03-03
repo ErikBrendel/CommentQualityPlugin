@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Before public void initExplanation() {     explanation = new ArrayList<>(). }
+false;public;0;4;;@After public void printExplanation() {     LogManager.getLogger(getClass()).info("Explanation:\n" + String.join("\n", explanation)). }
+false;protected;1;3;;protected Boolean randomHasByteOrderMarker(String charset) {     return charset.toUpperCase(Locale.ROOT).startsWith("UTF") ? randomBoolean() : null. }

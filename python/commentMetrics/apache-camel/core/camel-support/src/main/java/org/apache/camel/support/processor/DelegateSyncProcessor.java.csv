@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String toString() {     return "DelegateSync[" + processor + "]". }
+false;public;0;3;;public Processor getProcessor() {     return processor. }
+false;public;2;14;;@Override public boolean process(Exchange exchange, AsyncCallback callback) {     // force calling the sync method     try {         processor.process(exchange).     } catch (Throwable e) {         // must catch throwable so we catch all         exchange.setException(e).     } finally {         // we are bridging a sync processor as async so callback with true         callback.done(false).     }     return false. }
+false;public;1;6;;@Override public CompletableFuture<Exchange> processAsync(Exchange exchange) {     AsyncCallbackToCompletableFutureAdapter<Exchange> callback = new AsyncCallbackToCompletableFutureAdapter<>(exchange).     process(exchange, callback).     return callback.getFuture(). }
+false;public;1;4;;@Override public void process(Exchange exchange) throws Exception {     processor.process(exchange). }
+false;public;0;4;;@Override public boolean hasNext() {     return processor != null. }
+false;public;0;9;;@Override public List<Processor> next() {     if (!hasNext()) {         return null.     }     List<Processor> answer = new ArrayList<>(1).     answer.add(processor).     return answer. }
+false;protected;0;4;;@Override protected void doStart() throws Exception {     ServiceHelper.startService(processor). }
+false;protected;0;4;;@Override protected void doStop() throws Exception {     ServiceHelper.stopService(processor). }

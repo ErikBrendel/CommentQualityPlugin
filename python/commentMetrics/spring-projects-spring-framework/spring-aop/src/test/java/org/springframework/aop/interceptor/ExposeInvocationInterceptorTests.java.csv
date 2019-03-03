@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@Test public void testXmlConfig() {     DefaultListableBeanFactory bf = new DefaultListableBeanFactory().     new XmlBeanDefinitionReader(bf).loadBeanDefinitions(CONTEXT).     ITestBean tb = (ITestBean) bf.getBean("proxy").     String name = "tony".     tb.setName(name).     // Fires context checks     assertEquals(name, tb.getName()). }
+false;public;0;6;;@Override public String getName() {     MethodInvocation invocation = ExposeInvocationInterceptor.currentInvocation().     assertions(invocation).     return super.getName(). }
+false;public;0;6;;@Override public void absquatulate() {     MethodInvocation invocation = ExposeInvocationInterceptor.currentInvocation().     assertions(invocation).     super.absquatulate(). }
+false;protected,abstract;1;1;;protected abstract void assertions(MethodInvocation invocation).
+false;protected;1;6;;@Override protected void assertions(MethodInvocation invocation) {     assertTrue(invocation.getThis() == this).     assertTrue("Invocation should be on ITestBean: " + invocation.getMethod(), ITestBean.class.isAssignableFrom(invocation.getMethod().getDeclaringClass())). }

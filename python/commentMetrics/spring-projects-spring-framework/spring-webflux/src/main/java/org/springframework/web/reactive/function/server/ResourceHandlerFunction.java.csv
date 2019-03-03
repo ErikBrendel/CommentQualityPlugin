@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;22;;@Override public Mono<ServerResponse> handle(ServerRequest request) {     HttpMethod method = request.method().     if (method != null) {         switch(method) {             case GET:                 return EntityResponse.fromObject(this.resource).build().map(response -> response).             case HEAD:                 Resource headResource = new HeadMethodResource(this.resource).                 return EntityResponse.fromObject(headResource).build().map(response -> response).             case OPTIONS:                 return ServerResponse.ok().allow(SUPPORTED_METHODS).body(BodyInserters.empty()).         }     }     return ServerResponse.status(HttpStatus.METHOD_NOT_ALLOWED).allow(SUPPORTED_METHODS).body(BodyInserters.empty()). }
+false;public;0;4;;@Override public InputStream getInputStream() throws IOException {     return new ByteArrayInputStream(EMPTY). }
+false;public;0;4;;// delegation @Override public boolean exists() {     return this.delegate.exists(). }
+false;public;0;4;;@Override public URL getURL() throws IOException {     return this.delegate.getURL(). }
+false;public;0;4;;@Override public URI getURI() throws IOException {     return this.delegate.getURI(). }
+false;public;0;4;;@Override public File getFile() throws IOException {     return this.delegate.getFile(). }
+false;public;0;4;;@Override public long contentLength() throws IOException {     return this.delegate.contentLength(). }
+false;public;0;4;;@Override public long lastModified() throws IOException {     return this.delegate.lastModified(). }
+false;public;1;4;;@Override public Resource createRelative(String relativePath) throws IOException {     return this.delegate.createRelative(relativePath). }
+false;public;0;5;;@Override @Nullable public String getFilename() {     return this.delegate.getFilename(). }
+false;public;0;4;;@Override public String getDescription() {     return this.delegate.getDescription(). }

@@ -1,0 +1,27 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@ReadOperation public ListNamesResponse listNames() {     Set<String> names = new LinkedHashSet<>().     collectNames(names, this.registry).     return new ListNamesResponse(names). }
+false;private;2;9;;private void collectNames(Set<String> names, MeterRegistry registry) {     if (registry instanceof CompositeMeterRegistry) {         ((CompositeMeterRegistry) registry).getRegistries().forEach((member) -> collectNames(names, member)).     } else {         registry.getMeters().stream().map(this::getName).forEach(names::add).     } }
+false;private;1;3;;private String getName(Meter meter) {     return meter.getId().getName(). }
+false;public;2;17;;@ReadOperation public MetricResponse metric(@Selector String requiredMetricName, @Nullable List<String> tag) {     List<Tag> tags = parseTags(tag).     Collection<Meter> meters = findFirstMatchingMeters(this.registry, requiredMetricName, tags).     if (meters.isEmpty()) {         return null.     }     Map<Statistic, Double> samples = getSamples(meters).     Map<String, Set<String>> availableTags = getAvailableTags(meters).     tags.forEach((t) -> availableTags.remove(t.getKey())).     Meter.Id meterId = meters.iterator().next().getId().     return new MetricResponse(requiredMetricName, meterId.getDescription(), meterId.getBaseUnit(), asList(samples, Sample::new), asList(availableTags, AvailableTag::new)). }
+false;private;1;6;;private List<Tag> parseTags(List<String> tags) {     if (tags == null) {         return Collections.emptyList().     }     return tags.stream().map(this::parseTag).collect(Collectors.toList()). }
+false;private;1;9;;private Tag parseTag(String tag) {     String[] parts = tag.split(":", 2).     if (parts.length != 2) {         throw new InvalidEndpointRequestException("Each tag parameter must be in the form 'key:value' but was: " + tag, "Each tag parameter must be in the form 'key:value'").     }     return Tag.of(parts[0], parts[1]). }
+false;private;3;7;;private Collection<Meter> findFirstMatchingMeters(MeterRegistry registry, String name, Iterable<Tag> tags) {     if (registry instanceof CompositeMeterRegistry) {         return findFirstMatchingMeters((CompositeMeterRegistry) registry, name, tags).     }     return registry.find(name).tags(tags).meters(). }
+false;private;3;7;;private Collection<Meter> findFirstMatchingMeters(CompositeMeterRegistry composite, String name, Iterable<Tag> tags) {     return composite.getRegistries().stream().map((registry) -> findFirstMatchingMeters(registry, name, tags)).filter((matching) -> !matching.isEmpty()).findFirst().orElse(Collections.emptyList()). }
+false;private;1;5;;private Map<Statistic, Double> getSamples(Collection<Meter> meters) {     Map<Statistic, Double> samples = new LinkedHashMap<>().     meters.forEach((meter) -> mergeMeasurements(samples, meter)).     return samples. }
+false;private;2;4;;private void mergeMeasurements(Map<Statistic, Double> samples, Meter meter) {     meter.measure().forEach((measurement) -> samples.merge(measurement.getStatistic(), measurement.getValue(), mergeFunction(measurement.getStatistic()))). }
+false;private;1;3;;private BiFunction<Double, Double, Double> mergeFunction(Statistic statistic) {     return Statistic.MAX.equals(statistic) ? Double::max : Double::sum. }
+false;private;1;5;;private Map<String, Set<String>> getAvailableTags(Collection<Meter> meters) {     Map<String, Set<String>> availableTags = new HashMap<>().     meters.forEach((meter) -> mergeAvailableTags(availableTags, meter)).     return availableTags. }
+false;private;2;6;;private void mergeAvailableTags(Map<String, Set<String>> availableTags, Meter meter) {     meter.getId().getTags().forEach((tag) -> {         Set<String> value = Collections.singleton(tag.getValue()).         availableTags.merge(tag.getKey(), value, this::merge).     }). }
+false;private;2;6;;private <T> Set<T> merge(Set<T> set1, Set<T> set2) {     Set<T> result = new HashSet<>(set1.size() + set2.size()).     result.addAll(set1).     result.addAll(set2).     return result. }
+false;private;2;5;;private <K, V, T> List<T> asList(Map<K, V> map, BiFunction<K, V, T> mapper) {     return map.entrySet().stream().map((entry) -> mapper.apply(entry.getKey(), entry.getValue())).collect(Collectors.toList()). }
+false;public;0;3;;public Set<String> getNames() {     return this.names. }
+false;public;0;3;;public String getName() {     return this.name. }
+false;public;0;3;;public String getDescription() {     return this.description. }
+false;public;0;3;;public String getBaseUnit() {     return this.baseUnit. }
+false;public;0;3;;public List<Sample> getMeasurements() {     return this.measurements. }
+false;public;0;3;;public List<AvailableTag> getAvailableTags() {     return this.availableTags. }
+false;public;0;3;;public String getTag() {     return this.tag. }
+false;public;0;3;;public Set<String> getValues() {     return this.values. }
+false;public;0;3;;public Statistic getStatistic() {     return this.statistic. }
+false;public;0;3;;public Double getValue() {     return this.value. }
+false;public;0;5;;@Override public String toString() {     return "MeasurementSample{" + "statistic=" + this.statistic + ", value=" + this.value + '}'. }

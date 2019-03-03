@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@After public void close() {     if (context != null) {         context.close().     } }
+false;public;0;6;;@Test public void componentSingleConstructor() {     this.context = new AnnotationConfigApplicationContext(BaseConfiguration.class, SingleConstructorComponent.class).     assertThat(this.context.getBean(SingleConstructorComponent.class).autowiredName, is("foo")). }
+false;public;0;6;;@Test public void componentTwoConstructorsNoHint() {     this.context = new AnnotationConfigApplicationContext(BaseConfiguration.class, TwoConstructorsComponent.class).     assertThat(this.context.getBean(TwoConstructorsComponent.class).name, is("fallback")). }
+false;public;0;7;;@Test public void componentTwoSpecificConstructorsNoHint() {     thrown.expect(BeanCreationException.class).     thrown.expectMessage(NoSuchMethodException.class.getName()).     new AnnotationConfigApplicationContext(BaseConfiguration.class, TwoSpecificConstructorsComponent.class). }
+false;public;0;4;;@Bean public String autowiredName() {     return "foo". }

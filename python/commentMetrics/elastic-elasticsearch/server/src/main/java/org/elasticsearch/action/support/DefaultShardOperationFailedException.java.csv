@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;5;;public static DefaultShardOperationFailedException readShardOperationFailed(StreamInput in) throws IOException {     DefaultShardOperationFailedException exp = new DefaultShardOperationFailedException().     exp.readFrom(in).     return exp. }
+false;public;1;7;;@Override public void readFrom(StreamInput in) throws IOException {     index = in.readOptionalString().     shardId = in.readVInt().     cause = in.readException().     status = RestStatus.readFrom(in). }
+false;public;1;7;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeOptionalString(index).     out.writeVInt(shardId).     out.writeException(cause).     RestStatus.writeTo(out, status). }
+false;public;0;4;;@Override public String toString() {     return "[" + index + "][" + shardId + "] failed, reason [" + reason() + "]". }
+false;public;2;12;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.field("shard", shardId()).     builder.field("index", index()).     builder.field("status", status.name()).     if (reason != null) {         builder.startObject("reason").         ElasticsearchException.generateThrowableXContent(builder, params, cause).         builder.endObject().     }     return builder. }
+false;public,static;1;3;;public static DefaultShardOperationFailedException fromXContent(XContentParser parser) {     return PARSER.apply(parser, null). }

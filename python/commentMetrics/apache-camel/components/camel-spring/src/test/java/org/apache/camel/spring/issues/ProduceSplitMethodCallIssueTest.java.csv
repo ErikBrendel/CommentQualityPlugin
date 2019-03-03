@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/spring/issues/ProduceSplitMethodCallIssueTest.xml"). }
+false;public;0;11;;@Test public void testProduceSplitMethodCallIssue() throws Exception {     getMockEndpoint("mock:split").expectedBodiesReceived("Hello A", "Hello B").     CoolService cool = context.getRegistry().lookupByNameAndType("cool", CoolService.class).     String out = cool.stuff("A,B").     // keeps the original message     assertEquals("A,B", out).     assertMockEndpointsSatisfied(). }

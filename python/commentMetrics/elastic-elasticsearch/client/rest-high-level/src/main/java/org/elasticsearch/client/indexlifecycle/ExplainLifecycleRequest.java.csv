@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String[] getIndices() {     return indices. }
+false;public;1;4;;public ExplainLifecycleRequest indicesOptions(IndicesOptions indicesOptions) {     this.indicesOptions = indicesOptions.     return this. }
+false;public;0;3;;public IndicesOptions indicesOptions() {     return indicesOptions. }
+false;public;0;4;;@Override public Optional<ValidationException> validate() {     return Optional.empty(). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(Arrays.hashCode(indices), indicesOptions). }
+false;public;1;12;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (obj.getClass() != getClass()) {         return false.     }     ExplainLifecycleRequest other = (ExplainLifecycleRequest) obj.     return Objects.deepEquals(getIndices(), other.getIndices()) && Objects.equals(indicesOptions(), other.indicesOptions()). }
+false;public;0;4;;@Override public String toString() {     return "ExplainLifecycleRequest [indices()=" + Arrays.toString(indices) + ", indicesOptions()=" + indicesOptions + "]". }

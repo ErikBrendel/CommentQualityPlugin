@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void serializeCycleSunnyDay() throws Exception {     assertEquals("foo", SerializationUtils.deserialize(SerializationUtils.serialize("foo"))). }
+false;public;0;6;;@Test(expected = IllegalStateException.class) public void deserializeUndefined() throws Exception {     byte[] bytes = FOO.toByteArray().     Object foo = SerializationUtils.deserialize(bytes).     assertNotNull(foo). }
+false;public;0;4;;@Test(expected = IllegalArgumentException.class) public void serializeNonSerializable() throws Exception {     SerializationUtils.serialize(new Object()). }
+false;public;0;4;;@Test(expected = IllegalArgumentException.class) public void deserializeNonSerializable() throws Exception {     SerializationUtils.deserialize("foo".getBytes()). }
+false;public;0;4;;@Test public void serializeNull() throws Exception {     assertNull(SerializationUtils.serialize(null)). }
+false;public;0;4;;@Test public void deserializeNull() throws Exception {     assertNull(SerializationUtils.deserialize(null)). }

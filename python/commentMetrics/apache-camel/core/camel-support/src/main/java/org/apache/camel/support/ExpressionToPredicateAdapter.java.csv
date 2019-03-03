@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;public boolean matches(Exchange exchange) {     if (expression instanceof Predicate) {         return ((Predicate) expression).matches(exchange).     } else {         Object value = expression.evaluate(exchange, Object.class).         return ObjectHelper.evaluateValuePredicate(value).     } }
+false;public;0;4;;@Override public String toString() {     return expression.toString(). }
+true;public,static;1;3;/**  * Converts the given expression into an {@link Predicate}  */ ;/**  * Converts the given expression into an {@link Predicate}  */ public static Predicate toPredicate(final Expression expression) {     return new ExpressionToPredicateAdapter(expression). }
+false;public;1;6;;@Override public void setCamelContext(CamelContext camelContext) {     if (expression instanceof CamelContextAware) {         ((CamelContextAware) expression).setCamelContext(camelContext).     } }
+false;public;0;8;;@Override public CamelContext getCamelContext() {     if (expression instanceof CamelContextAware) {         return ((CamelContextAware) expression).getCamelContext().     } else {         return null.     } }

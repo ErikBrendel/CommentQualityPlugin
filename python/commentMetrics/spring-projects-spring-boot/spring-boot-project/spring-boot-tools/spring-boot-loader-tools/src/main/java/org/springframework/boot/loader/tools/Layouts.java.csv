@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,static;1;16;/**  * Return a layout for the given source file.  * @param file the source file  * @return a {@link Layout}  */ ;/**  * Return a layout for the given source file.  * @param file the source file  * @return a {@link Layout}  */ public static Layout forFile(File file) {     if (file == null) {         throw new IllegalArgumentException("File must not be null").     }     String lowerCaseFileName = file.getName().toLowerCase(Locale.ENGLISH).     if (lowerCaseFileName.endsWith(".jar")) {         return new Jar().     }     if (lowerCaseFileName.endsWith(".war")) {         return new War().     }     if (file.isDirectory() || lowerCaseFileName.endsWith(".zip")) {         return new Expanded().     }     throw new IllegalStateException("Unable to deduce layout for '" + file + "'"). }
+false;public;0;4;;@Override public String getLauncherClassName() {     return "org.springframework.boot.loader.JarLauncher". }
+false;public;2;4;;@Override public String getLibraryDestination(String libraryName, LibraryScope scope) {     return "BOOT-INF/lib/". }
+false;public;0;4;;@Override public String getClassesLocation() {     return "". }
+false;public;0;4;;@Override public String getRepackagedClassesLocation() {     return "BOOT-INF/classes/". }
+false;public;0;4;;@Override public boolean isExecutable() {     return true. }
+false;public;0;4;;@Override public String getLauncherClassName() {     return "org.springframework.boot.loader.PropertiesLauncher". }
+false;public;0;4;;@Override public String getLauncherClassName() {     return null. }
+false;public;0;4;;@Override public boolean isExecutable() {     return false. }
+false;public;0;4;;@Override public String getLauncherClassName() {     return "org.springframework.boot.loader.WarLauncher". }
+false;public;2;4;;@Override public String getLibraryDestination(String libraryName, LibraryScope scope) {     return SCOPE_DESTINATIONS.get(scope). }
+false;public;0;4;;@Override public String getClassesLocation() {     return "WEB-INF/classes/". }
+false;public;0;4;;@Override public boolean isExecutable() {     return true. }

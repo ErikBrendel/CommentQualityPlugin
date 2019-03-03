@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;9;;@Override protected void doStart() throws Exception {     super.doStart().     if (enableRoleChangeEvents) {         LOG.debug("Connecting roleListener : {} to the cluster: {}.", roleListener, clusterName).         raftHandle.addRoleListener(roleListener).     }     endpoint.connect(). }
+false;protected;0;9;;@Override protected void doStop() throws Exception {     if (enableRoleChangeEvents) {         LOG.debug("Closing connection to cluster: {} from roleListener: {}.", clusterName, roleListener).         raftHandle.removeRoleListener(roleListener).     }     endpoint.disconnect().     super.doStop(). }

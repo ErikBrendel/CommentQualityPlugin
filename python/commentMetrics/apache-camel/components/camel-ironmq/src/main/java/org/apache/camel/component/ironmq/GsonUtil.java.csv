@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Map<String, Object> getHeaders() {     return headers. }
+false;public;0;3;;public String getBody() {     return body. }
+false;static;1;4;;static String getBodyFromMessage(Message message) {     IronMqMessage ironMessage = new IronMqMessage(message.getBody(String.class), message.getHeaders()).     return GSON.toJson(ironMessage). }
+false;static;2;13;;static void copyFrom(io.iron.ironmq.Message source, Message target) {     IronMqMessage ironMqMessage = GSON.fromJson(source.getBody(), IronMqMessage.class).     target.setBody(ironMqMessage.getBody()).     if (ironMqMessage.getHeaders() != null) {         for (Map.Entry<String, Object> entry : ironMqMessage.getHeaders().entrySet()) {             String key = entry.getKey().             Object value = entry.getValue().             if (target.getHeader(key) == null) {                 target.setHeader(key, value).             }         }     } }

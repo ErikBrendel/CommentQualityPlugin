@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;7;;public BankQuote aggregate(BankQuote oldQuote, BankQuote newQuote) {     if (oldQuote != null && oldQuote.getRate() <= newQuote.getRate()) {         return oldQuote.     } else {         return newQuote.     } }

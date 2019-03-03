@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;public void processStanza(Stanza stanza) {     if (LOG.isDebugEnabled()) {         LOG.debug("{} : {}", direction, stanza.toXML(null)).     } }

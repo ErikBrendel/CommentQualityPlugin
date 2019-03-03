@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void setName(String n) {     name = n. }
+false;public;0;3;;public String getName() {     return name. }
+false;public;1;3;;public void setId(long i) {     id = i. }
+false;public;0;3;;public long getId() {     return id. }
+false;public;0;3;;public String toString() {     return "[Book id=" + id + ", name=" + name + "]". }

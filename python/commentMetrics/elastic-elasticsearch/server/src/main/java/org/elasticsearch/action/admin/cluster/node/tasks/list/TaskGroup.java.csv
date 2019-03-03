@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static Builder builder(TaskInfo taskInfo) {     return new Builder(taskInfo). }
+false;public;1;3;;public void addGroup(Builder builder) {     childTasks.add(builder). }
+false;public;0;3;;public TaskInfo getTaskInfo() {     return taskInfo. }
+false;public;0;3;;public TaskGroup build() {     return new TaskGroup(taskInfo, childTasks.stream().map(Builder::build).collect(Collectors.toList())). }
+false;public;0;3;;public TaskInfo getTaskInfo() {     return task. }
+false;public;0;3;;public List<TaskGroup> getChildTasks() {     return childTasks. }
+false;public;2;13;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     task.toXContent(builder, params).     if (childTasks.isEmpty() == false) {         builder.startArray("children").         for (TaskGroup taskGroup : childTasks) {             taskGroup.toXContent(builder, params).         }         builder.endArray().     }     return builder.endObject(). }

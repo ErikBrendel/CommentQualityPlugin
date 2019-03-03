@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@Test public void testSendX() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedBodiesReceived("<html><body>foo</body></html>").     mock.expectedHeaderReceived("x", "foo").     template.requestBody(serverUri + "?x=foo", null, Object.class).     assertMockEndpointsSatisfied(). }
+false;public;0;5;;public void configure() throws Exception {     from("jetty:" + serverUri).setBody().simple("<html><body>${in.header.x}</body></html>").to("mock:result"). }
+false;protected;0;9;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from("jetty:" + serverUri).setBody().simple("<html><body>${in.header.x}</body></html>").to("mock:result").         }     }. }

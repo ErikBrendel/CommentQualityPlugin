@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getMethodValue() {     return this.httpRequest.getMethod(). }
+false;public;0;4;;@Override public URI getURI() {     return this.httpRequest.getURI(). }
+false;public;1;5;;@Override public void setBody(Body body) {     assertNotExecuted().     this.body = body. }
+false;protected;1;4;;@Override protected OutputStream getBodyInternal(HttpHeaders headers) throws IOException {     throw new UnsupportedOperationException("getBody not supported"). }
+false;protected;1;13;;@Override protected ClientHttpResponse executeInternal(HttpHeaders headers) throws IOException {     HttpComponentsClientHttpRequest.addHeaders(this.httpRequest, headers).     if (this.httpRequest instanceof HttpEntityEnclosingRequest && this.body != null) {         HttpEntityEnclosingRequest entityEnclosingRequest = (HttpEntityEnclosingRequest) this.httpRequest.         HttpEntity requestEntity = new StreamingHttpEntity(getHeaders(), this.body).         entityEnclosingRequest.setEntity(requestEntity).     }     HttpResponse httpResponse = this.httpClient.execute(this.httpRequest, this.httpContext).     return new HttpComponentsClientHttpResponse(httpResponse). }
+false;public;0;4;;@Override public boolean isRepeatable() {     return false. }
+false;public;0;4;;@Override public boolean isChunked() {     return false. }
+false;public;0;4;;@Override public long getContentLength() {     return this.headers.getContentLength(). }
+false;public;0;6;;@Override @Nullable public Header getContentType() {     MediaType contentType = this.headers.getContentType().     return (contentType != null ? new BasicHeader("Content-Type", contentType.toString()) : null). }
+false;public;0;7;;@Override @Nullable public Header getContentEncoding() {     String contentEncoding = this.headers.getFirst("Content-Encoding").     return (contentEncoding != null ? new BasicHeader("Content-Encoding", contentEncoding) : null). }
+false;public;0;4;;@Override public InputStream getContent() throws IOException, IllegalStateException {     throw new IllegalStateException("No content available"). }
+false;public;1;4;;@Override public void writeTo(OutputStream outputStream) throws IOException {     this.body.writeTo(outputStream). }
+false;public;0;4;;@Override public boolean isStreaming() {     return true. }
+false;public;0;5;;@Override @Deprecated public void consumeContent() throws IOException {     throw new UnsupportedOperationException(). }

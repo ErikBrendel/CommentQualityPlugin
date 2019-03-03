@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;3;1;;void onResponse(List<RecentReport> reportDescription, Map<String, String> headers, SalesforceException ex).
+false;;3;1;;void onResponse(ReportDescription reportDescription, Map<String, String> headers, SalesforceException ex).
+false;;3;1;;void onResponse(AbstractReportResultsBase reportResults, Map<String, String> headers, SalesforceException ex).
+false;;3;1;;void onResponse(ReportInstance reportInstance, Map<String, String> headers, SalesforceException ex).
+false;;3;1;;void onResponse(List<ReportInstance> reportInstances, Map<String, String> headers, SalesforceException ex).
+false;;2;1;;void getRecentReports(Map<String, List<String>> headers, RecentReportsResponseCallback callback).
+false;;3;2;;void getReportDescription(String reportId, Map<String, List<String>> headers, ReportDescriptionResponseCallback callback).
+false;;5;2;;void executeSyncReport(String reportId, Boolean includeDetails, ReportMetadata reportFilter, Map<String, List<String>> headers, ReportResultsResponseCallback callback).
+false;;5;2;;void executeAsyncReport(String reportId, Boolean includeDetails, ReportMetadata reportFilter, Map<String, List<String>> headers, ReportInstanceResponseCallback callback).
+false;;3;2;;void getReportInstances(String reportId, Map<String, List<String>> headers, ReportInstanceListResponseCallback callback).
+false;;4;2;;void getReportResults(String reportId, String instanceId, Map<String, List<String>> headers, ReportResultsResponseCallback callback).

@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * Number of endpoints in the static registry.  */ ;/**  * Number of endpoints in the static registry.  */ int staticSize().
+true;;0;1;/**  * Number of endpoints in the dynamic registry  */ ;/**  * Number of endpoints in the dynamic registry  */ int dynamicSize().
+true;;0;1;/**  * Maximum number of entries to store in the dynamic registry  */ ;/**  * Maximum number of entries to store in the dynamic registry  */ int getMaximumCacheSize().
+true;;0;1;/**  * Purges the cache (removes endpoints from the dynamic cache)  */ ;/**  * Purges the cache (removes endpoints from the dynamic cache)  */ void purge().
+true;;1;1;/**  * Whether the given endpoint is stored in the static cache  *  * @param key  the endpoint key  * @return <tt>true</tt> if in static cache, <tt>false</tt> if not  */ ;/**  * Whether the given endpoint is stored in the static cache  *  * @param key  the endpoint key  * @return <tt>true</tt> if in static cache, <tt>false</tt> if not  */ boolean isStatic(String key).
+true;;1;1;/**  * Whether the given endpoint is stored in the dynamic cache  *  * @param key  the endpoint key  * @return <tt>true</tt> if in dynamic cache, <tt>false</tt> if not  */ ;/**  * Whether the given endpoint is stored in the dynamic cache  *  * @param key  the endpoint key  * @return <tt>true</tt> if in dynamic cache, <tt>false</tt> if not  */ boolean isDynamic(String key).
+true;;0;1;/**  * Cleanup the cache (purging stale entries)  */ ;/**  * Cleanup the cache (purging stale entries)  */ void cleanUp().

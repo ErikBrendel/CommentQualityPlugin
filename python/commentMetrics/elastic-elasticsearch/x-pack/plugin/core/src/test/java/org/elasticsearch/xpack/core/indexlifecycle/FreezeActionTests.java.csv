@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected FreezeAction doParseInstance(XContentParser parser) throws IOException {     return FreezeAction.parse(parser). }
+false;protected;0;4;;@Override protected FreezeAction createTestInstance() {     return new FreezeAction(). }
+false;protected;0;4;;@Override protected Reader<FreezeAction> instanceReader() {     return FreezeAction::new. }
+false;public;0;13;;public void testToSteps() {     FreezeAction action = createTestInstance().     String phase = randomAlphaOfLengthBetween(1, 10).     StepKey nextStepKey = new StepKey(randomAlphaOfLengthBetween(1, 10), randomAlphaOfLengthBetween(1, 10), randomAlphaOfLengthBetween(1, 10)).     List<Step> steps = action.toSteps(null, phase, nextStepKey).     assertNotNull(steps).     assertEquals(1, steps.size()).     StepKey expectedFirstStepKey = new StepKey(phase, FreezeAction.NAME, FreezeStep.NAME).     FreezeStep firstStep = (FreezeStep) steps.get(0).     assertEquals(expectedFirstStepKey, firstStep.getKey()).     assertEquals(nextStepKey, firstStep.getNextStepKey()). }

@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void testSendMatchingMessage() throws Exception {     String body = "<person name='James' city='London'/>".     getMockEndpoint("mock:result").expectedBodiesReceived(body).     template.sendBodyAndHeader("direct:start", ExchangePattern.InOut, body, "foo", "London").     assertMockEndpointsSatisfied(). }
+false;public;0;9;;@Test public void testSendNotMatchingMessage() throws Exception {     String body = "<person name='Hiram' city='Tampa'/>".     getMockEndpoint("mock:result").expectedMessageCount(0).     template.sendBodyAndHeader("direct:start", ExchangePattern.InOut, body, "foo", "Tampa").     assertMockEndpointsSatisfied(). }
+false;public;0;7;;public void configure() {     // START SNIPPET: example     from("direct:start").filter().method("myBean", "matches").to("mock:result"). // END SNIPPET: example }
+false;protected;0;11;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             // START SNIPPET: example             from("direct:start").filter().method("myBean", "matches").to("mock:result").         // END SNIPPET: example         }     }. }
+false;protected;0;6;;@Override protected Context createJndiContext() throws Exception {     Context context = super.createJndiContext().     context.bind("myBean", new MyBean()).     return context. }
+false;public;1;3;;public boolean matches(@Header("foo") String location) {     return "London".equals(location). }

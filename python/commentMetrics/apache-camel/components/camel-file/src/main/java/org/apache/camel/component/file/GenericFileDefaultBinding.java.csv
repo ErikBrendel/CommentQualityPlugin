@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public Object getBody(GenericFile<T> file) {     return body. }
+false;public;2;3;;public void setBody(GenericFile<T> file, Object body) {     this.body = body. }
+false;public;2;3;;public void loadContent(Exchange exchange, GenericFile<?> file) throws IOException { // noop as the body is already loaded }

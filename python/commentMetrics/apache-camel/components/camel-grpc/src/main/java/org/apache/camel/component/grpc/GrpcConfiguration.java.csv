@@ -1,0 +1,50 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Fully qualified service name from the protocol buffer descriptor file  * (package dot service definition name)  */ ;/**  * Fully qualified service name from the protocol buffer descriptor file  * (package dot service definition name)  */ public String getService() {     return service. }
+false;public;1;3;;public void setService(String service) {     this.service = service. }
+true;public;0;3;/**  * gRPC method name  */ ;/**  * gRPC method name  */ public String getMethod() {     return method. }
+false;public;1;3;;public void setMethod(String method) {     this.method = method. }
+true;public;0;3;/**  * The gRPC server host name. This is localhost or 0.0.0.0 when being a  * consumer or remote server host name when using producer.  */ ;/**  * The gRPC server host name. This is localhost or 0.0.0.0 when being a  * consumer or remote server host name when using producer.  */ public String getHost() {     return host. }
+false;public;1;3;;public void setHost(String host) {     this.host = host. }
+true;public;0;3;/**  * The gRPC local or remote server port  */ ;/**  * The gRPC local or remote server port  */ public int getPort() {     return port. }
+false;public;1;3;;public void setPort(int port) {     this.port = port. }
+true;public;1;3;/**  * Identifies the security negotiation type used for HTTP/2 communication  */ ;/**  * Identifies the security negotiation type used for HTTP/2 communication  */ public void setNegotiationType(NegotiationType negotiationType) {     this.negotiationType = negotiationType. }
+false;public;0;3;;public NegotiationType getNegotiationType() {     return negotiationType. }
+true;public;0;3;/**  * Authentication method type in advance to the SSL/TLS negotiation  */ ;/**  * Authentication method type in advance to the SSL/TLS negotiation  */ public GrpcAuthType getAuthenticationType() {     return authenticationType. }
+false;public;1;3;;public void setAuthenticationType(GrpcAuthType authenticationType) {     this.authenticationType = authenticationType. }
+true;public;0;3;/**  * JSON Web Token sign algorithm  */ ;/**  * JSON Web Token sign algorithm  */ public JwtAlgorithm getJwtAlgorithm() {     return jwtAlgorithm. }
+false;public;1;3;;public void setJwtAlgorithm(JwtAlgorithm jwtAlgorithm) {     this.jwtAlgorithm = jwtAlgorithm. }
+true;public;0;3;/**  * JSON Web Token secret  */ ;/**  * JSON Web Token secret  */ public String getJwtSecret() {     return jwtSecret. }
+false;public;1;3;;public void setJwtSecret(String jwtSecret) {     this.jwtSecret = jwtSecret. }
+true;public;0;3;/**  * JSON Web Token issuer  */ ;/**  * JSON Web Token issuer  */ public String getJwtIssuer() {     return jwtIssuer. }
+false;public;1;3;;public void setJwtIssuer(String jwtIssuer) {     this.jwtIssuer = jwtIssuer. }
+true;public;0;3;/**  * JSON Web Token subject  */ ;/**  * JSON Web Token subject  */ public String getJwtSubject() {     return jwtSubject. }
+false;public;1;3;;public void setJwtSubject(String jwtSubject) {     this.jwtSubject = jwtSubject. }
+true;public;0;3;/**  * Service Account key file in JSON format resource link supported by the Google Cloud SDK  */ ;/**  * Service Account key file in JSON format resource link supported by the Google Cloud SDK  */ public String getServiceAccountResource() {     return serviceAccountResource. }
+false;public;1;3;;public void setServiceAccountResource(String serviceAccountResource) {     this.serviceAccountResource = serviceAccountResource. }
+true;public;1;3;/**  * The X.509 certificate chain file resource in PEM format link  */ ;/**  * The X.509 certificate chain file resource in PEM format link  */ public void setKeyCertChainResource(String keyCertChainResource) {     this.keyCertChainResource = keyCertChainResource. }
+false;public;0;3;;public String getKeyCertChainResource() {     return keyCertChainResource. }
+true;public;1;3;/**  * The PKCS#8 private key file resource in PEM format link  */ ;/**  * The PKCS#8 private key file resource in PEM format link  */ public void setKeyResource(String keyResource) {     this.keyResource = keyResource. }
+false;public;0;3;;public String getKeyResource() {     return keyResource. }
+true;public;0;3;/**  * The PKCS#8 private key file password  */ ;/**  * The PKCS#8 private key file password  */ public String getKeyPassword() {     return keyPassword. }
+false;public;1;3;;public void setKeyPassword(String keyPassword) {     this.keyPassword = keyPassword. }
+true;public;1;3;/**  * The trusted certificates collection file resource in PEM format for verifying the remote endpoint's certificate  */ ;/**  * The trusted certificates collection file resource in PEM format for verifying the remote endpoint's certificate  */ public void setTrustCertCollectionResource(String trustCertCollectionResource) {     this.trustCertCollectionResource = trustCertCollectionResource. }
+false;public;0;3;;public String getTrustCertCollectionResource() {     return trustCertCollectionResource. }
+true;public;0;3;/**  * This option specifies the top-level strategy for processing service  * requests and responses in streaming mode. If an aggregation strategy is  * selected, all requests will be accumulated in the list, then transferred  * to the flow, and the accumulated responses will be sent to the sender. If  * a propagation strategy is selected, request is sent to the stream, and the  * response will be immediately sent back to the sender.  */ ;/**  * This option specifies the top-level strategy for processing service  * requests and responses in streaming mode. If an aggregation strategy is  * selected, all requests will be accumulated in the list, then transferred  * to the flow, and the accumulated responses will be sent to the sender. If  * a propagation strategy is selected, request is sent to the stream, and the  * response will be immediately sent back to the sender.  */ public GrpcConsumerStrategy getConsumerStrategy() {     return consumerStrategy. }
+false;public;1;3;;public void setConsumerStrategy(GrpcConsumerStrategy consumerStrategy) {     this.consumerStrategy = consumerStrategy. }
+true;public;1;3;/**  * Determines if onCompleted events should be pushed to the Camel route.  */ ;/**  * Determines if onCompleted events should be pushed to the Camel route.  */ public void setForwardOnCompleted(boolean forwardOnCompleted) {     this.forwardOnCompleted = forwardOnCompleted. }
+false;public;0;3;;public boolean isForwardOnCompleted() {     return forwardOnCompleted. }
+true;public;1;3;/**  * Determines if onError events should be pushed to the Camel route.  * Exceptions will be set as message body.  */ ;/**  * Determines if onError events should be pushed to the Camel route.  * Exceptions will be set as message body.  */ public void setForwardOnError(boolean forwardOnError) {     this.forwardOnError = forwardOnError. }
+false;public;0;3;;public boolean isForwardOnError() {     return forwardOnError. }
+false;public;0;3;;public GrpcProducerStrategy getProducerStrategy() {     return producerStrategy. }
+true;public;1;3;/**  * The mode used to communicate with a remote gRPC server.  * In SIMPLE mode a single exchange is translated into a remote procedure call.  * In STREAMING mode all exchanges will be sent within the same request (input and output of the recipient gRPC service must be of type 'stream').  */ ;/**  * The mode used to communicate with a remote gRPC server.  * In SIMPLE mode a single exchange is translated into a remote procedure call.  * In STREAMING mode all exchanges will be sent within the same request (input and output of the recipient gRPC service must be of type 'stream').  */ public void setProducerStrategy(GrpcProducerStrategy producerStrategy) {     this.producerStrategy = producerStrategy. }
+false;public;0;3;;public String getStreamRepliesTo() {     return streamRepliesTo. }
+true;public;1;3;/**  * When using STREAMING client mode, it indicates the endpoint where responses should be forwarded.  */ ;/**  * When using STREAMING client mode, it indicates the endpoint where responses should be forwarded.  */ public void setStreamRepliesTo(String streamRepliesTo) {     this.streamRepliesTo = streamRepliesTo. }
+true;public;0;3;/**  * The user agent header passed to the server  */ ;/**  * The user agent header passed to the server  */ public String getUserAgent() {     return userAgent. }
+false;public;1;3;;public void setUserAgent(String userAgent) {     this.userAgent = userAgent. }
+true;public;0;3;/**  * The HTTP/2 flow control window size (MiB)  */ ;/**  * The HTTP/2 flow control window size (MiB)  */ public int getFlowControlWindow() {     return flowControlWindow. }
+false;public;1;3;;public void setFlowControlWindow(int flowControlWindow) {     this.flowControlWindow = flowControlWindow. }
+true;public;1;3;/**  * The maximum message size allowed to be received/sent (MiB)  */ ;/**  * The maximum message size allowed to be received/sent (MiB)  */ public void setMaxMessageSize(int maxMessageSize) {     this.maxMessageSize = maxMessageSize. }
+false;public;0;3;;public int getMaxMessageSize() {     return maxMessageSize. }
+true;public;1;3;/**  * The maximum number of concurrent calls permitted for each incoming server connection  */ ;/**  * The maximum number of concurrent calls permitted for each incoming server connection  */ public void setMaxConcurrentCallsPerConnection(int maxConcurrentCallsPerConnection) {     this.maxConcurrentCallsPerConnection = maxConcurrentCallsPerConnection. }
+false;public;0;3;;public int getMaxConcurrentCallsPerConnection() {     return maxConcurrentCallsPerConnection. }
+false;public;3;9;;public void parseURI(URI uri, Map<String, Object> parameters, GrpcComponent component) {     setHost(uri.getHost()).     if (uri.getPort() != -1) {         setPort(uri.getPort()).     }     setService(uri.getPath().substring(1)). }

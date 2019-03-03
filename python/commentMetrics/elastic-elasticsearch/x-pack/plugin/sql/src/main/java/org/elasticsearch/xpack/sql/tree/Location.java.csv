@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public int getLineNumber() {     return line. }
+false;public;0;3;;public int getColumnNumber() {     return charPositionInLine + 1. }
+false;public;0;4;;@Override public String toString() {     return "@" + getLineNumber() + ":" + getColumnNumber(). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(line, charPositionInLine). }
+false;public;1;9;;@Override public boolean equals(Object obj) {     if (obj == null || obj.getClass() != getClass()) {         return false.     }     Location other = (Location) obj.     return line == other.line && charPositionInLine == other.charPositionInLine. }

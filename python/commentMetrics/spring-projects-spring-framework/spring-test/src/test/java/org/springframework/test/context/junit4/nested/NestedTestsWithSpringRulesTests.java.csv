@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void topLevelTest() {     assertEquals("foo", foo). }
+false;public;0;11;;@Test public void nestedTest() throws Exception {     // Note: the following would fail since TestExecutionListeners in     // the Spring TestContext Framework are not applied to the enclosing     // instance of an inner test class.     //      // assertEquals("foo", foo).     assertNull("@Autowired field in enclosing instance should be null.", foo).     assertEquals("bar", bar). }
+false;;0;4;;@Bean String foo() {     return "foo". }
+false;;0;4;;@Bean String bar() {     return "bar". }

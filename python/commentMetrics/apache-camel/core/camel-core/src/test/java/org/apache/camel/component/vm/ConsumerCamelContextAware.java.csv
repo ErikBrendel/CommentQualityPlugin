@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean isUseRouteBuilder() {     return false. }
+false;public;0;7;;public void testConsumerCamelContextAware() throws Exception {     Consumer consumer = context.getEndpoint("vm:foo").createConsumer(null).     assertNotNull(consumer).     VmConsumer vm = assertIsInstanceOf(VmConsumer.class, consumer).     assertEquals(vm.getCamelContext(), context). }

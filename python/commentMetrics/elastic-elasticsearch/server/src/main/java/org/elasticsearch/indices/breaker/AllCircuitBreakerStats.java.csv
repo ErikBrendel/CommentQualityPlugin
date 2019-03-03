@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeArray(allStats). }
+false;public;0;3;;public CircuitBreakerStats[] getAllStats() {     return this.allStats. }
+false;public;1;8;;public CircuitBreakerStats getStats(String name) {     for (CircuitBreakerStats stats : allStats) {         if (stats.getName().equals(name)) {             return stats.         }     }     return null. }
+false;public;2;11;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject(Fields.BREAKERS).     for (CircuitBreakerStats stats : allStats) {         if (stats != null) {             stats.toXContent(builder, params).         }     }     builder.endObject().     return builder. }

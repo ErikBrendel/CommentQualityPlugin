@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;1;7;;private byte[] getMessageBytes(int messageSize) {     byte[] msgBytes = new byte[messageSize].     for (int i = 0. i < messageSize. i++) {         msgBytes[i] = 'A'.     }     return msgBytes. }
+false;private;1;10;;private void sendMessage(int messageSize) throws Exception {     byte[] msgBytes = getMessageBytes(messageSize).     assertEquals(msgBytes.length, messageSize).     String message = new String(msgBytes).     getMockEndpoint("mock:result").expectedBodiesReceived(message).     template.sendBody("netty4:udp://localhost:{{port}}?sync=false", message).     assertMockEndpointsSatisfied(). }
+false;public;0;4;;@Test public void testSend512Message() throws Exception {     sendMessage(512). }
+false;public;0;4;;@Test public void testSend768Message() throws Exception {     sendMessage(768). }
+false;public;0;4;;@Test public void testSend1024Message() throws Exception {     sendMessage(1024). }
+false;public;0;5;;@Override public void configure() throws Exception {     from("netty4:udp://localhost:{{port}}?receiveBufferSizePredictor=2048&sync=false").to("mock:result"). }
+false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("netty4:udp://localhost:{{port}}?receiveBufferSizePredictor=2048&sync=false").to("mock:result").         }     }. }

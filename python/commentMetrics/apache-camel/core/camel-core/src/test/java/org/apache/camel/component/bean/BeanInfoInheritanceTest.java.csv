@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;16;;@Test public void testInheritance() throws Exception {     BeanInfo beanInfo = new BeanInfo(context, Y.class).     DefaultExchange exchange = new DefaultExchange(context).     exchange.getIn().setBody(new Request()).     try {         MethodInvocation mi = beanInfo.createInvocation(null, exchange).         assertNotNull(mi).         assertEquals("process", mi.getMethod().getName()).         assertEquals("Y", mi.getMethod().getDeclaringClass().getSimpleName()).     } catch (AmbiguousMethodCallException e) {         fail("This should not be ambiguous!").     } }
+false;public;0;16;;@Test public void testNoInheritance() throws Exception {     BeanInfo beanInfo = new BeanInfo(context, A.class).     DefaultExchange exchange = new DefaultExchange(context).     exchange.getIn().setBody(new Request()).     try {         MethodInvocation mi = beanInfo.createInvocation(null, exchange).         assertNotNull(mi).         assertEquals("process", mi.getMethod().getName()).         assertEquals("A", mi.getMethod().getDeclaringClass().getSimpleName()).     } catch (AmbiguousMethodCallException e) {         fail("This should not be ambiguous!").     } }
+false;public;0;14;;@Test public void testInheritanceAndOverload() throws Exception {     BeanInfo beanInfo = new BeanInfo(context, Z.class).     DefaultExchange exchange = new DefaultExchange(context).     exchange.getIn().setBody(new Request()).     try {         beanInfo.createInvocation(null, exchange).         fail("This should be ambiguous!").     } catch (AmbiguousMethodCallException e) {     // expected (currently not supported in camel)     } }
+false;public;1;3;;public int process(Request request) {     return 0. }
+false;public;1;3;;public int process(Request request) {     return 1. }
+false;public;1;3;;public int compute(String body) {     return 2. }
+false;public;1;3;;public int compute(Request request) {     return 2. }
+false;public;2;3;;public int process(Request request, String body) {     return 3. }
+false;public;1;3;;public void doSomething(String body) { // noop }
+false;public;1;3;;public int process(Request request) {     return 0. }

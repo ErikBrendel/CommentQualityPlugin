@@ -1,0 +1,33 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;7;;@Override public void beforeCaseStarted(CaseStartEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("beforeCaseStarted", event). }
+false;public;1;7;;@Override public void afterCaseStarted(CaseStartEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("afterCaseStarted", event). }
+false;public;1;7;;@Override public void beforeCaseClosed(CaseCloseEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("beforeCaseClosed", event). }
+false;public;1;7;;@Override public void afterCaseClosed(CaseCloseEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("afterCaseClosed", event). }
+false;public;1;7;;@Override public void beforeCaseCancelled(CaseCancelEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("beforeCaseCancelled", event). }
+false;public;1;7;;@Override public void afterCaseCancelled(CaseCancelEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("afterCaseCancelled", event). }
+false;public;1;7;;@Override public void beforeCaseDestroyed(CaseDestroyEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("beforeCaseDestroyed", event). }
+false;public;1;7;;@Override public void afterCaseDestroyed(CaseDestroyEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("afterCaseDestroyed", event). }
+false;public;1;7;;@Override public void beforeCaseReopen(CaseReopenEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("beforeCaseReopen", event). }
+false;public;1;7;;@Override public void afterCaseReopen(CaseReopenEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("afterCaseReopen", event). }
+false;public;1;7;;@Override public void beforeCaseCommentAdded(CaseCommentEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("beforeCaseCommentAdded", event). }
+false;public;1;7;;@Override public void afterCaseCommentAdded(CaseCommentEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("afterCaseCommentAdded", event). }
+false;public;1;7;;@Override public void beforeCaseCommentUpdated(CaseCommentEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("beforeCaseCommentUpdated", event). }
+false;public;1;7;;@Override public void afterCaseCommentUpdated(CaseCommentEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("afterCaseCommentUpdated", event). }
+false;public;1;7;;@Override public void beforeCaseCommentRemoved(CaseCommentEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("beforeCaseCommentRemoved", event). }
+false;public;1;7;;@Override public void afterCaseCommentRemoved(CaseCommentEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("afterCaseCommentRemoved", event). }
+false;public;1;7;;@Override public void beforeCaseRoleAssignmentAdded(CaseRoleAssignmentEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("beforeCaseRoleAssignmentAdded", event). }
+false;public;1;7;;@Override public void afterCaseRoleAssignmentAdded(CaseRoleAssignmentEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("afterCaseRoleAssignmentAdded", event). }
+false;public;1;7;;@Override public void beforeCaseRoleAssignmentRemoved(CaseRoleAssignmentEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("beforeCaseRoleAssignmentRemoved", event). }
+false;public;1;7;;@Override public void afterCaseRoleAssignmentRemoved(CaseRoleAssignmentEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("afterCaseRoleAssignmentRemoved", event). }
+false;public;1;7;;@Override public void beforeCaseDataAdded(CaseDataEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("beforeCaseDataAdded", event). }
+false;public;1;7;;@Override public void afterCaseDataAdded(CaseDataEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("afterCaseDataAdded", event). }
+false;public;1;7;;@Override public void beforeCaseDataRemoved(CaseDataEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("beforeCaseDataRemoved", event). }
+false;public;1;7;;@Override public void afterCaseDataRemoved(CaseDataEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("afterCaseDataRemoved", event). }
+false;public;1;7;;@Override public void beforeDynamicTaskAdded(CaseDynamicTaskEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("beforeDynamicTaskAdded", event). }
+false;public;1;7;;@Override public void afterDynamicTaskAdded(CaseDynamicTaskEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("afterDynamicTaskAdded", event). }
+false;public;1;7;;@Override public void beforeDynamicProcessAdded(CaseDynamicSubprocessEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("beforeDynamicProcessAdded", event). }
+false;public;1;7;;@Override public void afterDynamicProcessAdded(CaseDynamicSubprocessEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("afterDynamicProcessAdded", event). }
+false;public;0;4;;@Override public void close() { }
+false;public;1;4;;@Override public void addConsumer(JBPMConsumer consumer) {     this.consumers.add(consumer). }
+false;public;1;4;;@Override public void removeConsumer(JBPMConsumer consumer) {     this.consumers.remove(consumer). }
+false;protected;2;3;;protected void sendMessage(String eventType, Object event) {     this.consumers.stream().filter(c -> c.getStatus().isStarted()).forEach(c -> c.sendMessage(eventType, event)). }

@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void testDisruptorVmUseSameQueue() throws Exception {     getMockEndpoint("mock:result").expectedMessageCount(2).     template2.sendBody("direct:start", "Hello World").     template2.sendBody("direct:start", "Bye World").     assertMockEndpointsSatisfied(). }
+false;public;0;4;;@Override public void configure() throws Exception {     from("disruptor-vm:foo?size=500").to("mock:result"). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("disruptor-vm:foo?size=500").to("mock:result").         }     }. }
+false;public;0;4;;@Override public void configure() throws Exception {     from("direct:start").to("disruptor-vm:foo"). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilderForSecondContext() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").to("disruptor-vm:foo").         }     }. }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;default;0;6;/**  * Returns the global {@link SSLContextParameters} if enabled on the implementing object, null otherwise.  */ ;/**  * Returns the global {@link SSLContextParameters} if enabled on the implementing object, null otherwise.  */ default SSLContextParameters retrieveGlobalSslContextParameters() {     if (isUseGlobalSslContextParameters()) {         return getCamelContext().getSSLContextParameters().     }     return null. }
+true;;0;1;/**  * Determine if the implementing object is using global SSL context parameters.  */ ;/**  * Determine if the implementing object is using global SSL context parameters.  */ boolean isUseGlobalSslContextParameters().
+true;;1;1;/**  * Enable usage of global SSL context parameters.  */ ;/**  * Enable usage of global SSL context parameters.  */ void setUseGlobalSslContextParameters(boolean useGlobalSslContextParameters).

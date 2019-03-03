@@ -1,0 +1,17 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;17;;public void close() throws JMSException {     if (!closed) {         closed = true.         try {             if (consumer != null) {                 consumer.stop().             }             if (pollingConsumer != null) {                 pollingConsumer.stop().             }         } catch (JMSException e) {             throw e.         } catch (Exception e) {             throw JMSExceptionSupport.create(e).         }     } }
+false;public;0;3;;public MessageListener getMessageListener() throws JMSException {     return messageListener. }
+false;public;1;6;;public void setMessageListener(MessageListener messageListener) throws JMSException {     this.messageListener = messageListener.     if (messageListener != null && consumer == null) {         consumer = createConsumer().     } }
+false;public;0;4;;public Message receive() throws JMSException {     Exchange exchange = getPollingConsumer().receive().     return createMessage(exchange). }
+false;public;1;4;;public Message receive(long timeoutMillis) throws JMSException {     Exchange exchange = getPollingConsumer().receive(timeoutMillis).     return createMessage(exchange). }
+false;public;0;4;;public Message receiveNoWait() throws JMSException {     Exchange exchange = getPollingConsumer().receiveNoWait().     return createMessage(exchange). }
+false;public;0;3;;// Properties // ----------------------------------------------------------------------- public CamelDestination getDestination() {     return destination. }
+false;public;0;3;;public Endpoint getEndpoint() {     return endpoint. }
+false;public;0;3;;public String getMessageSelector() {     return messageSelector. }
+false;public;0;3;;public boolean isNoLocal() {     return noLocal. }
+false;public;0;3;;public ActiveMQSession getSession() {     return session. }
+false;protected;0;13;;// Implementation methods // ----------------------------------------------------------------------- protected PollingConsumer getPollingConsumer() throws JMSException {     try {         if (pollingConsumer == null) {             pollingConsumer = endpoint.createPollingConsumer().             pollingConsumer.start().         }         return pollingConsumer.     } catch (JMSException e) {         throw e.     } catch (Exception e) {         throw JMSExceptionSupport.create(e).     } }
+false;protected;1;8;;protected Message createMessage(Exchange exchange) throws JMSException {     if (exchange != null) {         Message message = destination.getBinding().makeJmsMessage(exchange, session).         return message.     } else {         return null.     } }
+false;public;1;4;;public void process(Exchange exchange) throws Exception {     Message message = createMessage(exchange).     getMessageListener().onMessage(message). }
+false;protected;0;16;;protected Consumer createConsumer() throws JMSException {     try {         Consumer answer = endpoint.createConsumer(new Processor() {              public void process(Exchange exchange) throws Exception {                 Message message = createMessage(exchange).                 getMessageListener().onMessage(message).             }         }).         answer.start().         return answer.     } catch (JMSException e) {         throw e.     } catch (Exception e) {         throw JMSExceptionSupport.create(e).     } }
+false;protected;0;5;;protected void checkClosed() throws javax.jms.IllegalStateException {     if (closed) {         throw new IllegalStateException("The producer is closed").     } }

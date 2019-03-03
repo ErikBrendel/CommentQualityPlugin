@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;11;;@Test public void shouldAccessRawQuery() throws Exception {     String query = "param=x1%26y%3D2".     mockEndpoint.expectedMessageCount(1).     mockEndpoint.message(0).header(HTTP_QUERY).isEqualTo("param=x1&y=2").     mockEndpoint.message(0).header(HTTP_RAW_QUERY).isEqualTo(query).     new URL("http://localhost:" + getPort() + "/?" + query).openConnection().getInputStream().close().     assertMockEndpointsSatisfied(). }
+false;public;0;5;;@Override public void configure() throws Exception {     from("netty4-http:http://0.0.0.0:{{port}}/").to(mockEndpoint). }
+false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("netty4-http:http://0.0.0.0:{{port}}/").to(mockEndpoint).         }     }. }

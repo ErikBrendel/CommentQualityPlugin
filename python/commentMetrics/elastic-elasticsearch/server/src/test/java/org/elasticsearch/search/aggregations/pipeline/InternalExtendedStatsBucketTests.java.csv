@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;10;9;;@Override protected InternalExtendedStatsBucket createInstance(String name, long count, double sum, double min, double max, double sumOfSqrs, double sigma, DocValueFormat formatter, List<PipelineAggregator> pipelineAggregators, Map<String, Object> metaData) {     return new InternalExtendedStatsBucket(name, count, sum, min, max, sumOfSqrs, sigma, formatter, pipelineAggregators, Collections.emptyMap()). }
+false;public;0;5;;@Override public void testReduceRandom() {     expectThrows(UnsupportedOperationException.class, () -> createTestInstance("name", Collections.emptyList(), null).reduce(null, null)). }
+false;protected;2;4;;@Override protected void assertReduced(InternalExtendedStats reduced, List<InternalExtendedStats> inputs) { // no test since reduce operation is unsupported }
+false;protected;0;4;;@Override protected Writeable.Reader<InternalExtendedStats> instanceReader() {     return InternalExtendedStatsBucket::new. }
+false;protected;2;5;;@Override protected void assertFromXContent(InternalExtendedStats aggregation, ParsedAggregation parsedAggregation) {     super.assertFromXContent(aggregation, parsedAggregation).     assertTrue(parsedAggregation instanceof ParsedExtendedStatsBucket). }

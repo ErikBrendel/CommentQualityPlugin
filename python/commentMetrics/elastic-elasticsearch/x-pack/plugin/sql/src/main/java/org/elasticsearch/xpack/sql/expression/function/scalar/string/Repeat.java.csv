@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected BinaryStringNumericOperation operation() {     return BinaryStringNumericOperation.REPEAT. }
+false;protected;2;4;;@Override protected Repeat replaceChildren(Expression newLeft, Expression newRight) {     return new Repeat(source(), newLeft, newRight). }
+false;protected;0;4;;@Override protected NodeInfo<Repeat> info() {     return NodeInfo.create(this, Repeat::new, left(), right()). }

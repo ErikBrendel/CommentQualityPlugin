@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;4;;public void forwardIngestRequest(Action<?> action, ActionRequest request, ActionListener<?> listener) {     transportService.sendRequest(randomIngestNode(), action.name(), request, new ActionListenerResponseHandler(listener, action.getResponseReader())). }
+false;private;0;8;;private DiscoveryNode randomIngestNode() {     final DiscoveryNode[] nodes = ingestNodes.     if (nodes.length == 0) {         throw new IllegalStateException("There are no ingest nodes in this cluster, unable to forward request to an ingest node.").     }     return nodes[Math.floorMod(ingestNodeGenerator.incrementAndGet(), nodes.length)]. }
+false;public;1;4;;@Override public void applyClusterState(ClusterChangedEvent event) {     ingestNodes = event.state().getNodes().getIngestNodes().values().toArray(DiscoveryNode.class). }

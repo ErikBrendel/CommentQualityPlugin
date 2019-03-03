@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;5;;@Override protected String getBlueprintDescriptor() {     return "org/apache/camel/test/blueprint/simpleTransform-context.xml," + "org/apache/camel/test/blueprint/simpleTransform-properties-context.xml". }
+false;public;0;9;;@Test public void testPayloadIsTransformed() throws InterruptedException {     mockOut.setExpectedMessageCount(1).     mockOut.message(0).body().isEqualTo("Modified: Cheese").     producerTemplate.sendBody("Cheese").     assertMockEndpointsSatisfied(). }
+false;public;0;9;;@Test public void testPayloadIsTransformedAgain() throws InterruptedException {     mockOut.setExpectedMessageCount(1).     mockOut.message(0).body().isEqualTo("Modified: Foo").     producerTemplate.sendBody("Foo").     assertMockEndpointsSatisfied(). }

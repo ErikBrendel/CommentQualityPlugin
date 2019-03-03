@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;6;;@BeforeClass public static void before() {     final WordpressServiceProvider serviceProvider = WordpressServiceProvider.getInstance().     serviceProvider.init(WordpressTestConstants.WORDPRESS_DEMO_URL).     servicePages = serviceProvider.getService(WordpressServicePages.class). }
+false;public;0;6;;@Test public void testRetrieve() {     final Page page = servicePages.retrieve(2, null, null).     assertThat(page, not(nullValue())).     assertThat(page.getId(), is(2)). }
+false;public;0;9;;@Test public void testList() {     final PageSearchCriteria criteria = new PageSearchCriteria().     criteria.setPage(1).     criteria.setPerPage(5).     final List<Page> posts = servicePages.list(criteria).     assertThat(posts, is(not(emptyCollectionOf(Page.class)))).     assertThat(posts.size(), is(5)). }

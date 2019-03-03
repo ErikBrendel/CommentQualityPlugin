@@ -1,0 +1,29 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public SSLContextParameters getConfig() {     return config. }
+false;public;1;3;;public void setConfig(SSLContextParameters config) {     this.config = config. }
+false;public;0;3;;public KeyManagersParameters getKeyManagers() {     return config.getKeyManagers(). }
+false;public;1;3;;public void setKeyManagers(KeyManagersParameters keyManagers) {     config.setKeyManagers(keyManagers). }
+false;public;0;3;;public TrustManagersParameters getTrustManagers() {     return config.getTrustManagers(). }
+false;public;1;3;;public void setTrustManagers(TrustManagersParameters trustManagers) {     config.setTrustManagers(trustManagers). }
+false;public;0;3;;public SecureRandomParameters getSecureRandom() {     return config.getSecureRandom(). }
+false;public;1;3;;public void setSecureRandom(SecureRandomParameters secureRandom) {     config.setSecureRandom(secureRandom). }
+false;public;0;3;;public SSLContextClientParameters getClientParameters() {     return config.getClientParameters(). }
+false;public;1;3;;public void setClientParameters(SSLContextClientParameters clientParameters) {     config.setClientParameters(clientParameters). }
+false;public;0;3;;public SSLContextServerParameters getServerParameters() {     return config.getServerParameters(). }
+false;public;1;3;;public void setServerParameters(SSLContextServerParameters serverParameters) {     config.setServerParameters(serverParameters). }
+false;public;0;3;;public String getProvider() {     return config.getProvider(). }
+false;public;1;3;;public void setProvider(String provider) {     config.setProvider(provider). }
+false;public;0;3;;public String getSecureSocketProtocol() {     return config.getSecureSocketProtocol(). }
+false;public;1;3;;public void setSecureSocketProtocol(String secureSocketProtocol) {     config.setSecureSocketProtocol(secureSocketProtocol). }
+false;public;0;3;;public String getCertAlias() {     return config.getCertAlias(). }
+false;public;1;3;;public void setCertAlias(String certAlias) {     config.setCertAlias(certAlias). }
+false;public;0;3;;public CipherSuitesParameters getCipherSuites() {     return config.getCipherSuites(). }
+false;public;1;3;;public void setCipherSuites(CipherSuitesParameters cipherSuites) {     config.setCipherSuites(cipherSuites). }
+false;public;0;3;;public FilterParameters getCipherSuitesFilter() {     return config.getCipherSuitesFilter(). }
+false;public;1;3;;public void setCipherSuitesFilter(FilterParameters cipherSuitesFilter) {     config.setCipherSuitesFilter(cipherSuitesFilter). }
+false;public;0;3;;public SecureSocketProtocolsParameters getSecureSocketProtocols() {     return config.getSecureSocketProtocols(). }
+false;public;1;3;;public void setSecureSocketProtocols(SecureSocketProtocolsParameters secureSocketProtocols) {     config.setSecureSocketProtocols(secureSocketProtocols). }
+false;public;0;3;;public FilterParameters getSecureSocketProtocolsFilter() {     return config.getSecureSocketProtocolsFilter(). }
+false;public;1;3;;public void setSecureSocketProtocolsFilter(FilterParameters secureSocketProtocolsFilter) {     config.setSecureSocketProtocolsFilter(secureSocketProtocolsFilter). }
+false;public;0;3;;public String getSessionTimeout() {     return config.getSessionTimeout(). }
+false;public;1;3;;public void setSessionTimeout(String sessionTimeout) {     config.setSessionTimeout(sessionTimeout). }

@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Override public String getValueAsString() {     if (valueAsString != null) {         return valueAsString.     } else {         return Double.toString(value).     } }
+false;public;0;4;;@Override public double value() {     return value. }
+false;protected;1;3;;protected void setValue(double value) {     this.value = value. }
+false;protected;1;3;;protected void setValueAsString(String valueAsString) {     this.valueAsString = valueAsString. }
+false;protected,static;2;7;;protected static void declareSingleValueFields(ObjectParser<? extends ParsedSingleValueNumericMetricsAggregation, Void> objectParser, double defaultNullValue) {     declareAggregationFields(objectParser).     objectParser.declareField(ParsedSingleValueNumericMetricsAggregation::setValue, (parser, context) -> parseDouble(parser, defaultNullValue), CommonFields.VALUE, ValueType.DOUBLE_OR_NULL).     objectParser.declareString(ParsedSingleValueNumericMetricsAggregation::setValueAsString, CommonFields.VALUE_AS_STRING). }

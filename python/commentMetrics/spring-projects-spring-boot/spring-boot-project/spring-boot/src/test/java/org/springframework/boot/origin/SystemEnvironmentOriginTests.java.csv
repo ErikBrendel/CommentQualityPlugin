@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void createWhenPropertyIsNullShouldThrowException() {     assertThatIllegalArgumentException().isThrownBy(() -> new SystemEnvironmentOrigin(null)). }
+false;public;0;5;;@Test public void createWhenPropertyNameIsEmptyShouldThrowException() {     assertThatIllegalArgumentException().isThrownBy(() -> new SystemEnvironmentOrigin("")). }
+false;public;0;5;;@Test public void getPropertyShouldReturnProperty() {     SystemEnvironmentOrigin origin = new SystemEnvironmentOrigin("FOO_BAR").     assertThat(origin.getProperty()).isEqualTo("FOO_BAR"). }
+false;public;0;6;;@Test public void toStringShouldReturnStringWithDetails() {     SystemEnvironmentOrigin origin = new SystemEnvironmentOrigin("FOO_BAR").     assertThat(origin.toString()).isEqualTo("System Environment Property \"FOO_BAR\""). }

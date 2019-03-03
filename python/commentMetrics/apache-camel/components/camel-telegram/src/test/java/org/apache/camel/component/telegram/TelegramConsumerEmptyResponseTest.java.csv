@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Before public void mockAPIs() {     TelegramService api = mockTelegramService().     UpdateResult defaultRes = getJSONResource("messages/updates-empty.json", UpdateResult.class).     when(api.getUpdates(any(), any(), any(), any())).thenAnswer((i) -> defaultRes). }
+false;public;0;7;;@Test(expected = AssertionError.class) public void testBehaviourWithEmptyUpdates() throws Exception {     endpoint.setResultWaitTime(500L).     endpoint.expectedMinimumMessageCount(1).     endpoint.assertIsSatisfied(). }
+false;public;0;4;;@Override public void configure() throws Exception {     from("telegram:bots/mock-token").to("mock:telegram"). }
+false;protected;0;9;;@Override protected RoutesBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("telegram:bots/mock-token").to("mock:telegram").         }     }. }

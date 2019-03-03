@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;public SamlPrepareAuthenticationRequestBuilder realmName(String name) {     request.setRealmName(name).     return this. }
+false;public;1;4;;public SamlPrepareAuthenticationRequestBuilder assertionConsumerService(String url) {     request.setAssertionConsumerServiceURL(url).     return this. }

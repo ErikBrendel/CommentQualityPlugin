@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;14;;@Override public OperationResult get() throws InterruptedException, ExecutionException {     for (ZooKeeperOperation op : keeperOperations) {         try {             OperationResult result = op.get().             if (result.isOk()) {                 operationProvidingResult = op.                 return result.             }         } catch (Exception e) {         }     }     throw new ExecutionException("All operations exhausted without one result", null). }
+false;public;2;4;;@Override public OperationResult get(long timeout, TimeUnit unit) throws InterruptedException, ExecutionException, TimeoutException {     return get(). }
+false;public;0;4;;@Override public OperationResult getResult() {     return null. }
+false;public;0;8;;@Override public ZooKeeperOperation createCopy() throws Exception {     ZooKeeperOperation[] copy = new ZooKeeperOperation[keeperOperations.length].     for (int x = 0. x < keeperOperations.length. x++) {         copy[x] = keeperOperations[x].createCopy().     }     return new AnyOfOperations(node, copy). }
+false;public;0;4;;@Override public WatchedEvent getWatchedEvent() {     return ZooKeeperUtils.getWatchedEvent(operationProvidingResult). }

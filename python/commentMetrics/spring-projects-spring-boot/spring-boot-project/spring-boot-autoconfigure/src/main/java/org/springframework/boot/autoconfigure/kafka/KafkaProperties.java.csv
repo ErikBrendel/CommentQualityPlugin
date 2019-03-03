@@ -1,0 +1,145 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public List<String> getBootstrapServers() {     return this.bootstrapServers. }
+false;public;1;3;;public void setBootstrapServers(List<String> bootstrapServers) {     this.bootstrapServers = bootstrapServers. }
+false;public;0;3;;public String getClientId() {     return this.clientId. }
+false;public;1;3;;public void setClientId(String clientId) {     this.clientId = clientId. }
+false;public;0;3;;public Map<String, String> getProperties() {     return this.properties. }
+false;public;0;3;;public Consumer getConsumer() {     return this.consumer. }
+false;public;0;3;;public Producer getProducer() {     return this.producer. }
+false;public;0;3;;public Listener getListener() {     return this.listener. }
+false;public;0;3;;public Admin getAdmin() {     return this.admin. }
+false;public;0;3;;public Streams getStreams() {     return this.streams. }
+false;public;0;3;;public Ssl getSsl() {     return this.ssl. }
+false;public;0;3;;public Jaas getJaas() {     return this.jaas. }
+false;public;0;3;;public Template getTemplate() {     return this.template. }
+false;private;0;15;;private Map<String, Object> buildCommonProperties() {     Map<String, Object> properties = new HashMap<>().     if (this.bootstrapServers != null) {         properties.put(CommonClientConfigs.BOOTSTRAP_SERVERS_CONFIG, this.bootstrapServers).     }     if (this.clientId != null) {         properties.put(CommonClientConfigs.CLIENT_ID_CONFIG, this.clientId).     }     properties.putAll(this.ssl.buildProperties()).     if (!CollectionUtils.isEmpty(this.properties)) {         properties.putAll(this.properties).     }     return properties. }
+true;public;0;5;/**  * Create an initial map of consumer properties from the state of this instance.  * <p>  * This allows you to add additional properties, if necessary, and override the  * default kafkaConsumerFactory bean.  * @return the consumer properties initialized with the customizations defined on this  * instance  */ ;/**  * Create an initial map of consumer properties from the state of this instance.  * <p>  * This allows you to add additional properties, if necessary, and override the  * default kafkaConsumerFactory bean.  * @return the consumer properties initialized with the customizations defined on this  * instance  */ public Map<String, Object> buildConsumerProperties() {     Map<String, Object> properties = buildCommonProperties().     properties.putAll(this.consumer.buildProperties()).     return properties. }
+true;public;0;5;/**  * Create an initial map of producer properties from the state of this instance.  * <p>  * This allows you to add additional properties, if necessary, and override the  * default kafkaProducerFactory bean.  * @return the producer properties initialized with the customizations defined on this  * instance  */ ;/**  * Create an initial map of producer properties from the state of this instance.  * <p>  * This allows you to add additional properties, if necessary, and override the  * default kafkaProducerFactory bean.  * @return the producer properties initialized with the customizations defined on this  * instance  */ public Map<String, Object> buildProducerProperties() {     Map<String, Object> properties = buildCommonProperties().     properties.putAll(this.producer.buildProperties()).     return properties. }
+true;public;0;5;/**  * Create an initial map of admin properties from the state of this instance.  * <p>  * This allows you to add additional properties, if necessary, and override the  * default kafkaAdmin bean.  * @return the admin properties initialized with the customizations defined on this  * instance  */ ;/**  * Create an initial map of admin properties from the state of this instance.  * <p>  * This allows you to add additional properties, if necessary, and override the  * default kafkaAdmin bean.  * @return the admin properties initialized with the customizations defined on this  * instance  */ public Map<String, Object> buildAdminProperties() {     Map<String, Object> properties = buildCommonProperties().     properties.putAll(this.admin.buildProperties()).     return properties. }
+true;public;0;5;/**  * Create an initial map of streams properties from the state of this instance.  * <p>  * This allows you to add additional properties, if necessary.  * @return the streams properties initialized with the customizations defined on this  * instance  */ ;/**  * Create an initial map of streams properties from the state of this instance.  * <p>  * This allows you to add additional properties, if necessary.  * @return the streams properties initialized with the customizations defined on this  * instance  */ public Map<String, Object> buildStreamsProperties() {     Map<String, Object> properties = buildCommonProperties().     properties.putAll(this.streams.buildProperties()).     return properties. }
+false;public;0;3;;public Ssl getSsl() {     return this.ssl. }
+false;public;0;3;;public Duration getAutoCommitInterval() {     return this.autoCommitInterval. }
+false;public;1;3;;public void setAutoCommitInterval(Duration autoCommitInterval) {     this.autoCommitInterval = autoCommitInterval. }
+false;public;0;3;;public String getAutoOffsetReset() {     return this.autoOffsetReset. }
+false;public;1;3;;public void setAutoOffsetReset(String autoOffsetReset) {     this.autoOffsetReset = autoOffsetReset. }
+false;public;0;3;;public List<String> getBootstrapServers() {     return this.bootstrapServers. }
+false;public;1;3;;public void setBootstrapServers(List<String> bootstrapServers) {     this.bootstrapServers = bootstrapServers. }
+false;public;0;3;;public String getClientId() {     return this.clientId. }
+false;public;1;3;;public void setClientId(String clientId) {     this.clientId = clientId. }
+false;public;0;3;;public Boolean getEnableAutoCommit() {     return this.enableAutoCommit. }
+false;public;1;3;;public void setEnableAutoCommit(Boolean enableAutoCommit) {     this.enableAutoCommit = enableAutoCommit. }
+false;public;0;3;;public Duration getFetchMaxWait() {     return this.fetchMaxWait. }
+false;public;1;3;;public void setFetchMaxWait(Duration fetchMaxWait) {     this.fetchMaxWait = fetchMaxWait. }
+false;public;0;3;;public DataSize getFetchMinSize() {     return this.fetchMinSize. }
+false;public;1;3;;public void setFetchMinSize(DataSize fetchMinSize) {     this.fetchMinSize = fetchMinSize. }
+false;public;0;3;;public String getGroupId() {     return this.groupId. }
+false;public;1;3;;public void setGroupId(String groupId) {     this.groupId = groupId. }
+false;public;0;3;;public Duration getHeartbeatInterval() {     return this.heartbeatInterval. }
+false;public;1;3;;public void setHeartbeatInterval(Duration heartbeatInterval) {     this.heartbeatInterval = heartbeatInterval. }
+false;public;0;3;;public Class<?> getKeyDeserializer() {     return this.keyDeserializer. }
+false;public;1;3;;public void setKeyDeserializer(Class<?> keyDeserializer) {     this.keyDeserializer = keyDeserializer. }
+false;public;0;3;;public Class<?> getValueDeserializer() {     return this.valueDeserializer. }
+false;public;1;3;;public void setValueDeserializer(Class<?> valueDeserializer) {     this.valueDeserializer = valueDeserializer. }
+false;public;0;3;;public Integer getMaxPollRecords() {     return this.maxPollRecords. }
+false;public;1;3;;public void setMaxPollRecords(Integer maxPollRecords) {     this.maxPollRecords = maxPollRecords. }
+false;public;0;3;;public Map<String, String> getProperties() {     return this.properties. }
+false;public;0;28;;public Map<String, Object> buildProperties() {     Properties properties = new Properties().     PropertyMapper map = PropertyMapper.get().alwaysApplyingWhenNonNull().     map.from(this::getAutoCommitInterval).asInt(Duration::toMillis).to(properties.in(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG)).     map.from(this::getAutoOffsetReset).to(properties.in(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG)).     map.from(this::getBootstrapServers).to(properties.in(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG)).     map.from(this::getClientId).to(properties.in(ConsumerConfig.CLIENT_ID_CONFIG)).     map.from(this::getEnableAutoCommit).to(properties.in(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG)).     map.from(this::getFetchMaxWait).asInt(Duration::toMillis).to(properties.in(ConsumerConfig.FETCH_MAX_WAIT_MS_CONFIG)).     map.from(this::getFetchMinSize).asInt(DataSize::toBytes).to(properties.in(ConsumerConfig.FETCH_MIN_BYTES_CONFIG)).     map.from(this::getGroupId).to(properties.in(ConsumerConfig.GROUP_ID_CONFIG)).     map.from(this::getHeartbeatInterval).asInt(Duration::toMillis).to(properties.in(ConsumerConfig.HEARTBEAT_INTERVAL_MS_CONFIG)).     map.from(this::getKeyDeserializer).to(properties.in(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG)).     map.from(this::getValueDeserializer).to(properties.in(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG)).     map.from(this::getMaxPollRecords).to(properties.in(ConsumerConfig.MAX_POLL_RECORDS_CONFIG)).     return properties.with(this.ssl, this.properties). }
+false;public;0;3;;public Ssl getSsl() {     return this.ssl. }
+false;public;0;3;;public String getAcks() {     return this.acks. }
+false;public;1;3;;public void setAcks(String acks) {     this.acks = acks. }
+false;public;0;3;;public DataSize getBatchSize() {     return this.batchSize. }
+false;public;1;3;;public void setBatchSize(DataSize batchSize) {     this.batchSize = batchSize. }
+false;public;0;3;;public List<String> getBootstrapServers() {     return this.bootstrapServers. }
+false;public;1;3;;public void setBootstrapServers(List<String> bootstrapServers) {     this.bootstrapServers = bootstrapServers. }
+false;public;0;3;;public DataSize getBufferMemory() {     return this.bufferMemory. }
+false;public;1;3;;public void setBufferMemory(DataSize bufferMemory) {     this.bufferMemory = bufferMemory. }
+false;public;0;3;;public String getClientId() {     return this.clientId. }
+false;public;1;3;;public void setClientId(String clientId) {     this.clientId = clientId. }
+false;public;0;3;;public String getCompressionType() {     return this.compressionType. }
+false;public;1;3;;public void setCompressionType(String compressionType) {     this.compressionType = compressionType. }
+false;public;0;3;;public Class<?> getKeySerializer() {     return this.keySerializer. }
+false;public;1;3;;public void setKeySerializer(Class<?> keySerializer) {     this.keySerializer = keySerializer. }
+false;public;0;3;;public Class<?> getValueSerializer() {     return this.valueSerializer. }
+false;public;1;3;;public void setValueSerializer(Class<?> valueSerializer) {     this.valueSerializer = valueSerializer. }
+false;public;0;3;;public Integer getRetries() {     return this.retries. }
+false;public;1;3;;public void setRetries(Integer retries) {     this.retries = retries. }
+false;public;0;3;;public String getTransactionIdPrefix() {     return this.transactionIdPrefix. }
+false;public;1;3;;public void setTransactionIdPrefix(String transactionIdPrefix) {     this.transactionIdPrefix = transactionIdPrefix. }
+false;public;0;3;;public Map<String, String> getProperties() {     return this.properties. }
+false;public;0;21;;public Map<String, Object> buildProperties() {     Properties properties = new Properties().     PropertyMapper map = PropertyMapper.get().alwaysApplyingWhenNonNull().     map.from(this::getAcks).to(properties.in(ProducerConfig.ACKS_CONFIG)).     map.from(this::getBatchSize).asInt(DataSize::toBytes).to(properties.in(ProducerConfig.BATCH_SIZE_CONFIG)).     map.from(this::getBootstrapServers).to(properties.in(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG)).     map.from(this::getBufferMemory).as(DataSize::toBytes).to(properties.in(ProducerConfig.BUFFER_MEMORY_CONFIG)).     map.from(this::getClientId).to(properties.in(ProducerConfig.CLIENT_ID_CONFIG)).     map.from(this::getCompressionType).to(properties.in(ProducerConfig.COMPRESSION_TYPE_CONFIG)).     map.from(this::getKeySerializer).to(properties.in(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG)).     map.from(this::getRetries).to(properties.in(ProducerConfig.RETRIES_CONFIG)).     map.from(this::getValueSerializer).to(properties.in(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG)).     return properties.with(this.ssl, this.properties). }
+false;public;0;3;;public Ssl getSsl() {     return this.ssl. }
+false;public;0;3;;public String getClientId() {     return this.clientId. }
+false;public;1;3;;public void setClientId(String clientId) {     this.clientId = clientId. }
+false;public;0;3;;public boolean isFailFast() {     return this.failFast. }
+false;public;1;3;;public void setFailFast(boolean failFast) {     this.failFast = failFast. }
+false;public;0;3;;public Map<String, String> getProperties() {     return this.properties. }
+false;public;0;7;;public Map<String, Object> buildProperties() {     Properties properties = new Properties().     PropertyMapper map = PropertyMapper.get().alwaysApplyingWhenNonNull().     map.from(this::getClientId).to(properties.in(ProducerConfig.CLIENT_ID_CONFIG)).     return properties.with(this.ssl, this.properties). }
+false;public;0;3;;public Ssl getSsl() {     return this.ssl. }
+false;public;0;3;;public String getApplicationId() {     return this.applicationId. }
+false;public;1;3;;public void setApplicationId(String applicationId) {     this.applicationId = applicationId. }
+false;public;0;3;;public boolean isAutoStartup() {     return this.autoStartup. }
+false;public;1;3;;public void setAutoStartup(boolean autoStartup) {     this.autoStartup = autoStartup. }
+false;public;0;3;;public List<String> getBootstrapServers() {     return this.bootstrapServers. }
+false;public;1;3;;public void setBootstrapServers(List<String> bootstrapServers) {     this.bootstrapServers = bootstrapServers. }
+false;public;0;3;;public DataSize getCacheMaxSizeBuffering() {     return this.cacheMaxSizeBuffering. }
+false;public;1;3;;public void setCacheMaxSizeBuffering(DataSize cacheMaxSizeBuffering) {     this.cacheMaxSizeBuffering = cacheMaxSizeBuffering. }
+false;public;0;3;;public String getClientId() {     return this.clientId. }
+false;public;1;3;;public void setClientId(String clientId) {     this.clientId = clientId. }
+false;public;0;3;;public Integer getReplicationFactor() {     return this.replicationFactor. }
+false;public;1;3;;public void setReplicationFactor(Integer replicationFactor) {     this.replicationFactor = replicationFactor. }
+false;public;0;3;;public String getStateDir() {     return this.stateDir. }
+false;public;1;3;;public void setStateDir(String stateDir) {     this.stateDir = stateDir. }
+false;public;0;3;;public Map<String, String> getProperties() {     return this.properties. }
+false;public;0;14;;public Map<String, Object> buildProperties() {     Properties properties = new Properties().     PropertyMapper map = PropertyMapper.get().alwaysApplyingWhenNonNull().     map.from(this::getApplicationId).to(properties.in("application.id")).     map.from(this::getBootstrapServers).to(properties.in(CommonClientConfigs.BOOTSTRAP_SERVERS_CONFIG)).     map.from(this::getCacheMaxSizeBuffering).asInt(DataSize::toBytes).to(properties.in("cache.max.bytes.buffering")).     map.from(this::getClientId).to(properties.in(CommonClientConfigs.CLIENT_ID_CONFIG)).     map.from(this::getReplicationFactor).to(properties.in("replication.factor")).     map.from(this::getStateDir).to(properties.in("state.dir")).     return properties.with(this.ssl, this.properties). }
+false;public;0;3;;public String getDefaultTopic() {     return this.defaultTopic. }
+false;public;1;3;;public void setDefaultTopic(String defaultTopic) {     this.defaultTopic = defaultTopic. }
+false;public;0;3;;public Type getType() {     return this.type. }
+false;public;1;3;;public void setType(Type type) {     this.type = type. }
+false;public;0;3;;public AckMode getAckMode() {     return this.ackMode. }
+false;public;1;3;;public void setAckMode(AckMode ackMode) {     this.ackMode = ackMode. }
+false;public;0;3;;public String getClientId() {     return this.clientId. }
+false;public;1;3;;public void setClientId(String clientId) {     this.clientId = clientId. }
+false;public;0;3;;public Integer getConcurrency() {     return this.concurrency. }
+false;public;1;3;;public void setConcurrency(Integer concurrency) {     this.concurrency = concurrency. }
+false;public;0;3;;public Duration getPollTimeout() {     return this.pollTimeout. }
+false;public;1;3;;public void setPollTimeout(Duration pollTimeout) {     this.pollTimeout = pollTimeout. }
+false;public;0;3;;public Float getNoPollThreshold() {     return this.noPollThreshold. }
+false;public;1;3;;public void setNoPollThreshold(Float noPollThreshold) {     this.noPollThreshold = noPollThreshold. }
+false;public;0;3;;public Integer getAckCount() {     return this.ackCount. }
+false;public;1;3;;public void setAckCount(Integer ackCount) {     this.ackCount = ackCount. }
+false;public;0;3;;public Duration getAckTime() {     return this.ackTime. }
+false;public;1;3;;public void setAckTime(Duration ackTime) {     this.ackTime = ackTime. }
+false;public;0;3;;public Duration getIdleEventInterval() {     return this.idleEventInterval. }
+false;public;1;3;;public void setIdleEventInterval(Duration idleEventInterval) {     this.idleEventInterval = idleEventInterval. }
+false;public;0;3;;public Duration getMonitorInterval() {     return this.monitorInterval. }
+false;public;1;3;;public void setMonitorInterval(Duration monitorInterval) {     this.monitorInterval = monitorInterval. }
+false;public;0;3;;public Boolean getLogContainerConfig() {     return this.logContainerConfig. }
+false;public;1;3;;public void setLogContainerConfig(Boolean logContainerConfig) {     this.logContainerConfig = logContainerConfig. }
+false;public;0;3;;public String getKeyPassword() {     return this.keyPassword. }
+false;public;1;3;;public void setKeyPassword(String keyPassword) {     this.keyPassword = keyPassword. }
+false;public;0;3;;public Resource getKeyStoreLocation() {     return this.keyStoreLocation. }
+false;public;1;3;;public void setKeyStoreLocation(Resource keyStoreLocation) {     this.keyStoreLocation = keyStoreLocation. }
+false;public;0;3;;public String getKeyStorePassword() {     return this.keyStorePassword. }
+false;public;1;3;;public void setKeyStorePassword(String keyStorePassword) {     this.keyStorePassword = keyStorePassword. }
+false;public;0;3;;public String getKeyStoreType() {     return this.keyStoreType. }
+false;public;1;3;;public void setKeyStoreType(String keyStoreType) {     this.keyStoreType = keyStoreType. }
+false;public;0;3;;public Resource getTrustStoreLocation() {     return this.trustStoreLocation. }
+false;public;1;3;;public void setTrustStoreLocation(Resource trustStoreLocation) {     this.trustStoreLocation = trustStoreLocation. }
+false;public;0;3;;public String getTrustStorePassword() {     return this.trustStorePassword. }
+false;public;1;3;;public void setTrustStorePassword(String trustStorePassword) {     this.trustStorePassword = trustStorePassword. }
+false;public;0;3;;public String getTrustStoreType() {     return this.trustStoreType. }
+false;public;1;3;;public void setTrustStoreType(String trustStoreType) {     this.trustStoreType = trustStoreType. }
+false;public;0;3;;public String getProtocol() {     return this.protocol. }
+false;public;1;3;;public void setProtocol(String protocol) {     this.protocol = protocol. }
+false;public;0;20;;public Map<String, Object> buildProperties() {     Properties properties = new Properties().     PropertyMapper map = PropertyMapper.get().alwaysApplyingWhenNonNull().     map.from(this::getKeyPassword).to(properties.in(SslConfigs.SSL_KEY_PASSWORD_CONFIG)).     map.from(this::getKeyStoreLocation).as(this::resourceToPath).to(properties.in(SslConfigs.SSL_KEYSTORE_LOCATION_CONFIG)).     map.from(this::getKeyStorePassword).to(properties.in(SslConfigs.SSL_KEYSTORE_PASSWORD_CONFIG)).     map.from(this::getKeyStoreType).to(properties.in(SslConfigs.SSL_KEYSTORE_TYPE_CONFIG)).     map.from(this::getTrustStoreLocation).as(this::resourceToPath).to(properties.in(SslConfigs.SSL_TRUSTSTORE_LOCATION_CONFIG)).     map.from(this::getTrustStorePassword).to(properties.in(SslConfigs.SSL_TRUSTSTORE_PASSWORD_CONFIG)).     map.from(this::getTrustStoreType).to(properties.in(SslConfigs.SSL_TRUSTSTORE_TYPE_CONFIG)).     map.from(this::getProtocol).to(properties.in(SslConfigs.SSL_PROTOCOL_CONFIG)).     return properties. }
+false;private;1;9;;private String resourceToPath(Resource resource) {     try {         return resource.getFile().getAbsolutePath().     } catch (IOException ex) {         throw new IllegalStateException("Resource '" + resource + "' must be on a file system", ex).     } }
+false;public;0;3;;public boolean isEnabled() {     return this.enabled. }
+false;public;1;3;;public void setEnabled(boolean enabled) {     this.enabled = enabled. }
+false;public;0;3;;public String getLoginModule() {     return this.loginModule. }
+false;public;1;3;;public void setLoginModule(String loginModule) {     this.loginModule = loginModule. }
+false;public;0;3;;public KafkaJaasLoginModuleInitializer.ControlFlag getControlFlag() {     return this.controlFlag. }
+false;public;1;4;;public void setControlFlag(KafkaJaasLoginModuleInitializer.ControlFlag controlFlag) {     this.controlFlag = controlFlag. }
+false;public;0;3;;public Map<String, String> getOptions() {     return this.options. }
+false;public;1;5;;public void setOptions(Map<String, String> options) {     if (options != null) {         this.options.putAll(options).     } }
+false;public;1;3;;public <V> java.util.function.Consumer<V> in(String key) {     return (value) -> put(key, value). }
+false;public;2;5;;public Properties with(Ssl ssl, Map<String, String> properties) {     putAll(ssl.buildProperties()).     putAll(properties).     return this. }

@@ -1,0 +1,16 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Response newResponse() {     throw new UnsupportedOperationException("usage of Streamable is to be replaced by Writeable"). }
+false;public;0;4;;@Override public Writeable.Reader<Response> getResponseReader() {     return Response::new. }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeBoolean(isUpdated). }
+false;public;0;3;;public boolean isUpdated() {     return isUpdated. }
+false;public;0;4;;@Override public RestStatus status() {     return RestStatus.ACCEPTED. }
+false;public;2;7;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field("updated", isUpdated).     builder.endObject().     return builder. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hashCode(isUpdated). }
+false;public;1;12;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     Response other = (Response) obj.     return this.isUpdated == other.isUpdated. }
+false;public;1;14;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeOptionalWriteable(modelPlotConfig).     boolean hasDetectorUpdates = detectorUpdates != null.     out.writeBoolean(hasDetectorUpdates).     if (hasDetectorUpdates) {         out.writeList(detectorUpdates).     }     if (out.getVersion().onOrAfter(Version.V_6_2_0)) {         out.writeOptionalWriteable(filter).         out.writeBoolean(updateScheduledEvents).     } }
+false;public;0;3;;public ModelPlotConfig getModelPlotConfig() {     return modelPlotConfig. }
+false;public;0;3;;public List<JobUpdate.DetectorUpdate> getDetectorUpdates() {     return detectorUpdates. }
+false;public;0;3;;public MlFilter getFilter() {     return filter. }
+false;public;0;3;;public boolean isUpdateScheduledEvents() {     return updateScheduledEvents. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(getJobId(), modelPlotConfig, detectorUpdates, filter, updateScheduledEvents). }
+false;public;1;16;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     Request other = (Request) obj.     return Objects.equals(getJobId(), other.getJobId()) && Objects.equals(modelPlotConfig, other.modelPlotConfig) && Objects.equals(detectorUpdates, other.detectorUpdates) && Objects.equals(filter, other.filter) && Objects.equals(updateScheduledEvents, other.updateScheduledEvents). }

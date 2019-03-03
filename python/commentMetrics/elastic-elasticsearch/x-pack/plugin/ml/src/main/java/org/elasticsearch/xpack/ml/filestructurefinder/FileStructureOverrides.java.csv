@@ -1,0 +1,25 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;3;;public static Builder builder() {     return new Builder(). }
+false;public;0;3;;public String getCharset() {     return charset. }
+false;public;0;3;;public FileStructure.Format getFormat() {     return format. }
+false;public;0;3;;public List<String> getColumnNames() {     return columnNames. }
+false;public;0;3;;public Boolean getHasHeaderRow() {     return hasHeaderRow. }
+false;public;0;3;;public Character getDelimiter() {     return delimiter. }
+false;public;0;3;;public Character getQuote() {     return quote. }
+false;public;0;3;;public Boolean getShouldTrimFields() {     return shouldTrimFields. }
+false;public;0;3;;public String getGrokPattern() {     return grokPattern. }
+false;public;0;3;;public String getTimestampFormat() {     return timestampFormat. }
+false;public;0;3;;public String getTimestampField() {     return timestampField. }
+false;public;0;6;;@Override public int hashCode() {     return Objects.hash(charset, format, columnNames, hasHeaderRow, delimiter, quote, shouldTrimFields, grokPattern, timestampFormat, timestampField). }
+false;public;1;23;;@Override public boolean equals(Object other) {     if (this == other) {         return true.     }     if (other == null || getClass() != other.getClass()) {         return false.     }     FileStructureOverrides that = (FileStructureOverrides) other.     return Objects.equals(this.charset, that.charset) && Objects.equals(this.format, that.format) && Objects.equals(this.columnNames, that.columnNames) && Objects.equals(this.hasHeaderRow, that.hasHeaderRow) && Objects.equals(this.delimiter, that.delimiter) && Objects.equals(this.quote, that.quote) && Objects.equals(this.shouldTrimFields, that.shouldTrimFields) && Objects.equals(this.grokPattern, that.grokPattern) && Objects.equals(this.timestampFormat, that.timestampFormat) && Objects.equals(this.timestampField, that.timestampField). }
+false;public;1;4;;public Builder setCharset(String charset) {     this.charset = charset.     return this. }
+false;public;1;4;;public Builder setFormat(FileStructure.Format format) {     this.format = format.     return this. }
+false;public;1;4;;public Builder setColumnNames(List<String> columnNames) {     this.columnNames = columnNames.     return this. }
+false;public;1;4;;public Builder setHasHeaderRow(Boolean hasHeaderRow) {     this.hasHeaderRow = hasHeaderRow.     return this. }
+false;public;1;4;;public Builder setDelimiter(Character delimiter) {     this.delimiter = delimiter.     return this. }
+false;public;1;4;;public Builder setQuote(Character quote) {     this.quote = quote.     return this. }
+false;public;1;4;;public Builder setShouldTrimFields(Boolean shouldTrimFields) {     this.shouldTrimFields = shouldTrimFields.     return this. }
+false;public;1;4;;public Builder setGrokPattern(String grokPattern) {     this.grokPattern = grokPattern.     return this. }
+false;public;1;4;;public Builder setTimestampFormat(String timestampFormat) {     this.timestampFormat = timestampFormat.     return this. }
+false;public;1;4;;public Builder setTimestampField(String timestampField) {     this.timestampField = timestampField.     return this. }
+false;public;0;5;;public FileStructureOverrides build() {     return new FileStructureOverrides(charset, format, columnNames, hasHeaderRow, delimiter, quote, shouldTrimFields, grokPattern, timestampFormat, timestampField). }

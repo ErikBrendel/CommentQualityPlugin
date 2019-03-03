@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void getShouldReturnProxy() {     AssertableReactiveWebApplicationContext context = AssertableReactiveWebApplicationContext.get(() -> mock(ConfigurableReactiveWebApplicationContext.class)).     assertThat(context).isInstanceOf(ConfigurableReactiveWebApplicationContext.class). }

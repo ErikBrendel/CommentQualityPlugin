@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;13;;@Test public void endpointPerConnection() throws Exception {     @SuppressWarnings("resource")     ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(Config.class).     ServerEndpointRegistration registration = new ServerEndpointRegistration("/path", EchoEndpoint.class).     registration.setBeanFactory(context.getBeanFactory()).     EchoEndpoint endpoint = registration.getConfigurator().getEndpointInstance(EchoEndpoint.class).     assertNotNull(endpoint). }
+false;public;0;10;;@Test public void endpointSingleton() throws Exception {     EchoEndpoint endpoint = new EchoEndpoint(new EchoService()).     ServerEndpointRegistration registration = new ServerEndpointRegistration("/path", endpoint).     EchoEndpoint actual = registration.getConfigurator().getEndpointInstance(EchoEndpoint.class).     assertSame(endpoint, actual). }
+false;public;0;4;;@Bean public EchoService echoService() {     return new EchoService(). }
+false;public;2;3;;@Override public void onOpen(Session session, EndpointConfig config) { }

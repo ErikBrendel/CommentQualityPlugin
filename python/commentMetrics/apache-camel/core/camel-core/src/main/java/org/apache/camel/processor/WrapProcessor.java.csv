@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String toString() {     return "Wrap[" + wrapped + "] -> " + processor. }
+false;public;0;7;;@Override public List<Processor> next() {     // must include wrapped in navigate     List<Processor> list = super.next().     list.add(wrapped).     return list. }
+false;protected;0;5;;@Override protected void doStart() throws Exception {     ServiceHelper.startService(wrapped).     super.doStart(). }
+false;protected;0;5;;@Override protected void doStop() throws Exception {     super.doStop().     ServiceHelper.stopService(wrapped). }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;4;11;;@Override protected Object performContextCommand(CamelController camelController, String contextName, PrintStream out, PrintStream err) throws Exception {     String json = camelController.getRestApiDocAsJson(contextName).     if (json != null) {         out.print(json).     } else {         out.print("There are no REST services").     }     return null. }

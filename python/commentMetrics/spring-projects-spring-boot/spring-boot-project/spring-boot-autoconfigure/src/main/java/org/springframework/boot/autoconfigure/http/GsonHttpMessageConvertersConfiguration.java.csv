@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;7;;@Bean @ConditionalOnMissingBean public GsonHttpMessageConverter gsonHttpMessageConverter(Gson gson) {     GsonHttpMessageConverter converter = new GsonHttpMessageConverter().     converter.setGson(gson).     return converter. }

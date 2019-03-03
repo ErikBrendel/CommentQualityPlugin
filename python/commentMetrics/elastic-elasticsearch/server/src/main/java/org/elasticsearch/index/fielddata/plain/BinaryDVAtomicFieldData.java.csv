@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Override public SortedBinaryDocValues getBytesValues() {     try {         final BinaryDocValues values = DocValues.getBinary(reader, field).         return FieldData.singleton(values).     } catch (IOException e) {         throw new IllegalStateException("Cannot load doc values", e).     } }
+false;public;0;4;;@Override public Strings getScriptValues() {     return new ScriptDocValues.Strings(getBytesValues()). }
+false;public;0;4;;@Override public void close() { // no-op }
+false;public;0;4;;@Override public long ramBytesUsed() {     // unknown     return 0. }
+false;public;0;4;;@Override public Collection<Accountable> getChildResources() {     return Collections.emptyList(). }

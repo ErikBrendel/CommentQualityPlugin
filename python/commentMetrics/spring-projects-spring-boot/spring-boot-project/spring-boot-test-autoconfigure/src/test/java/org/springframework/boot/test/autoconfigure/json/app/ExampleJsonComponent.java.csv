@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;3;5;;@Override protected void serializeObject(ExampleCustomObject value, JsonGenerator jgen, SerializerProvider provider) throws IOException {     jgen.writeStringField("value", value.toString()). }
+false;protected;4;7;;@Override protected ExampleCustomObject deserializeObject(JsonParser jsonParser, DeserializationContext context, ObjectCodec codec, JsonNode tree) throws IOException {     return new ExampleCustomObject(nullSafeValue(tree.get("value"), String.class)). }

@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Before public void setUp() {     endpoint = new MicrometerEndpoint(null, null, registry, Meter.Type.DISTRIBUTION_SUMMARY, METRICS_NAME, Tags.empty()).     inOrder = Mockito.inOrder(registry). }
+false;public;0;4;;@After public void tearDown() {     inOrder.verifyNoMoreInteractions(). }
+false;public;0;6;;@Test public void testHistogramEndpoint() {     assertThat(endpoint, is(notNullValue())).     assertThat(endpoint.getRegistry(), is(registry)).     assertThat(endpoint.getMetricsName(), is(METRICS_NAME)). }
+false;public;0;6;;@Test public void testCreateProducer() {     Producer producer = endpoint.createProducer().     assertThat(producer, is(notNullValue())).     assertThat(producer, is(instanceOf(DistributionSummaryProducer.class))). }
+false;public;0;4;;@Test public void testGetValue() {     assertThat(endpoint.getValue(), is(nullValue())). }
+false;public;0;6;;@Test public void testSetValue() {     assertThat(endpoint.getValue(), is(nullValue())).     endpoint.setValue(VALUE.toString()).     assertThat(Double.valueOf(endpoint.getValue()), is(VALUE)). }

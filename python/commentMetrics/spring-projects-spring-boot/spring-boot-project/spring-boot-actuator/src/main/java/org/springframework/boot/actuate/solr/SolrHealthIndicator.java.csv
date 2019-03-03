@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;9;;@Override protected void doHealthCheck(Health.Builder builder) throws Exception {     CoreAdminRequest request = new CoreAdminRequest().     request.setAction(CoreAdminParams.CoreAdminAction.STATUS).     CoreAdminResponse response = request.process(this.solrClient).     int statusCode = response.getStatus().     Status status = (statusCode != 0) ? Status.DOWN : Status.UP.     builder.status(status).withDetail("status", statusCode). }

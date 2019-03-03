@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;2;3;;public static LifecyclePolicyMetadata parse(XContentParser parser, String name) {     return PARSER.apply(parser, name). }
+false;public;0;3;;public LifecyclePolicy getPolicy() {     return policy. }
+false;public;0;3;;public String getName() {     return policy.getName(). }
+false;public;0;3;;public long getVersion() {     return version. }
+false;public;0;3;;public long getModifiedDate() {     return modifiedDate. }
+false;public;0;4;;public String getModifiedDateString() {     ZonedDateTime modifiedDateTime = ZonedDateTime.ofInstant(Instant.ofEpochMilli(modifiedDate), ZoneOffset.UTC).     return modifiedDateTime.toString(). }
+false;public;2;10;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(POLICY.getPreferredName(), policy).     builder.field(VERSION.getPreferredName(), version).     builder.field(MODIFIED_DATE.getPreferredName(), ZonedDateTime.ofInstant(Instant.ofEpochMilli(modifiedDate), ZoneOffset.UTC).toString()).     builder.endObject().     return builder. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(policy, version, modifiedDate). }
+false;public;1;13;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     LifecyclePolicyMetadata other = (LifecyclePolicyMetadata) obj.     return Objects.equals(policy, other.policy) && Objects.equals(version, other.version) && Objects.equals(modifiedDate, other.modifiedDate). }

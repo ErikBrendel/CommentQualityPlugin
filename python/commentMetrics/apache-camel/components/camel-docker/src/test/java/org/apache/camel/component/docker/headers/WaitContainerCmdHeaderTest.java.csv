@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;14;;@Test public void waitContainerHeaderTest() {     String containerId = "9c09acd48a25".     Map<String, Object> headers = getDefaultParameters().     headers.put(DockerConstants.DOCKER_CONTAINER_ID, containerId).     template.sendBodyAndHeaders("direct:in", "", headers).     Mockito.verify(dockerClient, Mockito.times(1)).waitContainerCmd(containerId). }
+false;protected;0;6;;@Override protected void setupMocks() {     Mockito.when(dockerClient.waitContainerCmd(anyString())).thenReturn(mockObject).     Mockito.when(mockObject.exec(any())).thenReturn(callback).     Mockito.when(callback.awaitStatusCode()).thenReturn(anyInt()). }
+false;protected;0;4;;@Override protected DockerOperation getOperation() {     return DockerOperation.WAIT_CONTAINER. }

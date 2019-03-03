@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public Expression replaceChildren(List<Expression> newChildren) {     throw new UnsupportedOperationException("this node doesn't have any children"). }
+false;public;0;3;;public Configuration configuration() {     return configuration. }
+false;public;0;4;;@Override public DataType dataType() {     return dataType. }
+false;public;0;4;;@Override public Nullability nullable() {     return Nullability.FALSE. }
+false;public;0;4;;@Override public boolean foldable() {     return true. }
+false;public,abstract;0;2;;@Override public abstract Object fold().
+false;public;0;4;;@Override public ScriptTemplate asScript() {     return asScript(this). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(super.hashCode(), fold()). }
+false;public;1;4;;@Override public boolean equals(Object obj) {     return super.equals(obj) && Objects.equals(fold(), ((ConfigurationFunction) obj).fold()). }

@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;15;;@Test public void testPositive() throws Exception {     assertEquals(ServiceStatus.Started, camelContext.getStatus()).     assertEquals(ServiceStatus.Started, camelContext2.getStatus()).     mockA.expectedBodiesReceived("David").     mockB.expectedBodiesReceived("Hello David").     mockC.expectedBodiesReceived("David").     start.sendBody("David").     start2.sendBody("David").     MockEndpoint.assertIsSatisfied(camelContext).     MockEndpoint.assertIsSatisfied(camelContext2). }
+false;public;0;4;;@Test public void testJmx() throws Exception {     assertEquals(DefaultManagementStrategy.class, camelContext.getManagementStrategy().getClass()). }
+false;public;0;5;;@Test public void testShutdownTimeout() throws Exception {     assertEquals(10, camelContext.getShutdownStrategy().getTimeout()).     assertEquals(TimeUnit.SECONDS, camelContext.getShutdownStrategy().getTimeUnit()). }
+false;public;0;7;;@Test public void testStopwatch() {     StopWatch stopWatch = StopWatchTestExecutionListener.getStopWatch().     assertNotNull(stopWatch).     assertTrue(stopWatch.taken() < 100). }
+false;public;0;4;;@Test public void testExcludedRoute() {     assertNotNull(camelContext.getRoute("excludedRoute")). }
+false;public;0;5;;@Test public void testProvidesBreakpoint() {     assertNull(camelContext.getDebugger()).     assertNull(camelContext2.getDebugger()). }
+false;public;0;4;;@Test public void testRouteCoverage() throws Exception { // noop }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void mavenUpload() throws IOException {     assertThat(this.gradleBuild.script("src/main/gradle/publishing/maven").build("deployerRepository").getOutput()).contains("https://repo.example.com"). }
+false;public;0;7;;@Test public void mavenPublish() throws IOException {     assertThat(this.gradleBuild.script("src/main/gradle/publishing/maven-publish").build("publishingConfiguration").getOutput()).contains("MavenPublication").contains("https://repo.example.com"). }

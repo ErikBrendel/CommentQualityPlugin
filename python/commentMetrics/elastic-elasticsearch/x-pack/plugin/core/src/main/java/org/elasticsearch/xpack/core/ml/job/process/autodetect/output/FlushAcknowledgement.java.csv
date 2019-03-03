@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeString(id).     out.writeVLong(lastFinalizedBucketEnd.getTime()). }
+false;public;0;3;;public String getId() {     return id. }
+false;public;0;3;;public Date getLastFinalizedBucketEnd() {     return lastFinalizedBucketEnd. }
+false;public;2;11;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(ID.getPreferredName(), id).     if (lastFinalizedBucketEnd != null) {         builder.timeField(LAST_FINALIZED_BUCKET_END.getPreferredName(), LAST_FINALIZED_BUCKET_END.getPreferredName() + "_string", lastFinalizedBucketEnd.getTime()).     }     builder.endObject().     return builder. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(id, lastFinalizedBucketEnd). }
+false;public;1;12;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     FlushAcknowledgement other = (FlushAcknowledgement) obj.     return Objects.equals(id, other.id) && Objects.equals(lastFinalizedBucketEnd, other.lastFinalizedBucketEnd). }

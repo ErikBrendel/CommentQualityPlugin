@@ -1,0 +1,21 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getId() {     return this.id. }
+false;public;0;6;;@Override @Nullable public URI getUri() {     checkNativeSessionInitialized().     return this.uri. }
+false;public;0;5;;@Override public HttpHeaders getHandshakeHeaders() {     Assert.state(this.headers != null, "WebSocket session is not yet initialized").     return this.headers. }
+false;public;0;5;;@Override public String getAcceptedProtocol() {     checkNativeSessionInitialized().     return this.acceptedProtocol. }
+false;public;0;5;;@Override public List<WebSocketExtension> getExtensions() {     Assert.state(this.extensions != null, "WebSocket session is not yet initialized").     return this.extensions. }
+false;public;0;4;;@Override public Principal getPrincipal() {     return this.user. }
+false;public;0;5;;@Override public InetSocketAddress getLocalAddress() {     checkNativeSessionInitialized().     return getNativeSession().getLocalAddress(). }
+false;public;0;5;;@Override public InetSocketAddress getRemoteAddress() {     checkNativeSessionInitialized().     return getNativeSession().getRemoteAddress(). }
+false;public;1;5;;@Override public void setTextMessageSizeLimit(int messageSizeLimit) {     checkNativeSessionInitialized().     getNativeSession().getPolicy().setMaxTextMessageSize(messageSizeLimit). }
+false;public;0;5;;@Override public int getTextMessageSizeLimit() {     checkNativeSessionInitialized().     return getNativeSession().getPolicy().getMaxTextMessageSize(). }
+false;public;1;5;;@Override public void setBinaryMessageSizeLimit(int messageSizeLimit) {     checkNativeSessionInitialized().     getNativeSession().getPolicy().setMaxBinaryMessageSize(messageSizeLimit). }
+false;public;0;5;;@Override public int getBinaryMessageSizeLimit() {     checkNativeSessionInitialized().     return getNativeSession().getPolicy().getMaxBinaryMessageSize(). }
+false;public;0;4;;@Override public boolean isOpen() {     return getNativeSession().isOpen(). }
+false;public;1;28;;@Override public void initializeNativeSession(Session session) {     super.initializeNativeSession(session).     this.uri = session.getUpgradeRequest().getRequestURI().     HttpHeaders headers = new HttpHeaders().     headers.putAll(session.getUpgradeRequest().getHeaders()).     this.headers = HttpHeaders.readOnlyHttpHeaders(headers).     this.acceptedProtocol = session.getUpgradeResponse().getAcceptedSubProtocol().     List<ExtensionConfig> jettyExtensions = session.getUpgradeResponse().getExtensions().     if (!CollectionUtils.isEmpty(jettyExtensions)) {         List<WebSocketExtension> extensions = new ArrayList<>(jettyExtensions.size()).         for (ExtensionConfig jettyExtension : jettyExtensions) {             extensions.add(new WebSocketExtension(jettyExtension.getName(), jettyExtension.getParameters())).         }         this.extensions = Collections.unmodifiableList(extensions).     } else {         this.extensions = Collections.emptyList().     }     if (this.user == null) {         this.user = session.getUpgradeRequest().getUserPrincipal().     } }
+false;protected;1;4;;@Override protected void sendTextMessage(TextMessage message) throws IOException {     getRemoteEndpoint().sendString(message.getPayload()). }
+false;protected;1;4;;@Override protected void sendBinaryMessage(BinaryMessage message) throws IOException {     getRemoteEndpoint().sendBytes(message.getPayload()). }
+false;protected;1;4;;@Override protected void sendPingMessage(PingMessage message) throws IOException {     getRemoteEndpoint().sendPing(message.getPayload()). }
+false;protected;1;4;;@Override protected void sendPongMessage(PongMessage message) throws IOException {     getRemoteEndpoint().sendPong(message.getPayload()). }
+false;private;0;8;;private RemoteEndpoint getRemoteEndpoint() throws IOException {     try {         return getNativeSession().getRemote().     } catch (WebSocketException ex) {         throw new IOException("Unable to obtain RemoteEndpoint in session " + getId(), ex).     } }
+false;protected;1;4;;@Override protected void closeInternal(CloseStatus status) throws IOException {     getNativeSession().close(status.getCode(), status.getReason()). }

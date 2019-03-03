@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;static;1;4;;static String getTransactionManagerName(Element element) {     return (element.hasAttribute(TRANSACTION_MANAGER_ATTRIBUTE) ? element.getAttribute(TRANSACTION_MANAGER_ATTRIBUTE) : DEFAULT_TRANSACTION_MANAGER_BEAN_NAME). }
+false;public;0;6;;@Override public void init() {     registerBeanDefinitionParser("advice", new TxAdviceBeanDefinitionParser()).     registerBeanDefinitionParser("annotation-driven", new AnnotationDrivenBeanDefinitionParser()).     registerBeanDefinitionParser("jta-transaction-manager", new JtaTransactionManagerBeanDefinitionParser()). }

@@ -1,0 +1,16 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;1;1;;Object getManagedObjectForCamelContext(CamelContext context).
+false;;1;1;;Object getManagedObjectForCamelHealth(CamelContext context).
+false;;3;1;;Object getManagedObjectForComponent(CamelContext context, Component component, String name).
+false;;2;1;;Object getManagedObjectForDataFormat(CamelContext context, DataFormat dataFormat).
+false;;2;1;;Object getManagedObjectForEndpoint(CamelContext context, Endpoint endpoint).
+false;;4;2;;Object getManagedObjectForErrorHandler(CamelContext context, RouteContext routeContext, Processor errorHandler, ErrorHandlerFactory errorHandlerBuilder).
+false;;1;1;;Object getManagedObjectForRouteController(CamelContext context).
+false;;2;1;;Object getManagedObjectForRoute(CamelContext context, Route route).
+false;;2;1;;Object getManagedObjectForConsumer(CamelContext context, Consumer consumer).
+false;;2;1;;Object getManagedObjectForProducer(CamelContext context, Producer producer).
+false;;4;2;;Object getManagedObjectForProcessor(CamelContext context, Processor processor, NamedNode definition, Route route).
+false;;2;1;;Object getManagedObjectForService(CamelContext context, Service service).
+false;;2;1;;Object getManagedObjectForClusterService(CamelContext context, CamelClusterService service).
+false;;6;2;;Object getManagedObjectForThreadPool(CamelContext context, ThreadPoolExecutor threadPool, String id, String sourceId, String routeId, String threadPoolProfileId).
+false;;2;1;;Object getManagedObjectForEventNotifier(CamelContext context, EventNotifier eventNotifier).

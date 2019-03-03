@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;public void setupCamel(@Observes CamelContextStartingEvent event) {     OpenTracingTracer ottracer = new OpenTracingTracer().     ottracer.init(event.getContext()). }

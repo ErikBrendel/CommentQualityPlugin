@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;8;;@Override public boolean matches(Method method, Class<?> targetClass) {     if (CacheManager.class.isAssignableFrom(targetClass)) {         return false.     }     CacheOperationSource cas = getCacheOperationSource().     return (cas != null && !CollectionUtils.isEmpty(cas.getCacheOperations(method, targetClass))). }
+false;public;1;11;;@Override public boolean equals(Object other) {     if (this == other) {         return true.     }     if (!(other instanceof CacheOperationSourcePointcut)) {         return false.     }     CacheOperationSourcePointcut otherPc = (CacheOperationSourcePointcut) other.     return ObjectUtils.nullSafeEquals(getCacheOperationSource(), otherPc.getCacheOperationSource()). }
+false;public;0;4;;@Override public int hashCode() {     return CacheOperationSourcePointcut.class.hashCode(). }
+false;public;0;4;;@Override public String toString() {     return getClass().getName() + ": " + getCacheOperationSource(). }
+true;protected,abstract;0;2;/**  * Obtain the underlying {@link CacheOperationSource} (may be {@code null}).  * To be implemented by subclasses.  */ ;/**  * Obtain the underlying {@link CacheOperationSource} (may be {@code null}).  * To be implemented by subclasses.  */ @Nullable protected abstract CacheOperationSource getCacheOperationSource().

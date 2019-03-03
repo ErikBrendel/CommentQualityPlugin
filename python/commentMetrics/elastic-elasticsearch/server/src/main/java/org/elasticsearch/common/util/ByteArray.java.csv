@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;1;1;/**  * Get an element given its index.  */ ;/**  * Get an element given its index.  */ byte get(long index).
+true;;2;1;/**  * Set a value at the given index and return the previous value.  */ ;/**  * Set a value at the given index and return the previous value.  */ byte set(long index, byte value).
+true;;3;1;/**  * Get a reference to a slice.  *  * @return <code>true</code> when a byte[] was materialized, <code>false</code> otherwise.  */ ;/**  * Get a reference to a slice.  *  * @return <code>true</code> when a byte[] was materialized, <code>false</code> otherwise.  */ boolean get(long index, int len, BytesRef ref).
+true;;4;1;/**  * Bulk set.  */ ;/**  * Bulk set.  */ void set(long index, byte[] buf, int offset, int len).
+true;;3;1;/**  * Fill slots between <code>fromIndex</code> inclusive to <code>toIndex</code> exclusive with <code>value</code>.  */ ;/**  * Fill slots between <code>fromIndex</code> inclusive to <code>toIndex</code> exclusive with <code>value</code>.  */ void fill(long fromIndex, long toIndex, byte value).

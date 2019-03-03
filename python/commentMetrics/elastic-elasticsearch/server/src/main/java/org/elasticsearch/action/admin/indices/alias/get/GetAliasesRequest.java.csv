@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;10;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeStringArray(indices).     out.writeStringArray(aliases).     indicesOptions.writeIndicesOptions(out).     if (out.getVersion().onOrAfter(Version.V_6_4_0)) {         out.writeStringArray(originalAliases).     } }
+false;public;1;5;;@Override public GetAliasesRequest indices(String... indices) {     this.indices = indices.     return this. }
+false;public;1;5;;public GetAliasesRequest aliases(String... aliases) {     this.aliases = aliases.     this.originalAliases = aliases.     return this. }
+false;public;1;4;;public GetAliasesRequest indicesOptions(IndicesOptions indicesOptions) {     this.indicesOptions = indicesOptions.     return this. }
+false;public;0;4;;@Override public String[] indices() {     return indices. }
+false;public;0;4;;@Override public String[] aliases() {     return aliases. }
+false;public;1;4;;@Override public void replaceAliases(String... aliases) {     this.aliases = aliases. }
+true;public;0;3;/**  * Returns the aliases as was originally specified by the user  */ ;/**  * Returns the aliases as was originally specified by the user  */ public String[] getOriginalAliases() {     return originalAliases. }
+false;public;0;4;;@Override public boolean expandAliasesWildcards() {     return true. }
+false;public;0;4;;@Override public IndicesOptions indicesOptions() {     return indicesOptions. }
+false;public;0;4;;@Override public ActionRequestValidationException validate() {     return null. }
+false;public;1;4;;@Override public void readFrom(StreamInput in) throws IOException {     throw new UnsupportedOperationException("usage of Streamable is to be replaced by Writeable"). }

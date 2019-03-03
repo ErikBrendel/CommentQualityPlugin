@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;3;8;;@Override protected Endpoint createEndpoint(String uri, String remaining, Map<String, Object> parameters) throws Exception {     AsteriskEndpoint endpoint = new AsteriskEndpoint(uri, this).     setProperties(endpoint, parameters).     return endpoint. }

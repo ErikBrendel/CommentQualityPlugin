@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;3;4;;protected KubernetesHPAEndpoint doCreateEndpoint(String uri, String remaining, KubernetesConfiguration config) throws Exception {     KubernetesHPAEndpoint endpoint = new KubernetesHPAEndpoint(uri, this, config).     return endpoint. }

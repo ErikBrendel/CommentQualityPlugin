@@ -1,0 +1,21 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getHost() {     return this.host. }
+false;public;1;3;;public void setHost(String host) {     this.host = host. }
+false;public;0;3;;public String getDatabase() {     return this.database. }
+false;public;1;3;;public void setDatabase(String database) {     this.database = database. }
+false;public;0;3;;public String getAuthenticationDatabase() {     return this.authenticationDatabase. }
+false;public;1;3;;public void setAuthenticationDatabase(String authenticationDatabase) {     this.authenticationDatabase = authenticationDatabase. }
+false;public;0;3;;public String getUsername() {     return this.username. }
+false;public;1;3;;public void setUsername(String username) {     this.username = username. }
+false;public;0;3;;public char[] getPassword() {     return this.password. }
+false;public;1;3;;public void setPassword(char[] password) {     this.password = password. }
+false;public;0;3;;public Class<?> getFieldNamingStrategy() {     return this.fieldNamingStrategy. }
+false;public;1;3;;public void setFieldNamingStrategy(Class<?> fieldNamingStrategy) {     this.fieldNamingStrategy = fieldNamingStrategy. }
+false;public;0;3;;public String getUri() {     return this.uri. }
+false;public;0;3;;public String determineUri() {     return (this.uri != null) ? this.uri : DEFAULT_URI. }
+false;public;1;3;;public void setUri(String uri) {     this.uri = uri. }
+false;public;0;3;;public Integer getPort() {     return this.port. }
+false;public;1;3;;public void setPort(Integer port) {     this.port = port. }
+false;public;0;3;;public String getGridFsDatabase() {     return this.gridFsDatabase. }
+false;public;1;3;;public void setGridFsDatabase(String gridFsDatabase) {     this.gridFsDatabase = gridFsDatabase. }
+false;public;0;6;;public String getMongoClientDatabase() {     if (this.database != null) {         return this.database.     }     return new MongoClientURI(determineUri()).getDatabase(). }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void test() {     assertTrue(Arrays.asList(applicationContext.getEnvironment().getActiveProfiles()).contains(getClass().getSimpleName().toLowerCase())). }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;8;;@Override protected void checkWeatherContent(String weather) {     log.debug("The weather in {} format is {}{}", WeatherMode.XML, LS, weather).     // assertStringContains(weather, "<?xml version=\"1.0\" encoding=\"utf-8\"?>").     assertStringContains(weather, "<coord").     assertStringContains(weather, "<temperature"). }
+false;public;0;5;;@Override public void configure() throws Exception {     from("weather:foo?appid=9162755b2efa555823cfe0451d7fff38&lon=4&lat=52&mode=xml").to("mock:result"). }
+false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("weather:foo?appid=9162755b2efa555823cfe0451d7fff38&lon=4&lat=52&mode=xml").to("mock:result").         }     }. }

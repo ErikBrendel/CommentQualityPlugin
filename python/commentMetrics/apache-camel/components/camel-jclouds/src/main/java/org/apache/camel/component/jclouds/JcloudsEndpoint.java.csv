@@ -1,0 +1,30 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public boolean isSingleton() {     return true. }
+false;public;0;3;;public JcloudsConfiguration getConfiguration() {     return configuration. }
+false;public;1;3;;public void setConfiguration(JcloudsConfiguration configuration) {     this.configuration = configuration. }
+false;public;0;3;;public JcloudsCommand getCommand() {     return configuration.getCommand(). }
+false;public;1;3;;public void setCommand(JcloudsCommand command) {     configuration.setCommand(command). }
+false;public;0;3;;public String getProviderId() {     return configuration.getProviderId(). }
+false;public;1;3;;public void setProviderId(String providerId) {     configuration.setProviderId(providerId). }
+false;public;0;3;;public String getImageId() {     return configuration.getImageId(). }
+false;public;1;3;;public void setImageId(String imageId) {     configuration.setImageId(imageId). }
+false;public;0;3;;public String getLocationId() {     return configuration.getLocationId(). }
+false;public;1;3;;public void setLocationId(String locationId) {     configuration.setLocationId(locationId). }
+false;public;0;3;;public String getHardwareId() {     return configuration.getHardwareId(). }
+false;public;1;3;;public void setHardwareId(String hardwareId) {     configuration.setHardwareId(hardwareId). }
+false;public;0;3;;public String getOperation() {     return configuration.getOperation(). }
+false;public;1;3;;public void setOperation(String operation) {     configuration.setOperation(operation). }
+false;public;0;3;;public String getNodeState() {     return configuration.getNodeState(). }
+false;public;1;3;;public void setNodeState(String nodeState) {     configuration.setNodeState(nodeState). }
+false;public;0;3;;public String getNodeId() {     return configuration.getNodeId(). }
+false;public;1;3;;public void setNodeId(String nodeId) {     configuration.setNodeId(nodeId). }
+false;public;0;3;;public String getGroup() {     return configuration.getGroup(). }
+false;public;1;3;;public void setGroup(String group) {     configuration.setGroup(group). }
+false;public;0;3;;public String getUser() {     return configuration.getUser(). }
+false;public;1;3;;public void setUser(String user) {     configuration.setUser(user). }
+false;public;0;3;;public String getContainer() {     return configuration.getContainer(). }
+false;public;1;3;;public void setContainer(String container) {     configuration.setContainer(container). }
+false;public;0;3;;public String getDirectory() {     return configuration.getDirectory(). }
+false;public;1;3;;public void setDirectory(String directory) {     configuration.setDirectory(directory). }
+false;public;0;3;;public String getBlobName() {     return configuration.getBlobName(). }
+false;public;1;3;;public void setBlobName(String blobName) {     configuration.setBlobName(blobName). }

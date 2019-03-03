@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void getSqlDialectWhenDataSourceIsNullShouldReturnDefault() {     assertThat(SqlDialectLookup.getDialect(null)).isEqualTo(SQLDialect.DEFAULT). }
+false;public;0;5;;@Test public void getSqlDialectWhenDataSourceIsUnknownShouldReturnDefault() throws Exception {     testGetSqlDialect("jdbc:idontexist:", SQLDialect.DEFAULT). }
+false;public;0;4;;@Test public void getSqlDialectWhenDerbyShouldReturnDerby() throws Exception {     testGetSqlDialect("jdbc:derby:", SQLDialect.DERBY). }
+false;public;0;4;;@Test public void getSqlDialectWhenH2ShouldReturnH2() throws Exception {     testGetSqlDialect("jdbc:h2:", SQLDialect.H2). }
+false;public;0;4;;@Test public void getSqlDialectWhenHsqldbShouldReturnHsqldb() throws Exception {     testGetSqlDialect("jdbc:hsqldb:", SQLDialect.HSQLDB). }
+false;public;0;4;;@Test public void getSqlDialectWhenMysqlShouldReturnMysql() throws Exception {     testGetSqlDialect("jdbc:mysql:", SQLDialect.MYSQL). }
+false;public;0;4;;@Test public void getSqlDialectWhenOracleShouldReturnDefault() throws Exception {     testGetSqlDialect("jdbc:oracle:", SQLDialect.DEFAULT). }
+false;public;0;4;;@Test public void getSqlDialectWhenPostgresShouldReturnPostgres() throws Exception {     testGetSqlDialect("jdbc:postgresql:", SQLDialect.POSTGRES). }
+false;public;0;4;;@Test public void getSqlDialectWhenSqlserverShouldReturnDefault() throws Exception {     testGetSqlDialect("jdbc:sqlserver:", SQLDialect.DEFAULT). }
+false;public;0;4;;@Test public void getSqlDialectWhenDb2ShouldReturnDefault() throws Exception {     testGetSqlDialect("jdbc:db2:", SQLDialect.DEFAULT). }
+false;public;0;4;;@Test public void getSqlDialectWhenInformixShouldReturnDefault() throws Exception {     testGetSqlDialect("jdbc:informix-sqli:", SQLDialect.DEFAULT). }
+false;private;2;10;;private void testGetSqlDialect(String url, SQLDialect expected) throws Exception {     DataSource dataSource = mock(DataSource.class).     Connection connection = mock(Connection.class).     DatabaseMetaData metaData = mock(DatabaseMetaData.class).     given(dataSource.getConnection()).willReturn(connection).     given(connection.getMetaData()).willReturn(metaData).     given(metaData.getURL()).willReturn(url).     SQLDialect sqlDialect = SqlDialectLookup.getDialect(dataSource).     assertThat(sqlDialect).isEqualTo(expected). }

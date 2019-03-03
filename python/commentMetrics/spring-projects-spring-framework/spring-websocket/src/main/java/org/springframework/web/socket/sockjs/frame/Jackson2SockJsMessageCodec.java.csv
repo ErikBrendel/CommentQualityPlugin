@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override @Nullable public String[] decode(String content) throws IOException {     return this.objectMapper.readValue(content, String[].class). }
+false;public;1;5;;@Override @Nullable public String[] decodeInputStream(InputStream content) throws IOException {     return this.objectMapper.readValue(content, String[].class). }
+false;protected;1;5;;@Override @SuppressWarnings("deprecation") protected char[] applyJsonQuoting(String content) {     return JsonStringEncoder.getInstance().quoteAsString(content). }

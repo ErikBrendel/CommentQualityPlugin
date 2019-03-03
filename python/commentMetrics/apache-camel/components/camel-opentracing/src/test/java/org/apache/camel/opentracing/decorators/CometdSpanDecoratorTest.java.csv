@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@Test public void testGetDestination() {     Endpoint endpoint = Mockito.mock(Endpoint.class).     Mockito.when(endpoint.getEndpointUri()).thenReturn("cometd://localhost:8080/MyQueue?hello=world").     CometdSpanDecorator decorator = new CometdSpanDecorator().     assertEquals("MyQueue", decorator.getDestination(null, endpoint)). }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getWriteableName() {     return ExtendedStatsBucketPipelineAggregationBuilder.NAME. }
+false;public;2;4;;@Override public InternalExtendedStats doReduce(List<InternalAggregation> aggregations, ReduceContext reduceContext) {     throw new UnsupportedOperationException("Not supported"). }

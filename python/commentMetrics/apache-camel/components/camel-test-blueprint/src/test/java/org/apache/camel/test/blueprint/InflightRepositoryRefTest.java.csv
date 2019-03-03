@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected String getBlueprintDescriptor() {     return "org/apache/camel/test/blueprint/inflightRepositoryRefTest.xml". }
+false;public;0;4;;@Test public void testEndpointConfiguration() throws Exception {     assertTrue("Get a wrong inflight repository", context.getInflightRepository() instanceof MyInflightRepository). }

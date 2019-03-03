@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;public void addConfigurer(HttpClientConfigurer configurer) {     if (configurer != null) {         configurers.add(configurer).     } }
+false;public;1;3;;public void removeConfigurer(HttpClientConfigurer configurer) {     configurers.remove(configurer). }
+false;public;1;7;;public HttpClient configureHttpClient(HttpClient client) {     for (HttpClientConfigurer configurer : configurers) {         configurer.configureHttpClient(client).     }     return client. }
+false;public;0;3;;public List<HttpClientConfigurer> getConfigurers() {     return Collections.unmodifiableList(configurers). }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@Test public void testXSLTProxy() throws Exception {     // warm up with 1.000 messages so that the JIT compiler kicks in     send("http://127.0.0.1:8192/service/XSLTProxy", 1000).     StopWatch watch = new StopWatch().     send("http://127.0.0.1:8192/service/XSLTProxy", count).     log.warn("Ran {} tests in {}ms", count, watch.taken()). }
+false;protected;0;4;;@Override protected String getBlueprintDescriptor() {     return "OSGI-INF/blueprint/xslt-bundle-context.xml". }

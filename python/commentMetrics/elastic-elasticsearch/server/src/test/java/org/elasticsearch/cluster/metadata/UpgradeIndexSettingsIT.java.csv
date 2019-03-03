@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected boolean forbidPrivateIndexSettings() {     return false. }
+false;public;0;14;;public void testSettingsVersion() {     createIndex("test", Settings.builder().put(IndexMetaData.SETTING_INDEX_VERSION_CREATED.getKey(), Version.CURRENT.minimumIndexCompatibilityVersion()).build()).     final long settingsVersion = client().admin().cluster().prepareState().get().getState().metaData().index("test").getSettingsVersion().     client().admin().indices().prepareUpgrade("test").get().     assertThat(client().admin().cluster().prepareState().get().getState().metaData().index("test").getSettingsVersion(), equalTo(1 + settingsVersion)). }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;13;;public void testGetIndexedScriptRequestSerialization() throws IOException {     GetStoredScriptRequest request = new GetStoredScriptRequest("id").     BytesStreamOutput out = new BytesStreamOutput().     out.setVersion(randomVersion(random())).     request.writeTo(out).     StreamInput in = out.bytes().streamInput().     in.setVersion(out.getVersion()).     GetStoredScriptRequest request2 = new GetStoredScriptRequest(in).     assertThat(request2.id(), equalTo(request.id())). }

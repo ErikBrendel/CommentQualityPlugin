@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;7;;@Consume(uri = "direct:foo", context = "camel-2") @RecipientList(context = "camel-2") public String[] doSomething(String body) {     LOG.info("Received body: " + body).     return new String[] { "mock:foo", "mock:result" }. }

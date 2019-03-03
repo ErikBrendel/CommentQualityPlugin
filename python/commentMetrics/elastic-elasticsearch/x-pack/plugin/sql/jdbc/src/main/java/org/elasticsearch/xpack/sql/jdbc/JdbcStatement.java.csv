@@ -1,0 +1,55 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;7;;@Override public ResultSet executeQuery(String sql) throws SQLException {     if (!execute(sql)) {         throw new SQLException("Invalid sql query [" + sql + "]").     }     return rs. }
+false;public;1;5;;@Override public int executeUpdate(String sql) throws SQLException {     checkOpen().     throw new SQLFeatureNotSupportedException("Update not supported"). }
+false;public;0;7;;@Override public void close() throws SQLException {     if (!closed) {         closed = true.         closeResultSet().     } }
+false;public;0;5;;@Override public int getMaxFieldSize() throws SQLException {     checkOpen().     return 0. }
+false;public;1;7;;@Override public void setMaxFieldSize(int max) throws SQLException {     checkOpen().     if (max < 0) {         throw new SQLException("Field size must be positive").     } }
+false;public;0;8;;@Override public int getMaxRows() throws SQLException {     long result = getLargeMaxRows().     if (result > Integer.MAX_VALUE) {         throw new SQLException("Max rows exceeds limit of " + Integer.MAX_VALUE).     }     return Math.toIntExact(result). }
+false;public;0;5;;@Override public long getLargeMaxRows() throws SQLException {     checkOpen().     return 0. }
+false;public;1;4;;@Override public void setMaxRows(int max) throws SQLException {     setLargeMaxRows(max). }
+false;public;1;8;;@Override public void setLargeMaxRows(long max) throws SQLException {     checkOpen().     if (max < 0) {         throw new SQLException("Field size must be positive").     } // ignore }
+false;public;1;5;;@Override public void setEscapeProcessing(boolean enable) throws SQLException {     checkOpen(). // no-op - always escape }
+false;public;0;5;;@Override public int getQueryTimeout() throws SQLException {     checkOpen().     return (int) TimeUnit.MILLISECONDS.toSeconds(requestMeta.queryTimeoutInMs()). }
+false;public;1;8;;@Override public void setQueryTimeout(int seconds) throws SQLException {     checkOpen().     if (seconds < 0) {         throw new SQLException("Query timeout must be positive").     }     requestMeta.queryTimeout(TimeUnit.SECONDS.toMillis(seconds)). }
+false;public;0;5;;@Override public void cancel() throws SQLException {     checkOpen().     throw new SQLFeatureNotSupportedException("Cancel not supported"). }
+false;public;0;5;;@Override public SQLWarning getWarnings() throws SQLException {     checkOpen().     return null. }
+false;public;0;4;;@Override public void clearWarnings() throws SQLException {     checkOpen(). }
+false;public;1;5;;@Override public void setCursorName(String name) throws SQLException {     checkOpen(). // no-op (doc is confusing - says no-op but also to throw an exception) }
+false;public;1;6;;@Override public boolean execute(String sql) throws SQLException {     checkOpen().     initResultSet(sql, Collections.emptyList()).     return true. }
+true;protected;2;7;// execute the query and handle the rs closing and initialization ;// execute the query and handle the rs closing and initialization protected void initResultSet(String sql, List<SqlTypedParamValue> params) throws SQLException {     // close previous result set     closeResultSet().     Cursor cursor = con.client.query(sql, params, requestMeta).     rs = new JdbcResultSet(cfg, this, cursor). }
+false;public;0;5;;@Override public ResultSet getResultSet() throws SQLException {     checkOpen().     return rs. }
+false;public;0;5;;@Override public int getUpdateCount() throws SQLException {     long count = getLargeUpdateCount().     return count > Integer.MAX_VALUE ? Integer.MAX_VALUE : count < Integer.MIN_VALUE ? Integer.MIN_VALUE : (int) count. }
+false;public;0;5;;@Override public long getLargeUpdateCount() throws SQLException {     checkOpen().     return -1. }
+false;public;0;6;;@Override public boolean getMoreResults() throws SQLException {     checkOpen().     closeResultSet().     return false. }
+false;public;1;9;;@Override public void setFetchDirection(int direction) throws SQLException {     checkOpen().     if (ResultSet.FETCH_REVERSE != direction || ResultSet.FETCH_FORWARD != direction || ResultSet.FETCH_UNKNOWN != direction) {         throw new SQLException("Invalid direction specified").     } }
+false;public;0;5;;@Override public int getFetchDirection() throws SQLException {     checkOpen().     return ResultSet.FETCH_FORWARD. }
+false;public;1;8;;@Override public void setFetchSize(int rows) throws SQLException {     checkOpen().     if (rows < 0) {         throw new SQLException("Fetch size must be positive").     }     requestMeta.fetchSize(rows). }
+false;public;0;11;;@Override public int getFetchSize() throws SQLException {     checkOpen().     // tl.dr - unless the user set it, returning the default is fine     return requestMeta.fetchSize(). }
+false;public;0;5;;@Override public int getResultSetConcurrency() throws SQLException {     checkOpen().     return ResultSet.CONCUR_READ_ONLY. }
+false;public;0;5;;@Override public int getResultSetType() throws SQLException {     checkOpen().     return ResultSet.TYPE_FORWARD_ONLY. }
+false;public;1;5;;@Override public void addBatch(String sql) throws SQLException {     checkOpen().     throw new SQLFeatureNotSupportedException("Batching not supported"). }
+false;public;0;5;;@Override public void clearBatch() throws SQLException {     checkOpen().     throw new SQLFeatureNotSupportedException("Batching not supported"). }
+false;public;0;5;;@Override public int[] executeBatch() throws SQLException {     checkOpen().     throw new SQLFeatureNotSupportedException("Batching not supported"). }
+false;public;0;5;;@Override public Connection getConnection() throws SQLException {     checkOpen().     return con. }
+false;public;1;13;;@Override public boolean getMoreResults(int current) throws SQLException {     checkOpen().     if (CLOSE_CURRENT_RESULT == current) {         closeResultSet().         return false.     }     if (KEEP_CURRENT_RESULT == current || CLOSE_ALL_RESULTS == current) {         throw new SQLException("Invalid current parameter").     }     throw new SQLFeatureNotSupportedException("Multiple ResultSets not supported"). }
+false;public;0;5;;@Override public ResultSet getGeneratedKeys() throws SQLException {     checkOpen().     throw new SQLFeatureNotSupportedException("Generated keys not supported"). }
+false;public;0;5;;@Override public long[] executeLargeBatch() throws SQLException {     checkOpen().     throw new SQLFeatureNotSupportedException("Batching not supported"). }
+false;public;1;5;;@Override public long executeLargeUpdate(String sql) throws SQLException {     checkOpen().     throw new SQLFeatureNotSupportedException("Batching not supported"). }
+false;public;2;5;;@Override public long executeLargeUpdate(String sql, int autoGeneratedKeys) throws SQLException {     checkOpen().     throw new SQLFeatureNotSupportedException("Batching not supported"). }
+false;public;2;5;;@Override public long executeLargeUpdate(String sql, int[] columnIndexes) throws SQLException {     checkOpen().     throw new SQLFeatureNotSupportedException("Batching not supported"). }
+false;public;2;5;;@Override public long executeLargeUpdate(String sql, String[] columnNames) throws SQLException {     checkOpen().     throw new SQLFeatureNotSupportedException("Batching not supported"). }
+false;public;2;5;;@Override public int executeUpdate(String sql, int autoGeneratedKeys) throws SQLException {     checkOpen().     throw new SQLFeatureNotSupportedException("Batching not supported"). }
+false;public;2;5;;@Override public int executeUpdate(String sql, int[] columnIndexes) throws SQLException {     checkOpen().     throw new SQLFeatureNotSupportedException("Batching not supported"). }
+false;public;2;5;;@Override public int executeUpdate(String sql, String[] columnNames) throws SQLException {     checkOpen().     throw new SQLFeatureNotSupportedException("Batching not supported"). }
+false;public;2;4;;@Override public boolean execute(String sql, int autoGeneratedKeys) throws SQLException {     return execute(sql). }
+false;public;2;4;;@Override public boolean execute(String sql, int[] columnIndexes) throws SQLException {     return execute(sql). }
+false;public;2;4;;@Override public boolean execute(String sql, String[] columnNames) throws SQLException {     return execute(sql). }
+false;public;0;5;;@Override public int getResultSetHoldability() throws SQLException {     checkOpen().     return ResultSet.CLOSE_CURSORS_AT_COMMIT. }
+false;public;0;4;;@Override public boolean isClosed() {     return closed. }
+false;public;1;5;;@Override public void setPoolable(boolean poolable) throws SQLException {     checkOpen(). // no-op }
+false;public;0;5;;@Override public boolean isPoolable() throws SQLException {     checkOpen().     return false. }
+false;public;0;5;;@Override public void closeOnCompletion() throws SQLException {     checkOpen().     closeOnCompletion = true. }
+false;public;0;5;;@Override public boolean isCloseOnCompletion() throws SQLException {     checkOpen().     return closeOnCompletion. }
+false;protected,final;0;5;;protected final void checkOpen() throws SQLException {     if (isClosed()) {         throw new SQLException("Statement is closed").     } }
+false;protected,final;0;11;;protected final void closeResultSet() throws SQLException {     if (rs != null) {         ignoreResultSetClose = true.         try {             rs.close().         } finally {             rs = null.             ignoreResultSetClose = false.         }     } }
+false;final;0;5;;final void resultSetWasClosed() throws SQLException {     if (closeOnCompletion && !ignoreResultSetClose) {         close().     } }

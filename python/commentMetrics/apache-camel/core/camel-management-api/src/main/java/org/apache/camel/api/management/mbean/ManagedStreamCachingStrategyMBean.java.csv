@@ -1,0 +1,25 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;2;;@ManagedAttribute(description = "Whether stream caching is enabled") boolean isEnabled().
+false;;0;2;;@ManagedAttribute(description = "Directory used when overflow and spooling to disk") String getSpoolDirectory().
+false;;0;2;;@ManagedAttribute(description = "Chiper used if writing with encryption") String getSpoolChiper().
+false;;1;2;;@ManagedAttribute(description = "Threshold in bytes when overflow and spooling to disk instead of keeping in memory") void setSpoolThreshold(long threshold).
+false;;0;2;;@ManagedAttribute(description = "Threshold in bytes when overflow and spooling to disk instead of keeping in memory") long getSpoolThreshold().
+false;;1;2;;@ManagedAttribute(description = "Percentage (1-99) of used heap memory threshold to activate spooling to disk") void setSpoolUsedHeapMemoryThreshold(int percentage).
+false;;0;2;;@ManagedAttribute(description = "Percentage (1-99) of used heap memory threshold to activate spooling to disk") int getSpoolUsedHeapMemoryThreshold().
+false;;1;2;;@ManagedAttribute(description = "Whether used heap memory limit is committed or maximum") void setSpoolUsedHeapMemoryLimit(SpoolUsedHeapMemoryLimit limit).
+false;;0;2;;@ManagedAttribute(description = "Whether used heap memory limit is committed or maximum") SpoolUsedHeapMemoryLimit getSpoolUsedHeapMemoryLimit().
+false;;1;2;;@ManagedAttribute(description = "Buffer size in bytes to use when coping between buffers") void setBufferSize(int bufferSize).
+false;;0;2;;@ManagedAttribute(description = "Buffer size in bytes to use when coping between buffers") int getBufferSize().
+false;;1;2;;@ManagedAttribute(description = "Whether to remove spool directory when stopping") void setRemoveSpoolDirectoryWhenStopping(boolean remove).
+false;;0;2;;@ManagedAttribute(description = "Whether to remove spool directory when stopping") boolean isRemoveSpoolDirectoryWhenStopping().
+false;;1;2;;@ManagedAttribute(description = "Whether any or all spool rules determines whether to spool") void setAnySpoolRules(boolean any).
+false;;0;2;;@ManagedAttribute(description = "Whether any or all spool rules determines whether to spool") boolean isAnySpoolRules().
+false;;0;2;;@ManagedAttribute(description = "Number of in-memory StreamCache created") long getCacheMemoryCounter().
+false;;0;2;;@ManagedAttribute(description = "Total accumulated number of bytes which has been stream cached for in-memory StreamCache") long getCacheMemorySize().
+false;;0;2;;@ManagedAttribute(description = "Average number of bytes per cached stream for in-memory stream caches.") long getCacheMemoryAverageSize().
+false;;0;2;;@ManagedAttribute(description = "Number of spooled (not in-memory) StreamCache created") long getCacheSpoolCounter().
+false;;0;2;;@ManagedAttribute(description = "Total accumulated number of bytes which has been stream cached for spooled StreamCache") long getCacheSpoolSize().
+false;;0;2;;@ManagedAttribute(description = "Average number of bytes per cached stream for spooled (not in-memory) stream caches.") long getCacheSpoolAverageSize().
+false;;0;2;;@ManagedAttribute(description = "Whether utilization statistics is enabled") boolean isStatisticsEnabled().
+false;;1;2;;@ManagedAttribute(description = "Whether utilization statistics is enabled") void setStatisticsEnabled(boolean enabled).
+false;;0;2;;@ManagedOperation(description = "Reset the utilization statistics") void resetStatistics().

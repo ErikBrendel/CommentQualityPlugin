@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;public PutStoredScriptRequestBuilder setId(String id) {     request.id(id).     return this. }
+true;public;2;4;/**  * Set the source of the script along with the content type of the source  */ ;/**  * Set the source of the script along with the content type of the source  */ public PutStoredScriptRequestBuilder setContent(BytesReference source, XContentType xContentType) {     request.content(source, xContentType).     return this. }

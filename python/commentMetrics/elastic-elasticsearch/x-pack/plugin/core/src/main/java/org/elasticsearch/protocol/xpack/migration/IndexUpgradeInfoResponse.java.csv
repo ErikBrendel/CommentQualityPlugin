@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     actions = in.readMap(StreamInput::readString, UpgradeActionRequired::readFromStream). }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeMap(actions, StreamOutput::writeString, (out1, value) -> value.writeTo(out1)). }
+false;public;0;3;;public Map<String, UpgradeActionRequired> getActions() {     return actions. }
+false;public;2;17;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     {         builder.startObject(INDICES.getPreferredName()).         for (Map.Entry<String, UpgradeActionRequired> entry : actions.entrySet()) {             builder.startObject(entry.getKey()).             {                 builder.field(ACTION_REQUIRED.getPreferredName(), entry.getValue().toString()).             }             builder.endObject().         }         builder.endObject().     }     builder.endObject().     return builder. }
+false;public;1;7;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     IndexUpgradeInfoResponse response = (IndexUpgradeInfoResponse) o.     return Objects.equals(actions, response.actions). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(actions). }

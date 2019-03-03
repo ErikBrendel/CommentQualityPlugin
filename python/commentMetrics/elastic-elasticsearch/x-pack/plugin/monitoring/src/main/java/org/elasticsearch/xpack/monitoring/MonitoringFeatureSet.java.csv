@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String name() {     return XPackField.MONITORING. }
+false;public;0;4;;@Override public String description() {     return "Monitoring for the Elastic Stack". }
+false;public;0;4;;@Override public boolean available() {     return licenseState != null && licenseState.isMonitoringAllowed(). }
+false;public;0;4;;@Override public boolean enabled() {     return enabled. }
+false;public;0;4;;@Override public Map<String, Object> nativeCodeInfo() {     return null. }
+false;public;1;6;;@Override public void usage(ActionListener<XPackFeatureSet.Usage> listener) {     final boolean collectionEnabled = monitoring != null && monitoring.isMonitoringActive().     listener.onResponse(new MonitoringFeatureSetUsage(available(), enabled(), collectionEnabled, exportersUsage(exporters))). }
+false;static;1;14;;static Map<String, Object> exportersUsage(Exporters exporters) {     if (exporters == null) {         return null.     }     Map<String, Object> usage = new HashMap<>().     for (Exporter exporter : exporters.getEnabledExporters()) {         if (exporter.config().enabled()) {             String type = exporter.config().type().             int count = (Integer) usage.getOrDefault(type, 0).             usage.put(type, count + 1).         }     }     return usage. }

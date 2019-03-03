@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected SmoothingModel createTestModel() {     return createRandomModel(). }
+false;static;0;3;;static SmoothingModel createRandomModel() {     return new StupidBackoff(randomDoubleBetween(0.0, 10.0, false)). }
+true;protected;1;5;/**  * mutate the given model so the returned smoothing model is different  */ ;/**  * mutate the given model so the returned smoothing model is different  */ @Override protected StupidBackoff createMutation(SmoothingModel input) {     StupidBackoff original = (StupidBackoff) input.     return new StupidBackoff(original.getDiscount() + 0.1). }
+false;;2;6;;@Override void assertWordScorer(WordScorer wordScorer, SmoothingModel input) {     assertThat(wordScorer, instanceOf(StupidBackoffScorer.class)).     StupidBackoff testModel = (StupidBackoff) input.     assertEquals(testModel.getDiscount(), ((StupidBackoffScorer) wordScorer).discount(), Double.MIN_VALUE). }
+false;protected;1;4;;@Override protected SmoothingModel fromXContent(XContentParser parser) throws IOException {     return StupidBackoff.fromXContent(parser). }

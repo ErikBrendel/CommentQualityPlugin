@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;15;;@Test public void testRecipientListLeak() throws Exception {     MockEndpoint x = getMockEndpoint("mock:x").     MockEndpoint y = getMockEndpoint("mock:y").     MockEndpoint z = getMockEndpoint("mock:z").     x.expectedBodiesReceived("Hello World", "Bye World").     y.expectedBodiesReceived("Hello World", "Bye World").     z.expectedBodiesReceived("Hello World", "Bye World").     sendBody("Hello World").     sendBody("Bye World").     assertMockEndpointsSatisfied(). }
+false;protected;1;3;;protected void sendBody(String body) {     template.sendBodyAndHeader("direct:a", body, "recipientListHeader", "mock:x,mock:y,mock:z"). }
+false;public;0;3;;public void configure() {     from("direct:a").recipientList(header("recipientListHeader")). }
+false;protected;0;7;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("direct:a").recipientList(header("recipientListHeader")).         }     }. }

@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,final;1;4;;@Override public final void setPassword(String pwd) {     this.password = pwd. }
+false;public,final;1;4;;@Override public final void setUsername(String user) {     this.username = user. }
+false;public,final;0;3;;public final String getPassword() {     return password. }
+false;public,final;0;4;;@Override public final String getUsername() {     return username. }
+false;protected,final;0;3;;protected final boolean isCredentialsSet() {     return !Strings.isNullOrEmpty(username) && !Strings.isNullOrEmpty(password). }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;4;/**  * Return the handler method associated with the error, if any.  * @since 5.0.5  */ ;/**  * Return the handler method associated with the error, if any.  * @since 5.0.5  */ @Nullable public Method getHandlerMethod() {     return this.handlerMethod. }
+true;public;0;4;/**  * Return the specific method parameter associated with the error, if any.  */ ;/**  * Return the specific method parameter associated with the error, if any.  */ @Nullable public MethodParameter getMethodParameter() {     return this.parameter. }

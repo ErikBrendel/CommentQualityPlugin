@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;2;7;;@SuppressWarnings("unchecked") public static <T> T valueOf(Expression e, DataType to) {     if (e.foldable()) {         return (T) DataTypeConversion.conversionFor(e.dataType(), to).convert(e.fold()).     }     throw new SqlIllegalArgumentException("Cannot determine value for {}", e). }
+false;public,static;1;6;;public static Object valueOf(Expression e) {     if (e.foldable()) {         return e.fold().     }     throw new SqlIllegalArgumentException("Cannot determine value for {}", e). }
+false;public,static;1;3;;public static Integer intValueOf(Expression e) {     return valueOf(e, DataType.INTEGER). }
+false;public,static;1;3;;public static double doubleValueOf(Expression e) {     return valueOf(e, DataType.DOUBLE). }
+false;public,static;2;3;;public static <T> List<T> valuesOf(List<Expression> list, DataType to) {     return foldTo(list, to, new ArrayList<>(list.size())). }
+false;public,static;2;3;;public static <T> Set<T> valuesOfNoDuplicates(List<Expression> list, DataType to) {     return foldTo(list, to, new LinkedHashSet<>(list.size())). }
+false;private,static;3;6;;private static <T, C extends Collection<T>> C foldTo(Collection<Expression> expressions, DataType to, C values) {     for (Expression e : expressions) {         values.add(valueOf(e, to)).     }     return values. }
+false;public,static;1;3;;public static List<Double> doubleValuesOf(List<Expression> list) {     return valuesOf(list, DataType.DOUBLE). }

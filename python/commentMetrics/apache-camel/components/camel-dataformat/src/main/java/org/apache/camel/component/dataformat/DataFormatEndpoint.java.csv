@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getName() {     return name. }
+false;public;1;3;;public void setName(String name) {     this.name = name. }
+false;public;0;3;;public DataFormat getDataFormat() {     return dataFormat. }
+false;public;1;3;;public void setDataFormat(DataFormat dataFormat) {     this.dataFormat = dataFormat. }
+false;public;0;3;;public String getOperation() {     return operation. }
+true;public;1;3;/**  * Operation to use either marshal or unmarshal  */ ;/**  * Operation to use either marshal or unmarshal  */ public void setOperation(String operation) {     this.operation = operation. }
+false;public;2;4;;@Override public boolean process(Exchange exchange, AsyncCallback callback) {     return processor.process(exchange, callback). }
+false;public;0;4;;@Override public String toString() {     return "DataFormatProducer[" + dataFormat + "]". }
+false;public;0;14;;@Override public Producer createProducer() throws Exception {     return new DefaultAsyncProducer(this) {          @Override         public boolean process(Exchange exchange, AsyncCallback callback) {             return processor.process(exchange, callback).         }          @Override         public String toString() {             return "DataFormatProducer[" + dataFormat + "]".         }     }. }
+false;public;1;4;;@Override public Consumer createConsumer(Processor processor) throws Exception {     throw new UnsupportedOperationException("Cannot consume from data format"). }
+false;public;0;4;;@Override public boolean isSingleton() {     return true. }
+false;public;0;4;;@Override public boolean isLenientProperties() {     return true. }
+false;protected;0;20;;@Override protected void doStart() throws Exception {     if (dataFormat == null && name != null) {         dataFormat = getCamelContext().resolveDataFormat(name).     }     if (operation.equals("marshal")) {         MarshalProcessor marshal = new MarshalProcessor(dataFormat).         marshal.setCamelContext(getCamelContext()).         processor = marshal.     } else {         UnmarshalProcessor unmarshal = new UnmarshalProcessor(dataFormat).         unmarshal.setCamelContext(getCamelContext()).         processor = unmarshal.     }     ServiceHelper.startService(dataFormat, processor).     super.doStart(). }
+false;protected;0;5;;@Override protected void doStop() throws Exception {     ServiceHelper.stopService(processor, dataFormat).     super.doStop(). }

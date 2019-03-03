@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected NodeCtor2<Expression, ZoneId, BaseDateTimeFunction> ctorForInfo() {     return Year::new. }
+false;protected;1;4;;@Override protected Year replaceChild(Expression newChild) {     return new Year(source(), newChild, zoneId()). }
+false;public;0;4;;@Override public String dateTimeFormat() {     return "year". }
+false;public;0;4;;@Override public Expression orderBy() {     return field(). }
+false;public;0;4;;@Override public long interval() {     return YEAR_IN_MILLIS. }

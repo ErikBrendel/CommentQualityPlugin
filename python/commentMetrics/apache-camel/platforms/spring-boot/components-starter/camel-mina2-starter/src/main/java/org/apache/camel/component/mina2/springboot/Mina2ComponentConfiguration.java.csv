@@ -1,0 +1,59 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Mina2ConfigurationNestedConfiguration getConfiguration() {     return configuration. }
+false;public;1;4;;public void setConfiguration(Mina2ConfigurationNestedConfiguration configuration) {     this.configuration = configuration. }
+false;public;0;3;;public Boolean getUseGlobalSslContextParameters() {     return useGlobalSslContextParameters. }
+false;public;1;4;;public void setUseGlobalSslContextParameters(Boolean useGlobalSslContextParameters) {     this.useGlobalSslContextParameters = useGlobalSslContextParameters. }
+false;public;0;3;;public Boolean getResolvePropertyPlaceholders() {     return resolvePropertyPlaceholders. }
+false;public;1;4;;public void setResolvePropertyPlaceholders(Boolean resolvePropertyPlaceholders) {     this.resolvePropertyPlaceholders = resolvePropertyPlaceholders. }
+false;public;0;3;;public String getProtocol() {     return protocol. }
+false;public;1;3;;public void setProtocol(String protocol) {     this.protocol = protocol. }
+false;public;0;3;;public String getHost() {     return host. }
+false;public;1;3;;public void setHost(String host) {     this.host = host. }
+false;public;0;3;;public Integer getPort() {     return port. }
+false;public;1;3;;public void setPort(Integer port) {     this.port = port. }
+false;public;0;3;;public Boolean getSync() {     return sync. }
+false;public;1;3;;public void setSync(Boolean sync) {     this.sync = sync. }
+false;public;0;3;;public Boolean getTextline() {     return textline. }
+false;public;1;3;;public void setTextline(Boolean textline) {     this.textline = textline. }
+false;public;0;3;;public Mina2TextLineDelimiter getTextlineDelimiter() {     return textlineDelimiter. }
+false;public;1;4;;public void setTextlineDelimiter(Mina2TextLineDelimiter textlineDelimiter) {     this.textlineDelimiter = textlineDelimiter. }
+false;public;0;3;;public ProtocolCodecFactory getCodec() {     return codec. }
+false;public;1;3;;public void setCodec(ProtocolCodecFactory codec) {     this.codec = codec. }
+false;public;0;3;;public String getEncoding() {     return encoding. }
+false;public;1;3;;public void setEncoding(String encoding) {     this.encoding = encoding. }
+false;public;0;3;;public Long getWriteTimeout() {     return writeTimeout. }
+false;public;1;3;;public void setWriteTimeout(Long writeTimeout) {     this.writeTimeout = writeTimeout. }
+false;public;0;3;;public Long getTimeout() {     return timeout. }
+false;public;1;3;;public void setTimeout(Long timeout) {     this.timeout = timeout. }
+false;public;0;3;;public Boolean getLazySessionCreation() {     return lazySessionCreation. }
+false;public;1;3;;public void setLazySessionCreation(Boolean lazySessionCreation) {     this.lazySessionCreation = lazySessionCreation. }
+false;public;0;3;;public Boolean getTransferExchange() {     return transferExchange. }
+false;public;1;3;;public void setTransferExchange(Boolean transferExchange) {     this.transferExchange = transferExchange. }
+false;public;0;3;;public Integer getEncoderMaxLineLength() {     return encoderMaxLineLength. }
+false;public;1;3;;public void setEncoderMaxLineLength(Integer encoderMaxLineLength) {     this.encoderMaxLineLength = encoderMaxLineLength. }
+false;public;0;3;;public Integer getDecoderMaxLineLength() {     return decoderMaxLineLength. }
+false;public;1;3;;public void setDecoderMaxLineLength(Integer decoderMaxLineLength) {     this.decoderMaxLineLength = decoderMaxLineLength. }
+false;public;0;3;;public Boolean getMinaLogger() {     return minaLogger. }
+false;public;1;3;;public void setMinaLogger(Boolean minaLogger) {     this.minaLogger = minaLogger. }
+false;public;0;3;;public List getFilters() {     return filters. }
+false;public;1;3;;public void setFilters(List filters) {     this.filters = filters. }
+false;public;0;3;;public Boolean getAllowDefaultCodec() {     return allowDefaultCodec. }
+false;public;1;3;;public void setAllowDefaultCodec(Boolean allowDefaultCodec) {     this.allowDefaultCodec = allowDefaultCodec. }
+false;public;0;3;;public Boolean getDisconnect() {     return disconnect. }
+false;public;1;3;;public void setDisconnect(Boolean disconnect) {     this.disconnect = disconnect. }
+false;public;0;3;;public Boolean getDisconnectOnNoReply() {     return disconnectOnNoReply. }
+false;public;1;3;;public void setDisconnectOnNoReply(Boolean disconnectOnNoReply) {     this.disconnectOnNoReply = disconnectOnNoReply. }
+false;public;0;3;;public LoggingLevel getNoReplyLogLevel() {     return noReplyLogLevel. }
+false;public;1;3;;public void setNoReplyLogLevel(LoggingLevel noReplyLogLevel) {     this.noReplyLogLevel = noReplyLogLevel. }
+false;public;0;3;;public SSLContextParameters getSslContextParameters() {     return sslContextParameters. }
+false;public;1;4;;public void setSslContextParameters(SSLContextParameters sslContextParameters) {     this.sslContextParameters = sslContextParameters. }
+false;public;0;3;;public Boolean getAutoStartTls() {     return autoStartTls. }
+false;public;1;3;;public void setAutoStartTls(Boolean autoStartTls) {     this.autoStartTls = autoStartTls. }
+false;public;0;3;;public Integer getMaximumPoolSize() {     return maximumPoolSize. }
+false;public;1;3;;public void setMaximumPoolSize(Integer maximumPoolSize) {     this.maximumPoolSize = maximumPoolSize. }
+false;public;0;3;;public Boolean getOrderedThreadPoolExecutor() {     return orderedThreadPoolExecutor. }
+false;public;1;4;;public void setOrderedThreadPoolExecutor(Boolean orderedThreadPoolExecutor) {     this.orderedThreadPoolExecutor = orderedThreadPoolExecutor. }
+false;public;0;3;;public Boolean getCachedAddress() {     return cachedAddress. }
+false;public;1;3;;public void setCachedAddress(Boolean cachedAddress) {     this.cachedAddress = cachedAddress. }
+false;public;0;3;;public Boolean getClientMode() {     return clientMode. }
+false;public;1;3;;public void setClientMode(Boolean clientMode) {     this.clientMode = clientMode. }

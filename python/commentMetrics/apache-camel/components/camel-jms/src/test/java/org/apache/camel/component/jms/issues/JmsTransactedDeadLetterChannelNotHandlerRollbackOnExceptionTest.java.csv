@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected boolean isHandleNew() {     return false. }
+false;public;0;9;;@Test public void shouldNotLoseMessagesOnExceptionInErrorHandler() throws Exception {     template.sendBody(testingEndpoint, "Hello World").     // as we do not handle new exception, then the exception propagates back     // and causes the transaction to rollback, and we can find the message in the ActiveMQ DLQ     Object dlqBody = consumer.receiveBody("activemq:ActiveMQ.DLQ", 2000).     assertEquals("Hello World", dlqBody). }

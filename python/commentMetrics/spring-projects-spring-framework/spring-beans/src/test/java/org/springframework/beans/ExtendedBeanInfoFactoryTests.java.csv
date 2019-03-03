@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;1;;public void setFoo(String s) { }
+false;public;0;8;;@Test public void shouldNotSupportClassHavingOnlyVoidReturningSetter() throws IntrospectionException {     @SuppressWarnings("unused")     class C {          public void setFoo(String s) {         }     }     assertThat(factory.getBeanInfo(C.class), nullValue()). }
+false;public;1;1;;public C setFoo(String s) {     return this. }
+false;public;0;8;;@Test public void shouldSupportClassHavingNonVoidReturningSetter() throws IntrospectionException {     @SuppressWarnings("unused")     class C {          public C setFoo(String s) {             return this.         }     }     assertThat(factory.getBeanInfo(C.class), notNullValue()). }
+false;public;2;1;;public C setFoo(int i, String s) {     return this. }
+false;public;0;8;;@Test public void shouldSupportClassHavingNonVoidReturningIndexedSetter() throws IntrospectionException {     @SuppressWarnings("unused")     class C {          public C setFoo(int i, String s) {             return this.         }     }     assertThat(factory.getBeanInfo(C.class), notNullValue()). }
+false;;1;1;;void setBar(String s) { }
+false;public;0;8;;@Test public void shouldNotSupportClassHavingNonPublicNonVoidReturningIndexedSetter() throws IntrospectionException {     @SuppressWarnings("unused")     class C {          void setBar(String s) {         }     }     assertThat(factory.getBeanInfo(C.class), nullValue()). }
+false;;0;1;;C setBar() {     return this. }
+false;public;0;8;;@Test public void shouldNotSupportClassHavingNonVoidReturningParameterlessSetter() throws IntrospectionException {     @SuppressWarnings("unused")     class C {          C setBar() {             return this.         }     }     assertThat(factory.getBeanInfo(C.class), nullValue()). }
+false;;1;1;;C set(String s) {     return this. }
+false;public;0;8;;@Test public void shouldNotSupportClassHavingNonVoidReturningMethodNamedSet() throws IntrospectionException {     @SuppressWarnings("unused")     class C {          C set(String s) {             return this.         }     }     assertThat(factory.getBeanInfo(C.class), nullValue()). }

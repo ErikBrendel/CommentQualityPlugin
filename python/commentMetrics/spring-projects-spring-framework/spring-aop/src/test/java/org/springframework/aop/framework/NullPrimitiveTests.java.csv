@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;1;;int getValue().
+false;public;0;4;;@Override public int getValue() {     return 100. }
+false;public;1;4;;@Override public Object invoke(MethodInvocation invocation) throws Throwable {     return null. }
+false;public;0;25;;@Test public void testNullPrimitiveWithJdkProxy() {     class SimpleFoo implements Foo {          @Override         public int getValue() {             return 100.         }     }     SimpleFoo target = new SimpleFoo().     ProxyFactory factory = new ProxyFactory(target).     factory.addAdvice(new MethodInterceptor() {          @Override         public Object invoke(MethodInvocation invocation) throws Throwable {             return null.         }     }).     Foo foo = (Foo) factory.getProxy().     thrown.expect(AopInvocationException.class).     thrown.expectMessage("Foo.getValue()").     assertEquals(0, foo.getValue()). }
+false;public;0;3;;public int getValue() {     return 100. }
+false;public;1;4;;@Override public Object invoke(MethodInvocation invocation) throws Throwable {     return null. }
+false;public;0;18;;@Test public void testNullPrimitiveWithCglibProxy() {     Bar target = new Bar().     ProxyFactory factory = new ProxyFactory(target).     factory.addAdvice(new MethodInterceptor() {          @Override         public Object invoke(MethodInvocation invocation) throws Throwable {             return null.         }     }).     Bar bar = (Bar) factory.getProxy().     thrown.expect(AopInvocationException.class).     thrown.expectMessage("Bar.getValue()").     assertEquals(0, bar.getValue()). }

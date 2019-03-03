@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void testNotYetImplemented() throws Exception {     try {         context.getEndpoint("atom:file://target/out.atom").createProducer().         fail("Should have thrown an UnsupportedOperationException").     } catch (UnsupportedOperationException e) {     // ok     } }

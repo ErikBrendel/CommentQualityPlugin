@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;@Override public void init(FilterConfig filterConfig) throws ServletException { }
+false;public;3;11;;@Override public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {     if (request instanceof HttpServletRequest && response instanceof HttpServletResponse) {         doFilter((HttpServletRequest) request, (HttpServletResponse) response, chain).     } else {         chain.doFilter(request, response).     } }
+false;private;3;8;;private void doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {     ServerHttpRequest serverRequest = new ServletServerHttpRequest(request).     ServerHttpResponse serverResponse = new ServletServerHttpResponse(response).     if (!this.dispatcher.handle(serverRequest, serverResponse)) {         chain.doFilter(request, response).     } }
+false;public;0;3;;@Override public void destroy() { }

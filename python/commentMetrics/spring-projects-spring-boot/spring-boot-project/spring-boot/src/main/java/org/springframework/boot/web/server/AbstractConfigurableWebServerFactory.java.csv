@@ -1,0 +1,19 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * The port that the web server listens on.  * @return the port  */ ;/**  * The port that the web server listens on.  * @return the port  */ public int getPort() {     return this.port. }
+false;public;1;4;;@Override public void setPort(int port) {     this.port = port. }
+true;public;0;3;/**  * Return the address that the web server binds to.  * @return the address  */ ;/**  * Return the address that the web server binds to.  * @return the address  */ public InetAddress getAddress() {     return this.address. }
+false;public;1;4;;@Override public void setAddress(InetAddress address) {     this.address = address. }
+true;public;0;3;/**  * Returns a mutable set of {@link ErrorPage ErrorPages} that will be used when  * handling exceptions.  * @return the error pages  */ ;/**  * Returns a mutable set of {@link ErrorPage ErrorPages} that will be used when  * handling exceptions.  * @return the error pages  */ public Set<ErrorPage> getErrorPages() {     return this.errorPages. }
+false;public;1;5;;@Override public void setErrorPages(Set<? extends ErrorPage> errorPages) {     Assert.notNull(errorPages, "ErrorPages must not be null").     this.errorPages = new LinkedHashSet<>(errorPages). }
+false;public;1;5;;@Override public void addErrorPages(ErrorPage... errorPages) {     Assert.notNull(errorPages, "ErrorPages must not be null").     this.errorPages.addAll(Arrays.asList(errorPages)). }
+false;public;0;3;;public Ssl getSsl() {     return this.ssl. }
+false;public;1;4;;@Override public void setSsl(Ssl ssl) {     this.ssl = ssl. }
+false;public;0;3;;public SslStoreProvider getSslStoreProvider() {     return this.sslStoreProvider. }
+false;public;1;4;;@Override public void setSslStoreProvider(SslStoreProvider sslStoreProvider) {     this.sslStoreProvider = sslStoreProvider. }
+false;public;0;3;;public Http2 getHttp2() {     return this.http2. }
+false;public;1;4;;@Override public void setHttp2(Http2 http2) {     this.http2 = http2. }
+false;public;0;3;;public Compression getCompression() {     return this.compression. }
+false;public;1;4;;@Override public void setCompression(Compression compression) {     this.compression = compression. }
+false;public;0;3;;public String getServerHeader() {     return this.serverHeader. }
+false;public;1;4;;@Override public void setServerHeader(String serverHeader) {     this.serverHeader = serverHeader. }
+true;protected,final;1;15;/**  * Return the absolute temp dir for given web server.  * @param prefix server name  * @return the temp dir for given server.  */ ;/**  * Return the absolute temp dir for given web server.  * @param prefix server name  * @return the temp dir for given server.  */ protected final File createTempDir(String prefix) {     try {         File tempDir = File.createTempFile(prefix + ".", "." + getPort()).         tempDir.delete().         tempDir.mkdir().         tempDir.deleteOnExit().         return tempDir.     } catch (IOException ex) {         throw new WebServerException("Unable to create tempDir. java.io.tmpdir is set to " + System.getProperty("java.io.tmpdir"), ex).     } }

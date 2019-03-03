@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@GetMapping("/") @ResponseBody @Transactional(readOnly = true) public List<Customer> customers(@RequestParam String name) {     return this.customerRepository.findByName(name). }

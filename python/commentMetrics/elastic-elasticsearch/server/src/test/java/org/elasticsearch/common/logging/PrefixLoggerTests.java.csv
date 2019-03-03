@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;public void testNullPrefix() {     Exception e = expectThrows(IllegalArgumentException.class, () -> new PrefixLogger(logger, null)).     assertThat(e.getMessage(), containsString("use a regular logger")). }
+false;public;0;4;;public void testEmptyPrefix() {     Exception e = expectThrows(IllegalArgumentException.class, () -> new PrefixLogger(logger, "")).     assertThat(e.getMessage(), containsString("use a regular logger")). }

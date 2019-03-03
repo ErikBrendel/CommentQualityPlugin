@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;8;/**  * Resets and returns elapsed time in milliseconds.  */ ;/**  * Resets and returns elapsed time in milliseconds.  */ public long reset() {     long nowNS = System.nanoTime().     try {         return TimeValue.nsecToMSec(nowNS - startNS).     } finally {         startNS = nowNS.     } }
+true;public;1;3;/**  * Resets and logs elapsed time in milliseconds.  */ ;/**  * Resets and logs elapsed time in milliseconds.  */ public void resetAndLog(String label) {     logger.fine(label + ": " + reset() + "ms"). }

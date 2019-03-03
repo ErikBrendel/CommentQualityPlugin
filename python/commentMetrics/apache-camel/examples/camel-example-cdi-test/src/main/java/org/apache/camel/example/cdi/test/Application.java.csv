@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Override public void configure() {     from("direct:message").routeId("route").log("${body} from ${camelContext.name}").     from("direct:in").routeId("in»out").bean("bean").to("direct:out"). }
+false;;1;3;;void hello(@Observes CamelContextStartedEvent event) {     producer.sendBody("Hello"). }
+false;;1;3;;void bye(@Observes CamelContextStoppingEvent event) {     producer.sendBody("Bye"). }
+false;public;1;3;;public String process(@Body String body) {     return body. }

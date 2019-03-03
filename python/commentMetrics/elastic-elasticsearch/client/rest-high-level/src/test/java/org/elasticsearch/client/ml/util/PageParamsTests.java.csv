@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected PageParams doParseInstance(XContentParser parser) {     return PageParams.PARSER.apply(parser, null). }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return false. }
+false;protected;0;6;;@Override protected PageParams createTestInstance() {     Integer from = randomBoolean() ? randomInt() : null.     Integer size = randomBoolean() ? randomInt() : null.     return new PageParams(from, size). }

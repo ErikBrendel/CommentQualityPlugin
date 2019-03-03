@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;11;;@Bean public TomcatServletWebServerFactory tomcatServletWebServerFactory(ObjectProvider<TomcatConnectorCustomizer> connectorCustomizers, ObjectProvider<TomcatContextCustomizer> contextCustomizers) {     TomcatServletWebServerFactory factory = new TomcatServletWebServerFactory().     factory.getTomcatConnectorCustomizers().addAll(connectorCustomizers.orderedStream().collect(Collectors.toList())).     factory.getTomcatContextCustomizers().addAll(contextCustomizers.orderedStream().collect(Collectors.toList())).     return factory. }
+false;public;0;4;;@Bean public JettyServletWebServerFactory JettyServletWebServerFactory() {     return new JettyServletWebServerFactory(). }
+false;public;0;4;;@Bean public UndertowServletWebServerFactory undertowServletWebServerFactory() {     return new UndertowServletWebServerFactory(). }

@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean allowNull() {     return false. }
+false;public;2;4;;@Override public <T> T convertTo(Class<T> type, Object value) throws TypeConversionException {     return convertTo(type, null, value). }
+false;public;2;9;;@Override public <T> T mandatoryConvertTo(Class<T> type, Object value) throws TypeConversionException, NoTypeConversionAvailableException {     T t = convertTo(type, null, value).     if (t == null) {         throw new NoTypeConversionAvailableException(value, type).     } else {         return t.     } }
+false;public;3;9;;@Override public <T> T mandatoryConvertTo(Class<T> type, Exchange exchange, Object value) throws TypeConversionException, NoTypeConversionAvailableException {     T t = convertTo(type, exchange, value).     if (t == null) {         throw new NoTypeConversionAvailableException(value, type).     } else {         return t.     } }
+false;public;2;9;;@Override public <T> T tryConvertTo(Class<T> type, Object value) {     try {         return convertTo(type, null, value).     } catch (Exception e) {     // ignore     }     return null. }
+false;public;3;9;;@Override public <T> T tryConvertTo(Class<T> type, Exchange exchange, Object value) {     try {         return convertTo(type, exchange, value).     } catch (Exception e) {     // ignore     }     return null. }

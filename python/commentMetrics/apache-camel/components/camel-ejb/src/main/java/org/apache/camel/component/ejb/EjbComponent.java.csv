@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;3;13;;@Override protected Endpoint createEndpoint(String uri, String remaining, Map<String, Object> parameters) throws Exception {     EjbEndpoint answer = new EjbEndpoint(uri, this).     answer.setBeanName(remaining).     // plugin registry to lookup in jndi for the EJBs     Registry registry = new JndiRegistry(getContext()).     // and register the bean as a holder on the endpoint     BeanHolder holder = new EjbRegistryBean(registry, getCamelContext(), answer.getBeanName()).     answer.setBeanHolder(holder).     return answer. }
+false;public;0;3;;public Context getContext() throws NamingException {     return context. }
+true;public;1;3;/**  * The Context to use for looking up the EJBs  */ ;/**  * The Context to use for looking up the EJBs  */ public void setContext(Context context) {     this.context = context. }
+false;public;0;3;;public Properties getProperties() {     return properties. }
+true;public;1;3;/**  * Properties for creating javax.naming.Context if a context has not been configured.  */ ;/**  * Properties for creating javax.naming.Context if a context has not been configured.  */ public void setProperties(Properties properties) {     this.properties = properties. }
+false;protected;0;8;;@Override protected void doStart() throws Exception {     super.doStart().     if (context == null && properties != null) {         context = new InitialContext(getProperties()).     } }

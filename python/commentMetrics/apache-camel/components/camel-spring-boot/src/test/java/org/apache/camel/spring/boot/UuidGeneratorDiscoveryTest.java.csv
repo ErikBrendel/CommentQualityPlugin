@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void testUuidDiscovery() {     assertThat(camelContext.getUuidGenerator()).isInstanceOf(MyUuidGenerator.class). }
+false;public;0;4;;@Override public String generateUuid() {     return UUID.randomUUID().toString(). }

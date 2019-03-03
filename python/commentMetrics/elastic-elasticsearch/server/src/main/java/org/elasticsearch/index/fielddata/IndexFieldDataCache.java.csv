@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;2;1;;<FD extends AtomicFieldData, IFD extends IndexFieldData<FD>> FD load(LeafReaderContext context, IFD indexFieldData) throws Exception.
+false;;2;2;;<FD extends AtomicFieldData, IFD extends IndexFieldData.Global<FD>> IFD load(DirectoryReader indexReader, IFD indexFieldData) throws Exception.
+true;;0;1;/**  * Clears all the field data stored cached in on this index.  */ ;/**  * Clears all the field data stored cached in on this index.  */ void clear().
+true;;1;1;/**  * Clears all the field data stored cached in on this index for the specified field name.  */ ;/**  * Clears all the field data stored cached in on this index for the specified field name.  */ void clear(String fieldName).
+true;default;3;1;/**  * Called after the fielddata is loaded during the cache phase  */ ;/**  * Called after the fielddata is loaded during the cache phase  */ default void onCache(ShardId shardId, String fieldName, Accountable ramUsage) { }
+true;default;4;1;/**  * Called after the fielddata is unloaded  */ ;/**  * Called after the fielddata is unloaded  */ default void onRemoval(ShardId shardId, String fieldName, boolean wasEvicted, long sizeInBytes) { }
+false;public;2;5;;@Override public <FD extends AtomicFieldData, IFD extends IndexFieldData<FD>> FD load(LeafReaderContext context, IFD indexFieldData) throws Exception {     return indexFieldData.loadDirect(context). }
+false;public;2;6;;@Override @SuppressWarnings("unchecked") public <FD extends AtomicFieldData, IFD extends IndexFieldData.Global<FD>> IFD load(DirectoryReader indexReader, IFD indexFieldData) throws Exception {     return (IFD) indexFieldData.localGlobalDirect(indexReader). }
+false;public;0;3;;@Override public void clear() { }
+false;public;1;3;;@Override public void clear(String fieldName) { }

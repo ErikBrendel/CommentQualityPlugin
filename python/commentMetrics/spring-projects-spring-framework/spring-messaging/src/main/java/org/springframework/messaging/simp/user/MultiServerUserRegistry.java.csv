@@ -1,0 +1,53 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private,static;0;10;;private static String generateId() {     String host.     try {         host = InetAddress.getLocalHost().getHostAddress().     } catch (UnknownHostException ex) {         host = "unknown".     }     return host + '-' + UUID.randomUUID(). }
+false;public;0;5;;@Override public int getOrder() {     return (this.delegateApplicationEvents ? ((SmartApplicationListener) this.localRegistry).getOrder() : Ordered.LOWEST_PRECEDENCE). }
+false;public;1;5;;// SmartApplicationListener methods @Override public boolean supportsEventType(Class<? extends ApplicationEvent> eventType) {     return (this.delegateApplicationEvents && ((SmartApplicationListener) this.localRegistry).supportsEventType(eventType)). }
+false;public;1;5;;@Override public boolean supportsSourceType(@Nullable Class<?> sourceType) {     return (this.delegateApplicationEvents && ((SmartApplicationListener) this.localRegistry).supportsSourceType(sourceType)). }
+false;public;1;6;;@Override public void onApplicationEvent(ApplicationEvent event) {     if (this.delegateApplicationEvents) {         ((SmartApplicationListener) this.localRegistry).onApplicationEvent(event).     } }
+false;public;1;12;;// SimpUserRegistry methods @Override @Nullable public SimpUser getUser(String userName) {     // Prefer remote registries due to cross-server SessionLookup     for (UserRegistrySnapshot registry : this.remoteRegistries.values()) {         SimpUser user = registry.getUserMap().get(userName).         if (user != null) {             return user.         }     }     return this.localRegistry.getUser(userName). }
+false;public;0;10;;@Override public Set<SimpUser> getUsers() {     // Prefer remote registries due to cross-server SessionLookup     Set<SimpUser> result = new HashSet<>().     for (UserRegistrySnapshot registry : this.remoteRegistries.values()) {         result.addAll(registry.getUserMap().values()).     }     result.addAll(this.localRegistry.getUsers()).     return result. }
+false;public;0;9;;@Override public int getUserCount() {     int userCount = 0.     for (UserRegistrySnapshot registry : this.remoteRegistries.values()) {         userCount += registry.getUserMap().size().     }     userCount += this.localRegistry.getUserCount().     return userCount. }
+false;public;1;9;;@Override public Set<SimpSubscription> findSubscriptions(SimpSubscriptionMatcher matcher) {     Set<SimpSubscription> result = new HashSet<>().     for (UserRegistrySnapshot registry : this.remoteRegistries.values()) {         result.addAll(registry.findSubscriptions(matcher)).     }     result.addAll(this.localRegistry.findSubscriptions(matcher)).     return result. }
+false;;0;3;;// Internal methods for UserRegistryMessageHandler to manage broadcasts Object getLocalRegistryDto() {     return new UserRegistrySnapshot(this.id, this.localRegistry). }
+false;;3;7;;void addRemoteRegistryDto(Message<?> message, MessageConverter converter, long expirationPeriod) {     UserRegistrySnapshot registry = (UserRegistrySnapshot) converter.fromMessage(message, UserRegistrySnapshot.class).     if (registry != null && !registry.getId().equals(this.id)) {         registry.init(expirationPeriod, this.sessionLookup).         this.remoteRegistries.put(registry.getId(), registry).     } }
+false;;0;4;;void purgeExpiredRegistries() {     long now = System.currentTimeMillis().     this.remoteRegistries.entrySet().removeIf(entry -> entry.getValue().isExpired(now)). }
+false;public;0;4;;@Override public String toString() {     return "local=[" + this.localRegistry + "], remote=" + this.remoteRegistries. }
+false;public;1;3;;public void setId(String id) {     this.id = id. }
+false;public;0;3;;public String getId() {     return this.id. }
+false;public;1;3;;public void setUserMap(Map<String, TransferSimpUser> users) {     this.users = users. }
+false;public;0;3;;public Map<String, TransferSimpUser> getUserMap() {     return this.users. }
+false;public;1;3;;public boolean isExpired(long now) {     return (now > this.expirationTime). }
+false;public;2;6;;public void init(long expirationPeriod, SessionLookup sessionLookup) {     this.expirationTime = System.currentTimeMillis() + expirationPeriod.     for (TransferSimpUser user : this.users.values()) {         user.afterDeserialization(sessionLookup).     } }
+false;public;1;13;;public Set<SimpSubscription> findSubscriptions(SimpSubscriptionMatcher matcher) {     Set<SimpSubscription> result = new HashSet<>().     for (TransferSimpUser user : this.users.values()) {         for (TransferSimpSession session : user.sessions) {             for (SimpSubscription subscription : session.subscriptions) {                 if (matcher.match(subscription)) {                     result.add(subscription).                 }             }         }     }     return result. }
+false;public;0;4;;@Override public String toString() {     return "id=" + this.id + ", users=" + this.users. }
+false;public;1;3;;public void setName(String name) {     this.name = name. }
+false;public;0;4;;@Override public String getName() {     return this.name. }
+false;public;0;7;;@Override public boolean hasSessions() {     if (this.sessionLookup != null) {         return !this.sessionLookup.findSessions(getName()).isEmpty().     }     return !this.sessions.isEmpty(). }
+false;public;1;13;;@Override @Nullable public SimpSession getSession(String sessionId) {     if (this.sessionLookup != null) {         return this.sessionLookup.findSessions(getName()).get(sessionId).     }     for (TransferSimpSession session : this.sessions) {         if (session.getId().equals(sessionId)) {             return session.         }     }     return null. }
+false;public;1;3;;public void setSessions(Set<TransferSimpSession> sessions) {     this.sessions.addAll(sessions). }
+false;public;0;8;;@Override public Set<SimpSession> getSessions() {     if (this.sessionLookup != null) {         Map<String, SimpSession> sessions = this.sessionLookup.findSessions(getName()).         return new HashSet<>(sessions.values()).     }     return new HashSet<>(this.sessions). }
+false;private;1;7;;private void afterDeserialization(SessionLookup sessionLookup) {     this.sessionLookup = sessionLookup.     for (TransferSimpSession session : this.sessions) {         session.setUser(this).         session.afterDeserialization().     } }
+false;private;1;5;;private void addSessions(Map<String, SimpSession> map) {     for (SimpSession session : this.sessions) {         map.put(session.getId(), session).     } }
+false;public;1;4;;@Override public boolean equals(Object other) {     return (this == other || (other instanceof SimpUser && this.name.equals(((SimpUser) other).getName()))). }
+false;public;0;4;;@Override public int hashCode() {     return this.name.hashCode(). }
+false;public;0;4;;@Override public String toString() {     return "name=" + this.name + ", sessions=" + this.sessions. }
+false;public;1;3;;public void setId(String id) {     this.id = id. }
+false;public;0;4;;@Override public String getId() {     return this.id. }
+false;public;1;3;;public void setUser(TransferSimpUser user) {     this.user = user. }
+false;public;0;4;;@Override public TransferSimpUser getUser() {     return this.user. }
+false;public;1;3;;public void setSubscriptions(Set<TransferSimpSubscription> subscriptions) {     this.subscriptions.addAll(subscriptions). }
+false;public;0;4;;@Override public Set<SimpSubscription> getSubscriptions() {     return new HashSet<>(this.subscriptions). }
+false;private;0;5;;private void afterDeserialization() {     for (TransferSimpSubscription subscription : this.subscriptions) {         subscription.setSession(this).     } }
+false;public;1;4;;@Override public boolean equals(Object other) {     return (this == other || (other instanceof SimpSession && getId().equals(((SimpSession) other).getId()))). }
+false;public;0;4;;@Override public int hashCode() {     return getId().hashCode(). }
+false;public;0;4;;@Override public String toString() {     return "id=" + this.id + ", subscriptions=" + this.subscriptions. }
+false;public;1;3;;public void setId(String id) {     this.id = id. }
+false;public;0;4;;@Override public String getId() {     return this.id. }
+false;public;1;3;;public void setSession(TransferSimpSession session) {     this.session = session. }
+false;public;0;4;;@Override public TransferSimpSession getSession() {     return this.session. }
+false;public;1;3;;public void setDestination(String destination) {     this.destination = destination. }
+false;public;0;4;;@Override public String getDestination() {     return this.destination. }
+false;public;1;12;;@Override public boolean equals(Object other) {     if (this == other) {         return true.     }     if (!(other instanceof SimpSubscription)) {         return false.     }     SimpSubscription otherSubscription = (SimpSubscription) other.     return (getId().equals(otherSubscription.getId()) && ObjectUtils.nullSafeEquals(getSession(), otherSubscription.getSession())). }
+false;public;0;4;;@Override public int hashCode() {     return getId().hashCode() * 31 + ObjectUtils.nullSafeHashCode(getSession()). }
+false;public;0;4;;@Override public String toString() {     return "destination=" + this.destination. }
+false;public;1;16;;public Map<String, SimpSession> findSessions(String userName) {     Map<String, SimpSession> map = new HashMap<>(4).     SimpUser user = localRegistry.getUser(userName).     if (user != null) {         for (SimpSession session : user.getSessions()) {             map.put(session.getId(), session).         }     }     for (UserRegistrySnapshot registry : remoteRegistries.values()) {         TransferSimpUser transferUser = registry.getUserMap().get(userName).         if (transferUser != null) {             transferUser.addSessions(map).         }     }     return map. }

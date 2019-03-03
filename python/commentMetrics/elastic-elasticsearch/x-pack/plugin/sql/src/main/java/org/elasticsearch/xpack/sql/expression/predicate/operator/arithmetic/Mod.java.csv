@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected NodeInfo<Mod> info() {     return NodeInfo.create(this, Mod::new, left(), right()). }
+false;protected;2;4;;@Override protected Mod replaceChildren(Expression newLeft, Expression newRight) {     return new Mod(source(), newLeft, newRight). }

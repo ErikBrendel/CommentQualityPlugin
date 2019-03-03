@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public <T> T newInstance(Class<T> type) {     return getReferenceByType(manager, type).orElseGet(() -> injector.newInstance(type)). }
+false;public;0;5;;@Override public boolean supportsAutoWiring() {     // TODO: cdi to support some kind of @Inject on constructors?     return false. }

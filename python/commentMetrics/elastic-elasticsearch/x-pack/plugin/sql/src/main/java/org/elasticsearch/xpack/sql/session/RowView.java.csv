@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * Number of columns in this row.  */ ;/**  * Number of columns in this row.  */ int columnCount().
+false;;1;1;;Object column(int index).
+false;default;2;3;;default <T> T column(int index, Class<T> type) {     return type.cast(column(index)). }
+false;default;1;4;;@Override default void forEach(Consumer<? super Object> action) {     forEachColumn(action::accept). }
+false;default;1;7;;default void forEachColumn(Consumer<? super Object> action) {     Objects.requireNonNull(action).     int rowSize = columnCount().     for (int i = 0. i < rowSize. i++) {         action.accept(column(i)).     } }
+false;public;0;4;;@Override public boolean hasNext() {     return pos < rowSize. }
+false;public;0;7;;@Override public Object next() {     if (pos >= rowSize) {         throw new NoSuchElementException().     }     return column(pos++). }
+false;default;0;20;;@Override default Iterator<Object> iterator() {     return new Iterator<Object>() {          private int pos = 0.          private final int rowSize = columnCount().          @Override         public boolean hasNext() {             return pos < rowSize.         }          @Override         public Object next() {             if (pos >= rowSize) {                 throw new NoSuchElementException().             }             return column(pos++).         }     }. }

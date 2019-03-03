@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;14;;@Test public void testMain() throws Exception {     // lets make a simple route     Main main = new Main().     main.setDuration(30).     main.setDurationHitExitCode(99).     main.setApplicationContextUri("org/apache/camel/spring/MainVetoTest.xml").     // should not hang as we veto fail     main.run().     // should complete normally due veto     assertEquals(0, main.getExitCode()). }

@@ -1,0 +1,23 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public LuceneConfigurationNestedConfiguration getConfig() {     return config. }
+false;public;1;3;;public void setConfig(LuceneConfigurationNestedConfiguration config) {     this.config = config. }
+false;public;0;3;;public Boolean getResolvePropertyPlaceholders() {     return resolvePropertyPlaceholders. }
+false;public;1;4;;public void setResolvePropertyPlaceholders(Boolean resolvePropertyPlaceholders) {     this.resolvePropertyPlaceholders = resolvePropertyPlaceholders. }
+false;public;0;3;;public URI getUri() {     return uri. }
+false;public;1;3;;public void setUri(URI uri) {     this.uri = uri. }
+false;public;0;3;;public String getHost() {     return host. }
+false;public;1;3;;public void setHost(String host) {     this.host = host. }
+false;public;0;3;;public LuceneOperation getOperation() {     return operation. }
+false;public;1;3;;public void setOperation(LuceneOperation operation) {     this.operation = operation. }
+false;public;0;3;;public String getAuthority() {     return authority. }
+false;public;1;3;;public void setAuthority(String authority) {     this.authority = authority. }
+false;public;0;3;;public File getSourceDirectory() {     return sourceDirectory. }
+false;public;1;3;;public void setSourceDirectory(File sourceDirectory) {     this.sourceDirectory = sourceDirectory. }
+false;public;0;3;;public File getIndexDirectory() {     return indexDirectory. }
+false;public;1;3;;public void setIndexDirectory(File indexDirectory) {     this.indexDirectory = indexDirectory. }
+false;public;0;3;;public Analyzer getAnalyzer() {     return analyzer. }
+false;public;1;3;;public void setAnalyzer(Analyzer analyzer) {     this.analyzer = analyzer. }
+false;public;0;3;;public Integer getMaxHits() {     return maxHits. }
+false;public;1;3;;public void setMaxHits(Integer maxHits) {     this.maxHits = maxHits. }
+false;public;0;3;;public Version getLuceneVersion() {     return luceneVersion. }
+false;public;1;3;;public void setLuceneVersion(Version luceneVersion) {     this.luceneVersion = luceneVersion. }

@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getName() {     return this.name. }
+false;public;0;3;;public List<RoleMapperExpression> getElements() {     return elements. }
+false;public;1;15;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     final CompositeRoleMapperExpression that = (CompositeRoleMapperExpression) o.     if (Objects.equals(this.getName(), that.getName()) == false) {         return false.     }     return Objects.equals(this.getElements(), that.getElements()). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(name, elements). }
+false;public;2;10;;@Override public XContentBuilder toXContent(final XContentBuilder builder, final Params params) throws IOException {     builder.startObject().     builder.startArray(name).     for (RoleMapperExpression e : elements) {         e.toXContent(builder, params).     }     builder.endArray().     return builder.endObject(). }

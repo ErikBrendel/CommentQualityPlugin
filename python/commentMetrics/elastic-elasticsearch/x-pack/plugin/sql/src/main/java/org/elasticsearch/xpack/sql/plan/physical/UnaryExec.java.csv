@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,final;1;7;;@Override public final PhysicalPlan replaceChildren(List<PhysicalPlan> newChildren) {     if (newChildren.size() != 1) {         throw new IllegalArgumentException("expected [1] child but received [" + newChildren.size() + "]").     }     return replaceChild(newChildren.get(0)). }
+false;protected,abstract;1;1;;protected abstract UnaryExec replaceChild(PhysicalPlan newChild).
+false;public;0;3;;public PhysicalPlan child() {     return child. }
+false;public;0;4;;@Override public List<Attribute> output() {     return child.output(). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hashCode(child()). }
+false;public;1;13;;@Override public boolean equals(Object obj) {     if (this == obj) {         return true.     }     if (obj == null || getClass() != obj.getClass()) {         return false.     }     UnaryExec other = (UnaryExec) obj.     return Objects.equals(child, other.child). }

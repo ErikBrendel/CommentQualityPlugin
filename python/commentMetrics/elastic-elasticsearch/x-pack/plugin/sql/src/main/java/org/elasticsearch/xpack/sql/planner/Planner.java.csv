@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public PhysicalPlan plan(LogicalPlan plan) {     return plan(plan, true). }
+false;public;2;3;;public PhysicalPlan plan(LogicalPlan plan, boolean verify) {     return foldPlan(mapPlan(plan, verify), verify). }
+true;public;2;3;// first, map the logical plan ;// first, map the logical plan public PhysicalPlan mapPlan(LogicalPlan plan, boolean verify) {     return verify ? verifyMappingPlan(mapper.map(plan)) : mapper.map(plan). }
+true;public;2;3;// second, pack it up ;// second, pack it up public PhysicalPlan foldPlan(PhysicalPlan mapped, boolean verify) {     return verify ? verifyExecutingPlan(folder.fold(mapped)) : folder.fold(mapped). }
+true;public;1;7;// verify the mapped plan ;// verify the mapped plan public PhysicalPlan verifyMappingPlan(PhysicalPlan plan) {     List<Failure> failures = Verifier.verifyMappingPlan(plan).     if (!failures.isEmpty()) {         throw new PlanningException(failures).     }     return plan. }
+false;public;1;4;;public Map<Node<?>, String> verifyMappingPlanFailures(PhysicalPlan plan) {     List<Failure> failures = Verifier.verifyMappingPlan(plan).     return failures.stream().collect(toMap(Failure::source, Failure::message)). }
+false;public;1;7;;public PhysicalPlan verifyExecutingPlan(PhysicalPlan plan) {     List<Failure> failures = Verifier.verifyExecutingPlan(plan).     if (!failures.isEmpty()) {         throw new PlanningException(failures).     }     return plan. }
+false;public;1;4;;public Map<Node<?>, String> verifyExecutingPlanFailures(PhysicalPlan plan) {     List<Failure> failures = Verifier.verifyExecutingPlan(plan).     return failures.stream().collect(toMap(Failure::source, Failure::message)). }

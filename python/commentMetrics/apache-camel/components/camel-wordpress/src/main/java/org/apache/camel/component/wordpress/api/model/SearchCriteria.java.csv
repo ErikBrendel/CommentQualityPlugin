@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Integer getPage() {     return page. }
+false;public;1;3;;public void setPage(Integer page) {     this.page = page. }
+false;public;0;3;;public Integer getPerPage() {     return perPage. }
+false;public;1;3;;public void setPerPage(Integer perPage) {     this.perPage = perPage. }
+false;public;0;3;;public String getSearch() {     return search. }
+false;public;1;3;;public void setSearch(String search) {     this.search = search. }
+false;public;0;3;;public Order getOrder() {     return order. }
+false;public;1;3;;public void setOrder(Order order) {     this.order = order. }
+false;public;0;3;;public List<Integer> getExclude() {     return exclude. }
+false;public;1;3;;public void setExclude(List<Integer> exclude) {     this.exclude = exclude. }
+false;public;0;3;;public List<Integer> getInclude() {     return include. }
+false;public;1;3;;public void setInclude(List<Integer> include) {     this.include = include. }
+false;public;0;5;;@Override public String toString() {     // @formatter:off     return toStringHelper(this).add("Query", this.search).add("Page", page).add("Per Page", perPage).addValue(this.order).toString(). }

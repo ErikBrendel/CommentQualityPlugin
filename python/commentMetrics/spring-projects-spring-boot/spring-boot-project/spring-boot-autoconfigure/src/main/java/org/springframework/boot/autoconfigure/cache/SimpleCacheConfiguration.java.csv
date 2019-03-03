@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;10;;@Bean public ConcurrentMapCacheManager cacheManager(CacheProperties cacheProperties, CacheManagerCustomizers cacheManagerCustomizers) {     ConcurrentMapCacheManager cacheManager = new ConcurrentMapCacheManager().     List<String> cacheNames = cacheProperties.getCacheNames().     if (!cacheNames.isEmpty()) {         cacheManager.setCacheNames(cacheNames).     }     return cacheManagerCustomizers.customize(cacheManager). }

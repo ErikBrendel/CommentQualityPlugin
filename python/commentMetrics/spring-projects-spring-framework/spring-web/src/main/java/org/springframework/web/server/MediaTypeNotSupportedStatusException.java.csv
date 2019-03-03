@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Return the list of supported content types in cases when the Accept  * header is parsed but not supported, or an empty list otherwise.  */ ;/**  * Return the list of supported content types in cases when the Accept  * header is parsed but not supported, or an empty list otherwise.  */ public List<MediaType> getSupportedMediaTypes() {     return this.supportedMediaTypes. }

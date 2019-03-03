@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void backsOffWithoutAClock() {     this.contextRunner.run((context) -> assertThat(context).doesNotHaveBean(StatsdMeterRegistry.class)). }
+false;public;0;8;;@Test public void autoConfiguresItsConfigMeterRegistryAndMetrics() {     this.contextRunner.withUserConfiguration(BaseConfiguration.class).run((context) -> assertThat(context).hasSingleBean(StatsdMeterRegistry.class).hasSingleBean(StatsdConfig.class).hasSingleBean(StatsdMetrics.class)). }
+false;public;0;8;;@Test public void autoConfigurationCanBeDisabled() {     this.contextRunner.withPropertyValues("management.metrics.export.statsd.enabled=false").run((context) -> assertThat(context).doesNotHaveBean(StatsdMeterRegistry.class).doesNotHaveBean(StatsdConfig.class)). }
+false;public;0;7;;@Test public void allowsCustomConfigToBeUsed() {     this.contextRunner.withUserConfiguration(CustomConfigConfiguration.class).run((context) -> assertThat(context).hasSingleBean(StatsdMeterRegistry.class).hasSingleBean(StatsdConfig.class).hasBean("customConfig")). }
+false;public;0;7;;@Test public void allowsCustomRegistryToBeUsed() {     this.contextRunner.withUserConfiguration(CustomRegistryConfiguration.class).run((context) -> assertThat(context).hasSingleBean(StatsdMeterRegistry.class).hasBean("customRegistry").hasSingleBean(StatsdConfig.class)). }
+false;public;0;11;;@Test public void stopsMeterRegistryWhenContextIsClosed() {     this.contextRunner.withUserConfiguration(BaseConfiguration.class).run((context) -> {         StatsdMeterRegistry registry = context.getBean(StatsdMeterRegistry.class).         assertThat(registry.isClosed()).isFalse().         context.close().         assertThat(registry.isClosed()).isTrue().     }). }
+false;public;0;4;;@Bean public Clock clock() {     return Clock.SYSTEM. }
+false;public;0;4;;@Bean public StatsdConfig customConfig() {     return (key) -> null. }
+false;public;2;4;;@Bean public StatsdMeterRegistry customRegistry(StatsdConfig config, Clock clock) {     return new StatsdMeterRegistry(config, clock). }

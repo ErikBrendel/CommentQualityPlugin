@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@Test public void testWireTapExpression() throws Exception {     getMockEndpoint("mock:foo").expectedBodiesReceived("Hello Camel").     getMockEndpoint("mock:bar").expectedBodiesReceived("Hello World").     template.sendBodyAndHeader("direct:start", "Hello Camel", "tap", "foo").     template.sendBodyAndHeader("direct:start", "Hello World", "tap", "bar").     assertMockEndpointsSatisfied(). }
+false;public;0;6;;public void configure() {     // START SNIPPET: e1     from("direct:start").wireTap("mock:${header.tap}"). // END SNIPPET: e1 }
+false;protected;0;10;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             // START SNIPPET: e1             from("direct:start").wireTap("mock:${header.tap}").         // END SNIPPET: e1         }     }. }

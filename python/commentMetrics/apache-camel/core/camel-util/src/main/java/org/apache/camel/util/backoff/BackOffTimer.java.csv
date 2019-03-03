@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;2;12;/**  * Schedule the given function/task to be executed some time in the future  * according to the given backOff.  */ ;/**  * Schedule the given function/task to be executed some time in the future  * according to the given backOff.  */ public Task schedule(BackOff backOff, ThrowingFunction<Task, Boolean, Exception> function) {     final BackOffTimerTask task = new BackOffTimerTask(backOff, scheduler, function).     long delay = task.next().     if (delay != BackOff.NEVER) {         scheduler.schedule(task, delay, TimeUnit.MILLISECONDS).     } else {         task.cancel().     }     return task. }
+true;;0;1;/**  * The back-off associated with this task.  */ ;/**  * The back-off associated with this task.  */ BackOff getBackOff().
+true;;0;1;/**  * Gets the task status.  */ ;/**  * Gets the task status.  */ Status getStatus().
+true;;0;1;/**  * The number of attempts so far.  */ ;/**  * The number of attempts so far.  */ long getCurrentAttempts().
+true;;0;1;/**  * The current computed delay.  */ ;/**  * The current computed delay.  */ long getCurrentDelay().
+true;;0;1;/**  * The current elapsed time.  */ ;/**  * The current elapsed time.  */ long getCurrentElapsedTime().
+true;;0;1;/**  * The time the last attempt has been performed.  */ ;/**  * The time the last attempt has been performed.  */ long getLastAttemptTime().
+true;;0;1;/**  * An indication about the time the next attempt will be made.  */ ;/**  * An indication about the time the next attempt will be made.  */ long getNextAttemptTime().
+true;;0;1;/**  * Reset the task.  */ ;/**  * Reset the task.  */ void reset().
+true;;0;1;/**  * Cancel the task.  */ ;/**  * Cancel the task.  */ void cancel().
+true;;1;1;/**  * Action to execute when the context is completed (cancelled or exhausted)  *  * @param whenCompleted the consumer.  */ ;/**  * Action to execute when the context is completed (cancelled or exhausted)  *  * @param whenCompleted the consumer.  */ void whenComplete(BiConsumer<Task, Throwable> whenCompleted).

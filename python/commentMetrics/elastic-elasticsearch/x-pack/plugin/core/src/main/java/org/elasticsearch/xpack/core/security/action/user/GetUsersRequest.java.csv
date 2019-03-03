@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Override public ActionRequestValidationException validate() {     ActionRequestValidationException validationException = null.     if (usernames == null) {         validationException = addValidationError("usernames cannot be null", validationException).     }     return validationException. }
+false;public;1;3;;public void usernames(String... usernames) {     this.usernames = usernames. }
+false;public;0;4;;@Override public String[] usernames() {     return usernames. }
+false;public;1;5;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     usernames = in.readStringArray(). }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeStringArray(usernames). }

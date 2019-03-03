@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void process(Exchange exchange) throws Exception { // Nothing to do }
+false;public;0;9;;@Test(expected = ConfigurationException.class) public void testNewCouchbaseConsumer() throws Exception {     new CouchbaseConsumer(new CouchbaseEndpoint(), new CouchbaseClient(new ArrayList<URI>(), "bucketName", "pwd"), new Processor() {          @Override         public void process(Exchange exchange) throws Exception {         // Nothing to do         }     }). }

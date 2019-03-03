@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public License license() {     return license. }
+false;public;1;7;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     if (in.readBoolean()) {         license = License.readLicense(in).     } }
+false;public;1;10;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     if (license == null) {         out.writeBoolean(false).     } else {         out.writeBoolean(true).         license.writeTo(out).     } }

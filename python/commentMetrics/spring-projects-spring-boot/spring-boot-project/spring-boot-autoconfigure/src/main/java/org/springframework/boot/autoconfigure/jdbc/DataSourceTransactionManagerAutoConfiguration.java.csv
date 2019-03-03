@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;10;;@Bean @ConditionalOnMissingBean(PlatformTransactionManager.class) public DataSourceTransactionManager transactionManager(DataSource dataSource, ObjectProvider<TransactionManagerCustomizers> transactionManagerCustomizers) {     DataSourceTransactionManager transactionManager = new DataSourceTransactionManager(dataSource).     transactionManagerCustomizers.ifAvailable((customizers) -> customizers.customize(transactionManager)).     return transactionManager. }

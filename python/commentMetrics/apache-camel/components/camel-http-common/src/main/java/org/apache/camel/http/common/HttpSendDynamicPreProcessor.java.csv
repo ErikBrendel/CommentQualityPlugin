@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;13;;@Override public void process(Exchange exchange) throws Exception {     if (path != null) {         exchange.getIn().setHeader(Exchange.HTTP_PATH, path).     } else {         exchange.getIn().removeHeader(Exchange.HTTP_PATH).     }     if (query != null) {         exchange.getIn().setHeader(Exchange.HTTP_QUERY, query).     } else {         exchange.getIn().removeHeader(Exchange.HTTP_QUERY).     } }

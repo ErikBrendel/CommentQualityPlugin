@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;8;;@Override protected CamelContext createCamelContext() throws Exception {     MockitoAnnotations.initMocks(this).     CamelContext context = super.createCamelContext().     HazelcastCamelTestHelper.registerHazelcastComponents(context, hazelcastInstance).     trainHazelcastInstance(hazelcastInstance).     return context. }
+false;protected;1;3;;protected void trainHazelcastInstance(HazelcastInstance hazelcastInstance) { }
+false;protected;1;3;;protected void verifyHazelcastInstance(HazelcastInstance hazelcastInstance) { }
+false;public,final;0;5;;@After public final void verifyHazelcastInstanceMock() {     verifyHazelcastInstance(hazelcastInstance).     verifyNoMoreInteractions(hazelcastInstance). }

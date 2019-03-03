@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public List<QuerySpec<?>> getQueries() {     return singletonList(new QuerySpec<>(PercolateQueryBuilder.NAME, PercolateQueryBuilder::new, PercolateQueryBuilder::fromXContent)). }
+false;public;1;7;;@Override public List<FetchSubPhase> getFetchSubPhases(FetchPhaseConstructionContext context) {     return Arrays.asList(new PercolatorMatchedSlotSubFetchPhase(), new PercolatorHighlightSubFetchPhase(context.getHighlighters())). }
+false;public;0;4;;@Override public List<Setting<?>> getSettings() {     return Arrays.asList(PercolatorFieldMapper.INDEX_MAP_UNMAPPED_FIELDS_AS_TEXT_SETTING). }
+false;public;0;4;;@Override public Map<String, Mapper.TypeParser> getMappers() {     return singletonMap(PercolatorFieldMapper.CONTENT_TYPE, new PercolatorFieldMapper.TypeParser()). }

@@ -1,0 +1,33 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * @return  The build info (incl. build hash and timestamp)  */ ;/**  * @return  The build info (incl. build hash and timestamp)  */ public BuildInfo getBuildInfo() {     return buildInfo. }
+true;public;0;3;/**  * @return  The current license info (incl. UID, type/mode. status and expiry date). May return {@code null} when no  *          license is currently installed.  */ ;/**  * @return  The current license info (incl. UID, type/mode. status and expiry date). May return {@code null} when no  *          license is currently installed.  */ public LicenseInfo getLicenseInfo() {     return licenseInfo. }
+true;public;0;3;/**  * @return  The current status of the feature sets in X-Pack. Feature sets describe the features available/enabled in X-Pack.  */ ;/**  * @return  The current status of the feature sets in X-Pack. Feature sets describe the features available/enabled in X-Pack.  */ public FeatureSetsInfo getFeatureSetsInfo() {     return featureSetsInfo. }
+false;public;1;9;;@Override public boolean equals(Object other) {     if (other == null || other.getClass() != getClass())         return false.     if (this == other)         return true.     XPackInfoResponse rhs = (XPackInfoResponse) other.     return Objects.equals(buildInfo, rhs.buildInfo) && Objects.equals(licenseInfo, rhs.licenseInfo) && Objects.equals(featureSetsInfo, rhs.featureSetsInfo). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(buildInfo, licenseInfo, featureSetsInfo). }
+false;public;0;8;;@Override public String toString() {     return "XPackInfoResponse{" + "buildInfo=" + buildInfo + ", licenseInfo=" + licenseInfo + ", featureSetsInfo=" + featureSetsInfo + '}'. }
+false;public,static;1;3;;public static XPackInfoResponse fromXContent(XContentParser parser) throws IOException {     return PARSER.parse(parser, null). }
+false;public;0;3;;public String getUid() {     return uid. }
+false;public;0;3;;public String getType() {     return type. }
+false;public;0;3;;public String getMode() {     return mode. }
+false;public;0;3;;public long getExpiryDate() {     return expiryDate. }
+false;public;0;3;;public LicenseStatus getStatus() {     return status. }
+false;public;1;11;;@Override public boolean equals(Object other) {     if (other == null || other.getClass() != getClass())         return false.     if (this == other)         return true.     LicenseInfo rhs = (LicenseInfo) other.     return Objects.equals(uid, rhs.uid) && Objects.equals(type, rhs.type) && Objects.equals(mode, rhs.mode) && Objects.equals(status, rhs.status) && expiryDate == rhs.expiryDate. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(uid, type, mode, status, expiryDate). }
+false;public;0;10;;@Override public String toString() {     return "LicenseInfo{" + "uid='" + uid + '\'' + ", type='" + type + '\'' + ", mode='" + mode + '\'' + ", status=" + status + ", expiryDate=" + expiryDate + '}'. }
+false;public;0;3;;public String getHash() {     return hash. }
+false;public;0;3;;public String getTimestamp() {     return timestamp. }
+false;public;1;8;;@Override public boolean equals(Object other) {     if (other == null || other.getClass() != getClass())         return false.     if (this == other)         return true.     BuildInfo rhs = (BuildInfo) other.     return Objects.equals(hash, rhs.hash) && Objects.equals(timestamp, rhs.timestamp). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(hash, timestamp). }
+false;public;0;7;;@Override public String toString() {     return "BuildInfo{" + "hash='" + hash + '\'' + ", timestamp='" + timestamp + '\'' + '}'. }
+false;public;0;3;;public Map<String, FeatureSet> getFeatureSets() {     return featureSets. }
+false;public;1;7;;@Override public boolean equals(Object other) {     if (other == null || other.getClass() != getClass())         return false.     if (this == other)         return true.     FeatureSetsInfo rhs = (FeatureSetsInfo) other.     return Objects.equals(featureSets, rhs.featureSets). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(featureSets). }
+false;public;0;6;;@Override public String toString() {     return "FeatureSetsInfo{" + "featureSets=" + featureSets + '}'. }
+false;public;0;3;;public String name() {     return name. }
+false;public;0;4;;@Nullable public String description() {     return description. }
+false;public;0;3;;public boolean available() {     return available. }
+false;public;0;3;;public boolean enabled() {     return enabled. }
+false;public;0;4;;@Nullable public Map<String, Object> nativeCodeInfo() {     return nativeCodeInfo. }
+false;public;1;11;;@Override public boolean equals(Object other) {     if (other == null || other.getClass() != getClass())         return false.     if (this == other)         return true.     FeatureSet rhs = (FeatureSet) other.     return Objects.equals(name, rhs.name) && Objects.equals(description, rhs.description) && available == rhs.available && enabled == rhs.enabled && Objects.equals(nativeCodeInfo, rhs.nativeCodeInfo). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(name, description, available, enabled, nativeCodeInfo). }
+false;public;0;10;;@Override public String toString() {     return "FeatureSet{" + "name='" + name + '\'' + ", description='" + description + '\'' + ", available=" + available + ", enabled=" + enabled + ", nativeCodeInfo=" + nativeCodeInfo + '}'. }

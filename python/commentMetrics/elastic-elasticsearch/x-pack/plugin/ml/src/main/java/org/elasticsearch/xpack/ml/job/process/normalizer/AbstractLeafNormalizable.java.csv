@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,final;0;4;;@Override public final boolean isContainerOnly() {     return false. }
+false;public,final;0;4;;@Override public final List<ChildType> getChildrenTypes() {     return Collections.emptyList(). }
+false;public,final;0;4;;@Override public final List<Normalizable> getChildren() {     return Collections.emptyList(). }
+false;public,final;1;4;;@Override public final List<Normalizable> getChildren(ChildType type) {     throw new UnsupportedOperationException(getClass().getSimpleName() + " has no children"). }
+false;public,final;2;4;;@Override public final boolean setMaxChildrenScore(ChildType childrenType, double maxScore) {     throw new UnsupportedOperationException(getClass().getSimpleName() + " has no children"). }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected String getBlueprintDescriptor() {     return "org/apache/camel/test/blueprint/SimpleWeaveAddMockLastTest.xml". }
+false;public;0;3;;public boolean isUseAdviceWith() {     return true. }
+false;public;0;4;;@Override public void configure() throws Exception {     weaveAddLast().to("mock:result"). }
+false;public;0;16;;@Test public void testWeaveAddMockLast() throws Exception {     RouteReifier.adviceWith(context.getRouteDefinitions().get(0), context, new AdviceWithRouteBuilder() {          @Override         public void configure() throws Exception {             weaveAddLast().to("mock:result").         }     }).     context.start().     getMockEndpoint("mock:result").expectedBodiesReceived("Bye Camel").     template.sendBody("seda:start", "Camel").     assertMockEndpointsSatisfied(). }

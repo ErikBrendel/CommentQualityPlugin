@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;public SearchTemplateRequestBuilder setRequest(SearchRequest searchRequest) {     request.setRequest(searchRequest).     return this. }
+false;public;1;4;;public SearchTemplateRequestBuilder setSimulate(boolean simulate) {     request.setSimulate(simulate).     return this. }
+true;public;1;4;/**  * Enables explanation for each hit on how its score was computed. Disabled by default  */ ;/**  * Enables explanation for each hit on how its score was computed. Disabled by default  */ public SearchTemplateRequestBuilder setExplain(boolean explain) {     request.setExplain(explain).     return this. }
+true;public;1;4;/**  * Enables profiling of the query. Disabled by default  */ ;/**  * Enables profiling of the query. Disabled by default  */ public SearchTemplateRequestBuilder setProfile(boolean profile) {     request.setProfile(profile).     return this. }
+false;public;1;4;;public SearchTemplateRequestBuilder setScriptType(ScriptType scriptType) {     request.setScriptType(scriptType).     return this. }
+false;public;1;4;;public SearchTemplateRequestBuilder setScript(String script) {     request.setScript(script).     return this. }
+false;public;1;4;;public SearchTemplateRequestBuilder setScriptParams(Map<String, Object> scriptParams) {     request.setScriptParams(scriptParams).     return this. }

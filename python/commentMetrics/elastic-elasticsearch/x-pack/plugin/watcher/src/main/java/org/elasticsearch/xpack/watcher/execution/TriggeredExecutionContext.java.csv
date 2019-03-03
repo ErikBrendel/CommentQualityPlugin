@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean overrideRecordOnConflict() {     return overrideOnConflict. }
+false;public;0;4;;@Override public boolean knownWatch() {     return true. }
+false;public,final;1;4;;@Override public final boolean simulateAction(String actionId) {     return false. }
+false;public,final;1;4;;@Override public final boolean skipThrottling(String actionId) {     return false. }
+false;public;0;4;;@Override public boolean shouldBeExecuted() {     return watch().status().state().isActive(). }
+false;public,final;0;4;;@Override public final boolean recordExecution() {     return true. }

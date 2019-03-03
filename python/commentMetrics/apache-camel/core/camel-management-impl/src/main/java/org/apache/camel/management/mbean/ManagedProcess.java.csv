@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public ProcessDefinition getDefinition() {     return (ProcessDefinition) super.getDefinition(). }
+false;public;0;4;;@Override public String getRef() {     return getDefinition().getRef(). }
+false;public;0;12;;@Override public String getProcessorClassName() {     if (processorClassName != null) {         return processorClassName.     }     Processor target = processor.     if (target instanceof DelegateProcessor) {         target = ((DelegateProcessor) target).getProcessor().     }     processorClassName = ObjectHelper.className(target).     return processorClassName. }

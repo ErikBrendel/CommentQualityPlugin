@@ -1,0 +1,27 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Test public void testObjectOperations() throws Exception {     BeanInfo info = createBeanInfo(Object.class).     List<MethodInfo> operations = info.getMethods().     assertEquals(1, operations.size()).     assertEquals("toString", operations.get(0).getMethod().getName()). }
+false;public;0;13;;@Test public void testGetOperations() throws Exception {     BeanInfo info = createBeanInfo(Foo.class).     List<MethodInfo> operations = info.getMethods().     assertEquals(2, operations.size()).     long size = operations.stream().filter(m -> m.getMethod().getName().equals("inOnlyMethod")).count().     assertEquals(1, size).     size = operations.stream().filter(m -> m.getMethod().getName().equals("inOutMethod")).count().     assertEquals(1, size). }
+false;public;0;7;;@Test public void testMethodPatternUsingMethodAnnotations() throws Exception {     BeanInfo info = createBeanInfo(Foo.class).     assertMethodPattern(info, "inOutMethod", ExchangePattern.InOut).     assertMethodPattern(info, "inOnlyMethod", ExchangePattern.InOnly). }
+false;public;0;6;;@Test public void testMethodPatternUsingClassAnnotationsOnInterface() throws Exception {     BeanInfo info = createBeanInfo(MyOneWayInterface.class).     assertMethodPattern(info, "inOnlyMethod", ExchangePattern.InOnly). }
+false;public;0;7;;@Test public void testMethodPatternUsingMethodAnnotationsOnInterface() throws Exception {     BeanInfo info = createBeanInfo(MyOneWayInterfaceWithOverloadedMethod.class).     assertMethodPattern(info, "inOnlyMethod", ExchangePattern.InOnly).     assertMethodPattern(info, "inOutMethod", ExchangePattern.InOut). }
+false;public;0;6;;@Test public void testMethodPatternUsingClassAnnotationsButOverloadingOnMethod() throws Exception {     BeanInfo info = createBeanInfo(OverloadOnMethod.class).     assertMethodPattern(info, "inOnlyMethod", ExchangePattern.InOnly). }
+false;public;0;6;;@Test public void testMethodPatternUsingClassAnnotationsButOverloadingOnBaseClassMethod() throws Exception {     BeanInfo info = createBeanInfo(OverloadOnBaseClass.class).     assertMethodPattern(info, "inOnlyMethod", ExchangePattern.InOnly). }
+false;public;0;6;;@Test public void testMethodPatternUsingClassAnnotationsOnClassWithAnnotationsOnInterface() throws Exception {     BeanInfo info = createBeanInfo(OverloadOnMethod.class).     assertMethodPattern(info, "inOnlyMethod", ExchangePattern.InOnly). }
+false;public;0;7;;@Test public void testMethodPatternUsingClassAnnotationsOnBaseInterfaceAndOverloadingMethodOnDerivedInterface() throws Exception {     BeanInfo info = createBeanInfo(OverloadOnInterface.class).     assertMethodPattern(info, "inOnlyMethod", ExchangePattern.InOnly).     assertMethodPattern(info, "inOutMethod", ExchangePattern.InOut). }
+false;public;0;12;;@Test public void testImplementLevel2InterfaceMethodInPackagePrivateClass() {     BeanInfo info = createBeanInfo(PackagePrivateClassImplementingLevel2InterfaceMethod.class).     List<MethodInfo> mis = info.getMethods().     Assert.assertNotNull(mis).     Assert.assertEquals(1, mis.size()).     MethodInfo mi = mis.get(0).     Assert.assertNotNull(mi).     Method m = mi.getMethod().     Assert.assertEquals("method", m.getName()).     Assert.assertTrue(Modifier.isPublic(m.getDeclaringClass().getModifiers())). }
+false;public;0;12;;@Test public void testPublicClassImplementingInterfaceMethodBySuperPackagePrivateClass() {     BeanInfo info = createBeanInfo(PublicClassImplementingBySuperPackagePrivateClass.class).     List<MethodInfo> mis = info.getMethods().     Assert.assertNotNull(mis).     Assert.assertEquals(1, mis.size()).     MethodInfo mi = mis.get(0).     Assert.assertNotNull(mi).     Method m = mi.getMethod().     Assert.assertEquals("method", m.getName()).     Assert.assertTrue(Modifier.isPublic(m.getDeclaringClass().getModifiers())). }
+false;protected;1;4;;protected BeanInfo createBeanInfo(Class<?> type) {     BeanInfo info = new BeanInfo(camelContext, type).     return info. }
+false;protected;3;13;;protected void assertMethodPattern(BeanInfo info, String methodName, ExchangePattern expectedPattern) throws NoSuchMethodException {     Class<?> type = info.getType().     Method method = type.getMethod(methodName).     assertNotNull("Could not find method: " + methodName, method).     MethodInfo methodInfo = info.getMethodInfo(method).     assertNotNull("Could not find methodInfo for: " + method, methodInfo).     ExchangePattern actualPattern = methodInfo.getPattern().     assertEquals("Pattern for: " + method, expectedPattern, actualPattern).     LOG.info("Method: {} has pattern: {}", method, actualPattern). }
+false;;0;1;;void inOutMethod().
+false;;0;2;;@Pattern(ExchangePattern.InOnly) void inOnlyMethod().
+false;;0;1;;void inOnlyMethod().
+false;;0;1;;void inOnlyMethod().
+false;;0;2;;@InOut Object inOutMethod().
+false;public;0;2;;public void inOnlyMethod() { }
+false;public;0;2;;public void robustInOnlyMethod() { }
+false;public;0;2;;public void inOnlyMethod() { }
+false;public;0;3;;public Object inOutMethod() {     return null. }
+false;;0;1;;String method().
+false;public;0;4;;@Override public String method() {     return "PackagePrivateClassImplementingLevel2InterfaceMethod.method() has been called". }
+false;;0;1;;String method().
+false;public;0;3;;public String method() {     return "PackagePrivateClassDefiningMethod.method() has been called". }

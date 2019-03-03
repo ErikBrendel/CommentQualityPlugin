@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Before public void setup() {     ctx = new ClassPathXmlApplicationContext(getClass().getSimpleName() + "-context.xml", getClass()).     testBean = (AnnotatedTestBean) ctx.getBean("testBean"). }
+false;public;0;6;;@Test public void testAnnotationBindingInAroundAdvice() {     assertEquals("this value doThis", testBean.doThis()).     assertEquals("that value doThat", testBean.doThat()).     assertEquals(2, testBean.doArray().length). }
+false;public;0;4;;@Test public void testNoMatchingWithoutAnnotationPresent() {     assertEquals("doTheOther", testBean.doTheOther()). }
+false;public;0;4;;@Test public void testPointcutEvaluatedAgainstArray() {     ctx.getBean("arrayFactoryBean"). }
+false;public;2;7;;@Around("execution(* *(..)) && @annotation(testAnn)") public Object doWithAnnotation(ProceedingJoinPoint pjp, TestAnnotation testAnn) throws Throwable {     String annValue = testAnn.value().     Object result = pjp.proceed().     return (result instanceof String ? annValue + " " + result : result). }
+false;public;0;5;;@Override @TestAnnotation("some value") public Object getObject() {     return new Resource[0]. }
+false;public;0;5;;@Override @TestAnnotation("some value") public Class<?> getObjectType() {     return Resource[].class. }
+false;public;0;4;;@Override public boolean isSingleton() {     return true. }

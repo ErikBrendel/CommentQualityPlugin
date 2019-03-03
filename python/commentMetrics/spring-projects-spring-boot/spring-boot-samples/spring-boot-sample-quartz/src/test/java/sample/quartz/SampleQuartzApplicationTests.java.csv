@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;12;;@Test public void quartzJobIsTriggered() throws InterruptedException {     try (ConfigurableApplicationContext context = SpringApplication.run(SampleQuartzApplication.class)) {         long end = System.currentTimeMillis() + 5000.         while ((!this.output.toString().contains("Hello World!")) && System.currentTimeMillis() < end) {             Thread.sleep(100).         }         assertThat(this.output.toString()).contains("Hello World!").     } }

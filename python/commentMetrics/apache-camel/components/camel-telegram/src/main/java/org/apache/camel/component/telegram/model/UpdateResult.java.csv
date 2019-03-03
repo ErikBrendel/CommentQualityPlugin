@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public boolean isOk() {     return ok. }
+false;public;1;3;;public void setOk(boolean ok) {     this.ok = ok. }
+false;public;0;3;;public List<Update> getUpdates() {     return updates. }
+false;public;1;3;;public void setUpdates(List<Update> updates) {     this.updates = updates. }
+false;public;0;8;;@Override public String toString() {     final StringBuilder sb = new StringBuilder("UpdateResult{").     sb.append("ok=").append(ok).     sb.append(", updates=").append(updates).     sb.append('}').     return sb.toString(). }

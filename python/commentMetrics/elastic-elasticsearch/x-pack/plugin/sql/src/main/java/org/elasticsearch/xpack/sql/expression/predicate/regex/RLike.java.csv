@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String pattern() {     return pattern. }
+false;protected;0;4;;@Override protected NodeInfo<RLike> info() {     return NodeInfo.create(this, RLike::new, field(), pattern). }
+false;protected;1;4;;@Override protected RLike replaceChild(Expression newChild) {     return new RLike(source(), newChild, pattern). }

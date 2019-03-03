@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;4;;@Bean Person dilbert() {     return new Person("Dilbert"). }
+false;;0;4;;@Bean Person wally() {     return new Person("Wally"). }
+false;;0;4;;@Bean Dog dogbert() {     return new Dog("Dogbert"). }
+false;;0;5;;@Primary @Bean Cat catbert() {     return new Cat("Catbert"). }
+false;;0;4;;@Bean Cat garfield() {     return new Cat("Garfield"). }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public FsInfo stats() {     return cache.getOrRefresh(). }
+false;private,static;4;8;;private static FsInfo stats(FsProbe probe, FsInfo initialValue, Logger logger, @Nullable ClusterInfo clusterInfo) {     try {         return probe.stats(initialValue, clusterInfo).     } catch (IOException e) {         logger.debug("unexpected exception reading filesystem info", e).         return null.     } }
+false;protected;0;4;;@Override protected FsInfo refresh() {     return stats(probe, initialValue, logger, clusterInfoService.getClusterInfo()). }

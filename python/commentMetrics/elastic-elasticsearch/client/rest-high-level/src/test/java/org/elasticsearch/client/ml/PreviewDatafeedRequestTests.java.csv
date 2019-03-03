@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected PreviewDatafeedRequest createTestInstance() {     return new PreviewDatafeedRequest(DatafeedConfigTests.randomValidDatafeedId()). }
+false;protected;1;4;;@Override protected PreviewDatafeedRequest doParseInstance(XContentParser parser) throws IOException {     return PreviewDatafeedRequest.fromXContent(parser). }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }

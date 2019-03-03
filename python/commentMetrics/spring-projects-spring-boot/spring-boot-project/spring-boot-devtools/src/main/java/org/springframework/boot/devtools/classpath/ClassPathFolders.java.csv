@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;1;5;;private void addUrls(URL[] urls) {     for (URL url : urls) {         addUrl(url).     } }
+false;private;1;11;;private void addUrl(URL url) {     if (url.getProtocol().equals("file") && url.getPath().endsWith("/")) {         try {             this.folders.add(ResourceUtils.getFile(url)).         } catch (Exception ex) {             logger.warn("Unable to get classpath URL " + url).             logger.trace("Unable to get classpath URL " + url, ex).         }     } }
+false;public;0;4;;@Override public Iterator<File> iterator() {     return Collections.unmodifiableList(this.folders).iterator(). }

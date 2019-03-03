@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void testUnmarshal() throws Exception {     Object result = template.requestBody("direct:unmarshal", "name: Camel").     assertNotNull(result).     assertTrue(result instanceof TestPojo). }
+false;public;0;8;;@Override public void configure() throws Exception {     SnakeYAMLDataFormat format = new SnakeYAMLDataFormat().     format.setUnmarshalType(TestPojo.class).     from("direct:unmarshal").unmarshal(format). }
+false;protected;0;13;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             SnakeYAMLDataFormat format = new SnakeYAMLDataFormat().             format.setUnmarshalType(TestPojo.class).             from("direct:unmarshal").unmarshal(format).         }     }. }

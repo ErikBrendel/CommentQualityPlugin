@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;7;;public static QueryMetric fromString(String metric) {     try {         return QueryMetric.valueOf(metric.toUpperCase(Locale.ROOT)).     } catch (Exception e) {         return REST.     } }
+false;public;0;4;;@Override public String toString() {     return this.name().toLowerCase(Locale.ROOT). }
+false;public,static;2;11;;public static QueryMetric from(Mode mode, String clientId) {     if (mode == Mode.ODBC) {         // default to "odbc_32" if the client_id is not provided or it has a wrong value         if (clientId == null || false == ODBC_CLIENT_IDS.contains(clientId)) {             return fromString(RequestInfo.ODBC_32).         } else {             return fromString(clientId).         }     }     return fromString(mode == Mode.PLAIN ? clientId : mode.toString()). }

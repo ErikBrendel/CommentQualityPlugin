@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;3;;protected String getFtpUrl() {     return "ftp://admin@localhost:" + getPort() + "/exist?password=admin&tempPrefix=upload-&fileExist=Override&disconnect=true&eagerDeleteTargetFile=false". }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Test public void testSendMatchingMessage() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived(matchingBody).     sendBody("direct:start", matchingBody).     assertMockEndpointsSatisfied(). }
+false;public;0;8;;@Test public void testSendNotMatchingMessage() throws Exception {     getMockEndpoint("mock:result").expectedMessageCount(0).     sendBody("direct:start", notMatchingBody).     assertMockEndpointsSatisfied(). }
+false;public;0;7;;public void configure() {     // START SNIPPET: example     from("direct:start").filter().xpath("/person[@name='James']").to("mock:result"). // END SNIPPET: example }
+false;protected;0;11;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             // START SNIPPET: example             from("direct:start").filter().xpath("/person[@name='James']").to("mock:result").         // END SNIPPET: example         }     }. }

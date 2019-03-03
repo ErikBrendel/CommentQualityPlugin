@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,static;1;9;/**  * Returns a random QueryBuilder or null  */ ;/**  * Returns a random QueryBuilder or null  */ public static QueryBuilder randomFilterOrNull(Random random) {     final QueryBuilder randomFilter.     if (random.nextBoolean()) {         randomFilter = randomFilter(random).     } else {         randomFilter = null.     }     return randomFilter. }
+true;public,static;1;4;/**  * Returns a random QueryBuilder  */ ;/**  * Returns a random QueryBuilder  */ public static QueryBuilder randomFilter(Random random) {     return new RangeQueryBuilder(RandomStrings.randomAsciiLettersOfLength(random, 10)).gt(random.nextInt()). }

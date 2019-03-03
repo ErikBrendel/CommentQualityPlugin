@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;0;3;;private String getFtpUrl() {     return "ftp://admin@localhost:" + getPort() + "/exist?password=admin&delay=2000&noop=true&fileExist=Override". }
+false;public;0;6;;@Override @Before public void setUp() throws Exception {     super.setUp().     template.sendBodyAndHeader(getFtpUrl(), "Hello World", Exchange.FILE_NAME, "hello.txt"). }
+false;public;0;10;;@Test public void testOverride() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedBodiesReceived("Bye World").     mock.expectedFileExists(FTP_ROOT_DIR + "/exist/hello.txt", "Bye World").     template.sendBodyAndHeader(getFtpUrl(), "Bye World", Exchange.FILE_NAME, "hello.txt").     assertMockEndpointsSatisfied(). }
+false;public;0;4;;@Override public void configure() throws Exception {     from(getFtpUrl()).to("mock:result"). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from(getFtpUrl()).to("mock:result").         }     }. }

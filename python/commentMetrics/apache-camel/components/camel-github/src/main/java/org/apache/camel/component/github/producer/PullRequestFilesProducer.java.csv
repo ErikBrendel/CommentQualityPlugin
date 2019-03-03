@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;9;;public void process(Exchange exchange) throws Exception {     Integer pullRequestNumber = exchange.getIn().getHeader(GitHubConstants.GITHUB_PULLREQUEST, Integer.class).     java.util.List<CommitFile> response = pullRequestService.getFiles(getRepository(), pullRequestNumber).     // copy the header of in message to the out message     exchange.getOut().copyFrom(exchange.getIn()).     exchange.getOut().setBody(response). }

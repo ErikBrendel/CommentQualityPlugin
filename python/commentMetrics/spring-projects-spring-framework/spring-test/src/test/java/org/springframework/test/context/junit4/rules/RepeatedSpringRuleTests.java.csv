@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;11;;@Parameters(name = "{0}") public static Object[][] repetitionData() {     return new Object[][] { //      { NonAnnotatedRepeatedTestCase.class.getSimpleName(), 0, 1, 1, 1 }, //      { DefaultRepeatValueRepeatedTestCase.class.getSimpleName(), 0, 1, 1, 1 }, //      { NegativeRepeatValueRepeatedTestCase.class.getSimpleName(), 0, 1, 1, 1 }, //      { RepeatedFiveTimesRepeatedTestCase.class.getSimpleName(), 0, 1, 1, 5 }, //      { RepeatedFiveTimesViaMetaAnnotationRepeatedTestCase.class.getSimpleName(), 0, 1, 1, 5 }, //      { TimedRepeatedTestCase.class.getSimpleName(), 3, 4, 4, (5 + 1 + 4 + 10) } }. }
+false;protected;0;4;;@Override protected Class<? extends Runner> getRunnerClass() {     return JUnit4.class. }
+false;protected;0;3;;protected void incrementInvocationCount() throws IOException {     invocationCount.incrementAndGet(). }
+false;public;0;5;;@Test @Timed(millis = 10000) public void nonAnnotated() throws Exception {     incrementInvocationCount(). }
+false;public;0;6;;@Test @Repeat @Timed(millis = 10000) public void defaultRepeatValue() throws Exception {     incrementInvocationCount(). }
+false;public;0;6;;@Test @Repeat(-5) @Timed(millis = 10000) public void negativeRepeatValue() throws Exception {     incrementInvocationCount(). }
+false;public;0;5;;@Test @Repeat(5) public void repeatedFiveTimes() throws Exception {     incrementInvocationCount(). }
+false;public;0;5;;@Test @RepeatedFiveTimes public void repeatedFiveTimes() throws Exception {     incrementInvocationCount(). }
+false;public;0;6;;@Test @Timed(millis = 1000) @Repeat(5) public void repeatedFiveTimesButDoesNotExceedTimeout() throws Exception {     incrementInvocationCount(). }
+false;public;0;7;;@Test @Timed(millis = 10) @Repeat(1) public void singleRepetitionExceedsTimeout() throws Exception {     incrementInvocationCount().     Thread.sleep(15). }
+false;public;0;7;;@Test @Timed(millis = 20) @Repeat(4) public void firstRepetitionOfManyExceedsTimeout() throws Exception {     incrementInvocationCount().     Thread.sleep(25). }
+false;public;0;7;;@Test @Timed(millis = 100) @Repeat(10) public void collectiveRepetitionsExceedTimeout() throws Exception {     incrementInvocationCount().     Thread.sleep(11). }

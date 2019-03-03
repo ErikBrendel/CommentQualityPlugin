@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected String sendUri() {     return "ircs://{{camelTo}}@{{server}}?channels={{channel1}}". }
+false;protected;0;4;;@Override protected String fromUri() {     return "ircs://{{camelFrom}}@{{server}}?channels={{channel1}}". }

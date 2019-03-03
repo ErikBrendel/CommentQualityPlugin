@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;12;;@Override protected CamelContext createCamelContext() throws Exception {     CamelContext camel = super.createCamelContext().     SjmsComponent sjms = new SjmsComponent().     log.info("Using live connection to existing ActiveMQ broker running on {}", url).     sjms.setConnectionFactory(new ActiveMQConnectionFactory(url)).     camel.addComponent("sjms", sjms).     return camel. }
+false;public;0;6;;@Test public void testConsume() throws Exception {     getMockEndpoint("mock:foo").expectedMinimumMessageCount(3).     assertMockEndpointsSatisfied(1, TimeUnit.MINUTES). }
+false;public;0;6;;@Override public void configure() throws Exception {     from("sjms:queue:foo?asyncStartListener=true").to("log:foo").to("mock:foo"). }
+false;protected;0;11;;@Override protected RoutesBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("sjms:queue:foo?asyncStartListener=true").to("log:foo").to("mock:foo").         }     }. }

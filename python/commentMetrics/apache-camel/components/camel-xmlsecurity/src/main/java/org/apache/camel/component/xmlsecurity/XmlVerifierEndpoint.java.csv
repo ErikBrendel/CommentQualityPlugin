@@ -1,0 +1,18 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;4;;@Override Processor createProcessor() {     return new XmlVerifierProcessor(getConfiguration()). }
+false;public;0;3;;public XmlVerifierConfiguration getConfiguration() {     return configuration. }
+false;public;1;3;;public void setConfiguration(XmlVerifierConfiguration configuration) {     this.configuration = configuration. }
+false;public;1;3;;public void setKeySelector(KeySelector keySelector) {     getConfiguration().setKeySelector(keySelector). }
+false;public;0;3;;public KeySelector getKeySelector() {     return getConfiguration().getKeySelector(). }
+false;public;0;3;;public XmlSignatureChecker getXmlSignatureChecker() {     return getConfiguration().getXmlSignatureChecker(). }
+false;public;1;3;;public void setXmlSignatureChecker(XmlSignatureChecker xmlSignatureChecker) {     getConfiguration().setXmlSignatureChecker(xmlSignatureChecker). }
+false;public;0;3;;public XmlSignature2Message getXmlSignature2Message() {     return getConfiguration().getXmlSignature2Message(). }
+false;public;1;3;;public void setXmlSignature2Message(XmlSignature2Message xmlSignature2Message) {     getConfiguration().setXmlSignature2Message(xmlSignature2Message). }
+false;public;0;3;;public ValidationFailedHandler getValidationFailedHandler() {     return getConfiguration().getValidationFailedHandler(). }
+false;public;1;3;;public void setValidationFailedHandler(ValidationFailedHandler validationFailedHandler) {     getConfiguration().setValidationFailedHandler(validationFailedHandler). }
+false;public;0;3;;public Object getOutputNodeSearch() {     return getConfiguration().getOutputNodeSearch(). }
+false;public;1;3;;public void setOutputNodeSearch(Object outputNodeSearch) {     getConfiguration().setOutputNodeSearch(outputNodeSearch). }
+false;public;0;3;;public String getOutputNodeSearchType() {     return getConfiguration().getOutputNodeSearchType(). }
+false;public;1;3;;public void setOutputNodeSearchType(String outputNodeSearchType) {     getConfiguration().setOutputNodeSearchType(outputNodeSearchType). }
+false;public;0;3;;public Boolean getRemoveSignatureElements() {     return getConfiguration().getRemoveSignatureElements(). }
+false;public;1;3;;public void setRemoveSignatureElements(Boolean removeSignatureElements) {     getConfiguration().setRemoveSignatureElements(removeSignatureElements). }

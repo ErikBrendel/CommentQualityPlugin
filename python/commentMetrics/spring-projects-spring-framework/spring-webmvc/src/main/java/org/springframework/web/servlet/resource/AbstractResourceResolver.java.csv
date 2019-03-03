@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;4;7;;@Override @Nullable public Resource resolveResource(@Nullable HttpServletRequest request, String requestPath, List<? extends Resource> locations, ResourceResolverChain chain) {     return resolveResourceInternal(request, requestPath, locations, chain). }
+false;public;3;7;;@Override @Nullable public String resolveUrlPath(String resourceUrlPath, List<? extends Resource> locations, ResourceResolverChain chain) {     return resolveUrlPathInternal(resourceUrlPath, locations, chain). }
+false;protected,abstract;4;3;;@Nullable protected abstract Resource resolveResourceInternal(@Nullable HttpServletRequest request, String requestPath, List<? extends Resource> locations, ResourceResolverChain chain).
+false;protected,abstract;3;3;;@Nullable protected abstract String resolveUrlPathInternal(String resourceUrlPath, List<? extends Resource> locations, ResourceResolverChain chain).

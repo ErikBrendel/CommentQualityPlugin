@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void setInputQueue(String inputQueue) {     this.inputQueue = inputQueue. }
+false;public;0;4;;@Override public void configure() throws Exception {     from(inputQueue).to("mock:result"). }

@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getName() {     return this.name. }
+false;public;0;3;;public String getUUID() {     return uuid. }
+false;public;0;11;;@Override public String toString() {     /*          * If we have a uuid we put it in the toString so it'll show up in logs which is useful as more and more things use the uuid rather          * than the name as the lookup key for the index.          */     if (ClusterState.UNKNOWN_UUID.equals(uuid)) {         return "[" + name + "]".     }     return "[" + name + "/" + uuid + "]". }
+false;public;1;11;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     Index index1 = (Index) o.     // allow for _na_ uuid     return uuid.equals(index1.uuid) && name.equals(index1.name). }
+false;public;0;6;;@Override public int hashCode() {     int result = name.hashCode().     result = 31 * result + uuid.hashCode().     return result. }
+false;public;1;5;;@Override public void writeTo(final StreamOutput out) throws IOException {     out.writeString(name).     out.writeString(uuid). }
+false;public;2;7;;@Override public XContentBuilder toXContent(final XContentBuilder builder, final Params params) throws IOException {     builder.startObject().     builder.field(INDEX_NAME_KEY, name).     builder.field(INDEX_UUID_KEY, uuid).     return builder.endObject(). }
+false;public,static;1;3;;public static Index fromXContent(final XContentParser parser) throws IOException {     return INDEX_PARSER.parse(parser, null).build(). }
+false;public;1;3;;public void name(final String name) {     this.name = name. }
+false;public;1;3;;public void uuid(final String uuid) {     this.uuid = uuid. }
+false;public;0;3;;public Index build() {     return new Index(name, uuid). }

@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected Class<? extends Annotation> getAnnotation() {     return EnableJpaRepositories.class. }
+false;protected;0;4;;@Override protected Class<?> getConfiguration() {     return EnableJpaRepositoriesConfiguration.class. }
+false;protected;0;4;;@Override protected RepositoryConfigurationExtension getRepositoryConfigurationExtension() {     return new JpaRepositoryConfigExtension(). }
+false;protected;0;5;;@Override protected BootstrapMode getBootstrapMode() {     return (this.bootstrapMode == null) ? super.getBootstrapMode() : this.bootstrapMode. }
+false;public;1;5;;@Override public void setEnvironment(Environment environment) {     super.setEnvironment(environment).     configureBootstrapMode(environment). }
+false;private;1;8;;private void configureBootstrapMode(Environment environment) {     String property = environment.getProperty("spring.data.jpa.repositories.bootstrap-mode").     if (StringUtils.hasText(property)) {         this.bootstrapMode = BootstrapMode.valueOf(property.toUpperCase(Locale.ENGLISH)).     } }

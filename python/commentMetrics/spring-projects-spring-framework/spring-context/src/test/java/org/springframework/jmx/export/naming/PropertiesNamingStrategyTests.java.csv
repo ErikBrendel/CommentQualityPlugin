@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;9;;@Override protected ObjectNamingStrategy getStrategy() throws Exception {     KeyNamingStrategy strat = new KeyNamingStrategy().     Properties mappings = new Properties().     mappings.setProperty("namingTest", "bean:name=namingTest").     strat.setMappings(mappings).     strat.afterPropertiesSet().     return strat. }
+false;protected;0;4;;@Override protected Object getManagedResource() {     return new Object(). }
+false;protected;0;4;;@Override protected String getKey() {     return "namingTest". }
+false;protected;0;4;;@Override protected String getCorrectObjectName() {     return OBJECT_NAME. }

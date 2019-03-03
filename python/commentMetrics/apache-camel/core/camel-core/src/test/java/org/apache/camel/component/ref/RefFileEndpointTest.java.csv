@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Override @Before public void setUp() throws Exception {     deleteDirectory("target/data/foo").     super.setUp(). }
+false;public;0;12;;@Test public void testRefFileEndpoint() throws Exception {     getMockEndpoint("mock:result").expectedMessageCount(1).     template.sendBodyAndHeader("file:target/data/foo", "Hello World", Exchange.FILE_NAME, "hello.txt").     assertMockEndpointsSatisfied().     FileConsumer consumer = (FileConsumer) context.getRoute("foo").getConsumer().     assertEquals(3000, consumer.getDelay()).     assertEquals(250, consumer.getInitialDelay()). }
+false;protected;0;6;;@Override protected CamelContext createCamelContext() throws Exception {     CamelContext context = new DefaultCamelContext().     context.getRegistry().bind("foo", context.getEndpoint("file:target/data/foo?initialDelay=250&delay=3000&delete=true")).     return context. }
+false;public;0;4;;@Override public void configure() throws Exception {     from("ref:foo").routeId("foo").to("mock:result"). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("ref:foo").routeId("foo").to("mock:result").         }     }. }

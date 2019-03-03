@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;3;;protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/spring/config/PackageResolverTest.xml"). }
+false;public;0;9;;@Test public void testSetAcceptableSchema() throws Exception {     DefaultPackageScanClassResolver resolver = (DefaultPackageScanClassResolver) context.getPackageScanClassResolver().     assertNotNull(resolver).     // just check the accept schema     assertTrue("We should accept the test:!", resolver.isAcceptableScheme("test://test")).     assertTrue("We should accept the test2:!", resolver.isAcceptableScheme("test2://test")). }

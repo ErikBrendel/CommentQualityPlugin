@@ -1,0 +1,83 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public MailConfigurationNestedConfiguration getConfiguration() {     return configuration. }
+false;public;1;4;;public void setConfiguration(MailConfigurationNestedConfiguration configuration) {     this.configuration = configuration. }
+false;public;0;3;;public String getContentTypeResolver() {     return contentTypeResolver. }
+false;public;1;3;;public void setContentTypeResolver(String contentTypeResolver) {     this.contentTypeResolver = contentTypeResolver. }
+false;public;0;3;;public Boolean getUseGlobalSslContextParameters() {     return useGlobalSslContextParameters. }
+false;public;1;4;;public void setUseGlobalSslContextParameters(Boolean useGlobalSslContextParameters) {     this.useGlobalSslContextParameters = useGlobalSslContextParameters. }
+false;public;0;3;;public Boolean getResolvePropertyPlaceholders() {     return resolvePropertyPlaceholders. }
+false;public;1;4;;public void setResolvePropertyPlaceholders(Boolean resolvePropertyPlaceholders) {     this.resolvePropertyPlaceholders = resolvePropertyPlaceholders. }
+false;public;0;3;;public JavaMailSender getJavaMailSender() {     return javaMailSender. }
+false;public;1;3;;public void setJavaMailSender(JavaMailSender javaMailSender) {     this.javaMailSender = javaMailSender. }
+false;public;0;3;;public String getHost() {     return host. }
+false;public;1;3;;public void setHost(String host) {     this.host = host. }
+false;public;0;3;;public Properties getJavaMailProperties() {     return javaMailProperties. }
+false;public;1;3;;public void setJavaMailProperties(Properties javaMailProperties) {     this.javaMailProperties = javaMailProperties. }
+false;public;0;3;;public Properties getAdditionalJavaMailProperties() {     return additionalJavaMailProperties. }
+false;public;1;4;;public void setAdditionalJavaMailProperties(Properties additionalJavaMailProperties) {     this.additionalJavaMailProperties = additionalJavaMailProperties. }
+false;public;0;3;;public String getPassword() {     return password. }
+false;public;1;3;;public void setPassword(String password) {     this.password = password. }
+false;public;0;3;;public String getSubject() {     return subject. }
+false;public;1;3;;public void setSubject(String subject) {     this.subject = subject. }
+false;public;0;3;;public Integer getPort() {     return port. }
+false;public;1;3;;public void setPort(Integer port) {     this.port = port. }
+false;public;0;3;;public String getProtocol() {     return protocol. }
+false;public;1;3;;public void setProtocol(String protocol) {     this.protocol = protocol. }
+false;public;0;3;;public Session getSession() {     return session. }
+false;public;1;3;;public void setSession(Session session) {     this.session = session. }
+false;public;0;3;;public String getUsername() {     return username. }
+false;public;1;3;;public void setUsername(String username) {     this.username = username. }
+false;public;0;3;;public String getFrom() {     return from. }
+false;public;1;3;;public void setFrom(String from) {     this.from = from. }
+false;public;0;3;;public Boolean getDelete() {     return delete. }
+false;public;1;3;;public void setDelete(Boolean delete) {     this.delete = delete. }
+false;public;0;3;;public Boolean getMapMailMessage() {     return mapMailMessage. }
+false;public;1;3;;public void setMapMailMessage(Boolean mapMailMessage) {     this.mapMailMessage = mapMailMessage. }
+false;public;0;3;;public String getFolderName() {     return folderName. }
+false;public;1;3;;public void setFolderName(String folderName) {     this.folderName = folderName. }
+false;public;0;3;;public Boolean getIgnoreUriScheme() {     return ignoreUriScheme. }
+false;public;1;3;;public void setIgnoreUriScheme(Boolean ignoreUriScheme) {     this.ignoreUriScheme = ignoreUriScheme. }
+false;public;0;3;;public Boolean getUnseen() {     return unseen. }
+false;public;1;3;;public void setUnseen(Boolean unseen) {     this.unseen = unseen. }
+false;public;0;3;;public String getTo() {     return to. }
+false;public;1;3;;public void setTo(String to) {     this.to = to. }
+false;public;0;3;;public String getCc() {     return cc. }
+false;public;1;3;;public void setCc(String cc) {     this.cc = cc. }
+false;public;0;3;;public String getBcc() {     return bcc. }
+false;public;1;3;;public void setBcc(String bcc) {     this.bcc = bcc. }
+false;public;0;3;;public String getReplyTo() {     return replyTo. }
+false;public;1;3;;public void setReplyTo(String replyTo) {     this.replyTo = replyTo. }
+false;public;0;3;;public Integer getFetchSize() {     return fetchSize. }
+false;public;1;3;;public void setFetchSize(Integer fetchSize) {     this.fetchSize = fetchSize. }
+false;public;0;3;;public Boolean getDebugMode() {     return debugMode. }
+false;public;1;3;;public void setDebugMode(Boolean debugMode) {     this.debugMode = debugMode. }
+false;public;0;3;;public Integer getConnectionTimeout() {     return connectionTimeout. }
+false;public;1;3;;public void setConnectionTimeout(Integer connectionTimeout) {     this.connectionTimeout = connectionTimeout. }
+false;public;0;3;;public Boolean getDummyTrustManager() {     return dummyTrustManager. }
+false;public;1;3;;public void setDummyTrustManager(Boolean dummyTrustManager) {     this.dummyTrustManager = dummyTrustManager. }
+false;public;0;3;;public String getContentType() {     return contentType. }
+false;public;1;3;;public void setContentType(String contentType) {     this.contentType = contentType. }
+false;public;0;3;;public String getAlternativeBodyHeader() {     return alternativeBodyHeader. }
+false;public;1;3;;public void setAlternativeBodyHeader(String alternativeBodyHeader) {     this.alternativeBodyHeader = alternativeBodyHeader. }
+false;public;0;3;;public Boolean getUseInlineAttachments() {     return useInlineAttachments. }
+false;public;1;3;;public void setUseInlineAttachments(Boolean useInlineAttachments) {     this.useInlineAttachments = useInlineAttachments. }
+false;public;0;3;;public Boolean getIgnoreUnsupportedCharset() {     return ignoreUnsupportedCharset. }
+false;public;1;3;;public void setIgnoreUnsupportedCharset(Boolean ignoreUnsupportedCharset) {     this.ignoreUnsupportedCharset = ignoreUnsupportedCharset. }
+false;public;0;3;;public Boolean getDisconnect() {     return disconnect. }
+false;public;1;3;;public void setDisconnect(Boolean disconnect) {     this.disconnect = disconnect. }
+false;public;0;3;;public Boolean getCloseFolder() {     return closeFolder. }
+false;public;1;3;;public void setCloseFolder(Boolean closeFolder) {     this.closeFolder = closeFolder. }
+false;public;0;3;;public SSLContextParameters getSslContextParameters() {     return sslContextParameters. }
+false;public;1;4;;public void setSslContextParameters(SSLContextParameters sslContextParameters) {     this.sslContextParameters = sslContextParameters. }
+false;public;0;3;;public String getCopyTo() {     return copyTo. }
+false;public;1;3;;public void setCopyTo(String copyTo) {     this.copyTo = copyTo. }
+false;public;0;3;;public Boolean getPeek() {     return peek. }
+false;public;1;3;;public void setPeek(Boolean peek) {     this.peek = peek. }
+false;public;0;3;;public Boolean getSkipFailedMessage() {     return skipFailedMessage. }
+false;public;1;3;;public void setSkipFailedMessage(Boolean skipFailedMessage) {     this.skipFailedMessage = skipFailedMessage. }
+false;public;0;3;;public Boolean getHandleFailedMessage() {     return handleFailedMessage. }
+false;public;1;3;;public void setHandleFailedMessage(Boolean handleFailedMessage) {     this.handleFailedMessage = handleFailedMessage. }
+false;public;0;3;;public AttachmentsContentTransferEncodingResolver getAttachmentsContentTransferEncodingResolver() {     return attachmentsContentTransferEncodingResolver. }
+false;public;1;4;;public void setAttachmentsContentTransferEncodingResolver(AttachmentsContentTransferEncodingResolver attachmentsContentTransferEncodingResolver) {     this.attachmentsContentTransferEncodingResolver = attachmentsContentTransferEncodingResolver. }
+false;public;0;3;;public Boolean getMimeDecodeHeaders() {     return mimeDecodeHeaders. }
+false;public;1;3;;public void setMimeDecodeHeaders(Boolean mimeDecodeHeaders) {     this.mimeDecodeHeaders = mimeDecodeHeaders. }

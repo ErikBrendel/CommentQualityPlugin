@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;5;;@Override protected AbstractApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/component/mina2/SpringMultipleUDPTest-context.xml"). }
+false;public;0;14;;@Test public void testMinaSpringProtobufEndpoint() throws Exception {     MockEndpoint result = getMockEndpoint("mock:result").     result.expectedMessageCount(7).     for (int i = 0. i < 7. i++) {         template.requestBody("myMinaEndpoint", "Hello World" + i + LS).     }     // Sleep for awhile to let the messages go through.     Thread.sleep(3000).     assertMockEndpointsSatisfied(). }

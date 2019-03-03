@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;12;;@Test public void testOutputTypeSelectOne() throws Exception {     mock.expectedMessageCount(1).     template.sendBody("direct:start", "select * from customer where ID = 'cust1'").     assertMockEndpointsSatisfied().     Map row = assertIsInstanceOf(Map.class, mock.getReceivedExchanges().get(0).getIn().getBody(Map.class)).     assertEquals("cust1", row.get("ID")).     assertEquals("jstrachan", row.get("NAME")). }
+false;public;0;3;;public void configure() throws Exception {     from("direct:start").to("jdbc:testdb?outputType=SelectOne").to("mock:result"). }
+false;protected;0;8;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from("direct:start").to("jdbc:testdb?outputType=SelectOne").to("mock:result").         }     }. }

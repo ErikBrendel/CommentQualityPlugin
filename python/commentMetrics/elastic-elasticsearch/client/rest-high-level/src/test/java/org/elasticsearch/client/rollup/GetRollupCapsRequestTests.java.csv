@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;public void testImplicitIndexPattern() {     String pattern = randomFrom("", "*", MetaData.ALL, null).     GetRollupCapsRequest request = new GetRollupCapsRequest(pattern).     assertThat(request.getIndexPattern(), equalTo(MetaData.ALL)). }

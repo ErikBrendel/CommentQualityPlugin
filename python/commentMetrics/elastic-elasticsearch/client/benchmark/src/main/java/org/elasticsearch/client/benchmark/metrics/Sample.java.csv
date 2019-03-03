@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getOperation() {     return operation. }
+false;public;0;3;;public boolean isSuccess() {     return success. }
+false;public;0;3;;public long getStartTimestamp() {     return startTimestamp. }
+false;public;0;3;;public long getStopTimestamp() {     return stopTimestamp. }
+false;public;0;3;;public long getServiceTime() {     return stopTimestamp - startTimestamp. }
+false;public;0;3;;public long getLatency() {     return stopTimestamp - expectedStartTimestamp. }

@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public boolean add(String key, Exchange exchange) {     return map.put(key, exchange) == null. }
+false;public;1;4;;@Override public boolean contains(String key) {     return map.containsKey(key). }
+false;public;1;4;;@Override public Exchange get(String key) {     return map.get(key). }
+false;public;1;4;;@Override public Exchange getAndRemove(String key) {     return map.remove(key). }
+false;public;1;4;;@Override public void push(Exchange exchange) {     stack.push(exchange). }
+false;public;0;8;;@Override public Exchange pop() {     if (!stack.isEmpty()) {         return stack.pop().     } else {         return null.     } }
+false;public;0;5;;@Override public void clear() {     map.clear().     stack.clear(). }
+false;public;0;4;;@Override public void start() throws Exception { // noop }
+false;public;0;4;;@Override public void stop() throws Exception { // noop }

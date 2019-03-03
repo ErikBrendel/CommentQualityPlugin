@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public void warning(TransformerException e) throws TransformerException {     // just log warning     LOG.warn("Warning parsing XSLT file: {}", e.getMessageAndLocation()). }
+false;public;1;5;;@Override public void error(TransformerException e) throws TransformerException {     LOG.error("Error parsing XSLT file: {}", e.getMessageAndLocation()).     throw e. }
+false;public;1;5;;@Override public void fatalError(TransformerException e) throws TransformerException {     LOG.error("Fatal error parsing XSLT file: {}", e.getMessageAndLocation()).     throw e. }

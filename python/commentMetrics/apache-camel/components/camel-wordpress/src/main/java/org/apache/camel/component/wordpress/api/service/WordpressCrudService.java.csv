@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;2;1;;T retrieve(Integer entityID, Context context).
+false;;1;1;;T retrieve(Integer entityID).
+false;;1;1;;T create(T entity).
+false;;1;1;;T delete(Integer entityID).
+false;;1;1;;DeletedModel<T> forceDelete(Integer entityID).
+false;;1;1;;List<T> list(S searchCriteria).
+false;;2;1;;T update(Integer entityID, T entity).

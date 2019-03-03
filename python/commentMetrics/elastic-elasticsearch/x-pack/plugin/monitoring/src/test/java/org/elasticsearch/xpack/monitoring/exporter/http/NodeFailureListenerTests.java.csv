@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;public void testSetSnifferTwiceFails() {     listener.setSniffer(sniffer).     assertThat(listener.getSniffer(), is(sniffer)).     expectThrows(AlreadySetException.class, () -> listener.setSniffer(randomFrom(sniffer, null))). }
+false;public;0;7;;public void testSetResourceTwiceFails() {     listener.setResource(resource).     assertThat(listener.getResource(), is(resource)).     expectThrows(AlreadySetException.class, () -> listener.setResource(randomFrom(resource, null))). }
+false;public;0;7;;public void testSnifferNotifiedOnFailure() {     listener.setSniffer(sniffer).     listener.onFailure(node).     verify(sniffer).sniffOnFailure(). }
+false;public;0;7;;public void testResourceNotifiedOnFailure() {     listener.setResource(resource).     listener.onFailure(node).     assertTrue(resource.isDirty()). }
+false;public;0;17;;public void testResourceAndSnifferNotifiedOnFailure() {     final HttpResource optionalResource = randomFrom(resource, null).     final Sniffer optionalSniffer = randomFrom(sniffer, null).     listener.setResource(optionalResource).     listener.setSniffer(optionalSniffer).     listener.onFailure(node).     if (optionalResource != null) {         assertTrue(resource.isDirty()).     }     if (optionalSniffer != null) {         verify(sniffer).sniffOnFailure().     } }

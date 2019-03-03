@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void convertRecordToString() throws Exception {     Record record = new Record().withSequenceNumber("1").withData(ByteBuffer.wrap("this is a String".getBytes(Charset.forName("UTF-8")))).     String result = RecordStringConverter.toString(record).     assertThat(result, is("this is a String")). }

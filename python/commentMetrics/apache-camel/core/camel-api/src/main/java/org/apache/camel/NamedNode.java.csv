@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * Gets the value of the id property.  */ ;/**  * Gets the value of the id property.  */ String getId().
+true;;0;1;/**  * Returns a short name for this node which can be useful for ID generation or referring to related resources like images  *  * @return defaults to "node" but derived nodes should overload this to provide a unique name  */ ;/**  * Returns a short name for this node which can be useful for ID generation or referring to related resources like images  *  * @return defaults to "node" but derived nodes should overload this to provide a unique name  */ String getShortName().
+true;;0;1;/**  * Returns a label to describe this node such as the expression if some kind of expression node  */ ;/**  * Returns a label to describe this node such as the expression if some kind of expression node  */ String getLabel().
+true;;0;1;/**  * Returns the description text or null if there is no description text associated with this node  */ ;/**  * Returns the description text or null if there is no description text associated with this node  */ String getDescriptionText().

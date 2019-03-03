@@ -1,0 +1,16 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;// WebSocketContainer @Override public long getDefaultAsyncSendTimeout() {     return this.defaultAsyncSendTimeout. }
+false;public;1;4;;@Override public void setAsyncSendTimeout(long timeout) {     this.defaultAsyncSendTimeout = timeout. }
+false;public;0;4;;@Override public long getDefaultMaxSessionIdleTimeout() {     return this.defaultMaxSessionIdleTimeout. }
+false;public;1;4;;@Override public void setDefaultMaxSessionIdleTimeout(long timeout) {     this.defaultMaxSessionIdleTimeout = timeout. }
+false;public;0;4;;@Override public int getDefaultMaxBinaryMessageBufferSize() {     return this.defaultMaxBinaryMessageBufferSize. }
+false;public;1;4;;@Override public void setDefaultMaxBinaryMessageBufferSize(int max) {     this.defaultMaxBinaryMessageBufferSize = max. }
+false;public;0;4;;@Override public int getDefaultMaxTextMessageBufferSize() {     return this.defaultMaxTextMessageBufferSize. }
+false;public;1;4;;@Override public void setDefaultMaxTextMessageBufferSize(int max) {     this.defaultMaxTextMessageBufferSize = max. }
+false;public;0;4;;@Override public Set<Extension> getInstalledExtensions() {     return Collections.emptySet(). }
+false;public;2;4;;@Override public Session connectToServer(Object annotatedEndpointInstance, URI path) throws DeploymentException, IOException {     throw new UnsupportedOperationException("MockServerContainer does not support connectToServer(Object, URI)"). }
+false;public;2;4;;@Override public Session connectToServer(Class<?> annotatedEndpointClass, URI path) throws DeploymentException, IOException {     throw new UnsupportedOperationException("MockServerContainer does not support connectToServer(Class, URI)"). }
+false;public;3;7;;@Override public Session connectToServer(Endpoint endpointInstance, ClientEndpointConfig cec, URI path) throws DeploymentException, IOException {     throw new UnsupportedOperationException("MockServerContainer does not support connectToServer(Endpoint, ClientEndpointConfig, URI)"). }
+false;public;3;7;;@Override public Session connectToServer(Class<? extends Endpoint> endpointClass, ClientEndpointConfig cec, URI path) throws DeploymentException, IOException {     throw new UnsupportedOperationException("MockServerContainer does not support connectToServer(Class, ClientEndpointConfig, URI)"). }
+false;public;1;4;;// ServerContainer @Override public void addEndpoint(Class<?> endpointClass) throws DeploymentException {     throw new UnsupportedOperationException("MockServerContainer does not support addEndpoint(Class)"). }
+false;public;1;5;;@Override public void addEndpoint(ServerEndpointConfig serverConfig) throws DeploymentException {     throw new UnsupportedOperationException("MockServerContainer does not support addEndpoint(ServerEndpointConfig)"). }

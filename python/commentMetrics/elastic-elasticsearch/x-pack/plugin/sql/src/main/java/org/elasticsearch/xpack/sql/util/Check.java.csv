@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;3;5;;public static void isTrue(boolean expression, String message, Object... values) {     if (!expression) {         throw new SqlIllegalArgumentException(message, values).     } }
+false;public,static;2;5;;public static void isTrue(boolean expression, String message) {     if (!expression) {         throw new SqlIllegalArgumentException(message).     } }
+false;public,static;2;5;;public static void notNull(Object object, String message) {     if (object == null) {         throw new SqlIllegalArgumentException(message).     } }
+false;public,static;3;5;;public static void notNull(Object object, String message, Object... values) {     if (object == null) {         throw new SqlIllegalArgumentException(message, values).     } }

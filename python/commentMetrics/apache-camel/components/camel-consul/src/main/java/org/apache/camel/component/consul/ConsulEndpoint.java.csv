@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean isSingleton() {     return true. }
+false;public;0;6;;@Override public Producer createProducer() throws Exception {     ConsulFactories.ProducerFactory factory = producerFactory.orElseThrow(() -> new IllegalArgumentException("No producer for " + apiEndpoint)).     return factory.create(this, configuration). }
+false;public;1;6;;@Override public Consumer createConsumer(Processor processor) throws Exception {     ConsulFactories.ConsumerFactory factory = consumerFactory.orElseThrow(() -> new IllegalArgumentException("No consumer for " + apiEndpoint)).     return factory.create(this, configuration, processor). }
+false;public;0;3;;// ************************************************************************* //  // ************************************************************************* public ConsulConfiguration getConfiguration() {     return this.configuration. }
+false;public;0;3;;public String getApiEndpoint() {     return this.apiEndpoint. }
+false;public,synchronized;0;9;;public synchronized Consul getConsul() throws Exception {     if (consul == null && ObjectHelper.isEmpty(getConfiguration().getConsulClient())) {         consul = configuration.createConsulClient(getCamelContext()).     } else if (ObjectHelper.isNotEmpty(getConfiguration().getConsulClient())) {         consul = getConfiguration().getConsulClient().     }     return consul. }

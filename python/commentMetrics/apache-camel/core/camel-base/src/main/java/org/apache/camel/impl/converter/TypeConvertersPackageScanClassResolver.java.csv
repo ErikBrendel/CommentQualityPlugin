@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Override public Set<ClassLoader> getClassLoaders() {     // return a new set to avoid any concurrency issues in other runtimes such as OSGi     return Collections.unmodifiableSet(new LinkedHashSet<>(classLoaders)). }
+false;public;1;4;;@Override public void addClassLoader(ClassLoader classLoader) {     classLoaders.add(classLoader). }
+false;public;2;4;;@Override public Set<Class<?>> findAnnotated(Class<? extends Annotation> annotation, String... packageNames) {     return converters. }
+false;public;2;4;;@Override public Set<Class<?>> findAnnotated(Set<Class<? extends Annotation>> annotations, String... packageNames) {     return converters. }
+false;public;2;5;;@Override public Set<Class<?>> findImplementations(Class<?> parent, String... packageNames) {     // noop     return null. }
+false;public;2;5;;@Override public Set<Class<?>> findByFilter(PackageScanFilter filter, String... packageNames) {     // noop     return null. }
+false;public;1;4;;@Override public void addFilter(PackageScanFilter filter) { // noop }
+false;public;1;4;;@Override public void removeFilter(PackageScanFilter filter) { // noop }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public void start() {     daemon.start(). }
+false;public;0;3;;public CountDownLatch getLatch() {     return controller.getLatch(). }
+false;public;0;3;;public AtomicBoolean getCompleted() {     return controller.getCompleted(). }
+false;public;0;4;;@Override public void run() {     controller.run(). }

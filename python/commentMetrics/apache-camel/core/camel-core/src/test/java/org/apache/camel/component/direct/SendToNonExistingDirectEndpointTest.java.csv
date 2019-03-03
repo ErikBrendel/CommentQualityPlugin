@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean isUseRouteBuilder() {     return false. }
+false;public;0;13;;@Test public void testDirect() throws Exception {     context.getComponent("direct", DirectComponent.class).setBlock(false).     try {         template.sendBody("direct:foo", "Hello World").         fail("Should have thrown exception").     } catch (CamelExecutionException e) {         DirectConsumerNotAvailableException cause = assertIsInstanceOf(DirectConsumerNotAvailableException.class, e.getCause()).         // ensure backwards compatibility         assertIsInstanceOf(CamelExchangeException.class, cause).         assertNotNull(cause.getExchange()).     } }

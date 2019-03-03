@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void testEncode() throws Exception {     runEncoderTest(DECODED, ENCODED.getBytes()). }
+false;public;0;4;;@Test public void testDecode() throws Exception {     runDecoderTest(ENCODED.getBytes(), DECODED). }
+false;protected;0;5;;@Override protected AbstractApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/dataformat/base64/SpringBase64DataFormatLineLengthTest.xml"). }

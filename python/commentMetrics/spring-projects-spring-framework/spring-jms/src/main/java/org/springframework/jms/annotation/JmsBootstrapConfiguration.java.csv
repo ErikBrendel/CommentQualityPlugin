@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Bean(name = JmsListenerConfigUtils.JMS_LISTENER_ANNOTATION_PROCESSOR_BEAN_NAME) @Role(BeanDefinition.ROLE_INFRASTRUCTURE) public JmsListenerAnnotationBeanPostProcessor jmsListenerAnnotationProcessor() {     return new JmsListenerAnnotationBeanPostProcessor(). }
+false;public;0;4;;@Bean(name = JmsListenerConfigUtils.JMS_LISTENER_ENDPOINT_REGISTRY_BEAN_NAME) public JmsListenerEndpointRegistry defaultJmsListenerEndpointRegistry() {     return new JmsListenerEndpointRegistry(). }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;6;;@Test void autowiredFields() {     assertNotNull(this.character, "Character should have been @Autowired by Spring").     assertEquals(getExpectedName(), character.getName(), "character's name").     assertEquals(getExpectedNumCharacters(), this.characters.size(), "Number of characters in context"). }
+false;;1;5;;@Test void autowiredParameterByTypeForSingleGenericBean(@Autowired T character) {     assertNotNull(character, "Character should have been @Autowired by Spring").     assertEquals(getExpectedName(), character.getName(), "character's name"). }
+false;abstract;0;1;;abstract int getExpectedNumCharacters().
+false;abstract;0;1;;abstract String getExpectedName().

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected AsyncHandler createHttpHandler() {     return new AsyncHandler(). }
+false;public;0;9;;@Test // TODO: fragile due to socket failures @Ignore public void basicTest() throws Exception {     URI url = new URI("http://localhost:" + port).     ResponseEntity<String> response = new RestTemplate().exchange(RequestEntity.get(url).build(), String.class).     assertThat(response.getBody(), Matchers.equalTo("hello")). }
+false;public;2;7;;@Override public Mono<Void> handle(ServerHttpRequest request, ServerHttpResponse response) {     return response.writeWith(Flux.just("h", "e", "l", "l", "o").delayElements(Duration.ofMillis(100)).publishOn(asyncGroup).collect(dataBufferFactory::allocateBuffer, (buffer, str) -> buffer.write(str.getBytes()))). }

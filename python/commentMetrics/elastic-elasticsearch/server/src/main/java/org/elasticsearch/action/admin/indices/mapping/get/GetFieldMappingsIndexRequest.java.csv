@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public ActionRequestValidationException validate() {     return null. }
+false;public;0;3;;public String[] types() {     return types. }
+false;public;0;3;;public String[] fields() {     return fields. }
+false;public;0;3;;public boolean probablySingleFieldRequest() {     return probablySingleFieldRequest. }
+false;public;0;3;;public boolean includeDefaults() {     return includeDefaults. }
+false;public;0;4;;@Override public String[] indices() {     return originalIndices.indices(). }
+false;public;0;4;;@Override public IndicesOptions indicesOptions() {     return originalIndices.indicesOptions(). }
+false;public;1;9;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeStringArray(types).     out.writeStringArray(fields).     out.writeBoolean(includeDefaults).     out.writeBoolean(probablySingleFieldRequest).     OriginalIndices.writeOriginalIndices(originalIndices, out). }
+false;public;1;9;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     types = in.readStringArray().     fields = in.readStringArray().     includeDefaults = in.readBoolean().     probablySingleFieldRequest = in.readBoolean().     originalIndices = OriginalIndices.readOriginalIndices(in). }

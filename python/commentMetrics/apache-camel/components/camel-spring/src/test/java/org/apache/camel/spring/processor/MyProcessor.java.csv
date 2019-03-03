@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;public void process(Exchange exchange) {     Message in = exchange.getIn().     in.setBody(in.getBody(String.class) + " World!"). }

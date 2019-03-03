@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Override @Before public void setUp() throws Exception {     replaceRouteFromWith("routeId", "direct:start").     super.setUp(). }
+false;public;0;8;;@Test public void replacesFromEndpoint() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("Hello World").     template.sendBody("direct:start", "Hello World").     assertMockEndpointsSatisfied(). }
+false;public;0;4;;@Test(expected = NoSuchEndpointException.class) public void exceptionThrownWhenEndpointNotFoundAndNoCreate() {     getMockEndpoint("mock:bogus", false). }
+false;public;0;4;;@Test(expected = NoSuchEndpointException.class) public void exceptionThrownWhenEndpointNotAMockEndpoint() {     getMockEndpoint("direct:something", false). }
+false;public;0;5;;@Test public void autoCreateNoneExisting() {     MockEndpoint mock = getMockEndpoint("mock:bogus2", true).     assertNotNull(mock). }
+false;public;0;6;;@Override public void configure() throws Exception {     from("direct:something").id("routeId").to("mock:result"). }
+false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:something").id("routeId").to("mock:result").         }     }. }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public boolean isCreateCamelContextPerClass() {     return true. }
+false;public;0;3;;public boolean isUseRouteBuilder() {     return false. }
+false;protected;0;5;;@Override protected CamelContext createCamelContext() throws Exception {     ApplicationContext applicationContext = new ClassPathXmlApplicationContext("org/apache/camel/dataformat/barcode/barcodeDataformatSpring.xml").     return SpringCamelContext.springCamelContext(applicationContext, true). }

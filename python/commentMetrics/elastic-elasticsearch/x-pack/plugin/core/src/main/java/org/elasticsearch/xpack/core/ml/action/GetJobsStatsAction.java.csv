@@ -1,0 +1,32 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Response newResponse() {     throw new UnsupportedOperationException("usage of Streamable is to be replaced by Writeable"). }
+false;public;0;4;;@Override public Writeable.Reader<Response> getResponseReader() {     return Response::new. }
+false;public;1;9;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeString(jobId).     out.writeStringCollection(expandedJobsIds).     if (out.getVersion().onOrAfter(Version.V_6_1_0)) {         out.writeBoolean(allowNoJobs).     } }
+false;public;0;1;;public List<String> getExpandedJobsIds() {     return expandedJobsIds. }
+false;public;1;1;;public void setExpandedJobsIds(List<String> expandedJobsIds) {     this.expandedJobsIds = expandedJobsIds. }
+false;public;1;3;;public void setAllowNoJobs(boolean allowNoJobs) {     this.allowNoJobs = allowNoJobs. }
+false;public;0;3;;public String getJobId() {     return jobId. }
+false;public;0;3;;public boolean allowNoJobs() {     return allowNoJobs. }
+false;public;1;4;;@Override public boolean match(Task task) {     return expandedJobsIds.stream().anyMatch(jobId -> OpenJobAction.JobTaskMatcher.match(task, jobId)). }
+false;public;0;4;;@Override public ActionRequestValidationException validate() {     return null. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(jobId, allowNoJobs). }
+false;public;1;11;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     Request other = (Request) obj.     return Objects.equals(jobId, other.jobId) && Objects.equals(allowNoJobs, other.allowNoJobs). }
+false;public;0;3;;public String getJobId() {     return jobId. }
+false;public;0;3;;public DataCounts getDataCounts() {     return dataCounts. }
+false;public;0;3;;public ModelSizeStats getModelSizeStats() {     return modelSizeStats. }
+false;public;0;3;;public ForecastStats getForecastStats() {     return forecastStats. }
+false;public;0;3;;public JobState getState() {     return state. }
+false;public;0;3;;public DiscoveryNode getNode() {     return node. }
+false;public;0;3;;public String getAssignmentExplanation() {     return assignmentExplanation. }
+false;public;0;3;;public TimeValue getOpenTime() {     return openTime. }
+false;public;2;9;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     // TODO: Have callers wrap the content with an object as they choose rather than forcing it upon them     builder.startObject().     {         toUnwrappedXContent(builder).     }     return builder.endObject(). }
+false;public;1;33;;public XContentBuilder toUnwrappedXContent(XContentBuilder builder) throws IOException {     builder.field(Job.ID.getPreferredName(), jobId).     builder.field(DATA_COUNTS, dataCounts).     if (modelSizeStats != null) {         builder.field(MODEL_SIZE_STATS, modelSizeStats).     }     if (forecastStats != null) {         builder.field(FORECASTS_STATS, forecastStats).     }     builder.field(STATE, state.toString()).     if (node != null) {         builder.startObject(NODE).         builder.field("id", node.getId()).         builder.field("name", node.getName()).         builder.field("ephemeral_id", node.getEphemeralId()).         builder.field("transport_address", node.getAddress().toString()).         builder.startObject("attributes").         for (Map.Entry<String, String> entry : node.getAttributes().entrySet()) {             builder.field(entry.getKey(), entry.getValue()).         }         builder.endObject().         builder.endObject().     }     if (assignmentExplanation != null) {         builder.field("assignment_explanation", assignmentExplanation).     }     if (openTime != null) {         builder.field("open_time", openTime.getStringRep()).     }     return builder. }
+false;public;1;13;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeString(jobId).     dataCounts.writeTo(out).     out.writeOptionalWriteable(modelSizeStats).     state.writeTo(out).     out.writeOptionalWriteable(node).     out.writeOptionalString(assignmentExplanation).     out.writeOptionalTimeValue(openTime).     if (out.getVersion().onOrAfter(Version.V_6_4_0)) {         out.writeOptionalWriteable(forecastStats).     } }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(jobId, dataCounts, modelSizeStats, forecastStats, state, node, assignmentExplanation, openTime). }
+false;public;1;18;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     JobStats other = (JobStats) obj.     return Objects.equals(jobId, other.jobId) && Objects.equals(this.dataCounts, other.dataCounts) && Objects.equals(this.modelSizeStats, other.modelSizeStats) && Objects.equals(this.forecastStats, other.forecastStats) && Objects.equals(this.state, other.state) && Objects.equals(this.node, other.node) && Objects.equals(this.assignmentExplanation, other.assignmentExplanation) && Objects.equals(this.openTime, other.openTime). }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     jobsStats.writeTo(out). }
+false;public;0;3;;public QueryPage<JobStats> getResponse() {     return jobsStats. }
+false;public;2;7;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     jobsStats.doXContentBody(builder, params).     builder.endObject().     return builder. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(jobsStats). }
+false;public;1;11;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     Response other = (Response) obj.     return Objects.equals(jobsStats, other.jobsStats). }
+false;public,final;0;4;;@Override public final String toString() {     return Strings.toString(this). }

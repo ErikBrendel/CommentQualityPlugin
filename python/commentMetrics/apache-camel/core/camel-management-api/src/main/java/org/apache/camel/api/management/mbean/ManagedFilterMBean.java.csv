@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;2;;@ManagedAttribute(description = "The language for the predicate") String getPredicateLanguage().
+false;;0;2;;@ManagedAttribute(description = "Predicate to determine if the message should be filtered or not") String getPredicate().
+false;;0;2;;@ManagedAttribute(description = "Gets the number of Exchanges that matched the filter predicate and therefore as filtered") Long getFilteredCount().

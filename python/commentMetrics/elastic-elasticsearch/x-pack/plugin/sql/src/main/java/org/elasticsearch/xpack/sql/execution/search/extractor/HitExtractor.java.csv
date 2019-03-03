@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;1;1;/**  * Extract the value from a hit.  */ ;/**  * Extract the value from a hit.  */ Object extract(SearchHit hit).
+true;;0;2;/**  * Name of the inner hit needed by this extractor if it needs one, {@code null} otherwise.  */ ;/**  * Name of the inner hit needed by this extractor if it needs one, {@code null} otherwise.  */ @Nullable String hitName().

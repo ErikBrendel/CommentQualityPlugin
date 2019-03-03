@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public YearMonth parse(String text, Locale locale) throws ParseException {     return YearMonth.parse(text). }
+false;public;2;4;;@Override public String print(YearMonth object, Locale locale) {     return object.toString(). }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,synchronized;0;8;;@Override public synchronized T get() {     if (resultSet == false) {         result = supplier.get().         resultSet = true.     }     return result. }

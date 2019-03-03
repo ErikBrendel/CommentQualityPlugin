@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@Test public void testNoSuchLanguage() throws Exception {     try {         assertPredicate("foo").         fail("Should have thrown an exception").     } catch (NoSuchLanguageException e) {         assertEquals("No language could be found for: unknown", e.getMessage()).         assertEquals("unknown", e.getLanguage()).     } }
+false;protected;0;3;;protected String getLanguageName() {     return "unknown". }

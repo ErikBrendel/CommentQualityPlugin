@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;15;;@Override public SearchRequestBuilder prepareSearch(String... indices) {     SearchRequestBuilder searchRequestBuilder = in.prepareSearch(indices).setSearchType(defaultSearchType).setPreference(defaultPreference).setBatchedReduceSize(batchedReduceSize).     if (maxConcurrentShardRequests != -1) {         searchRequestBuilder.setMaxConcurrentShardRequests(maxConcurrentShardRequests).     }     if (preFilterShardSize != -1) {         searchRequestBuilder.setPreFilterShardSize(preFilterShardSize).     }     if (doTimeout) {         searchRequestBuilder.setTimeout(new TimeValue(1, TimeUnit.DAYS)).     }     return searchRequestBuilder. }
+false;public;0;4;;@Override public String toString() {     return "randomized(" + super.toString() + ")". }
+false;public;0;3;;public Client in() {     return super.in(). }

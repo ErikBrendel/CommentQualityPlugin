@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;4;;@BeforeClass public static void enable() {     AnsiOutput.setEnabled(Enabled.ALWAYS). }
+false;public,static;0;4;;@AfterClass public static void reset() {     AnsiOutput.setEnabled(Enabled.DETECT). }
+false;public;0;6;;@Test public void encoding() {     String encoded = AnsiOutput.toString("A", AnsiColor.RED, AnsiStyle.BOLD, "B", AnsiStyle.NORMAL, "D", AnsiColor.GREEN, "E", AnsiStyle.FAINT, "F").     assertThat(encoded).isEqualTo("A[31.1mB[0mD[32mE[2mF[0.39m"). }

@@ -1,0 +1,24 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Override public ClientRequest.Builder method(HttpMethod method) {     Assert.notNull(method, "HttpMethod must not be null").     this.method = method.     return this. }
+false;public;1;6;;@Override public ClientRequest.Builder url(URI url) {     Assert.notNull(url, "URI must not be null").     this.url = url.     return this. }
+false;public;2;7;;@Override public ClientRequest.Builder header(String headerName, String... headerValues) {     for (String headerValue : headerValues) {         this.headers.add(headerName, headerValue).     }     return this. }
+false;public;1;5;;@Override public ClientRequest.Builder headers(Consumer<HttpHeaders> headersConsumer) {     headersConsumer.accept(this.headers).     return this. }
+false;public;2;7;;@Override public ClientRequest.Builder cookie(String name, String... values) {     for (String value : values) {         this.cookies.add(name, value).     }     return this. }
+false;public;1;5;;@Override public ClientRequest.Builder cookies(Consumer<MultiValueMap<String, String>> cookiesConsumer) {     cookiesConsumer.accept(this.cookies).     return this. }
+false;public;2;5;;@Override public <S, P extends Publisher<S>> ClientRequest.Builder body(P publisher, Class<S> elementClass) {     this.body = BodyInserters.fromPublisher(publisher, elementClass).     return this. }
+false;public;2;7;;@Override public <S, P extends Publisher<S>> ClientRequest.Builder body(P publisher, ParameterizedTypeReference<S> typeReference) {     this.body = BodyInserters.fromPublisher(publisher, typeReference).     return this. }
+false;public;2;5;;@Override public ClientRequest.Builder attribute(String name, Object value) {     this.attributes.put(name, value).     return this. }
+false;public;1;5;;@Override public ClientRequest.Builder attributes(Consumer<Map<String, Object>> attributesConsumer) {     attributesConsumer.accept(this.attributes).     return this. }
+false;public;1;5;;@Override public ClientRequest.Builder body(BodyInserter<?, ? super ClientHttpRequest> inserter) {     this.body = inserter.     return this. }
+false;public;0;4;;@Override public ClientRequest build() {     return new BodyInserterRequest(this.method, this.url, this.headers, this.cookies, this.body, this.attributes). }
+false;public;0;4;;@Override public HttpMethod method() {     return this.method. }
+false;public;0;4;;@Override public URI url() {     return this.url. }
+false;public;0;4;;@Override public HttpHeaders headers() {     return this.headers. }
+false;public;0;4;;@Override public MultiValueMap<String, String> cookies() {     return this.cookies. }
+false;public;0;4;;@Override public BodyInserter<?, ? super ClientHttpRequest> body() {     return this.body. }
+false;public;0;4;;@Override public Map<String, Object> attributes() {     return this.attributes. }
+false;public;0;4;;@Override public String logPrefix() {     return this.logPrefix. }
+false;public;0;4;;@Override public List<HttpMessageWriter<?>> messageWriters() {     return strategies.messageWriters(). }
+false;public;0;4;;@Override public Optional<ServerHttpRequest> serverRequest() {     return Optional.empty(). }
+false;public;0;4;;@Override public Map<String, Object> hints() {     return Hints.from(Hints.LOG_PREFIX_HINT, logPrefix()). }
+false;public;2;33;;@Override public Mono<Void> writeTo(ClientHttpRequest request, ExchangeStrategies strategies) {     HttpHeaders requestHeaders = request.getHeaders().     if (!this.headers.isEmpty()) {         this.headers.entrySet().stream().filter(entry -> !requestHeaders.containsKey(entry.getKey())).forEach(entry -> requestHeaders.put(entry.getKey(), entry.getValue())).     }     MultiValueMap<String, HttpCookie> requestCookies = request.getCookies().     if (!this.cookies.isEmpty()) {         this.cookies.forEach((name, values) -> values.forEach(value -> {             HttpCookie cookie = new HttpCookie(name, value).             requestCookies.add(name, cookie).         })).     }     return this.body.insert(request, new BodyInserter.Context() {          @Override         public List<HttpMessageWriter<?>> messageWriters() {             return strategies.messageWriters().         }          @Override         public Optional<ServerHttpRequest> serverRequest() {             return Optional.empty().         }          @Override         public Map<String, Object> hints() {             return Hints.from(Hints.LOG_PREFIX_HINT, logPrefix()).         }     }). }

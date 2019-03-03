@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;16;;@Deployment public static Archive<?> deployment() {     return ShrinkWrap.create(JavaArchive.class).addPackage(CdiCamelExtension.class.getPackage()).addClasses(FirstCamelContextBean.class, FirstCamelContextEventConsumingRoute.class, FirstCamelContextEventProducingRoute.class, SecondCamelContextBean.class, SecondCamelContextEventConsumingRoute.class, SecondCamelContextEventProducingRoute.class).addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml"). }
+false;public;1;5;;@Test @InSequence(1) public void configureCamelContexts(@ContextName("second") CamelContext secondContext) throws Exception {     secondContext.getRouteController().startAllRoutes(). }
+false;public;0;15;;@Test @InSequence(2) public void sendEventsToConsumers() throws InterruptedException {     firstConsumeString.expectedMessageCount(1).     firstConsumeString.expectedBodiesReceived("testFirst").     secondConsumeString.expectedMessageCount(2).     secondConsumeString.expectedBodiesReceived("testSecond1", "testSecond2").     objectEvent.select(String.class, ContextName.Literal.of("first")).fire("testFirst").     objectEvent.select(String.class, ContextName.Literal.of("second")).fire("testSecond1").     objectEvent.select(String.class, ContextName.Literal.of("second")).fire("testSecond2").     assertIsSatisfied(2L, TimeUnit.SECONDS, firstConsumeString, secondConsumeString). }
+false;public;0;11;;@Test @InSequence(3) public void sendMessagesToProducers() {     firstProduceString.sendBody("testFirst").     secondProduceString.sendBody("testSecond").     assertThat(observer.getObjectEvents(), Matchers.<Object>contains("testFirst", "testSecond")).     assertThat(observer.getStringEvents(), contains("testFirst", "testSecond")).     assertThat(observer.getFirstStringEvents(), contains("testFirst")).     assertThat(observer.secondStringEvents(), contains("testSecond")). }
+false;public;0;4;;@Before public void resetCollectedEvents() {     observer.reset(). }
+false;;1;3;;void collectObjectEvents(@Observes Object event) {     objectEvents.add(event). }
+false;;1;3;;void collectStringEvents(@Observes String event) {     stringEvents.add(event). }
+false;;1;3;;void collectFirstStringEvents(@Observes @ContextName("first") String event) {     firstStringEvents.add(event). }
+false;;1;3;;void collectSecondStringEvents(@Observes @ContextName("second") String event) {     secondStringEvents.add(event). }
+false;;0;3;;List<Object> getObjectEvents() {     return objectEvents. }
+false;;0;3;;List<String> getStringEvents() {     return stringEvents. }
+false;;0;3;;List<String> getFirstStringEvents() {     return firstStringEvents. }
+false;;0;3;;List<String> secondStringEvents() {     return secondStringEvents. }
+false;;0;6;;void reset() {     objectEvents.clear().     stringEvents.clear().     firstStringEvents.clear().     secondStringEvents.clear(). }

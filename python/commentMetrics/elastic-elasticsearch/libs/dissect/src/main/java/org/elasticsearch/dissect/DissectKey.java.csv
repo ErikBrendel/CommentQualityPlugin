@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;3;;Modifier getModifier() {     return modifier. }
+false;;0;3;;boolean skip() {     return skip. }
+false;;0;3;;boolean skipRightPadding() {     return skipRightPadding. }
+false;;0;3;;int getAppendPosition() {     return appendPosition. }
+false;;0;3;;String getName() {     return name. }
+true;public;0;9;// generated ;// generated @Override public String toString() {     return "DissectKey{" + "modifier=" + modifier + ", skip=" + skip + ", appendPosition=" + appendPosition + ", name='" + name + '\'' + '}'. }
+false;public;0;4;;@Override public String toString() {     return modifier. }
+true;static;1;4;// package private for testing ;// package private for testing static Modifier fromString(String modifier) {     return EnumSet.allOf(Modifier.class).stream().filter(km -> km.modifier.equals(modifier)).findFirst().orElseThrow(// throw should never happen     () -> new IllegalArgumentException("Found invalid modifier.")). }
+false;private,static;1;15;;private static Modifier findModifier(String key) {     Modifier modifier = Modifier.NONE.     if (key != null && !key.isEmpty()) {         Matcher matcher = MODIFIER_PATTERN.matcher(key).         int matches = 0.         while (matcher.find()) {             Modifier priorModifier = modifier.             modifier = Modifier.fromString(matcher.group()).             if (++matches > 1 && !(APPEND.equals(priorModifier) && APPEND_WITH_ORDER.equals(modifier))) {                 throw new DissectException.KeyParse(key, "multiple modifiers are not allowed.").             }         }     }     return modifier. }

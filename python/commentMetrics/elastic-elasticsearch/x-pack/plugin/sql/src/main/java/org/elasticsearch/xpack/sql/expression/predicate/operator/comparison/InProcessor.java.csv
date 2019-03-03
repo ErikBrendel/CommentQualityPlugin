@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getWriteableName() {     return NAME. }
+false;public,final;1;4;;@Override public final void writeTo(StreamOutput out) throws IOException {     out.writeNamedWriteableList(processsors). }
+false;public;1;5;;@Override public Object process(Object input) {     Object leftValue = processsors.get(processsors.size() - 1).process(input).     return apply(leftValue, Processors.process(processsors.subList(0, processsors.size() - 1), leftValue)). }
+false;public,static;2;12;;public static Boolean apply(Object input, List<Object> values) {     Boolean result = Boolean.FALSE.     for (Object v : values) {         Boolean compResult = Comparisons.eq(input, v).         if (compResult == null) {             result = null.         } else if (compResult == Boolean.TRUE) {             return Boolean.TRUE.         }     }     return result. }
+false;public;1;7;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     InProcessor that = (InProcessor) o.     return Objects.equals(processsors, that.processsors). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(processsors). }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;2;7;;public static CamelContext getCamelContextWithId(ApplicationContext context, String contextId) {     try {         return context.getBean(contextId, CamelContext.class).     } catch (Exception e) {         throw new IllegalArgumentException("Cannot find the CamelContext with id " + contextId, e).     } }

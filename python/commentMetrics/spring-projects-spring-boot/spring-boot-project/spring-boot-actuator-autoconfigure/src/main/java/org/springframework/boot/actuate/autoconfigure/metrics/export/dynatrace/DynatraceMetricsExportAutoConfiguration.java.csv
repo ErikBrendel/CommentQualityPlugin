@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Bean @ConditionalOnMissingBean public DynatraceConfig dynatraceConfig() {     return new DynatracePropertiesConfigAdapter(this.properties). }
+false;public;2;10;;@Bean @ConditionalOnMissingBean public DynatraceMeterRegistry dynatraceMeterRegistry(DynatraceConfig dynatraceConfig, Clock clock) {     return DynatraceMeterRegistry.builder(dynatraceConfig).clock(clock).httpClient(new HttpUrlConnectionSender(this.properties.getConnectTimeout(), this.properties.getReadTimeout())).build(). }

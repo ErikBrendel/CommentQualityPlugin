@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@AfterReturning("execution(* sample..*Service.*(..))") public void logServiceAccess(JoinPoint joinPoint) {     System.out.println("Completed: " + joinPoint). }

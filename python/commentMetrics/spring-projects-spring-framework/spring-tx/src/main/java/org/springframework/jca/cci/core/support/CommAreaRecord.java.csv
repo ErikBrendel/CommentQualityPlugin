@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void setRecordName(String recordName) {     this.recordName = recordName. }
+false;public;0;4;;@Override public String getRecordName() {     return this.recordName. }
+false;public;1;4;;@Override public void setRecordShortDescription(String recordShortDescription) {     this.recordShortDescription = recordShortDescription. }
+false;public;0;4;;@Override public String getRecordShortDescription() {     return this.recordShortDescription. }
+false;public;1;4;;@Override public void read(InputStream in) throws IOException {     this.bytes = FileCopyUtils.copyToByteArray(in). }
+false;public;1;5;;@Override public void write(OutputStream out) throws IOException {     out.write(this.bytes).     out.flush(). }
+false;public;0;3;;public byte[] toByteArray() {     return this.bytes. }
+false;public;0;4;;@Override public Object clone() {     return new CommAreaRecord(this.bytes). }

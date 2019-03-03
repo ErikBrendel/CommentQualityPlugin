@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;0;4;;private String getFtpUrl() {     return "ftp://admin@localhost:" + getPort() + "/dirnotmatched/?password=admin" + "&recursive=true&include=^.*txt$". }
+false;public;0;6;;@Override @Before public void setUp() throws Exception {     super.setUp().     prepareFtpServer(). }
+false;public;0;6;;@Test public void testSkipDirectories() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMessageCount(3).     mock.assertIsSatisfied(). }
+false;private;0;10;;private void prepareFtpServer() throws Exception {     // prepares the FTP Server by creating files on the server that we want to unit     // test that we can pool and store as a local file     sendFile(getFtpUrl() + "/?password=admin", "This is a dot file", ".skipme").     sendFile(getFtpUrl() + "/?password=admin", "This is a web file", "index.html").     sendFile(getFtpUrl() + "/?password=admin", "This is a readme file", "readme.txt").     sendFile(getFtpUrl() + "/2007/?password=admin", "2007 report", "report2007.txt").     sendFile(getFtpUrl() + "/2008/?password=admin", "2008 report", "report2008.txt"). }
+false;public;0;3;;public void configure() throws Exception {     from(getFtpUrl()).to("mock:result"). }
+false;protected;0;7;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from(getFtpUrl()).to("mock:result").         }     }. }

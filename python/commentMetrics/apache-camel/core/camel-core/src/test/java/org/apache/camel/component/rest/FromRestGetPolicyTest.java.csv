@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry jndi = super.createRegistry().     jndi.bind("dummy-rest", new DummyRestConsumerFactory()).     return jndi. }
+false;public;0;10;;@Test public void testFromRestModel() throws Exception {     assertEquals(1, context.getRoutes().size()).     assertEquals(1, context.getRestDefinitions().size()).     getMockEndpoint("mock:hello").expectedMessageCount(1).     template.sendBody("seda:get-say-hello", null).     assertMockEndpointsSatisfied(). }
+false;public;0;7;;@Override public void configure() throws Exception {     restConfiguration().host("localhost").     rest("/say/hello").get().route().policy(new MyDummyPolicy()).to("mock:hello"). }
+false;protected;0;12;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             restConfiguration().host("localhost").             rest("/say/hello").get().route().policy(new MyDummyPolicy()).to("mock:hello").         }     }. }
+false;public;2;4;;@Override public void beforeWrap(RouteContext routeContext, NamedNode definition) { // noop }
+false;public;2;4;;@Override public Processor wrap(RouteContext routeContext, Processor processor) {     return processor. }

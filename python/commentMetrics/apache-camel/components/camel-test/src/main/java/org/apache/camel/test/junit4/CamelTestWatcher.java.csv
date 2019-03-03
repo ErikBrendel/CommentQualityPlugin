@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected void starting(Description description) {     watch.restart(). }
+false;protected;1;4;;@Override protected void finished(Description description) {     watch.taken(). }
+false;public;0;3;;public long timeTaken() {     return watch.taken(). }

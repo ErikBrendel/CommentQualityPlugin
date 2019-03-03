@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public <T extends Enum> Converter<String, T> getConverter(Class<T> targetType) {     return new StringToEnum(ConversionUtils.getEnumType(targetType)). }
+false;public;1;8;;@Override public T convert(String source) {     if (source.isEmpty()) {         // It's an empty enum identifier: reset the enum value to null.         return null.     }     return (T) Enum.valueOf(this.enumType, source.trim()). }

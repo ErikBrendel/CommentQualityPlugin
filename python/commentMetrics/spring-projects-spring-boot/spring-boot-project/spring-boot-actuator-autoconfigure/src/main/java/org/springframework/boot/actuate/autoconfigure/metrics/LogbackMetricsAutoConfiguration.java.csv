@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Bean @ConditionalOnMissingBean public LogbackMetrics logbackMetrics() {     return new LogbackMetrics(). }
+false;public;2;14;;@Override public ConditionOutcome getMatchOutcome(ConditionContext context, AnnotatedTypeMetadata metadata) {     ILoggerFactory loggerFactory = LoggerFactory.getILoggerFactory().     ConditionMessage.Builder message = ConditionMessage.forCondition("LogbackLoggingCondition").     if (loggerFactory instanceof LoggerContext) {         return ConditionOutcome.match(message.because("ILoggerFactory is a Logback LoggerContext")).     }     return ConditionOutcome.noMatch(message.because("ILoggerFactory is an instance of " + loggerFactory.getClass().getCanonicalName())). }

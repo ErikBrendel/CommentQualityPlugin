@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Override public void register(final ExtensionBuilder builder) {     builder.service(DeployableContainer.class, ManagedSEDeployableContainer.class).     builder.service(Protocol.class, CustomJMXProtocol.class).     builder.service(AuxiliaryArchiveAppender.class, SEContainerAppender.class). }

@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void defaultsToPlatform() throws Exception {     assertEquals("jmx:platform", new JMXUriBuilder().toString()). }
+false;public;0;4;;@Test public void remote() throws Exception {     assertEquals("jmx:service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi", new JMXUriBuilder("service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi").toString()). }
+false;public;0;4;;@Test public void withServerName() throws Exception {     assertEquals("jmx:service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi", new JMXUriBuilder().withServerName("service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi").toString()). }
+false;public;0;4;;@Test public void format() throws Exception {     assertEquals("jmx:platform?format=raw", new JMXUriBuilder().withFormat("raw").toString()). }
+false;public;0;4;;@Test public void credentials() throws Exception {     assertEquals("jmx:platform?user=me&password=pass", new JMXUriBuilder().withUser("me").withPassword("pass").toString()). }
+false;public;0;4;;@Test public void objectName() throws Exception {     assertEquals("jmx:platform?objectDomain=myDomain&objectName=oname", new JMXUriBuilder().withObjectDomain("myDomain").withObjectName("oname").toString()). }
+false;public;0;4;;@Test public void notificationFilter() throws Exception {     assertEquals("jmx:platform?notificationFilter=#foo", new JMXUriBuilder().withNotificationFilter("#foo").toString()). }
+false;public;0;4;;@Test public void handback() throws Exception {     assertEquals("jmx:platform?handback=#hb", new JMXUriBuilder().withHandback("#hb").toString()). }
+false;public;0;7;;@Test public void objectProperties() throws Exception {     LinkedHashMap<String, String> map = new LinkedHashMap<>().     map.put("one", "1").     map.put("two", "2").     assertEquals("jmx:platform?key.one=1&key.two=2", new JMXUriBuilder().withObjectProperties(map).toString()). }
+false;public;0;4;;@Test public void withObjectPropertiesReference() throws Exception {     assertEquals("jmx:platform?objectProperties=#op", new JMXUriBuilder().withObjectPropertiesReference("#op").toString()). }
+false;public;0;4;;@Test public void withObjectPropertiesReferenceSansHashmark() throws Exception {     assertEquals("jmx:platform?objectProperties=#op", new JMXUriBuilder().withObjectPropertiesReference("op").toString()). }

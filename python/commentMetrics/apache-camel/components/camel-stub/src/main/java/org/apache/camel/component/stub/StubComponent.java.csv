@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;3;4;;@Override protected void validateURI(String uri, String path, Map<String, Object> parameters) { // Don't validate so we can stub any URI }
+false;protected;3;4;;@Override protected void validateParameters(String uri, Map<String, Object> parameters, String optionPrefix) { // Don't validate so we can stub any URI }
+false;protected;4;4;;@Override protected StubEndpoint createEndpoint(String endpointUri, Component component, BlockingQueueFactory<Exchange> queueFactory, int concurrentConsumers) {     return new StubEndpoint(endpointUri, component, queueFactory, concurrentConsumers). }
+false;protected;4;4;;@Override protected StubEndpoint createEndpoint(String endpointUri, Component component, BlockingQueue<Exchange> queue, int concurrentConsumers) {     return new StubEndpoint(endpointUri, component, queue, concurrentConsumers). }

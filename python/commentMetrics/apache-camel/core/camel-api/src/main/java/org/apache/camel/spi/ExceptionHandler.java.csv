@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;1;1;/**  * Handles the given exception  *  * @param exception the exception  */ ;/**  * Handles the given exception  *  * @param exception the exception  */ void handleException(Throwable exception).
+true;;2;1;/**  * Handles the given exception  *  * @param message additional message  * @param exception the exception  */ ;/**  * Handles the given exception  *  * @param message additional message  * @param exception the exception  */ void handleException(String message, Throwable exception).
+true;;3;1;/**  * Handles the given exception  *  * @param message additional message  * @param exchange exchange which cause the exception  * @param exception the exception  */ ;/**  * Handles the given exception  *  * @param message additional message  * @param exchange exchange which cause the exception  * @param exception the exception  */ void handleException(String message, Exchange exchange, Throwable exception).

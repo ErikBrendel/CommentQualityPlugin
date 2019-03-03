@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;4;11;;@Override public Object convert(Object existingDestinationFieldValue, Object sourceFieldValue, Class<?> destinationClass, Class<?> sourceClass) {     try {         return getParameter().     } finally {         done().     } }
+true;public;0;3;/**  * We need at least one field in this class so that we can use it as a  * source for Dozer transformations.  */ ;/**  * We need at least one field in this class so that we can use it as a  * source for Dozer transformations.  */ public String getLiteral() {     return getParameter(). }

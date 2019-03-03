@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void testSplit() throws Exception {     Collection<String> split = patternSplitStrategy.split("hello" + PATTERN + "world").     assertEquals(2, split.size()).     assertEquals("world", new ArrayList<>(split).get(1)). }

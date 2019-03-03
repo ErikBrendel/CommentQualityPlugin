@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;0;3;;private String getFtpUrl() {     return "ftp://admin@doesnotexisthost:" + getPort() + "/reconnect?password=admin". }
+false;public;0;10;;@Test public void testFromFileToFtp() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMessageCount(0).     // let it run a little     Thread.sleep(3000).     assertMockEndpointsSatisfied(). }
+false;public;0;3;;public void configure() throws Exception {     from(getFtpUrl()).to("mock:result"). }
+false;protected;0;7;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from(getFtpUrl()).to("mock:result").         }     }. }

@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;7;;@Converter public static byte[] toByteArray(IoBuffer buffer) {     byte[] answer = new byte[buffer.remaining()].     buffer.get(answer).     return answer. // we should not mark and reset the buffer with mina2 }
+false;public,static;2;6;;@Converter public static String toString(IoBuffer buffer, Exchange exchange) {     byte[] bytes = toByteArray(buffer).     // use type converter as it can handle encoding set on the Exchange     return exchange.getContext().getTypeConverter().convertTo(String.class, exchange, bytes). }
+false;public,static;1;4;;@Converter public static InputStream toInputStream(IoBuffer buffer) {     return buffer.asInputStream(). }
+false;public,static;1;5;;@Converter public static ObjectInput toObjectInput(IoBuffer buffer) throws IOException {     InputStream is = toInputStream(buffer).     return new ObjectInputStream(is). }
+false;public,static;1;6;;@Converter public static IoBuffer toIoBuffer(byte[] bytes) {     IoBuffer buf = IoBuffer.allocate(bytes.length).     buf.put(bytes).     return buf. }

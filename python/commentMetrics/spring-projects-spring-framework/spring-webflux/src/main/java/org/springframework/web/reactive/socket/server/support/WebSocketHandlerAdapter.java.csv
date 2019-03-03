@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Return the configured {@code WebSocketService} to handle requests.  */ ;/**  * Return the configured {@code WebSocketService} to handle requests.  */ public WebSocketService getWebSocketService() {     return this.webSocketService. }
+false;public;1;4;;@Override public boolean supports(Object handler) {     return WebSocketHandler.class.isAssignableFrom(handler.getClass()). }
+false;public;2;5;;@Override public Mono<HandlerResult> handle(ServerWebExchange exchange, Object handler) {     WebSocketHandler webSocketHandler = (WebSocketHandler) handler.     return getWebSocketService().handleRequest(exchange, webSocketHandler).then(Mono.empty()). }

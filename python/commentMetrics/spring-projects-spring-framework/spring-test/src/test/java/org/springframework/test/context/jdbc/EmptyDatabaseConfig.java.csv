@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Bean public PlatformTransactionManager transactionManager() {     return new DataSourceTransactionManager(dataSource()). }
+false;public;0;6;;@Bean public DataSource dataSource() {     return //      new EmbeddedDatabaseBuilder().setName(//      "empty-sql-scripts-test-db").build(). }

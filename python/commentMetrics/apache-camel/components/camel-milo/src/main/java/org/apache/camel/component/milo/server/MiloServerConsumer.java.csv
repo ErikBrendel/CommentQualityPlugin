@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;6;;@Override protected void doStart() throws Exception {     super.doStart().     this.item.addWriteListener(this.writeHandler). }
+false;protected;0;6;;@Override protected void doStop() throws Exception {     this.item.removeWriteListener(this.writeHandler).     super.doStop(). }
+false;protected;1;11;;protected void performWrite(final DataValue value) {     final Exchange exchange = getEndpoint().createExchange().     exchange.setIn(mapToMessage(value)).     try {         getAsyncProcessor().process(exchange).     } catch (final Exception e) {         throw new RuntimeException(e).     } }
+false;private;1;11;;private DefaultMessage mapToMessage(final DataValue value) {     if (value == null) {         return null.     }     final DefaultMessage result = new DefaultMessage(getEndpoint().getCamelContext()).     Messages.fillFromDataValue(value, result).     return result. }

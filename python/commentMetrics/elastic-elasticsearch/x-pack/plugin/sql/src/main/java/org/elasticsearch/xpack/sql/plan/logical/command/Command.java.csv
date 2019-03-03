@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,final;1;4;;@Override public final LogicalPlan replaceChildren(List<LogicalPlan> newChildren) {     throw new UnsupportedOperationException("this type of node doesn't have any children to replace"). }
+false;public;0;4;;@Override public boolean expressionsResolved() {     return true. }
+true;protected,final;1;3;/**  * Syntactic sugar for creating a schema keyword/string field.  */ ;/**  * Syntactic sugar for creating a schema keyword/string field.  */ protected final FieldAttribute keyword(String name) {     return field(name, new KeywordEsField(name)). }
+true;protected,final;2;3;/**  * Syntactic sugar for creating a schema field.  */ ;/**  * Syntactic sugar for creating a schema field.  */ protected final FieldAttribute field(String name, DataType type) {     return field(name, new EsField(name, type, emptyMap(), true)). }
+false;private;2;3;;private FieldAttribute field(String name, EsField field) {     return new FieldAttribute(source(), name, field). }

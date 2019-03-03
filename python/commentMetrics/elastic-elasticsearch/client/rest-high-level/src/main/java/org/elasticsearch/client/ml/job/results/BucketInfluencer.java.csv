@@ -1,0 +1,18 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;18;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(Job.ID.getPreferredName(), jobId).     builder.field(Result.RESULT_TYPE.getPreferredName(), RESULT_TYPE_VALUE).     if (influenceField != null) {         builder.field(INFLUENCER_FIELD_NAME.getPreferredName(), influenceField).     }     builder.field(INITIAL_ANOMALY_SCORE.getPreferredName(), initialAnomalyScore).     builder.field(ANOMALY_SCORE.getPreferredName(), anomalyScore).     builder.field(RAW_ANOMALY_SCORE.getPreferredName(), rawAnomalyScore).     builder.field(PROBABILITY.getPreferredName(), probability).     builder.timeField(Result.TIMESTAMP.getPreferredName(), Result.TIMESTAMP.getPreferredName() + "_string", timestamp.getTime()).     builder.field(BUCKET_SPAN.getPreferredName(), bucketSpan).     builder.field(Result.IS_INTERIM.getPreferredName(), isInterim).     builder.endObject().     return builder. }
+false;public;0;3;;public String getJobId() {     return jobId. }
+false;public;0;3;;public double getProbability() {     return probability. }
+false;;1;3;;void setProbability(double probability) {     this.probability = probability. }
+false;public;0;3;;public String getInfluencerFieldName() {     return influenceField. }
+false;;1;3;;void setInfluencerFieldName(String fieldName) {     this.influenceField = fieldName. }
+false;public;0;3;;public double getInitialAnomalyScore() {     return initialAnomalyScore. }
+false;;1;3;;void setInitialAnomalyScore(double influenceScore) {     this.initialAnomalyScore = influenceScore. }
+false;public;0;3;;public double getAnomalyScore() {     return anomalyScore. }
+false;;1;3;;void setAnomalyScore(double score) {     anomalyScore = score. }
+false;public;0;3;;public double getRawAnomalyScore() {     return rawAnomalyScore. }
+false;;1;3;;void setRawAnomalyScore(double score) {     rawAnomalyScore = score. }
+false;;1;3;;void setIsInterim(boolean isInterim) {     this.isInterim = isInterim. }
+false;public;0;3;;public boolean isInterim() {     return isInterim. }
+false;public;0;3;;public Date getTimestamp() {     return timestamp. }
+false;public;0;5;;@Override public int hashCode() {     return Objects.hash(influenceField, initialAnomalyScore, anomalyScore, rawAnomalyScore, probability, isInterim, timestamp, jobId, bucketSpan). }
+false;public;1;21;;@Override public boolean equals(Object obj) {     if (this == obj) {         return true.     }     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     BucketInfluencer other = (BucketInfluencer) obj.     return Objects.equals(influenceField, other.influenceField) && Double.compare(initialAnomalyScore, other.initialAnomalyScore) == 0 && Double.compare(anomalyScore, other.anomalyScore) == 0 && Double.compare(rawAnomalyScore, other.rawAnomalyScore) == 0 && Double.compare(probability, other.probability) == 0 && Objects.equals(isInterim, other.isInterim) && Objects.equals(timestamp, other.timestamp) && Objects.equals(jobId, other.jobId) && bucketSpan == other.bucketSpan. }

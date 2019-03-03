@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;5;;@Override protected Request createTestInstance() {     Job.Builder jobConfiguration = buildJobBuilder(jobId, null).     return new Request(jobConfiguration). }
+false;protected;0;4;;@Override protected Request createBlankInstance() {     return new Request(). }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return false. }
+false;protected;1;4;;@Override protected Request doParseInstance(XContentParser parser) {     return Request.parseRequest(jobId, parser). }
+false;public;0;7;;public void testParseRequest_InvalidCreateSetting() throws IOException {     Job.Builder jobConfiguration = buildJobBuilder(jobId, null).     jobConfiguration.setFinishedTime(new Date()).     BytesReference bytes = XContentHelper.toXContent(jobConfiguration, XContentType.JSON, false).     XContentParser parser = createParser(XContentType.JSON.xContent(), bytes).     expectThrows(IllegalArgumentException.class, () -> Request.parseRequest(jobId, parser)). }

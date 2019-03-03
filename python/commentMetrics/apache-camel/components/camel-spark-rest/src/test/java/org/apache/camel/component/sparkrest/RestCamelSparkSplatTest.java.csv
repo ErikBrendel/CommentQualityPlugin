@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Override public void configure() throws Exception {     rest("/hello/*/to/*").get().route().to("mock:foo").transform().simple("Bye big ${header.splat[1]} from ${header.splat[0]}"). }
+false;protected;0;12;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             rest("/hello/*/to/*").get().route().to("mock:foo").transform().simple("Bye big ${header.splat[1]} from ${header.splat[0]}").         }     }. }

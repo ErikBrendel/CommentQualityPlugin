@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;public void process(Exchange exchange) throws Exception {     LOG.debug("START of onExchange: " + exchange).     super.process(exchange).     LOG.debug("END of onExchange: " + exchange). }

@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public T getPayload() {     return this.payload. }
+false;public;0;3;;public MessageHeaders getHeaders() {     return this.headers. }
+false;public;1;11;;public boolean equals(Object other) {     if (this == other) {         return true.     }     if (!(other instanceof GenericMessage)) {         return false.     }     GenericMessage<?> otherMsg = (GenericMessage<?>) other.     // Using nullSafeEquals for proper array equals comparisons     return (ObjectUtils.nullSafeEquals(this.payload, otherMsg.payload) && this.headers.equals(otherMsg.headers)). }
+false;public;0;4;;public int hashCode() {     // Using nullSafeHashCode for proper array hashCode handling     return (ObjectUtils.nullSafeHashCode(this.payload) * 23 + this.headers.hashCode()). }
+false;public;0;12;;public String toString() {     StringBuilder sb = new StringBuilder(getClass().getSimpleName()).     sb.append(" [payload=").     if (this.payload instanceof byte[]) {         sb.append("byte[").append(((byte[]) this.payload).length).append("]").     } else {         sb.append(this.payload).     }     sb.append(", headers=").append(this.headers).append("]").     return sb.toString(). }

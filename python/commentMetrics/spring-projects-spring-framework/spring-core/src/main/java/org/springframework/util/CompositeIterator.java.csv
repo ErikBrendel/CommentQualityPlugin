@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;7;/**  * Add given iterator to this composite.  */ ;/**  * Add given iterator to this composite.  */ public void add(Iterator<E> iterator) {     Assert.state(!this.inUse, "You can no longer add iterators to a composite iterator that's already in use").     if (this.iterators.contains(iterator)) {         throw new IllegalArgumentException("You cannot add the same iterator twice").     }     this.iterators.add(iterator). }
+false;public;0;10;;@Override public boolean hasNext() {     this.inUse = true.     for (Iterator<E> iterator : this.iterators) {         if (iterator.hasNext()) {             return true.         }     }     return false. }
+false;public;0;10;;@Override public E next() {     this.inUse = true.     for (Iterator<E> iterator : this.iterators) {         if (iterator.hasNext()) {             return iterator.next().         }     }     throw new NoSuchElementException("All iterators exhausted"). }
+false;public;0;4;;@Override public void remove() {     throw new UnsupportedOperationException("CompositeIterator does not support remove()"). }

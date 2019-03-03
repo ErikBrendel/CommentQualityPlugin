@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;3;;protected String getFtpUrl() {     return "ftp://admin@localhost:" + getPort() + "/changed?password=admin&readLock=changed&readLockCheckInterval=1000&readLockMinLength=0&delete=true". }
+false;public;0;10;;@Test public void testChangedReadLock() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMessageCount(1).     mock.expectedFileExists("target/changed/out/zerofile.dat").     writeZeroFile().     assertMockEndpointsSatisfied(). }
+false;private;0;6;;private void writeZeroFile() throws Exception {     createDirectory(FTP_ROOT_DIR + "/changed").     FileOutputStream fos = new FileOutputStream(FTP_ROOT_DIR + "/changed/zerofile.dat", true).     fos.flush().     fos.close(). }
+false;public;0;4;;@Override public void configure() throws Exception {     from(getFtpUrl()).to("file:target/changed/out", "mock:result"). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from(getFtpUrl()).to("file:target/changed/out", "mock:result").         }     }. }

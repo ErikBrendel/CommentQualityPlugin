@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String toString() {     return "asc". }
+false;public;0;4;;@Override public String toString() {     return "desc". }
+false;public,static;1;3;;public static SortOrder readFromStream(StreamInput in) throws IOException {     return in.readEnum(SortOrder.class). }
+false;public;1;4;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeEnum(this). }
+false;public,static;1;3;;public static SortOrder fromString(String op) {     return valueOf(op.toUpperCase(Locale.ROOT)). }

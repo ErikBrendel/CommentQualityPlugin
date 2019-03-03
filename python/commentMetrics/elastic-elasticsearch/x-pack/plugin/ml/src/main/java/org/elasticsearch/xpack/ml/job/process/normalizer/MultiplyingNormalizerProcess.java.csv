@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean isReady() {     return true. }
+false;public;1;26;;@Override public void writeRecord(String[] record) throws IOException {     if (shouldIgnoreHeader) {         shouldIgnoreHeader = false.         return.     }     NormalizerResult result = new NormalizerResult().     try {         // This isn't great as the order must match the order in Normalizer.normalize(),         // but it's only for developers who cannot run the native processes         result.setLevel(record[0]).         result.setPartitionFieldName(record[1]).         result.setPartitionFieldValue(record[2]).         result.setPersonFieldName(record[3]).         result.setPersonFieldValue(record[4]).         result.setFunctionName(record[5]).         result.setValueFieldName(record[6]).         result.setProbability(Double.parseDouble(record[7])).         result.setNormalizedScore(factor * Double.parseDouble(record[8])).     } catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {         throw new IOException("Unable to write to no-op normalizer", e).     }     // Write lineified JSON     builder.lfAtEnd().     result.toXContent(builder, null). }
+false;public;0;4;;@Override public void persistState() { // Nothing to do }
+false;public;0;4;;@Override public void flushStream() { // Nothing to do }
+false;public;0;4;;@Override public void kill() { // Nothing to do }
+false;public;0;4;;@Override public ZonedDateTime getProcessStartTime() {     return null. }
+false;public;0;4;;@Override public void close() {     builder.close(). }
+false;public;0;4;;@Override public NormalizerResultHandler createNormalizedResultsHandler() {     return new NormalizerResultHandler(processOutStream). }
+false;public;0;5;;@Override public boolean isProcessAlive() {     // Sanity check: make sure the process hasn't terminated already     return true. }
+false;public;0;4;;@Override public boolean isProcessAliveAfterWaiting() {     return true. }
+false;public;0;4;;@Override public String readError() {     return "". }

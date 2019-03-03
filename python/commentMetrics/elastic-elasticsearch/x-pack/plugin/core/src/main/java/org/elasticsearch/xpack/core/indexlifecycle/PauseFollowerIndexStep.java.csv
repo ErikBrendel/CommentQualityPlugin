@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;2;11;;@Override void innerPerformAction(String followerIndex, Listener listener) {     PauseFollowAction.Request request = new PauseFollowAction.Request(followerIndex).     getClient().execute(PauseFollowAction.INSTANCE, request, ActionListener.wrap(r -> {         assert r.isAcknowledged() : "pause follow response is not acknowledged".         listener.onResponse(true).     }, listener::onFailure)). }

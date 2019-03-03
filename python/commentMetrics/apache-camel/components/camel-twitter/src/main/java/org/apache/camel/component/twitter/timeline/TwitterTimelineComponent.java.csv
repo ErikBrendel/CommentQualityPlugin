@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;4;5;;@Override protected Endpoint doCreateEndpoint(TwitterConfiguration properties, String uri, String remaining, Map<String, Object> parameters) throws Exception {     String user = getAndRemoveParameter(parameters, "user", String.class).     return new TwitterTimelineEndpoint(uri, remaining, user, this, properties). }

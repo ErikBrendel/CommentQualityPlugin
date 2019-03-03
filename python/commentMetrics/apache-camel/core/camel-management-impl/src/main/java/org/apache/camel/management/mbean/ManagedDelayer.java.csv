@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Delayer getDelayer() {     return delayer. }
+false;public;0;3;;public Long getDelay() {     return delayer.getDelayValue(). }
+false;public;1;4;;public void constantDelay(Integer millis) {     Expression delay = ExpressionBuilder.constantExpression(millis).     delayer.setDelay(delay). }
+false;public;0;3;;public int getDelayedCount() {     return delayer.getDelayedCount(). }
+false;public;0;3;;public Boolean isAsyncDelayed() {     return delayer.isAsyncDelayed(). }
+false;public;0;4;;@Override public Boolean isCallerRunsWhenRejected() {     return delayer.isCallerRunsWhenRejected(). }

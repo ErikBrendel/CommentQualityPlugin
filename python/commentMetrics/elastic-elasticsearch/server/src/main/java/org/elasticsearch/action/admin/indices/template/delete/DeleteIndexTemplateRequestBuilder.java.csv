@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;4;/**  * Sets the name of the index template to delete.  */ ;/**  * Sets the name of the index template to delete.  */ public DeleteIndexTemplateRequestBuilder setName(String name) {     request.name(name).     return this. }

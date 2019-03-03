@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;10;;public void process(Exchange exchange) throws Exception {     // just print out the request message     Message in = exchange.getIn().     String request = in.getBody(String.class).     // just make sure the request is greetme     assertTrue("It should be GreetMe request.", request.indexOf("<greetMe") > 0).     InputStream is = new ByteArrayInputStream(RESPONSE.getBytes()).     SOAPMessage message = MessageFactory.newInstance().createMessage(null, is).     exchange.getOut().setBody(message). }

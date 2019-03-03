@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Override public void execute() {     GetItemResult result = ddbClient.getItem(new GetItemRequest().withKey(determineKey()).withTableName(determineTableName()).withAttributesToGet(determineAttributeNames()).withConsistentRead(determineConsistentRead())).     addAttributesToResult(result.getItem()). }

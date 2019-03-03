@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;4;// tag::configuration[] ;// tag::configuration[] @Bean public MeterFilter renameRegionTagMeterFilter() {     return MeterFilter.renameTag("com.example", "mytag.region", "mytag.area"). }

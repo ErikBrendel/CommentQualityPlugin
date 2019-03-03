@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;15;;public void consumed(Exchange result) {     if (processedConsumers.incrementAndGet() == expectedConsumers || result.getException() != null && !resultHandled.getAndSet(true)) {         // As a result, the behaviour of SEDA in case of multicast is to only copy the results on an error         if (result.getException() != null) {             ExchangeHelper.copyResults(getExchange(), result).         }         performSynchronization().     } }
+false;public;0;6;;@Override public Exchange cancelAndGetOriginalExchange() {     resultHandled.set(true).     return super.cancelAndGetOriginalExchange(). }

@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;3;;public static ParamsBuilder paramsBuilder() {     return new ParamsBuilder(). }
+false;public;1;4;;public ParamsBuilder variable(Object value) {     params.add(new Var(value)).     return this. }
+false;public;1;4;;public ParamsBuilder agg(AggregateFunctionAttribute agg) {     params.add(new Agg(agg)).     return this. }
+false;public;1;4;;public ParamsBuilder grouping(GroupingFunctionAttribute grouping) {     params.add(new Grouping(grouping)).     return this. }
+false;public;1;4;;public ParamsBuilder script(Params ps) {     params.add(new Script(ps)).     return this. }
+false;public;0;3;;public Params build() {     return new Params(new ArrayList<>(params)). }

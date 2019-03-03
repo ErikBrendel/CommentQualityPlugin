@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;public int setupFreePort(String name) {     port = AvailablePortFinder.getNextAvailable(++port).     System.setProperty(name, String.valueOf(port)).     return port. }
+false;protected;0;9;;@Override protected CamelContext createCamelContext() throws Exception {     CamelContext context = super.createCamelContext().     AvroConfiguration configuration = new AvroConfiguration().     AvroComponent component = new AvroComponent(context).     component.setConfiguration(configuration).     context.addComponent("avro", component).     return context. }

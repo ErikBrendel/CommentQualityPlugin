@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Producer createProducer() throws Exception {     return new PubNubProducer(this, configuration). }
+false;public;1;4;;@Override public Consumer createConsumer(Processor processor) throws Exception {     return new PubNubConsumer(this, processor, configuration). }
+false;public;0;4;;@Override public boolean isSingleton() {     return true. }
+false;public;0;3;;public PubNubConfiguration getConfiguration() {     return configuration. }
+true;public;0;3;/**  * Reference to a Pubnub client in the registry.  */ ;/**  * Reference to a Pubnub client in the registry.  */ public PubNub getPubnub() {     return pubnub. }
+false;public;1;3;;public void setPubnub(PubNub pubnub) {     this.pubnub = pubnub. }
+false;protected;0;8;;@Override protected void doStop() throws Exception {     super.doStop().     if (pubnub != null) {         pubnub.destroy().         pubnub = null.     } }
+false;protected;0;5;;@Override protected void doStart() throws Exception {     this.pubnub = getPubnub() != null ? getPubnub() : getInstance().     super.doStart(). }
+false;private;0;15;;private PubNub getInstance() {     PubNub answer = null.     PNConfiguration pnConfiguration = new PNConfiguration().     pnConfiguration.setPublishKey(configuration.getPublishKey()).     pnConfiguration.setSubscribeKey(configuration.getSubscribeKey()).     pnConfiguration.setSecretKey(configuration.getSecretKey()).     pnConfiguration.setAuthKey(configuration.getAuthKey()).     pnConfiguration.setCipherKey(configuration.getCipherKey()).     pnConfiguration.setSecure(configuration.isSecure()).     if (ObjectHelper.isNotEmpty(configuration.getUuid())) {         pnConfiguration.setUuid(configuration.getUuid()).     }     answer = new PubNub(pnConfiguration).     return answer. }

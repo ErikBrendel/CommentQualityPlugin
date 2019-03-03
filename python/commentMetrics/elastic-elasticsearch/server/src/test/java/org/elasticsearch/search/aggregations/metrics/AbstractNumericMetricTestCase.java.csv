@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected,final;0;10;;@Override protected final AF createTestAggregatorBuilder() {     AF factory = doCreateTestAggregatorFactory().     String field = randomNumericField().     randomFieldOrScript(factory, field).     if (randomBoolean()) {         factory.missing("MISSING").     }     return factory. }
+false;protected,abstract;0;1;;protected abstract AF doCreateTestAggregatorFactory().

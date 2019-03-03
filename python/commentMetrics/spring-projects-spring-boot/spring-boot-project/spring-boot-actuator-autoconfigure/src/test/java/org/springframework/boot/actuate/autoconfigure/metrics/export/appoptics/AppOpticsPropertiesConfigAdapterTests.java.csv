@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected AppOpticsProperties createProperties() {     return new AppOpticsProperties(). }
+false;protected;1;5;;@Override protected AppOpticsPropertiesConfigAdapter createConfigAdapter(AppOpticsProperties properties) {     return new AppOpticsPropertiesConfigAdapter(properties). }
+false;public;0;7;;@Test public void whenPropertiesUrisIsSetAdapterUriReturnsIt() {     AppOpticsProperties properties = createProperties().     properties.setUri("https://appoptics.example.com/v1/measurements").     assertThat(createConfigAdapter(properties).uri()).isEqualTo("https://appoptics.example.com/v1/measurements"). }
+false;public;0;6;;@Test public void whenPropertiesApiTokenIsSetAdapterApiTokenReturnsIt() {     AppOpticsProperties properties = createProperties().     properties.setApiToken("ABC123").     assertThat(createConfigAdapter(properties).apiToken()).isEqualTo("ABC123"). }
+false;public;0;6;;@Test public void whenPropertiesHostTagIsSetAdapterHostTagReturnsIt() {     AppOpticsProperties properties = createProperties().     properties.setHostTag("node").     assertThat(createConfigAdapter(properties).hostTag()).isEqualTo("node"). }

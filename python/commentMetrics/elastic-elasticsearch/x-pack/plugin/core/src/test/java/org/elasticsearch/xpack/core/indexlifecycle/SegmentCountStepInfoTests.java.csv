@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected Info createTestInstance() {     return new Info(randomNonNegativeLong()). }
+false;protected;1;4;;@Override protected Info doParseInstance(XContentParser parser) throws IOException {     return Info.PARSER.apply(parser, null). }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return false. }
+false;public,final;0;5;;public final void testEqualsAndHashcode() {     for (int runs = 0. runs < NUMBER_OF_TEST_RUNS. runs++) {         EqualsHashCodeTestUtils.checkEqualsAndHashCode(createTestInstance(), this::copyInstance, this::mutateInstance).     } }
+false;protected,final;1;3;;protected final Info copyInstance(Info instance) throws IOException {     return new Info(instance.getNumberShardsLeftToMerge()). }
+false;protected;1;3;;protected Info mutateInstance(Info instance) throws IOException {     return createTestInstance(). }

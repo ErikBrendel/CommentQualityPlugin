@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void setsDependsOn() {     this.context = new AnnotationConfigApplicationContext(Config.class).     assertDependsOn("dataSource").     assertDependsOn("connectionFactory").     assertDependsOn("userTransactionManager", "dataSource", "connectionFactory").     assertDependsOn("messageDrivenContainer", "userTransactionManager").     this.context.close(). }
+false;private;2;10;;private void assertDependsOn(String bean, String... expected) {     BeanDefinition definition = this.context.getBeanDefinition(bean).     if (definition.getDependsOn() == null) {         assertThat(expected).as("No dependsOn expected for " + bean).isEmpty().         return.     }     HashSet<String> dependsOn = new HashSet<>(Arrays.asList(definition.getDependsOn())).     assertThat(dependsOn).isEqualTo(new HashSet<>(Arrays.asList(expected))). }
+false;public;0;4;;@Bean public DataSource dataSource() {     return mock(DataSource.class). }
+false;public;0;4;;@Bean public ConnectionFactory connectionFactory() {     return mock(ConnectionFactory.class). }
+false;public;0;4;;@Bean public UserTransactionManager userTransactionManager() {     return mock(UserTransactionManager.class). }
+false;public;0;4;;@Bean public MessageDrivenContainer messageDrivenContainer() {     return mock(MessageDrivenContainer.class). }
+false;public,static;0;4;;@Bean public static AtomikosDependsOnBeanFactoryPostProcessor atomikosPostProcessor() {     return new AtomikosDependsOnBeanFactoryPostProcessor(). }

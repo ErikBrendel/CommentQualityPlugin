@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getName() {     return this.name. }
+false;public;0;5;;@Override @Nullable public Object getSource() {     return this.source. }
+true;public;1;4;/**  * Add the given component as nested element of this composite component.  * @param component the nested component to add  */ ;/**  * Add the given component as nested element of this composite component.  * @param component the nested component to add  */ public void addNestedComponent(ComponentDefinition component) {     Assert.notNull(component, "ComponentDefinition must not be null").     this.nestedComponents.add(component). }
+true;public;0;3;/**  * Return the nested components that this composite component holds.  * @return the array of nested components, or an empty array if none  */ ;/**  * Return the nested components that this composite component holds.  * @return the array of nested components, or an empty array if none  */ public ComponentDefinition[] getNestedComponents() {     return this.nestedComponents.toArray(new ComponentDefinition[0]). }

@@ -1,0 +1,23 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public int size() {     return size.get(). }
+false;public;0;3;;public int capacity() {     return this.capacity. }
+false;public;0;4;;@Override public boolean hasNext() {     return it.hasNext(). }
+false;public;0;5;;@Override public E next() {     current = it.next().     return current. }
+false;public;0;8;;@Override public void remove() {     // if it was removed or not     if (queue.remove(current)) {         size.decrementAndGet().     } }
+false;public;0;27;;@Override public Iterator<E> iterator() {     final Iterator<E> it = queue.iterator().     return new Iterator<E>() {          E current.          @Override         public boolean hasNext() {             return it.hasNext().         }          @Override         public E next() {             current = it.next().             return current.         }          @Override         public void remove() {             // if it was removed or not             if (queue.remove(current)) {                 size.decrementAndGet().             }         }     }. }
+false;public;0;4;;@Override public E peek() {     return queue.peek(). }
+false;public;0;8;;@Override public E poll() {     E e = queue.poll().     if (e != null) {         size.decrementAndGet().     }     return e. }
+false;public;2;8;;@Override public E poll(long timeout, TimeUnit unit) throws InterruptedException {     E e = queue.poll(timeout, unit).     if (e != null) {         size.decrementAndGet().     }     return e. }
+false;public;1;8;;@Override public boolean remove(Object o) {     boolean v = queue.remove(o).     if (v) {         size.decrementAndGet().     }     return v. }
+true;public;1;9;/**  * Forces adding an element to the queue, without doing size checks.  */ ;/**  * Forces adding an element to the queue, without doing size checks.  */ public void forcePut(E e) throws InterruptedException {     size.incrementAndGet().     try {         queue.put(e).     } catch (InterruptedException ie) {         size.decrementAndGet().         throw ie.     } }
+false;public;1;17;;@Override public boolean offer(E e) {     while (true) {         final int current = size.get().         if (current >= capacity()) {             return false.         }         if (size.compareAndSet(current, 1 + current)) {             break.         }     }     boolean offered = queue.offer(e).     if (!offered) {         size.decrementAndGet().     }     return offered. }
+false;public;3;5;;@Override public boolean offer(E e, long timeout, TimeUnit unit) throws InterruptedException {     // note, not used in ThreadPoolExecutor     throw new IllegalStateException("offer with timeout not allowed on size queue"). }
+false;public;1;5;;@Override public void put(E e) throws InterruptedException {     // note, not used in ThreadPoolExecutor     throw new IllegalStateException("put not allowed on size queue"). }
+false;public;0;11;;@Override public E take() throws InterruptedException {     E e.     try {         e = queue.take().         size.decrementAndGet().     } catch (InterruptedException ie) {         throw ie.     }     return e. }
+false;public;0;4;;@Override public int remainingCapacity() {     return capacity() - size.get(). }
+false;public;1;6;;@Override public int drainTo(Collection<? super E> c) {     int v = queue.drainTo(c).     size.addAndGet(-v).     return v. }
+false;public;2;6;;@Override public int drainTo(Collection<? super E> c, int maxElements) {     int v = queue.drainTo(c, maxElements).     size.addAndGet(-v).     return v. }
+false;public;0;4;;@Override public Object[] toArray() {     return queue.toArray(). }
+false;public;1;4;;@Override public <T> T[] toArray(T[] a) {     return (T[]) queue.toArray(a). }
+false;public;1;4;;@Override public boolean contains(Object o) {     return queue.contains(o). }
+false;public;1;4;;@Override public boolean containsAll(Collection<?> c) {     return queue.containsAll(c). }

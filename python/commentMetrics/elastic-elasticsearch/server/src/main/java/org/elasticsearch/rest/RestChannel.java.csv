@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;1;;XContentBuilder newBuilder() throws IOException.
+false;;0;1;;XContentBuilder newErrorBuilder() throws IOException.
+false;;2;1;;XContentBuilder newBuilder(@Nullable XContentType xContentType, boolean useFiltering) throws IOException.
+false;;0;1;;BytesStreamOutput bytesOutput().
+false;;0;1;;RestRequest request().
+true;;0;1;/**  * @return true iff an error response should contain additional details like exception traces.  */ ;/**  * @return true iff an error response should contain additional details like exception traces.  */ boolean detailedErrorsEnabled().
+false;;1;1;;void sendResponse(RestResponse response).

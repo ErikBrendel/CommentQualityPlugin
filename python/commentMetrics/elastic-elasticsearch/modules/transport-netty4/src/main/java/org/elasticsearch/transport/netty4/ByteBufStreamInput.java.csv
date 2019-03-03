@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public BytesReference readBytesReference(int length) throws IOException {     // memory leaks.     return super.readBytesReference(length). }
+false;public;1;8;;@Override public BytesRef readBytesRef(int length) throws IOException {     // memory leaks.     return super.readBytesRef(length). }
+false;public;0;4;;@Override public int available() throws IOException {     return endIndex - buffer.readerIndex(). }
+false;protected;1;7;;@Override protected void ensureCanReadBytes(int length) throws EOFException {     int bytesAvailable = endIndex - buffer.readerIndex().     if (bytesAvailable < length) {         throw new EOFException("tried to read: " + length + " bytes but only " + bytesAvailable + " remaining").     } }
+false;public;1;4;;@Override public void mark(int readlimit) {     buffer.markReaderIndex(). }
+false;public;0;4;;@Override public boolean markSupported() {     return true. }
+false;public;0;7;;@Override public int read() throws IOException {     if (available() == 0) {         return -1.     }     return buffer.readByte() & 0xff. }
+false;public;3;14;;@Override public int read(byte[] b, int off, int len) throws IOException {     if (len == 0) {         return 0.     }     int available = available().     if (available == 0) {         return -1.     }     len = Math.min(available, len).     buffer.readBytes(b, off, len).     return len. }
+false;public;0;4;;@Override public void reset() throws IOException {     buffer.resetReaderIndex(). }
+false;public;1;8;;@Override public long skip(long n) throws IOException {     if (n > Integer.MAX_VALUE) {         return skipBytes(Integer.MAX_VALUE).     } else {         return skipBytes((int) n).     } }
+false;public;1;5;;public int skipBytes(int n) throws IOException {     int nBytes = Math.min(available(), n).     buffer.skipBytes(nBytes).     return nBytes. }
+false;public;0;10;;@Override public byte readByte() throws IOException {     try {         return buffer.readByte().     } catch (IndexOutOfBoundsException ex) {         EOFException eofException = new EOFException().         eofException.initCause(ex).         throw eofException.     } }
+false;public;3;7;;@Override public void readBytes(byte[] b, int offset, int len) throws IOException {     int read = read(b, offset, len).     if (read < len) {         throw new IndexOutOfBoundsException().     } }
+false;public;0;4;;@Override public void close() throws IOException { // nothing to do here }

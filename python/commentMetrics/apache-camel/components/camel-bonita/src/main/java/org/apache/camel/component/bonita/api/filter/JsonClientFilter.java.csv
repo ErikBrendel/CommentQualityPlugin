@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;9;;@Override public void filter(ClientRequestContext request, ClientResponseContext response) throws IOException {     String contentType = response.getHeaders().getFirst("Content-Type").     if (contentType.startsWith("text/plain")) {         String newContentType = "application/json" + contentType.substring(10).         response.getHeaders().putSingle("Content-Type", newContentType).     } }

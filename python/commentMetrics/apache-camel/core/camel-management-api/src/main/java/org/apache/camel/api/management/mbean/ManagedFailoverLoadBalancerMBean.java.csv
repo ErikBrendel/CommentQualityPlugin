@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;2;;@ManagedAttribute(description = "Number of processors in the load balancer") Integer getSize().
+false;;0;2;;@ManagedAttribute(description = "Whether or not the failover load balancer should operate in round robin mode or not.") Boolean isRoundRobin().
+false;;0;2;;@ManagedAttribute(description = "Whether or not the failover load balancer should operate in sticky mode or not.") Boolean isSticky().
+false;;0;2;;@ManagedAttribute(description = "A value to indicate after X failover attempts we should exhaust (give up).") Integer getMaximumFailoverAttempts().
+false;;0;2;;@ManagedAttribute(description = "The class names of the exceptions the load balancer uses (separated by comma)") String getExceptions().
+false;;0;2;;@ManagedAttribute(description = "Processor id of the last known good processor that succeed processing the exchange") String getLastGoodProcessorId().
+false;;0;2;;@ManagedOperation(description = "Statistics of the content based router for each exception") TabularData exceptionStatistics().

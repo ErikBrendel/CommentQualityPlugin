@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeDouble(discount). }
+true;public;0;3;/**  * @return the discount parameter of the model  */ ;/**  * @return the discount parameter of the model  */ public double getDiscount() {     return this.discount. }
+false;protected;2;5;;@Override protected XContentBuilder innerToXContent(XContentBuilder builder, Params params) throws IOException {     builder.field(DISCOUNT_FIELD.getPreferredName(), discount).     return builder. }
+false;public;0;4;;@Override public String getWriteableName() {     return NAME. }
+false;protected;1;5;;@Override protected boolean doEquals(SmoothingModel other) {     StupidBackoff otherModel = (StupidBackoff) other.     return Objects.equals(discount, otherModel.discount). }
+false;protected;0;4;;@Override protected int doHashCode() {     return Objects.hash(discount). }
+false;public,static;1;14;;public static SmoothingModel fromXContent(XContentParser parser) throws IOException {     XContentParser.Token token.     String fieldName = null.     double discount = DEFAULT_BACKOFF_DISCOUNT.     while ((token = parser.nextToken()) != Token.END_OBJECT) {         if (token == XContentParser.Token.FIELD_NAME) {             fieldName = parser.currentName().         }         if (token.isValue() && DISCOUNT_FIELD.match(fieldName, parser.getDeprecationHandler())) {             discount = parser.doubleValue().         }     }     return new StupidBackoff(discount). }
+false;public;0;5;;@Override public WordScorerFactory buildWordScorerFactory() {     return (IndexReader reader, Terms terms, String field, double realWordLikelihood, BytesRef separator) -> new StupidBackoffScorer(reader, terms, field, realWordLikelihood, separator, discount). }

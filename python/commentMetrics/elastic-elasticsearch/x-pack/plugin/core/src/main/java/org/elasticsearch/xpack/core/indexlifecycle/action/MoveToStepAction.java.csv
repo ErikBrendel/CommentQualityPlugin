@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Response newResponse() {     return new Response(). }
+false;public;0;3;;public String getIndex() {     return index. }
+false;public;0;3;;public StepKey getCurrentStepKey() {     return currentStepKey. }
+false;public;0;3;;public StepKey getNextStepKey() {     return nextStepKey. }
+false;public;0;4;;@Override public ActionRequestValidationException validate() {     return null. }
+false;public,static;2;3;;public static Request parseRequest(String name, XContentParser parser) {     return PARSER.apply(parser, name). }
+false;public;1;7;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     this.index = in.readString().     this.currentStepKey = new StepKey(in).     this.nextStepKey = new StepKey(in). }
+false;public;1;7;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeString(index).     currentStepKey.writeTo(out).     nextStepKey.writeTo(out). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(index, currentStepKey, nextStepKey). }
+false;public;1;12;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (obj.getClass() != getClass()) {         return false.     }     Request other = (Request) obj.     return Objects.equals(index, other.index) && Objects.equals(currentStepKey, other.currentStepKey) && Objects.equals(nextStepKey, other.nextStepKey). }
+false;public;0;4;;@Override public String toString() {     return Strings.toString(this). }
+false;public;2;7;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     return builder.startObject().field(CURRENT_KEY_FIELD.getPreferredName(), currentStepKey).field(NEXT_KEY_FIELD.getPreferredName(), nextStepKey).endObject(). }

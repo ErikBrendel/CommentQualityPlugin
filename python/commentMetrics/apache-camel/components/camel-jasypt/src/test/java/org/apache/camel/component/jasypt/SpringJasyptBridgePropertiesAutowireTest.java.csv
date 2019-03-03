@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Test public void testJasyptProperties() throws Exception {     getMockEndpoint("mock:tiger").expectedBodiesReceived("Hello World Data Spring").     template.sendBody("direct:start", "Hello World").     assertMockEndpointsSatisfied(). }
+false;protected;0;5;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/component/jasypt/SpringJasyptBridgePropertiesAutowireTest.xml"). }

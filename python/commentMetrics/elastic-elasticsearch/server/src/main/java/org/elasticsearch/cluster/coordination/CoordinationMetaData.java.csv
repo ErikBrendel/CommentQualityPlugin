@@ -1,0 +1,42 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private,static;1;3;;private static long term(Object[] termAndConfigs) {     return (long) termAndConfigs[0]. }
+false;private,static;1;5;;@SuppressWarnings("unchecked") private static VotingConfiguration lastCommittedConfig(Object[] fields) {     List<String> nodeIds = (List<String>) fields[1].     return new VotingConfiguration(new HashSet<>(nodeIds)). }
+false;private,static;1;5;;@SuppressWarnings("unchecked") private static VotingConfiguration lastAcceptedConfig(Object[] fields) {     List<String> nodeIds = (List<String>) fields[2].     return new VotingConfiguration(new HashSet<>(nodeIds)). }
+false;private,static;1;5;;@SuppressWarnings("unchecked") private static Set<VotingConfigExclusion> votingConfigExclusions(Object[] fields) {     Set<VotingConfigExclusion> votingTombstones = new HashSet<>((List<VotingConfigExclusion>) fields[3]).     return votingTombstones. }
+false;public,static;0;3;;public static Builder builder() {     return new Builder(). }
+false;public,static;1;3;;public static Builder builder(CoordinationMetaData coordinationMetaData) {     return new Builder(coordinationMetaData). }
+false;public;1;7;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeLong(term).     lastCommittedConfiguration.writeTo(out).     lastAcceptedConfiguration.writeTo(out).     out.writeCollection(votingConfigExclusions). }
+false;public;2;8;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     return builder.field(TERM_PARSE_FIELD.getPreferredName(), term).field(LAST_COMMITTED_CONFIGURATION_FIELD.getPreferredName(), lastCommittedConfiguration).field(LAST_ACCEPTED_CONFIGURATION_FIELD.getPreferredName(), lastAcceptedConfiguration).field(VOTING_CONFIG_EXCLUSIONS_FIELD.getPreferredName(), votingConfigExclusions). }
+false;public,static;1;3;;public static CoordinationMetaData fromXContent(XContentParser parser) throws IOException {     return PARSER.parse(parser, null). }
+false;public;0;3;;public long term() {     return term. }
+false;public;0;3;;public VotingConfiguration getLastAcceptedConfiguration() {     return lastAcceptedConfiguration. }
+false;public;0;3;;public VotingConfiguration getLastCommittedConfiguration() {     return lastCommittedConfiguration. }
+false;public;0;3;;public Set<VotingConfigExclusion> getVotingConfigExclusions() {     return votingConfigExclusions. }
+false;public;1;12;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (!(o instanceof CoordinationMetaData))         return false.     CoordinationMetaData that = (CoordinationMetaData) o.     if (term != that.term)         return false.     if (!lastCommittedConfiguration.equals(that.lastCommittedConfiguration))         return false.     if (!lastAcceptedConfiguration.equals(that.lastAcceptedConfiguration))         return false.     return votingConfigExclusions.equals(that.votingConfigExclusions). }
+false;public;0;8;;@Override public int hashCode() {     int result = (int) (term ^ (term >>> 32)).     result = 31 * result + lastCommittedConfiguration.hashCode().     result = 31 * result + lastAcceptedConfiguration.hashCode().     result = 31 * result + votingConfigExclusions.hashCode().     return result. }
+false;public;0;9;;@Override public String toString() {     return "CoordinationMetaData{" + "term=" + term + ", lastCommittedConfiguration=" + lastCommittedConfiguration + ", lastAcceptedConfiguration=" + lastAcceptedConfiguration + ", votingConfigExclusions=" + votingConfigExclusions + '}'. }
+false;public;1;4;;public Builder term(long term) {     this.term = term.     return this. }
+false;public;1;4;;public Builder lastCommittedConfiguration(VotingConfiguration config) {     this.lastCommittedConfiguration = config.     return this. }
+false;public;1;4;;public Builder lastAcceptedConfiguration(VotingConfiguration config) {     this.lastAcceptedConfiguration = config.     return this. }
+false;public;1;4;;public Builder addVotingConfigExclusion(VotingConfigExclusion exclusion) {     votingConfigExclusions.add(exclusion).     return this. }
+false;public;0;4;;public Builder clearVotingConfigExclusions() {     votingConfigExclusions.clear().     return this. }
+false;public;0;3;;public CoordinationMetaData build() {     return new CoordinationMetaData(term, lastCommittedConfiguration, lastAcceptedConfiguration, votingConfigExclusions). }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeString(nodeId).     out.writeString(nodeName). }
+false;public;0;3;;public String getNodeId() {     return nodeId. }
+false;public;0;3;;public String getNodeName() {     return nodeName. }
+false;private,static;1;3;;private static String nodeId(Object[] nodeIdAndName) {     return (String) nodeIdAndName[0]. }
+false;private,static;1;3;;private static String nodeName(Object[] nodeIdAndName) {     return (String) nodeIdAndName[1]. }
+false;public,static;1;3;;public static VotingConfigExclusion fromXContent(XContentParser parser) throws IOException {     return PARSER.parse(parser, null). }
+false;public;2;7;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     return builder.startObject().field(NODE_ID_PARSE_FIELD.getPreferredName(), nodeId).field(NODE_NAME_PARSE_FIELD.getPreferredName(), nodeName).endObject(). }
+false;public;1;8;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     VotingConfigExclusion that = (VotingConfigExclusion) o.     return Objects.equals(nodeId, that.nodeId) && Objects.equals(nodeName, that.nodeName). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(nodeId, nodeName). }
+false;public;0;9;;@Override public String toString() {     StringBuilder sb = new StringBuilder().     if (nodeName.length() > 0) {         sb.append('{').append(nodeName).append('}').     }     sb.append('{').append(nodeId).append('}').     return sb.toString(). }
+false;public;1;4;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeStringArray(nodeIds.toArray(new String[nodeIds.size()])). }
+false;public;1;5;;public boolean hasQuorum(Collection<String> votes) {     final HashSet<String> intersection = new HashSet<>(nodeIds).     intersection.retainAll(votes).     return intersection.size() * 2 > nodeIds.size(). }
+false;public;0;3;;public Set<String> getNodeIds() {     return nodeIds. }
+false;public;0;4;;@Override public String toString() {     return "VotingConfiguration{" + String.join(",", nodeIds) + "}". }
+false;public;1;7;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     VotingConfiguration that = (VotingConfiguration) o.     return Objects.equals(nodeIds, that.nodeIds). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(nodeIds). }
+false;public;0;3;;public boolean isEmpty() {     return nodeIds.isEmpty(). }
+false;public;2;8;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startArray().     for (String nodeId : nodeIds) {         builder.value(nodeId).     }     return builder.endArray(). }
+false;public,static;1;4;;public static VotingConfiguration of(DiscoveryNode... nodes) {     // this could be used in many more places - TODO use this where appropriate     return new VotingConfiguration(Arrays.stream(nodes).map(DiscoveryNode::getId).collect(Collectors.toSet())). }

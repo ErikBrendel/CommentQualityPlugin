@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;public void execute() {     BatchPutAttributesRequest request = new BatchPutAttributesRequest().withDomainName(determineDomainName()).withItems(determineReplaceableItems()).     log.trace("Sending request [{}] for exchange [{}]...", request, exchange).     this.sdbClient.batchPutAttributes(request).     log.trace("Request sent"). }
+false;protected;0;4;;@SuppressWarnings("unchecked") protected Collection<ReplaceableItem> determineReplaceableItems() {     return exchange.getIn().getHeader(SdbConstants.REPLACEABLE_ITEMS, Collection.class). }

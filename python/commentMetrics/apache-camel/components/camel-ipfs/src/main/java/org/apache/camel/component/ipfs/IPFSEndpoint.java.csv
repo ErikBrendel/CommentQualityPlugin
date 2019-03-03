@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public IPFSComponent getComponent() {     return (IPFSComponent) super.getComponent(). }
+false;public;1;4;;@Override public Consumer createConsumer(Processor processor) throws Exception {     throw new UnsupportedOperationException(). }
+false;public;0;4;;@Override public Producer createProducer() throws Exception {     return new IPFSProducer(this). }
+false;public;0;4;;@Override public boolean isSingleton() {     return false. }
+false;;0;3;;IPFSConfiguration getConfiguration() {     return configuration. }
+false;;0;8;;IPFSCommand getCommand() {     String cmd = configuration.getIpfsCmd().     try {         return IPFSCommand.valueOf(cmd).     } catch (IllegalArgumentException ex) {         throw new IllegalArgumentException("Unsupported command: " + cmd).     } }
+false;;0;3;;String ipfsVersion() throws IOException {     return ipfs().version(). }
+false;;1;4;;List<String> ipfsAdd(Path path) throws IOException {     List<Multihash> cids = ipfs().add(path).     return cids.stream().map(mh -> mh.toBase58()).collect(Collectors.toList()). }
+false;;1;9;;InputStream ipfsCat(String cid) throws IOException, TimeoutException {     Multihash mhash = Multihash.fromBase58(cid).     Future<InputStream> future = ipfs().cat(mhash).     try {         return future.get(defaultTimeout, TimeUnit.MILLISECONDS).     } catch (InterruptedException | ExecutionException ex) {         throw new IOException("Cannot obtain: " + cid, ex).     } }
+false;;2;9;;Path ipfsGet(String cid, Path outdir) throws IOException, TimeoutException {     Multihash mhash = Multihash.fromBase58(cid).     Future<Path> future = ipfs().get(mhash, outdir).     try {         return future.get(defaultTimeout, TimeUnit.MILLISECONDS).     } catch (InterruptedException | ExecutionException ex) {         throw new IOException("Cannot obtain: " + cid, ex).     } }
+false;private;0;3;;private IPFSClient ipfs() {     return getComponent().getIPFSClient(). }

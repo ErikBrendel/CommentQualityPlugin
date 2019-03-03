@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;5;;@Override protected ApplicationContext getApplicationContext() {     return new GenericXmlApplicationContext("/org/springframework/cache/jcache/config/jCacheStandaloneConfig.xml"). }

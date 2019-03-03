@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected Writeable.Reader<FollowInfoAction.Request> instanceReader() {     return FollowInfoAction.Request::new. }
+false;protected;0;6;;@Override protected FollowInfoAction.Request createTestInstance() {     FollowInfoAction.Request request = new FollowInfoAction.Request().     request.setFollowerIndices(generateRandomStringArray(4, 4, true, false)).     return request. }

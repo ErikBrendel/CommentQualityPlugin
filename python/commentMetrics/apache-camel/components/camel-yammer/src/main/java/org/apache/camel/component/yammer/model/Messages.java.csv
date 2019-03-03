@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public ThreadedExtended getThreadedExtended() {     return threadedExtended. }
+false;public;1;3;;public void setThreadedExtended(ThreadedExtended threadedExtended) {     this.threadedExtended = threadedExtended. }
+false;public;0;3;;public List<Message> getMessages() {     return messages. }
+false;public;1;3;;public void setMessages(List<Message> messages) {     this.messages = messages. }
+false;public;0;3;;public List<Reference> getReferences() {     return references. }
+false;public;1;3;;public void setReferences(List<Reference> references) {     this.references = references. }
+false;public;0;3;;public Meta getMeta() {     return meta. }
+false;public;1;3;;public void setMeta(Meta meta) {     this.meta = meta. }
+false;public;0;4;;@Override public String toString() {     return "Messages [threadedExtended=" + threadedExtended + ", messages=" + messages + ", references=" + references + ", meta=" + meta + "]". }

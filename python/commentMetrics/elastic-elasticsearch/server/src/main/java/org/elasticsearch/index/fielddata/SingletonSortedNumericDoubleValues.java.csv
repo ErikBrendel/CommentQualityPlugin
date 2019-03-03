@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Return the wrapped {@link NumericDoubleValues}  */ ;/**  * Return the wrapped {@link NumericDoubleValues}  */ public NumericDoubleValues getNumericDoubleValues() {     return in. }
+false;public;1;4;;@Override public boolean advanceExact(int target) throws IOException {     return in.advanceExact(target). }
+false;public;0;4;;@Override public int docValueCount() {     return 1. }
+false;public;0;4;;@Override public double nextValue() throws IOException {     return in.doubleValue(). }

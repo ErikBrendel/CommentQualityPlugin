@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void classLevel() {     assertNumUsers(2). }
+false;public;0;5;;@Test @Sql public void methodLevel() {     assertNumUsers(3). }
+false;protected;1;3;;protected void assertNumUsers(int expected) {     assertEquals("Number of rows in the 'user' table.", expected, countRowsInTable("user")). }

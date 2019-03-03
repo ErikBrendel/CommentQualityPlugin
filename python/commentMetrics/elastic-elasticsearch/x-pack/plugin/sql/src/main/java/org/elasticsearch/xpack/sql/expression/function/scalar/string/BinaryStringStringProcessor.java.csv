@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;7;;@Override public Number apply(String left, String right) {     if (left == null || right == null) {         return null.     }     return op.apply(left, right). }
+false;public;0;4;;@Override public String getWriteableName() {     return NAME. }
+false;protected;2;11;;@Override protected Object doProcess(Object left, Object right) {     if (!(left instanceof String || left instanceof Character)) {         throw new SqlIllegalArgumentException("A string/char is required. received [{}]", left).     }     if (!(right instanceof String || right instanceof Character)) {         throw new SqlIllegalArgumentException("A string/char is required. received [{}]", right).     }     return super.doProcess(left.toString(), right.toString()). }

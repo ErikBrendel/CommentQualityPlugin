@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Before @Override public void createTestCalendar() { }
+false;public;0;4;;@After @Override public void deleteTestCalendar() { }
+false;protected;0;10;;@Override protected CamelContext createCamelContext() throws Exception {     final CamelContext context = new DefaultCamelContext(createRegistry()).     // add GoogleCalendarComponent to Camel context but don't set up configuration     final GoogleCalendarComponent component = new GoogleCalendarComponent(context).     context.addComponent("google-calendar", component).     return context. }
+false;public;0;11;;@Test public void testConfiguration() throws Exception {     GoogleCalendarEndpoint endpoint = getMandatoryEndpoint(TEST_URI, GoogleCalendarEndpoint.class).     GoogleCalendarConfiguration configuration = endpoint.getConfiguration().     assertNotNull(configuration).     assertEquals("a", configuration.getClientId()).     assertEquals("b", configuration.getClientSecret()).     assertEquals("c", configuration.getApplicationName()).     assertEquals("d", configuration.getAccessToken()).     assertEquals("e", configuration.getRefreshToken()). }
+false;public;0;4;;@Override public void configure() {     from("direct://COPY").to(TEST_URI). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() {             from("direct://COPY").to(TEST_URI).         }     }. }

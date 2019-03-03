@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getFileId() {     return fileId. }
+false;public;1;3;;public void setFileId(String fileId) {     this.fileId = fileId. }
+false;public;0;3;;public Integer getWidth() {     return width. }
+false;public;1;3;;public void setWidth(Integer width) {     this.width = width. }
+false;public;0;3;;public Integer getHeight() {     return height. }
+false;public;1;3;;public void setHeight(Integer height) {     this.height = height. }
+false;public;0;3;;public Long getFileSize() {     return fileSize. }
+false;public;1;3;;public void setFileSize(Long fileSize) {     this.fileSize = fileSize. }
+false;public;0;10;;@Override public String toString() {     final StringBuilder sb = new StringBuilder("IncomingPhotoSize{").     sb.append("fileId='").append(fileId).append('\'').     sb.append(", width=").append(width).     sb.append(", height=").append(height).     sb.append(", fileSize=").append(fileSize).     sb.append('}').     return sb.toString(). }

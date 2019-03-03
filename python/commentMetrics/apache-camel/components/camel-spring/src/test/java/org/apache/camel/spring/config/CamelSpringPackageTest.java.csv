@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext(new String[] { "org/apache/camel/spring/config/routeBuilderPackage.xml" }). }
+false;public;0;9;;@Test public void testRouteExcluded() throws InterruptedException {     assertEquals(1, context.getRoutes().size()).     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMessageCount(1).     sendBody("direct:start", "dropped like a hot rock").     mock.assertIsSatisfied(). }

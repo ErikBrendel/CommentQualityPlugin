@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;2;;@ManagedAttribute(description = "Application Health") boolean getIsHealthy().
+false;;0;2;;@ManagedAttribute(description = "Registered Health Checks IDs") Collection<String> getHealthChecksIDs().
+false;;0;2;;@ManagedOperation(description = "Registered Health Checks Details") TabularData details().
+false;;1;2;;@ManagedOperation(description = "Invoke an Health Check by ID") String invoke(String id).

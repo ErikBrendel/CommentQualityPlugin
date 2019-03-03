@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@After public void after() {     ApplicationContextTestUtils.closeAll(this.context). }
+false;public;0;7;;@Test public void testParent() {     SpringApplicationBuilder builder = new SpringApplicationBuilder(Child.class).     builder.parent(Parent.class).     this.context = builder.run("--server.port=0", "--management.metrics.use-global-registry=false"). }
+false;public;0;7;;@Test public void testChild() {     SpringApplicationBuilder builder = new SpringApplicationBuilder(Parent.class).     builder.child(Child.class).     this.context = builder.run("--server.port=0", "--management.metrics.use-global-registry=false"). }

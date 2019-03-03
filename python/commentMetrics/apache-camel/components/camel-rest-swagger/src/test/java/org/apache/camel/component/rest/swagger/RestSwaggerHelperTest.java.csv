@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test(expected = IllegalArgumentException.class) public void emptyHostParamsAreNotAllowed() {     RestSwaggerHelper.isHostParam(""). }
+false;public;0;4;;@Test(expected = IllegalArgumentException.class) public void nonUriHostParametersAreNotAllowed() {     RestSwaggerHelper.isHostParam("carrot"). }
+false;public;0;4;;@Test(expected = IllegalArgumentException.class) public void nullHostParamsAreNotAllowed() {     RestSwaggerHelper.isHostParam(null). }
+false;public;0;4;;@Test public void shouldNiceify() {     assertThat(RestSwaggerHelper.isHostParam("http://api.example.com")).isEqualTo("http://api.example.com"). }
+false;public;0;4;;@Test public void shouldReturnUriParameter() {     assertThat(RestSwaggerHelper.isHostParam("http://api.example.com")).isEqualTo("http://api.example.com"). }

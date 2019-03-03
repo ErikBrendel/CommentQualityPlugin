@@ -1,0 +1,22 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;4;/**  * @deprecated Types are in the process of being removed.  */ ;/**  * @deprecated Types are in the process of being removed.  */ @Deprecated public String type() {     return type. }
+true;public;1;5;/**  * @deprecated Types are in the process of being removed.  */ ;/**  * @deprecated Types are in the process of being removed.  */ @Deprecated public ExplainRequest type(String type) {     this.type = type.     return this. }
+false;public;0;3;;public String id() {     return id. }
+false;public;1;4;;public ExplainRequest id(String id) {     this.id = id.     return this. }
+false;public;0;3;;public String routing() {     return routing. }
+false;public;1;4;;public ExplainRequest routing(String routing) {     this.routing = routing.     return this. }
+true;public;1;4;/**  * Simple sets the routing. Since the parent is only used to get to the right shard.  */ ;/**  * Simple sets the routing. Since the parent is only used to get to the right shard.  */ public ExplainRequest parent(String parent) {     this.routing = parent.     return this. }
+false;public;0;3;;public String preference() {     return preference. }
+false;public;1;4;;public ExplainRequest preference(String preference) {     this.preference = preference.     return this. }
+false;public;0;3;;public QueryBuilder query() {     return query. }
+false;public;1;4;;public ExplainRequest query(QueryBuilder query) {     this.query = query.     return this. }
+true;public;1;4;/**  * Allows setting the {@link FetchSourceContext} for this request, controlling if and how _source should be returned.  */ ;/**  * Allows setting the {@link FetchSourceContext} for this request, controlling if and how _source should be returned.  */ public ExplainRequest fetchSourceContext(FetchSourceContext context) {     this.fetchSourceContext = context.     return this. }
+false;public;0;3;;public FetchSourceContext fetchSourceContext() {     return fetchSourceContext. }
+false;public;0;3;;public String[] storedFields() {     return storedFields. }
+false;public;1;4;;public ExplainRequest storedFields(String[] fields) {     this.storedFields = fields.     return this. }
+false;public;0;3;;public AliasFilter filteringAlias() {     return filteringAlias. }
+false;public;1;7;;public ExplainRequest filteringAlias(AliasFilter filteringAlias) {     if (filteringAlias != null) {         this.filteringAlias = filteringAlias.     }     return this. }
+false;public;0;14;;@Override public ActionRequestValidationException validate() {     ActionRequestValidationException validationException = super.validateNonNullIndex().     if (Strings.isEmpty(type)) {         validationException = addValidationError("type is missing", validationException).     }     if (Strings.isEmpty(id)) {         validationException = addValidationError("id is missing", validationException).     }     if (query == null) {         validationException = ValidateActions.addValidationError("query is missing", validationException).     }     return validationException. }
+false;public;1;13;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     type = in.readString().     id = in.readString().     routing = in.readOptionalString().     preference = in.readOptionalString().     query = in.readNamedWriteable(QueryBuilder.class).     filteringAlias = new AliasFilter(in).     storedFields = in.readOptionalStringArray().     fetchSourceContext = in.readOptionalWriteable(FetchSourceContext::new).     nowInMillis = in.readVLong(). }
+false;public;1;13;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeString(type).     out.writeString(id).     out.writeOptionalString(routing).     out.writeOptionalString(preference).     out.writeNamedWriteable(query).     filteringAlias.writeTo(out).     out.writeOptionalStringArray(storedFields).     out.writeOptionalWriteable(fetchSourceContext).     out.writeVLong(nowInMillis). }
+false;public;2;7;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(QUERY_FIELD.getPreferredName(), query).     builder.endObject().     return builder. }

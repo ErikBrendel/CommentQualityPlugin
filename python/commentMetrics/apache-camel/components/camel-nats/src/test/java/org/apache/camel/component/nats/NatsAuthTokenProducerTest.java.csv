@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void sendTest() throws Exception {     template.sendBody("direct:send", "pippo"). }
+false;public;0;4;;@Override public void configure() throws Exception {     from("direct:send").to("nats://" + getNatsUrl() + "?topic=test"). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:send").to("nats://" + getNatsUrl() + "?topic=test").         }     }. }

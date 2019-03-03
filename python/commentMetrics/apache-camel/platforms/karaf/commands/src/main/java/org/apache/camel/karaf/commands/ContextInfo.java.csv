@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Override public Object execute() throws Exception {     ContextInfoCommand command = new ContextInfoCommand(name, verbose).     command.setStringEscape(stringEscape).     return command.execute(this, System.out, System.err). }

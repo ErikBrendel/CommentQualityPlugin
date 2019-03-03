@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Autowired(required = false) public void setConfigurers(List<WebFluxConfigurer> configurers) {     if (!CollectionUtils.isEmpty(configurers)) {         this.configurers.addWebFluxConfigurers(configurers).     } }
+false;protected;1;4;;@Override protected void configureContentTypeResolver(RequestedContentTypeResolverBuilder builder) {     this.configurers.configureContentTypeResolver(builder). }
+false;protected;1;4;;@Override protected void addCorsMappings(CorsRegistry registry) {     this.configurers.addCorsMappings(registry). }
+false;public;1;4;;@Override public void configurePathMatching(PathMatchConfigurer configurer) {     this.configurers.configurePathMatching(configurer). }
+false;protected;1;4;;@Override protected void addResourceHandlers(ResourceHandlerRegistry registry) {     this.configurers.addResourceHandlers(registry). }
+false;protected;1;4;;@Override protected void configureArgumentResolvers(ArgumentResolverConfigurer configurer) {     this.configurers.configureArgumentResolvers(configurer). }
+false;protected;1;4;;@Override protected void configureHttpMessageCodecs(ServerCodecConfigurer configurer) {     this.configurers.configureHttpMessageCodecs(configurer). }
+false;protected;1;4;;@Override protected void addFormatters(FormatterRegistry registry) {     this.configurers.addFormatters(registry). }
+false;protected;0;5;;@Override protected Validator getValidator() {     Validator validator = this.configurers.getValidator().     return (validator != null ? validator : super.getValidator()). }
+false;protected;0;5;;@Override protected MessageCodesResolver getMessageCodesResolver() {     MessageCodesResolver messageCodesResolver = this.configurers.getMessageCodesResolver().     return (messageCodesResolver != null ? messageCodesResolver : super.getMessageCodesResolver()). }
+false;protected;1;4;;@Override protected void configureViewResolvers(ViewResolverRegistry registry) {     this.configurers.configureViewResolvers(registry). }

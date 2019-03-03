@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected ReplicationResponse newShardResponse() {     return new ReplicationResponse(). }
+false;protected;2;4;;@Override protected ShardFlushRequest newShardRequest(FlushRequest request, ShardId shardId) {     return new ShardFlushRequest(request, shardId). }
+false;protected;4;5;;@Override protected FlushResponse newResponse(int successfulShards, int failedShards, int totalNumCopies, List<DefaultShardOperationFailedException> shardFailures) {     return new FlushResponse(totalNumCopies, successfulShards, failedShards, shardFailures). }

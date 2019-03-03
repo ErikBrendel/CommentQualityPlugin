@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;12;;@Test public void testDefaultInjector() throws Exception {     CamelContext context = new DefaultCamelContext().     context.start().     // use the injector (will use the default)     // which should post process the bean to inject the @Produce     MyBean bean = context.getInjector().newInstance(MyBean.class).     Object reply = bean.doSomething("World").     assertEquals("WorldWorld", reply). }
+false;public;1;3;;public Object doSomething(String body) {     return template.requestBody(body). }

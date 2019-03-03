@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Consume(uri = "direct:start") @RecipientList public String[] route(String body) {     return new String[] { "mock:a", "mock:b" }. }

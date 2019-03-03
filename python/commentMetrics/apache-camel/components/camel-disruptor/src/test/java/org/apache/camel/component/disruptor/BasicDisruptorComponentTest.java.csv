@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void testProduce() throws InterruptedException {     resultEndpoint.expectedBodiesReceived(VALUE).     resultEndpoint.setExpectedMessageCount(1).     template.sendBody("disruptor:test", VALUE).     resultEndpoint.assertIsSatisfied(). }
+false;public;0;5;;@Override public void configure() throws Exception {     from("disruptor:test").to("mock:result"). }
+false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("disruptor:test").to("mock:result").         }     }. }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Bean(name = LDAP_MOCK_NAME) public LdapTemplate testTemplate() {     return Mockito.mock(LdapTemplate.class). }

@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public void load(Properties props, InputStream is) throws IOException {     props.load(is). }
+false;public;2;4;;@Override public void load(Properties props, Reader reader) throws IOException {     props.load(reader). }
+false;public;3;4;;@Override public void store(Properties props, OutputStream os, String header) throws IOException {     props.store(os, header). }
+false;public;3;4;;@Override public void store(Properties props, Writer writer, String header) throws IOException {     props.store(writer, header). }
+false;public;2;4;;@Override public void loadFromXml(Properties props, InputStream is) throws IOException {     props.loadFromXML(is). }
+false;public;3;4;;@Override public void storeToXml(Properties props, OutputStream os, String header) throws IOException {     props.storeToXML(os, header). }
+false;public;4;4;;@Override public void storeToXml(Properties props, OutputStream os, String header, String encoding) throws IOException {     props.storeToXML(os, header, encoding). }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public String print(char[] object, Locale locale) {     return new String(object). }
+false;public;2;4;;@Override public char[] parse(String text, Locale locale) throws ParseException {     return text.toCharArray(). }

@@ -1,0 +1,34 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;8;/**  * Returns a copy of this configuration  */ ;/**  * Returns a copy of this configuration  */ public GangliaConfiguration copy() {     try {         GangliaConfiguration copy = (GangliaConfiguration) clone().         return copy.     } catch (CloneNotSupportedException e) {         throw new RuntimeCamelException(e).     } }
+false;public;1;10;;public void configure(URI uri) {     String value = uri.getHost().     if (value != null) {         setHost(value).     }     int port = uri.getPort().     if (port > 0) {         setPort(port).     } }
+false;public;0;7;;public GMetric createGMetric() {     try {         return new GMetric(host, port, mode, ttl, wireFormat31x, null, spoofHostname).     } catch (IOException ex) {         throw new RuntimeCamelException("Failed to initialize Ganglia", ex).     } }
+false;public;0;3;;public String getHost() {     return host. }
+true;public;1;3;/**  * Host name for Ganglia server  */ ;/**  * Host name for Ganglia server  */ public void setHost(String host) {     this.host = host. }
+false;public;0;3;;public int getPort() {     return port. }
+true;public;1;3;/**  * Port for Ganglia server  */ ;/**  * Port for Ganglia server  */ public void setPort(int port) {     this.port = port. }
+false;public;0;3;;public GMetric.UDPAddressingMode getMode() {     return mode. }
+true;public;1;3;/**  * Send the UDP metric packets using MULTICAST or UNICAST  */ ;/**  * Send the UDP metric packets using MULTICAST or UNICAST  */ public void setMode(GMetric.UDPAddressingMode mode) {     this.mode = mode. }
+false;public;0;3;;public int getTtl() {     return ttl. }
+true;public;1;3;/**  * If using multicast, set the TTL of the packets  */ ;/**  * If using multicast, set the TTL of the packets  */ public void setTtl(int ttl) {     this.ttl = ttl. }
+false;public;0;3;;public boolean getWireFormat31x() {     return wireFormat31x. }
+true;public;1;3;/**  * Use the wire format of Ganglia 3.1.0 and later versions.  Set this to false to use Ganglia 3.0.x or earlier.  */ ;/**  * Use the wire format of Ganglia 3.1.0 and later versions.  Set this to false to use Ganglia 3.0.x or earlier.  */ public void setWireFormat31x(boolean wireFormat31x) {     this.wireFormat31x = wireFormat31x. }
+false;public;0;3;;public String getSpoofHostname() {     return spoofHostname. }
+true;public;1;3;/**  * Spoofing information IP:hostname  */ ;/**  * Spoofing information IP:hostname  */ public void setSpoofHostname(String spoofHostname) {     this.spoofHostname = spoofHostname. }
+false;public;0;3;;public String getGroupName() {     return groupName. }
+true;public;1;3;/**  * The group that the metric belongs to.  */ ;/**  * The group that the metric belongs to.  */ public void setGroupName(String groupName) {     this.groupName = groupName. }
+false;public;0;3;;public String getPrefix() {     return prefix. }
+true;public;1;3;/**  * Prefix the metric name with this string and an underscore.  */ ;/**  * Prefix the metric name with this string and an underscore.  */ public void setPrefix(String prefix) {     this.prefix = prefix. }
+false;public;0;3;;public String getMetricName() {     return metricName. }
+true;public;1;3;/**  * The name to use for the metric.  */ ;/**  * The name to use for the metric.  */ public void setMetricName(String metricName) {     this.metricName = metricName. }
+false;public;0;3;;public GMetricType getType() {     return type. }
+true;public;1;3;/**  * The type of value  */ ;/**  * The type of value  */ public void setType(GMetricType type) {     this.type = type. }
+false;public;0;3;;public GMetricSlope getSlope() {     return slope. }
+true;public;1;3;/**  * The slope  */ ;/**  * The slope  */ public void setSlope(GMetricSlope slope) {     this.slope = slope. }
+false;public;0;3;;public String getUnits() {     return units. }
+true;public;1;3;/**  * Any unit of measurement that qualifies the metric, e.g. widgets, litres, bytes.  * Do not include a prefix such as k (kilo) or m (milli), other tools may scale the units later.  * The value should be unscaled.  */ ;/**  * Any unit of measurement that qualifies the metric, e.g. widgets, litres, bytes.  * Do not include a prefix such as k (kilo) or m (milli), other tools may scale the units later.  * The value should be unscaled.  */ public void setUnits(String units) {     this.units = units. }
+false;public;0;3;;public boolean isWireFormat31x() {     return wireFormat31x. }
+false;public;0;3;;public int getTmax() {     return tmax. }
+true;public;1;3;/**  * Maximum time in seconds that the value can be considered current.  * After this, Ganglia considers the value to have expired.  */ ;/**  * Maximum time in seconds that the value can be considered current.  * After this, Ganglia considers the value to have expired.  */ public void setTmax(int tmax) {     this.tmax = tmax. }
+false;public;0;3;;public int getDmax() {     return dmax. }
+true;public;1;3;/**  * Minumum time in seconds before Ganglia will purge the metric value if it expires.  * Set to 0 and the value will remain in Ganglia indefinitely until a gmond agent restart.  */ ;/**  * Minumum time in seconds before Ganglia will purge the metric value if it expires.  * Set to 0 and the value will remain in Ganglia indefinitely until a gmond agent restart.  */ public void setDmax(int dmax) {     this.dmax = dmax. }
+false;public;0;18;;@Override public String toString() {     return "GangliaConfiguration[" + "host=" + host + ":" + port + ", mode=" + mode + ", ttl=" + ttl + ", wireFormat31x=" + wireFormat31x + ", spoofHostname=" + spoofHostname + ", groupName=" + groupName + ", prefix=" + prefix + ", metricName=" + metricName + ", type=" + type + ", slope=" + slope + ", units=" + units + ", tmax=" + tmax + ", dmax=" + dmax + "]". }

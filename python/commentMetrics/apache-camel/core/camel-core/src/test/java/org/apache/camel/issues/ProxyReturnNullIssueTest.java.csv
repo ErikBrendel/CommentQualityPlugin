@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void testEcho() throws Exception {     Echo service = ProxyHelper.createProxy(context.getEndpoint("direct:echo"), Echo.class).     assertEquals("Hello World", service.echo("Hello World")). }
+false;public;0;5;;@Test public void testEchoNull() throws Exception {     Echo service = ProxyHelper.createProxy(context.getEndpoint("direct:echo"), Echo.class).     assertEquals(null, service.echo(null)). }
+false;public;0;4;;@Override public void configure() throws Exception {     from("direct:echo").bean(new MyEchoBean()). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:echo").bean(new MyEchoBean()).         }     }. }
+false;;1;1;;String echo(String text).
+false;public;1;3;;public String echo(String text) {     return text. }

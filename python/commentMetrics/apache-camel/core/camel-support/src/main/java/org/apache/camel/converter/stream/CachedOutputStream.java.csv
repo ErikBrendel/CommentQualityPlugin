@@ -1,0 +1,19 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public void flush() throws IOException {     currentStream.flush(). }
+false;public;0;8;;public void close() throws IOException {     currentStream.close().     // need to clean up the temp file this time     if (!closedOnCompletion) {         tempFileManager.closeFileInputStreams().         tempFileManager.cleanUpTempFile().     } }
+false;public;1;3;;public boolean equals(Object obj) {     return currentStream.equals(obj). }
+false;public;0;3;;public int hashCode() {     return currentStream.hashCode(). }
+false;public;0;3;;public OutputStream getCurrentStream() {     return currentStream. }
+false;public;0;3;;public String toString() {     return "CachedOutputStream[size: " + totalLength + "]". }
+false;public;3;7;;public void write(byte[] b, int off, int len) throws IOException {     this.totalLength += len.     if (inMemory && currentStream instanceof ByteArrayOutputStream && strategy.shouldSpoolCache(totalLength)) {         pageToFileStream().     }     currentStream.write(b, off, len). }
+false;public;1;7;;public void write(byte[] b) throws IOException {     this.totalLength += b.length.     if (inMemory && currentStream instanceof ByteArrayOutputStream && strategy.shouldSpoolCache(totalLength)) {         pageToFileStream().     }     currentStream.write(b). }
+false;public;1;7;;public void write(int b) throws IOException {     this.totalLength++.     if (inMemory && currentStream instanceof ByteArrayOutputStream && strategy.shouldSpoolCache(totalLength)) {         pageToFileStream().     }     currentStream.write(b). }
+false;public;0;3;;public InputStream getInputStream() throws IOException {     return (InputStream) newStreamCache(). }
+false;public;0;4;;public InputStream getWrappedInputStream() throws IOException {     // The WrappedInputStream will close the CachedOutputStream when it is closed     return new WrappedInputStream(this, (InputStream) newStreamCache()). }
+true;public;0;13;/**  * Creates a new {@link StreamCache} from the data cached in this {@link OutputStream}.  */ ;/**  * Creates a new {@link StreamCache} from the data cached in this {@link OutputStream}.  */ public StreamCache newStreamCache() throws IOException {     flush().     if (inMemory) {         if (currentStream instanceof CachedByteArrayOutputStream) {             return ((CachedByteArrayOutputStream) currentStream).newInputStreamCache().         } else {             throw new IllegalStateException("CurrentStream should be an instance of CachedByteArrayOutputStream but is: " + currentStream.getClass().getName()).         }     } else {         return tempFileManager.newStreamCache().     } }
+false;private;0;12;;private void pageToFileStream() throws IOException {     flush().     ByteArrayOutputStream bout = (ByteArrayOutputStream) currentStream.     try {         // creates an tmp file and a file output stream         currentStream = tempFileManager.createOutputStream(strategy).         bout.writeTo(currentStream).     } finally {         // ensure flag is flipped to file based         inMemory = false.     } }
+false;public;0;3;;public int getStrategyBufferSize() {     return strategy.getBufferSize(). }
+false;public;0;4;;@Override public int read() throws IOException {     return inputStream.read(). }
+false;public;0;4;;@Override public int available() throws IOException {     return inputStream.available(). }
+false;public;0;4;;@Override public void reset() throws IOException {     inputStream.reset(). }
+false;public;0;5;;@Override public void close() throws IOException {     inputStream.close().     cachedOutputStream.close(). }

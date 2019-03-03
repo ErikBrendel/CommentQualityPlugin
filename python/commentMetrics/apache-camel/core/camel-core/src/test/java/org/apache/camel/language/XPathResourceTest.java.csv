@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Test public void testXPathResource() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("James").     template.sendBody("direct:start", "<person><name>James</name><city>London</city></person>").     assertMockEndpointsSatisfied(). }
+false;public;0;6;;@Override public void configure() throws Exception {     from("direct:start").transform().xpath("resource:classpath:myxpath.txt").to("mock:result"). }
+false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").transform().xpath("resource:classpath:myxpath.txt").to("mock:result").         }     }. }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;2;1;/**  * Method is called during the creation of a validator endpoint.  *  * @param camelContext camel context  * @param rootResourceUri resource URI specified in the endpoint URI  * @return resource resolver  */ ;/**  * Method is called during the creation of a validator endpoint.  *  * @param camelContext camel context  * @param rootResourceUri resource URI specified in the endpoint URI  * @return resource resolver  */ LSResourceResolver createResourceResolver(CamelContext camelContext, String rootResourceUri).

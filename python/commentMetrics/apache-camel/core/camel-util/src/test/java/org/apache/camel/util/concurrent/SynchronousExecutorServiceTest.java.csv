@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;public void run() {     invoked = true.     name2 = Thread.currentThread().getName(). }
+false;public;0;15;;@Test public void testSynchronousExecutorService() throws Exception {     name1 = Thread.currentThread().getName().     ExecutorService service = new SynchronousExecutorService().     service.execute(new Runnable() {          public void run() {             invoked = true.             name2 = Thread.currentThread().getName().         }     }).     assertTrue("Should have been invoked", invoked).     assertEquals("Should use same thread", name1, name2). }
+false;public;0;3;;public void run() {     invoked = true. }
+false;public;0;13;;@Test public void testSynchronousExecutorServiceShutdown() throws Exception {     ExecutorService service = new SynchronousExecutorService().     service.execute(new Runnable() {          public void run() {             invoked = true.         }     }).     service.shutdown().     assertTrue(service.isShutdown()).     assertTrue(service.isTerminated()). }

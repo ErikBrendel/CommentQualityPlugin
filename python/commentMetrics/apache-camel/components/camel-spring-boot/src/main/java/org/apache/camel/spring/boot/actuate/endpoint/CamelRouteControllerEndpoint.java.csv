@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;12;;@ReadOperation public List<String> getControlledRoutes() {     RouteController controller = camelContext.getRouteController().     if (controller != null) {         return controller.getControlledRoutes().stream().map(Route::getId).collect(Collectors.toList()).     }     return Collections.emptyList(). }

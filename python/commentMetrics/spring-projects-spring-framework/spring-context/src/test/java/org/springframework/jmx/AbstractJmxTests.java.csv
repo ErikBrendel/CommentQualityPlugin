@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected,final;0;4;;@Override protected final void onSetUp() throws Exception {     ctx = loadContext(getApplicationContextPath()). }
+false;protected,final;0;6;;@Override protected final void onTearDown() throws Exception {     if (ctx != null) {         ctx.close().     } }
+false;protected;0;3;;protected String getApplicationContextPath() {     return "org/springframework/jmx/applicationContext.xml". }
+false;protected;0;3;;protected ApplicationContext getContext() {     return this.ctx. }

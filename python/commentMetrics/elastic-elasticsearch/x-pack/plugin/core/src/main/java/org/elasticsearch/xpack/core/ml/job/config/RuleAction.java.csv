@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,static;1;3;/**  * Case-insensitive from string method.  *  * @param value String representation  * @return The rule action  */ ;/**  * Case-insensitive from string method.  *  * @param value String representation  * @return The rule action  */ public static RuleAction fromString(String value) {     return RuleAction.valueOf(value.toUpperCase(Locale.ROOT)). }
+false;public,static;1;3;;public static RuleAction readFromStream(StreamInput in) throws IOException {     return in.readEnum(RuleAction.class). }
+false;public;1;4;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeEnum(this). }
+false;public;0;4;;@Override public String toString() {     return name().toLowerCase(Locale.ROOT). }

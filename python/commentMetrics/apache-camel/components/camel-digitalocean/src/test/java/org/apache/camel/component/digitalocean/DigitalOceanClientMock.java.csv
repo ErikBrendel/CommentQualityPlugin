@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Override public Account getAccountInfo() throws DigitalOceanException, RequestUnsuccessfulException {     Account account = new Account().     account.setEmail("camel@apache.org").     return account. }

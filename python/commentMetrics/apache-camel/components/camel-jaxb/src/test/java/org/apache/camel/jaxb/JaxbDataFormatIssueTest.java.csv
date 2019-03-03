@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;12;;@Test public void testJaxbMarshalling() throws InterruptedException {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMessageCount(1).     mock.message(0).body().endsWith("<foo><bar>Hello Bar</bar></foo>").     Foo foo = new Foo().     foo.setBar("Hello Bar").     template.sendBody("direct:start", foo).     assertMockEndpointsSatisfied(). }
+false;public;0;7;;@Override public void configure() throws Exception {     JaxbDataFormat jaxb = new JaxbDataFormat(JAXBContext.newInstance(Foo.class)).     jaxb.setPrettyPrint(false).     from("direct:start").marshal(jaxb).to("log:xml", "mock:result"). }
+false;protected;0;12;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             JaxbDataFormat jaxb = new JaxbDataFormat(JAXBContext.newInstance(Foo.class)).             jaxb.setPrettyPrint(false).             from("direct:start").marshal(jaxb).to("log:xml", "mock:result").         }     }. }
+false;public;0;3;;public String getBar() {     return bar. }
+false;public;1;3;;public void setBar(String bar) {     this.bar = bar. }

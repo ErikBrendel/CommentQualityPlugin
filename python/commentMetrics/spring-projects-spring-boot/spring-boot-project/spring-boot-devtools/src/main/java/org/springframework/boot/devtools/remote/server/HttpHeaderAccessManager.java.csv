@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public boolean isAllowed(ServerHttpRequest request) {     String providedSecret = request.getHeaders().getFirst(this.headerName).     return this.expectedSecret.equals(providedSecret). }

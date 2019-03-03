@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getName() {     return "watcher_start_service". }
+false;public;2;4;;@Override public RestChannelConsumer doPrepareRequest(RestRequest request, WatcherClient client) {     return channel -> client.watcherService(new WatcherServiceRequest().start(), new RestToXContentListener<>(channel)). }
+false;public;0;4;;@Override public String getName() {     return "watcher_stop_service". }
+false;public;2;4;;@Override public RestChannelConsumer doPrepareRequest(RestRequest request, WatcherClient client) {     return channel -> client.watcherService(new WatcherServiceRequest().stop(), new RestToXContentListener<>(channel)). }

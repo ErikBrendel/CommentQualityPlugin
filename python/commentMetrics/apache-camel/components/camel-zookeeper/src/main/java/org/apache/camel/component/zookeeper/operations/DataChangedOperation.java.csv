@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;5;2;;public void processResult(int rc, String path, Object ctx, byte[] data, Stat stat) { }
+false;protected;0;7;;@Override protected void installWatch() {     connection.getData(getNode(), this, new DataCallback() {          public void processResult(int rc, String path, Object ctx, byte[] data, Stat stat) {         }     }, null). }
+false;public;0;11;;public OperationResult<byte[]> getResult() {     OperationResult<byte[]> answer.     if (EventType.NodeDeleted.equals(getWatchedEvent().getType()) && sendEmptyMessageOnDelete) {         answer = new OperationResult<>((byte[]) null, null).     } else if (getChangedData) {         answer = new GetDataOperation(connection, getNode()).getResult().     } else {         answer = null.     }     return answer. }
+false;public;0;4;;@Override public ZooKeeperOperation<?> createCopy() throws Exception {     return getClass().getConstructor(CONSTRUCTOR_ARGS).newInstance(new Object[] { connection, node, getChangedData, sendEmptyMessageOnDelete }). }

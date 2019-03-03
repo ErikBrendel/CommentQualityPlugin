@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void testUuidDiscovery() {     assertThat(camelContext.getLogListeners()).contains(logListener). }
+false;public;3;4;;@Override public String onLog(Exchange exchange, CamelLogger logger, String s) {     return null. }

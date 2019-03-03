@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Set<ConvertiblePair> getConvertibleTypes() {     return Collections.singleton(new ConvertiblePair(Number.class, Duration.class)). }
+false;public;3;6;;@Override public Object convert(Object source, TypeDescriptor sourceType, TypeDescriptor targetType) {     return this.delegate.convert((source != null) ? source.toString() : null, TypeDescriptor.valueOf(String.class), targetType). }

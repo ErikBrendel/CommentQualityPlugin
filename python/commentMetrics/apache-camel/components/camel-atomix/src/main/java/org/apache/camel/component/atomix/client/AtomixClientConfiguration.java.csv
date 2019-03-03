@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;// **************************************** // Properties // **************************************** public String getResultHeader() {     return resultHeader. }
+true;public;1;3;/**  * The header that wil carry the result.  */ ;/**  * The header that wil carry the result.  */ public void setResultHeader(String resultHeader) {     this.resultHeader = resultHeader. }
+false;public;0;7;;// **************************************** // Copy // **************************************** public AtomixClientConfiguration copy() {     try {         return (AtomixClientConfiguration) super.clone().     } catch (CloneNotSupportedException e) {         throw new RuntimeCamelException(e).     } }

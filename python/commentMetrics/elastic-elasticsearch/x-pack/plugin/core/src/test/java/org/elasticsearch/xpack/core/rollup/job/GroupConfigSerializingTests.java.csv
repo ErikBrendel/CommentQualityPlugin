@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected GroupConfig doParseInstance(final XContentParser parser) throws IOException {     return GroupConfig.fromXContent(parser). }
+false;protected;0;4;;@Override protected Writeable.Reader<GroupConfig> instanceReader() {     return GroupConfig::new. }
+false;protected;0;4;;@Override protected GroupConfig createTestInstance() {     return randomGroupConfig(random()). }

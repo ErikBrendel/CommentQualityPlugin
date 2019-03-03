@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean isUseRouteBuilder() {     return false. }
+false;public;0;6;;@Override @Before public void setUp() throws Exception {     deleteDirectory(TARGET_DIR).     super.setUp(). }
+false;public;0;6;;@Override @After public void tearDown() throws Exception {     context.stop().     super.tearDown(). }
+false;public;0;4;;@Test public void testSimpleFile() throws Exception {     assertTargetFile("data.txt", "data.txt"). }
+false;public;0;4;;@Test public void testFilePlus() throws Exception {     assertTargetFile("data+.txt", "data .txt"). }
+false;public;0;4;;@Test public void testFileSpace() throws Exception {     assertTargetFile("data%20.txt", "data .txt"). }
+false;public;0;4;;@Test public void testFile2B() throws Exception {     assertTargetFile("data%2B.txt", "data .txt"). }
+false;public;0;4;;@Test public void testFileRaw2B() throws Exception {     assertTargetFile("RAW(data%2B.txt)", "data%2B.txt"). }
+false;public;0;4;;@Test public void testFileRawPlus() throws Exception {     assertTargetFile("RAW(data+.txt)", "data+.txt"). }
+false;public;0;4;;@Test public void testFileRawSpace() throws Exception {     assertTargetFile("RAW(data%20.txt)", "data%20.txt"). }
+false;public;0;4;;@Test public void testFileRaw2520() throws Exception {     assertTargetFile("RAW(data%2520.txt)", "data%2520.txt"). }
+false;public;0;4;;@Test public void testFileWithTwoHundredPercent() throws Exception {     assertTargetFile("RAW(data%%.txt)", "data%%.txt"). }
+false;public;0;4;;@Override public void configure() throws Exception {     from("direct:start").to("file:" + TARGET_DIR + "?fileName=" + encoded). }
+false;private;2;18;;private void assertTargetFile(final String encoded, final String expected) throws Exception {     context.addRoutes(new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").to("file:" + TARGET_DIR + "?fileName=" + encoded).         }     }).     context.start().     String result = template.requestBody("direct:start", "Kermit", String.class).     assertEquals("Kermit", result).     BufferedReader br = new BufferedReader(new FileReader(Paths.get(TARGET_DIR, expected).toFile())).     assertEquals("Kermit", br.readLine()).     br.close(). }

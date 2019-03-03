@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;public void start() throws Exception {     LOG.info("Starting Server").     Object implementor = new GreeterImpl().     String address = "http://cxf.apache.org/transports/jms".     endpoint = Endpoint.publish(address, implementor). }
+false;public;0;5;;public void stop() {     if (endpoint != null) {         endpoint.stop().     } }
+false;public,static;1;9;;public static void main(String[] args) throws Exception {     Server server = new Server().     LOG.info("Server ready...").     server.start().     Thread.sleep(5 * 60 * 1000).     LOG.info("Server exiting").     server.stop().     System.exit(0). }

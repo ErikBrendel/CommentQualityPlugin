@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void testWithNoOutBodySet() throws Exception {     String reply = template.requestBody("direct:start", "Foo", String.class).     assertEquals("Foo", reply). }
+false;protected;0;6;;protected CamelContext createCamelContext() throws Exception {     CamelContext camelContext = super.createCamelContext().     ConnectionFactory connectionFactory = CamelJmsTestHelper.createConnectionFactory().     camelContext.addComponent("activemq", jmsComponentAutoAcknowledge(connectionFactory)).     return camelContext. }
+false;public;0;10;;public void configure() throws Exception {     from("direct:start").to("log:before").to("activemq:request").to("log:after").to("mock:result").     from("activemq:request").to("log:receivedRequest"). }
+false;protected;0;14;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from("direct:start").to("log:before").to("activemq:request").to("log:after").to("mock:result").             from("activemq:request").to("log:receivedRequest").         }     }. }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private,static;1;8;;private static List<Runner> createRunners(Class<?> testClass) throws InitializationError {     List<Runner> runners = new ArrayList<>().     runners.add(new WebFluxEndpointsRunner(testClass)).     runners.add(new WebMvcEndpointRunner(testClass)).     runners.add(new JerseyEndpointsRunner(testClass)).     return runners. }

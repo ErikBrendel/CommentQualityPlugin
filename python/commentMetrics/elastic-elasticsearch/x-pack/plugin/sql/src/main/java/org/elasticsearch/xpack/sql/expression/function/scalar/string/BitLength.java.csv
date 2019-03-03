@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected NodeInfo<BitLength> info() {     return NodeInfo.create(this, BitLength::new, field()). }
+false;protected;1;4;;@Override protected BitLength replaceChild(Expression newChild) {     return new BitLength(source(), newChild). }
+false;protected;0;4;;@Override protected StringOperation operation() {     return StringOperation.BIT_LENGTH. }
+false;public;0;5;;@Override public DataType dataType() {     // TODO investigate if a data type Long (BIGINT) wouldn't be more appropriate here     return DataType.INTEGER. }

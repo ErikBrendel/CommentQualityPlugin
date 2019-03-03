@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public List<Dependency> getDependencies() {     return this.dependencies. }
+false;public;0;10;;@Override public String getSpringBootVersion() {     for (DependencyManagement delegate : this.delegates) {         String version = delegate.getSpringBootVersion().         if (version != null) {             return version.         }     }     return null. }
+false;public;1;10;;@Override public Dependency find(String artifactId) {     for (DependencyManagement delegate : this.delegates) {         Dependency found = delegate.find(artifactId).         if (found != null) {             return found.         }     }     return null. }

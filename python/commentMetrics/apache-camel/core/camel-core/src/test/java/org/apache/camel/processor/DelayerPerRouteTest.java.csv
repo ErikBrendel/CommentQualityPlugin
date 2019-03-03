@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void testDelayerPerRoute() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("B", "A").     template.sendBody("seda:a", "A").     template.sendBody("seda:b", "B").     assertMockEndpointsSatisfied(). }
+false;public;0;8;;@Override public void configure() throws Exception {     context.setDelayer(2000L).     from("seda:a").to("mock:result").     from("seda:b").noDelayer().to("mock:result"). }
+false;protected;0;13;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             context.setDelayer(2000L).             from("seda:a").to("mock:result").             from("seda:b").noDelayer().to("mock:result").         }     }. }

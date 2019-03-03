@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public boolean supportsReturnType(MethodParameter returnType) {     return ListenableFuture.class.isAssignableFrom(returnType.getParameterType()). }
+false;public;2;5;;@Override @SuppressWarnings("unchecked") public ListenableFuture<?> toListenableFuture(Object returnValue, MethodParameter returnType) {     return (ListenableFuture<?>) returnValue. }

@@ -1,0 +1,23 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;1;;String getName().
+false;;1;1;;void setName(String name).
+false;;0;1;;ITestBean getSpouse().
+false;;1;1;;void setSpouse(ITestBean spouse).
+false;;0;1;;ITestBean[] getSpouses().
+false;;0;1;;String[] getStringArray().
+false;;1;1;;void setStringArray(String[] stringArray).
+false;;0;1;;Integer[][] getNestedIntegerArray().
+false;;0;1;;Integer[] getSomeIntegerArray().
+false;;1;1;;void setSomeIntegerArray(Integer[] someIntegerArray).
+false;;1;1;;void setNestedIntegerArray(Integer[][] nestedIntegerArray).
+false;;0;1;;int[] getSomeIntArray().
+false;;1;1;;void setSomeIntArray(int[] someIntArray).
+false;;0;1;;int[][] getNestedIntArray().
+false;;1;1;;void setNestedIntArray(int[][] someNestedArray).
+true;;1;1;/**  * Throws a given (non-null) exception.  */ ;/**  * Throws a given (non-null) exception.  */ void exceptional(Throwable t) throws Throwable.
+false;;0;1;;Object returnsThis().
+false;;0;1;;INestedTestBean getDoctor().
+false;;0;1;;INestedTestBean getLawyer().
+false;;0;1;;IndexedTestBean getNestedIndexedBean().
+true;;0;1;/**  * Increment the age by one.  * @return the previous age  */ ;/**  * Increment the age by one.  * @return the previous age  */ int haveBirthday().
+false;;0;1;;void unreliableFileOperation() throws IOException.

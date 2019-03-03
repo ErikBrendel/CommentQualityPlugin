@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@Test public void testSplitIteratorNull() throws Exception {     assertFalse(myIterator.isNullReturned()).     getMockEndpoint("mock:line").expectedBodiesReceived("A", "B", "C").     template.sendBody("direct:start", "Hello World").     assertMockEndpointsSatisfied().     assertTrue(myIterator.isNullReturned()). }
+false;public;0;6;;@Override public void configure() throws Exception {     from("direct:start").split(constant(myIterator)).to("mock:line"). }
+false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").split(constant(myIterator)).to("mock:line").         }     }. }
+false;public;0;5;;@Override public boolean hasNext() {     // we return true one extra time, and cause next to return null     return count > 0. }
+false;public;0;14;;@Override public String next() {     count--.     if (count == 0) {         nullReturned = true.         return null.     } else if (count == 1) {         return "C".     } else if (count == 2) {         return "B".     } else {         return "A".     } }
+false;public;0;3;;public boolean isNullReturned() {     return nullReturned. }
+false;public;0;4;;@Override public void remove() { // noop }
+false;public;1;4;;@Override public void forEachRemaining(Consumer<? super String> action) { // noop }

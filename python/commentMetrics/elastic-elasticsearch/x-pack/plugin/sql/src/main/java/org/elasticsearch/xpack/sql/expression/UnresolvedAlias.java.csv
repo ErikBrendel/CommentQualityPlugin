@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected NodeInfo<UnresolvedAlias> info() {     return NodeInfo.create(this, UnresolvedAlias::new, child). }
+false;public;1;7;;@Override public Expression replaceChildren(List<Expression> newChildren) {     if (newChildren.size() != 1) {         throw new IllegalArgumentException("expected [1] child but received [" + newChildren.size() + "]").     }     return new UnresolvedAlias(source(), newChildren.get(0)). }
+false;public;0;3;;public Expression child() {     return child. }
+false;public;0;4;;@Override public String unresolvedMessage() {     return "Unknown alias [" + name() + "]". }
+false;public;0;4;;@Override public Nullability nullable() {     throw new UnresolvedException("nullable", this). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(child). }
+false;public;1;12;;@Override public boolean equals(Object obj) {     /*          * Intentionally not calling the superclass          * equals because it uses id which we always          * mutate when we make a clone.          */     if (obj == null || obj.getClass() != getClass()) {         return false.     }     return Objects.equals(child, ((UnresolvedAlias) obj).child). }
+false;public;0;4;;@Override public String toString() {     return child + " AS ?". }

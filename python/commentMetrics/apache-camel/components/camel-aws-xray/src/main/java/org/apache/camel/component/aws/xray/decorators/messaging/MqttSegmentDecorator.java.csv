@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getComponent() {     return "mqtt". }
+false;public;2;4;;@Override public String getOperationName(Exchange exchange, Endpoint endpoint) {     return stripSchemeAndOptions(endpoint). }
+false;protected;2;6;;@Override protected String getDestination(Exchange exchange, Endpoint endpoint) {     Map<String, String> queryParameters = toQueryParameters(endpoint.getEndpointUri()).     String destination = queryParameters.get("subscribeTopicNames").     return null != destination ? destination : queryParameters.get("publishTopicName"). }

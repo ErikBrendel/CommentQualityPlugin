@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public SObjectDescription description() {     return new SObjectDescription(). }
+false;public;0;3;;public String getAccount__c() {     return account__c. }
+false;public;0;3;;public String getContactId__c() {     return contactId__c. }
+false;public;1;3;;public void setAccount__c(final String account__c) {     this.account__c = account__c. }
+false;public;1;3;;public void setContactId__c(final String contactId__c) {     this.contactId__c = contactId__c. }
+false;public;0;16;;@Test public void shouldSerializeToJson() throws IOException {     final String expectedJson = IOUtils.toString(SObjectCompositeTest.class.getResourceAsStream("/org/apache/camel/component/salesforce/api/dto/composite_request_example.json"), StandardCharsets.UTF_8).     final ObjectMapper mapper = JsonUtils.createObjectMapper().copy().configure(SerializationFeature.ORDER_MAP_ENTRIES_BY_KEYS, true).configure(SerializationFeature.INDENT_OUTPUT, true).     final String serialized = mapper.writerFor(SObjectComposite.class).writeValueAsString(composite).     assertThat(serialized).as("Should serialize as expected by Salesforce").isEqualTo(expectedJson). }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;12;;@Override public boolean forward(Exchange exchange, StreamObserver<Object> responseObserver, AsyncCallback callback) {     Message message = exchange.getIn().     try {         GrpcUtils.invokeAsyncMethod(grpcStub, configuration.getMethod(), message.getBody(), responseObserver).     } catch (Exception e) {         exchange.setException(e).         callback.done(true).         return true.     }     return false. }
+false;public;1;6;;@Override public void forward(Exchange exchange) {     Message message = exchange.getIn().     Object outBody = GrpcUtils.invokeSyncMethod(grpcStub, configuration.getMethod(), message.getBody()).     exchange.getOut().setBody(outBody). }
+false;public;0;3;;@Override public void shutdown() { }

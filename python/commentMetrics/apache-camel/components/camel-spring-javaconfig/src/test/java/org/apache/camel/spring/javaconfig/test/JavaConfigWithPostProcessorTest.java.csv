@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void testPostProcessorInjectsMe() throws Exception {     assertEquals("doCheese() should be called", true, doCheeseCalled). }
+false;public;0;4;;public void doCheese() {     logger.info("doCheese called!").     doCheeseCalled = true. }

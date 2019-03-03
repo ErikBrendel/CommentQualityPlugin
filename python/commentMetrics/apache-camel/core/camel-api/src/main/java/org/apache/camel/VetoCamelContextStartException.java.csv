@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public CamelContext getContext() {     return context. }
+true;public;0;3;/**  * Whether to rethrow this exception when starting CamelContext, to cause an exception  * to be thrown from the start method.  * <p/>  * This option is default <tt>true</tt>.  */ ;/**  * Whether to rethrow this exception when starting CamelContext, to cause an exception  * to be thrown from the start method.  * <p/>  * This option is default <tt>true</tt>.  */ public boolean isRethrowException() {     return rethrowException. }

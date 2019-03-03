@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public boolean supportsAdvice(Advice advice) {     return (advice instanceof AfterReturningAdvice). }
+false;public;1;5;;@Override public MethodInterceptor getInterceptor(Advisor advisor) {     AfterReturningAdvice advice = (AfterReturningAdvice) advisor.getAdvice().     return new AfterReturningAdviceInterceptor(advice). }

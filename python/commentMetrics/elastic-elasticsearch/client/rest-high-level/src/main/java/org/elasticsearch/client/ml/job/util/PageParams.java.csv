@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public int getFrom() {     return from. }
+false;public;0;3;;public int getSize() {     return size. }
+false;public;2;12;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     if (from != null) {         builder.field(FROM.getPreferredName(), from).     }     if (size != null) {         builder.field(SIZE.getPreferredName(), size).     }     builder.endObject().     return builder. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(from, size). }
+false;public;1;12;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     PageParams other = (PageParams) obj.     return Objects.equals(from, other.from) && Objects.equals(size, other.size). }

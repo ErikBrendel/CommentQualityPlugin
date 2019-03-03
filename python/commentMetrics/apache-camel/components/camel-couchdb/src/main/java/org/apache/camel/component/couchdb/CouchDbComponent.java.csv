@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;3;6;;@Override protected CouchDbEndpoint createEndpoint(String uri, String remaining, Map<String, Object> params) throws Exception {     CouchDbEndpoint endpoint = new CouchDbEndpoint(uri, remaining, this).     setProperties(endpoint, params).     return endpoint. }

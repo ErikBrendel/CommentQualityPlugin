@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;8;;@Override public Transaction createTransaction(@Nullable String name, int timeout) throws NotSupportedException, SystemException {     if (timeout >= 0) {         this.transactionManager.setTransactionTimeout(timeout).     }     this.transactionManager.begin().     return new ManagedTransactionAdapter(this.transactionManager). }
+false;public;0;4;;@Override public boolean supportsResourceAdapterManagedTransactions() {     return false. }

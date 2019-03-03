@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static String charToString(final char value) {     return String.valueOf(value). }
+false;public,static;1;13;;public static char StringTochar(final String value) {     if (value == null) {         throw new ClassCastException("cannot cast " + "null " + String.class.getCanonicalName() + " to " + char.class.getCanonicalName()).     }     if (value.length() != 1) {         throw new ClassCastException("cannot cast " + String.class.getCanonicalName() + " with length not equal to one to " + char.class.getCanonicalName()).     }     return value.charAt(0). }

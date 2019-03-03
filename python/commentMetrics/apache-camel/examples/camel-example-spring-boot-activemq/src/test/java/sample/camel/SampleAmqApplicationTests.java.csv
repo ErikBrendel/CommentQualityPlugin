@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Ignore("Requires a running activemq broker") public void shouldProduceMessages() throws Exception {     NotifyBuilder notify = new NotifyBuilder(camelContext).whenDone(1).create().     assertTrue(notify.matches(10, TimeUnit.SECONDS)). }

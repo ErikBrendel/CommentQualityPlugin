@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@Override @Before public void setUp() throws Exception {     this.testBinding = new TestHttpBinding().     this.testConfigurer = new TestClientConfigurer().     this.testHttpContext = new BasicHttpContext().     super.setUp().     this.endpoint1 = context.getEndpoint(TEST_URI_1, HttpEndpoint.class).     this.endpoint2 = context.getEndpoint(TEST_URI_2, HttpEndpoint.class). }
+false;public;0;5;;@Test public void testHttpBinding() {     assertSame(testBinding, endpoint1.getHttpBinding()).     assertSame(testBinding, endpoint2.getHttpBinding()). }
+false;public;0;5;;@Test public void testHttpClientConfigurer() {     assertSame(testConfigurer, endpoint1.getHttpClientConfigurer()).     assertSame(testConfigurer, endpoint2.getHttpClientConfigurer()). }
+false;public;0;5;;@Test public void testHttpContext() {     assertSame(testHttpContext, endpoint1.getHttpContext()).     assertSame(testHttpContext, endpoint2.getHttpContext()). }
+false;protected;0;8;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry registry = super.createRegistry().     registry.bind("customBinding", testBinding).     registry.bind("customConfigurer", testConfigurer).     registry.bind("customContext", testHttpContext).     return registry. }
+false;public;0;4;;public void configure() {     from("direct:start1").to(TEST_URI_1).     from("direct:start2").to(TEST_URI_2). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() {             from("direct:start1").to(TEST_URI_1).             from("direct:start2").to(TEST_URI_2).         }     }. }
+false;public;1;2;;public void configureHttpClient(HttpClientBuilder clientBuilder) { }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;5;;@Test void testMessage() {     String message = this.restTemplate.getForObject("/hi", String.class).     assertThat(message).isEqualTo("Hello World"). }

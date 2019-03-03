@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;10;;@Deployment public static Archive<?> deployment() {     return ShrinkWrap.create(JavaArchive.class).addPackage(CdiCamelExtension.class.getPackage()).addClass(ProduceTemplateBean.class).addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml"). }
+false;public;0;4;;@Override public void configure() {     from("direct:inbound").bean(ProduceTemplateBean.class). }
+false;public;1;10;;@Test @InSequence(1) public void configureCamelContext(CamelContext context) throws Exception {     context.addRoutes(new RouteBuilder() {          @Override         public void configure() {             from("direct:inbound").bean(ProduceTemplateBean.class).         }     }). }
+false;public;2;11;;@Test @InSequence(2) public void sendMessageToInbound(@Uri("direct:inbound") ProducerTemplate in, @Uri("mock:outbound") MockEndpoint out) throws InterruptedException {     out.expectedMessageCount(1).     out.expectedBodiesReceived("test-processed").     in.sendBody("test").     assertIsSatisfied(2L, TimeUnit.SECONDS, out). }

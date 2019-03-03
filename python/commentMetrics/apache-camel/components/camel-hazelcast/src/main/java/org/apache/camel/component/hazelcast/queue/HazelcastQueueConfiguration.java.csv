@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Define the polling timeout of the Queue consumer in Poll mode  */ ;/**  * Define the polling timeout of the Queue consumer in Poll mode  */ public long getPollingTimeout() {     return pollingTimeout. }
+false;public;1;3;;public void setPollingTimeout(long pollingTimeout) {     this.pollingTimeout = pollingTimeout. }
+true;public;0;3;/**  * Define the Queue Consumer mode: Listen or Poll  */ ;/**  * Define the Queue Consumer mode: Listen or Poll  */ public HazelcastQueueConsumerMode getQueueConsumerMode() {     return queueConsumerMode. }
+false;public;1;3;;public void setQueueConsumerMode(HazelcastQueueConsumerMode queueConsumerMode) {     this.queueConsumerMode = queueConsumerMode. }
+true;public;0;3;/**  * Define the Pool size for Queue Consumer Executor  */ ;/**  * Define the Pool size for Queue Consumer Executor  */ public int getPoolSize() {     return poolSize. }
+false;public;1;3;;public void setPoolSize(int poolSize) {     this.poolSize = poolSize. }

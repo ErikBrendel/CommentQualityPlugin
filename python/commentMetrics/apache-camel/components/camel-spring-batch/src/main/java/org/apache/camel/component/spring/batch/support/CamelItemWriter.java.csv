@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public void write(List<? extends I> items) throws Exception {     for (I item : items) {         LOG.debug("writing item [{}]...", item).         producerTemplate.sendBody(endpointUri, item).         LOG.debug("wrote item").     } }

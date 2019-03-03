@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * Get the sequence number for this message.  *  * @return the sequence number  */ ;/**  * Get the sequence number for this message.  *  * @return the sequence number  */ int getSequence().
+false;default;1;4;;@Override default int compareTo(HttpPipelinedMessage o) {     return Integer.compare(getSequence(), o.getSequence()). }

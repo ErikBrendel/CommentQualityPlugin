@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;2;6;;@Override protected RestChannelConsumer prepareRequest(final RestRequest request, final NodeClient client) throws IOException {     final String id = request.param("id").     final PutRollupJobAction.Request putRollupJobRequest = PutRollupJobAction.Request.fromXContent(request.contentParser(), id).     return channel -> client.execute(PutRollupJobAction.INSTANCE, putRollupJobRequest, new RestToXContentListener<>(channel)). }
+false;public;0;4;;@Override public String getName() {     return "put_rollup_job". }

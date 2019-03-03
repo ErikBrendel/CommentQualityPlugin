@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;public void configure() {     from("direct:start").doTry().process(validator).to("mock:valid").doCatch(ValidationException.class).doTry().process(validator).to("mock:valid").doCatch(ValidationException.class).pipeline("log:a", "mock:invalid"). }
+false;protected;0;14;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("direct:start").doTry().process(validator).to("mock:valid").doCatch(ValidationException.class).doTry().process(validator).to("mock:valid").doCatch(ValidationException.class).pipeline("log:a", "mock:invalid").         }     }. }

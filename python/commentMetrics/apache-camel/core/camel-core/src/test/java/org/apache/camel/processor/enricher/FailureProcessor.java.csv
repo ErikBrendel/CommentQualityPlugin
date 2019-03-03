@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;public void process(Exchange exchange) throws Exception {     if (error) {         throw new RuntimeException("failed").     } else {         exchange.getOut().setFault(true).         exchange.getOut().setBody("failed").     } }

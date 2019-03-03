@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public void connect() throws IOException {     connected = true. }
+false;public;0;4;;@Override public InputStream getInputStream() throws IOException {     return new ByteArrayInputStream(xsd2). }
+false;public;0;4;;@Override public void connect() throws IOException {     connected = true. }
+false;public;0;4;;@Override public InputStream getInputStream() throws IOException {     return new ByteArrayInputStream(xsd1). }
+false;protected;1;32;;@Override protected URLConnection openConnection(URL u) throws IOException {     if (getCounter() == 0) {         LOG.info("resolved XSD1").         incrementCounter().         return new URLConnection(u) {              @Override             public void connect() throws IOException {                 connected = true.             }              @Override             public InputStream getInputStream() throws IOException {                 return new ByteArrayInputStream(xsd1).             }         }.     } else {         LOG.info("resolved XSD2").         incrementCounter().         return new URLConnection(u) {              @Override             public void connect() throws IOException {                 connected = true.             }              @Override             public InputStream getInputStream() throws IOException {                 return new ByteArrayInputStream(xsd2).             }         }.     } }
+false;public,static,synchronized;0;3;;public static synchronized void incrementCounter() {     counter++. }
+false;public,static,synchronized;0;3;;public static synchronized int getCounter() {     return counter. }

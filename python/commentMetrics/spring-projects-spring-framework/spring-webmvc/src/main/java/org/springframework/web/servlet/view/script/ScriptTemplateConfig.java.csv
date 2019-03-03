@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;2;/**  * Return the {@link ScriptEngine} to use by the views.  */ ;/**  * Return the {@link ScriptEngine} to use by the views.  */ @Nullable ScriptEngine getEngine().
+true;;0;2;/**  * Return the engine name that will be used to instantiate the {@link ScriptEngine}.  */ ;/**  * Return the engine name that will be used to instantiate the {@link ScriptEngine}.  */ @Nullable String getEngineName().
+true;;0;2;/**  * Return whether to use a shared engine for all threads or whether to create  * thread-local engine instances for each thread.  */ ;/**  * Return whether to use a shared engine for all threads or whether to create  * thread-local engine instances for each thread.  */ @Nullable Boolean isSharedEngine().
+true;;0;2;/**  * Return the scripts to be loaded by the script engine (library or user provided).  */ ;/**  * Return the scripts to be loaded by the script engine (library or user provided).  */ @Nullable String[] getScripts().
+true;;0;2;/**  * Return the object where the render function belongs (optional).  */ ;/**  * Return the object where the render function belongs (optional).  */ @Nullable String getRenderObject().
+true;;0;2;/**  * Return the render function name (optional). If not specified, the script templates  * will be evaluated with {@link ScriptEngine#eval(String, Bindings)}.  */ ;/**  * Return the render function name (optional). If not specified, the script templates  * will be evaluated with {@link ScriptEngine#eval(String, Bindings)}.  */ @Nullable String getRenderFunction().
+true;;0;2;/**  * Return the content type to use for the response.  * @since 4.2.1  */ ;/**  * Return the content type to use for the response.  * @since 4.2.1  */ @Nullable String getContentType().
+true;;0;2;/**  * Return the charset used to read script and template files.  */ ;/**  * Return the charset used to read script and template files.  */ @Nullable Charset getCharset().
+true;;0;2;/**  * Return the resource loader path(s) via a Spring resource location.  */ ;/**  * Return the resource loader path(s) via a Spring resource location.  */ @Nullable String getResourceLoaderPath().

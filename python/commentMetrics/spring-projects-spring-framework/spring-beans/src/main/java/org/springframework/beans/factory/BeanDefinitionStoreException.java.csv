@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;4;/**  * Return the description of the resource that the bean definition came from, if available.  */ ;/**  * Return the description of the resource that the bean definition came from, if available.  */ @Nullable public String getResourceDescription() {     return this.resourceDescription. }
+true;public;0;4;/**  * Return the name of the bean, if available.  */ ;/**  * Return the name of the bean, if available.  */ @Nullable public String getBeanName() {     return this.beanName. }

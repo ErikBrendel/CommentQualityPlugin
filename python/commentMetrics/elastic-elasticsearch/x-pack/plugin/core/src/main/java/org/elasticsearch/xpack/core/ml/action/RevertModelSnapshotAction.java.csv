@@ -1,0 +1,21 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Response newResponse() {     return new Response(). }
+false;public,static;3;10;;public static Request parseRequest(String jobId, String snapshotId, XContentParser parser) {     Request request = PARSER.apply(parser, null).     if (jobId != null) {         request.jobId = jobId.     }     if (snapshotId != null) {         request.snapshotId = snapshotId.     }     return request. }
+false;public;0;3;;public String getJobId() {     return jobId. }
+false;public;0;3;;public String getSnapshotId() {     return snapshotId. }
+false;public;0;3;;public boolean getDeleteInterveningResults() {     return deleteInterveningResults. }
+false;public;1;3;;public void setDeleteInterveningResults(boolean deleteInterveningResults) {     this.deleteInterveningResults = deleteInterveningResults. }
+false;public;0;4;;@Override public ActionRequestValidationException validate() {     return null. }
+false;public;1;7;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     jobId = in.readString().     snapshotId = in.readString().     deleteInterveningResults = in.readBoolean(). }
+false;public;1;7;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeString(jobId).     out.writeString(snapshotId).     out.writeBoolean(deleteInterveningResults). }
+false;public;2;9;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(Job.ID.getPreferredName(), jobId).     builder.field(SNAPSHOT_ID.getPreferredName(), snapshotId).     builder.field(DELETE_INTERVENING.getPreferredName(), deleteInterveningResults).     builder.endObject().     return builder. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(jobId, snapshotId, deleteInterveningResults). }
+false;public;1;12;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     Request other = (Request) obj.     return Objects.equals(jobId, other.jobId) && Objects.equals(snapshotId, other.snapshotId) && Objects.equals(deleteInterveningResults, other.deleteInterveningResults). }
+false;public;0;3;;public ModelSnapshot getModel() {     return model. }
+false;public;1;9;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     if (in.getVersion().before(Version.V_6_3_0)) {         // the acknowledged flag was removed         in.readBoolean().     }     model = new ModelSnapshot(in). }
+false;public;1;9;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     if (out.getVersion().before(Version.V_6_3_0)) {         // the acknowledged flag is no longer supported         out.writeBoolean(true).     }     model.writeTo(out). }
+false;public;0;4;;@Override public RestStatus status() {     return RestStatus.OK. }
+false;public;2;8;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(MODEL.getPreferredName()).     builder = model.toXContent(builder, params).     builder.endObject().     return builder. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(model). }
+false;public;1;11;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     Response other = (Response) obj.     return Objects.equals(model, other.model). }
+false;public,final;0;4;;@Override public final String toString() {     return Strings.toString(this). }

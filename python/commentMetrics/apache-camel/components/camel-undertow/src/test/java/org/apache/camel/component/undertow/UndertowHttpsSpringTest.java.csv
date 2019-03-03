@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;5;;@BeforeClass public static void setUpJaas() throws Exception {     URL trustStoreUrl = UndertowHttpsSpringTest.class.getClassLoader().getResource("ssl/keystore.jks").     System.setProperty("javax.net.ssl.trustStore", trustStoreUrl.toURI().getPath()). }
+false;public,static;0;4;;@AfterClass public static void tearDownJaas() throws Exception {     System.clearProperty("java.security.auth.login.config"). }
+false;public;0;9;;@Test public void testSSLConsumer() throws Exception {     mockEndpoint.expectedBodiesReceived("Hello World").     String out = template.requestBody("undertow:https://localhost:" + port + "/spring?sslContextParameters=#sslClient", "Hello World", String.class).     assertEquals("Bye World", out).     mockEndpoint.assertIsSatisfied(). }
+false;public;0;3;;public Integer getPort() {     return port. }
+false;public;1;4;;@Resource(name = "dynaPort") public void setPort(Integer port) {     this.port = port. }

@@ -1,0 +1,32 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Before public void createCompiler() throws IOException {     this.compiler = new TestCompiler(this.temporaryFolder). }
+false;public;0;5;;@Test public void noCandidate() {     CandidateComponentsMetadata metadata = compile(SampleNone.class).     assertThat(metadata.getItems(), hasSize(0)). }
+false;public;0;5;;@Test public void noAnnotation() {     CandidateComponentsMetadata metadata = compile(CandidateComponentsIndexerTests.class).     assertThat(metadata.getItems(), hasSize(0)). }
+false;public;0;4;;@Test public void stereotypeComponent() {     testComponent(SampleComponent.class). }
+false;public;0;4;;@Test public void stereotypeService() {     testComponent(SampleService.class). }
+false;public;0;4;;@Test public void stereotypeController() {     testComponent(SampleController.class). }
+false;public;0;4;;@Test public void stereotypeControllerMetaAnnotation() {     testComponent(SampleMetaController.class). }
+false;public;0;4;;@Test public void stereotypeRepository() {     testSingleComponent(SampleRepository.class, Component.class). }
+false;public;0;5;;@Test public void stereotypeControllerMetaIndex() {     testSingleComponent(SampleMetaIndexedController.class, Component.class, MetaControllerIndexed.class). }
+false;public;0;4;;@Test public void stereotypeOnAbstractClass() {     testComponent(AbstractController.class). }
+false;public;0;4;;@Test public void cdiManagedBean() {     testSingleComponent(SampleManagedBean.class, ManagedBean.class). }
+false;public;0;4;;@Test public void cdiNamed() {     testSingleComponent(SampleNamed.class, Named.class). }
+false;public;0;4;;@Test public void cdiTransactional() {     testSingleComponent(SampleTransactional.class, Transactional.class). }
+false;public;0;4;;@Test public void persistenceEntity() {     testSingleComponent(SampleEntity.class, Entity.class). }
+false;public;0;4;;@Test public void persistenceMappedSuperClass() {     testSingleComponent(SampleMappedSuperClass.class, MappedSuperclass.class). }
+false;public;0;4;;@Test public void persistenceEmbeddable() {     testSingleComponent(SampleEmbeddable.class, Embeddable.class). }
+false;public;0;4;;@Test public void persistenceConverter() {     testSingleComponent(SampleConverter.class, Converter.class). }
+false;public;0;7;;@Test public void packageInfo() {     CandidateComponentsMetadata metadata = compile("org/springframework/context/index/sample/jpa/package-info").     assertThat(metadata, hasComponent("org.springframework.context.index.sample.jpa", "package-info")). }
+false;public;0;4;;@Test public void typeStereotypeFromMetaInterface() {     testSingleComponent(SampleSpecializedRepo.class, Repo.class). }
+false;public;0;4;;@Test public void typeStereotypeFromInterfaceFromSuperClass() {     testSingleComponent(SampleRepo.class, Repo.class). }
+false;public;0;4;;@Test public void typeStereotypeFromSeveralInterfaces() {     testSingleComponent(SampleSmartRepo.class, Repo.class, SmartRepo.class). }
+false;public;0;4;;@Test public void typeStereotypeOnInterface() {     testSingleComponent(SpecializedRepo.class, Repo.class). }
+false;public;0;4;;@Test public void typeStereotypeOnInterfaceFromSeveralInterfaces() {     testSingleComponent(SmartRepo.class, Repo.class, SmartRepo.class). }
+false;public;0;4;;@Test public void typeStereotypeOnIndexedInterface() {     testSingleComponent(Repo.class, Repo.class). }
+false;public;0;14;;@Test public void embeddedCandidatesAreDetected() throws IOException, ClassNotFoundException {     // Validate nested type structure     String nestedType = "org.springframework.context.index.sample.SampleEmbedded.Another$AnotherPublicCandidate".     Class<?> type = ClassUtils.forName(nestedType, getClass().getClassLoader()).     assertThat(type, sameInstance(SampleEmbedded.Another.AnotherPublicCandidate.class)).     CandidateComponentsMetadata metadata = compile(SampleEmbedded.class).     assertThat(metadata, hasComponent(SampleEmbedded.PublicCandidate.class, Component.class)).     assertThat(metadata, hasComponent(nestedType, Component.class.getName())).     assertThat(metadata.getItems(), hasSize(2)). }
+false;public;0;5;;@Test public void embeddedNonStaticCandidateAreIgnored() {     CandidateComponentsMetadata metadata = compile(SampleNonStaticEmbedded.class).     assertThat(metadata.getItems(), hasSize(0)). }
+false;private;1;7;;private void testComponent(Class<?>... classes) {     CandidateComponentsMetadata metadata = compile(classes).     for (Class<?> c : classes) {         assertThat(metadata, hasComponent(c, Component.class)).     }     assertThat(metadata.getItems(), hasSize(classes.length)). }
+false;private;2;5;;private void testSingleComponent(Class<?> target, Class<?>... stereotypes) {     CandidateComponentsMetadata metadata = compile(target).     assertThat(metadata, hasComponent(target, stereotypes)).     assertThat(metadata.getItems(), hasSize(1)). }
+false;private;1;5;;private CandidateComponentsMetadata compile(Class<?>... types) {     CandidateComponentsIndexer processor = new CandidateComponentsIndexer().     this.compiler.getTask(types).call(processor).     return readGeneratedMetadata(this.compiler.getOutputLocation()). }
+false;private;1;5;;private CandidateComponentsMetadata compile(String... types) {     CandidateComponentsIndexer processor = new CandidateComponentsIndexer().     this.compiler.getTask(types).call(processor).     return readGeneratedMetadata(this.compiler.getOutputLocation()). }
+false;private;1;15;;private CandidateComponentsMetadata readGeneratedMetadata(File outputLocation) {     try {         File metadataFile = new File(outputLocation, MetadataStore.METADATA_PATH).         if (metadataFile.isFile()) {             return PropertiesMarshaller.read(new FileInputStream(metadataFile)).         } else {             return new CandidateComponentsMetadata().         }     } catch (IOException ex) {         throw new IllegalStateException("Failed to read metadata from disk", ex).     } }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;2;5;;@Override protected Object doInvokeMethod(ApiMethod method, Map<String, Object> properties) throws RuntimeCamelException {     Object executor = super.doInvokeMethod(method, properties).     return endpoint.execute(executor, method, properties). }

@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static StopDatafeedResponse fromXContent(XContentParser parser) throws IOException {     return PARSER.parse(parser, null). }
+true;public;0;3;/**  * Has the Datafeed stopped or not  *  * @return boolean value indicating the Datafeed stopped status  */ ;/**  * Has the Datafeed stopped or not  *  * @return boolean value indicating the Datafeed stopped status  */ public boolean isStopped() {     return stopped. }
+false;public;1;13;;@Override public boolean equals(Object other) {     if (this == other) {         return true.     }     if (other == null || getClass() != other.getClass()) {         return false.     }     StopDatafeedResponse that = (StopDatafeedResponse) other.     return isStopped() == that.isStopped(). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(isStopped()). }
+false;public;2;7;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(STOPPED.getPreferredName(), stopped).     builder.endObject().     return builder. }

@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * Gets the {@link CamelCatalog}  */ ;/**  * Gets the {@link CamelCatalog}  */ CamelCatalog getCamelCatalog().
+true;;1;1;/**  * Sets the {@link CamelCatalog} to use  */ ;/**  * Sets the {@link CamelCatalog} to use  */ void setCamelCatalog(CamelCatalog camelCatalog).
+true;;0;1;/**  * Name of provider such as <tt>default</tt>, <tt>karaf</tt>, <tt>spring-boot</tt>  */ ;/**  * Name of provider such as <tt>default</tt>, <tt>karaf</tt>, <tt>spring-boot</tt>  */ String getProviderName().
+true;;0;1;/**  * Maven group id of the runtime provider JAR dependency.  */ ;/**  * Maven group id of the runtime provider JAR dependency.  */ String getProviderGroupId().
+true;;0;1;/**  * Maven artifact id of the runtime provider JAR dependency.  */ ;/**  * Maven artifact id of the runtime provider JAR dependency.  */ String getProviderArtifactId().
+true;;0;1;/**  * Gets the directory where the component json files are stored in the catalog JAR file  */ ;/**  * Gets the directory where the component json files are stored in the catalog JAR file  */ String getComponentJSonSchemaDirectory().
+true;;0;1;/**  * Gets the directory where the data format json files are stored in the catalog JAR file  */ ;/**  * Gets the directory where the data format json files are stored in the catalog JAR file  */ String getDataFormatJSonSchemaDirectory().
+true;;0;1;/**  * Gets the directory where the language json files are stored in the catalog JAR file  */ ;/**  * Gets the directory where the language json files are stored in the catalog JAR file  */ String getLanguageJSonSchemaDirectory().
+true;;0;1;/**  * Gets the directory where the other (miscellaneous) json files are stored in the catalog JAR file  */ ;/**  * Gets the directory where the other (miscellaneous) json files are stored in the catalog JAR file  */ String getOtherJSonSchemaDirectory().
+true;;0;1;/**  * Find all the component names from the Camel catalog supported by the provider  */ ;/**  * Find all the component names from the Camel catalog supported by the provider  */ List<String> findComponentNames().
+true;;0;1;/**  * Find all the data format names from the Camel catalog supported by the provider  */ ;/**  * Find all the data format names from the Camel catalog supported by the provider  */ List<String> findDataFormatNames().
+true;;0;1;/**  * Find all the language names from the Camel catalog supported by the provider  */ ;/**  * Find all the language names from the Camel catalog supported by the provider  */ List<String> findLanguageNames().
+true;;0;1;/**  * Find all the other (miscellaneous) names from the Camel catalog supported by the provider  */ ;/**  * Find all the other (miscellaneous) names from the Camel catalog supported by the provider  */ List<String> findOtherNames().

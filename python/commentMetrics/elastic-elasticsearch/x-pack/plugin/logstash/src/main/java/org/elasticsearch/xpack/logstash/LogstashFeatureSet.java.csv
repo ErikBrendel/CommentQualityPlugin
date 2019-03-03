@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String name() {     return XPackField.LOGSTASH. }
+false;public;0;4;;@Override public String description() {     return "Logstash management component for X-Pack". }
+false;public;0;4;;@Override public boolean available() {     return licenseState != null && licenseState.isLogstashAllowed(). }
+false;public;0;4;;@Override public boolean enabled() {     return enabled. }
+false;public;0;4;;@Override public Map<String, Object> nativeCodeInfo() {     return null. }
+false;public;1;4;;@Override public void usage(ActionListener<XPackFeatureSet.Usage> listener) {     listener.onResponse(new LogstashFeatureSetUsage(available(), enabled())). }

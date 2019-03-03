@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;3;;public static CheckNullProcessor randomProcessor() {     return new CheckNullProcessor(randomFrom(CheckNullProcessor.CheckNullOperation.values())). }
+false;protected;0;4;;@Override protected CheckNullProcessor createTestInstance() {     return randomProcessor(). }
+false;protected;0;4;;@Override protected Reader<CheckNullProcessor> instanceReader() {     return CheckNullProcessor::new. }
+false;protected;0;4;;@Override protected NamedWriteableRegistry getNamedWriteableRegistry() {     return new NamedWriteableRegistry(Processors.getNamedWriteables()). }
+false;public;0;5;;public void testIsNull() {     assertEquals(true, new CheckNullProcessor(CheckNullProcessor.CheckNullOperation.IS_NULL).process(null)).     assertEquals(false, new CheckNullProcessor(CheckNullProcessor.CheckNullOperation.IS_NULL).process("foo")).     assertEquals(false, new CheckNullProcessor(CheckNullProcessor.CheckNullOperation.IS_NULL).process(1)). }
+false;public;0;5;;public void testIsNotNull() {     assertEquals(false, new CheckNullProcessor(CheckNullProcessor.CheckNullOperation.IS_NOT_NULL).process(null)).     assertEquals(true, new CheckNullProcessor(CheckNullProcessor.CheckNullOperation.IS_NOT_NULL).process("foo")).     assertEquals(true, new CheckNullProcessor(CheckNullProcessor.CheckNullOperation.IS_NOT_NULL).process(1)). }

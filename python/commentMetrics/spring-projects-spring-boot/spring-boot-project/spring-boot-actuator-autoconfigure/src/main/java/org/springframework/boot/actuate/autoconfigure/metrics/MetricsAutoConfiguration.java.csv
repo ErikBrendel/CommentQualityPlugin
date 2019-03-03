@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Bean @ConditionalOnMissingBean public Clock micrometerClock() {     return Clock.SYSTEM. }
+false;public,static;4;9;;@Bean public static MeterRegistryPostProcessor meterRegistryPostProcessor(ObjectProvider<MeterBinder> meterBinders, ObjectProvider<MeterFilter> meterFilters, ObjectProvider<MeterRegistryCustomizer<?>> meterRegistryCustomizers, ObjectProvider<MetricsProperties> metricsProperties) {     return new MeterRegistryPostProcessor(meterBinders, meterFilters, meterRegistryCustomizers, metricsProperties). }
+false;public;1;5;;@Bean @Order(0) public PropertiesMeterFilter propertiesMeterFilter(MetricsProperties properties) {     return new PropertiesMeterFilter(properties). }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@Test public void testRollbackCustomMessage() throws Exception {     try {         template.sendBody("direct:start", "Hello World").         fail("Should have thrown an exception").     } catch (CamelExecutionException e) {         assertIsInstanceOf(RollbackExchangeException.class, e.getCause()).         assertTrue(e.getCause().getMessage().startsWith("boo")).     } }
+false;public;0;6;;@Override public void configure() throws Exception {     context.setTracing(true).     from("direct:start").rollback("boo"). }
+false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             context.setTracing(true).             from("direct:start").rollback("boo").         }     }. }

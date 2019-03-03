@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public long recoveryId() {     return this.recoveryId. }
+false;public;0;3;;public ShardId shardId() {     return shardId. }
+false;public;0;3;;public long clusterStateVersion() {     return clusterStateVersion. }
+false;public;1;7;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     recoveryId = in.readLong().     shardId = ShardId.readShardId(in).     clusterStateVersion = in.readVLong(). }
+false;public;1;7;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeLong(recoveryId).     shardId.writeTo(out).     out.writeVLong(clusterStateVersion). }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;3;;public static StringEscape getInstance() {     return instance. }
+false;public;1;4;;@Override public String unescapeJava(String str) {     return KarafStringEscapeUtils.unescapeJava(str). }
+false;public;1;4;;@Override public String escapeJava(String str) {     return KarafStringEscapeUtils.escapeJava(str). }
+false;public;1;4;;@Override public String hex(char ch) {     return KarafStringEscapeUtils.hex(ch). }

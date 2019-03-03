@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;public Order generateOrder() {     Order order = new Order().     order.setAmount(amount.nextInt(10) + 1).     order.setBook(books.findById(amount.nextInt(2) + 1).get()).     return order. }

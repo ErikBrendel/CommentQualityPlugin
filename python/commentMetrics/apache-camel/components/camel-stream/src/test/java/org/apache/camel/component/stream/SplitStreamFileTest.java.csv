@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Override @Before public void setUp() throws Exception {     deleteDirectory("target/stream").     createDirectory("target/stream").     super.setUp(). }
+false;public;0;11;;@Test public void testCloseFileOnDone() throws Exception {     template.sendBody("direct:start", "A,B,C,D").     template.sendBody("direct:start", "A,B").     File file = new File("target/stream/splitFile.txt").     String result = IOConverter.toString(file, new DefaultExchange(context)).     assertEquals("Get a wrong result", "A" + LS + "B" + LS + "C" + LS + "D" + LS + "A" + LS + "B" + LS, result). }
+false;public;0;5;;public void configure() {     from("direct:start").split(body().tokenize(",")).to("stream:file?fileName=target/stream/splitFile.txt&closeOnDone=false"). }
+false;protected;0;9;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("direct:start").split(body().tokenize(",")).to("stream:file?fileName=target/stream/splitFile.txt&closeOnDone=false").         }     }. }

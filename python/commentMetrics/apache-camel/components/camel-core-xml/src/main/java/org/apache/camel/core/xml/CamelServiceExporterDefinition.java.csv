@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getUri() {     return uri. }
+true;public;1;3;/**  * Camel endpoint uri to use a remote transport when calling the service  */ ;/**  * Camel endpoint uri to use a remote transport when calling the service  */ public void setUri(String uri) {     this.uri = uri. }
+false;public;0;3;;public String getServiceRef() {     return serviceRef. }
+true;public;1;3;/**  * Reference to the service name to lookup in the registry.  */ ;/**  * Reference to the service name to lookup in the registry.  */ public void setServiceRef(String serviceRef) {     this.serviceRef = serviceRef. }
+false;public;0;3;;public Class<?> getServiceInterface() {     return serviceInterface. }
+true;public;1;3;/**  * Java interfaces to use as facade for the service to be exported  */ ;/**  * Java interfaces to use as facade for the service to be exported  */ public void setServiceInterface(Class<?> serviceInterface) {     this.serviceInterface = serviceInterface. }
+false;public;0;3;;public String getCamelContextId() {     return camelContextId. }
+true;public;1;3;/**  * The id of the CamelContext to use, if there is multiple CamelContext in the same JVM.  */ ;/**  * The id of the CamelContext to use, if there is multiple CamelContext in the same JVM.  */ public void setCamelContextId(String camelContextId) {     this.camelContextId = camelContextId. }

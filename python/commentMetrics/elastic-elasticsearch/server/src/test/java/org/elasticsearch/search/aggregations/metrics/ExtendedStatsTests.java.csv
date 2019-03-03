@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;8;;@Override protected ExtendedStatsAggregationBuilder doCreateTestAggregatorFactory() {     ExtendedStatsAggregationBuilder factory = new ExtendedStatsAggregationBuilder(randomAlphaOfLengthBetween(3, 10)).     if (randomBoolean()) {         factory.sigma(randomDoubleBetween(0.0, 10.0, true)).     }     return factory. }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void setAsText(String text) {     setValue(StringUtils.parseLocaleString(text)). }
+false;public;0;5;;@Override public String getAsText() {     Object value = getValue().     return (value != null ? value.toString() : ""). }

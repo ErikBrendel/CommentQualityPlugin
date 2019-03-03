@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void setName(String name) {     this.name = name. }
+false;public;1;3;;public void setPattern(String pattern) {     this.pattern = pattern. }
+false;public;1;3;;public void setBossCount(int bossCount) {     this.bossCount = bossCount. }
+false;public;1;3;;public void setNativeTransport(boolean nativeTransport) {     this.nativeTransport = nativeTransport. }
+false;public;1;4;;public NettyServerBossPoolBuilder withName(String name) {     setName(name).     return this. }
+false;public;1;4;;public NettyServerBossPoolBuilder withPattern(String pattern) {     setPattern(pattern).     return this. }
+false;public;1;4;;public NettyServerBossPoolBuilder withBossCount(int bossCount) {     setBossCount(bossCount).     return this. }
+false;public;1;4;;public NettyServerBossPoolBuilder withNativeTransport(boolean nativeTransport) {     setNativeTransport(nativeTransport).     return this. }
+true;public;0;7;/**  * Creates a new boss pool.  */ ;/**  * Creates a new boss pool.  */ public EventLoopGroup build() {     if (nativeTransport) {         return new EpollEventLoopGroup(bossCount, new CamelThreadFactory(pattern, name, false)).     } else {         return new NioEventLoopGroup(bossCount, new CamelThreadFactory(pattern, name, false)).     } }

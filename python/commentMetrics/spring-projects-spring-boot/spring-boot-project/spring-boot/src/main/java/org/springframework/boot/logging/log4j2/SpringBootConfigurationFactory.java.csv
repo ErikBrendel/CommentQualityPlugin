@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected String[] getSupportedTypes() {     return TYPES. }
+false;public;2;9;;@Override public Configuration getConfiguration(LoggerContext loggerContext, ConfigurationSource source) {     if (source != null && source != ConfigurationSource.NULL_SOURCE && LoggingSystem.get(loggerContext.getClass().getClassLoader()) != null) {         return new SpringBootConfiguration().     }     return null. }

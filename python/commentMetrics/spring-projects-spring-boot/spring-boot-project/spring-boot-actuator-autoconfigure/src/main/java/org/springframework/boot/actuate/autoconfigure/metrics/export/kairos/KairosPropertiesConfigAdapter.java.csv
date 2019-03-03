@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String uri() {     return get(KairosProperties::getUri, KairosConfig.super::uri). }
+false;public;0;4;;@Override public String userName() {     return get(KairosProperties::getUserName, KairosConfig.super::userName). }
+false;public;0;4;;@Override public String password() {     return get(KairosProperties::getPassword, KairosConfig.super::password). }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;3;;public static Builder builder() {     return new Builder(). }
+false;public;1;5;;public Builder addExpression(final RoleMapperExpression expression) {     assert expression != null : "expression cannot be null".     elements.add(expression).     return this. }
+false;public;0;3;;public AllRoleMapperExpression build() {     return new AllRoleMapperExpression(CompositeType.ALL.getName(), elements.toArray(new RoleMapperExpression[0])). }

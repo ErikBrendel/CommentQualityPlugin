@@ -1,0 +1,19 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Response newResponse() {     return new Response(). }
+false;public;1;3;;public void setFilterId(String filterId) {     this.filterId = filterId. }
+false;public;0;3;;public String getFilterId() {     return filterId. }
+false;public;0;3;;public PageParams getPageParams() {     return pageParams. }
+false;public;1;3;;public void setPageParams(PageParams pageParams) {     this.pageParams = pageParams. }
+false;public;0;10;;@Override public ActionRequestValidationException validate() {     ActionRequestValidationException validationException = null.     if (pageParams != null && filterId != null) {         validationException = addValidationError("Params [" + PageParams.FROM.getPreferredName() + ", " + PageParams.SIZE.getPreferredName() + "] are incompatible with [" + MlFilter.ID.getPreferredName() + "]", validationException).     }     return validationException. }
+false;public;1;5;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     filterId = in.readOptionalString(). }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeOptionalString(filterId). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(filterId). }
+false;public;1;11;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     Request other = (Request) obj.     return Objects.equals(filterId, other.filterId). }
+false;public;0;3;;public QueryPage<MlFilter> getFilters() {     return filters. }
+false;public;1;5;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     filters = new QueryPage<>(in, MlFilter::new). }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     filters.writeTo(out). }
+false;public;0;4;;@Override public RestStatus status() {     return RestStatus.OK. }
+false;public;2;7;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     filters.doXContentBody(builder, params).     builder.endObject().     return builder. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(filters). }
+false;public;1;11;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     Response other = (Response) obj.     return Objects.equals(filters, other.filters). }
+false;public,final;0;4;;@Override public final String toString() {     return Strings.toString(this). }

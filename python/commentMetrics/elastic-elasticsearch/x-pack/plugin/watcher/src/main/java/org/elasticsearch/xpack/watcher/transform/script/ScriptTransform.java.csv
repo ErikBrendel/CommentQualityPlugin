@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String type() {     return TYPE. }
+false;public;0;3;;public Script getScript() {     return script. }
+false;public;1;9;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     ScriptTransform that = (ScriptTransform) o.     return script.equals(that.script). }
+false;public;0;4;;@Override public int hashCode() {     return script.hashCode(). }
+false;public;2;4;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     return script.toXContent(builder, params). }
+false;public,static;2;9;;public static ScriptTransform parse(String watchId, XContentParser parser) throws IOException {     try {         Script script = Script.parse(parser).         return new ScriptTransform(script).     } catch (ElasticsearchParseException pe) {         throw new ElasticsearchParseException("could not parse [{}] transform for watch [{}]. failed to parse script", pe, TYPE, watchId).     } }
+false;public,static;1;3;;public static Builder builder(Script script) {     return new Builder(script). }
+false;protected;2;4;;@Override protected XContentBuilder typeXContent(XContentBuilder builder, Params params) throws IOException {     return builder. }
+false;public;0;4;;@Override public ScriptTransform build() {     return new ScriptTransform(script). }

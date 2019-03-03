@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void setLatitude(double latitude) {     this.latitude = latitude. }
+false;public;1;3;;public void setLongitude(double longitude) {     this.longitude = longitude. }
+false;public;1;3;;public void setReplyKeyboardMarkup(ReplyKeyboardMarkup replyKeyboardMarkup) {     this.replyKeyboardMarkup = replyKeyboardMarkup. }
+false;public;1;3;;public void setMessageId(Long messageId) {     this.messageId = messageId. }
+false;public;0;11;;@Override public String toString() {     final StringBuilder sb = new StringBuilder("{").     sb.append("message_id='").append(messageId).append('\'').     sb.append(", inlineMessageId=").append(inlineMessageId).append('\'').     sb.append(", latitude=").append(latitude).append('\'').     sb.append(", longitude=").append(longitude).append('\'').     sb.append(", replyKeyboardMarkup=").append(replyKeyboardMarkup).     sb.append('}').     return sb.toString(). }

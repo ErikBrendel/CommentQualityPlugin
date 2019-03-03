@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@PostConstruct public void postConstruct() {     StringWriter writer = new StringWriter().     new RuntimeException().printStackTrace(new PrintWriter(writer)).     this.calls.add(writer.toString()). }
+false;public;0;5;;@Test public void postConstructShouldBeInvokedOnlyOnce() {     // gh-6874     assertThat(this.calls).hasSize(1). }

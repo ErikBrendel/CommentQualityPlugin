@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public boolean manuallyStopped() {     return manuallyStopped. }
+false;public;0;4;;@Override public String toString() {     return "manuallyStopped[" + manuallyStopped + "]". }
+false;public;1;9;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     WatcherMetaData action = (WatcherMetaData) o.     return manuallyStopped == action.manuallyStopped. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(manuallyStopped). }

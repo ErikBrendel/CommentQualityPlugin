@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/spring/example/expressionTrim.xml"). }
+false;public;0;5;;@Test public void testDefault() throws Exception {     String out = template.requestBody("direct:a", "World", String.class).     assertEquals("Hello World", out). }
+false;public;0;5;;@Test public void testTrim() throws Exception {     String out = template.requestBody("direct:b", "World", String.class).     assertEquals("Hello World", out). }
+false;public;0;6;;@Test public void testNoTrim() throws Exception {     String out = template.requestBody("direct:c", "World", String.class).     // the xml has whitespace noise which is not trimmed     assertEquals("\n          Hello World\n        ", out). }

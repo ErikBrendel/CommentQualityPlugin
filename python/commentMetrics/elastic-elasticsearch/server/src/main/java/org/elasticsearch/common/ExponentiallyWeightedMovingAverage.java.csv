@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public double getAverage() {     return Double.longBitsToDouble(this.averageBits.get()). }
+false;public;1;10;;public void addValue(double newValue) {     boolean successful = false.     do {         final long currentBits = this.averageBits.get().         final double currentAvg = getAverage().         final double newAvg = (alpha * newValue) + ((1 - alpha) * currentAvg).         final long newBits = Double.doubleToLongBits(newAvg).         successful = averageBits.compareAndSet(currentBits, newBits).     } while (successful == false). }

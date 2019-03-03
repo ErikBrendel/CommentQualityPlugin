@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void testSimple() throws Exception {     String result = template.requestBody("http://localhost:{{port}}/myapp", "Camel", String.class).     assertEquals("Hello Camel", result). }
+false;public;0;4;;public void configure() throws Exception {     from("jetty:http://localhost:{{port}}/myapp?responseBufferSize=65536").transform(body().prepend("Hello ")). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from("jetty:http://localhost:{{port}}/myapp?responseBufferSize=65536").transform(body().prepend("Hello ")).         }     }. }

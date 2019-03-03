@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public ScriptEngine getScriptEngine(Settings settings, Collection<ScriptContext<?>> contexts) {     return new MockScriptEngine(pluginScriptLang(), pluginScripts(), pluginContextCompilers()). }
+false;protected,abstract;0;1;;protected abstract Map<String, Function<Map<String, Object>, Object>> pluginScripts().
+false;protected;0;3;;protected Map<ScriptContext<?>, MockScriptEngine.ContextCompiler> pluginContextCompilers() {     return Collections.emptyMap(). }
+false;public;0;3;;public String pluginScriptLang() {     return NAME. }

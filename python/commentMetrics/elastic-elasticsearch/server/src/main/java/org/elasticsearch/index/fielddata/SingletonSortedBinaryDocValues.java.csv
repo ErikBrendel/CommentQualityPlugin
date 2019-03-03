@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public boolean advanceExact(int doc) throws IOException {     return in.advanceExact(doc). }
+false;public;0;4;;@Override public int docValueCount() {     return 1. }
+false;public;0;4;;@Override public BytesRef nextValue() throws IOException {     return in.binaryValue(). }
+false;public;0;3;;public BinaryDocValues getBinaryDocValues() {     return in. }

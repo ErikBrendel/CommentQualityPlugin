@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;7;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeStringArray(indices).     out.writeStringArray(types).     indicesOptions.writeIndicesOptions(out). }
+false;public;0;4;;@Override public String[] indices() {     return indices. }
+false;public;1;5;;@Override public TypesExistsRequest indices(String... indices) {     this.indices = indices.     return this. }
+false;public;0;3;;public String[] types() {     return types. }
+false;public;1;3;;public void types(String[] types) {     this.types = types. }
+false;public;0;4;;@Override public IndicesOptions indicesOptions() {     return indicesOptions. }
+false;public;1;4;;public TypesExistsRequest indicesOptions(IndicesOptions indicesOptions) {     this.indicesOptions = indicesOptions.     return this. }
+false;public;0;12;;@Override public ActionRequestValidationException validate() {     ActionRequestValidationException validationException = null.     if (indices == null) {         // Specifying '*' via rest api results in an empty array         validationException = addValidationError("index/indices is missing", validationException).     }     if (types == null || types.length == 0) {         validationException = addValidationError("type/types is missing", validationException).     }     return validationException. }
+false;public;1;4;;@Override public void readFrom(StreamInput in) throws IOException {     throw new UnsupportedOperationException("usage of Streamable is to be replaced by Writeable"). }

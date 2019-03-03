@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;1;;Recycler<T> build().
+true;;1;1;/**  * Create a new empty instance of the given size.  */ ;/**  * Create a new empty instance of the given size.  */ T newInstance(int sizing).
+true;;1;1;/**  * Recycle the data. This operation is called when the data structure is released.  */ ;/**  * Recycle the data. This operation is called when the data structure is released.  */ void recycle(T value).
+true;;1;1;/**  * Destroy the data. This operation allows the data structure to release any internal resources before GC.  */ ;/**  * Destroy the data. This operation allows the data structure to release any internal resources before GC.  */ void destroy(T value).
+true;;0;1;/**  * Reference to the value.  */ ;/**  * Reference to the value.  */ T v().
+true;;0;1;/**  * Whether this instance has been recycled (true) or newly allocated (false).  */ ;/**  * Whether this instance has been recycled (true) or newly allocated (false).  */ boolean isRecycled().
+false;;0;1;;void close().
+false;;0;1;;V<T> obtain().
+false;;1;1;;V<T> obtain(int sizing).

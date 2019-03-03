@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public void afterPropertiesSet() throws Exception {     startServer(). }
+false;;0;16;;void startServer() throws Exception {     if (this.server != null) {         try {             if (!this.server.isStarted()) {                 this.server.start().             }             logger.info("LiveReload server is running on port " + this.server.getPort()).         } catch (Exception ex) {             logger.warn("Unable to start LiveReload server").             logger.debug("Live reload start error", ex).             this.server = null.         }     } }
+true;public;0;5;/**  * Trigger LiveReload if the server is up and running.  */ ;/**  * Trigger LiveReload if the server is up and running.  */ public void triggerReload() {     if (this.server != null) {         this.server.triggerReload().     } }

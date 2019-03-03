@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;10;;@Override public void onCamelContextStarted(CamelContext context, boolean alreadyStarted) throws Exception {     System.out.println("Camel is started. Ready to run examples!").     // Methods usage examples     new SendMessageUsage().run(context).     new LiveLocationUsage().run(context).     new GetUpdatesUsage().run(context).     new SendVenueUsage().run(context). }

@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;3;/**  * The category of this metric (ex. throughput, performance, utilization).  */ ;/**  * The category of this metric (ex. throughput, performance, utilization).  */ public void setCategory(@Nullable String category) {     this.category = category. }
+true;public;0;4;/**  * The category of this metric (ex. throughput, performance, utilization).  */ ;/**  * The category of this metric (ex. throughput, performance, utilization).  */ @Nullable public String getCategory() {     return this.category. }
+true;public;1;3;/**  * A display name for this metric.  */ ;/**  * A display name for this metric.  */ public void setDisplayName(@Nullable String displayName) {     this.displayName = displayName. }
+true;public;0;4;/**  * A display name for this metric.  */ ;/**  * A display name for this metric.  */ @Nullable public String getDisplayName() {     return this.displayName. }
+true;public;1;4;/**  * A description of how this metric's values change over time.  */ ;/**  * A description of how this metric's values change over time.  */ public void setMetricType(MetricType metricType) {     Assert.notNull(metricType, "MetricType must not be null").     this.metricType = metricType. }
+true;public;0;3;/**  * A description of how this metric's values change over time.  */ ;/**  * A description of how this metric's values change over time.  */ public MetricType getMetricType() {     return this.metricType. }
+true;public;1;3;/**  * The persist period for this metric.  */ ;/**  * The persist period for this metric.  */ public void setPersistPeriod(int persistPeriod) {     this.persistPeriod = persistPeriod. }
+true;public;0;3;/**  * The persist period for this metric.  */ ;/**  * The persist period for this metric.  */ public int getPersistPeriod() {     return this.persistPeriod. }
+true;public;1;3;/**  * The persist policy for this metric.  */ ;/**  * The persist policy for this metric.  */ public void setPersistPolicy(@Nullable String persistPolicy) {     this.persistPolicy = persistPolicy. }
+true;public;0;4;/**  * The persist policy for this metric.  */ ;/**  * The persist policy for this metric.  */ @Nullable public String getPersistPolicy() {     return this.persistPolicy. }
+true;public;1;3;/**  * The expected unit of measurement values.  */ ;/**  * The expected unit of measurement values.  */ public void setUnit(@Nullable String unit) {     this.unit = unit. }
+true;public;0;4;/**  * The expected unit of measurement values.  */ ;/**  * The expected unit of measurement values.  */ @Nullable public String getUnit() {     return this.unit. }

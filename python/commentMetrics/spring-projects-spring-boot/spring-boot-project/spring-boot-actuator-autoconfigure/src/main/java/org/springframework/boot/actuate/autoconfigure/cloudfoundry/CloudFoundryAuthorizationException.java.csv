@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Return the status code that should be returned to the client.  * @return the HTTP status code  */ ;/**  * Return the status code that should be returned to the client.  * @return the HTTP status code  */ public HttpStatus getStatusCode() {     return getReason().getStatus(). }
+true;public;0;3;/**  * Return the reason why the authorization exception was thrown.  * @return the reason  */ ;/**  * Return the reason why the authorization exception was thrown.  * @return the reason  */ public Reason getReason() {     return this.reason. }
+false;public;0;3;;public HttpStatus getStatus() {     return this.status. }

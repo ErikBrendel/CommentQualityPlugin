@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;10;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(ENABLED_FIELD.getPreferredName(), enabled).     if (terms != null) {         builder.field(TERMS_FIELD.getPreferredName(), terms).     }     builder.endObject().     return builder. }
+false;public;0;3;;public boolean isEnabled() {     return enabled. }
+false;public;0;3;;public String getTerms() {     return this.terms. }
+false;public;1;13;;@Override public boolean equals(Object other) {     if (this == other) {         return true.     }     if (other instanceof ModelPlotConfig == false) {         return false.     }     ModelPlotConfig that = (ModelPlotConfig) other.     return this.enabled == that.enabled && Objects.equals(this.terms, that.terms). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(enabled, terms). }

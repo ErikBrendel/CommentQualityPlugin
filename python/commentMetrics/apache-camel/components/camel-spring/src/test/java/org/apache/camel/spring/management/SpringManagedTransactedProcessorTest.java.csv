@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected boolean useJmx() {     return true. }
+false;protected;0;4;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/spring/management/SpringManagedTransactedProcessorTest.xml"). }
+false;protected;0;3;;protected MBeanServer getMBeanServer() {     return context.getManagementStrategy().getManagementAgent().getMBeanServer(). }
+false;public;0;17;;@Test public void testTransacted() throws Exception {     getMockEndpoint("mock:foo").expectedMessageCount(1).     getMockEndpoint("mock:bar").expectedMessageCount(1).     template.sendBody("seda:foo", "Hello World").     template.sendBody("seda:bar", "Bye World").     assertMockEndpointsSatisfied().     MBeanServer mbeanServer = getMBeanServer().     // there should be 4 processors     Set<ObjectName> set = mbeanServer.queryNames(new ObjectName("*:type=processors,*"), null).     // there should only be 2 error handler types as route 1 and route 3 uses the same default error handler     assertEquals(4, set.size()). }

@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;// **************************************** // Properties // **************************************** public AtomixMessaging.Action getDefaultAction() {     return defaultAction. }
+true;public;1;3;/**  * The default action.  */ ;/**  * The default action.  */ public void setDefaultAction(AtomixMessaging.Action defaultAction) {     this.defaultAction = defaultAction. }
+false;public;0;3;;public String getMemberName() {     return memberName. }
+true;public;1;3;/**  * The Atomix Group member name  */ ;/**  * The Atomix Group member name  */ public void setMemberName(String memberName) {     this.memberName = memberName. }
+false;public;0;3;;public String getChannelName() {     return channelName. }
+true;public;1;3;/**  * The messaging channel name  */ ;/**  * The messaging channel name  */ public void setChannelName(String channelName) {     this.channelName = channelName. }
+false;public;0;3;;public AtomixMessaging.BroadcastType getBroadcastType() {     return broadcastType. }
+true;public;1;3;/**  * The broadcast type.  */ ;/**  * The broadcast type.  */ public void setBroadcastType(AtomixMessaging.BroadcastType broadcastType) {     this.broadcastType = broadcastType. }
+false;public;0;7;;// **************************************** // Copy // **************************************** public AtomixMessagingConfiguration copy() {     try {         return (AtomixMessagingConfiguration) super.clone().     } catch (CloneNotSupportedException e) {         throw new RuntimeCamelException(e).     } }

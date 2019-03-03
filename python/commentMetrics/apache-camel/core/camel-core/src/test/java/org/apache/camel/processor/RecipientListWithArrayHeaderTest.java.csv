@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;14;;@Test public void testSendingAMessageUsingMulticastReceivesItsOwnExchange() throws Exception {     MockEndpoint x = getMockEndpoint("mock:x").     MockEndpoint y = getMockEndpoint("mock:y").     MockEndpoint z = getMockEndpoint("mock:z").     x.expectedBodiesReceived("answer").     y.expectedBodiesReceived("answer").     z.expectedBodiesReceived("answer").     sendBody().     assertMockEndpointsSatisfied(). }
+false;protected;0;4;;protected void sendBody() {     template.sendBodyAndHeader("direct:a", "answer", "recipientListHeader", new String[] { "mock:x", "mock:y", "mock:z" }). }
+false;public;0;5;;public void configure() {     // START SNIPPET: example     from("direct:a").recipientList(header("recipientListHeader")). // END SNIPPET: example }
+false;protected;0;10;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             // START SNIPPET: example             from("direct:a").recipientList(header("recipientListHeader")).         // END SNIPPET: example         }     }. }

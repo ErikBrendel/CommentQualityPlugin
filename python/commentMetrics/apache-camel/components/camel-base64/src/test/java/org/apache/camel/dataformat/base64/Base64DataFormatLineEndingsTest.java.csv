@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void testEncode() throws Exception {     runEncoderTest(DECODED, ENCODED.getBytes()). }
+false;public;0;4;;@Test public void testDecode() throws Exception {     runDecoderTest(ENCODED.getBytes(), DECODED). }

@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void autoConfiguresConfigAndMeterRegistry() {     this.contextRunner.withUserConfiguration(BaseConfiguration.class).run((context) -> assertThat(context).hasSingleBean(SimpleMeterRegistry.class).hasSingleBean(Clock.class).hasSingleBean(SimpleConfig.class)). }
+false;public;0;8;;@Test public void backsOffWhenSpecificallyDisabled() {     this.contextRunner.withUserConfiguration(BaseConfiguration.class).withPropertyValues("management.metrics.export.simple.enabled=false").run((context) -> assertThat(context).doesNotHaveBean(SimpleMeterRegistry.class).doesNotHaveBean(SimpleConfig.class)). }
+false;public;0;6;;@Test public void allowsConfigToBeCustomized() {     this.contextRunner.withUserConfiguration(CustomConfigConfiguration.class).run((context) -> assertThat(context).hasSingleBean(SimpleConfig.class).hasBean("customConfig")). }
+false;public;0;6;;@Test public void backsOffEntirelyWithCustomMeterRegistry() {     this.contextRunner.withUserConfiguration(CustomRegistryConfiguration.class).run((context) -> assertThat(context).hasSingleBean(MeterRegistry.class).hasBean("customRegistry").doesNotHaveBean(SimpleConfig.class)). }
+false;public;0;4;;@Bean public Clock clock() {     return Clock.SYSTEM. }
+false;public;0;4;;@Bean public SimpleConfig customConfig() {     return (key) -> null. }
+false;public;0;4;;@Bean public MeterRegistry customRegistry() {     return mock(MeterRegistry.class). }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Bean public String order() {     return userConfig.user() + " + order". }
+false;public;0;6;;@Test @Override public void loadContextHierarchy() {     super.loadContextHierarchy().     assertEquals("parent + user + order", order). }

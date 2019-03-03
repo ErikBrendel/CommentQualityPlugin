@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;4;7;;@FallbackConverter(canPromote = true) public Object convertTo(Class<?> type, Exchange exchange, Object value, TypeConverterRegistry registry) {     if (MyCoolBean.class.isAssignableFrom(value.getClass())) {         return "This is cool: " + value.toString().     }     return null. }

@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public ShapeType type() {     return ShapeType.POLYGON. }
+false;private;1;5;;private void checkRing(LinearRing ring) {     if (ring.length() < 4) {         throw new IllegalArgumentException("at least 4 polygon points required").     } }
+false;public;0;3;;public int getNumberOfHoles() {     return holes.size(). }
+false;public;0;3;;public LinearRing getPolygon() {     return polygon. }
+false;public;1;6;;public LinearRing getHole(int i) {     if (i >= holes.size()) {         throw new IllegalArgumentException("Index " + i + " is outside the bounds of the " + holes.size() + " polygon holes").     }     return holes.get(i). }
+false;public;1;4;;@Override public <T> T visit(GeometryVisitor<T> visitor) {     return visitor.visit(this). }
+false;public;0;4;;@Override public boolean isEmpty() {     return polygon.isEmpty(). }
+false;public;0;10;;@Override public String toString() {     StringBuilder sb = new StringBuilder().     sb.append("polygon=").append(polygon).     if (holes.size() > 0) {         sb.append(", holes=").         sb.append(holes).     }     return sb.toString(). }
+false;public;1;8;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     Polygon polygon1 = (Polygon) o.     return Objects.equals(polygon, polygon1.polygon) && Objects.equals(holes, polygon1.holes). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(polygon, holes). }

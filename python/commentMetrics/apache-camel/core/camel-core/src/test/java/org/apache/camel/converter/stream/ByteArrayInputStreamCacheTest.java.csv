@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;12;;@Test public void testByteArrayInputStream() throws Exception {     ByteArrayInputStreamCache cache = new ByteArrayInputStreamCache(new ByteArrayInputStream("<foo>bar</foo>".getBytes())).     ByteArrayOutputStream bos = new ByteArrayOutputStream().     cache.writeTo(bos).     String s = context.getTypeConverter().convertTo(String.class, bos).     assertEquals("<foo>bar</foo>", s).     IOHelper.close(cache, bos). }

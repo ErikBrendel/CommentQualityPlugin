@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;4;/**  * Creates a new producer which is used send messages into the endpoint  *  * @return a newly created producer  * @throws Exception can be thrown  */ ;/**  * Creates a new producer which is used send messages into the endpoint  *  * @return a newly created producer  * @throws Exception can be thrown  */ @Override public Producer createProducer() throws Exception {     return new AvroNettyProducer(this). }

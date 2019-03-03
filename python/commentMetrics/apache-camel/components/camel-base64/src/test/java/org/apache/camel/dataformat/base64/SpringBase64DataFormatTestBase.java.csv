@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;2;10;;protected void runEncoderTest(byte[] raw, byte[] expected) throws Exception {     result.setExpectedMessageCount(1).     template.sendBody("direct:startEncode", raw).     assertMockEndpointsSatisfied().     byte[] encoded = result.getReceivedExchanges().get(0).getIn().getBody(byte[].class).     assertArrayEquals(expected, encoded). }
+false;protected;2;10;;protected void runDecoderTest(byte[] encoded, byte[] expected) throws Exception {     result.setExpectedMessageCount(1).     template.sendBody("direct:startDecode", encoded).     assertMockEndpointsSatisfied().     byte[] decoded = result.getReceivedExchanges().get(0).getIn().getBody(byte[].class).     assertArrayEquals(expected, decoded). }

@@ -1,0 +1,17 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected void writeTermTypeInfoTo(StreamOutput out) throws IOException { // Nothing to write }
+false;public;0;4;;@Override public String getWriteableName() {     return NAME. }
+false;public;0;4;;@Override public String getType() {     return SignificantStringTerms.NAME. }
+false;public;1;4;;@Override public UnmappedSignificantTerms create(List<Bucket> buckets) {     return new UnmappedSignificantTerms(name, requiredSize, minDocCount, pipelineAggregators(), metaData). }
+false;public;2;4;;@Override public Bucket createBucket(InternalAggregations aggregations, Bucket prototype) {     throw new UnsupportedOperationException("not supported for UnmappedSignificantTerms"). }
+false;protected;3;4;;@Override protected UnmappedSignificantTerms create(long subsetSize, long supersetSize, List<Bucket> buckets) {     throw new UnsupportedOperationException("not supported for UnmappedSignificantTerms"). }
+false;public;2;4;;@Override public InternalAggregation doReduce(List<InternalAggregation> aggregations, ReduceContext reduceContext) {     return new UnmappedSignificantTerms(name, requiredSize, minDocCount, pipelineAggregators(), metaData). }
+false;public;0;4;;@Override public boolean isMapped() {     return false. }
+false;public;2;5;;@Override public XContentBuilder doXContentBody(XContentBuilder builder, Params params) throws IOException {     builder.startArray(CommonFields.BUCKETS.getPreferredName()).endArray().     return builder. }
+false;protected;1;4;;@Override protected Bucket[] createBucketsArray(int size) {     return new Bucket[size]. }
+false;public;0;4;;@Override public Iterator<SignificantTerms.Bucket> iterator() {     return emptyIterator(). }
+false;public;0;4;;@Override public List<Bucket> getBuckets() {     return emptyList(). }
+false;public;1;4;;@Override public SignificantTerms.Bucket getBucketByKey(String term) {     return null. }
+false;protected;0;4;;@Override protected SignificanceHeuristic getSignificanceHeuristic() {     throw new UnsupportedOperationException(). }
+false;protected;0;4;;@Override protected long getSubsetSize() {     return 0. }
+false;protected;0;4;;@Override protected long getSupersetSize() {     return 0. }

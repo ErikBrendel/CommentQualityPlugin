@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getName() {     return "refresh_action". }
+false;protected;1;4;;@Override protected RestStatus getStatus(RefreshResponse response) {     return response.getStatus(). }
+false;public;2;11;;@Override public RestChannelConsumer prepareRequest(final RestRequest request, final NodeClient client) throws IOException {     RefreshRequest refreshRequest = new RefreshRequest(Strings.splitStringByCommaToArray(request.param("index"))).     refreshRequest.indicesOptions(IndicesOptions.fromRequest(request, refreshRequest.indicesOptions())).     return channel -> client.admin().indices().refresh(refreshRequest, new RestToXContentListener<RefreshResponse>(channel) {          @Override         protected RestStatus getStatus(RefreshResponse response) {             return response.getStatus().         }     }). }

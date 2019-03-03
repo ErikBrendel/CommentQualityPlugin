@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void empty() {     ExchangeStrategies strategies = ExchangeStrategies.empty().build().     assertTrue(strategies.messageReaders().isEmpty()).     assertTrue(strategies.messageWriters().isEmpty()). }
+false;public;0;6;;@Test public void withDefaults() {     ExchangeStrategies strategies = ExchangeStrategies.withDefaults().     assertFalse(strategies.messageReaders().isEmpty()).     assertFalse(strategies.messageWriters().isEmpty()). }

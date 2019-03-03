@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;12;;@Override public QueryBuilder asBuilder() {     final MatchQueryBuilder queryBuilder = QueryBuilders.matchQuery(name, text).     options.forEach((k, v) -> {         if (BUILDER_APPLIERS.containsKey(k)) {             BUILDER_APPLIERS.get(k).accept(queryBuilder, v).         } else {             throw new IllegalArgumentException("illegal match option [" + k + "]").         }     }).     return queryBuilder. }
+false;public;0;3;;public String name() {     return name. }
+false;public;0;3;;public Object text() {     return text. }
+false;;0;3;;MatchQueryPredicate predicate() {     return predicate. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(text, name, predicate). }
+false;public;1;11;;@Override public boolean equals(Object obj) {     if (false == super.equals(obj)) {         return false.     }     MatchQuery other = (MatchQuery) obj.     return Objects.equals(text, other.text) && Objects.equals(name, other.name) && Objects.equals(predicate, other.predicate). }
+false;protected;0;4;;@Override protected String innerToString() {     return name + ":" + text. }

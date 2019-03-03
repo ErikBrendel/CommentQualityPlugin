@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean isDumpRouteCoverage() {     return true. }
+false;public;0;7;;@Test public void withHeaderTestCase() throws InterruptedException {     String expectedBody = "<matched/>".     resultEndpoint.expectedHeaderReceived("foo", "bar").     template.sendBodyAndHeader(expectedBody, "foo", "bar").     resultEndpoint.assertIsSatisfied(). }
+false;public;0;6;;@Test public void noHeaderTestCase() throws InterruptedException {     resultEndpoint.expectedHeaderReceived("foo", "bar").     // speedup test     resultEndpoint.setResultWaitTime(1).     resultEndpoint.assertIsNotSatisfied(). }
+false;public;0;3;;public void configure() {     from("direct:start").filter(header("foo").isEqualTo("bar")).to("mock:result"). }
+false;protected;0;8;;@Override protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("direct:start").filter(header("foo").isEqualTo("bar")).to("mock:result").         }     }. }

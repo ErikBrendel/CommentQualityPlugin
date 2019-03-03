@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public int getPrecision() {     return precision. }
+false;public;0;4;;@Override public Exact getExactInfo() {     return new Exact(normalized == false, "Normalized keyword field cannot be used for exact match operations"). }
+false;public;1;9;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     if (!super.equals(o))         return false.     KeywordEsField that = (KeywordEsField) o.     return precision == that.precision && normalized == that.normalized. }
+false;public;0;5;;@Override public int hashCode() {     return Objects.hash(super.hashCode(), precision, normalized). }

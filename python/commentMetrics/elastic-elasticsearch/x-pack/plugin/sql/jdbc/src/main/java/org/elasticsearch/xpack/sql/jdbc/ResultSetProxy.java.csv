@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;2;10;;@Override protected Object postProcess(Object result, Object proxy) {     if (result instanceof ResultSetMetaData) {         return Debug.proxy(new ResultSetMetaDataProxy(log, result)).     }     if (result instanceof Statement) {         return parent.     }     return result. }

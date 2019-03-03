@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected Recycler<byte[]> newRecycler(int limit) {     return Recyclers.none(RECYCLER_C). }
+false;protected;1;4;;@Override protected void assertRecycled(byte[] data) { // will never match }
+false;protected;1;4;;@Override protected void assertDead(byte[] data) { // will never match }

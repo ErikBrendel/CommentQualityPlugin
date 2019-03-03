@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void writeTo(StreamOutput out) throws IOException { // No state to write }
+false;public;0;4;;@Override public String getWriteableName() {     return NAME. }
+false;public;0;4;;@Override public boolean canBeMinimized() {     return false. }
+false;public;0;4;;@Override public MovAvgModel neighboringModel() {     return new LinearModel(). }
+false;public;0;4;;@Override public MovAvgModel clone() {     return new LinearModel(). }
+false;protected;2;9;;@Override protected double[] doPredict(Collection<Double> values, int numPredictions) {     double[] predictions = new double[numPredictions].     // EWMA just emits the same final prediction repeatedly.     Arrays.fill(predictions, next(values)).     return predictions. }
+false;public;1;4;;@Override public double next(Collection<Double> values) {     return MovingFunctions.linearWeightedAvg(values.stream().mapToDouble(Double::doubleValue).toArray()). }
+false;public;2;5;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.field(MovAvgPipelineAggregationBuilder.MODEL.getPreferredName(), NAME).     return builder. }
+false;public;3;5;;@Override public MovAvgModel parse(@Nullable Map<String, Object> settings, String pipelineName, int windowSize) throws ParseException {     checkUnrecognizedParams(settings).     return new LinearModel(). }
+false;public;2;5;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.field(MovAvgPipelineAggregationBuilder.MODEL.getPreferredName(), NAME).     return builder. }
+false;public;0;4;;@Override public MovAvgModel build() {     return new LinearModel(). }
+false;public;0;4;;@Override public int hashCode() {     return 0. }
+false;public;1;10;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     return true. }

@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;3;;public static Calendar testInstance() {     return testInstance(JobTests.randomValidJobId()). }
+false;public,static;1;12;;public static Calendar testInstance(String calendarId) {     int size = randomInt(10).     List<String> items = new ArrayList<>(size).     for (int i = 0. i < size. i++) {         items.add(randomAlphaOfLengthBetween(1, 20)).     }     String description = null.     if (randomBoolean()) {         description = randomAlphaOfLength(20).     }     return new Calendar(calendarId, items, description). }
+false;protected;0;4;;@Override protected Calendar createTestInstance() {     return testInstance(). }
+false;protected;0;4;;@Override protected Writeable.Reader<Calendar> instanceReader() {     return Calendar::new. }
+false;protected;1;4;;@Override protected Calendar doParseInstance(XContentParser parser) throws IOException {     return Calendar.STRICT_PARSER.apply(parser, null).build(). }
+false;public;0;4;;public void testNullId() {     NullPointerException ex = expectThrows(NullPointerException.class, () -> new Calendar(null, Collections.emptyList(), null)).     assertEquals(Calendar.ID.getPreferredName() + " must not be null", ex.getMessage()). }
+false;public;0;3;;public void testDocumentId() {     assertThat(Calendar.documentId("foo"), equalTo("calendar_foo")). }
+false;public;0;9;;public void testStrictParser() throws IOException {     String json = "{\"foo\":\"bar\"}".     try (XContentParser parser = createParser(JsonXContent.jsonXContent, json)) {         IllegalArgumentException e = expectThrows(IllegalArgumentException.class, () -> Calendar.STRICT_PARSER.apply(parser, null)).         assertThat(e.getMessage(), containsString("unknown field [foo]")).     } }
+false;public;0;6;;public void testLenientParser() throws IOException {     String json = "{\"foo\":\"bar\"}".     try (XContentParser parser = createParser(JsonXContent.jsonXContent, json)) {         Calendar.LENIENT_PARSER.apply(parser, null).     } }

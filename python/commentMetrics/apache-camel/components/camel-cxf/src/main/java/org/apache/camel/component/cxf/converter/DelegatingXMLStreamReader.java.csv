@@ -1,0 +1,46 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public Object getProperty(String name) throws IllegalArgumentException {     return reader.getProperty(name). }
+false;public;0;11;;@Override public int next() throws XMLStreamException {     // only inject namespaces at the root level     final int c = reader.next().     if (c == XMLStreamConstants.START_ELEMENT) {         depth++.     } else if (c == XMLStreamConstants.END_ELEMENT) {         depth--.     }     return c. }
+false;public;3;4;;@Override public void require(int type, String namespaceURI, String localName) throws XMLStreamException {     reader.require(type, namespaceURI, localName). }
+false;public;0;4;;@Override public String getElementText() throws XMLStreamException {     return reader.getElementText(). }
+false;public;0;4;;@Override public int nextTag() throws XMLStreamException {     return reader.nextTag(). }
+false;public;0;4;;@Override public boolean hasNext() throws XMLStreamException {     return reader.hasNext(). }
+false;public;0;4;;@Override public void close() throws XMLStreamException {     reader.close(). }
+false;public;1;4;;@Override public String getNamespaceURI(String prefix) {     return reader.getNamespaceURI(prefix). }
+false;public;0;4;;@Override public boolean isStartElement() {     return reader.isStartElement(). }
+false;public;0;4;;@Override public boolean isEndElement() {     return reader.isEndElement(). }
+false;public;0;4;;@Override public boolean isCharacters() {     return reader.isCharacters(). }
+false;public;0;3;;public boolean isWhiteSpace() {     return reader.isWhiteSpace(). }
+false;public;2;3;;public String getAttributeValue(String namespaceURI, String localName) {     return reader.getAttributeValue(namespaceURI, localName). }
+false;public;0;3;;public int getAttributeCount() {     return reader.getAttributeCount(). }
+false;public;1;3;;public QName getAttributeName(int index) {     return reader.getAttributeName(index). }
+false;public;1;3;;public String getAttributeNamespace(int index) {     return reader.getAttributeNamespace(index). }
+false;public;1;3;;public String getAttributeLocalName(int index) {     return reader.getAttributeLocalName(index). }
+false;public;1;3;;public String getAttributePrefix(int index) {     return reader.getAttributePrefix(index). }
+false;public;1;3;;public String getAttributeType(int index) {     return reader.getAttributeType(index). }
+false;public;1;3;;public String getAttributeValue(int index) {     return reader.getAttributeValue(index). }
+false;public;1;3;;public boolean isAttributeSpecified(int index) {     return reader.isAttributeSpecified(index). }
+false;public;0;3;;public int getNamespaceCount() {     return (depth == 1 ? xprefixes.length : 0) + reader.getNamespaceCount(). }
+false;public;1;7;;public String getNamespacePrefix(int index) {     if (depth == 1) {         return index < xprefixes.length ? xprefixes[index] : reader.getNamespacePrefix(index - xprefixes.length).     } else {         return reader.getNamespacePrefix(index).     } }
+false;public;1;7;;public String getNamespaceURI(int index) {     if (depth == 1) {         return index < xprefixes.length ? getNamespaceURI(xprefixes[index]) : reader.getNamespaceURI(index - xprefixes.length).     } else {         return reader.getNamespaceURI(index).     } }
+false;public;0;3;;public NamespaceContext getNamespaceContext() {     return reader.getNamespaceContext(). }
+false;public;0;3;;public int getEventType() {     return reader.getEventType(). }
+false;public;0;3;;public String getText() {     return reader.getText(). }
+false;public;0;3;;public char[] getTextCharacters() {     return reader.getTextCharacters(). }
+false;public;4;3;;public int getTextCharacters(int sourceStart, char[] target, int targetStart, int length) throws XMLStreamException {     return reader.getTextCharacters(sourceStart, target, targetStart, length). }
+false;public;0;3;;public int getTextStart() {     return reader.getTextStart(). }
+false;public;0;3;;public int getTextLength() {     return reader.getTextLength(). }
+false;public;0;3;;public String getEncoding() {     return reader.getEncoding(). }
+false;public;0;3;;public boolean hasText() {     return reader.hasText(). }
+false;public;0;3;;public Location getLocation() {     return reader.getLocation(). }
+false;public;0;3;;public QName getName() {     return reader.getName(). }
+false;public;0;3;;public String getLocalName() {     return reader.getLocalName(). }
+false;public;0;3;;public boolean hasName() {     return reader.hasName(). }
+false;public;0;3;;public String getNamespaceURI() {     return reader.getNamespaceURI(). }
+false;public;0;3;;public String getPrefix() {     return reader.getPrefix(). }
+false;public;0;3;;public String getVersion() {     return reader.getVersion(). }
+false;public;0;3;;public boolean isStandalone() {     return reader.isStandalone(). }
+false;public;0;3;;public boolean standaloneSet() {     return reader.standaloneSet(). }
+false;public;0;3;;public String getCharacterEncodingScheme() {     return reader.getCharacterEncodingScheme(). }
+false;public;0;3;;public String getPITarget() {     return reader.getPITarget(). }
+false;public;0;3;;public String getPIData() {     return reader.getPIData(). }

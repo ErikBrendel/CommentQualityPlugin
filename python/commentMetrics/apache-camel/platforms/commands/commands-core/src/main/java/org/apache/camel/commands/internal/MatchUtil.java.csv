@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;2;3;;public static boolean matchWildcard(String name, String pattern) {     return pattern.endsWith("*") && name.startsWith(pattern.substring(0, pattern.length() - 1)). }

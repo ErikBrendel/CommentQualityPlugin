@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected boolean useJmx() {     return true. }
+false;public;0;6;;@Override @Before public void setUp() throws Exception {     System.setProperty(JmxSystemPropertyKeys.USE_PLATFORM_MBS, "false").     super.setUp(). }
+false;public;0;15;;@Override @Test public void testMBeanServerType() throws Exception {     // JMX tests dont work well on AIX CI servers (hangs them)     if (isPlatform("aix")) {         return.     }     try {         mbsc.getMBeanInfo(new ObjectName("java.lang:type=OperatingSystem")).         // should not get here         assertFalse(true).     } catch (InstanceNotFoundException e) {     // expected     } }
+false;protected;0;14;;@Override protected MBeanServerConnection getMBeanConnection() throws Exception {     if (mbsc == null) {         List<MBeanServer> servers = MBeanServerFactory.findMBeanServer(null).         for (MBeanServer server : servers) {             if (domainName.equals(server.getDefaultDomain())) {                 mbsc = server.                 break.             }         }     }     return mbsc. }

@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@Override public CompletableFuture<CamelSagaCoordinator> newSaga() {     ObjectHelper.notNull(camelContext, "camelContext").     String uuid = camelContext.getUuidGenerator().generateUuid().     CamelSagaCoordinator coordinator = new InMemorySagaCoordinator(camelContext, this, uuid).     coordinators.put(uuid, coordinator).     return CompletableFuture.completedFuture(coordinator). }
+false;public;1;4;;@Override public CompletableFuture<CamelSagaCoordinator> getSaga(String id) {     return CompletableFuture.completedFuture(coordinators.get(id)). }
+false;public;1;4;;@Override public void registerStep(CamelSagaStep step) { // do nothing }
+false;protected;0;7;;@Override protected void doStart() throws Exception {     if (this.executorService == null) {         this.executorService = camelContext.getExecutorServiceManager().newDefaultScheduledThreadPool(this, "saga").     } }
+false;protected;0;7;;@Override protected void doStop() throws Exception {     if (this.executorService != null) {         camelContext.getExecutorServiceManager().shutdownGraceful(this.executorService).         this.executorService = null.     } }
+false;public;0;3;;public ScheduledExecutorService getExecutorService() {     return executorService. }
+false;public;1;4;;@Override public void setCamelContext(CamelContext camelContext) {     this.camelContext = camelContext. }
+false;public;0;4;;@Override public CamelContext getCamelContext() {     return camelContext. }
+false;public;0;3;;public int getMaxRetryAttempts() {     return maxRetryAttempts. }
+false;public;1;3;;public void setMaxRetryAttempts(int maxRetryAttempts) {     this.maxRetryAttempts = maxRetryAttempts. }
+false;public;0;3;;public long getRetryDelayInMilliseconds() {     return retryDelayInMilliseconds. }
+false;public;1;3;;public void setRetryDelayInMilliseconds(long retryDelayInMilliseconds) {     this.retryDelayInMilliseconds = retryDelayInMilliseconds. }

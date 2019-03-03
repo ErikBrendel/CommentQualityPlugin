@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;3;// Invoked if a Job data map entry with that name ;// Invoked if a Job data map entry with that name public void setName(String name) {     this.name = name. }
+false;protected;1;5;;@Override protected void executeInternal(JobExecutionContext context) throws JobExecutionException {     System.out.println(String.format("Hello %s!", this.name)). }

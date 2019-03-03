@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public KeyManagersParametersFactoryBean getKeyManagers() {     return keyManagers. }
+false;public;1;3;;public void setKeyManagers(KeyManagersParametersFactoryBean keyManagers) {     this.keyManagers = keyManagers. }
+false;public;0;4;;@Override public TrustManagersParametersFactoryBean getTrustManagers() {     return trustManagers. }
+false;public;1;3;;public void setTrustManagers(TrustManagersParametersFactoryBean trustManagers) {     this.trustManagers = trustManagers. }
+false;public;0;4;;@Override public SecureRandomParametersFactoryBean getSecureRandom() {     return secureRandom. }
+false;public;1;3;;public void setSecureRandom(SecureRandomParametersFactoryBean secureRandom) {     this.secureRandom = secureRandom. }
+false;public;0;4;;@Override public SSLContextClientParametersFactoryBean getClientParameters() {     return clientParameters. }
+false;public;1;3;;public void setClientParameters(SSLContextClientParametersFactoryBean clientParameters) {     this.clientParameters = clientParameters. }
+false;public;0;4;;@Override public SSLContextServerParametersFactoryBean getServerParameters() {     return serverParameters. }
+false;public;1;3;;public void setServerParameters(SSLContextServerParametersFactoryBean serverParameters) {     this.serverParameters = serverParameters. }
+false;protected;1;4;;@Override protected CamelContext getCamelContextWithId(String camelContextId) {     return CamelContextResolverHelper.getCamelContextWithId(applicationContext, camelContextId). }
+false;public;1;3;;public void setApplicationContext(ApplicationContext applicationContext) {     this.applicationContext = applicationContext. }

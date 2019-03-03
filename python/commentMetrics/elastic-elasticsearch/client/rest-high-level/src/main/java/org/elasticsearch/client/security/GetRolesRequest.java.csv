@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Set<String> getRoleNames() {     return roleNames. }
+false;public;1;11;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     final GetRolesRequest that = (GetRolesRequest) o.     return Objects.equals(roleNames, that.roleNames). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(roleNames). }

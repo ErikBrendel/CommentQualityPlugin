@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void testUnMarshallMessage() throws Exception {     template.sendBody(record).     resultEndpoint.expectedMessageCount(1).     resultEndpoint.assertIsSatisfied(). }
+false;public;0;4;;public void configure() {     // from("file://src/test/data2")     from("direct:start").unmarshal(camelDataFormat).to("mock:result"). }

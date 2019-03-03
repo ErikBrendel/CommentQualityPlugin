@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Producer createProducer() throws Exception {     return new SpringLdapProducer(this). }
+false;public;1;4;;@Override public Consumer createConsumer(Processor processor) throws Exception {     throw new UnsupportedOperationException("spring-ldap endpoint supports producer enrpoint only."). }
+false;public;0;4;;@Override public boolean isSingleton() {     return false. }
+false;public;0;4;;@Override public String createEndpointUri() {     return "spring-ldap://" + templateName + "?operation=" + operation.name() + "&scope=" + getScope(). }
+false;public;0;3;;public LdapTemplate getLdapTemplate() {     return ldapTemplate. }
+false;public;0;3;;public String getTemplateName() {     return templateName. }
+true;public;1;3;/**  * Name of the Spring LDAP Template bean  */ ;/**  * Name of the Spring LDAP Template bean  */ public void setTemplateName(String templateName) {     this.templateName = templateName. }
+false;public;0;3;;public LdapOperation getOperation() {     return operation. }
+true;public;1;3;/**  * The LDAP operation to be performed.  */ ;/**  * The LDAP operation to be performed.  */ public void setOperation(LdapOperation operation) {     this.operation = operation. }
+false;public;0;3;;public String getScope() {     return scope. }
+true;public;1;3;/**  * The scope of the search operation.  */ ;/**  * The scope of the search operation.  */ public void setScope(String scope) {     this.scope = scope. }
+false;public;0;9;;public int scopeValue() {     if (scope.equals(OBJECT_SCOPE_NAME)) {         return SearchControls.OBJECT_SCOPE.     } else if (scope.equals(ONELEVEL_SCOPE_NAME)) {         return SearchControls.ONELEVEL_SCOPE.     } else {         return SearchControls.SUBTREE_SCOPE.     } }

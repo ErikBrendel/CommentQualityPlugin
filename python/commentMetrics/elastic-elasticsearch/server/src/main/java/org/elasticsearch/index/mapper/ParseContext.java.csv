@@ -1,0 +1,100 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Return the path associated with this document.  */ ;/**  * Return the path associated with this document.  */ public String getPath() {     return path. }
+true;public;0;3;/**  * Return a prefix that all fields in this document should have.  */ ;/**  * Return a prefix that all fields in this document should have.  */ public String getPrefix() {     return prefix. }
+true;public;0;3;/**  * Return the parent document, or null if this is the root document.  */ ;/**  * Return the parent document, or null if this is the root document.  */ public Document getParent() {     return parent. }
+false;public;0;4;;@Override public Iterator<IndexableField> iterator() {     return fields.iterator(). }
+false;public;0;3;;public List<IndexableField> getFields() {     return fields. }
+false;public;1;5;;public void add(IndexableField field) {     // either a meta fields or starts with the prefix     assert field.name().startsWith("_") || field.name().startsWith(prefix) : field.name() + " " + prefix.     fields.add(field). }
+true;public;2;9;/**  * Add fields so that they can later be fetched using {@link #getByKey(Object)}.  */ ;/**  * Add fields so that they can later be fetched using {@link #getByKey(Object)}.  */ public void addWithKey(Object key, IndexableField field) {     if (keyedFields == null) {         keyedFields = new ObjectObjectHashMap<>().     } else if (keyedFields.containsKey(key)) {         throw new IllegalStateException("Only one field can be stored per key").     }     keyedFields.put(key, field).     add(field). }
+true;public;1;3;/**  * Get back fields that have been previously added with {@link #addWithKey(Object, IndexableField)}.  */ ;/**  * Get back fields that have been previously added with {@link #addWithKey(Object, IndexableField)}.  */ public IndexableField getByKey(Object key) {     return keyedFields == null ? null : keyedFields.get(key). }
+false;public;1;9;;public IndexableField[] getFields(String name) {     List<IndexableField> f = new ArrayList<>().     for (IndexableField field : fields) {         if (field.name().equals(name)) {             f.add(field).         }     }     return f.toArray(new IndexableField[f.size()]). }
+true;public,final;1;9;/**  * Returns an array of values of the field specified as the method parameter.  * This method returns an empty array when there are no  * matching fields.  It never returns null.  * If you want the actual numeric field instances back, use {@link #getFields}.  * @param name the name of the field  * @return a <code>String[]</code> of field values  */ ;/**  * Returns an array of values of the field specified as the method parameter.  * This method returns an empty array when there are no  * matching fields.  It never returns null.  * If you want the actual numeric field instances back, use {@link #getFields}.  * @param name the name of the field  * @return a <code>String[]</code> of field values  */ public final String[] getValues(String name) {     List<String> result = new ArrayList<>().     for (IndexableField field : fields) {         if (field.name().equals(name) && field.stringValue() != null) {             result.add(field.stringValue()).         }     }     return result.toArray(new String[result.size()]). }
+false;public;1;8;;public IndexableField getField(String name) {     for (IndexableField field : fields) {         if (field.name().equals(name)) {             return field.         }     }     return null. }
+false;public;1;8;;public String get(String name) {     for (IndexableField f : fields) {         if (f.name().equals(name) && f.stringValue() != null) {             return f.stringValue().         }     }     return null. }
+false;public;1;8;;public BytesRef getBinaryValue(String name) {     for (IndexableField f : fields) {         if (f.name().equals(name) && f.binaryValue() != null) {             return f.binaryValue().         }     }     return null. }
+false;public;0;4;;@Override public Iterable<Document> nonRootDocuments() {     return in.nonRootDocuments(). }
+false;public;0;4;;@Override public DocumentMapperParser docMapperParser() {     return in.docMapperParser(). }
+false;public;0;4;;@Override public boolean isWithinCopyTo() {     return in.isWithinCopyTo(). }
+false;public;0;4;;@Override public boolean isWithinMultiFields() {     return in.isWithinMultiFields(). }
+false;public;0;4;;@Override public IndexSettings indexSettings() {     return in.indexSettings(). }
+false;public;0;4;;@Override public SourceToParse sourceToParse() {     return in.sourceToParse(). }
+false;public;0;4;;@Override public ContentPath path() {     return in.path(). }
+false;public;0;4;;@Override public XContentParser parser() {     return in.parser(). }
+false;public;0;4;;@Override public Document rootDoc() {     return in.rootDoc(). }
+false;public;0;4;;@Override public Document doc() {     return in.doc(). }
+false;protected;1;4;;@Override protected void addDoc(Document doc) {     in.addDoc(doc). }
+false;public;0;4;;@Override public RootObjectMapper root() {     return in.root(). }
+false;public;0;4;;@Override public DocumentMapper docMapper() {     return in.docMapper(). }
+false;public;0;4;;@Override public MapperService mapperService() {     return in.mapperService(). }
+false;public;0;4;;@Override public Field version() {     return in.version(). }
+false;public;1;4;;@Override public void version(Field version) {     in.version(version). }
+false;public;0;4;;@Override public SeqNoFieldMapper.SequenceIDFields seqID() {     return in.seqID(). }
+false;public;1;4;;@Override public void seqID(SeqNoFieldMapper.SequenceIDFields seqID) {     in.seqID(seqID). }
+false;public;0;4;;@Override public boolean externalValueSet() {     return in.externalValueSet(). }
+false;public;0;4;;@Override public Object externalValue() {     return in.externalValue(). }
+false;public;1;4;;@Override public void addDynamicMapper(Mapper update) {     in.addDynamicMapper(update). }
+false;public;0;4;;@Override public List<Mapper> getDynamicMappers() {     return in.getDynamicMappers(). }
+false;public;0;4;;@Override public Iterator<Document> iterator() {     return in.iterator(). }
+false;public;1;4;;@Override public void addIgnoredField(String field) {     in.addIgnoredField(field). }
+false;public;0;4;;@Override public Collection<String> getIgnoredFields() {     return in.getIgnoredFields(). }
+false;public;0;4;;@Override public DocumentMapperParser docMapperParser() {     return this.docMapperParser. }
+false;public;0;4;;@Override public IndexSettings indexSettings() {     return this.indexSettings. }
+false;public;0;4;;@Override public SourceToParse sourceToParse() {     return this.sourceToParse. }
+false;public;0;4;;@Override public ContentPath path() {     return this.path. }
+false;public;0;4;;@Override public XContentParser parser() {     return this.parser. }
+false;public;0;4;;@Override public Document rootDoc() {     return documents.get(0). }
+false;;0;3;;List<Document> docs() {     return this.documents. }
+false;public;0;4;;@Override public Document doc() {     return this.document. }
+false;protected;1;11;;@Override protected void addDoc(Document doc) {     numNestedDocs++.     if (numNestedDocs > maxAllowedNumNestedDocs) {         throw new MapperParsingException("The number of nested documents has exceeded the allowed limit of [" + maxAllowedNumNestedDocs + "]." + " This limit can be set by changing the [" + MapperService.INDEX_MAPPING_NESTED_DOCS_LIMIT_SETTING.getKey() + "] index level setting.").     }     this.documents.add(doc). }
+false;public;0;4;;@Override public RootObjectMapper root() {     return docMapper.root(). }
+false;public;0;4;;@Override public DocumentMapper docMapper() {     return this.docMapper. }
+false;public;0;4;;@Override public MapperService mapperService() {     return docMapperParser.mapperService. }
+false;public;0;4;;@Override public Field version() {     return this.version. }
+false;public;1;4;;@Override public void version(Field version) {     this.version = version. }
+false;public;0;4;;@Override public SeqNoFieldMapper.SequenceIDFields seqID() {     return this.seqID. }
+false;public;1;4;;@Override public void seqID(SeqNoFieldMapper.SequenceIDFields seqID) {     this.seqID = seqID. }
+false;public;1;4;;@Override public void addDynamicMapper(Mapper mapper) {     dynamicMappers.add(mapper). }
+false;public;0;4;;@Override public List<Mapper> getDynamicMappers() {     return dynamicMappers. }
+false;public;0;7;;@Override public Iterable<Document> nonRootDocuments() {     if (docsReversed) {         throw new IllegalStateException("documents are already reversed").     }     return documents.subList(1, documents.size()). }
+false;;0;17;;void postParse() {     if (documents.size() > 1) {         docsReversed = true.         if (indexSettings.getIndexVersionCreated().onOrAfter(Version.V_6_5_0)) {             /**              * For indices created on or after {@link Version#V_6_5_0} we preserve the order              * of the children while ensuring that parents appear after them.              */             List<Document> newDocs = reorderParent(documents).             documents.clear().             documents.addAll(newDocs).         } else {             // reverse the order of docs for nested docs support, parent should be last             Collections.reverse(documents).         }     } }
+true;private;1;12;/**  * Returns a copy of the provided {@link List} where parent documents appear  * after their children.  */ ;/**  * Returns a copy of the provided {@link List} where parent documents appear  * after their children.  */ private List<Document> reorderParent(List<Document> docs) {     List<Document> newDocs = new ArrayList<>(docs.size()).     LinkedList<Document> parents = new LinkedList<>().     for (Document doc : docs) {         while (parents.peek() != doc.getParent()) {             newDocs.add(parents.poll()).         }         parents.add(0, doc).     }     newDocs.addAll(parents).     return newDocs. }
+false;public;0;4;;@Override public Iterator<Document> iterator() {     return documents.iterator(). }
+false;public;1;4;;@Override public void addIgnoredField(String field) {     ignoredFields.add(field). }
+false;public;0;4;;@Override public Collection<String> getIgnoredFields() {     return Collections.unmodifiableCollection(ignoredFields). }
+true;public,abstract;0;1;/**  * Returns an Iterable over all non-root documents. If there are no non-root documents  * the iterable will return an empty iterator.  */ ;/**  * Returns an Iterable over all non-root documents. If there are no non-root documents  * the iterable will return an empty iterator.  */ public abstract Iterable<Document> nonRootDocuments().
+true;public,abstract;1;1;/**  * Add the given {@code field} to the set of ignored fields.  */ ;/**  * Add the given {@code field} to the set of ignored fields.  */ public abstract void addIgnoredField(String field).
+true;public,abstract;0;1;/**  * Return the collection of fields that have been ignored so far.  */ ;/**  * Return the collection of fields that have been ignored so far.  */ public abstract Collection<String> getIgnoredFields().
+false;public,abstract;0;1;;public abstract DocumentMapperParser docMapperParser().
+false;public;0;4;;@Override public boolean isWithinCopyTo() {     return true. }
+true;public,final;0;8;/**  * Return a new context that will be within a copy-to operation.  */ ;/**  * Return a new context that will be within a copy-to operation.  */ public final ParseContext createCopyToContext() {     return new FilterParseContext(this) {          @Override         public boolean isWithinCopyTo() {             return true.         }     }. }
+false;public;0;3;;public boolean isWithinCopyTo() {     return false. }
+false;public;0;4;;@Override public boolean isWithinMultiFields() {     return true. }
+true;public,final;0;8;/**  * Return a new context that will be within multi-fields.  */ ;/**  * Return a new context that will be within multi-fields.  */ public final ParseContext createMultiFieldContext() {     return new FilterParseContext(this) {          @Override         public boolean isWithinMultiFields() {             return true.         }     }. }
+true;public,final;1;5;/**  * Return a new context that will be used within a nested document.  */ ;/**  * Return a new context that will be used within a nested document.  */ public final ParseContext createNestedContext(String fullPath) {     final Document doc = new Document(fullPath, doc()).     addDoc(doc).     return switchDoc(doc). }
+false;public;0;4;;@Override public Document doc() {     return document. }
+true;public,final;1;8;/**  * Return a new context that has the provided document as the current document.  */ ;/**  * Return a new context that has the provided document as the current document.  */ public final ParseContext switchDoc(final Document document) {     return new FilterParseContext(this) {          @Override         public Document doc() {             return document.         }     }. }
+false;public;0;4;;@Override public ContentPath path() {     return path. }
+true;public,final;1;8;/**  * Return a new context that will have the provided path.  */ ;/**  * Return a new context that will have the provided path.  */ public final ParseContext overridePath(final ContentPath path) {     return new FilterParseContext(this) {          @Override         public ContentPath path() {             return path.         }     }. }
+false;public;0;3;;public boolean isWithinMultiFields() {     return false. }
+false;public,abstract;0;1;;public abstract IndexSettings indexSettings().
+false;public,abstract;0;1;;public abstract SourceToParse sourceToParse().
+false;public,abstract;0;1;;public abstract ContentPath path().
+false;public,abstract;0;1;;public abstract XContentParser parser().
+false;public,abstract;0;1;;public abstract Document rootDoc().
+false;public,abstract;0;1;;public abstract Document doc().
+false;protected,abstract;1;1;;protected abstract void addDoc(Document doc).
+false;public,abstract;0;1;;public abstract RootObjectMapper root().
+false;public,abstract;0;1;;public abstract DocumentMapper docMapper().
+false;public,abstract;0;1;;public abstract MapperService mapperService().
+false;public,abstract;0;1;;public abstract Field version().
+false;public,abstract;1;1;;public abstract void version(Field version).
+false;public,abstract;0;1;;public abstract SeqNoFieldMapper.SequenceIDFields seqID().
+false;public,abstract;1;1;;public abstract void seqID(SeqNoFieldMapper.SequenceIDFields seqID).
+false;public;0;4;;@Override public boolean externalValueSet() {     return true. }
+false;public;0;4;;@Override public Object externalValue() {     return externalValue. }
+true;public,final;1;12;/**  * Return a new context that will have the external value set.  */ ;/**  * Return a new context that will have the external value set.  */ public final ParseContext createExternalValueContext(final Object externalValue) {     return new FilterParseContext(this) {          @Override         public boolean externalValueSet() {             return true.         }          @Override         public Object externalValue() {             return externalValue.         }     }. }
+false;public;0;3;;public boolean externalValueSet() {     return false. }
+false;public;0;3;;public Object externalValue() {     throw new IllegalStateException("External value is not set"). }
+true;public,final;1;11;/**  * Try to parse an externalValue if any  * @param clazz Expected class for external value  * @return null if no external value has been set or the value  */ ;/**  * Try to parse an externalValue if any  * @param clazz Expected class for external value  * @return null if no external value has been set or the value  */ public final <T> T parseExternalValue(Class<T> clazz) {     if (!externalValueSet() || externalValue() == null) {         return null.     }     if (!clazz.isInstance(externalValue())) {         throw new IllegalArgumentException("illegal external value class [" + externalValue().getClass().getName() + "]. Should be " + clazz.getName()).     }     return clazz.cast(externalValue()). }
+true;public,abstract;1;1;/**  * Add a new mapper dynamically created while parsing.  */ ;/**  * Add a new mapper dynamically created while parsing.  */ public abstract void addDynamicMapper(Mapper update).
+true;public,abstract;0;1;/**  * Get dynamic mappers created while parsing.  */ ;/**  * Get dynamic mappers created while parsing.  */ public abstract List<Mapper> getDynamicMappers().

@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@After public void cleanUp() {     if (this.context != null) {         this.context.close().     } }
+false;public;0;5;;@Test public void normalFiltersAreRegistered() {     load(FilterConfiguration.class).     assertThat(this.context.getServletContext().getFilterRegistrations()).hasSize(1). }
+false;public;0;5;;@Test public void scopedTargetFiltersAreNotRegistered() {     load(ScopedTargetFilterConfiguration.class).     assertThat(this.context.getServletContext().getFilterRegistrations()).isEmpty(). }
+false;private;1;4;;private void load(Class<?> configuration) {     this.context = new AnnotationConfigServletWebServerApplicationContext(ContainerConfiguration.class, configuration). }
+false;public;0;4;;@Bean public TomcatServletWebServerFactory webServerFactory() {     return new TomcatServletWebServerFactory(0). }
+false;public;0;4;;@Bean(name = "scopedTarget.myFilter") public Filter myFilter() {     return new MockFilter(). }
+false;public;0;4;;@Bean public Filter myFilter() {     return new MockFilter(). }

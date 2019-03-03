@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;static;1;9;;static StartBasicResponse.Status fromErrorMessage(final String errorMessage) {     final StartBasicResponse.Status[] values = StartBasicResponse.Status.values().     for (StartBasicResponse.Status status : values) {         if (Objects.equals(status.errorMessage, errorMessage)) {             return status.         }     }     throw new IllegalArgumentException("No status for error message ['" + errorMessage + "']"). }
+false;public;0;3;;public Status getStatus() {     return status. }
+false;public;0;3;;public boolean isAcknowledged() {     return status != StartBasicResponse.Status.NEED_ACKNOWLEDGEMENT. }
+false;public;0;3;;public boolean isBasicStarted() {     return status.isBasicStarted. }
+false;public;0;3;;public String getErrorMessage() {     return status.errorMessage. }
+false;public;0;3;;public String getAcknowledgeMessage() {     return acknowledgeMessage. }
+false;public;0;3;;public Map<String, String[]> getAcknowledgeMessages() {     return acknowledgeMessages. }
+false;public,static;1;3;;public static StartBasicResponse fromXContent(XContentParser parser) throws IOException {     return PARSER.parse(parser, null). }

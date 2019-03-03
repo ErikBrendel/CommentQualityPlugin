@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public SendEmailResult sendEmail(SendEmailRequest sendEmailRequest) throws AmazonServiceException, AmazonClientException {     this.sendEmailRequest = sendEmailRequest.     SendEmailResult result = new SendEmailResult().     result.setMessageId("1").     return result. }
+false;public;1;8;;@Override public SendRawEmailResult sendRawEmail(SendRawEmailRequest sendRawEmailRequest) throws AmazonServiceException, AmazonClientException {     this.sendRawEmailRequest = sendRawEmailRequest.     SendRawEmailResult result = new SendRawEmailResult().     result.setMessageId("1").     return result. }
+false;public;0;3;;public SendEmailRequest getSendEmailRequest() {     return sendEmailRequest. }
+false;public;0;3;;public SendRawEmailRequest getSendRawEmailRequest() {     return sendRawEmailRequest. }

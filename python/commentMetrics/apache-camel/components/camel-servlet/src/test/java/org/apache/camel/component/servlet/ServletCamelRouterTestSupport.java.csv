@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;11;;@Before public void setUp() throws Exception {     InputStream is = this.getClass().getResourceAsStream(getConfiguration()).     assertNotNull("The configuration input stream should not be null", is).     sr = new ServletRunner(is, CONTEXT).     HttpUnitOptions.setExceptionsThrownOnErrorStatus(true).     if (startCamelContext) {         super.setUp().     } }
+false;public;0;7;;@After public void tearDown() throws Exception {     if (startCamelContext) {         super.tearDown().     }     sr.shutDown(). }
+true;protected;0;3;/**  * @return The web.xml to use for testing.  */ ;/**  * @return The web.xml to use for testing.  */ protected String getConfiguration() {     return "/org/apache/camel/component/servlet/web.xml". }
+false;protected;0;3;;protected ServletUnitClient newClient() {     return sr.newClient(). }

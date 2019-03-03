@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Map<String, Object> stats() {     return stats. }
+false;protected;2;9;;@Override protected void innerXContent(XContentBuilder builder, Params params) throws IOException {     super.innerXContent(builder, params).     if (enabled) {         for (Map.Entry<String, Object> entry : stats.entrySet()) {             builder.field(entry.getKey(), entry.getValue()).         }     } }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeMap(stats). }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;11;;@Override protected CamelContext createCamelContext() throws Exception {     CamelContext context = super.createCamelContext().     context.addComponent(ReactiveStreamsConstants.SCHEME, ReactiveStreamsComponent.withServiceType(RxJavaStreamsConstants.SERVICE_NAME)).     return context. }
+false;protected;0;4;;@Override protected void doPostSetup() throws Exception {     this.crs = CamelReactiveStreams.get(context). }
+false;public;0;5;;@Override public boolean isUseRouteBuilder() {     // You need to start the context if "use route builder" is set to false     return false. }
+false;protected;0;6;;protected ReactiveStreamsComponent getReactiveStreamsComponent() {     return ObjectHelper.notNull(context.getComponent(ReactiveStreamsConstants.SCHEME, ReactiveStreamsComponent.class), ReactiveStreamsConstants.SCHEME). }

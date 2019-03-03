@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;4;11;;protected void waitForLeader(int attempts, RaftHandle rh, RaftHandle rh2, RaftHandle rh3) throws InterruptedException {     boolean thereIsLeader = rh.isLeader() || rh2.isLeader() || rh3.isLeader().     while (!thereIsLeader && attempts > 0) {         thereIsLeader = rh.isLeader() || rh2.isLeader() || rh3.isLeader().         TimeUnit.SECONDS.sleep(1).         attempts--.     }     if (attempts <= 0) {         throw new RuntimeException("No leader in time!").     } }

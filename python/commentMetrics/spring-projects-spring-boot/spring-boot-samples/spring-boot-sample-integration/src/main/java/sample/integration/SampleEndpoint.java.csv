@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;7;;@ServiceActivator public String hello(File input) throws Exception {     FileInputStream in = new FileInputStream(input).     String name = new String(StreamUtils.copyToByteArray(in)).     in.close().     return this.helloWorldService.getHelloMessage(name). }

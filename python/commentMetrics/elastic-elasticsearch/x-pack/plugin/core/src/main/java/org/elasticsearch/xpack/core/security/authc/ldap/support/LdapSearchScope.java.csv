@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public SearchScope scope() {     return scope. }
+false;public,static;2;13;;public static LdapSearchScope resolve(String scope, LdapSearchScope defaultScope) {     if (Strings.isNullOrEmpty(scope)) {         return defaultScope.     }     switch(scope.toLowerCase(Locale.ENGLISH)) {         case "base":         case "object":             return BASE.         case "one_level":             return ONE_LEVEL.         case "sub_tree":             return SUB_TREE.         default:             throw new IllegalArgumentException("unknown search scope [" + scope + "]").     } }

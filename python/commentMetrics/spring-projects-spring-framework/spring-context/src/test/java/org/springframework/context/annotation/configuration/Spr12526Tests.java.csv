@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;13;;@Test public void testInjection() {     AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(TestContext.class).     CustomCondition condition = ctx.getBean(CustomCondition.class).     condition.setCondition(true).     FirstService firstService = (FirstService) ctx.getBean(Service.class).     assertNotNull("FirstService.dependency is null", firstService.getDependency()).     condition.setCondition(false).     SecondService secondService = (SecondService) ctx.getBean(Service.class).     assertNotNull("SecondService.dependency is null", secondService.getDependency()). }
+false;public;0;5;;@Bean @Scope(SCOPE_SINGLETON) public CustomCondition condition() {     return new CustomCondition(). }
+false;public;1;5;;@Bean @Scope(SCOPE_PROTOTYPE) public Service service(CustomCondition condition) {     return (condition.check() ? new FirstService() : new SecondService()). }
+false;public;0;4;;@Bean public DependencyOne dependencyOne() {     return new DependencyOne(). }
+false;public;0;4;;@Bean public DependencyTwo dependencyTwo() {     return new DependencyTwo(). }
+false;public;0;3;;public boolean check() {     return condition. }
+false;public;1;3;;public void setCondition(boolean value) {     this.condition = value. }
+false;;0;1;;void doStuff().
+false;public;0;6;;@Override public void doStuff() {     if (dependency == null) {         throw new IllegalStateException("FirstService: dependency is null").     } }
+false;public;1;4;;@Resource(name = "dependencyOne") public void setDependency(DependencyOne dependency) {     this.dependency = dependency. }
+false;public;0;3;;public DependencyOne getDependency() {     return dependency. }
+false;public;0;6;;@Override public void doStuff() {     if (dependency == null) {         throw new IllegalStateException("SecondService: dependency is null").     } }
+false;public;1;4;;@Resource(name = "dependencyTwo") public void setDependency(DependencyTwo dependency) {     this.dependency = dependency. }
+false;public;0;3;;public DependencyTwo getDependency() {     return dependency. }

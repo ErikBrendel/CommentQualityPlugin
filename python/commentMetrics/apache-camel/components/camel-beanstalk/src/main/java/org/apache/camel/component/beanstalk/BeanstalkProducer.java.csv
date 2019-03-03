@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Command getCommand() {     return command. }
+false;public;1;5;;@Override public void process(final Exchange exchange) throws Exception {     Future f = executor.submit(new RunCommand(exchange)).     f.get(). }
+false;public;2;11;;@Override public boolean process(final Exchange exchange, final AsyncCallback callback) {     try {         executor.submit(new RunCommand(exchange, callback)).     } catch (Throwable t) {         exchange.setException(t).         callback.done(true).         return true.     }     return false. }
+false;protected;0;4;;protected void resetClient() {     closeClient().     initClient(). }
+false;protected;0;5;;protected void closeClient() {     if (client != null) {         client.close().     } }
+false;protected;0;3;;protected void initClient() {     this.client = getEndpoint().getConnection().newWritingClient(). }
+false;public;0;3;;public void run() {     initClient(). }
+false;protected;0;10;;@Override protected void doStart() throws Exception {     super.doStart().     executor = getEndpoint().getCamelContext().getExecutorServiceManager().newSingleThreadExecutor(this, "Beanstalk-Producer").     executor.execute(new Runnable() {          public void run() {             initClient().         }     }). }
+false;protected;0;6;;@Override protected void doStop() throws Exception {     getEndpoint().getCamelContext().getExecutorServiceManager().shutdown(executor).     closeClient().     super.doStop(). }
+false;public;0;4;;@Override public BeanstalkEndpoint getEndpoint() {     return (BeanstalkEndpoint) super.getEndpoint(). }
+false;public;0;18;;@Override public void run() {     try {         try {             command.act(client, exchange).         } catch (BeanstalkException e) {             /* Retry one time */             resetClient().             command.act(client, exchange).         }     } catch (Throwable t) {         exchange.setException(t).     } finally {         if (callback != null) {             callback.done(false).         }     } }

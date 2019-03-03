@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;2;4;;@Override AmazonEC2 buildClient(AWSCredentialsProvider credentials, ClientConfiguration configuration) {     return new AmazonEC2Mock(nodes, tagsList, credentials, configuration). }

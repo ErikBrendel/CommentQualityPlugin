@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected AbstractApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/component/xslt/extensions/camelXsltContext.xml"). }
+false;public;0;6;;@Test public void testExtensions() {     String result = template().requestBody("direct:extensions", "<dummy/>", String.class).     assertNotNull(result).     assertEquals(XSLT_RESULT, result). }

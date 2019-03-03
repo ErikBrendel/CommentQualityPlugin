@@ -1,0 +1,31 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getAuthMethod() {     return authMethod. }
+true;public;1;3;/**  * Authentication methods allowed to use as a comma separated list of values Basic, Digest or NTLM.  */ ;/**  * Authentication methods allowed to use as a comma separated list of values Basic, Digest or NTLM.  */ public void setAuthMethod(String authMethod) {     this.authMethod = authMethod. }
+false;public;0;3;;public String getAuthMethodPriority() {     return authMethodPriority. }
+true;public;1;3;/**  * Which authentication method to prioritize to use, either as Basic, Digest or NTLM.  */ ;/**  * Which authentication method to prioritize to use, either as Basic, Digest or NTLM.  */ public void setAuthMethodPriority(String authMethodPriority) {     this.authMethodPriority = authMethodPriority. }
+false;public;0;3;;public String getAuthUsername() {     return authUsername. }
+true;public;1;3;/**  * Authentication username  */ ;/**  * Authentication username  */ public void setAuthUsername(String authUsername) {     this.authUsername = authUsername. }
+false;public;0;3;;public String getAuthPassword() {     return authPassword. }
+true;public;1;3;/**  * Authentication password  */ ;/**  * Authentication password  */ public void setAuthPassword(String authPassword) {     this.authPassword = authPassword. }
+false;public;0;3;;public String getAuthDomain() {     return authDomain. }
+true;public;1;3;/**  * Authentication domain to use with NTML  */ ;/**  * Authentication domain to use with NTML  */ public void setAuthDomain(String authDomain) {     this.authDomain = authDomain. }
+false;public;0;3;;public String getAuthHost() {     return authHost. }
+true;public;1;3;/**  * Authentication host to use with NTML  */ ;/**  * Authentication host to use with NTML  */ public void setAuthHost(String authHost) {     this.authHost = authHost. }
+false;public;0;3;;public String getProxyAuthScheme() {     return proxyAuthScheme. }
+true;public;1;3;/**  * Proxy authentication scheme to use  */ ;/**  * Proxy authentication scheme to use  */ public void setProxyAuthScheme(String proxyAuthScheme) {     this.proxyAuthScheme = proxyAuthScheme. }
+false;public;0;3;;public String getProxyAuthMethod() {     return proxyAuthMethod. }
+true;public;1;3;/**  * Proxy authentication method to use  */ ;/**  * Proxy authentication method to use  */ public void setProxyAuthMethod(String proxyAuthMethod) {     this.proxyAuthMethod = proxyAuthMethod. }
+false;public;0;3;;public String getProxyAuthUsername() {     return proxyAuthUsername. }
+true;public;1;3;/**  * Proxy authentication username  */ ;/**  * Proxy authentication username  */ public void setProxyAuthUsername(String proxyAuthUsername) {     this.proxyAuthUsername = proxyAuthUsername. }
+false;public;0;3;;public String getProxyAuthPassword() {     return proxyAuthPassword. }
+true;public;1;3;/**  * Proxy authentication password  */ ;/**  * Proxy authentication password  */ public void setProxyAuthPassword(String proxyAuthPassword) {     this.proxyAuthPassword = proxyAuthPassword. }
+false;public;0;3;;public String getProxyAuthDomain() {     return proxyAuthDomain. }
+true;public;1;3;/**  * Proxy authentication domain to use with NTML  */ ;/**  * Proxy authentication domain to use with NTML  */ public void setProxyAuthDomain(String proxyAuthDomain) {     this.proxyAuthDomain = proxyAuthDomain. }
+false;public;0;3;;public String getProxyAuthHost() {     return proxyAuthHost. }
+true;public;1;3;/**  * Proxy authentication host  */ ;/**  * Proxy authentication host  */ public void setProxyAuthHost(String proxyAuthHost) {     this.proxyAuthHost = proxyAuthHost. }
+false;public;0;3;;public int getProxyAuthPort() {     return proxyAuthPort. }
+true;public;1;3;/**  * Proxy authentication port  */ ;/**  * Proxy authentication port  */ public void setProxyAuthPort(int proxyAuthPort) {     this.proxyAuthPort = proxyAuthPort. }
+false;public;0;3;;public String getProxyHost() {     return proxyHost. }
+true;public;1;3;/**  * Proxy hostname to use  */ ;/**  * Proxy hostname to use  */ public void setProxyHost(String proxyHost) {     this.proxyHost = proxyHost. }
+false;public;0;3;;public int getProxyPort() {     return proxyPort. }
+true;public;1;3;/**  * Proxy port to use  */ ;/**  * Proxy port to use  */ public void setProxyPort(int proxyPort) {     this.proxyPort = proxyPort. }

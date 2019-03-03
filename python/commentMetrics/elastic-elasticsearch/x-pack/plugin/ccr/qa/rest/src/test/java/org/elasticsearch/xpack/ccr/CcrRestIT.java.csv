@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;4;;@ParametersFactory public static Iterable<Object[]> parameters() throws Exception {     return ESClientYamlSuiteTestCase.createParameters(). }
+false;protected;0;5;;@Override protected Settings restClientSettings() {     final String ccrUserAuthHeaderValue = basicAuthHeaderValue("ccr-user", new SecureString("ccr-user-password".toCharArray())).     return Settings.builder().put(ThreadContext.PREFIX + ".Authorization", ccrUserAuthHeaderValue).build(). }
+false;public;0;4;;@After public void cleanup() throws Exception {     ESRestTestCase.waitForPendingTasks(adminClient(), taskName -> taskName.startsWith(ShardChangesAction.NAME)). }

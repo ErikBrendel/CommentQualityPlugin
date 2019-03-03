@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Bean @ConditionalOnMissingBean public InfoEndpoint infoEndpoint(ObjectProvider<InfoContributor> infoContributors) {     return new InfoEndpoint(infoContributors.orderedStream().collect(Collectors.toList())). }

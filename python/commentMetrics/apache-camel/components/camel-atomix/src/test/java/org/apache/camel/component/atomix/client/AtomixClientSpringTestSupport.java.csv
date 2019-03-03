@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;3;;protected Address getReplicaAddress() {     return applicationContext.getBean(Address.class). }
+false;protected;0;3;;protected AtomixReplica getReplica() {     return applicationContext.getBean(AtomixReplica.class). }
+false;protected;0;3;;protected AtomixClient getClient() {     return applicationContext.getBean(AtomixClient.class). }

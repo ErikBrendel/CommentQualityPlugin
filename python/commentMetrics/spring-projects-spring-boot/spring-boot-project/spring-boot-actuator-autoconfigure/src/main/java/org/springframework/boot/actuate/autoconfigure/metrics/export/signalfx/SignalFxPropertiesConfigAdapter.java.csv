@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String accessToken() {     return get(SignalFxProperties::getAccessToken, SignalFxConfig.super::accessToken). }
+false;public;0;4;;@Override public String uri() {     return get(SignalFxProperties::getUri, SignalFxConfig.super::uri). }
+false;public;0;4;;@Override public String source() {     return get(SignalFxProperties::getSource, SignalFxConfig.super::source). }

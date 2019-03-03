@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void predicatesWithIdenticalPathsAreEqual() {     assertThat(predicateWithPath("/path")).isEqualTo(predicateWithPath("/path")). }
+false;public;0;4;;@Test public void predicatesWithDifferentPathsAreNotEqual() {     assertThat(predicateWithPath("/one")).isNotEqualTo(predicateWithPath("/two")). }
+false;public;0;5;;@Test public void predicatesWithIdenticalPathsWithVariablesAreEqual() {     assertThat(predicateWithPath("/path/{foo}")).isEqualTo(predicateWithPath("/path/{foo}")). }
+false;public;0;5;;@Test public void predicatesWhereOneHasAPathAndTheOtherHasAVariableAreNotEqual() {     assertThat(predicateWithPath("/path/{foo}")).isNotEqualTo(predicateWithPath("/path/foo")). }
+false;public;0;5;;@Test public void predicatesWithSinglePathVariablesInTheSamplePlaceAreEqual() {     assertThat(predicateWithPath("/path/{foo1}")).isEqualTo(predicateWithPath("/path/{foo2}")). }
+false;public;0;5;;@Test public void predicatesWithMultiplePathVariablesInTheSamplePlaceAreEqual() {     assertThat(predicateWithPath("/path/{foo1}/more/{bar1}")).isEqualTo(predicateWithPath("/path/{foo2}/more/{bar2}")). }
+false;private;1;4;;private WebOperationRequestPredicate predicateWithPath(String path) {     return new WebOperationRequestPredicate(path, WebEndpointHttpMethod.GET, Collections.emptyList(), Collections.emptyList()). }

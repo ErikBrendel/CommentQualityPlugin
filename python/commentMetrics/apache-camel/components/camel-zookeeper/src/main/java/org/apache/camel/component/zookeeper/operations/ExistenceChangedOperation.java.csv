@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;4;2;;public void processResult(int rc, String path, Object ctx, Stat stat) { }
+false;protected;0;10;;@Override protected void installWatch() {     connection.exists(getNode(), this, new StatCallback() {          public void processResult(int rc, String path, Object ctx, Stat stat) {         }     }, null).     if (LOG.isDebugEnabled()) {         LOG.debug("Installed exists watch").     } }
+false;public;0;10;;@Override public OperationResult<String> getResult() {     try {         String path = getNode().         Stat statistics = connection.exists(path, true).         return new OperationResult<>(path, statistics).     } catch (Exception e) {         return new OperationResult<>(e).     } }

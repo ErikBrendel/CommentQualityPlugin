@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public AcknowledgedResponse newResponse() {     return new AcknowledgedResponse(). }
+false;public,static;1;15;;public static Request parseRequest(XContentParser parser) {     Job.Builder job = Job.STRICT_PARSER.apply(parser, null).     // When jobs are PUT their ID must be supplied in the URL - assume this will     // be valid unless an invalid job ID is specified in the JSON to be validated     job.setId(job.getId() != null ? job.getId() : "ok").     // Some fields cannot be set at create time     List<String> invalidJobCreationSettings = job.invalidCreateTimeSettings().     if (invalidJobCreationSettings.isEmpty() == false) {         throw new IllegalArgumentException(Messages.getMessage(Messages.JOB_CONFIG_INVALID_CREATE_SETTINGS, String.join(",", invalidJobCreationSettings))).     }     return new Request(job.build(new Date())). }
+false;public;0;3;;public Job getJob() {     return job. }
+false;public;0;4;;@Override public ActionRequestValidationException validate() {     return null. }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     job.writeTo(out). }
+false;public;1;5;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     job = new Job(in). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(job). }
+false;public;1;11;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     Request other = (Request) obj.     return Objects.equals(job, other.job). }

@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;0;16;;private Document<Feed> getDocument() throws IOException, ParseException {     if (document == null) {         if (ObjectHelper.isEmpty(endpoint.getUsername()) || ObjectHelper.isEmpty(endpoint.getPassword())) {             document = AtomUtils.parseDocument(endpoint.getFeedUri()).         } else {             document = AtomUtils.parseDocument(endpoint.getFeedUri(), endpoint.getUsername(), endpoint.getPassword()).         }         Feed root = document.getRoot().         if (endpoint.isSortEntries()) {             sortEntries(root).         }         list = root.getEntries().         entryIndex = list.size() - 1.     }     return document. }
+false;protected;1;3;;protected void sortEntries(Feed feed) {     feed.sortEntriesByUpdated(true). }
+false;protected;1;4;;@Override protected void populateList(Object feed) throws ParseException, IOException { // list is populated already in the createFeed method }
+false;protected;0;4;;@Override protected Object createFeed() throws IOException {     return getDocument().getRoot(). }
+false;protected;0;4;;@Override protected void resetList() {     document = null. }
+false;protected;1;4;;@Override protected EntryFilter createEntryFilter(Date lastUpdate) {     return new UpdatedDateFilter(lastUpdate). }

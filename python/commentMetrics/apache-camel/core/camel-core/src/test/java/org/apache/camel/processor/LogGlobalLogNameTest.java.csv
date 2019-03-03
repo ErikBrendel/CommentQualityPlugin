@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;6;;@Override protected CamelContext createCamelContext() throws Exception {     CamelContext context = super.createCamelContext().     context.getGlobalOptions().put(Exchange.LOG_EIP_NAME, "com.foo.myapp").     return context. }

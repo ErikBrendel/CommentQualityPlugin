@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,static;0;3;/**  * Determine whether Kotlin is present in general.  */ ;/**  * Determine whether Kotlin is present in general.  */ public static boolean isKotlinPresent() {     return (kotlinMetadata != null). }
+true;public,static;0;3;/**  * Determine whether Kotlin reflection is present.  * @since 5.1  */ ;/**  * Determine whether Kotlin reflection is present.  * @since 5.1  */ public static boolean isKotlinReflectPresent() {     return kotlinReflectPresent. }
+true;public,static;1;3;/**  * Determine whether the given {@code Class} is a Kotlin type  * (with Kotlin metadata present on it).  */ ;/**  * Determine whether the given {@code Class} is a Kotlin type  * (with Kotlin metadata present on it).  */ public static boolean isKotlinType(Class<?> clazz) {     return (kotlinMetadata != null && clazz.getDeclaredAnnotation(kotlinMetadata) != null). }

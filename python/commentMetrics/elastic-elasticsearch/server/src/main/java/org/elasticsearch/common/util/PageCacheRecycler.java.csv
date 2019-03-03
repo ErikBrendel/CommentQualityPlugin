@@ -1,0 +1,20 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public void close() {     Releasables.close(true, bytePage, intPage, longPage, objectPage). }
+false;public;1;4;;@Override public byte[] newInstance(int sizing) {     return new byte[BYTE_PAGE_SIZE]. }
+false;public;1;4;;@Override public void recycle(byte[] value) { // nothing to do }
+false;public;1;4;;@Override public int[] newInstance(int sizing) {     return new int[INT_PAGE_SIZE]. }
+false;public;1;4;;@Override public void recycle(int[] value) { // nothing to do }
+false;public;1;4;;@Override public long[] newInstance(int sizing) {     return new long[LONG_PAGE_SIZE]. }
+false;public;1;4;;@Override public void recycle(long[] value) { // nothing to do }
+false;public;1;4;;@Override public Object[] newInstance(int sizing) {     return new Object[OBJECT_PAGE_SIZE]. }
+false;public;1;4;;@Override public void recycle(Object[] value) {     // we need to remove the strong refs on the objects stored in the array     Arrays.fill(value, null). }
+false;public;1;7;;public Recycler.V<byte[]> bytePage(boolean clear) {     final Recycler.V<byte[]> v = bytePage.obtain().     if (v.isRecycled() && clear) {         Arrays.fill(v.v(), (byte) 0).     }     return v. }
+false;public;1;7;;public Recycler.V<int[]> intPage(boolean clear) {     final Recycler.V<int[]> v = intPage.obtain().     if (v.isRecycled() && clear) {         Arrays.fill(v.v(), 0).     }     return v. }
+false;public;1;7;;public Recycler.V<long[]> longPage(boolean clear) {     final Recycler.V<long[]> v = longPage.obtain().     if (v.isRecycled() && clear) {         Arrays.fill(v.v(), 0L).     }     return v. }
+false;public;0;4;;public Recycler.V<Object[]> objectPage() {     // object pages are cleared on release anyway     return objectPage.obtain(). }
+false;private,static;4;9;;private static <T> Recycler<T> build(Type type, int limit, int availableProcessors, Recycler.C<T> c) {     final Recycler<T> recycler.     if (limit == 0) {         recycler = none(c).     } else {         recycler = type.build(c, limit, availableProcessors).     }     return recycler. }
+false;;3;4;;@Override <T> Recycler<T> build(Recycler.C<T> c, int limit, int availableProcessors) {     return concurrentDeque(c, limit). }
+false;;3;4;;@Override <T> Recycler<T> build(Recycler.C<T> c, int limit, int availableProcessors) {     return concurrent(dequeFactory(c, limit / availableProcessors), availableProcessors). }
+false;;3;4;;@Override <T> Recycler<T> build(Recycler.C<T> c, int limit, int availableProcessors) {     return none(c). }
+false;public,static;1;7;;public static Type parse(String type) {     try {         return Type.valueOf(type.toUpperCase(Locale.ROOT)).     } catch (IllegalArgumentException e) {         throw new IllegalArgumentException("no type support [" + type + "]").     } }
+false;abstract;3;1;;abstract <T> Recycler<T> build(Recycler.C<T> c, int limit, int availableProcessors).

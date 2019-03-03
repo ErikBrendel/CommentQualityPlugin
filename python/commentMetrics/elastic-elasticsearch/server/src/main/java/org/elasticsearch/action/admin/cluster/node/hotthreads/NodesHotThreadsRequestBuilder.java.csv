@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;public NodesHotThreadsRequestBuilder setThreads(int threads) {     request.threads(threads).     return this. }
+false;public;1;4;;public NodesHotThreadsRequestBuilder setIgnoreIdleThreads(boolean ignoreIdleThreads) {     request.ignoreIdleThreads(ignoreIdleThreads).     return this. }
+false;public;1;4;;public NodesHotThreadsRequestBuilder setType(String type) {     request.type(type).     return this. }
+false;public;1;4;;public NodesHotThreadsRequestBuilder setInterval(TimeValue interval) {     request.interval(interval).     return this. }

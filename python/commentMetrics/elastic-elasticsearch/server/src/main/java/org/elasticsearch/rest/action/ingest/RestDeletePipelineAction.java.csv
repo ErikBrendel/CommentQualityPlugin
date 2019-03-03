@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getName() {     return "ingest_delete_pipeline_action". }
+false;public;2;7;;@Override public RestChannelConsumer prepareRequest(RestRequest restRequest, NodeClient client) throws IOException {     DeletePipelineRequest request = new DeletePipelineRequest(restRequest.param("id")).     request.masterNodeTimeout(restRequest.paramAsTime("master_timeout", request.masterNodeTimeout())).     request.timeout(restRequest.paramAsTime("timeout", request.timeout())).     return channel -> client.admin().cluster().deletePipeline(request, new RestToXContentListener<>(channel)). }

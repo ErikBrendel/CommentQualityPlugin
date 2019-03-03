@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void testDefaultSettings() {     assertThat(output.toString()).contains("firstName='Alice', lastName='Smith'"). }
+false;public;0;6;;@Override public void evaluate() throws Throwable {     if (!runningOnWindows()) {         base.evaluate().     } }
+false;private;0;3;;private boolean runningOnWindows() {     return File.separatorChar == '\\'. }
+false;public;2;17;;@Override public Statement apply(Statement base, Description description) {     return new Statement() {          @Override         public void evaluate() throws Throwable {             if (!runningOnWindows()) {                 base.evaluate().             }         }          private boolean runningOnWindows() {             return File.separatorChar == '\\'.         }     }. }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;6;;@Override protected AbstractApplicationContext createApplicationContext() {     // lets reuse the xml file from the other test     return new ClassPathXmlApplicationContext(new String[] { "org/apache/camel/test/spring/CamelSpringActiveProfileTest-context.xml" }, false). }
+false;protected;0;5;;@Override protected String[] activeProfiles() {     // return the active profiles to be used     return new String[] { "test" }. }
+false;public;0;6;;@Test public void testLoadActiveProfile() throws InterruptedException {     getMockEndpoint("mock:test").expectedBodiesReceived("Hello World").     template.sendBody("direct:start", "World").     assertMockEndpointsSatisfied(). }

@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;11;;@Override public Producer createProducer() throws Exception {     ServiceNowProducer producer = configuration.getRelease().get(this).     LOGGER.info("Producer for ServiceNow Rel. {} = {}/{}", configuration.getRelease().name(), producer.getRelease().name(), producer.getClass().getName()).     return producer. }
+false;public;1;4;;@Override public Consumer createConsumer(Processor processor) throws Exception {     throw new UnsupportedOperationException("Consumer is not supported"). }
+false;public;0;4;;@Override public boolean isSingleton() {     return true. }
+false;public;0;3;;public ServiceNowConfiguration getConfiguration() {     return configuration. }
+false;public;0;3;;public String getInstanceName() {     return instanceName. }

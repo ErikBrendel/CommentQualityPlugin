@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;10;;@Override protected CamelContext createCamelContext() throws Exception {     CamelContext context = super.createCamelContext().     System.setProperty("propPath", "org/apache/camel/component/properties").     PropertiesComponent pc = context.getComponent("properties", PropertiesComponent.class).     pc.setLocation("classpath:${propPath}/${propFile}").     return context. }
+false;public;0;6;;@Override @After public void tearDown() throws Exception {     super.tearDown().     System.clearProperty("propPath"). }

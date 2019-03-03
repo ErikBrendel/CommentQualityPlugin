@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public SetBodyDefinition getDefinition() {     return (SetBodyDefinition) super.getDefinition(). }
+false;public;0;4;;@Override public String getExpressionLanguage() {     return getDefinition().getExpression().getLanguage(). }
+false;public;0;4;;@Override public String getExpression() {     return getDefinition().getExpression().getExpression(). }

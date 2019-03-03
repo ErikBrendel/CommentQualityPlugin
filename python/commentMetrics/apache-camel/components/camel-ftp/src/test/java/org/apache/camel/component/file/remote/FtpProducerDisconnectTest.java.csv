@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@Override @Before public void setUp() throws Exception {     super.setUp().     // ask the singleton FtpEndpoint to make use of a custom FTPClient     // so that we can hold a reference on it inside the test below     FtpEndpoint<?> endpoint = context.getEndpoint(getFtpUrl(), FtpEndpoint.class).     endpoint.setFtpClient(new FTPClient()). }
+false;private;0;3;;private String getFtpUrl() {     return "ftp://admin@localhost:" + getPort() + "/done?password=admin&disconnect=true". }
+false;public;0;8;;@Test public void testDisconnectOnDone() throws Exception {     sendFile(getFtpUrl(), "Hello World", "claus.txt").     FtpEndpoint<?> endpoint = context.getEndpoint(getFtpUrl(), FtpEndpoint.class).     assertFalse("The FTPClient should be already disconnected", endpoint.getFtpClient().isConnected()).     assertTrue("The FtpEndpoint should be configured to disconnect", endpoint.isDisconnect()). }

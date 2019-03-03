@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;static;2;5;;static void expectations(@Observes @Initialized(ApplicationScoped.class) Object event, @Uri("mock:out") MockEndpoint mock) {     mock.expectedMessageCount(1).     mock.expectedBodiesReceived(1). }
+false;public;1;4;;@Test public void testOne(@Uri("mock:out") MockEndpoint mock) throws InterruptedException {     assertIsSatisfied(1L, TimeUnit.SECONDS, mock). }
+false;public;1;4;;@Test public void testTwo(@Uri("mock:out") MockEndpoint mock) throws InterruptedException {     assertIsSatisfied(1L, TimeUnit.SECONDS, mock). }

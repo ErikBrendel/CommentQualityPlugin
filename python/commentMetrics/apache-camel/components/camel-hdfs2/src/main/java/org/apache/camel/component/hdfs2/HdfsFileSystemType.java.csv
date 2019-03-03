@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;10;;@Override public StringBuilder getHdfsPath(HdfsConfiguration config) {     StringBuilder hpath = new StringBuilder().     hpath.append("file://").     hpath.append(config.getPath()).     if (config.getSplitStrategies().size() > 0) {         hpath.append('/').     }     return hpath. }
+false;public;1;13;;@Override public StringBuilder getHdfsPath(HdfsConfiguration config) {     StringBuilder hpath = new StringBuilder().     hpath.append("hdfs://").     hpath.append(config.getHostName()).     hpath.append(':').     hpath.append(config.getPort()).     hpath.append(config.getPath()).     if (config.getSplitStrategies().size() > 0) {         hpath.append('/').     }     return hpath. }
+false;public,abstract;1;1;;public abstract StringBuilder getHdfsPath(HdfsConfiguration conf).

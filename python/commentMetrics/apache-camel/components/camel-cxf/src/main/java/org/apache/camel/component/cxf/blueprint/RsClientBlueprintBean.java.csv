@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public BlueprintContainer getBlueprintContainer() {     return blueprintContainer. }
+false;public;1;3;;public void setBlueprintContainer(BlueprintContainer blueprintContainer) {     this.blueprintContainer = blueprintContainer. }
+false;public;0;3;;public BundleContext getBundleContext() {     return bundleContext. }
+false;public;1;3;;public void setBundleContext(BundleContext bundleContext) {     this.bundleContext = bundleContext. }
+false;public;0;3;;public boolean isLoggingFeatureEnabled() {     return loggingFeature != null. }
+false;public;1;14;;public void setLoggingFeatureEnabled(boolean loggingFeatureEnabled) {     if (loggingFeature != null) {         getFeatures().remove(loggingFeature).         loggingFeature = null.     }     if (loggingFeatureEnabled) {         loggingFeature = new LoggingFeature().         if (getLoggingSizeLimit() > 0) {             loggingFeature.setLimit(getLoggingSizeLimit()).         }         getFeatures().add(loggingFeature).     } }
+false;public;0;3;;public int getLoggingSizeLimit() {     return loggingSizeLimit. }
+false;public;1;8;;public void setLoggingSizeLimit(int loggingSizeLimit) {     this.loggingSizeLimit = loggingSizeLimit.     if (loggingFeature != null) {         if (loggingSizeLimit > 0) {             loggingFeature.setLimit(loggingSizeLimit).         }     } }
+false;public;1;8;;public void setSkipFaultLogging(boolean skipFaultLogging) {     if (skipFaultLogging) {         if (this.getProperties() == null) {             this.setProperties(new HashMap<String, Object>()).         }         this.getProperties().put(FaultListener.class.getName(), new NullFaultListener()).     } }

@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Override public WebServer getWebServer(ServletContextInitializer... initializers) {     this.webServer = spy(new MockServletWebServer(mergeInitializers(initializers), getPort())).     return this.webServer. }
+false;public;0;3;;public MockServletWebServer getWebServer() {     return this.webServer. }
+false;public;0;3;;public ServletContext getServletContext() {     return (getWebServer() != null) ? getWebServer().getServletContext() : null. }
+false;public;1;4;;public RegisteredServlet getRegisteredServlet(int index) {     return (getWebServer() != null) ? getWebServer().getRegisteredServlet(index) : null. }
+false;public;1;4;;public RegisteredFilter getRegisteredFilter(int index) {     return (getWebServer() != null) ? getWebServer().getRegisteredFilters(index) : null. }
+false;public;0;3;;@Override public void start() throws WebServerException { }

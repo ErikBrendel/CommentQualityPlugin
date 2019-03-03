@@ -1,0 +1,17 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public MockHttpServletRequest getRequest() {     return this.mockRequest. }
+false;public;0;4;;@Override public MockHttpServletResponse getResponse() {     return this.mockResponse. }
+false;public;1;3;;public void setHandler(@Nullable Object handler) {     this.handler = handler. }
+false;public;0;5;;@Override @Nullable public Object getHandler() {     return this.handler. }
+false;public;1;3;;public void setInterceptors(@Nullable HandlerInterceptor... interceptors) {     this.interceptors = interceptors. }
+false;public;0;5;;@Override @Nullable public HandlerInterceptor[] getInterceptors() {     return this.interceptors. }
+false;public;1;3;;public void setResolvedException(Exception resolvedException) {     this.resolvedException = resolvedException. }
+false;public;0;5;;@Override @Nullable public Exception getResolvedException() {     return this.resolvedException. }
+false;public;1;3;;public void setModelAndView(@Nullable ModelAndView mav) {     this.modelAndView = mav. }
+false;public;0;5;;@Override @Nullable public ModelAndView getModelAndView() {     return this.modelAndView. }
+false;public;0;4;;@Override public FlashMap getFlashMap() {     return RequestContextUtils.getOutputFlashMap(this.mockRequest). }
+false;public;1;3;;public void setAsyncResult(Object asyncResult) {     this.asyncResult.set(asyncResult). }
+false;public;0;4;;@Override public Object getAsyncResult() {     return getAsyncResult(-1). }
+false;public;1;14;;@Override public Object getAsyncResult(long timeToWait) {     if (this.mockRequest.getAsyncContext() != null && timeToWait == -1) {         long requestTimeout = this.mockRequest.getAsyncContext().getTimeout().         timeToWait = requestTimeout == -1 ? Long.MAX_VALUE : requestTimeout.     }     if (!awaitAsyncDispatch(timeToWait)) {         throw new IllegalStateException("Async result for handler [" + this.handler + "]" + " was not set during the specified timeToWait=" + timeToWait).     }     Object result = this.asyncResult.get().     Assert.state(result != RESULT_NONE, () -> "Async result for handler [" + this.handler + "] was not set").     return this.asyncResult.get(). }
+true;private;1;10;/**  * True if the latch count reached 0 within the specified timeout.  */ ;/**  * True if the latch count reached 0 within the specified timeout.  */ private boolean awaitAsyncDispatch(long timeout) {     Assert.state(this.asyncDispatchLatch != null, "The asyncDispatch CountDownLatch was not set by the TestDispatcherServlet.").     try {         return this.asyncDispatchLatch.await(timeout, TimeUnit.MILLISECONDS).     } catch (InterruptedException ex) {         return false.     } }
+false;;1;3;;void setAsyncDispatchLatch(CountDownLatch asyncDispatchLatch) {     this.asyncDispatchLatch = asyncDispatchLatch. }

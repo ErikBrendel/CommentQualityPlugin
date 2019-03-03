@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Test public void info() {     client.get().uri("/actuator/info").accept(MediaType.APPLICATION_JSON).exchange().expectStatus().isOk().expectBody().jsonPath("beanName1.key11").isEqualTo("value11").jsonPath("beanName1.key12").isEqualTo("value12").jsonPath("beanName2.key21").isEqualTo("value21").jsonPath("beanName2.key22").isEqualTo("value22"). }
+false;public;0;4;;@Bean public InfoEndpoint endpoint() {     return new InfoEndpoint(Arrays.asList(beanName1(), beanName2())). }
+false;public;0;9;;@Bean public InfoContributor beanName1() {     return (builder) -> {         Map<String, Object> content = new LinkedHashMap<>().         content.put("key11", "value11").         content.put("key12", "value12").         builder.withDetail("beanName1", content).     }. }
+false;public;0;9;;@Bean public InfoContributor beanName2() {     return (builder) -> {         Map<String, Object> content = new LinkedHashMap<>().         content.put("key21", "value21").         content.put("key22", "value22").         builder.withDetail("beanName2", content).     }. }

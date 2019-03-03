@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;1;1;/**  * Set the list of channel interceptors clearing any existing interceptors.  */ ;/**  * Set the list of channel interceptors clearing any existing interceptors.  */ void setInterceptors(List<ChannelInterceptor> interceptors).
+true;;1;1;/**  * Add a channel interceptor to the end of the list.  */ ;/**  * Add a channel interceptor to the end of the list.  */ void addInterceptor(ChannelInterceptor interceptor).
+true;;2;1;/**  * Add a channel interceptor at the specified index.  */ ;/**  * Add a channel interceptor at the specified index.  */ void addInterceptor(int index, ChannelInterceptor interceptor).
+true;;0;1;/**  * Return the list of configured interceptors.  */ ;/**  * Return the list of configured interceptors.  */ List<ChannelInterceptor> getInterceptors().
+true;;1;1;/**  * Remove the given interceptor.  */ ;/**  * Remove the given interceptor.  */ boolean removeInterceptor(ChannelInterceptor interceptor).
+true;;1;1;/**  * Remove the interceptor at the given index.  */ ;/**  * Remove the interceptor at the given index.  */ ChannelInterceptor removeInterceptor(int index).

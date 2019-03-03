@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void testUserStreaming() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:user-streaming").     mock.setResultWaitTime(TimeUnit.MILLISECONDS.convert(1, TimeUnit.MINUTES)).     mock.expectedMessageCount(1).     mock.assertIsSatisfied(). }
+false;public;0;6;;@Override public void configure() {     from("twitter://streaming/user?type=event&" + getUriTokens()).to("log:org.apache.camel.component.twitter?level=INFO&showHeaders=true").to("mock:user-streaming"). }
+false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          @Override         public void configure() {             from("twitter://streaming/user?type=event&" + getUriTokens()).to("log:org.apache.camel.component.twitter?level=INFO&showHeaders=true").to("mock:user-streaming").         }     }. }

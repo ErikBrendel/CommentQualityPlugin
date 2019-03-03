@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * @return the names of index templates this request is requesting  */ ;/**  * @return the names of index templates this request is requesting  */ public List<String> names() {     return names. }
+true;public;0;3;/**  * @return the timeout for waiting for the master node to respond  */ ;/**  * @return the timeout for waiting for the master node to respond  */ public TimeValue getMasterNodeTimeout() {     return masterNodeTimeout. }
+false;public;1;3;;public void setMasterNodeTimeout(@Nullable TimeValue masterNodeTimeout) {     this.masterNodeTimeout = masterNodeTimeout. }
+false;public;1;4;;public void setMasterNodeTimeout(String masterNodeTimeout) {     final TimeValue timeValue = TimeValue.parseTimeValue(masterNodeTimeout, getClass().getSimpleName() + ".masterNodeTimeout").     setMasterNodeTimeout(timeValue). }
+true;public;0;3;/**  * @return true if this request is to read from the local cluster state, rather than the master node - false otherwise  */ ;/**  * @return true if this request is to read from the local cluster state, rather than the master node - false otherwise  */ public boolean isLocal() {     return local. }
+false;public;1;3;;public void setLocal(boolean local) {     this.local = local. }

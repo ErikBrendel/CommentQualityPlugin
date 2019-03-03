@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected Object getImpl() {     return new HelloImpl12(). }
+false;protected;0;13;;@Override protected Hello getPort() {     URL wsdl = getClass().getResource("/mtom.wsdl").     assertNotNull("WSDL is null", wsdl).     HelloService12 service = new HelloService12(wsdl, HelloService12.SERVICE).     assertNotNull("Service is null ", service).     Hello port = service.getHelloPort().     ((BindingProvider) port).getRequestContext().put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY, "http://localhost:" + port1 + "/CxfMtomRouterPayloadMode12Test/jaxws-mtom/hello").     return port. }

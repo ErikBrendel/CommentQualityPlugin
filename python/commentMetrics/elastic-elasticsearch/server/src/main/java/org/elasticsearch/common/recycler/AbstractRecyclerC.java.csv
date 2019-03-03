@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,abstract;1;2;;@Override public abstract T newInstance(int sizing).
+false;public,abstract;1;2;;@Override public abstract void recycle(T value).
+false;public;1;4;;@Override public void destroy(T value) { // by default we simply drop the object for GC. }

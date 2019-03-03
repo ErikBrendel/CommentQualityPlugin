@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void ofShouldCreateUnorderedConfigurations() {     UserConfigurations configurations = UserConfigurations.of(OutputStream.class, InputStream.class).     assertThat(Configurations.getClasses(configurations)).containsExactly(OutputStream.class, InputStream.class). }

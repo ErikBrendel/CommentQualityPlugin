@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void setTestModel(boolean testModel) {     this.testModel = testModel. }
+false;public;1;7;;public String resolveOrderItemChannel(OrderItem orderItem) {     if (testModel) {         return (orderItem.isIced()) ? "mock:coldDrinks" : "mock:hotDrinks".     } else {         return super.resolveOrderItemChannel(orderItem).     } }

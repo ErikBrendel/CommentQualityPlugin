@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;10;;@Override public ClientHttpResponse intercept(HttpRequest request, byte[] body, ClientHttpRequestExecution execution) throws IOException {     HttpHeaders headers = request.getHeaders().     if (!headers.containsKey(HttpHeaders.AUTHORIZATION)) {         headers.setBasicAuth(this.username, this.password, this.charset).     }     return execution.execute(request, body). }

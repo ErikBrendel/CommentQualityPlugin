@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getMethod() {     return this.request.getMethod(). }
+false;public;0;16;;@Override public URI getUri() {     String queryString = this.request.getQueryString().     if (!StringUtils.hasText(queryString)) {         return URI.create(this.request.getRequestURL().toString()).     }     try {         StringBuffer urlBuffer = appendQueryString(queryString).         return new URI(urlBuffer.toString()).     } catch (URISyntaxException ex) {         String encoded = UriUtils.encodeQuery(queryString, StandardCharsets.UTF_8).         StringBuffer urlBuffer = appendQueryString(encoded).         return URI.create(urlBuffer.toString()).     } }
+false;private;1;3;;private StringBuffer appendQueryString(String queryString) {     return this.request.getRequestURL().append("?").append(queryString). }
+false;public;0;4;;@Override public Map<String, List<String>> getHeaders() {     return extractHeaders(). }
+false;public;0;4;;@Override public String getRemoteAddress() {     return this.request.getRemoteAddr(). }
+false;private;0;9;;private Map<String, List<String>> extractHeaders() {     Map<String, List<String>> headers = new LinkedHashMap<>().     Enumeration<String> names = this.request.getHeaderNames().     while (names.hasMoreElements()) {         String name = names.nextElement().         headers.put(name, Collections.list(this.request.getHeaders(name))).     }     return headers. }

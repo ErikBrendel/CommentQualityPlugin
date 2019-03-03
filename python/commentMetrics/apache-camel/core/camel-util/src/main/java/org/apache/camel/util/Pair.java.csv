@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public T getLeft() {     return left. }
+false;public;0;3;;public T getRight() {     return right. }
+false;public;1;11;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     Pair<?> that = (Pair<?>) o.     return Objects.equals(left, that.left) && Objects.equals(right, that.right). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(left, right). }
+false;public;0;4;;@Override public String toString() {     return "(" + left + ", " + right + ")". }

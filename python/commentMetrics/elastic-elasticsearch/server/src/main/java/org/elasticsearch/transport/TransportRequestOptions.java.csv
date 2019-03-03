@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public TimeValue timeout() {     return this.timeout. }
+false;public;0;3;;public Type type() {     return this.type. }
+false;public,static;0;3;;public static Builder builder() {     return new Builder(). }
+false;public,static;1;3;;public static Builder builder(TransportRequestOptions options) {     return new Builder().withTimeout(options.timeout).withType(options.type()). }
+false;public;1;3;;public Builder withTimeout(long timeout) {     return withTimeout(TimeValue.timeValueMillis(timeout)). }
+false;public;1;4;;public Builder withTimeout(TimeValue timeout) {     this.timeout = timeout.     return this. }
+false;public;1;4;;public Builder withType(Type type) {     this.type = type.     return this. }
+false;public;0;3;;public TransportRequestOptions build() {     return new TransportRequestOptions(timeout, type). }

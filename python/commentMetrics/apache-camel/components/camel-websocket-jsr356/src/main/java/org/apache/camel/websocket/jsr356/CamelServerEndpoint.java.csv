@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;3;;Collection<BiConsumer<Session, Object>> getEndpoints() {     return endpoints. }
+false;;0;3;;Session getSession() {     return session. }
+false;public;2;7;;@Override public void onOpen(final Session session, final EndpointConfig endpointConfig) {     this.session = session.     log.debug("Session opened #{}", session.getId()).     session.addMessageHandler(InputStream.class, this::propagateExchange).     session.addMessageHandler(String.class, this::propagateExchange). }
+false;public;2;4;;@Override public void onClose(final Session session, final CloseReason closeReason) {     log.debug("Session closed #{}", session.getId()). }
+false;public;2;13;;@Override public void onError(final Session session, final Throwable throwable) {     synchronized (session) {         if (session.isOpen()) {             try {                 session.close(new CloseReason(CloseReason.CloseCodes.CLOSED_ABNORMALLY, "an exception occured")).             } catch (final IOException e) {                 log.debug("Error closing session #{}", session.getId(), e).             }         }     }     log.debug("Error on session #{}", session.getId(), throwable). }
+false;private;1;5;;private void propagateExchange(final Object message) {     synchronized (session) {         endpoints.forEach(consumer -> consumer.accept(session, message)).     } }

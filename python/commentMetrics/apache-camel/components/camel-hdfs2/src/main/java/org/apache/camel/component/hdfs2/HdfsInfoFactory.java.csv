@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;9;;public static HdfsInfo newHdfsInfo(String hdfsPath) throws IOException {     // need to remember auth as Hadoop will override that, which otherwise means the Auth is broken afterwards     Configuration auth = HdfsComponent.getJAASConfiguration().     try {         return new HdfsInfo(hdfsPath).     } finally {         HdfsComponent.setJAASConfiguration(auth).     } }

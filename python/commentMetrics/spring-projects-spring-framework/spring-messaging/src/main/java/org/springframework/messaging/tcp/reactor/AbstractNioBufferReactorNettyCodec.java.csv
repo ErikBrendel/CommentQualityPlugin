@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public Collection<Message<P>> decode(ByteBuf inputBuffer) {     ByteBuffer nioBuffer = inputBuffer.nioBuffer().     int start = nioBuffer.position().     List<Message<P>> messages = decodeInternal(nioBuffer).     inputBuffer.skipBytes(nioBuffer.position() - start).     return messages. }
+false;public;2;4;;@Override public void encode(Message<P> message, ByteBuf outputBuffer) {     outputBuffer.writeBytes(encodeInternal(message)). }
+false;protected,abstract;1;1;;protected abstract List<Message<P>> decodeInternal(ByteBuffer nioBuffer).
+false;protected,abstract;1;1;;protected abstract ByteBuffer encodeInternal(Message<P> message).

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Test public void autoConfiguredContext() {     ApplicationContext context = this.context.     assertThat(context.getBean(OverrideAutoConfigurationSpringBootApplication.class)).isNotNull().     assertThat(context.getBean(ConfigurationPropertiesBindingPostProcessor.class)).isNotNull(). }

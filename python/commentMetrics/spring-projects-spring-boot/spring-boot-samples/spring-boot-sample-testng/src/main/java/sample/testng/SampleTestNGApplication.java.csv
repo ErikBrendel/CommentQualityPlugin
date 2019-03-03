@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void contextInitialized(ServletContextEvent sce) {     logger.info("ServletContext initialized"). }
+false;public;1;4;;@Override public void contextDestroyed(ServletContextEvent sce) {     logger.info("ServletContext destroyed"). }
+false;protected;0;16;;@Bean protected ServletContextListener listener() {     return new ServletContextListener() {          @Override         public void contextInitialized(ServletContextEvent sce) {             logger.info("ServletContext initialized").         }          @Override         public void contextDestroyed(ServletContextEvent sce) {             logger.info("ServletContext destroyed").         }     }. }
+false;public,static;1;3;;public static void main(String[] args) {     SpringApplication.run(SampleTestNGApplication.class, args). }

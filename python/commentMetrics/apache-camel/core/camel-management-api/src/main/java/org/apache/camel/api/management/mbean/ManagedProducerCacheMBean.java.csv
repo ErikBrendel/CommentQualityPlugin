@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;2;;@ManagedAttribute(description = "Source") String getSource().
+false;;0;2;;@ManagedAttribute(description = "Number of elements cached") Integer getSize().
+false;;0;2;;@ManagedAttribute(description = "Maximum cache size (capacity)") Integer getMaximumCacheSize().
+false;;0;2;;@ManagedAttribute(description = "Cache hits") Long getHits().
+false;;0;2;;@ManagedAttribute(description = "Cache misses") Long getMisses().
+false;;0;2;;@ManagedAttribute(description = "Cache evicted") Long getEvicted().
+false;;0;2;;@ManagedOperation(description = "Reset cache statistics") void resetStatistics().
+false;;0;2;;@ManagedOperation(description = "Purges the cache") void purge().
+false;;0;2;;@ManagedAttribute(description = "EventNotifier enabled") Boolean isEventNotifierEnabled().

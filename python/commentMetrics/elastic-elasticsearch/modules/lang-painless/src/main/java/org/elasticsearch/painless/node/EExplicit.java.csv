@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;1;4;;@Override void extractVariables(Set<String> variables) {     child.extractVariables(variables). }
+false;;1;13;;@Override void analyze(Locals locals) {     actual = locals.getPainlessLookup().canonicalTypeNameToType(type).     if (actual == null) {         throw createError(new IllegalArgumentException("Not a type [" + type + "].")).     }     child.expected = actual.     child.explicit = true.     child.analyze(locals).     child = child.cast(locals). }
+false;;2;4;;@Override void write(MethodWriter writer, Globals globals) {     throw createError(new IllegalStateException("Illegal tree structure.")). }
+false;;1;7;;AExpression cast(Locals locals) {     child.expected = expected.     child.explicit = explicit.     child.internal = internal.     return child.cast(locals). }
+false;public;0;4;;@Override public String toString() {     return singleLineToString(type, child). }

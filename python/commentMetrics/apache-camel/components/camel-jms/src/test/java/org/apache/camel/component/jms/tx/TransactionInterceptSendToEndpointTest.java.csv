@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;protected ClassPathXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("/org/apache/camel/component/jms/tx/TransactionInterceptSendToEndpointTest.xml"). }
+false;public;0;10;;@Test public void testIntercepted() throws Exception {     getMockEndpoint("mock:end").expectedMessageCount(1).     getMockEndpoint("mock:detour").expectedMessageCount(1).     getMockEndpoint("mock:foo").expectedMessageCount(0).     template.sendBody("activemq:start", "Hello World").     assertMockEndpointsSatisfied(). }

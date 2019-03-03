@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getName() {     return username. }
+false;public;0;3;;public String getUsername() {     return username. }
+false;public;0;3;;public String getPassword() {     return password. }
+false;public;0;5;;@Override public String toString() {     // do not display the password     return "HttpPrincipal[" + username + "]". }

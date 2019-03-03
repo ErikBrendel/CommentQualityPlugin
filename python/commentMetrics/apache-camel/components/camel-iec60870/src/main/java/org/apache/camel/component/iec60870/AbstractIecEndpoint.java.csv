@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public ObjectAddress getAddress() {     return this.address. }
+false;protected;0;5;;@Override protected void doStart() throws Exception {     super.doStart().     this.connectionHandle.set(this.connection.register()). }
+false;protected;0;8;;@Override protected void doStop() throws Exception {     final Handle connectionHandle = this.connectionHandle.getAndSet(null).     if (connectionHandle != null) {         connectionHandle.unregister().     }     super.doStop(). }
+false;protected;0;3;;protected T getConnection() {     return this.connection. }
+false;public;0;4;;@Override public boolean isSingleton() {     return true. }

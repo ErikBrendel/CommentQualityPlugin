@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;17;;@Test public void listImageHeaderTest() {     String filter = "{\"dangling\":[\"true\"]}".     Boolean showAll = true.     Map<String, Object> headers = getDefaultParameters().     headers.put(DockerConstants.DOCKER_FILTER, filter).     headers.put(DockerConstants.DOCKER_SHOW_ALL, showAll).     template.sendBodyAndHeaders("direct:in", "", headers).     Mockito.verify(dockerClient, Mockito.times(1)).listImagesCmd().     Mockito.verify(mockObject, Mockito.times(1)).withShowAll(eq(showAll)). }
+false;protected;0;4;;@Override protected void setupMocks() {     Mockito.when(dockerClient.listImagesCmd()).thenReturn(mockObject). }
+false;protected;0;4;;@Override protected DockerOperation getOperation() {     return DockerOperation.LIST_IMAGES. }

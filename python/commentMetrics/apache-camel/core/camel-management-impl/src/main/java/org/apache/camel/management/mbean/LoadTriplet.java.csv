@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;5;/**  * Update the load statistics  *  * @param currentReading the current reading  */ ;/**  * Update the load statistics  *  * @param currentReading the current reading  */ public void update(int currentReading) {     load01 = updateLoad(currentReading, EXP_1, load01).     load05 = updateLoad(currentReading, EXP_5, load05).     load15 = updateLoad(currentReading, EXP_15, load15). }
+false;private;3;3;;private double updateLoad(int reading, double exp, double recentLoad) {     return Double.isNaN(recentLoad) ? reading : reading + exp * (recentLoad - reading). }
+false;public;0;3;;public double getLoad1() {     return load01. }
+false;public;0;3;;public double getLoad5() {     return load05. }
+false;public;0;3;;public double getLoad15() {     return load15. }
+false;public;0;4;;@Override public String toString() {     return String.format("%.2f, %.2f, %.2f", getLoad1(), getLoad5(), getLoad15()). }

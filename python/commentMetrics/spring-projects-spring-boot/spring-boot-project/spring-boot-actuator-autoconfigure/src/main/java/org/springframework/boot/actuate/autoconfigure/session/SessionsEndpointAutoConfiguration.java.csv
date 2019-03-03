@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;7;;@Bean @ConditionalOnBean(FindByIndexNameSessionRepository.class) @ConditionalOnMissingBean public SessionsEndpoint sessionEndpoint(FindByIndexNameSessionRepository<? extends Session> sessionRepository) {     return new SessionsEndpoint(sessionRepository). }

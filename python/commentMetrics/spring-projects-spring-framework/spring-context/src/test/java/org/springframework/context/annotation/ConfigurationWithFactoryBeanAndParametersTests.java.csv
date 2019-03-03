@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void test() {     ApplicationContext ctx = new AnnotationConfigApplicationContext(Config.class, Bar.class).     assertNotNull(ctx.getBean(Bar.class).foo). }
+false;public;1;4;;@Bean public FactoryBean<Foo> fb(@Value("42") String answer) {     return new FooFactoryBean(). }
+false;public;0;4;;@Override public Foo getObject() {     return new Foo(). }
+false;public;0;4;;@Override public Class<Foo> getObjectType() {     return Foo.class. }
+false;public;0;4;;@Override public boolean isSingleton() {     return true. }

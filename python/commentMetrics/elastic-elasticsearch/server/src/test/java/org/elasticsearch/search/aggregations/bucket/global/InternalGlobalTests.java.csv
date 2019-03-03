@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;5;5;;@Override protected InternalGlobal createTestInstance(String name, long docCount, InternalAggregations aggregations, List<PipelineAggregator> pipelineAggregators, Map<String, Object> metaData) {     return new InternalGlobal(name, docCount, aggregations, pipelineAggregators, metaData). }
+false;protected;2;4;;@Override protected void extraAssertReduced(InternalGlobal reduced, List<InternalGlobal> inputs) { // Nothing extra to assert }
+false;protected;0;4;;@Override protected Reader<InternalGlobal> instanceReader() {     return InternalGlobal::new. }
+false;protected;0;4;;@Override protected Class<? extends ParsedSingleBucketAggregation> implementationClass() {     return ParsedGlobal.class. }

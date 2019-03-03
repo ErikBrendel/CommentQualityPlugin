@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;1;1;/**  * Injects the {@link CamelContext}  *  * @param camelContext the Camel context  */ ;/**  * Injects the {@link CamelContext}  *  * @param camelContext the Camel context  */ void setCamelContext(CamelContext camelContext).
+true;;0;1;/**  * Get the {@link CamelContext}  *  * @return camelContext the Camel context  */ ;/**  * Get the {@link CamelContext}  *  * @return camelContext the Camel context  */ CamelContext getCamelContext().
+true;static;2;7;/**  * Set the {@link CamelContext} context if the component is an instance of {@link CamelContextAware}.  */ ;/**  * Set the {@link CamelContext} context if the component is an instance of {@link CamelContextAware}.  */ static <T> T trySetCamelContext(T object, CamelContext camelContext) {     if (object instanceof CamelContextAware) {         ((CamelContextAware) object).setCamelContext(camelContext).     }     return object. }

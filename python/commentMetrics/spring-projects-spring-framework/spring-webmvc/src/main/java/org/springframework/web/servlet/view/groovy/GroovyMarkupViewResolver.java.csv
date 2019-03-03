@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected Class<?> requiredViewClass() {     return GroovyMarkupView.class. }
+true;protected;2;4;/**  * This resolver supports i18n, so cache keys should contain the locale.  */ ;/**  * This resolver supports i18n, so cache keys should contain the locale.  */ @Override protected Object getCacheKey(String viewName, Locale locale) {     return viewName + '_' + locale. }

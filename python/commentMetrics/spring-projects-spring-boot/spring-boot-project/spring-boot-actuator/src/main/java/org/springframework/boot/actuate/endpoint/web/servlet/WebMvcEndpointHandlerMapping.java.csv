@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected LinksHandler getLinksHandler() {     return new WebMvcLinksHandler(). }
+false;public;2;8;;@Override @ResponseBody public Map<String, Map<String, Link>> links(HttpServletRequest request, HttpServletResponse response) {     return Collections.singletonMap("_links", WebMvcEndpointHandlerMapping.this.linksResolver.resolveLinks(request.getRequestURL().toString())). }
+false;public;0;4;;@Override public String toString() {     return "Actuator root web endpoint". }

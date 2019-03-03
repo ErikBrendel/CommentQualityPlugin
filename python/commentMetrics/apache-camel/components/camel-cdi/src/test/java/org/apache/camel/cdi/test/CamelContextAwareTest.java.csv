@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;10;;@Deployment public static Archive<?> deployment() {     return ShrinkWrap.create(JavaArchive.class).addPackage(CdiCamelExtension.class.getPackage()).addClass(CamelContextAwareBean.class).addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml"). }
+false;public;0;4;;@Test public void camelContextAware() {     assertThat(bean.getCamelContext(), is(notNullValue())). }

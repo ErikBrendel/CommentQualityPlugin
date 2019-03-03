@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;5;;public static int getPort(String name) {     int port = AvailablePortFinder.getNextAvailable().     System.setProperty(name, Integer.toString(port)).     return port. }
+false;public,static;0;3;;public static int getPort1() {     return PORT1. }
+false;public,static;0;3;;public static String getConnection() {     return CONNECTION. }
+false;public,static;0;3;;public static String getHostForMQTTEndpoint() {     return HOST. }
+false;public,static;0;8;;public static BrokerService newBrokerService() throws Exception {     BrokerService service = new BrokerService().     service.setPersistent(false).     service.setAdvisorySupport(false).     service.addConnector(getConnection()).     return service. }
+false;public,static;0;6;;public static MQTTComponent newComponent() throws Exception {     MQTTComponent component = new MQTTComponent().     component.setHost(getHostForMQTTEndpoint()).     return component. }

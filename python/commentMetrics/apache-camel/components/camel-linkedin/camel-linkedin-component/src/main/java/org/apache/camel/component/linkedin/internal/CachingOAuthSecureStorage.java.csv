@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Override public OAuthToken getOAuthToken() {     // delegate only if token doesn't exist or has expired     if (secureStorage != null && (token == null || token.getExpiryTime() < System.currentTimeMillis())) {         token = secureStorage.getOAuthToken().     }     return token. }
+false;public;1;7;;@Override public void saveOAuthToken(OAuthToken newToken) {     token = newToken.     if (secureStorage != null) {         secureStorage.saveOAuthToken(newToken).     } }

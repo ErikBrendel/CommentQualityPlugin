@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;9;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeMap(jobsUsage).     out.writeMap(datafeedsUsage).     if (out.getVersion().onOrAfter(Version.V_6_5_0)) {         out.writeInt(nodeCount).     } }
+false;protected;2;13;;@Override protected void innerXContent(XContentBuilder builder, Params params) throws IOException {     super.innerXContent(builder, params).     if (jobsUsage != null) {         builder.field(JOBS_FIELD, jobsUsage).     }     if (datafeedsUsage != null) {         builder.field(DATAFEEDS_FIELD, datafeedsUsage).     }     if (nodeCount >= 0) {         builder.field(NODE_COUNT, nodeCount).     } }

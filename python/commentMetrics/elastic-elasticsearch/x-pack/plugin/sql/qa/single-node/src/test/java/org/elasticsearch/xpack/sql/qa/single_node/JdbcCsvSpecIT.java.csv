@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;6;;@Override protected int fetchSize() {     // similar with https://github.com/elastic/elasticsearch/issues/35176 quicker     return fileName.startsWith("nested") && randomBoolean() ? randomIntBetween(1, 5) : super.fetchSize(). }

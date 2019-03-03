@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected Request doParseInstance(XContentParser parser) {     return UpdateModelSnapshotAction.Request.parseRequest(null, null, parser). }
+false;protected;0;12;;@Override protected Request createTestInstance() {     Request request = new Request(randomAlphaOfLengthBetween(1, 20), randomAlphaOfLengthBetween(1, 20)).     if (randomBoolean()) {         request.setDescription(randomAlphaOfLengthBetween(1, 20)).     }     if (randomBoolean()) {         request.setRetain(randomBoolean()).     }     return request. }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return false. }
+false;protected;0;4;;@Override protected Request createBlankInstance() {     return new Request(). }

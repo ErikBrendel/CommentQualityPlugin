@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;2;1;/**  * Resolve the view name to a View instance.  * @param viewName the name of the view to resolve  * @param locale the locale for the request  * @return the resolved view or an empty stream  */ ;/**  * Resolve the view name to a View instance.  * @param viewName the name of the view to resolve  * @param locale the locale for the request  * @return the resolved view or an empty stream  */ Mono<View> resolveViewName(String viewName, Locale locale).

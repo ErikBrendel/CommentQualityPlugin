@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;11;;@Override protected GetCategoriesResponse createTestInstance() {     String jobId = randomAlphaOfLength(20).     int listSize = randomInt(10).     List<CategoryDefinition> categories = new ArrayList<>(listSize).     for (int j = 0. j < listSize. j++) {         CategoryDefinition category = CategoryDefinitionTests.createTestInstance(jobId).         categories.add(category).     }     return new GetCategoriesResponse(categories, listSize). }
+false;protected;1;4;;@Override protected GetCategoriesResponse doParseInstance(XContentParser parser) throws IOException {     return GetCategoriesResponse.fromXContent(parser). }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }

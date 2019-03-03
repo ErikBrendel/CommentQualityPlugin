@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;5;;public static void main(String[] args) throws Exception {     Main main = new Main().     main.addRouteBuilder(new SensorRoute()).     main.run(). }
+false;public;0;4;;@Override public void configure() throws Exception {     from("pubnub:pubnub-sensor-network?subscribeKey=sub-c-5f1b7c8e-fbee-11e3-aa40-02ee2ddab7fe").log("${body}").to("mock:result"). }

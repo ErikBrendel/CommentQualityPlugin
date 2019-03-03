@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,abstract;0;1;;public abstract E build().
+true;public,static;1;3;/**  * Create a new {@link GeoContextMapping}  */ ;/**  * Create a new {@link GeoContextMapping}  */ public static GeoContextMapping.Builder geo(String name) {     return new GeoContextMapping.Builder(name). }
+true;public,static;1;3;/**  * Create a new {@link CategoryContextMapping}  */ ;/**  * Create a new {@link CategoryContextMapping}  */ public static CategoryContextMapping.Builder category(String name) {     return new CategoryContextMapping.Builder(name). }

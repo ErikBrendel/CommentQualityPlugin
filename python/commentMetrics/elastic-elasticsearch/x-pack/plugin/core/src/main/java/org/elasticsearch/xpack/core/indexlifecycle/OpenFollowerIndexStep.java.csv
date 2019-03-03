@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;4;12;;@Override public void performAction(IndexMetaData indexMetaData, ClusterState currentClusterState, ClusterStateObserver observer, Listener listener) {     OpenIndexRequest request = new OpenIndexRequest(indexMetaData.getIndex().getName()).     getClient().admin().indices().open(request, ActionListener.wrap(r -> {         assert r.isAcknowledged() : "open index response is not acknowledged".         listener.onResponse(true).     }, listener::onFailure)). }

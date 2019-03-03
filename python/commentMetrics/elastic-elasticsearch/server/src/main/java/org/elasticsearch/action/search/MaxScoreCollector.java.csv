@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void setScorer(Scorable scorer) {     this.scorer = scorer. }
+false;public;0;5;;@Override public ScoreMode scoreMode() {     // Could be TOP_SCORES but it is always used in a MultiCollector anyway, so this saves some wrapping.     return ScoreMode.COMPLETE. }
+false;public;1;5;;@Override public void collect(int doc) throws IOException {     hasHits = true.     maxScore = Math.max(maxScore, scorer.score()). }
+true;public;0;3;/**  * Get the maximum score. This returns {@link Float#NaN} if no hits were  * collected.  */ ;/**  * Get the maximum score. This returns {@link Float#NaN} if no hits were  * collected.  */ public float getMaxScore() {     return hasHits ? maxScore : Float.NaN. }

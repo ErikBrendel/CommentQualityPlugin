@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;public void configure() {     errorHandler(noErrorHandler()).     from(routerEndpointURI).to("log:org.apache.camel?level=DEBUG").setHeader(Exchange.DESTINATION_OVERRIDE_URL, constant(getServiceAddress())).to(serviceEndpointURI). }
+false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             errorHandler(noErrorHandler()).             from(routerEndpointURI).to("log:org.apache.camel?level=DEBUG").setHeader(Exchange.DESTINATION_OVERRIDE_URL, constant(getServiceAddress())).to(serviceEndpointURI).         }     }. }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean isUseRouteBuilder() {     return false. }
+false;public;0;6;;@Test public void testComponentJsonSchema() throws Exception {     CamelContext context = new DefaultCamelContext().     String json = context.getComponentParameterJsonSchema("direct").     assertNotNull("Should have found some auto-generated JSON", json). }

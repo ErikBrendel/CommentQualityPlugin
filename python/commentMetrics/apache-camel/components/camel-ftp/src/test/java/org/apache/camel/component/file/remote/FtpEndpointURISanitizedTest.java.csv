@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;3;;protected String getFtpUrl() {     return "ftp://admin@localhost:" + getPort() + "/////foo?password=" + password + "&delay=5000". }
+false;public;0;5;;@Test public void testFtpDirectoryRelative() throws Exception {     Endpoint endpoint = context.getEndpoint(getFtpUrl()).     assertThat(((FtpEndpoint<?>) endpoint).getConfiguration().getDirectoryName(), equalTo("foo")). }
+false;public;0;6;;@Test public void testFtpConsumerUriSanitized() throws Exception {     Endpoint endpoint = context.getEndpoint(getFtpUrl()).     Consumer consumer = endpoint.createConsumer(null).     assertFalse(consumer.toString().contains(password)). }
+false;public;0;6;;@Test public void testFtpProducerUriSanitized() throws Exception {     Endpoint endpoint = context.getEndpoint(getFtpUrl()).     Producer producer = endpoint.createProducer().     assertFalse(producer.toString().contains(password)). }

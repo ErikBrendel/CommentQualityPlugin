@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getName() {     return "mylogin". }
+false;public;0;4;;@Override public String getName() {     return "camel". }
+false;public;3;15;;@Override public UserIdentity login(String username, Object password, ServletRequest servletRequest) {     if ("donald".equals(username)) {         Subject subject = new Subject().         Principal principal = new Principal() {              @Override             public String getName() {                 return "camel".             }         }.         return getIdentityService().newUserIdentity(subject, principal, new String[] { "admin" }).     } else {         return null.     } }
+false;public;1;4;;@Override public boolean validate(UserIdentity userIdentity) {     return true. }
+false;public;0;4;;@Override public IdentityService getIdentityService() {     return is. }
+false;public;1;4;;@Override public void setIdentityService(IdentityService identityService) {     this.is = identityService. }
+false;public;1;4;;@Override public void logout(UserIdentity userIdentity) { // noop }

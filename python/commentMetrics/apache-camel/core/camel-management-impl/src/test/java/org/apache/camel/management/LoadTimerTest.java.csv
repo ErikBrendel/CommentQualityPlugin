@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean isUseRouteBuilder() {     return false. }
+false;public;0;21;;@Test public void testTimer() throws Exception {     TimerListenerManager myTimer = new TimerListenerManager().     myTimer.setCamelContext(context).     myTimer.start().     TestLoadAware test = new TestLoadAware().     myTimer.addTimerListener(test).     try {         await().atMost(5, TimeUnit.SECONDS).untilAsserted(() -> {             assertTrue(test.counter >= SAMPLES).             assertFalse(Double.isNaN(test.load.getLoad1())).             assertTrue(test.load.getLoad1() > 0.0d).             assertTrue(test.load.getLoad1() < SAMPLES).         }).     } finally {         myTimer.removeTimerListener(test).     }     myTimer.stop(). }
+false;public;0;4;;@Override public void onTimer() {     load.update(++counter). }

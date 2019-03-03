@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;6;;@Override protected void doPreSetup() throws Exception {     List<ValidationProvider<?>> validationProviders = asList(new HibernateValidator()).     given(validationProviderResolver.getValidationProviders()).willReturn(validationProviders).     super.doPreSetup(). }
+false;public;0;5;;@Override public void configure() throws Exception {     from("direct:test").to("bean-validator://ValidationProviderResolverTest?validationProviderResolver=#myValidationProviderResolver"). }
+false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:test").to("bean-validator://ValidationProviderResolverTest?validationProviderResolver=#myValidationProviderResolver").         }     }. }
+false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry registry = super.createRegistry().     registry.bind("myValidationProviderResolver", validationProviderResolver).     return registry. }
+false;public;0;4;;// Tests @Test public void shouldResolveCustomValidationProviderResolver() {     verify(validationProviderResolver, atLeastOnce()).getValidationProviders(). }

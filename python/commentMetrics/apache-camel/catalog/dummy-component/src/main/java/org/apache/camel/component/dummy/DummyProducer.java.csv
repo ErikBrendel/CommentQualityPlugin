@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;7;;@Override public void process(Exchange exchange) throws Exception {     total += amount.     exchange.getIn().setBody("total " + total + " of " + drink.name().toLowerCase() + " ordered" + (celebrity ? " from famous person" : "")). }

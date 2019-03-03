@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;4;12;;@Override public int score(LeafCollector collector, Bits acceptDocs, int min, int max) throws IOException {     int interval = INITIAL_INTERVAL.     while (min < max) {         checkCancelled.run().         final int newMax = (int) Math.min((long) min + interval, max).         min = scorer.score(collector, acceptDocs, min, newMax).         interval = Math.min(interval << 1, MAX_INTERVAL).     }     checkCancelled.run().     return min. }
+false;public;0;4;;@Override public long cost() {     return scorer.cost(). }

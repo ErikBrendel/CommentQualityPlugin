@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;1;;String name().
+false;;0;1;;String description().
+false;;0;1;;boolean available().
+false;;0;1;;boolean enabled().
+false;;0;1;;Map<String, Object> nativeCodeInfo().
+false;;1;1;;void usage(ActionListener<Usage> listener).
+false;public;0;3;;public String name() {     return name. }
+false;public;0;3;;public boolean available() {     return available. }
+false;public;0;3;;public boolean enabled() {     return enabled. }
+false;public;0;4;;@Override public String getWriteableName() {     return name. }
+false;public;1;6;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeString(name).     out.writeBoolean(available).     out.writeBoolean(enabled). }
+false;public,final;2;6;;@Override public final XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     innerXContent(builder, params).     return builder.endObject(). }
+false;protected;2;4;;protected void innerXContent(XContentBuilder builder, Params params) throws IOException {     builder.field(AVAILABLE_XFIELD, available).     builder.field(ENABLED_XFIELD, enabled). }

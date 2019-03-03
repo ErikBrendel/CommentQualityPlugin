@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void process(String body) {     this.body = body. }
+false;public;0;5;;public String getAndClearBody() {     String answer = body.     body = null.     return answer. }

@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void entryAdded(EntryEvent<Object, Object> event) {     this.sendExchange(HazelcastConstants.ADDED, event.getKey(), event.getValue()). }
+false;public;1;3;;public void entryEvicted(EntryEvent<Object, Object> event) {     this.sendExchange(HazelcastConstants.EVICTED, event.getKey(), event.getValue()). }
+false;public;1;3;;public void mapEvicted(MapEvent mapEvent) { // noop }
+false;public;1;3;;public void mapCleared(MapEvent mapEvent) { // noop }
+false;public;1;3;;public void entryRemoved(EntryEvent<Object, Object> event) {     this.sendExchange(HazelcastConstants.REMOVED, event.getKey(), event.getValue()). }
+false;public;1;3;;public void entryUpdated(EntryEvent<Object, Object> event) {     this.sendExchange(HazelcastConstants.UPDATED, event.getKey(), event.getValue()). }

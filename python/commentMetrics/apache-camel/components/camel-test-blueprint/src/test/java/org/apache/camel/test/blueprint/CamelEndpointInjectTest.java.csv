@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected String getBlueprintDescriptor() {     return "org/apache/camel/test/blueprint/camelEndpointInject.xml". }
+false;public;0;11;;@Test public void testEndpointInjection() throws Exception {     MockEndpoint mock = context.getEndpoint("mock:result", MockEndpoint.class).     assertNotNull(mock).     mock.expectedMessageCount(1).     MyProducer producer = context.getRegistry().lookupByNameAndType("myProducer", MyProducer.class).     producer.doSomething("Hello World").     mock.assertIsSatisfied(). }

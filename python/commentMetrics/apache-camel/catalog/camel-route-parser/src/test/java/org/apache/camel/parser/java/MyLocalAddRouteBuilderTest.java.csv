@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean isUseRouteBuilder() {     return false. }
+false;public;0;5;;@Override public void configure() throws Exception {     from("direct:start").to("mock:foo"). }
+false;public;0;19;;@Test public void testFoo() throws Exception {     log.info("Adding a route locally").     context.addRoutes(new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").to("mock:foo").         }     }).     context.start().     getMockEndpoint("mock:foo").expectedMessageCount(1).     template.sendBody("direct:start", "Hello World").     assertMockEndpointsSatisfied(). }

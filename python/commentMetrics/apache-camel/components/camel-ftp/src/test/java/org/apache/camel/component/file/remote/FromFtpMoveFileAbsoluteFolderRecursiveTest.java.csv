@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;protected String getFtpUrl() {     return "ftp://admin@localhost:" + getPort() + "/movefile?password=admin&recursive=true&binary=false" + "&move=/.done/${file:name}.old&initialDelay=2500&delay=5000". }
+false;public;0;6;;@Override @Before public void setUp() throws Exception {     super.setUp().     prepareFtpServer(). }
+false;public;0;10;;@Test public void testPollFileAndShouldBeMoved() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedBodiesReceivedInAnyOrder("Hello", "Bye", "Goodday").     mock.expectedFileExists(FTP_ROOT_DIR + "/.done/hello.txt.old").     mock.expectedFileExists(FTP_ROOT_DIR + "/.done/bye/bye.txt.old").     mock.expectedFileExists(FTP_ROOT_DIR + "/.done/goodday/goodday.txt.old").     mock.assertIsSatisfied(). }
+false;private;0;5;;private void prepareFtpServer() throws Exception {     template.sendBodyAndHeader(getFtpUrl(), "Hello", Exchange.FILE_NAME, "hello.txt").     template.sendBodyAndHeader(getFtpUrl(), "Bye", Exchange.FILE_NAME, "bye/bye.txt").     template.sendBodyAndHeader(getFtpUrl(), "Goodday", Exchange.FILE_NAME, "goodday/goodday.txt"). }
+false;public;0;3;;public void configure() throws Exception {     from(getFtpUrl()).to("mock:result"). }
+false;protected;0;7;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from(getFtpUrl()).to("mock:result").         }     }. }

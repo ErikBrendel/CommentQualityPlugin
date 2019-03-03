@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected,abstract;0;1;;protected abstract String[] getApplicationContextFiles().
+false;public;0;4;;@Before public void setUp() throws Exception {     ctx = new ClassPathXmlApplicationContext(getApplicationContextFiles()). }
+false;public;0;4;;@After public void tearDown() throws Exception {     IOHelper.close(ctx). }

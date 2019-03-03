@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Exception getException() {     return exception. }
+false;public;0;3;;public Stat getStatistics() {     return statistics. }
+false;public;0;3;;public ResultType getResult() {     return result. }
+false;public;0;3;;public boolean isOk() {     return ok. }
+false;public;1;11;;public boolean failedDueTo(Code... codes) {     if (exception instanceof KeeperException) {         for (Code code : codes) {             if (code.equals(((KeeperException) exception).code())) {                 return true.             }         }     }     return false. }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;protected,abstract;1;1;/**  *  Introduces random changes into the test object  */ ;/**  *  Introduces random changes into the test object  */ protected abstract T makeTestChanges(T testInstance).
+false;protected,abstract;0;1;;protected abstract Reader<Diff<T>> diffReader().
+false;public,final;0;4;;public final void testDiffableSerialization() throws IOException {     DiffableTestUtils.testDiffableSerialization(this::createTestInstance, this::makeTestChanges, getNamedWriteableRegistry(), instanceReader(), diffReader()). }

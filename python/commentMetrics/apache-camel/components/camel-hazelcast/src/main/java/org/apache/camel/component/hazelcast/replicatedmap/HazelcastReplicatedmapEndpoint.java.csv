@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;public Consumer createConsumer(Processor processor) throws Exception {     HazelcastReplicatedmapConsumer answer = new HazelcastReplicatedmapConsumer(hazelcastInstance, this, processor, cacheName).     configureConsumer(answer).     return answer. }
+false;public;0;3;;public Producer createProducer() throws Exception {     return new HazelcastReplicatedmapProducer(hazelcastInstance, this, cacheName). }

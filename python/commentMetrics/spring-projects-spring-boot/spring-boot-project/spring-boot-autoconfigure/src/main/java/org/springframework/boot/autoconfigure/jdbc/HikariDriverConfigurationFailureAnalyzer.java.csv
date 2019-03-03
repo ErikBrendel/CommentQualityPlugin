@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;2;14;;@Override protected FailureAnalysis analyze(Throwable rootFailure, CannotGetJdbcConnectionException cause) {     if (!EXPECTED_MESSAGE.equals(cause.getMessage())) {         return null.     }     return new FailureAnalysis("Configuration of the Hikari connection pool failed: " + "'dataSourceClassName' is not supported.", "Spring Boot auto-configures only a driver and can't specify a custom " + "DataSource. Consider configuring the Hikari DataSource in " + "your own configuration.", cause). }

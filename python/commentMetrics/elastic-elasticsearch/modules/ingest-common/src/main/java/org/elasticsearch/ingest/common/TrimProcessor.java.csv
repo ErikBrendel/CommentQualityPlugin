@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected String process(String value) {     return value.trim(). }
+false;public;0;4;;@Override public String getType() {     return TYPE. }
+false;protected;5;5;;@Override protected TrimProcessor newProcessor(String tag, Map<String, Object> config, String field, boolean ignoreMissing, String targetField) {     return new TrimProcessor(tag, field, ignoreMissing, targetField). }

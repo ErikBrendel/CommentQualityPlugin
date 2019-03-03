@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Override public void init() {     registerBeanDefinitionParser("handlers", new HandlersBeanDefinitionParser()).     if (isSpringMessagingPresent) {         registerBeanDefinitionParser("message-broker", new MessageBrokerBeanDefinitionParser()).     } }

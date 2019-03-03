@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Test public void testOneWayInJmsOutPojo() throws Exception {     // Send a message to the JMS endpoint     template.sendBodyAndHeader("jms:test", "Hello", "cheese", 123).     // The Activated endpoint should send it to the pojo due to the configured route.     assertTrue("The message ware received by the Pojo", receivedCountDown.await(5, TimeUnit.SECONDS)). }
+false;public;0;3;;public void configure() {     from("jms:test").to("bean:myBean"). }
+false;protected;0;8;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() {             from("jms:test").to("bean:myBean").         }     }. }
+false;protected;1;10;;@Override protected void bindToRegistry(Registry registry) throws Exception {     // add ActiveMQ with embedded broker     ConnectionFactory connectionFactory = CamelJmsTestHelper.createConnectionFactory().     JmsComponent amq = jmsComponentAutoAcknowledge(connectionFactory).     amq.setCamelContext(context).     registry.bind("myBean", myBean).     registry.bind("jms", amq). }
+false;public;1;4;;public void onMessage(String body) {     log.info("Received: " + body).     receivedCountDown.countDown(). }

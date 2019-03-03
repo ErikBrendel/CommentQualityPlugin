@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;3;/**  * Specify the collection of Cache instances to use for this CacheManager.  */ ;/**  * Specify the collection of Cache instances to use for this CacheManager.  */ public void setCaches(Collection<? extends Cache> caches) {     this.caches = caches. }
+false;protected;0;4;;@Override protected Collection<? extends Cache> loadCaches() {     return this.caches. }

@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;public RecordsQueryBuilder from(int from) {     this.from = from.     return this. }
+false;public;1;4;;public RecordsQueryBuilder size(int size) {     this.size = size.     return this. }
+false;public;1;4;;public RecordsQueryBuilder epochStart(String startTime) {     this.start = startTime.     return this. }
+false;public;1;4;;public RecordsQueryBuilder epochEnd(String endTime) {     this.end = endTime.     return this. }
+false;public;1;4;;public RecordsQueryBuilder includeInterim(boolean include) {     this.includeInterim = include.     return this. }
+false;public;1;4;;public RecordsQueryBuilder sortField(String fieldname) {     this.sortField = fieldname.     return this. }
+false;public;1;4;;public RecordsQueryBuilder sortDescending(boolean sortDescending) {     this.sortDescending = sortDescending.     return this. }
+false;public;1;4;;public RecordsQueryBuilder recordScore(double recordScore) {     this.recordScore = recordScore.     return this. }
+false;public;1;4;;public RecordsQueryBuilder timestamp(Date timestamp) {     this.timestamp = timestamp.     return this. }
+false;public;0;36;;public SearchSourceBuilder build() {     QueryBuilder query = new ResultsFilterBuilder().timeRange(Result.TIMESTAMP.getPreferredName(), start, end).score(AnomalyRecord.RECORD_SCORE.getPreferredName(), recordScore).interim(includeInterim).build().     FieldSortBuilder sb.     if (sortField != null) {         sb = new FieldSortBuilder(sortField).missing("_last").order(sortDescending ? SortOrder.DESC : SortOrder.ASC).     } else {         sb = SortBuilders.fieldSort(ElasticsearchMappings.ES_DOC).     }     BoolQueryBuilder recordFilter = new BoolQueryBuilder().filter(query).filter(new TermsQueryBuilder(Result.RESULT_TYPE.getPreferredName(), AnomalyRecord.RESULT_TYPE_VALUE)).     if (timestamp != null) {         recordFilter.filter(QueryBuilders.termQuery(Result.TIMESTAMP.getPreferredName(), timestamp.getTime())).     }     SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder().from(from).size(size).query(recordFilter).sort(sb).fetchSource(true).     for (String sortField : SECONDARY_SORT) {         searchSourceBuilder.sort(sortField, sortDescending ? SortOrder.DESC : SortOrder.ASC).     }     return searchSourceBuilder. }

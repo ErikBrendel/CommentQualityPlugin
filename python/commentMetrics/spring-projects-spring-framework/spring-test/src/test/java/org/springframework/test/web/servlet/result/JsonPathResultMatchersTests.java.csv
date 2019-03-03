@@ -1,0 +1,43 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test(expected = AssertionError.class) public void valueWithMismatch() throws Exception {     new JsonPathResultMatchers("$.str").value("bogus").match(stubMvcResult). }
+false;public;0;4;;@Test public void valueWithDirectMatch() throws Exception {     new JsonPathResultMatchers("$.str").value("foo").match(stubMvcResult). }
+false;public;0;4;;// SPR-16587 @Test public void valueWithNumberConversion() throws Exception {     new JsonPathResultMatchers("$.num").value(5.0f).match(stubMvcResult). }
+false;public;0;4;;@Test public void valueWithMatcher() throws Exception {     new JsonPathResultMatchers("$.str").value(Matchers.equalTo("foo")).match(stubMvcResult). }
+false;public;0;4;;// SPR-16587 @Test public void valueWithMatcherAndNumberConversion() throws Exception {     new JsonPathResultMatchers("$.num").value(Matchers.equalTo(5.0f), Float.class).match(stubMvcResult). }
+false;public;0;4;;@Test(expected = AssertionError.class) public void valueWithMatcherAndMismatch() throws Exception {     new JsonPathResultMatchers("$.str").value(Matchers.equalTo("bogus")).match(stubMvcResult). }
+false;public;0;4;;@Test public void exists() throws Exception {     new JsonPathResultMatchers("$.str").exists().match(stubMvcResult). }
+false;public;0;4;;@Test public void existsForAnEmptyArray() throws Exception {     new JsonPathResultMatchers("$.emptyArray").exists().match(stubMvcResult). }
+false;public;0;4;;@Test public void existsForAnEmptyMap() throws Exception {     new JsonPathResultMatchers("$.emptyMap").exists().match(stubMvcResult). }
+false;public;0;4;;@Test(expected = AssertionError.class) public void existsNoMatch() throws Exception {     new JsonPathResultMatchers("$.bogus").exists().match(stubMvcResult). }
+false;public;0;4;;@Test public void doesNotExist() throws Exception {     new JsonPathResultMatchers("$.bogus").doesNotExist().match(stubMvcResult). }
+false;public;0;4;;@Test(expected = AssertionError.class) public void doesNotExistNoMatch() throws Exception {     new JsonPathResultMatchers("$.str").doesNotExist().match(stubMvcResult). }
+false;public;0;4;;@Test(expected = AssertionError.class) public void doesNotExistForAnEmptyArray() throws Exception {     new JsonPathResultMatchers("$.emptyArray").doesNotExist().match(stubMvcResult). }
+false;public;0;4;;@Test(expected = AssertionError.class) public void doesNotExistForAnEmptyMap() throws Exception {     new JsonPathResultMatchers("$.emptyMap").doesNotExist().match(stubMvcResult). }
+false;public;0;4;;@Test public void isEmptyForAnEmptyString() throws Exception {     new JsonPathResultMatchers("$.emptyString").isEmpty().match(stubMvcResult). }
+false;public;0;4;;@Test public void isEmptyForAnEmptyArray() throws Exception {     new JsonPathResultMatchers("$.emptyArray").isEmpty().match(stubMvcResult). }
+false;public;0;4;;@Test public void isEmptyForAnEmptyMap() throws Exception {     new JsonPathResultMatchers("$.emptyMap").isEmpty().match(stubMvcResult). }
+false;public;0;4;;@Test public void isNotEmptyForString() throws Exception {     new JsonPathResultMatchers("$.str").isNotEmpty().match(stubMvcResult). }
+false;public;0;4;;@Test public void isNotEmptyForNumber() throws Exception {     new JsonPathResultMatchers("$.num").isNotEmpty().match(stubMvcResult). }
+false;public;0;4;;@Test public void isNotEmptyForBoolean() throws Exception {     new JsonPathResultMatchers("$.bool").isNotEmpty().match(stubMvcResult). }
+false;public;0;4;;@Test public void isNotEmptyForArray() throws Exception {     new JsonPathResultMatchers("$.arr").isNotEmpty().match(stubMvcResult). }
+false;public;0;4;;@Test public void isNotEmptyForMap() throws Exception {     new JsonPathResultMatchers("$.colorMap").isNotEmpty().match(stubMvcResult). }
+false;public;0;4;;@Test(expected = AssertionError.class) public void isNotEmptyForAnEmptyString() throws Exception {     new JsonPathResultMatchers("$.emptyString").isNotEmpty().match(stubMvcResult). }
+false;public;0;4;;@Test(expected = AssertionError.class) public void isNotEmptyForAnEmptyArray() throws Exception {     new JsonPathResultMatchers("$.emptyArray").isNotEmpty().match(stubMvcResult). }
+false;public;0;4;;@Test(expected = AssertionError.class) public void isNotEmptyForAnEmptyMap() throws Exception {     new JsonPathResultMatchers("$.emptyMap").isNotEmpty().match(stubMvcResult). }
+false;public;0;4;;@Test public void isArray() throws Exception {     new JsonPathResultMatchers("$.arr").isArray().match(stubMvcResult). }
+false;public;0;4;;@Test public void isArrayForAnEmptyArray() throws Exception {     new JsonPathResultMatchers("$.emptyArray").isArray().match(stubMvcResult). }
+false;public;0;4;;@Test(expected = AssertionError.class) public void isArrayNoMatch() throws Exception {     new JsonPathResultMatchers("$.bar").isArray().match(stubMvcResult). }
+false;public;0;4;;@Test public void isMap() throws Exception {     new JsonPathResultMatchers("$.colorMap").isMap().match(stubMvcResult). }
+false;public;0;4;;@Test public void isMapForAnEmptyMap() throws Exception {     new JsonPathResultMatchers("$.emptyMap").isMap().match(stubMvcResult). }
+false;public;0;4;;@Test(expected = AssertionError.class) public void isMapNoMatch() throws Exception {     new JsonPathResultMatchers("$.str").isMap().match(stubMvcResult). }
+false;public;0;4;;@Test public void isBoolean() throws Exception {     new JsonPathResultMatchers("$.bool").isBoolean().match(stubMvcResult). }
+false;public;0;4;;@Test(expected = AssertionError.class) public void isBooleanNoMatch() throws Exception {     new JsonPathResultMatchers("$.str").isBoolean().match(stubMvcResult). }
+false;public;0;4;;@Test public void isNumber() throws Exception {     new JsonPathResultMatchers("$.num").isNumber().match(stubMvcResult). }
+false;public;0;4;;@Test(expected = AssertionError.class) public void isNumberNoMatch() throws Exception {     new JsonPathResultMatchers("$.str").isNumber().match(stubMvcResult). }
+false;public;0;4;;@Test public void isString() throws Exception {     new JsonPathResultMatchers("$.str").isString().match(stubMvcResult). }
+false;public;0;4;;@Test(expected = AssertionError.class) public void isStringNoMatch() throws Exception {     new JsonPathResultMatchers("$.arr").isString().match(stubMvcResult). }
+false;public;0;6;;@Test(expected = AssertionError.class) public void valueWithJsonPrefixNotConfigured() throws Exception {     String jsonPrefix = "prefix".     StubMvcResult result = createPrefixedStubMvcResult(jsonPrefix).     new JsonPathResultMatchers("$.str").value("foo").match(result). }
+false;public;0;6;;@Test(expected = AssertionError.class) public void valueWithJsonWrongPrefix() throws Exception {     String jsonPrefix = "prefix".     StubMvcResult result = createPrefixedStubMvcResult(jsonPrefix).     new JsonPathResultMatchers("$.str").prefix("wrong").value("foo").match(result). }
+false;public;0;6;;@Test public void valueWithJsonPrefix() throws Exception {     String jsonPrefix = "prefix".     StubMvcResult result = createPrefixedStubMvcResult(jsonPrefix).     new JsonPathResultMatchers("$.str").prefix(jsonPrefix).value("foo").match(result). }
+false;public;0;9;;@Test(expected = AssertionError.class) public void prefixWithPayloadNotLongEnough() throws Exception {     MockHttpServletResponse response = new MockHttpServletResponse().     response.addHeader("Content-Type", "application/json").     response.getWriter().print(new String("test".getBytes("ISO-8859-1"))).     StubMvcResult result = new StubMvcResult(null, null, null, null, null, null, response).     new JsonPathResultMatchers("$.str").prefix("prefix").value("foo").match(result). }
+false;private;1;6;;private StubMvcResult createPrefixedStubMvcResult(String jsonPrefix) throws Exception {     MockHttpServletResponse response = new MockHttpServletResponse().     response.addHeader("Content-Type", "application/json").     response.getWriter().print(jsonPrefix + new String(RESPONSE_CONTENT.getBytes("ISO-8859-1"))).     return new StubMvcResult(null, null, null, null, null, null, response). }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void setBeanFactory(BeanFactory beanFactory) {     this.beanFactory = beanFactory. }
+false;public;1;11;;@Override public MessageChannel resolveDestination(String name) {     Assert.state(this.beanFactory != null, "No BeanFactory configured").     try {         return this.beanFactory.getBean(name, MessageChannel.class).     } catch (BeansException ex) {         throw new DestinationResolutionException("Failed to find MessageChannel bean with name '" + name + "'", ex).     } }

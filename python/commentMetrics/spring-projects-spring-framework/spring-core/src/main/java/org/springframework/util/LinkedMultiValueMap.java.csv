@@ -1,0 +1,25 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;// MultiValueMap implementation @Override @Nullable public V getFirst(K key) {     List<V> values = this.targetMap.get(key).     return (values != null ? values.get(0) : null). }
+false;public;2;5;;@Override public void add(K key, @Nullable V value) {     List<V> values = this.targetMap.computeIfAbsent(key, k -> new LinkedList<>()).     values.add(value). }
+false;public;2;5;;@Override public void addAll(K key, List<? extends V> values) {     List<V> currentValues = this.targetMap.computeIfAbsent(key, k -> new LinkedList<>()).     currentValues.addAll(values). }
+false;public;1;6;;@Override public void addAll(MultiValueMap<K, V> values) {     for (Entry<K, List<V>> entry : values.entrySet()) {         addAll(entry.getKey(), entry.getValue()).     } }
+false;public;2;6;;@Override public void set(K key, @Nullable V value) {     List<V> values = new LinkedList<>().     values.add(value).     this.targetMap.put(key, values). }
+false;public;1;4;;@Override public void setAll(Map<K, V> values) {     values.forEach(this::set). }
+false;public;0;6;;@Override public Map<K, V> toSingleValueMap() {     LinkedHashMap<K, V> singleValueMap = new LinkedHashMap<>(this.targetMap.size()).     this.targetMap.forEach((key, value) -> singleValueMap.put(key, value.get(0))).     return singleValueMap. }
+false;public;0;4;;// Map implementation @Override public int size() {     return this.targetMap.size(). }
+false;public;0;4;;@Override public boolean isEmpty() {     return this.targetMap.isEmpty(). }
+false;public;1;4;;@Override public boolean containsKey(Object key) {     return this.targetMap.containsKey(key). }
+false;public;1;4;;@Override public boolean containsValue(Object value) {     return this.targetMap.containsValue(value). }
+false;public;1;5;;@Override @Nullable public List<V> get(Object key) {     return this.targetMap.get(key). }
+false;public;2;5;;@Override @Nullable public List<V> put(K key, List<V> value) {     return this.targetMap.put(key, value). }
+false;public;1;5;;@Override @Nullable public List<V> remove(Object key) {     return this.targetMap.remove(key). }
+false;public;1;4;;@Override public void putAll(Map<? extends K, ? extends List<V>> map) {     this.targetMap.putAll(map). }
+false;public;0;4;;@Override public void clear() {     this.targetMap.clear(). }
+false;public;0;4;;@Override public Set<K> keySet() {     return this.targetMap.keySet(). }
+false;public;0;4;;@Override public Collection<List<V>> values() {     return this.targetMap.values(). }
+false;public;0;4;;@Override public Set<Entry<K, List<V>>> entrySet() {     return this.targetMap.entrySet(). }
+true;public;0;5;/**  * Create a deep copy of this Map.  * @return a copy of this Map, including a copy of each value-holding List entry  * (consistently using an independent modifiable {@link LinkedList} for each entry)  * along the lines of {@code MultiValueMap.addAll} semantics  * @since 4.2  * @see #addAll(MultiValueMap)  * @see #clone()  */ ;/**  * Create a deep copy of this Map.  * @return a copy of this Map, including a copy of each value-holding List entry  * (consistently using an independent modifiable {@link LinkedList} for each entry)  * along the lines of {@code MultiValueMap.addAll} semantics  * @since 4.2  * @see #addAll(MultiValueMap)  * @see #clone()  */ public LinkedMultiValueMap<K, V> deepCopy() {     LinkedMultiValueMap<K, V> copy = new LinkedMultiValueMap<>(this.targetMap.size()).     this.targetMap.forEach((key, value) -> copy.put(key, new LinkedList<>(value))).     return copy. }
+true;public;0;4;/**  * Create a regular copy of this Map.  * @return a shallow copy of this Map, reusing this Map's value-holding List entries  * (even if some entries are shared or unmodifiable) along the lines of standard  * {@code Map.put} semantics  * @since 4.2  * @see #put(Object, List)  * @see #putAll(Map)  * @see LinkedMultiValueMap#LinkedMultiValueMap(Map)  * @see #deepCopy()  */ ;/**  * Create a regular copy of this Map.  * @return a shallow copy of this Map, reusing this Map's value-holding List entries  * (even if some entries are shared or unmodifiable) along the lines of standard  * {@code Map.put} semantics  * @since 4.2  * @see #put(Object, List)  * @see #putAll(Map)  * @see LinkedMultiValueMap#LinkedMultiValueMap(Map)  * @see #deepCopy()  */ @Override public LinkedMultiValueMap<K, V> clone() {     return new LinkedMultiValueMap<>(this). }
+false;public;1;4;;@Override public boolean equals(Object obj) {     return this.targetMap.equals(obj). }
+false;public;0;4;;@Override public int hashCode() {     return this.targetMap.hashCode(). }
+false;public;0;4;;@Override public String toString() {     return this.targetMap.toString(). }

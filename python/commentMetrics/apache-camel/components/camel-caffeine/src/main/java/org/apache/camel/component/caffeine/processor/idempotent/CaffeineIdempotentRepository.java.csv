@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@ManagedAttribute(description = "The processor name") public String getCacheName() {     return cacheName. }
+false;public;1;10;;@Override @ManagedOperation(description = "Adds the key to the store") public boolean add(String key) {     if (cache.asMap().containsKey(key)) {         return false.     } else {         cache.put(key, true).         return true.     } }
+false;public;1;4;;@Override public boolean confirm(String key) {     return cache.asMap().containsKey(key). }
+false;public;1;5;;@Override @ManagedOperation(description = "Does the store contain the given key") public boolean contains(String key) {     return cache.asMap().containsKey(key). }
+false;public;1;6;;@Override @ManagedOperation(description = "Remove the key from the store") public boolean remove(String key) {     cache.invalidate(key).     return true. }
+false;public;0;5;;@Override @ManagedOperation(description = "Clear the store") public void clear() {     cache.invalidateAll(). }
+false;protected;0;7;;@Override protected void doStart() throws Exception {     if (cache == null) {         Caffeine<Object, Object> builder = Caffeine.newBuilder().         cache = builder.build().     } }
+false;protected;0;3;;protected Cache getCache() {     return this.cache. }
+false;protected;0;3;;@Override protected void doStop() throws Exception { }

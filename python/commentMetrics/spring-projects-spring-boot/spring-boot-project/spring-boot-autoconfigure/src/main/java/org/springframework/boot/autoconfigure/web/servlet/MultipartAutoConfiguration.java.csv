@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Bean @ConditionalOnMissingBean({ MultipartConfigElement.class, CommonsMultipartResolver.class }) public MultipartConfigElement multipartConfigElement() {     return this.multipartProperties.createMultipartConfig(). }
+false;public;0;7;;@Bean(name = DispatcherServlet.MULTIPART_RESOLVER_BEAN_NAME) @ConditionalOnMissingBean(MultipartResolver.class) public StandardServletMultipartResolver multipartResolver() {     StandardServletMultipartResolver multipartResolver = new StandardServletMultipartResolver().     multipartResolver.setResolveLazily(this.multipartProperties.isResolveLazily()).     return multipartResolver. }

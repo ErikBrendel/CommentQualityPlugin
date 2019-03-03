@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;3;12;;@Override protected void taskOperation(PersistJobAction.Request request, TransportOpenJobAction.JobTask task, ActionListener<PersistJobAction.Response> listener) {     processManager.persistJob(task, e -> {         if (e == null) {             listener.onResponse(new PersistJobAction.Response(true)).         } else {             listener.onFailure(e).         }     }). }

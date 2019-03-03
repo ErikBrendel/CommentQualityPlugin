@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     ExecuteWatchResponse that = (ExecuteWatchResponse) o.     return Objects.equals(recordId, that.recordId) && Objects.equals(recordSource, that.recordSource). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(recordId, recordSource). }
+false;public;0;4;;@Override public String toString() {     return recordId + ":" + recordSource. }
+true;public;0;3;/**  * @return The id of the watch record holding the watch execution result.  */ ;/**  * @return The id of the watch record holding the watch execution result.  */ public String getRecordId() {     return recordId. }
+true;public;0;3;/**  * @return The watch record source  */ ;/**  * @return The watch record source  */ public XContentSource getRecordSource() {     return recordSource. }
+false;public;1;6;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     recordId = in.readString().     recordSource = XContentSource.readFrom(in). }
+false;public;1;6;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeString(recordId).     XContentSource.writeTo(recordSource, out). }
+false;public;2;9;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field("_id", recordId).     builder.field("watch_record").     recordSource.toXContent(builder, params).     builder.endObject().     return builder. }
+false;public,static;1;3;;public static ExecuteWatchResponse fromXContent(XContentParser parser) throws IOException {     return PARSER.parse(parser, null). }
+false;private,static;1;6;;private static BytesReference readBytesReference(XContentParser parser) throws IOException {     try (XContentBuilder builder = XContentFactory.jsonBuilder()) {         builder.copyCurrentStructure(parser).         return BytesReference.bytes(builder).     } }

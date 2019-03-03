@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;@Override public void setInstanceId(String schedInstId) { }
+false;public;1;3;;@Override public void setInstanceName(String schedName) { }
+false;public;0;9;;@Override public void initialize() throws SchedulerConfigException {     // Absolutely needs thread-bound Executor to initialize.     this.taskExecutor = SchedulerFactoryBean.getConfigTimeTaskExecutor().     if (this.taskExecutor == null) {         throw new SchedulerConfigException("No local Executor found for configuration - " + "'taskExecutor' property must be set on SchedulerFactoryBean").     } }
+false;public;1;3;;@Override public void shutdown(boolean waitForJobsToComplete) { }
+false;public;0;4;;@Override public int getPoolSize() {     return -1. }
+false;public;1;12;;@Override public boolean runInThread(Runnable runnable) {     Assert.state(this.taskExecutor != null, "No TaskExecutor available").     try {         this.taskExecutor.execute(runnable).         return true.     } catch (RejectedExecutionException ex) {         logger.error("Task has been rejected by TaskExecutor", ex).         return false.     } }
+false;public;0;9;;@Override public int blockForAvailableThreads() {     // on a {@code java.util.concurrent.ThreadPoolExecutor}.     return 1. }

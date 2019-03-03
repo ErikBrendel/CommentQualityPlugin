@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public BulkResponse newResponse() {     return new BulkResponse(). }
+false;public;1;4;;@Override public TransportRequestOptions transportOptions(Settings settings) {     return TransportRequestOptions.builder().withType(TransportRequestOptions.Type.BULK).build(). }

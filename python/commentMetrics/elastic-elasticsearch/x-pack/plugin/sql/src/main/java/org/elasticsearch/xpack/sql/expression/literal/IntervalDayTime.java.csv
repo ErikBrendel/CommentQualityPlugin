@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private,static;1;3;;private static Duration duration(StreamInput in) throws IOException {     return Duration.ofSeconds(in.readVLong(), in.readVInt()). }
+false;public;1;6;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeVLong(interval().getSeconds()).     out.writeVInt(interval().getNano()).     out.writeEnum(dataType()). }
+false;public;0;4;;@Override public String getWriteableName() {     return NAME. }
+false;public;1;4;;@Override public IntervalDayTime add(Interval<Duration> interval) {     return new IntervalDayTime(interval().plus(interval.interval()), DataTypes.compatibleInterval(dataType(), interval.dataType())). }
+false;public;1;4;;@Override public IntervalDayTime sub(Interval<Duration> interval) {     return new IntervalDayTime(interval().minus(interval.interval()), DataTypes.compatibleInterval(dataType(), interval.dataType())). }
+false;public;1;4;;@Override public Interval<Duration> mul(long mul) {     return new IntervalDayTime(interval().multipliedBy(mul), dataType()). }

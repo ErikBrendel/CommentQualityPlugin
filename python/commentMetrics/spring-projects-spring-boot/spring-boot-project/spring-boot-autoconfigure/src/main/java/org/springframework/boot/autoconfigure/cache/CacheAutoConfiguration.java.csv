@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;7;;@Bean @ConditionalOnMissingBean public CacheManagerCustomizers cacheManagerCustomizers(ObjectProvider<CacheManagerCustomizer<?>> customizers) {     return new CacheManagerCustomizers(customizers.orderedStream().collect(Collectors.toList())). }
+false;public;2;5;;@Bean public CacheManagerValidator cacheAutoConfigurationValidator(CacheProperties cacheProperties, ObjectProvider<CacheManager> cacheManager) {     return new CacheManagerValidator(cacheProperties, cacheManager). }
+false;public;0;7;;@Override public void afterPropertiesSet() {     Assert.notNull(this.cacheManager.getIfAvailable(), () -> "No cache manager could " + "be auto-configured, check your configuration (caching " + "type is '" + this.cacheProperties.getType() + "')"). }
+false;public;1;9;;@Override public String[] selectImports(AnnotationMetadata importingClassMetadata) {     CacheType[] types = CacheType.values().     String[] imports = new String[types.length].     for (int i = 0. i < types.length. i++) {         imports[i] = CacheConfigurations.getConfigurationClass(types[i]).     }     return imports. }

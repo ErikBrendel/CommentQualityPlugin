@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Bean(name = "zookeeper-server-to-service-definition") public Converter<ZookeeperServer, ServiceDefinition> zookeeperServerToServiceDefinition() {     return new ZookeeperServerToServiceDefinition(). }

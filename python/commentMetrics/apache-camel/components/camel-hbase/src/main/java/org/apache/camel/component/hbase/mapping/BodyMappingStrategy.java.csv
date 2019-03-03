@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;4;/**  * Resolves the cells that the {@link org.apache.camel.Exchange} refers to.  */ ;/**  * Resolves the cells that the {@link org.apache.camel.Exchange} refers to.  */ @Override public HBaseData resolveModel(Message message) {     return message.getBody(HBaseData.class). }
+true;public;2;6;/**  * Applies the cells to the {@link org.apache.camel.Exchange}.  */ ;/**  * Applies the cells to the {@link org.apache.camel.Exchange}.  */ public void applyGetResults(Message message, HBaseData data) {     if (data == null) {         return.     }     message.setBody(data). }
+true;public;2;6;/**  * Applies the cells to the {@link org.apache.camel.Exchange}.  */ ;/**  * Applies the cells to the {@link org.apache.camel.Exchange}.  */ public void applyScanResults(Message message, HBaseData data) {     if (data == null) {         return.     }     message.setBody(data). }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected String executor() {     return ThreadPool.Names.SAME. }
+false;protected;0;4;;@Override protected GetBasicStatusResponse newResponse() {     return new GetBasicStatusResponse(). }
+false;protected;3;12;;@Override protected void masterOperation(GetBasicStatusRequest request, ClusterState state, ActionListener<GetBasicStatusResponse> listener) throws Exception {     LicensesMetaData licensesMetaData = state.metaData().custom(LicensesMetaData.TYPE).     if (licensesMetaData == null) {         listener.onResponse(new GetBasicStatusResponse(true)).     } else {         License license = licensesMetaData.getLicense().         listener.onResponse(new GetBasicStatusResponse(license == null || license.type().equals("basic") == false)).     } }
+false;protected;2;4;;@Override protected ClusterBlockException checkBlock(GetBasicStatusRequest request, ClusterState state) {     return state.blocks().globalBlockedException(ClusterBlockLevel.METADATA_READ). }

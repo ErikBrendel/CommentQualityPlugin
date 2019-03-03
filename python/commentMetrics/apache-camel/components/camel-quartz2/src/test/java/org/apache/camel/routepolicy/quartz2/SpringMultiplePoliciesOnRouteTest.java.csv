@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;13;;@Test public void testMultiplePoliciesOnRoute() throws Exception {     // we use seda which are not persistent and hence can loose a message     // when we get graceful shutdown support we can prevent this     getMockEndpoint("mock:success").expectedMinimumMessageCount(size - 10).     for (int i = 0. i < size. i++) {         template.sendBody(url, "Message " + i).         Thread.sleep(3).     }     assertMockEndpointsSatisfied(). }
+false;protected;0;4;;@Override protected AbstractApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/routepolicy/quartz2/MultiplePolicies.xml"). }

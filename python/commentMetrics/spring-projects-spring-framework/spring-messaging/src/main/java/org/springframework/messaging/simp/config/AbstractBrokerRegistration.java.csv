@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;3;;protected SubscribableChannel getClientInboundChannel() {     return this.clientInboundChannel. }
+false;protected;0;3;;protected MessageChannel getClientOutboundChannel() {     return this.clientOutboundChannel. }
+false;protected;0;3;;protected Collection<String> getDestinationPrefixes() {     return this.destinationPrefixes. }
+false;protected,abstract;1;1;;protected abstract AbstractBrokerMessageHandler getMessageHandler(SubscribableChannel brokerChannel).

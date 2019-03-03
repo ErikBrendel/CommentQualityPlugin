@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Nullable public ModelPlotConfig getModelPlotConfig() {     return modelPlotConfig. }
+false;public;0;4;;@Nullable public List<JobUpdate.DetectorUpdate> getDetectorUpdates() {     return detectorUpdates. }
+false;public;0;4;;@Nullable public MlFilter getFilter() {     return filter. }
+false;public;0;4;;@Nullable public List<ScheduledEvent> getScheduledEvents() {     return scheduledEvents. }
+false;public;1;4;;public Builder setModelPlotConfig(ModelPlotConfig modelPlotConfig) {     this.modelPlotConfig = modelPlotConfig.     return this. }
+false;public;1;4;;public Builder setDetectorUpdates(List<JobUpdate.DetectorUpdate> detectorUpdates) {     this.detectorUpdates = detectorUpdates.     return this. }
+false;public;1;4;;public Builder setFilter(MlFilter filter) {     this.filter = filter.     return this. }
+false;public;1;4;;public Builder setScheduledEvents(List<ScheduledEvent> scheduledEvents) {     this.scheduledEvents = scheduledEvents.     return this. }
+false;public;0;3;;public UpdateProcessMessage build() {     return new UpdateProcessMessage(modelPlotConfig, detectorUpdates, filter, scheduledEvents). }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Test public void testLanguage() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("Hello World").     template.sendBody("direct:start", "World").     assertMockEndpointsSatisfied(). }
+false;public;0;7;;@Override public void configure() throws Exception {     // START SNIPPET: e1     String script = URLEncoder.encode("Hello ${body}", "UTF-8").     from("direct:start").to("language:simple:" + script).to("mock:result"). // END SNIPPET: e1 }
+false;protected;0;12;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             // START SNIPPET: e1             String script = URLEncoder.encode("Hello ${body}", "UTF-8").             from("direct:start").to("language:simple:" + script).to("mock:result").         // END SNIPPET: e1         }     }. }

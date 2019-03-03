@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;7;;@Override public ServiceLoadBalancer newInstance(CamelContext camelContext) throws Exception {     DefaultServiceLoadBalancer loadBalancer = new DefaultServiceLoadBalancer().     loadBalancer.setCamelContext(camelContext).     return loadBalancer. }

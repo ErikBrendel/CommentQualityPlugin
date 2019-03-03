@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Override public void init() {     registerBeanDefinitionParser("listener-container", new JmsListenerContainerParser()).     registerBeanDefinitionParser("jca-listener-container", new JcaListenerContainerParser()).     registerBeanDefinitionParser("annotation-driven", new AnnotationDrivenJmsBeanDefinitionParser()). }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public double getValue() {     return value(). }
+false;public;0;4;;@Override public String getType() {     return MaxAggregationBuilder.NAME. }
+false;protected;2;9;;@Override protected XContentBuilder doXContentBody(XContentBuilder builder, Params params) throws IOException {     boolean hasValue = !Double.isInfinite(value).     builder.field(CommonFields.VALUE.getPreferredName(), hasValue ? value : null).     if (hasValue && valueAsString != null) {         builder.field(CommonFields.VALUE_AS_STRING.getPreferredName(), valueAsString).     }     return builder. }
+false;public,static;2;5;;public static ParsedMax fromXContent(XContentParser parser, final String name) {     ParsedMax max = PARSER.apply(parser, null).     max.setName(name).     return max. }

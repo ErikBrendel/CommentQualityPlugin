@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;3;;Expression precision() {     return precision. }
+false;protected;0;4;;@Override protected NodeInfo<CurrentDateTime> info() {     return NodeInfo.create(this, CurrentDateTime::new, precision, configuration()). }
+false;static;2;10;;static ZonedDateTime nanoPrecision(ZonedDateTime zdt, Expression precisionExpression) {     int precision = precisionExpression != null ? Foldables.intValueOf(precisionExpression) : 3.     int nano = zdt.getNano().     if (precision >= 0 && precision < 10) {         // remove the remainder         nano = nano - nano % (int) Math.pow(10, (9 - precision)).         return zdt.withNano(nano).     }     return zdt. }

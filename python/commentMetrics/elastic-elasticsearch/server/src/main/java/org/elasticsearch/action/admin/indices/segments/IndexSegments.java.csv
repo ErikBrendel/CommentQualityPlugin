@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getIndex() {     return this.index. }
+true;public;0;3;/**  * A shard id to index shard segments map (note, index shard segments is the replication shard group that maps  * to the shard id).  */ ;/**  * A shard id to index shard segments map (note, index shard segments is the replication shard group that maps  * to the shard id).  */ public Map<Integer, IndexShardSegments> getShards() {     return this.indexShards. }
+false;public;0;4;;@Override public Iterator<IndexShardSegments> iterator() {     return indexShards.values().iterator(). }

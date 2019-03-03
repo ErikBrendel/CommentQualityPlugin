@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Bean @ConditionalOnMissingBean public IntegrationGraphEndpoint integrationGraphEndpoint(IntegrationGraphServer integrationGraphServer) {     return new IntegrationGraphEndpoint(integrationGraphServer). }
+false;public;0;5;;@Bean @ConditionalOnMissingBean public IntegrationGraphServer integrationGraphServer() {     return new IntegrationGraphServer(). }

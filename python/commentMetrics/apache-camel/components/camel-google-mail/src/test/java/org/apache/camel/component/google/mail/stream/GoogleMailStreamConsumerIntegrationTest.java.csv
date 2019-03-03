@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void testConsumePrefixedMessages() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMinimumMessageCount(1).     assertMockEndpointsSatisfied(). }
+false;public;0;6;;@Override public void configure() {     from("google-mail-stream://test?markAsRead=true&delay=5000&maxResults=30").to("mock:result"). }
+false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() {             from("google-mail-stream://test?markAsRead=true&delay=5000&maxResults=30").to("mock:result").         }     }. }

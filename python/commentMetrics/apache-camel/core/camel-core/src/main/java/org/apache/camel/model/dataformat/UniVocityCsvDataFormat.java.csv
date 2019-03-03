@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Boolean getQuoteAllFields() {     return quoteAllFields. }
+true;public;1;3;/**  * Whether or not all values must be quoted when writing them.  */ ;/**  * Whether or not all values must be quoted when writing them.  */ public void setQuoteAllFields(Boolean quoteAllFields) {     this.quoteAllFields = quoteAllFields. }
+false;public;0;3;;public String getQuote() {     return quote. }
+true;public;1;3;/**  * The quote symbol.  */ ;/**  * The quote symbol.  */ public void setQuote(String quote) {     this.quote = quote. }
+false;public;0;3;;public String getQuoteEscape() {     return quoteEscape. }
+true;public;1;3;/**  * The quote escape symbol  */ ;/**  * The quote escape symbol  */ public void setQuoteEscape(String quoteEscape) {     this.quoteEscape = quoteEscape. }
+false;public;0;3;;public String getDelimiter() {     return delimiter. }
+true;public;1;3;/**  * The delimiter of values  */ ;/**  * The delimiter of values  */ public void setDelimiter(String delimiter) {     this.delimiter = delimiter. }
+false;protected;2;17;;@Override protected void configureDataFormat(DataFormat dataFormat, CamelContext camelContext) {     super.configureDataFormat(dataFormat, camelContext).     if (quoteAllFields != null) {         setProperty(camelContext, dataFormat, "quoteAllFields", quoteAllFields).     }     if (quote != null) {         setProperty(camelContext, dataFormat, "quote", singleCharOf("quote", quote)).     }     if (quoteEscape != null) {         setProperty(camelContext, dataFormat, "quoteEscape", singleCharOf("quoteEscape", quoteEscape)).     }     if (delimiter != null) {         setProperty(camelContext, dataFormat, "delimiter", singleCharOf("delimiter", delimiter)).     } }

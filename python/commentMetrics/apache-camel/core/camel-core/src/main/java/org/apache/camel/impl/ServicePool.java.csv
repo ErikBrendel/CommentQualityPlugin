@@ -1,0 +1,34 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;1;;S acquire() throws Exception.
+false;;1;1;;void release(S s).
+false;;0;1;;int size().
+false;;0;1;;void stop().
+false;;1;1;;void evict(S s).
+false;public;1;4;;@Override public boolean equals(Object o) {     return o instanceof Key && ((Key) o).s == s. }
+false;public;0;4;;@Override public int hashCode() {     return s.hashCode(). }
+false;protected;1;7;;protected void onEvict(S s) {     Endpoint e = getEndpoint.apply(s).     Pool<S> p = pool.get(e).     if (p != null) {         p.evict(s).     } }
+true;public;1;10;/**  * Tries to acquire the service with the given key  *  * @param endpoint the endpoint  * @return the acquired service  */ ;/**  * Tries to acquire the service with the given key  *  * @param endpoint the endpoint  * @return the acquired service  */ public S acquire(Endpoint endpoint) throws Exception {     if (!isStarted()) {         return null.     }     S s = getPool(endpoint).acquire().     if (s != null && cache != null) {         cache.putIfAbsent(new Key<>(s), s).     }     return s. }
+true;public;2;3;/**  * Releases the service back to the pool  *  * @param endpoint the endpoint  * @param s the service  */ ;/**  * Releases the service back to the pool  *  * @param endpoint the endpoint  * @param s the service  */ public void release(Endpoint endpoint, S s) {     getPool(endpoint).release(s). }
+false;protected;1;3;;protected Pool<S> getPool(Endpoint endpoint) {     return pool.computeIfAbsent(endpoint, this::createPool). }
+false;private;1;16;;private Pool<S> createPool(Endpoint endpoint) {     boolean singleton = endpoint.isSingleton().     try {         S s = producer.apply(endpoint).         if (s instanceof IsSingleton) {             singleton = ((IsSingleton) s).isSingleton().         }     } catch (Exception e) {     // Ignore     }     if (singleton && capacity > 0) {         return new SinglePool(endpoint).     } else {         return new MultiplePool(endpoint).     } }
+true;public;0;3;/**  * Returns the current size of the pool  *  * @return the current size of the pool  */ ;/**  * Returns the current size of the pool  *  * @return the current size of the pool  */ public int size() {     return pool.values().stream().mapToInt(Pool::size).sum(). }
+false;protected;0;3;;@Override protected void doStart() throws Exception { }
+false;protected;0;5;;@Override protected void doStop() throws Exception {     pool.values().forEach(Pool::stop).     pool.clear(). }
+false;public;0;5;;public void cleanUp() {     if (cache instanceof LRUCache) {         ((LRUCache) cache).cleanUp().     } }
+false;public;0;5;;public void resetStatistics() {     if (cache instanceof LRUCache) {         ((LRUCache) cache).resetStatistics().     } }
+false;public;0;7;;public long getEvicted() {     if (cache instanceof LRUCache) {         return ((LRUCache) cache).getEvicted().     } else {         return -1.     } }
+false;public;0;7;;public long getMisses() {     if (cache instanceof LRUCache) {         return ((LRUCache) cache).getMisses().     } else {         return -1.     } }
+false;public;0;7;;public long getHits() {     if (cache instanceof LRUCache) {         return ((LRUCache) cache).getHits().     } else {         return -1.     } }
+false;public;0;7;;public int getMaxCacheSize() {     if (cache instanceof LRUCache) {         return ((LRUCache) cache).getMaxCacheSize().     } else {         return -1.     } }
+false;static;1;7;;static <S extends Service> void stop(S s) {     try {         s.stop().     } catch (Exception e) {         LOG.debug("Error stopping service {}", s, e).     } }
+false;public;0;12;;@Override public S acquire() throws Exception {     if (s == null) {         synchronized (this) {             if (s == null) {                 s = producer.apply(endpoint).                 endpoint.getCamelContext().addService(s, true, true).             }         }     }     return s. }
+false;public;1;3;;@Override public void release(S s) { }
+false;public;0;4;;@Override public int size() {     return s != null ? 1 : 0. }
+false;public;0;9;;@Override public void stop() {     S toStop = null.     synchronized (this) {         toStop = s.         s = null.     }     doStop(toStop). }
+false;public;1;9;;@Override public void evict(S s) {     synchronized (this) {         if (this.s == s) {             this.s = null.         }     }     doStop(s). }
+false;;1;10;;void doStop(S s) {     if (s != null) {         ServicePool.stop(s).         try {             endpoint.getCamelContext().removeService(s).         } catch (Exception e) {             LOG.debug("Error removing service {}", s, e).         }     } }
+false;public;0;9;;@Override public S acquire() throws Exception {     S s = queue.poll().     if (s == null) {         s = producer.apply(endpoint).         s.start().     }     return s. }
+false;public;1;8;;@Override public void release(S s) {     if (queue.size() < capacity) {         queue.add(s).     } else {         ServicePool.stop(s).     } }
+false;public;0;4;;@Override public int size() {     return queue.size(). }
+false;public;0;5;;@Override public void stop() {     queue.forEach(ServicePool::stop).     queue.clear(). }
+false;public;1;5;;@Override public void evict(S s) {     queue.remove(s).     ServicePool.stop(s). }

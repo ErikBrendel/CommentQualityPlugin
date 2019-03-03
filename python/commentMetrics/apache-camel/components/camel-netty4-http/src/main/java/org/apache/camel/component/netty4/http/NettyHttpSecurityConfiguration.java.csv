@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public boolean isAuthenticate() {     return authenticate. }
+true;public;1;3;/**  * Whether to enable authentication  * <p/>  * This is by default enabled.  */ ;/**  * Whether to enable authentication  * <p/>  * This is by default enabled.  */ public void setAuthenticate(boolean authenticate) {     this.authenticate = authenticate. }
+false;public;0;3;;public String getConstraint() {     return constraint. }
+true;public;1;3;/**  * The supported restricted.  * <p/>  * Currently only Basic is supported.  */ ;/**  * The supported restricted.  * <p/>  * Currently only Basic is supported.  */ public void setConstraint(String constraint) {     this.constraint = constraint. }
+false;public;0;3;;public String getRealm() {     return realm. }
+true;public;1;3;/**  * Sets the name of the realm to use.  */ ;/**  * Sets the name of the realm to use.  */ public void setRealm(String realm) {     this.realm = realm. }
+false;public;0;3;;public SecurityConstraint getSecurityConstraint() {     return securityConstraint. }
+true;public;1;3;/**  * Sets a {@link SecurityConstraint} to use for checking if a web resource is restricted or not  * <p/>  * By default this is <tt>null</tt>, which means all resources is restricted.  */ ;/**  * Sets a {@link SecurityConstraint} to use for checking if a web resource is restricted or not  * <p/>  * By default this is <tt>null</tt>, which means all resources is restricted.  */ public void setSecurityConstraint(SecurityConstraint securityConstraint) {     this.securityConstraint = securityConstraint. }
+false;public;0;3;;public SecurityAuthenticator getSecurityAuthenticator() {     return securityAuthenticator. }
+true;public;1;3;/**  * Sets the {@link SecurityAuthenticator} to use for authenticating the {@link HttpPrincipal}.  */ ;/**  * Sets the {@link SecurityAuthenticator} to use for authenticating the {@link HttpPrincipal}.  */ public void setSecurityAuthenticator(SecurityAuthenticator securityAuthenticator) {     this.securityAuthenticator = securityAuthenticator. }
+false;public;0;3;;public LoggingLevel getLoginDeniedLoggingLevel() {     return loginDeniedLoggingLevel. }
+true;public;1;3;/**  * Sets a logging level to use for logging denied login attempts (incl stacktraces)  * <p/>  * This level is by default DEBUG.  */ ;/**  * Sets a logging level to use for logging denied login attempts (incl stacktraces)  * <p/>  * This level is by default DEBUG.  */ public void setLoginDeniedLoggingLevel(LoggingLevel loginDeniedLoggingLevel) {     this.loginDeniedLoggingLevel = loginDeniedLoggingLevel. }
+false;public;0;3;;public String getRoleClassName() {     return roleClassName. }
+false;public;1;3;;public void setRoleClassName(String roleClassName) {     this.roleClassName = roleClassName. }

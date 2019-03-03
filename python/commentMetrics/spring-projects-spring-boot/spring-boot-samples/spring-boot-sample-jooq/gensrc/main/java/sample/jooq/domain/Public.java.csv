@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;4;/**  * {@inheritDoc}  */ ;/**  * {@inheritDoc}  */ @Override public Catalog getCatalog() {     return DefaultCatalog.DEFAULT_CATALOG. }
+false;public,final;0;6;;@Override public final List<Table<?>> getTables() {     List result = new ArrayList().     result.addAll(getTables0()).     return result. }
+false;private,final;0;4;;private final List<Table<?>> getTables0() {     return Arrays.<Table<?>>asList(Language.LANGUAGE, Author.AUTHOR, Book.BOOK, BookStore.BOOK_STORE, BookToBookStore.BOOK_TO_BOOK_STORE). }

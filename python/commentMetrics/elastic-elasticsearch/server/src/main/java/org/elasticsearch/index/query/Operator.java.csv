@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;public BooleanClause.Occur toBooleanClauseOccur() {     switch(this) {         case OR:             return BooleanClause.Occur.SHOULD.         case AND:             return BooleanClause.Occur.MUST.         default:             throw Operator.newOperatorException(this.toString()).     } }
+false;public;0;10;;public QueryParser.Operator toQueryParserOperator() {     switch(this) {         case OR:             return QueryParser.Operator.OR.         case AND:             return QueryParser.Operator.AND.         default:             throw Operator.newOperatorException(this.toString()).     } }
+false;public,static;1;3;;public static Operator readFromStream(StreamInput in) throws IOException {     return in.readEnum(Operator.class). }
+false;public;1;4;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeEnum(this). }
+false;public,static;1;3;;public static Operator fromString(String op) {     return valueOf(op.toUpperCase(Locale.ROOT)). }
+false;private,static;1;4;;private static IllegalArgumentException newOperatorException(String op) {     return new IllegalArgumentException("operator needs to be either " + CollectionUtils.arrayAsArrayList(values()) + ", but not [" + op + "]"). }

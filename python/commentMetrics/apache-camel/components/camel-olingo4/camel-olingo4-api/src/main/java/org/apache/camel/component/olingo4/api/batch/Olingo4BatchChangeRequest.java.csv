@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Operation getOperation() {     return operation. }
+false;public;0;3;;public Object getBody() {     return body. }
+false;public;0;3;;public String getContentId() {     return contentId. }
+false;public;0;5;;@Override public String toString() {     return new StringBuilder("Batch Change Request{ ").append(resourceUri).append("/").append(resourcePath).append(", headers=").append(headers).append(", contentId=").append(contentId).append(", operation=").append(operation).append(", body=").append(body).append('}').toString(). }
+false;public,static;1;6;;public static Olingo4BatchChangeRequestBuilder resourcePath(String resourcePath) {     if (resourcePath == null) {         throw new IllegalArgumentException("resourcePath").     }     return new Olingo4BatchChangeRequestBuilder().resourcePath(resourcePath). }
+false;public;1;4;;public Olingo4BatchChangeRequestBuilder resourcePath(String resourcePath) {     request.resourcePath = resourcePath.     return this. }
+false;public;1;4;;public Olingo4BatchChangeRequestBuilder resourceUri(String resourceUri) {     request.resourceUri = resourceUri.     return this. }
+false;public;1;4;;public Olingo4BatchChangeRequestBuilder headers(Map<String, String> headers) {     request.headers = headers.     return this. }
+false;public;1;4;;public Olingo4BatchChangeRequestBuilder contentId(String contentId) {     request.contentId = contentId.     return this. }
+false;public;1;4;;public Olingo4BatchChangeRequestBuilder operation(Operation operation) {     request.operation = operation.     return this. }
+false;public;1;4;;public Olingo4BatchChangeRequestBuilder body(Object body) {     request.body = body.     return this. }
+false;public;0;13;;public Olingo4BatchChangeRequest build() {     // avoid later NPEs     if (request.resourcePath == null) {         throw new IllegalArgumentException("Null resourcePath").     }     if (request.operation == null) {         throw new IllegalArgumentException("Null operation").     }     if (request.operation != Operation.DELETE && request.body == null) {         throw new IllegalArgumentException("Null body").     }     return request. }

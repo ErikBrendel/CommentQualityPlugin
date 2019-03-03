@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected NodeInfo<CharLength> info() {     return NodeInfo.create(this, CharLength::new, field()). }
+false;protected;1;4;;@Override protected CharLength replaceChild(Expression newChild) {     return new CharLength(source(), newChild). }
+false;protected;0;4;;@Override protected StringOperation operation() {     return StringOperation.CHAR_LENGTH. }
+false;public;0;4;;@Override public DataType dataType() {     return DataType.INTEGER. }

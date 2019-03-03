@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;3;;protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/spring/routebuilder/camelRouteBuilder.xml"). }
+false;public;0;10;;@Test public void testShouldProcessAnnotatedFields() throws Exception {     getMockEndpoint("mock:a").expectedMessageCount(1).     getMockEndpoint("mock:b").expectedMessageCount(1).     template.sendBody("direct:a", "Hello World").     template.sendBody("direct:b", "Bye World").     assertMockEndpointsSatisfied(). }

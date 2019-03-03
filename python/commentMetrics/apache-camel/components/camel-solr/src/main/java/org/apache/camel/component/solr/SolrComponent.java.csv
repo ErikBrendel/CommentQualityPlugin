@@ -1,0 +1,16 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public HttpSolrClient getSolrServer() {     return solrServer. }
+false;public;1;3;;public void setSolrServer(HttpSolrClient solrServer) {     this.solrServer = solrServer. }
+false;public;0;3;;public ConcurrentUpdateSolrClient getUpdateSolrServer() {     return updateSolrServer. }
+false;public;1;3;;public void setUpdateSolrServer(ConcurrentUpdateSolrClient updateSolrServer) {     this.updateSolrServer = updateSolrServer. }
+false;public;0;3;;public CloudSolrClient getCloudSolrServer() {     return cloudSolrServer. }
+false;public;1;3;;public void setCloudSolrServer(CloudSolrClient cloudServer) {     cloudSolrServer = cloudServer. }
+false;public;0;3;;public int addReference() {     return referenceCounter.incrementAndGet(). }
+false;public;0;3;;public int decReference() {     return referenceCounter.decrementAndGet(). }
+false;protected;3;6;;@Override protected Endpoint createEndpoint(String uri, String remaining, Map<String, Object> parameters) throws Exception {     Endpoint endpoint = new SolrEndpoint(uri, this, remaining).     setProperties(endpoint, parameters).     return endpoint. }
+false;public;1;3;;public SolrServerReference getSolrServers(SolrEndpoint endpoint) {     return servers.get(endpoint). }
+false;public;2;3;;public void addSolrServers(SolrEndpoint endpoint, SolrServerReference servers) {     this.servers.put(endpoint, servers). }
+false;protected;0;7;;@Override protected void doShutdown() throws Exception {     for (SolrServerReference server : servers.values()) {         shutdownServers(server).     }     servers.clear(). }
+false;;1;3;;void shutdownServers(SolrServerReference ref) {     shutdownServers(ref, false). }
+false;private;1;6;;private void shutdownServer(SolrClient server) throws IOException {     if (server != null) {         log.info("Shutting down solr server: {}", server).         server.close().     } }
+false;;2;32;;void shutdownServers(SolrServerReference ref, boolean remove) {     try {         shutdownServer(ref.getSolrServer()).     } catch (Exception e) {         log.warn("Error shutting down solr server. This exception is ignored.", e).     }     try {         shutdownServer(ref.getUpdateSolrServer()).     } catch (Exception e) {         log.warn("Error shutting down streaming solr server. This exception is ignored.", e).     }     try {         shutdownServer(ref.getCloudSolrServer()).     } catch (Exception e) {         log.warn("Error shutting down streaming solr server. This exception is ignored.", e).     }     if (remove) {         SolrEndpoint key = null.         for (Map.Entry<SolrEndpoint, SolrServerReference> entry : servers.entrySet()) {             if (entry.getValue() == ref) {                 key = entry.getKey().                 break.             }         }         if (key != null) {             servers.remove(key).         }     } }

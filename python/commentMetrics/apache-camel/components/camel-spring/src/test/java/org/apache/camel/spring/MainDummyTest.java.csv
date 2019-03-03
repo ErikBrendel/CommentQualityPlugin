@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;15;;@Test public void testMain() throws Exception {     Main main = new Main().     main.start().     // should also be a Camel     CamelContext camel = main.getApplicationContext().getBean(CamelContext.class).     assertNotNull("Camel should be in Spring", camel).     DummyBean dummy = (DummyBean) main.getApplicationContext().getBean("dummy").     assertNotNull(dummy).     assertEquals("John Doe", dummy.getName()).     main.stop(). }

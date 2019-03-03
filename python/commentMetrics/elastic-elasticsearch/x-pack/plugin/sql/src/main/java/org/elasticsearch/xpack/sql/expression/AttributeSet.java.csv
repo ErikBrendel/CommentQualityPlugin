@@ -1,0 +1,28 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;1;3;// a set from a collection of sets without too much copying ;// package protected - should be called through Expressions to cheaply create // a set from a collection of sets without too much copying void addAll(AttributeSet other) {     delegate.addAll(other.delegate). }
+false;public;1;3;;public AttributeSet combine(AttributeSet other) {     return new AttributeSet(delegate.combine(other.delegate)). }
+false;public;1;3;;public AttributeSet subtract(AttributeSet other) {     return new AttributeSet(delegate.subtract(other.delegate)). }
+false;public;1;3;;public AttributeSet intersect(AttributeSet other) {     return new AttributeSet(delegate.intersect(other.delegate)). }
+false;public;1;3;;public boolean subsetOf(AttributeSet other) {     return delegate.subsetOf(other.delegate). }
+false;public;0;3;;public Set<String> names() {     return delegate.attributeNames(). }
+false;public;1;4;;@Override public void forEach(Consumer<? super Attribute> action) {     delegate.forEach((k, v) -> action.accept(k)). }
+false;public;0;4;;@Override public int size() {     return delegate.size(). }
+false;public;0;4;;@Override public boolean isEmpty() {     return delegate.isEmpty(). }
+false;public;1;4;;@Override public boolean contains(Object o) {     return delegate.containsKey(o). }
+false;public;1;9;;@Override public boolean containsAll(Collection<?> c) {     for (Object o : c) {         if (!delegate.containsKey(o)) {             return false.         }     }     return true. }
+false;public;0;4;;@Override public Iterator<Attribute> iterator() {     return delegate.keySet().iterator(). }
+false;public;0;4;;@Override public Object[] toArray() {     return delegate.keySet().toArray(). }
+false;public;1;4;;@Override public <T> T[] toArray(T[] a) {     return delegate.keySet().toArray(a). }
+false;public;1;4;;@Override public boolean add(Attribute e) {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public boolean remove(Object o) {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public boolean addAll(Collection<? extends Attribute> c) {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public boolean retainAll(Collection<?> c) {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public boolean removeAll(Collection<?> c) {     throw new UnsupportedOperationException(). }
+false;public;0;4;;@Override public void clear() {     throw new UnsupportedOperationException(). }
+false;public;0;4;;@Override public Spliterator<Attribute> spliterator() {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public boolean removeIf(Predicate<? super Attribute> filter) {     throw new UnsupportedOperationException(). }
+false;public;0;4;;@Override public Stream<Attribute> stream() {     return delegate.keySet().stream(). }
+false;public;0;4;;@Override public Stream<Attribute> parallelStream() {     return delegate.keySet().parallelStream(). }
+false;public;1;4;;@Override public boolean equals(Object o) {     return delegate.equals(o). }
+false;public;0;4;;@Override public int hashCode() {     return delegate.hashCode(). }
+false;public;0;4;;@Override public String toString() {     return delegate.keySet().toString(). }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;1;1;/**  * Injects the XML Namespaces of prefix -> uri mappings  *  * @param namespaces the XML namespaces with the key of prefixes and the value the URIs  */ ;/**  * Injects the XML Namespaces of prefix -> uri mappings  *  * @param namespaces the XML namespaces with the key of prefixes and the value the URIs  */ void setNamespaces(Map<String, String> namespaces).
+true;;0;1;/**  * Gets the XML Namespaces  */ ;/**  * Gets the XML Namespaces  */ Map<String, String> getNamespaces().

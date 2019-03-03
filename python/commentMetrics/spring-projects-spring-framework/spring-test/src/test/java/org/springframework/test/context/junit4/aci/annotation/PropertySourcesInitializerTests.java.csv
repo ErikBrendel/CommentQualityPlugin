@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Bean public String enigma() {     return enigma. }
+false;public;0;4;;@Test public void customPropertySourceConfiguredViaContextInitializer() {     assertEquals("foo", enigma). }
+false;public;1;5;;@Override public void initialize(ConfigurableApplicationContext applicationContext) {     applicationContext.getEnvironment().getPropertySources().addFirst(new MockPropertySource().withProperty("enigma", "foo")). }

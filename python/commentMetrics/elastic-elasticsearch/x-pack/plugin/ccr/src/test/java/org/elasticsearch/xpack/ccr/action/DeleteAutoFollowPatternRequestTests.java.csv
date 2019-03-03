@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected Writeable.Reader<DeleteAutoFollowPatternAction.Request> instanceReader() {     return DeleteAutoFollowPatternAction.Request::new. }
+false;protected;0;4;;@Override protected DeleteAutoFollowPatternAction.Request createTestInstance() {     return new DeleteAutoFollowPatternAction.Request(randomAlphaOfLength(4)). }

@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Before public void setUpWorkingFolder() throws DbxException {     createDir(workdir). }
+false;protected;1;7;;protected void createDir(String name) throws DbxException {     try {         removeDir(name).     } finally {         client.files().createFolder(name).     } }
+false;protected;1;3;;protected void removeDir(String name) throws DbxException {     client.files().delete(name). }
+false;protected;2;8;;protected void createFile(String fileName, String content) throws IOException {     try {         client.files().uploadBuilder(workdir + "/" + fileName).uploadAndFinish(new ByteArrayInputStream(content.getBytes())).     } catch (DbxException e) {         log.info("folder is already created").     } }
+false;protected;1;8;;protected String getFileContent(String path) throws DbxException, IOException {     ByteArrayOutputStream target = new ByteArrayOutputStream().     DbxDownloader<FileMetadata> downloadedFile = client.files().download(path).     if (downloadedFile != null) {         downloadedFile.download(target).     }     return new String(target.toByteArray()). }
+false;protected;0;4;;@Override protected Properties useOverridePropertiesWithPropertiesComponent() {     return properties. }

@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;1;1;;String sayHello(String input).
+false;public;1;4;;@Override public String sayHello(String input) {     return EXPECTED_OUTPUT. }
+false;public;1;4;;@Override public String sayHello(String input) {     return EXPECTED_OUTPUT. }
+true;public,static;0;3;/**  * @return package-private implementation that can only be bean-binded  *         through its interface  */ ;/**  * @return package-private implementation that can only be bean-binded  *         through its interface  */ public static HelloCamel newPackagePrivateHelloCamel() {     return new PackagePrivateHelloCamel(). }
+true;public,static;0;3;/**  * @return private implementation that can only be bean-binded through its  *         interface  */ ;/**  * @return private implementation that can only be bean-binded through its  *         interface  */ public static HelloCamel newPrivateHelloCamel() {     return new PrivateHelloCamel(). }

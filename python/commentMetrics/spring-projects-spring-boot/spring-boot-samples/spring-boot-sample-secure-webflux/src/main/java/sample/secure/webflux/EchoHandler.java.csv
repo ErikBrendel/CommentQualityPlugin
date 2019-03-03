@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public Mono<ServerResponse> echo(ServerRequest request) {     return ServerResponse.ok().body(request.bodyToMono(String.class), String.class). }

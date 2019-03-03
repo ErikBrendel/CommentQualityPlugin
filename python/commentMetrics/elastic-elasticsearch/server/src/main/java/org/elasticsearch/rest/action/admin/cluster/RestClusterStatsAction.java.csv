@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getName() {     return "cluster_stats_action". }
+false;public;2;6;;@Override public RestChannelConsumer prepareRequest(final RestRequest request, final NodeClient client) throws IOException {     ClusterStatsRequest clusterStatsRequest = new ClusterStatsRequest().nodesIds(request.paramAsStringArray("nodeId", null)).     clusterStatsRequest.timeout(request.param("timeout")).     return channel -> client.admin().cluster().clusterStats(clusterStatsRequest, new NodesResponseRestListener<>(channel)). }
+false;public;0;4;;@Override public boolean canTripCircuitBreaker() {     return false. }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public String resolveThemeName(HttpServletRequest request) {     return getDefaultThemeName(). }
+false;public;3;6;;@Override public void setThemeName(HttpServletRequest request, @Nullable HttpServletResponse response, @Nullable String themeName) {     throw new UnsupportedOperationException("Cannot change theme - use a different theme resolution strategy"). }

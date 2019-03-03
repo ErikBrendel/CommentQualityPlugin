@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected NodeInfo<InnerAggregate> info() {     return NodeInfo.create(this, InnerAggregate::new, inner, outer, innerKey). }
+false;public;1;8;;@Override public Expression replaceChildren(List<Expression> newChildren) {     /* I can't figure out how rewriting this one's children ever worked because its          * are all twisted up in `outer`. Refusing to rewrite it doesn't break anything          * that I can see right now so lets just go with it and hope for the best.          * Maybe someone will make this make sense one day! */     throw new UnsupportedOperationException("can't be rewritten"). }
+false;public;0;3;;public AggregateFunction inner() {     return inner. }
+false;public;0;3;;public CompoundNumericAggregate outer() {     return outer. }
+false;public;0;3;;public String innerName() {     return innerName. }
+false;public;0;3;;public Expression innerKey() {     return innerKey. }
+false;public;0;4;;@Override public DataType dataType() {     return inner.dataType(). }
+false;public;0;4;;@Override public String functionId() {     return outer.id().toString(). }
+false;public;0;6;;@Override public AggregateFunctionAttribute toAttribute() {     // this is highly correlated with QueryFolder$FoldAggregate#addFunction (regarding the function name within the querydsl)     return new AggregateFunctionAttribute(source(), name(), dataType(), outer.id(), functionId(), inner.id(), aggMetricValue(functionId(), innerName)). }
+false;private,static;2;4;;private static String aggMetricValue(String aggPath, String valueName) {     // handle aggPath inconsistency (for percentiles and percentileRanks) percentile[99.9] (valid) vs percentile.99.9 (invalid)     return aggPath + "[" + valueName + "]". }
+false;public;1;8;;@Override public boolean functionEquals(Function f) {     if (super.equals(f)) {         InnerAggregate other = (InnerAggregate) f.         return inner.equals(other.inner) && outer.equals(other.outer).     }     return false. }
+false;public;0;4;;@Override public String name() {     return inner.name(). }
+false;public;0;4;;@Override public String toString() {     return nodeName() + "[" + outer + ">" + inner.nodeName() + "#" + inner.id() + "]". }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Before @Override public void setUp() throws Exception {     routerEndpointURI = "cxf://" + routerAddress + "?" + SERVICE_CLASS + "&DataFormat=RAW".     super.setUp(). }

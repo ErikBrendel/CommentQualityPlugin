@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Autowired public void setDataSource(DataSource dataSource) {     this.jdbcTemplate = new JdbcTemplate(dataSource). }
+false;public;0;5;;@Test public // test##_ prefix is required for @FixMethodOrder. void test01_classLevelScripts() {     assertNumUsers(1). }
+false;public;0;8;;@Test @Sql(statements = "DROP TABLE user IF EXISTS") @Sql("schema.sql") @Sql(statements = "INSERT INTO user VALUES ('Dilbert'), ('Dogbert'), ('Catbert')") public // test##_ prefix is required for @FixMethodOrder. void test02_methodLevelScripts() {     assertNumUsers(3). }
+false;protected;1;3;;protected int countRowsInTable(String tableName) {     return JdbcTestUtils.countRowsInTable(this.jdbcTemplate, tableName). }
+false;protected;1;3;;protected void assertNumUsers(int expected) {     assertEquals("Number of rows in the 'user' table.", expected, countRowsInTable("user")). }

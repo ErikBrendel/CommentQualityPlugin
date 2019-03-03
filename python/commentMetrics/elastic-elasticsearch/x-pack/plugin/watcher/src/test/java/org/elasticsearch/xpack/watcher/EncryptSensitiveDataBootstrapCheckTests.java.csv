@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;public void testDefaultIsFalse() {     assertFalse(CHECK.check(emptyContext).isFailure()).     assertTrue(CHECK.alwaysEnforce()). }
+false;public;0;4;;public void testNoKeyInKeystore() {     Settings settings = Settings.builder().put(Watcher.ENCRYPT_SENSITIVE_DATA_SETTING.getKey(), true).build().     assertTrue(CHECK.check(createTestContext(settings, null)).isFailure()). }
+false;public;0;9;;public void testKeyInKeystore() {     MockSecureSettings secureSettings = new MockSecureSettings().     secureSettings.setFile(WatcherField.ENCRYPTION_KEY_SETTING.getKey(), CryptoServiceTests.generateKey()).     Settings settings = Settings.builder().put(Watcher.ENCRYPT_SENSITIVE_DATA_SETTING.getKey(), true).setSecureSettings(secureSettings).build().     assertFalse(CHECK.check(createTestContext(settings, null)).isFailure()). }

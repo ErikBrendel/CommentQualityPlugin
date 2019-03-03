@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;public void configure() {     getContext().setTracing(true).     from("timer://foo?fixedRate=true&delay=0&period=10").to("bean:myBean", "mock:result"). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() {             getContext().setTracing(true).             from("timer://foo?fixedRate=true&delay=0&period=10").to("bean:myBean", "mock:result").         }     }. }

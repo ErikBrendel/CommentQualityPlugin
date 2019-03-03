@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void parseEmpty() {     assertThat(SystemPropertyFormatter.format(null, null)).isEqualTo(""). }
+false;public;0;4;;@Test public void parseOnlyKey() {     assertThat(SystemPropertyFormatter.format("key1", null)).isEqualTo("-Dkey1"). }
+false;public;0;5;;@Test public void parseKeyWithValue() {     assertThat(SystemPropertyFormatter.format("key1", "value1")).isEqualTo("-Dkey1=\"value1\""). }
+false;public;0;4;;@Test public void parseKeyWithEmptyValue() {     assertThat(SystemPropertyFormatter.format("key1", "")).isEqualTo("-Dkey1"). }
+false;public;0;5;;@Test public void parseKeyWithOnlySpaces() {     assertThat(SystemPropertyFormatter.format("key1", "   ")).isEqualTo("-Dkey1=\"   \""). }

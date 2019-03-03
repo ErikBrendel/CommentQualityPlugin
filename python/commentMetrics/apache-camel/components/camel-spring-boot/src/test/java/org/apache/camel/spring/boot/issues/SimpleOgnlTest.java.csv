@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;12;;@Test public void testSimpleOgnlListExpression() throws Exception {     List<String> list = new ArrayList<>().     list.add("one").     list.add("two").     resultEndpoint.expectedBodiesReceived(list.get(0)).     template.sendBody(list).     resultEndpoint.assertIsSatisfied(). }
+false;public;0;3;;public void configure() {     from("direct:start").setBody(simple("${body[0]}")).to("mock:result"). }
+false;public;0;8;;@Bean public RouteBuilder route() {     return new RouteBuilder() {          public void configure() {             from("direct:start").setBody(simple("${body[0]}")).to("mock:result").         }     }. }

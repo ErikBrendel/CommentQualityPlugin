@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;10;;public static Set<Setting.AffixSetting<?>> getSettings(String realmType) {     Set<Setting.AffixSetting<?>> settings = new HashSet<>().     settings.add(BASE_DN.apply(realmType)).     settings.add(SCOPE.apply(realmType)).     if (realmType.equals(LDAP_TYPE)) {         settings.add(FILTER).         settings.add(USER_ATTRIBUTE).     }     return settings. }

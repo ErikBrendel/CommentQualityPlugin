@@ -1,0 +1,150 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Integer getPort() {     return this.port. }
+false;public;1;3;;public void setPort(Integer port) {     this.port = port. }
+false;public;0;3;;public InetAddress getAddress() {     return this.address. }
+false;public;1;3;;public void setAddress(InetAddress address) {     this.address = address. }
+false;public;0;3;;public Boolean isUseForwardHeaders() {     return this.useForwardHeaders. }
+false;public;1;3;;public void setUseForwardHeaders(Boolean useForwardHeaders) {     this.useForwardHeaders = useForwardHeaders. }
+false;public;0;3;;public String getServerHeader() {     return this.serverHeader. }
+false;public;1;3;;public void setServerHeader(String serverHeader) {     this.serverHeader = serverHeader. }
+false;public;0;3;;public DataSize getMaxHttpHeaderSize() {     return this.maxHttpHeaderSize. }
+false;public;1;3;;public void setMaxHttpHeaderSize(DataSize maxHttpHeaderSize) {     this.maxHttpHeaderSize = maxHttpHeaderSize. }
+false;public;0;3;;public Duration getConnectionTimeout() {     return this.connectionTimeout. }
+false;public;1;3;;public void setConnectionTimeout(Duration connectionTimeout) {     this.connectionTimeout = connectionTimeout. }
+false;public;0;3;;public ErrorProperties getError() {     return this.error. }
+false;public;0;3;;public Ssl getSsl() {     return this.ssl. }
+false;public;1;3;;public void setSsl(Ssl ssl) {     this.ssl = ssl. }
+false;public;0;3;;public Compression getCompression() {     return this.compression. }
+false;public;0;3;;public Http2 getHttp2() {     return this.http2. }
+false;public;0;3;;public Servlet getServlet() {     return this.servlet. }
+false;public;0;3;;public Tomcat getTomcat() {     return this.tomcat. }
+false;public;0;3;;public Jetty getJetty() {     return this.jetty. }
+false;public;0;3;;public Undertow getUndertow() {     return this.undertow. }
+false;public;0;3;;public String getContextPath() {     return this.contextPath. }
+false;public;1;3;;public void setContextPath(String contextPath) {     this.contextPath = cleanContextPath(contextPath). }
+false;private;1;6;;private String cleanContextPath(String contextPath) {     if (StringUtils.hasText(contextPath) && contextPath.endsWith("/")) {         return contextPath.substring(0, contextPath.length() - 1).     }     return contextPath. }
+false;public;0;3;;public String getApplicationDisplayName() {     return this.applicationDisplayName. }
+false;public;1;3;;public void setApplicationDisplayName(String displayName) {     this.applicationDisplayName = displayName. }
+false;public;0;3;;public Map<String, String> getContextParameters() {     return this.contextParameters. }
+false;public;0;3;;public Jsp getJsp() {     return this.jsp. }
+false;public;0;3;;public Session getSession() {     return this.session. }
+false;public;0;3;;public int getMaxThreads() {     return this.maxThreads. }
+false;public;1;3;;public void setMaxThreads(int maxThreads) {     this.maxThreads = maxThreads. }
+false;public;0;3;;public int getMinSpareThreads() {     return this.minSpareThreads. }
+false;public;1;3;;public void setMinSpareThreads(int minSpareThreads) {     this.minSpareThreads = minSpareThreads. }
+false;public;0;3;;public DataSize getMaxHttpPostSize() {     return this.maxHttpPostSize. }
+false;public;1;3;;public void setMaxHttpPostSize(DataSize maxHttpPostSize) {     this.maxHttpPostSize = maxHttpPostSize. }
+false;public;0;3;;public Accesslog getAccesslog() {     return this.accesslog. }
+false;public;0;3;;public Duration getBackgroundProcessorDelay() {     return this.backgroundProcessorDelay. }
+false;public;1;3;;public void setBackgroundProcessorDelay(Duration backgroundProcessorDelay) {     this.backgroundProcessorDelay = backgroundProcessorDelay. }
+false;public;0;3;;public File getBasedir() {     return this.basedir. }
+false;public;1;3;;public void setBasedir(File basedir) {     this.basedir = basedir. }
+false;public;0;3;;public String getInternalProxies() {     return this.internalProxies. }
+false;public;1;3;;public void setInternalProxies(String internalProxies) {     this.internalProxies = internalProxies. }
+false;public;0;3;;public String getProtocolHeader() {     return this.protocolHeader. }
+false;public;1;3;;public void setProtocolHeader(String protocolHeader) {     this.protocolHeader = protocolHeader. }
+false;public;0;3;;public String getProtocolHeaderHttpsValue() {     return this.protocolHeaderHttpsValue. }
+false;public;1;3;;public void setProtocolHeaderHttpsValue(String protocolHeaderHttpsValue) {     this.protocolHeaderHttpsValue = protocolHeaderHttpsValue. }
+false;public;0;3;;public String getPortHeader() {     return this.portHeader. }
+false;public;1;3;;public void setPortHeader(String portHeader) {     this.portHeader = portHeader. }
+false;public;0;3;;public Boolean getRedirectContextRoot() {     return this.redirectContextRoot. }
+false;public;1;3;;public void setRedirectContextRoot(Boolean redirectContextRoot) {     this.redirectContextRoot = redirectContextRoot. }
+false;public;0;3;;public Boolean getUseRelativeRedirects() {     return this.useRelativeRedirects. }
+false;public;1;3;;public void setUseRelativeRedirects(Boolean useRelativeRedirects) {     this.useRelativeRedirects = useRelativeRedirects. }
+false;public;0;3;;public String getRemoteIpHeader() {     return this.remoteIpHeader. }
+false;public;1;3;;public void setRemoteIpHeader(String remoteIpHeader) {     this.remoteIpHeader = remoteIpHeader. }
+false;public;0;3;;public Charset getUriEncoding() {     return this.uriEncoding. }
+false;public;1;3;;public void setUriEncoding(Charset uriEncoding) {     this.uriEncoding = uriEncoding. }
+false;public;0;3;;public int getMaxConnections() {     return this.maxConnections. }
+false;public;1;3;;public void setMaxConnections(int maxConnections) {     this.maxConnections = maxConnections. }
+false;public;0;3;;public DataSize getMaxSwallowSize() {     return this.maxSwallowSize. }
+false;public;1;3;;public void setMaxSwallowSize(DataSize maxSwallowSize) {     this.maxSwallowSize = maxSwallowSize. }
+false;public;0;3;;public int getAcceptCount() {     return this.acceptCount. }
+false;public;1;3;;public void setAcceptCount(int acceptCount) {     this.acceptCount = acceptCount. }
+false;public;0;3;;public int getProcessorCache() {     return this.processorCache. }
+false;public;1;3;;public void setProcessorCache(int processorCache) {     this.processorCache = processorCache. }
+false;public;0;3;;public List<String> getAdditionalTldSkipPatterns() {     return this.additionalTldSkipPatterns. }
+false;public;1;3;;public void setAdditionalTldSkipPatterns(List<String> additionalTldSkipPatterns) {     this.additionalTldSkipPatterns = additionalTldSkipPatterns. }
+false;public;0;3;;public Resource getResource() {     return this.resource. }
+false;public;0;3;;public boolean isEnabled() {     return this.enabled. }
+false;public;1;3;;public void setEnabled(boolean enabled) {     this.enabled = enabled. }
+false;public;0;3;;public String getPattern() {     return this.pattern. }
+false;public;1;3;;public void setPattern(String pattern) {     this.pattern = pattern. }
+false;public;0;3;;public String getDirectory() {     return this.directory. }
+false;public;1;3;;public void setDirectory(String directory) {     this.directory = directory. }
+false;public;0;3;;public String getPrefix() {     return this.prefix. }
+false;public;1;3;;public void setPrefix(String prefix) {     this.prefix = prefix. }
+false;public;0;3;;public String getSuffix() {     return this.suffix. }
+false;public;1;3;;public void setSuffix(String suffix) {     this.suffix = suffix. }
+false;public;0;3;;public boolean isRotate() {     return this.rotate. }
+false;public;1;3;;public void setRotate(boolean rotate) {     this.rotate = rotate. }
+false;public;0;3;;public boolean isRenameOnRotate() {     return this.renameOnRotate. }
+false;public;1;3;;public void setRenameOnRotate(boolean renameOnRotate) {     this.renameOnRotate = renameOnRotate. }
+false;public;0;3;;public int getMaxDays() {     return this.maxDays. }
+false;public;1;3;;public void setMaxDays(int maxDays) {     this.maxDays = maxDays. }
+false;public;0;3;;public String getFileDateFormat() {     return this.fileDateFormat. }
+false;public;1;3;;public void setFileDateFormat(String fileDateFormat) {     this.fileDateFormat = fileDateFormat. }
+false;public;0;3;;public boolean isRequestAttributesEnabled() {     return this.requestAttributesEnabled. }
+false;public;1;3;;public void setRequestAttributesEnabled(boolean requestAttributesEnabled) {     this.requestAttributesEnabled = requestAttributesEnabled. }
+false;public;0;3;;public boolean isBuffered() {     return this.buffered. }
+false;public;1;3;;public void setBuffered(boolean buffered) {     this.buffered = buffered. }
+false;public;0;3;;public boolean isAllowCaching() {     return this.allowCaching. }
+false;public;1;3;;public void setAllowCaching(boolean allowCaching) {     this.allowCaching = allowCaching. }
+false;public;0;3;;public Duration getCacheTtl() {     return this.cacheTtl. }
+false;public;1;3;;public void setCacheTtl(Duration cacheTtl) {     this.cacheTtl = cacheTtl. }
+false;public;0;3;;public Accesslog getAccesslog() {     return this.accesslog. }
+false;public;0;3;;public DataSize getMaxHttpPostSize() {     return this.maxHttpPostSize. }
+false;public;1;3;;public void setMaxHttpPostSize(DataSize maxHttpPostSize) {     this.maxHttpPostSize = maxHttpPostSize. }
+false;public;0;3;;public Integer getAcceptors() {     return this.acceptors. }
+false;public;1;3;;public void setAcceptors(Integer acceptors) {     this.acceptors = acceptors. }
+false;public;0;3;;public Integer getSelectors() {     return this.selectors. }
+false;public;1;3;;public void setSelectors(Integer selectors) {     this.selectors = selectors. }
+false;public;0;3;;public boolean isEnabled() {     return this.enabled. }
+false;public;1;3;;public void setEnabled(boolean enabled) {     this.enabled = enabled. }
+false;public;0;3;;public String getFilename() {     return this.filename. }
+false;public;1;3;;public void setFilename(String filename) {     this.filename = filename. }
+false;public;0;3;;public String getFileDateFormat() {     return this.fileDateFormat. }
+false;public;1;3;;public void setFileDateFormat(String fileDateFormat) {     this.fileDateFormat = fileDateFormat. }
+false;public;0;3;;public int getRetentionPeriod() {     return this.retentionPeriod. }
+false;public;1;3;;public void setRetentionPeriod(int retentionPeriod) {     this.retentionPeriod = retentionPeriod. }
+false;public;0;3;;public boolean isAppend() {     return this.append. }
+false;public;1;3;;public void setAppend(boolean append) {     this.append = append. }
+false;public;0;3;;public boolean isExtendedFormat() {     return this.extendedFormat. }
+false;public;1;3;;public void setExtendedFormat(boolean extendedFormat) {     this.extendedFormat = extendedFormat. }
+false;public;0;3;;public String getDateFormat() {     return this.dateFormat. }
+false;public;1;3;;public void setDateFormat(String dateFormat) {     this.dateFormat = dateFormat. }
+false;public;0;3;;public Locale getLocale() {     return this.locale. }
+false;public;1;3;;public void setLocale(Locale locale) {     this.locale = locale. }
+false;public;0;3;;public TimeZone getTimeZone() {     return this.timeZone. }
+false;public;1;3;;public void setTimeZone(TimeZone timeZone) {     this.timeZone = timeZone. }
+false;public;0;3;;public boolean isLogCookies() {     return this.logCookies. }
+false;public;1;3;;public void setLogCookies(boolean logCookies) {     this.logCookies = logCookies. }
+false;public;0;3;;public boolean isLogServer() {     return this.logServer. }
+false;public;1;3;;public void setLogServer(boolean logServer) {     this.logServer = logServer. }
+false;public;0;3;;public boolean isLogLatency() {     return this.logLatency. }
+false;public;1;3;;public void setLogLatency(boolean logLatency) {     this.logLatency = logLatency. }
+false;public;0;3;;public DataSize getMaxHttpPostSize() {     return this.maxHttpPostSize. }
+false;public;1;3;;public void setMaxHttpPostSize(DataSize maxHttpPostSize) {     this.maxHttpPostSize = maxHttpPostSize. }
+false;public;0;3;;public DataSize getBufferSize() {     return this.bufferSize. }
+false;public;1;3;;public void setBufferSize(DataSize bufferSize) {     this.bufferSize = bufferSize. }
+false;public;0;3;;public Integer getIoThreads() {     return this.ioThreads. }
+false;public;1;3;;public void setIoThreads(Integer ioThreads) {     this.ioThreads = ioThreads. }
+false;public;0;3;;public Integer getWorkerThreads() {     return this.workerThreads. }
+false;public;1;3;;public void setWorkerThreads(Integer workerThreads) {     this.workerThreads = workerThreads. }
+false;public;0;3;;public Boolean getDirectBuffers() {     return this.directBuffers. }
+false;public;1;3;;public void setDirectBuffers(Boolean directBuffers) {     this.directBuffers = directBuffers. }
+false;public;0;3;;public boolean isEagerFilterInit() {     return this.eagerFilterInit. }
+false;public;1;3;;public void setEagerFilterInit(boolean eagerFilterInit) {     this.eagerFilterInit = eagerFilterInit. }
+false;public;0;3;;public Accesslog getAccesslog() {     return this.accesslog. }
+false;public;0;3;;public boolean isEnabled() {     return this.enabled. }
+false;public;1;3;;public void setEnabled(boolean enabled) {     this.enabled = enabled. }
+false;public;0;3;;public String getPattern() {     return this.pattern. }
+false;public;1;3;;public void setPattern(String pattern) {     this.pattern = pattern. }
+false;public;0;3;;public String getPrefix() {     return this.prefix. }
+false;public;1;3;;public void setPrefix(String prefix) {     this.prefix = prefix. }
+false;public;0;3;;public String getSuffix() {     return this.suffix. }
+false;public;1;3;;public void setSuffix(String suffix) {     this.suffix = suffix. }
+false;public;0;3;;public File getDir() {     return this.dir. }
+false;public;1;3;;public void setDir(File dir) {     this.dir = dir. }
+false;public;0;3;;public boolean isRotate() {     return this.rotate. }
+false;public;1;3;;public void setRotate(boolean rotate) {     this.rotate = rotate. }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;7;;@Override protected Mono<Health> doHealthCheck(Health.Builder builder) {     ReactiveRedisConnection connection = this.connectionFactory.getReactiveConnection().     return connection.serverCommands().info().map((info) -> up(builder, info)).doFinally((signal) -> connection.close()). }
+false;private;2;4;;private Health up(Health.Builder builder, Properties info) {     return builder.up().withDetail(RedisHealthIndicator.VERSION, info.getProperty(RedisHealthIndicator.REDIS_VERSION)).build(). }

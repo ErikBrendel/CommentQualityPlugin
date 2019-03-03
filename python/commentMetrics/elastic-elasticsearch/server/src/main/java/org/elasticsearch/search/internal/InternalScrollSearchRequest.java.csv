@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeLong(id).     out.writeOptionalWriteable(scroll). }
+false;public;0;3;;public long id() {     return id. }
+false;public;0;3;;public Scroll scroll() {     return scroll. }
+false;public;1;4;;public InternalScrollSearchRequest scroll(Scroll scroll) {     this.scroll = scroll.     return this. }
+false;public;1;4;;@Override public void readFrom(StreamInput in) throws IOException {     throw new UnsupportedOperationException("usage of Streamable is to be replaced by Writeable"). }
+false;public;5;4;;@Override public Task createTask(long id, String type, String action, TaskId parentTaskId, Map<String, String> headers) {     return new SearchTask(id, type, action, getDescription(), parentTaskId, headers). }
+false;public;0;4;;@Override public String getDescription() {     return "id[" + id + "], scroll[" + scroll + "]". }

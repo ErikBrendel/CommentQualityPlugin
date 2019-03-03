@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public String get(String key) {     return null. }
+false;public;0;4;;@Override public Duration step() {     return get(AtlasProperties::getStep, AtlasConfig.super::step). }
+false;public;0;4;;@Override public boolean enabled() {     return get(AtlasProperties::isEnabled, AtlasConfig.super::enabled). }
+false;public;0;4;;@Override public Duration connectTimeout() {     return get(AtlasProperties::getConnectTimeout, AtlasConfig.super::connectTimeout). }
+false;public;0;4;;@Override public Duration readTimeout() {     return get(AtlasProperties::getReadTimeout, AtlasConfig.super::readTimeout). }
+false;public;0;4;;@Override public int numThreads() {     return get(AtlasProperties::getNumThreads, AtlasConfig.super::numThreads). }
+false;public;0;4;;@Override public int batchSize() {     return get(AtlasProperties::getBatchSize, AtlasConfig.super::batchSize). }
+false;public;0;4;;@Override public String uri() {     return get(AtlasProperties::getUri, AtlasConfig.super::uri). }
+false;public;0;4;;@Override public Duration meterTTL() {     return get(AtlasProperties::getMeterTimeToLive, AtlasConfig.super::meterTTL). }
+false;public;0;4;;@Override public boolean lwcEnabled() {     return get(AtlasProperties::isLwcEnabled, AtlasConfig.super::lwcEnabled). }
+false;public;0;5;;@Override public Duration configRefreshFrequency() {     return get(AtlasProperties::getConfigRefreshFrequency, AtlasConfig.super::configRefreshFrequency). }
+false;public;0;4;;@Override public Duration configTTL() {     return get(AtlasProperties::getConfigTimeToLive, AtlasConfig.super::configTTL). }
+false;public;0;4;;@Override public String configUri() {     return get(AtlasProperties::getConfigUri, AtlasConfig.super::configUri). }
+false;public;0;4;;@Override public String evalUri() {     return get(AtlasProperties::getEvalUri, AtlasConfig.super::evalUri). }

@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getType() {     return StringTerms.NAME. }
+false;public,static;2;5;;public static ParsedStringTerms fromXContent(XContentParser parser, String name) throws IOException {     ParsedStringTerms aggregation = PARSER.parse(parser, null).     aggregation.setName(name).     return aggregation. }
+false;public;0;4;;@Override public Object getKey() {     return getKeyAsString(). }
+false;public;0;11;;@Override public String getKeyAsString() {     String keyAsString = super.getKeyAsString().     if (keyAsString != null) {         return keyAsString.     }     if (key != null) {         return key.utf8ToString().     }     return null. }
+false;public;0;6;;public Number getKeyAsNumber() {     if (key != null) {         return Double.parseDouble(key.utf8ToString()).     }     return null. }
+false;protected;1;4;;@Override protected XContentBuilder keyToXContent(XContentBuilder builder) throws IOException {     return builder.field(CommonFields.KEY.getPreferredName(), getKey()). }
+false;static;1;10;;static ParsedBucket fromXContent(XContentParser parser) throws IOException {     return parseTermsBucketXContent(parser, ParsedBucket::new, (p, bucket) -> {         CharBuffer cb = p.charBufferOrNull().         if (cb == null) {             bucket.key = null.         } else {             bucket.key = new BytesRef(cb).         }     }). }

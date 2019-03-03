@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;9;;@Override public <P extends Page> P getPage(String url) throws IOException, FailingHttpStatusCodeException, MalformedURLException {     if (url.startsWith("/")) {         String port = this.environment.getProperty("local.server.port", "8080").         url = "http://localhost:" + port + url.     }     return super.getPage(url). }

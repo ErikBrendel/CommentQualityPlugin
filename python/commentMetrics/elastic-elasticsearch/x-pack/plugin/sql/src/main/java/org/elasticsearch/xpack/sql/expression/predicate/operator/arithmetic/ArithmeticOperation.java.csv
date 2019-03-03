@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;2;4;;@Override protected TypeResolution resolveInputType(Expression e, Expressions.ParamOrdinal paramOrdinal) {     return isNumeric(e, sourceText(), paramOrdinal). }
+false;public;0;4;;@Override public ArithmeticOperation swapLeftAndRight() {     return this. }
+false;public;0;7;;@Override public DataType dataType() {     if (dataType == null) {         dataType = DataTypeConversion.commonType(left().dataType(), right().dataType()).     }     return dataType. }
+false;protected;0;4;;@Override protected Pipe makePipe() {     return new BinaryArithmeticPipe(source(), this, Expressions.pipe(left()), Expressions.pipe(right()), function()). }

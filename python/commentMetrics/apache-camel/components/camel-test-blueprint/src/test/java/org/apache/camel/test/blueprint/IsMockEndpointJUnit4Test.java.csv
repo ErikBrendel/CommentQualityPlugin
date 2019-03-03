@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected String getBlueprintDescriptor() {     return "org/apache/camel/test/blueprint/IsMockEndpoints.xml". }
+false;public;0;4;;@Override public String isMockEndpoints() {     return "*". }
+false;public;0;11;;@Test public void testMockAllEndpoints() throws Exception {     mockSeda.expectedBodiesReceived("bar").     mockBar.expectedBodiesReceived("bar").     template.sendBody("direct:foo", "Hello World").     assertNotNull(context.hasEndpoint("mock:seda:result")).     assertNotNull(context.hasEndpoint("mock:baz")).     assertMockEndpointsSatisfied(). }
+false;public;0;9;;@Test public void testMockBar() throws Exception {     mockBar.expectedBodiesReceived("bar").     template.sendBody("direct:foo", "Hello World").     assertNotNull(context.hasEndpoint("mock:bar")).     assertMockEndpointsSatisfied(). }
+false;public;0;9;;@Test public void testMockBaz() throws Exception {     mockBaz.expectedBodiesReceived("baz").     template.sendBody("direct:foo", "Hello World").     assertNotNull(context.hasEndpoint("mock:baz")).     assertMockEndpointsSatisfied(). }

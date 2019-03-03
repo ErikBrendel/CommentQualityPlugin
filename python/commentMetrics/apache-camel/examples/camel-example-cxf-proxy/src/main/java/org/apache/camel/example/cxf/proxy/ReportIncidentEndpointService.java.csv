@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;9;;public OutputReportIncident reportIncident(InputReportIncident in) {     // just log and return a fixed response     System.out.println("\n\n\nInvoked real web service: id=" + in.getIncidentId() + " by " + in.getGivenName() + " " + in.getFamilyName() + "\n\n\n").     OutputReportIncident out = new OutputReportIncident().     out.setCode("OK." + in.getIncidentId()).     return out. }

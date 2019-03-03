@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;3;;protected void setSpanReporter(ZipkinTracer zipkin) {     zipkin.setSpanReporter(Reporter.NOOP). }
+false;protected;0;13;;@Override protected CamelContext createCamelContext() throws Exception {     CamelContext context = super.createCamelContext().     zipkin = new ZipkinTracer().     zipkin.setServiceName("dude").     setSpanReporter(zipkin).     // attaching ourself to CamelContext     zipkin.init(context).     return context. }
+false;public;0;10;;@Test public void testZipkinRoute() throws Exception {     NotifyBuilder notify = new NotifyBuilder(context).whenDone(5).create().     for (int i = 0. i < 5. i++) {         template.sendBody("seda:dude", "Hello World").     }     assertTrue(notify.matches(30, TimeUnit.SECONDS)). }
+false;public;0;6;;@Override public void configure() throws Exception {     from("seda:dude").routeId("dude").log("routing at ${routeId}").delay(simple("${random(1000,2000)}")). }
+false;protected;0;11;;@Override protected RoutesBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("seda:dude").routeId("dude").log("routing at ${routeId}").delay(simple("${random(1000,2000)}")).         }     }. }

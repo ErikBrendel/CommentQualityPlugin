@@ -1,0 +1,20 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getUri() {     return this.uri. }
+false;public;1;3;;public void setUri(String uri) {     this.uri = uri. }
+false;public;0;3;;public String getUsername() {     return this.username. }
+false;public;1;3;;public void setUsername(String username) {     this.username = username. }
+false;public;0;3;;public String getPassword() {     return this.password. }
+false;public;1;3;;public void setPassword(String password) {     this.password = password. }
+false;public;0;3;;public AutoIndexMode getAutoIndex() {     return this.autoIndex. }
+false;public;1;3;;public void setAutoIndex(AutoIndexMode autoIndex) {     this.autoIndex = autoIndex. }
+false;public;0;3;;public Boolean getOpenInView() {     return this.openInView. }
+false;public;1;3;;public void setOpenInView(Boolean openInView) {     this.openInView = openInView. }
+false;public;0;3;;public boolean isUseNativeTypes() {     return this.useNativeTypes. }
+false;public;1;3;;public void setUseNativeTypes(boolean useNativeTypes) {     this.useNativeTypes = useNativeTypes. }
+false;public;0;3;;public Embedded getEmbedded() {     return this.embedded. }
+false;public;1;4;;@Override public void setApplicationContext(ApplicationContext ctx) throws BeansException {     this.classLoader = ctx.getClassLoader(). }
+true;public;0;5;/**  * Create a {@link Configuration} based on the state of this instance.  * @return a configuration  */ ;/**  * Create a {@link Configuration} based on the state of this instance.  * @return a configuration  */ public Configuration createConfiguration() {     Builder builder = new Builder().     configure(builder).     return builder.build(). }
+false;private;1;15;;private void configure(Builder builder) {     if (this.uri != null) {         builder.uri(this.uri).     } else {         configureUriWithDefaults(builder).     }     if (this.username != null && this.password != null) {         builder.credentials(this.username, this.password).     }     builder.autoIndex(this.getAutoIndex().getName()).     if (this.useNativeTypes) {         builder.useNativeTypes().     } }
+false;private;1;6;;private void configureUriWithDefaults(Builder builder) {     if (!getEmbedded().isEnabled() || !ClassUtils.isPresent(EMBEDDED_DRIVER, this.classLoader)) {         builder.uri(DEFAULT_BOLT_URI).     } }
+false;public;0;3;;public boolean isEnabled() {     return this.enabled. }
+false;public;1;3;;public void setEnabled(boolean enabled) {     this.enabled = enabled. }

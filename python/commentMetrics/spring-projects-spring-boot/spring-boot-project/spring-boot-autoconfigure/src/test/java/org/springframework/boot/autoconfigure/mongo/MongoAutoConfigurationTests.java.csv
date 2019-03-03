@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void clientExists() {     this.contextRunner.run((context) -> assertThat(context).hasSingleBean(MongoClient.class)). }
+false;public;0;6;;@Test public void optionsAdded() {     this.contextRunner.withUserConfiguration(OptionsConfig.class).run((context) -> assertThat(context.getBean(MongoClient.class).getMongoClientOptions().getSocketTimeout()).isEqualTo(300)). }
+false;public;0;6;;@Test public void optionsAddedButNoHost() {     this.contextRunner.withUserConfiguration(OptionsConfig.class).run((context) -> assertThat(context.getBean(MongoClient.class).getMongoClientOptions().getSocketTimeout()).isEqualTo(300)). }
+false;public;0;12;;@Test public void optionsSslConfig() {     this.contextRunner.withUserConfiguration(SslOptionsConfig.class).run((context) -> {         assertThat(context).hasSingleBean(MongoClient.class).         MongoClient mongo = context.getBean(MongoClient.class).         MongoClientOptions options = mongo.getMongoClientOptions().         assertThat(options.isSslEnabled()).isTrue().         assertThat(options.getSocketFactory()).isSameAs(context.getBean("mySocketFactory")).     }). }
+false;public;0;9;;@Test public void doesNotCreateMongoClientWhenAlreadyDefined() {     this.contextRunner.withUserConfiguration(FallbackMongoClientConfig.class).run((context) -> {         assertThat(context).doesNotHaveBean(MongoClient.class).         assertThat(context).hasSingleBean(com.mongodb.client.MongoClient.class).     }). }
+false;public;0;4;;@Bean public MongoClientOptions mongoOptions() {     return MongoClientOptions.builder().socketTimeout(300).build(). }
+false;public;0;5;;@Bean public MongoClientOptions mongoClientOptions() {     return MongoClientOptions.builder().sslEnabled(true).socketFactory(mySocketFactory()).build(). }
+false;public;0;4;;@Bean public SocketFactory mySocketFactory() {     return mock(SocketFactory.class). }
+false;;0;4;;@Bean com.mongodb.client.MongoClient fallbackMongoClient() {     return MongoClients.create(). }

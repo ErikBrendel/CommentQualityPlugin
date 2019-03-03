@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected CouchbaseConfigurer couchbaseConfigurer() {     return this.couchbaseConfigurer. }
+false;protected;0;4;;@Override protected Consistency getDefaultConsistency() {     return this.properties.getConsistency(). }
+false;protected;0;5;;@Override protected Set<Class<?>> getInitialEntitySet() throws ClassNotFoundException {     return new EntityScanner(this.applicationContext).scan(Document.class, Persistent.class). }
+false;public;0;6;;@Override @ConditionalOnMissingBean(name = BeanNames.COUCHBASE_TEMPLATE) @Bean(name = BeanNames.COUCHBASE_TEMPLATE) public CouchbaseTemplate couchbaseTemplate() throws Exception {     return super.couchbaseTemplate(). }
+false;public;0;6;;@Override @ConditionalOnMissingBean(name = BeanNames.COUCHBASE_CUSTOM_CONVERSIONS) @Bean(name = BeanNames.COUCHBASE_CUSTOM_CONVERSIONS) public CustomConversions customConversions() {     return super.customConversions(). }
+false;public;0;9;;@Override @ConditionalOnMissingBean(name = BeanNames.COUCHBASE_INDEX_MANAGER) @Bean(name = BeanNames.COUCHBASE_INDEX_MANAGER) public IndexManager indexManager() {     if (this.properties.isAutoIndex()) {         return new IndexManager(true, true, true).     }     return new IndexManager(false, false, false). }

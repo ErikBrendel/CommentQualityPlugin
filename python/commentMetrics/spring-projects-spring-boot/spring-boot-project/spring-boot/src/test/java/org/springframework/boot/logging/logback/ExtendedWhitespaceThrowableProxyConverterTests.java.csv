@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void noStackTrace() {     String s = this.converter.convert(this.event).     assertThat(s).isEmpty(). }
+false;public;0;6;;@Test public void withStackTrace() {     this.event.setThrowableProxy(new ThrowableProxy(new RuntimeException())).     String s = this.converter.convert(this.event).     assertThat(s).startsWith(System.lineSeparator()).endsWith(System.lineSeparator()). }

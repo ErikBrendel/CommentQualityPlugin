@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected SSLService getSslService() {     return thisVar.getSslService(). }
+false;protected;0;4;;@Override protected XPackLicenseState getLicenseState() {     return thisVar.getLicenseState(). }
+false;protected;0;4;;@Override protected Clock getClock() {     return clock. }
+false;protected;2;4;;@Override protected TriggerEngine getTriggerEngine(Clock clock, ScheduleRegistry scheduleRegistry) {     return new ScheduleTriggerEngineMock(scheduleRegistry, clock). }
+false;protected;1;4;;@Override protected WatchExecutor getWatchExecutor(ThreadPool threadPool) {     return new SameThreadExecutor(). }
+false;protected;1;4;;@Override protected Consumer<Iterable<TriggerEvent>> getTriggerEngineListener(ExecutionService executionService) {     return new SyncTriggerEventConsumer(executionService). }
+false;public;0;4;;@Override public Stream<Runnable> tasks() {     return Stream.empty(). }
+false;public;0;4;;@Override public BlockingQueue<Runnable> queue() {     return new ArrayBlockingQueue<>(1). }
+false;public;0;4;;@Override public long largestPoolSize() {     return 1. }
+false;public;1;4;;@Override public void execute(Runnable runnable) {     runnable.run(). }

@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public InetSocketAddress getLocalAddress() {     return (InetSocketAddress) channel.localAddress(). }
+false;public;1;4;;@Override public void addCloseListener(ActionListener<Void> listener) {     closeContext.addListener(ActionListener.toBiConsumer(listener)). }
+false;public;0;4;;@Override public boolean isOpen() {     return channel.isOpen(). }
+false;public;0;4;;@Override public void close() {     channel.close(). }
+false;public;0;4;;@Override public String toString() {     return "Netty4HttpChannel{localAddress=" + getLocalAddress() + "}". }

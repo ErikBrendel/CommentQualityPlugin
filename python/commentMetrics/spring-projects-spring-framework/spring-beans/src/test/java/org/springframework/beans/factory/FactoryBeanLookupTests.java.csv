@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Before public void setUp() {     beanFactory = new DefaultListableBeanFactory().     new XmlBeanDefinitionReader((BeanDefinitionRegistry) beanFactory).loadBeanDefinitions(new ClassPathResource("FactoryBeanLookupTests-context.xml", this.getClass())). }
+false;public;0;5;;@Test public void factoryBeanLookupByNameDereferencing() {     Object fooFactory = beanFactory.getBean("&fooFactory").     assertThat(fooFactory, instanceOf(FooFactoryBean.class)). }
+false;public;0;5;;@Test public void factoryBeanLookupByType() {     FooFactoryBean fooFactory = beanFactory.getBean(FooFactoryBean.class).     assertNotNull(fooFactory). }
+false;public;0;5;;@Test public void factoryBeanLookupByTypeAndNameDereference() {     FooFactoryBean fooFactory = beanFactory.getBean("&fooFactory", FooFactoryBean.class).     assertNotNull(fooFactory). }
+false;public;0;5;;@Test public void factoryBeanObjectLookupByName() {     Object fooFactory = beanFactory.getBean("fooFactory").     assertThat(fooFactory, instanceOf(Foo.class)). }
+false;public;0;5;;@Test public void factoryBeanObjectLookupByNameAndType() {     Foo foo = beanFactory.getBean("fooFactory", Foo.class).     assertNotNull(foo). }
+false;protected;0;4;;@Override protected Foo createInstance() throws Exception {     return new Foo(). }
+false;public;0;4;;@Override public Class<?> getObjectType() {     return Foo.class. }

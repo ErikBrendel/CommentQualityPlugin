@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public RestStatus status() {     return RestStatus.BAD_REQUEST. }
+false;private,static;1;8;;private static String extractMessage(Collection<Failure> failures) {     return failures.stream().map(f -> {         Location l = f.source().source().source().         return "line " + l.getLineNumber() + ":" + l.getColumnNumber() + ": " + f.message().     }).collect(Collectors.joining("\n", "Found " + failures.size() + " problem(s)\n", "")). }

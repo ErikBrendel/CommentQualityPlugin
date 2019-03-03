@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void testLanguageExpressions() throws Exception {     assertExpression("exchange.getIn().body", "<hello id='m123'>world!</hello>").     assertExpression("request.headers.get('foo')", "abc"). }
+false;protected;0;3;;protected String getLanguageName() {     return "js". }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;2;1;/**  * Populates a message exchange when using the DataSet as a source of messages  */ ;/**  * Populates a message exchange when using the DataSet as a source of messages  */ void populateMessage(Exchange exchange, long messageIndex) throws Exception.
+true;;0;1;/**  * Returns the size of the dataset  */ ;/**  * Returns the size of the dataset  */ long getSize().
+true;;4;1;/**  * Asserts that the expected message has been received for the given index  */ ;/**  * Asserts that the expected message has been received for the given index  */ void assertMessageExpected(DataSetEndpoint endpoint, Exchange expected, Exchange actual, long messageIndex) throws Exception.
+true;;0;1;/**  * Returns the number of messages which should be received before reporting on the progress of the test  */ ;/**  * Returns the number of messages which should be received before reporting on the progress of the test  */ long getReportCount().

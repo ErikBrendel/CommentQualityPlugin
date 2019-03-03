@@ -1,0 +1,22 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;1;;String name().
+false;;4;1;;void authenticationSuccess(String requestId, String realm, User user, RestRequest request).
+false;;5;1;;void authenticationSuccess(String requestId, String realm, User user, String action, TransportMessage message).
+false;;3;1;;void anonymousAccessDenied(String requestId, String action, TransportMessage message).
+false;;2;1;;void anonymousAccessDenied(String requestId, RestRequest request).
+false;;2;1;;void authenticationFailed(String requestId, RestRequest request).
+false;;3;1;;void authenticationFailed(String requestId, String action, TransportMessage message).
+false;;4;1;;void authenticationFailed(String requestId, AuthenticationToken token, String action, TransportMessage message).
+false;;3;1;;void authenticationFailed(String requestId, AuthenticationToken token, RestRequest request).
+false;;5;1;;void authenticationFailed(String requestId, String realm, AuthenticationToken token, String action, TransportMessage message).
+false;;4;1;;void authenticationFailed(String requestId, String realm, AuthenticationToken token, RestRequest request).
+false;;5;2;;void accessGranted(String requestId, Authentication authentication, String action, TransportMessage message, AuthorizationInfo authorizationInfo).
+false;;5;2;;void accessDenied(String requestId, Authentication authentication, String action, TransportMessage message, AuthorizationInfo authorizationInfo).
+false;;2;1;;void tamperedRequest(String requestId, RestRequest request).
+false;;3;1;;void tamperedRequest(String requestId, String action, TransportMessage message).
+false;;4;1;;void tamperedRequest(String requestId, User user, String action, TransportMessage request).
+true;;3;1;/**  * The {@link #connectionGranted(InetAddress, String, SecurityIpFilterRule)} and  * {@link #connectionDenied(InetAddress, String, SecurityIpFilterRule)} methods do not have a requestId because they related to a  * potentially long-lived TCP connection, not a single request. For both Transport and Rest connections, a single connection  * granted/denied event is generated even if that connection is used for multiple Elasticsearch actions (potentially as different users)  */ ;/**  * The {@link #connectionGranted(InetAddress, String, SecurityIpFilterRule)} and  * {@link #connectionDenied(InetAddress, String, SecurityIpFilterRule)} methods do not have a requestId because they related to a  * potentially long-lived TCP connection, not a single request. For both Transport and Rest connections, a single connection  * granted/denied event is generated even if that connection is used for multiple Elasticsearch actions (potentially as different users)  */ void connectionGranted(InetAddress inetAddress, String profile, SecurityIpFilterRule rule).
+false;;3;1;;void connectionDenied(InetAddress inetAddress, String profile, SecurityIpFilterRule rule).
+false;;5;2;;void runAsGranted(String requestId, Authentication authentication, String action, TransportMessage message, AuthorizationInfo authorizationInfo).
+false;;5;2;;void runAsDenied(String requestId, Authentication authentication, String action, TransportMessage message, AuthorizationInfo authorizationInfo).
+false;;4;2;;void runAsDenied(String requestId, Authentication authentication, RestRequest request, AuthorizationInfo authorizationInfo).

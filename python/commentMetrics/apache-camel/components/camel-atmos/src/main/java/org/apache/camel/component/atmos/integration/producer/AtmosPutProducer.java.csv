@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Override public void process(Exchange exchange) throws Exception {     AtmosResult result = AtmosAPIFacade.getInstance(configuration.getClient()).put(configuration.getLocalPath(), configuration.getRemotePath()).     result.populateExchange(exchange). }

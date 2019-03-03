@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Bean public StringBuffer foo() {     return new StringBuffer("foo"). }
+false;public;0;4;;@Bean public StringBuffer baz() {     return new StringBuffer("baz-parent"). }
+false;public;0;4;;@Bean public StringBuffer baz() {     return new StringBuffer("baz-child"). }
+false;private;0;4;;// ------------------------------------------------------------------------- private void reverseStringBuffers() {     foo.reverse().     baz.reverse(). }
+false;private;0;4;;private void assertOriginalState() {     assertCleanParentContext().     assertCleanChildContext(). }
+false;private;0;3;;private void assertCleanParentContext() {     assertEquals("foo", foo.toString()). }
+false;private;0;3;;private void assertCleanChildContext() {     assertEquals("baz-child", baz.toString()). }
+false;private;0;3;;private void assertDirtyParentContext() {     assertEquals("oof", foo.toString()). }
+false;private;0;3;;private void assertDirtyChildContext() {     assertEquals("dlihc-zab", baz.toString()). }
+false;public;0;6;;// ------------------------------------------------------------------------- @Before public void verifyContextHierarchy() {     assertNotNull("child ApplicationContext", context).     assertNotNull("parent ApplicationContext", context.getParent()).     assertNull("grandparent ApplicationContext", context.getParent().getParent()). }
+false;public;0;5;;@Test public void test1_verifyOriginalStateAndDirtyContexts() {     assertOriginalState().     reverseStringBuffers(). }
+false;public;0;6;;@Test @DirtiesContext public void test2_verifyContextsWereDirtiedAndTriggerExhaustiveCacheClearing() {     assertDirtyParentContext().     assertDirtyChildContext(). }
+false;public;0;6;;@Test @DirtiesContext(hierarchyMode = HierarchyMode.CURRENT_LEVEL) public void test3_verifyOriginalStateWasReinstatedAndDirtyContextsAndTriggerCurrentLevelCacheClearing() {     assertOriginalState().     reverseStringBuffers(). }
+false;public;0;5;;@Test public void test4_verifyParentContextIsStillDirtyButChildContextHasBeenReinstated() {     assertDirtyParentContext().     assertCleanChildContext(). }

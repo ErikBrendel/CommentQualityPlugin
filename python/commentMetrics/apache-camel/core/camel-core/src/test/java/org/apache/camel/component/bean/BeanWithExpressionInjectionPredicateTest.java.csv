@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void testSendMessage() throws Exception {     template.sendBody("direct:in", "Hello").     assertEquals("Hello", myBean.body).     assertEquals(false, myBean.foo). }
+false;public;0;7;;@Test public void testSendMessageWithFoo() throws Exception {     template.sendBodyAndHeader("direct:in", "Hello", "foo", 123).     assertEquals("Hello", myBean.body).     assertEquals(true, myBean.foo). }
+false;protected;0;6;;@Override protected Context createJndiContext() throws Exception {     JndiContext answer = new JndiContext().     answer.bind("myBean", myBean).     return answer. }
+false;public;0;3;;public void configure() {     from("direct:in").bean("myBean"). }
+false;protected;0;7;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("direct:in").bean("myBean").         }     }. }
+false;public;2;4;;public void read(String body, @Simple("${header.foo} != null") boolean foo) {     this.body = body.     this.foo = foo. }

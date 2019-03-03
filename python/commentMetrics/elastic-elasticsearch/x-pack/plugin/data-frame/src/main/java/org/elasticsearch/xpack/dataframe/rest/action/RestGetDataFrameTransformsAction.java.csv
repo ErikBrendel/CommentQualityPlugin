@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;2;6;;@Override protected RestChannelConsumer prepareRequest(RestRequest restRequest, NodeClient client) {     String id = restRequest.param(DataFrameField.ID.getPreferredName()).     GetDataFrameTransformsAction.Request request = new GetDataFrameTransformsAction.Request(id).     return channel -> client.execute(GetDataFrameTransformsAction.INSTANCE, request, new RestToXContentListener<>(channel)). }
+false;public;0;4;;@Override public String getName() {     return "data_frame_get_transforms_action". }

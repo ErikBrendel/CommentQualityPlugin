@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String[] getPolicyNames() {     return policyNames. }
+false;public;1;7;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     GetLifecyclePolicyRequest request = (GetLifecyclePolicyRequest) o.     return Arrays.equals(getPolicyNames(), request.getPolicyNames()). }
+false;public;0;4;;@Override public int hashCode() {     return Arrays.hashCode(getPolicyNames()). }

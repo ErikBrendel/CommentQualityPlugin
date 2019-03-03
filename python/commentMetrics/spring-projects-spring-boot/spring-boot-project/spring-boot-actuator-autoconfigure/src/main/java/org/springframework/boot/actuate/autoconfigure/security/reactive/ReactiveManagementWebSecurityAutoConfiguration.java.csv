@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;7;;@Bean public SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {     return http.authorizeExchange().matchers(EndpointRequest.to(HealthEndpoint.class, InfoEndpoint.class)).permitAll().anyExchange().authenticated().and().httpBasic().and().formLogin().and().build(). }

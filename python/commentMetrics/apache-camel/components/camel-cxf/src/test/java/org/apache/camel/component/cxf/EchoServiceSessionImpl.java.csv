@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;13;;public String echo(String text) {     // Find the HttpSession     MessageContext mc = context.getMessageContext().     HttpSession session = ((javax.servlet.http.HttpServletRequest) mc.get(MessageContext.SERVLET_REQUEST)).getSession().     if (session == null) {         throw new WebServiceException("No HTTP Session found").     }     if (session.getAttribute("foo") == null) {         session.setAttribute("foo", "bar").         return "New " + text.     }     return "Old " + text. }

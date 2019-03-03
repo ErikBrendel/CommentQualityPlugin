@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Throwable getCause() {     return getExchange().getException(). }
+false;public;0;9;;@Override public String toString() {     Exception cause = getExchange().getException().     if (cause != null) {         return getExchange().getExchangeId() + " exchange failure: " + getExchange() + " cause " + cause.     } else {         return getExchange().getExchangeId() + " exchange failure: " + getExchange().     } }

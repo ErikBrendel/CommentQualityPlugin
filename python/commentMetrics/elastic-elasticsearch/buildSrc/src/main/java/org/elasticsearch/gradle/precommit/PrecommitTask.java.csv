@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@OutputFile public File getSuccessMarker() {     return new File(getProject().getBuildDir(), "markers/" + this.getName()). }
+false;public;0;5;;@TaskAction public void writeMarker() throws IOException {     getSuccessMarker().getParentFile().mkdirs().     Files.write(getSuccessMarker().toPath(), new byte[] {}, StandardOpenOption.CREATE). }

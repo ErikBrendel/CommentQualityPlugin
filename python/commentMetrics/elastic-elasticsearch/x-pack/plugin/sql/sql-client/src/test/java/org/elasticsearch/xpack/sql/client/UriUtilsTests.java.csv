@@ -1,0 +1,16 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public void testHostAndPort() throws Exception {     assertEquals(URI.create("http://server:9200/"), parseURI("server:9200", DEFAULT_URI)). }
+false;public;0;3;;public void testJustHost() throws Exception {     assertEquals(URI.create("http://server:9200/"), parseURI("server", DEFAULT_URI)). }
+false;public;0;3;;public void testHttpWithPort() throws Exception {     assertEquals(URI.create("http://server:9201/"), parseURI("http://server:9201", DEFAULT_URI)). }
+false;public;0;3;;public void testHttpsWithPort() throws Exception {     assertEquals(URI.create("https://server:9201/"), parseURI("https://server:9201", DEFAULT_URI)). }
+false;public;0;3;;public void testHttpNoPort() throws Exception {     assertEquals(URI.create("https://server:9200/"), parseURI("https://server", DEFAULT_URI)). }
+false;public;0;3;;public void testLocalhostV6() throws Exception {     assertEquals(URI.create("http://[::1]:51082/"), parseURI("[::1]:51082", DEFAULT_URI)). }
+false;public;0;3;;public void testHttpsWithUser() throws Exception {     assertEquals(URI.create("https://user@server:9200/"), parseURI("https://user@server", DEFAULT_URI)). }
+false;public;0;3;;public void testUserPassHost() throws Exception {     assertEquals(URI.create("http://user:password@server:9200/"), parseURI("user:password@server", DEFAULT_URI)). }
+false;public;0;3;;public void testHttpPath() throws Exception {     assertEquals(URI.create("https://server:9201/some_path"), parseURI("https://server:9201/some_path", DEFAULT_URI)). }
+false;public;0;3;;public void testHttpQuery() throws Exception {     assertEquals(URI.create("https://server:9201/?query"), parseURI("https://server:9201/?query", DEFAULT_URI)). }
+false;public;0;6;;public void testUnsupportedProtocol() throws Exception {     assertEquals("Invalid connection configuration [ftp://server:9201/]: Only http and https protocols are supported", expectThrows(IllegalArgumentException.class, () -> parseURI("ftp://server:9201/", DEFAULT_URI)).getMessage()). }
+false;public;0;6;;public void testMalformed() throws Exception {     assertEquals("Invalid connection configuration []: Expected authority at index 7: http://", expectThrows(IllegalArgumentException.class, () -> parseURI("", DEFAULT_URI)).getMessage()). }
+false;public;0;4;;public void testRemoveQuery() throws Exception {     assertEquals(URI.create("http://server:9100"), removeQuery(URI.create("http://server:9100?query"), "http://server:9100?query", DEFAULT_URI)). }
+false;public;0;4;;public void testRemoveQueryTrailingSlash() throws Exception {     assertEquals(URI.create("http://server:9100/"), removeQuery(URI.create("http://server:9100/?query"), "http://server:9100/?query", DEFAULT_URI)). }
+false;public;0;4;;public void testRemoveQueryNoQuery() throws Exception {     assertEquals(URI.create("http://server:9100"), removeQuery(URI.create("http://server:9100"), "http://server:9100", DEFAULT_URI)). }

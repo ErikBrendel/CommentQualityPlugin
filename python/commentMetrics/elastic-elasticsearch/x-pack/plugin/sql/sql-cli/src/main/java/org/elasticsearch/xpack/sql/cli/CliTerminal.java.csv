@@ -1,0 +1,18 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;1;1;/**  * Prints line with plain text  */ ;/**  * Prints line with plain text  */ void print(String text).
+true;;1;1;/**  * Prints line with plain text followed by a new line  */ ;/**  * Prints line with plain text followed by a new line  */ void println(String text).
+true;;2;1;/**  * Prints a formatted error message  */ ;/**  * Prints a formatted error message  */ void error(String type, String message).
+true;;0;1;/**  * Prints a new line  */ ;/**  * Prints a new line  */ void println().
+true;;0;1;/**  * Clears the terminal  */ ;/**  * Clears the terminal  */ void clear().
+true;;0;1;/**  * Flushes the terminal  */ ;/**  * Flushes the terminal  */ void flush().
+true;;1;1;/**  * Prints the stacktrace of the exception  */ ;/**  * Prints the stacktrace of the exception  */ void printStackTrace(Exception ex).
+true;;1;1;/**  * Prompts the user to enter the password and returns it.  *  * @throws UserException if there is a problem reading the password,  *      for instance, the user {@code ctrl-c}s while we're waiting  *      or they send an EOF  * @return the password the user typed, never null  */ ;/**  * Prompts the user to enter the password and returns it.  *  * @throws UserException if there is a problem reading the password,  *      for instance, the user {@code ctrl-c}s while we're waiting  *      or they send an EOF  * @return the password the user typed, never null  */ String readPassword(String prompt) throws UserException.
+true;;1;1;/**  * Reads the line from the terminal.  *  * @return {@code null} if the user closes the terminal while we're  * waiting for the line, {@code ""} if the use {@code ctrl-c}s while  * we're waiting, the line they typed otherwise  */ ;/**  * Reads the line from the terminal.  *  * @return {@code null} if the user closes the terminal while we're  * waiting for the line, {@code ""} if the use {@code ctrl-c}s while  * we're waiting, the line they typed otherwise  */ String readLine(String prompt).
+true;;0;1;/**  * Creates a new line builder, which allows building a formatted lines.  *  * The line is not displayed until it is closed with ln() or end().  */ ;/**  * Creates a new line builder, which allows building a formatted lines.  *  * The line is not displayed until it is closed with ln() or end().  */ LineBuilder line().
+true;;1;1;/**  * Adds a plain text to the line  */ ;/**  * Adds a plain text to the line  */ LineBuilder text(String text).
+true;;1;1;/**  * Adds a text with emphasis to the line  */ ;/**  * Adds a text with emphasis to the line  */ LineBuilder em(String text).
+true;;1;1;/**  * Adds a text representing the error message  */ ;/**  * Adds a text representing the error message  */ LineBuilder error(String text).
+true;;1;1;/**  * Adds a text representing a parameter of the error message  */ ;/**  * Adds a text representing a parameter of the error message  */ LineBuilder param(String text).
+true;;0;1;/**  * Adds '\n' to the line and send it to the screen.  */ ;/**  * Adds '\n' to the line and send it to the screen.  */ void ln().
+true;;0;1;/**  * Sends the line to the screen.  */ ;/**  * Sends the line to the screen.  */ void end().
+false;;0;2;;@Override void close() throws IOException.

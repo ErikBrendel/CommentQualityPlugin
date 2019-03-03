@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static SetPriorityAction parse(XContentParser parser) {     return PARSER.apply(parser, null). }
+false;public;0;4;;@Override public String getWriteableName() {     return NAME. }
+false;public;2;7;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(RECOVERY_PRIORITY_FIELD.getPreferredName(), recoveryPriority).     builder.endObject().     return builder. }
+false;public;1;4;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeOptionalVInt(recoveryPriority). }
+false;public;0;4;;@Override public boolean isSafeAction() {     return true. }
+false;public;3;8;;@Override public List<Step> toSteps(Client client, String phase, StepKey nextStepKey) {     StepKey key = new StepKey(phase, NAME, NAME).     Settings indexPriority = recoveryPriority == null ? Settings.builder().putNull(IndexMetaData.INDEX_PRIORITY_SETTING.getKey()).build() : Settings.builder().put(IndexMetaData.INDEX_PRIORITY_SETTING.getKey(), recoveryPriority).build().     return Collections.singletonList(new UpdateSettingsStep(key, nextStepKey, client, indexPriority)). }
+false;public;1;4;;@Override public List<StepKey> toStepKeys(String phase) {     return Collections.singletonList(new StepKey(phase, NAME, NAME)). }
+false;public;1;9;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     SetPriorityAction that = (SetPriorityAction) o.     return recoveryPriority != null ? recoveryPriority.equals(that.recoveryPriority) : that.recoveryPriority == null. }
+false;public;0;4;;@Override public int hashCode() {     return recoveryPriority != null ? recoveryPriority.hashCode() : 0. }
+false;public;0;4;;@Override public String toString() {     return Strings.toString(this). }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/spring/spi/bridgePropertyPlaceholderConfigurerUtilIssue.xml"). }
+false;public;0;8;;@Test public void testIssue() throws Exception {     MockEndpoint result = context.getEndpoint("mock:result", MockEndpoint.class).     // we do not receive the constant  but a different value     result.expectedBodiesReceived("Hello Camel").     template.sendBody("direct:start", "Test").     result.assertIsSatisfied(). }

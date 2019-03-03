@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public ServerHttpResponse getDelegate() {     return this.delegate. }
+false;public;1;4;;// ServerHttpResponse delegation methods... @Override public boolean setStatusCode(@Nullable HttpStatus status) {     return getDelegate().setStatusCode(status). }
+false;public;0;4;;@Override public HttpStatus getStatusCode() {     return getDelegate().getStatusCode(). }
+false;public;0;4;;@Override public HttpHeaders getHeaders() {     return getDelegate().getHeaders(). }
+false;public;0;4;;@Override public MultiValueMap<String, ResponseCookie> getCookies() {     return getDelegate().getCookies(). }
+false;public;1;4;;@Override public void addCookie(ResponseCookie cookie) {     getDelegate().addCookie(cookie). }
+false;public;0;4;;@Override public DataBufferFactory bufferFactory() {     return getDelegate().bufferFactory(). }
+false;public;1;4;;@Override public void beforeCommit(Supplier<? extends Mono<Void>> action) {     getDelegate().beforeCommit(action). }
+false;public;0;4;;@Override public boolean isCommitted() {     return getDelegate().isCommitted(). }
+false;public;1;4;;@Override public Mono<Void> writeWith(Publisher<? extends DataBuffer> body) {     return getDelegate().writeWith(body). }
+false;public;1;4;;@Override public Mono<Void> writeAndFlushWith(Publisher<? extends Publisher<? extends DataBuffer>> body) {     return getDelegate().writeAndFlushWith(body). }
+false;public;0;4;;@Override public Mono<Void> setComplete() {     return getDelegate().setComplete(). }
+false;public;0;4;;@Override public String toString() {     return getClass().getSimpleName() + " [delegate=" + getDelegate() + "]". }

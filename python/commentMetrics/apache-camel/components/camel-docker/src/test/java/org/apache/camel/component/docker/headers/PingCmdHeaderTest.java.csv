@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void pingHeaderTest() {     Map<String, Object> headers = getDefaultParameters().     template.sendBodyAndHeaders("direct:in", "", headers).     Mockito.verify(dockerClient, Mockito.times(1)).pingCmd(). }
+false;protected;0;4;;@Override protected void setupMocks() {     Mockito.when(dockerClient.pingCmd()).thenReturn(mockObject). }
+false;protected;0;4;;@Override protected DockerOperation getOperation() {     return DockerOperation.PING. }

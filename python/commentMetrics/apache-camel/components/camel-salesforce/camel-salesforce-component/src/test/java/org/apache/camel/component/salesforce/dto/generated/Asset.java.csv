@@ -1,0 +1,23 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@JsonProperty("ContactId") public String getContactId() {     return this.ContactId. }
+false;public;1;4;;@JsonProperty("ContactId") public void setContactId(String ContactId) {     this.ContactId = ContactId. }
+false;public;0;4;;@JsonProperty("AccountId") public String getAccountId() {     return this.AccountId. }
+false;public;1;4;;@JsonProperty("AccountId") public void setAccountId(String AccountId) {     this.AccountId = AccountId. }
+false;public;0;4;;@JsonProperty("Product2Id") public String getProduct2Id() {     return this.Product2Id. }
+false;public;1;4;;@JsonProperty("Product2Id") public void setProduct2Id(String Product2Id) {     this.Product2Id = Product2Id. }
+false;public;0;4;;@JsonProperty("IsCompetitorProduct") public Boolean getIsCompetitorProduct() {     return this.IsCompetitorProduct. }
+false;public;1;4;;@JsonProperty("IsCompetitorProduct") public void setIsCompetitorProduct(Boolean IsCompetitorProduct) {     this.IsCompetitorProduct = IsCompetitorProduct. }
+false;public;0;4;;@JsonProperty("SerialNumber") public String getSerialNumber() {     return this.SerialNumber. }
+false;public;1;4;;@JsonProperty("SerialNumber") public void setSerialNumber(String SerialNumber) {     this.SerialNumber = SerialNumber. }
+false;public;0;4;;@JsonProperty("InstallDate") public java.time.ZonedDateTime getInstallDate() {     return this.InstallDate. }
+false;public;1;4;;@JsonProperty("InstallDate") public void setInstallDate(java.time.ZonedDateTime InstallDate) {     this.InstallDate = InstallDate. }
+false;public;0;4;;@JsonProperty("PurchaseDate") public java.time.ZonedDateTime getPurchaseDate() {     return this.PurchaseDate. }
+false;public;1;4;;@JsonProperty("PurchaseDate") public void setPurchaseDate(java.time.ZonedDateTime PurchaseDate) {     this.PurchaseDate = PurchaseDate. }
+false;public;0;4;;@JsonProperty("UsageEndDate") public java.time.ZonedDateTime getUsageEndDate() {     return this.UsageEndDate. }
+false;public;1;4;;@JsonProperty("UsageEndDate") public void setUsageEndDate(java.time.ZonedDateTime UsageEndDate) {     this.UsageEndDate = UsageEndDate. }
+false;public;0;4;;@JsonProperty("Price") public Double getPrice() {     return this.Price. }
+false;public;1;4;;@JsonProperty("Price") public void setPrice(Double Price) {     this.Price = Price. }
+false;public;0;4;;@JsonProperty("Quantity") public Double getQuantity() {     return this.Quantity. }
+false;public;1;4;;@JsonProperty("Quantity") public void setQuantity(Double Quantity) {     this.Quantity = Quantity. }
+false;public;0;4;;@JsonProperty("Description") public String getDescription() {     return this.Description. }
+false;public;1;4;;@JsonProperty("Description") public void setDescription(String Description) {     this.Description = Description. }

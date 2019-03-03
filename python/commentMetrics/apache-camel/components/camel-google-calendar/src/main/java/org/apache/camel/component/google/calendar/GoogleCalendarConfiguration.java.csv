@@ -1,0 +1,23 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public GoogleCalendarApiName getApiName() {     return apiName. }
+true;public;1;3;/**  * What kind of operation to perform  */ ;/**  * What kind of operation to perform  */ public void setApiName(GoogleCalendarApiName apiName) {     this.apiName = apiName. }
+false;public;0;3;;public String getMethodName() {     return methodName. }
+true;public;1;3;/**  * What sub operation to use for the selected operation  */ ;/**  * What sub operation to use for the selected operation  */ public void setMethodName(String methodName) {     this.methodName = methodName. }
+false;public;0;3;;public String getClientId() {     return clientId. }
+true;public;1;3;/**  * Client ID of the calendar application  */ ;/**  * Client ID of the calendar application  */ public void setClientId(String clientId) {     this.clientId = clientId. }
+false;public;0;3;;public String getEmailAddress() {     return emailAddress. }
+true;public;1;3;/**  * The emailAddress of the Google Service Account.  */ ;/**  * The emailAddress of the Google Service Account.  */ public void setEmailAddress(String emailAddress) {     this.emailAddress = emailAddress. }
+false;public;0;3;;public String getClientSecret() {     return clientSecret. }
+true;public;1;3;/**  * Client secret of the calendar application  */ ;/**  * Client secret of the calendar application  */ public void setClientSecret(String clientSecret) {     this.clientSecret = clientSecret. }
+false;public;0;3;;public String getAccessToken() {     return accessToken. }
+true;public;1;3;/**  * OAuth 2 access token. This typically expires after an hour so refreshToken is recommended for long term usage.  */ ;/**  * OAuth 2 access token. This typically expires after an hour so refreshToken is recommended for long term usage.  */ public void setAccessToken(String accessToken) {     this.accessToken = accessToken. }
+false;public;0;3;;public String getRefreshToken() {     return refreshToken. }
+true;public;1;3;/**  * OAuth 2 refresh token. Using this, the Google Calendar component can obtain a new accessToken whenever the current one expires - a necessity if the application is long-lived.  */ ;/**  * OAuth 2 refresh token. Using this, the Google Calendar component can obtain a new accessToken whenever the current one expires - a necessity if the application is long-lived.  */ public void setRefreshToken(String refreshToken) {     this.refreshToken = refreshToken. }
+false;public;0;3;;public String getApplicationName() {     return applicationName. }
+true;public;1;3;/**  * Google calendar application name. Example would be "camel-google-calendar/1.0"  */ ;/**  * Google calendar application name. Example would be "camel-google-calendar/1.0"  */ public void setApplicationName(String applicationName) {     this.applicationName = applicationName. }
+false;public;0;3;;public String getScopes() {     return scopes. }
+true;public;1;3;/**  * Specifies the level of permissions you want a calendar application to have to a user account.  * You can separate multiple scopes by comma.  * See https://developers.google.com/google-apps/calendar/auth for more info.  */ ;/**  * Specifies the level of permissions you want a calendar application to have to a user account.  * You can separate multiple scopes by comma.  * See https://developers.google.com/google-apps/calendar/auth for more info.  */ public void setScopes(String scopes) {     this.scopes = scopes. }
+false;public;0;3;;public String getP12FileName() {     return p12FileName. }
+true;public;1;3;/**  * The name of the p12 file which has the private key to use with the Google Service Account.  */ ;/**  * The name of the p12 file which has the private key to use with the Google Service Account.  */ public void setP12FileName(String p12FileName) {     this.p12FileName = p12FileName. }
+false;public;0;3;;public String getUser() {     return user. }
+true;public;1;3;/**  * The email address of the user the application is trying to impersonate in the service account flow  */ ;/**  * The email address of the user the application is trying to impersonate in the service account flow  */ public void setUser(String user) {     this.user = user. }

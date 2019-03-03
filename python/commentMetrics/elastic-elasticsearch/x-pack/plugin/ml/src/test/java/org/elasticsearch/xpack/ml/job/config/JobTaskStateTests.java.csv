@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected JobTaskState createTestInstance() {     return new JobTaskState(randomFrom(JobState.values()), randomLong(), randomAlphaOfLength(10)). }
+false;protected;0;4;;@Override protected Writeable.Reader<JobTaskState> instanceReader() {     return JobTaskState::new. }
+false;protected;1;4;;@Override protected JobTaskState doParseInstance(XContentParser parser) {     return JobTaskState.fromXContent(parser). }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }

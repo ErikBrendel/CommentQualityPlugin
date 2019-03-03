@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;1;3;;<A extends Annotation> void addQualifier(A qualifier) {     annotated.addAnnotation(qualifier). }
+false;public;0;7;;public Class<? extends Annotation> getScope() {     return annotated.getAnnotations().stream().map(Annotation::annotationType).filter(manager::isScope).findAny().orElse(Dependent.class). }
+false;public;0;5;;public Set<Annotation> getQualifiers() {     return annotated.getAnnotations().stream().filter(a -> manager.isQualifier(a.annotationType())).collect(toSet()). }
+false;public;0;8;;public String getName() {     return annotated.getAnnotations().stream().filter(isAnnotationType(Named.class)).map(Named.class::cast).map(Named::value).findFirst().orElse(null). }
+false;public;0;3;;public Set<Class<? extends Annotation>> getStereotypes() {     return emptySet(). }
+false;public;0;3;;public Set<Type> getTypes() {     return annotated.getTypeClosure(). }
+false;public;0;3;;public boolean isAlternative() {     return false. }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Map<String, DisruptorReference> getDisruptors() {     return DISRUPTORS. }
+false;protected;0;5;;@Override protected void doStart() throws Exception {     super.doStart().     START_COUNTER.incrementAndGet(). }
+false;protected;0;7;;@Override protected void doStop() throws Exception {     if (START_COUNTER.decrementAndGet() <= 0) {         // clear queues when no more vm components in use         getDisruptors().clear().     } }

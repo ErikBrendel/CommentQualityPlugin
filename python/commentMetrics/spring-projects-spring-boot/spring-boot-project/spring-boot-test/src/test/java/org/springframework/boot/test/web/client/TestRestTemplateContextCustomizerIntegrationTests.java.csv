@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void test() {     assertThat(this.restTemplate.getForObject("/", String.class)).contains("hello"). }
+false;public;0;4;;@Bean public TomcatServletWebServerFactory webServerFactory() {     return new TomcatServletWebServerFactory(0). }
+false;public;2;7;;@Override public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {     try (PrintWriter writer = response.getWriter()) {         writer.println("hello").     } }

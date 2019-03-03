@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;21;;@Override protected FlushJobRequest createTestInstance() {     FlushJobRequest request = new FlushJobRequest(randomAlphaOfLengthBetween(1, 20)).     if (randomBoolean()) {         request.setCalcInterim(randomBoolean()).     }     if (randomBoolean()) {         request.setAdvanceTime(String.valueOf(randomLong())).     }     if (randomBoolean()) {         request.setStart(String.valueOf(randomLong())).     }     if (randomBoolean()) {         request.setEnd(String.valueOf(randomLong())).     }     if (randomBoolean()) {         request.setSkipTime(String.valueOf(randomLong())).     }     return request. }
+false;protected;1;4;;@Override protected FlushJobRequest doParseInstance(XContentParser parser) throws IOException {     return FlushJobRequest.PARSER.apply(parser, null). }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return false. }

@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Override public int available() throws IOException {     if (this.available < 0) {         return super.available().     }     return this.available. }
+false;public;3;8;;@Override public int read(byte[] b, int off, int len) throws IOException {     int result = super.read(b, off, len).     if (result != -1) {         this.available -= result.     }     return result. }
+false;public;0;5;;@Override public void close() throws IOException {     super.close().     this.inf.end(). }
+false;protected;0;15;;@Override protected void fill() throws IOException {     try {         super.fill().     } catch (EOFException ex) {         if (this.extraBytesWritten) {             throw ex.         }         this.len = 1.         this.buf[0] = 0x0.         this.extraBytesWritten = true.         this.inf.setInput(this.buf, 0, this.len).     } }
+false;private,static;1;6;;private static int getInflaterBufferSize(long size) {     // inflater likes some space     size += 2.     size = (size > 65536) ? 8192 : size.     size = (size <= 0) ? 4096 : size.     return (int) size. }

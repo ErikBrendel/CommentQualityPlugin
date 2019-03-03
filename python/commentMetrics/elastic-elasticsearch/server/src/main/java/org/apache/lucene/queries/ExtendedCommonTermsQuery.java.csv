@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected int calcLowFreqMinimumNumberShouldMatch(int numOptional) {     return calcMinimumNumberShouldMatch(lowFreqMinNumShouldMatchSpec, numOptional). }
+false;protected;2;6;;protected int calcMinimumNumberShouldMatch(String spec, int numOptional) {     if (spec == null) {         return 0.     }     return Queries.calculateMinShouldMatch(numOptional, spec). }
+false;protected;1;4;;@Override protected int calcHighFreqMinimumNumberShouldMatch(int numOptional) {     return calcMinimumNumberShouldMatch(highFreqMinNumShouldMatchSpec, numOptional). }
+false;public;1;3;;public void setHighFreqMinimumNumberShouldMatch(String spec) {     this.highFreqMinNumShouldMatchSpec = spec. }
+false;public;0;3;;public String getHighFreqMinimumNumberShouldMatchSpec() {     return highFreqMinNumShouldMatchSpec. }
+false;public;1;3;;public void setLowFreqMinimumNumberShouldMatch(String spec) {     this.lowFreqMinNumShouldMatchSpec = spec. }
+false;public;0;3;;public String getLowFreqMinimumNumberShouldMatchSpec() {     return lowFreqMinNumShouldMatchSpec. }
+false;public;0;3;;public float getMaxTermFrequency() {     return this.maxTermFrequency. }

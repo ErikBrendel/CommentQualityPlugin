@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected MovFnPipelineAggregationBuilder createTestInstance() {     return new MovFnPipelineAggregationBuilder(randomAlphaOfLength(10), "foo", new Script("foo"), randomIntBetween(1, 10)). }
+false;protected;0;4;;@Override protected Writeable.Reader<MovFnPipelineAggregationBuilder> instanceReader() {     return MovFnPipelineAggregationBuilder::new. }
+false;protected;1;4;;@Override protected MovFnPipelineAggregationBuilder doParseInstance(XContentParser parser) throws IOException {     return MovFnPipelineAggregationBuilder.parse(parser). }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return false. }

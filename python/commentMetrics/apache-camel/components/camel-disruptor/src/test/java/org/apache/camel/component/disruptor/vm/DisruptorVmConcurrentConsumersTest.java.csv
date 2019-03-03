@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void testSendToSeda() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedBodiesReceived("Hello World").     template2.sendBody("disruptor-vm:foo?concurrentConsumers=5", "Hello World").     assertMockEndpointsSatisfied(). }
+false;public;0;4;;@Override public void configure() throws Exception {     from("disruptor-vm:foo?concurrentConsumers=5").to("mock:result"). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("disruptor-vm:foo?concurrentConsumers=5").to("mock:result").         }     }. }

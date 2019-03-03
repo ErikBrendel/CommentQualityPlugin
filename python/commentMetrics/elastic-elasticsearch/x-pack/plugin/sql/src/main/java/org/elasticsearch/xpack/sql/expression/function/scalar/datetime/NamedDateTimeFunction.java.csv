@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected Object doFold(ZonedDateTime dateTime) {     return nameExtractor.extract(dateTime). }
+false;public;1;10;;@Override public ScriptTemplate scriptWithField(FieldAttribute field) {     return new ScriptTemplate(formatTemplate(format(Locale.ROOT, "{sql}.%s(doc[{}].value, {})", StringUtils.underscoreToLowerCamelCase(nameExtractor.name()))), paramsBuilder().variable(field.name()).variable(zoneId().getId()).build(), dataType()). }
+false;protected;0;4;;@Override protected Processor makeProcessor() {     return new NamedDateTimeProcessor(nameExtractor, zoneId()). }
+false;public;0;4;;@Override public DataType dataType() {     return DataType.KEYWORD. }

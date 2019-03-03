@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@GetMapping(value = "/json", produces = MediaType.APPLICATION_JSON_VALUE) public Mono<ExamplePojo> json() {     return Mono.just(new ExamplePojo("a", "b")). }

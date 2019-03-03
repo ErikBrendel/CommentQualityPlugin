@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@GET @Path("/customers/{id}/") public Customer getCustomer(@PathParam("id") String id) {     return null. }
+false;public;2;4;;@PUT @Path("/customers/{id}") public Response updateCustomer(Customer customer, @PathParam("id") String id) {     return null. }
+false;public;3;4;;@POST @Path("/customers/") public Response newCustomer(Customer customer, @PathParam("type") String type, @QueryParam("age") int age) {     return null. }
+false;public;1;4;;@Path("/customers/vip/{status}") public VipCustomerResource vipCustomer(@PathParam("status") String status) {     return new VipCustomerResource(). }
+false;public;1;5;;@Consumes("image/jpeg") @POST @Path("/customers/{id}/image_inputstream") public Response uploadImageInputStream(InputStream is) {     return null. }
+false;public;1;5;;@Consumes("image/jpeg") @POST @Path("/customers/{id}/image_datahandler") public Response uploadImageDataHandler(DataHandler dh) {     return null. }
+false;public;0;4;;@Path("/customers/multipart") public MultipartCustomer multipart() {     return new MultipartCustomer(). }
+false;public;0;3;;public String getId() {     return id. }
+false;public;1;3;;public void setId(String id) {     this.id = id. }

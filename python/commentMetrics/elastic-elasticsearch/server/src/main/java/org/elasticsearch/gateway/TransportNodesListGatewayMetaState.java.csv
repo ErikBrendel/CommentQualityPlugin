@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;5;;public ActionFuture<NodesGatewayMetaState> list(String[] nodesIds, @Nullable TimeValue timeout) {     PlainActionFuture<NodesGatewayMetaState> future = PlainActionFuture.newFuture().     execute(new Request(nodesIds).timeout(timeout), future).     return future. }
+false;protected;2;4;;@Override protected NodeRequest newNodeRequest(String nodeId, Request request) {     return new NodeRequest(nodeId). }
+false;protected;0;4;;@Override protected NodeGatewayMetaState newNodeResponse() {     return new NodeGatewayMetaState(). }
+false;protected;3;4;;@Override protected NodesGatewayMetaState newResponse(Request request, List<NodeGatewayMetaState> responses, List<FailedNodeException> failures) {     return new NodesGatewayMetaState(clusterService.getClusterName(), responses, failures). }
+false;protected;1;4;;@Override protected NodeGatewayMetaState nodeOperation(NodeRequest request) {     return new NodeGatewayMetaState(clusterService.localNode(), metaState.getMetaData()). }
+false;public;1;4;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in). }
+false;public;1;4;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out). }
+false;protected;1;4;;@Override protected List<NodeGatewayMetaState> readNodesFrom(StreamInput in) throws IOException {     return in.readStreamableList(NodeGatewayMetaState::new). }
+false;protected;2;4;;@Override protected void writeNodesTo(StreamOutput out, List<NodeGatewayMetaState> nodes) throws IOException {     out.writeStreamableList(nodes). }
+false;public;1;4;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in). }
+false;public;1;4;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out). }
+false;public;0;3;;public MetaData metaData() {     return metaData. }
+false;public;1;7;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     if (in.readBoolean()) {         metaData = MetaData.readFrom(in).     } }
+false;public;1;10;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     if (metaData == null) {         out.writeBoolean(false).     } else {         out.writeBoolean(true).         metaData.writeTo(out).     } }

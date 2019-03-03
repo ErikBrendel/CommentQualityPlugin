@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getName() {     return policy.getName(). }
+false;public;0;3;;public LifecyclePolicy getLifecyclePolicy() {     return policy. }
+false;public;2;7;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field("policy", policy).     builder.endObject().     return builder. }
+false;public;1;7;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     PutLifecyclePolicyRequest that = (PutLifecyclePolicyRequest) o.     return Objects.equals(getLifecyclePolicy(), that.getLifecyclePolicy()). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(getLifecyclePolicy()). }

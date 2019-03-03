@@ -1,0 +1,16 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getJobId() {     return jobId. }
+false;public;0;4;;@Nullable public ModelPlotConfig getModelPlotConfig() {     return modelPlotConfig. }
+false;public;0;4;;@Nullable public List<JobUpdate.DetectorUpdate> getDetectorUpdates() {     return detectorUpdates. }
+false;public;0;4;;@Nullable public MlFilter getFilter() {     return filter. }
+true;public;0;3;/**  * Returns true if the update params include a job update,  * ie an update to the job config directly rather than an  * update to external resources a job uses (e.g. calendars, filters).  */ ;/**  * Returns true if the update params include a job update,  * ie an update to the job config directly rather than an  * update to external resources a job uses (e.g. calendars, filters).  */ public boolean isJobUpdate() {     return modelPlotConfig != null || detectorUpdates != null. }
+false;public;0;3;;public boolean isUpdateScheduledEvents() {     return updateScheduledEvents. }
+false;public,static;1;7;;public static UpdateParams fromJobUpdate(JobUpdate jobUpdate) {     return new Builder(jobUpdate.getJobId()).modelPlotConfig(jobUpdate.getModelPlotConfig()).detectorUpdates(jobUpdate.getDetectorUpdates()).updateScheduledEvents(jobUpdate.getGroups() != null).build(). }
+false;public,static;2;3;;public static UpdateParams filterUpdate(String jobId, MlFilter filter) {     return new Builder(jobId).filter(filter).build(). }
+false;public,static;1;3;;public static UpdateParams scheduledEventsUpdate(String jobId) {     return new Builder(jobId).updateScheduledEvents(true).build(). }
+false;public,static;1;3;;public static Builder builder(String jobId) {     return new Builder(jobId). }
+false;public;1;4;;public Builder modelPlotConfig(ModelPlotConfig modelPlotConfig) {     this.modelPlotConfig = modelPlotConfig.     return this. }
+false;public;1;4;;public Builder detectorUpdates(List<JobUpdate.DetectorUpdate> detectorUpdates) {     this.detectorUpdates = detectorUpdates.     return this. }
+false;public;1;4;;public Builder filter(MlFilter filter) {     this.filter = filter.     return this. }
+false;public;1;4;;public Builder updateScheduledEvents(boolean updateScheduledEvents) {     this.updateScheduledEvents = updateScheduledEvents.     return this. }
+false;public;0;3;;public UpdateParams build() {     return new UpdateParams(jobId, modelPlotConfig, detectorUpdates, filter, updateScheduledEvents). }

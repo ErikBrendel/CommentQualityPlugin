@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public SpelExpression parseRaw(String expressionString) throws ParseException {     return doParseExpression(expressionString, null). }
+false;protected;2;4;;@Override protected SpelExpression doParseExpression(String expressionString, @Nullable ParserContext context) throws ParseException {     return new InternalSpelExpressionParser(this.configuration).doParseExpression(expressionString, context). }

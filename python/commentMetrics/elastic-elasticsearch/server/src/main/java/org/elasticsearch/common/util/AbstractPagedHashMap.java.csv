@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;static;1;5;;static long hash(long value) {     // all bits of the hash to carry as much value     return BitMixer.mix64(value). }
+false;static;1;3;;static long hash(double value) {     return hash(Double.doubleToLongBits(value)). }
+true;public;0;3;/**  * Return the number of allocated slots to store this hash table.  */ ;/**  * Return the number of allocated slots to store this hash table.  */ public long capacity() {     return mask + 1. }
+true;public;0;3;/**  * Return the number of longs in this hash table.  */ ;/**  * Return the number of longs in this hash table.  */ public long size() {     return size. }
+false;static;2;3;;static long slot(long hash, long mask) {     return hash & mask. }
+false;static;2;3;;static long nextSlot(long curSlot, long mask) {     // linear probing     return (curSlot + 1) & mask. }
+true;protected,abstract;1;1;/**  * Resize to the given capacity.  */ ;/**  * Resize to the given capacity.  */ protected abstract void resize(long capacity).
+false;protected,abstract;1;1;;protected abstract boolean used(long bucket).
+true;protected,abstract;1;1;/**  * Remove the entry at the given index and add it back  */ ;/**  * Remove the entry at the given index and add it back  */ protected abstract void removeAndAdd(long index).
+false;protected,final;0;32;;protected final void grow() {     // the re-mapping of keys to slots a bit more tricky.     assert size == maxSize.     final long prevSize = size.     final long buckets = capacity().     // Resize arrays     final long newBuckets = buckets << 1.     // power of 2     assert newBuckets == Long.highestOneBit(newBuckets) : newBuckets.     resize(newBuckets).     mask = newBuckets - 1.     // First let's remap in-place: most data will be put in its final position directly     for (long i = 0. i < buckets. ++i) {         if (used(i)) {             removeAndAdd(i).         }     }     // allocated slots. Let's re-add them to make sure they are in the right slot. This 2nd loop will typically exit very early.     for (long i = buckets. i < newBuckets. ++i) {         if (used(i)) {             // add it back             removeAndAdd(i).         } else {             break.         }     }     assert size == prevSize.     maxSize = (long) (newBuckets * maxLoadFactor).     assert size < maxSize. }

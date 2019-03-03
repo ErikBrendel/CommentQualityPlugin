@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;3;6;;@Override protected void executePhaseOnShard(final SearchShardIterator shardIt, final ShardRouting shard, final SearchActionListener<DfsSearchResult> listener) {     getSearchTransport().sendExecuteDfs(getConnection(shardIt.getClusterAlias(), shard.currentNodeId()), buildShardSearchRequest(shardIt), getTask(), listener). }
+false;protected;2;5;;@Override protected SearchPhase getNextPhase(final SearchPhaseResults<DfsSearchResult> results, final SearchPhaseContext context) {     return new DfsQueryPhase(results.getAtomicArray(), searchPhaseController, (queryResults) -> new FetchSearchPhase(queryResults, searchPhaseController, context), context). }

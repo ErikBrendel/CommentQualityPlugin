@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getCustomerName() {     return customerName. }
+false;public;1;3;;public void setCustomerName(String customerName) {     this.customerName = customerName. }
+false;public;0;3;;public String getProductName() {     return productName. }
+false;public;1;3;;public void setProductName(String productName) {     this.productName = productName. }
+false;public;0;4;;@Override public String toString() {     return "order[" + customerName + "," + productName + "]". }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;5;;@Override protected void before() throws Throwable {     log.info("Starting embedded broker[{}] on {}", brokerId, tcpConnectorUri).     brokerService.start(). }
+false;protected;0;9;;@Override protected void after() {     try {         log.info("Stopping embedded broker[{}]", brokerId).         brokerService.stop().     } catch (Exception e) {         throw new RuntimeException("Exception shutting down broker service", e).     } }
+false;public;0;3;;public String getTcpConnectorUri() {     return tcpConnectorUri. }

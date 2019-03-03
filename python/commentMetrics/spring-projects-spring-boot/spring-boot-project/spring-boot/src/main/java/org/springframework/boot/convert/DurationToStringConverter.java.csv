@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Set<ConvertiblePair> getConvertibleTypes() {     return Collections.singleton(new ConvertiblePair(Duration.class, String.class)). }
+false;public;3;9;;@Override public Object convert(Object source, TypeDescriptor sourceType, TypeDescriptor targetType) {     if (source == null) {         return null.     }     return convert((Duration) source, getDurationStyle(sourceType), getDurationUnit(sourceType)). }
+false;private;1;4;;private ChronoUnit getDurationUnit(TypeDescriptor sourceType) {     DurationUnit annotation = sourceType.getAnnotation(DurationUnit.class).     return (annotation != null) ? annotation.value() : null. }
+false;private;1;4;;private DurationStyle getDurationStyle(TypeDescriptor sourceType) {     DurationFormat annotation = sourceType.getAnnotation(DurationFormat.class).     return (annotation != null) ? annotation.value() : null. }
+false;private;3;4;;private String convert(Duration source, DurationStyle style, ChronoUnit unit) {     style = (style != null) ? style : DurationStyle.ISO8601.     return style.print(source, unit). }

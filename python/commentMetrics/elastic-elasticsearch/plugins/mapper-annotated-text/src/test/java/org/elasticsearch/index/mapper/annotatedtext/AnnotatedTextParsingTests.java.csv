@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;3;9;;private void checkParsing(String markup, String expectedPlainText, AnnotationToken... expectedTokens) {     AnnotatedText at = AnnotatedText.parse(markup).     assertEquals(expectedPlainText, at.textMinusMarkup).     List<AnnotationToken> actualAnnotations = at.annotations.     assertEquals(expectedTokens.length, actualAnnotations.size()).     for (int i = 0. i < expectedTokens.length. i++) {         assertEquals(expectedTokens[i], actualAnnotations.get(i)).     } }
+false;public;0;3;;public void testSingleValueMarkup() {     checkParsing("foo [bar](Y)", "foo bar", new AnnotationToken(4, 7, "Y")). }
+false;public;0;4;;public void testMultiValueMarkup() {     checkParsing("foo [bar](Y&B)", "foo bar", new AnnotationToken(4, 7, "Y"), new AnnotationToken(4, 7, "B")). }
+false;public;0;4;;public void testBlankTextAnnotation() {     checkParsing("It sounded like this:[](theSoundOfOneHandClapping)", "It sounded like this:", new AnnotationToken(21, 21, "theSoundOfOneHandClapping")). }
+false;public;0;4;;public void testMissingBracket() {     checkParsing("[foo](MissingEndBracket bar", "[foo](MissingEndBracket bar", new AnnotationToken[0]). }
+false;public;0;5;;public void testAnnotationWithType() {     Exception expectedException = expectThrows(ElasticsearchParseException.class, () -> checkParsing("foo [bar](type=foo) baz", "foo bar baz", new AnnotationToken(4, 7, "noType"))).     assertThat(expectedException.getMessage(), equalTo("key=value pairs are not supported in annotations")). }
+false;public;0;3;;public void testMissingValue() {     checkParsing("[foo]() bar", "foo bar", new AnnotationToken[0]). }

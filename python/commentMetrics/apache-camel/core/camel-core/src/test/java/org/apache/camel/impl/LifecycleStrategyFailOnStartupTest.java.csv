@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;5;;protected CamelContext createCamelContext() throws Exception {     CamelContext context = new DefaultCamelContext(new JndiContext()).     context.addLifecycleStrategy(dummy1).     return context. }
+false;public;0;10;;@Test public void testLifecycleStrategyFailOnStartup() throws Exception {     CamelContext context = createCamelContext().     try {         context.start().         fail("Should have thrown exception").     } catch (IllegalArgumentException e) {         assertEquals("Forced", e.getMessage()).     } }
+false;public;1;4;;@Override public void onContextStart(CamelContext context) throws VetoCamelContextStartException {     throw new IllegalArgumentException("Forced"). }

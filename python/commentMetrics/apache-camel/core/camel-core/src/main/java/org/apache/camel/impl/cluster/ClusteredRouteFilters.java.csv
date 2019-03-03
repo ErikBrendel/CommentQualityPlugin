@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;8;;@Override public boolean test(CamelContext camelContext, String routeId, RouteDefinition route) {     try {         return route.isAutoStartup(camelContext).     } catch (Exception e) {         throw RuntimeCamelException.wrapRuntimeCamelException(e).     } }
+false;public;3;4;;@Override public boolean test(CamelContext camelContext, String routeId, RouteDefinition route) {     return !names.contains(routeId). }

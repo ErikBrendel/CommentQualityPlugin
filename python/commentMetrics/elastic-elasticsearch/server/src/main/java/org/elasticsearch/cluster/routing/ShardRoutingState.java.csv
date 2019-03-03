@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Byte value of this {@link ShardRoutingState}  * @return Byte value of this {@link ShardRoutingState}  */ ;/**  * Byte value of this {@link ShardRoutingState}  * @return Byte value of this {@link ShardRoutingState}  */ public byte value() {     return this.value. }
+false;public,static;1;14;;public static ShardRoutingState fromValue(byte value) {     switch(value) {         case 1:             return UNASSIGNED.         case 2:             return INITIALIZING.         case 3:             return STARTED.         case 4:             return RELOCATING.         default:             throw new IllegalStateException("No routing state mapped for [" + value + "]").     } }

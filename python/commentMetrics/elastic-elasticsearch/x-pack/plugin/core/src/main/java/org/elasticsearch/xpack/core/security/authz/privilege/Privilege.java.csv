@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Set<String> name() {     return name. }
+false;public;0;3;;public Predicate<String> predicate() {     return predicate. }
+false;public;1;11;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     Privilege privilege = (Privilege) o.     if (name != null ? !name.equals(privilege.name) : privilege.name != null)         return false.     return true. }
+false;public;0;4;;@Override public int hashCode() {     return name != null ? name.hashCode() : 0. }
+false;static;1;3;;static String actionToPattern(String text) {     return text + "*". }
+false;public;0;4;;@Override public String toString() {     return name.toString(). }
+false;public;0;3;;public Automaton getAutomaton() {     return automaton. }

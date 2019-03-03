@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * Return the HTTP method of the request.  */ ;/**  * Return the HTTP method of the request.  */ HttpMethod getMethod().
+true;;0;1;/**  * Return the URI of the request.  */ ;/**  * Return the URI of the request.  */ URI getURI().
+true;;0;1;/**  * Return a mutable map of request cookies to send to the server.  */ ;/**  * Return a mutable map of request cookies to send to the server.  */ MultiValueMap<String, HttpCookie> getCookies().

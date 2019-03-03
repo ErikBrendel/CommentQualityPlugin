@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void parseNull() {     String[] args = parseArgs(null).     assertThat(args).isNotNull().     assertThat(args.length).isEqualTo(0). }
+false;public;0;6;;@Test public void parseNullArray() {     String[] args = new RunArguments((String[]) null).asArray().     assertThat(args).isNotNull().     assertThat(args.length).isEqualTo(0). }
+false;public;0;6;;@Test public void parseArrayContainingNullValue() {     String[] args = new RunArguments(new String[] { "foo", null, "bar" }).asArray().     assertThat(args).isNotNull().     assertThat(args).containsOnly("foo", "bar"). }
+false;public;0;6;;@Test public void parseArrayContainingEmptyValue() {     String[] args = new RunArguments(new String[] { "foo", "", "bar" }).asArray().     assertThat(args).isNotNull().     assertThat(args).containsOnly("foo", "", "bar"). }
+false;public;0;6;;@Test public void parseEmpty() {     String[] args = parseArgs("   ").     assertThat(args).isNotNull().     assertThat(args.length).isEqualTo(0). }
+false;public;0;9;;@Test public void parseDebugFlags() {     String[] args = parseArgs("-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005").     assertThat(args.length).isEqualTo(2).     assertThat(args[0]).isEqualTo("-Xdebug").     assertThat(args[1]).isEqualTo("-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005"). }
+false;public;0;7;;@Test public void parseWithExtraSpaces() {     String[] args = parseArgs("     -Dfoo=bar        -Dfoo2=bar2  ").     assertThat(args.length).isEqualTo(2).     assertThat(args[0]).isEqualTo("-Dfoo=bar").     assertThat(args[1]).isEqualTo("-Dfoo2=bar2"). }
+false;public;0;7;;@Test public void parseWithNewLinesAndTabs() {     String[] args = parseArgs("     -Dfoo=bar \n" + "\t\t -Dfoo2=bar2  ").     assertThat(args.length).isEqualTo(2).     assertThat(args[0]).isEqualTo("-Dfoo=bar").     assertThat(args[1]).isEqualTo("-Dfoo2=bar2"). }
+false;public;0;6;;@Test public void quoteHandledProperly() {     String[] args = parseArgs("-Dvalue=\"My Value\"    ").     assertThat(args.length).isEqualTo(1).     assertThat(args[0]).isEqualTo("-Dvalue=My Value"). }
+false;private;1;3;;private String[] parseArgs(String args) {     return new RunArguments(args).asArray(). }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public double getPercent() {     return percent. }
+false;public;0;3;;public double getValue() {     return value. }
+false;public;1;12;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     Percentile that = (Percentile) o.     return Double.compare(that.percent, percent) == 0 && Double.compare(that.value, value) == 0. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(percent, value). }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static void registerMissType(Class clazz) {     missTypes.add(clazz). }
+false;public;3;14;;@SuppressWarnings("unchecked") @Override public <T> T convertTo(Class<T> toType, Exchange exchange, Object value) {     // should not try to convert specific types     if (missTypes.stream().anyMatch(cl -> cl.isAssignableFrom(value.getClass()))) {         return (T) MISS_VALUE.     }     if (toType.equals(String.class)) {         return (T) value.toString().     }     return null. }

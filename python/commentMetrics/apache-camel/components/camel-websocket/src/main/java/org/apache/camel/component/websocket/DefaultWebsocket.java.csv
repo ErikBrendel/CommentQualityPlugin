@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;5;;@OnWebSocketClose public void onClose(int closeCode, String message) {     LOG.trace("onClose {} {}", closeCode, message).     sync.removeSocket(this). }
+false;public;1;7;;@OnWebSocketConnect public void onConnect(Session session) {     LOG.trace("onConnect {}", session).     this.session = session.     this.connectionKey = UUID.randomUUID().toString().     sync.addSocket(this). }
+false;public;1;9;;@OnWebSocketMessage public void onMessage(String message) {     LOG.debug("onMessage: {}", message).     if (this.consumer != null) {         this.consumer.sendMessage(this.connectionKey, message, getRemoteAddress()).     } else {         LOG.debug("No consumer to handle message received: {}", message).     } }
+false;public;3;11;;@OnWebSocketMessage public void onMessage(byte[] data, int offset, int length) {     LOG.debug("onMessage: byte[]").     if (this.consumer != null) {         byte[] message = new byte[length].         System.arraycopy(data, offset, message, 0, length).         this.consumer.sendMessage(this.connectionKey, message, getRemoteAddress()).     } else {         LOG.debug("No consumer to handle message received: byte[]").     } }
+false;private;0;4;;private InetSocketAddress getRemoteAddress() {     Session current = session.     return current != null ? current.getRemoteAddress() : null. }
+false;public;0;3;;public Session getSession() {     return session. }
+false;public;0;3;;public String getPathSpec() {     return pathSpec. }
+false;public;1;3;;public void setSession(Session session) {     this.session = session. }
+false;public;0;3;;public String getConnectionKey() {     return connectionKey. }
+false;public;1;3;;public void setConnectionKey(String connectionKey) {     this.connectionKey = connectionKey. }

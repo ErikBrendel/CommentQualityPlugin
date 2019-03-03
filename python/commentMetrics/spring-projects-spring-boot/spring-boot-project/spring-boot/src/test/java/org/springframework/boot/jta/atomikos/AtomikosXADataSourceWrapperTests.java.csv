@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void wrap() throws Exception {     XADataSource dataSource = mock(XADataSource.class).     AtomikosXADataSourceWrapper wrapper = new AtomikosXADataSourceWrapper().     DataSource wrapped = wrapper.wrapDataSource(dataSource).     assertThat(wrapped).isInstanceOf(AtomikosDataSourceBean.class).     assertThat(((AtomikosDataSourceBean) wrapped).getXaDataSource()).isSameAs(dataSource). }

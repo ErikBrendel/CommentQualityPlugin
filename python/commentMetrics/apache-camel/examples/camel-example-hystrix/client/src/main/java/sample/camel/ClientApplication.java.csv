@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,static;1;3;/**  * A main method to start this application.  */ ;/**  * A main method to start this application.  */ public static void main(String[] args) {     SpringApplication.run(ClientApplication.class, args). }
+false;public;0;4;;@Bean public HystrixEventStreamServlet hystrixServlet() {     return new HystrixEventStreamServlet(). }
+false;public;0;4;;@Bean public ServletRegistrationBean servletRegistrationBean() {     return new ServletRegistrationBean(new HystrixEventStreamServlet(), "/hystrix.stream"). }

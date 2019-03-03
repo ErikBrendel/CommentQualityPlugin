@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;5;;@ParametersFactory(shuffle = false, argumentFormatting = PARAM_FORMATTING) public static List<Object[]> readScriptSpec() throws Exception {     Parser parser = specParser().     return readScriptSpec("/datetime.sql-spec", parser). }
+false;protected;0;4;;@Override protected boolean logEsResultSet() {     return true. }

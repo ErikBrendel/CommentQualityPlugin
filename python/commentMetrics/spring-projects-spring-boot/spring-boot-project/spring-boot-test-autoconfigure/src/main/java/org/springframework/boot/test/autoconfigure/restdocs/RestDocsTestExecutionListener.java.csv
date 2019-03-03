@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public int getOrder() {     return Ordered.LOWEST_PRECEDENCE - 100. }
+false;public;1;6;;@Override public void beforeTestMethod(TestContext testContext) throws Exception {     if (restDocsIsPresent()) {         new DocumentationHandler().beforeTestMethod(testContext).     } }
+false;public;1;6;;@Override public void afterTestMethod(TestContext testContext) throws Exception {     if (restDocsIsPresent()) {         new DocumentationHandler().afterTestMethod(testContext).     } }
+false;private;0;3;;private boolean restDocsIsPresent() {     return ClassUtils.isPresent(REST_DOCS_CLASS, getClass().getClassLoader()). }
+false;private;1;8;;private void beforeTestMethod(TestContext testContext) throws Exception {     ManualRestDocumentation restDocumentation = findManualRestDocumentation(testContext).     if (restDocumentation != null) {         restDocumentation.beforeTest(testContext.getTestClass(), testContext.getTestMethod().getName()).     } }
+false;private;1;7;;private void afterTestMethod(TestContext testContext) {     ManualRestDocumentation restDocumentation = findManualRestDocumentation(testContext).     if (restDocumentation != null) {         restDocumentation.afterTest().     } }
+false;private;1;10;;private ManualRestDocumentation findManualRestDocumentation(TestContext testContext) {     try {         return testContext.getApplicationContext().getBean(ManualRestDocumentation.class).     } catch (NoSuchBeanDefinitionException ex) {         return null.     } }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;7;;public Object postProcessBeforeInitialization(Object bean, String name) throws BeansException {     if (bean instanceof Cheese) {         Cheese cheese = (Cheese) bean.         cheese.doCheese().     }     return bean. }
+false;public;2;7;;public Object postProcessAfterInitialization(Object bean, String name) throws BeansException {     if (bean instanceof Cheese) {         Cheese cheese = (Cheese) bean.         cheese.doCheese().     }     return bean. }

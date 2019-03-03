@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public AcknowledgedResponse newResponse() {     return new AcknowledgedResponse(). }
+false;public,static;2;7;;public static Request fromXContent(final XContentParser parser, final String followerIndex) throws IOException {     FollowParameters parameters = PARSER.parse(parser, null).     Request request = new Request().     request.setFollowerIndex(followerIndex).     request.setParameters(parameters).     return request. }
+false;public;0;3;;public String getFollowerIndex() {     return followerIndex. }
+false;public;1;3;;public void setFollowerIndex(String followerIndex) {     this.followerIndex = followerIndex. }
+false;public;0;3;;public FollowParameters getParameters() {     return parameters. }
+false;public;1;3;;public void setParameters(FollowParameters parameters) {     this.parameters = parameters. }
+false;public;0;8;;@Override public ActionRequestValidationException validate() {     ActionRequestValidationException e = parameters.validate().     if (followerIndex == null) {         e = addValidationError("follower_index is missing", e).     }     return e. }
+false;public;1;6;;@Override public void writeTo(final StreamOutput out) throws IOException {     super.writeTo(out).     out.writeString(followerIndex).     parameters.writeTo(out). }
+false;public;2;9;;@Override public XContentBuilder toXContent(final XContentBuilder builder, final Params params) throws IOException {     builder.startObject().     {         parameters.toXContentFragment(builder).     }     builder.endObject().     return builder. }
+false;public;1;8;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     Request request = (Request) o.     return Objects.equals(followerIndex, request.followerIndex) && Objects.equals(parameters, request.parameters). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(followerIndex, parameters). }

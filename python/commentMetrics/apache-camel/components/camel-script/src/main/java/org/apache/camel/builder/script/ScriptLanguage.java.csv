@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;public Predicate createPredicate(String expression) {     expression = loadResource(expression).     return new ScriptBuilder(getCamelContext(), language, expression). }
+false;public;1;4;;public Expression createExpression(String expression) {     expression = loadResource(expression).     return new ScriptBuilder(getCamelContext(), language, expression). }

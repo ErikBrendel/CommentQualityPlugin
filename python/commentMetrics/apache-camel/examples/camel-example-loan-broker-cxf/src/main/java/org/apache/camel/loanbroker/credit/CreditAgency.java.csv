@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;public int getCreditHistoryLength(String ssn) {     int creditScore = (int) (Math.random() * 600 + 300).     return creditScore. }
+false;public;1;4;;public int getCreditScore(String ssn) {     int creditHistoryLength = (int) (Math.random() * 19 + 1).     return creditHistoryLength. }

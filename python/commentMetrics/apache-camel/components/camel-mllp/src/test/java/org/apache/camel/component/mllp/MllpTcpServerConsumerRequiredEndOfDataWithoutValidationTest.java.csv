@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;4;;@Override boolean validatePayload() {     return false. }
+false;;0;4;;@Override boolean requireEndOfData() {     return true. }
+false;public;0;5;;@Override @Test public void testInvalidMessage() throws Exception {     runNthInvalidMessage(). }
+false;public;0;5;;@Override @Test public void testNthInvalidMessage() throws Exception {     runNthInvalidMessage(). }
+false;public;0;7;;@Override @Test public void testMessageContainingEmbeddedStartOfBlock() throws Exception {     expectedCompleteCount = 1.     runMessageContainingEmbeddedStartOfBlock(). }
+false;public;0;5;;@Override @Test public void testNthMessageContainingEmbeddedStartOfBlock() throws Exception {     runNthMessageContainingEmbeddedStartOfBlock(). }
+false;public;0;11;;@Override @Test public void testMessageContainingEmbeddedEndOfBlock() throws Exception {     setExpectedCounts().     NotifyBuilder done = new NotifyBuilder(context()).whenDone(1).create().     mllpClient.sendFramedData(Hl7TestMessageGenerator.generateMessage().replaceFirst("EVN", "EVN" + MllpProtocolConstants.END_OF_BLOCK)).     assertFalse("Exchange should not have completed", done.matches(5, TimeUnit.SECONDS)). }
+false;public;0;7;;@Override @Test public void testInvalidMessageContainingEmbeddedEndOfBlock() throws Exception {     expectedInvalidCount = 1.     runInvalidMessageContainingEmbeddedEndOfBlock(). }
+false;public;0;7;;@Override @Test public void testNthMessageContainingEmbeddedEndOfBlock() throws Exception {     expectedInvalidCount = 1.     runNthMessageContainingEmbeddedEndOfBlock(). }
+false;public;0;9;;@Override @Test public void testInitialMessageWithoutEndOfDataByte() throws Exception {     setExpectedCounts().     mllpClient.setSendEndOfData(false).     mllpClient.sendFramedData(Hl7TestMessageGenerator.generateMessage()). }
+false;public;0;8;;@Override @Test public void testMessageWithoutEndOfDataByte() throws Exception {     expectedCompleteCount = 1.     expectedInvalidCount = 1.     runMessageWithoutEndOfDataByte(). }

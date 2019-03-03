@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected Class<?> upgradeStrategyConfigClass() {     return UndertowTestConfig.class. }
+false;protected;0;4;;@Override protected WebSocketTestServer createWebSocketTestServer() {     return new UndertowTestServer(). }
+false;protected;0;4;;@Override protected Transport createWebSocketTransport() {     return new WebSocketTransport(new StandardWebSocketClient()). }
+false;protected;0;9;;@Override protected AbstractXhrTransport createXhrTransport() {     try {         return new UndertowXhrTransport().     } catch (IOException ex) {         throw new IllegalStateException("Could not create UndertowXhrTransport").     } }
+false;public;0;4;;@Bean public RequestUpgradeStrategy upgradeStrategy() {     return new UndertowRequestUpgradeStrategy(). }

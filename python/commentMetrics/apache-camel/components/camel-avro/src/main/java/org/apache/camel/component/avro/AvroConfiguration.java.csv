@@ -1,0 +1,24 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;public AvroConfiguration copy() {     try {         AvroConfiguration answer = (AvroConfiguration) clone().         return answer.     } catch (CloneNotSupportedException e) {         throw new RuntimeCamelException(e).     } }
+false;public;3;18;;public void parseURI(URI uri, Map<String, Object> parameters, AvroComponent component) throws Exception {     transport = AvroTransport.valueOf(uri.getScheme()).     setHost(uri.getHost()).     setPort(uri.getPort()).     if ((uri.getPath() != null) && (StringUtils.indexOf(uri.getPath(), AVRO_MESSAGE_NAME_SEPARATOR) != -1)) {         String path = StringUtils.substringAfter(uri.getPath(), AVRO_MESSAGE_NAME_SEPARATOR).         if (!path.contains(AVRO_MESSAGE_NAME_SEPARATOR)) {             setMessageName(path).         } else {             throw new IllegalArgumentException("Unrecognized Avro message name: " + path + " for uri: " + uri).         }     }     setUriAuthority(uri.getAuthority()). }
+false;public;0;3;;public String getHost() {     return host. }
+true;public;1;3;/**  * Hostname to use  */ ;/**  * Hostname to use  */ public void setHost(String host) {     this.host = host. }
+false;public;0;3;;public int getPort() {     return port. }
+true;public;1;3;/**  * Port number to use  */ ;/**  * Port number to use  */ public void setPort(int port) {     this.port = port. }
+false;public;0;3;;public Protocol getProtocol() {     return protocol. }
+true;public;1;3;/**  * Avro protocol to use  */ ;/**  * Avro protocol to use  */ public void setProtocol(Protocol protocol) {     this.protocol = protocol. }
+false;public;0;3;;public AvroTransport getTransport() {     return transport. }
+true;public;1;3;/**  * Transport to use, can be either http or netty  */ ;/**  * Transport to use, can be either http or netty  */ public void setTransport(String transport) {     this.transport = AvroTransport.valueOf(transport). }
+true;public;1;3;/**  * Transport to use, can be either http or netty  */ ;/**  * Transport to use, can be either http or netty  */ public void setTransport(AvroTransport transport) {     this.transport = transport. }
+false;public;0;3;;public String getProtocolLocation() {     return protocolLocation. }
+true;public;1;3;/**  * Avro protocol location  */ ;/**  * Avro protocol location  */ public void setProtocolLocation(String protocolLocation) {     this.protocolLocation = protocolLocation. }
+false;public;0;3;;public String getProtocolClassName() {     return protocolClassName. }
+true;public;1;3;/**  * Avro protocol to use defined by the FQN class name  */ ;/**  * Avro protocol to use defined by the FQN class name  */ public void setProtocolClassName(String protocolClassName) {     this.protocolClassName = protocolClassName. }
+false;public;0;3;;public String getMessageName() {     return messageName. }
+true;public;1;3;/**  * The name of the message to send.  */ ;/**  * The name of the message to send.  */ public void setMessageName(String messageName) {     this.messageName = messageName. }
+false;public;0;3;;public String getUriAuthority() {     return uriAuthority. }
+true;public;1;3;/**  * Authority to use (username and password)  */ ;/**  * Authority to use (username and password)  */ public void setUriAuthority(String uriAuthority) {     this.uriAuthority = uriAuthority. }
+false;public;0;3;;public boolean isReflectionProtocol() {     return reflectionProtocol. }
+true;public;1;3;/**  * If protocol object provided is reflection protocol. Should be used only with protocol parameter because for protocolClassName protocol type will be auto detected  */ ;/**  * If protocol object provided is reflection protocol. Should be used only with protocol parameter because for protocolClassName protocol type will be auto detected  */ public void setReflectionProtocol(boolean isReflectionProtocol) {     this.reflectionProtocol = isReflectionProtocol. }
+false;public;0;3;;public boolean isSingleParameter() {     return singleParameter. }
+true;public;1;3;/**  * If true, consumer parameter won't be wrapped into array. Will fail if protocol specifies more then 1 parameter for the message  */ ;/**  * If true, consumer parameter won't be wrapped into array. Will fail if protocol specifies more then 1 parameter for the message  */ public void setSingleParameter(boolean singleParameter) {     this.singleParameter = singleParameter. }

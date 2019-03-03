@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public int getOrderNumber() {     return orderNumber. }
+false;public;0;4;;@Override public String toString() {     return (iced ? "Iced" : "Hot") + " " + drinkType.toString() + ", " + shots + " shots.". }
+false;public;1;11;;@Override public boolean equals(Object o) {     if (o instanceof Drink) {         Drink that = (Drink) o.         return ObjectHelper.equal(this.drinkType, that.drinkType) && ObjectHelper.equal(this.orderNumber, that.orderNumber) && ObjectHelper.equal(this.iced, that.iced) && ObjectHelper.equal(this.shots, that.shots).     }     return false. }
+false;public;0;8;;@Override public int hashCode() {     if (iced) {         return drinkType.hashCode() + orderNumber * 1000 + shots * 100.     } else {         return drinkType.hashCode() + orderNumber * 1000 + shots * 100 + 5.     } }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;8;;@Bean(name = "load-balancer") @ConditionalOnMissingBean public ServiceLoadBalancer cloudLoadBalancer(LoadBalancerClient loadBalancerClient, Optional<CamelSpringCloudServiceLoadBalancer.LoadBalancerClientAdapter> clientAdapter) {     return new CamelSpringCloudServiceLoadBalancer(loadBalancerClient, clientAdapter). }

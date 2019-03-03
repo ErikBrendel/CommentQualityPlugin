@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Bean public PlatformTransactionManager txManager1() {     return txManager1. }
+false;public;0;4;;@Bean public PlatformTransactionManager txManager2() {     return txManager2. }
+false;public;0;5;;@BeforeTransaction public void beforeTransaction() {     txManager1.clear().     txManager2.clear(). }
+false;public;0;7;;@Test public void transactionalTest() {     assertEquals(1, txManager1.begun).     assertEquals(1, txManager1.inflight).     assertEquals(0, txManager1.commits).     assertEquals(0, txManager1.rollbacks). }
+false;public;0;7;;@AfterTransaction public void afterTransaction() {     assertEquals(1, txManager1.begun).     assertEquals(0, txManager1.inflight).     assertEquals(0, txManager1.commits).     assertEquals(1, txManager1.rollbacks). }

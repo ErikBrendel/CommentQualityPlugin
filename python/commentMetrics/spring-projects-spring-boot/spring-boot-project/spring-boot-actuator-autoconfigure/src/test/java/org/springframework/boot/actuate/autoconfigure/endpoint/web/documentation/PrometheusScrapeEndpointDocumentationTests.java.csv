@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void prometheus() throws Exception {     this.mockMvc.perform(get("/actuator/prometheus")).andExpect(status().isOk()).andDo(document("prometheus")). }
+false;public;0;8;;@Bean public PrometheusScrapeEndpoint endpoint() {     CollectorRegistry collectorRegistry = new CollectorRegistry(true).     PrometheusMeterRegistry meterRegistry = new PrometheusMeterRegistry((key) -> null, collectorRegistry, Clock.SYSTEM).     new JvmMemoryMetrics().bindTo(meterRegistry).     return new PrometheusScrapeEndpoint(collectorRegistry). }

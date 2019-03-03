@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public TokenStream create(TokenStream tokenStream) {     // TODO: Expose preserveOriginal     return new NGramTokenFilter(tokenStream, minGram, maxGram, false). }
+false;public;0;11;;@Override public TokenFilterFactory getSynonymFilter() {     if (indexSettings.getIndexVersionCreated().onOrAfter(Version.V_7_0_0)) {         throw new IllegalArgumentException("Token filter [" + name() + "] cannot be used to parse synonyms").     } else {         DEPRECATION_LOGGER.deprecatedAndMaybeLog("synonym_tokenfilters", "Token filter [" + name() + "] will not be usable to parse synonyms after v7.0").         return this.     } }

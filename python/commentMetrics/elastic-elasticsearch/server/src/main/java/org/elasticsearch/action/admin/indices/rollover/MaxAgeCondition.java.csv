@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public Result evaluate(final Stats stats) {     long indexAge = System.currentTimeMillis() - stats.indexCreated.     return new Result(this, this.value.getMillis() <= indexAge). }
+false;public;0;4;;@Override public String getWriteableName() {     return NAME. }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     // TODO here we should just use TimeValue#writeTo and same for de-serialization in the constructor, we lose information this way     out.writeLong(value.getMillis()). }
+false;public;2;4;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     return builder.field(NAME, value.getStringRep()). }
+false;public,static;1;7;;public static MaxAgeCondition fromXContent(XContentParser parser) throws IOException {     if (parser.nextToken() == XContentParser.Token.VALUE_STRING) {         return new MaxAgeCondition(TimeValue.parseTimeValue(parser.text(), NAME)).     } else {         throw new IllegalArgumentException("invalid token: " + parser.currentToken()).     } }

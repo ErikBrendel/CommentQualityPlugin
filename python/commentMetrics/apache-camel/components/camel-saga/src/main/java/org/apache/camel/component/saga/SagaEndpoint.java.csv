@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@Override public Producer createProducer() throws Exception {     if (SagaEndpointAction.COMPLETE.equals(this.action)) {         return new SagaProducer(this, true).     } else if (SagaEndpointAction.COMPENSATE.equals(this.action)) {         return new SagaProducer(this, false).     } else {         throw new IllegalStateException("Unsupported action '" + this.action + "' in saga endpoint").     } }
+false;public;1;4;;@Override public Consumer createConsumer(Processor processor) throws Exception {     throw new UnsupportedOperationException("Consumer not allowed for saga endpoint"). }
+false;public;0;4;;@Override public boolean isSingleton() {     return true. }

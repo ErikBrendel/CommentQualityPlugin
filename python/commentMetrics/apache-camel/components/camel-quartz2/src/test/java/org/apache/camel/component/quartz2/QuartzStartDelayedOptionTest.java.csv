@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void testStartDelayed() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.setResultMinimumWaitTime(1500).     mock.setResultWaitTime(3000).     mock.expectedMessageCount(2).     assertMockEndpointsSatisfied(). }
+false;public;0;5;;@Override public void configure() throws Exception {     from("quartz2://myGroup/myTimerName?startDelayedSeconds=2&trigger.repeatInterval=2&trigger.repeatCount=1").routeId("myRoute").to("mock:result"). }
+false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("quartz2://myGroup/myTimerName?startDelayedSeconds=2&trigger.repeatInterval=2&trigger.repeatCount=1").routeId("myRoute").to("mock:result").         }     }. }

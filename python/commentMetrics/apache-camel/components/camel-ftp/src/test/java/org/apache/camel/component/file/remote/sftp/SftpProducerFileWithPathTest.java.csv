@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;0;3;;private String getFtpUrl() {     return "sftp://admin@localhost:" + getPort() + "/" + FTP_ROOT_DIR + "?password=admin". }
+false;public;0;4;;@Override public boolean isUseRouteBuilder() {     return false. }
+false;public;0;12;;@Test public void testProducerFileWithPath() throws Exception {     if (!canTest()) {         return.     }     template.sendBodyAndHeader(getFtpUrl(), "Hello World", Exchange.FILE_NAME, "hello/claus.txt").     File file = new File(FTP_ROOT_DIR + "/hello/claus.txt").     assertTrue("The uploaded file should exists", file.exists()).     assertEquals("Hello World", IOConverter.toString(file, null)). }

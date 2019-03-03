@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Before public void setUp() throws Exception {     endpoint = new MetricsEndpoint(null, null, registry, MetricsType.HISTOGRAM, METRICS_NAME).     inOrder = Mockito.inOrder(registry). }
+false;public;0;4;;@After public void tearDown() throws Exception {     inOrder.verifyNoMoreInteractions(). }
+false;public;0;6;;@Test public void testHistogramEndpoint() throws Exception {     assertThat(endpoint, is(notNullValue())).     assertThat(endpoint.getRegistry(), is(registry)).     assertThat(endpoint.getMetricsName(), is(METRICS_NAME)). }
+false;public;0;6;;@Test public void testCreateProducer() throws Exception {     Producer producer = endpoint.createProducer().     assertThat(producer, is(notNullValue())).     assertThat(producer, is(instanceOf(HistogramProducer.class))). }
+false;public;0;4;;@Test public void testGetValue() throws Exception {     assertThat(endpoint.getValue(), is(nullValue())). }
+false;public;0;6;;@Test public void testSetValue() throws Exception {     assertThat(endpoint.getValue(), is(nullValue())).     endpoint.setValue(VALUE).     assertThat(endpoint.getValue(), is(VALUE)). }

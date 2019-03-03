@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;public void createAccountAndNotify(String username) {     this.jmsTemplate.convertAndSend("java:/jms/queue/bootdemo", username).     Account entity = new Account(username).     this.accountRepository.save(entity).     if ("error".equals(username)) {         throw new RuntimeException("Simulated error").     } }

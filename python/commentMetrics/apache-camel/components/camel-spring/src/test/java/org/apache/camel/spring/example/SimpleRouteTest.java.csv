@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void testSimpleRoute() throws Exception {     MockEndpoint resultEndpoint = resolveMandatoryEndpoint("mock:result", MockEndpoint.class).     resultEndpoint.expectedBodiesReceived(expectedBody).     template.sendBody("direct:start", expectedBody).     resultEndpoint.assertIsSatisfied(). }
+false;protected;0;3;;protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/spring/example/simpleRoute.xml"). }

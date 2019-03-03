@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;13;;@Test public void testExecute() throws Exception {     final CamelServiceNowGenerateMojo mojo = createMojo().     mojo.objects = Arrays.asList("incident").     mojo.fields = Collections.singletonMap("incident", "sys_id").     mojo.fieldsExcludePattern = Collections.singletonMap("incident", "^sys_.*$").     mojo.execute().     Assert.assertTrue("Output directory was not created", mojo.outputDirectory.exists()).     Assert.assertTrue("Output directory is empty", mojo.outputDirectory.list().length > 0). }

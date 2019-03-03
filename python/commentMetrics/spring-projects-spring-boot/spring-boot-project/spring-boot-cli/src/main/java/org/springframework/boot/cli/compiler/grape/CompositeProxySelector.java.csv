@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;10;;@Override public Proxy getProxy(RemoteRepository repository) {     for (ProxySelector selector : this.selectors) {         Proxy proxy = selector.getProxy(repository).         if (proxy != null) {             return proxy.         }     }     return null. }

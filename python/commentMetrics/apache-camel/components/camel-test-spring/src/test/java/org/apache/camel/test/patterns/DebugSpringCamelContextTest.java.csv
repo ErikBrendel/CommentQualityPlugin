@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public void configure() throws Exception { // there is no route to be used }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {         // there is no route to be used         }     }. }
+false;protected;0;4;;@Override protected AbstractApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/test/patterns/applicationContext.xml"). }

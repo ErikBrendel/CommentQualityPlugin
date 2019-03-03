@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public GeoPoint getKey() {     return GeoPoint.fromGeohash(hashAsString). }
+false;public;0;4;;@Override public String getKeyAsString() {     return hashAsString. }
+false;static;1;3;;static ParsedGeoHashGridBucket fromXContent(XContentParser parser) throws IOException {     return parseXContent(parser, false, ParsedGeoHashGridBucket::new, (p, bucket) -> bucket.hashAsString = p.textOrNull()). }

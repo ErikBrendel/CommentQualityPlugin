@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public CreateApiKeyResponse newResponse() {     throw new UnsupportedOperationException("usage of Streamable is to be replaced by Writeable"). }
+false;public;0;4;;@Override public Writeable.Reader<CreateApiKeyResponse> getResponseReader() {     return CreateApiKeyResponse::new. }

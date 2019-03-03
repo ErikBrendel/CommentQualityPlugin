@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;12;;@Override public boolean hasNext() {     while (current != null) {         if (current.hasNext()) {             return true.         } else {             current = it.hasNext() ? it.next() : null.         }     }     return false. }
+false;public;0;7;;@Override public T next() {     if (current != null) {         return current.next().     }     throw new NoSuchElementException(). }
+false;public;0;4;;@Override public void remove() {     current.remove(). }

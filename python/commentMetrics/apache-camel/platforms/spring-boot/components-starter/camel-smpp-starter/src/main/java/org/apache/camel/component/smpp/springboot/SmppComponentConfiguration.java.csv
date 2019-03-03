@@ -1,0 +1,77 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public SmppConfigurationNestedConfiguration getConfiguration() {     return configuration. }
+false;public;1;4;;public void setConfiguration(SmppConfigurationNestedConfiguration configuration) {     this.configuration = configuration. }
+false;public;0;3;;public Boolean getResolvePropertyPlaceholders() {     return resolvePropertyPlaceholders. }
+false;public;1;4;;public void setResolvePropertyPlaceholders(Boolean resolvePropertyPlaceholders) {     this.resolvePropertyPlaceholders = resolvePropertyPlaceholders. }
+false;public;0;3;;public String getHost() {     return host. }
+false;public;1;3;;public void setHost(String host) {     this.host = host. }
+false;public;0;3;;public Integer getPort() {     return port. }
+false;public;1;3;;public void setPort(Integer port) {     this.port = port. }
+false;public;0;3;;public String getSystemId() {     return systemId. }
+false;public;1;3;;public void setSystemId(String systemId) {     this.systemId = systemId. }
+false;public;0;3;;public Byte getDataCoding() {     return dataCoding. }
+false;public;1;3;;public void setDataCoding(Byte dataCoding) {     this.dataCoding = dataCoding. }
+false;public;0;3;;public Byte getAlphabet() {     return alphabet. }
+false;public;1;3;;public void setAlphabet(Byte alphabet) {     this.alphabet = alphabet. }
+false;public;0;3;;public String getEncoding() {     return encoding. }
+false;public;1;3;;public void setEncoding(String encoding) {     this.encoding = encoding. }
+false;public;0;3;;public String getPassword() {     return password. }
+false;public;1;3;;public void setPassword(String password) {     this.password = password. }
+false;public;0;3;;public Integer getEnquireLinkTimer() {     return enquireLinkTimer. }
+false;public;1;3;;public void setEnquireLinkTimer(Integer enquireLinkTimer) {     this.enquireLinkTimer = enquireLinkTimer. }
+false;public;0;3;;public Integer getTransactionTimer() {     return transactionTimer. }
+false;public;1;3;;public void setTransactionTimer(Integer transactionTimer) {     this.transactionTimer = transactionTimer. }
+false;public;0;3;;public String getSystemType() {     return systemType. }
+false;public;1;3;;public void setSystemType(String systemType) {     this.systemType = systemType. }
+false;public;0;3;;public Byte getRegisteredDelivery() {     return registeredDelivery. }
+false;public;1;3;;public void setRegisteredDelivery(Byte registeredDelivery) {     this.registeredDelivery = registeredDelivery. }
+false;public;0;3;;public String getServiceType() {     return serviceType. }
+false;public;1;3;;public void setServiceType(String serviceType) {     this.serviceType = serviceType. }
+false;public;0;3;;public Byte getSourceAddrTon() {     return sourceAddrTon. }
+false;public;1;3;;public void setSourceAddrTon(Byte sourceAddrTon) {     this.sourceAddrTon = sourceAddrTon. }
+false;public;0;3;;public Byte getDestAddrTon() {     return destAddrTon. }
+false;public;1;3;;public void setDestAddrTon(Byte destAddrTon) {     this.destAddrTon = destAddrTon. }
+false;public;0;3;;public Byte getSourceAddrNpi() {     return sourceAddrNpi. }
+false;public;1;3;;public void setSourceAddrNpi(Byte sourceAddrNpi) {     this.sourceAddrNpi = sourceAddrNpi. }
+false;public;0;3;;public Byte getDestAddrNpi() {     return destAddrNpi. }
+false;public;1;3;;public void setDestAddrNpi(Byte destAddrNpi) {     this.destAddrNpi = destAddrNpi. }
+false;public;0;3;;public Byte getProtocolId() {     return protocolId. }
+false;public;1;3;;public void setProtocolId(Byte protocolId) {     this.protocolId = protocolId. }
+false;public;0;3;;public Byte getPriorityFlag() {     return priorityFlag. }
+false;public;1;3;;public void setPriorityFlag(Byte priorityFlag) {     this.priorityFlag = priorityFlag. }
+false;public;0;3;;public Byte getReplaceIfPresentFlag() {     return replaceIfPresentFlag. }
+false;public;1;3;;public void setReplaceIfPresentFlag(Byte replaceIfPresentFlag) {     this.replaceIfPresentFlag = replaceIfPresentFlag. }
+false;public;0;3;;public String getSourceAddr() {     return sourceAddr. }
+false;public;1;3;;public void setSourceAddr(String sourceAddr) {     this.sourceAddr = sourceAddr. }
+false;public;0;3;;public String getDestAddr() {     return destAddr. }
+false;public;1;3;;public void setDestAddr(String destAddr) {     this.destAddr = destAddr. }
+false;public;0;3;;public Byte getTypeOfNumber() {     return typeOfNumber. }
+false;public;1;3;;public void setTypeOfNumber(Byte typeOfNumber) {     this.typeOfNumber = typeOfNumber. }
+false;public;0;3;;public Byte getNumberingPlanIndicator() {     return numberingPlanIndicator. }
+false;public;1;3;;public void setNumberingPlanIndicator(Byte numberingPlanIndicator) {     this.numberingPlanIndicator = numberingPlanIndicator. }
+false;public;0;3;;public Boolean getUsingSSL() {     return usingSSL. }
+false;public;1;3;;public void setUsingSSL(Boolean usingSSL) {     this.usingSSL = usingSSL. }
+false;public;0;3;;public Long getInitialReconnectDelay() {     return initialReconnectDelay. }
+false;public;1;3;;public void setInitialReconnectDelay(Long initialReconnectDelay) {     this.initialReconnectDelay = initialReconnectDelay. }
+false;public;0;3;;public Long getReconnectDelay() {     return reconnectDelay. }
+false;public;1;3;;public void setReconnectDelay(Long reconnectDelay) {     this.reconnectDelay = reconnectDelay. }
+false;public;0;3;;public Integer getMaxReconnect() {     return maxReconnect. }
+false;public;1;3;;public void setMaxReconnect(Integer maxReconnect) {     this.maxReconnect = maxReconnect. }
+false;public;0;3;;public Boolean getLazySessionCreation() {     return lazySessionCreation. }
+false;public;1;3;;public void setLazySessionCreation(Boolean lazySessionCreation) {     this.lazySessionCreation = lazySessionCreation. }
+false;public;0;3;;public String getHttpProxyHost() {     return httpProxyHost. }
+false;public;1;3;;public void setHttpProxyHost(String httpProxyHost) {     this.httpProxyHost = httpProxyHost. }
+false;public;0;3;;public Integer getHttpProxyPort() {     return httpProxyPort. }
+false;public;1;3;;public void setHttpProxyPort(Integer httpProxyPort) {     this.httpProxyPort = httpProxyPort. }
+false;public;0;3;;public String getHttpProxyUsername() {     return httpProxyUsername. }
+false;public;1;3;;public void setHttpProxyUsername(String httpProxyUsername) {     this.httpProxyUsername = httpProxyUsername. }
+false;public;0;3;;public String getHttpProxyPassword() {     return httpProxyPassword. }
+false;public;1;3;;public void setHttpProxyPassword(String httpProxyPassword) {     this.httpProxyPassword = httpProxyPassword. }
+false;public;0;3;;public SessionStateListener getSessionStateListener() {     return sessionStateListener. }
+false;public;1;4;;public void setSessionStateListener(SessionStateListener sessionStateListener) {     this.sessionStateListener = sessionStateListener. }
+false;public;0;3;;public String getAddressRange() {     return addressRange. }
+false;public;1;3;;public void setAddressRange(String addressRange) {     this.addressRange = addressRange. }
+false;public;0;3;;public SmppSplittingPolicy getSplittingPolicy() {     return splittingPolicy. }
+false;public;1;3;;public void setSplittingPolicy(SmppSplittingPolicy splittingPolicy) {     this.splittingPolicy = splittingPolicy. }
+false;public;0;3;;public Map getProxyHeaders() {     return proxyHeaders. }
+false;public;1;3;;public void setProxyHeaders(Map proxyHeaders) {     this.proxyHeaders = proxyHeaders. }

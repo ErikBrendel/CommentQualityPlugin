@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;12;;@Test public void testGetDestinationHeaderTopic() {     Exchange exchange = Mockito.mock(Exchange.class).     Message message = Mockito.mock(Message.class).     Mockito.when(exchange.getIn()).thenReturn(message).     Mockito.when(message.getHeader(RabbitmqSpanDecorator.EXCHANGE_NAME)).thenReturn("test").     RabbitmqSpanDecorator decorator = new RabbitmqSpanDecorator().     assertEquals("test", decorator.getDestination(exchange, null)). }

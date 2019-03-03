@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getOrderId() {     return orderId. }
+false;public;1;4;;public OrderResponse setOrderId(String orderId) {     this.orderId = orderId.     return this. }
+false;public;0;3;;public boolean isAccepted() {     return accepted. }
+false;public;1;4;;public OrderResponse setAccepted(boolean accepted) {     this.accepted = accepted.     return this. }
+false;public;0;3;;public String getDescription() {     return description. }
+false;public;1;4;;public OrderResponse setDescription(String description) {     this.description = description.     return this. }
+false;public;0;4;;@Override public String toString() {     return String.format("OrderResponse[orderId='%s', accepted='%s', description='%s']", orderId, accepted, description). }

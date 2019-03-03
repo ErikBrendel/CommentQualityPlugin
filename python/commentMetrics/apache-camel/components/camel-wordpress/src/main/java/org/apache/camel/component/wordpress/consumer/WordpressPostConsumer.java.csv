@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;8;;@Override protected int poll() throws Exception {     if (this.getConfiguration().getId() == null) {         return this.pollForPostList().     } else {         return this.pollForSingle().     } }
+false;private;0;5;;private int pollForPostList() {     final List<Post> posts = this.servicePosts.list((PostSearchCriteria) getConfiguration().getSearchCriteria()).     posts.stream().forEach(p -> this.process(p)).     return posts.size(). }
+false;private;0;8;;private int pollForSingle() {     final Post post = this.servicePosts.retrieve(getConfiguration().getId()).     if (post == null) {         return 0.     }     this.process(post).     return 1. }

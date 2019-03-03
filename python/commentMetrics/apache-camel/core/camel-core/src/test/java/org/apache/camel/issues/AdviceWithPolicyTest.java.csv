@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public void configure() throws Exception {     weaveById("b").after().to("mock:result"). }
+false;public;0;19;;@Test public void testAdviceWithPolicy() throws Exception {     RouteDefinition route = context.getRouteDefinitions().get(0).     RouteReifier.adviceWith(route, context, new AdviceWithRouteBuilder() {          @Override         public void configure() throws Exception {             weaveById("b").after().to("mock:result").         }     }).     context.start().     getMockEndpoint("mock:a").expectedMessageCount(1).     getMockEndpoint("mock:b").expectedMessageCount(1).     getMockEndpoint("mock:result").expectedMessageCount(1).     template.sendBody("direct:start", "Hello World").     assertMockEndpointsSatisfied(). }
+false;public;0;7;;@Override public void configure() throws Exception {     from("direct:start").policy(new MyPolicy()).to("mock:a").id("a").to("mock:b").id("b"). }
+false;protected;0;12;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").policy(new MyPolicy()).to("mock:a").id("a").to("mock:b").id("b").         }     }. }
+false;public;2;4;;@Override public void beforeWrap(RouteContext routeContext, NamedNode definition) { // noop }
+false;public;2;4;;@Override public Processor wrap(RouteContext routeContext, Processor processor) {     return processor. }

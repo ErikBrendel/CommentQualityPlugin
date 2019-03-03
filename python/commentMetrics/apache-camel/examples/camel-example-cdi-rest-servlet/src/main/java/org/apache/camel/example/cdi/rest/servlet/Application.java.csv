@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;13;;@Override public void configure() {     rest("/say/").produces("text/plain").get("hello").route().transform().constant("Hello World!").endRest().get("hello/{name}").route().bean("hello").log("${body}"). }
+false;public;1;3;;public String hello(@Header("name") String name) {     return "Hello " + name + ", I'm " + context + "!". }

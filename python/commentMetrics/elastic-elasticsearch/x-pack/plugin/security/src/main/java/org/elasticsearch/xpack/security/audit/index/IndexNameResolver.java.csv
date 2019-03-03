@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;3;;DateTimeFormatter formatter() {     return formatter. }
+false;public,static;2;3;;public static String resolve(DateTime timestamp, Rollover rollover) {     return rollover.formatter().print(timestamp). }
+false;public,static;3;3;;public static String resolve(String indexNamePrefix, DateTime timestamp, Rollover rollover) {     return indexNamePrefix + resolve(timestamp, rollover). }

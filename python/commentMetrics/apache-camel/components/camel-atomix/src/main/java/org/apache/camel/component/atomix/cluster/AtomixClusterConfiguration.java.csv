@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;// ****************************************** // Properties // ****************************************** public Class<? extends Transport> getClientTransport() {     return clientTransport. }
+true;public;1;3;/**  * The client transport  */ ;/**  * The client transport  */ public void setClientTransport(Class<? extends Transport> clientTransport) {     this.clientTransport = clientTransport. }
+false;public;0;3;;public Class<? extends Transport> getServerTransport() {     return serverTransport. }
+true;public;1;3;/**  * The server transport  */ ;/**  * The server transport  */ public void setServerTransport(Class<? extends Transport> serverTransport) {     this.serverTransport = serverTransport. }
+false;public;0;3;;public String getStoragePath() {     return storagePath. }
+true;public;1;3;/**  * Sets the log directory.  */ ;/**  * Sets the log directory.  */ public void setStoragePath(String storagePath) {     this.storagePath = storagePath. }
+false;public;0;3;;public StorageLevel getStorageLevel() {     return storageLevel. }
+true;public;1;3;/**  * Sets the log storage level.  */ ;/**  * Sets the log storage level.  */ public void setStorageLevel(StorageLevel storageLevel) {     this.storageLevel = storageLevel. }
+false;public;0;7;;// **************************************** // Copy // **************************************** public AtomixClusterConfiguration copy() {     try {         return (AtomixClusterConfiguration) super.clone().     } catch (CloneNotSupportedException e) {         throw new RuntimeCamelException(e).     } }

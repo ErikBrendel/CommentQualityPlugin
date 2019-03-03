@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public <V> V acceptTargetVisitor(BindingTargetVisitor<? super T, V> visitor) {     return visitor.visit(this). }
+false;public;0;4;;@Override public Set<Dependency<?>> getDependencies() {     return singleton(Dependency.get(Key.get(Injector.class))). }
+false;public;0;4;;@Override public PrivateElements getPrivateElements() {     return privateElements. }
+false;public;1;4;;@Override public BindingImpl<T> withScoping(Scoping scoping) {     return new ExposedBindingImpl<>(getSource(), getKey(), scoping, privateElements). }
+false;public;1;4;;@Override public ExposedBindingImpl<T> withKey(Key<T> key) {     return new ExposedBindingImpl<>(getSource(), key, getScoping(), privateElements). }
+false;public;0;8;;@Override public String toString() {     return new ToStringBuilder(ExposedBinding.class).add("key", getKey()).add("source", getSource()).add("privateElements", privateElements).toString(). }
+false;public;1;4;;@Override public void applyTo(Binder binder) {     throw new UnsupportedOperationException("This element represents a synthetic binding."). }

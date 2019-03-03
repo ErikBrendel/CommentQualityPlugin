@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public double getValue() {     return value(). }
+false;public;0;4;;@Override public String getType() {     return SumAggregationBuilder.NAME. }
+false;protected;2;8;;@Override protected XContentBuilder doXContentBody(XContentBuilder builder, Params params) throws IOException {     builder.field(CommonFields.VALUE.getPreferredName(), value).     if (valueAsString != null) {         builder.field(CommonFields.VALUE_AS_STRING.getPreferredName(), valueAsString).     }     return builder. }
+false;public,static;2;5;;public static ParsedSum fromXContent(XContentParser parser, final String name) {     ParsedSum sum = PARSER.apply(parser, null).     sum.setName(name).     return sum. }

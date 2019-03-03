@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public boolean equals(Object o) {     if (o instanceof MyBean) {         MyBean that = (MyBean) o.         return ObjectHelper.equal(this.a, that.a) && ObjectHelper.equal(this.b, that.b).     }     return false. }
+false;public;0;11;;@Override public int hashCode() {     int answer = 1.     if (a != null) {         answer += a.hashCode() * 37.     }     if (b != null) {         answer += b.hashCode() * 37.     }     return answer. }
+false;public;0;4;;@Override public String toString() {     return "MyBean[a=" + a + " b=" + b + "]". }
+false;public;0;3;;public String getA() {     return a. }
+false;public;1;3;;public void setA(String a) {     this.a = a. }
+false;public;0;3;;public String getB() {     return b. }
+false;public;1;3;;public void setB(String b) {     this.b = b. }

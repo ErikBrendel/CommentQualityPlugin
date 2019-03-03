@@ -1,0 +1,20 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;public TestTrace withSegment(TestSegment segment) {     this.segments.add(segment).     return this. }
+false;public;0;3;;public Set<TestSegment> getSegments() {     return segments. }
+false;public;0;4;;public TestTrace inRandomOrder() {     randomOrder = true.     return this. }
+false;public;0;3;;public boolean isRandomOrder() {     return randomOrder. }
+false;public;0;3;;public String getName() {     return name. }
+false;public;0;3;;public Map<String, Object> getAnnotations() {     return this.annotations. }
+false;public;0;3;;public Map<String, Map<String, Object>> getMetadata() {     return metadata. }
+false;public;0;3;;public List<TestSubsegment> getSubsegments() {     return subsegments. }
+false;public;2;4;;public T withAnnotation(String name, Object value) {     this.annotations.put(name, value).     return (T) this. }
+false;public;2;3;;public T withMetadata(String name, Object value) {     return this.withMetadata("default", name, value). }
+false;public;3;8;;public T withMetadata(String namespace, String name, Object value) {     if (!this.metadata.containsKey(namespace)) {         this.metadata.put(namespace, new LinkedHashMap<>()).     }     Map<String, Object> namespaceMap = this.metadata.get(namespace).     namespaceMap.put(name, value).     return (T) this. }
+false;public;1;4;;public T withSubsegment(TestSubsegment subsegment) {     this.subsegments.add(subsegment).     return (T) this. }
+false;public;0;4;;public T inRandomOrder() {     this.randomOrder = true.     return (T) this. }
+false;public;0;3;;public boolean isRandomOrder() {     return randomOrder. }
+false;public;0;49;;@Override public String toString() {     String ret = this.getClass().getSimpleName() + "(name: " + name.     if (!subsegments.isEmpty()) {         ret += ", subsegments: [".         StringBuilder sb = new StringBuilder().         for (TestSubsegment sub : subsegments) {             if (sb.length() > 0) {                 sb.append(", ").             }             sb.append(sub).         }         ret += sb.toString() + "]".     }     if (!annotations.isEmpty()) {         ret += ", annotations: {".         StringBuilder sb = new StringBuilder().         for (String key : annotations.keySet()) {             if (sb.length() > 0) {                 sb.append(", ").             }             sb.append(key).append("->").append(annotations.get(key)).         }         ret += sb.toString() + "}".     }     if (!metadata.isEmpty()) {         ret += ", metadata: {".         StringBuilder sb = new StringBuilder().         for (String namespace : metadata.keySet()) {             if (sb.length() > 0) {                 sb.append(", ").             }             sb.append(namespace).append(": [").             boolean first = true.             for (String key : metadata.get(namespace).keySet()) {                 if (!first) {                     sb.append(", ").                 }                 sb.append(key).append("->").append(metadata.get(namespace).get(key)).                 first = false.             }             sb.append("]").         }         ret += sb.toString() + "}".     }     ret += ")".     return ret. }
+false;public;0;3;;public double getStartTime() {     return this.startTime. }
+false;public,static;0;3;;public static TestTrace createTrace() {     return new TestTrace(). }
+false;public,static;1;3;;public static TestSegment createSegment(String name) {     return new TestSegment(name). }
+false;public,static;1;3;;public static TestSubsegment createSubsegment(String name) {     return new TestSubsegment(name). }

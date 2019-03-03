@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;15;;@Override public Exchange aggregate(Exchange oldExchange, Exchange newExchange) {     if (oldExchange == null) {         return newExchange.     }     String body = oldExchange.getIn().getBody(String.class).     String newBody = newExchange.getIn().getBody(String.class).     body = body + newBody.     if (started) {         body = "Started" + body.     }     newExchange.getIn().setBody(body).     return newExchange. }
+false;protected;0;4;;@Override protected void doStart() throws Exception {     started = true. }
+false;protected;0;4;;@Override protected void doStop() throws Exception {     started = false. }

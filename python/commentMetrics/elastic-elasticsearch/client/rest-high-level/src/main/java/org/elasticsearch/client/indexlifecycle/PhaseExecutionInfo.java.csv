@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;2;3;;public static PhaseExecutionInfo parse(XContentParser parser, String name) {     return PARSER.apply(parser, name). }
+false;public;0;3;;public String getPolicyName() {     return policyName. }
+false;public;0;3;;public Phase getPhase() {     return phase. }
+false;public;0;3;;public long getVersion() {     return version. }
+false;public;0;3;;public long getModifiedDate() {     return modifiedDate. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(policyName, phase, version, modifiedDate). }
+false;public;1;14;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     PhaseExecutionInfo other = (PhaseExecutionInfo) obj.     return Objects.equals(policyName, other.policyName) && Objects.equals(phase, other.phase) && Objects.equals(version, other.version) && Objects.equals(modifiedDate, other.modifiedDate). }
+false;public;0;4;;@Override public String toString() {     return Strings.toString(this, false, true). }
+false;public;2;12;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(POLICY_NAME_FIELD.getPreferredName(), policyName).     if (phase != null) {         builder.field(PHASE_DEFINITION_FIELD.getPreferredName(), phase).     }     builder.field(VERSION_FIELD.getPreferredName(), version).     builder.timeField(MODIFIED_DATE_IN_MILLIS_FIELD.getPreferredName(), "modified_date", modifiedDate).     builder.endObject().     return builder. }

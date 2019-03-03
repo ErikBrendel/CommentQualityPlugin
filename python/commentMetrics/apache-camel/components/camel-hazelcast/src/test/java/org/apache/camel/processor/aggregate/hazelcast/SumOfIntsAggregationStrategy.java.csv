@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;12;;@Override public Exchange aggregate(Exchange oldExchange, Exchange newExchange) {     if (oldExchange == null) {         return newExchange.     } else {         Integer n = newExchange.getIn().getBody(Integer.class).         Integer o = oldExchange.getIn().getBody(Integer.class).         Integer v = (o == null ? 0 : o) + (n == null ? 0 : n).         oldExchange.getIn().setBody(v, Integer.class).         return oldExchange.     } }

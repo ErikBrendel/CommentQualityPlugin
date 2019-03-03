@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;4;;@Override boolean validatePayload() {     return true. }
+false;;0;4;;@Override boolean requireEndOfData() {     return false. }
+false;public;0;7;;@Override @Test public void testInvalidMessage() throws Exception {     expectedInvalidCount = 1.     runInvalidMessage(). }
+false;public;0;7;;@Override @Test public void testNthInvalidMessage() throws Exception {     expectedInvalidCount = 1.     runNthInvalidMessage(). }
+false;public;0;7;;@Override @Test public void testMessageContainingEmbeddedStartOfBlock() throws Exception {     expectedInvalidCount = 1.     runMessageContainingEmbeddedStartOfBlock(). }
+false;public;0;7;;@Override @Test public void testNthMessageContainingEmbeddedStartOfBlock() throws Exception {     expectedInvalidCount = 1.     runNthMessageContainingEmbeddedStartOfBlock(). }
+false;public;0;13;;@Override @Test public void testMessageContainingEmbeddedEndOfBlock() throws Exception {     expectedInvalidCount = 1.     setExpectedCounts().     NotifyBuilder done = new NotifyBuilder(context()).whenDone(1).create().     mllpClient.sendFramedData(Hl7TestMessageGenerator.generateMessage().replaceFirst("EVN", "EVN" + MllpProtocolConstants.END_OF_BLOCK)).     assertTrue("Exchange should have completed", done.matches(5, TimeUnit.SECONDS)). }
+false;public;0;7;;@Override @Test public void testInvalidMessageContainingEmbeddedEndOfBlock() throws Exception {     expectedInvalidCount = 1.     runInvalidMessageContainingEmbeddedEndOfBlock(). }
+false;public;0;7;;@Override @Test public void testNthMessageContainingEmbeddedEndOfBlock() throws Exception {     expectedInvalidCount = 1.     runNthMessageContainingEmbeddedEndOfBlock(). }
+false;public;0;7;;@Override @Test public void testMessageWithoutEndOfDataByte() throws Exception {     expectedCompleteCount = 1.     runMessageWithoutEndOfDataByte(). }

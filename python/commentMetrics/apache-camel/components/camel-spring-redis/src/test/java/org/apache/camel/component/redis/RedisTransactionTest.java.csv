@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry registry = super.createRegistry().     registry.bind("redisTemplate", redisTemplate).     return registry. }
+false;public;0;5;;@Test public void shouldExecuteMULTI() throws Exception {     sendHeaders(RedisConstants.COMMAND, "MULTI").     verify(redisTemplate).multi(). }
+false;public;0;5;;@Test public void shouldExecuteDISCARD() throws Exception {     sendHeaders(RedisConstants.COMMAND, "DISCARD").     verify(redisTemplate).discard(). }
+false;public;0;5;;@Test public void shouldExecuteEXEC() throws Exception {     sendHeaders(RedisConstants.COMMAND, "EXEC").     verify(redisTemplate).exec(). }
+false;public;0;5;;@Test public void shouldExecuteUNWATCH() throws Exception {     sendHeaders(RedisConstants.COMMAND, "UNWATCH").     verify(redisTemplate).unwatch(). }
+false;public;0;10;;@Test public void shouldExecuteWATCH() throws Exception {     List<String> keys = new ArrayList<>().     keys.add("key").     sendHeaders(RedisConstants.COMMAND, "WATCH", RedisConstants.KEYS, keys).     verify(redisTemplate).watch(keys). }

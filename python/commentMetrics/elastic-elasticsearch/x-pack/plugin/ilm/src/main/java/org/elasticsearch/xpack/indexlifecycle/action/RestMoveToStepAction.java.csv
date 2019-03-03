@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getName() {     return "ilm_move_to_step_action". }
+false;protected;2;9;;@Override protected RestChannelConsumer prepareRequest(RestRequest restRequest, NodeClient client) throws IOException {     String index = restRequest.param("name").     XContentParser parser = restRequest.contentParser().     MoveToStepAction.Request request = MoveToStepAction.Request.parseRequest(index, parser).     request.timeout(restRequest.paramAsTime("timeout", request.timeout())).     request.masterNodeTimeout(restRequest.paramAsTime("master_timeout", request.masterNodeTimeout())).     return channel -> client.execute(MoveToStepAction.INSTANCE, request, new RestToXContentListener<>(channel)). }

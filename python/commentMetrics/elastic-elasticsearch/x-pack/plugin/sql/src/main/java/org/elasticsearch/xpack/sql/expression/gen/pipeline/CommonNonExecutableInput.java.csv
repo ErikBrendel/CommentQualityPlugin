@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,final;0;4;;@Override public final Processor asProcessor() {     throw new SqlIllegalArgumentException("Unresolved input - needs resolving first"). }
+false;public,final;1;4;;@Override public final Pipe resolveAttributes(AttributeResolver resolver) {     return this. }
+false;public,final;1;4;;@Override public final void collectFields(SqlSourceBuilder sourceBuilder) { // Nothing to extract }

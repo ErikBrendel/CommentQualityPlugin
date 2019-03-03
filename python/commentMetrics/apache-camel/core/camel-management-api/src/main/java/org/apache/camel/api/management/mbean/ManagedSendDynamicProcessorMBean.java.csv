@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;2;;@ManagedAttribute(description = "The uri of the endpoint to send to. The uri can be dynamic computed using the expressions.", mask = true) String getUri().
+false;;0;2;;@ManagedAttribute(description = "Message Exchange Pattern") String getMessageExchangePattern().
+false;;0;2;;@ManagedAttribute(description = "Sets the maximum size used by the ProducerCache which is used to cache and reuse producers") Integer getCacheSize().
+false;;0;2;;@ManagedAttribute(description = "Ignore the invalidate endpoint exception when try to create a producer with that endpoint") Boolean isIgnoreInvalidEndpoint().
+false;;0;2;;@ManagedAttribute(description = "Whether to allow components to optimise toD if they are SendDynamicAware") Boolean isAllowOptimisedComponents().
+false;;0;2;;@ManagedAttribute(description = "Whether an optimised component (SendDynamicAware) is in use") Boolean isOptimised().
+false;;0;2;;@ManagedOperation(description = "Statistics of the endpoints which has been sent to") TabularData extendedInformation().

@@ -1,0 +1,22 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,abstract;1;1;;public abstract void add(Integer v).
+false;public,abstract;1;1;;public abstract void add(Long v).
+false;public,abstract;1;1;;public abstract void add(Double v).
+false;public,abstract;1;1;;public abstract void add(String v).
+false;public,abstract;0;1;;public abstract void addNull().
+false;public,abstract;0;1;;public abstract String getID().
+false;final;1;10;;final boolean check(Object v) {     if (generated) {         throw new RuntimeException("Cannot update ID as it has already been generated.").     }     if (v == null) {         addNull().         return false.     }     return true. }
+false;final;0;6;;final void setFlag() {     if (generated) {         throw new RuntimeException("Cannot generate ID as it has already been generated.").     }     generated = true. }
+false;public;1;6;;@Override public void add(Integer v) {     if (check(v)) {         crc.update(v).     } }
+false;public;1;6;;@Override public void add(Long v) {     if (check(v)) {         crc.update(Numbers.longToBytes(v), 0, 8).     } }
+false;public;1;6;;@Override public void add(Double v) {     if (check(v)) {         crc.update(Numbers.doubleToBytes(v), 0, 8).     } }
+false;public;1;7;;@Override public void add(String v) {     if (check(v)) {         byte[] vs = (v).getBytes(StandardCharsets.UTF_8).         crc.update(vs, 0, vs.length).     } }
+false;public;0;6;;@Override public void addNull() {     // Old ID scheme used (int)19 as the null placeholder.     // Not great but we're stuck with it :(     crc.update(19). }
+false;public;0;5;;@Override public String getID() {     setFlag().     return String.valueOf(crc.getValue()). }
+false;public;1;6;;@Override public void add(Integer v) {     if (check(v)) {         update(Numbers.intToBytes(v)).     } }
+false;public;1;6;;@Override public void add(Long v) {     if (check(v)) {         update(Numbers.longToBytes(v)).     } }
+false;public;1;6;;@Override public void add(Double v) {     if (check(v)) {         update(Numbers.doubleToBytes(v)).     } }
+false;public;1;6;;@Override public void add(String v) {     if (check(v)) {         update((v).getBytes(StandardCharsets.UTF_8)).     } }
+false;public;0;5;;@Override public void addNull() {     // New ID scheme uses a (hopefully) unique placeholder for null     update(NULL_PLACEHOLDER.bytes). }
+false;private;1;4;;private void update(byte[] v) {     id.append(v, 0, v.length).     id.append(DELIM). }
+false;public;0;11;;@Override public String getID() {     setFlag().     MurmurHash3.Hash128 hasher = MurmurHash3.hash128(id.bytes(), 0, id.length(), SEED, new MurmurHash3.Hash128()).     byte[] hashedBytes = new byte[16].     System.arraycopy(Numbers.longToBytes(hasher.h1), 0, hashedBytes, 0, 8).     System.arraycopy(Numbers.longToBytes(hasher.h2), 0, hashedBytes, 8, 8).     return jobId + "$" + Base64.getUrlEncoder().withoutPadding().encodeToString(hashedBytes). }

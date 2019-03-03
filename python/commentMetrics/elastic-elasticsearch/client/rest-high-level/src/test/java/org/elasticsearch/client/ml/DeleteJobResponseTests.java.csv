@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;7;;@Override protected DeleteJobResponse createTestInstance() {     if (randomBoolean()) {         return new DeleteJobResponse(randomBoolean(), null).     }     return new DeleteJobResponse(null, new TaskId(randomAlphaOfLength(20) + ":" + randomIntBetween(1, 100))). }
+false;protected;1;4;;@Override protected DeleteJobResponse doParseInstance(XContentParser parser) throws IOException {     return DeleteJobResponse.PARSER.apply(parser, null). }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }

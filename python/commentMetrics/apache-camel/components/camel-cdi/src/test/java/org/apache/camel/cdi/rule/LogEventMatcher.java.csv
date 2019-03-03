@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;3;;public static LogEventMatcher logEvent() {     return new LogEventMatcher(). }
+false;public;2;13;;@Override public boolean matches(Object item, Description description) {     LogEvent target = (LogEvent) item.     if (!match(target)) {         description.appendText(" was LogEvent with ").appendText("level [" + Objects.toString(target.getLevel(), "n/a") + "], ").appendText("logger [" + Objects.toString(target.getLogger(), "n/a") + "], ").appendText("message [" + Objects.toString(target.getMessage(), "n/a") + "]").         return false.     }     return true. }
+false;public;1;7;;@Override public void describeTo(Description description) {     description.appendText("LogEvent with ").appendText("level [" + Objects.toString(level, "n/a") + "], ").appendText("logger [" + Objects.toString(logger, "n/a") + "], ").appendText("message [" + Objects.toString(message, "n/a") + "]"). }
+false;public;1;4;;public LogEventMatcher withLevel(String level) {     this.level = level.     return this. }
+false;public;1;4;;public LogEventMatcher withLogger(String logger) {     this.logger = logger.     return this. }
+false;public;1;4;;public LogEventMatcher withMessage(Matcher<String> message) {     this.message = message.     return this. }
+false;private;1;21;;private boolean match(LogEvent target) {     if (level != null) {         if (!level.equals(target.getLevel())) {             return false.         }     }     if (logger != null) {         if (!logger.equals(target.getLogger())) {             return false.         }     }     if (message != null) {         if (!message.matches(target.getMessage())) {             return false.         }     }     return true. }

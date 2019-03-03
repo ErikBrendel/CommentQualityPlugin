@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;14;;public static void main(String[] args) throws Exception {     Server server = new Server(8080).     WebAppContext webAppContext = new WebAppContext().     webAppContext.setContextPath("/").     webAppContext.setConfigurations(new Configuration[] { new WebApplicationInitializersConfiguration(SpringInitializer.class) }).     webAppContext.setParentLoaderPriority(true).     server.setHandler(webAppContext).     server.start().     server.join(). }

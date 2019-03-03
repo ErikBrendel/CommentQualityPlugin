@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * @return the task Id  */ ;/**  * @return the task Id  */ public TaskId getTaskId() {     return taskId. }
+true;public;0;3;/**  * @return the requests per seconds value  */ ;/**  * @return the requests per seconds value  */ public float getRequestsPerSecond() {     return requestsPerSecond. }
+false;public;0;4;;@Override public String toString() {     return "RethrottleRequest: taskID = " + taskId + ". reqestsPerSecond = " + requestsPerSecond. }

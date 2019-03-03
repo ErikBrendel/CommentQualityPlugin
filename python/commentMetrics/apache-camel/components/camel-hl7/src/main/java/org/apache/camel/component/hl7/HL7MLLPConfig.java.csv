@@ -1,0 +1,23 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Charset getCharset() {     return charset. }
+false;public;1;3;;public void setCharset(Charset charset) {     this.charset = charset. }
+false;public;0;3;;public boolean isConvertLFtoCR() {     return convertLFtoCR. }
+false;public;1;3;;public void setConvertLFtoCR(boolean convertLFtoCR) {     this.convertLFtoCR = convertLFtoCR. }
+false;public;0;3;;public char getStartByte() {     return startByte. }
+false;public;1;3;;public void setStartByte(char startByte) {     this.startByte = startByte. }
+false;public;0;3;;public char getEndByte1() {     return endByte1. }
+false;public;1;3;;public void setEndByte1(char endByte1) {     this.endByte1 = endByte1. }
+false;public;0;3;;public char getEndByte2() {     return endByte2. }
+false;public;1;3;;public void setEndByte2(char endByte2) {     this.endByte2 = endByte2. }
+false;public;0;3;;public Parser getParser() {     return parser. }
+false;public;1;3;;public void setParser(Parser parser) {     this.parser = parser. }
+false;public;0;3;;public HapiContext getHapiContext() {     return hapiContext. }
+false;public;1;4;;public void setHapiContext(HapiContext hapiContext) {     this.hapiContext = hapiContext.     this.parser = hapiContext.getPipeParser(). }
+false;public;0;3;;public boolean isValidate() {     return parser.getParserConfiguration().isValidating(). }
+false;public;1;3;;public void setValidate(boolean validate) {     parser.getParserConfiguration().setValidating(validate). }
+false;public;0;3;;public boolean isProduceString() {     return produceString. }
+false;public;1;3;;public void setProduceString(boolean produceString) {     this.produceString = produceString. }
+false;public;0;3;;public CodingErrorAction getMalformedInputErrorAction() {     return malformedInputErrorAction. }
+false;public;1;3;;public void setMalformedInputErrorAction(CodingErrorAction malformedInputErrorAction) {     this.malformedInputErrorAction = malformedInputErrorAction. }
+false;public;0;3;;public CodingErrorAction getUnmappableCharacterErrorAction() {     return unmappableCharacterErrorAction. }
+false;public;1;3;;public void setUnmappableCharacterErrorAction(CodingErrorAction unmappableCharacterErrorAction) {     this.unmappableCharacterErrorAction = unmappableCharacterErrorAction. }

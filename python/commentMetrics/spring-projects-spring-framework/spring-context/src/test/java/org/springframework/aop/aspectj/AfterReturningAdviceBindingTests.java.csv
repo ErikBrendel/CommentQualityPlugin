@@ -1,0 +1,27 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;16;;@Before public void setup() throws Exception {     ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext(getClass().getSimpleName() + ".xml", getClass()).     afterAdviceAspect = (AfterReturningAdviceBindingTestAspect) ctx.getBean("testAspect").     mockCollaborator = mock(AfterReturningAdviceBindingCollaborator.class).     afterAdviceAspect.setCollaborator(mockCollaborator).     testBeanProxy = (ITestBean) ctx.getBean("testBean").     assertTrue(AopUtils.isAopProxy(testBeanProxy)).     // we need the real target too, not just the proxy...     this.testBeanTarget = (TestBean) ((Advised) testBeanProxy).getTargetSource().getTarget(). }
+false;public;0;5;;@Test public void testOneIntArg() {     testBeanProxy.setAge(5).     verify(mockCollaborator).oneIntArg(5). }
+false;public;0;5;;@Test public void testOneObjectArg() {     testBeanProxy.getAge().     verify(mockCollaborator).oneObjectArg(this.testBeanProxy). }
+false;public;0;5;;@Test public void testOneIntAndOneObjectArgs() {     testBeanProxy.setAge(5).     verify(mockCollaborator).oneIntAndOneObject(5, this.testBeanProxy). }
+false;public;0;5;;@Test public void testNeedsJoinPoint() {     testBeanProxy.getAge().     verify(mockCollaborator).needsJoinPoint("getAge"). }
+false;public;0;5;;@Test public void testNeedsJoinPointStaticPart() {     testBeanProxy.getAge().     verify(mockCollaborator).needsJoinPointStaticPart("getAge"). }
+false;public;0;6;;@Test public void testReturningString() {     testBeanProxy.setName("adrian").     testBeanProxy.getName().     verify(mockCollaborator).oneString("adrian"). }
+false;public;0;5;;@Test public void testReturningObject() {     testBeanProxy.returnsThis().     verify(mockCollaborator).oneObjectArg(this.testBeanTarget). }
+false;public;0;5;;@Test public void testReturningBean() {     testBeanProxy.returnsThis().     verify(mockCollaborator).oneTestBeanArg(this.testBeanTarget). }
+false;public;0;7;;@Test public void testReturningBeanArray() {     this.testBeanTarget.setSpouse(new TestBean()).     ITestBean[] spouses = this.testBeanTarget.getSpouses().     testBeanProxy.getSpouses().     verify(mockCollaborator).testBeanArrayArg(spouses). }
+false;public;0;6;;@Test public void testNoInvokeWhenReturningParameterTypeDoesNotMatch() {     testBeanProxy.setSpouse(this.testBeanProxy).     testBeanProxy.getSpouse().     verifyZeroInteractions(mockCollaborator). }
+false;public;0;5;;@Test public void testReturningByType() {     testBeanProxy.returnsThis().     verify(mockCollaborator).objectMatchNoArgs(). }
+false;public;0;6;;@Test public void testReturningPrimitive() {     testBeanProxy.setAge(20).     testBeanProxy.haveBirthday().     verify(mockCollaborator).oneInt(20). }
+false;private;0;3;;private AfterReturningAdviceBindingCollaborator getCollaborator() {     return (AfterReturningAdviceBindingCollaborator) this.collaborator. }
+false;public;1;3;;public void oneString(String name) {     getCollaborator().oneString(name). }
+false;public;1;3;;public void oneTestBeanArg(TestBean bean) {     getCollaborator().oneTestBeanArg(bean). }
+false;public;1;3;;public void testBeanArrayArg(ITestBean[] beans) {     getCollaborator().testBeanArrayArg(beans). }
+false;public;0;3;;public void objectMatchNoArgs() {     getCollaborator().objectMatchNoArgs(). }
+false;public;0;3;;public void stringMatchNoArgs() {     getCollaborator().stringMatchNoArgs(). }
+false;public;1;3;;public void oneInt(int result) {     getCollaborator().oneInt(result). }
+false;;1;1;;void oneString(String s).
+false;;1;1;;void oneTestBeanArg(TestBean b).
+false;;1;1;;void testBeanArrayArg(ITestBean[] b).
+false;;0;1;;void objectMatchNoArgs().
+false;;0;1;;void stringMatchNoArgs().
+false;;1;1;;void oneInt(int result).

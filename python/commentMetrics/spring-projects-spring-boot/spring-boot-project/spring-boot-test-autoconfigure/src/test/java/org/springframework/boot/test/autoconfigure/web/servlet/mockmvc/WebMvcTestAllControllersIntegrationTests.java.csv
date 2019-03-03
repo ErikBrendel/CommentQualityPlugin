@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void shouldFindController1() throws Exception {     this.mvc.perform(get("/one")).andExpect(content().string("one")).andExpect(status().isOk()). }
+false;public;0;5;;@Test public void shouldFindController2() throws Exception {     this.mvc.perform(get("/two")).andExpect(content().string("hellotwo")).andExpect(status().isOk()). }
+false;public;0;5;;@Test public void shouldFindControllerAdvice() throws Exception {     this.mvc.perform(get("/error")).andExpect(content().string("recovered")).andExpect(status().isOk()). }
+false;public;0;5;;@Test public void shouldRunValidationSuccess() throws Exception {     this.mvc.perform(get("/three/OK")).andExpect(status().isOk()).andExpect(content().string("Hello OK")). }
+false;public;0;6;;@Test public void shouldRunValidationFailure() throws Exception {     assertThatExceptionOfType(NestedServletException.class).isThrownBy(() -> this.mvc.perform(get("/three/invalid"))).withCauseInstanceOf(ConstraintViolationException.class). }
+false;public;0;5;;@Test public void shouldNotFilterErrorAttributes() {     assertThat(this.errorAttributes).isNotNull(). }

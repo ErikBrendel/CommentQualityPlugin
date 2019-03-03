@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test @Order(2) public void sendMessageTwo() {     producer.sendBody("two"). }
+false;public;0;5;;@Test @Order(3) public void sendMessageThree() {     producer.sendBody("three"). }
+false;public;0;5;;@Test @Order(1) public void sendMessageOne() {     producer.sendBody("one"). }
+false;public;0;4;;@Override public void configure() {     from("direct:out").process(verifier). }
+false;protected;0;5;;@Override protected void verify() {     assertThat("Messages sequence is incorrect!", messages, contains("one", "two", "three")). }
+false;public;1;4;;@Override public void process(Exchange exchange) {     messages.add(exchange.getIn().getBody(String.class)). }

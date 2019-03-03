@@ -1,0 +1,19 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;// ServerEndpointConfig implementation @Override public String getPath() {     return this.path. }
+false;public;0;10;;@Override public Class<? extends Endpoint> getEndpointClass() {     if (this.endpoint != null) {         return this.endpoint.getClass().     } else {         Assert.state(this.endpointProvider != null, "No endpoint set").         return this.endpointProvider.getHandlerType().     } }
+false;public;0;9;;public Endpoint getEndpoint() {     if (this.endpoint != null) {         return this.endpoint.     } else {         Assert.state(this.endpointProvider != null, "No endpoint set").         return this.endpointProvider.getHandler().     } }
+false;public;1;3;;public void setSubprotocols(List<String> subprotocols) {     this.subprotocols = subprotocols. }
+false;public;0;4;;@Override public List<String> getSubprotocols() {     return this.subprotocols. }
+false;public;1;3;;public void setExtensions(List<Extension> extensions) {     this.extensions = extensions. }
+false;public;0;4;;@Override public List<Extension> getExtensions() {     return this.extensions. }
+false;public;1;3;;public void setEncoders(List<Class<? extends Encoder>> encoders) {     this.encoders = encoders. }
+false;public;0;4;;@Override public List<Class<? extends Encoder>> getEncoders() {     return this.encoders. }
+false;public;1;3;;public void setDecoders(List<Class<? extends Decoder>> decoders) {     this.decoders = decoders. }
+false;public;0;4;;@Override public List<Class<? extends Decoder>> getDecoders() {     return this.decoders. }
+false;public;1;4;;public void setUserProperties(Map<String, Object> userProperties) {     this.userProperties.clear().     this.userProperties.putAll(userProperties). }
+false;public;0;4;;@Override public Map<String, Object> getUserProperties() {     return this.userProperties. }
+false;public;0;4;;@Override public Configurator getConfigurator() {     return this. }
+false;public,final;1;5;;// ServerEndpointConfig.Configurator implementation @SuppressWarnings("unchecked") @Override public final <T> T getEndpointInstance(Class<T> clazz) throws InstantiationException {     return (T) getEndpoint(). }
+false;public;3;4;;@Override public void modifyHandshake(ServerEndpointConfig sec, HandshakeRequest request, HandshakeResponse response) {     super.modifyHandshake(this, request, response). }
+false;public;1;6;;// Remaining methods @Override public void setBeanFactory(BeanFactory beanFactory) {     if (this.endpointProvider != null) {         this.endpointProvider.setBeanFactory(beanFactory).     } }
+false;public;0;4;;@Override public String toString() {     return "ServerEndpointRegistration for path '" + getPath() + "': " + getEndpointClass(). }

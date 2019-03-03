@@ -1,0 +1,18 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getJobId() {     return jobId. }
+false;public;0;3;;public long getCategoryId() {     return categoryId. }
+false;;1;3;;void setCategoryId(long categoryId) {     this.categoryId = categoryId. }
+false;public;0;3;;public String getTerms() {     return terms. }
+false;;1;3;;void setTerms(String terms) {     this.terms = terms. }
+false;public;0;3;;public String getRegex() {     return regex. }
+false;;1;3;;void setRegex(String regex) {     this.regex = regex. }
+false;public;0;3;;public long getMaxMatchingLength() {     return maxMatchingLength. }
+false;;1;3;;void setMaxMatchingLength(long maxMatchingLength) {     this.maxMatchingLength = maxMatchingLength. }
+false;public;0;3;;public List<String> getExamples() {     return new ArrayList<>(examples). }
+false;;1;4;;void setExamples(Collection<String> examples) {     this.examples.clear().     this.examples.addAll(examples). }
+false;;1;3;;void addExample(String example) {     examples.add(example). }
+false;public;0;3;;public String getGrokPattern() {     return grokPattern. }
+false;;1;3;;void setGrokPattern(String grokPattern) {     this.grokPattern = grokPattern. }
+false;public;2;15;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(Job.ID.getPreferredName(), jobId).     builder.field(CATEGORY_ID.getPreferredName(), categoryId).     builder.field(TERMS.getPreferredName(), terms).     builder.field(REGEX.getPreferredName(), regex).     builder.field(MAX_MATCHING_LENGTH.getPreferredName(), maxMatchingLength).     builder.field(EXAMPLES.getPreferredName(), examples).     if (grokPattern != null) {         builder.field(GROK_PATTERN.getPreferredName(), grokPattern).     }     builder.endObject().     return builder. }
+false;public;1;17;;@Override public boolean equals(Object other) {     if (this == other) {         return true.     }     if (other == null || getClass() != other.getClass()) {         return false.     }     CategoryDefinition that = (CategoryDefinition) other.     return Objects.equals(this.jobId, that.jobId) && Objects.equals(this.categoryId, that.categoryId) && Objects.equals(this.terms, that.terms) && Objects.equals(this.regex, that.regex) && Objects.equals(this.maxMatchingLength, that.maxMatchingLength) && Objects.equals(this.examples, that.examples) && Objects.equals(this.grokPattern, that.grokPattern). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(jobId, categoryId, terms, regex, maxMatchingLength, examples, grokPattern). }

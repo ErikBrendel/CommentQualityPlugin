@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * Suspends the service.  *  * @throws Exception is thrown if suspending failed  */ ;/**  * Suspends the service.  *  * @throws Exception is thrown if suspending failed  */ void suspend() throws Exception.
+true;;0;1;/**  * Resumes the service.  *  * @throws Exception is thrown if resuming failed  */ ;/**  * Resumes the service.  *  * @throws Exception is thrown if resuming failed  */ void resume() throws Exception.
+true;;0;1;/**  * Tests whether the service is suspended or not.  *  * @return <tt>true</tt> if suspended  */ ;/**  * Tests whether the service is suspended or not.  *  * @return <tt>true</tt> if suspended  */ boolean isSuspended().

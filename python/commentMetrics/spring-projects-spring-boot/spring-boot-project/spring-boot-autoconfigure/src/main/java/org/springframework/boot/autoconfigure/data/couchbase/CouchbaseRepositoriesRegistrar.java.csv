@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected Class<? extends Annotation> getAnnotation() {     return EnableCouchbaseRepositories.class. }
+false;protected;0;4;;@Override protected Class<?> getConfiguration() {     return EnableCouchbaseRepositoriesConfiguration.class. }
+false;protected;0;4;;@Override protected RepositoryConfigurationExtension getRepositoryConfigurationExtension() {     return new CouchbaseRepositoryConfigurationExtension(). }

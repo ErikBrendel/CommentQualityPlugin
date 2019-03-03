@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void entryEqualsSameInstance() {     AnnotationMetadata metadata = mock(AnnotationMetadata.class).     Group.Entry entry = new Group.Entry(metadata, "com.example.Test").     assertEquals(entry, entry). }
+false;public;0;6;;@Test public void entryEqualsSameMetadataAndClassName() {     AnnotationMetadata metadata = mock(AnnotationMetadata.class).     assertEquals(new Group.Entry(metadata, "com.example.Test"), new Group.Entry(metadata, "com.example.Test")). }
+false;public;0;6;;@Test public void entryEqualDifferentMetadataAndSameClassName() {     assertNotEquals(new Group.Entry(mock(AnnotationMetadata.class), "com.example.Test"), new Group.Entry(mock(AnnotationMetadata.class), "com.example.Test")). }
+false;public;0;6;;@Test public void entryEqualSameMetadataAnDifferentClassName() {     AnnotationMetadata metadata = mock(AnnotationMetadata.class).     assertNotEquals(new Group.Entry(metadata, "com.example.Test"), new Group.Entry(metadata, "com.example.AnotherTest")). }

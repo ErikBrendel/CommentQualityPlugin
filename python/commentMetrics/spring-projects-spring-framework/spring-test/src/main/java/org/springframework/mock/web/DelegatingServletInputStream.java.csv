@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,final;0;3;/**  * Return the underlying source stream (never {@code null}).  */ ;/**  * Return the underlying source stream (never {@code null}).  */ public final InputStream getSourceStream() {     return this.sourceStream. }
+false;public;0;8;;@Override public int read() throws IOException {     int data = this.sourceStream.read().     if (data == -1) {         this.finished = true.     }     return data. }
+false;public;0;4;;@Override public int available() throws IOException {     return this.sourceStream.available(). }
+false;public;0;5;;@Override public void close() throws IOException {     super.close().     this.sourceStream.close(). }
+false;public;0;4;;@Override public boolean isFinished() {     return this.finished. }
+false;public;0;4;;@Override public boolean isReady() {     return true. }
+false;public;1;4;;@Override public void setReadListener(ReadListener readListener) {     throw new UnsupportedOperationException(). }

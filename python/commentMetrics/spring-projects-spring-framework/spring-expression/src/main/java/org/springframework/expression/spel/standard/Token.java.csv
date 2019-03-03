@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public TokenKind getKind() {     return this.kind. }
+false;public;0;3;;public boolean isIdentifier() {     return (this.kind == TokenKind.IDENTIFIER). }
+false;public;0;4;;public boolean isNumericRelationalOperator() {     return (this.kind == TokenKind.GT || this.kind == TokenKind.GE || this.kind == TokenKind.LT || this.kind == TokenKind.LE || this.kind == TokenKind.EQ || this.kind == TokenKind.NE). }
+false;public;0;3;;public String stringValue() {     return (this.data != null ? this.data : ""). }
+false;public;0;3;;public Token asInstanceOfToken() {     return new Token(TokenKind.INSTANCEOF, this.startPos, this.endPos). }
+false;public;0;3;;public Token asMatchesToken() {     return new Token(TokenKind.MATCHES, this.startPos, this.endPos). }
+false;public;0;3;;public Token asBetweenToken() {     return new Token(TokenKind.BETWEEN, this.startPos, this.endPos). }
+false;public;0;11;;@Override public String toString() {     StringBuilder s = new StringBuilder().     s.append("[").append(this.kind.toString()).     if (this.kind.hasPayload()) {         s.append(":").append(this.data).     }     s.append("]").     s.append("(").append(this.startPos).append(",").append(this.endPos).append(")").     return s.toString(). }

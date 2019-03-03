@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void setFactoryBeanProperty(String s) {     this.factoryBeanProperty = s. }
+false;public;0;3;;public String getFactoryBeanProperty() {     return this.factoryBeanProperty. }
+false;public;0;5;;public FactoryMethods defaultInstance() {     TestBean tb = new TestBean().     tb.setName(this.factoryBeanProperty).     return FactoryMethods.newInstance(tb). }
+true;public;1;3;/**  * Note that overloaded methods are supported.  */ ;/**  * Note that overloaded methods are supported.  */ public FactoryMethods newInstance(TestBean tb) {     return FactoryMethods.newInstance(tb). }
+false;public;3;3;;public FactoryMethods newInstance(TestBean tb, int num, String name) {     return FactoryMethods.newInstance(tb, num, name). }

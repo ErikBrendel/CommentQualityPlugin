@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void testFoo() throws Exception { // noop }
+false;public;0;5;;@Override public void configure() throws Exception {     from("direct:foo").to("mock:foo"). }
+false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:foo").to("mock:foo").         }     }. }

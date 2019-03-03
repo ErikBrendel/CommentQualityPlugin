@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String setName() {     return setName. }
+false;public;0;4;;@Override public int uniqueId() {     return uniqueId. }
+false;public;0;4;;@Override public Class<? extends Annotation> annotationType() {     return Element.class. }
+false;public;0;5;;@Override public String toString() {     return "@" + Element.class.getName() + "(setName=" + setName + ",uniqueId=" + uniqueId + ")". }
+false;public;1;6;;@Override public boolean equals(Object o) {     return o instanceof Element && ((Element) o).setName().equals(setName()) && ((Element) o).uniqueId() == uniqueId(). }
+false;public;0;5;;@Override public int hashCode() {     return 127 * ("setName".hashCode() ^ setName.hashCode()) + 127 * ("uniqueId".hashCode() ^ uniqueId). }

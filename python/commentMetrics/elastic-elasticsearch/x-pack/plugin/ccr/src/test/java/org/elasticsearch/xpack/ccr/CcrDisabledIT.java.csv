@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;public void testClusterCanStartWithCcrInstalledButNotEnabled() throws Exception {     // TODO: Assert that x-pack ccr feature is not enabled once feature functionality has been added     ensureGreen(). }
+false;protected;1;5;;@Override protected Settings nodeSettings(int nodeOrdinal) {     return Settings.builder().put(super.nodeSettings(nodeOrdinal)).put(XPackSettings.CCR_ENABLED_SETTING.getKey(), true).put(XPackSettings.SECURITY_ENABLED.getKey(), false).build(). }
+false;protected;0;4;;@Override protected Settings transportClientSettings() {     return Settings.builder().put(super.transportClientSettings()).put(XPackSettings.SECURITY_ENABLED.getKey(), false).build(). }
+false;protected;0;4;;@Override protected Collection<Class<? extends Plugin>> nodePlugins() {     return Collections.singletonList(LocalStateCcr.class). }
+false;protected;0;4;;@Override protected Collection<Class<? extends Plugin>> transportClientPlugins() {     return Collections.singletonList(XPackClientPlugin.class). }

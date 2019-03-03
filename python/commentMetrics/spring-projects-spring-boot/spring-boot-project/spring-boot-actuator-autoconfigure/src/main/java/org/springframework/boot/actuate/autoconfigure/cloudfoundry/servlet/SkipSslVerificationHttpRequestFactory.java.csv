@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;2;8;;@Override protected void prepareConnection(HttpURLConnection connection, String httpMethod) throws IOException {     if (connection instanceof HttpsURLConnection) {         prepareHttpsConnection((HttpsURLConnection) connection).     }     super.prepareConnection(connection, httpMethod). }
+false;private;1;9;;private void prepareHttpsConnection(HttpsURLConnection connection) {     connection.setHostnameVerifier(new SkipHostnameVerifier()).     try {         connection.setSSLSocketFactory(createSslSocketFactory()).     } catch (Exception ex) {     // Ignore     } }
+false;private;0;6;;private SSLSocketFactory createSslSocketFactory() throws Exception {     SSLContext context = SSLContext.getInstance("TLS").     context.init(null, new TrustManager[] { new SkipX509TrustManager() }, new SecureRandom()).     return context.getSocketFactory(). }
+false;public;2;4;;@Override public boolean verify(String s, SSLSession sslSession) {     return true. }
+false;public;0;4;;@Override public X509Certificate[] getAcceptedIssuers() {     return new X509Certificate[0]. }
+false;public;2;3;;@Override public void checkClientTrusted(X509Certificate[] chain, String authType) { }
+false;public;2;3;;@Override public void checkServerTrusted(X509Certificate[] chain, String authType) { }

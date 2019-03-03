@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected HandlerMethodArgumentResolver createResolver() {     return new RequestAttributeMethodArgumentResolver(). }
+false;protected;0;4;;@Override protected String getHandleMethodName() {     return "handleWithRequestAttribute". }
+false;protected;0;4;;@Override protected int getScope() {     return RequestAttributes.SCOPE_REQUEST. }

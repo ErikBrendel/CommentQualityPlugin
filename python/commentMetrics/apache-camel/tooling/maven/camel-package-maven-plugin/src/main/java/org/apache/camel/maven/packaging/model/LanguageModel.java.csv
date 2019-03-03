@@ -1,0 +1,32 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getKind() {     return kind. }
+false;public;1;3;;public void setKind(String kind) {     this.kind = kind. }
+false;public;0;3;;public String getName() {     return name. }
+false;public;1;3;;public void setName(String name) {     this.name = name. }
+false;public;0;3;;public String getModelName() {     return modelName. }
+false;public;1;3;;public void setModelName(String modelName) {     this.modelName = modelName. }
+false;public;0;3;;public String getTitle() {     return title. }
+false;public;1;3;;public void setTitle(String title) {     this.title = title. }
+false;public;0;3;;public String getDescription() {     return description. }
+false;public;1;3;;public void setDescription(String description) {     this.description = description. }
+false;public;0;3;;public String getFirstVersion() {     return firstVersion. }
+false;public;1;3;;public void setFirstVersion(String firstVersion) {     this.firstVersion = firstVersion. }
+false;public;0;3;;public String getLabel() {     return label. }
+false;public;1;3;;public void setLabel(String label) {     this.label = label. }
+false;public;0;3;;public String getDeprecated() {     return deprecated. }
+false;public;1;3;;public void setDeprecated(String deprecated) {     this.deprecated = deprecated. }
+false;public;0;3;;public String getDeprecationNote() {     return deprecationNote. }
+false;public;1;3;;public void setDeprecationNote(String deprecationNote) {     this.deprecationNote = deprecationNote. }
+false;public;0;3;;public String getJavaType() {     return javaType. }
+false;public;1;3;;public void setJavaType(String javaType) {     this.javaType = javaType. }
+false;public;0;3;;public String getGroupId() {     return groupId. }
+false;public;1;3;;public void setGroupId(String groupId) {     this.groupId = groupId. }
+false;public;0;3;;public String getArtifactId() {     return artifactId. }
+false;public;1;3;;public void setArtifactId(String artifactId) {     this.artifactId = artifactId. }
+false;public;0;3;;public String getVersion() {     return version. }
+false;public;1;3;;public void setVersion(String version) {     this.version = version. }
+false;public;0;3;;public List<LanguageOptionModel> getLanguageOptions() {     return languageOptions. }
+false;public;1;3;;public void addLanguageOption(LanguageOptionModel option) {     languageOptions.add(option). }
+false;public;0;3;;public String getShortJavaType() {     return StringHelper.getClassShortName(javaType). }
+false;public;0;7;;public String getDocLink() {     if ("camel-core".equals(artifactId)) {         return coreOnly ? "src/main/docs" : "../core/camel-core/src/main/docs".     } else {         return artifactId + "/src/main/docs".     } }
+false;public;0;3;;public String getFirstVersionShort() {     return cutLastZeroDigit(firstVersion). }

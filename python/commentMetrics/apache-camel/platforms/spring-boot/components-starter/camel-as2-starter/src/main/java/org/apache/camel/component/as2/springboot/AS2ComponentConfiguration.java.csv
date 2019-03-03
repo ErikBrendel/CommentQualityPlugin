@@ -1,0 +1,61 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public AS2ConfigurationNestedConfiguration getConfiguration() {     return configuration. }
+false;public;1;4;;public void setConfiguration(AS2ConfigurationNestedConfiguration configuration) {     this.configuration = configuration. }
+false;public;0;3;;public Boolean getResolvePropertyPlaceholders() {     return resolvePropertyPlaceholders. }
+false;public;1;4;;public void setResolvePropertyPlaceholders(Boolean resolvePropertyPlaceholders) {     this.resolvePropertyPlaceholders = resolvePropertyPlaceholders. }
+false;public;0;3;;public AS2ApiName getApiName() {     return apiName. }
+false;public;1;3;;public void setApiName(AS2ApiName apiName) {     this.apiName = apiName. }
+false;public;0;3;;public String getMethodName() {     return methodName. }
+false;public;1;3;;public void setMethodName(String methodName) {     this.methodName = methodName. }
+false;public;0;3;;public String getAs2Version() {     return as2Version. }
+false;public;1;3;;public void setAs2Version(String as2Version) {     this.as2Version = as2Version. }
+false;public;0;3;;public String getUserAgent() {     return userAgent. }
+false;public;1;3;;public void setUserAgent(String userAgent) {     this.userAgent = userAgent. }
+false;public;0;3;;public String getServer() {     return server. }
+false;public;1;3;;public void setServer(String server) {     this.server = server. }
+false;public;0;3;;public String getServerFqdn() {     return serverFqdn. }
+false;public;1;3;;public void setServerFqdn(String serverFqdn) {     this.serverFqdn = serverFqdn. }
+false;public;0;3;;public String getTargetHostname() {     return targetHostname. }
+false;public;1;3;;public void setTargetHostname(String targetHostname) {     this.targetHostname = targetHostname. }
+false;public;0;3;;public Integer getTargetPortNumber() {     return targetPortNumber. }
+false;public;1;3;;public void setTargetPortNumber(Integer targetPortNumber) {     this.targetPortNumber = targetPortNumber. }
+false;public;0;3;;public String getClientFqdn() {     return clientFqdn. }
+false;public;1;3;;public void setClientFqdn(String clientFqdn) {     this.clientFqdn = clientFqdn. }
+false;public;0;3;;public Integer getServerPortNumber() {     return serverPortNumber. }
+false;public;1;3;;public void setServerPortNumber(Integer serverPortNumber) {     this.serverPortNumber = serverPortNumber. }
+false;public;0;3;;public String getRequestUri() {     return requestUri. }
+false;public;1;3;;public void setRequestUri(String requestUri) {     this.requestUri = requestUri. }
+false;public;0;3;;public ContentType getEdiMessageType() {     return ediMessageType. }
+false;public;1;3;;public void setEdiMessageType(ContentType ediMessageType) {     this.ediMessageType = ediMessageType. }
+false;public;0;3;;public String getEdiMessageTransferEncoding() {     return ediMessageTransferEncoding. }
+false;public;1;4;;public void setEdiMessageTransferEncoding(String ediMessageTransferEncoding) {     this.ediMessageTransferEncoding = ediMessageTransferEncoding. }
+false;public;0;3;;public AS2MessageStructure getAs2MessageStructure() {     return as2MessageStructure. }
+false;public;1;4;;public void setAs2MessageStructure(AS2MessageStructure as2MessageStructure) {     this.as2MessageStructure = as2MessageStructure. }
+false;public;0;3;;public String getSubject() {     return subject. }
+false;public;1;3;;public void setSubject(String subject) {     this.subject = subject. }
+false;public;0;3;;public String getFrom() {     return from. }
+false;public;1;3;;public void setFrom(String from) {     this.from = from. }
+false;public;0;3;;public String getAs2From() {     return as2From. }
+false;public;1;3;;public void setAs2From(String as2From) {     this.as2From = as2From. }
+false;public;0;3;;public String getAs2To() {     return as2To. }
+false;public;1;3;;public void setAs2To(String as2To) {     this.as2To = as2To. }
+false;public;0;3;;public AS2SignatureAlgorithm getSigningAlgorithm() {     return signingAlgorithm. }
+false;public;1;3;;public void setSigningAlgorithm(AS2SignatureAlgorithm signingAlgorithm) {     this.signingAlgorithm = signingAlgorithm. }
+false;public;0;3;;public Certificate[] getSigningCertificateChain() {     return signingCertificateChain. }
+false;public;1;4;;public void setSigningCertificateChain(Certificate[] signingCertificateChain) {     this.signingCertificateChain = signingCertificateChain. }
+false;public;0;3;;public PrivateKey getSigningPrivateKey() {     return signingPrivateKey. }
+false;public;1;3;;public void setSigningPrivateKey(PrivateKey signingPrivateKey) {     this.signingPrivateKey = signingPrivateKey. }
+false;public;0;3;;public AS2CompressionAlgorithm getCompressionAlgorithm() {     return compressionAlgorithm. }
+false;public;1;4;;public void setCompressionAlgorithm(AS2CompressionAlgorithm compressionAlgorithm) {     this.compressionAlgorithm = compressionAlgorithm. }
+false;public;0;3;;public String getDispositionNotificationTo() {     return dispositionNotificationTo. }
+false;public;1;4;;public void setDispositionNotificationTo(String dispositionNotificationTo) {     this.dispositionNotificationTo = dispositionNotificationTo. }
+false;public;0;3;;public String[] getSignedReceiptMicAlgorithms() {     return signedReceiptMicAlgorithms. }
+false;public;1;4;;public void setSignedReceiptMicAlgorithms(String[] signedReceiptMicAlgorithms) {     this.signedReceiptMicAlgorithms = signedReceiptMicAlgorithms. }
+false;public;0;3;;public AS2EncryptionAlgorithm getEncryptingAlgorithm() {     return encryptingAlgorithm. }
+false;public;1;4;;public void setEncryptingAlgorithm(AS2EncryptionAlgorithm encryptingAlgorithm) {     this.encryptingAlgorithm = encryptingAlgorithm. }
+false;public;0;3;;public Certificate[] getEncryptingCertificateChain() {     return encryptingCertificateChain. }
+false;public;1;4;;public void setEncryptingCertificateChain(Certificate[] encryptingCertificateChain) {     this.encryptingCertificateChain = encryptingCertificateChain. }
+false;public;0;3;;public PrivateKey getDecryptingPrivateKey() {     return decryptingPrivateKey. }
+false;public;1;3;;public void setDecryptingPrivateKey(PrivateKey decryptingPrivateKey) {     this.decryptingPrivateKey = decryptingPrivateKey. }
+false;public;0;3;;public String getMdnMessageTemplate() {     return mdnMessageTemplate. }
+false;public;1;3;;public void setMdnMessageTemplate(String mdnMessageTemplate) {     this.mdnMessageTemplate = mdnMessageTemplate. }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected String getBlueprintDescriptor() {     return "org/apache/camel/test/blueprint/configadmin.xml". }
+true;protected;0;7;// override this method to provide our custom properties we use in this unit test ;// START SNIPPET: e1 // override this method to provide our custom properties we use in this unit test @Override protected Properties useOverridePropertiesWithPropertiesComponent() {     Properties extra = new Properties().     extra.put("destination", "mock:extra").     extra.put("greeting", "Bye").     return extra. }
+false;public;0;9;;// END SNIPPET: e1 @Test public void testConfigAdmin() throws Exception {     getMockEndpoint("mock:extra").expectedBodiesReceived("Bye World").     getMockEndpoint("mock:result").expectedMessageCount(0).     template.sendBody("direct:start", "World").     assertMockEndpointsSatisfied(). }

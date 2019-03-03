@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void runShouldCreateIndicator() {     this.contextRunner.run((context) -> assertThat(context).hasSingleBean(CouchbaseReactiveHealthIndicator.class).doesNotHaveBean(CouchbaseHealthIndicator.class).doesNotHaveBean(ApplicationHealthIndicator.class)). }
+false;public;0;7;;@Test public void runWhenDisabledShouldNotCreateIndicator() {     this.contextRunner.withPropertyValues("management.health.couchbase.enabled:false").run((context) -> assertThat(context).doesNotHaveBean(CouchbaseReactiveHealthIndicator.class).hasSingleBean(ApplicationHealthIndicator.class)). }
+false;public;0;4;;@Bean public Cluster couchbaseCluster() {     return mock(Cluster.class). }

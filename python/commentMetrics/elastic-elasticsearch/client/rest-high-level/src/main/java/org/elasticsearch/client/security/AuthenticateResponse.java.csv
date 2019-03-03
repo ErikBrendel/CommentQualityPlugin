@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * @return The effective user. This is the authenticated user, or, when  *         submitting requests on behalf of other users, it is the  *         impersonated user.  */ ;/**  * @return The effective user. This is the authenticated user, or, when  *         submitting requests on behalf of other users, it is the  *         impersonated user.  */ public User getUser() {     return user. }
+true;public;0;3;/**  * @return whether the user is enabled or not  */ ;/**  * @return whether the user is enabled or not  */ public boolean enabled() {     return enabled. }
+true;public;0;3;/**  * @return the realm that authenticated the user  */ ;/**  * @return the realm that authenticated the user  */ public RealmInfo getAuthenticationRealm() {     return authenticationRealm. }
+true;public;0;3;/**  * @return the realm where the user information was looked up  */ ;/**  * @return the realm where the user information was looked up  */ public RealmInfo getLookupRealm() {     return lookupRealm. }
+false;public;1;10;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     AuthenticateResponse that = (AuthenticateResponse) o.     return enabled == that.enabled && Objects.equals(user, that.user) && Objects.equals(authenticationRealm, that.authenticationRealm) && Objects.equals(lookupRealm, that.lookupRealm). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(user, enabled, authenticationRealm, lookupRealm). }
+false;public,static;1;3;;public static AuthenticateResponse fromXContent(XContentParser parser) throws IOException {     return PARSER.parse(parser, null). }
+false;public;0;3;;public String getName() {     return name. }
+false;public;0;3;;public String getType() {     return type. }
+false;public;1;8;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     RealmInfo realmInfo = (RealmInfo) o.     return Objects.equals(name, realmInfo.name) && Objects.equals(type, realmInfo.type). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(name, type). }

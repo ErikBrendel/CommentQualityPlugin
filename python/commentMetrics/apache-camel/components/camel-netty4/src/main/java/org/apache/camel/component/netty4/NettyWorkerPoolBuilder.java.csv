@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void setName(String name) {     this.name = name. }
+false;public;1;3;;public void setPattern(String pattern) {     this.pattern = pattern. }
+false;public;1;3;;public void setWorkerCount(int workerCount) {     this.workerCount = workerCount. }
+false;public;1;3;;public void setNativeTransport(boolean nativeTransport) {     this.nativeTransport = nativeTransport. }
+false;public;1;4;;public NettyWorkerPoolBuilder withName(String name) {     setName(name).     return this. }
+false;public;1;4;;public NettyWorkerPoolBuilder withPattern(String pattern) {     setPattern(pattern).     return this. }
+false;public;1;4;;public NettyWorkerPoolBuilder withWorkerCount(int workerCount) {     setWorkerCount(workerCount).     return this. }
+false;public;1;4;;public NettyWorkerPoolBuilder withNativeTransport(boolean nativeTransport) {     setNativeTransport(nativeTransport).     return this. }
+true;public;0;9;/**  * Creates a new worker pool.  */ ;/**  * Creates a new worker pool.  */ public EventLoopGroup build() {     int count = workerCount > 0 ? workerCount : NettyHelper.DEFAULT_IO_THREADS.     if (nativeTransport) {         workerPool = new EpollEventLoopGroup(count, new CamelThreadFactory(pattern, name, false)).     } else {         workerPool = new NioEventLoopGroup(count, new CamelThreadFactory(pattern, name, false)).     }     return workerPool. }
+true;public;0;6;/**  * Shutdown the created worker pool  */ ;/**  * Shutdown the created worker pool  */ public void destroy() {     if (workerPool != null) {         workerPool.shutdownGracefully().         workerPool = null.     } }

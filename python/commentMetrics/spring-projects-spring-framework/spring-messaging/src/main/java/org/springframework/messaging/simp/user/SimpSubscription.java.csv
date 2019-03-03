@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * Return the id associated of the subscription.  */ ;/**  * Return the id associated of the subscription.  */ String getId().
+true;;0;1;/**  * Return the session of the subscription.  */ ;/**  * Return the session of the subscription.  */ SimpSession getSession().
+true;;0;1;/**  * Return the subscription's destination.  */ ;/**  * Return the subscription's destination.  */ String getDestination().

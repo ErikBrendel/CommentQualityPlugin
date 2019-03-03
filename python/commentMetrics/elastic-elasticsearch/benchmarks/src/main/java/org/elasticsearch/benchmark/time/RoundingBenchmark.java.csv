@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Benchmark public long timeRoundingDateTimeUnitJoda() {     return jodaRounding.round(timestamp). }
+false;public;0;4;;@Benchmark public long timeRoundingDateTimeUnitJava() {     return javaRounding.round(timestamp). }
+false;public;0;4;;@Benchmark public long timeRoundingDateTimeUnitDayOfMonthJoda() {     return jodaDayOfMonthRounding.round(timestamp). }
+false;public;0;4;;@Benchmark public long timeRoundingDateTimeUnitDayOfMonthJava() {     return javaDayOfMonthRounding.round(timestamp). }
+false;public;0;4;;@Benchmark public long timeIntervalRoundingJava() {     return timeIntervalRoundingJava.round(timestamp). }
+false;public;0;4;;@Benchmark public long timeIntervalRoundingJoda() {     return timeIntervalRoundingJoda.round(timestamp). }
+false;public;0;4;;@Benchmark public long timeUnitRoundingUtcDayOfMonthJava() {     return timeUnitRoundingUtcDayOfMonthJava.round(timestamp). }
+false;public;0;4;;@Benchmark public long timeUnitRoundingUtcDayOfMonthJoda() {     return timeUnitRoundingUtcDayOfMonthJoda.round(timestamp). }
+false;public;0;4;;@Benchmark public long timeUnitRoundingUtcQuarterOfYearJava() {     return timeUnitRoundingUtcQuarterOfYearJava.round(timestamp). }
+false;public;0;4;;@Benchmark public long timeUnitRoundingUtcQuarterOfYearJoda() {     return timeUnitRoundingUtcQuarterOfYearJoda.round(timestamp). }
+false;public;0;4;;@Benchmark public long timeUnitRoundingUtcMonthOfYearJava() {     return timeUnitRoundingUtcMonthOfYearJava.round(timestamp). }
+false;public;0;4;;@Benchmark public long timeUnitRoundingUtcMonthOfYearJoda() {     return timeUnitRoundingUtcMonthOfYearJoda.round(timestamp). }
+false;public;0;4;;@Benchmark public long timeUnitRoundingUtcYearOfCenturyJava() {     return timeUnitRoundingUtcYearOfCenturyJava.round(timestamp). }
+false;public;0;4;;@Benchmark public long timeUnitRoundingUtcYearOfCenturyJoda() {     return timeUnitRoundingUtcYearOfCenturyJoda.round(timestamp). }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;7;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry jndi = super.createRegistry().     jndi.bind("dummy-rest", new DummyRestConsumerFactory()).     jndi.bind("dummy-rest-api", new DummyRestProcessorFactory()).     return jndi. }
+false;public;0;6;;@Override public void configure() throws Exception {     from("direct:start1?timeout=30000").to("mock:result").     from("direct:start2").to("mock:result").     rest("/say/hello").get("/bar").id("getSayHelloBar").to("mock:result"). }
+false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start1?timeout=30000").to("mock:result").             from("direct:start2").to("mock:result").             rest("/say/hello").get("/bar").id("getSayHelloBar").to("mock:result").         }     }. }
+false;public;0;4;;@Test public void testSayHelloBar() {     assertEquals("getSayHelloBar", context.getRouteDefinitions().get(2).getId()). }

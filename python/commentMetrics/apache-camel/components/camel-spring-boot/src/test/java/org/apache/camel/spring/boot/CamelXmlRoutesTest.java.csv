@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;14;;@Test public void shouldDetectRoutes() {     // When     Route route = camelContext.getRoute("foo").     // Then     assertNotNull(route).     // When     route = camelContext.getRoute("bar").     // Then     assertNotNull(route). }

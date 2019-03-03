@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public void onSubscribe(Subscription subscription) {     if (subscription == null) {         throw new NullPointerException("subscription is null").     }     delegate.onSubscribe(subscription). }
+false;public;1;10;;@Override public void onNext(R r) {     if (r == null) {         throw new NullPointerException("element is null").     }     Exchange exchange = new DefaultExchange(context).     exchange.getIn().setBody(r).     delegate.onNext(exchange). }
+false;public;1;8;;@Override public void onError(Throwable throwable) {     if (throwable == null) {         throw new NullPointerException("throwable is null").     }     delegate.onError(throwable). }
+false;public;0;4;;@Override public void onComplete() {     delegate.onComplete(). }

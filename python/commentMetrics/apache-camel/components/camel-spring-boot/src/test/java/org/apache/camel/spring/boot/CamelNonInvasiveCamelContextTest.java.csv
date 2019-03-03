@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;// Tests @Test public void shouldUseCamelContextFromXml() {     assertNotNull(camelContext).     assertEquals("xmlCamelContext", camelContext.getName()). }
+false;public;0;5;;@Test public void shouldUseProducerTemplateFromXml() {     assertNotNull(producerTemplate).     assertEquals(xmlProducerTemplate, producerTemplate). }
+false;public;0;5;;@Test public void shouldUseConsumerTemplateFromXml() {     assertNotNull(consumerTemplate).     assertEquals(xmlConsumerTemplate, consumerTemplate). }

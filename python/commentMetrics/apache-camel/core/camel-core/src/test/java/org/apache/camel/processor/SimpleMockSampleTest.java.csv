@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;12;;@Test public void testSimpleThousandMessages() throws Exception {     int count = 1000.     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMessageCount(count).     for (int i = 0. i < count. i++) {         template.sendBody("direct:start", "Hello World").     }     assertMockEndpointsSatisfied(). }
+false;public;0;10;;@Test public void testSimpleTwoMessages() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedBodiesReceived("Hello World", "Bye World").     template.sendBody("direct:start", "Hello World").     template.sendBody("direct:start", "Bye World").     assertMockEndpointsSatisfied(). }
+false;public;0;4;;@Override public void configure() throws Exception {     from("direct:start").to("log:foo").to("log:bar").to("mock:result"). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").to("log:foo").to("log:bar").to("mock:result").         }     }. }

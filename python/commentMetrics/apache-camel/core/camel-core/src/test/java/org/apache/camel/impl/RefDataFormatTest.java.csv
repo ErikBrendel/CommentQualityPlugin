@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry jndi = super.createRegistry().     jndi.bind("reverse", new MyReverseDataFormat()).     return jndi. }
+false;public;0;8;;@Test public void testMarshalRef() throws Exception {     getMockEndpoint("mock:a").expectedBodiesReceived("CBA").     template.sendBody("direct:a", "ABC").     assertMockEndpointsSatisfied(). }
+false;public;0;8;;@Test public void testUnmarshalRef() throws Exception {     getMockEndpoint("mock:b").expectedBodiesReceived("ABC").     template.sendBody("direct:b", "CBA").     assertMockEndpointsSatisfied(). }
+false;public;0;12;;@Override public void configure() throws Exception {     // START SNIPPET: e1     from("direct:a").marshal().custom("reverse").to("mock:a").     from("direct:b").unmarshal().custom("reverse").to("mock:b"). // END SNIPPET: e1 }
+false;protected;0;17;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             // START SNIPPET: e1             from("direct:a").marshal().custom("reverse").to("mock:a").             from("direct:b").unmarshal().custom("reverse").to("mock:b").         // END SNIPPET: e1         }     }. }
+false;public;3;5;;public void marshal(Exchange exchange, Object graph, OutputStream stream) throws Exception {     byte[] bytes = exchange.getContext().getTypeConverter().mandatoryConvertTo(byte[].class, graph).     String body = reverseBytes(bytes).     stream.write(body.getBytes()). }
+false;public;2;5;;public Object unmarshal(Exchange exchange, InputStream stream) throws Exception {     byte[] bytes = exchange.getContext().getTypeConverter().mandatoryConvertTo(byte[].class, stream).     String body = reverseBytes(bytes).     return body. }
+false;private;1;8;;private String reverseBytes(byte[] data) {     StringBuilder sb = new StringBuilder(data.length).     for (int i = data.length - 1. i >= 0. i--) {         char ch = (char) data[i].         sb.append(ch).     }     return sb.toString(). }
+false;protected;0;4;;@Override protected void doStart() throws Exception { // noop }
+false;protected;0;4;;@Override protected void doStop() throws Exception { // noop }

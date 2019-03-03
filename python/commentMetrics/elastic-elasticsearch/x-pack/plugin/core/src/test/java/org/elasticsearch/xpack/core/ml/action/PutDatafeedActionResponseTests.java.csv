@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;7;;@Override protected Response createTestInstance() {     DatafeedConfig.Builder datafeedConfig = new DatafeedConfig.Builder(DatafeedConfigTests.randomValidDatafeedId(), randomAlphaOfLength(10)).     datafeedConfig.setIndices(Arrays.asList(randomAlphaOfLength(10))).     return new Response(datafeedConfig.build()). }
+false;protected;0;4;;@Override protected Response createBlankInstance() {     return new Response(). }
+false;protected;0;5;;@Override protected NamedWriteableRegistry getNamedWriteableRegistry() {     SearchModule searchModule = new SearchModule(Settings.EMPTY, false, Collections.emptyList()).     return new NamedWriteableRegistry(searchModule.getNamedWriteables()). }

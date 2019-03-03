@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;3;;String getField() {     return field. }
+false;;0;3;;String getSeparator() {     return separator. }
+false;;0;3;;String getTargetField() {     return targetField. }
+false;public;1;12;;@Override public IngestDocument execute(IngestDocument document) {     List<?> list = document.getFieldValue(field, List.class).     if (list == null) {         throw new IllegalArgumentException("field [" + field + "] is null, cannot join.").     }     String joined = list.stream().map(Object::toString).collect(Collectors.joining(separator)).     document.setFieldValue(targetField, joined).     return document. }
+false;public;0;4;;@Override public String getType() {     return TYPE. }
+false;public;3;8;;@Override public JoinProcessor create(Map<String, Processor.Factory> registry, String processorTag, Map<String, Object> config) throws Exception {     String field = ConfigurationUtils.readStringProperty(TYPE, processorTag, config, "field").     String separator = ConfigurationUtils.readStringProperty(TYPE, processorTag, config, "separator").     String targetField = ConfigurationUtils.readStringProperty(TYPE, processorTag, config, "target_field", field).     return new JoinProcessor(processorTag, field, separator, targetField). }

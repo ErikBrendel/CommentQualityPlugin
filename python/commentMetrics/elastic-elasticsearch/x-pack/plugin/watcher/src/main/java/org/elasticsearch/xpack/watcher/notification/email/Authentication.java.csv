@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String user() {     return user. }
+false;public;0;3;;public Secret password() {     return password. }
+false;public;1;8;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     Authentication that = (Authentication) o.     return Objects.equals(user, that.user) && Objects.equals(password, that.password). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(user, password). }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected TypeResolution resolveType() {     return isNumeric(field(), sourceText(), ParamOrdinal.DEFAULT). }
+false;public;0;4;;@Override public DataType dataType() {     return DataType.DOUBLE. }

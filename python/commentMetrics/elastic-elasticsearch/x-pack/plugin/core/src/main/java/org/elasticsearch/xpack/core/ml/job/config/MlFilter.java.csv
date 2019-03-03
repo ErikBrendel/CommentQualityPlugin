@@ -1,0 +1,19 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private,static;1;10;;private static ObjectParser<Builder, Void> createParser(boolean ignoreUnknownFields) {     ObjectParser<Builder, Void> parser = new ObjectParser<>(TYPE.getPreferredName(), ignoreUnknownFields, Builder::new).     parser.declareString((builder, s) -> {     }, TYPE).     parser.declareString(Builder::setId, ID).     parser.declareStringOrNull(Builder::setDescription, DESCRIPTION).     parser.declareStringArray(Builder::setItems, ITEMS).     return parser. }
+false;public;1;8;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeString(id).     if (out.getVersion().onOrAfter(Version.V_6_4_0)) {         out.writeOptionalString(description).     }     out.writeStringArray(items.toArray(new String[items.size()])). }
+false;public;2;14;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(ID.getPreferredName(), id).     if (description != null) {         builder.field(DESCRIPTION.getPreferredName(), description).     }     builder.field(ITEMS.getPreferredName(), items).     if (params.paramAsBoolean(ToXContentParams.INCLUDE_TYPE, false)) {         builder.field(TYPE.getPreferredName(), FILTER_TYPE).     }     builder.endObject().     return builder. }
+false;public;0;3;;public String getId() {     return id. }
+false;public;0;3;;public String getDescription() {     return description. }
+false;public;0;3;;public SortedSet<String> getItems() {     return Collections.unmodifiableSortedSet(items). }
+false;public;1;13;;@Override public boolean equals(Object obj) {     if (obj == this) {         return true.     }     if (!(obj instanceof MlFilter)) {         return false.     }     MlFilter other = (MlFilter) obj.     return id.equals(other.id) && Objects.equals(description, other.description) && items.equals(other.items). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(id, description, items). }
+false;public;0;3;;public String documentId() {     return documentId(id). }
+false;public,static;1;3;;public static String documentId(String filterId) {     return DOCUMENT_ID_PREFIX + filterId. }
+false;public,static;1;3;;public static Builder builder(String filterId) {     return new Builder().setId(filterId). }
+false;public;1;4;;public Builder setId(String id) {     this.id = id.     return this. }
+false;public;0;4;;@Nullable public String getId() {     return id. }
+false;public;1;4;;public Builder setDescription(String description) {     this.description = description.     return this. }
+false;public;1;4;;public Builder setItems(SortedSet<String> items) {     this.items = items.     return this. }
+false;public;1;4;;public Builder setItems(List<String> items) {     this.items = new TreeSet<>(items).     return this. }
+false;public;1;4;;public Builder setItems(String... items) {     setItems(Arrays.asList(items)).     return this. }
+false;public;0;11;;public MlFilter build() {     ExceptionsHelper.requireNonNull(id, MlFilter.ID.getPreferredName()).     ExceptionsHelper.requireNonNull(items, MlFilter.ITEMS.getPreferredName()).     if (!MlStrings.isValidId(id)) {         throw ExceptionsHelper.badRequestException(Messages.getMessage(Messages.INVALID_ID, ID.getPreferredName(), id)).     }     if (items.size() > MAX_ITEMS) {         throw ExceptionsHelper.badRequestException(Messages.getMessage(Messages.FILTER_CONTAINS_TOO_MANY_ITEMS, id, MAX_ITEMS)).     }     return new MlFilter(id, description, items). }

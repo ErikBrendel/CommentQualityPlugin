@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;11;;public Consumer createConsumer(Processor processor) throws Exception {     if (configuration.isPresenceAgent()) {         SipPresenceAgent answer = new SipPresenceAgent(this, processor, configuration).         configureConsumer(answer).         return answer.     } else {         SipSubscriber answer = new SipSubscriber(this, processor, configuration).         configureConsumer(answer).         return answer.     } }
+false;public;0;3;;public Producer createProducer() throws Exception {     return new SipPublisher(this, configuration). }
+false;public;0;3;;public boolean isSingleton() {     return true. }
+false;public;0;3;;public SipConfiguration getConfiguration() {     return configuration. }
+false;public;1;3;;public void setConfiguration(SipConfiguration configuration) {     this.configuration = configuration. }

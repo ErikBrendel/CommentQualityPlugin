@@ -1,0 +1,43 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Map<String, String> getEventData() {     return event. }
+true;public;2;3;/**  * Add a key value pair  */ ;/**  * Add a key value pair  */ public void addPair(String key, char value) {     addPair(key, String.valueOf(value)). }
+true;public;2;3;/**  * Add a key value pair  */ ;/**  * Add a key value pair  */ public void addPair(String key, boolean value) {     addPair(key, String.valueOf(value)). }
+true;public;2;3;/**  * Add a key value pair  */ ;/**  * Add a key value pair  */ public void addPair(String key, double value) {     addPair(key, String.valueOf(value)). }
+true;public;2;3;/**  * Add a key value pair  */ ;/**  * Add a key value pair  */ public void addPair(String key, long value) {     addPair(key, String.valueOf(value)). }
+true;public;2;3;/**  * Add a key value pair  */ ;/**  * Add a key value pair  */ public void addPair(String key, int value) {     addPair(key, String.valueOf(value)). }
+true;public;2;3;/**  * Add a key value pair  */ ;/**  * Add a key value pair  */ public void addPair(String key, Object value) {     addPair(key, value.toString()). }
+true;public;1;3;/**  * Utility method for formatting Throwable,Error,Exception objects in a more  * linear and Splunk friendly manner than printStackTrace  *  * @param throwable the Throwable object to add to the event  */ ;/**  * Utility method for formatting Throwable,Error,Exception objects in a more  * linear and Splunk friendly manner than printStackTrace  *  * @param throwable the Throwable object to add to the event  */ public void addThrowable(Throwable throwable) {     addThrowableObject(throwable, -1). }
+true;public;2;3;/**  * Utility method for formatting Throwable,Error,Exception objects in a more  * linear and Splunk friendly manner than printStackTrace  *  * @param throwable the Throwable object to add to the event  * @param stackTraceDepth maximum number of stacktrace elements to log  */ ;/**  * Utility method for formatting Throwable,Error,Exception objects in a more  * linear and Splunk friendly manner than printStackTrace  *  * @param throwable the Throwable object to add to the event  * @param stackTraceDepth maximum number of stacktrace elements to log  */ public void addThrowable(Throwable throwable, int stackTraceDepth) {     addThrowableObject(throwable, stackTraceDepth). }
+false;private;2;16;;/**  * Internal private method for formatting Throwable,Error,Exception objects  * in a more linear and Splunk friendly manner than printStackTrace  *  * @param throwable the Throwable object to add to the event  * @param stackTraceDepth maximum number of stacktrace elements to log, -1  *            for all  */ private void addThrowableObject(Throwable throwable, int stackTraceDepth) {     addPair(THROWABLE_CLASS, throwable.getClass().getCanonicalName()).     addPair(THROWABLE_MESSAGE, throwable.getMessage()).     StackTraceElement[] elements = throwable.getStackTrace().     StringBuilder sb = new StringBuilder().     int depth = 0.     for (StackTraceElement element : elements) {         depth++.         if (stackTraceDepth == -1 || stackTraceDepth >= depth) {             sb.append(element.toString()).append(",").         } else {             break.         }     }     addPair(THROWABLE_STACKTRACE_ELEMENTS, sb.toString()). }
+true;public;2;3;/**  * Add a key value pair  */ ;/**  * Add a key value pair  */ public void addPair(String key, String value) {     this.event.put(key, value). }
+true;public;0;19;/**  * return the completed event message  */ ;/**  * return the completed event message  */ @Override public String toString() {     StringBuilder event = new StringBuilder().     if (useInternalDate) {         event.append(DATE_FORMATTER.print(new Date().getTime())).append(PAIRDELIM).     }     for (String key : this.event.keySet()) {         event.append(key).         event.append(KVDELIM).         if (quoteValues) {             event.append(QUOTE).append(this.event.get(key)).append(QUOTE).append(PAIRDELIM).         } else {             event.append(this.event.get(key)).append(PAIRDELIM).         }     }     // trim off trailing pair delim char(s)     String result = event.substring(0, event.length() - PAIRDELIM.length()) + LINEBREAK.     return result. }
+false;public;1;3;;public void setCommonCategory(String commonCategory) {     addPair(COMMON_CATEGORY, commonCategory). }
+false;public;1;3;;public void setCommonCount(String commonCount) {     addPair(COMMON_COUNT, commonCount). }
+false;public;1;3;;public void setCommonDesc(String commonDesc) {     addPair(COMMON_DESC, commonDesc). }
+false;public;1;3;;public void setCommonDhcpPool(String commonDhcpPool) {     addPair(COMMON_DHCP_POOL, commonDhcpPool). }
+false;public;1;3;;public void setCommonDuration(long commonDuration) {     addPair(COMMON_DURATION, commonDuration). }
+false;public;1;3;;public void setCommonDvcHost(String commonDvcHost) {     addPair(COMMON_DVC_HOST, commonDvcHost). }
+false;public;1;3;;public void setCommonDvcIp(String commonDvcIp) {     addPair(COMMON_DVC_IP, commonDvcIp). }
+false;public;1;3;;public void setCommonDvcIp6(String commonDvcIp6) {     addPair(COMMON_DVC_IP6, commonDvcIp6). }
+false;public;1;3;;public void setCommonDvcLocation(String commonDvcLocation) {     addPair(COMMON_DVC_LOCATION, commonDvcLocation). }
+false;public;1;3;;public void setCommonDvcMac(String commonDvcMac) {     addPair(COMMON_DVC_MAC, commonDvcMac). }
+false;public;1;3;;public void setCommonDvcNtDomain(String commonDvcNtDomain) {     addPair(COMMON_DVC_NT_DOMAIN, commonDvcNtDomain). }
+false;public;1;3;;public void setCommonDvcNtHost(String commonDvcNtHost) {     addPair(COMMON_DVC_NT_HOST, commonDvcNtHost). }
+false;public;1;3;;public void setCommonDvcTime(long commonDvcTime) {     addPair(COMMON_DVC_TIME, commonDvcTime). }
+false;public;1;3;;public void setCommonEndTime(long commonEndTime) {     addPair(COMMON_END_TIME, commonEndTime). }
+false;public;1;3;;public void setCommonEventId(long commonEventId) {     addPair(COMMON_EVENT_ID, commonEventId). }
+false;public;1;3;;public void setCommonLength(long commonLength) {     addPair(COMMON_LENGTH, commonLength). }
+false;public;1;3;;public void setCommonLogLevel(String commonLogLevel) {     addPair(COMMON_LOG_LEVEL, commonLogLevel). }
+false;public;1;3;;public void setCommonName(String commonName) {     addPair(COMMON_NAME, commonName). }
+false;public;1;3;;public void setCommonPid(long commonPid) {     addPair(COMMON_PID, commonPid). }
+false;public;1;3;;public void setCommonPriority(long commonPriority) {     addPair(COMMON_PRIORITY, commonPriority). }
+false;public;1;3;;public void setCommonProduct(String commonProduct) {     addPair(COMMON_PRODUCT, commonProduct). }
+false;public;1;3;;public void setCommonProductVersion(long commonProductVersion) {     addPair(COMMON_PRODUCT_VERSION, commonProductVersion). }
+false;public;1;3;;public void setCommonReason(String commonReason) {     addPair(COMMON_REASON, commonReason). }
+false;public;1;3;;public void setCommonResult(String commonResult) {     addPair(COMMON_RESULT, commonResult). }
+false;public;1;3;;public void setCommonSeverity(String commonSeverity) {     addPair(COMMON_SEVERITY, commonSeverity). }
+false;public;1;3;;public void setCommonStartTime(long commonStartTime) {     addPair(COMMON_START_TIME, commonStartTime). }
+false;public;1;3;;public void setCommonTransactionId(String commonTransactionId) {     addPair(COMMON_TRANSACTION_ID, commonTransactionId). }
+false;public;1;3;;public void setCommonUrl(String commonUrl) {     addPair(COMMON_URL, commonUrl). }
+false;public;1;3;;public void setCommonVendor(String commonVendor) {     addPair(COMMON_VENDOR, commonVendor). }
+false;public;1;3;;public void setUpdatePackage(String updatePackage) {     addPair(UPDATE_PACKAGE, updatePackage). }

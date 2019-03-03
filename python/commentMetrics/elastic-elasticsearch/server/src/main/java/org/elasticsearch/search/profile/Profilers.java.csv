@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;6;/**  * Switch to a new profile.  */ ;/**  * Switch to a new profile.  */ public QueryProfiler addQueryProfiler() {     QueryProfiler profiler = new QueryProfiler().     searcher.setProfiler(profiler).     queryProfilers.add(profiler).     return profiler. }
+true;public;0;3;/**  * Get the current profiler.  */ ;/**  * Get the current profiler.  */ public QueryProfiler getCurrentQueryProfiler() {     return queryProfilers.get(queryProfilers.size() - 1). }
+true;public;0;3;/**  * Return the list of all created {@link QueryProfiler}s so far.  */ ;/**  * Return the list of all created {@link QueryProfiler}s so far.  */ public List<QueryProfiler> getQueryProfilers() {     return Collections.unmodifiableList(queryProfilers). }
+true;public;0;3;/**  * Return the {@link AggregationProfiler}.  */ ;/**  * Return the {@link AggregationProfiler}.  */ public AggregationProfiler getAggregationProfiler() {     return aggProfiler. }

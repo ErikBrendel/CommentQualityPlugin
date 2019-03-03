@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;12;;@Override protected CookieManager getCookieManager(Exchange exchange) {     Object handlerObj = exchange.getProperty(Exchange.COOKIE_HANDLER).     if (handlerObj instanceof java.net.CookieManager) {         return (CookieManager) handlerObj.     } else {         CookieManager handler = new CookieManager().         handler.setCookiePolicy(cookiePolicy).         exchange.setProperty(Exchange.COOKIE_HANDLER, handler).         return handler.     } }
+false;public;1;4;;@Override public void setCookiePolicy(CookiePolicy cookiePolicy) {     this.cookiePolicy = cookiePolicy. }

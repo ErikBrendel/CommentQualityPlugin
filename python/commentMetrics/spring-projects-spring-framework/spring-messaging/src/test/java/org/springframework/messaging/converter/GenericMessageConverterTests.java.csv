@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void fromMessageWithConversion() {     Message<String> content = MessageBuilder.withPayload("33").build().     assertEquals(33, converter.fromMessage(content, Integer.class)). }
+false;public;0;5;;@Test public void fromMessageNoConverter() {     Message<Integer> content = MessageBuilder.withPayload(1234).build().     assertNull("No converter from integer to locale", converter.fromMessage(content, Locale.class)). }
+false;public;0;7;;@Test public void fromMessageWithFailedConversion() {     Message<String> content = MessageBuilder.withPayload("test not a number").build().     thrown.expect(MessageConversionException.class).     thrown.expectCause(isA(ConversionException.class)).     converter.fromMessage(content, Integer.class). }

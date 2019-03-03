@@ -1,0 +1,25 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Response newResponse() {     return new Response(). }
+false;public;1;8;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeString(datafeedId).     if (out.getVersion().onOrAfter(Version.V_6_1_0)) {         out.writeBoolean(allowNoDatafeeds).     } }
+false;public;0;3;;public String getDatafeedId() {     return datafeedId. }
+false;public;0;3;;public boolean allowNoDatafeeds() {     return allowNoDatafeeds. }
+false;public;1;3;;public void setAllowNoDatafeeds(boolean allowNoDatafeeds) {     this.allowNoDatafeeds = allowNoDatafeeds. }
+false;public;0;4;;@Override public ActionRequestValidationException validate() {     return null. }
+false;public;1;4;;@Override public void readFrom(StreamInput in) throws IOException {     throw new UnsupportedOperationException("usage of Streamable is to be replaced by Writeable"). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(datafeedId, allowNoDatafeeds). }
+false;public;1;11;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     Request other = (Request) obj.     return Objects.equals(datafeedId, other.datafeedId) && Objects.equals(allowNoDatafeeds, other.allowNoDatafeeds). }
+false;public;0;3;;public String getDatafeedId() {     return datafeedId. }
+false;public;0;3;;public DatafeedState getDatafeedState() {     return datafeedState. }
+false;public;0;3;;public DiscoveryNode getNode() {     return node. }
+false;public;0;3;;public String getAssignmentExplanation() {     return assignmentExplanation. }
+false;public;2;27;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(DatafeedConfig.ID.getPreferredName(), datafeedId).     builder.field(STATE, datafeedState.toString()).     if (node != null) {         builder.startObject("node").         builder.field("id", node.getId()).         builder.field("name", node.getName()).         builder.field("ephemeral_id", node.getEphemeralId()).         builder.field("transport_address", node.getAddress().toString()).         builder.startObject("attributes").         for (Map.Entry<String, String> entry : node.getAttributes().entrySet()) {             if (entry.getKey().startsWith("ml.")) {                 builder.field(entry.getKey(), entry.getValue()).             }         }         builder.endObject().         builder.endObject().     }     if (assignmentExplanation != null) {         builder.field("assignment_explanation", assignmentExplanation).     }     builder.endObject().     return builder. }
+false;public;1;7;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeString(datafeedId).     datafeedState.writeTo(out).     out.writeOptionalWriteable(node).     out.writeOptionalString(assignmentExplanation). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(datafeedId, datafeedState, node, assignmentExplanation). }
+false;public;1;14;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     DatafeedStats other = (DatafeedStats) obj.     return Objects.equals(datafeedId, other.datafeedId) && Objects.equals(this.datafeedState, other.datafeedState) && Objects.equals(this.node, other.node) && Objects.equals(this.assignmentExplanation, other.assignmentExplanation). }
+false;public;0;3;;public QueryPage<DatafeedStats> getResponse() {     return datafeedsStats. }
+false;public;1;5;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     datafeedsStats = new QueryPage<>(in, DatafeedStats::new). }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     datafeedsStats.writeTo(out). }
+false;public;2;7;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     datafeedsStats.doXContentBody(builder, params).     builder.endObject().     return builder. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(datafeedsStats). }
+false;public;1;11;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     Response other = (Response) obj.     return Objects.equals(datafeedsStats, other.datafeedsStats). }
+false;public,final;0;4;;@Override public final String toString() {     return Strings.toString(this). }

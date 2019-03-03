@@ -1,0 +1,16 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void onInit(Consumer consumer) {     this.consumer = consumer. }
+false;public;1;4;;@Override public void scheduleTask(Runnable runnable) {     this.runnable = runnable. }
+false;public;0;7;;@Override public void unscheduleTask() {     if (future != null) {         future.cancel(false).         future = null.     } }
+false;public;0;4;;@Override public void startScheduler() { // we start the scheduler in doStart }
+false;public;0;4;;@Override public boolean isSchedulerStarted() {     return taskScheduler != null && !taskScheduler.getScheduledExecutor().isShutdown(). }
+false;public;1;4;;@Override public void setCamelContext(CamelContext camelContext) {     this.camelContext = camelContext. }
+false;public;0;4;;@Override public CamelContext getCamelContext() {     return camelContext. }
+false;public;0;3;;public String getCron() {     return cron. }
+false;public;1;3;;public void setCron(String cron) {     this.cron = cron. }
+false;public;0;3;;public TimeZone getTimeZone() {     return timeZone. }
+false;public;1;3;;public void setTimeZone(TimeZone timeZone) {     this.timeZone = timeZone. }
+false;public;0;3;;public ThreadPoolTaskScheduler getTaskScheduler() {     return taskScheduler. }
+false;public;1;3;;public void setTaskScheduler(ThreadPoolTaskScheduler taskScheduler) {     this.taskScheduler = taskScheduler. }
+false;protected;0;15;;@Override protected void doStart() throws Exception {     StringHelper.notEmpty(cron, "cron", this).     trigger = new CronTrigger(getCron(), getTimeZone()).     if (taskScheduler == null) {         taskScheduler = new CamelThreadPoolTaskScheduler(getCamelContext(), consumer, consumer.getEndpoint().getEndpointUri()).         taskScheduler.afterPropertiesSet().         destroyTaskScheduler = true.     }     LOG.debug("Scheduling cron trigger {}", getCron()).     future = taskScheduler.schedule(runnable, trigger). }
+false;protected;0;12;;@Override protected void doStop() throws Exception {     if (future != null) {         future.cancel(false).         future = null.     }     if (destroyTaskScheduler) {         taskScheduler.destroy().         taskScheduler = null.     } }

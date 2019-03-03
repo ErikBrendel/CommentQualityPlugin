@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Response newResponse() {     throw new UnsupportedOperationException("usage of Streamable is to be replaced by Writeable"). }
+false;public;0;4;;@Override public Writeable.Reader<Response> getResponseReader() {     return Response::new. }
+false;public;1;4;;@Override public boolean match(Task task) {     return task.getDescription().equals(RollupField.NAME + "_" + id). }
+false;public;0;3;;public String getId() {     return id. }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeString(id). }
+false;public;0;4;;@Override public ActionRequestValidationException validate() {     return null. }
+false;public;2;5;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.field(RollupField.ID.getPreferredName(), id).     return builder. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(id). }
+false;public;1;11;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     Request other = (Request) obj.     return Objects.equals(id, other.id). }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeBoolean(acknowledged). }
+false;public;0;3;;public boolean isDeleted() {     return acknowledged. }
+false;public;2;10;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     {         toXContentCommon(builder, params).         builder.field("acknowledged", acknowledged).     }     builder.endObject().     return builder. }
+false;public;1;7;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     DeleteRollupJobAction.Response response = (DeleteRollupJobAction.Response) o.     return super.equals(o) && acknowledged == response.acknowledged. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(super.hashCode(), acknowledged). }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getName() {     return "ml_delete_expired_data_action". }
+false;protected;2;5;;@Override protected RestChannelConsumer prepareRequest(RestRequest restRequest, NodeClient client) throws IOException {     DeleteExpiredDataAction.Request request = new DeleteExpiredDataAction.Request().     return channel -> client.execute(DeleteExpiredDataAction.INSTANCE, request, new RestToXContentListener<>(channel)). }

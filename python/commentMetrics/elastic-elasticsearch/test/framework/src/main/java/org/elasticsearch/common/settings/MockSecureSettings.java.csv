@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean isLoaded() {     return true. }
+false;public;0;4;;@Override public Set<String> getSettingNames() {     return settingNames. }
+false;public;1;5;;@Override public SecureString getString(String setting) {     ensureOpen().     return secureStrings.get(setting). }
+false;public;1;5;;@Override public InputStream getFile(String setting) {     ensureOpen().     return new ByteArrayInputStream(files.get(setting)). }
+false;public;2;5;;public void setString(String setting, String value) {     ensureOpen().     secureStrings.put(setting, new SecureString(value.toCharArray())).     settingNames.add(setting). }
+false;public;2;5;;public void setFile(String setting, byte[] value) {     ensureOpen().     files.put(setting, value).     settingNames.add(setting). }
+true;public;1;10;/**  * Merge the given secure settings into this one.  */ ;/**  * Merge the given secure settings into this one.  */ public void merge(MockSecureSettings secureSettings) {     for (String setting : secureSettings.getSettingNames()) {         if (settingNames.contains(setting)) {             throw new IllegalArgumentException("Cannot overwrite existing secure setting " + setting).         }     }     settingNames.addAll(secureSettings.settingNames).     secureStrings.putAll(secureSettings.secureStrings).     files.putAll(secureSettings.files). }
+false;public;0;4;;@Override public void close() throws IOException {     closed.set(true). }
+false;private;0;5;;private void ensureOpen() {     if (closed.get()) {         throw new IllegalStateException("secure settings are already closed").     } }
+false;public;0;4;;public SecureSettings clone() {     ensureOpen().     return new MockSecureSettings(this). }

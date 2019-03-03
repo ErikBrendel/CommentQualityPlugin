@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private,static;2;7;;private static String getRequiredSetting(Settings settings, Setting<String> setting) {     String value = setting.get(settings).     if (value == null || Strings.hasLength(value) == false) {         throw new IllegalArgumentException("Missing required setting " + setting.getKey() + " for azure").     }     return value. }
+false;public;0;10;;@Override public HostedServiceGetDetailedResponse getServiceDetails() {     SpecialPermission.check().     try {         return AccessController.doPrivileged((PrivilegedExceptionAction<HostedServiceGetDetailedResponse>) () -> client.getHostedServicesOperations().getDetailed(serviceName)).     } catch (PrivilegedActionException e) {         throw new AzureServiceRemoteException("can not get list of azure nodes", e.getCause()).     } }
+false;protected;0;3;;@Override protected void doStart() throws ElasticsearchException { }
+false;protected;0;3;;@Override protected void doStop() throws ElasticsearchException { }
+false;protected;0;10;;@Override protected void doClose() throws ElasticsearchException {     if (client != null) {         try {             client.close().         } catch (IOException e) {             logger.error("error while closing Azure client", e).         }     } }

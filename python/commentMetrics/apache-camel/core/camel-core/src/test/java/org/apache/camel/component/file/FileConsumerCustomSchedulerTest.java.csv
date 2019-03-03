@@ -1,0 +1,20 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry jndi = super.createRegistry().     jndi.bind("myScheduler", scheduler).     return jndi. }
+false;public;0;6;;@Override @Before public void setUp() throws Exception {     deleteDirectory("target/data/file/custom").     super.setUp(). }
+false;public;0;14;;@Test public void testCustomScheduler() throws Exception {     getMockEndpoint("mock:result").expectedMessageCount(1).     template.sendBodyAndHeader("file:target/data/file/custom", "Hello World", Exchange.FILE_NAME, "hello.txt").     context.getRouteController().startRoute("foo").     assertMockEndpointsSatisfied().     // the scheduler is only run once, and we can configure its properties     assertEquals(1, scheduler.getCounter()).     assertEquals("bar", scheduler.getFoo()). }
+false;public;0;5;;@Override public void configure() throws Exception {     from("file:target/data/file/custom?scheduler=#myScheduler&scheduler.foo=bar&initialDelay=0&delay=10").routeId("foo").noAutoStartup().to("mock:result"). }
+false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("file:target/data/file/custom?scheduler=#myScheduler&scheduler.foo=bar&initialDelay=0&delay=10").routeId("foo").noAutoStartup().to("mock:result").         }     }. }
+false;public;1;4;;@Override public void onInit(Consumer consumer) { // noop }
+false;public;0;5;;@Override public void run() {     counter++.     task.run(). }
+false;public;1;10;;@Override public void scheduleTask(final Runnable task) {     this.timerTask = new TimerTask() {          @Override         public void run() {             counter++.             task.run().         }     }. }
+false;public;0;4;;@Override public void unscheduleTask() { // noop }
+false;public;0;3;;public int getCounter() {     return counter. }
+false;public;0;3;;public String getFoo() {     return foo. }
+false;public;1;3;;public void setFoo(String foo) {     this.foo = foo. }
+false;public;0;5;;@Override public void startScheduler() {     timer = new Timer().     timer.schedule(timerTask, 10). }
+false;public;0;4;;@Override public boolean isSchedulerStarted() {     return true. }
+false;public;1;4;;@Override public void setCamelContext(CamelContext camelContext) {     this.camelContext = camelContext. }
+false;public;0;4;;@Override public CamelContext getCamelContext() {     return camelContext. }
+false;public;0;4;;@Override public void shutdown() throws Exception {     timerTask.cancel(). }
+false;public;0;3;;@Override public void start() throws Exception { }
+false;public;0;3;;@Override public void stop() throws Exception { }

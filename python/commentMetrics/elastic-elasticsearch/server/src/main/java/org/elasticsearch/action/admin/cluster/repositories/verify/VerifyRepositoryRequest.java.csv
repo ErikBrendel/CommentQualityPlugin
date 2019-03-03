@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Override public ActionRequestValidationException validate() {     ActionRequestValidationException validationException = null.     if (name == null) {         validationException = addValidationError("name is missing", validationException).     }     return validationException. }
+true;public;1;4;/**  * Sets the name of the repository to unregister.  *  * @param name name of the repository  */ ;/**  * Sets the name of the repository to unregister.  *  * @param name name of the repository  */ public VerifyRepositoryRequest name(String name) {     this.name = name.     return this. }
+true;public;0;3;/**  * The name of the repository.  *  * @return the name of the repository  */ ;/**  * The name of the repository.  *  * @return the name of the repository  */ public String name() {     return this.name. }
+false;public;1;5;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     name = in.readString(). }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeString(name). }

@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public AcknowledgedResponse newResponse() {     return new AcknowledgedResponse(). }
+false;public;0;3;;public String getFollowerIndex() {     return followerIndex. }
+false;public;0;4;;@Override public String[] indices() {     return new String[] { followerIndex }. }
+false;public;0;4;;@Override public IndicesOptions indicesOptions() {     return IndicesOptions.strictSingleIndexNoExpandForbidClosed(). }
+false;public;0;8;;@Override public ActionRequestValidationException validate() {     ActionRequestValidationException e = null.     if (followerIndex == null) {         e = addValidationError("follower index is missing", e).     }     return e. }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeString(followerIndex). }

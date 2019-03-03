@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;4;/**  * Set the name of the scope.  */ ;/**  * Set the name of the scope.  */ public void setScopeName(String scopeName) {     Assert.notNull(scopeName, "'scopeName' must not be null").     this.scopeName = scopeName. }
+true;public;0;3;/**  * Get the name of the scope.  */ ;/**  * Get the name of the scope.  */ public String getScopeName() {     return this.scopeName. }
+true;public;1;4;/**  * Set the proxy-mode to be applied to the scoped instance.  */ ;/**  * Set the proxy-mode to be applied to the scoped instance.  */ public void setScopedProxyMode(ScopedProxyMode scopedProxyMode) {     Assert.notNull(scopedProxyMode, "'scopedProxyMode' must not be null").     this.scopedProxyMode = scopedProxyMode. }
+true;public;0;3;/**  * Get the proxy-mode to be applied to the scoped instance.  */ ;/**  * Get the proxy-mode to be applied to the scoped instance.  */ public ScopedProxyMode getScopedProxyMode() {     return this.scopedProxyMode. }

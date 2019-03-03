@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,final;0;3;/**  * Return the underlying Class.  */ ;/**  * Return the underlying Class.  */ public final Class<?> getIntrospectedClass() {     return this.introspectedClass. }
+false;public;0;4;;@Override public String getClassName() {     return this.introspectedClass.getName(). }
+false;public;0;4;;@Override public boolean isInterface() {     return this.introspectedClass.isInterface(). }
+false;public;0;4;;@Override public boolean isAnnotation() {     return this.introspectedClass.isAnnotation(). }
+false;public;0;4;;@Override public boolean isAbstract() {     return Modifier.isAbstract(this.introspectedClass.getModifiers()). }
+false;public;0;4;;@Override public boolean isConcrete() {     return !(isInterface() || isAbstract()). }
+false;public;0;4;;@Override public boolean isFinal() {     return Modifier.isFinal(this.introspectedClass.getModifiers()). }
+false;public;0;6;;@Override public boolean isIndependent() {     return (!hasEnclosingClass() || (this.introspectedClass.getDeclaringClass() != null && Modifier.isStatic(this.introspectedClass.getModifiers()))). }
+false;public;0;4;;@Override public boolean hasEnclosingClass() {     return (this.introspectedClass.getEnclosingClass() != null). }
+false;public;0;6;;@Override @Nullable public String getEnclosingClassName() {     Class<?> enclosingClass = this.introspectedClass.getEnclosingClass().     return (enclosingClass != null ? enclosingClass.getName() : null). }
+false;public;0;4;;@Override public boolean hasSuperClass() {     return (this.introspectedClass.getSuperclass() != null). }
+false;public;0;6;;@Override @Nullable public String getSuperClassName() {     Class<?> superClass = this.introspectedClass.getSuperclass().     return (superClass != null ? superClass.getName() : null). }
+false;public;0;9;;@Override public String[] getInterfaceNames() {     Class<?>[] ifcs = this.introspectedClass.getInterfaces().     String[] ifcNames = new String[ifcs.length].     for (int i = 0. i < ifcs.length. i++) {         ifcNames[i] = ifcs[i].getName().     }     return ifcNames. }
+false;public;0;8;;@Override public String[] getMemberClassNames() {     LinkedHashSet<String> memberClassNames = new LinkedHashSet<>(4).     for (Class<?> nestedClass : this.introspectedClass.getDeclaredClasses()) {         memberClassNames.add(nestedClass.getName()).     }     return StringUtils.toStringArray(memberClassNames). }

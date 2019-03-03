@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Map<String, AnalysisProvider<TokenFilterFactory>> getTokenFilters() {     return singletonMap("polish_stem", PolishStemTokenFilterFactory::new). }
+false;public;0;4;;@Override public Map<String, AnalysisProvider<AnalyzerProvider<? extends Analyzer>>> getAnalyzers() {     return singletonMap("polish", PolishAnalyzerProvider::new). }

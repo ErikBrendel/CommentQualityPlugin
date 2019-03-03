@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Before public void setUp() throws Exception {     camelContext = new DefaultCamelContext().     jaxbDataFormat = new JaxbDataFormat().     jaxbDataFormat.setCamelContext(camelContext).     jaxbDataFormat.doStart(). }
+false;public;0;7;;@Test public void testNeedFilteringDisabledFiltering() {     jaxbDataFormat.setFilterNonXmlChars(false).     Exchange exchange = new DefaultExchange(camelContext).     assertFalse(jaxbDataFormat.needFiltering(exchange)). }
+false;public;0;7;;@Test public void testNeedFilteringEnabledFiltering() {     jaxbDataFormat.setFilterNonXmlChars(true).     Exchange exchange = new DefaultExchange(camelContext).     assertTrue(jaxbDataFormat.needFiltering(exchange)). }
+false;public;0;7;;@Test public void testNeedFilteringTruePropagates() {     Exchange exchange = new DefaultExchange(camelContext).     exchange.setProperty(Exchange.FILTER_NON_XML_CHARS, Boolean.TRUE).     assertTrue(jaxbDataFormat.needFiltering(exchange)). }
+false;public;0;7;;@Test public void testNeedFilteringFalsePropagates() {     Exchange exchange = new DefaultExchange(camelContext).     exchange.setProperty(Exchange.FILTER_NON_XML_CHARS, Boolean.FALSE).     assertFalse(jaxbDataFormat.needFiltering(exchange)). }

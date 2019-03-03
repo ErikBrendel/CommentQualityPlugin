@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;3;10;/**  * Populate the put role request from the source and the role's name  */ ;/**  * Populate the put role request from the source and the role's name  */ public PutRoleMappingRequestBuilder source(String name, BytesReference source, XContentType xContentType) throws IOException {     ExpressionRoleMapping mapping = ExpressionRoleMapping.parse(name, source, xContentType).     request.setName(name).     request.setEnabled(mapping.isEnabled()).     request.setRoles(mapping.getRoles()).     request.setRules(mapping.getExpression()).     request.setMetadata(mapping.getMetadata()).     return this. }
+false;public;1;4;;public PutRoleMappingRequestBuilder name(String name) {     request.setName(name).     return this. }
+false;public;1;4;;public PutRoleMappingRequestBuilder roles(String... roles) {     request.setRoles(Arrays.asList(roles)).     return this. }
+false;public;1;4;;public PutRoleMappingRequestBuilder expression(RoleMapperExpression expression) {     request.setRules(expression).     return this. }
+false;public;1;4;;public PutRoleMappingRequestBuilder enabled(boolean enabled) {     request.setEnabled(enabled).     return this. }
+false;public;1;4;;public PutRoleMappingRequestBuilder metadata(Map<String, Object> metadata) {     request.setMetadata(metadata).     return this. }

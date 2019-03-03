@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public boolean isAutowireCandidate(BeanDefinitionHolder bdHolder, DependencyDescriptor descriptor) {     return bdHolder.getBeanDefinition().isAutowireCandidate(). }
+false;public;1;4;;@Override public boolean isRequired(DependencyDescriptor descriptor) {     return descriptor.isRequired(). }
+false;public;1;5;;@Override @Nullable public Object getSuggestedValue(DependencyDescriptor descriptor) {     return null. }
+false;public;2;5;;@Override @Nullable public Object getLazyResolutionProxyIfNecessary(DependencyDescriptor descriptor, @Nullable String beanName) {     return null. }

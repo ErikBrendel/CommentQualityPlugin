@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public ExitStatus run(String... args) throws Exception {     return run(Arrays.asList(args)). }
+false;protected;1;10;;protected ExitStatus run(Collection<String> args) throws IOException {     this.process = new RunProcess(this.command).     int code = this.process.run(true, StringUtils.toStringArray(args)).     if (code == 0) {         return ExitStatus.OK.     } else {         return new ExitStatus(code, "EXTERNAL_ERROR").     } }
+false;public;0;3;;public boolean handleSigInt() {     return this.process.handleSigInt(). }

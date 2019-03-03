@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Override public List<Setting<?>> getSettings() {     return Arrays.asList(URLRepository.ALLOWED_URLS_SETTING, URLRepository.REPOSITORIES_URL_SETTING, URLRepository.SUPPORTED_PROTOCOLS_SETTING). }
+false;public;2;4;;@Override public Map<String, Repository.Factory> getRepositories(Environment env, NamedXContentRegistry namedXContentRegistry) {     return Collections.singletonMap(URLRepository.TYPE, metadata -> new URLRepository(metadata, env, namedXContentRegistry)). }

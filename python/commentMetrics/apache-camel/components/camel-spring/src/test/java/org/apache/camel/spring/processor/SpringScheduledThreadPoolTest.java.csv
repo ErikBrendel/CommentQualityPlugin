@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/spring/processor/SpringScheduledThreadPoolTest.xml"). }
+false;public;0;8;;@Test public void testScheduledThreadPool() throws Exception {     SizedScheduledExecutorService pool = context.getRegistry().lookupByNameAndType("myPool", SizedScheduledExecutorService.class).     assertNotNull(pool).     assertFalse("Should be started", pool.isShutdown()).     assertEquals(5, pool.getCorePoolSize()). }

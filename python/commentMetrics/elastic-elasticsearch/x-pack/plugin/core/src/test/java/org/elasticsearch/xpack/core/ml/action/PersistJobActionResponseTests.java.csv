@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected Writeable.Reader<PersistJobAction.Response> instanceReader() {     return PersistJobAction.Response::new. }
+false;protected;0;4;;@Override protected PersistJobAction.Response createTestInstance() {     return new PersistJobAction.Response(randomBoolean()). }

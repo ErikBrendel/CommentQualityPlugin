@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Map<String, String> getQueryParams() {     return queryParams. }
+false;public,static;1;6;;public static Olingo4BatchQueryRequestBuilder resourcePath(String resourcePath) {     if (resourcePath == null) {         throw new IllegalArgumentException("resourcePath").     }     return new Olingo4BatchQueryRequestBuilder().resourcePath(resourcePath). }
+false;public;0;5;;@Override public String toString() {     return new StringBuilder("Batch Query Request{ ").append(resourceUri).append("/").append(resourcePath).append(", headers=").append(headers).append(", queryParams=").append(queryParams).append('}').toString(). }
+false;public;0;7;;public Olingo4BatchQueryRequest build() {     // avoid later NPEs     if (request.resourcePath == null) {         throw new IllegalArgumentException("Null resourcePath").     }     return request. }
+false;public;1;4;;public Olingo4BatchQueryRequestBuilder resourceUri(String resourceUri) {     request.resourceUri = resourceUri.     return this. }
+false;public;1;4;;public Olingo4BatchQueryRequestBuilder resourcePath(String resourcePath) {     request.resourcePath = resourcePath.     return this. }
+false;public;1;4;;public Olingo4BatchQueryRequestBuilder headers(Map<String, String> headers) {     request.headers = headers.     return this. }
+false;public;1;4;;public Olingo4BatchQueryRequestBuilder queryParams(Map<String, String> queryParams) {     request.queryParams = queryParams.     return this. }

@@ -1,0 +1,35 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public CaffeineConfigurationNestedConfiguration getConfiguration() {     return configuration. }
+false;public;1;4;;public void setConfiguration(CaffeineConfigurationNestedConfiguration configuration) {     this.configuration = configuration. }
+false;public;0;3;;public Boolean getResolvePropertyPlaceholders() {     return resolvePropertyPlaceholders. }
+false;public;1;4;;public void setResolvePropertyPlaceholders(Boolean resolvePropertyPlaceholders) {     this.resolvePropertyPlaceholders = resolvePropertyPlaceholders. }
+false;public;0;3;;public Boolean getCreateCacheIfNotExist() {     return createCacheIfNotExist. }
+false;public;1;3;;public void setCreateCacheIfNotExist(Boolean createCacheIfNotExist) {     this.createCacheIfNotExist = createCacheIfNotExist. }
+false;public;0;3;;public String getAction() {     return action. }
+false;public;1;3;;public void setAction(String action) {     this.action = action. }
+false;public;0;3;;public Object getKey() {     return key. }
+false;public;1;3;;public void setKey(Object key) {     this.key = key. }
+false;public;0;3;;public Class getKeyType() {     return keyType. }
+false;public;1;3;;public void setKeyType(Class keyType) {     this.keyType = keyType. }
+false;public;0;3;;public Class getValueType() {     return valueType. }
+false;public;1;3;;public void setValueType(Class valueType) {     this.valueType = valueType. }
+false;public;0;3;;public Cache getCache() {     return cache. }
+false;public;1;3;;public void setCache(Cache cache) {     this.cache = cache. }
+false;public;0;3;;public CacheLoader getCacheLoader() {     return cacheLoader. }
+false;public;1;3;;public void setCacheLoader(CacheLoader cacheLoader) {     this.cacheLoader = cacheLoader. }
+false;public;0;3;;public Boolean getStatsEnabled() {     return statsEnabled. }
+false;public;1;3;;public void setStatsEnabled(Boolean statsEnabled) {     this.statsEnabled = statsEnabled. }
+false;public;0;3;;public Integer getInitialCapacity() {     return initialCapacity. }
+false;public;1;3;;public void setInitialCapacity(Integer initialCapacity) {     this.initialCapacity = initialCapacity. }
+false;public;0;3;;public Integer getMaximumSize() {     return maximumSize. }
+false;public;1;3;;public void setMaximumSize(Integer maximumSize) {     this.maximumSize = maximumSize. }
+false;public;0;3;;public EvictionType getEvictionType() {     return evictionType. }
+false;public;1;3;;public void setEvictionType(EvictionType evictionType) {     this.evictionType = evictionType. }
+false;public;0;3;;public Integer getExpireAfterAccessTime() {     return expireAfterAccessTime. }
+false;public;1;3;;public void setExpireAfterAccessTime(Integer expireAfterAccessTime) {     this.expireAfterAccessTime = expireAfterAccessTime. }
+false;public;0;3;;public Integer getExpireAfterWriteTime() {     return expireAfterWriteTime. }
+false;public;1;3;;public void setExpireAfterWriteTime(Integer expireAfterWriteTime) {     this.expireAfterWriteTime = expireAfterWriteTime. }
+false;public;0;3;;public RemovalListener getRemovalListener() {     return removalListener. }
+false;public;1;3;;public void setRemovalListener(RemovalListener removalListener) {     this.removalListener = removalListener. }
+false;public;0;3;;public StatsCounter getStatsCounter() {     return statsCounter. }
+false;public;1;3;;public void setStatsCounter(StatsCounter statsCounter) {     this.statsCounter = statsCounter. }

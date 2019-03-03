@@ -1,0 +1,33 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public State parent() {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public <T> BindingImpl<T> getExplicitBinding(Key<T> key) {     return null. }
+false;public;0;4;;@Override public Map<Key<?>, Binding<?>> getExplicitBindingsThisLevel() {     throw new UnsupportedOperationException(). }
+false;public;2;4;;@Override public void putBinding(Key<?> key, BindingImpl<?> binding) {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public Scope getScope(Class<? extends Annotation> scopingAnnotation) {     return null. }
+false;public;2;4;;@Override public void putAnnotation(Class<? extends Annotation> annotationType, Scope scope) {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public void addConverter(MatcherAndConverter matcherAndConverter) {     throw new UnsupportedOperationException(). }
+false;public;4;5;;@Override public MatcherAndConverter getConverter(String stringValue, TypeLiteral<?> type, Errors errors, Object source) {     throw new UnsupportedOperationException(). }
+false;public;0;4;;@Override public Iterable<MatcherAndConverter> getConvertersThisLevel() {     return emptySet(). }
+false;public;1;4;;@Override public void addTypeListener(TypeListenerBinding typeListenerBinding) {     throw new UnsupportedOperationException(). }
+false;public;0;4;;@Override public List<TypeListenerBinding> getTypeListenerBindings() {     return Collections.emptyList(). }
+false;public;1;3;;@Override public void blacklist(Key<?> key) { }
+false;public;1;4;;@Override public boolean isBlacklisted(Key<?> key) {     return true. }
+false;public;0;3;;@Override public void clearBlacklisted() { }
+false;public;1;3;;@Override public void makeAllBindingsToEagerSingletons(Injector injector) { }
+false;public;0;4;;@Override public Object lock() {     throw new UnsupportedOperationException(). }
+false;;0;1;;State parent().
+true;;1;1;/**  * Gets a binding which was specified explicitly in a module, or null.  */ ;/**  * Gets a binding which was specified explicitly in a module, or null.  */ <T> BindingImpl<T> getExplicitBinding(Key<T> key).
+true;;0;1;/**  * Returns the explicit bindings at this level only.  */ ;/**  * Returns the explicit bindings at this level only.  */ Map<Key<?>, Binding<?>> getExplicitBindingsThisLevel().
+false;;2;1;;void putBinding(Key<?> key, BindingImpl<?> binding).
+true;;1;1;/**  * Returns the matching scope, or null.  */ ;/**  * Returns the matching scope, or null.  */ Scope getScope(Class<? extends Annotation> scopingAnnotation).
+false;;2;1;;void putAnnotation(Class<? extends Annotation> annotationType, Scope scope).
+false;;1;1;;void addConverter(MatcherAndConverter matcherAndConverter).
+true;;4;2;/**  * Returns the matching converter for {@code type}, or null if none match.  */ ;/**  * Returns the matching converter for {@code type}, or null if none match.  */ MatcherAndConverter getConverter(String stringValue, TypeLiteral<?> type, Errors errors, Object source).
+true;;0;1;/**  * Returns all converters at this level only.  */ ;/**  * Returns all converters at this level only.  */ Iterable<MatcherAndConverter> getConvertersThisLevel().
+false;;1;1;;void addTypeListener(TypeListenerBinding typeListenerBinding).
+false;;0;1;;List<TypeListenerBinding> getTypeListenerBindings().
+true;;1;1;/**  * Forbids the corresponding injector from creating a binding to {@code key}. Child injectors  * blacklist their bound keys on their parent injectors to prevent just-in-time bindings on the  * parent injector that would conflict.  */ ;/**  * Forbids the corresponding injector from creating a binding to {@code key}. Child injectors  * blacklist their bound keys on their parent injectors to prevent just-in-time bindings on the  * parent injector that would conflict.  */ void blacklist(Key<?> key).
+true;;1;1;/**  * Returns true if {@code key} is forbidden from being bound in this injector. This indicates that  * one of this injector's descendent's has bound the key.  */ ;/**  * Returns true if {@code key} is forbidden from being bound in this injector. This indicates that  * one of this injector's descendent's has bound the key.  */ boolean isBlacklisted(Key<?> key).
+true;;0;1;/**  * Returns the shared lock for all injector data. This is a low-granularity, high-contention lock  * to be used when reading mutable data (ie. just-in-time bindings, and binding blacklists).  */ ;/**  * Returns the shared lock for all injector data. This is a low-granularity, high-contention lock  * to be used when reading mutable data (ie. just-in-time bindings, and binding blacklists).  */ Object lock().
+true;;0;1;// ES_GUICE: clean blacklist keys ;// ES_GUICE: clean blacklist keys void clearBlacklisted().
+false;;1;1;;void makeAllBindingsToEagerSingletons(Injector injector).

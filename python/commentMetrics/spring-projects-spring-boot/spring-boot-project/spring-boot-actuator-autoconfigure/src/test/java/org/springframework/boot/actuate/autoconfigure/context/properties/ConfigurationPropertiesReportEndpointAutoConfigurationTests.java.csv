@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void runShouldHaveEndpointBean() {     this.contextRunner.withUserConfiguration(Config.class).run(validateTestProperties("******", "654321")). }
+false;public;0;7;;@Test public void runWhenEnabledPropertyIsFalseShouldNotHaveEndpointBean() {     this.contextRunner.withPropertyValues("management.endpoint.configprops.enabled:false").run((context) -> assertThat(context).doesNotHaveBean(ConfigurationPropertiesReportEndpoint.class)). }
+false;public;0;6;;@Test public void keysToSanitizeCanBeConfiguredViaTheEnvironment() {     this.contextRunner.withUserConfiguration(Config.class).withPropertyValues("management.endpoint.configprops.keys-to-sanitize: .*pass.*, property").run(validateTestProperties("******", "******")). }
+false;private;2;17;;private ContextConsumer<AssertableApplicationContext> validateTestProperties(String dbPassword, String myTestProperty) {     return (context) -> {         assertThat(context).hasSingleBean(ConfigurationPropertiesReportEndpoint.class).         ConfigurationPropertiesReportEndpoint endpoint = context.getBean(ConfigurationPropertiesReportEndpoint.class).         ApplicationConfigurationProperties properties = endpoint.configurationProperties().         Map<String, Object> nestedProperties = properties.getContexts().get(context.getId()).getBeans().get("testProperties").getProperties().         assertThat(nestedProperties).isNotNull().         assertThat(nestedProperties.get("dbPassword")).isEqualTo(dbPassword).         assertThat(nestedProperties.get("myTestProperty")).isEqualTo(myTestProperty).     }. }
+false;public;0;4;;@Bean public TestProperties testProperties() {     return new TestProperties(). }
+false;public;0;3;;public String getDbPassword() {     return this.dbPassword. }
+false;public;1;3;;public void setDbPassword(String dbPassword) {     this.dbPassword = dbPassword. }
+false;public;0;3;;public String getMyTestProperty() {     return this.myTestProperty. }
+false;public;1;3;;public void setMyTestProperty(String myTestProperty) {     this.myTestProperty = myTestProperty. }

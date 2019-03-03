@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean isGetGeneratedKeysSimulated() {     return true. }
+false;public;2;4;;@Override public String getSimpleQueryForGetGeneratedKey(String tableName, String keyColumnName) {     return "select max(identity()) from " + tableName. }

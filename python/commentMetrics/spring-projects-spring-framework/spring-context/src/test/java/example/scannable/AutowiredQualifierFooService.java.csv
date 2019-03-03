@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;0;7;;@PostConstruct private void init() {     if (this.initCalled) {         throw new IllegalStateException("Init already called").     }     this.initCalled = true. }
+false;public;1;4;;@Override public String foo(int id) {     return this.fooDao.findFoo(id). }
+false;public;1;4;;@Override public Future<String> asyncFoo(int id) {     return new AsyncResult<>(this.fooDao.findFoo(id)). }
+false;public;0;4;;@Override public boolean isInitCalled() {     return this.initCalled. }

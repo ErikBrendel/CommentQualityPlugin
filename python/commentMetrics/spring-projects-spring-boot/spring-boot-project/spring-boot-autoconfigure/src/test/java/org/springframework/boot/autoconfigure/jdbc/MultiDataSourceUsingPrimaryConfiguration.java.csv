@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Bean @Primary public DataSource test1DataSource() {     return new TestDataSource("test1"). }
+false;public;0;4;;@Bean public DataSource test2DataSource() {     return new TestDataSource("test2"). }

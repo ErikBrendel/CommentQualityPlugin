@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;4;/**  * Returns the object or <code>null</code> if the given key does not have a  * value in the context  */ ;/**  * Returns the object or <code>null</code> if the given key does not have a  * value in the context  */ // (T)object @SuppressWarnings("unchecked") public <T> T getFromContext(String key) {     return context != null ? (T) context.get(key) : null. }
+true;public;2;6;/**  * Puts the object into the context  */ ;/**  * Puts the object into the context  */ public void putInContext(String key, Object value) {     if (context == null) {         context = new HashMap<>().     }     context.put(key, value). }

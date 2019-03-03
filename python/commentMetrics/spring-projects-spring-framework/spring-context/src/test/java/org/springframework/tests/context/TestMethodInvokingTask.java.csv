@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public void doSomething() {     this.counter++. }
+false;public;0;12;;public void doWait() {     this.counter++.     // wait until stop is called     synchronized (this.lock) {         try {             this.lock.wait().         } catch (InterruptedException e) {         // fall through         }     } }
+false;public;0;5;;public void stop() {     synchronized (this.lock) {         this.lock.notify().     } }

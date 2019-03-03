@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;protected;0;3;/*      * @see org.apache.camel.component.file.remote.FtpServerSecureTestSupport#getClientAuth()      */ ;/*      * @see org.apache.camel.component.file.remote.FtpServerSecureTestSupport#getClientAuth()      */ protected String getClientAuth() {     return "true". }
+true;protected;0;3;/*      * @see org.apache.camel.component.file.remote.FtpServerSecureTestSupport#useImplicit()      */ ;/*      * @see org.apache.camel.component.file.remote.FtpServerSecureTestSupport#useImplicit()      */ protected boolean useImplicit() {     return false. }
+true;protected;0;3;/*      * @see org.apache.camel.component.file.remote.FtpServerSecureTestSupport#getAuthValue()      */ ;/*      * @see org.apache.camel.component.file.remote.FtpServerSecureTestSupport#getAuthValue()      */ protected String getAuthValue() {     return AUTH_VALUE_TLS. }

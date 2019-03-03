@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;5;;public static IgniteSetComponent fromIgnite(Ignite ignite) {     IgniteSetComponent answer = new IgniteSetComponent().     answer.setIgnite(ignite).     return answer. }
+false;public,static;1;5;;public static IgniteSetComponent fromConfiguration(IgniteConfiguration configuration) {     IgniteSetComponent answer = new IgniteSetComponent().     answer.setIgniteConfiguration(configuration).     return answer. }
+false;public,static;1;5;;public static IgniteSetComponent fromInputStream(InputStream inputStream) {     IgniteSetComponent answer = new IgniteSetComponent().     answer.setConfigurationResource(inputStream).     return answer. }
+false;public,static;1;5;;public static IgniteSetComponent fromUrl(URL url) {     IgniteSetComponent answer = new IgniteSetComponent().     answer.setConfigurationResource(url).     return answer. }
+false;public,static;1;5;;public static IgniteSetComponent fromLocation(String location) {     IgniteSetComponent answer = new IgniteSetComponent().     answer.setConfigurationResource(location).     return answer. }
+false;protected;3;7;;@Override protected Endpoint createEndpoint(String uri, String remaining, Map<String, Object> parameters) throws Exception {     ObjectHelper.notNull(getCamelContext(), "Camel Context").     IgniteSetEndpoint answer = new IgniteSetEndpoint(uri, remaining, parameters, this).     setProperties(answer, parameters).     return answer. }

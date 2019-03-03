@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected NodeInfo<? extends Greatest> info() {     return NodeInfo.create(this, Greatest::new, children()). }
+false;public;1;4;;@Override public Expression replaceChildren(List<Expression> newChildren) {     return new Greatest(source(), newChildren). }
+false;public;0;4;;@Override public Object fold() {     return GREATEST.apply(Foldables.valuesOfNoDuplicates(children(), dataType)). }

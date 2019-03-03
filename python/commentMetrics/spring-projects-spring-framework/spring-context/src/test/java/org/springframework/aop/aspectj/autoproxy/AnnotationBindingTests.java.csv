@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Before public void setup() {     ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext(getClass().getSimpleName() + "-context.xml", getClass()).     testBean = (AnnotatedTestBean) ctx.getBean("testBean"). }
+false;public;0;5;;@Test public void testAnnotationBindingInAroundAdvice() {     assertEquals("this value", testBean.doThis()).     assertEquals("that value", testBean.doThat()). }
+false;public;0;4;;@Test public void testNoMatchingWithoutAnnotationPresent() {     assertEquals("doTheOther", testBean.doTheOther()). }

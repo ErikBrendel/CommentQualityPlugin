@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public PredicateValidatingProcessor createProcessor(RouteContext routeContext) throws Exception {     Predicate pred = definition.getExpression().createPredicate(routeContext).     return new PredicateValidatingProcessor(pred). }

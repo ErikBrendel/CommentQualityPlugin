@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;9;;protected BlobStore newBlobStore() throws IOException {     final Settings settings.     if (randomBoolean()) {         settings = Settings.builder().put("buffer_size", new ByteSizeValue(randomIntBetween(1, 100), ByteSizeUnit.KB)).build().     } else {         settings = Settings.EMPTY.     }     return new FsBlobStore(settings, createTempDir()). }

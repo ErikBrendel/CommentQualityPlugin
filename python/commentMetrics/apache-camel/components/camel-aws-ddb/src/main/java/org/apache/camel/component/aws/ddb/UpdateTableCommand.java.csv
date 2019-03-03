@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Override public void execute() {     ddbClient.updateTable(new UpdateTableRequest().withTableName(determineTableName()).withProvisionedThroughput(new ProvisionedThroughput().withReadCapacityUnits(determineReadCapacity()).withWriteCapacityUnits(determineWriteCapacity()))). }
+false;private;0;4;;private Long determineReadCapacity() {     Long readCapacity = exchange.getIn().getHeader(DdbConstants.READ_CAPACITY, Long.class).     return readCapacity != null ? readCapacity : configuration.getReadCapacity(). }
+false;private;0;4;;private Long determineWriteCapacity() {     Long writeCapacity = exchange.getIn().getHeader(DdbConstants.WRITE_CAPACITY, Long.class).     return writeCapacity != null ? writeCapacity : configuration.getWriteCapacity(). }

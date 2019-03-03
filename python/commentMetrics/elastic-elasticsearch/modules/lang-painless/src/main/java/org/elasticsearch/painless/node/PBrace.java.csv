@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;1;5;;@Override void extractVariables(Set<String> variables) {     prefix.extractVariables(variables).     index.extractVariables(variables). }
+false;;1;26;;@Override void analyze(Locals locals) {     prefix.analyze(locals).     prefix.expected = prefix.actual.     prefix = prefix.cast(locals).     if (prefix.actual.isArray()) {         sub = new PSubBrace(location, prefix.actual, index).     } else if (prefix.actual == def.class) {         sub = new PSubDefArray(location, index).     } else if (Map.class.isAssignableFrom(prefix.actual)) {         sub = new PSubMapShortcut(location, prefix.actual, index).     } else if (List.class.isAssignableFrom(prefix.actual)) {         sub = new PSubListShortcut(location, prefix.actual, index).     } else {         throw createError(new IllegalArgumentException("Illegal array access on type " + "[" + PainlessLookupUtility.typeToCanonicalTypeName(prefix.actual) + "].")).     }     sub.write = write.     sub.read = read.     sub.expected = expected.     sub.explicit = explicit.     sub.analyze(locals).     actual = sub.actual. }
+false;;2;5;;@Override void write(MethodWriter writer, Globals globals) {     prefix.write(writer, globals).     sub.write(writer, globals). }
+false;;0;4;;@Override boolean isDefOptimized() {     return sub.isDefOptimized(). }
+false;;1;5;;@Override void updateActual(Class<?> actual) {     sub.updateActual(actual).     this.actual = actual. }
+false;;0;4;;@Override int accessElementCount() {     return sub.accessElementCount(). }
+false;;2;5;;@Override void setup(MethodWriter writer, Globals globals) {     prefix.write(writer, globals).     sub.setup(writer, globals). }
+false;;2;4;;@Override void load(MethodWriter writer, Globals globals) {     sub.load(writer, globals). }
+false;;2;4;;@Override void store(MethodWriter writer, Globals globals) {     sub.store(writer, globals). }
+false;public;0;4;;@Override public String toString() {     return singleLineToString(prefix, index). }

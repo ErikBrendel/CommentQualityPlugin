@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public // test##_ prefix is required for @FixMethodOrder. void test01_classLevelScripts() {     assertNumUsers(1). }
+false;public;0;9;;@Test @Sql("drop-schema.sql") @Sql("schema.sql") @Sql("data.sql") @Sql("data-add-dogbert.sql") public // test##_ prefix is required for @FixMethodOrder. void test02_methodLevelScripts() {     assertNumUsers(2). }
+false;protected;1;3;;protected void assertNumUsers(int expected) {     assertEquals("Number of rows in the 'user' table.", expected, countRowsInTable("user")). }

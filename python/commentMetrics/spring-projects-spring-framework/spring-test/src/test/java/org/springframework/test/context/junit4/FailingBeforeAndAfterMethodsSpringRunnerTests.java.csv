@@ -1,0 +1,16 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;14;;@Parameters(name = "{0}") public static Object[] testCases() {     return new Object[] { //      AlwaysFailingBeforeTestClassTestCase.class.getSimpleName(), //      AlwaysFailingAfterTestClassTestCase.class.getSimpleName(), //      AlwaysFailingPrepareTestInstanceTestCase.class.getSimpleName(), //      AlwaysFailingBeforeTestMethodTestCase.class.getSimpleName(), //      AlwaysFailingBeforeTestExecutionTestCase.class.getSimpleName(), //      AlwaysFailingAfterTestExecutionTestCase.class.getSimpleName(), //      AlwaysFailingAfterTestMethodTestCase.class.getSimpleName(), //      FailingBeforeTransactionTestCase.class.getSimpleName(), //      FailingAfterTransactionTestCase.class.getSimpleName() }. }
+false;protected;0;3;;protected Class<? extends Runner> getRunnerClass() {     return SpringRunner.class. }
+false;public;0;7;;@Test public void runTestAndAssertCounters() throws Exception {     int expectedStartedCount = this.clazz.getSimpleName().startsWith("AlwaysFailingBeforeTestClass") ? 0 : 1.     int expectedFinishedCount = this.clazz.getSimpleName().startsWith("AlwaysFailingBeforeTestClass") ? 0 : 1.     runTestsAndAssertCounters(getRunnerClass(), this.clazz, expectedStartedCount, 1, expectedFinishedCount, 0, 0). }
+false;public;1;4;;@Override public void beforeTestClass(TestContext testContext) {     fail("always failing beforeTestClass()"). }
+false;public;1;4;;@Override public void afterTestClass(TestContext testContext) {     fail("always failing afterTestClass()"). }
+false;public;1;4;;@Override public void prepareTestInstance(TestContext testContext) throws Exception {     fail("always failing prepareTestInstance()"). }
+false;public;1;4;;@Override public void beforeTestMethod(TestContext testContext) {     fail("always failing beforeTestMethod()"). }
+false;public;1;4;;@Override public void beforeTestExecution(TestContext testContext) {     fail("always failing beforeTestExecution()"). }
+false;public;1;4;;@Override public void afterTestMethod(TestContext testContext) {     fail("always failing afterTestMethod()"). }
+false;public;1;4;;@Override public void afterTestExecution(TestContext testContext) {     fail("always failing afterTestExecution()"). }
+false;public;0;3;;@Test public void testNothing() { }
+false;public;0;3;;@Test public void testNothing() { }
+false;public;0;4;;@BeforeTransaction public void beforeTransaction() {     fail("always failing beforeTransaction()"). }
+false;public;0;3;;@Test public void testNothing() { }
+false;public;0;4;;@AfterTransaction public void afterTransaction() {     fail("always failing afterTransaction()"). }

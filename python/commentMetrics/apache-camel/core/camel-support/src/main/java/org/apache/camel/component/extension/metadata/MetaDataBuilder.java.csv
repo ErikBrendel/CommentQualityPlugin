@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;public MetaDataBuilder withPayload(Object payload) {     this.payload = payload.     return this. }
+false;public;2;8;;public MetaDataBuilder withAttribute(String name, Object value) {     if (this.attributes == null) {         this.attributes = new HashMap<>().     }     this.attributes.put(name, value).     return this. }
+false;public;0;7;;public MetaDataExtension.MetaData build() {     return new DefaultMetaData(camelContext, attributes == null ? Collections.emptyMap() : attributes, payload). }
+false;public,static;1;3;;// ***************************** //  // ***************************** public static MetaDataBuilder on(CamelContext camelContext) {     return new MetaDataBuilder(camelContext). }

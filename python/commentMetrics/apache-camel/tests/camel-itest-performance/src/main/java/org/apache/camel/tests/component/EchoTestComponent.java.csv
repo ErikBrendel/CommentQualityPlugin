@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;3;6;;@Override protected Endpoint createEndpoint(String uri, String remaining, Map<String, Object> parameters) throws Exception {     Endpoint endpoint = new EchoEndpoint(uri, this).     setProperties(endpoint, parameters).     return endpoint. }
+false;public;1;5;;@Override public Consumer createConsumer(Processor processor) throws Exception {     // Component only supports Producers     return null. }
+false;public;0;4;;@Override public Producer createProducer() throws Exception {     return new EchoProducer(this). }
+false;public;0;4;;@Override public boolean isSingleton() {     return false. }
+false;public;1;4;;@Override public void process(Exchange exchange) throws Exception { // do nothing, echo is implicit }
+false;public;2;5;;@Override public boolean process(Exchange exchange, AsyncCallback callback) {     // do nothing, echo is implicit     return true. }
+false;public;1;5;;@Override public CompletableFuture<Exchange> processAsync(Exchange exchange) {     // TODO Auto-generated method stub     return null. }

@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@ReadOperation public ApplicationMappings mappings() {     ApplicationContext target = this.context.     Map<String, ContextMappings> contextMappings = new HashMap<>().     while (target != null) {         contextMappings.put(target.getId(), mappingsForContext(target)).         target = target.getParent().     }     return new ApplicationMappings(contextMappings). }
+false;private;1;8;;private ContextMappings mappingsForContext(ApplicationContext applicationContext) {     Map<String, Object> mappings = new HashMap<>().     this.descriptionProviders.forEach((provider) -> mappings.put(provider.getMappingName(), provider.describeMappings(applicationContext))).     return new ContextMappings(mappings, (applicationContext.getParent() != null) ? applicationContext.getId() : null). }
+false;public;0;3;;public Map<String, ContextMappings> getContexts() {     return this.contextMappings. }
+false;public;0;3;;public String getParentId() {     return this.parentId. }
+false;public;0;3;;public Map<String, Object> getMappings() {     return this.mappings. }

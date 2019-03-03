@@ -1,0 +1,30 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Override public Consumer createConsumer(Processor processor) throws Exception {     CouchDbConsumer answer = new CouchDbConsumer(this, createClient(), processor).     configureConsumer(answer).     return answer. }
+false;public;0;4;;@Override public Producer createProducer() throws Exception {     return new CouchDbProducer(this, createClient()). }
+false;public;0;4;;@Override public boolean isSingleton() {     return true. }
+false;public;4;10;;public Exchange createExchange(String seq, String id, JsonObject obj, boolean deleted) {     Exchange exchange = super.createExchange().     exchange.getIn().setHeader(CouchDbConstants.HEADER_DATABASE, database).     exchange.getIn().setHeader(CouchDbConstants.HEADER_SEQ, seq).     exchange.getIn().setHeader(CouchDbConstants.HEADER_DOC_ID, id).     exchange.getIn().setHeader(CouchDbConstants.HEADER_DOC_REV, obj.get("_rev").getAsString()).     exchange.getIn().setHeader(CouchDbConstants.HEADER_METHOD, deleted ? "DELETE" : "UPDATE").     exchange.getIn().setBody(obj).     return exchange. }
+false;protected;0;3;;protected CouchDbClientWrapper createClient() {     return new CouchDbClientWrapper(new CouchDbClient(database, createDatabase, protocol, hostname, port, username, password)). }
+false;public;0;3;;public String getProtocol() {     return protocol. }
+true;public;1;3;/**  * The protocol to use for communicating with the database.  */ ;/**  * The protocol to use for communicating with the database.  */ public void setProtocol(String protocol) {     this.protocol = protocol. }
+false;public;0;3;;public String getHostname() {     return hostname. }
+true;public;1;3;/**  * Hostname of the running couchdb instance  */ ;/**  * Hostname of the running couchdb instance  */ public void setHostname(String hostname) {     this.hostname = hostname. }
+false;public;0;3;;public String getStyle() {     return style. }
+true;public;1;3;/**  * Specifies how many revisions are returned in the changes array.  * The default, main_only, will only return the current "winning" revision. all_docs will return all leaf revisions (including conflicts and deleted former conflicts.)  */ ;/**  * Specifies how many revisions are returned in the changes array.  * The default, main_only, will only return the current "winning" revision. all_docs will return all leaf revisions (including conflicts and deleted former conflicts.)  */ public void setStyle(String style) {     this.style = style. }
+false;public;0;3;;public String getUsername() {     return username. }
+true;public;1;3;/**  * Username in case of authenticated databases  */ ;/**  * Username in case of authenticated databases  */ public void setUsername(String username) {     this.username = username. }
+false;public;0;3;;public String getDatabase() {     return database. }
+true;public;1;3;/**  * Name of the database to use  */ ;/**  * Name of the database to use  */ public void setDatabase(String database) {     this.database = database. }
+false;public;0;3;;public String getPassword() {     return password. }
+true;public;1;3;/**  * Password for authenticated databases  */ ;/**  * Password for authenticated databases  */ public void setPassword(String password) {     this.password = password. }
+false;public;0;3;;public int getPort() {     return port. }
+true;public;1;3;/**  * Port number for the running couchdb instance  */ ;/**  * Port number for the running couchdb instance  */ public void setPort(int port) {     this.port = port. }
+false;public;0;3;;public long getHeartbeat() {     return heartbeat. }
+true;public;1;3;/**  * How often to send an empty message to keep socket alive in millis  */ ;/**  * How often to send an empty message to keep socket alive in millis  */ public void setHeartbeat(long heartbeat) {     this.heartbeat = heartbeat. }
+false;public;0;3;;public boolean isCreateDatabase() {     return createDatabase. }
+true;public;1;3;/**  * Creates the database if it does not already exist  */ ;/**  * Creates the database if it does not already exist  */ public void setCreateDatabase(boolean createDatabase) {     this.createDatabase = createDatabase. }
+false;public;0;3;;public boolean isDeletes() {     return deletes. }
+true;public;1;3;/**  * Document deletes are published as events  */ ;/**  * Document deletes are published as events  */ public void setDeletes(boolean deletes) {     this.deletes = deletes. }
+false;public;0;3;;public boolean isUpdates() {     return updates. }
+true;public;1;3;/**  * Document inserts/updates are published as events  */ ;/**  * Document inserts/updates are published as events  */ public void setUpdates(boolean updates) {     this.updates = updates. }
+false;public;0;3;;public String getSince() {     return since. }
+true;public;1;3;/**  * Start tracking changes immediately after the given update sequence.  * The default, null, will start monitoring from the latest sequence.  */ ;/**  * Start tracking changes immediately after the given update sequence.  * The default, null, will start monitoring from the latest sequence.  */ public void setSince(String since) {     this.since = since. }

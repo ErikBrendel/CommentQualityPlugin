@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void testSayHello() throws Exception {     Object value = template.requestBody("bean:myBean?method=sayHello", body).     assertEquals("Returned value", "Hello James!", value). }
+false;public;0;6;;@Test public void testSayGoodbye() throws Exception {     Object value = template.requestBody("bean:myBean?method=sayGoodbye", body).     assertEquals("Returned value", "Bye James!", value). }
+false;public;0;6;;@Test public void testChooseMethodUsingBodyType() throws Exception {     Object value = template.requestBody("bean:myBean", 4).     assertEquals("Returned value", 8L, value). }
+false;public;0;9;;@Test public void testAmbiguousMethodCallFails() throws Exception {     try {         Object value = template.requestBody("bean:myBean", body).         fail("We should have failed to invoke an ambiguous method but instead got: " + value).     } catch (Exception e) {         log.info("Caught expected failure: " + e, e).     } }
+false;protected;0;3;;protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/component/bean/camelContext.xml"). }

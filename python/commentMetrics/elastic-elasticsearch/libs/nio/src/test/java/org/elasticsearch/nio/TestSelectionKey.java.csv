@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public SelectableChannel channel() {     return null. }
+false;public;0;4;;@Override public Selector selector() {     return null. }
+false;public;0;4;;@Override public int interestOps() {     return ops. }
+false;public;1;5;;@Override public SelectionKey interestOps(int ops) {     this.ops = ops.     return this. }
+false;public;0;4;;@Override public int readyOps() {     return readyOps. }
+false;public;1;3;;public void setReadyOps(int readyOps) {     this.readyOps = readyOps. }

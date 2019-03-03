@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;13;;@Test public void testMethodPatternUsingMethodAnnotations() throws Exception {     Class<?> foo = Foo.class.getClass().     ParameterInfo info = new ParameterInfo(1, foo.getClass(), foo.getAnnotations(), null).     assertNotNull(info).     assertNotNull(info.toString()).     assertEquals(1, info.getIndex()).     assertEquals(foo, info.getType()).     assertNull(info.getExpression()).     assertNotNull(info.getAnnotations()). }
+false;public;1;3;;public String hello(@Body String body) {     return "Hello " + body. }

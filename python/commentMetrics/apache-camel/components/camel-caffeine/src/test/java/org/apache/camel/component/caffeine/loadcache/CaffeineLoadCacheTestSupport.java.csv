@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public Integer load(Integer key) throws Exception {     return key + 1. }
+false;public;0;12;;@Override public void setUp() throws Exception {     CacheLoader cl = new CacheLoader<Integer, Integer>() {          @Override         public Integer load(Integer key) throws Exception {             return key + 1.         }     }.     cache = Caffeine.newBuilder().build(cl).     super.setUp(). }
+false;protected;0;7;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry registry = super.createRegistry().     registry.bind("cache", cache).     return registry. }
+false;protected;0;3;;protected Cache getTestCache() {     return cache. }

@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;1;;int size().
+false;public,abstract;0;1;;public abstract int size().
+false;public;0;3;;public int size() {     return 1. }
+false;public;0;4;;@Override public void configure() throws Exception {     from("direct:in").choice().when(simple("${headers.bean.size} != 0")).to("mock:out"). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:in").choice().when(simple("${headers.bean.size} != 0")).to("mock:out").         }     }. }
+false;public;0;10;;@Test public void testAmbiguousMethodCallException() throws Exception {     MockEndpoint out = getMockEndpoint("mock:out").     out.expectedMessageCount(1).     ExchangeBuilder exchangeBuilder = new ExchangeBuilder(context).withHeader("bean", new Clazz()).     template.send("direct:in", exchangeBuilder.build()).     out.assertIsSatisfied(). }

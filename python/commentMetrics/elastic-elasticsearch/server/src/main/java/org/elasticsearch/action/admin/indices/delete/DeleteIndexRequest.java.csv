@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public IndicesOptions indicesOptions() {     return indicesOptions. }
+false;public;1;4;;public DeleteIndexRequest indicesOptions(IndicesOptions indicesOptions) {     this.indicesOptions = indicesOptions.     return this. }
+false;public;0;8;;@Override public ActionRequestValidationException validate() {     ActionRequestValidationException validationException = null.     if (CollectionUtils.isEmpty(indices)) {         validationException = addValidationError("index / indices is missing", validationException).     }     return validationException. }
+false;public;1;5;;@Override public DeleteIndexRequest indices(String... indices) {     this.indices = indices.     return this. }
+true;public;0;4;/**  * The index to delete.  */ ;/**  * The index to delete.  */ @Override public String[] indices() {     return indices. }
+false;public;1;6;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     indices = in.readStringArray().     indicesOptions = IndicesOptions.readIndicesOptions(in). }
+false;public;1;6;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeStringArray(indices).     indicesOptions.writeIndicesOptions(out). }

@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;5;;@Override public void before(Method method, Object[] objects, @Nullable Object o) throws Throwable {     countBefore++. // System.out.println("Method:" + method.getName()). }
+false;public;1;8;;public void afterThrowing(Exception e) throws Throwable {     countThrows++.     // e.printStackTrace().     throw e. }
+false;public;0;3;;public int getCountBefore() {     return countBefore. }
+false;public;0;3;;public int getCountThrows() {     return countThrows. }
+false;public;0;4;;public void reset() {     countThrows = 0.     countBefore = 0. }

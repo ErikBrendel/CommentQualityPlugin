@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static Expression constant(Object value) {     return ExpressionBuilder.constantExpression(value). }
+false;public;1;3;;public Predicate createPredicate(String expression) {     return ExpressionToPredicateAdapter.toPredicate(createExpression(expression)). }
+false;public;1;3;;public Expression createExpression(String expression) {     return ConstantLanguage.constant(expression). }
+false;public;0;3;;public boolean isSingleton() {     return true. }

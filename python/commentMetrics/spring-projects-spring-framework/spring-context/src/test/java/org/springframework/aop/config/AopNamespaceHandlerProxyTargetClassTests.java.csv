@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void testIsClassProxy() {     ITestBean bean = getTestBean().     assertTrue("Should be a CGLIB proxy", AopUtils.isCglibProxy(bean)).     assertTrue("Should expose proxy", ((Advised) bean).isExposeProxy()). }

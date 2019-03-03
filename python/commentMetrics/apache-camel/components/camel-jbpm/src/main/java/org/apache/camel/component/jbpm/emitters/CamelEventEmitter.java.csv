@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public void deliver(Collection<InstanceView<?>> data) { // no-op }
+false;public;1;14;;@Override public void apply(Collection<InstanceView<?>> data) {     if (consumer == null || data.isEmpty()) {         return.     }     if (sendItems) {         data.forEach(item -> consumer.sendMessage("Emitter", item)).     } else {         consumer.sendMessage("Emitter", data).     } }
+false;public;1;5;;@Override public void drop(Collection<InstanceView<?>> data) { // no-op }
+false;public;0;4;;@Override public EventCollection newCollection() {     return new BaseEventCollection(). }
+false;public;0;4;;@Override public void close() { }

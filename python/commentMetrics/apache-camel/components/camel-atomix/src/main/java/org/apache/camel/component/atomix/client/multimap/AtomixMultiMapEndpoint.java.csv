@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Producer createProducer() throws Exception {     return new AtomixMultiMapProducer(this). }
+false;public;0;4;;@Override public AtomixMultiMapConfiguration getConfiguration() {     return this.configuration. }
+false;public;1;4;;@Override public void setConfiguration(AtomixMultiMapConfiguration configuration) {     this.configuration = configuration. }

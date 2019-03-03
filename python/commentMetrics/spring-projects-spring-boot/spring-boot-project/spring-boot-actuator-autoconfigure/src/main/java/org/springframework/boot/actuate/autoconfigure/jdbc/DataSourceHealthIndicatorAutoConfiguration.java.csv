@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Override public void afterPropertiesSet() throws Exception {     this.poolMetadataProvider = new CompositeDataSourcePoolMetadataProvider(this.metadataProviders). }
+false;public;1;5;;@Bean @ConditionalOnMissingBean(name = "dbHealthIndicator") public HealthIndicator dbHealthIndicator(Map<String, DataSource> dataSources) {     return createHealthIndicator(filterDataSources(dataSources)). }
+false;private;1;13;;private Map<String, DataSource> filterDataSources(Map<String, DataSource> candidates) {     if (candidates == null) {         return null.     }     Map<String, DataSource> dataSources = new LinkedHashMap<>().     candidates.forEach((name, dataSource) -> {         if (!(dataSource instanceof AbstractRoutingDataSource)) {             dataSources.put(name, dataSource).         }     }).     return dataSources. }
+false;protected;1;4;;@Override protected DataSourceHealthIndicator createHealthIndicator(DataSource source) {     return new DataSourceHealthIndicator(source, getValidationQuery(source)). }
+false;private;1;5;;private String getValidationQuery(DataSource source) {     DataSourcePoolMetadata poolMetadata = this.poolMetadataProvider.getDataSourcePoolMetadata(source).     return (poolMetadata != null) ? poolMetadata.getValidationQuery() : null. }

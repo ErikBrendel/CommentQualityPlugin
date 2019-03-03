@@ -1,0 +1,16 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public void beforeWrap(RouteContext routeContext, NamedNode namedNode) { }
+false;public;2;50;;@Override public Processor wrap(RouteContext routeContext, Processor processor) {     // Don't add JCachePolicyProcessor if JCachePolicy is disabled. This means enable/disable has impact only during startup     if (!isEnabled()) {         return processor.     }     Cache cache = this.cache.     if (cache == null) {         // Create cache based on given configuration         // Find CacheManager         CacheManager cacheManager = this.cacheManager.         // Lookup CacheManager from CamelContext if it's not set         if (cacheManager == null) {             Set<CacheManager> lookupResult = routeContext.getCamelContext().getRegistry().findByType(CacheManager.class).             if (ObjectHelper.isNotEmpty(lookupResult)) {                 // Use the first cache manager found                 cacheManager = lookupResult.iterator().next().                 LOG.debug("CacheManager from CamelContext registry: {}", cacheManager).             }         }         // Lookup CacheManager the standard way         if (cacheManager == null) {             cacheManager = Caching.getCachingProvider().getCacheManager().             LOG.debug("CacheManager from CachingProvider: {}", cacheManager).         }         // Use routeId as cacheName if it's not set         String cacheName = ObjectHelper.isNotEmpty(this.cacheName) ? this.cacheName : routeContext.getRoute().getId().         LOG.debug("Getting cache:{}", cacheName).         // Get cache or create a new one using the cacheConfiguration         cache = cacheManager.getCache(cacheName).         if (cache == null) {             LOG.debug("Create cache:{}", cacheName).             cache = cacheManager.createCache(cacheName, cacheConfiguration != null ? this.cacheConfiguration : (Configuration) new MutableConfiguration()).         }     }     // Create processor     return new JCachePolicyProcessor(cache, keyExpression, processor). }
+false;public;0;3;;public Cache getCache() {     return cache. }
+false;public;1;3;;public void setCache(Cache cache) {     this.cache = cache. }
+false;public;0;3;;public CacheManager getCacheManager() {     return cacheManager. }
+false;public;1;3;;public void setCacheManager(CacheManager cacheManager) {     this.cacheManager = cacheManager. }
+false;public;0;3;;public Configuration getCacheConfiguration() {     return cacheConfiguration. }
+false;public;1;3;;public void setCacheConfiguration(Configuration cacheConfiguration) {     this.cacheConfiguration = cacheConfiguration. }
+false;public;0;3;;public String getCacheName() {     return cacheName. }
+false;public;1;3;;public void setCacheName(String cacheName) {     this.cacheName = cacheName. }
+false;public;0;3;;public Expression getKeyExpression() {     return keyExpression. }
+false;public;1;3;;public void setKeyExpression(Expression keyExpression) {     this.keyExpression = keyExpression. }
+false;public;0;3;;public boolean isEnabled() {     return enabled. }
+false;public;1;3;;public void setEnabled(boolean enabled) {     this.enabled = enabled. }
+false;public;0;7;;@Override public String toString() {     return "JCachePolicy{" + "keyExpression=" + keyExpression + ", enabled=" + enabled + '}'. }

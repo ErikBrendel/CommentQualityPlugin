@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void testConcurrentMarshall() throws Exception {     assertMockEndpointsSatisfied(). }
+false;protected;1;13;;@Override protected void bindToRegistry(Registry registry) throws Exception {     PurchaseOrder bean = new PurchaseOrder().     bean.setName("Beer").     bean.setAmount(23).     bean.setPrice(2.5).     SimpleDataSet ds = new SimpleDataSet().     ds.setDefaultBody(bean).     ds.setSize(200).     registry.bind("beer", ds). }
+false;public;0;6;;public void configure() {     DataFormat jaxb = new JaxbDataFormat("org.apache.camel.example").     // use 5 concurrent threads to do marshalling     from("dataset:beer").marshal(jaxb).to("dataset:beer"). }
+false;protected;0;10;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             DataFormat jaxb = new JaxbDataFormat("org.apache.camel.example").             // use 5 concurrent threads to do marshalling             from("dataset:beer").marshal(jaxb).to("dataset:beer").         }     }. }

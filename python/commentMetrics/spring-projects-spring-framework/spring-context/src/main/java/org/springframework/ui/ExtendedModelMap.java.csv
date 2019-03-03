@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;5;;@Override public ExtendedModelMap addAttribute(String attributeName, @Nullable Object attributeValue) {     super.addAttribute(attributeName, attributeValue).     return this. }
+false;public;1;5;;@Override public ExtendedModelMap addAttribute(Object attributeValue) {     super.addAttribute(attributeValue).     return this. }
+false;public;1;5;;@Override public ExtendedModelMap addAllAttributes(@Nullable Collection<?> attributeValues) {     super.addAllAttributes(attributeValues).     return this. }
+false;public;1;5;;@Override public ExtendedModelMap addAllAttributes(@Nullable Map<String, ?> attributes) {     super.addAllAttributes(attributes).     return this. }
+false;public;1;5;;@Override public ExtendedModelMap mergeAttributes(@Nullable Map<String, ?> attributes) {     super.mergeAttributes(attributes).     return this. }
+false;public;0;4;;@Override public Map<String, Object> asMap() {     return this. }

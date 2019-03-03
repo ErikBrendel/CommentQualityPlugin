@@ -1,0 +1,119 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getHost() {     return this.host. }
+true;public;0;6;/**  * Returns the host from the first address, or the configured host if no addresses  * have been set.  * @return the host  * @see #setAddresses(String)  * @see #getHost()  */ ;/**  * Returns the host from the first address, or the configured host if no addresses  * have been set.  * @return the host  * @see #setAddresses(String)  * @see #getHost()  */ public String determineHost() {     if (CollectionUtils.isEmpty(this.parsedAddresses)) {         return getHost().     }     return this.parsedAddresses.get(0).host. }
+false;public;1;3;;public void setHost(String host) {     this.host = host. }
+false;public;0;3;;public int getPort() {     return this.port. }
+true;public;0;7;/**  * Returns the port from the first address, or the configured port if no addresses  * have been set.  * @return the port  * @see #setAddresses(String)  * @see #getPort()  */ ;/**  * Returns the port from the first address, or the configured port if no addresses  * have been set.  * @return the port  * @see #setAddresses(String)  * @see #getPort()  */ public int determinePort() {     if (CollectionUtils.isEmpty(this.parsedAddresses)) {         return getPort().     }     Address address = this.parsedAddresses.get(0).     return address.port. }
+false;public;1;3;;public void setPort(int port) {     this.port = port. }
+false;public;0;3;;public String getAddresses() {     return this.addresses. }
+true;public;0;10;/**  * Returns the comma-separated addresses or a single address ({@code host:port})  * created from the configured host and port if no addresses have been set.  * @return the addresses  */ ;/**  * Returns the comma-separated addresses or a single address ({@code host:port})  * created from the configured host and port if no addresses have been set.  * @return the addresses  */ public String determineAddresses() {     if (CollectionUtils.isEmpty(this.parsedAddresses)) {         return this.host + ":" + this.port.     }     List<String> addressStrings = new ArrayList<>().     for (Address parsedAddress : this.parsedAddresses) {         addressStrings.add(parsedAddress.host + ":" + parsedAddress.port).     }     return StringUtils.collectionToCommaDelimitedString(addressStrings). }
+false;public;1;4;;public void setAddresses(String addresses) {     this.addresses = addresses.     this.parsedAddresses = parseAddresses(addresses). }
+false;private;1;7;;private List<Address> parseAddresses(String addresses) {     List<Address> parsedAddresses = new ArrayList<>().     for (String address : StringUtils.commaDelimitedListToStringArray(addresses)) {         parsedAddresses.add(new Address(address)).     }     return parsedAddresses. }
+false;public;0;3;;public String getUsername() {     return this.username. }
+true;public;0;7;/**  * If addresses have been set and the first address has a username it is returned.  * Otherwise returns the result of calling {@code getUsername()}.  * @return the username  * @see #setAddresses(String)  * @see #getUsername()  */ ;/**  * If addresses have been set and the first address has a username it is returned.  * Otherwise returns the result of calling {@code getUsername()}.  * @return the username  * @see #setAddresses(String)  * @see #getUsername()  */ public String determineUsername() {     if (CollectionUtils.isEmpty(this.parsedAddresses)) {         return this.username.     }     Address address = this.parsedAddresses.get(0).     return (address.username != null) ? address.username : this.username. }
+false;public;1;3;;public void setUsername(String username) {     this.username = username. }
+false;public;0;3;;public String getPassword() {     return this.password. }
+true;public;0;7;/**  * If addresses have been set and the first address has a password it is returned.  * Otherwise returns the result of calling {@code getPassword()}.  * @return the password or {@code null}  * @see #setAddresses(String)  * @see #getPassword()  */ ;/**  * If addresses have been set and the first address has a password it is returned.  * Otherwise returns the result of calling {@code getPassword()}.  * @return the password or {@code null}  * @see #setAddresses(String)  * @see #getPassword()  */ public String determinePassword() {     if (CollectionUtils.isEmpty(this.parsedAddresses)) {         return getPassword().     }     Address address = this.parsedAddresses.get(0).     return (address.password != null) ? address.password : getPassword(). }
+false;public;1;3;;public void setPassword(String password) {     this.password = password. }
+false;public;0;3;;public Ssl getSsl() {     return this.ssl. }
+false;public;0;3;;public String getVirtualHost() {     return this.virtualHost. }
+true;public;0;7;/**  * If addresses have been set and the first address has a virtual host it is returned.  * Otherwise returns the result of calling {@code getVirtualHost()}.  * @return the virtual host or {@code null}  * @see #setAddresses(String)  * @see #getVirtualHost()  */ ;/**  * If addresses have been set and the first address has a virtual host it is returned.  * Otherwise returns the result of calling {@code getVirtualHost()}.  * @return the virtual host or {@code null}  * @see #setAddresses(String)  * @see #getVirtualHost()  */ public String determineVirtualHost() {     if (CollectionUtils.isEmpty(this.parsedAddresses)) {         return getVirtualHost().     }     Address address = this.parsedAddresses.get(0).     return (address.virtualHost != null) ? address.virtualHost : getVirtualHost(). }
+false;public;1;3;;public void setVirtualHost(String virtualHost) {     this.virtualHost = "".equals(virtualHost) ? "/" : virtualHost. }
+false;public;0;3;;public Duration getRequestedHeartbeat() {     return this.requestedHeartbeat. }
+false;public;1;3;;public void setRequestedHeartbeat(Duration requestedHeartbeat) {     this.requestedHeartbeat = requestedHeartbeat. }
+false;public;0;3;;public boolean isPublisherConfirms() {     return this.publisherConfirms. }
+false;public;1;3;;public void setPublisherConfirms(boolean publisherConfirms) {     this.publisherConfirms = publisherConfirms. }
+false;public;0;3;;public boolean isPublisherReturns() {     return this.publisherReturns. }
+false;public;1;3;;public void setPublisherReturns(boolean publisherReturns) {     this.publisherReturns = publisherReturns. }
+false;public;0;3;;public Duration getConnectionTimeout() {     return this.connectionTimeout. }
+false;public;1;3;;public void setConnectionTimeout(Duration connectionTimeout) {     this.connectionTimeout = connectionTimeout. }
+false;public;0;3;;public Cache getCache() {     return this.cache. }
+false;public;0;3;;public Listener getListener() {     return this.listener. }
+false;public;0;3;;public Template getTemplate() {     return this.template. }
+false;public;0;3;;public boolean isEnabled() {     return this.enabled. }
+false;public;1;3;;public void setEnabled(boolean enabled) {     this.enabled = enabled. }
+false;public;0;3;;public String getKeyStore() {     return this.keyStore. }
+false;public;1;3;;public void setKeyStore(String keyStore) {     this.keyStore = keyStore. }
+false;public;0;3;;public String getKeyStoreType() {     return this.keyStoreType. }
+false;public;1;3;;public void setKeyStoreType(String keyStoreType) {     this.keyStoreType = keyStoreType. }
+false;public;0;3;;public String getKeyStorePassword() {     return this.keyStorePassword. }
+false;public;1;3;;public void setKeyStorePassword(String keyStorePassword) {     this.keyStorePassword = keyStorePassword. }
+false;public;0;3;;public String getTrustStore() {     return this.trustStore. }
+false;public;1;3;;public void setTrustStore(String trustStore) {     this.trustStore = trustStore. }
+false;public;0;3;;public String getTrustStoreType() {     return this.trustStoreType. }
+false;public;1;3;;public void setTrustStoreType(String trustStoreType) {     this.trustStoreType = trustStoreType. }
+false;public;0;3;;public String getTrustStorePassword() {     return this.trustStorePassword. }
+false;public;1;3;;public void setTrustStorePassword(String trustStorePassword) {     this.trustStorePassword = trustStorePassword. }
+false;public;0;3;;public String getAlgorithm() {     return this.algorithm. }
+false;public;1;3;;public void setAlgorithm(String sslAlgorithm) {     this.algorithm = sslAlgorithm. }
+false;public;0;3;;public boolean isValidateServerCertificate() {     return this.validateServerCertificate. }
+false;public;1;3;;public void setValidateServerCertificate(boolean validateServerCertificate) {     this.validateServerCertificate = validateServerCertificate. }
+false;public;0;3;;public boolean getVerifyHostname() {     return this.verifyHostname. }
+false;public;1;3;;public void setVerifyHostname(boolean verifyHostname) {     this.verifyHostname = verifyHostname. }
+false;public;0;3;;public Channel getChannel() {     return this.channel. }
+false;public;0;3;;public Connection getConnection() {     return this.connection. }
+false;public;0;3;;public Integer getSize() {     return this.size. }
+false;public;1;3;;public void setSize(Integer size) {     this.size = size. }
+false;public;0;3;;public Duration getCheckoutTimeout() {     return this.checkoutTimeout. }
+false;public;1;3;;public void setCheckoutTimeout(Duration checkoutTimeout) {     this.checkoutTimeout = checkoutTimeout. }
+false;public;0;3;;public CacheMode getMode() {     return this.mode. }
+false;public;1;3;;public void setMode(CacheMode mode) {     this.mode = mode. }
+false;public;0;3;;public Integer getSize() {     return this.size. }
+false;public;1;3;;public void setSize(Integer size) {     this.size = size. }
+false;public;0;3;;public ContainerType getType() {     return this.type. }
+false;public;1;3;;public void setType(ContainerType containerType) {     this.type = containerType. }
+false;public;0;3;;public SimpleContainer getSimple() {     return this.simple. }
+false;public;0;3;;public DirectContainer getDirect() {     return this.direct. }
+false;public;0;3;;public boolean isAutoStartup() {     return this.autoStartup. }
+false;public;1;3;;public void setAutoStartup(boolean autoStartup) {     this.autoStartup = autoStartup. }
+false;public;0;3;;public AcknowledgeMode getAcknowledgeMode() {     return this.acknowledgeMode. }
+false;public;1;3;;public void setAcknowledgeMode(AcknowledgeMode acknowledgeMode) {     this.acknowledgeMode = acknowledgeMode. }
+false;public;0;3;;public Integer getPrefetch() {     return this.prefetch. }
+false;public;1;3;;public void setPrefetch(Integer prefetch) {     this.prefetch = prefetch. }
+false;public;0;3;;public Boolean getDefaultRequeueRejected() {     return this.defaultRequeueRejected. }
+false;public;1;3;;public void setDefaultRequeueRejected(Boolean defaultRequeueRejected) {     this.defaultRequeueRejected = defaultRequeueRejected. }
+false;public;0;3;;public Duration getIdleEventInterval() {     return this.idleEventInterval. }
+false;public;1;3;;public void setIdleEventInterval(Duration idleEventInterval) {     this.idleEventInterval = idleEventInterval. }
+false;public,abstract;0;1;;public abstract boolean isMissingQueuesFatal().
+false;public;0;3;;public ListenerRetry getRetry() {     return this.retry. }
+false;public;0;3;;public Integer getConcurrency() {     return this.concurrency. }
+false;public;1;3;;public void setConcurrency(Integer concurrency) {     this.concurrency = concurrency. }
+false;public;0;3;;public Integer getMaxConcurrency() {     return this.maxConcurrency. }
+false;public;1;3;;public void setMaxConcurrency(Integer maxConcurrency) {     this.maxConcurrency = maxConcurrency. }
+false;public;0;3;;public Integer getTransactionSize() {     return this.transactionSize. }
+false;public;1;3;;public void setTransactionSize(Integer transactionSize) {     this.transactionSize = transactionSize. }
+false;public;0;4;;@Override public boolean isMissingQueuesFatal() {     return this.missingQueuesFatal. }
+false;public;1;3;;public void setMissingQueuesFatal(boolean missingQueuesFatal) {     this.missingQueuesFatal = missingQueuesFatal. }
+false;public;0;3;;public Integer getConsumersPerQueue() {     return this.consumersPerQueue. }
+false;public;1;3;;public void setConsumersPerQueue(Integer consumersPerQueue) {     this.consumersPerQueue = consumersPerQueue. }
+false;public;0;4;;@Override public boolean isMissingQueuesFatal() {     return this.missingQueuesFatal. }
+false;public;1;3;;public void setMissingQueuesFatal(boolean missingQueuesFatal) {     this.missingQueuesFatal = missingQueuesFatal. }
+false;public;0;3;;public Retry getRetry() {     return this.retry. }
+false;public;0;3;;public Boolean getMandatory() {     return this.mandatory. }
+false;public;1;3;;public void setMandatory(Boolean mandatory) {     this.mandatory = mandatory. }
+false;public;0;3;;public Duration getReceiveTimeout() {     return this.receiveTimeout. }
+false;public;1;3;;public void setReceiveTimeout(Duration receiveTimeout) {     this.receiveTimeout = receiveTimeout. }
+false;public;0;3;;public Duration getReplyTimeout() {     return this.replyTimeout. }
+false;public;1;3;;public void setReplyTimeout(Duration replyTimeout) {     this.replyTimeout = replyTimeout. }
+false;public;0;3;;public String getExchange() {     return this.exchange. }
+false;public;1;3;;public void setExchange(String exchange) {     this.exchange = exchange. }
+false;public;0;3;;public String getRoutingKey() {     return this.routingKey. }
+false;public;1;3;;public void setRoutingKey(String routingKey) {     this.routingKey = routingKey. }
+false;public;0;3;;public String getDefaultReceiveQueue() {     return this.defaultReceiveQueue. }
+false;public;1;3;;public void setDefaultReceiveQueue(String defaultReceiveQueue) {     this.defaultReceiveQueue = defaultReceiveQueue. }
+false;public;0;3;;public boolean isEnabled() {     return this.enabled. }
+false;public;1;3;;public void setEnabled(boolean enabled) {     this.enabled = enabled. }
+false;public;0;3;;public int getMaxAttempts() {     return this.maxAttempts. }
+false;public;1;3;;public void setMaxAttempts(int maxAttempts) {     this.maxAttempts = maxAttempts. }
+false;public;0;3;;public Duration getInitialInterval() {     return this.initialInterval. }
+false;public;1;3;;public void setInitialInterval(Duration initialInterval) {     this.initialInterval = initialInterval. }
+false;public;0;3;;public double getMultiplier() {     return this.multiplier. }
+false;public;1;3;;public void setMultiplier(double multiplier) {     this.multiplier = multiplier. }
+false;public;0;3;;public Duration getMaxInterval() {     return this.maxInterval. }
+false;public;1;3;;public void setMaxInterval(Duration maxInterval) {     this.maxInterval = maxInterval. }
+false;public;0;3;;public boolean isStateless() {     return this.stateless. }
+false;public;1;3;;public void setStateless(boolean stateless) {     this.stateless = stateless. }
+false;private;1;6;;private String trimPrefix(String input) {     if (input.startsWith(PREFIX_AMQP)) {         input = input.substring(PREFIX_AMQP.length()).     }     return input. }
+false;private;1;13;;private String parseUsernameAndPassword(String input) {     if (input.contains("@")) {         String[] split = StringUtils.split(input, "@").         String creds = split[0].         input = split[1].         split = StringUtils.split(creds, ":").         this.username = split[0].         if (split.length > 0) {             this.password = split[1].         }     }     return input. }
+false;private;1;11;;private String parseVirtualHost(String input) {     int hostIndex = input.indexOf('/').     if (hostIndex >= 0) {         this.virtualHost = input.substring(hostIndex + 1).         if (this.virtualHost.isEmpty()) {             this.virtualHost = "/".         }         input = input.substring(0, hostIndex).     }     return input. }
+false;private;1;11;;private void parseHostAndPort(String input) {     int portIndex = input.indexOf(':').     if (portIndex == -1) {         this.host = input.         this.port = DEFAULT_PORT.     } else {         this.host = input.substring(0, portIndex).         this.port = Integer.valueOf(input.substring(portIndex + 1)).     } }

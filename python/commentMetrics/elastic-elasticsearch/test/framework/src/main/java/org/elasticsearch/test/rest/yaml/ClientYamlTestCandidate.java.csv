@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getApi() {     return restTestSuite.getApi(). }
+false;public;0;3;;public String getName() {     return restTestSuite.getName(). }
+false;public;0;3;;public String getSuitePath() {     return restTestSuite.getPath(). }
+false;public;0;3;;public String getTestPath() {     return restTestSuite.getPath() + "/" + testSection.getName(). }
+false;public;0;3;;public SetupSection getSetupSection() {     return restTestSuite.getSetupSection(). }
+false;public;0;3;;public TeardownSection getTeardownSection() {     return restTestSuite.getTeardownSection(). }
+false;public;0;3;;public ClientYamlTestSection getTestSection() {     return testSection. }
+false;public;0;4;;@Override public String toString() {     return getTestPath(). }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;12;;@Test public void testCamelProxyUsingRef() throws Exception {     AbstractApplicationContext ac = new ClassPathXmlApplicationContext("org/apache/camel/spring/config/CamelProxyUsingRefTest.xml").     MyProxySender sender = ac.getBean("myProxySender", MyProxySender.class).     String reply = sender.hello("World").     assertEquals("Hello World", reply).     // we're done so let's properly close the application context     IOHelper.close(ac). }

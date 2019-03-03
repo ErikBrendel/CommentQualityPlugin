@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;11;;@Override public void configure() throws Exception {     from(newOrder).choice().when(xpath("/order/product = 'widget'")).to(// add a log so we can see this happening in the shell     "log:widget").to(widget).otherwise().to(// add a log so we can see this happening in the shell     "log:gadget").to(gadget). }

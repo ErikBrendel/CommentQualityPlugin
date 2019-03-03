@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Before public void setUp() throws Exception {     bundleContext.setBundle(bundle). }
+false;public;0;3;;@After public void tearDown() throws Exception { }
+false;public;0;3;;public BundleContext getBundleContext() {     return bundleContext. }
+false;public;0;3;;public OsgiPackageScanClassResolver getPackageScanClassResolver() {     return packageScanClassResolver. }
+false;public;0;3;;public ClassResolver getClassResolver() {     return classResolver. }

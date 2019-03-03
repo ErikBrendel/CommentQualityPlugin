@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * Get the order this route should be started.  * <p/>  * See more at <a href="http://camel.apache.org/configuring-route-startup-ordering-and-autostartup.html">  * configuring route startup ordering</a>.  *  * @return the order  */ ;/**  * Get the order this route should be started.  * <p/>  * See more at <a href="http://camel.apache.org/configuring-route-startup-ordering-and-autostartup.html">  * configuring route startup ordering</a>.  *  * @return the order  */ int getStartupOrder().
+true;;0;1;/**  * Gets the route  *  * @return the route  */ ;/**  * Gets the route  *  * @return the route  */ Route getRoute().
+true;;0;1;/**  * Gets the input to this route (often only one consumer)  *  * @return the input consumers.  */ ;/**  * Gets the input to this route (often only one consumer)  *  * @return the input consumers.  */ List<Consumer> getInputs().
+true;;0;1;/**  * Gets the services to this route.  *  * @return the services.  */ ;/**  * Gets the services to this route.  *  * @return the services.  */ List<Service> getServices().

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;6;;@Override protected Map<String, Class<?>> getTokenizers() {     Map<String, Class<?>> tokenizers = new HashMap<>(super.getTokenizers()).     tokenizers.put("korean", KoreanTokenizerFactory.class).     return tokenizers. }
+false;protected;0;7;;@Override protected Map<String, Class<?>> getTokenFilters() {     Map<String, Class<?>> filters = new HashMap<>(super.getTokenFilters()).     filters.put("koreanpartofspeechstop", NoriPartOfSpeechStopFilterFactory.class).     filters.put("koreanreadingform", NoriReadingFormFilterFactory.class).     return filters. }

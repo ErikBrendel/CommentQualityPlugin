@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;4;;@Override public T get(Errors errors, InternalContext context, Dependency<?> dependency) {     throw new AssertionError(). }
+false;public;1;4;;@Override public <V> V acceptTargetVisitor(BindingTargetVisitor<? super T, V> visitor) {     return visitor.visit(this). }
+false;public;1;4;;@Override public BindingImpl<T> withScoping(Scoping scoping) {     return new UntargettedBindingImpl<>(getSource(), getKey(), scoping). }
+false;public;1;4;;@Override public BindingImpl<T> withKey(Key<T> key) {     return new UntargettedBindingImpl<>(getSource(), key, getScoping()). }
+false;public;1;4;;@Override public void applyTo(Binder binder) {     getScoping().applyTo(binder.withSource(getSource()).bind(getKey())). }
+false;public;0;7;;@Override public String toString() {     return new ToStringBuilder(UntargettedBinding.class).add("key", getKey()).add("source", getSource()).toString(). }

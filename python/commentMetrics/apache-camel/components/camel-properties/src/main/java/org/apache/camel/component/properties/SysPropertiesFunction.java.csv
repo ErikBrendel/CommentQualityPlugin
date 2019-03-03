@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getName() {     return "sys". }
+false;public;1;13;;@Override public String apply(String remainder) {     String key = remainder.     String defaultValue = null.     if (remainder.contains(":")) {         key = StringHelper.before(remainder, ":").         defaultValue = StringHelper.after(remainder, ":").     }     String value = System.getProperty(key).     return value != null ? value : defaultValue. }

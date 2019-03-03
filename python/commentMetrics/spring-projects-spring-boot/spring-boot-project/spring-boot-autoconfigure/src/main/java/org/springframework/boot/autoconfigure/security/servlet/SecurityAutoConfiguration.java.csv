@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Bean @ConditionalOnMissingBean(AuthenticationEventPublisher.class) public DefaultAuthenticationEventPublisher authenticationEventPublisher(ApplicationEventPublisher publisher) {     return new DefaultAuthenticationEventPublisher(publisher). }

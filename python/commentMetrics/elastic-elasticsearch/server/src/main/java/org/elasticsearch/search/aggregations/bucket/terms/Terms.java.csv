@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;1;;Number getKeyAsNumber().
+false;;0;1;;long getDocCountError().
+true;;0;2;/**  * Return the sorted list of the buckets in this terms aggregation.  */ ;/**  * Return the sorted list of the buckets in this terms aggregation.  */ @Override List<? extends Bucket> getBuckets().
+true;;1;1;/**  * Get the bucket for the given term, or null if there is no such bucket.  */ ;/**  * Get the bucket for the given term, or null if there is no such bucket.  */ Bucket getBucketByKey(String term).
+true;;0;1;/**  * Get an upper bound of the error on document counts in this aggregation.  */ ;/**  * Get an upper bound of the error on document counts in this aggregation.  */ long getDocCountError().
+true;;0;1;/**  * Return the sum of the document counts of all buckets that did not make  * it to the top buckets.  */ ;/**  * Return the sum of the document counts of all buckets that did not make  * it to the top buckets.  */ long getSumOfOtherDocCounts().

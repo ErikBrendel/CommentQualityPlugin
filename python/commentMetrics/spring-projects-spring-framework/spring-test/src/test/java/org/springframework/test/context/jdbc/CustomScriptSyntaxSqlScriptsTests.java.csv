@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test @Sql("schema.sql") @//  Sql(//  scripts = "data-add-users-with-custom-script-syntax.sql", config = @SqlConfig(commentPrefix = "`", blockCommentStartDelimiter = "#$", blockCommentEndDelimiter = "$#", separator = "@@")) public void methodLevelScripts() {     assertNumUsers(3). }
+false;protected;1;3;;protected void assertNumUsers(int expected) {     assertEquals("Number of rows in the 'user' table.", expected, countRowsInTable("user")). }

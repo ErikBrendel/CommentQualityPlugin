@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Before public void setUp() throws Exception {     cacheManager = JCacheHelper.createManager(new JCacheConfiguration("idempotent-repository")).     cache = cacheManager.getCache().     repository = new JCacheIdempotentRepository().     repository.setCache(cache).     repository.start(). }
+false;public;0;5;;@After public void tearDown() throws Exception {     repository.stop().     cacheManager.close(). }
+false;public;0;8;;@Test public void addsNewKeysToCache() throws Exception {     assertTrue(repository.add("One")).     assertTrue(repository.add("Two")).     assertTrue(cache.containsKey("One")).     assertTrue(cache.containsKey("Two")). }
+false;public;0;5;;@Test public void skipsAddingSecondTimeTheSameKey() throws Exception {     assertTrue(repository.add("One")).     assertFalse(repository.add("One")). }
+false;public;0;6;;@Test public void containsPreviouslyAddedKey() throws Exception {     assertFalse(repository.contains("One")).     repository.add("One").     assertTrue(repository.contains("One")). }
+false;public;0;9;;@Test public void removesAnExistingKey() throws Exception {     cache.clear().     repository.add("One").     assertTrue(repository.remove("One")).     assertFalse(repository.contains("One")). }
+false;public;0;4;;@Test public void doesNotRemoveMissingKey() throws Exception {     assertFalse(repository.remove("One")). }
+false;public;0;13;;@Test public void clearCache() throws Exception {     assertTrue(repository.add("One")).     assertTrue(repository.add("Two")).     assertTrue(cache.containsKey("One")).     assertTrue(cache.containsKey("Two")).     repository.clear().     assertFalse(cache.containsKey("One")).     assertFalse(cache.containsKey("Two")). }

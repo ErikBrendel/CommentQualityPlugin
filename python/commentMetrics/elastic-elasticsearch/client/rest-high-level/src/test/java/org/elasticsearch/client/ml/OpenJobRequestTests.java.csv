@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;8;;@Override protected OpenJobRequest createTestInstance() {     OpenJobRequest openJobRequest = new OpenJobRequest(JobTests.randomValidJobId()).     if (randomBoolean()) {         openJobRequest.setTimeout(TimeValue.timeValueSeconds(randomIntBetween(1, Integer.MAX_VALUE))).     }     return openJobRequest. }
+false;protected;1;4;;@Override protected OpenJobRequest doParseInstance(XContentParser parser) throws IOException {     return OpenJobRequest.fromXContent(parser). }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }

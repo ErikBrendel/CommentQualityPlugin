@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;14;;@Override protected Response createTestInstance() {     final Response result.     int listSize = randomInt(10).     List<Job> jobList = new ArrayList<>(listSize).     for (int j = 0. j < listSize. j++) {         jobList.add(JobTests.createRandomizedJob()).     }     result = new Response(new QueryPage<>(jobList, jobList.size(), Job.RESULTS_FIELD)).     return result. }
+false;protected;0;4;;@Override protected Response createBlankInstance() {     return new Response(). }

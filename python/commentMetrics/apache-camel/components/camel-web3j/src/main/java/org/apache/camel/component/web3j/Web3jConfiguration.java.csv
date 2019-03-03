@@ -1,0 +1,73 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public List<String> getPrivateFor() {     return privateFor. }
+true;public;1;3;/**  *  A transaction privateFor nodes with public keys in a Quorum network  */ ;/**  *  A transaction privateFor nodes with public keys in a Quorum network  */ public void setPrivateFor(List<String> privateFor) {     this.privateFor = privateFor. }
+false;public;0;3;;public boolean isQuorumAPI() {     return quorumAPI. }
+true;public;1;3;/**  *  If true, this will support Quorum API.  */ ;/**  *  If true, this will support Quorum API.  */ public void setQuorumAPI(boolean quorumAPI) {     this.quorumAPI = quorumAPI. }
+false;public;0;3;;public Web3j getWeb3j() {     return web3j. }
+true;public;1;3;/**  * The preconfigured Web3j object.  */ ;/**  * The preconfigured Web3j object.  */ public void setWeb3j(Web3j web3j) {     this.web3j = web3j. }
+false;public;0;3;;public BigInteger getPriority() {     return priority. }
+true;public;1;3;/**  * The priority of a whisper message.  */ ;/**  * The priority of a whisper message.  */ public void setPriority(BigInteger priority) {     this.priority = priority. }
+false;public;0;3;;public BigInteger getTtl() {     return ttl. }
+true;public;1;3;/**  * The time to live in seconds of a whisper message.  */ ;/**  * The time to live in seconds of a whisper message.  */ public void setTtl(BigInteger ttl) {     this.ttl = ttl. }
+false;public;0;3;;public BigInteger getGasPrice() {     return gasPrice. }
+true;public;1;3;/**  * Gas price used for each paid gas.  */ ;/**  * Gas price used for each paid gas.  */ public void setGasPrice(BigInteger gasPrice) {     this.gasPrice = gasPrice. }
+false;public;0;3;;public BigInteger getGasLimit() {     return gasLimit. }
+true;public;1;3;/**  * The maximum gas allowed in this block.  */ ;/**  * The maximum gas allowed in this block.  */ public void setGasLimit(BigInteger gasLimit) {     this.gasLimit = gasLimit. }
+false;public;0;3;;public BigInteger getValue() {     return value. }
+true;public;1;3;/**  * The value sent within a transaction.  */ ;/**  * The value sent within a transaction.  */ public void setValue(BigInteger value) {     this.value = value. }
+false;public;0;3;;public String getData() {     return data. }
+true;public;1;3;/**  * The compiled code of a contract OR the hash of the invoked method signature and encoded parameters.  */ ;/**  * The compiled code of a contract OR the hash of the invoked method signature and encoded parameters.  */ public void setData(String data) {     this.data = data. }
+false;public;0;3;;public String getFromAddress() {     return fromAddress. }
+true;public;1;3;/**  * The address the transaction is send from  */ ;/**  * The address the transaction is send from  */ public void setFromAddress(String fromAddress) {     this.fromAddress = fromAddress. }
+false;public;0;3;;public String getToAddress() {     return toAddress. }
+true;public;1;3;/**  * The address the transaction is directed to.  */ ;/**  * The address the transaction is directed to.  */ public void setToAddress(String toAddress) {     this.toAddress = toAddress. }
+false;public;0;3;;public String getClientId() {     return clientId. }
+true;public;1;3;/**  * A random hexadecimal(32 bytes) ID identifying the client.  */ ;/**  * A random hexadecimal(32 bytes) ID identifying the client.  */ public void setClientId(String clientId) {     this.clientId = clientId. }
+false;public;0;3;;public String getHashrate() {     return hashrate. }
+true;public;1;3;/**  * A hexadecimal string representation (32 bytes) of the hash rate.  */ ;/**  * A hexadecimal string representation (32 bytes) of the hash rate.  */ public void setHashrate(String hashrate) {     this.hashrate = hashrate. }
+false;public;0;3;;public String getMixDigest() {     return mixDigest. }
+true;public;1;3;/**  * The mix digest (256 bits) used for submitting a proof-of-work solution.  */ ;/**  * The mix digest (256 bits) used for submitting a proof-of-work solution.  */ public void setMixDigest(String mixDigest) {     this.mixDigest = mixDigest. }
+false;public;0;3;;public String getHeaderPowHash() {     return headerPowHash. }
+true;public;1;3;/**  * The header's pow-hash (256 bits) used for submitting a proof-of-work solution.  */ ;/**  * The header's pow-hash (256 bits) used for submitting a proof-of-work solution.  */ public void setHeaderPowHash(String headerPowHash) {     this.headerPowHash = headerPowHash. }
+false;public;0;3;;public String getNonce() {     return nonce. }
+true;public;1;3;/**  * The nonce found (64 bits) used for submitting a proof-of-work solution.  */ ;/**  * The nonce found (64 bits) used for submitting a proof-of-work solution.  */ public void setNonce(String nonce) {     this.nonce = nonce. }
+false;public;0;3;;public String getSourceCode() {     return sourceCode. }
+true;public;1;3;/**  * The source code to compile.  */ ;/**  * The source code to compile.  */ public void setSourceCode(String sourceCode) {     this.sourceCode = sourceCode. }
+false;public;0;3;;public String getTransactionHash() {     return transactionHash. }
+true;public;1;3;/**  * The information about a transaction requested by transaction hash.  */ ;/**  * The information about a transaction requested by transaction hash.  */ public void setTransactionHash(String transactionHash) {     this.transactionHash = transactionHash. }
+false;public;0;3;;public String getDatabaseName() {     return databaseName. }
+true;public;1;3;/**  * The local database name.  */ ;/**  * The local database name.  */ public void setDatabaseName(String databaseName) {     this.databaseName = databaseName. }
+false;public;0;3;;public String getKeyName() {     return keyName. }
+true;public;1;3;/**  * The key name in the database.  */ ;/**  * The key name in the database.  */ public void setKeyName(String keyName) {     this.keyName = keyName. }
+false;public;0;3;;public BigInteger getFilterId() {     return filterId. }
+true;public;1;3;/**  * The filter id to use.  */ ;/**  * The filter id to use.  */ public void setFilterId(BigInteger filterId) {     this.filterId = filterId. }
+false;public;0;3;;public BigInteger getIndex() {     return index. }
+true;public;1;3;/**  * The transactions/uncle index position in the block.  */ ;/**  * The transactions/uncle index position in the block.  */ public void setIndex(BigInteger index) {     this.index = index. }
+false;public;0;3;;public String getSignedTransactionData() {     return signedTransactionData. }
+true;public;1;3;/**  * The signed transaction data for a new message call transaction or a contract creation for signed transactions.  */ ;/**  * The signed transaction data for a new message call transaction or a contract creation for signed transactions.  */ public void setSignedTransactionData(String signedTransactionData) {     this.signedTransactionData = signedTransactionData. }
+false;public;0;3;;public String getBlockHash() {     return blockHash. }
+true;public;1;3;/**  * Hash of the block where this transaction was in.  */ ;/**  * Hash of the block where this transaction was in.  */ public void setBlockHash(String blockHash) {     this.blockHash = blockHash. }
+false;public;0;3;;public String getSha3HashOfDataToSign() {     return sha3HashOfDataToSign. }
+true;public;1;3;/**  * Message to sign by calculating an Ethereum specific signature.  */ ;/**  * Message to sign by calculating an Ethereum specific signature.  */ public void setSha3HashOfDataToSign(String sha3HashOfDataToSign) {     this.sha3HashOfDataToSign = sha3HashOfDataToSign. }
+false;public;0;3;;public BigInteger getPosition() {     return position. }
+true;public;1;3;/**  * The transaction index position withing a block.  */ ;/**  * The transaction index position withing a block.  */ public void setPosition(BigInteger position) {     this.position = position. }
+false;public;0;3;;public DefaultBlockParameter getFromBlock() {     return fromBlock. }
+true;public;1;3;/**  * The block number, or the string "latest" for the last mined block or "pending", "earliest" for not yet mined transactions.  */ ;/**  * The block number, or the string "latest" for the last mined block or "pending", "earliest" for not yet mined transactions.  */ public void setFromBlock(String block) {     this.fromBlock = toDefaultBlockParameter(block). }
+true;public;1;3;/**  * The block number, or the string "latest" for the last mined block or "pending", "earliest" for not yet mined transactions.  */ ;/**  * The block number, or the string "latest" for the last mined block or "pending", "earliest" for not yet mined transactions.  */ public void setToBlock(String block) {     this.toBlock = toDefaultBlockParameter(block). }
+false;private;1;16;;private DefaultBlockParameter toDefaultBlockParameter(String block) {     DefaultBlockParameter defaultBlockParameter = null.     if (block != null) {         for (DefaultBlockParameterName defaultBlockParameterName : DefaultBlockParameterName.values()) {             if (block.equalsIgnoreCase(defaultBlockParameterName.getValue())) {                 defaultBlockParameter = defaultBlockParameterName.             }         }         if (defaultBlockParameter == null) {             defaultBlockParameter = DefaultBlockParameter.valueOf(new BigInteger(block)).         }     }     return defaultBlockParameter. }
+false;public;0;3;;public DefaultBlockParameter getToBlock() {     return toBlock. }
+false;public;0;3;;public DefaultBlockParameter getAtBlock() {     return atBlock. }
+true;public;1;3;/**  * The block number, or the string "latest" for the last mined block or "pending", "earliest" for not yet mined transactions.  */ ;/**  * The block number, or the string "latest" for the last mined block or "pending", "earliest" for not yet mined transactions.  */ public void setAtBlock(String block) {     this.atBlock = toDefaultBlockParameter(block). }
+false;public;0;3;;public List<String> getAddresses() {     return addresses. }
+true;public;1;3;/**  * Contract address or a list of addresses.  */ ;/**  * Contract address or a list of addresses.  */ public void setAddresses(List<String> addresses) {     this.addresses = addresses. }
+false;public;0;3;;public List<String> getTopics() {     return topics. }
+true;public;1;3;/**  * Topics are order-dependent. Each topic can also be a list of topics.  * Specify multiple topics separated by comma.  */ ;/**  * Topics are order-dependent. Each topic can also be a list of topics.  * Specify multiple topics separated by comma.  */ public void setTopics(List<String> topics) {     this.topics = topics. }
+false;public;1;4;;public void setTopics(String topics) {     String[] arr = topics.split(",").     this.topics = Arrays.asList(arr). }
+false;public;0;3;;public String getAddress() {     return address. }
+true;public;1;3;/**  * Contract address.  */ ;/**  * Contract address.  */ public void setAddress(String address) {     this.address = address. }
+false;public;0;3;;public boolean isFullTransactionObjects() {     return fullTransactionObjects. }
+true;public;1;3;/**  *  If true it returns the full transaction objects, if false only the hashes of the transactions.  */ ;/**  *  If true it returns the full transaction objects, if false only the hashes of the transactions.  */ public void setFullTransactionObjects(boolean fullTransactionObjects) {     this.fullTransactionObjects = fullTransactionObjects. }
+false;public;0;3;;public String getOperation() {     return operation. }
+true;public;1;3;/**  * Operation to use.  */ ;/**  * Operation to use.  */ public void setOperation(String operation) {     this.operation = operation. }
+false;public;0;3;;public String getOperationOrDefault() {     return this.operation != null ? operation : Web3jConstants.TRANSACTION. }
+false;public;0;7;;public Web3jConfiguration copy() {     try {         return (Web3jConfiguration) super.clone().     } catch (CloneNotSupportedException e) {         throw new RuntimeCamelException(e).     } }

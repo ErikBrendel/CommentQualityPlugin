@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;3;3;;protected Group<T> createGroup(CuratorFramework client, String path, Class<T> clazz) {     return new ZooKeeperMultiGroup<>(client, path, clazz). }
+false;public;1;9;;@Override public boolean isMaster(String id) {     Group<T> group = this.getGroup().     if (group != null) {         return ((MultiGroup) group).isMaster(id).     } else {         return false.     } }

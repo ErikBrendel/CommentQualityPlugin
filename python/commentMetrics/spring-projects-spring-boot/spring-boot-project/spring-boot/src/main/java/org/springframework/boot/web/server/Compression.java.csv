@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Return whether response compression is enabled.  * @return {@code true} if response compression is enabled  */ ;/**  * Return whether response compression is enabled.  * @return {@code true} if response compression is enabled  */ public boolean getEnabled() {     return this.enabled. }
+false;public;1;3;;public void setEnabled(boolean enabled) {     this.enabled = enabled. }
+true;public;0;3;/**  * Return the MIME types that should be compressed.  * @return the MIME types that should be compressed  */ ;/**  * Return the MIME types that should be compressed.  * @return the MIME types that should be compressed  */ public String[] getMimeTypes() {     return this.mimeTypes. }
+false;public;1;3;;public void setMimeTypes(String[] mimeTypes) {     this.mimeTypes = mimeTypes. }
+false;public;0;3;;public String[] getExcludedUserAgents() {     return this.excludedUserAgents. }
+false;public;1;3;;public void setExcludedUserAgents(String[] excludedUserAgents) {     this.excludedUserAgents = excludedUserAgents. }
+true;public;0;3;/**  * Return the minimum "Content-Length" value that is required for compression to be  * performed.  * @return the minimum content size in bytes that is required for compression  */ ;/**  * Return the minimum "Content-Length" value that is required for compression to be  * performed.  * @return the minimum content size in bytes that is required for compression  */ public DataSize getMinResponseSize() {     return this.minResponseSize. }
+false;public;1;3;;public void setMinResponseSize(DataSize minSize) {     this.minResponseSize = minSize. }

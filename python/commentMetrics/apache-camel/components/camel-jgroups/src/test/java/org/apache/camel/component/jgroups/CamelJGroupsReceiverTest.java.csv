@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;// Tests @Test(expected = JGroupsException.class) public void shouldHandleProcessingException() throws Exception {     // Given     willThrow(Exception.class).given(processor).process(ArgumentMatchers.isNull()).     Message message = new Message(null, "someMessage").     message.setSrc(null).     // When     receiver.receive(message). }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String apiKey() {     return get(NewRelicProperties::getApiKey, NewRelicConfig.super::apiKey). }
+false;public;0;4;;@Override public String accountId() {     return get(NewRelicProperties::getAccountId, NewRelicConfig.super::accountId). }
+false;public;0;4;;@Override public String uri() {     return get(NewRelicProperties::getUri, NewRelicConfig.super::uri). }

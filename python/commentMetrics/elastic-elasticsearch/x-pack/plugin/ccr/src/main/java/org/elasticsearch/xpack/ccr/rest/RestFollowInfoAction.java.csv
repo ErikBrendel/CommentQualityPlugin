@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getName() {     return "ccr_follower_info". }
+false;protected;2;6;;@Override protected RestChannelConsumer prepareRequest(final RestRequest restRequest, final NodeClient client) throws IOException {     final FollowInfoAction.Request request = new FollowInfoAction.Request().     request.setFollowerIndices(Strings.splitStringByCommaToArray(restRequest.param("index"))).     return channel -> client.execute(FollowInfoAction.INSTANCE, request, new RestToXContentListener<>(channel)). }

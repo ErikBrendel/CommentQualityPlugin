@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;public void configure() throws Exception {     from("file://target/data/empty?initialDelay=0&delay=10&sendEmptyMessageWhenIdle=true").convertBodyTo(String.class).to("mock:result"). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from("file://target/data/empty?initialDelay=0&delay=10&sendEmptyMessageWhenIdle=true").convertBodyTo(String.class).to("mock:result").         }     }. }
+false;public;0;10;;@Test public void testConsumeIdleMessages() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMinimumMessageCount(2).     assertMockEndpointsSatisfied().     assertTrue(mock.getExchanges().get(0).getIn().getBody() == null).     assertTrue(mock.getExchanges().get(1).getIn().getBody() == null). }

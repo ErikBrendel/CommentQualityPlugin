@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public boolean supportsParameter(MethodParameter parameter) {     return SessionStatus.class == parameter.getParameterType(). }
+false;public;3;8;;@Nullable @Override public Object resolveArgumentValue(MethodParameter parameter, BindingContext bindingContext, ServerWebExchange exchange) {     Assert.isInstanceOf(InitBinderBindingContext.class, bindingContext).     return ((InitBinderBindingContext) bindingContext).getSessionStatus(). }

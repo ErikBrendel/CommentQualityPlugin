@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;11;;@Override public void execute() {     UpdateItemResult result = ddbClient.updateItem(new UpdateItemRequest().withTableName(determineTableName()).withKey(determineKey()).withAttributeUpdates(determineUpdateValues()).withExpected(determineUpdateCondition()).withReturnValues(determineReturnValues())).     addAttributesToResult(result.getAttributes()). }
+false;private;0;4;;@SuppressWarnings("unchecked") private Map<String, AttributeValueUpdate> determineUpdateValues() {     return exchange.getIn().getHeader(DdbConstants.UPDATE_VALUES, Map.class). }

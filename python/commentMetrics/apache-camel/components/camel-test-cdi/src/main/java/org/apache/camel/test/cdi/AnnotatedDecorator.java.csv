@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Type getBaseType() {     return decorated.getBaseType(). }
+false;public;0;4;;@Override public Set<Type> getTypeClosure() {     return decorated.getTypeClosure(). }
+false;public;1;9;;@Override public <T extends Annotation> T getAnnotation(Class<T> annotationType) {     T annotation = getDecoratingAnnotation(annotationType).     if (annotation != null) {         return annotation.     } else {         return decorated.getAnnotation(annotationType).     } }
+false;public;0;6;;@Override public Set<Annotation> getAnnotations() {     Set<Annotation> annotations = new HashSet<>(this.annotations).     annotations.addAll(decorated.getAnnotations()).     return Collections.unmodifiableSet(annotations). }
+false;public;1;4;;@Override public boolean isAnnotationPresent(Class<? extends Annotation> annotationType) {     return getDecoratingAnnotation(annotationType) != null || decorated.isAnnotationPresent(annotationType). }
+false;private;1;9;;@SuppressWarnings("unchecked") private <T extends Annotation> T getDecoratingAnnotation(Class<T> annotationType) {     for (Annotation annotation : annotations) {         if (annotationType.isAssignableFrom(annotation.annotationType())) {             return (T) annotation.         }     }     return null. }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * Reset the transactional state of this holder.  */ ;/**  * Reset the transactional state of this holder.  */ void reset().
+true;;0;1;/**  * Notify this holder that it has been unbound from transaction synchronization.  */ ;/**  * Notify this holder that it has been unbound from transaction synchronization.  */ void unbound().
+true;;0;1;/**  * Determine whether this holder is considered as 'void',  * i.e. as a leftover from a previous thread.  */ ;/**  * Determine whether this holder is considered as 'void',  * i.e. as a leftover from a previous thread.  */ boolean isVoid().

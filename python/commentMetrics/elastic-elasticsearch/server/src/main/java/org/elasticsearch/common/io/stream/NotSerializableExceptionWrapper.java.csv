@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeString(name).     RestStatus.writeTo(out, status). }
+false;protected;0;4;;@Override protected String getExceptionName() {     return name. }
+false;public;0;4;;@Override public RestStatus status() {     return status. }

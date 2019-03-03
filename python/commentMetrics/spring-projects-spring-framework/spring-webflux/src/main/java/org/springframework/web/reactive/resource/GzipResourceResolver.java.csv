@@ -1,0 +1,18 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;4;21;;@Override protected Mono<Resource> resolveResourceInternal(@Nullable ServerWebExchange exchange, String requestPath, List<? extends Resource> locations, ResourceResolverChain chain) {     return chain.resolveResource(exchange, requestPath, locations).map(resource -> {         if (exchange == null || isGzipAccepted(exchange)) {             try {                 Resource gzipped = new GzippedResource(resource).                 if (gzipped.exists()) {                     resource = gzipped.                 }             } catch (IOException ex) {                 String logPrefix = exchange != null ? exchange.getLogPrefix() : "".                 logger.trace(logPrefix + "No gzip resource for [" + resource.getFilename() + "]", ex).             }         }         return resource.     }). }
+false;private;1;4;;private boolean isGzipAccepted(ServerWebExchange exchange) {     String value = exchange.getRequest().getHeaders().getFirst("Accept-Encoding").     return (value != null && value.toLowerCase().contains("gzip")). }
+false;protected;3;6;;@Override protected Mono<String> resolveUrlPathInternal(String resourceUrlPath, List<? extends Resource> locations, ResourceResolverChain chain) {     return chain.resolveUrlPath(resourceUrlPath, locations). }
+false;public;0;4;;@Override public InputStream getInputStream() throws IOException {     return this.gzipped.getInputStream(). }
+false;public;0;4;;@Override public boolean exists() {     return this.gzipped.exists(). }
+false;public;0;4;;@Override public boolean isReadable() {     return this.gzipped.isReadable(). }
+false;public;0;4;;@Override public boolean isOpen() {     return this.gzipped.isOpen(). }
+false;public;0;4;;@Override public boolean isFile() {     return this.gzipped.isFile(). }
+false;public;0;4;;@Override public URL getURL() throws IOException {     return this.gzipped.getURL(). }
+false;public;0;4;;@Override public URI getURI() throws IOException {     return this.gzipped.getURI(). }
+false;public;0;4;;@Override public File getFile() throws IOException {     return this.gzipped.getFile(). }
+false;public;0;4;;@Override public long contentLength() throws IOException {     return this.gzipped.contentLength(). }
+false;public;0;4;;@Override public long lastModified() throws IOException {     return this.gzipped.lastModified(). }
+false;public;1;4;;@Override public Resource createRelative(String relativePath) throws IOException {     return this.gzipped.createRelative(relativePath). }
+false;public;0;5;;@Override @Nullable public String getFilename() {     return this.original.getFilename(). }
+false;public;0;4;;@Override public String getDescription() {     return this.gzipped.getDescription(). }
+false;public;0;8;;@Override public HttpHeaders getResponseHeaders() {     HttpHeaders headers = (this.original instanceof HttpResource ? ((HttpResource) this.original).getResponseHeaders() : new HttpHeaders()).     headers.add(HttpHeaders.CONTENT_ENCODING, "gzip").     headers.add(HttpHeaders.VARY, HttpHeaders.ACCEPT_ENCODING).     return headers. }

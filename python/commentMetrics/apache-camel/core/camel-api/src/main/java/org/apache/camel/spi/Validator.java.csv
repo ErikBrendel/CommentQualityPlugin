@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,abstract;2;1;/**  * Perform data validation with specified type.  *  * @param message message to apply validation  * @param type the data type  * @throws ValidationException thrown if any validation error is detected  */ ;/**  * Perform data validation with specified type.  *  * @param message message to apply validation  * @param type the data type  * @throws ValidationException thrown if any validation error is detected  */ public abstract void validate(Message message, DataType type) throws ValidationException.
+true;public;0;3;/**  * Get 'from' data type.  */ ;/**  * Get 'from' data type.  */ public DataType getType() {     return type. }
+true;public;1;4;/**  * Set data type.  *  * @param type data type  */ ;/**  * Set data type.  *  * @param type data type  */ public Validator setType(String type) {     this.type = new DataType(type).     return this. }
+false;public;0;4;;@Override public CamelContext getCamelContext() {     return this.camelContext. }
+false;public;1;4;;@Override public void setCamelContext(CamelContext context) {     this.camelContext = context. }
+false;public;0;4;;@Override public String toString() {     return String.format("%s[type='%s']", this.getClass().getSimpleName(), type). }
+false;protected;0;4;;@Override protected void doStart() throws Exception { // no-op }
+false;protected;0;4;;@Override protected void doStop() throws Exception { // no-op }

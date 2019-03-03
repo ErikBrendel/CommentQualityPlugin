@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;public Map<String, Object> status() {     Map<String, Object> answer = new HashMap<>().     answer.put("name", name).     answer.put("time", new Date().getTime()).     return answer. }

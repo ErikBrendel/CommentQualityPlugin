@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void sessionsForUsernameWithoutUsernameParam() {     client.get().uri((builder) -> builder.path("/actuator/sessions").build()).exchange().expectStatus().isBadRequest(). }
+false;public;0;9;;@Test public void sessionsForUsernameNoResults() {     given(repository.findByPrincipalName("user")).willReturn(Collections.emptyMap()).     client.get().uri((builder) -> builder.path("/actuator/sessions").queryParam("username", "user").build()).exchange().expectStatus().isOk().expectBody().jsonPath("sessions").isEmpty(). }
+false;public;0;10;;@Test public void sessionsForUsernameFound() {     given(repository.findByPrincipalName("user")).willReturn(Collections.singletonMap(session.getId(), session)).     client.get().uri((builder) -> builder.path("/actuator/sessions").queryParam("username", "user").build()).exchange().expectStatus().isOk().expectBody().jsonPath("sessions.[*].id").isEqualTo(new JSONArray().appendElement(session.getId())). }
+false;public;0;6;;@Test public void sessionForIdNotFound() {     client.get().uri((builder) -> builder.path("/actuator/sessions/session-id-not-found").build()).exchange().expectStatus().isNotFound(). }
+false;public;0;4;;@Bean public SessionsEndpoint sessionsEndpoint() {     return new SessionsEndpoint(repository). }

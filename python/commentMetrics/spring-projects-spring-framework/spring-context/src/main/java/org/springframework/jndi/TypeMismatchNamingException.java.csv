@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,final;0;3;/**  * Return the required type for the lookup, if available.  */ ;/**  * Return the required type for the lookup, if available.  */ public final Class<?> getRequiredType() {     return this.requiredType. }
+true;public,final;0;3;/**  * Return the actual type that the lookup returned, if available.  */ ;/**  * Return the actual type that the lookup returned, if available.  */ public final Class<?> getActualType() {     return this.actualType. }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void newItemMetadataPrefixWithCapitalizedPrefix() {     assertThat(newItemMetadataPrefix("Prefix.", "value")).isEqualTo("prefix.value"). }
+false;public;0;5;;@Test public void newItemMetadataPrefixWithCamelCaseSuffix() {     assertThat(newItemMetadataPrefix("prefix.", "myValue")).isEqualTo("prefix.my-value"). }
+false;public;0;5;;@Test public void newItemMetadataPrefixWithUpperCamelCaseSuffix() {     assertThat(newItemMetadataPrefix("prefix.", "MyValue")).isEqualTo("prefix.my-value"). }
+false;private;2;3;;private String newItemMetadataPrefix(String prefix, String suffix) {     return ItemMetadata.newItemMetadataPrefix(prefix, suffix). }

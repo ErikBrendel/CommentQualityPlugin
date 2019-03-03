@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Bean public Sender mySender() {     return new Sender(). }
+false;public;0;4;;@Bean public Queue fooQueue() {     return new Queue("foo"). }
+false;public;1;4;;@RabbitHandler public void process(@Payload String foo) {     System.out.println(new Date() + ": " + foo). }
+false;public,static;1;3;;public static void main(String[] args) {     SpringApplication.run(SampleAmqpSimpleApplication.class, args). }

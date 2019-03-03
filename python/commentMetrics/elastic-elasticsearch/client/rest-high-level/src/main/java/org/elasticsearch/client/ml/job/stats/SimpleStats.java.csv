@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public double getMin() {     return min. }
+false;public;0;3;;public double getMax() {     return max. }
+false;public;0;3;;public double getAvg() {     return avg. }
+false;public;0;3;;public double getTotal() {     return total. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(total, min, max, avg). }
+false;public;1;16;;@Override public boolean equals(Object obj) {     if (this == obj) {         return true.     }     if (obj == null || getClass() != obj.getClass()) {         return false.     }     SimpleStats other = (SimpleStats) obj.     return Objects.equals(total, other.total) && Objects.equals(min, other.min) && Objects.equals(avg, other.avg) && Objects.equals(max, other.max). }
+false;public;2;10;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(MIN.getPreferredName(), min).     builder.field(MAX.getPreferredName(), max).     builder.field(AVG.getPreferredName(), avg).     builder.field(TOTAL.getPreferredName(), total).     builder.endObject().     return builder. }

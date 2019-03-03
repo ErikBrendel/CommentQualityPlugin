@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void portMustBePositive() {     assertThatIllegalArgumentException().isThrownBy(() -> new StaticPortProvider(0)).withMessageContaining("Port must be positive"). }
+false;public;0;5;;@Test public void getPort() {     StaticPortProvider provider = new StaticPortProvider(123).     assertThat(provider.getPort()).isEqualTo(123). }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;3;;protected ClassPathXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/component/jms/remoting/spring.xml"). }
+false;public;0;6;;@Test public void testRemoting() throws Exception {     ISay proxy = applicationContext.getBean("sayProxy", ISay.class).     String rc = proxy.say("Camel").     assertEquals("Hello Camel", rc). }

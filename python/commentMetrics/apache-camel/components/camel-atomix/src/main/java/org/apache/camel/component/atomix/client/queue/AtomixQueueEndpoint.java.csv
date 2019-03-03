@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Producer createProducer() throws Exception {     return new AtomixQueueProducer(this). }
+false;public;1;4;;@Override public Consumer createConsumer(Processor processor) throws Exception {     return new AtomixQueueConsumer(this, processor, getResourceName()). }
+false;public;0;4;;@Override public AtomixQueueConfiguration getConfiguration() {     return this.configuration. }
+false;public;1;4;;@Override public void setConfiguration(AtomixQueueConfiguration configuration) {     this.configuration = configuration. }

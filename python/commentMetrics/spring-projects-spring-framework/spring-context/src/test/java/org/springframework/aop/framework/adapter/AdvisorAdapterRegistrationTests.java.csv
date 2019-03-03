@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Before @After public void resetGlobalAdvisorAdapterRegistry() {     GlobalAdvisorAdapterRegistry.reset(). }
+false;public;0;15;;@Test public void testAdvisorAdapterRegistrationManagerNotPresentInContext() {     ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext(getClass().getSimpleName() + "-without-bpp.xml", getClass()).     ITestBean tb = (ITestBean) ctx.getBean("testBean").     // just invoke any method to see if advice fired     try {         tb.getName().         fail("Should throw UnknownAdviceTypeException").     } catch (UnknownAdviceTypeException ex) {         // expected         assertEquals(0, getAdviceImpl(tb).getInvocationCounter()).     } }
+false;public;0;14;;@Test public void testAdvisorAdapterRegistrationManagerPresentInContext() {     ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext(getClass().getSimpleName() + "-with-bpp.xml", getClass()).     ITestBean tb = (ITestBean) ctx.getBean("testBean").     // just invoke any method to see if advice fired     try {         tb.getName().         assertEquals(1, getAdviceImpl(tb).getInvocationCounter()).     } catch (UnknownAdviceTypeException ex) {         fail("Should not throw UnknownAdviceTypeException").     } }
+false;private;1;5;;private SimpleBeforeAdviceImpl getAdviceImpl(ITestBean tb) {     Advised advised = (Advised) tb.     Advisor advisor = advised.getAdvisors()[0].     return (SimpleBeforeAdviceImpl) advisor.getAdvice(). }
+false;;0;1;;void before() throws Throwable.
+false;public;1;4;;@Override public boolean supportsAdvice(Advice advice) {     return (advice instanceof SimpleBeforeAdvice). }
+false;public;1;5;;@Override public MethodInterceptor getInterceptor(Advisor advisor) {     SimpleBeforeAdvice advice = (SimpleBeforeAdvice) advisor.getAdvice().     return new SimpleBeforeAdviceInterceptor(advice). }
+false;public;0;4;;@Override public void before() throws Throwable {     ++invocationCounter. }
+false;public;0;3;;public int getInvocationCounter() {     return invocationCounter. }
+false;public;1;5;;@Override public Object invoke(MethodInvocation mi) throws Throwable {     advice.before().     return mi.proceed(). }

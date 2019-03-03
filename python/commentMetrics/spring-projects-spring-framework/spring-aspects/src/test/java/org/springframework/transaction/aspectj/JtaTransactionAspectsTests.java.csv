@@ -1,0 +1,17 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Before public void setUp() {     this.txManager.clear(). }
+false;public;0;6;;@Test public void commitOnAnnotatedPublicMethod() throws Throwable {     assertEquals(0, this.txManager.begun).     new JtaAnnotationPublicAnnotatedMember().echo(null).     assertEquals(1, this.txManager.commits). }
+false;public;0;14;;@Test public void matchingRollbackOnApplied() throws Throwable {     assertEquals(0, this.txManager.begun).     InterruptedException test = new InterruptedException().     try {         new JtaAnnotationPublicAnnotatedMember().echo(test).         fail("Should have thrown an exception").     } catch (Throwable throwable) {         assertEquals("wrong exception", test, throwable).     }     assertEquals(1, this.txManager.rollbacks).     assertEquals(0, this.txManager.commits). }
+false;public;0;14;;@Test public void nonMatchingRollbackOnApplied() throws Throwable {     assertEquals(0, this.txManager.begun).     IOException test = new IOException().     try {         new JtaAnnotationPublicAnnotatedMember().echo(test).         fail("Should have thrown an exception").     } catch (Throwable throwable) {         assertEquals("wrong exception", test, throwable).     }     assertEquals(1, this.txManager.commits).     assertEquals(0, this.txManager.rollbacks). }
+false;public;0;6;;@Test public void commitOnAnnotatedProtectedMethod() {     assertEquals(0, this.txManager.begun).     new JtaAnnotationProtectedAnnotatedMember().doInTransaction().     assertEquals(1, this.txManager.commits). }
+false;public;0;6;;@Test public void nonAnnotatedMethodCallingProtectedMethod() {     assertEquals(0, this.txManager.begun).     new JtaAnnotationProtectedAnnotatedMember().doSomething().     assertEquals(1, this.txManager.commits). }
+false;public;0;6;;@Test public void commitOnAnnotatedPrivateMethod() {     assertEquals(0, this.txManager.begun).     new JtaAnnotationPrivateAnnotatedMember().doInTransaction().     assertEquals(1, this.txManager.commits). }
+false;public;0;6;;@Test public void nonAnnotatedMethodCallingPrivateMethod() {     assertEquals(0, this.txManager.begun).     new JtaAnnotationPrivateAnnotatedMember().doSomething().     assertEquals(1, this.txManager.commits). }
+false;public;0;6;;@Test public void notTransactional() {     assertEquals(0, this.txManager.begun).     new TransactionAspectTests.NotTransactional().noop().     assertEquals(0, this.txManager.begun). }
+false;public;1;6;;@Transactional(rollbackOn = InterruptedException.class) public void echo(Throwable t) throws Throwable {     if (t != null) {         throw t.     } }
+false;public;0;3;;public void doSomething() {     doInTransaction(). }
+false;protected;0;3;;@Transactional protected void doInTransaction() { }
+false;public;0;3;;public void doSomething() {     doInTransaction(). }
+false;private;0;3;;@Transactional private void doInTransaction() { }
+false;public;0;4;;@Bean public CallCountingTransactionManager transactionManager() {     return new CallCountingTransactionManager(). }
+false;public;0;6;;@Bean public JtaAnnotationTransactionAspect transactionAspect() {     JtaAnnotationTransactionAspect aspect = JtaAnnotationTransactionAspect.aspectOf().     aspect.setTransactionManager(transactionManager()).     return aspect. }

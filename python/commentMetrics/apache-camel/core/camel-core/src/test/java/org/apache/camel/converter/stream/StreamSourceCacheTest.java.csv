@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;13;;@Test public void testStreamSourceCache() throws Exception {     Exchange exchange = new DefaultExchange(context).     StreamSource source = context.getTypeConverter().convertTo(StreamSource.class, "<foo>bar</foo>").     StreamSourceCache cache = new StreamSourceCache(source, exchange).     ByteArrayOutputStream bos = new ByteArrayOutputStream().     cache.writeTo(bos).     String s = context.getTypeConverter().convertTo(String.class, bos).     assertEquals("<foo>bar</foo>", s). }

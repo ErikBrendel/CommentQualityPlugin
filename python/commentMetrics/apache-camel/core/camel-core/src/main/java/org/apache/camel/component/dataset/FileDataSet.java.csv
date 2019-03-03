@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;// Properties // ------------------------------------------------------------------------- public File getSourceFile() {     return sourceFile. }
+false;public;1;4;;public void setSourceFile(File sourceFile) throws IOException {     this.sourceFile = sourceFile.     readSourceFile(). }
+false;public;2;5;;public void setSourceFile(File sourceFile, String delimiter) throws IOException {     this.sourceFile = sourceFile.     this.delimiter = delimiter.     readSourceFile(). }
+false;public;0;3;;public String getDelimiter() {     return delimiter. }
+false;private;0;12;;// Implementation methods // ------------------------------------------------------------------------- private void readSourceFile() throws IOException {     List<Object> bodies = new LinkedList<>().     try (Scanner scanner = new Scanner(sourceFile, null, delimiter)) {         while (scanner.hasNext()) {             String nextPayload = scanner.next().             if ((nextPayload != null) && (nextPayload.length() > 0)) {                 bodies.add(nextPayload).             }         }         setDefaultBodies(bodies).     } }

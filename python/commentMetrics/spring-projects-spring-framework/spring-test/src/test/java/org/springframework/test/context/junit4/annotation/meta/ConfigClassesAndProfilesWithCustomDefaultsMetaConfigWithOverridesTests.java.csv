@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void verifyEmployee() {     assertNotNull("The employee should have been autowired.", this.employee).     assertEquals("John Smith", this.employee.getName()). }
+false;public;0;5;;@Test public void verifyPet() {     assertNotNull("The pet should have been autowired.", this.pet).     assertEquals("Fido", this.pet.getName()). }
+false;public;0;4;;@Test public void verifyFoo() {     assertEquals("Production Foo", this.foo). }

@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;9;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry registry = super.createRegistry().     registry.bind("myExpiryPolicyFactory", EXPIRY_POLICY_FACTORY).     registry.bind("myCacheWriterFactory", CACHE_WRITER_FACTORY).     registry.bind("myCacheLoaderFactory", CACHE_LOADER_FACTORY).     return registry. }
+false;public;0;9;;@Test public void testConfigurations() throws Exception {     final Cache<Object, Object> cache = from.getManager().getCache().     final CompleteConfiguration<Object, Object> conf = cache.getConfiguration(CompleteConfiguration.class).     assertEquals(EXPIRY_POLICY_FACTORY, conf.getExpiryPolicyFactory()).     assertEquals(CACHE_WRITER_FACTORY, conf.getCacheWriterFactory()).     assertEquals(CACHE_LOADER_FACTORY, conf.getCacheLoaderFactory()). }
+false;public;0;3;;public void configure() {     from(from).to(to). }
+false;protected;0;8;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() {             from(from).to(to).         }     }. }
+false;public;1;4;;@Override public Object load(Object key) throws CacheLoaderException {     return null. }
+false;public;1;4;;@Override public Map<Object, Object> loadAll(Iterable<?> keys) throws CacheLoaderException {     return null. }
+false;public,static;0;3;;public static Factory<CacheLoader<Object, Object>> factory() {     return new FactoryBuilder.SingletonFactory(new MyCacheLoader()). }
+false;public;1;3;;@Override public void write(Cache.Entry<?, ?> entry) throws CacheWriterException { }
+false;public;1;3;;@Override public void writeAll(Collection<Cache.Entry<?, ?>> entries) throws CacheWriterException { }
+false;public;1;3;;@Override public void delete(Object key) throws CacheWriterException { }
+false;public;1;3;;@Override public void deleteAll(Collection<?> keys) throws CacheWriterException { }
+false;public,static;0;3;;public static Factory<CacheWriter<Object, Object>> factory() {     return new FactoryBuilder.SingletonFactory(new MyCacheWriter()). }

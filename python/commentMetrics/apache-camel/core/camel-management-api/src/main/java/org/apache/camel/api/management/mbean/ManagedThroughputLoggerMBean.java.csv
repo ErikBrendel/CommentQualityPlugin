@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;2;;@ManagedAttribute(description = "The received number of messages") int getReceivedCounter().
+false;;0;2;;@ManagedAttribute(description = "The average throughput") double getAverage().
+false;;0;2;;@ManagedAttribute(description = "The throughput rate") double getRate().
+false;;0;2;;@ManagedAttribute(description = "The last log message") String getLastLogMessage().
+false;;0;2;;@ManagedOperation(description = "Resets the throughput logger statistics") void resetThroughputLogger().

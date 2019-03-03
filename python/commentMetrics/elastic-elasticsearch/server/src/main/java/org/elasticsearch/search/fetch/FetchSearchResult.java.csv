@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public QuerySearchResult queryResult() {     return null. }
+false;public;0;4;;@Override public FetchSearchResult fetchResult() {     return this. }
+false;public;1;4;;public void hits(SearchHits hits) {     assert assertNoSearchTarget(hits).     this.hits = hits. }
+false;private;1;6;;private boolean assertNoSearchTarget(SearchHits hits) {     for (SearchHit hit : hits.getHits()) {         assert hit.getShard() == null : "expected null but got: " + hit.getShard().     }     return true. }
+false;public;0;3;;public SearchHits hits() {     return hits. }
+false;public;0;4;;public FetchSearchResult initCounter() {     counter = 0.     return this. }
+false;public;0;3;;public int counterGetAndIncrement() {     return counter++. }
+false;public,static;1;5;;public static FetchSearchResult readFetchSearchResult(StreamInput in) throws IOException {     FetchSearchResult result = new FetchSearchResult().     result.readFrom(in).     return result. }
+false;public;1;6;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     requestId = in.readLong().     hits = new SearchHits(in). }
+false;public;1;6;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeLong(requestId).     hits.writeTo(out). }

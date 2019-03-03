@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;4;7;;public void getPersonMultiPartOperation(String nameIn, int ssnIn, Holder<String> nameOut, Holder<Integer> ssnOut) {     nameOut.value = "New Person Name".     ssnOut.value = 123456789. }

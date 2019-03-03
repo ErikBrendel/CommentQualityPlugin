@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;25;;@Test public void testSpr10744() throws Exception {     AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext().     context.getBeanFactory().registerScope("myTestScope", new MyTestScope()).     context.register(MyTestConfiguration.class).     context.refresh().     Foo bean1 = context.getBean("foo", Foo.class).     Foo bean2 = context.getBean("foo", Foo.class).     assertThat(bean1, sameInstance(bean2)).     // Should not have invoked constructor for the proxy instance     assertThat(createCount, equalTo(0)).     assertThat(scopeCount, equalTo(0)).     // Proxy mode should create new scoped object on each method call     bean1.getMessage().     assertThat(createCount, equalTo(1)).     assertThat(scopeCount, equalTo(1)).     bean1.getMessage().     assertThat(createCount, equalTo(2)).     assertThat(scopeCount, equalTo(2)).     context.close(). }
+false;public;2;5;;@Override public Object get(String name, ObjectFactory<?> objectFactory) {     scopeCount++.     return objectFactory.getObject(). }
+false;public;1;4;;@Override public Object remove(String name) {     return null. }
+false;public;2;3;;@Override public void registerDestructionCallback(String name, Runnable callback) { }
+false;public;1;4;;@Override public Object resolveContextualObject(String key) {     return null. }
+false;public;0;4;;@Override public String getConversationId() {     return null. }
+false;public;0;3;;public String getMessage() {     return "Hello". }
+false;public;0;4;;@Bean public Foo foo() {     return new Foo(). }
+false;public;0;6;;@Bean @Scope(value = "myTestScope", proxyMode = ScopedProxyMode.TARGET_CLASS) @Override public Foo foo() {     return new Foo(). }

@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public WebServer getWebServer(HttpHandler httpHandler) {     this.webServer = spy(new MockReactiveWebServer(httpHandler, getPort())).     return this.webServer. }
+false;public;0;3;;public MockReactiveWebServer getWebServer() {     return this.webServer. }
+false;public;0;3;;public HttpHandler getHttpHandler() {     return this.httpHandler. }
+false;public;0;3;;public Map<String, HttpHandler> getHttpHandlerMap() {     return this.httpHandlerMap. }
+false;public;0;4;;@Override public void start() throws WebServerException { }
+false;public;0;4;;@Override public void stop() throws WebServerException { }
+false;public;0;4;;@Override public int getPort() {     return this.port. }

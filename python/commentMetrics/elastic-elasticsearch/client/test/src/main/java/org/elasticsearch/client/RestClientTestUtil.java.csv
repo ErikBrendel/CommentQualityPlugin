@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;static;0;3;;static String[] getHttpMethods() {     return HTTP_METHODS. }
+false;static;1;3;;static String randomHttpMethod(Random random) {     return RandomPicks.randomFrom(random, HTTP_METHODS). }
+false;static;1;3;;static int randomStatusCode(Random random) {     return RandomPicks.randomFrom(random, ALL_STATUS_CODES). }
+false;static;1;3;;static int randomOkStatusCode(Random random) {     return RandomPicks.randomFrom(random, OK_STATUS_CODES). }
+false;static;1;3;;static int randomErrorNoRetryStatusCode(Random random) {     return RandomPicks.randomFrom(random, ERROR_NO_RETRY_STATUS_CODES). }
+false;static;1;3;;static int randomErrorRetryStatusCode(Random random) {     return RandomPicks.randomFrom(random, ERROR_RETRY_STATUS_CODES). }
+false;static;0;3;;static List<Integer> getOkStatusCodes() {     return OK_STATUS_CODES. }
+false;static;0;3;;static List<Integer> getAllErrorStatusCodes() {     return ALL_ERROR_STATUS_CODES. }
+false;static;0;3;;static List<Integer> getAllStatusCodes() {     return ALL_STATUS_CODES. }
+true;static;2;13;/**  * Create a random number of {@link Header}s.  * Generated header names will either be the {@code baseName} plus its index, or exactly the provided {@code baseName} so that the  * we test also support for multiple headers with same key and different values.  */ ;/**  * Create a random number of {@link Header}s.  * Generated header names will either be the {@code baseName} plus its index, or exactly the provided {@code baseName} so that the  * we test also support for multiple headers with same key and different values.  */ static Header[] randomHeaders(Random random, final String baseName) {     int numHeaders = RandomNumbers.randomIntBetween(random, 0, 5).     final Header[] headers = new Header[numHeaders].     for (int i = 0. i < numHeaders. i++) {         String headerName = baseName.         // randomly exercise the code path that supports multiple headers with same key         if (random.nextBoolean()) {             headerName = headerName + i.         }         headers[i] = new BasicHeader(headerName, RandomStrings.randomAsciiLettersOfLengthBetween(random, 3, 10)).     }     return headers. }

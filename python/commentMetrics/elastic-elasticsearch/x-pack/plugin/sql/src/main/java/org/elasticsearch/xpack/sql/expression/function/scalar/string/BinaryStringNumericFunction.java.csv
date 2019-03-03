@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected,abstract;0;2;;@Override protected abstract BinaryStringNumericOperation operation().
+false;protected;1;4;;@Override protected TypeResolution resolveSecondParameterInputType(Expression e) {     return isNumeric(e, sourceText(), Expressions.ParamOrdinal.SECOND). }
+false;protected;0;4;;@Override protected Pipe makePipe() {     return new BinaryStringNumericPipe(source(), this, Expressions.pipe(left()), Expressions.pipe(right()), operation()). }
+false;public;0;4;;@Override public DataType dataType() {     return DataType.KEYWORD. }

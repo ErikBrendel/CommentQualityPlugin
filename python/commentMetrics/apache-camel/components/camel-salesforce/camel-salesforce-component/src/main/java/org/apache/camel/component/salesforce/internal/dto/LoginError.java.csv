@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getError() {     return error. }
+false;public;1;3;;public void setError(String error) {     this.error = error. }
+false;public;0;4;;@JsonProperty("error_description") public String getErrorDescription() {     return errorDescription. }
+false;public;1;4;;@JsonProperty("error_description") public void setErrorDescription(String errorDescription) {     this.errorDescription = errorDescription. }

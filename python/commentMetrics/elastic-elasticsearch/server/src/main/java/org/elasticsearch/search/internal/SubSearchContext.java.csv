@@ -1,0 +1,55 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;3;;@Override protected void doClose() { }
+false;public;1;3;;@Override public void preProcess(boolean rewrite) { }
+false;public;1;4;;@Override public Query buildFilteredQuery(Query query) {     throw new UnsupportedOperationException("this context should be read only"). }
+false;public;1;4;;@Override public SearchContext scrollContext(ScrollContext scrollContext) {     throw new UnsupportedOperationException("Not supported"). }
+false;public;1;4;;@Override public SearchContext aggregations(SearchContextAggregations aggregations) {     throw new UnsupportedOperationException("Not supported"). }
+false;public;0;4;;@Override public SearchContextHighlight highlight() {     return highlight. }
+false;public;1;4;;@Override public void highlight(SearchContextHighlight highlight) {     this.highlight = highlight. }
+false;public;1;4;;@Override public void suggest(SuggestionSearchContext suggest) {     throw new UnsupportedOperationException("Not supported"). }
+false;public;1;4;;@Override public void addRescore(RescoreContext rescore) {     throw new UnsupportedOperationException("Not supported"). }
+false;public;0;4;;@Override public boolean hasScriptFields() {     return scriptFields != null. }
+false;public;0;7;;@Override public ScriptFieldsContext scriptFields() {     if (scriptFields == null) {         scriptFields = new ScriptFieldsContext().     }     return this.scriptFields. }
+false;public;0;4;;@Override public boolean sourceRequested() {     return fetchSourceContext != null && fetchSourceContext.fetchSource(). }
+false;public;0;4;;@Override public boolean hasFetchSourceContext() {     return fetchSourceContext != null. }
+false;public;0;4;;@Override public FetchSourceContext fetchSourceContext() {     return fetchSourceContext. }
+false;public;1;5;;@Override public SearchContext fetchSourceContext(FetchSourceContext fetchSourceContext) {     this.fetchSourceContext = fetchSourceContext.     return this. }
+false;public;0;4;;@Override public DocValueFieldsContext docValueFieldsContext() {     return docValueFieldsContext. }
+false;public;1;5;;@Override public SearchContext docValueFieldsContext(DocValueFieldsContext docValueFieldsContext) {     this.docValueFieldsContext = docValueFieldsContext.     return this. }
+false;public;1;4;;@Override public void timeout(TimeValue timeout) {     throw new UnsupportedOperationException("Not supported"). }
+false;public;1;4;;@Override public void terminateAfter(int terminateAfter) {     throw new UnsupportedOperationException("Not supported"). }
+false;public;1;4;;@Override public SearchContext minimumScore(float minimumScore) {     throw new UnsupportedOperationException("Not supported"). }
+false;public;1;5;;@Override public SearchContext sort(SortAndFormats sort) {     this.sort = sort.     return this. }
+false;public;0;4;;@Override public SortAndFormats sort() {     return sort. }
+false;public;1;8;;@Override public SearchContext parsedQuery(ParsedQuery parsedQuery) {     this.parsedQuery = parsedQuery.     if (parsedQuery != null) {         this.query = parsedQuery.query().     }     return this. }
+false;public;0;4;;@Override public ParsedQuery parsedQuery() {     return parsedQuery. }
+false;public;0;4;;@Override public Query query() {     return query. }
+false;public;1;5;;@Override public SearchContext trackScores(boolean trackScores) {     this.trackScores = trackScores.     return this. }
+false;public;0;4;;@Override public boolean trackScores() {     return trackScores. }
+false;public;1;4;;@Override public SearchContext parsedPostFilter(ParsedQuery postFilter) {     throw new UnsupportedOperationException("Not supported"). }
+false;public;0;4;;@Override public int from() {     return from. }
+false;public;1;5;;@Override public SearchContext from(int from) {     this.from = from.     return this. }
+false;public;0;4;;@Override public int size() {     return size. }
+false;public;1;5;;@Override public SearchContext size(int size) {     this.size = size.     return this. }
+false;public;0;4;;@Override public boolean hasStoredFields() {     return storedFields != null && storedFields.fieldNames() != null. }
+false;public;0;4;;@Override public boolean hasStoredFieldsContext() {     return storedFields != null. }
+false;public;0;4;;@Override public boolean storedFieldsRequested() {     return storedFields != null && storedFields.fetchFields(). }
+false;public;0;4;;@Override public StoredFieldsContext storedFieldsContext() {     return storedFields. }
+false;public;1;5;;@Override public SearchContext storedFieldsContext(StoredFieldsContext storedFieldsContext) {     this.storedFields = storedFieldsContext.     return this. }
+false;public;0;4;;@Override public boolean explain() {     return explain. }
+false;public;1;4;;@Override public void explain(boolean explain) {     this.explain = explain. }
+false;public;1;4;;@Override public void groupStats(List<String> groupStats) {     throw new UnsupportedOperationException("Not supported"). }
+false;public;0;4;;@Override public boolean version() {     return version. }
+false;public;1;4;;@Override public void version(boolean version) {     this.version = version. }
+false;public;0;4;;@Override public boolean seqNoAndPrimaryTerm() {     return seqNoAndPrimaryTerm. }
+false;public;1;4;;@Override public void seqNoAndPrimaryTerm(boolean seqNoAndPrimaryTerm) {     this.seqNoAndPrimaryTerm = seqNoAndPrimaryTerm. }
+false;public;0;4;;@Override public int[] docIdsToLoad() {     return docIdsToLoad. }
+false;public;0;4;;@Override public int docIdsToLoadFrom() {     return docsIdsToLoadFrom. }
+false;public;0;4;;@Override public int docIdsToLoadSize() {     return docsIdsToLoadSize. }
+false;public;3;7;;@Override public SearchContext docIdsToLoad(int[] docIdsToLoad, int docsIdsToLoadFrom, int docsIdsToLoadSize) {     this.docIdsToLoad = docIdsToLoad.     this.docsIdsToLoadFrom = docsIdsToLoadFrom.     this.docsIdsToLoadSize = docsIdsToLoadSize.     return this. }
+false;public;0;4;;@Override public CollapseContext collapse() {     return null. }
+false;public;1;4;;@Override public void accessed(long accessTime) {     throw new UnsupportedOperationException("Not supported"). }
+false;public;1;4;;@Override public void keepAlive(long keepAlive) {     throw new UnsupportedOperationException("Not supported"). }
+false;public;0;4;;@Override public QuerySearchResult queryResult() {     return querySearchResult. }
+false;public;0;4;;@Override public FetchSearchResult fetchResult() {     return fetchSearchResult. }
+false;public;0;4;;@Override public long getRelativeTimeInMillis() {     throw new UnsupportedOperationException("Not supported"). }

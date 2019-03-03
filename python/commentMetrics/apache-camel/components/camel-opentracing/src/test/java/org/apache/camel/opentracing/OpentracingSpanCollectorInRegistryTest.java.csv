@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;9;;@Override protected CamelContext createCamelContext() throws Exception {     CamelContext context = super.createCamelContext().     openTracing = new OpenTracingTracer().     openTracing.init(context).     return context. }
+false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry registry = super.createRegistry().     registry.bind("tracer", NoopTracerFactory.create()).     return registry. }
+false;public;0;5;;@Test public void testZipkinConfiguration() throws Exception {     assertNotNull(openTracing.getTracer()).     assertTrue(openTracing.getTracer() instanceof NoopTracer). }

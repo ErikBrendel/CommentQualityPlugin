@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public Diff<T> diff(T previousState) {     if (this.get().equals(previousState)) {         return new CompleteNamedDiff<>(previousState.getWriteableName(), previousState.getMinimalSupportedVersion()).     } else {         return new CompleteNamedDiff<>(get()).     } }
+false;public,static;3;4;;public static <T extends NamedDiffable<T>> NamedDiff<T> readDiffFrom(Class<? extends T> tClass, String name, StreamInput in) throws IOException {     return new CompleteNamedDiff<>(tClass, name, in). }
+false;public;1;10;;@Override public void writeTo(StreamOutput out) throws IOException {     assert minimalSupportedVersion != null : "shouldn't be called on diff that was de-serialized from the stream".     if (part != null) {         out.writeBoolean(true).         part.writeTo(out).     } else {         out.writeBoolean(false).     } }
+false;public;1;8;;@Override public T apply(T part) {     if (this.part != null) {         return this.part.     } else {         return part.     } }
+false;public;0;4;;@Override public String getWriteableName() {     return name. }
+false;public;0;5;;@Override public Version getMinimalSupportedVersion() {     assert minimalSupportedVersion != null : "shouldn't be called on the diff that was de-serialized from the stream".     return minimalSupportedVersion. }
+false;public;0;4;;@SuppressWarnings("unchecked") public T get() {     return (T) this. }

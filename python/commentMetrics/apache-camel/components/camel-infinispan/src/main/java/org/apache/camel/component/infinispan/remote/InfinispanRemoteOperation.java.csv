@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;3;8;;public static Query buildQuery(InfinispanConfiguration configuration, BasicCache<Object, Object> cache, Message message) {     InfinispanQueryBuilder queryBuilder = message.getHeader(InfinispanConstants.QUERY_BUILDER, InfinispanQueryBuilder.class).     if (queryBuilder == null) {         queryBuilder = configuration.getQueryBuilder().     }     return buildQuery(queryBuilder, cache). }
+false;public,static;2;3;;public static Query buildQuery(InfinispanConfiguration configuration, BasicCache<Object, Object> cache) {     return buildQuery(configuration.getQueryBuilder(), cache). }
+false;public,static;2;3;;public static Query buildQuery(InfinispanQueryBuilder queryBuilder, BasicCache<Object, Object> cache) {     return buildQuery(queryBuilder, InfinispanUtil.asRemote(cache)). }
+false;public,static;2;3;;public static Query buildQuery(InfinispanQueryBuilder queryBuilder, RemoteCache<Object, Object> cache) {     return queryBuilder != null ? queryBuilder.build(Search.getQueryFactory(cache)) : null. }

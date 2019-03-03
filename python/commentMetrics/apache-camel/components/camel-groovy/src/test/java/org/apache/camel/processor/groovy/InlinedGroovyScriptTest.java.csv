@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected AbstractApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/processor/groovy/inlinedGroovyScript.xml"). }
+false;public;0;9;;@Test public void testGroovy() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("HelloHelloHello").     template.sendBodyAndHeader("direct:start", "Hello", "foo", 123).     template.sendBodyAndHeader("direct:start", "3", "foo", 123).     assertMockEndpointsSatisfied(). }

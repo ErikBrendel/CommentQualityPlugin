@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Override public void afterPropertiesSet() {     if (getNotificationListener() == null) {         throw new IllegalArgumentException("Property 'notificationListener' is required").     } }
+false;;2;6;;void replaceObjectName(Object originalName, Object newName) {     if (this.mappedObjectNames != null && this.mappedObjectNames.contains(originalName)) {         this.mappedObjectNames.remove(originalName).         this.mappedObjectNames.add(newName).     } }

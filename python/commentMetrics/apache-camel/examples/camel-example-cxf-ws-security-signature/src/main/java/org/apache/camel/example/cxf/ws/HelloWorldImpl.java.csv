@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@WebMethod public String sayHello(@WebParam(name = "toWhom") String toWhom) {     return "Hello " + toWhom. }

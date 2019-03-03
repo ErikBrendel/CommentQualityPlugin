@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;9;;public G withDestinationGenerator(final DestinationGenerator directRouteGenerator) {     notNull(directRouteGenerator, "directRouteGenerator").     this.destinationGenerator = directRouteGenerator.     @SuppressWarnings("unchecked")     final G that = (G) this.     return that. }
+false;;0;3;;DestinationGenerator destinationGenerator() {     return destinationGenerator. }
+false;public;1;8;;public G withOperationFilter(OperationFilter filter) {     this.filter = filter.     @SuppressWarnings("unchecked")     final G that = (G) this.     return that. }
+false;public;1;8;;public G withOperationFilter(String include) {     this.filter.setIncludes(include).     @SuppressWarnings("unchecked")     final G that = (G) this.     return that. }
+false;public;1;8;;public G withRestComponent(String restComponent) {     this.restComponent = restComponent.     @SuppressWarnings("unchecked")     final G that = (G) this.     return that. }
+false;public;1;8;;public G withRestContextPath(String contextPath) {     this.restContextPath = contextPath.     @SuppressWarnings("unchecked")     final G that = (G) this.     return that. }
+false;public;1;8;;public G withApiContextPath(String contextPath) {     this.apiContextPath = contextPath.     @SuppressWarnings("unchecked")     final G that = (G) this.     return that. }
+false;public;0;8;;public G asSpringComponent() {     this.springComponent = true.     @SuppressWarnings("unchecked")     final G that = (G) this.     return that. }
+false;public;0;8;;public G asSpringBootProject() {     this.springBootProject = true.     @SuppressWarnings("unchecked")     final G that = (G) this.     return that. }
+false;public,static;1;3;;public static RestDslSourceCodeGenerator<Appendable> toAppendable(final Swagger swagger) {     return new AppendableGenerator(swagger). }
+false;public,static;1;3;;public static RestDslDefinitionGenerator toDefinition(final Swagger swagger) {     return new RestDslDefinitionGenerator(swagger). }
+false;public,static;1;3;;public static RestDslXmlGenerator toXml(final Swagger swagger) {     return new RestDslXmlGenerator(swagger). }
+false;public,static;1;3;;public static RestDslSourceCodeGenerator<Filer> toFiler(final Swagger swagger) {     return new FilerGenerator(swagger). }
+false;public,static;1;3;;public static RestDslSourceCodeGenerator<Path> toPath(final Swagger swagger) {     return new PathGenerator(swagger). }

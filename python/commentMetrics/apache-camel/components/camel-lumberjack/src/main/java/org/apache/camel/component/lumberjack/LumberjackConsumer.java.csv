@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;5;;@Override protected void doStart() throws Exception {     super.doStart().     lumberjackServer.start(). }
+false;protected;0;5;;@Override protected void doStop() throws Exception {     lumberjackServer.stop().     super.doStop(). }
+false;protected;0;5;;@Override protected void doResume() throws Exception {     super.doResume().     lumberjackServer.start(). }
+false;protected;0;5;;@Override protected void doSuspend() throws Exception {     lumberjackServer.stop().     super.doSuspend(). }
+false;private;0;4;;private ThreadFactory getThreadFactory() {     String threadNamePattern = getEndpoint().getCamelContext().getExecutorServiceManager().getThreadNamePattern().     return new CamelThreadFactory(threadNamePattern, "LumberjackNettyExecutor", true). }
+false;private;2;8;;private void onMessageReceived(Object payload, LumberjackMessageProcessor.Callback callback) {     // Create the exchange     Exchange exchange = getEndpoint().createExchange().     exchange.getIn().setBody(payload).     // Process the exchange     getAsyncProcessor().process(exchange, doneSync -> callback.onComplete(!exchange.isFailed())). }

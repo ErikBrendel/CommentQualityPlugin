@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String type() {     return TransformInput.TYPE. }
+false;public;2;6;;@Override public TransformInput parseInput(String watchId, XContentParser parser) throws IOException {     XContentParserUtils.ensureExpectedToken(XContentParser.Token.START_OBJECT, parser.currentToken(), parser::getTokenLocation).     Transform transform = transformRegistry.parse(watchId, parser).transform().     return new TransformInput(transform). }
+false;public;1;7;;@Override public ExecutableTransformInput createExecutable(TransformInput input) {     Transform transform = input.getTransform().     TransformFactory factory = transformRegistry.factory(transform.type()).     ExecutableTransform executableTransform = factory.createExecutable(transform).     return new ExecutableTransformInput(input, executableTransform). }

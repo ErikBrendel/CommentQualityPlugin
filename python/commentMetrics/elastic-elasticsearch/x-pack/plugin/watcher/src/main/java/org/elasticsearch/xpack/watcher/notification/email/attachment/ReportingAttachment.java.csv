@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String type() {     return ReportingAttachmentParser.TYPE. }
+false;public;0;4;;@Override public String id() {     return id. }
+false;public;0;4;;@Override public boolean inline() {     return inline. }
+false;public;0;3;;public BasicAuth auth() {     return auth. }
+false;public;0;3;;public String url() {     return url. }
+false;public;0;3;;public TimeValue interval() {     return interval. }
+false;public;0;3;;public Integer retries() {     return retries. }
+false;public;0;3;;public HttpProxy proxy() {     return proxy. }
+false;public;2;29;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject(id).startObject(ReportingAttachmentParser.TYPE).field(URL.getPreferredName(), url).     if (retries != null) {         builder.field(RETRIES.getPreferredName(), retries).     }     if (interval != null) {         builder.field(INTERVAL.getPreferredName(), interval).     }     if (inline) {         builder.field(INLINE.getPreferredName(), inline).     }     if (auth != null) {         builder.startObject(AUTH.getPreferredName()).         builder.field(BasicAuth.TYPE, auth, params).         builder.endObject().     }     if (proxy != null) {         proxy.toXContent(builder, params).     }     return builder.endObject().endObject(). }
+false;public;1;11;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     ReportingAttachment otherAttachment = (ReportingAttachment) o.     return Objects.equals(id, otherAttachment.id) && Objects.equals(url, otherAttachment.url) && Objects.equals(interval, otherAttachment.interval) && Objects.equals(inline, otherAttachment.inline) && Objects.equals(retries, otherAttachment.retries) && Objects.equals(auth, otherAttachment.auth) && Objects.equals(proxy, otherAttachment.proxy). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(id, url, interval, inline, retries, auth, proxy). }

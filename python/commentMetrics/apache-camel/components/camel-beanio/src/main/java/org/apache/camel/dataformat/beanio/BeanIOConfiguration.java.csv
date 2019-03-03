@@ -1,0 +1,22 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getMapping() {     return mapping. }
+false;public;1;3;;public void setMapping(String mapping) {     this.mapping = mapping. }
+false;public;0;3;;public String getStreamName() {     return streamName. }
+false;public;1;3;;public void setStreamName(String streamName) {     this.streamName = streamName. }
+false;public;0;3;;public boolean isIgnoreUnidentifiedRecords() {     return ignoreUnidentifiedRecords. }
+false;public;1;3;;public void setIgnoreUnidentifiedRecords(boolean ignoreUnidentifiedRecords) {     this.ignoreUnidentifiedRecords = ignoreUnidentifiedRecords. }
+false;public;0;3;;public boolean isIgnoreUnexpectedRecords() {     return ignoreUnexpectedRecords. }
+false;public;1;3;;public void setIgnoreUnexpectedRecords(boolean ignoreUnexpectedRecords) {     this.ignoreUnexpectedRecords = ignoreUnexpectedRecords. }
+false;public;0;3;;public boolean isIgnoreInvalidRecords() {     return ignoreInvalidRecords. }
+false;public;1;3;;public void setIgnoreInvalidRecords(boolean ignoreInvalidRecords) {     this.ignoreInvalidRecords = ignoreInvalidRecords. }
+false;public;0;3;;public Charset getEncoding() {     return encoding. }
+false;public;1;3;;public void setEncoding(Charset encoding) {     this.encoding = encoding. }
+false;public;0;3;;public Properties getProperties() {     return properties. }
+false;public;1;3;;public void setProperties(Properties properties) {     this.properties = properties. }
+false;public;0;3;;public BeanReaderErrorHandler getBeanReaderErrorHandler() {     return beanReaderErrorHandler. }
+false;public;1;3;;public void setBeanReaderErrorHandler(BeanReaderErrorHandler beanReaderErrorHandler) {     this.beanReaderErrorHandler = beanReaderErrorHandler. }
+false;public;0;3;;public String getBeanReaderErrorHandlerType() {     return beanReaderErrorHandlerType. }
+false;public;1;3;;public void setBeanReaderErrorHandlerType(String beanReaderErrorHandlerType) {     this.beanReaderErrorHandlerType = beanReaderErrorHandlerType. }
+false;public;1;3;;public void setBeanReaderErrorHandlerType(Class<?> beanReaderErrorHandlerType) {     this.beanReaderErrorHandlerType = beanReaderErrorHandlerType.getName(). }
+false;public;0;3;;public boolean isUnmarshalSingleObject() {     return unmarshalSingleObject. }
+false;public;1;3;;public void setUnmarshalSingleObject(boolean unmarshalSingleObject) {     this.unmarshalSingleObject = unmarshalSingleObject. }

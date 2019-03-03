@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public ScriptStats stats() {     return new ScriptStats(compilationsMetric.count(), cacheEvictionsMetric.count(), compilationLimitTriggered.count()). }
+false;public;0;3;;public void onCompilation() {     compilationsMetric.inc(). }
+false;public;0;3;;public void onCacheEviction() {     cacheEvictionsMetric.inc(). }
+false;public;0;3;;public void onCompilationLimit() {     compilationLimitTriggered.inc(). }

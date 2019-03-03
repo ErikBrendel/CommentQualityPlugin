@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;14;;@Override protected Request createTestInstance() {     UpdateFilterAction.Request request = new UpdateFilterAction.Request(filterId).     if (randomBoolean()) {         request.setDescription(randomAlphaOfLength(20)).     }     if (randomBoolean()) {         request.setAddItems(generateRandomStrings()).     }     if (randomBoolean()) {         request.setRemoveItems(generateRandomStrings()).     }     return request. }
+false;private,static;0;8;;private static Collection<String> generateRandomStrings() {     int size = randomIntBetween(0, 10).     List<String> strings = new ArrayList<>(size).     for (int i = 0. i < size. ++i) {         strings.add(randomAlphaOfLength(20)).     }     return strings. }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return false. }
+false;protected;0;4;;@Override protected Request createBlankInstance() {     return new Request(). }
+false;protected;1;4;;@Override protected Request doParseInstance(XContentParser parser) {     return Request.parseRequest(filterId, parser). }

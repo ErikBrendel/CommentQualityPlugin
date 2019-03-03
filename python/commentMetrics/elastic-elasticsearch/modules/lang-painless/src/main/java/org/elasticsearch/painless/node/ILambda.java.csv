@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * Returns reference to resolve at link-time  */ ;/**  * Returns reference to resolve at link-time  */ String getPointer().
+true;;0;1;/**  * Returns the types of captured parameters. Can be empty  */ ;/**  * Returns the types of captured parameters. Can be empty  */ org.objectweb.asm.Type[] getCaptures().
+true;default;0;3;/**  * Returns the number of captured parameters  */ ;/**  * Returns the number of captured parameters  */ default int getCaptureCount() {     return getCaptures().length. }

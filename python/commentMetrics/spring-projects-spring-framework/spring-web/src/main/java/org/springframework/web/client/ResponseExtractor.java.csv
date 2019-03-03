@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;1;2;/**  * Extract data from the given {@code ClientHttpResponse} and return it.  * @param response the HTTP response  * @return the extracted data  * @throws IOException in case of I/O errors  */ ;/**  * Extract data from the given {@code ClientHttpResponse} and return it.  * @param response the HTTP response  * @return the extracted data  * @throws IOException in case of I/O errors  */ @Nullable T extractData(ClientHttpResponse response) throws IOException.

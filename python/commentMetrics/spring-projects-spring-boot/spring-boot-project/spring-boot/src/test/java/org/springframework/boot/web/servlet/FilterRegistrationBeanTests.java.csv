@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void setFilter() throws Exception {     FilterRegistrationBean<Filter> bean = new FilterRegistrationBean<>().     bean.setFilter(this.filter).     bean.onStartup(this.servletContext).     verify(this.servletContext).addFilter("mockFilter", this.filter). }
+false;public;0;7;;@Test public void setFilterMustNotBeNull() throws Exception {     FilterRegistrationBean<Filter> bean = new FilterRegistrationBean<>().     assertThatIllegalArgumentException().isThrownBy(() -> bean.onStartup(this.servletContext)).withMessageContaining("Filter must not be null"). }
+false;public;0;6;;@Test public void constructFilterMustNotBeNull() {     assertThatIllegalArgumentException().isThrownBy(() -> new FilterRegistrationBean<>(null)).withMessageContaining("Filter must not be null"). }
+false;public;0;7;;@Test public void createServletRegistrationBeanMustNotBeNull() {     assertThatIllegalArgumentException().isThrownBy(() -> new FilterRegistrationBean<>(this.filter, (ServletRegistrationBean[]) null)).withMessageContaining("ServletRegistrationBeans must not be null"). }
+false;protected;1;5;;@Override protected AbstractFilterRegistrationBean<MockFilter> createFilterRegistrationBean(ServletRegistrationBean<?>... servletRegistrationBeans) {     return new FilterRegistrationBean<>(this.filter, servletRegistrationBeans). }
+false;protected;0;4;;@Override protected Filter getExpectedFilter() {     return eq(this.filter). }

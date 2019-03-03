@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected BiFunction<String, String, Number> operation() {     return BinaryStringStringOperation.POSITION. }
+false;protected;2;4;;@Override protected Position replaceChildren(Expression newLeft, Expression newRight) {     return new Position(source(), newLeft, newRight). }
+false;protected;0;7;;@Override protected Pipe makePipe() {     return new BinaryStringStringPipe(source(), this, Expressions.pipe(left()), Expressions.pipe(right()), BinaryStringStringOperation.POSITION). }
+false;protected;0;4;;@Override protected NodeInfo<Position> info() {     return NodeInfo.create(this, Position::new, left(), right()). }

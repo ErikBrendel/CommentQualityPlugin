@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Producer createProducer() throws Exception {     return new DirectMessageProducer(this, user). }
+false;public;1;5;;@Override public Consumer createConsumer(Processor processor) throws Exception {     Consumer answer = TwitterHelper.createConsumer(processor, this, new DirectMessageConsumerHandler(this)).     return answer. }

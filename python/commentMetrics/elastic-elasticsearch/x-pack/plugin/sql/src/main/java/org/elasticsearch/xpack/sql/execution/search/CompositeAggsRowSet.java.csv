@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected Object extractValue(BucketExtractor e) {     return e.extract(buckets.get(row)). }
+false;protected;0;4;;@Override protected boolean doHasCurrent() {     return row < size. }
+false;protected;0;8;;@Override protected boolean doNext() {     if (row < size - 1) {         row++.         return true.     }     return false. }
+false;protected;0;4;;@Override protected void doReset() {     row = 0. }
+false;public;0;4;;@Override public int size() {     return size. }
+false;public;0;4;;@Override public Cursor nextPageCursor() {     return cursor. }

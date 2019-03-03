@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;11;;@Override protected GetBucketsResponse createTestInstance() {     String jobId = randomAlphaOfLength(20).     int listSize = randomInt(10).     List<Bucket> buckets = new ArrayList<>(listSize).     for (int j = 0. j < listSize. j++) {         Bucket bucket = BucketTests.createTestInstance(jobId).         buckets.add(bucket).     }     return new GetBucketsResponse(buckets, listSize). }
+false;protected;1;4;;@Override protected GetBucketsResponse doParseInstance(XContentParser parser) throws IOException {     return GetBucketsResponse.fromXContent(parser). }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }

@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Override public Producer createProducer() throws Exception {     JingValidator answer = new JingValidator(this).     answer.setSchema(getSchema()).     return answer. }
+false;public;1;4;;@Override public Consumer createConsumer(Processor processor) throws Exception {     throw new UnsupportedOperationException("This endpoint does not support consumer"). }
+false;public;0;4;;@Override public boolean isSingleton() {     return true. }
+false;public;0;3;;public String getResourceUri() {     return resourceUri. }
+true;public;1;3;/**  * URL to a local resource on the classpath or a full URL to a remote resource or resource on the file system which contains the schema to validate against.  */ ;/**  * URL to a local resource on the classpath or a full URL to a remote resource or resource on the file system which contains the schema to validate against.  */ public void setResourceUri(String resourceUri) {     this.resourceUri = resourceUri. }
+false;public;0;3;;public boolean isCompactSyntax() {     return compactSyntax. }
+true;public;1;3;/**  * Whether to validate using RelaxNG compact syntax or not.  * <p/>  * By default this is <tt>false</tt> for using RelaxNG XML Syntax (rng)  * And <tt>true</tt> is for using  RelaxNG Compact Syntax (rnc)  */ ;/**  * Whether to validate using RelaxNG compact syntax or not.  * <p/>  * By default this is <tt>false</tt> for using RelaxNG XML Syntax (rng)  * And <tt>true</tt> is for using  RelaxNG Compact Syntax (rnc)  */ public void setCompactSyntax(boolean compactSyntax) {     this.compactSyntax = compactSyntax. }
+false;public;0;3;;public Schema getSchema() {     return schema. }
+false;public;1;3;;public void setSchema(Schema schema) {     this.schema = schema. }
+false;public;0;3;;public SchemaFactory getSchemaFactory() {     return schemaFactory. }
+false;public;1;3;;public void setSchemaFactory(SchemaFactory schemaFactory) {     this.schemaFactory = schemaFactory. }
+false;public;0;3;;public InputSource getInputSource() {     return inputSource. }
+false;public;1;3;;public void setInputSource(InputSource inputSource) {     this.inputSource = inputSource. }
+false;protected;0;20;;@Override protected void doStart() throws Exception {     super.doStart().     if (inputSource == null) {         StringHelper.notEmpty(resourceUri, "resourceUri", this).         InputStream inputStream = ResourceHelper.resolveMandatoryResourceAsInputStream(getCamelContext(), resourceUri).         inputSource = new InputSource(inputStream).     }     if (schemaFactory == null) {         schemaFactory = new SchemaFactory().         schemaFactory.setCompactSyntax(compactSyntax).         schemaFactory.setXMLReaderCreator(new Jaxp11XMLReaderCreator()).     }     if (schema == null) {         schema = schemaFactory.createSchema(inputSource).     } }

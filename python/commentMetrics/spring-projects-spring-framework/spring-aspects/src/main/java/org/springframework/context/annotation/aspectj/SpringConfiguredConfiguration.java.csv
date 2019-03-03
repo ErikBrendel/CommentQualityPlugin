@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Bean(name = BEAN_CONFIGURER_ASPECT_BEAN_NAME) @Role(BeanDefinition.ROLE_INFRASTRUCTURE) public AnnotationBeanConfigurerAspect beanConfigurerAspect() {     return AnnotationBeanConfigurerAspect.aspectOf(). }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;12;;@Test public void testLoadConsumer() throws InterruptedException, IOException, TimeoutException {     mockResultEndpoint.setExpectedMessageCount(10000).     Options options = new Options.Builder().server("nats://" + getNatsUrl()).build().     Connection connection = Nats.connect(options).     for (int i = 0. i < 10000. i++) {         connection.publish("test", ("test" + i).getBytes()).     }     mockResultEndpoint.assertIsSatisfied(). }
+false;public;0;4;;@Override public void configure() throws Exception {     from("nats://" + getNatsUrl() + "?topic=test").to(mockResultEndpoint). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("nats://" + getNatsUrl() + "?topic=test").to(mockResultEndpoint).         }     }. }

@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public void close() {     delegate.close(). }
+false;public;0;4;;@Override public ScoreMode scoreMode() {     return delegate.scoreMode(). }
+false;public;0;4;;@Override public String name() {     return delegate.name(). }
+false;public;0;4;;@Override public SearchContext context() {     return delegate.context(). }
+false;public;0;4;;@Override public Aggregator parent() {     return delegate.parent(). }
+false;public;1;4;;@Override public Aggregator subAggregator(String name) {     return delegate.subAggregator(name). }
+false;public;1;12;;@Override public InternalAggregation buildAggregation(long bucket) throws IOException {     Timer timer = profileBreakdown.getTimer(AggregationTimingType.BUILD_AGGREGATION).     timer.start().     InternalAggregation result.     try {         result = delegate.buildAggregation(bucket).     } finally {         timer.stop().     }     return result. }
+false;public;0;4;;@Override public InternalAggregation buildEmptyAggregation() {     return delegate.buildEmptyAggregation(). }
+false;public;1;4;;@Override public LeafBucketCollector getLeafCollector(LeafReaderContext ctx) throws IOException {     return new ProfilingLeafBucketCollector(delegate.getLeafCollector(ctx), profileBreakdown). }
+false;public;0;12;;@Override public void preCollection() throws IOException {     this.profileBreakdown = profiler.getQueryBreakdown(delegate).     Timer timer = profileBreakdown.getTimer(AggregationTimingType.INITIALIZE).     timer.start().     try {         delegate.preCollection().     } finally {         timer.stop().     }     profiler.pollLastElement(). }
+false;public;0;4;;@Override public void postCollection() throws IOException {     delegate.postCollection(). }
+false;public;0;4;;@Override public String toString() {     return delegate.toString(). }
+false;public,static;1;6;;public static Aggregator unwrap(Aggregator agg) {     if (agg instanceof ProfilingAggregator) {         return ((ProfilingAggregator) agg).delegate.     }     return agg. }

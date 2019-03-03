@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Exchange getExchange() {     return exchange. }
+false;public;0;10;;@Override public Exchange cancelAndGetOriginalExchange() {     if (synchronizations != null) {         for (Synchronization synchronization : synchronizations) {             exchange.addOnCompletion(synchronization).         }     }     return exchange. }
+false;protected;0;5;;protected void performSynchronization() {     // call synchronizations with the result     UnitOfWorkHelper.doneSynchronizations(getExchange(), synchronizations, AbstractSynchronizedExchange.LOG). }

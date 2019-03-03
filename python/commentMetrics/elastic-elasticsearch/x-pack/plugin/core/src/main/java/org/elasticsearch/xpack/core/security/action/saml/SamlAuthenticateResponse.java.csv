@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getPrincipal() {     return principal. }
+false;public;0;3;;public String getTokenString() {     return tokenString. }
+false;public;0;3;;public String getRefreshToken() {     return refreshToken. }
+false;public;0;3;;public TimeValue getExpiresIn() {     return expiresIn. }
+false;public;1;8;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeString(principal).     out.writeString(tokenString).     out.writeString(refreshToken).     out.writeTimeValue(expiresIn). }
+false;public;1;8;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     principal = in.readString().     tokenString = in.readString().     refreshToken = in.readString().     expiresIn = in.readTimeValue(). }

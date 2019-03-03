@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;3;;protected StopILMRequest createTestInstance() {     return new StopILMRequest(). }
+false;public;0;4;;public void testValidate() {     StopILMRequest request = createTestInstance().     assertFalse(request.validate().isPresent()). }
+false;public;0;3;;public void testEqualsAndHashcode() {     EqualsHashCodeTestUtils.checkEqualsAndHashCode(createTestInstance(), (original) -> createTestInstance()). }

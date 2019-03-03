@@ -1,0 +1,21 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;18;;@ReadOperation public ApplicationLiquibaseBeans liquibaseBeans() {     ApplicationContext target = this.context.     Map<String, ContextLiquibaseBeans> contextBeans = new HashMap<>().     while (target != null) {         Map<String, LiquibaseBean> liquibaseBeans = new HashMap<>().         DatabaseFactory factory = DatabaseFactory.getInstance().         StandardChangeLogHistoryService service = new StandardChangeLogHistoryService().         this.context.getBeansOfType(SpringLiquibase.class).forEach((name, liquibase) -> liquibaseBeans.put(name, createReport(liquibase, service, factory))).         ApplicationContext parent = target.getParent().         contextBeans.put(target.getId(), new ContextLiquibaseBeans(liquibaseBeans, (parent != null) ? parent.getId() : null)).         target = parent.     }     return new ApplicationLiquibaseBeans(contextBeans). }
+false;private;3;29;;private LiquibaseBean createReport(SpringLiquibase liquibase, ChangeLogHistoryService service, DatabaseFactory factory) {     try {         DataSource dataSource = liquibase.getDataSource().         JdbcConnection connection = new JdbcConnection(dataSource.getConnection()).         Database database = null.         try {             database = factory.findCorrectDatabaseImplementation(connection).             String defaultSchema = liquibase.getDefaultSchema().             if (StringUtils.hasText(defaultSchema)) {                 database.setDefaultSchemaName(defaultSchema).             }             service.setDatabase(database).             return new LiquibaseBean(service.getRanChangeSets().stream().map(ChangeSet::new).collect(Collectors.toList())).         } finally {             if (database != null) {                 database.close().             } else {                 connection.close().             }         }     } catch (Exception ex) {         throw new IllegalStateException("Unable to get Liquibase change sets", ex).     } }
+false;public;0;3;;public Map<String, ContextLiquibaseBeans> getContexts() {     return this.contexts. }
+false;public;0;3;;public Map<String, LiquibaseBean> getLiquibaseBeans() {     return this.liquibaseBeans. }
+false;public;0;3;;public String getParentId() {     return this.parentId. }
+false;public;0;3;;public List<ChangeSet> getChangeSets() {     return this.changeSets. }
+false;public;0;3;;public String getAuthor() {     return this.author. }
+false;public;0;3;;public String getChangeLog() {     return this.changeLog. }
+false;public;0;3;;public String getComments() {     return this.comments. }
+false;public;0;3;;public Set<String> getContexts() {     return this.contexts. }
+false;public;0;3;;public Instant getDateExecuted() {     return this.dateExecuted. }
+false;public;0;3;;public String getDeploymentId() {     return this.deploymentId. }
+false;public;0;3;;public String getDescription() {     return this.description. }
+false;public;0;3;;public ExecType getExecType() {     return this.execType. }
+false;public;0;3;;public String getId() {     return this.id. }
+false;public;0;3;;public Set<String> getLabels() {     return this.labels. }
+false;public;0;3;;public String getChecksum() {     return this.checksum. }
+false;public;0;3;;public Integer getOrderExecuted() {     return this.orderExecuted. }
+false;public;0;3;;public String getTag() {     return this.tag. }
+false;public;0;3;;public Set<String> getContexts() {     return this.contexts. }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;public JAXBContext newJAXBContext() throws JAXBException {     if (context == null) {         synchronized (this) {             if (context == null) {                 context = JAXBContext.newInstance(getPackages(), getClassLoader()).             }         }     }     return context. }
+false;protected;0;3;;protected String getPackages() {     return Constants.JAXB_CONTEXT_PACKAGES. }
+false;protected;0;3;;protected ClassLoader getClassLoader() {     return getClass().getClassLoader(). }

@@ -1,0 +1,16 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public TemporalAccessor parse(String input) {     final DateTime dt = parser.parseDateTime(input).     return ZonedDateTime.ofInstant(Instant.ofEpochMilli(dt.getMillis()), DateUtils.dateTimeZoneToZoneId(dt.getZone())). }
+false;public;1;3;;public long parseMillis(String input) {     return parser.parseMillis(input). }
+false;public;1;3;;public DateTime parseJoda(String input) {     return parser.parseDateTime(input). }
+false;public;1;10;;@Override public DateFormatter withZone(ZoneId zoneId) {     DateTimeZone timeZone = DateUtils.zoneIdToDateTimeZone(zoneId).     if (parser.getZone().equals(timeZone)) {         return this.     }     DateTimeFormatter parser = this.parser.withZone(timeZone).     DateTimeFormatter printer = this.printer.withZone(timeZone).     return new JodaDateFormatter(pattern, parser, printer). }
+false;public;1;9;;@Override public DateFormatter withLocale(Locale locale) {     if (parser.getLocale().equals(locale)) {         return this.     }     DateTimeFormatter parser = this.parser.withLocale(locale).     DateTimeFormatter printer = this.printer.withLocale(locale).     return new JodaDateFormatter(pattern, parser, printer). }
+false;public;1;6;;@Override public String format(TemporalAccessor accessor) {     DateTimeZone timeZone = DateUtils.zoneIdToDateTimeZone(ZoneId.from(accessor)).     DateTime dateTime = new DateTime(Instant.from(accessor).toEpochMilli(), timeZone).     return printer.print(dateTime). }
+false;public;1;3;;public String formatJoda(DateTime dateTime) {     return printer.print(dateTime). }
+false;public;1;3;;public String formatMillis(long millis) {     return printer.print(millis). }
+false;public;1;6;;public JodaDateFormatter withYear(int year) {     if (parser.getDefaultYear() == year) {         return this.     }     return new JodaDateFormatter(pattern, parser.withDefaultYear(year), printer.withDefaultYear(year)). }
+false;public;0;4;;@Override public String pattern() {     return pattern. }
+false;public;0;4;;@Override public Locale locale() {     return printer.getLocale(). }
+false;public;0;4;;@Override public ZoneId zone() {     return DateUtils.dateTimeZoneToZoneId(printer.getZone()). }
+false;public;0;4;;@Override public DateMathParser toDateMathParser() {     return new JodaDateMathParser(this). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(locale(), zone(), pattern()). }
+false;public;1;11;;@Override public boolean equals(Object obj) {     if (obj.getClass().equals(this.getClass()) == false) {         return false.     }     JodaDateFormatter other = (JodaDateFormatter) obj.     return Objects.equals(pattern(), other.pattern()) && Objects.equals(locale(), other.locale()) && Objects.equals(zone(), other.zone()). }

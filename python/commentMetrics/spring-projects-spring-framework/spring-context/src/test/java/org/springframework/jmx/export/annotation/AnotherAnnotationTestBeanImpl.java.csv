@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;@Override public void foo() { }
+false;public;0;3;;public void doNotExpose() { }
+false;public;0;4;;@Override public String getBar() {     return this.bar. }
+false;public;1;4;;@Override public void setBar(String bar) {     this.bar = bar. }
+false;public;0;4;;@Override public int getCacheEntries() {     return 42. }

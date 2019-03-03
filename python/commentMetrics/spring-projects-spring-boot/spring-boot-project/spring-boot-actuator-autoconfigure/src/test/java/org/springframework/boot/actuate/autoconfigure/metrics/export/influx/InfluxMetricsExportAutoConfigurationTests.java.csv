@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void backsOffWithoutAClock() {     this.contextRunner.run((context) -> assertThat(context).doesNotHaveBean(InfluxMeterRegistry.class)). }
+false;public;0;7;;@Test public void autoConfiguresItsConfigAndMeterRegistry() {     this.contextRunner.withUserConfiguration(BaseConfiguration.class).run((context) -> assertThat(context).hasSingleBean(InfluxMeterRegistry.class).hasSingleBean(InfluxConfig.class)). }
+false;public;0;8;;@Test public void autoConfigurationCanBeDisabled() {     this.contextRunner.withUserConfiguration(BaseConfiguration.class).withPropertyValues("management.metrics.export.influx.enabled=false").run((context) -> assertThat(context).doesNotHaveBean(InfluxMeterRegistry.class).doesNotHaveBean(InfluxConfig.class)). }
+false;public;0;7;;@Test public void allowsCustomConfigToBeUsed() {     this.contextRunner.withUserConfiguration(CustomConfigConfiguration.class).run((context) -> assertThat(context).hasSingleBean(InfluxMeterRegistry.class).hasSingleBean(InfluxConfig.class).hasBean("customConfig")). }
+false;public;0;7;;@Test public void allowsCustomRegistryToBeUsed() {     this.contextRunner.withUserConfiguration(CustomRegistryConfiguration.class).run((context) -> assertThat(context).hasSingleBean(InfluxMeterRegistry.class).hasBean("customRegistry").hasSingleBean(InfluxConfig.class)). }
+false;public;0;11;;@Test public void stopsMeterRegistryWhenContextIsClosed() {     this.contextRunner.withUserConfiguration(BaseConfiguration.class).run((context) -> {         InfluxMeterRegistry registry = context.getBean(InfluxMeterRegistry.class).         assertThat(registry.isClosed()).isFalse().         context.close().         assertThat(registry.isClosed()).isTrue().     }). }
+false;public;0;4;;@Bean public Clock clock() {     return Clock.SYSTEM. }
+false;public;0;4;;@Bean public InfluxConfig customConfig() {     return (key) -> null. }
+false;public;2;4;;@Bean public InfluxMeterRegistry customRegistry(InfluxConfig config, Clock clock) {     return new InfluxMeterRegistry(config, clock). }

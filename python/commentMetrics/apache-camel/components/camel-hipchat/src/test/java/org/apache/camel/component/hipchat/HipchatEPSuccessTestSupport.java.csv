@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;2;5;;@Override protected StatusLine post(String urlPath, Map<String, String> postParam) throws IOException {     callback.call(postParam).     return new BasicStatusLine(new ProtocolVersion("any", 1, 1), 204, ""). }
+false;public;0;9;;public Producer createProducer() throws Exception {     return new HipchatProducer(this) {          @Override         protected StatusLine post(String urlPath, Map<String, String> postParam) throws IOException {             callback.call(postParam).             return new BasicStatusLine(new ProtocolVersion("any", 1, 1), 204, "").         }     }. }
+false;protected;1;4;;@Override protected CloseableHttpResponse executeGet(HttpGet httpGet) throws IOException {     return closeableHttpResponse. }
+false;public;1;9;;@Override public Consumer createConsumer(Processor processor) throws Exception {     return new HipchatConsumer(this, processor) {          @Override         protected CloseableHttpResponse executeGet(HttpGet httpGet) throws IOException {             return closeableHttpResponse.         }     }. }

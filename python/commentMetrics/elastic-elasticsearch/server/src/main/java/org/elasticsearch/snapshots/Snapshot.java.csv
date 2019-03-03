@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Gets the repository name for the snapshot.  */ ;/**  * Gets the repository name for the snapshot.  */ public String getRepository() {     return repository. }
+true;public;0;3;/**  * Gets the snapshot id for the snapshot.  */ ;/**  * Gets the snapshot id for the snapshot.  */ public SnapshotId getSnapshotId() {     return snapshotId. }
+false;public;0;4;;@Override public String toString() {     return repository + ":" + snapshotId.toString(). }
+false;public;1;11;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     Snapshot that = (Snapshot) o.     return repository.equals(that.repository) && snapshotId.equals(that.snapshotId). }
+false;public;0;4;;@Override public int hashCode() {     return hashCode. }
+false;private;0;3;;private int computeHashCode() {     return Objects.hash(repository, snapshotId). }
+false;public;1;5;;@Override public void writeTo(final StreamOutput out) throws IOException {     out.writeString(repository).     snapshotId.writeTo(out). }

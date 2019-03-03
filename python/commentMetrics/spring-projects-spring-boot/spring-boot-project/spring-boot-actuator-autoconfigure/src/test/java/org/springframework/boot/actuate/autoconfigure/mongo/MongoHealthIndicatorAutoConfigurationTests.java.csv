@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void runShouldCreateIndicator() {     this.contextRunner.run((context) -> assertThat(context).hasSingleBean(MongoHealthIndicator.class).doesNotHaveBean(ApplicationHealthIndicator.class)). }
+false;public;0;7;;@Test public void runWhenDisabledShouldNotCreateIndicator() {     this.contextRunner.withPropertyValues("management.health.mongo.enabled:false").run((context) -> assertThat(context).doesNotHaveBean(MongoHealthIndicator.class).hasSingleBean(ApplicationHealthIndicator.class)). }

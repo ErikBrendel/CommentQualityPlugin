@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void shouldNotApplyFilter() throws Exception {     this.mvc.perform(get("/one")).andExpect(header().string("x-test", (String) null)). }
+false;public;1;8;;@Bean public FilterRegistrationBean<ExampleFilter> exampleFilterRegistration(ExampleFilter filter) {     FilterRegistrationBean<ExampleFilter> registration = new FilterRegistrationBean<>(filter).     registration.setEnabled(false).     return registration. }

@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String symbol() {     return symbol. }
+false;public;2;7;;@Override public Boolean apply(Object left, Object right) {     if (this != NULLEQ && (left == null || right == null)) {         return null.     }     return doApply(left, right). }
+false;public,final;2;4;;@Override public final Boolean doApply(Object left, Object right) {     return process.apply(left, right). }
+false;public;0;4;;@Override public String toString() {     return symbol. }
+false;public;0;4;;@Override public String getWriteableName() {     return NAME. }
+false;public;1;7;;@Override public Object process(Object input) {     if (function() == BinaryComparisonOperation.NULLEQ) {         return doProcess(left().process(input), right().process(input)).     }     return super.process(input). }

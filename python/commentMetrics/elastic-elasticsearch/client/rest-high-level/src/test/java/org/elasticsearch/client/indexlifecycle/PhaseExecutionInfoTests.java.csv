@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;static;1;4;;static PhaseExecutionInfo randomPhaseExecutionInfo(String phaseName) {     return new PhaseExecutionInfo(randomAlphaOfLength(5), PhaseTests.randomPhase(phaseName), randomNonNegativeLong(), randomNonNegativeLong()). }
+false;public;0;4;;@Before public void setupPhaseName() {     phaseName = randomAlphaOfLength(7). }
+false;protected;0;4;;@Override protected PhaseExecutionInfo createTestInstance() {     return randomPhaseExecutionInfo(phaseName). }
+false;protected;1;4;;@Override protected PhaseExecutionInfo doParseInstance(XContentParser parser) throws IOException {     return PhaseExecutionInfo.parse(parser, phaseName). }
+false;protected;0;5;;@Override protected Predicate<String> getRandomFieldsExcludeFilter() {     // actions are plucked from the named registry, and it fails if the action is not in the named registry     return (field) -> field.equals("phase_definition.actions"). }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }
+false;protected;0;6;;@Override protected NamedXContentRegistry xContentRegistry() {     List<NamedXContentRegistry.Entry> entries = new ArrayList<>(ClusterModule.getNamedXWriteables()).     entries.add(new NamedXContentRegistry.Entry(LifecycleAction.class, new ParseField(DeleteAction.NAME), DeleteAction::parse)).     return new NamedXContentRegistry(entries). }

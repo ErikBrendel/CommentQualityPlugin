@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected void trainHazelcastInstance(HazelcastInstance hazelcastInstance) {     when(hazelcastInstance.getRingbuffer("foo")).thenReturn(ringbuffer). }
+false;protected;1;4;;@Override protected void verifyHazelcastInstance(HazelcastInstance hazelcastInstance) {     verify(hazelcastInstance, atLeastOnce()).getRingbuffer("foo"). }
+false;protected;0;4;;@Override protected AbstractApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("/META-INF/spring/test-camel-context-ringbuffer.xml"). }
+false;public;0;6;;@Test public void testReadTail() throws InterruptedException {     when(ringbuffer.readOne(ArgumentMatchers.anyLong())).thenReturn("pippo").     Object result = template.requestBody("direct:readonceTail", 12L, String.class).     assertEquals("pippo", result). }
+false;public;0;6;;@Test public void testAdd() throws InterruptedException {     when(ringbuffer.add(ArgumentMatchers.anyLong())).thenReturn(13L).     Object result = template.requestBody("direct:add", 12L, Long.class).     assertEquals(13L, result). }
+false;public;0;6;;@Test public void testCapacity() throws InterruptedException {     when(ringbuffer.capacity()).thenReturn(13L).     Object result = template.requestBody("direct:capacity", 12L, Long.class).     assertEquals(13L, result). }
+false;public;0;6;;@Test public void testRemainingCapacity() throws InterruptedException {     when(ringbuffer.remainingCapacity()).thenReturn(2L).     Object result = template.requestBody("direct:remainingCapacity", "", Long.class).     assertEquals(2L, result). }

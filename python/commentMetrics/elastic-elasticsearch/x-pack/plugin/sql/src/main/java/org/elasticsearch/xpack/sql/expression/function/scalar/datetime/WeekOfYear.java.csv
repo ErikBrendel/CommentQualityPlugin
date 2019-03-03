@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected NodeCtor2<Expression, ZoneId, BaseDateTimeFunction> ctorForInfo() {     return WeekOfYear::new. }
+false;protected;1;4;;@Override protected WeekOfYear replaceChild(Expression newChild) {     return new WeekOfYear(source(), newChild, zoneId()). }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public int compare(ActionFilter o1, ActionFilter o2) {     return Integer.compare(o1.order(), o2.order()). }
+true;public;0;3;/**  * Returns the action filters that have been injected  */ ;/**  * Returns the action filters that have been injected  */ public ActionFilter[] filters() {     return filters. }

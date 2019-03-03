@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void testMinaSpringEndpoint() throws Exception {     MockEndpoint result = getMockEndpoint("mock:result").     result.expectedMessageCount(1).     template.sendBody("myMinaEndpoint", "Hello World" + LS).     assertMockEndpointsSatisfied(). }
+false;protected;0;4;;@Override protected ClassPathXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/component/mina2/SpringMinaEndpointUDPTest-context.xml"). }

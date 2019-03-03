@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@GetMapping("/two") @ResponseBody public String two(ExampleArgument argument) {     return argument + "two". }
+false;public;1;5;;@GetMapping("/two/{id}") @ResponseBody public String two(@PathVariable ExampleId id) {     return id.getId() + "two". }
+false;public;1;5;;@GetMapping("/paged") @ResponseBody public String paged(Pageable pageable) {     return String.format("%s:%s", pageable.getPageNumber(), pageable.getPageSize()). }

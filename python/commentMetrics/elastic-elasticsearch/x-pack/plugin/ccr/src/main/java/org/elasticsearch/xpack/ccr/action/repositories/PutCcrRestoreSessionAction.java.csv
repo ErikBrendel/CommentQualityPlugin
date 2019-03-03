@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public PutCcrRestoreSessionResponse newResponse() {     return new PutCcrRestoreSessionResponse(). }
+false;public;0;4;;@Override public Writeable.Reader<PutCcrRestoreSessionAction.PutCcrRestoreSessionResponse> getResponseReader() {     return PutCcrRestoreSessionAction.PutCcrRestoreSessionResponse::new. }
+false;protected;2;10;;@Override protected PutCcrRestoreSessionResponse shardOperation(PutCcrRestoreSessionRequest request, ShardId shardId) throws IOException {     IndexShard indexShard = indicesService.getShardOrNull(shardId).     if (indexShard == null) {         throw new ShardNotFoundException(shardId).     }     Store.MetadataSnapshot storeFileMetaData = ccrRestoreService.openSession(request.getSessionUUID(), indexShard).     long mappingVersion = indexShard.indexSettings().getIndexMetaData().getMappingVersion().     return new PutCcrRestoreSessionResponse(clusterService.localNode(), storeFileMetaData, mappingVersion). }
+false;protected;0;4;;@Override protected PutCcrRestoreSessionResponse newResponse() {     return new PutCcrRestoreSessionResponse(). }
+false;protected;1;4;;@Override protected boolean resolveIndex(PutCcrRestoreSessionRequest request) {     return false. }
+false;protected;2;5;;@Override protected ShardsIterator shards(ClusterState state, InternalRequest request) {     final ShardId shardId = request.request().getShardId().     return state.routingTable().shardRoutingTable(shardId).primaryShardIt(). }
+false;public;1;7;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     node = new DiscoveryNode(in).     storeFileMetaData = new Store.MetadataSnapshot(in).     mappingVersion = in.readVLong(). }
+false;public;1;7;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     node.writeTo(out).     storeFileMetaData.writeTo(out).     out.writeVLong(mappingVersion). }
+false;public;0;3;;public DiscoveryNode getNode() {     return node. }
+false;public;0;3;;public Store.MetadataSnapshot getStoreFileMetaData() {     return storeFileMetaData. }
+false;public;0;3;;public long getMappingVersion() {     return mappingVersion. }

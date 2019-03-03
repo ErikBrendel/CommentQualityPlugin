@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getName() {     return name. }
+false;public;0;4;;@Override public String getHost() {     return super.getHost(). }
+false;public;0;4;;@Override public int getPort() {     return super.getPort(). }
+false;public;0;4;;@Override public ServiceHealth getHealth() {     return health. }
+false;public;0;10;;@Override public Map<String, String> getMetadata() {     Map<String, String> meta = metaData != null ? new HashMap<>(metaData) : new HashMap<>().     ObjectHelper.ifNotEmpty(super.getId(), val -> meta.put("id", val)).     ObjectHelper.ifNotEmpty(super.getZone(), val -> meta.put("zone", val)).     ObjectHelper.ifNotEmpty(super.isAlive(), val -> meta.put("is_alive", Boolean.toString(val))).     ObjectHelper.ifNotEmpty(super.isReadyToServe(), val -> meta.put("ready_to_server", Boolean.toString(val))).     return Collections.unmodifiableMap(meta). }

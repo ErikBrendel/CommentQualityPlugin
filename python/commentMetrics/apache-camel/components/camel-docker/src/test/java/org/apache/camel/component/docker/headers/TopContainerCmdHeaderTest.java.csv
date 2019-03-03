@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;17;;@Test public void topContainerHeaderTest() {     String containerId = "9c09acd48a25".     String psArgs = "aux".     Map<String, Object> headers = getDefaultParameters().     headers.put(DockerConstants.DOCKER_CONTAINER_ID, containerId).     headers.put(DockerConstants.DOCKER_PS_ARGS, psArgs).     template.sendBodyAndHeaders("direct:in", "", headers).     Mockito.verify(dockerClient, Mockito.times(1)).topContainerCmd(containerId).     Mockito.verify(mockObject, Mockito.times(1)).withPsArgs(eq(psArgs)). }
+false;protected;0;4;;@Override protected void setupMocks() {     Mockito.when(dockerClient.topContainerCmd(anyString())).thenReturn(mockObject). }
+false;protected;0;4;;@Override protected DockerOperation getOperation() {     return DockerOperation.TOP_CONTAINER. }

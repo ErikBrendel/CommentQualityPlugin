@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@PostConstruct public void checkSessionTimeout() {     if (this.timeout == null && this.serverProperties != null) {         this.timeout = this.serverProperties.getServlet().getSession().getTimeout().     } }
+false;public;0;3;;public StoreType getStoreType() {     return this.storeType. }
+false;public;1;3;;public void setStoreType(StoreType storeType) {     this.storeType = storeType. }
+true;public;0;3;/**  * Return the session timeout.  * @return the session timeout  * @see Session#getTimeout()  */ ;/**  * Return the session timeout.  * @return the session timeout  * @see Session#getTimeout()  */ public Duration getTimeout() {     return this.timeout. }
+false;public;1;3;;public void setTimeout(Duration timeout) {     this.timeout = timeout. }
+false;public;0;3;;public Servlet getServlet() {     return this.servlet. }
+false;public;1;3;;public void setServlet(Servlet servlet) {     this.servlet = servlet. }
+false;public;0;3;;public int getFilterOrder() {     return this.filterOrder. }
+false;public;1;3;;public void setFilterOrder(int filterOrder) {     this.filterOrder = filterOrder. }
+false;public;0;3;;public Set<DispatcherType> getFilterDispatcherTypes() {     return this.filterDispatcherTypes. }
+false;public;1;3;;public void setFilterDispatcherTypes(Set<DispatcherType> filterDispatcherTypes) {     this.filterDispatcherTypes = filterDispatcherTypes. }

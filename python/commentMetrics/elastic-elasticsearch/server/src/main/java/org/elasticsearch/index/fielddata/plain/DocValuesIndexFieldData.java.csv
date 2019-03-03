@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,final;0;3;;public final String getFieldName() {     return fieldName. }
+false;public,final;0;3;;public final void clear() { // can't do }
+false;public,final;1;3;;public final void clear(IndexReader reader) { // can't do }
+false;public,final;0;3;;public final Index index() {     return index. }
+false;public;1;4;;public Builder numericType(NumericType type) {     this.numericType = type.     return this. }
+false;public;1;4;;public Builder scriptFunction(Function<SortedSetDocValues, ScriptDocValues<?>> scriptFunction) {     this.scriptFunction = scriptFunction.     return this. }
+false;public;5;14;;@Override public IndexFieldData<?> build(IndexSettings indexSettings, MappedFieldType fieldType, IndexFieldDataCache cache, CircuitBreakerService breakerService, MapperService mapperService) {     // Ignore Circuit Breaker     final String fieldName = fieldType.name().     if (BINARY_INDEX_FIELD_NAMES.contains(fieldName)) {         assert numericType == null.         return new BinaryDVIndexFieldData(indexSettings.getIndex(), fieldName).     } else if (numericType != null) {         return new SortedNumericDVIndexFieldData(indexSettings.getIndex(), fieldName, numericType).     } else {         return new SortedSetDVOrdinalsIndexFieldData(indexSettings, cache, fieldName, breakerService, scriptFunction).     } }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public boolean matches(ClassNode classNode) {     return AstUtils.hasAtLeastOneAnnotation(classNode, "EnableRetry", "Retryable", "Recover"). }
+false;public;1;6;;@Override public void applyDependencies(DependencyCustomizer dependencies) {     dependencies.ifAnyMissingClasses("org.springframework.retry.annotation.EnableRetry").add("spring-retry", "spring-boot-starter-aop"). }
+false;public;1;4;;@Override public void applyImports(ImportCustomizer imports) {     imports.addStarImports("org.springframework.retry.annotation"). }

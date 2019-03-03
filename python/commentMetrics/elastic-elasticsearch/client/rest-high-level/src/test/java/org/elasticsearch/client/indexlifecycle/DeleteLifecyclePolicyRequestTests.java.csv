@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;0;3;;private DeleteLifecyclePolicyRequest createTestInstance() {     return new DeleteLifecyclePolicyRequest(randomAlphaOfLengthBetween(2, 20)). }
+false;public;0;5;;public void testValidate() {     DeleteLifecyclePolicyRequest req = createTestInstance().     assertFalse(req.validate().isPresent()). }
+false;public;0;3;;public void testValidationFailure() {     expectThrows(IllegalArgumentException.class, () -> new DeleteLifecyclePolicyRequest(randomFrom("", null))). }

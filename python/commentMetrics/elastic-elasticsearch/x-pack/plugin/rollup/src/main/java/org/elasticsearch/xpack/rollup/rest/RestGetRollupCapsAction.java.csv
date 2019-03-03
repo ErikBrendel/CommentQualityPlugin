@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;2;7;;@Override protected RestChannelConsumer prepareRequest(RestRequest restRequest, NodeClient client) throws IOException {     String id = restRequest.param(ID.getPreferredName()).     GetRollupCapsAction.Request request = new GetRollupCapsAction.Request(id).     return channel -> client.execute(GetRollupCapsAction.INSTANCE, request, new RestToXContentListener<>(channel)). }
+false;public;0;4;;@Override public String getName() {     return "get_rollup_caps". }

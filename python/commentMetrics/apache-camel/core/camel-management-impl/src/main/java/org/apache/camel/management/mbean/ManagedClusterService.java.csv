@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void init(ManagementStrategy strategy) { // do nothing }
+false;public;0;3;;public CamelContext getContext() {     return context. }
+false;public;0;3;;public CamelClusterService getService() {     return service. }
+false;public;0;7;;@Override public void start() throws Exception {     if (!context.getStatus().isStarted()) {         throw new IllegalArgumentException("CamelContext is not started").     }     service.start(). }
+false;public;0;7;;@Override public void stop() throws Exception {     if (!context.getStatus().isStarted()) {         throw new IllegalArgumentException("CamelContext is not started").     }     service.stop(). }
+false;public;0;11;;@Override public String getState() {     // must use String type to be sure remote JMX can read the attribute without requiring Camel classes.     if (service instanceof StatefulService) {         ServiceStatus status = ((StatefulService) service).getStatus().         return status.name().     }     // assume started if not a ServiceSupport instance     return ServiceStatus.Started.name(). }
+false;public;0;4;;@Override public String getCamelId() {     return context.getName(). }
+false;public;0;6;;@Override public Collection<String> getNamespaces() {     return ClusterServiceHelper.lookupService(context).map(CamelClusterService::getNamespaces).orElseGet(Collections::emptyList). }
+false;public;1;7;;@Override public void startView(String namespace) throws Exception {     Optional<CamelClusterService> service = ClusterServiceHelper.lookupService(context).     if (service.isPresent()) {         service.get().startView(namespace).     } }
+false;public;1;7;;@Override public void stopView(String namespace) throws Exception {     Optional<CamelClusterService> service = ClusterServiceHelper.lookupService(context).     if (service.isPresent()) {         service.get().stopView(namespace).     } }
+false;public;1;6;;@Override public boolean isLeader(String namespace) {     return ClusterServiceHelper.lookupService(context).map(s -> s.isLeader(namespace)).orElse(false). }

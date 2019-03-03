@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public void onResponse(T t) {     try {         delegate.onResponse(t).     } finally {         latch.countDown().     } }
+false;public;1;8;;@Override public void onFailure(Exception e) {     try {         delegate.onFailure(e).     } finally {         latch.countDown().     } }

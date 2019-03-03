@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,abstract;1;1;;public abstract ClassMetadata getClassMetadataFor(Class<?> clazz).
+false;public;0;6;;@Test public void withNoMemberClasses() {     ClassMetadata metadata = getClassMetadataFor(L0_a.class).     String[] nestedClasses = metadata.getMemberClassNames().     assertThat(nestedClasses, equalTo(new String[] {})). }
+false;public;0;6;;@Test public void withPublicMemberClasses() {     ClassMetadata metadata = getClassMetadataFor(L0_b.class).     String[] nestedClasses = metadata.getMemberClassNames().     assertThat(nestedClasses, equalTo(new String[] { L0_b.L1.class.getName() })). }
+false;public;0;6;;@Test public void withNonPublicMemberClasses() {     ClassMetadata metadata = getClassMetadataFor(L0_c.class).     String[] nestedClasses = metadata.getMemberClassNames().     assertThat(nestedClasses, equalTo(new String[] { L0_c.L1.class.getName() })). }
+false;public;0;6;;@Test public void againstMemberClass() {     ClassMetadata metadata = getClassMetadataFor(L0_b.L1.class).     String[] nestedClasses = metadata.getMemberClassNames().     assertThat(nestedClasses, equalTo(new String[] {})). }

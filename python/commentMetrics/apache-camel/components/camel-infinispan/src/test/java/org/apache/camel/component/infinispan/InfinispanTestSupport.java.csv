@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Override @Before public void setUp() throws Exception {     basicCacheContainer = new DefaultCacheManager(new ConfigurationBuilder().build()).     basicCacheContainer.start().     super.setUp(). }
+false;public;0;5;;@Override public void tearDown() throws Exception {     basicCacheContainer.stop().     super.tearDown(). }
+false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry registry = super.createRegistry().     registry.bind("cacheContainer", basicCacheContainer).     return registry. }
+false;protected;0;3;;protected BasicCache<Object, Object> currentCache() {     return basicCacheContainer.getCache(). }
+false;protected;1;3;;protected BasicCache<Object, Object> namedCache(String name) {     return basicCacheContainer.getCache(name). }
+false;protected;0;4;;protected void injectTimeService() {     ts = new ControlledTimeService(0).     TestingUtil.replaceComponent((DefaultCacheManager) basicCacheContainer, TimeService.class, ts, true). }

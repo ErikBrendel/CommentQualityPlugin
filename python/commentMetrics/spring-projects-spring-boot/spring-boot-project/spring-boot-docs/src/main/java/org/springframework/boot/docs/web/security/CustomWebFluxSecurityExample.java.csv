@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;10;// tag::configuration[] ;// @formatter:off // tag::configuration[] @Bean public SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {     return http.authorizeExchange().matchers(PathRequest.toStaticResources().atCommonLocations()).permitAll().pathMatchers("/foo", "/bar").authenticated().and().formLogin().and().build(). }

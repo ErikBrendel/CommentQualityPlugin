@@ -1,0 +1,56 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void init(DockerClientConfig dockerClientConfig) { // Noop }
+false;public;0;4;;@Override public String getVersion() {     return FAKE_VERSION. }
+false;public;1;9;;@Override public Version exec(VersionCmd versionCmd) {     return new Version() {          @Override         public String getVersion() {             return FAKE_VERSION.         }     }. }
+false;public;0;14;;@Override public VersionCmd.Exec createVersionCmdExec() {     return new VersionCmd.Exec() {          @Override         public Version exec(VersionCmd versionCmd) {             return new Version() {                  @Override                 public String getVersion() {                     return FAKE_VERSION.                 }             }.         }     }. }
+false;public;0;4;;@Override public AuthCmd.Exec createAuthCmdExec() {     return null. }
+false;public;0;4;;@Override public InfoCmd.Exec createInfoCmdExec() {     return null. }
+false;public;0;4;;@Override public PingCmd.Exec createPingCmdExec() {     return null. }
+false;public;0;4;;@Override public ExecCreateCmd.Exec createExecCmdExec() {     return null. }
+false;public;0;4;;@Override public PullImageCmd.Exec createPullImageCmdExec() {     return null. }
+false;public;0;4;;@Override public PushImageCmd.Exec createPushImageCmdExec() {     return null. }
+false;public;0;4;;@Override public SaveImageCmd.Exec createSaveImageCmdExec() {     return null. }
+false;public;0;4;;@Override public CreateImageCmd.Exec createCreateImageCmdExec() {     return null. }
+false;public;0;4;;@Override public LoadImageCmd.Exec createLoadImageCmdExec() {     return null. }
+false;public;0;4;;@Override public SearchImagesCmd.Exec createSearchImagesCmdExec() {     return null. }
+false;public;0;4;;@Override public RemoveImageCmd.Exec createRemoveImageCmdExec() {     return null. }
+false;public;0;4;;@Override public ListImagesCmd.Exec createListImagesCmdExec() {     return null. }
+false;public;0;4;;@Override public InspectImageCmd.Exec createInspectImageCmdExec() {     return null. }
+false;public;0;4;;@Override public ListContainersCmd.Exec createListContainersCmdExec() {     return null. }
+false;public;0;4;;@Override public CreateContainerCmd.Exec createCreateContainerCmdExec() {     return null. }
+false;public;0;4;;@Override public StartContainerCmd.Exec createStartContainerCmdExec() {     return null. }
+false;public;0;4;;@Override public InspectContainerCmd.Exec createInspectContainerCmdExec() {     return null. }
+false;public;0;4;;@Override public RemoveContainerCmd.Exec createRemoveContainerCmdExec() {     return null. }
+false;public;0;4;;@Override public WaitContainerCmd.Exec createWaitContainerCmdExec() {     return null. }
+false;public;0;4;;@Override public AttachContainerCmd.Exec createAttachContainerCmdExec() {     return null. }
+false;public;0;4;;@Override public ExecStartCmd.Exec createExecStartCmdExec() {     return null. }
+false;public;0;4;;@Override public InspectExecCmd.Exec createInspectExecCmdExec() {     return null. }
+false;public;0;4;;@Override public LogContainerCmd.Exec createLogContainerCmdExec() {     return null. }
+false;public;0;4;;@Override public CopyFileFromContainerCmd.Exec createCopyFileFromContainerCmdExec() {     return null. }
+false;public;0;4;;@Override public CopyArchiveFromContainerCmd.Exec createCopyArchiveFromContainerCmdExec() {     return null. }
+false;public;0;4;;@Override public CopyArchiveToContainerCmd.Exec createCopyArchiveToContainerCmdExec() {     return null. }
+false;public;0;4;;@Override public StopContainerCmd.Exec createStopContainerCmdExec() {     return null. }
+false;public;0;4;;@Override public ContainerDiffCmd.Exec createContainerDiffCmdExec() {     return null. }
+false;public;0;4;;@Override public KillContainerCmd.Exec createKillContainerCmdExec() {     return null. }
+false;public;0;4;;@Override public UpdateContainerCmd.Exec createUpdateContainerCmdExec() {     return null. }
+false;public;0;4;;@Override public RenameContainerCmd.Exec createRenameContainerCmdExec() {     return null. }
+false;public;0;4;;@Override public RestartContainerCmd.Exec createRestartContainerCmdExec() {     return null. }
+false;public;0;4;;@Override public CommitCmd.Exec createCommitCmdExec() {     return null. }
+false;public;0;4;;@Override public BuildImageCmd.Exec createBuildImageCmdExec() {     return null. }
+false;public;0;4;;@Override public TopContainerCmd.Exec createTopContainerCmdExec() {     return null. }
+false;public;0;4;;@Override public TagImageCmd.Exec createTagImageCmdExec() {     return null. }
+false;public;0;4;;@Override public PauseContainerCmd.Exec createPauseContainerCmdExec() {     return null. }
+false;public;0;4;;@Override public UnpauseContainerCmd.Exec createUnpauseContainerCmdExec() {     return null. }
+false;public;0;4;;@Override public EventsCmd.Exec createEventsCmdExec() {     return null. }
+false;public;0;4;;@Override public StatsCmd.Exec createStatsCmdExec() {     return null. }
+false;public;0;4;;@Override public CreateVolumeCmd.Exec createCreateVolumeCmdExec() {     return null. }
+false;public;0;4;;@Override public InspectVolumeCmd.Exec createInspectVolumeCmdExec() {     return null. }
+false;public;0;4;;@Override public RemoveVolumeCmd.Exec createRemoveVolumeCmdExec() {     return null. }
+false;public;0;4;;@Override public ListVolumesCmd.Exec createListVolumesCmdExec() {     return null. }
+false;public;0;4;;@Override public ListNetworksCmd.Exec createListNetworksCmdExec() {     return null. }
+false;public;0;4;;@Override public InspectNetworkCmd.Exec createInspectNetworkCmdExec() {     return null. }
+false;public;0;4;;@Override public CreateNetworkCmd.Exec createCreateNetworkCmdExec() {     return null. }
+false;public;0;4;;@Override public RemoveNetworkCmd.Exec createRemoveNetworkCmdExec() {     return null. }
+false;public;0;4;;@Override public ConnectToNetworkCmd.Exec createConnectToNetworkCmdExec() {     return null. }
+false;public;0;4;;@Override public DisconnectFromNetworkCmd.Exec createDisconnectFromNetworkCmdExec() {     return null. }
+false;public;0;4;;@Override public void close() throws IOException { }

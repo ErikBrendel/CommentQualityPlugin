@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;11;;protected boolean validateQuery(HttpRequest request) throws IOException {     try {         String query = new URI(request.getRequestLine().getUri()).getRawQuery().         if (expectedQuery != null && !expectedQuery.equals(query)) {             return false.         }     } catch (URISyntaxException e) {         throw new IOException(e).     }     return true. }

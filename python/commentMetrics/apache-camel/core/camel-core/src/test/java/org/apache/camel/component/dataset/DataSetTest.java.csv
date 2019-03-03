@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void testDataSet() throws Exception {     // data set will itself set its assertions so we should just     // assert that all mocks is ok     assertMockEndpointsSatisfied(). }
+false;protected;0;6;;@Override protected Context createJndiContext() throws Exception {     Context context = super.createJndiContext().     context.bind("foo", dataSet).     return context. }
+false;public;0;5;;public void configure() throws Exception {     // start this first to make sure the "direct:foo" consumer is ready     from("direct:foo").to("dataset:foo?minRate=50").     from("dataset:foo?initialDelay=0&minRate=50").to("direct:foo"). }
+false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             // start this first to make sure the "direct:foo" consumer is ready             from("direct:foo").to("dataset:foo?minRate=50").             from("dataset:foo?initialDelay=0&minRate=50").to("direct:foo").         }     }. }

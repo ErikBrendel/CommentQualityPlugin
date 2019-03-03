@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void setOrder(int order) {     this.order = order. }
+false;public;0;4;;@Override public int getOrder() {     return this.order. }
+false;public;1;4;;@Override public boolean supportsMethod(Method method) {     return AnnotatedElementUtils.hasAnnotation(method, TransactionalEventListener.class). }
+false;public;3;4;;@Override public ApplicationListener<?> createApplicationListener(String beanName, Class<?> type, Method method) {     return new ApplicationListenerMethodTransactionalAdapter(beanName, type, method). }

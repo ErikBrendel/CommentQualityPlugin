@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;9;;public static Map<String, Object> filterCMISProperties(Map<String, Object> properties) {     Map<String, Object> result = new HashMap<>(properties.size()).     for (Map.Entry<String, Object> entry : properties.entrySet()) {         if (entry.getKey().startsWith("cmis:")) {             result.put(entry.getKey(), entry.getValue()).         }     }     return result. }
+false;public,static;1;4;;public static Map<String, Object> objectProperties(CmisObject cmisObject) {     List<Property<?>> propertyList = cmisObject.getProperties().     return propertyDataToMap(propertyList). }
+false;public,static;1;7;;public static Map<String, Object> propertyDataToMap(List<? extends PropertyData<?>> properties) {     Map<String, Object> result = new HashMap<>().     for (PropertyData<?> propertyData : properties) {         result.put(propertyData.getId(), propertyData.getFirstValue()).     }     return result. }
+false;public,static;1;3;;public static boolean isFolder(CmisObject cmisObject) {     return CamelCMISConstants.CMIS_FOLDER.equals(getObjectTypeId(cmisObject)). }
+false;public,static;1;3;;public static boolean isDocument(CmisObject cmisObject) {     return CamelCMISConstants.CMIS_DOCUMENT.equals(getObjectTypeId(cmisObject)). }
+false;public,static;1;3;;public static Object getObjectTypeId(CmisObject child) {     // BASE_TYPE_ID?     return child.getPropertyValue(PropertyIds.OBJECT_TYPE_ID). }

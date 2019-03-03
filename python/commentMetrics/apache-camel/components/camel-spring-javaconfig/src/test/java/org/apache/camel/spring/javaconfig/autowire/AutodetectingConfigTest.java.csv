@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;12;;@Test public void shouldAutodetectRouteBuilders() throws InterruptedException {     // Given     autowireMockEndpoint.expectedMessageCount(1).     autowireMockEndpoint.message(0).body().isEqualTo(message).     // When     producer.sendBody("direct:autowire", message).     // Then     autowireMockEndpoint.assertIsSatisfied(). }
+false;public;0;12;;@Test public void shouldWireRouteBuildersFromModule() throws InterruptedException {     // Given     moduleMockEndpoint.expectedMessageCount(1).     moduleMockEndpoint.message(0).body().isEqualTo(message).     // When     producer.sendBody("direct:module", message).     // Then     moduleMockEndpoint.assertIsSatisfied(). }

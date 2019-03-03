@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Before public void setup() {     this.mockMvc = MockMvcBuilders.webAppContextSetup(this.wac).alwaysExpect(status().isOk()).build(). }
+false;public;0;5;;// TilesConfigurer: resources under "/WEB-INF/**/tiles.xml" @Test public void tilesDefinitions() throws Exception {     this.mockMvc.perform(get("/")).andExpect(forwardedUrl("/WEB-INF/layouts/standardLayout.jsp")). }
+false;public;0;6;;// Resources served via <mvc:resources/> @Test public void resourceRequest() throws Exception {     this.mockMvc.perform(get("/resources/Spring.js")).andExpect(content().contentType("application/javascript")).andExpect(content().string(containsString("Spring={}."))). }
+false;public;0;6;;// Forwarded to the "default" servlet via <mvc:default-servlet-handler/> @Test public void resourcesViaDefaultServlet() throws Exception {     this.mockMvc.perform(get("/unknown/resource")).andExpect(handler().handlerType(DefaultServletHttpRequestHandler.class)).andExpect(forwardedUrl("default")). }

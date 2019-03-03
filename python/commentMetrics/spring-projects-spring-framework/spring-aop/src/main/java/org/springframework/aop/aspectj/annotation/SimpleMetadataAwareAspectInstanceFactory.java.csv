@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,final;0;4;;@Override public final AspectMetadata getAspectMetadata() {     return this.metadata. }
+false;public;0;4;;@Override public Object getAspectCreationMutex() {     return this. }
+false;protected;1;4;;@Override protected int getOrderForAspectClass(Class<?> aspectClass) {     return OrderUtils.getOrder(aspectClass, Ordered.LOWEST_PRECEDENCE). }

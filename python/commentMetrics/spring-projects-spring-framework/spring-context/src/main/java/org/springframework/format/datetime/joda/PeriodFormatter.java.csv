@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public Period parse(String text, Locale locale) throws ParseException {     return Period.parse(text). }
+false;public;2;4;;@Override public String print(Period object, Locale locale) {     return object.toString(). }

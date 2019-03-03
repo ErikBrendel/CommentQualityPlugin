@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public void onResponse(Response response) {     try {         channel.sendResponse(response).     } catch (Exception e) {         onFailure(e).     } }
+false;public;1;9;;@Override public void onFailure(Exception e) {     try {         channel.sendResponse(e).     } catch (Exception e1) {         logger.warn(() -> new ParameterizedMessage("Failed to send error response for action [{}] and request [{}]", actionName, request), e1).     } }

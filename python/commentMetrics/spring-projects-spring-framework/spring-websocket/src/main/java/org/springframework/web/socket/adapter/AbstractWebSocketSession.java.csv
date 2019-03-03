@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Map<String, Object> getAttributes() {     return this.attributes. }
+false;public;0;5;;@Override public T getNativeSession() {     Assert.state(this.nativeSession != null, "WebSocket session not yet initialized").     return this.nativeSession. }
+false;public;1;6;;@SuppressWarnings("unchecked") @Override @Nullable public <R> R getNativeSession(@Nullable Class<R> requiredType) {     return (requiredType == null || requiredType.isInstance(this.nativeSession) ? (R) this.nativeSession : null). }
+false;public;1;4;;public void initializeNativeSession(T session) {     Assert.notNull(session, "WebSocket session must not be null").     this.nativeSession = session. }
+false;protected,final;0;3;;protected final void checkNativeSessionInitialized() {     Assert.state(this.nativeSession != null, "WebSocket session is not yet initialized"). }
+false;public,final;1;24;;@Override public final void sendMessage(WebSocketMessage<?> message) throws IOException {     checkNativeSessionInitialized().     if (logger.isTraceEnabled()) {         logger.trace("Sending " + message + ", " + this).     }     if (message instanceof TextMessage) {         sendTextMessage((TextMessage) message).     } else if (message instanceof BinaryMessage) {         sendBinaryMessage((BinaryMessage) message).     } else if (message instanceof PingMessage) {         sendPingMessage((PingMessage) message).     } else if (message instanceof PongMessage) {         sendPongMessage((PongMessage) message).     } else {         throw new IllegalStateException("Unexpected WebSocketMessage type: " + message).     } }
+false;protected,abstract;1;1;;protected abstract void sendTextMessage(TextMessage message) throws IOException.
+false;protected,abstract;1;1;;protected abstract void sendBinaryMessage(BinaryMessage message) throws IOException.
+false;protected,abstract;1;1;;protected abstract void sendPingMessage(PingMessage message) throws IOException.
+false;protected,abstract;1;1;;protected abstract void sendPongMessage(PongMessage message) throws IOException.
+false;public,final;0;4;;@Override public final void close() throws IOException {     close(CloseStatus.NORMAL). }
+false;public,final;1;8;;@Override public final void close(CloseStatus status) throws IOException {     checkNativeSessionInitialized().     if (logger.isDebugEnabled()) {         logger.debug("Closing " + this).     }     closeInternal(status). }
+false;protected,abstract;1;1;;protected abstract void closeInternal(CloseStatus status) throws IOException.
+false;public;0;9;;@Override public String toString() {     if (this.nativeSession != null) {         return getClass().getSimpleName() + "[id=" + getId() + ", uri=" + getUri() + "]".     } else {         return getClass().getSimpleName() + "[nativeSession=null]".     } }

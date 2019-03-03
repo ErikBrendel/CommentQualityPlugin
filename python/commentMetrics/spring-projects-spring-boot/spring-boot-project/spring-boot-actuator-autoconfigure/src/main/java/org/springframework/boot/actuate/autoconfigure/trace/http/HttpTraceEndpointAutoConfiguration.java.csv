@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Bean @ConditionalOnBean(HttpTraceRepository.class) @ConditionalOnMissingBean public HttpTraceEndpoint httpTraceEndpoint(HttpTraceRepository traceRepository) {     return new HttpTraceEndpoint(traceRepository). }

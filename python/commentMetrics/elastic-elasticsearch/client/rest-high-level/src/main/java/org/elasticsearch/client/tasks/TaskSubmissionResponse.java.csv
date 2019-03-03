@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Get the task id  *  * @return the id of the reindex task.  */ ;/**  * Get the task id  *  * @return the id of the reindex task.  */ public String getTask() {     return task. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(task). }
+false;public;1;11;;@Override public boolean equals(Object other) {     if (this == other) {         return true.     }     if (other == null || getClass() != other.getClass()) {         return false.     }     TaskSubmissionResponse that = (TaskSubmissionResponse) other.     return Objects.equals(task, that.task). }
+false;public,static;1;3;;public static TaskSubmissionResponse fromXContent(XContentParser parser) throws IOException {     return PARSER.parse(parser, null). }

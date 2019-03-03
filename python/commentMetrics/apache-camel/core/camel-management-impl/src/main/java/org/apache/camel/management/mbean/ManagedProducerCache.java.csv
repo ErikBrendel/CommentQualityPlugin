@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public ProducerCache getProducerCache() {     return producerCache. }
+false;public;0;6;;public String getSource() {     if (producerCache.getSource() != null) {         return producerCache.getSource().toString().     }     return null. }
+false;public;0;3;;public Integer getSize() {     return producerCache.size(). }
+false;public;0;3;;public Integer getMaximumCacheSize() {     return producerCache.getCapacity(). }
+false;public;0;3;;public Long getHits() {     return producerCache.getHits(). }
+false;public;0;3;;public Long getMisses() {     return producerCache.getMisses(). }
+false;public;0;3;;public Long getEvicted() {     return producerCache.getEvicted(). }
+false;public;0;3;;public void resetStatistics() {     producerCache.resetCacheStatistics(). }
+false;public;0;3;;public void purge() {     producerCache.purge(). }
+false;public;0;3;;public Boolean isEventNotifierEnabled() {     return producerCache.isEventNotifierEnabled(). }

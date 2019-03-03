@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Get the parameter name.  */ ;/**  * Get the parameter name.  */ public String getParameterName() {     return this.parameterName. }
+true;public;0;3;/**  * Get the parameter SQL type.  */ ;/**  * Get the parameter SQL type.  */ public int getSqlType() {     return this.sqlType. }
+true;public;0;3;/**  * Get whether the parameter/column is nullable.  */ ;/**  * Get whether the parameter/column is nullable.  */ public boolean isNullable() {     return this.nullable. }

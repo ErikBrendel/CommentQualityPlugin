@@ -1,0 +1,47 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * URLs to one or more NAT servers. Use comma to separate URLs when  * specifying multiple servers.  */ ;/**  * URLs to one or more NAT servers. Use comma to separate URLs when  * specifying multiple servers.  */ public String getServers() {     return servers. }
+false;public;1;3;;public void setServers(String servers) {     this.servers = servers. }
+true;public;0;3;/**  * The name of topic we want to use  */ ;/**  * The name of topic we want to use  */ public String getTopic() {     return topic. }
+false;public;1;3;;public void setTopic(String topic) {     this.topic = topic. }
+true;public;0;3;/**  * Reference an already instantiated connection to Nats server  */ ;/**  * Reference an already instantiated connection to Nats server  */ public Connection getConnection() {     return connection. }
+false;public;1;3;;public void setConnection(Connection connection) {     this.connection = connection. }
+true;public;0;3;/**  * Whether or not using reconnection feature  */ ;/**  * Whether or not using reconnection feature  */ public boolean getReconnect() {     return reconnect. }
+false;public;1;3;;public void setReconnect(boolean reconnect) {     this.reconnect = reconnect. }
+true;public;0;3;/**  * Whether or not running in pedantic mode (this affects performace)  */ ;/**  * Whether or not running in pedantic mode (this affects performace)  */ public boolean getPedantic() {     return pedantic. }
+false;public;1;3;;public void setPedantic(boolean pedantic) {     this.pedantic = pedantic. }
+true;public;0;3;/**  * Whether or not running in verbose mode  */ ;/**  * Whether or not running in verbose mode  */ public boolean getVerbose() {     return verbose. }
+false;public;1;3;;public void setVerbose(boolean verbose) {     this.verbose = verbose. }
+true;public;0;3;/**  * Waiting time before attempts reconnection (in milliseconds)  */ ;/**  * Waiting time before attempts reconnection (in milliseconds)  */ public int getReconnectTimeWait() {     return reconnectTimeWait. }
+false;public;1;3;;public void setReconnectTimeWait(int reconnectTimeWait) {     this.reconnectTimeWait = reconnectTimeWait. }
+true;public;0;3;/**  * Max reconnection attempts  */ ;/**  * Max reconnection attempts  */ public int getMaxReconnectAttempts() {     return maxReconnectAttempts. }
+false;public;1;3;;public void setMaxReconnectAttempts(int maxReconnectAttempts) {     this.maxReconnectAttempts = maxReconnectAttempts. }
+true;public;0;3;/**  * maximum number of pings have not received a response allowed by the  * client  */ ;/**  * maximum number of pings have not received a response allowed by the  * client  */ public int getMaxPingsOut() {     return maxPingsOut. }
+false;public;1;3;;public void setMaxPingsOut(int maxPingsOut) {     this.maxPingsOut = maxPingsOut. }
+true;public;0;3;/**  *  Interval to clean up cancelled/timed out requests.  */ ;/**  *  Interval to clean up cancelled/timed out requests.  */ public int getRequestCleanupInterval() {     return requestCleanupInterval. }
+false;public;1;3;;public void setRequestCleanupInterval(int requestCleanupInterval) {     this.requestCleanupInterval = requestCleanupInterval. }
+true;public;0;3;/**  * Ping interval to be aware if connection is still alive (in milliseconds)  */ ;/**  * Ping interval to be aware if connection is still alive (in milliseconds)  */ public int getPingInterval() {     return pingInterval. }
+false;public;1;3;;public void setPingInterval(int pingInterval) {     this.pingInterval = pingInterval. }
+true;public;0;3;/**  * Timeout for connection attempts. (in milliseconds)  */ ;/**  * Timeout for connection attempts. (in milliseconds)  */ public int getConnectionTimeout() {     return connectionTimeout. }
+false;public;1;3;;public void setConnectionTimeout(int connectionTimeout) {     this.connectionTimeout = connectionTimeout. }
+true;public;0;3;/**  * the subject to which subscribers should send response  */ ;/**  * the subject to which subscribers should send response  */ public String getReplySubject() {     return replySubject. }
+false;public;1;3;;public void setReplySubject(String replySubject) {     this.replySubject = replySubject. }
+true;public;0;3;/**  * Whether or not randomizing the order of servers for the connection  * attempts  */ ;/**  * Whether or not randomizing the order of servers for the connection  * attempts  */ public boolean getNoRandomizeServers() {     return noRandomizeServers. }
+false;public;1;3;;public void setNoRandomizeServers(boolean noRandomizeServers) {     this.noRandomizeServers = noRandomizeServers. }
+true;public;0;3;/**  * Turn off echo. If supported by the gnatsd version you are connecting to  * this flag will prevent the server from echoing messages back to the  * connection if it has subscriptions on the subject being published to.  */ ;/**  * Turn off echo. If supported by the gnatsd version you are connecting to  * this flag will prevent the server from echoing messages back to the  * connection if it has subscriptions on the subject being published to.  */ public boolean getNoEcho() {     return noEcho. }
+false;public;1;3;;public void setNoEcho(boolean noEcho) {     this.noEcho = noEcho. }
+true;public;0;3;/**  * The Queue name if we are using nats for a queue configuration  */ ;/**  * The Queue name if we are using nats for a queue configuration  */ public String getQueueName() {     return queueName. }
+false;public;1;3;;public void setQueueName(String queueName) {     this.queueName = queueName. }
+true;public;0;3;/**  * Stop receiving messages from a topic we are subscribing to after  * maxMessages  */ ;/**  * Stop receiving messages from a topic we are subscribing to after  * maxMessages  */ public String getMaxMessages() {     return maxMessages. }
+false;public;1;3;;public void setMaxMessages(String maxMessages) {     this.maxMessages = maxMessages. }
+true;public;0;3;/**  * Consumer pool size  */ ;/**  * Consumer pool size  */ public int getPoolSize() {     return poolSize. }
+false;public;1;3;;public void setPoolSize(int poolSize) {     this.poolSize = poolSize. }
+false;public;0;3;;public boolean isFlushConnection() {     return flushConnection. }
+true;public;1;3;/**  * Define if we want to flush connection or not  */ ;/**  * Define if we want to flush connection or not  */ public void setFlushConnection(boolean flushConnection) {     this.flushConnection = flushConnection. }
+false;public;0;3;;public int getFlushTimeout() {     return flushTimeout. }
+true;public;1;3;/**  * Set the flush timeout (in milliseconds)  */ ;/**  * Set the flush timeout (in milliseconds)  */ public void setFlushTimeout(int flushTimeout) {     this.flushTimeout = flushTimeout. }
+true;public;0;3;/**  * Set secure option indicating TLS is required  */ ;/**  * Set secure option indicating TLS is required  */ public boolean isSecure() {     return secure. }
+false;public;1;3;;public void setSecure(boolean secure) {     this.secure = secure. }
+true;public;0;3;/**  * To configure security using SSLContextParameters  */ ;/**  * To configure security using SSLContextParameters  */ public SSLContextParameters getSslContextParameters() {     return sslContextParameters. }
+false;public;1;3;;public void setSslContextParameters(SSLContextParameters sslContextParameters) {     this.sslContextParameters = sslContextParameters. }
+false;public;0;30;;public Builder createOptions() throws NoSuchAlgorithmException, IllegalArgumentException {     Builder builder = new Options.Builder().     builder.server(splitServers()).     if (getVerbose()) {         builder.verbose().     }     if (getPedantic()) {         builder.pedantic().     }     if (isSecure()) {         builder.secure().     }     if (!getReconnect()) {         builder.noReconnect().     } else {         builder.maxReconnects(getMaxReconnectAttempts()).         builder.reconnectWait(Duration.ofMillis(getReconnectTimeWait())).     }     builder.pingInterval(Duration.ofMillis(getPingInterval())).     builder.connectionTimeout(Duration.ofMillis(getConnectionTimeout())).     builder.maxPingsOut(getMaxPingsOut()).     builder.requestCleanupInterval(Duration.ofMillis(getRequestCleanupInterval())).     if (getNoRandomizeServers()) {         builder.noRandomize().     }     if (getNoEcho()) {         builder.noEcho().     }     return builder. }
+false;private;0;14;;private String splitServers() {     StringBuilder servers = new StringBuilder().     String prefix = "nats://".     String[] pieces = getServers().split(",").     for (int i = 0. i < pieces.length. i++) {         if (i < pieces.length - 1) {             servers.append(prefix + pieces[i] + ",").         } else {             servers.append(prefix + pieces[i]).         }     }     return servers.toString(). }

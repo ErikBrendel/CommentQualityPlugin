@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Before public void setUp() throws Exception {     super.setUp().     NetworkConfig.createStandardWithoutFile(). }
+false;protected;1;3;;protected CoapClient createClient(String path) {     return createClient(path, PORT). }
+false;protected;2;4;;protected CoapClient createClient(String path, int port) {     String url = String.format("coap://localhost:%d/%s", port, FileUtil.stripLeadingSeparator(path)).     return new CoapClient(url). }

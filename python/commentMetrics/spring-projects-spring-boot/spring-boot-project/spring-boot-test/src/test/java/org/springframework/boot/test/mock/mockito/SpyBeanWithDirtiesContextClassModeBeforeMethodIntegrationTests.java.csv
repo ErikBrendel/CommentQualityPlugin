@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void testSpying() throws Exception {     this.caller.sayGreeting().     verify(this.exampleService).greeting(). }

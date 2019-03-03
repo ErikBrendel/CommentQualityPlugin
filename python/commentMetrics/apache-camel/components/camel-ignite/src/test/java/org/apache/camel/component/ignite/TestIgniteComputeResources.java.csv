@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public void run() {     System.out.println("Hello from a runnable"). }
+false;public;0;4;;@Override public void run() {     COUNTER.incrementAndGet(). }
+false;public;1;5;;@Override public boolean apply(Event event) {     COUNTER.incrementAndGet().     return true. }
+false;public;0;4;;@Override public String call() throws Exception {     return "hello". }
+false;public;1;4;;@Override public String apply(String input) {     return "hello " + input. }
+false;public;1;10;;@Override public String reduce(List<ComputeJobResult> results) throws IgniteException {     StringBuilder answer = new StringBuilder().     for (ComputeJobResult res : results) {         Object data = res.getData().         answer.append(data).append(",").     }     answer.deleteCharAt(answer.length() - 1).     return answer.toString(). }
+false;public;0;4;;@Override public Object execute() throws IgniteException {     return "a" + c. }
+false;public;0;4;;@Override public void cancel() { // nothing }
+false;protected;2;21;;@Override protected Collection<? extends ComputeJob> split(int gridSize, final Integer arg) throws IgniteException {     Set<ComputeJob> answer = new HashSet<>().     for (int i = 0. i < arg. i++) {         final int c = i.         answer.add(new ComputeJob() {              private static final long serialVersionUID = 3365213549618276779L.              @Override             public Object execute() throws IgniteException {                 return "a" + c.             }              @Override             public void cancel() {             // nothing             }         }).     }     return answer. }
+false;public;1;5;;@Override public boolean collect(String value) {     list.add(value).     return true. }
+false;public;0;7;;@Override public String reduce() {     Collections.sort(list).     String answer = Joiner.on("").join(list).     list.clear().     return answer. }

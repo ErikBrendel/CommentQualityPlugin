@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Bean @ConditionalOnMissingBean(name = "elasticsearchRestHealthIndicator") public HealthIndicator elasticsearchRestHealthIndicator(Map<String, RestClient> clients) {     return createHealthIndicator(clients). }
+false;protected;1;4;;@Override protected ElasticsearchRestHealthIndicator createHealthIndicator(RestClient client) {     return new ElasticsearchRestHealthIndicator(client). }

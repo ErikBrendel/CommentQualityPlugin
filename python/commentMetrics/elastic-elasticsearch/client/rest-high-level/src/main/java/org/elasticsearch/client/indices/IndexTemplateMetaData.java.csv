@@ -1,0 +1,21 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String name() {     return this.name. }
+false;public;0;3;;public int order() {     return this.order. }
+false;public;0;4;;@Nullable public Integer version() {     return version. }
+false;public;0;3;;public List<String> patterns() {     return this.patterns. }
+false;public;0;3;;public Settings settings() {     return this.settings. }
+false;public;0;3;;public MappingMetaData mappings() {     return this.mappings. }
+false;public;0;3;;public ImmutableOpenMap<String, AliasMetaData> aliases() {     return this.aliases. }
+false;public,static;1;3;;public static Builder builder(String name) {     return new Builder(name). }
+false;public;1;13;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     IndexTemplateMetaData that = (IndexTemplateMetaData) o.     return order == that.order && Objects.equals(name, that.name) && Objects.equals(version, that.version) && Objects.equals(patterns, that.patterns) && Objects.equals(settings, that.settings) && Objects.equals(mappings, that.mappings) && Objects.equals(aliases, that.aliases). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(name, order, version, patterns, settings, mappings, aliases). }
+false;public;1;4;;public Builder order(int order) {     this.order = order.     return this. }
+false;public;1;4;;public Builder version(Integer version) {     this.version = version.     return this. }
+false;public;1;4;;public Builder patterns(List<String> indexPatterns) {     this.indexPatterns = indexPatterns.     return this. }
+false;public;1;4;;public Builder settings(Settings.Builder settings) {     this.settings = settings.build().     return this. }
+false;public;1;4;;public Builder settings(Settings settings) {     this.settings = settings.     return this. }
+false;public;1;4;;public Builder mapping(MappingMetaData mappings) {     this.mappings = mappings.     return this. }
+false;public;1;4;;public Builder putAlias(AliasMetaData aliasMetaData) {     aliases.put(aliasMetaData.alias(), aliasMetaData).     return this. }
+false;public;1;4;;public Builder putAlias(AliasMetaData.Builder aliasMetaData) {     aliases.put(aliasMetaData.alias(), aliasMetaData.build()).     return this. }
+false;public;0;3;;public IndexTemplateMetaData build() {     return new IndexTemplateMetaData(name, order, version, indexPatterns, settings, mappings, aliases.build()). }
+false;public,static;2;3;;public static IndexTemplateMetaData fromXContent(XContentParser parser, String templateName) throws IOException {     return PARSER.parse(parser, templateName). }

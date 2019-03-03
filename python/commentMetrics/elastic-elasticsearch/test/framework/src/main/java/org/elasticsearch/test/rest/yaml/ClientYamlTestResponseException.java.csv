@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Exposes the obtained response body  */ ;/**  * Exposes the obtained response body  */ public ClientYamlTestResponse getRestTestResponse() {     return restTestResponse. }
+true;public;0;3;/**  * Exposes the origina {@link ResponseException}. Note that the entity will always be null as it  * gets eagerly consumed and exposed through {@link #getRestTestResponse()}.  */ ;/**  * Exposes the origina {@link ResponseException}. Note that the entity will always be null as it  * gets eagerly consumed and exposed through {@link #getRestTestResponse()}.  */ public ResponseException getResponseException() {     return responseException. }

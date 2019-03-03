@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;public void run(CamelContext context) {     ProducerTemplate template = context.createProducerTemplate().     OutgoingTextMessage msg = new OutgoingTextMessage().     msg.setText("Hello world!").     MessageResult msgResult = template.requestBody("direct:start", msg, MessageResult.class).     System.out.println(msgResult). }

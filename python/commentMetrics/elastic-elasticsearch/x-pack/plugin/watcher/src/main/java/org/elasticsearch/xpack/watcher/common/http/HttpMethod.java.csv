@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String method() {     return method. }
+false;public,static;1;17;;public static HttpMethod parse(String value) {     value = value.toUpperCase(Locale.ROOT).     switch(value) {         case "HEAD":             return HEAD.         case "GET":             return GET.         case "POST":             return POST.         case "PUT":             return PUT.         case "DELETE":             return DELETE.         default:             throw new IllegalArgumentException("unsupported http method [" + value + "]").     } }
+false;public;0;3;;public String value() {     return name().toLowerCase(Locale.ROOT). }

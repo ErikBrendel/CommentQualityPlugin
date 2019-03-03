@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected NodeInfo<? extends Coalesce> info() {     return NodeInfo.create(this, Coalesce::new, children()). }
+false;public;1;4;;@Override public Expression replaceChildren(List<Expression> newChildren) {     return new Coalesce(source(), newChildren). }
+false;public;0;8;;@Override public boolean foldable() {     // if the first entry is foldable, so is coalesce     // that's because the nulls are eliminated by the optimizer     // and if the first expression is folded (and not null), the rest do not matter     List<Expression> children = children().     return (children.isEmpty() || (children.get(0).foldable() && children.get(0).fold() != null)). }
+false;public;0;5;;@Override public Object fold() {     List<Expression> children = children().     return children.isEmpty() ? null : children.get(0).fold(). }

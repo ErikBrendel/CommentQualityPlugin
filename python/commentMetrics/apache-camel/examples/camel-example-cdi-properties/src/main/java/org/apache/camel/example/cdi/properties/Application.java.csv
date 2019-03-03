@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Override public void configure() {     // Property placeholders in endpoint URIs are resolved     // based on configuration properties     from("{{destination}}").log("${body} from CamelContext (${camelContext.name})"). }
+false;;3;7;;void hello(@Observes CamelContextStartedEvent event, // Configuration properties can be injected with @ConfigProperty @ConfigProperty(name = "message") String message, // Property placeholders in @Uri qualifier are also resolved @Uri("{{destination}}") ProducerTemplate producer) {     producer.sendBody(message). }
+false;;1;10;;@Produces @ApplicationScoped @Named("properties") // "properties" component bean that Camel uses to lookup properties PropertiesComponent properties(PropertiesParser parser) {     PropertiesComponent component = new PropertiesComponent().     // Use DeltaSpike as configuration source for Camel CDI     component.setPropertiesParser(parser).     return component. }
+false;public;3;4;;@Override public String parseProperty(String key, String value, Properties properties) {     return ConfigResolver.getPropertyValue(key). }

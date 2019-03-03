@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;8;;public void getQuote(@XPath("/quote_request/@item") String item, Exchange exchange) throws Exception {     if ("beer".equals(item)) {         exchange.getIn().setBody(beerPrice).         quoteAggregator.send(exchange).     } else {         throw new Exception("No quote available for " + item).     } }

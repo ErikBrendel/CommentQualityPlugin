@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected boolean supports(Class<?> clazz) {     return (byte[].class == clazz). }
+false;protected;3;7;;@Override @Nullable protected Object convertFromInternal(Message<?> message, @Nullable Class<?> targetClass, @Nullable Object conversionHint) {     return message.getPayload(). }
+false;protected;3;7;;@Override @Nullable protected Object convertToInternal(Object payload, @Nullable MessageHeaders headers, @Nullable Object conversionHint) {     return payload. }

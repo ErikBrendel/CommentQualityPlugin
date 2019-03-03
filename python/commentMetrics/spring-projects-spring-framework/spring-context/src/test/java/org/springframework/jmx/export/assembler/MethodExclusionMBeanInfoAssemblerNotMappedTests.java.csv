@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void testGetAgeIsReadOnly() throws Exception {     ModelMBeanInfo info = getMBeanInfoFromAssembler().     ModelMBeanAttributeInfo attr = info.getAttribute(AGE_ATTRIBUTE).     assertTrue("Age is not readable", attr.isReadable()).     assertTrue("Age is not writable", attr.isWritable()). }
+false;public;0;8;;@Test public void testNickNameIsExposed() throws Exception {     ModelMBeanInfo inf = (ModelMBeanInfo) getMBeanInfo().     MBeanAttributeInfo attr = inf.getAttribute("NickName").     assertNotNull("Nick Name should not be null", attr).     assertTrue("Nick Name should be writable", attr.isWritable()).     assertTrue("Nick Name should be readable", attr.isReadable()). }
+false;protected;0;4;;@Override protected String getObjectName() {     return OBJECT_NAME. }
+false;protected;0;4;;@Override protected int getExpectedOperationCount() {     return 11. }
+false;protected;0;4;;@Override protected int getExpectedAttributeCount() {     return 4. }
+false;protected;0;4;;@Override protected String getApplicationContextPath() {     return "org/springframework/jmx/export/assembler/methodExclusionAssemblerNotMapped.xml". }
+false;protected;0;8;;@Override protected MBeanInfoAssembler getAssembler() throws Exception {     MethodExclusionMBeanInfoAssembler assembler = new MethodExclusionMBeanInfoAssembler().     Properties props = new Properties().     props.setProperty("bean:name=testBean5", "setAge,isSuperman,setSuperman,dontExposeMe").     assembler.setIgnoredMethodMappings(props).     return assembler. }

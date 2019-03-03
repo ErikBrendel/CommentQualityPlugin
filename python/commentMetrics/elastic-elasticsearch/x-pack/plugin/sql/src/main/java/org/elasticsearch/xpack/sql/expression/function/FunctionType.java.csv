@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;8;;public static FunctionType of(Class<? extends Function> clazz) {     for (FunctionType type : values()) {         if (type.baseClass.isAssignableFrom(clazz)) {             return type.         }     }     throw new SqlIllegalArgumentException("Cannot identify the function type for {}", clazz). }

@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected,abstract;0;1;;protected abstract String getUri().
+false;protected,abstract;0;1;;protected abstract Logger getLogger().
+false;public;0;11;;@Test public void testDailyTrend() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMinimumMessageCount(1).     mock.assertIsSatisfied().     List<Exchange> tweets = mock.getExchanges().     for (Exchange e : tweets) {         getLogger().info("Tweet: " + e.getIn().getBody(String.class)).     } }
+false;public;0;4;;public void configure() {     from(getUri() + getUriTokens()).transform(body().convertToString()).to("mock:result"). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from(getUri() + getUriTokens()).transform(body().convertToString()).to("mock:result").         }     }. }

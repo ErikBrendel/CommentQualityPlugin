@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Override public void postProcessTest() throws Exception {     super.postProcessTest().     repo = applicationContext.getBean("repo1", JdbcAggregationRepository.class).     configureJdbcAggregationRepository(). }
+false;;0;2;;void configureJdbcAggregationRepository() { }
+false;public;0;10;;@Override public // START SNIPPET: e1 void configure() throws Exception {     // here is the Camel route where we aggregate     from("direct:start").aggregate(header("id"), new MyAggregationStrategy()).completionInterval(getCompletionInterval()).aggregationRepository(repo).to("mock:aggregated"). }
+false;protected;0;16;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public // START SNIPPET: e1         void configure() throws Exception {             // here is the Camel route where we aggregate             from("direct:start").aggregate(header("id"), new MyAggregationStrategy()).completionInterval(getCompletionInterval()).aggregationRepository(repo).to("mock:aggregated").         }     }. }
+false;;0;3;;long getCompletionInterval() {     return 5000. }
+false;protected;0;4;;@Override protected AbstractApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/processor/aggregate/jdbc/JdbcSpringDataSource.xml"). }
+false;public;2;10;;public Exchange aggregate(Exchange oldExchange, Exchange newExchange) {     if (oldExchange == null) {         return newExchange.     }     String body1 = oldExchange.getIn().getBody(String.class).     String body2 = newExchange.getIn().getBody(String.class).     oldExchange.getIn().setBody(body1 + body2).     return oldExchange. }

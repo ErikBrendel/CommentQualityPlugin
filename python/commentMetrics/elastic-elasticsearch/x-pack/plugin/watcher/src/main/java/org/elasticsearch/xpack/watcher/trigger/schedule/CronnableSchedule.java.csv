@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;12;;@Override public long nextScheduledTimeAfter(long startTime, long time) {     assert time >= startTime.     return Arrays.stream(crons).map(cron -> cron.getNextValidTimeAfter(time)).filter(nextValidTime -> nextValidTime > -1).sorted().findFirst().orElse(-1L). }
+false;public;0;3;;public Cron[] crons() {     return crons. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash((Object[]) crons). }
+false;public;1;11;;@Override public boolean equals(Object obj) {     if (this == obj) {         return true.     }     if (obj == null || getClass() != obj.getClass()) {         return false.     }     final CronnableSchedule other = (CronnableSchedule) obj.     return Objects.deepEquals(this.crons, other.crons). }
+false;static;1;7;;static Cron[] crons(String... expressions) {     Cron[] crons = new Cron[expressions.length].     for (int i = 0. i < crons.length. i++) {         crons[i] = new Cron(expressions[i]).     }     return crons. }

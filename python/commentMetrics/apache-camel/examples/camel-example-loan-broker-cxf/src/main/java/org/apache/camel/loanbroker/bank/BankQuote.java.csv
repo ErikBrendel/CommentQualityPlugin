@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void setBankName(String name) {     bankName = name. }
+false;public;1;3;;public void setSsn(String s) {     ssn = s. }
+false;public;1;3;;public void setRate(Double r) {     rate = r. }
+false;public;0;3;;public String getBankName() {     return bankName. }
+false;public;0;3;;public String getSsn() {     return ssn. }
+false;public;0;3;;public Double getRate() {     return rate. }
+false;public;0;3;;public String toString() {     return "[ssn:" + ssn + " bank:" + bankName + " rate:" + rate + "]". }

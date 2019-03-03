@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;4;;@Override public void publish(ClusterChangedEvent clusterChangedEvent, ActionListener<Void> publishListener, AckListener ackListener) {     publishListener.onResponse(null). }
+false;public;0;4;;@Override public DiscoveryStats stats() {     return null. }
+false;public;0;4;;@Override public void startInitialJoin() { }
+false;public;0;4;;@Override public Lifecycle.State lifecycleState() {     return null. }
+false;public;1;4;;@Override public void addLifecycleListener(LifecycleListener listener) { }
+false;public;1;4;;@Override public void removeLifecycleListener(LifecycleListener listener) { }
+false;public;0;2;;@Override public void start() { }
+false;public;0;2;;@Override public void stop() { }
+false;public;0;2;;@Override public void close() { }

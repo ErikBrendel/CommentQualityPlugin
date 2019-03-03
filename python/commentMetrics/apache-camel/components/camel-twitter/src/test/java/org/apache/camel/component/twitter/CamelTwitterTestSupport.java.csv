@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;6;;protected String getUriTokens() {     return "consumerKey=" + consumerKey + "&consumerSecret=" + consumerSecret + "&accessToken=" + accessToken + "&accessTokenSecret=" + accessTokenSecret. }
+false;protected;0;9;;protected Map<String, Object> getParameters() {     Map<String, Object> parameters = new HashMap<>().     parameters.put("consumerKey", this.consumerKey).     parameters.put("consumerSecret", this.consumerSecret).     parameters.put("accessToken", this.accessToken).     parameters.put("accessTokenSecret", this.accessTokenSecret).     return parameters. }
+false;protected;3;8;;protected void addProperty(Properties properties, String name, String envName) {     if (!properties.containsKey(name)) {         String value = System.getenv(envName).         if (ObjectHelper.isNotEmpty(value)) {             properties.setProperty(name, value).         }     } }

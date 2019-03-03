@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * @return the status of the requested watch. If an action was  * successfully acknowledged, this will be reflected in its status.  */ ;/**  * @return the status of the requested watch. If an action was  * successfully acknowledged, this will be reflected in its status.  */ public WatchStatus getStatus() {     return status. }
+false;public,static;1;3;;public static AckWatchResponse fromXContent(XContentParser parser) throws IOException {     return PARSER.parse(parser, null). }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public List<Comment> getComments(IRepositoryIdProvider repository, int issueNumber) {     return comments. }
+false;public;3;5;;@Override public Comment createComment(IRepositoryIdProvider repository, int issueNumber, String commentText) throws IOException {     Comment addedComment = mockPullRequestService.addComment((long) issueNumber, commentText).     return addedComment. }
+false;public;2;8;;@Override public Issue createIssue(IRepositoryIdProvider repository, Issue issue) {     Issue finalIssue = new Issue().     issue.setBody("There's an error").     issue.setTitle("Error").     issue.setId(1L).     return finalIssue. }
+false;public;2;8;;@Override public Issue getIssue(IRepositoryIdProvider repository, String issueNumber) {     Issue issue = new Issue().     issue.setBody("There's an error").     issue.setTitle("Error").     issue.setId(1L).     return issue. }

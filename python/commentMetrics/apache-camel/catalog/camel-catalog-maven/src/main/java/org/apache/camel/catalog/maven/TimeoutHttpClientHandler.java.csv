@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public int getTimeout() {     return timeout. }
+true;public;1;3;/**  * Sets the timeout in millis (http.socket.timeout) when downloading via http/https protocols.  * <p/>  * The default value is 10000  */ ;/**  * Sets the timeout in millis (http.socket.timeout) when downloading via http/https protocols.  * <p/>  * The default value is 10000  */ public void setTimeout(int timeout) {     this.timeout = timeout. }
+false;public;1;11;;@Override public URLInfo getURLInfo(URL url) {     // ensure we always use a timeout     String protocol = url.getProtocol().     if ("http".equals(protocol) || "https".equals(protocol)) {         return super.getURLInfo(url, timeout).     } else {         // use basic for non http         return basic.getURLInfo(url, timeout).     } }
+false;public;1;10;;@Override public InputStream openStream(URL url) throws IOException {     String protocol = url.getProtocol().     if ("http".equals(protocol) || "https".equals(protocol)) {         return super.openStream(url).     } else {         // use basic for non http         return basic.openStream(url).     } }

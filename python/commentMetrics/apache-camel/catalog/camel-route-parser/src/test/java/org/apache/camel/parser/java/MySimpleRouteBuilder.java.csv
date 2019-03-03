@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;11;;@Override public void configure() throws Exception {     from("timer:foo").filter(simple("${body} > 100")).toD("log:a").end().filter().simple("${body} > 200").to("log:b").end().to("log:c"). }

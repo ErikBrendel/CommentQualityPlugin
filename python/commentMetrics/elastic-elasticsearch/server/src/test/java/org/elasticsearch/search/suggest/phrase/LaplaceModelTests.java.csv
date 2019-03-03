@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected SmoothingModel createTestModel() {     return createRandomModel(). }
+false;static;0;3;;static SmoothingModel createRandomModel() {     return new Laplace(randomDoubleBetween(0.0, 10.0, false)). }
+true;protected;1;5;/**  * mutate the given model so the returned smoothing model is different  */ ;/**  * mutate the given model so the returned smoothing model is different  */ @Override protected Laplace createMutation(SmoothingModel input) {     Laplace original = (Laplace) input.     return new Laplace(original.getAlpha() + 0.1). }
+false;;2;6;;@Override void assertWordScorer(WordScorer wordScorer, SmoothingModel input) {     Laplace model = (Laplace) input.     assertThat(wordScorer, instanceOf(LaplaceScorer.class)).     assertEquals(model.getAlpha(), ((LaplaceScorer) wordScorer).alpha(), Double.MIN_VALUE). }
+false;protected;1;4;;@Override protected SmoothingModel fromXContent(XContentParser parser) throws IOException {     return Laplace.fromXContent(parser). }

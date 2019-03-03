@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void verifyEmployeeSetFromBaseContextConfig() {     assertNotNull("The employee should have been autowired.", this.employee).     assertEquals("John Smith", this.employee.getName()). }

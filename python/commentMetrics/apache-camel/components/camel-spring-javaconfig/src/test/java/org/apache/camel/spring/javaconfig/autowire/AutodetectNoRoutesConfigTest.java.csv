@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Test public void shouldAutodetectRouteBuilders() throws InterruptedException {     // When     int routesNumber = camelContext.getRoutes().size().     // Then     assertEquals(0, routesNumber). }

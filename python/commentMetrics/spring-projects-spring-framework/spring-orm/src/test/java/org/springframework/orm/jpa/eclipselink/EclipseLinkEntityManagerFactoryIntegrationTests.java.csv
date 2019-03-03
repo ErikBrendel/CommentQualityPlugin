@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void testCanCastNativeEntityManagerFactoryToEclipseLinkEntityManagerFactoryImpl() {     EntityManagerFactoryInfo emfi = (EntityManagerFactoryInfo) entityManagerFactory.     assertTrue(emfi.getNativeEntityManagerFactory().getClass().getName().endsWith("EntityManagerFactoryImpl")). }
+false;public;0;6;;@Test public void testCanCastSharedEntityManagerProxyToEclipseLinkEntityManager() {     assertTrue(sharedEntityManager instanceof JpaEntityManager).     JpaEntityManager eclipselinkEntityManager = (JpaEntityManager) sharedEntityManager.     assertNotNull(eclipselinkEntityManager.getActiveSession()). }

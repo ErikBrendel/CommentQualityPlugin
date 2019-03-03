@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;3;4;;@Override protected NodesStatsResponse newResponse(NodesStatsRequest request, List<NodeStats> responses, List<FailedNodeException> failures) {     return new NodesStatsResponse(clusterService.getClusterName(), responses, failures). }
+false;protected;2;4;;@Override protected NodeStatsRequest newNodeRequest(String nodeId, NodesStatsRequest request) {     return new NodeStatsRequest(nodeId, request). }
+false;protected;0;4;;@Override protected NodeStats newNodeResponse() {     return new NodeStats(). }
+false;protected;1;7;;@Override protected NodeStats nodeOperation(NodeStatsRequest nodeStatsRequest) {     NodesStatsRequest request = nodeStatsRequest.request.     return nodeService.stats(request.indices(), request.os(), request.process(), request.jvm(), request.threadPool(), request.fs(), request.transport(), request.http(), request.breaker(), request.script(), request.discovery(), request.ingest(), request.adaptiveSelection()). }
+false;public;1;6;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     request = new NodesStatsRequest().     request.readFrom(in). }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     request.writeTo(out). }

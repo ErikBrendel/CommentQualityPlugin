@@ -1,0 +1,16 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Test public void servletThatImplementsServletContextInitializerIsOnlyRegisteredOnce() {     load(ServletConfiguration.class).     ServletContextInitializerBeans initializerBeans = new ServletContextInitializerBeans(this.context.getBeanFactory()).     assertThat(initializerBeans.size()).isEqualTo(1).     assertThat(initializerBeans.iterator()).hasOnlyElementsOfType(TestServlet.class). }
+false;public;0;8;;@Test public void filterThatImplementsServletContextInitializerIsOnlyRegisteredOnce() {     load(FilterConfiguration.class).     ServletContextInitializerBeans initializerBeans = new ServletContextInitializerBeans(this.context.getBeanFactory()).     assertThat(initializerBeans.size()).isEqualTo(1).     assertThat(initializerBeans.iterator()).hasOnlyElementsOfType(TestFilter.class). }
+false;public;0;9;;@Test public void looksForInitializerBeansOfSpecifiedType() {     load(TestConfiguration.class).     ServletContextInitializerBeans initializerBeans = new ServletContextInitializerBeans(this.context.getBeanFactory(), TestServletContextInitializer.class).     assertThat(initializerBeans.size()).isEqualTo(1).     assertThat(initializerBeans.iterator()).hasOnlyElementsOfType(TestServletContextInitializer.class). }
+false;private;1;3;;private void load(Class<?>... configuration) {     this.context = new AnnotationConfigApplicationContext(configuration). }
+false;public;0;4;;@Bean public TestServlet testServlet() {     return new TestServlet(). }
+false;public;0;4;;@Bean public TestFilter testFilter() {     return new TestFilter(). }
+false;public;0;4;;@Bean public TestServletContextInitializer testServletContextInitializer() {     return new TestServletContextInitializer(). }
+false;public;0;4;;@Bean public OtherTestServletContextInitializer otherTestServletContextInitializer() {     return new OtherTestServletContextInitializer(). }
+false;public;1;4;;@Override public void onStartup(ServletContext servletContext) { }
+false;public;1;4;;@Override public void onStartup(ServletContext servletContext) { }
+false;public;1;4;;@Override public void init(FilterConfig filterConfig) { }
+false;public;3;5;;@Override public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) { }
+false;public;0;4;;@Override public void destroy() { }
+false;public;1;4;;@Override public void onStartup(ServletContext servletContext) throws ServletException { }
+false;public;1;4;;@Override public void onStartup(ServletContext servletContext) throws ServletException { }

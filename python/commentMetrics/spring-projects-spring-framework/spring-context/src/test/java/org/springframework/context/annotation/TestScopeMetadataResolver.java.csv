@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Override public ScopeMetadata resolveScopeMetadata(BeanDefinition beanDefinition) {     ScopeMetadata metadata = new ScopeMetadata().     metadata.setScopeName("myCustomScope").     return metadata. }

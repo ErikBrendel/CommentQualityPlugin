@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;3;/**  * Get the id associated with key at <code>0 &lt.= index &lt.= capacity()</code> or -1 if this slot is unused.  */ ;/**  * Get the id associated with key at <code>0 &lt.= index &lt.= capacity()</code> or -1 if this slot is unused.  */ public long id(long index) {     return ids.get(index) - 1. }
+false;protected,final;2;3;;protected final long id(long index, long id) {     return ids.set(index, id + 1) - 1. }
+false;protected;1;4;;@Override protected void resize(long capacity) {     ids = bigArrays.resize(ids, capacity). }
+false;protected;1;4;;@Override protected boolean used(long bucket) {     return id(bucket) >= 0. }
+false;public;0;4;;@Override public void close() {     Releasables.close(ids). }

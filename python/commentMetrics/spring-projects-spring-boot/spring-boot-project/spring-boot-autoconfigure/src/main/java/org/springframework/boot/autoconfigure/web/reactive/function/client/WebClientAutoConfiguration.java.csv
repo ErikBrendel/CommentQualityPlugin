@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Bean @Scope("prototype") @ConditionalOnMissingBean public WebClient.Builder webClientBuilder() {     return this.webClientBuilder.clone(). }
+false;public;1;7;;@Bean @ConditionalOnMissingBean @Order(0) public WebClientCodecCustomizer exchangeStrategiesCustomizer(List<CodecCustomizer> codecCustomizers) {     return new WebClientCodecCustomizer(codecCustomizers). }

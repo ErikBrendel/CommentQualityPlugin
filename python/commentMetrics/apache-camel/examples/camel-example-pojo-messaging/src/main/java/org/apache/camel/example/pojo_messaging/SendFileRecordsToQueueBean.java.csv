@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;5;;@Consume(uri = "file:src/data?noop=true") public void onFileSendToQueue(String body, @Header("CamelFileName") String name) {     LOG.info("Incoming file: {}", name).     producer.sendBody(body). }

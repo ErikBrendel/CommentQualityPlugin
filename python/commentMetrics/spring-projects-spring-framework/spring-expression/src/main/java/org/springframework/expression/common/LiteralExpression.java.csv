@@ -1,0 +1,24 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,final;0;4;;@Override public final String getExpressionString() {     return this.literalValue. }
+false;public;1;4;;@Override public Class<?> getValueType(EvaluationContext context) {     return String.class. }
+false;public;0;4;;@Override public String getValue() {     return this.literalValue. }
+false;public;1;6;;@Override @Nullable public <T> T getValue(@Nullable Class<T> expectedResultType) throws EvaluationException {     Object value = getValue().     return ExpressionUtils.convertTypedValue(null, new TypedValue(value), expectedResultType). }
+false;public;1;4;;@Override public String getValue(Object rootObject) {     return this.literalValue. }
+false;public;2;6;;@Override @Nullable public <T> T getValue(Object rootObject, @Nullable Class<T> desiredResultType) throws EvaluationException {     Object value = getValue(rootObject).     return ExpressionUtils.convertTypedValue(null, new TypedValue(value), desiredResultType). }
+false;public;1;4;;@Override public String getValue(EvaluationContext context) {     return this.literalValue. }
+false;public;2;8;;@Override @Nullable public <T> T getValue(EvaluationContext context, @Nullable Class<T> expectedResultType) throws EvaluationException {     Object value = getValue(context).     return ExpressionUtils.convertTypedValue(context, new TypedValue(value), expectedResultType). }
+false;public;2;4;;@Override public String getValue(EvaluationContext context, Object rootObject) throws EvaluationException {     return this.literalValue. }
+false;public;3;8;;@Override @Nullable public <T> T getValue(EvaluationContext context, Object rootObject, @Nullable Class<T> desiredResultType) throws EvaluationException {     Object value = getValue(context, rootObject).     return ExpressionUtils.convertTypedValue(context, new TypedValue(value), desiredResultType). }
+false;public;0;4;;@Override public Class<?> getValueType() {     return String.class. }
+false;public;1;4;;@Override public Class<?> getValueType(Object rootObject) throws EvaluationException {     return String.class. }
+false;public;2;4;;@Override public Class<?> getValueType(EvaluationContext context, Object rootObject) throws EvaluationException {     return String.class. }
+false;public;0;4;;@Override public TypeDescriptor getValueTypeDescriptor() {     return TypeDescriptor.valueOf(String.class). }
+false;public;1;4;;@Override public TypeDescriptor getValueTypeDescriptor(Object rootObject) throws EvaluationException {     return TypeDescriptor.valueOf(String.class). }
+false;public;1;4;;@Override public TypeDescriptor getValueTypeDescriptor(EvaluationContext context) {     return TypeDescriptor.valueOf(String.class). }
+false;public;2;4;;@Override public TypeDescriptor getValueTypeDescriptor(EvaluationContext context, Object rootObject) throws EvaluationException {     return TypeDescriptor.valueOf(String.class). }
+false;public;1;4;;@Override public boolean isWritable(Object rootObject) throws EvaluationException {     return false. }
+false;public;1;4;;@Override public boolean isWritable(EvaluationContext context) {     return false. }
+false;public;2;4;;@Override public boolean isWritable(EvaluationContext context, Object rootObject) throws EvaluationException {     return false. }
+false;public;2;4;;@Override public void setValue(Object rootObject, @Nullable Object value) throws EvaluationException {     throw new EvaluationException(this.literalValue, "Cannot call setValue() on a LiteralExpression"). }
+false;public;2;4;;@Override public void setValue(EvaluationContext context, @Nullable Object value) throws EvaluationException {     throw new EvaluationException(this.literalValue, "Cannot call setValue() on a LiteralExpression"). }
+false;public;3;4;;@Override public void setValue(EvaluationContext context, Object rootObject, @Nullable Object value) throws EvaluationException {     throw new EvaluationException(this.literalValue, "Cannot call setValue() on a LiteralExpression"). }

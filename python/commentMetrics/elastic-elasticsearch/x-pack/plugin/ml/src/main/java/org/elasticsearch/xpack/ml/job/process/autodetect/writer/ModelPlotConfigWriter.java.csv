@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;17;;public void write() throws IOException {     StringBuilder contents = new StringBuilder().     contents.append("boundspercentile").append(EQUALS).append(modelPlotConfig.isEnabled() ? BOUNDS_PERCENTILE_DEFAULT : BOUNDS_PERCENTILE_DISABLE_VALUE).append(NEW_LINE).     String terms = modelPlotConfig.getTerms().     contents.append(ModelPlotConfig.TERMS_FIELD.getPreferredName()).append(EQUALS).append(terms == null ? "" : terms).append(NEW_LINE).     writer.write(contents.toString()). }

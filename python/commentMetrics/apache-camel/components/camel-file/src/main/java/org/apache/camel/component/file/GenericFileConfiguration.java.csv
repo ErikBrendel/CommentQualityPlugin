@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public boolean needToNormalize() {     return true. }
+false;public;1;6;;public void configure(URI uri) {     String path = uri.getPath().     // strip tailing slash which URI path always start with     path = FileUtil.stripFirstLeadingSeparator(path).     setDirectory(path). }
+false;public;0;3;;public String getDirectory() {     return directory. }
+false;public;1;12;;public void setDirectory(String directory) {     this.directory = needToNormalize() ? // must normalize path to cater for Windows and other OS     FileUtil.normalizePath(directory) : // for the remote directory we don't need to do that     directory.     // endpoint directory must not be null     if (this.directory == null) {         this.directory = "".     } }
+false;public;0;3;;public String toString() {     return directory. }

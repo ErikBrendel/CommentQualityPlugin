@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Test public void testMarshallMessage() throws Exception {     resultEndpoint.expectedBodiesReceived(result).     template.sendBody(generateModel()).     resultEndpoint.assertIsSatisfied(). }
+false;public;0;14;;public List<Map<String, Object>> generateModel() {     Map<String, Object> modelObjects = new HashMap<>().     BooleanExample example = new BooleanExample().     example.setName("andrew").     example.setExist(Boolean.TRUE).     modelObjects.put(example.getClass().getName(), example).     models.add(modelObjects).     return models. }
+false;public;0;8;;public void configure() {     BindyCsvDataFormat camelDataFormat = new BindyCsvDataFormat(org.apache.camel.dataformat.bindy.model.simple.bool.BooleanExample.class).     camelDataFormat.setLocale("en").     from("direct:start").marshal(camelDataFormat).to("mock:result"). }

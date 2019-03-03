@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Before public void before() {     // Setup mock     getMockEndpoint("mock:value").whenAnyExchangeReceived((e) -> e.getMessage().setBody(generateValue(e.getMessage().getBody(String.class)))). }
+false;public,static;0;3;;public static String randomString() {     return UUID.randomUUID().toString(). }
+false;public,static;1;4;;public static Cache lookupCache(String cacheName) {     // This will also open a closed cache     return Caching.getCachingProvider().getCacheManager().getCache(cacheName). }
+false;public,static;1;3;;public static String generateValue(String key) {     return "value-" + key. }
+false;public;0;7;;@After public void after() {     // The RouteBuilder code is called for every test, so we destroy cache after each test     CacheManager cacheManager = Caching.getCachingProvider().getCacheManager().     cacheManager.getCacheNames().forEach((s) -> cacheManager.destroyCache(s)).     Caching.getCachingProvider().close(). }

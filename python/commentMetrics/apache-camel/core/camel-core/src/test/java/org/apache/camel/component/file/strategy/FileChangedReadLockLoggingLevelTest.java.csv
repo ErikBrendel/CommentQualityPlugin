@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Override public void configure() throws Exception {     from("file:target/data/changed/in?initialDelay=0&delay=10&readLock=changed&readLockCheckInterval=100&readLockLoggingLevel=DEBUG").to("file:target/data/changed/out", "mock:result"). }
+false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("file:target/data/changed/in?initialDelay=0&delay=10&readLock=changed&readLockCheckInterval=100&readLockLoggingLevel=DEBUG").to("file:target/data/changed/out", "mock:result").         }     }. }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Return how often in milliseconds the task should be executed.  */ ;/**  * Return how often in milliseconds the task should be executed.  */ public long getInterval() {     return this.interval. }
+true;public;0;3;/**  * Return the initial delay before first execution of the task.  */ ;/**  * Return the initial delay before first execution of the task.  */ public long getInitialDelay() {     return this.initialDelay. }

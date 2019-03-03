@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void prefixIsMandatory() {     assertThatIllegalArgumentException().isThrownBy(() -> new SimpleInfoContributor(null, new Object())). }
+false;public;0;6;;@Test public void mapSimpleObject() {     Object o = new Object().     Info info = contributeFrom("test", o).     assertThat(info.get("test")).isSameAs(o). }
+false;private,static;2;6;;private static Info contributeFrom(String prefix, Object detail) {     SimpleInfoContributor contributor = new SimpleInfoContributor(prefix, detail).     Info.Builder builder = new Info.Builder().     contributor.contribute(builder).     return builder.build(). }

@@ -1,0 +1,31 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * The Consul agent URL  */ ;// ************************************************************************* // Getter/Setter // ************************************************************************* /**  * The Consul agent URL  */ public String getUrl() {     return url. }
+false;public;1;3;;public void setUrl(String url) {     this.url = url. }
+false;public;0;3;;public String getDatacenter() {     return datacenter. }
+true;public;1;3;/**  * The data center  */ ;/**  * The data center  */ public void setDatacenter(String datacenter) {     this.datacenter = datacenter. }
+false;public;0;3;;public String getAclToken() {     return aclToken. }
+true;public;1;3;/**  * Sets the ACL token to be used with Consul  */ ;/**  * Sets the ACL token to be used with Consul  */ public void setAclToken(String aclToken) {     this.aclToken = aclToken. }
+false;public;0;3;;public String getUserName() {     return userName. }
+true;public;1;3;/**  * Sets the username to be used for basic authentication  */ ;/**  * Sets the username to be used for basic authentication  */ public void setUserName(String userName) {     this.userName = userName. }
+false;public;0;3;;public String getPassword() {     return password. }
+true;public;1;3;/**  * Sets the password to be used for basic authentication  */ ;/**  * Sets the password to be used for basic authentication  */ public void setPassword(String password) {     this.password = password. }
+false;public;0;3;;public Long getConnectTimeoutMillis() {     return connectTimeoutMillis. }
+true;public;1;3;/**  * Connect timeout for OkHttpClient  */ ;/**  * Connect timeout for OkHttpClient  */ public void setConnectTimeoutMillis(Long connectTimeoutMillis) {     this.connectTimeoutMillis = connectTimeoutMillis. }
+false;public;0;3;;public Long getReadTimeoutMillis() {     return readTimeoutMillis. }
+true;public;1;3;/**  * Read timeout for OkHttpClient  */ ;/**  * Read timeout for OkHttpClient  */ public void setReadTimeoutMillis(Long readTimeoutMillis) {     this.readTimeoutMillis = readTimeoutMillis. }
+false;public;0;3;;public Long getWriteTimeoutMillis() {     return writeTimeoutMillis. }
+true;public;1;3;/**  * Write timeout for OkHttpClient  */ ;/**  * Write timeout for OkHttpClient  */ public void setWriteTimeoutMillis(Long writeTimeoutMillis) {     this.writeTimeoutMillis = writeTimeoutMillis. }
+false;public;0;3;;public Integer getBlockSeconds() {     return blockSeconds. }
+true;public;1;3;/**  * The seconds to wait for a watch event, default 10 seconds  */ ;/**  * The seconds to wait for a watch event, default 10 seconds  */ public void setBlockSeconds(Integer blockSeconds) {     this.blockSeconds = blockSeconds. }
+false;public;0;3;;public SSLContextParameters getSslContextParameters() {     return sslContextParameters. }
+true;public;1;3;/**  * To configure security using SSLContextParameters.  */ ;/**  * To configure security using SSLContextParameters.  */ public void setSslContextParameters(SSLContextParameters sslContextParameters) {     this.sslContextParameters = sslContextParameters. }
+true;public;1;4;/**  * The Consul agent URL  */ ;// ************************************************************************* // Fluent API // ************************************************************************* /**  * The Consul agent URL  */ public ConsulServiceCallServiceDiscoveryConfiguration url(String url) {     setUrl(url).     return this. }
+true;public;1;4;/**  * The data center  */ ;/**  * The data center  */ public ConsulServiceCallServiceDiscoveryConfiguration dataCenter(String dc) {     setDatacenter(dc).     return this. }
+true;public;1;4;/**  * Sets the ACL token to be used with Consul  */ ;/**  * Sets the ACL token to be used with Consul  */ public ConsulServiceCallServiceDiscoveryConfiguration aclToken(String aclToken) {     setAclToken(aclToken).     return this. }
+true;public;1;4;/**  * Sets the username to be used for basic authentication  */ ;/**  * Sets the username to be used for basic authentication  */ public ConsulServiceCallServiceDiscoveryConfiguration userName(String userName) {     setUserName(userName).     return this. }
+true;public;1;4;/**  * Sets the password to be used for basic authentication  */ ;/**  * Sets the password to be used for basic authentication  */ public ConsulServiceCallServiceDiscoveryConfiguration password(String password) {     setPassword(password).     return this. }
+true;public;1;4;/**  * Connect timeout for OkHttpClient  */ ;/**  * Connect timeout for OkHttpClient  */ public ConsulServiceCallServiceDiscoveryConfiguration connectTimeoutMillis(Long connectTimeoutMillis) {     setConnectTimeoutMillis(connectTimeoutMillis).     return this. }
+true;public;1;4;/**  * Read timeout for OkHttpClient  */ ;/**  * Read timeout for OkHttpClient  */ public ConsulServiceCallServiceDiscoveryConfiguration readTimeoutMillis(Long readTimeoutMillis) {     setReadTimeoutMillis(readTimeoutMillis).     return this. }
+true;public;1;4;/**  * Write timeout for OkHttpClient  */ ;/**  * Write timeout for OkHttpClient  */ public ConsulServiceCallServiceDiscoveryConfiguration writeTimeoutMillis(Long writeTimeoutMillis) {     setWriteTimeoutMillis(writeTimeoutMillis).     return this. }
+true;public;1;4;/**  * The seconds to wait for a watch event, default 10 seconds  */ ;/**  * The seconds to wait for a watch event, default 10 seconds  */ public ConsulServiceCallServiceDiscoveryConfiguration blockSeconds(Integer blockSeconds) {     setBlockSeconds(blockSeconds).     return this. }
+true;public;1;4;/**  * To configure security using SSLContextParameters.  */ ;/**  * To configure security using SSLContextParameters.  */ public ConsulServiceCallServiceDiscoveryConfiguration sslContextParameters(SSLContextParameters sslContextParameters) {     setSslContextParameters(sslContextParameters).     return this. }

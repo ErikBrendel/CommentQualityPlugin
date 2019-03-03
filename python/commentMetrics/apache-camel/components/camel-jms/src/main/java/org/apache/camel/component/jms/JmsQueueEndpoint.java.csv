@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@ManagedAttribute public int getMaximumBrowseSize() {     return maximumBrowseSize. }
+true;public;1;4;/**  * If a number is set > 0 then this limits the number of messages that are  * returned when browsing the queue  */ ;/**  * If a number is set > 0 then this limits the number of messages that are  * returned when browsing the queue  */ @ManagedAttribute public void setMaximumBrowseSize(int maximumBrowseSize) {     this.maximumBrowseSize = maximumBrowseSize. }
+false;public;0;8;;public List<Exchange> getExchanges() {     if (queueBrowseStrategy == null) {         return Collections.emptyList().     }     String queue = getDestinationName().     JmsOperations template = getConfiguration().createInOnlyTemplate(this, false, queue).     return queueBrowseStrategy.browse(template, queue, this). }
+false;protected;0;3;;protected QueueBrowseStrategy createQueueBrowseStrategy() {     return new DefaultQueueBrowseStrategy(). }

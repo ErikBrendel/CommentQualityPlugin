@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected String getBlueprintDescriptor() {     return "org/apache/camel/test/blueprint/eventNotifier.xml". }
+false;public;0;9;;@Test public void testCustomEvent() throws Exception {     getMockEndpoint("mock:result").expectedMessageCount(1).     getMockEndpoint("mock:event").expectedMinimumMessageCount(8).     template.sendBody("direct:start", "Hello World").     assertMockEndpointsSatisfied(). }

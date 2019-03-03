@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;4;/**  * Calls the action listeners {@link ActionListener#onFailure(Exception)} method with the given exception.  * This method is invoked for all exception thrown by {@link #doRun()}  */ ;/**  * Calls the action listeners {@link ActionListener#onFailure(Exception)} method with the given exception.  * This method is invoked for all exception thrown by {@link #doRun()}  */ @Override public void onFailure(Exception e) {     listener.onFailure(e). }

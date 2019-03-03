@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Test public void filterAutoConfigurationWorksWithoutSecurityAutoConfiguration() {     try (AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext()) {         context.setServletContext(new MockServletContext()).         context.register(Config.class).         context.refresh().     } }

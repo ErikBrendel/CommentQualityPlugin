@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;1;4;;@Override void extractVariables(Set<String> variables) {     throw createError(new IllegalStateException("Illegal tree structure.")). }
+false;;1;8;;@Override void analyze(Locals locals) {     index.analyze(locals).     index.expected = index.actual.     index = index.cast(locals).     actual = expected == null || explicit ? def.class : expected. }
+false;;2;5;;@Override void write(MethodWriter writer, Globals globals) {     setup(writer, globals).     load(writer, globals). }
+false;;0;4;;@Override int accessElementCount() {     return 2. }
+false;;0;4;;@Override boolean isDefOptimized() {     return true. }
+false;;1;4;;@Override void updateActual(Class<?> actual) {     this.actual = actual. }
+false;;2;9;;@Override void setup(MethodWriter writer, Globals globals) {     // Current stack:                                                                    def     // def, def     writer.dup().     // def, def, unnormalized_index     index.write(writer, globals).     Type methodType = Type.getMethodType(MethodWriter.getType(index.actual), Type.getType(Object.class), MethodWriter.getType(index.actual)).     // def, normalized_index     writer.invokeDefCall("normalizeIndex", methodType, DefBootstrap.INDEX_NORMALIZE). }
+false;;2;8;;@Override void load(MethodWriter writer, Globals globals) {     writer.writeDebugInfo(location).     Type methodType = Type.getMethodType(MethodWriter.getType(actual), Type.getType(Object.class), MethodWriter.getType(index.actual)).     writer.invokeDefCall("arrayLoad", methodType, DefBootstrap.ARRAY_LOAD). }
+false;;2;9;;@Override void store(MethodWriter writer, Globals globals) {     writer.writeDebugInfo(location).     Type methodType = Type.getMethodType(Type.getType(void.class), Type.getType(Object.class), MethodWriter.getType(index.actual), MethodWriter.getType(actual)).     writer.invokeDefCall("arrayStore", methodType, DefBootstrap.ARRAY_STORE). }
+false;public;0;4;;@Override public String toString() {     return singleLineToString(prefix, index). }

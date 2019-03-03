@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Override @Before public void setUp() throws Exception {     deleteDirectory("target/data/exclusiveread").     super.setUp(). }
+false;public;0;10;;@Test public void testManually() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     // this is used for manual testing where you can copy/lock files etc. while this test runs     // mock.setSleepForEmptyTest(10 * 1000L).     mock.setSleepForEmptyTest(100).     mock.expectedMessageCount(0).     mock.assertIsSatisfied(). }
+false;public;0;3;;public void configure() throws Exception {     from(fileUrl).to("mock:result"). }
+false;protected;0;7;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from(fileUrl).to("mock:result").         }     }. }

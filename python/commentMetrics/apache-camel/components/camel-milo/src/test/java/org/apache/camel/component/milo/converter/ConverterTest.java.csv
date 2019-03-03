@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void testDataValueToVariant() {     final Variant value = testConvertDataValue("Foo", Variant.class).     Assert.assertNotNull(value).     Assert.assertEquals("Foo", value.getValue()). }
+false;public;0;7;;@Test public void testVariantToDataValue() {     final DataValue value = testConvert(new Variant("Foo"), DataValue.class).     Assert.assertNotNull(value).     Assert.assertEquals("Foo", value.getValue().getValue()).     Assert.assertTrue(value.getStatusCode().isGood()). }
+false;private;2;3;;private <T> T testConvert(final Object value, final Class<T> clazz) {     return this.context.getTypeConverter().convertTo(clazz, value). }
+false;private;2;3;;private <T> T testConvertDataValue(final Object value, final Class<T> clazz) {     return this.context.getTypeConverter().convertTo(clazz, new DataValue(new Variant(value))). }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override @SuppressWarnings("unchecked") public Map<String, Object> parseMap(String json) {     return parseMap(json, (trimmed) -> new Yaml().loadAs(trimmed, Map.class)). }
+false;public;1;5;;@Override @SuppressWarnings("unchecked") public List<Object> parseList(String json) {     return parseList(json, (trimmed) -> new Yaml().loadAs(trimmed, List.class)). }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@GetMapping("/") @ResponseBody public String helloWorld() {     return this.helloWorldService.getHelloMessage(). }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Set<String> getUsernames() {     return usernames. }
+false;public;1;7;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (!(o instanceof GetUsersRequest))         return false.     GetUsersRequest that = (GetUsersRequest) o.     return Objects.equals(usernames, that.usernames). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(usernames). }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;1;2;;@Query("Select * from customer where firstname=?0") Customer findByFirstName(String firstName).
+false;;1;2;;@Query("Select * from customer where lastname=?0") List<Customer> findByLastName(String lastName).

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;4;;public static <T> T doPrivileged(final PrivilegedAction<T> operation) {     SpecialPermission.check().     return AccessController.doPrivileged(operation). }
+false;public,static;1;7;;public static void doPrivilegedVoid(final Runnable action) {     SpecialPermission.check().     AccessController.doPrivileged((PrivilegedAction<Void>) () -> {         action.run().         return null.     }). }
+false;public,static;1;9;;public static <T> T doPrivilegedIOException(final PrivilegedExceptionAction<T> operation) throws IOException {     SpecialPermission.check().     try {         return AccessController.doPrivileged(operation).     } catch (final PrivilegedActionException e) {         throw (IOException) e.getCause().     } }

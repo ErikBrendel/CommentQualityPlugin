@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public BeanProcessor getProcessor() {     return (BeanProcessor) super.getProcessor(). }
+false;public;0;4;;@Override public Object getInstance() {     return getProcessor().getBean(). }
+false;public;0;4;;@Override public String getMethod() {     return getProcessor().getMethod(). }
+false;public;0;16;;@Override public String getBeanClassName() {     if (beanClassName != null) {         return beanClassName.     }     try {         Object bean = getProcessor().getBean().         if (bean != null) {             beanClassName = ObjectHelper.className(bean).         }     } catch (NoSuchBeanException e) {     // ignore     }     return beanClassName. }

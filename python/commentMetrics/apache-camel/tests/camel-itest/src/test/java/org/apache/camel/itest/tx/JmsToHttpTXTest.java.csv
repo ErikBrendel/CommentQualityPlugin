@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;15;;@Test public void testSendToTXJms() throws Exception {     // we assume 2 rollbacks     mock.expectedMessageCount(2).     // use requestBody to force a InOut message exchange pattern ( = request/reply)     // will send and wait for a response     Object out = template.requestBody("<?xml version=\"1.0\"?><request><status id=\"123\"/></request>").     // compare response     assertEquals(ok, out).     // assert the mock is correct     mock.assertIsSatisfied(). }

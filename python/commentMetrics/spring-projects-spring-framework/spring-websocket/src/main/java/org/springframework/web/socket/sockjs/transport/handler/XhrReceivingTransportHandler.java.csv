@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public TransportType getTransportType() {     return TransportType.XHR_SEND. }
+false;protected;1;5;;@Override @Nullable protected String[] readMessages(ServerHttpRequest request) throws IOException {     return getServiceConfig().getMessageCodec().decodeInputStream(request.getBody()). }
+false;protected;0;4;;@Override protected HttpStatus getResponseStatus() {     return HttpStatus.NO_CONTENT. }

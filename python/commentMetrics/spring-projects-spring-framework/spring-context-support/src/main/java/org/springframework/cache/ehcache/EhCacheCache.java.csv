@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,final;0;4;;@Override public final String getName() {     return this.cache.getName(). }
+false;public,final;0;4;;@Override public final Ehcache getNativeCache() {     return this.cache. }
+false;public;1;6;;@Override @Nullable public ValueWrapper get(Object key) {     Element element = lookup(key).     return toValueWrapper(element). }
+false;public;2;25;;@SuppressWarnings("unchecked") @Override @Nullable public <T> T get(Object key, Callable<T> valueLoader) {     Element element = lookup(key).     if (element != null) {         return (T) element.getObjectValue().     } else {         this.cache.acquireWriteLockOnKey(key).         try {             // one more attempt with the write lock             element = lookup(key).             if (element != null) {                 return (T) element.getObjectValue().             } else {                 return loadValue(key, valueLoader).             }         } finally {             this.cache.releaseWriteLockOnKey(key).         }     } }
+false;private;2;11;;private <T> T loadValue(Object key, Callable<T> valueLoader) {     T value.     try {         value = valueLoader.call().     } catch (Throwable ex) {         throw new ValueRetrievalException(key, valueLoader, ex).     }     put(key, value).     return value. }
+false;public;2;12;;@Override @SuppressWarnings("unchecked") @Nullable public <T> T get(Object key, @Nullable Class<T> type) {     Element element = this.cache.get(key).     Object value = (element != null ? element.getObjectValue() : null).     if (value != null && type != null && !type.isInstance(value)) {         throw new IllegalStateException("Cached value is not of required type [" + type.getName() + "]: " + value).     }     return (T) value. }
+false;public;2;4;;@Override public void put(Object key, @Nullable Object value) {     this.cache.put(new Element(key, value)). }
+false;public;2;6;;@Override @Nullable public ValueWrapper putIfAbsent(Object key, @Nullable Object value) {     Element existingElement = this.cache.putIfAbsent(new Element(key, value)).     return toValueWrapper(existingElement). }
+false;public;1;4;;@Override public void evict(Object key) {     this.cache.remove(key). }
+false;public;0;4;;@Override public void clear() {     this.cache.removeAll(). }
+false;private;1;4;;@Nullable private Element lookup(Object key) {     return this.cache.get(key). }
+false;private;1;4;;@Nullable private ValueWrapper toValueWrapper(@Nullable Element element) {     return (element != null ? new SimpleValueWrapper(element.getObjectValue()) : null). }

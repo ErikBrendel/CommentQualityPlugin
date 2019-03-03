@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void shouldAutoConfigureWebClient() {     WebMvcTestWebDriverCustomScopeIntegrationTests.previousWebDriver = this.webDriver. }
+false;public;0;4;;@Test public void shouldBeTheSameWebClient() {     assertThat(previousWebDriver).isNotNull().isSameAs(this.webDriver). }
+false;public;1;5;;@Bean @Scope("singleton") public WebDriverFactory webDriver(MockMvc mockMvc) {     return new WebDriverFactory(mockMvc). }
+false;public;0;4;;@Override public boolean isSingleton() {     return true. }
+false;public;0;4;;@Override public Class<?> getObjectType() {     return WebDriver.class. }
+false;public;0;4;;@Override public WebDriver getObject() {     return this.driver. }

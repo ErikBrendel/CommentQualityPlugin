@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Before public void setup() {     given(this.vehicleDetailsService.getVehicleDetails(VIN)).willReturn(new VehicleDetails("Honda", "Civic")). }
+false;public;0;4;;@Test public void test() {     this.restTemplate.getForEntity("/{username}/vehicle", String.class, "sframework"). }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void testAssertionsUsingBean() throws Exception {     MyAssertions bean = getMandatoryBean(MyAssertions.class, "myBean").     bean.assertEndpointsValid(). }
+false;protected;0;3;;protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/spring/mock/spring.xml"). }

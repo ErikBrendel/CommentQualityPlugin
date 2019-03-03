@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void testSendMatchingMessage() throws Exception {     MockEndpoint resultEndpoint = resolveMandatoryEndpoint("mock:result", MockEndpoint.class).     resultEndpoint.expectedMessageCount(0).     template.sendBodyAndHeader("direct:start", "<matched/>", "foo", "bar").     resultEndpoint.assertIsSatisfied(). }
+false;public;0;10;;@Test public void testSendNotMatchingMessage() throws Exception {     MockEndpoint resultEndpoint = resolveMandatoryEndpoint("mock:result", MockEndpoint.class).     resultEndpoint.expectedMessageCount(1).     resultEndpoint.message(0).exchangeProperty(Exchange.FILTER_MATCHED).isEqualTo(true).     template.sendBody("direct:start", "<notMatched/>").     resultEndpoint.assertIsSatisfied(). }
+false;public;0;6;;public void configure() {     from("direct:start").filter(not(header("foo"))).to("mock:result"). }
+false;protected;0;10;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("direct:start").filter(not(header("foo"))).to("mock:result").         }     }. }

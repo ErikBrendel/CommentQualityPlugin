@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Before public void before() {     client = new CouchDbClient("camelcouchdb", true, "http", "localhost", 5984, null, null). }
+false;public;0;4;;@Override public void configure() throws Exception {     from(from).to(to). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from(from).to(to).         }     }. }
+false;public;0;11;;@Test public void testDeletesOnly() throws InterruptedException {     to.expectedHeaderReceived(CouchDbConstants.HEADER_METHOD, "UPDATE").     to.expectedMessageCount(1).     JsonElement obj = new Gson().toJsonTree("{ \"randomString\" : \"" + UUID.randomUUID() + "\" }").     Response resp = client.save(obj).     client.remove(resp.getId(), resp.getRev()).     to.assertIsSatisfied(). }

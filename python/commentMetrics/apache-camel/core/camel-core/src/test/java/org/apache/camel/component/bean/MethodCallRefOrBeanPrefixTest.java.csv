@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry jndi = super.createRegistry().     jndi.bind("foo", new MyFooBean()).     return jndi. }
+false;public;0;10;;@Test public void testRefOrBeanPrefix() throws Exception {     getMockEndpoint("mock:a").expectedBodiesReceived("Hello A").     getMockEndpoint("mock:b").expectedBodiesReceived("Hello B").     template.sendBody("direct:a", "A").     template.sendBody("direct:b", "B").     assertMockEndpointsSatisfied(). }
+false;public;0;8;;@Override public void configure() throws Exception {     from("direct:a").transform().method("ref:foo").to("mock:a").     from("direct:b").transform().method("bean:foo").to("mock:b"). }
+false;protected;0;13;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:a").transform().method("ref:foo").to("mock:a").             from("direct:b").transform().method("bean:foo").to("mock:b").         }     }. }

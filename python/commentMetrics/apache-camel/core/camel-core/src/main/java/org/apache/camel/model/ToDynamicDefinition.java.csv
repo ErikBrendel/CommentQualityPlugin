@@ -1,0 +1,17 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getShortName() {     return "toD". }
+false;public;0;4;;@Override public String toString() {     return "DynamicTo[" + getLabel() + "]". }
+true;public;1;4;/**  * Sets the optional {@link ExchangePattern} used to invoke this endpoint  */ ;// Fluent API // ------------------------------------------------------------------------- /**  * Sets the optional {@link ExchangePattern} used to invoke this endpoint  */ public ToDynamicDefinition pattern(ExchangePattern pattern) {     setPattern(pattern).     return this. }
+true;public;1;4;/**  * Sets the maximum size used by the {@link org.apache.camel.spi.ConsumerCache} which is used to cache and reuse producers.  *  * @param cacheSize  the cache size, use <tt>0</tt> for default cache size, or <tt>-1</tt> to turn cache off.  * @return the builder  */ ;/**  * Sets the maximum size used by the {@link org.apache.camel.spi.ConsumerCache} which is used to cache and reuse producers.  *  * @param cacheSize  the cache size, use <tt>0</tt> for default cache size, or <tt>-1</tt> to turn cache off.  * @return the builder  */ public ToDynamicDefinition cacheSize(int cacheSize) {     setCacheSize(cacheSize).     return this. }
+true;public;0;4;/**  * Ignore the invalidate endpoint exception when try to create a producer with that endpoint  *  * @return the builder  */ ;/**  * Ignore the invalidate endpoint exception when try to create a producer with that endpoint  *  * @return the builder  */ public ToDynamicDefinition ignoreInvalidEndpoint() {     setIgnoreInvalidEndpoint(true).     return this. }
+true;public;1;4;/**  * Whether to allow components to optimise toD if they are {@link org.apache.camel.spi.SendDynamicAware}.  *  * @return the builder  */ ;/**  * Whether to allow components to optimise toD if they are {@link org.apache.camel.spi.SendDynamicAware}.  *  * @return the builder  */ public ToDynamicDefinition allowOptimisedComponents(boolean allowOptimisedComponents) {     setAllowOptimisedComponents(allowOptimisedComponents).     return this. }
+false;public;0;3;;// Properties // ------------------------------------------------------------------------- public String getUri() {     return uri. }
+true;public;1;3;/**  * The uri of the endpoint to send to. The uri can be dynamic computed using the {@link org.apache.camel.language.simple.SimpleLanguage} expression.  */ ;/**  * The uri of the endpoint to send to. The uri can be dynamic computed using the {@link org.apache.camel.language.simple.SimpleLanguage} expression.  */ public void setUri(String uri) {     this.uri = uri. }
+false;public;0;3;;public ExchangePattern getPattern() {     return pattern. }
+false;public;1;3;;public void setPattern(ExchangePattern pattern) {     this.pattern = pattern. }
+false;public;0;3;;public Integer getCacheSize() {     return cacheSize. }
+false;public;1;3;;public void setCacheSize(Integer cacheSize) {     this.cacheSize = cacheSize. }
+false;public;0;3;;public Boolean getIgnoreInvalidEndpoint() {     return ignoreInvalidEndpoint. }
+false;public;1;3;;public void setIgnoreInvalidEndpoint(Boolean ignoreInvalidEndpoint) {     this.ignoreInvalidEndpoint = ignoreInvalidEndpoint. }
+false;public;0;3;;public Boolean getAllowOptimisedComponents() {     return allowOptimisedComponents. }
+false;public;1;3;;public void setAllowOptimisedComponents(Boolean allowOptimisedComponents) {     this.allowOptimisedComponents = allowOptimisedComponents. }

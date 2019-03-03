@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void testMocksAreValid() throws Exception {     // now run the test and send in a message with the expected body     template.sendBody("seda:foo", expectedBody).     assertMockEndpointsSatisfied(). }
+false;public;0;8;;@Override public void configure() throws Exception {     MyEndpoint my = new MyEndpoint("my:foo", context).     context.addEndpoint("my:foo", my).     from("seda:foo").to("test:my:foo?timeout=0"). }
+false;protected;0;13;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             MyEndpoint my = new MyEndpoint("my:foo", context).             context.addEndpoint("my:foo", my).             from("seda:foo").to("test:my:foo?timeout=0").         }     }. }
+false;public;0;5;;@Override public Producer createProducer() throws Exception {     // not needed for this test     return null. }
+false;public;0;4;;@Override public Endpoint getEndpoint() {     return MyEndpoint.this. }
+false;public;0;4;;@Override public Processor getProcessor() {     return null. }
+false;public;0;7;;@Override public void start() throws Exception {     // when starting then send a message to the processor     Exchange exchange = new DefaultExchange(getEndpoint()).     exchange.getIn().setBody(expectedBody).     processor.process(exchange). }
+false;public;0;4;;@Override public void stop() throws Exception { // noop }
+false;public;1;27;;@Override public Consumer createConsumer(final Processor processor) throws Exception {     return new Consumer() {          @Override         public Endpoint getEndpoint() {             return MyEndpoint.this.         }          @Override         public Processor getProcessor() {             return null.         }          @Override         public void start() throws Exception {             // when starting then send a message to the processor             Exchange exchange = new DefaultExchange(getEndpoint()).             exchange.getIn().setBody(expectedBody).             processor.process(exchange).         }          @Override         public void stop() throws Exception {         // noop         }     }. }
+false;public;0;4;;@Override public boolean isSingleton() {     return true. }

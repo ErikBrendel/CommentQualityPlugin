@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;12;;@Override public void select(Iterable<Node> nodes) {     Iterator<Node> itr = nodes.iterator().     while (itr.hasNext()) {         Map<String, List<String>> allAttributes = itr.next().getAttributes().         if (allAttributes == null)             continue.         List<String> values = allAttributes.get(key).         if (values == null || false == values.contains(value)) {             itr.remove().         }     } }
+false;public;1;12;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     HasAttributeNodeSelector that = (HasAttributeNodeSelector) o.     return Objects.equals(key, that.key) && Objects.equals(value, that.value). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(key, value). }
+false;public;0;4;;@Override public String toString() {     return key + "=" + value. }

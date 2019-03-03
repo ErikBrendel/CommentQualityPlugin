@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Before public void setup() {     this.mockMvc = standaloneSetup(new SampleController()).apply(defaultSetup()).build(). }
+false;public;0;4;;@Test public void fooHeader() throws Exception {     this.mockMvc.perform(get("/").with(headers().foo("a=b"))).andExpect(content().string("Foo")). }
+false;public;0;4;;@Test public void barHeader() throws Exception {     this.mockMvc.perform(get("/").with(headers().bar("a=b"))).andExpect(content().string("Bar")). }
+false;private,static;0;3;;private static TestMockMvcConfigurer defaultSetup() {     return new TestMockMvcConfigurer(). }
+false;private,static;0;3;;private static TestRequestPostProcessor headers() {     return new TestRequestPostProcessor(). }
+false;public;1;4;;public TestRequestPostProcessor foo(String value) {     this.headers.add("Foo", value).     return this. }
+false;public;1;4;;public TestRequestPostProcessor bar(String value) {     this.headers.add("Bar", value).     return this. }
+false;public;1;7;;@Override public MockHttpServletRequest postProcessRequest(MockHttpServletRequest request) {     for (String headerName : this.headers.keySet()) {         request.addHeader(headerName, this.headers.get(headerName)).     }     return request. }
+false;public;1;4;;@Override public void afterConfigurerAdded(ConfigurableMockMvcBuilder<?> builder) {     builder.alwaysExpect(status().isOk()). }
+false;public;2;8;;@Override public RequestPostProcessor beforeMockMvcCreated(ConfigurableMockMvcBuilder<?> builder, WebApplicationContext context) {     return request -> {         request.setUserPrincipal(mock(Principal.class)).         return request.     }. }
+false;public;1;6;;@RequestMapping(headers = "Foo") @ResponseBody public String handleFoo(Principal principal) {     Assert.notNull(principal, "Principal must not be null").     return "Foo". }
+false;public;1;6;;@RequestMapping(headers = "Bar") @ResponseBody public String handleBar(Principal principal) {     Assert.notNull(principal, "Principal must not be null").     return "Bar". }

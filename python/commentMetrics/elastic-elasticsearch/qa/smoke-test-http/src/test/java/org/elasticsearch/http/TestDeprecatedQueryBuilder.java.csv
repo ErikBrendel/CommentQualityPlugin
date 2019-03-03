@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected void doWriteTo(StreamOutput out) throws IOException { // nothing to do }
+false;protected;2;4;;@Override protected void doXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject(NAME).endObject(). }
+false;public,static;1;7;;public static TestDeprecatedQueryBuilder fromXContent(XContentParser parser) throws IOException, ParsingException {     if (parser.nextToken() != XContentParser.Token.END_OBJECT) {         throw new ParsingException(parser.getTokenLocation(), "[{}] query does not have any fields", NAME).     }     return new TestDeprecatedQueryBuilder(). }
+false;public;0;4;;@Override public String getWriteableName() {     return NAME. }
+false;protected;1;6;;@Override protected Query doToQuery(QueryShardContext context) throws IOException {     deprecationLogger.deprecated("[{}] query is deprecated, but used on [{}] index", NAME, context.index().getName()).     return Queries.newMatchAllQuery(). }
+false;public;0;4;;@Override public int doHashCode() {     return 0. }
+false;protected;1;4;;@Override protected boolean doEquals(TestDeprecatedQueryBuilder other) {     return true. }

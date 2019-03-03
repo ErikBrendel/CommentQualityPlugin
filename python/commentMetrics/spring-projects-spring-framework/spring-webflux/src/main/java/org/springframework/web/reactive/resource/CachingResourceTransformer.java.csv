@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Return the configured {@code Cache}.  */ ;/**  * Return the configured {@code Cache}.  */ public Cache getCache() {     return this.cache. }
+false;public;3;13;;@Override public Mono<Resource> transform(ServerWebExchange exchange, Resource resource, ResourceTransformerChain transformerChain) {     Resource cachedResource = this.cache.get(resource, Resource.class).     if (cachedResource != null) {         logger.trace(exchange.getLogPrefix() + "Resource resolved from cache").         return Mono.just(cachedResource).     }     return transformerChain.transform(exchange, resource).doOnNext(transformed -> this.cache.put(resource, transformed)). }

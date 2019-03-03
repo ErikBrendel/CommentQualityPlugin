@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public long getChecksum() {     return this.digest.getValue(). }
+false;public;1;5;;@Override public void writeByte(byte b) throws IOException {     out.writeByte(b).     digest.update(b). }
+false;public;3;5;;@Override public void writeBytes(byte[] b, int offset, int length) throws IOException {     out.writeBytes(b, offset, length).     digest.update(b, offset, length). }
+false;public;0;4;;@Override public void flush() throws IOException {     out.flush(). }
+false;public;0;4;;@Override public void close() throws IOException {     out.close(). }
+false;public;0;5;;@Override public void reset() throws IOException {     out.reset().     digest.reset(). }
+false;public;0;3;;public void resetDigest() {     digest.reset(). }

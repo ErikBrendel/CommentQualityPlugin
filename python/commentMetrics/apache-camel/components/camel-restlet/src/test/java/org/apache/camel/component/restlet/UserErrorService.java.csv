@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;public void idToLowError(Exchange exchange) {     exchange.getIn().setBody("id value is too low").     exchange.getIn().setHeader(Exchange.CONTENT_TYPE, "text/plain").     exchange.getIn().setHeader(Exchange.HTTP_RESPONSE_CODE, 400). }

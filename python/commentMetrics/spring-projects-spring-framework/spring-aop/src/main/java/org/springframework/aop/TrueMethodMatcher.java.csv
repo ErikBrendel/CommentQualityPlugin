@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean isRuntime() {     return false. }
+false;public;2;4;;@Override public boolean matches(Method method, Class<?> targetClass) {     return true. }
+false;public;3;5;;@Override public boolean matches(Method method, Class<?> targetClass, Object... args) {     // Should never be invoked as isRuntime returns false.     throw new UnsupportedOperationException(). }
+false;public;0;4;;@Override public String toString() {     return "MethodMatcher.TRUE". }
+true;private;0;3;/**  * Required to support serialization. Replaces with canonical  * instance on deserialization, protecting Singleton pattern.  * Alternative to overriding {@code equals()}.  */ ;/**  * Required to support serialization. Replaces with canonical  * instance on deserialization, protecting Singleton pattern.  * Alternative to overriding {@code equals()}.  */ private Object readResolve() {     return INSTANCE. }

@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getAction() {     return action. }
+false;public;1;3;;public Request newRequest(StreamInput in) throws IOException {     return requestReader.read(in). }
+false;public;2;12;;public void processMessageReceived(Request request, TransportChannel channel) throws Exception {     final Task task = taskManager.register(channel.getChannelType(), action, request).     boolean success = false.     try {         handler.messageReceived(request, new TaskTransportChannel(taskManager, task, channel), task).         success = true.     } finally {         if (success == false) {             taskManager.unregister(task).         }     } }
+false;public;0;3;;public boolean isForceExecution() {     return forceExecution. }
+false;public;0;3;;public boolean canTripCircuitBreaker() {     return canTripCircuitBreaker. }
+false;public;0;3;;public String getExecutor() {     return executor. }
+false;public;0;4;;@Override public String toString() {     return handler.toString(). }

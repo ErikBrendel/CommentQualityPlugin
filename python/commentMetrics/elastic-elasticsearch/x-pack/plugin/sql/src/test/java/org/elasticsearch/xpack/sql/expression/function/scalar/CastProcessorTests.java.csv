@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;3;;public static CastProcessor randomCastProcessor() {     return new CastProcessor(randomFrom(Conversion.values())). }
+false;protected;0;4;;@Override protected CastProcessor createTestInstance() {     return randomCastProcessor(). }
+false;protected;0;4;;@Override protected Reader<CastProcessor> instanceReader() {     return CastProcessor::new. }
+false;protected;1;4;;@Override protected CastProcessor mutateInstance(CastProcessor instance) throws IOException {     return new CastProcessor(randomValueOtherThan(instance.converter(), () -> randomFrom(Conversion.values()))). }
+false;public;0;15;;public void testApply() {     {         CastProcessor proc = new CastProcessor(Conversion.STRING_TO_INT).         assertEquals(null, proc.process(null)).         assertEquals(1, proc.process("1")).         Exception e = expectThrows(SqlIllegalArgumentException.class, () -> proc.process("1.2")).         assertEquals("cannot cast [1.2] to [integer]", e.getMessage()).     }     {         CastProcessor proc = new CastProcessor(Conversion.BOOL_TO_INT).         assertEquals(null, proc.process(null)).         assertEquals(1, proc.process(true)).         assertEquals(0, proc.process(false)).     } }
+false;protected;0;4;;@Override protected NamedWriteableRegistry getNamedWriteableRegistry() {     return new NamedWriteableRegistry(Processors.getNamedWriteables()). }

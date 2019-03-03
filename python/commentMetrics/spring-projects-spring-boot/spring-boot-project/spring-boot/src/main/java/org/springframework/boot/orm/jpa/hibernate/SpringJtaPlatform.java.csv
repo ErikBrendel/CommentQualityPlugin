@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected TransactionManager locateTransactionManager() {     return this.transactionManager.getTransactionManager(). }
+false;protected;0;4;;@Override protected UserTransaction locateUserTransaction() {     return this.transactionManager.getUserTransaction(). }

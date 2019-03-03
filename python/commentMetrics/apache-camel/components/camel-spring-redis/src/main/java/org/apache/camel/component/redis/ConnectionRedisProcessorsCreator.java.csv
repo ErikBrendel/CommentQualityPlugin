@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;2;7;;Map<Command, Processor> getProcessors(RedisClient redisClient, ExchangeConverter exchangeConverter) {     bind(Command.ECHO, wrap(exchange -> redisClient.echo(exchangeConverter.getStringValue(exchange)))).     bind(Command.PING, wrap(exchange -> redisClient.ping())).     bind(Command.QUIT, exchange -> redisClient.quit()).     return result. }

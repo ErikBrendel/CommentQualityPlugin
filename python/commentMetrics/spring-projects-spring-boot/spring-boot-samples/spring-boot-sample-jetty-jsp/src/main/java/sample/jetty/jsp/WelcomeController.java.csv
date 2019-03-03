@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@RequestMapping("/") public String welcome(Map<String, Object> model) {     model.put("time", new Date()).     model.put("message", this.message).     return "welcome". }
+false;public;0;4;;@RequestMapping("/fail") public String fail() {     throw new MyException("Oh dear!"). }
+false;public;0;4;;@RequestMapping("/fail2") public String fail2() {     throw new IllegalStateException(). }
+false;public;1;5;;@ExceptionHandler(MyException.class) @ResponseStatus(HttpStatus.BAD_REQUEST) @ResponseBody public MyRestResponse handleMyRuntimeException(MyException exception) {     return new MyRestResponse("Some data I want to send back to the client."). }

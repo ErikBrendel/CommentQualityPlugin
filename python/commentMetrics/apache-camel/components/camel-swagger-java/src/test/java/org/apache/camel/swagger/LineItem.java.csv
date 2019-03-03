@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@ApiModelProperty(value = "ISBN of the book", required = true) public String getIsbn() {     return isbn. }
+false;public;1;3;;public void setIsbn(String isbn) {     this.isbn = isbn. }
+false;public;0;4;;@ApiModelProperty(value = "Name of the book", required = true) public String getName() {     return name. }
+false;public;1;3;;public void setName(String name) {     this.name = name. }

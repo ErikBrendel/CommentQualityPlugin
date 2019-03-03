@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public long ramBytesUsed() {     return ramBytesUsed. }
+false;public,final;0;4;;@Override public final ScriptDocValues<Double> getScriptValues() {     return new ScriptDocValues.Doubles(getDoubleValues()). }
+false;public,final;0;4;;@Override public final SortedBinaryDocValues getBytesValues() {     return FieldData.toString(getDoubleValues()). }
+false;public,final;0;4;;@Override public final SortedNumericDocValues getLongValues() {     return FieldData.castToLong(getDoubleValues()). }
+false;public;0;4;;@Override public SortedNumericDoubleValues getDoubleValues() {     return FieldData.emptySortedNumericDoubles(). }
+false;public;0;4;;@Override public Collection<Accountable> getChildResources() {     return Collections.emptyList(). }
+false;public,static;1;15;;public static AtomicNumericFieldData empty(final int maxDoc) {     return new AtomicDoubleFieldData(0) {          @Override         public SortedNumericDoubleValues getDoubleValues() {             return FieldData.emptySortedNumericDoubles().         }          @Override         public Collection<Accountable> getChildResources() {             return Collections.emptyList().         }     }. }
+false;public;0;3;;@Override public void close() { }

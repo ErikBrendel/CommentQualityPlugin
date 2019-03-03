@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;9;;@Override public WebResponse getResponse(WebRequest request) throws IOException {     for (DelegateWebConnection connection : this.connections) {         if (connection.getMatcher().matches(request)) {             return connection.getDelegate().getResponse(request).         }     }     return this.defaultConnection.getResponse(request). }
+false;public;0;3;;@Override public void close() { }
+false;private;0;3;;private WebRequestMatcher getMatcher() {     return this.matcher. }
+false;private;0;3;;private WebConnection getDelegate() {     return this.delegate. }

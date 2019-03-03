@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@GetMapping("/echo") public ResponseEntity<String> echo(@RequestParam("text") String text) {     return ResponseEntity.ok().header("echo", text).body(text). }

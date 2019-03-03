@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public boolean enabled() {     return false. }
+false;public;1;5;;public void configure(SSLParameters sslParameters) {     // nothing to do here     assert !sslParameters.getWantClientAuth().     assert !sslParameters.getNeedClientAuth(). }
+false;public;0;3;;public boolean enabled() {     return true. }
+false;public;1;3;;public void configure(SSLParameters sslParameters) {     sslParameters.setWantClientAuth(true). }
+false;public;0;3;;public boolean enabled() {     return true. }
+false;public;1;3;;public void configure(SSLParameters sslParameters) {     sslParameters.setNeedClientAuth(true). }
+true;public,abstract;0;1;/**  * @return true if client authentication is enabled  */ ;/**  * @return true if client authentication is enabled  */ public abstract boolean enabled().
+true;public,abstract;1;1;/**  * Configure client authentication of the provided {@link SSLParameters}  */ ;/**  * Configure client authentication of the provided {@link SSLParameters}  */ public abstract void configure(SSLParameters sslParameters).
+false;static;0;7;;static Map<String, SslClientAuthenticationMode> buildLookup() {     final Map<String, SslClientAuthenticationMode> map = new LinkedHashMap<>(3).     map.put("none", NONE).     map.put("optional", OPTIONAL).     map.put("required", REQUIRED).     return map. }
+false;public,static;1;9;;public static SslClientAuthenticationMode parse(String value) {     final SslClientAuthenticationMode mode = LOOKUP.get(value.toLowerCase(Locale.ROOT)).     if (mode == null) {         final String allowedValues = LOOKUP.keySet().stream().collect(Collectors.joining(",")).         throw new SslConfigException("could not resolve ssl client authentication, unknown value [" + value + "], recognised values are [" + allowedValues + "]").     }     return mode. }

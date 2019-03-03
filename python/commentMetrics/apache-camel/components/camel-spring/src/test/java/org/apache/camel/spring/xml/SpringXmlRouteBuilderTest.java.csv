@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected List<Route> buildSimpleRoute() {     return getRoutesFromContext("org/apache/camel/spring/xml/buildSimpleRoute.xml"). }
+false;protected;0;6;;@Override protected List<Route> buildCustomProcessor() {     List<Route> answer = getRoutesFromContext("org/apache/camel/spring/xml/buildCustomProcessor.xml").     myProcessor = applicationContext.getBean("myProcessor", Processor.class).     return answer. }
+false;protected;0;6;;@Override protected List<Route> buildCustomProcessorWithFilter() {     List<Route> answer = getRoutesFromContext("org/apache/camel/spring/xml/buildCustomProcessorWithFilter.xml").     myProcessor = applicationContext.getBean("myProcessor", Processor.class).     return answer. }
+false;protected;0;4;;@Override protected List<Route> buildSimpleRouteWithHeaderPredicate() {     return getRoutesFromContext("org/apache/camel/spring/xml/buildSimpleRouteWithHeaderPredicate.xml"). }
+false;protected;0;4;;@Override protected List<Route> buildSimpleRouteWithChoice() {     return getRoutesFromContext("org/apache/camel/spring/xml/buildSimpleRouteWithChoice.xml"). }
+false;protected;0;4;;@Override protected List<Route> buildWireTap() {     return getRoutesFromContext("org/apache/camel/spring/xml/buildWireTap.xml"). }
+false;protected;0;4;;@Override protected List<Route> buildDynamicRecipientList() {     return getRoutesFromContext("org/apache/camel/spring/xml/buildDynamicRecipientList.xml"). }
+false;protected;0;4;;@Override protected List<Route> buildStaticRecipientList() {     return getRoutesFromContext("org/apache/camel/spring/xml/buildStaticRecipientList.xml"). }
+false;protected;0;4;;@Override protected List<Route> buildSplitter() {     return getRoutesFromContext("org/apache/camel/spring/xml/buildSplitter.xml"). }
+false;protected;0;4;;@Override protected List<Route> buildIdempotentConsumer() {     return getRoutesFromContext("org/apache/camel/spring/xml/buildIdempotentConsumer.xml"). }
+false;public;0;5;;@Override @Test public void testIdempotentConsumer() throws Exception { // is tested elsewhere }
+false;public;0;5;;@Override @Test public void testRouteWithInterceptor() throws Exception { // is tested elsewhere }
+false;protected;1;8;;protected List<Route> getRoutesFromContext(String classpathConfigFile) {     applicationContext = new ClassPathXmlApplicationContext(classpathConfigFile).     SpringCamelContext context = applicationContext.getBeansOfType(SpringCamelContext.class).values().iterator().next().     assertNotNull("No Camel Context in file: " + classpathConfigFile, context).     List<Route> routes = context.getRoutes().     assertNotNull("No routes available for context: " + context.getName() + " in file: " + classpathConfigFile, routes).     return routes. }

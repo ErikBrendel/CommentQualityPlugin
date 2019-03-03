@@ -1,0 +1,21 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Override public void init(ManagementStrategy strategy) {     super.init(strategy).     boolean enabled = context.getManagementStrategy().getManagementAgent().getStatisticsLevel().isDefaultOrExtended().     setStatisticsEnabled(enabled). }
+false;public;0;3;;public CamelContext getContext() {     return context. }
+false;public;0;3;;public Object getInstance() {     return processor. }
+false;public;0;3;;public Processor getProcessor() {     return processor. }
+false;public;0;3;;public ProcessorDefinition<?> getDefinition() {     return definition. }
+false;public;0;3;;public String getId() {     return id. }
+false;public;0;3;;public Integer getIndex() {     return definition.getIndex(). }
+false;public;0;3;;public Boolean getSupportExtendedInformation() {     return false. }
+false;public;0;3;;public Route getRoute() {     return route. }
+false;public;1;3;;public void setRoute(Route route) {     this.route = route. }
+false;public;0;10;;public String getState() {     // must use String type to be sure remote JMX can read the attribute without requiring Camel classes.     if (processor instanceof StatefulService) {         ServiceStatus status = ((StatefulService) processor).getStatus().         return status.name().     }     // assume started if not a ServiceSupport instance     return ServiceStatus.Started.name(). }
+false;public;0;3;;public String getCamelId() {     return context.getName(). }
+false;public;0;3;;public String getCamelManagementName() {     return context.getManagementName(). }
+false;public;0;6;;public String getRouteId() {     if (route != null) {         return route.getId().     }     return null. }
+false;public;0;3;;public String getProcessorId() {     return id. }
+false;public;0;6;;public void start() throws Exception {     if (!context.getStatus().isStarted()) {         throw new IllegalArgumentException("CamelContext is not started").     }     ServiceHelper.startService(getProcessor()). }
+false;public;0;6;;public void stop() throws Exception {     if (!context.getStatus().isStarted()) {         throw new IllegalArgumentException("CamelContext is not started").     }     ServiceHelper.stopService(getProcessor()). }
+false;public;0;3;;public String informationJson() {     return context.explainEipJson(id, true). }
+false;public;1;30;;public TabularData explain(boolean allOptions) {     try {         String json = context.explainEipJson(id, allOptions).         List<Map<String, String>> rows = JSonSchemaHelper.parseJsonSchema("properties", json, true).         TabularData answer = new TabularDataSupport(CamelOpenMBeanTypes.explainEipTabularType()).         for (Map<String, String> row : rows) {             String name = row.get("name").             String kind = row.get("kind").             String label = row.get("label") != null ? row.get("label") : "".             String type = row.get("type").             String javaType = row.get("javaType").             String deprecated = row.get("deprecated") != null ? row.get("deprecated") : "".             String value = row.get("value") != null ? row.get("value") : "".             String defaultValue = row.get("defaultValue") != null ? row.get("defaultValue") : "".             String description = row.get("description") != null ? row.get("description") : "".             CompositeType ct = CamelOpenMBeanTypes.explainEipsCompositeType().             CompositeData data = new CompositeDataSupport(ct, new String[] { "option", "kind", "label", "type", "java type", "deprecated", "value", "default value", "description" }, new Object[] { name, kind, label, type, javaType, deprecated, value, defaultValue, description }).             answer.put(data).         }         return answer.     } catch (Exception e) {         throw RuntimeCamelException.wrapRuntimeCamelException(e).     } }
+false;public;0;4;;@Override public String dumpProcessorAsXml() throws Exception {     return ModelHelper.dumpModelAsXml(context, definition). }

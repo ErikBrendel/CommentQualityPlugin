@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@Test public void customConfigurationStereotype() {     AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext().     ctx.register(Config.class).     ctx.refresh().     assertThat(ctx.containsBean("customName"), is(true)).     TestBean a = ctx.getBean("a", TestBean.class).     TestBean b = ctx.getBean("b", TestBean.class).     assertThat(b, sameInstance(a.getSpouse())). }
+false;public;0;6;;@Bean public TestBean a() {     TestBean a = new TestBean().     a.setSpouse(b()).     return a. }
+false;public;0;4;;@Bean public TestBean b() {     return new TestBean(). }

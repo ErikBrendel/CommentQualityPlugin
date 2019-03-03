@@ -1,0 +1,109 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,abstract;1;1;;public abstract void setTask(SearchTask task).
+false;public,abstract;0;1;;public abstract SearchTask getTask().
+false;public,abstract;0;1;;public abstract boolean isCancelled().
+false;public,final;0;6;;@Override public final void close() {     if (closed.compareAndSet(false, true)) {         // prevent double closing         decRef().     } }
+false;protected,final;0;8;;@Override protected final void closeInternal() {     try {         clearReleasables(Lifetime.CONTEXT).     } finally {         doClose().     } }
+false;protected;0;4;;@Override protected void alreadyClosed() {     throw new IllegalStateException("search context is already closed can't increment refCount current count [" + refCount() + "]"). }
+false;protected,abstract;0;1;;protected abstract void doClose().
+true;public,abstract;1;1;/**  * Should be called before executing the main query and after all other parameters have been set.  * @param rewrite if the set query should be rewritten against the searcher returned from {@link #searcher()}  */ ;/**  * Should be called before executing the main query and after all other parameters have been set.  * @param rewrite if the set query should be rewritten against the searcher returned from {@link #searcher()}  */ public abstract void preProcess(boolean rewrite).
+true;public,abstract;1;1;/**  * Automatically apply all required filters to the given query such as  *  alias filters, types filters, etc.  */ ;/**  * Automatically apply all required filters to the given query such as  *  alias filters, types filters, etc.  */ public abstract Query buildFilteredQuery(Query query).
+false;public,abstract;0;1;;public abstract long id().
+false;public,abstract;0;1;;public abstract String source().
+false;public,abstract;0;1;;public abstract ShardSearchRequest request().
+false;public,abstract;0;1;;public abstract SearchType searchType().
+false;public,abstract;0;1;;public abstract SearchShardTarget shardTarget().
+false;public,abstract;0;1;;public abstract int numberOfShards().
+false;public,abstract;0;1;;public abstract float queryBoost().
+false;public,abstract;0;1;;public abstract long getOriginNanoTime().
+false;public,abstract;0;1;;public abstract ScrollContext scrollContext().
+false;public,abstract;1;1;;public abstract SearchContext scrollContext(ScrollContext scroll).
+false;public,abstract;0;1;;public abstract SearchContextAggregations aggregations().
+false;public,abstract;1;1;;public abstract SearchContext aggregations(SearchContextAggregations aggregations).
+false;public,abstract;1;1;;public abstract void addSearchExt(SearchExtBuilder searchExtBuilder).
+false;public,abstract;1;1;;public abstract SearchExtBuilder getSearchExt(String name).
+false;public,abstract;0;1;;public abstract SearchContextHighlight highlight().
+false;public,abstract;1;1;;public abstract void highlight(SearchContextHighlight highlight).
+false;public;0;6;;public InnerHitsContext innerHits() {     if (innerHitsContext == null) {         innerHitsContext = new InnerHitsContext().     }     return innerHitsContext. }
+false;public,abstract;0;1;;public abstract SuggestionSearchContext suggest().
+false;public,abstract;1;1;;public abstract void suggest(SuggestionSearchContext suggest).
+true;public,abstract;0;1;/**  * @return list of all rescore contexts.  empty if there aren't any.  */ ;/**  * @return list of all rescore contexts.  empty if there aren't any.  */ public abstract List<RescoreContext> rescore().
+false;public,abstract;1;1;;public abstract void addRescore(RescoreContext rescore).
+false;public,abstract;0;1;;public abstract boolean hasScriptFields().
+false;public,abstract;0;1;;public abstract ScriptFieldsContext scriptFields().
+true;public,abstract;0;1;/**  * A shortcut function to see whether there is a fetchSourceContext and it says the source is requested.  */ ;/**  * A shortcut function to see whether there is a fetchSourceContext and it says the source is requested.  */ public abstract boolean sourceRequested().
+false;public,abstract;0;1;;public abstract boolean hasFetchSourceContext().
+false;public,abstract;0;1;;public abstract FetchSourceContext fetchSourceContext().
+false;public,abstract;1;1;;public abstract SearchContext fetchSourceContext(FetchSourceContext fetchSourceContext).
+false;public,abstract;0;1;;public abstract DocValueFieldsContext docValueFieldsContext().
+false;public,abstract;1;1;;public abstract SearchContext docValueFieldsContext(DocValueFieldsContext docValueFieldsContext).
+false;public,abstract;0;1;;public abstract ContextIndexSearcher searcher().
+false;public,abstract;0;1;;public abstract IndexShard indexShard().
+false;public,abstract;0;1;;public abstract MapperService mapperService().
+false;public,abstract;0;1;;public abstract SimilarityService similarityService().
+false;public,abstract;0;1;;public abstract BigArrays bigArrays().
+false;public,abstract;0;1;;public abstract BitsetFilterCache bitsetFilterCache().
+false;public,abstract;1;1;;public abstract <IFD extends IndexFieldData<?>> IFD getForField(MappedFieldType fieldType).
+false;public,abstract;0;1;;public abstract TimeValue timeout().
+false;public,abstract;1;1;;public abstract void timeout(TimeValue timeout).
+false;public,abstract;0;1;;public abstract int terminateAfter().
+false;public,abstract;1;1;;public abstract void terminateAfter(int terminateAfter).
+true;public,abstract;0;1;/**  * Indicates if the current index should perform frequent low level search cancellation check.  *  * Enabling low-level checks will make long running searches to react to the cancellation request faster. However,  * since it will produce more cancellation checks it might slow the search performance down.  */ ;/**  * Indicates if the current index should perform frequent low level search cancellation check.  *  * Enabling low-level checks will make long running searches to react to the cancellation request faster. However,  * since it will produce more cancellation checks it might slow the search performance down.  */ public abstract boolean lowLevelCancellation().
+false;public,abstract;1;1;;public abstract SearchContext minimumScore(float minimumScore).
+false;public,abstract;0;1;;public abstract Float minimumScore().
+false;public,abstract;1;1;;public abstract SearchContext sort(SortAndFormats sort).
+false;public,abstract;0;1;;public abstract SortAndFormats sort().
+false;public,abstract;1;1;;public abstract SearchContext trackScores(boolean trackScores).
+false;public,abstract;0;1;;public abstract boolean trackScores().
+false;public,abstract;1;1;;public abstract SearchContext trackTotalHitsUpTo(int trackTotalHits).
+true;public,abstract;0;1;/**  * Indicates the total number of hits to count accurately.  * Defaults to {@link #DEFAULT_TRACK_TOTAL_HITS_UP_TO}.  */ ;/**  * Indicates the total number of hits to count accurately.  * Defaults to {@link #DEFAULT_TRACK_TOTAL_HITS_UP_TO}.  */ public abstract int trackTotalHitsUpTo().
+false;public,abstract;1;1;;public abstract SearchContext searchAfter(FieldDoc searchAfter).
+false;public,abstract;0;1;;public abstract FieldDoc searchAfter().
+false;public,abstract;1;1;;public abstract SearchContext collapse(CollapseContext collapse).
+false;public,abstract;0;1;;public abstract CollapseContext collapse().
+false;public,abstract;1;1;;public abstract SearchContext parsedPostFilter(ParsedQuery postFilter).
+false;public,abstract;0;1;;public abstract ParsedQuery parsedPostFilter().
+false;public,abstract;0;1;;public abstract Query aliasFilter().
+false;public,abstract;1;1;;public abstract SearchContext parsedQuery(ParsedQuery query).
+false;public,abstract;0;1;;public abstract ParsedQuery parsedQuery().
+true;public,abstract;0;1;/**  * The query to execute, might be rewritten.  */ ;/**  * The query to execute, might be rewritten.  */ public abstract Query query().
+false;public,abstract;0;1;;public abstract int from().
+false;public,abstract;1;1;;public abstract SearchContext from(int from).
+false;public,abstract;0;1;;public abstract int size().
+false;public,abstract;1;1;;public abstract SearchContext size(int size).
+false;public,abstract;0;1;;public abstract boolean hasStoredFields().
+false;public,abstract;0;1;;public abstract boolean hasStoredFieldsContext().
+true;public,abstract;0;1;/**  * A shortcut function to see whether there is a storedFieldsContext and it says the fields are requested.  */ ;/**  * A shortcut function to see whether there is a storedFieldsContext and it says the fields are requested.  */ public abstract boolean storedFieldsRequested().
+false;public,abstract;0;1;;public abstract StoredFieldsContext storedFieldsContext().
+false;public,abstract;1;1;;public abstract SearchContext storedFieldsContext(StoredFieldsContext storedFieldsContext).
+false;public,abstract;0;1;;public abstract boolean explain().
+false;public,abstract;1;1;;public abstract void explain(boolean explain).
+false;public,abstract;0;2;;@Nullable public abstract List<String> groupStats().
+false;public,abstract;1;1;;public abstract void groupStats(List<String> groupStats).
+false;public,abstract;0;1;;public abstract boolean version().
+false;public,abstract;1;1;;public abstract void version(boolean version).
+true;public,abstract;0;1;/**  * indicates whether the sequence number and primary term of the last modification to each hit should be returned  */ ;/**  * indicates whether the sequence number and primary term of the last modification to each hit should be returned  */ public abstract boolean seqNoAndPrimaryTerm().
+true;public,abstract;1;1;/**  * controls whether the sequence number and primary term of the last modification to each hit should be returned  */ ;/**  * controls whether the sequence number and primary term of the last modification to each hit should be returned  */ public abstract void seqNoAndPrimaryTerm(boolean seqNoAndPrimaryTerm).
+false;public,abstract;0;1;;public abstract int[] docIdsToLoad().
+false;public,abstract;0;1;;public abstract int docIdsToLoadFrom().
+false;public,abstract;0;1;;public abstract int docIdsToLoadSize().
+false;public,abstract;3;1;;public abstract SearchContext docIdsToLoad(int[] docIdsToLoad, int docsIdsToLoadFrom, int docsIdsToLoadSize).
+false;public,abstract;1;1;;public abstract void accessed(long accessTime).
+false;public,abstract;0;1;;public abstract long lastAccessTime().
+false;public,abstract;0;1;;public abstract long keepAlive().
+false;public,abstract;1;1;;public abstract void keepAlive(long keepAlive).
+false;public;0;3;;public SearchLookup lookup() {     return getQueryShardContext().lookup(). }
+false;public,abstract;0;1;;public abstract DfsSearchResult dfsResult().
+false;public,abstract;0;1;;public abstract QuerySearchResult queryResult().
+false;public,abstract;0;1;;public abstract FetchPhase fetchPhase().
+false;public,abstract;0;1;;public abstract FetchSearchResult fetchResult().
+true;public,abstract;0;1;/**  * Return a handle over the profilers for the current search request, or {@code null} if profiling is not enabled.  */ ;/**  * Return a handle over the profilers for the current search request, or {@code null} if profiling is not enabled.  */ public abstract Profilers getProfilers().
+true;public;2;11;/**  * Schedule the release of a resource. The time when {@link Releasable#close()} will be called on this object  * is function of the provided {@link Lifetime}.  */ ;/**  * Schedule the release of a resource. The time when {@link Releasable#close()} will be called on this object  * is function of the provided {@link Lifetime}.  */ public void addReleasable(Releasable releasable, Lifetime lifetime) {     if (clearables == null) {         clearables = new EnumMap<>(Lifetime.class).     }     List<Releasable> releasables = clearables.get(lifetime).     if (releasables == null) {         releasables = new ArrayList<>().         clearables.put(lifetime, releasables).     }     releasables.add(releasable). }
+false;public;1;15;;public void clearReleasables(Lifetime lifetime) {     if (clearables != null) {         List<List<Releasable>> releasables = new ArrayList<>().         for (Lifetime lc : Lifetime.values()) {             if (lc.compareTo(lifetime) > 0) {                 break.             }             List<Releasable> remove = clearables.remove(lc).             if (remove != null) {                 releasables.add(remove).             }         }         Releasables.close(Iterables.flatten(releasables)).     } }
+true;public,final;0;4;/**  * @return true if the request contains only suggest  */ ;/**  * @return true if the request contains only suggest  */ public final boolean hasOnlySuggest() {     return request().source() != null && request().source().isSuggestOnly(). }
+true;public,abstract;1;1;/**  * Looks up the given field, but does not restrict to fields in the types set on this context.  */ ;/**  * Looks up the given field, but does not restrict to fields in the types set on this context.  */ public abstract MappedFieldType smartNameFieldType(String name).
+false;public,abstract;1;1;;public abstract ObjectMapper getObjectMapper(String name).
+true;public,abstract;0;1;/**  * Returns time in milliseconds that can be used for relative time calculations.  * WARN: This is not the epoch time.  */ ;/**  * Returns time in milliseconds that can be used for relative time calculations.  * WARN: This is not the epoch time.  */ public abstract long getRelativeTimeInMillis().
+true;public,abstract;0;1;/**  * Return a view of the additional query collectors that should be run for this context.  */ ;/**  * Return a view of the additional query collectors that should be run for this context.  */ public abstract Map<Class<?>, Collector> queryCollectors().
+false;public,abstract;0;1;;public abstract QueryShardContext getQueryShardContext().
+false;public;0;16;;@Override public String toString() {     StringBuilder result = new StringBuilder().append(shardTarget()).     if (searchType() != SearchType.DEFAULT) {         result.append("searchType=[").append(searchType()).append("]").     }     if (scrollContext() != null) {         if (scrollContext().scroll != null) {             result.append("scroll=[").append(scrollContext().scroll.keepAlive()).append("]").         } else {             result.append("scroll=[null]").         }     }     result.append(" query=[").append(query()).append("]").     return result.toString(). }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;10;;public void process(Exchange exchange) throws Exception {     Thread.sleep(1000).     Message in = exchange.getIn().     // Get the parameter list     List<?> parameter = in.getBody(List.class).     // Get the operation name     String operation = (String) in.getHeader(CxfConstants.OPERATION_NAME).     Object result = operation + " " + (String) parameter.get(0).     exchange.getOut().setBody(result). }

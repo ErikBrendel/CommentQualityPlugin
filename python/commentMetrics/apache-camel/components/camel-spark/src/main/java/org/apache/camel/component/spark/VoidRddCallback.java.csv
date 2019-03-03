@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,abstract;2;1;;public abstract void doOnRdd(JavaRDDLike rdd, Object... payloads).
+false;public;2;5;;@Override public Void onRdd(JavaRDDLike rdd, Object... payloads) {     doOnRdd(rdd, payloads).     return null. }

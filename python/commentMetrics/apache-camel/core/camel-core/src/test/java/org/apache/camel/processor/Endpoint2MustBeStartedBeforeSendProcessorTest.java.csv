@@ -1,0 +1,20 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Override public void configure() throws Exception {     myendpoint = new MyEndpoint("myendpoint", context).     from("direct:start").to(myendpoint). }
+false;public;0;15;;@Test public void testEndpointMustBeStartedBeforeProducer() throws Exception {     context.addRoutes(new RouteBuilder() {          @Override         public void configure() throws Exception {             myendpoint = new MyEndpoint("myendpoint", context).             from("direct:start").to(myendpoint).         }     }).     context.start().     assertEquals("EndpointProducer", order). }
+false;public;0;7;;@Override public void configure() throws Exception {     myendpoint = new MyEndpoint("myendpoint", context).     from(myendpoint).to("mock:result"). }
+false;public;0;15;;@Test public void testEndpointMustBeStartedBeforeConsumer() throws Exception {     context.addRoutes(new RouteBuilder() {          @Override         public void configure() throws Exception {             myendpoint = new MyEndpoint("myendpoint", context).             from(myendpoint).to("mock:result").         }     }).     context.start().     assertEquals("EndpointConsumer", order). }
+false;public;0;8;;@Override public void configure() throws Exception {     myendpoint = new MyEndpoint("myendpoint", context).     from(myendpoint).to("mock:result").to(myendpoint). }
+false;public;0;16;;@Test public void testEndpointMustBeStartedBeforeConsumerAndProducer() throws Exception {     context.addRoutes(new RouteBuilder() {          @Override         public void configure() throws Exception {             myendpoint = new MyEndpoint("myendpoint", context).             from(myendpoint).to("mock:result").to(myendpoint).         }     }).     context.start().     assertEquals("EndpointProducerConsumer", order). }
+false;public;0;8;;@Override public void configure() throws Exception {     myendpoint = new MyEndpoint("myendpoint", context).     from(myendpoint).routeId("foo").to("mock:result").to(myendpoint). }
+false;public;0;28;;@Test public void testEndpointStartedOnceAndOnlyStoppedOnShutdown() throws Exception {     context.addRoutes(new RouteBuilder() {          @Override         public void configure() throws Exception {             myendpoint = new MyEndpoint("myendpoint", context).             from(myendpoint).routeId("foo").to("mock:result").to(myendpoint).         }     }).     context.start().     assertEquals("EndpointProducerConsumer", order).     order = "".     context.getRouteController().stopRoute("foo").     assertEquals("StopConsumerStopProducer", order).     order = "".     context.getRouteController().startRoute("foo").     assertEquals("ProducerConsumer", order).     order = "".     context.stop().     assertEquals("StopConsumerStopProducerStopEndpoint", order). }
+false;public;0;4;;@Override public boolean isUseRouteBuilder() {     return false. }
+false;public;0;3;;public Producer createProducer() throws Exception {     return new MyProducer(this). }
+false;public;1;3;;public Consumer createConsumer(Processor processor) throws Exception {     return new MyConsumer(this, null). }
+false;public;0;3;;public boolean isSingleton() {     return true. }
+false;public;0;4;;// in this test we use start/stop to implement logic // this is however discouraged, as you should prefer to use doStart/doStop @Override public void doStart() throws Exception {     order += "Endpoint". }
+false;public;0;4;;@Override public void doStop() throws Exception {     order += "StopEndpoint". }
+false;public;1;3;;public void process(Exchange exchange) throws Exception { // noop }
+false;protected;0;4;;@Override protected void doStart() throws Exception {     order += "Producer". }
+false;protected;0;4;;@Override protected void doStop() throws Exception {     order += "StopProducer". }
+false;protected;0;4;;@Override protected void doStart() throws Exception {     order += "Consumer". }
+false;protected;0;4;;@Override protected void doStop() throws Exception {     order += "StopConsumer". }

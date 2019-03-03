@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Test public void testTextlineInOnlyNull() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("Hello World").     template.sendBody("netty4:tcp://localhost:{{port}}?textline=true&delimiter=NULL&sync=false", "Hello World\u0000").     assertMockEndpointsSatisfied(). }
+false;public;0;7;;@Override public void configure() throws Exception {     from("netty4:tcp://localhost:{{port}}?textline=true&delimiter=NULL&sync=false").validate(body().isInstanceOf(String.class)).to("mock:result"). }
+false;protected;0;12;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("netty4:tcp://localhost:{{port}}?textline=true&delimiter=NULL&sync=false").validate(body().isInstanceOf(String.class)).to("mock:result").         }     }. }

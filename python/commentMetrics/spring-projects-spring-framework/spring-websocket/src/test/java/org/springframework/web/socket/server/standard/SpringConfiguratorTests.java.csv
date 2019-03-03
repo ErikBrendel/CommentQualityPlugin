@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;12;;@Before public void setup() {     this.servletContext = new MockServletContext().     this.webAppContext = new AnnotationConfigWebApplicationContext().     this.webAppContext.register(Config.class).     this.contextLoader = new ContextLoader(this.webAppContext).     this.contextLoader.initWebApplicationContext(this.servletContext).     this.configurator = new SpringConfigurator(). }
+false;public;0;4;;@After public void destroy() {     this.contextLoader.closeWebApplicationContext(this.servletContext). }
+false;public;0;5;;@Test public void getEndpointPerConnection() throws Exception {     PerConnectionEchoEndpoint endpoint = this.configurator.getEndpointInstance(PerConnectionEchoEndpoint.class).     assertNotNull(endpoint). }
+false;public;0;6;;@Test public void getEndpointSingletonByType() throws Exception {     EchoEndpoint expected = this.webAppContext.getBean(EchoEndpoint.class).     EchoEndpoint actual = this.configurator.getEndpointInstance(EchoEndpoint.class).     assertSame(expected, actual). }
+false;public;0;6;;@Test public void getEndpointSingletonByComponentName() throws Exception {     ComponentEchoEndpoint expected = this.webAppContext.getBean(ComponentEchoEndpoint.class).     ComponentEchoEndpoint actual = this.configurator.getEndpointInstance(ComponentEchoEndpoint.class).     assertSame(expected, actual). }
+false;public;0;4;;@Bean public EchoEndpoint javaConfigEndpoint() {     return new EchoEndpoint(echoService()). }
+false;public;0;4;;@Bean public EchoService echoService() {     return new EchoService(). }

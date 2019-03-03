@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;3;/**  * Specify the pointcut targeting the advice.  * <p>Default is {@code Pointcut.TRUE}.  * @see #setAdviceBeanName  */ ;/**  * Specify the pointcut targeting the advice.  * <p>Default is {@code Pointcut.TRUE}.  * @see #setAdviceBeanName  */ public void setPointcut(@Nullable Pointcut pointcut) {     this.pointcut = (pointcut != null ? pointcut : Pointcut.TRUE). }
+false;public;0;4;;@Override public Pointcut getPointcut() {     return this.pointcut. }
+false;public;0;4;;@Override public String toString() {     return getClass().getName() + ": pointcut [" + getPointcut() + "]. advice bean '" + getAdviceBeanName() + "'". }

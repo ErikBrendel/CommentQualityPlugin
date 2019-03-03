@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;4;;@Nullable public static TransportType fromValue(String value) {     return TRANSPORT_TYPES.get(value). }
+false;public;0;3;;public String value() {     return this.value. }
+false;public;0;3;;public HttpMethod getHttpMethod() {     return this.httpMethod. }
+false;public;0;3;;public boolean sendsNoCacheInstruction() {     return this.headerHints.contains("no_cache"). }
+false;public;0;3;;public boolean sendsSessionCookie() {     return this.headerHints.contains("jsessionid"). }
+false;public;0;3;;public boolean supportsCors() {     return this.headerHints.contains("cors"). }
+false;public;0;3;;public boolean supportsOrigin() {     return this.headerHints.contains("cors") || this.headerHints.contains("origin"). }
+false;public;0;4;;@Override public String toString() {     return this.value. }

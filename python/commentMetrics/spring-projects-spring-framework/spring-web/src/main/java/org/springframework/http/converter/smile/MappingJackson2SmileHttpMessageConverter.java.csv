@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;5;/**  * {@inheritDoc}  * The {@code ObjectMapper} must be configured with a {@code SmileFactory} instance.  */ ;/**  * {@inheritDoc}  * The {@code ObjectMapper} must be configured with a {@code SmileFactory} instance.  */ @Override public void setObjectMapper(ObjectMapper objectMapper) {     Assert.isInstanceOf(SmileFactory.class, objectMapper.getFactory(), "SmileFactory required").     super.setObjectMapper(objectMapper). }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * The HTTP status that fits the exception (never {@code null}).  */ ;/**  * The HTTP status that fits the exception (never {@code null}).  */ public HttpStatus getStatus() {     return this.status. }
+true;public;0;4;/**  * The reason explaining the exception (potentially {@code null} or empty).  */ ;/**  * The reason explaining the exception (potentially {@code null} or empty).  */ @Nullable public String getReason() {     return this.reason. }
+false;public;0;5;;@Override public String getMessage() {     String msg = this.status + (this.reason != null ? " \"" + this.reason + "\"" : "").     return NestedExceptionUtils.buildMessage(msg, getCause()). }

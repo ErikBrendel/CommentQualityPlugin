@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void runShouldHaveEndpointBean() {     this.contextRunner.withUserConfiguration(CacheConfiguration.class).run((context) -> assertThat(context).hasSingleBean(CachesEndpoint.class)). }
+false;public;0;5;;@Test public void runWithoutCacheManagerShouldHaveEndpointBean() {     this.contextRunner.run((context) -> assertThat(context).hasSingleBean(CachesEndpoint.class)). }
+false;public;0;7;;@Test public void runWhenEnabledPropertyIsFalseShouldNotHaveEndpointBean() {     this.contextRunner.withPropertyValues("management.endpoint.caches.enabled:false").withUserConfiguration(CacheConfiguration.class).run((context) -> assertThat(context).doesNotHaveBean(CachesEndpoint.class)). }
+false;public;0;4;;@Bean public CacheManager cacheManager() {     return mock(CacheManager.class). }

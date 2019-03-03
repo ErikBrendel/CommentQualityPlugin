@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;public void testWrite_GivenEmpty() throws IOException {     StringBuilder buffer = new StringBuilder().     new MlFilterWriter(Collections.emptyList(), buffer).write().     assertThat(buffer.toString().isEmpty(), is(true)). }
+false;public;0;10;;public void testWrite() throws IOException {     List<MlFilter> filters = new ArrayList<>().     filters.add(MlFilter.builder("filter_1").setItems("a", "b").build()).     filters.add(MlFilter.builder("filter_2").setItems("c", "d").build()).     StringBuilder buffer = new StringBuilder().     new MlFilterWriter(filters, buffer).write().     assertThat(buffer.toString(), equalTo("filter.filter_1 = [\"a\",\"b\"]\nfilter.filter_2 = [\"c\",\"d\"]\n")). }

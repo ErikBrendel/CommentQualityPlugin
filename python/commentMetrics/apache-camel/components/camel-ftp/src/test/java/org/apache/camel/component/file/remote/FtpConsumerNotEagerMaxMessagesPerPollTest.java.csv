@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;0;4;;private String getFtpUrl() {     return "ftp://admin@localhost:" + getPort() + "/poll/?password=admin&delay=6000&delete=true" + "&sortBy=file:name&maxMessagesPerPoll=2&eagerMaxMessagesPerPoll=false". }
+false;public;0;6;;@Override @Before public void setUp() throws Exception {     super.setUp().     prepareFtpServer(). }
+false;public;0;18;;@Test public void testMaxMessagesPerPoll() throws Exception {     // start route     context.getRouteController().startRoute("foo").     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedBodiesReceived("AAA", "BBB").     mock.setResultWaitTime(4000).     mock.expectedPropertyReceived(Exchange.BATCH_SIZE, 2).     assertMockEndpointsSatisfied().     mock.reset().     mock.expectedBodiesReceived("CCC").     mock.expectedPropertyReceived(Exchange.BATCH_SIZE, 1).     assertMockEndpointsSatisfied(). }
+false;private;0;5;;private void prepareFtpServer() throws Exception {     sendFile(getFtpUrl(), "CCC", "ccc.txt").     sendFile(getFtpUrl(), "AAA", "aaa.txt").     sendFile(getFtpUrl(), "BBB", "bbb.txt"). }
+false;public;0;3;;public void configure() throws Exception {     from(getFtpUrl()).noAutoStartup().routeId("foo").to("mock:result"). }
+false;protected;0;7;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from(getFtpUrl()).noAutoStartup().routeId("foo").to("mock:result").         }     }. }

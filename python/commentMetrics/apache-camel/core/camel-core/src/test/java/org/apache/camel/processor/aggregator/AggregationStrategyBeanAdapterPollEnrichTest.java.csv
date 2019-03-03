@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Test public void testNoData() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("A").     template.sendBody("direct:start", "A").     assertMockEndpointsSatisfied(). }
+false;public;0;10;;@Test public void testData() throws Exception {     template.sendBody("seda:foo", "B").     getMockEndpoint("mock:result").expectedBodiesReceived("AB").     template.sendBody("direct:start", "A").     assertMockEndpointsSatisfied(). }
+false;public;0;6;;@Override public void configure() throws Exception {     from("direct:start").pollEnrich("seda:foo", 100, AggregationStrategies.bean(appender)).to("mock:result"). }
+false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").pollEnrich("seda:foo", 100, AggregationStrategies.bean(appender)).to("mock:result").         }     }. }
+false;public;2;3;;public String append(String existing, String next) {     return existing + next. }

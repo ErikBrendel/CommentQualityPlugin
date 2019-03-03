@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;17;;@Test public void test() throws Exception {     StringWriter writer = new StringWriter().     StreamResult result = new StreamResult(writer).     Source xsl = fromClasspath(XSL_PATH).     xsl.setSystemId("classpath:/" + XSL_PATH).     Source xml = fromString(XML_DATA).     TransformerFactory factory = new TransformerFactoryImpl().     Transformer transformer = factory.newTransformer(xsl).     transformer.setURIResolver(new XsltUriResolver(context(), XSL_PATH)).     transformer.transform(xml, result).     Assert.assertEquals(XML_RESP, writer.toString()). }
+false;protected;1;3;;protected Source fromString(String data) throws IOException {     return new StreamSource(new StringReader(data)). }
+false;protected;1;5;;protected Source fromClasspath(String path) throws IOException {     return new StreamSource(ResourceHelper.resolveMandatoryResourceAsInputStream(context(), path)). }

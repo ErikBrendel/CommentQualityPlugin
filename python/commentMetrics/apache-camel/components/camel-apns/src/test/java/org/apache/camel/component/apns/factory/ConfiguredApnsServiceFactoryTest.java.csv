@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;5;;@Override protected ApnsServiceBuilder configureServiceBuilder(ApnsServiceBuilder serviceBuilder) {     apnsServiceBuilder.withSocksProxy("my.proxy.com", 6666).     return apnsServiceBuilder. }
+false;public;0;4;;@Before public void setUp() throws IOException {     apnsServiceFactory.setSslContextParameters(mock(SSLContextParameters.class)). }
+false;public;0;8;;@Test public void shouldSetProxyOnDefaultServiceBuilder() {     // When     apnsServiceFactory.getApnsService().     // Then     verify(apnsServiceBuilder).withSocksProxy(anyString(), anyInt()). }

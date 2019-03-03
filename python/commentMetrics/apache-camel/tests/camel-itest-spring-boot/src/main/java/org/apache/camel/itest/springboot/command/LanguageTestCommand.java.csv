@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;11;;@Override public Boolean executeTest(ITestConfig config, String language) throws Exception {     logger.info("Getting Camel language: {}", language).     Language lan = context.resolveLanguage(language).     assertNotNull("Cannot get language with name: " + language, lan).     logger.info("Found Camel language: {} instance: {} with className: {}", language, lan, lan.getClass()).     return true. }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public void checkBeforeCoreValidation(Input input) throws Exception {     if (!"Signature".equals(input.getMessageBodyDocument().getDocumentElement().getLocalName())) {         throw new XmlSignatureInvalidException("XML signature is not enveloping. Only enveloping XML signatures are allowed.").     } }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@XmlElementDecl(name = "brand-airplane") public JAXBElement<Airplane> createAirplane(Airplane airplane) {     return new JAXBElement<>(new QName("brand-airplane"), Airplane.class, null, airplane). }

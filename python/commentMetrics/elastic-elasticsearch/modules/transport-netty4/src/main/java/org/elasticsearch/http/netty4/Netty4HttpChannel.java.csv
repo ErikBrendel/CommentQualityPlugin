@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;18;;@Override public void sendResponse(HttpResponse response, ActionListener<Void> listener) {     ChannelPromise writePromise = channel.newPromise().     writePromise.addListener(f -> {         if (f.isSuccess()) {             listener.onResponse(null).         } else {             final Throwable cause = f.cause().             ExceptionsHelper.maybeDieOnAnotherThread(cause).             if (cause instanceof Error) {                 listener.onFailure(new Exception(cause)).             } else {                 listener.onFailure((Exception) cause).             }         }     }).     channel.writeAndFlush(response, writePromise). }
+false;public;0;4;;@Override public InetSocketAddress getLocalAddress() {     return (InetSocketAddress) channel.localAddress(). }
+false;public;0;4;;@Override public InetSocketAddress getRemoteAddress() {     return (InetSocketAddress) channel.remoteAddress(). }
+false;public;1;4;;@Override public void addCloseListener(ActionListener<Void> listener) {     closeContext.addListener(ActionListener.toBiConsumer(listener)). }
+false;public;0;4;;@Override public boolean isOpen() {     return channel.isOpen(). }
+false;public;0;4;;@Override public void close() {     channel.close(). }
+false;public;0;3;;public Channel getNettyChannel() {     return channel. }
+false;public;0;7;;@Override public String toString() {     return "Netty4HttpChannel{" + "localAddress=" + getLocalAddress() + ", remoteAddress=" + getRemoteAddress() + '}'. }

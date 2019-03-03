@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;2;11;;@Override protected Class<?> resolveFallbackIfPossible(String className, ClassNotFoundException ex) throws IOException, ClassNotFoundException {     // Else, propagate the ClassNotFoundException.     if (this.codebaseUrl == null) {         throw ex.     }     return RMIClassLoader.loadClass(this.codebaseUrl, className). }
+false;protected;0;4;;@Override protected ClassLoader getFallbackClassLoader() throws IOException {     return RMIClassLoader.getClassLoader(this.codebaseUrl). }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;11;;public StreamSource[] resolve(String moduleURI, String baseURI, String[] locations) throws XPathException {     StreamSource[] ss = new StreamSource[locations.length].     try {         for (int i = 0. i < locations.length. i++) {             ss[i] = new StreamSource(xqueryComponent.resolveModuleResource(locations[i]).openStream()).         }     } catch (Exception e) {         throw new XPathException("Error resolving resource: " + Arrays.toString(locations), e).     }     return ss. }

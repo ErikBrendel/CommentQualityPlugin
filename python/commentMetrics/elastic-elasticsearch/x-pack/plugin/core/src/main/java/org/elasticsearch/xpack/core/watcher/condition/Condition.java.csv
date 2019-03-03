@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * @return the type of this condition  */ ;/**  * @return the type of this condition  */ String type().
+false;public;0;3;;public Map<String, Object> getResolvedValues() {     return resolveValues. }
+false;public;0;3;;public String type() {     return type. }
+false;public;0;3;;public Status status() {     return status. }
+false;public;0;3;;public boolean met() {     return met. }
+false;public;0;4;;public String reason() {     assert status == Status.FAILURE.     return reason. }
+false;public;2;22;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field("type", type).     builder.field("status", status.name().toLowerCase(Locale.ROOT)).     switch(status) {         case SUCCESS:             assert reason == null.             builder.field("met", met).             break.         case FAILURE:             assert reason != null && !met.             builder.field("reason", reason).             break.         default:             assert false.     }     if (resolveValues != null) {         builder.startObject(type).field("resolved_values", resolveValues).endObject().     }     return builder.endObject(). }

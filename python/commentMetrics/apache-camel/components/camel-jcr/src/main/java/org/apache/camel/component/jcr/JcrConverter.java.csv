@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;4;;@Converter public static Value toValue(Boolean bool) {     return new BooleanValue(bool). }
+false;public,static;1;4;;@Converter public static Value toValue(InputStream stream) {     return new BinaryValue(stream). }
+false;public,static;1;4;;@Converter public static Value toValue(Calendar calendar) {     return new DateValue(calendar). }
+false;public,static;1;4;;@Converter public static Value toValue(String value) {     return new StringValue(value). }
+false;public,static;1;4;;@Converter public static Boolean toBoolean(Value value) throws RepositoryException {     return value.getBoolean(). }
+false;public,static;1;4;;@Converter public static InputStream toValue(Value value) throws RepositoryException {     return value.getBinary().getStream(). }
+false;public,static;1;4;;@Converter public static Calendar toCalendar(Value value) throws RepositoryException {     return value.getDate(). }
+false;public,static;1;4;;@Converter public static String toString(Value value) throws RepositoryException {     return value.getString(). }

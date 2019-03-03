@@ -1,0 +1,48 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Override public WebsocketComponent getComponent() {     ObjectHelper.notNull(component, "component").     return (WebsocketComponent) super.getComponent(). }
+false;public;1;7;;@Override public Consumer createConsumer(Processor processor) throws Exception {     ObjectHelper.notNull(component, "component").     WebsocketConsumer consumer = new WebsocketConsumer(this, processor).     configureConsumer(consumer).     return consumer. }
+false;public;0;4;;@Override public Producer createProducer() throws Exception {     return new WebsocketProducer(this). }
+false;public;1;3;;public void connect(WebsocketConsumer consumer) throws Exception {     component.connect(consumer). }
+false;public;1;3;;public void disconnect(WebsocketConsumer consumer) throws Exception {     component.disconnect(consumer). }
+false;public;1;3;;public void connect(WebsocketProducer producer) throws Exception {     component.connect(producer). }
+false;public;1;3;;public void disconnect(WebsocketProducer producer) throws Exception {     component.disconnect(producer). }
+false;public;0;4;;@Override public boolean isSingleton() {     return true. }
+false;public;0;3;;public URI getUri() {     return uri. }
+false;public;0;3;;public Integer getPort() {     return port. }
+false;public;0;3;;public String getHost() {     return host. }
+true;public;1;3;/**  * The hostname. The default value is <tt>0.0.0.0</tt>.  * Setting this option on the component will use the component configured value as default.  */ ;/**  * The hostname. The default value is <tt>0.0.0.0</tt>.  * Setting this option on the component will use the component configured value as default.  */ public void setHost(String host) {     this.host = host. }
+true;public;1;3;/**  * The port number. The default value is <tt>9292</tt>.  * Setting this option on the component will use the component configured value as default.  */ ;/**  * The port number. The default value is <tt>9292</tt>.  * Setting this option on the component will use the component configured value as default.  */ public void setPort(int port) {     this.port = port. }
+false;public;0;3;;public String getStaticResources() {     return staticResources. }
+true;public;1;3;/**  * Set a resource path for static resources (such as .html files etc).  * <p/>  * The resources can be loaded from classpath, if you prefix with <tt>classpath:</tt>,  * otherwise the resources is loaded from file system or from JAR files.  * <p/>  * For example to load from root classpath use <tt>classpath:.</tt>, or  * <tt>classpath:WEB-INF/static</tt>  * <p/>  * If not configured (eg <tt>null</tt>) then no static resource is in use.  */ ;/**  * Set a resource path for static resources (such as .html files etc).  * <p/>  * The resources can be loaded from classpath, if you prefix with <tt>classpath:</tt>,  * otherwise the resources is loaded from file system or from JAR files.  * <p/>  * For example to load from root classpath use <tt>classpath:.</tt>, or  * <tt>classpath:WEB-INF/static</tt>  * <p/>  * If not configured (eg <tt>null</tt>) then no static resource is in use.  */ public void setStaticResources(String staticResources) {     this.staticResources = staticResources. }
+false;public;0;3;;public Boolean getSendToAll() {     return sendToAll. }
+true;public;1;3;/**  * To send to all websocket subscribers. Can be used to configure on endpoint level, instead of having to use the WebsocketConstants.SEND_TO_ALL header on the message.  */ ;/**  * To send to all websocket subscribers. Can be used to configure on endpoint level, instead of having to use the WebsocketConstants.SEND_TO_ALL header on the message.  */ public void setSendToAll(Boolean sendToAll) {     this.sendToAll = sendToAll. }
+false;public;0;3;;public Integer getSendTimeout() {     return sendTimeout. }
+true;public;1;3;/**  * Timeout in millis when sending to a websocket channel.  * The default timeout is 30000 (30 seconds).  */ ;/**  * Timeout in millis when sending to a websocket channel.  * The default timeout is 30000 (30 seconds).  */ public void setSendTimeout(Integer sendTimeout) {     this.sendTimeout = sendTimeout. }
+false;public;0;3;;public String getProtocol() {     return uri.getScheme(). }
+false;public;0;3;;public String getPath() {     return uri.getPath(). }
+true;public;1;3;/**  * Whether to enable session support which enables HttpSession for each http request.  */ ;/**  * Whether to enable session support which enables HttpSession for each http request.  */ public void setSessionSupport(boolean support) {     sessionSupport = support. }
+false;public;0;3;;public boolean isSessionSupport() {     return sessionSupport. }
+false;public;0;3;;public Integer getBufferSize() {     return bufferSize. }
+true;public;1;3;/**  * Set the buffer size of the websocketServlet, which is also the max frame byte size (default 8192)  */ ;/**  * Set the buffer size of the websocketServlet, which is also the max frame byte size (default 8192)  */ public void setBufferSize(Integer bufferSize) {     this.bufferSize = bufferSize. }
+false;public;0;3;;public Integer getMaxIdleTime() {     return maxIdleTime. }
+true;public;1;3;/**  * Set the time in ms that the websocket created by the websocketServlet may be idle before closing. (default is 300000)  */ ;/**  * Set the time in ms that the websocket created by the websocketServlet may be idle before closing. (default is 300000)  */ public void setMaxIdleTime(Integer maxIdleTime) {     this.maxIdleTime = maxIdleTime. }
+false;public;0;3;;public Integer getMaxTextMessageSize() {     return maxTextMessageSize. }
+true;public;1;3;/**  * Can be used to set the size in characters that the websocket created by the websocketServlet may be accept before closing.  */ ;/**  * Can be used to set the size in characters that the websocket created by the websocketServlet may be accept before closing.  */ public void setMaxTextMessageSize(Integer maxTextMessageSize) {     this.maxTextMessageSize = maxTextMessageSize. }
+false;public;0;3;;public Integer getMaxBinaryMessageSize() {     return maxBinaryMessageSize. }
+true;public;1;3;/**  * Can be used to set the size in bytes that the websocket created by the websocketServlet may be accept before closing. (Default is -1 - or unlimited)  */ ;/**  * Can be used to set the size in bytes that the websocket created by the websocketServlet may be accept before closing. (Default is -1 - or unlimited)  */ public void setMaxBinaryMessageSize(Integer maxBinaryMessageSize) {     this.maxBinaryMessageSize = maxBinaryMessageSize. }
+false;public;0;3;;public Integer getMinVersion() {     return minVersion. }
+true;public;1;3;/**  * Can be used to set the minimum protocol version accepted for the websocketServlet. (Default 13 - the RFC6455 version)  */ ;/**  * Can be used to set the minimum protocol version accepted for the websocketServlet. (Default 13 - the RFC6455 version)  */ public void setMinVersion(Integer minVersion) {     this.minVersion = minVersion. }
+false;public;0;3;;public List<Handler> getHandlers() {     return handlers. }
+false;public;1;3;;public void setHandlers(List<Handler> handlers) {     this.handlers = handlers. }
+false;public;0;3;;public SSLContextParameters getSslContextParameters() {     return sslContextParameters. }
+true;public;1;3;/**  * To configure security using SSLContextParameters  */ ;/**  * To configure security using SSLContextParameters  */ public void setSslContextParameters(SSLContextParameters sslContextParameters) {     this.sslContextParameters = sslContextParameters. }
+false;public;0;3;;public boolean isEnableJmx() {     return this.enableJmx. }
+true;public;1;3;/**  * If this option is true, Jetty JMX support will be enabled for this endpoint. See Jetty JMX support for more details.  */ ;/**  * If this option is true, Jetty JMX support will be enabled for this endpoint. See Jetty JMX support for more details.  */ public void setEnableJmx(boolean enableJmx) {     this.enableJmx = enableJmx. }
+false;public;0;3;;public String getAllowedOrigins() {     return allowedOrigins. }
+true;public;1;3;/**  * The CORS allowed origins. Use * to allow all.  */ ;/**  * The CORS allowed origins. Use * to allow all.  */ public void setAllowedOrigins(String allowedOrigins) {     this.allowedOrigins = allowedOrigins. }
+false;public;0;3;;public boolean isCrossOriginFilterOn() {     return crossOriginFilterOn. }
+true;public;1;3;/**  * Whether to enable CORS  */ ;/**  * Whether to enable CORS  */ public void setCrossOriginFilterOn(boolean crossOriginFilterOn) {     this.crossOriginFilterOn = crossOriginFilterOn. }
+false;public;0;3;;public String getFilterPath() {     return filterPath. }
+true;public;1;3;/**  * Context path for filtering CORS  */ ;/**  * Context path for filtering CORS  */ public void setFilterPath(String filterPath) {     this.filterPath = filterPath. }
+false;public;0;3;;public String getResourceUri() {     return resourceUri. }
+true;public;1;3;/**  * Name of the websocket channel to use  */ ;/**  * Name of the websocket channel to use  */ public void setResourceUri(String resourceUri) {     this.resourceUri = resourceUri. }

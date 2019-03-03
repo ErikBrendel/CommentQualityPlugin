@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public void configure() throws Exception {     interceptSendToEndpoint("log*").to("mock:http").skipSendToOriginalEndpoint(). }
+false;public;0;16;;@Test public void testInterceptSendToEndpoint() throws Exception {     RouteDefinition route = context.getRouteDefinitions().get(0).     RouteReifier.adviceWith(route, context, new RouteBuilder() {          @Override         public void configure() throws Exception {             interceptSendToEndpoint("log*").to("mock:http").skipSendToOriginalEndpoint().         }     }).     getMockEndpoint("mock:http").expectedMessageCount(1).     template.sendBody("direct:start", "Hello World").     assertMockEndpointsSatisfied(). }
+false;public;0;4;;@Override public void configure() throws Exception {     from("direct:start").to("log://foo?groupSize=5&level=WARN"). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").to("log://foo?groupSize=5&level=WARN").         }     }. }

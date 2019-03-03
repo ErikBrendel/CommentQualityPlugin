@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {     this.properties.applyTo(config). }
+false;public;1;6;;@Override public void configureJacksonObjectMapper(ObjectMapper objectMapper) {     if (this.objectMapperBuilder != null) {         this.objectMapperBuilder.configure(objectMapper).     } }

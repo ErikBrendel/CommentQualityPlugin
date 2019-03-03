@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;public MonitoringBulkRequestBuilder add(MonitoringBulkDoc doc) {     request.add(doc).     return this. }
+false;public;6;9;;public MonitoringBulkRequestBuilder add(final MonitoredSystem system, final String type, final BytesReference content, final XContentType xContentType, final long timestamp, final long intervalMillis) throws IOException {     request.add(system, type, content, xContentType, timestamp, intervalMillis).     return this. }

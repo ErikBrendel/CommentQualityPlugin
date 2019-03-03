@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;7;5;;@Override public KafkaManualCommit newInstance(Exchange exchange, KafkaConsumer consumer, String topicName, String threadId, StateRepository<String, String> offsetRepository, TopicPartition partition, long recordOffset) {     return new DefaultKafkaManualCommit(consumer, topicName, threadId, offsetRepository, partition, recordOffset). }

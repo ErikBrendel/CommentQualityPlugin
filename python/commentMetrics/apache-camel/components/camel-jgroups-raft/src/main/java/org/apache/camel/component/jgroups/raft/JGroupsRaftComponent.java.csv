@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;3;4;;@Override protected Endpoint createEndpoint(String uri, String remaining, Map<String, Object> parameters) {     return new JGroupsRaftEndpoint(uri, remaining, this, remaining, parameters, raftId, channelProperties, stateMachine, raftHandle). }
+false;public;0;3;;public RaftHandle getRaftHandle() {     return raftHandle. }
+true;public;1;3;/**  * RaftHandle to use.  */ ;/**  * RaftHandle to use.  */ public void setRaftHandle(RaftHandle raftHandle) {     this.raftHandle = raftHandle. }
+false;public;0;3;;public StateMachine getStateMachine() {     return stateMachine. }
+true;public;1;3;/**  * StateMachine to use.  */ ;/**  * StateMachine to use.  */ public void setStateMachine(StateMachine stateMachine) {     this.stateMachine = stateMachine. }
+false;public;0;3;;public String getRaftId() {     return raftId. }
+true;public;1;3;/**  * Unique raftId to use.  */ ;/**  * Unique raftId to use.  */ public void setRaftId(String raftId) {     this.raftId = raftId. }
+false;public;0;3;;public String getChannelProperties() {     return channelProperties. }
+true;public;1;3;/**  * Specifies configuration properties of the RaftHandle JChannel used by the endpoint (ignored if raftHandle ref is provided).  */ ;/**  * Specifies configuration properties of the RaftHandle JChannel used by the endpoint (ignored if raftHandle ref is provided).  */ public void setChannelProperties(String channelProperties) {     this.channelProperties = channelProperties. }

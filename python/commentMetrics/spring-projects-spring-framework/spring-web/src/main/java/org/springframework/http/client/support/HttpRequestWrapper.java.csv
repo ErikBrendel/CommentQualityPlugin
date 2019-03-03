@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Return the wrapped request.  */ ;/**  * Return the wrapped request.  */ public HttpRequest getRequest() {     return this.request. }
+true;public;0;5;/**  * Return the method of the wrapped request.  */ ;/**  * Return the method of the wrapped request.  */ @Override @Nullable public HttpMethod getMethod() {     return this.request.getMethod(). }
+true;public;0;4;/**  * Return the method value of the wrapped request.  */ ;/**  * Return the method value of the wrapped request.  */ @Override public String getMethodValue() {     return this.request.getMethodValue(). }
+true;public;0;4;/**  * Return the URI of the wrapped request.  */ ;/**  * Return the URI of the wrapped request.  */ @Override public URI getURI() {     return this.request.getURI(). }
+true;public;0;4;/**  * Return the headers of the wrapped request.  */ ;/**  * Return the headers of the wrapped request.  */ @Override public HttpHeaders getHeaders() {     return this.request.getHeaders(). }

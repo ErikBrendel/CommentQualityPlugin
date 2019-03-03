@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Phase getPhase() {     return phase. }
+false;public;0;4;;@Override public Throwable getException() {     return throwable. }
+false;public;0;7;;@Override public String toString() {     return "DefaultRouteError{" + "phase=" + phase + ", throwable=" + throwable + '}'. }
+false;public,static;4;6;;// *********************************** // Helpers // *********************************** public static void set(CamelContext context, String routeId, RouteError.Phase phase, Throwable throwable) {     Route route = context.getRoute(routeId).     if (route != null) {         route.getRouteContext().setLastError(new DefaultRouteError(phase, throwable)).     } }
+false;public,static;2;6;;public static void reset(CamelContext context, String routeId) {     Route route = context.getRoute(routeId).     if (route != null) {         route.getRouteContext().setLastError(null).     } }

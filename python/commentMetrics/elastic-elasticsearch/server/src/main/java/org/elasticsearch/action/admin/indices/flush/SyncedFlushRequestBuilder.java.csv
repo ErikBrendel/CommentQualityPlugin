@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;public SyncedFlushRequestBuilder setIndices(String[] indices) {     super.request().indices(indices).     return this. }
+false;public;1;4;;public SyncedFlushRequestBuilder setIndicesOptions(IndicesOptions indicesOptions) {     super.request().indicesOptions(indicesOptions).     return this. }

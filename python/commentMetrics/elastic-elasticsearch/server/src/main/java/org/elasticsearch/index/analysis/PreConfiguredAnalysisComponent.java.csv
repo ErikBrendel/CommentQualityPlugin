@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;4;12;;@Override public T get(IndexSettings indexSettings, Environment environment, String name, Settings settings) throws IOException {     Version versionCreated = Version.indexCreated(settings).     synchronized (this) {         T factory = cache.get(versionCreated).         if (factory == null) {             factory = create(versionCreated).             cache.put(versionCreated, factory).         }         return factory.     } }
+true;public;0;3;/**  * The name of the analysis component in the API.  */ ;/**  * The name of the analysis component in the API.  */ public String getName() {     return name. }
+false;protected,abstract;1;1;;protected abstract T create(Version version).

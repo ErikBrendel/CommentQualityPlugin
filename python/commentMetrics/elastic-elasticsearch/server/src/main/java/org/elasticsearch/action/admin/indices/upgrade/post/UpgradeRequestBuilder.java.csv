@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;4;/**  *  Should the upgrade only the ancient (older major version of Lucene) segments?  */ ;/**  *  Should the upgrade only the ancient (older major version of Lucene) segments?  */ public UpgradeRequestBuilder setUpgradeOnlyAncientSegments(boolean upgradeOnlyAncientSegments) {     request.upgradeOnlyAncientSegments(upgradeOnlyAncientSegments).     return this. }

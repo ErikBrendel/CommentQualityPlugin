@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;9;;@Override public void onComplete(Exchange exchange) {     try {         LOG.debug("Committing").         session.commit().     } catch (JMSException ex) {         LOG.warn("Exception caught while committing JMS session", ex).     } }
+false;public;1;9;;@Override public void onFailure(Exchange exchange) {     try {         LOG.debug("Rolling back").         session.rollback().     } catch (JMSException ex) {         LOG.warn("Exception caught while rolling back JMS session", ex).     } }

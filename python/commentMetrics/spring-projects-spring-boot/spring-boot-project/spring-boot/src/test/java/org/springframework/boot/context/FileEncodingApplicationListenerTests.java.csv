@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test(expected = IllegalStateException.class) public void testIllegalState() {     TestPropertySourceUtils.addInlinedPropertiesToEnvironment(this.environment, "spring.mandatory_file_encoding=FOO").     ConfigurationPropertySources.attach(this.environment).     this.initializer.onApplicationEvent(this.event). }
+false;public;0;4;;@Test public void testSunnyDayNothingMandated() {     this.initializer.onApplicationEvent(this.event). }
+false;public;0;8;;@Test public void testSunnyDayMandated() {     Assume.assumeNotNull(System.getProperty("file.encoding")).     TestPropertySourceUtils.addInlinedPropertiesToEnvironment(this.environment, "spring.mandatory_file_encoding:" + System.getProperty("file.encoding")).     ConfigurationPropertySources.attach(this.environment).     this.initializer.onApplicationEvent(this.event). }

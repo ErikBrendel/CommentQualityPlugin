@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;10;;@Override public Object invoke(MethodInvocation methodInvocation) throws Throwable {     beforeAccess().     try {         return methodInvocation.proceed().     } finally {         afterAccess().     } }

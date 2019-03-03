@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private,static;2;6;;private static String getMessage(HttpStatus statusCode, String statusText) {     if (!StringUtils.hasLength(statusText)) {         statusText = statusCode.getReasonPhrase().     }     return statusCode.value() + " " + statusText. }
+true;public;0;3;/**  * Return the HTTP status code.  */ ;/**  * Return the HTTP status code.  */ public HttpStatus getStatusCode() {     return this.statusCode. }

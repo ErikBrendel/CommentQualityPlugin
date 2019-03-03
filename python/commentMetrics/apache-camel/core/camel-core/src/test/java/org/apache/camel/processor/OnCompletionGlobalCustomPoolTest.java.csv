@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Before public void setUp() throws Exception {     // use a pool with 2 concurrent tasks so we cannot run too fast     pool = Executors.newFixedThreadPool(2).     super.setUp(). }
+false;public;0;5;;@After public void tearDown() throws Exception {     super.tearDown().     pool.shutdownNow(). }
+false;public;0;10;;@Override public void configure() throws Exception {     // use a custom thread pool     onCompletion().executorService(pool).to("log:global").to("mock:sync").     from("direct:start").process(new MyProcessor()).to("mock:result"). }
+false;protected;0;15;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             // use a custom thread pool             onCompletion().executorService(pool).to("log:global").to("mock:sync").             from("direct:start").process(new MyProcessor()).to("mock:result").         }     }. }

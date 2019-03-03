@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void getNameShouldReturnName() {     OperationMethodParameter parameter = new OperationMethodParameter("name", this.method.getParameters()[0]).     assertThat(parameter.getName()).isEqualTo("name"). }
+false;public;0;6;;@Test public void getTypeShouldReturnType() {     OperationMethodParameter parameter = new OperationMethodParameter("name", this.method.getParameters()[0]).     assertThat(parameter.getType()).isEqualTo(String.class). }
+false;public;0;6;;@Test public void isMandatoryWhenNoAnnotationShouldReturnTrue() {     OperationMethodParameter parameter = new OperationMethodParameter("name", this.method.getParameters()[0]).     assertThat(parameter.isMandatory()).isTrue(). }
+false;public;0;6;;@Test public void isMandatoryWhenNullableAnnotationShouldReturnFalse() {     OperationMethodParameter parameter = new OperationMethodParameter("name", this.method.getParameters()[1]).     assertThat(parameter.isMandatory()).isFalse(). }
+false;;2;3;;void example(String one, @Nullable String two) { }

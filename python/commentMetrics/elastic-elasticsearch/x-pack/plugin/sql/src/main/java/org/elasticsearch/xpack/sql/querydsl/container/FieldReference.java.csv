@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,abstract;0;1;/**  * Field name.  *  * @return field name.  */ ;/**  * Field name.  *  * @return field name.  */ public abstract String name().
+false;public,final;0;4;;@Override public final boolean supportedByAggsOnlyQuery() {     return false. }

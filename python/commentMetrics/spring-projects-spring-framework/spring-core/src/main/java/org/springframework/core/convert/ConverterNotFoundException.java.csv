@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;4;/**  * Return the source type that was requested to convert from.  */ ;/**  * Return the source type that was requested to convert from.  */ @Nullable public TypeDescriptor getSourceType() {     return this.sourceType. }
+true;public;0;3;/**  * Return the target type that was requested to convert to.  */ ;/**  * Return the target type that was requested to convert to.  */ public TypeDescriptor getTargetType() {     return this.targetType. }

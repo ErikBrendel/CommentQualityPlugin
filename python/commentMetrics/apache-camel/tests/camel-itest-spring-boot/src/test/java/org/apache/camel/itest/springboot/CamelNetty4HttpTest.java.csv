@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;4;;@Deployment public static Archive<?> createSpringBootPackage() throws Exception {     return ArquillianPackager.springBootPackage(createTestConfig()). }
+false;public,static;0;9;;public static ITestConfig createTestConfig() {     return new ITestConfigBuilder().module(inferModuleName(CamelNetty4HttpTest.class)).unitTestExclusionPattern(".*(\\.integration\\..*|IntegrationTest$|BaseNettyTest$|ManagedNettyEndpointTest$|NettyMixedCaseHttpPathTest$|NettyHttpContentTypeTest$)").dependency("org.hibernate.validator:hibernate-validator").build(). }
+false;public;0;5;;@Test public void componentTests() throws Exception {     this.runComponentTest(config).     this.runModuleUnitTestsIfEnabled(config). }

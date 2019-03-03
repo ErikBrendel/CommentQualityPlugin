@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeVLong(fullClusterStateReceivedCount).     out.writeVLong(incompatibleClusterStateDiffReceivedCount).     out.writeVLong(compatibleClusterStateDiffReceivedCount). }
+false;public;2;11;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject("published_cluster_states").     {         builder.field("full_states", fullClusterStateReceivedCount).         builder.field("incompatible_diffs", incompatibleClusterStateDiffReceivedCount).         builder.field("compatible_diffs", compatibleClusterStateDiffReceivedCount).     }     builder.endObject().     return builder. }
+false;public;0;1;;public long getFullClusterStateReceivedCount() {     return fullClusterStateReceivedCount. }
+false;public;0;1;;public long getIncompatibleClusterStateDiffReceivedCount() {     return incompatibleClusterStateDiffReceivedCount. }
+false;public;0;1;;public long getCompatibleClusterStateDiffReceivedCount() {     return compatibleClusterStateDiffReceivedCount. }
+false;public;0;7;;@Override public String toString() {     return "PublishClusterStateStats(full=" + fullClusterStateReceivedCount + ", incompatible=" + incompatibleClusterStateDiffReceivedCount + ", compatible=" + compatibleClusterStateDiffReceivedCount + ")". }

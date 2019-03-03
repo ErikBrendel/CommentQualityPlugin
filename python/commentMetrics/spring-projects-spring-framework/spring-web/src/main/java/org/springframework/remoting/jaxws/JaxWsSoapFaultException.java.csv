@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,final;0;3;/**  * Return the wrapped JAX-WS SOAPFault.  */ ;/**  * Return the wrapped JAX-WS SOAPFault.  */ public final SOAPFault getFault() {     return ((SOAPFaultException) getCause()).getFault(). }
+false;public;0;4;;@Override public String getFaultCode() {     return getFault().getFaultCode(). }
+false;public;0;4;;@Override public QName getFaultCodeAsQName() {     return getFault().getFaultCodeAsQName(). }
+false;public;0;4;;@Override public String getFaultString() {     return getFault().getFaultString(). }
+false;public;0;4;;@Override public String getFaultActor() {     return getFault().getFaultActor(). }

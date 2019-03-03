@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;static;1;3;;static JdbcColumnInfo varcharInfo(String name) {     return new JdbcColumnInfo(name, EsType.KEYWORD, EMPTY, EMPTY, EMPTY, EMPTY, 0). }
+false;static;1;3;;static JdbcColumnInfo intInfo(String name) {     return new JdbcColumnInfo(name, EsType.INTEGER, EMPTY, EMPTY, EMPTY, EMPTY, 11). }
+false;static;1;3;;static JdbcColumnInfo doubleInfo(String name) {     return new JdbcColumnInfo(name, EsType.DOUBLE, EMPTY, EMPTY, EMPTY, EMPTY, 25). }
+false;public;0;9;;public void testToString() {     assertEquals("test.doc.a<type=[KEYWORD] catalog=[as] schema=[ads] label=[lab]>", new JdbcColumnInfo("a", EsType.KEYWORD, "test.doc", "as", "ads", "lab", 0).toString()).     assertEquals("test.doc.a<type=[KEYWORD]>", new JdbcColumnInfo("a", EsType.KEYWORD, "test.doc", EMPTY, EMPTY, EMPTY, 0).toString()).     assertEquals("string<type=[KEYWORD]>", varcharInfo("string").toString()).     assertEquals("int<type=[INTEGER]>", intInfo("int").toString()).     assertEquals("d<type=[DOUBLE]>", doubleInfo("d").toString()). }

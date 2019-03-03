@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;7;/**  * This method sets the context for a server socket channel. The context is called when a new channel is  * accepted, an exception occurs, or it is time to close the channel.  *  * @param context to call  */ ;/**  * This method sets the context for a server socket channel. The context is called when a new channel is  * accepted, an exception occurs, or it is time to close the channel.  *  * @param context to call  */ public void setContext(ServerChannelContext context) {     if (contextSet.compareAndSet(false, true)) {         this.context = context.     } else {         throw new IllegalStateException("Context on this channel were already set. It should only be once.").     } }
+false;public;0;5;;@Override public InetSocketAddress getLocalAddress() {     attemptToSetLocalAddress().     return localAddress. }
+false;public;0;4;;@Override public ServerSocketChannel getRawChannel() {     return serverSocketChannel. }
+false;public;0;4;;@Override public ServerChannelContext getContext() {     return context. }
+false;public;0;6;;@Override public String toString() {     return "NioServerSocketChannel{" + "localAddress=" + getLocalAddress() + '}'. }
+false;private;0;5;;private void attemptToSetLocalAddress() {     if (localAddress == null) {         localAddress = (InetSocketAddress) serverSocketChannel.socket().getLocalSocketAddress().     } }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;8;;@Bean @ConditionalOnMissingBean @ConditionalOnProperty("spring.influx.url") public InfluxDB influxDb(InfluxDbProperties properties, ObjectProvider<InfluxDbOkHttpClientBuilderProvider> builder) {     return new InfluxDBImpl(properties.getUrl(), properties.getUser(), properties.getPassword(), determineBuilder(builder.getIfAvailable())). }
+false;private,static;1;7;;private static OkHttpClient.Builder determineBuilder(InfluxDbOkHttpClientBuilderProvider builder) {     if (builder != null) {         return builder.get().     }     return new OkHttpClient.Builder(). }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;15;;public static HazelcastInstance newInstance() {     Config cfg = new XmlConfigBuilder().build().     // hazelcast.version.check.enabled is deprecated     cfg.setProperty("hazelcast.phone.home.enabled", System.getProperty("hazelcast.phone.home.enabled", "false")).     cfg.setProperty("hazelcast.logging.type", System.getProperty("hazelcast.logging.type", "slf4j")).     return newInstance(cfg). }
+false;public,static;1;3;;public static HazelcastInstance newInstance(Config cfg) {     return Hazelcast.newHazelcastInstance(cfg). }

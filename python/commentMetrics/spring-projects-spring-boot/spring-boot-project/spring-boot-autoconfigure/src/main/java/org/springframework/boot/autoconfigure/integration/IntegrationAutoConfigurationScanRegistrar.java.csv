@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void setBeanFactory(BeanFactory beanFactory) throws BeansException {     this.beanFactory = beanFactory. }
+false;public;2;6;;@Override public void registerBeanDefinitions(AnnotationMetadata importingClassMetadata, final BeanDefinitionRegistry registry) {     super.registerBeanDefinitions(new StandardAnnotationMetadata(IntegrationComponentScanConfiguration.class, true), registry). }
+false;protected;2;7;;@Override protected Collection<String> getBasePackages(AnnotationMetadata importingClassMetadata, BeanDefinitionRegistry registry) {     return (AutoConfigurationPackages.has(this.beanFactory) ? AutoConfigurationPackages.get(this.beanFactory) : Collections.emptyList()). }

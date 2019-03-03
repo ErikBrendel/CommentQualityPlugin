@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@Override @Test public void testTransactionSuccess() throws Exception {     MockEndpoint book = getMockEndpoint("mock:book").     book.expectedMessageCount(2).     super.testTransactionSuccess().     assertMockEndpointsSatisfied(). }
+false;public;0;10;;@Override @Test public void testTransactionRollback() throws Exception {     MockEndpoint book = getMockEndpoint("mock:book").     book.expectedMessageCount(1).     super.testTransactionRollback().     assertMockEndpointsSatisfied(). }
+false;public;0;6;;@Override @Before public void setUp() throws Exception {     setUseRouteBuilder(false).     super.setUp(). }
+false;protected;0;4;;protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("/org/apache/camel/spring/interceptor/transactionalClientWithAnnotatedBeanTest.xml"). }

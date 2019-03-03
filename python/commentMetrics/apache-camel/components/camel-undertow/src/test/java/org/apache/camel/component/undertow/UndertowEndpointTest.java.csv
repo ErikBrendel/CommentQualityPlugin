@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Before public void createEndpoint() throws URISyntaxException {     endpoint = new UndertowEndpoint(null, null). }
+false;public;0;5;;@Test public void emptyPathShouldBeReplacedWithSlash() {     endpoint.setHttpURI(withoutSlash).     assertEquals(withSlash, endpoint.getHttpURI()). }
+false;public;0;5;;@Test public void nonEmptyPathShouldBeKeptSame() {     endpoint.setHttpURI(withSlash).     assertEquals(withSlash, endpoint.getHttpURI()). }

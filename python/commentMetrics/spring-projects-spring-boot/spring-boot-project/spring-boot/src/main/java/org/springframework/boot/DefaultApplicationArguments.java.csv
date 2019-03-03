@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String[] getSourceArgs() {     return this.args. }
+false;public;0;5;;@Override public Set<String> getOptionNames() {     String[] names = this.source.getPropertyNames().     return Collections.unmodifiableSet(new HashSet<>(Arrays.asList(names))). }
+false;public;1;4;;@Override public boolean containsOption(String name) {     return this.source.containsProperty(name). }
+false;public;1;5;;@Override public List<String> getOptionValues(String name) {     List<String> values = this.source.getOptionValues(name).     return (values != null) ? Collections.unmodifiableList(values) : null. }
+false;public;0;4;;@Override public List<String> getNonOptionArgs() {     return this.source.getNonOptionArgs(). }
+false;public;0;4;;@Override public List<String> getNonOptionArgs() {     return super.getNonOptionArgs(). }
+false;public;1;4;;@Override public List<String> getOptionValues(String name) {     return super.getOptionValues(name). }

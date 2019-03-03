@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;protected User processDelete(Exchange exchange) {     LOG.debug("Trying to delete user {}", getConfiguration().getId()).     return serviceUsers.delete(getConfiguration().getId()). }
+false;protected;1;4;;protected User processUpdate(Exchange exchange) {     LOG.debug("Trying to update the user {} with id {}", exchange.getIn().getBody(), this.getConfiguration().getId()).     return serviceUsers.update(getConfiguration().getId(), exchange.getIn().getBody(User.class)). }
+false;protected;1;4;;protected User processInsert(Exchange exchange) {     LOG.debug("Trying to create a new user{}", exchange.getIn().getBody()).     return serviceUsers.create(exchange.getIn().getBody(User.class)). }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected FindFileStructureAction.Response createTestInstance() {     return new FindFileStructureAction.Response(FileStructureTests.createTestFileStructure()). }
+false;protected;0;4;;@Override protected FindFileStructureAction.Response createBlankInstance() {     return new FindFileStructureAction.Response(). }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;10;;@Deployment public static Archive<?> deployment() {     return ShrinkWrap.create(JavaArchive.class).addPackage(CdiCamelExtension.class.getPackage()).addClass(QualifiedCamelContext.class).addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml"). }
+false;public;0;9;;@Test public void sendMessageToInbound() throws InterruptedException {     outbound.expectedMessageCount(1).     outbound.expectedBodiesReceived("test").     inbound.sendBody("test").     assertIsSatisfied(2L, TimeUnit.SECONDS, outbound). }
+false;public;0;4;;@Override public void configure() {     from(directEP).to(mockEP). }

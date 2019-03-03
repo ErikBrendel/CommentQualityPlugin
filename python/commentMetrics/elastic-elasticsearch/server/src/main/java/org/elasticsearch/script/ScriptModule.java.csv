@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Service responsible for managing scripts.  */ ;/**  * Service responsible for managing scripts.  */ public ScriptService getScriptService() {     return scriptService. }
+true;public;1;3;/**  * Allow the script service to register any settings update handlers on the cluster settings  */ ;/**  * Allow the script service to register any settings update handlers on the cluster settings  */ public void registerClusterSettingsListeners(ClusterSettings clusterSettings) {     scriptService.registerClusterSettingsListeners(clusterSettings). }

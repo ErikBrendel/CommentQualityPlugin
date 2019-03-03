@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static Literal l(Object value) {     return Literal.of(EMPTY, value). }
+false;public,static;0;3;;public static Literal randomStringLiteral() {     return l(ESTestCase.randomRealisticUnicodeOfLength(1024)). }
+false;public,static;0;3;;public static Literal randomIntLiteral() {     return l(ESTestCase.randomInt()). }
+false;public;0;4;;@Override public boolean hasNext() {     return bs != null. }
+false;public;0;14;;@Override public BitSet next() {     BitSet old = (BitSet) bs.clone().     int b = bs.previousClearBit(n - 1).     int b1 = bs.previousSetBit(b).     if (b1 == -1)         bs = null.     else {         bs.clear(b1).         bs.set(b1 + 1, b1 + (n - b) + 1).         bs.clear(b1 + (n - b) + 1, n).     }     return old. }
+false;public;0;29;;@Override public Iterator<BitSet> iterator() {     return new Iterator<BitSet>() {          BitSet bs = new BitSet(n).          {             bs.set(0, k).         }          @Override         public boolean hasNext() {             return bs != null.         }          @Override         public BitSet next() {             BitSet old = (BitSet) bs.clone().             int b = bs.previousClearBit(n - 1).             int b1 = bs.previousSetBit(b).             if (b1 == -1)                 bs = null.             else {                 bs.clear(b1).                 bs.set(b1 + 1, b1 + (n - b) + 1).                 bs.clear(b1 + (n - b) + 1, n).             }             return old.         }     }. }

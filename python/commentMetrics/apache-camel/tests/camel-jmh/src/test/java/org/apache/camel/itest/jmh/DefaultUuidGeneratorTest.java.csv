@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;21;;@Test public void launchBenchmark() throws Exception {     Options opt = new OptionsBuilder().include(this.getClass().getName() + ".*").mode(Mode.All).timeUnit(TimeUnit.MICROSECONDS).warmupTime(TimeValue.seconds(1)).warmupIterations(2).measurementTime(TimeValue.seconds(1)).measurementIterations(2).threads(2).forks(1).shouldFailOnError(true).shouldDoGC(true).build().     new Runner(opt).run(). }
+false;public;0;4;;@Setup(Level.Trial) public void initialize() {     uuid = new DefaultUuidGenerator(). }
+false;public;2;6;;@Benchmark @Measurement(batchSize = 1000000) public void benchmark(BenchmarkState state, Blackhole bh) {     String id = state.uuid.generateUuid().     bh.consume(id). }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public void process(final Exchange exchange) throws Exception {     final Object value = exchange.getIn().getBody().     log.trace("Update item value - {} = {}", this.item, value).     this.item.update(value). }

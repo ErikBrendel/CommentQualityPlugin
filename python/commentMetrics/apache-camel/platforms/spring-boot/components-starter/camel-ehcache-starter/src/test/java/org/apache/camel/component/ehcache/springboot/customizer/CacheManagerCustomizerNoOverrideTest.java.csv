@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void testComponentConfiguration() throws Exception {     Assert.assertNotNull(cacheManager).     Assert.assertNotNull(component).     Assert.assertNotNull(component.getCacheManager()).     Assert.assertEquals(CACHE_MANAGER, component.getCacheManager()). }
+false;public;1;4;;@Override public void customize(EhcacheComponent component) {     component.setCacheManager(CACHE_MANAGER). }
+false;public;0;10;;@Order(Ordered.HIGHEST_PRECEDENCE) @Bean public ComponentCustomizer<EhcacheComponent> customizer() {     return new ComponentCustomizer<EhcacheComponent>() {          @Override         public void customize(EhcacheComponent component) {             component.setCacheManager(CACHE_MANAGER).         }     }. }
+false;public;0;4;;@Bean(initMethod = "init", destroyMethod = "close") public CacheManager cacheManager() {     return CacheManagerBuilder.newCacheManagerBuilder().build(). }

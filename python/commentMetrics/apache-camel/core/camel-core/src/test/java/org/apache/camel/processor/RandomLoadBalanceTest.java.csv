@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Override @Before public void setUp() throws Exception {     super.setUp().     x = getMockEndpoint("mock://x").     y = getMockEndpoint("mock://y").     z = getMockEndpoint("mock://z"). }
+false;public;0;4;;public void configure() {     from("direct://start").loadBalance().random().to("mock://x", "mock://y", "mock://z"). }
+false;protected;0;8;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("direct://start").loadBalance().random().to("mock://x", "mock://y", "mock://z").         }     }. }
+false;public;0;13;;@Test public void testRandom() throws Exception {     // it should be safe to assume that they should at least each get > 5 messages     x.expectedMinimumMessageCount(5).     y.expectedMinimumMessageCount(5).     z.expectedMinimumMessageCount(5).     for (int i = 0. i < 100. i++) {         template.sendBody("direct:start", "Hello World").     }     assertMockEndpointsSatisfied(). }

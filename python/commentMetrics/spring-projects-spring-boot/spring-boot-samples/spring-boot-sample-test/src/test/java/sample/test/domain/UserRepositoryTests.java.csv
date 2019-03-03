@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void findByUsernameShouldReturnUser() {     this.entityManager.persist(new User("sboot", VIN)).     User user = this.repository.findByUsername("sboot").     assertThat(user.getUsername()).isEqualTo("sboot").     assertThat(user.getVin()).isEqualTo(VIN). }
+false;public;0;6;;@Test public void findByUsernameWhenNoUserShouldReturnNull() {     this.entityManager.persist(new User("sboot", VIN)).     User user = this.repository.findByUsername("mmouse").     assertThat(user).isNull(). }

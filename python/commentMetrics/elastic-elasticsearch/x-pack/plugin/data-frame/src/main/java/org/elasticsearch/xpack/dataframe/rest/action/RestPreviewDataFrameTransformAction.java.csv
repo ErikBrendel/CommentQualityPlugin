@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getName() {     return "data_frame_preview_transform_action". }
+false;protected;2;7;;@Override protected RestChannelConsumer prepareRequest(RestRequest restRequest, NodeClient client) throws IOException {     XContentParser parser = restRequest.contentParser().     PreviewDataFrameTransformAction.Request request = PreviewDataFrameTransformAction.Request.fromXContent(parser).     return channel -> client.execute(PreviewDataFrameTransformAction.INSTANCE, request, new RestToXContentListener<>(channel)). }

@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public OperationType getType() {     return this.operationType. }
+false;public;1;5;;@Override public Object invoke(InvocationContext context) {     return (this.invoke != null) ? this.invoke.apply(context.getArguments()) : "result". }
+false;public;0;4;;@Override public String getName() {     return "testOperation". }
+false;public;0;4;;@Override public Class<?> getOutputType() {     return String.class. }
+false;public;0;4;;@Override public String getDescription() {     return "Test JMX operation". }
+false;public;0;4;;@Override public List<JmxOperationParameter> getParameters() {     return this.parameters. }

@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public TokenStream create(TokenStream tokenStream) {     return factory.create(tokenStream). }
+false;public;0;13;;@Override public TokenFilterFactory getSynonymFilter() {     if (indexSettings.getIndexVersionCreated().onOrAfter(Version.V_7_0_0)) {         throw new IllegalArgumentException("Token filter [" + name() + "] cannot be used to parse synonyms").     } else {         DEPRECATION_LOGGER.deprecatedAndMaybeLog("synonym_tokenfilters", "Token filter " + name() + "] will not be usable to parse synonym after v7.0").     }     return this. }
+false;public;0;3;;public Factory getInnerFactory() {     return this.factory. }
+false;public;1;18;;@Override public TokenStream create(TokenStream tokenStream) {     ShingleFilter filter = new ShingleFilter(tokenStream, minShingleSize, maxShingleSize).     filter.setOutputUnigrams(outputUnigrams).     filter.setOutputUnigramsIfNoShingles(outputUnigramsIfNoShingles).     filter.setTokenSeparator(tokenSeparator).     filter.setFillerToken(fillerToken).     if (outputUnigrams || (minShingleSize != maxShingleSize)) {         /**          * We disable the graph analysis on this token stream          * because it produces shingles of different size.          * Graph analysis on such token stream is useless and dangerous as it may create too many paths          * since shingles of different size are not aligned in terms of positions.          */         filter.addAttribute(DisableGraphAttribute.class).     }     return filter. }
+false;public;0;3;;public int getMaxShingleSize() {     return maxShingleSize. }
+false;public;0;3;;public int getMinShingleSize() {     return minShingleSize. }
+false;public;0;3;;public boolean getOutputUnigrams() {     return outputUnigrams. }
+false;public;0;3;;public boolean getOutputUnigramsIfNoShingles() {     return outputUnigramsIfNoShingles. }
+false;public;0;4;;@Override public String name() {     return name. }

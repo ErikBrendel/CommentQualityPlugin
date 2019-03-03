@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;7;;public static void main(String[] args) {     int i = 1.     for (String entry : ManagementFactory.getRuntimeMXBean().getClassPath().split(File.pathSeparator)) {         System.out.println(i++ + ". " + entry).     } }

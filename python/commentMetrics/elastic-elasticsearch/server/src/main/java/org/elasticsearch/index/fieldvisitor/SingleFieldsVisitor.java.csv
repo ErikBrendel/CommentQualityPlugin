@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;11;;@Override public Status needsField(FieldInfo fieldInfo) {     if (fieldInfo.name.equals(field.name())) {         return Status.YES.     }     /*          * We can't return Status.STOP here because we could be loading          * multi-valued fields.          */     return Status.NO. }
+false;private;1;3;;private void addValue(Object value) {     destination.add(field.valueForDisplay(value)). }
+false;public;2;8;;@Override public void binaryField(FieldInfo fieldInfo, byte[] value) {     if (IdFieldMapper.NAME.equals(fieldInfo.name)) {         addValue(Uid.decodeId(value)).     } else {         addValue(new BytesRef(value)).     } }
+false;public;2;4;;@Override public void stringField(FieldInfo fieldInfo, byte[] bytes) {     addValue(new String(bytes, StandardCharsets.UTF_8)). }
+false;public;2;4;;@Override public void intField(FieldInfo fieldInfo, int value) {     addValue(value). }
+false;public;2;4;;@Override public void longField(FieldInfo fieldInfo, long value) {     addValue(value). }
+false;public;2;4;;@Override public void floatField(FieldInfo fieldInfo, float value) {     addValue(value). }
+false;public;2;4;;@Override public void doubleField(FieldInfo fieldInfo, double value) {     addValue(value). }

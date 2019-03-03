@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public Long unmarshal(String value) {     return new Long(value). }
+false;public;1;6;;public String marshal(Long value) {     if (value == null) {         return null.     }     return value.toString(). }

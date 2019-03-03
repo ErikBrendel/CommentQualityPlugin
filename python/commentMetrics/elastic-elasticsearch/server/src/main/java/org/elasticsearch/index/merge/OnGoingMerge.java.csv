@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * A unique id for the merge.  */ ;/**  * A unique id for the merge.  */ public String getId() {     return id. }
+true;public;0;3;/**  * The list of segments that are being merged.  */ ;/**  * The list of segments that are being merged.  */ public List<SegmentCommitInfo> getMergedSegments() {     return mergedSegments. }

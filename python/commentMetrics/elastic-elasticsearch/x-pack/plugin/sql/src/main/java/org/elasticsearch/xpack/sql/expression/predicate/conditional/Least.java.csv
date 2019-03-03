@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected NodeInfo<? extends Least> info() {     return NodeInfo.create(this, Least::new, children()). }
+false;public;1;4;;@Override public Expression replaceChildren(List<Expression> newChildren) {     return new Least(source(), newChildren). }
+false;public;0;4;;@Override public Object fold() {     return LEAST.apply(Foldables.valuesOfNoDuplicates(children(), dataType)). }

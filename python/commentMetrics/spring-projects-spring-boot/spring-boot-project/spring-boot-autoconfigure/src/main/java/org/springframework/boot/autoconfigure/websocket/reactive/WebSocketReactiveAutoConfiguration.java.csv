@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Bean @ConditionalOnMissingBean(name = "websocketReactiveWebServerCustomizer") public TomcatWebSocketReactiveWebServerCustomizer websocketReactiveWebServerCustomizer() {     return new TomcatWebSocketReactiveWebServerCustomizer(). }

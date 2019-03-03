@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected ShrinkAction doParseInstance(XContentParser parser) throws IOException {     return ShrinkAction.parse(parser). }
+false;protected;0;4;;@Override protected ShrinkAction createTestInstance() {     return randomInstance(). }
+false;static;0;3;;static ShrinkAction randomInstance() {     return new ShrinkAction(randomIntBetween(1, 100)). }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }
+false;public;0;4;;public void testNonPositiveShardNumber() {     Exception e = expectThrows(Exception.class, () -> new ShrinkAction(randomIntBetween(-100, 0))).     assertThat(e.getMessage(), equalTo("[number_of_shards] must be greater than 0")). }

@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;11;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry registry = super.createRegistry().     ConsulComponent component = new ConsulComponent().     component.setUrl(consulUrl()).     registry.bind("consul", component).     return registry. }
+false;protected;0;3;;protected Consul getConsul() {     return Consul.builder().withUrl(consulUrl()).build(). }
+false;protected;0;3;;protected KeyValueClient getKeyValueClient() {     return getConsul().keyValueClient(). }
+false;protected;0;3;;protected String generateRandomString() {     return UUID.randomUUID().toString(). }
+false;protected;1;6;;protected String[] generateRandomArrayOfStrings(int size) {     String[] array = new String[size].     Arrays.setAll(array, i -> generateRandomString()).     return array. }
+false;protected;1;3;;protected List<String> generateRandomListOfStrings(int size) {     return Arrays.asList(generateRandomArrayOfStrings(size)). }
+false;protected;0;3;;protected String generateKey() {     return KV_PREFIX + "/" + testName.getMethodName() + "/" + generateRandomString(). }
+false;protected;0;7;;protected String consulUrl() {     return String.format("http://%s:%d", getContainerHost(CONTAINER_NAME), getContainerPort(CONTAINER_NAME, Consul.DEFAULT_HTTP_PORT)). }
+false;protected;0;4;;@Override protected GenericContainer<?> createContainer() {     return consulContainer(). }
+false;public,static;0;16;;public static GenericContainer consulContainer() {     return new GenericContainer(CONTAINER_IMAGE).withNetworkAliases(CONTAINER_NAME).withExposedPorts(Consul.DEFAULT_HTTP_PORT).waitingFor(Wait.forLogMessageContaining("Synced node info", 1)).withCommand("agent", "-dev", "-server", "-bootstrap", "-client", "0.0.0.0", "-log-level", "trace"). }

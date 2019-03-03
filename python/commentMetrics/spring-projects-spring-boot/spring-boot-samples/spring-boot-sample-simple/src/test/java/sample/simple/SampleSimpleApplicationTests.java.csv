@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Before public void init() {     this.profiles = System.getProperty("spring.profiles.active"). }
+false;public;0;9;;@After public void after() {     if (this.profiles != null) {         System.setProperty("spring.profiles.active", this.profiles).     } else {         System.clearProperty("spring.profiles.active").     } }
+false;public;0;6;;@Test public void testDefaultSettings() throws Exception {     SampleSimpleApplication.main(new String[0]).     String output = this.output.toString().     assertThat(output).contains("Hello Phil"). }
+false;public;0;6;;@Test public void testCommandLineOverrides() throws Exception {     SampleSimpleApplication.main(new String[] { "--name=Gordon", "--duration=1m" }).     String output = this.output.toString().     assertThat(output).contains("Hello Gordon for 60 seconds"). }

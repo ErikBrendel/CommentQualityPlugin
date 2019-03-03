@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void shouldOnlyCollectRoutesOnce() {     GenericApplicationContext parent = new GenericApplicationContext().     parent.refresh().     ConfigurableApplicationContext context = new SpringApplicationBuilder(Configuration.class).web(WebApplicationType.NONE).parent(parent).run().     ContextRefreshedEvent refreshEvent = new ContextRefreshedEvent(context).     RoutesCollector collector = context.getBean(RoutesCollector.class).     // no changes should happen here     collector.onApplicationEvent(refreshEvent). }
+false;public;0;4;;@Override public void configure() throws Exception {     from("seda:test").to("mock:test"). }
+false;;0;9;;@Bean RoutesBuilder routes() {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("seda:test").to("mock:test").         }     }. }

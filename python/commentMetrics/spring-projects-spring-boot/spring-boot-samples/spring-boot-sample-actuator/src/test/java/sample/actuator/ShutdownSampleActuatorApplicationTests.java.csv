@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@Test public void testHome() {     @SuppressWarnings("rawtypes")     ResponseEntity<Map> entity = this.restTemplate.withBasicAuth("user", getPassword()).getForEntity("/", Map.class).     assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.OK).     @SuppressWarnings("unchecked")     Map<String, Object> body = entity.getBody().     assertThat(body.get("message")).isEqualTo("Hello Phil"). }
+false;public;0;12;;@Test @DirtiesContext public void testShutdown() {     @SuppressWarnings("rawtypes")     ResponseEntity<Map> entity = this.restTemplate.withBasicAuth("user", getPassword()).postForEntity("/actuator/shutdown", null, Map.class).     assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.OK).     @SuppressWarnings("unchecked")     Map<String, Object> body = entity.getBody().     assertThat(((String) body.get("message"))).contains("Shutting down"). }
+false;private;0;3;;private String getPassword() {     return "password". }
+false;protected;1;4;;@Override protected void configure(HttpSecurity http) throws Exception {     http.csrf().disable(). }

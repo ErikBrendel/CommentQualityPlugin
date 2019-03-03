@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void foo() {     assertEquals("foo", foo). }
+false;public;1;4;;@Override public void initialize(GenericApplicationContext applicationContext) {     new AnnotatedBeanDefinitionReader(applicationContext).register(GlobalConfig.class). }

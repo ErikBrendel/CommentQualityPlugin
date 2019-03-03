@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Ignore @Test public void ensureServerModeSendsProperly() throws Exception {     final String body = getClass().getName() + "#" + testName.getMethodName().     serverProducer.sendBody(body).     ExistingServerEndpoint.self.latch.await().     assertEquals(singletonList(body), ExistingServerEndpoint.self.messages). }
+false;public;0;4;;public void configure() {     from("direct:ensureServerModeSendsProperly").id("camel_consumer_acts_as_client").convertBodyTo(String.class).to("websocket-jsr356://ws://localhost:" + servlet.getConfiguration().getHttpPort() + "/existingserver"). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("direct:ensureServerModeSendsProperly").id("camel_consumer_acts_as_client").convertBodyTo(String.class).to("websocket-jsr356://ws://localhost:" + servlet.getConfiguration().getHttpPort() + "/existingserver").         }     }. }
+false;public;1;4;;@OnOpen public void onOpen(final Session session) {     self = this. }
+false;public,synchronized;1;5;;@OnMessage public synchronized void onMessage(final String message) {     messages.add(message).     latch.countDown(). }

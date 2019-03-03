@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;3;;DateTimeFormatter getRoundupParser() {     return roundupParser. }
+false;;0;3;;DateTimeFormatter getParser() {     return parser. }
+false;;0;3;;DateTimeFormatter getPrinter() {     return printer. }
+false;public;1;12;;@Override public TemporalAccessor parse(String input) {     if (Strings.isNullOrEmpty(input)) {         throw new IllegalArgumentException("cannot parse empty date").     }     try {         return parser.parse(input).     } catch (DateTimeParseException e) {         throw new IllegalArgumentException("failed to parse date field [" + input + "] with format [" + format + "]", e).     } }
+false;public;1;9;;@Override public DateFormatter withZone(ZoneId zoneId) {     // shortcurt to not create new objects unnecessarily     if (zoneId.equals(parser.getZone())) {         return this.     }     return new JavaDateFormatter(format, printer.withZone(zoneId), roundupParser.withZone(zoneId), parser.withZone(zoneId)). }
+false;public;1;9;;@Override public DateFormatter withLocale(Locale locale) {     // shortcurt to not create new objects unnecessarily     if (locale.equals(parser.getLocale())) {         return this.     }     return new JavaDateFormatter(format, printer.withLocale(locale), roundupParser.withLocale(locale), parser.withLocale(locale)). }
+false;public;1;4;;@Override public String format(TemporalAccessor accessor) {     return printer.format(accessor). }
+false;public;0;4;;@Override public String pattern() {     return format. }
+false;public;0;4;;@Override public Locale locale() {     return this.printer.getLocale(). }
+false;public;0;4;;@Override public ZoneId zone() {     return this.printer.getZone(). }
+false;public;0;4;;@Override public DateMathParser toDateMathParser() {     return new JavaDateMathParser(format, parser, roundupParser). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(locale(), printer.getZone(), format). }
+false;public;1;11;;@Override public boolean equals(Object obj) {     if (obj.getClass().equals(this.getClass()) == false) {         return false.     }     JavaDateFormatter other = (JavaDateFormatter) obj.     return Objects.equals(format, other.format) && Objects.equals(locale(), other.locale()) && Objects.equals(this.printer.getZone(), other.printer.getZone()). }
+false;public;0;4;;@Override public String toString() {     return String.format(Locale.ROOT, "format[%s] locale[%s]", format, locale()). }

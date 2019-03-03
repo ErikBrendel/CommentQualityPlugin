@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;6;;@Override protected AutodetectCapableMBeanInfoAssembler getAssembler() {     MetadataMBeanInfoAssembler assembler = new MetadataMBeanInfoAssembler().     assembler.setAttributeSource(getAttributeSource()).     return assembler. }
+false;protected,abstract;0;1;;protected abstract JmxAttributeSource getAttributeSource().

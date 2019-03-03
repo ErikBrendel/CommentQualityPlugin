@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;2;4;;@Override protected AggregationBuilder shallowCopy(AggregatorFactories.Builder factoriesBuilder, Map<String, Object> metaData) {     return new MatrixStatsAggregationBuilder(this, factoriesBuilder, metaData). }
+false;protected;1;4;;@Override protected void innerWriteTo(StreamOutput out) { // Do nothing, no extra state to write to stream }
+false;public;1;4;;public MatrixStatsAggregationBuilder multiValueMode(MultiValueMode multiValueMode) {     this.multiValueMode = multiValueMode.     return this. }
+false;public;0;3;;public MultiValueMode multiValueMode() {     return this.multiValueMode. }
+false;protected;4;5;;@Override protected MatrixStatsAggregatorFactory innerBuild(SearchContext context, Map<String, ValuesSourceConfig<Numeric>> configs, AggregatorFactory<?> parent, AggregatorFactories.Builder subFactoriesBuilder) throws IOException {     return new MatrixStatsAggregatorFactory(name, configs, multiValueMode, context, parent, subFactoriesBuilder, metaData). }
+false;public;2;5;;@Override public XContentBuilder doXContentBody(XContentBuilder builder, ToXContent.Params params) throws IOException {     builder.field(MULTIVALUE_MODE_FIELD.getPreferredName(), multiValueMode).     return builder. }
+false;protected;0;4;;@Override protected int innerHashCode() {     return 0. }
+false;protected;1;4;;@Override protected boolean innerEquals(Object obj) {     return true. }
+false;public;0;4;;@Override public String getType() {     return NAME. }

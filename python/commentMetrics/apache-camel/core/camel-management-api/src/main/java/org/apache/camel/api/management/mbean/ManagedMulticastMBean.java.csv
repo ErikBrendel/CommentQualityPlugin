@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;2;;@ManagedAttribute(description = "If enabled then the aggregate method on AggregationStrategy can be called concurrently.") Boolean isParallelAggregate().
+false;;0;2;;@ManagedAttribute(description = "If enabled then sending messages to the multicasts occurs concurrently.") Boolean isParallelProcessing().
+false;;0;2;;@ManagedAttribute(description = "If enabled then Camel will process replies out-of-order, eg in the order they come back.") Boolean isStreaming().
+false;;0;2;;@ManagedAttribute(description = "Will now stop further processing if an exception or failure occurred during processing.") Boolean isStopOnException().
+false;;0;2;;@ManagedAttribute(description = "Shares the UnitOfWork with the parent and the resource exchange") Boolean isShareUnitOfWork().
+false;;0;2;;@ManagedAttribute(description = "The total timeout specified in millis, when using parallel processing.") Long getTimeout().

@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;2;3;;public static AggregationBuilder parse(String aggregationName, XContentParser parser) throws IOException {     return PARSER.parse(parser, new GeoCentroidAggregationBuilder(aggregationName), null). }
+false;protected;2;4;;@Override protected AggregationBuilder shallowCopy(Builder factoriesBuilder, Map<String, Object> metaData) {     return new GeoCentroidAggregationBuilder(this, factoriesBuilder, metaData). }
+false;protected;1;4;;@Override protected void innerWriteTo(StreamOutput out) { // Do nothing, no extra state to write to stream }
+false;protected;4;5;;@Override protected GeoCentroidAggregatorFactory innerBuild(SearchContext context, ValuesSourceConfig<ValuesSource.GeoPoint> config, AggregatorFactory<?> parent, Builder subFactoriesBuilder) throws IOException {     return new GeoCentroidAggregatorFactory(name, config, context, parent, subFactoriesBuilder, metaData). }
+false;public;2;4;;@Override public XContentBuilder doXContentBody(XContentBuilder builder, Params params) throws IOException {     return builder. }
+false;protected;0;4;;@Override protected int innerHashCode() {     return 0. }
+false;protected;1;4;;@Override protected boolean innerEquals(Object obj) {     return true. }
+false;public;0;4;;@Override public String getType() {     return NAME. }

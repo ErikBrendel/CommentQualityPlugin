@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;12;;@Test public void testBeanHasCamelTemplateInjected() throws Exception {     assertNotNull("Bean should be injected", bean).     ProducerTemplate template = bean.getTemplate().     assertNotNull("Bean should have a CamelTemplate", template).     endpoint.expectedBodiesReceived(body).     template.sendBody(body).     endpoint.assertIsSatisfied(). }

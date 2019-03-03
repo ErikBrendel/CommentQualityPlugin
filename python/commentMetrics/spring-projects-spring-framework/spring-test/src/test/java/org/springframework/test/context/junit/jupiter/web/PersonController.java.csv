@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;1;7;;@GetMapping("/person/{id}") Person getPerson(@PathVariable long id) {     if (id == 42) {         return new Person("Dilbert").     }     return new Person("Wally"). }

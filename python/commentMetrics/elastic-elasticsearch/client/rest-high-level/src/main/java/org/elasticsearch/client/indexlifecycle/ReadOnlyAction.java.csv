@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static ReadOnlyAction parse(XContentParser parser) {     return PARSER.apply(parser, null). }
+false;public;0;4;;@Override public String getName() {     return NAME. }
+false;public;2;6;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.endObject().     return builder. }
+false;public;0;4;;@Override public int hashCode() {     return ReadOnlyAction.class.hashCode(). }
+false;public;1;10;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (obj.getClass() != getClass()) {         return false.     }     return true. }
+false;public;0;4;;@Override public String toString() {     return Strings.toString(this). }

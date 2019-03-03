@@ -1,0 +1,18 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public DataCounts dataCounts() {     return dataCounts. }
+false;public;0;3;;public ModelSizeStats modelSizeStats() {     return modelSizeStats. }
+false;public;0;4;;@Nullable public ModelSnapshot modelSnapshot() {     return modelSnapshot. }
+false;public;0;4;;@Nullable public Quantiles quantiles() {     return quantiles. }
+false;public;0;3;;public Set<MlFilter> filters() {     return filters. }
+false;public;0;3;;public List<ScheduledEvent> scheduledEvents() {     return scheduledEvents. }
+false;public;1;19;;@Override public boolean equals(Object other) {     if (this == other) {         return true.     }     if (other instanceof AutodetectParams == false) {         return false.     }     AutodetectParams that = (AutodetectParams) other.     return Objects.equals(this.dataCounts, that.dataCounts) && Objects.equals(this.modelSizeStats, that.modelSizeStats) && Objects.equals(this.modelSnapshot, that.modelSnapshot) && Objects.equals(this.quantiles, that.quantiles) && Objects.equals(this.filters, that.filters) && Objects.equals(this.scheduledEvents, that.scheduledEvents). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(dataCounts, modelSizeStats, modelSnapshot, quantiles, filters, scheduledEvents). }
+false;public;1;4;;public Builder setDataCounts(DataCounts dataCounts) {     this.dataCounts = dataCounts.     return this. }
+false;public;0;3;;public DataCounts getDataCounts() {     return dataCounts. }
+false;public;1;4;;public Builder setModelSizeStats(ModelSizeStats modelSizeStats) {     this.modelSizeStats = modelSizeStats.     return this. }
+false;public;1;4;;public Builder setModelSnapshot(ModelSnapshot modelSnapshot) {     this.modelSnapshot = modelSnapshot.     return this. }
+false;public;1;4;;public Builder setQuantiles(Quantiles quantiles) {     this.quantiles = quantiles.     return this. }
+false;public;1;4;;public Builder setScheduledEvents(List<ScheduledEvent> scheduledEvents) {     this.scheduledEvents = scheduledEvents.     return this. }
+false;public;1;4;;public Builder addFilter(MlFilter filter) {     filters.add(filter).     return this. }
+false;public;1;4;;public Builder setFilters(Set<MlFilter> filters) {     filters = Objects.requireNonNull(filters).     return this. }
+false;public;0;4;;public AutodetectParams build() {     return new AutodetectParams(dataCounts, modelSizeStats, modelSnapshot, quantiles, filters, scheduledEvents). }

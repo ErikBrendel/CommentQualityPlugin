@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Test public void testScriptExternal() throws Exception {     resultEndpoint.expectedBodiesReceived("Hello").     sendBody("direct:start", "Hello").     resultEndpoint.assertIsSatisfied(). }
+false;public;0;7;;@Override @Before public void setUp() throws Exception {     super.setUp().     resultEndpoint = getMockEndpoint("mock:result"). }
+false;protected;0;3;;protected CamelContext createCamelContext() throws Exception {     return createSpringCamelContext(this, "org/apache/camel/spring/processor/script-external.xml"). }

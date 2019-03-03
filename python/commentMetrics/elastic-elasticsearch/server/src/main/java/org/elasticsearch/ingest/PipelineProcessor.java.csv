@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public IngestDocument execute(IngestDocument ingestDocument) throws Exception {     Pipeline pipeline = ingestService.getPipeline(pipelineName).     if (pipeline == null) {         throw new IllegalStateException("Pipeline processor configured for non-existent pipeline [" + pipelineName + ']').     }     return ingestDocument.executePipeline(pipeline). }
+false;;0;3;;Pipeline getPipeline() {     return ingestService.getPipeline(pipelineName). }
+false;public;0;4;;@Override public String getType() {     return TYPE. }
+false;;0;3;;String getPipelineName() {     return pipelineName. }
+false;public;3;7;;@Override public PipelineProcessor create(Map<String, Processor.Factory> registry, String processorTag, Map<String, Object> config) throws Exception {     String pipeline = ConfigurationUtils.readStringProperty(TYPE, processorTag, config, "name").     return new PipelineProcessor(processorTag, pipeline, ingestService). }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Bean @ConditionalOnBean(name = DEFAULT_SECURITY_FILTER_NAME) public SecurityMockMvcBuilderCustomizer securityMockMvcBuilderCustomizer() {     return new SecurityMockMvcBuilderCustomizer(). }
+false;public;2;6;;@Override public RequestPostProcessor beforeMockMvcCreated(ConfigurableMockMvcBuilder<?> builder, WebApplicationContext context) {     return SecurityMockMvcRequestPostProcessors.testSecurityContext(). }
+false;public;1;13;;@Override public void customize(ConfigurableMockMvcBuilder<?> builder) {     builder.apply(new MockMvcConfigurerAdapter() {          @Override         public RequestPostProcessor beforeMockMvcCreated(ConfigurableMockMvcBuilder<?> builder, WebApplicationContext context) {             return SecurityMockMvcRequestPostProcessors.testSecurityContext().         }     }). }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;public void configure() throws Exception {     fromF("service:my-service:undertow:http://localhost:%d/path/to/service/1", SocketUtils.findAvailableTcpPort()).transform().simple("Hi!, I'm service-1 on path: /path/to/service/1").     fromF("service:my-service:undertow:http://localhost:%d/path/to/service/2", SocketUtils.findAvailableTcpPort()).transform().simple("Hi!, I'm service-1 on path: /path/to/service/2"). }
+true;public,static;1;3;/**  * A main method to start this application.  */ ;/**  * A main method to start this application.  */ public static void main(String[] args) {     SpringApplication.run(ServiceApplication.class, args). }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;5;// tag::configuration[] ;// tag::configuration[] @Bean @ConfigurationProperties("app.datasource") public HikariDataSource dataSource() {     return DataSourceBuilder.create().type(HikariDataSource.class).build(). }

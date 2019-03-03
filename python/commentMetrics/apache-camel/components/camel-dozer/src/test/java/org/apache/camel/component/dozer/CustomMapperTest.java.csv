@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Before public void setup() {     customMapper = new CustomMapper(new DefaultClassResolver()). }
+false;public;0;5;;@Test public void selectMapperOneMethod() {     customMapper.setParameter(MapperWithOneMethod.class.getName()).     Assert.assertNotNull(customMapper.selectMethod(MapperWithOneMethod.class, String.class)). }
+false;public;0;8;;@Test public void selectMapperMultipleMethods() throws Exception {     Method selectedMethod = customMapper.selectMethod(MapperWithTwoMethods.class, B.class).     Assert.assertNotNull(selectedMethod).     Assert.assertEquals(MapperWithTwoMethods.class.getMethod("convertToA", B.class), selectedMethod). }
+false;public;0;5;;@Test public void mapCustomFindOperation() throws Exception {     customMapper.setParameter(MapperWithTwoMethods.class.getName()).     Assert.assertNotNull(customMapper.mapCustom(new B(), B.class)). }
+false;public;0;5;;@Test public void mapCustomDeclaredOperation() throws Exception {     customMapper.setParameter(MapperWithTwoMethods.class.getName() + ",convertToA").     Assert.assertNotNull(customMapper.mapCustom(new B(), B.class)). }
+false;public;0;10;;@Test public void mapCustomInvalidOperation() {     customMapper.setParameter(MapperWithTwoMethods.class.getName() + ",convertToB").     try {         customMapper.mapCustom(new B(), B.class).         Assert.fail("Invalid operation should result in exception").     } catch (RuntimeException ex) {         Assert.assertTrue(ex.getCause() instanceof NoSuchMethodException).     } }
+false;public;0;5;;@Test public void mapCustomNullField() throws Exception {     customMapper.setParameter(MapperWithTwoMethods.class.getName()).     Assert.assertNotNull(customMapper.mapCustom(null, B.class)). }
+false;public;1;3;;public A convertToA(String val) {     return new A(). }
+false;public;1;3;;public A convertToA(String val) {     return new A(). }
+false;public;1;3;;public A convertToA(B val) {     return new A(). }

@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;4;/**  * Delegates to {@link #getName}.  */ ;/**  * Delegates to {@link #getName}.  */ @Override public String getDescription() {     return getName(). }
+true;public;0;4;/**  * Returns an empty array.  */ ;/**  * Returns an empty array.  */ @Override public BeanDefinition[] getBeanDefinitions() {     return new BeanDefinition[0]. }
+true;public;0;4;/**  * Returns an empty array.  */ ;/**  * Returns an empty array.  */ @Override public BeanDefinition[] getInnerBeanDefinitions() {     return new BeanDefinition[0]. }
+true;public;0;4;/**  * Returns an empty array.  */ ;/**  * Returns an empty array.  */ @Override public BeanReference[] getBeanReferences() {     return new BeanReference[0]. }
+true;public;0;4;/**  * Delegates to {@link #getDescription}.  */ ;/**  * Delegates to {@link #getDescription}.  */ @Override public String toString() {     return getDescription(). }

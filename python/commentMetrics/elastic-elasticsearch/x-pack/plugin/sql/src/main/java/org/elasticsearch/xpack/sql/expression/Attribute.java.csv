@@ -1,0 +1,19 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,final;1;4;;@Override public final Expression replaceChildren(List<Expression> newChildren) {     throw new UnsupportedOperationException("this type of node doesn't have any children to replace"). }
+false;public;0;4;;@Override public ScriptTemplate asScript() {     throw new SqlIllegalArgumentException("Encountered a bug - an attribute should never be scripted"). }
+false;public;0;3;;public String qualifier() {     return qualifier. }
+false;public;0;3;;public String qualifiedName() {     return qualifier == null ? name() : qualifier + "." + name(). }
+false;public;0;4;;@Override public Nullability nullable() {     return nullability. }
+false;public;0;4;;@Override public AttributeSet references() {     return new AttributeSet(this). }
+false;public;1;3;;public Attribute withLocation(Source source) {     return Objects.equals(source(), source) ? this : clone(source, name(), qualifier(), nullable(), id(), synthetic()). }
+false;public;1;3;;public Attribute withQualifier(String qualifier) {     return Objects.equals(qualifier(), qualifier) ? this : clone(source(), name(), qualifier, nullable(), id(), synthetic()). }
+false;public;1;3;;public Attribute withNullability(Nullability nullability) {     return Objects.equals(nullable(), nullability) ? this : clone(source(), name(), qualifier(), nullability, id(), synthetic()). }
+false;protected,abstract;6;2;;protected abstract Attribute clone(Source source, String name, String qualifier, Nullability nullability, ExpressionId id, boolean synthetic).
+false;public;0;4;;@Override public Attribute toAttribute() {     return this. }
+false;public;0;4;;@Override public int semanticHash() {     return id().hashCode(). }
+false;protected;0;4;;@Override protected NodeInfo<? extends Expression> info() {     return null. }
+false;public;1;4;;@Override public boolean semanticEquals(Expression other) {     return other instanceof Attribute ? id().equals(((Attribute) other).id()) : false. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(super.hashCode(), qualifier, nullability). }
+false;public;1;10;;@Override public boolean equals(Object obj) {     if (super.equals(obj)) {         Attribute other = (Attribute) obj.         return Objects.equals(qualifier, other.qualifier) && Objects.equals(nullability, other.nullability).     }     return false. }
+false;public;0;4;;@Override public String toString() {     return name() + "{" + label() + "}" + "#" + id(). }
+false;protected,abstract;0;1;;protected abstract String label().

@@ -1,0 +1,18 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry jndi = super.createRegistry().     jndi.bind("mySender", new MySender()).     return jndi. }
+false;public;0;6;;@Test public void testSendWithCustomMailSender() throws Exception {     sendBody("smtp://claus@localhost?javaMailSender=#mySender", "Hello World").     assertTrue("Should have used custom mail sender", sent). }
+false;public;1;4;;@Override public void send(MimeMessage mimeMessage) throws MessagingException {     sent = true. }
+false;public;0;4;;@Override public Properties getJavaMailProperties() {     return null. }
+false;public;1;3;;@Override public void setJavaMailProperties(Properties javaMailProperties) { }
+false;public;1;3;;@Override public void setHost(String host) { }
+false;public;0;4;;@Override public String getHost() {     return null. }
+false;public;1;3;;@Override public void setPort(int port) { }
+false;public;0;4;;@Override public int getPort() {     return 0. }
+false;public;1;3;;@Override public void setUsername(String username) { }
+false;public;0;4;;@Override public String getUsername() {     return null. }
+false;public;1;3;;@Override public void setPassword(String password) { }
+false;public;0;4;;@Override public String getPassword() {     return null. }
+false;public;1;3;;@Override public void setProtocol(String protocol) { }
+false;public;0;4;;@Override public String getProtocol() {     return null. }
+false;public;1;3;;@Override public void setSession(Session session) { }
+false;public;0;4;;@Override public Session getSession() {     return null. }

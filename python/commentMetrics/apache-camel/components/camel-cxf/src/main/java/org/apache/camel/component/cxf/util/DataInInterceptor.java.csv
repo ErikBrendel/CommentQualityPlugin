@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;10;;public void handleMessage(Message message) throws Fault {     DepthXMLStreamReader xmlReader = getXMLStreamReader(message).     try {         // put the payload source as a document         Document doc = StaxUtils.read(xmlReader).         message.setContent(Source.class, new DOMSource(doc)).     } catch (XMLStreamException e) {         throw new Fault(new org.apache.cxf.common.i18n.Message("XMLSTREAM_EXCEPTION", JUL_LOG), e).     } }

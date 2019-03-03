@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;8;;public static ProducerType fromUri(String uri) {     for (ProducerType producerType : ProducerType.values()) {         if (producerType.name().equalsIgnoreCase(uri)) {             return producerType.         }     }     throw new RuntimeException("Unable to construct prodcucerType from uri : " + uri). }

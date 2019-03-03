@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean isHostnameVerificationEnabled() {     return false. }
+false;public;0;4;;@Override public boolean isCertificateVerificationEnabled() {     return false. }
+false;public;0;4;;@Override public boolean isHostnameVerificationEnabled() {     return false. }
+false;public;0;4;;@Override public boolean isCertificateVerificationEnabled() {     return true. }
+false;public;0;4;;@Override public boolean isHostnameVerificationEnabled() {     return true. }
+false;public;0;4;;@Override public boolean isCertificateVerificationEnabled() {     return true. }
+true;public,abstract;0;1;/**  * @return true if hostname verification is enabled  */ ;/**  * @return true if hostname verification is enabled  */ public abstract boolean isHostnameVerificationEnabled().
+true;public,abstract;0;1;/**  * @return true if certificate verification is enabled  */ ;/**  * @return true if certificate verification is enabled  */ public abstract boolean isCertificateVerificationEnabled().
+false;private,static;0;7;;private static Map<String, SslVerificationMode> buildLookup() {     Map<String, SslVerificationMode> map = new LinkedHashMap<>(3).     map.put("none", NONE).     map.put("certificate", CERTIFICATE).     map.put("full", FULL).     return map. }
+false;public,static;1;9;;public static SslVerificationMode parse(String value) {     final SslVerificationMode mode = LOOKUP.get(value.toLowerCase(Locale.ROOT)).     if (mode == null) {         final String allowedValues = LOOKUP.keySet().stream().collect(Collectors.joining(",")).         throw new SslConfigException("could not resolve ssl client verification mode, unknown value [" + value + "], recognised values are [" + allowedValues + "]").     }     return mode. }

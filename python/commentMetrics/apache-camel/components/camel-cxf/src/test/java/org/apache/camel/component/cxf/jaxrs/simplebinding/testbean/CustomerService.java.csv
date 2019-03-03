@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;2;2;;@GET @Path("/customers/{id}/") Customer getCustomer(@PathParam("id") String id, @QueryParam("test") String test).
+false;;2;2;;@PUT @Path("/customers/{id}") Response updateCustomer(Customer customer, @PathParam("id") String id).
+false;;3;2;;@POST @Path("/customers/") Response newCustomer(Customer customer, @PathParam("type") String type, @QueryParam("age") int age).
+false;;1;2;;@Path("/customers/vip/{status}") VipCustomerResource vipCustomer(@PathParam("status") String status).
+false;;1;3;;@Consumes("image/jpeg") @POST @Path("/customers/{id}/image_inputstream") Response uploadImageInputStream(InputStream is).
+false;;1;3;;@Consumes("image/jpeg") @POST @Path("/customers/{id}/image_datahandler") Response uploadImageDataHandler(DataHandler dh).
+false;;0;2;;@Path("/customers/multipart") MultipartCustomer multipart().

@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void setEnabled(boolean enabled) {     this.enabled = enabled. }
+false;public;0;3;;public boolean isEnabled() {     return this.enabled. }
+false;public;1;3;;public void setCheckTemplateLocation(boolean checkTemplateLocation) {     this.checkTemplateLocation = checkTemplateLocation. }
+false;public;0;3;;public boolean isCheckTemplateLocation() {     return this.checkTemplateLocation. }
+false;public;0;3;;public String[] getViewNames() {     return this.viewNames. }
+false;public;1;3;;public void setViewNames(String[] viewNames) {     this.viewNames = viewNames. }
+false;public;0;3;;public boolean isCache() {     return this.cache. }
+false;public;1;3;;public void setCache(boolean cache) {     this.cache = cache. }
+false;public;0;9;;public MimeType getContentType() {     if (this.contentType.getCharset() == null) {         Map<String, String> parameters = new LinkedHashMap<>().         parameters.put("charset", this.charset.name()).         parameters.putAll(this.contentType.getParameters()).         return new MimeType(this.contentType, parameters).     }     return this.contentType. }
+false;public;1;3;;public void setContentType(MimeType contentType) {     this.contentType = contentType. }
+false;public;0;3;;public Charset getCharset() {     return this.charset. }
+false;public;0;3;;public String getCharsetName() {     return (this.charset != null) ? this.charset.name() : null. }
+false;public;1;3;;public void setCharset(Charset charset) {     this.charset = charset. }

@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;3;3;;protected Endpoint createEndpoint(String uri, String remaining, Map<String, Object> parameters) throws Exception {     return null. }
+false;public;0;3;;public HeaderFilterStrategy getHeaderFilterStrategy() {     return strategy. }
+false;public;1;3;;public void setHeaderFilterStrategy(HeaderFilterStrategy strategy) {     this.strategy = strategy. }
+false;public;0;3;;public Producer createProducer() throws Exception {     return null. }
+false;public;1;3;;public Consumer createConsumer(Processor processor) throws Exception {     return null. }
+false;public;0;3;;public boolean isSingleton() {     return true. }
+false;public;0;10;;@Test public void testHeaderFilterStrategyComponent() {     MyComponent comp = new MyComponent(MyEndpoint.class).     assertNull(comp.getHeaderFilterStrategy()).     HeaderFilterStrategy strategy = new DefaultHeaderFilterStrategy().     comp.setHeaderFilterStrategy(strategy).     assertSame(strategy, comp.getHeaderFilterStrategy()). }
+false;public;0;14;;@Test public void testHeaderFilterStrategyAware() {     MyComponent comp = new MyComponent(MyEndpoint.class).     assertNull(comp.getHeaderFilterStrategy()).     HeaderFilterStrategy strategy = new DefaultHeaderFilterStrategy().     comp.setHeaderFilterStrategy(strategy).     MyEndpoint my = new MyEndpoint().     comp.setEndpointHeaderFilterStrategy(my).     assertSame(strategy, my.getHeaderFilterStrategy()).     assertSame(strategy, comp.getHeaderFilterStrategy()). }

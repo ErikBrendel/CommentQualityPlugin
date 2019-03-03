@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean isUseRouteBuilder() {     return false. }
+false;public;0;14;;@Test public void testTimerListenerManager() throws Exception {     ScheduledExecutorService executor = Executors.newScheduledThreadPool(1).     TimerListenerManager manager = new TimerListenerManager().     manager.setCamelContext(context).     manager.addTimerListener(task).     manager.start().     assertTrue("Should be invoked", task.await()).     manager.stop().     manager.removeTimerListener(task).     executor.shutdown(). }
+false;public;0;4;;@Override public void onTimer() {     latch.countDown(). }
+false;public;0;3;;public boolean await() throws InterruptedException {     return latch.await(5, TimeUnit.SECONDS). }

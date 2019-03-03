@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;12;;@Override public Object getInstance(Message m) {     Object result = null.     if (provider != null) {         result = provider.getInstance(m).     } else {         // create the instance with the invoker         result = Proxy.newProxyInstance(clazz.getClassLoader(), new Class[] { clazz }, new SubResourceClassInvocationHandler()).     }     return result. }
+false;public;2;6;;@Override public void releaseInstance(Message m, Object o) {     if (provider != null) {         provider.releaseInstance(m, o).     } }
+false;public;0;8;;@Override public Class<?> getResourceClass() {     if (provider != null) {         return provider.getResourceClass().     } else {         return clazz.     } }
+false;public;0;4;;@Override public boolean isSingleton() {     return false. }

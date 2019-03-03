@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;5;;@Override protected void doStart() throws Exception {     super.doStart().     endpoint.consumerStarted(this). }
+false;protected;0;5;;@Override protected void doStop() throws Exception {     endpoint.consumerStopped(this).     super.doStop(). }

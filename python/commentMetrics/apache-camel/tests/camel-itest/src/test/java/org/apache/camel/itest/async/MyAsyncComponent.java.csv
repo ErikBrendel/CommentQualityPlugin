@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;3;7;;@Override protected Endpoint createEndpoint(String uri, String remaining, Map<String, Object> parameters) throws Exception {     MyAsyncEndpoint answer = new MyAsyncEndpoint(uri, this).     answer.setReply(remaining).     setProperties(answer, parameters).     return answer. }

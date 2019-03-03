@@ -1,0 +1,48 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public FieldSource setType(Class clazz) {     return null. }
+false;public;1;4;;@Override public FieldSource setType(String type) {     return null. }
+false;public;1;4;;@Override public FieldSource setLiteralInitializer(String value) {     return null. }
+false;public;1;4;;@Override public FieldSource setStringInitializer(String value) {     return null. }
+false;public;1;4;;@Override public FieldSource setTransient(boolean value) {     return null. }
+false;public;1;4;;@Override public FieldSource setVolatile(boolean value) {     return null. }
+false;public;1;4;;@Override public FieldSource setType(JavaType entity) {     return null. }
+false;public;0;4;;@Override public List<AnnotationSource> getAnnotations() {     return null. }
+false;public;1;4;;@Override public boolean hasAnnotation(String type) {     return false. }
+false;public;1;4;;@Override public boolean hasAnnotation(Class type) {     return false. }
+false;public;1;4;;@Override public AnnotationSource getAnnotation(String type) {     return null. }
+false;public;0;4;;@Override public AnnotationSource addAnnotation() {     return null. }
+false;public;1;4;;@Override public AnnotationSource addAnnotation(String className) {     return null. }
+false;public;0;3;;@Override public void removeAllAnnotations() { }
+false;public;1;4;;@Override public Object removeAnnotation(Annotation annotation) {     return null. }
+false;public;1;4;;@Override public AnnotationSource addAnnotation(Class type) {     return null. }
+false;public;1;4;;@Override public AnnotationSource getAnnotation(Class type) {     return null. }
+false;public;0;4;;@Override public Type getType() {     return type. }
+false;public;0;4;;@Override public String getStringInitializer() {     return null. }
+false;public;0;4;;@Override public String getLiteralInitializer() {     return null. }
+false;public;0;4;;@Override public boolean isTransient() {     return false. }
+false;public;0;4;;@Override public boolean isVolatile() {     return false. }
+false;public;1;4;;@Override public Object setFinal(boolean finl) {     return null. }
+false;public;0;4;;@Override public boolean isFinal() {     return false. }
+false;public;0;4;;@Override public Object getInternal() {     return internal. }
+false;public;0;4;;@Override public JavaDocSource getJavaDoc() {     return null. }
+false;public;0;4;;@Override public boolean hasJavaDoc() {     return false. }
+false;public;0;4;;@Override public Object removeJavaDoc() {     return null. }
+false;public;1;4;;@Override public Object setName(String name) {     return null. }
+false;public;0;4;;@Override public String getName() {     return null. }
+false;public;0;4;;@Override public Object getOrigin() {     return origin. }
+false;public;1;4;;@Override public Object setStatic(boolean value) {     return null. }
+false;public;0;4;;@Override public boolean isStatic() {     return false. }
+false;public;0;4;;@Override public Object setPackagePrivate() {     return null. }
+false;public;0;4;;@Override public Object setPublic() {     return null. }
+false;public;0;4;;@Override public Object setPrivate() {     return null. }
+false;public;0;4;;@Override public Object setProtected() {     return null. }
+false;public;1;4;;@Override public Object setVisibility(Visibility scope) {     return null. }
+false;public;0;4;;@Override public boolean isPackagePrivate() {     return false. }
+false;public;0;4;;@Override public boolean isPublic() {     return false. }
+false;public;0;4;;@Override public boolean isPrivate() {     return false. }
+false;public;0;4;;@Override public boolean isProtected() {     return false. }
+false;public;0;4;;@Override public Visibility getVisibility() {     return null. }
+false;public;0;4;;@Override public int getColumnNumber() {     return 0. }
+false;public;0;4;;@Override public int getStartPosition() {     return 0. }
+false;public;0;4;;@Override public int getEndPosition() {     return 0. }
+false;public;0;4;;@Override public int getLineNumber() {     return 0. }

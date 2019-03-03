@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;11;;@Override public void process(Exchange exchange) throws Exception {     SplunkEvent splunkEvent = new SplunkEvent().     splunkEvent.addPair("ERRORKEY", "AVUA123").     splunkEvent.addPair("ERRORMSG", "Service ABC Failed").     splunkEvent.addPair("ERRORDESC", "BusinessException: Username and password don't match").     splunkEvent.addPair(SplunkEvent.COMMON_START_TIME, "Thu Aug 15 2014 00:15:06").     exchange.getIn().setBody(splunkEvent, SplunkEvent.class). }

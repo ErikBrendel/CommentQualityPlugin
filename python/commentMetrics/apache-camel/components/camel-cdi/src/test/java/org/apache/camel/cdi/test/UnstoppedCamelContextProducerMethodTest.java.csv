@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected void verify() {     assertThat("Camel CDI hasn't stopped Camel context!", context.getStatus(), is(equalTo(ServiceStatus.Stopped))). }
+false;public,static;0;10;;@Deployment public static Archive<?> deployment() {     return ShrinkWrap.create(JavaArchive.class).addPackage(CdiCamelExtension.class.getPackage()).addClass(SimpleCamelRoute.class).addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml"). }
+false;public;2;10;;@Test public void sendMessageToInbound(@Uri("direct:start") ProducerTemplate inbound, @Uri("mock:result") MockEndpoint outbound) throws InterruptedException {     outbound.expectedMessageCount(1).     outbound.expectedBodiesReceived("test").     inbound.sendBody("test").     assertIsSatisfied(2L, TimeUnit.SECONDS, outbound). }
+false;private;0;6;;@Produces @ApplicationScoped private CamelContext produceAndStartContext() {     context.setName("unstopped-context").     return context. }

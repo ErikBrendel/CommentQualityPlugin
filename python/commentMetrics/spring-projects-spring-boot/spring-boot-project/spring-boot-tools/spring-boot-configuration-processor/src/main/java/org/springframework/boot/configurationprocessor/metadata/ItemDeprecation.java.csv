@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getReason() {     return this.reason. }
+false;public;1;3;;public void setReason(String reason) {     this.reason = reason. }
+false;public;0;3;;public String getReplacement() {     return this.replacement. }
+false;public;1;3;;public void setReplacement(String replacement) {     this.replacement = replacement. }
+false;public;0;3;;public String getLevel() {     return this.level. }
+false;public;1;3;;public void setLevel(String level) {     this.level = level. }
+false;public;1;13;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     ItemDeprecation other = (ItemDeprecation) o.     return nullSafeEquals(this.reason, other.reason) && nullSafeEquals(this.replacement, other.replacement) && nullSafeEquals(this.level, other.level). }
+false;public;0;7;;@Override public int hashCode() {     int result = nullSafeHashCode(this.reason).     result = 31 * result + nullSafeHashCode(this.replacement).     result = 31 * result + nullSafeHashCode(this.level).     return result. }
+false;public;0;6;;@Override public String toString() {     return "ItemDeprecation{" + "reason='" + this.reason + '\'' + ", " + "replacement='" + this.replacement + '\'' + ", " + "level='" + this.level + '\'' + '}'. }
+false;private;2;9;;private boolean nullSafeEquals(Object o1, Object o2) {     if (o1 == o2) {         return true.     }     if (o1 == null || o2 == null) {         return false.     }     return o1.equals(o2). }
+false;private;1;3;;private int nullSafeHashCode(Object o) {     return (o != null) ? o.hashCode() : 0. }

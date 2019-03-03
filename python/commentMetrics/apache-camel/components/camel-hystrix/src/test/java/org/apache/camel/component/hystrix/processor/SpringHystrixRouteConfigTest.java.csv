@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected AbstractApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/component/hystrix/processor/SpringHystrixRouteConfigTest.xml"). }
+false;public;0;8;;@Test public void testHystrix() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("Bye World").     template.sendBody("direct:start", "Hello World").     assertMockEndpointsSatisfied(). }

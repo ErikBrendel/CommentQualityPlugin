@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Override @Before public void setUp() throws Exception {     deleteDirectory("target/renameissue").     super.setUp(). }
+false;public;0;12;;@Test public void testFileRenameFileOnCommitIssue() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMessageCount(1).     mock.expectedFileExists("target/renameissue/.camel/hello.xml").     String body = "<?xml version=\"1.0\"?><persons xmlns=\"http://foo.com/bar\"><person name=\"James\"/><person name=\"Claus\"/></persons>".     template.sendBodyAndHeader("file://target/renameissue", body, Exchange.FILE_NAME, "hello.xml").     assertMockEndpointsSatisfied(). }
+false;protected;0;4;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/spring/issues/SpringRenameFileOnCommitIssueTest.xml"). }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;5;;protected void setupHttpConduit(HTTPConduit httpConduit) {     TLSClientParameters tlsClientParameters = tryToGetTLSClientParametersFromConduit(httpConduit).     tlsClientParameters.setHostnameVerifier(hostnameVerifier).     httpConduit.setTlsClientParameters(tlsClientParameters). }

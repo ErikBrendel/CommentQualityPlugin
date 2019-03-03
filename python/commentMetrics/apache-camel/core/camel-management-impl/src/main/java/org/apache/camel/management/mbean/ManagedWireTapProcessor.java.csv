@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;9;;public void init(ManagementStrategy strategy) {     super.init(strategy).     sanitize = strategy.getManagementAgent().getMask() != null ? strategy.getManagementAgent().getMask() : false.     if (sanitize) {         uri = URISupport.sanitizeUri(processor.getUri()).     } else {         uri = processor.getUri().     } }
+false;public;0;7;;@Override public void reset() {     super.reset().     if (processor.getEndpointUtilizationStatistics() != null) {         processor.getEndpointUtilizationStatistics().clear().     } }
+false;public;0;4;;@Override public Boolean getSupportExtendedInformation() {     return true. }
+false;public;0;3;;public WireTapProcessor getProcessor() {     return processor. }
+false;public;0;3;;public String getUri() {     return uri. }
+false;public;0;3;;public Integer getCacheSize() {     return processor.getCacheSize(). }
+false;public;0;3;;public Boolean isIgnoreInvalidEndpoint() {     return processor.isIgnoreInvalidEndpoint(). }
+false;public;0;3;;public Boolean isCopy() {     return processor.isCopy(). }
+false;public;0;3;;public Boolean isDynamicUri() {     return processor.isDynamicUri(). }
+false;public;0;3;;public Integer getTaskSize() {     return processor.getPendingExchangesSize(). }
+false;public;0;28;;@Override public TabularData extendedInformation() {     try {         TabularData answer = new TabularDataSupport(CamelOpenMBeanTypes.endpointsUtilizationTabularType()).         EndpointUtilizationStatistics stats = processor.getEndpointUtilizationStatistics().         if (stats != null) {             for (Map.Entry<String, Long> entry : stats.getStatistics().entrySet()) {                 CompositeType ct = CamelOpenMBeanTypes.endpointsUtilizationCompositeType().                 String url = entry.getKey().                 if (sanitize) {                     url = URISupport.sanitizeUri(url).                 }                 Long hits = entry.getValue().                 if (hits == null) {                     hits = 0L.                 }                 CompositeData data = new CompositeDataSupport(ct, new String[] { "url", "hits" }, new Object[] { url, hits }).                 answer.put(data).             }         }         return answer.     } catch (Exception e) {         throw RuntimeCamelException.wrapRuntimeCamelException(e).     } }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;1;;City getCity().
+false;;0;1;;String getName().
+false;;0;1;;Double getAverageRating().
+false;default;0;3;;default Integer getAverageRatingRounded() {     return (getAverageRating() != null) ? (int) Math.round(getAverageRating()) : null. }

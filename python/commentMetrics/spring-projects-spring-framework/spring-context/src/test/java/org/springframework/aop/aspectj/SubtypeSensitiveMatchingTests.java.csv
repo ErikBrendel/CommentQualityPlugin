@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Before public void setup() {     ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext(getClass().getSimpleName() + ".xml", getClass()).     nonSerializableBean = (NonSerializableFoo) ctx.getBean("testClassA").     serializableBean = (SerializableFoo) ctx.getBean("testClassB").     bar = (Bar) ctx.getBean("testClassC"). }
+false;public;0;5;;@Test public void testBeansAreProxiedOnStaticMatch() {     assertTrue("bean with serializable type should be proxied", this.serializableBean instanceof Advised). }
+false;public;0;5;;@Test public void testBeansThatDoNotMatchBasedSolelyOnRuntimeTypeAreNotProxied() {     assertFalse("bean with non-serializable type should not be proxied", this.nonSerializableBean instanceof Advised). }
+false;public;0;5;;@Test public void testBeansThatDoNotMatchBasedOnOtherTestAreProxied() {     assertTrue("bean with args check should be proxied", this.bar instanceof Advised). }
+false;;0;1;;void foo().
+false;;0;1;;void foo().
+false;public;0;2;;@Override public void foo() { }
+false;public;0;2;;@Override public void foo() { }
+false;;1;1;;void bar(Object o).
+false;public;1;2;;@Override public void bar(Object o) { }

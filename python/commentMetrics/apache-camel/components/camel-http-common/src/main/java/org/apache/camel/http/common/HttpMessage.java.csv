@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public HttpServletRequest getRequest() {     return request. }
+false;public;0;3;;public HttpServletResponse getResponse() {     return response. }
+false;protected;0;8;;@Override protected Object createBody() {     try {         return endpoint.getHttpBinding().parseBody(this).     } catch (IOException e) {         throw new RuntimeCamelException(e).     } }
+false;public;0;4;;@Override public HttpMessage newInstance() {     return new HttpMessage(request, response, getExchange(), endpoint). }
+false;public;0;5;;@Override public String toString() {     // do not use toString on HTTP message     return "HttpMessage@" + ObjectHelper.getIdentityHashCode(this). }

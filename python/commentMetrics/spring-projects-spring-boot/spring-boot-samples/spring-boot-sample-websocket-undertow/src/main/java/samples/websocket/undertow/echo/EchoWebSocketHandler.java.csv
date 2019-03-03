@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void afterConnectionEstablished(WebSocketSession session) {     logger.debug("Opened new session in instance " + this). }
+false;public;2;7;;@Override public void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {     String echoMessage = this.echoService.getMessage(message.getPayload()).     logger.debug(echoMessage).     session.sendMessage(new TextMessage(echoMessage)). }
+false;public;2;5;;@Override public void handleTransportError(WebSocketSession session, Throwable exception) throws Exception {     session.close(CloseStatus.SERVER_ERROR). }

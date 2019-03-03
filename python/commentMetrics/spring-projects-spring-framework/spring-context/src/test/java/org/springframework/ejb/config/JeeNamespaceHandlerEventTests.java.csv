@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Before public void setUp() throws Exception {     this.reader = new XmlBeanDefinitionReader(this.beanFactory).     this.reader.setEventListener(this.eventListener).     this.reader.loadBeanDefinitions(new ClassPathResource("jeeNamespaceHandlerTests.xml", getClass())). }
+false;public;0;5;;@Test public void testJndiLookupComponentEventReceived() {     ComponentDefinition component = this.eventListener.getComponentDefinition("simple").     assertTrue(component instanceof BeanComponentDefinition). }
+false;public;0;5;;@Test public void testLocalSlsbComponentEventReceived() {     ComponentDefinition component = this.eventListener.getComponentDefinition("simpleLocalEjb").     assertTrue(component instanceof BeanComponentDefinition). }
+false;public;0;5;;@Test public void testRemoteSlsbComponentEventReceived() {     ComponentDefinition component = this.eventListener.getComponentDefinition("simpleRemoteEjb").     assertTrue(component instanceof BeanComponentDefinition). }

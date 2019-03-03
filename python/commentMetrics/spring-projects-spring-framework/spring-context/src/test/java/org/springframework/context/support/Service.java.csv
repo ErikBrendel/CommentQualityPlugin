@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void setApplicationContext(ApplicationContext applicationContext) {     this.applicationContext = applicationContext. }
+false;public;1;7;;@Override public void setMessageSource(MessageSource messageSource) {     if (this.messageSource != null) {         throw new IllegalArgumentException("MessageSource should not be set twice").     }     this.messageSource = messageSource. }
+false;public;0;3;;public MessageSource getMessageSource() {     return messageSource. }
+false;public;1;3;;public void setResources(Resource[] resources) {     this.resources = resources. }
+false;public;0;3;;public Resource[] getResources() {     return resources. }
+false;public;0;13;;@Override public void run() {     Assert.state(applicationContext.getBean("messageSource") instanceof StaticMessageSource, "Invalid MessageSource bean").     try {         applicationContext.getBean("service2").         // Should have thrown BeanCreationNotAllowedException         properlyDestroyed = false.     } catch (BeanCreationNotAllowedException ex) {     // expected     } }
+false;public;0;26;;@Override public void destroy() {     this.properlyDestroyed = true.     Thread thread = new Thread() {          @Override         public void run() {             Assert.state(applicationContext.getBean("messageSource") instanceof StaticMessageSource, "Invalid MessageSource bean").             try {                 applicationContext.getBean("service2").                 // Should have thrown BeanCreationNotAllowedException                 properlyDestroyed = false.             } catch (BeanCreationNotAllowedException ex) {             // expected             }         }     }.     thread.start().     try {         thread.join().     } catch (InterruptedException ex) {         Thread.currentThread().interrupt().     } }
+false;public;0;3;;public boolean isProperlyDestroyed() {     return properlyDestroyed. }

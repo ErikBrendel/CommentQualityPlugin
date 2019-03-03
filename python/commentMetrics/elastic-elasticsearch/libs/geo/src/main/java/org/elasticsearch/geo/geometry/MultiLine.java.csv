@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public ShapeType type() {     return ShapeType.MULTILINESTRING. }
+false;public;1;4;;@Override public <T> T visit(GeometryVisitor<T> visitor) {     return visitor.visit(this). }

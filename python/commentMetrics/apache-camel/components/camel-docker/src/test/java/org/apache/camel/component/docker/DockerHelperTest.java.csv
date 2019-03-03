@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void transformHeaderTestFromHeader() {     String headerField = DockerHelper.transformFromHeaderName(DockerConstants.DOCKER_REGISTRY).     assertEquals("registry", headerField). }

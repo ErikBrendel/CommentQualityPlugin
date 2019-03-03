@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;3;;protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/spring/SpringChangeFunctionStartFunctionEndTest.xml"). }
+false;public;0;8;;@Test public void testSimpleWithPrefix() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("Custom tokens is cool").     template.sendBody("direct:start", "Custom tokens").     assertMockEndpointsSatisfied(). }
+false;public;0;9;;@Override @After public void tearDown() throws Exception {     // change the tokens back to default after testing     SimpleLanguage.changeFunctionStartToken("${", "$simple{").     SimpleLanguage.changeFunctionEndToken("}").     super.tearDown(). }

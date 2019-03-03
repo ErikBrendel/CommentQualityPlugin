@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected NodeInfo<StringQueryPredicate> info() {     return NodeInfo.create(this, StringQueryPredicate::new, query(), options()). }
+false;public;1;4;;@Override public Expression replaceChildren(List<Expression> newChildren) {     throw new UnsupportedOperationException("this type of node doesn't have any children to replace"). }
+false;public;0;3;;public Map<String, Float> fields() {     return fields. }

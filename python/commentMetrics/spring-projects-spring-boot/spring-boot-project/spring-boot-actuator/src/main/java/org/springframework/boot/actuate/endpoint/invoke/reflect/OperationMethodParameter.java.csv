@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getName() {     return this.name. }
+false;public;0;4;;@Override public Class<?> getType() {     return this.parameter.getType(). }
+false;public;0;4;;@Override public boolean isMandatory() {     return ObjectUtils.isEmpty(this.parameter.getAnnotationsByType(Nullable.class)). }
+false;public;0;4;;@Override public String toString() {     return this.name + " of type " + this.parameter.getType().getName(). }

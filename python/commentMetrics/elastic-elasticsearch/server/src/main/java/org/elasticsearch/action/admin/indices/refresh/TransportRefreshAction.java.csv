@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected ReplicationResponse newShardResponse() {     return new ReplicationResponse(). }
+false;protected;2;6;;@Override protected BasicReplicationRequest newShardRequest(RefreshRequest request, ShardId shardId) {     BasicReplicationRequest replicationRequest = new BasicReplicationRequest(shardId).     replicationRequest.waitForActiveShards(ActiveShardCount.NONE).     return replicationRequest. }
+false;protected;4;5;;@Override protected RefreshResponse newResponse(int successfulShards, int failedShards, int totalNumCopies, List<DefaultShardOperationFailedException> shardFailures) {     return new RefreshResponse(totalNumCopies, successfulShards, failedShards, shardFailures). }

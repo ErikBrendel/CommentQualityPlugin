@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public long getInitiallyRequested() {     return initiallyRequested. }
+false;public;1;3;;public void setInitiallyRequested(long initiallyRequested) {     this.initiallyRequested = initiallyRequested. }
+false;public;1;3;;public void request(long exchanges) {     this.subscription.request(exchanges). }
+false;public;0;3;;public void cancel() {     this.subscription.cancel(). }
+false;public;1;8;;@Override public void onSubscribe(Subscription subscription) {     this.subscription = subscription.     if (initiallyRequested > 0) {         subscription.request(initiallyRequested).     } }
+false;public;1;4;;@Override public void onNext(T t) { }
+false;public;1;4;;@Override public void onError(Throwable throwable) { }
+false;public;0;4;;@Override public void onComplete() { }

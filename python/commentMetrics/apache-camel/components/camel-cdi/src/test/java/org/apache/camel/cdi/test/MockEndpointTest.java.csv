@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;10;;@Deployment public static Archive<?> deployment() {     return ShrinkWrap.create(JavaArchive.class).addPackage(CdiCamelExtension.class.getPackage()).addClasses(DefaultCamelContextBean.class, MockAnnotationRoute.class).addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml"). }
+false;public;0;5;;@Test public void verifyCamelContext() {     assertThat(defaultCamelContext.getName(), is(equalTo("camel-cdi"))).     assertThat(defaultOutbound.getCamelContext().getName(), is(equalTo(defaultCamelContext.getName()))). }
+false;public;0;10;;@Test public void sendMessageToInbound() throws InterruptedException {     defaultOutbound.expectedMessageCount(1).     defaultOutbound.expectedBodiesReceived("test").     defaultOutbound.expectedHeaderReceived("foo", "bar").     defaultInbound.sendBodyAndHeader("test", "foo", "bar").     assertIsSatisfied(2L, TimeUnit.SECONDS, defaultOutbound). }

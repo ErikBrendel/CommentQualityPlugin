@@ -1,0 +1,17 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;9;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeVInt(policyMetadatas.size()).     for (Map.Entry<String, LifecyclePolicyMetadata> entry : policyMetadatas.entrySet()) {         out.writeString(entry.getKey()).         entry.getValue().writeTo(out).     }     out.writeEnum(operationMode). }
+false;public;0;3;;public Map<String, LifecyclePolicyMetadata> getPolicyMetadatas() {     return policyMetadatas. }
+false;public;0;3;;public OperationMode getOperationMode() {     return operationMode. }
+false;public;0;4;;public Map<String, LifecyclePolicy> getPolicies() {     return policyMetadatas.values().stream().map(LifecyclePolicyMetadata::getPolicy).collect(Collectors.toMap(LifecyclePolicy::getName, Function.identity())). }
+false;public;1;4;;@Override public Diff<Custom> diff(Custom previousState) {     return new IndexLifecycleMetadataDiff((IndexLifecycleMetadata) previousState, this). }
+false;public;2;6;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.field(POLICIES_FIELD.getPreferredName(), policyMetadatas).     builder.field(OPERATION_MODE_FIELD.getPreferredName(), operationMode).     return builder. }
+false;public;0;4;;@Override public Version getMinimalSupportedVersion() {     return Version.V_7_0_0. }
+false;public;0;4;;@Override public String getWriteableName() {     return TYPE. }
+false;public;0;4;;@Override public EnumSet<MetaData.XContentContext> context() {     return MetaData.ALL_CONTEXTS. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(policyMetadatas, operationMode). }
+false;public;1;12;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (obj.getClass() != getClass()) {         return false.     }     IndexLifecycleMetadata other = (IndexLifecycleMetadata) obj.     return Objects.equals(policyMetadatas, other.policyMetadatas) && Objects.equals(operationMode, other.operationMode). }
+false;public;0;4;;@Override public String toString() {     return Strings.toString(this, true, true). }
+false;public;1;6;;@Override public MetaData.Custom apply(MetaData.Custom part) {     TreeMap<String, LifecyclePolicyMetadata> newPolicies = new TreeMap<>(policies.apply(((IndexLifecycleMetadata) part).policyMetadatas)).     return new IndexLifecycleMetadata(newPolicies, this.operationMode). }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     policies.writeTo(out).     out.writeEnum(operationMode). }
+false;public;0;4;;@Override public String getWriteableName() {     return TYPE. }
+false;static;1;3;;static Diff<LifecyclePolicyMetadata> readLifecyclePolicyDiffFrom(StreamInput in) throws IOException {     return AbstractDiffable.readDiffFrom(LifecyclePolicyMetadata::new, in). }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;15;;public OperationResult<Boolean> getResult() {     try {         connection.delete(node, version).         if (LOG.isDebugEnabled()) {             if (LOG.isTraceEnabled()) {                 LOG.trace(format("Set data of node '%s'", node)).             } else {                 LOG.debug(format("Set data of node '%s'", node)).             }         }         return new OperationResult<>(true, null, true).     } catch (Exception e) {         return new OperationResult<>(e).     } }
+false;public;1;3;;public void setVersion(int version) {     this.version = version. }
+false;public;0;6;;@Override public ZooKeeperOperation<?> createCopy() throws Exception {     DeleteOperation copy = (DeleteOperation) super.createCopy().     // set the version to -1 for 'any version'     copy.version = -1.     return copy. }

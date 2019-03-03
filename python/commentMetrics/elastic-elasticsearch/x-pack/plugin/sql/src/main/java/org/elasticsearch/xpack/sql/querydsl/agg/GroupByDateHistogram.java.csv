@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;// For testing ;// For testing public long interval() {     return interval. }
+false;protected;0;6;;@Override protected CompositeValuesSourceBuilder<?> createSourceBuilder() {     return new DateHistogramValuesSourceBuilder(id()).interval(interval).timeZone(zoneId). }
+false;protected;4;4;;@Override protected GroupByKey copy(String id, String fieldName, ScriptTemplate script, Direction direction) {     return new GroupByDateHistogram(id, fieldName, script, direction, interval, zoneId). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(super.hashCode(), interval, zoneId). }
+false;public;1;9;;@Override public boolean equals(Object obj) {     if (super.equals(obj)) {         GroupByDateHistogram other = (GroupByDateHistogram) obj.         return Objects.equals(interval, other.interval) && Objects.equals(zoneId, other.zoneId).     }     return false. }

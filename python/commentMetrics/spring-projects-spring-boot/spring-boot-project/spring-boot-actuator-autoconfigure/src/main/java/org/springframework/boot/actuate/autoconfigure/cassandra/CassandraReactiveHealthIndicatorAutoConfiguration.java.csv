@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Bean @ConditionalOnMissingBean(name = "cassandraReactiveHealthIndicator") public ReactiveHealthIndicator cassandraHealthIndicator(Map<String, ReactiveCassandraOperations> reactiveCassandraOperations) {     return createHealthIndicator(reactiveCassandraOperations). }

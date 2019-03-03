@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Override @Before public void setUp() throws Exception {     deleteDirectory("target/data/files").     super.setUp().     template.sendBodyAndHeader("file://target/data/files", "Hello World", Exchange.FILE_NAME, "report.txt"). }
+false;public;0;9;;@Test public void testBackoffMultiplier() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedBodiesReceived("Hello World").     assertMockEndpointsSatisfied().     oneExchangeDone.matchesMockWaitTime(). }
+false;public;0;4;;public void configure() throws Exception {     from("file://target/data/files/?initialDelay=0&delay=10&delete=true&backoffMultiplier=4&backoffIdleThreshold=3").convertBodyTo(String.class).to("mock:result"). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from("file://target/data/files/?initialDelay=0&delay=10&delete=true&backoffMultiplier=4&backoffIdleThreshold=3").convertBodyTo(String.class).to("mock:result").         }     }. }

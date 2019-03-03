@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;4;5;;@Override InternalGeoTileGridBucket buildBucket(InternalGeoGridBucket bucket, long hashAsLong, long docCount, InternalAggregations aggregations) {     return new InternalGeoTileGridBucket(hashAsLong, docCount, aggregations). }
+false;public;0;4;;@Override public String getKeyAsString() {     return GeoTileUtils.stringEncode(hashAsLong). }
+false;public;0;4;;@Override public GeoPoint getKey() {     return GeoTileUtils.hashToGeoPoint(hashAsLong). }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String scheme() {     return scheme. }
+false;public;0;3;;public int defaultPort() {     return defaultPort. }
+false;public,static;1;11;;public static Scheme parse(String value) {     value = value.toLowerCase(Locale.ROOT).     switch(value) {         case "http":             return HTTP.         case "https":             return HTTPS.         default:             throw new IllegalArgumentException("unsupported http scheme [" + value + "]").     } }
+false;public;0;3;;public String value() {     return name().toLowerCase(Locale.ROOT). }

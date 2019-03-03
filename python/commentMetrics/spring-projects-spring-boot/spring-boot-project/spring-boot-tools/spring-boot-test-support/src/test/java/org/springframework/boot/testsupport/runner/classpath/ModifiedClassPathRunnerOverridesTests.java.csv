@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void classesAreLoadedFromOverride() {     assertThat(ApplicationContext.class.getProtectionDomain().getCodeSource().getLocation().toString()).endsWith("spring-context-4.1.0.RELEASE.jar"). }
+false;public;0;5;;@Test public void classesAreLoadedFromTransitiveDependencyOfOverride() {     assertThat(StringUtils.class.getProtectionDomain().getCodeSource().getLocation().toString()).endsWith("spring-core-4.1.0.RELEASE.jar"). }

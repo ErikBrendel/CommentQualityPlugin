@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;14;;@Test public void testUnMarshallSingleMessage() throws Exception {     resultEndpoint.expectedMessageCount(1).     // should still be a list as we turned off unwrap     resultEndpoint.message(0).body().isInstanceOf(List.class).     template.sendBody(singleRecord).     resultEndpoint.assertIsSatisfied().     // there should be 1 element in the list     List list = resultEndpoint.getReceivedExchanges().get(0).getIn().getBody(List.class).     Assert.assertEquals(1, list.size()). }
+false;public;0;5;;public void configure() {     from("direct:start").unmarshal().bindy(BindyType.Csv, TYPE, false).to("mock:result"). }

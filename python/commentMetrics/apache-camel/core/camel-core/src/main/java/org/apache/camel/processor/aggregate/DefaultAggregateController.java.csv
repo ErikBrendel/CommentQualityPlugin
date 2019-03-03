@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void onStart(AggregateProcessor processor) {     this.processor = processor. }
+false;public;1;3;;public void onStop(AggregateProcessor processor) {     this.processor = null. }
+false;public;1;7;;public int forceCompletionOfGroup(String key) {     if (processor != null) {         return processor.forceCompletionOfGroup(key).     } else {         return 0.     } }
+false;public;0;7;;public int forceCompletionOfAllGroups() {     if (processor != null) {         return processor.forceCompletionOfAllGroups().     } else {         return 0.     } }

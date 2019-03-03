@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public boolean isStatic(String key) {     return isStatic(new EndpointKey(key)). }
+false;public;1;4;;@Override public boolean isDynamic(String key) {     return isDynamic(new EndpointKey(key)). }
+false;public;0;4;;@Override public String toString() {     return "EndpointRegistry for " + context.getName() + ", capacity: " + maxCacheSize. }

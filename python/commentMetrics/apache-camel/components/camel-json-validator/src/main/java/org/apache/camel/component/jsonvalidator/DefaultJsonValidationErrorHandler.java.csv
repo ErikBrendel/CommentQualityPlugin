@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;4;;@Override public void handleErrors(Exchange exchange, JsonSchema schema, Set<ValidationMessage> errors) throws ValidationException {     throw new JsonValidationException(exchange, schema, errors). }
+false;public;3;4;;@Override public void handleErrors(Exchange exchange, JsonSchema schema, Exception e) throws ValidationException {     throw new JsonValidationException(exchange, schema, e). }

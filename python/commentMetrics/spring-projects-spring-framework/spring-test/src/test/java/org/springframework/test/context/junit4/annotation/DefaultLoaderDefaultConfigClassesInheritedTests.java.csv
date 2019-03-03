@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Bean public Pet pet() {     return new Pet("Fido"). }
+false;public;0;5;;@Test public void verifyPetSetFromExtendedContextConfig() {     assertNotNull("The pet should have been autowired.", this.pet).     assertEquals("Fido", this.pet.getName()). }

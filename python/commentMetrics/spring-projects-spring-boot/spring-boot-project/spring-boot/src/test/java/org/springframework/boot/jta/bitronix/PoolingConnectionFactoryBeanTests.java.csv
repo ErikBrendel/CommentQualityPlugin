@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,synchronized;0;4;;@Override public synchronized void init() { // Stub out for the tests }
+false;public;0;7;;@Test public void sensibleDefaults() {     assertThat(this.bean.getMaxPoolSize()).isEqualTo(10).     assertThat(this.bean.getTestConnections()).isTrue().     assertThat(this.bean.getAutomaticEnlistingEnabled()).isTrue().     assertThat(this.bean.getAllowLocalTransactions()).isTrue(). }
+false;public;0;6;;@Test public void setsUniqueNameIfNull() throws Exception {     this.bean.setBeanName("beanName").     this.bean.afterPropertiesSet().     assertThat(this.bean.getUniqueName()).isEqualTo("beanName"). }
+false;public;0;7;;@Test public void doesNotSetUniqueNameIfNotNull() throws Exception {     this.bean.setBeanName("beanName").     this.bean.setUniqueName("un").     this.bean.afterPropertiesSet().     assertThat(this.bean.getUniqueName()).isEqualTo("un"). }
+false;public;0;10;;@Test public void setConnectionFactory() throws Exception {     XAConnectionFactory factory = mock(XAConnectionFactory.class).     this.bean.setConnectionFactory(factory).     this.bean.setBeanName("beanName").     this.bean.afterPropertiesSet().     this.bean.init().     this.bean.createPooledConnection(factory, this.bean).     verify(factory).createXAConnection(). }

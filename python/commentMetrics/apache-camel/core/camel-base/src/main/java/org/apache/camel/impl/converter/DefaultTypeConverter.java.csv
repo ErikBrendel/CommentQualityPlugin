@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean allowNull() {     return false. }
+false;public;0;5;;@Override public boolean isRunAllowed() {     // as type converter is used during initialization then allow it to always run     return true. }
+false;protected;0;17;;@Override protected void doStart() throws Exception {     super.doStart().     // core type converters is always loaded which does not use any classpath scanning     // and therefore is fast     loadCoreTypeConverters().     if (loadTypeConverters) {         int core = typeMappings.size().         // load type converters up front         loadTypeConverters().         int additional = typeMappings.size() - core.         // report how many type converters we have loaded         log.info("Type converters loaded (core: {}, classpath: {})", core, additional).     } }

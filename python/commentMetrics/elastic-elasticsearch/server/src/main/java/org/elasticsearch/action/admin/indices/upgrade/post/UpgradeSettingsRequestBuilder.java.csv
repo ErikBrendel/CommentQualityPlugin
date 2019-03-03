@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;4;/**  * Sets the index versions to be updated  */ ;/**  * Sets the index versions to be updated  */ public UpgradeSettingsRequestBuilder setVersions(Map<String, Tuple<Version, String>> versions) {     request.versions(versions).     return this. }

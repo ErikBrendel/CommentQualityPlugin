@@ -1,0 +1,213 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,static;2;7;/**  * Returns a new JMS endpoint for the given JMS destination using the configuration from the given JMS component  */ ;/**  * Returns a new JMS endpoint for the given JMS destination using the configuration from the given JMS component  */ public static JmsEndpoint newInstance(Destination destination, JmsComponent component) throws JMSException {     JmsEndpoint answer = newInstance(destination).     JmsConfiguration newConfiguration = component.getConfiguration().copy().     answer.setConfiguration(newConfiguration).     answer.setCamelContext(component.getCamelContext()).     return answer. }
+true;public,static;1;11;/**  * Returns a new JMS endpoint for the given JMS destination  */ ;/**  * Returns a new JMS endpoint for the given JMS destination  */ public static JmsEndpoint newInstance(Destination destination) throws JMSException {     if (destination instanceof TemporaryQueue) {         return new JmsTemporaryQueueEndpoint((TemporaryQueue) destination).     } else if (destination instanceof TemporaryTopic) {         return new JmsTemporaryTopicEndpoint((TemporaryTopic) destination).     } else if (destination instanceof Queue) {         return new JmsQueueEndpoint((Queue) destination).     } else {         return new JmsEndpoint((Topic) destination).     } }
+false;public;0;8;;public Producer createProducer() throws Exception {     Producer answer = new JmsProducer(this).     if (isSynchronous()) {         return new SynchronousDelegateProducer(answer).     } else {         return answer.     } }
+false;public;1;4;;public JmsConsumer createConsumer(Processor processor) throws Exception {     AbstractMessageListenerContainer listenerContainer = createMessageListenerContainer().     return createConsumer(processor, listenerContainer). }
+false;public;0;3;;public AbstractMessageListenerContainer createMessageListenerContainer() throws Exception {     return configuration.createMessageListenerContainer(this). }
+false;public;2;67;;public void configureListenerContainer(AbstractMessageListenerContainer listenerContainer, JmsConsumer consumer) {     if (destinationName != null) {         listenerContainer.setDestinationName(destinationName).         log.debug("Using destinationName: {} on listenerContainer: {}", destinationName, listenerContainer).     } else if (destination != null) {         listenerContainer.setDestination(destination).         log.debug("Using destination: {} on listenerContainer: {}", destinationName, listenerContainer).     } else {         DestinationResolver resolver = getDestinationResolver().         if (resolver != null) {             listenerContainer.setDestinationResolver(resolver).         } else {             throw new IllegalArgumentException("Neither destination, destinationName or destinationResolver are specified on this endpoint!").         }         log.debug("Using destinationResolver: {} on listenerContainer: {}", resolver, listenerContainer).     }     listenerContainer.setPubSubDomain(pubSubDomain).     // include destination name as part of thread and transaction name     String consumerName = getThreadName().     if (configuration.getTaskExecutor() != null) {         if (log.isDebugEnabled()) {             log.debug("Using custom TaskExecutor: {} on listener container: {}", configuration.getTaskExecutor(), listenerContainer).         }         setContainerTaskExecutor(listenerContainer, configuration.getTaskExecutor()).         // as the lifecycle of the shared thread pool is handled elsewhere         if (configuration.getTaskExecutor() instanceof ExecutorService) {             consumer.setListenerContainerExecutorService((ExecutorService) configuration.getTaskExecutor(), false).         }     } else if ((listenerContainer instanceof DefaultJmsMessageListenerContainer && configuration.getDefaultTaskExecutorType() == null) || !(listenerContainer instanceof DefaultJmsMessageListenerContainer)) {         // preserve backwards compatibility if an explicit Default TaskExecutor Type was not set.         // otherwise, defer the creation of the TaskExecutor         // use a cached pool as DefaultMessageListenerContainer will throttle pool sizing         ExecutorService executor = getCamelContext().getExecutorServiceManager().newCachedThreadPool(consumer, consumerName).         setContainerTaskExecutor(listenerContainer, executor).         // we created a new private thread pool that this listener container is using, now store a reference on the consumer         // so when the consumer is stopped we can shutdown the thread pool also, to ensure all resources is shutdown         consumer.setListenerContainerExecutorService(executor, true).     } else {         // do nothing, as we're working with a DefaultJmsMessageListenerContainer with an explicit DefaultTaskExecutorType,         // so DefaultJmsMessageListenerContainer#createDefaultTaskExecutor will handle the creation         log.debug("Deferring creation of TaskExecutor for listener container: {} as per policy: {}", listenerContainer, getDefaultTaskExecutorType()).     }     // set a default transaction name if none provided     if (configuration.getTransactionName() == null) {         if (listenerContainer instanceof DefaultMessageListenerContainer) {             ((DefaultMessageListenerContainer) listenerContainer).setTransactionName(consumerName).         }     }     // now configure the JMS 2.0 API     if (configuration.getDurableSubscriptionName() != null) {         listenerContainer.setDurableSubscriptionName(configuration.getDurableSubscriptionName()).     } else if (configuration.isSubscriptionDurable()) {         listenerContainer.setSubscriptionDurable(true).         if (configuration.getSubscriptionName() != null) {             listenerContainer.setSubscriptionName(configuration.getSubscriptionName()).         }     }     listenerContainer.setSubscriptionShared(configuration.isSubscriptionShared()). }
+false;private;2;7;;private void setContainerTaskExecutor(AbstractMessageListenerContainer listenerContainer, Executor executor) {     if (listenerContainer instanceof SimpleMessageListenerContainer) {         ((SimpleMessageListenerContainer) listenerContainer).setTaskExecutor(executor).     } else if (listenerContainer instanceof DefaultMessageListenerContainer) {         ((DefaultMessageListenerContainer) listenerContainer).setTaskExecutor(executor).     } }
+true;public;0;8;/**  * Gets the destination name which was configured from the endpoint uri.  *  * @return the destination name resolved from the endpoint uri  */ ;/**  * Gets the destination name which was configured from the endpoint uri.  *  * @return the destination name resolved from the endpoint uri  */ public String getEndpointConfiguredDestinationName() {     String remainder = StringHelper.after(getEndpointKey(), "//").     if (remainder != null && remainder.contains("?")) {         // remove parameters         remainder = StringHelper.before(remainder, "?").     }     return JmsMessageHelper.normalizeDestinationName(remainder). }
+true;public;2;6;/**  * Creates a consumer using the given processor and listener container  *  * @param processor         the processor to use to process the messages  * @param listenerContainer the listener container  * @return a newly created consumer  * @throws Exception if the consumer cannot be created  */ ;/**  * Creates a consumer using the given processor and listener container  *  * @param processor         the processor to use to process the messages  * @param listenerContainer the listener container  * @return a newly created consumer  * @throws Exception if the consumer cannot be created  */ public JmsConsumer createConsumer(Processor processor, AbstractMessageListenerContainer listenerContainer) throws Exception {     JmsConsumer consumer = new JmsConsumer(this, processor, listenerContainer).     configureListenerContainer(listenerContainer, consumer).     configureConsumer(consumer).     return consumer. }
+false;public;0;6;;@Override public PollingConsumer createPollingConsumer() throws Exception {     JmsPollingConsumer answer = new JmsPollingConsumer(this, createInOnlyTemplate()).     configurePollingConsumer(answer).     return answer. }
+false;public;1;6;;@Override public Exchange createExchange(ExchangePattern pattern) {     Exchange exchange = super.createExchange(pattern).     exchange.setProperty(Exchange.BINDING, getBinding()).     return exchange. }
+false;public;2;5;;public Exchange createExchange(Message message, Session session) {     Exchange exchange = createExchange(getExchangePattern()).     exchange.setIn(new JmsMessage(exchange, message, session, getBinding())).     return exchange. }
+true;public;0;3;/**  * Factory method for creating a new template for InOnly message exchanges  */ ;/**  * Factory method for creating a new template for InOnly message exchanges  */ public JmsOperations createInOnlyTemplate() {     return configuration.createInOnlyTemplate(this, pubSubDomain, destinationName). }
+true;public;0;3;/**  * Factory method for creating a new template for InOut message exchanges  */ ;/**  * Factory method for creating a new template for InOut message exchanges  */ public JmsOperations createInOutTemplate() {     return configuration.createInOutTemplate(this, pubSubDomain, destinationName, configuration.getRequestTimeout()). }
+false;public;0;4;;public boolean isMultipleConsumersSupported() {     // JMS allows multiple consumers on both queues and topics     return true. }
+false;public;0;3;;public String getThreadName() {     return "JmsConsumer[" + getEndpointConfiguredDestinationName() + "]". }
+false;public;0;4;;// Properties // ------------------------------------------------------------------------- @Override public JmsComponent getComponent() {     return (JmsComponent) super.getComponent(). }
+false;public;0;6;;public HeaderFilterStrategy getHeaderFilterStrategy() {     if (headerFilterStrategy == null) {         headerFilterStrategy = new JmsHeaderFilterStrategy(isIncludeAllJMSXProperties()).     }     return headerFilterStrategy. }
+true;public;1;3;/**  * To use a custom HeaderFilterStrategy to filter header to and from Camel message.  */ ;/**  * To use a custom HeaderFilterStrategy to filter header to and from Camel message.  */ public void setHeaderFilterStrategy(HeaderFilterStrategy strategy) {     this.headerFilterStrategy = strategy. }
+false;public;0;6;;public JmsBinding getBinding() {     if (binding == null) {         binding = createBinding().     }     return binding. }
+true;protected;0;3;/**  * Creates the {@link org.apache.camel.component.jms.JmsBinding} to use.  */ ;/**  * Creates the {@link org.apache.camel.component.jms.JmsBinding} to use.  */ protected JmsBinding createBinding() {     return new JmsBinding(this). }
+true;public;1;3;/**  * Sets the binding used to convert from a Camel message to and from a JMS  * message  */ ;/**  * Sets the binding used to convert from a Camel message to and from a JMS  * message  */ public void setBinding(JmsBinding binding) {     this.binding = binding. }
+false;public;0;3;;public String getDestinationType() {     return destinationType. }
+true;public;1;3;/**  * The kind of destination to use  */ ;/**  * The kind of destination to use  */ public void setDestinationType(String destinationType) {     this.destinationType = destinationType. }
+false;public;0;3;;public String getDestinationName() {     return destinationName. }
+true;public;1;3;/**  * Name of the queue or topic to use as destination  */ ;/**  * Name of the queue or topic to use as destination  */ public void setDestinationName(String destinationName) {     this.destinationName = destinationName. }
+false;public;0;3;;public Destination getDestination() {     return destination. }
+true;public;1;3;/**  * Allows a specific JMS Destination object to be used as the destination  */ ;/**  * Allows a specific JMS Destination object to be used as the destination  */ public void setDestination(Destination destination) {     this.destination = destination. }
+false;public;0;3;;public JmsConfiguration getConfiguration() {     return configuration. }
+false;public;1;3;;public void setConfiguration(JmsConfiguration configuration) {     this.configuration = configuration. }
+false;public;0;3;;public boolean isSingleton() {     return true. }
+false;public;0;4;;@ManagedAttribute public boolean isPubSubDomain() {     return pubSubDomain. }
+true;public;0;5;/**  * Lazily loads the temporary queue type if one has not been explicitly configured  * via calling the {@link JmsProviderMetadata#setTemporaryQueueType(Class)}  * on the {@link #getConfiguration()} instance  */ ;/**  * Lazily loads the temporary queue type if one has not been explicitly configured  * via calling the {@link JmsProviderMetadata#setTemporaryQueueType(Class)}  * on the {@link #getConfiguration()} instance  */ public Class<? extends TemporaryQueue> getTemporaryQueueType() {     JmsProviderMetadata metadata = getProviderMetadata().     JmsOperations template = getMetadataJmsOperations().     return metadata.getTemporaryQueueType(template). }
+true;public;0;5;/**  * Lazily loads the temporary topic type if one has not been explicitly configured  * via calling the {@link JmsProviderMetadata#setTemporaryTopicType(Class)}  * on the {@link #getConfiguration()} instance  */ ;/**  * Lazily loads the temporary topic type if one has not been explicitly configured  * via calling the {@link JmsProviderMetadata#setTemporaryTopicType(Class)}  * on the {@link #getConfiguration()} instance  */ public Class<? extends TemporaryTopic> getTemporaryTopicType() {     JmsOperations template = getMetadataJmsOperations().     JmsProviderMetadata metadata = getProviderMetadata().     return metadata.getTemporaryTopicType(template). }
+true;protected;0;5;/**  * Returns the provider metadata  */ ;/**  * Returns the provider metadata  */ protected JmsProviderMetadata getProviderMetadata() {     JmsConfiguration conf = getConfiguration().     JmsProviderMetadata metadata = conf.getProviderMetadata().     return metadata. }
+true;protected;0;7;/**  * Returns the {@link JmsOperations} used for metadata operations such as creating temporary destinations  */ ;/**  * Returns the {@link JmsOperations} used for metadata operations such as creating temporary destinations  */ protected JmsOperations getMetadataJmsOperations() {     JmsOperations template = getConfiguration().getMetadataJmsOperations(this).     if (template == null) {         throw new IllegalArgumentException("No Metadata JmsTemplate supplied!").     }     return template. }
+false;protected;0;7;;protected ExecutorService getAsyncStartStopExecutorService() {     if (getComponent() == null) {         throw new IllegalStateException("AsyncStartStopListener requires JmsComponent to be configured on this endpoint: " + this).     }     // use shared thread pool from component     return getComponent().getAsyncStartStopExecutorService(). }
+false;public;1;3;;public void onListenerContainerStarting(AbstractMessageListenerContainer container) {     runningMessageListeners.incrementAndGet(). }
+false;public;1;3;;public void onListenerContainerStopped(AbstractMessageListenerContainer container) {     runningMessageListeners.decrementAndGet(). }
+true;protected;0;3;/**  * State whether this endpoint is running (eg started)  */ ;/**  * State whether this endpoint is running (eg started)  */ protected boolean isRunning() {     return isStarted(). }
+false;public;0;9;;@Override public void stop() throws Exception {     int running = runningMessageListeners.get().     if (running <= 0) {         super.stop().     } else {         log.trace("There are still {} running message listeners. Cannot stop endpoint {}", running, this).     } }
+false;public;0;9;;@Override public void shutdown() throws Exception {     int running = runningMessageListeners.get().     if (running <= 0) {         super.shutdown().     } else {         log.trace("There are still {} running message listeners. Cannot shutdown endpoint {}", running, this).     } }
+true;public;0;4;// ------------------------------------------------------------------------- ;// Delegated properties from the configuration // ------------------------------------------------------------------------- @ManagedAttribute public int getAcknowledgementMode() {     return getConfiguration().getAcknowledgementMode(). }
+false;public;0;4;;@ManagedAttribute public String getAcknowledgementModeName() {     return getConfiguration().getAcknowledgementModeName(). }
+false;public;0;4;;@ManagedAttribute public int getCacheLevel() {     return getConfiguration().getCacheLevel(). }
+false;public;0;4;;@ManagedAttribute public String getCacheLevelName() {     return getConfiguration().getCacheLevelName(). }
+false;public;0;4;;@ManagedAttribute public String getReplyToCacheLevelName() {     return getConfiguration().getReplyToCacheLevelName(). }
+false;public;0;4;;@ManagedAttribute public String getClientId() {     return getConfiguration().getClientId(). }
+false;public;0;4;;@ManagedAttribute public int getConcurrentConsumers() {     return getConfiguration().getConcurrentConsumers(). }
+false;public;0;4;;@ManagedAttribute public int getReplyToConcurrentConsumers() {     return getConfiguration().getReplyToConcurrentConsumers(). }
+false;public;0;3;;public ConnectionFactory getConnectionFactory() {     return getConfiguration().getConnectionFactory(). }
+false;public;0;3;;public DestinationResolver getDestinationResolver() {     return getConfiguration().getDestinationResolver(). }
+false;public;0;4;;@ManagedAttribute public String getDurableSubscriptionName() {     return getConfiguration().getDurableSubscriptionName(). }
+false;public;0;3;;public ExceptionListener getExceptionListener() {     return getConfiguration().getExceptionListener(). }
+false;public;0;3;;public ErrorHandler getErrorHandler() {     return getConfiguration().getErrorHandler(). }
+false;public;0;3;;public LoggingLevel getErrorHandlerLoggingLevel() {     return getConfiguration().getErrorHandlerLoggingLevel(). }
+false;public;0;4;;@ManagedAttribute public boolean isErrorHandlerLogStackTrace() {     return getConfiguration().isErrorHandlerLogStackTrace(). }
+false;public;1;4;;@ManagedAttribute public void setErrorHandlerLogStackTrace(boolean errorHandlerLogStackTrace) {     getConfiguration().setErrorHandlerLogStackTrace(errorHandlerLogStackTrace). }
+false;public;0;4;;@ManagedAttribute public int getIdleTaskExecutionLimit() {     return getConfiguration().getIdleTaskExecutionLimit(). }
+false;public;0;4;;@ManagedAttribute public int getIdleConsumerLimit() {     return getConfiguration().getIdleConsumerLimit(). }
+false;public;0;3;;public JmsOperations getJmsOperations() {     return getConfiguration().getJmsOperations(). }
+false;public;0;3;;public ConnectionFactory getListenerConnectionFactory() {     return getConfiguration().getListenerConnectionFactory(). }
+false;public;0;4;;@ManagedAttribute public int getMaxConcurrentConsumers() {     return getConfiguration().getMaxConcurrentConsumers(). }
+false;public;0;4;;@ManagedAttribute public int getReplyToMaxConcurrentConsumers() {     return getConfiguration().getReplyToMaxConcurrentConsumers(). }
+false;public;0;4;;@ManagedAttribute public int getReplyToOnTimeoutMaxConcurrentConsumers() {     return getConfiguration().getReplyToOnTimeoutMaxConcurrentConsumers(). }
+false;public;0;4;;@ManagedAttribute public int getMaxMessagesPerTask() {     return getConfiguration().getMaxMessagesPerTask(). }
+false;public;0;3;;public MessageConverter getMessageConverter() {     return getConfiguration().getMessageConverter(). }
+false;public;1;3;;public JmsOperations getMetadataJmsOperations(JmsEndpoint endpoint) {     return getConfiguration().getMetadataJmsOperations(endpoint). }
+false;public;0;4;;@ManagedAttribute public int getPriority() {     return getConfiguration().getPriority(). }
+false;public;0;4;;@ManagedAttribute public long getReceiveTimeout() {     return getConfiguration().getReceiveTimeout(). }
+false;public;0;4;;@ManagedAttribute public long getRecoveryInterval() {     return getConfiguration().getRecoveryInterval(). }
+false;public;0;4;;@ManagedAttribute public String getReplyTo() {     return getConfiguration().getReplyTo(). }
+false;public;0;4;;@ManagedAttribute public String getReplyToOverride() {     return getConfiguration().getReplyToOverride(). }
+false;public;0;4;;@ManagedAttribute public boolean isReplyToSameDestinationAllowed() {     return getConfiguration().isReplyToSameDestinationAllowed(). }
+false;public;0;4;;@ManagedAttribute public String getReplyToDestinationSelectorName() {     return getConfiguration().getReplyToDestinationSelectorName(). }
+false;public;0;4;;@ManagedAttribute public long getRequestTimeout() {     return getConfiguration().getRequestTimeout(). }
+false;public;0;4;;@ManagedAttribute public long getRequestTimeoutCheckerInterval() {     return getConfiguration().getRequestTimeoutCheckerInterval(). }
+false;public;0;3;;public TaskExecutor getTaskExecutor() {     return getConfiguration().getTaskExecutor(). }
+false;public;0;3;;public ConnectionFactory getTemplateConnectionFactory() {     return getConfiguration().getTemplateConnectionFactory(). }
+false;public;0;4;;@ManagedAttribute public long getTimeToLive() {     return getConfiguration().getTimeToLive(). }
+false;public;0;3;;public PlatformTransactionManager getTransactionManager() {     return getConfiguration().getTransactionManager(). }
+false;public;0;4;;@ManagedAttribute public String getTransactionName() {     return getConfiguration().getTransactionName(). }
+false;public;0;4;;@ManagedAttribute public int getTransactionTimeout() {     return getConfiguration().getTransactionTimeout(). }
+false;public;0;4;;@ManagedAttribute public boolean isAcceptMessagesWhileStopping() {     return getConfiguration().isAcceptMessagesWhileStopping(). }
+false;public;0;4;;@ManagedAttribute public boolean isAllowReplyManagerQuickStop() {     return getConfiguration().isAllowReplyManagerQuickStop(). }
+false;public;0;4;;@ManagedAttribute public boolean isAlwaysCopyMessage() {     return getConfiguration().isAlwaysCopyMessage(). }
+false;public;0;4;;@ManagedAttribute public boolean isAutoStartup() {     return getConfiguration().isAutoStartup(). }
+false;public;0;4;;@ManagedAttribute public boolean isDeliveryPersistent() {     return getConfiguration().isDeliveryPersistent(). }
+false;public;0;4;;@ManagedAttribute public Integer getDeliveryMode() {     return getConfiguration().getDeliveryMode(). }
+false;public;0;4;;@ManagedAttribute public boolean isDisableReplyTo() {     return getConfiguration().isDisableReplyTo(). }
+false;public;0;4;;@ManagedAttribute public boolean isEagerLoadingOfProperties() {     return getConfiguration().isEagerLoadingOfProperties(). }
+false;public;0;4;;@ManagedAttribute public boolean isExplicitQosEnabled() {     return getConfiguration().isExplicitQosEnabled(). }
+false;public;0;4;;@ManagedAttribute public boolean isExposeListenerSession() {     return getConfiguration().isExposeListenerSession(). }
+false;public;0;4;;@ManagedAttribute public boolean isMessageIdEnabled() {     return getConfiguration().isMessageIdEnabled(). }
+false;public;0;4;;@ManagedAttribute public boolean isMessageTimestampEnabled() {     return getConfiguration().isMessageTimestampEnabled(). }
+false;public;0;4;;@ManagedAttribute public boolean isPreserveMessageQos() {     return getConfiguration().isPreserveMessageQos(). }
+false;public;0;4;;@ManagedAttribute public boolean isPubSubNoLocal() {     return getConfiguration().isPubSubNoLocal(). }
+false;public;0;4;;@ManagedAttribute public boolean isReplyToDeliveryPersistent() {     return getConfiguration().isReplyToDeliveryPersistent(). }
+false;public;0;4;;@ManagedAttribute public boolean isTransacted() {     return getConfiguration().isTransacted(). }
+false;public;0;4;;@ManagedAttribute public boolean isLazyCreateTransactionManager() {     return getConfiguration().isLazyCreateTransactionManager(). }
+false;public;0;4;;@ManagedAttribute public boolean isUseMessageIDAsCorrelationID() {     return getConfiguration().isUseMessageIDAsCorrelationID(). }
+false;public;1;4;;@ManagedAttribute public void setAcceptMessagesWhileStopping(boolean acceptMessagesWhileStopping) {     getConfiguration().setAcceptMessagesWhileStopping(acceptMessagesWhileStopping). }
+false;public;1;4;;@ManagedAttribute public void setAllowReplyManagerQuickStop(boolean allowReplyManagerQuickStop) {     getConfiguration().setAllowReplyManagerQuickStop(allowReplyManagerQuickStop). }
+false;public;1;4;;@ManagedAttribute public void setAcknowledgementMode(int consumerAcknowledgementMode) {     getConfiguration().setAcknowledgementMode(consumerAcknowledgementMode). }
+false;public;1;4;;@ManagedAttribute public void setAcknowledgementModeName(String consumerAcknowledgementMode) {     getConfiguration().setAcknowledgementModeName(consumerAcknowledgementMode). }
+false;public;1;4;;@ManagedAttribute public void setAlwaysCopyMessage(boolean alwaysCopyMessage) {     getConfiguration().setAlwaysCopyMessage(alwaysCopyMessage). }
+false;public;1;4;;@ManagedAttribute public void setAutoStartup(boolean autoStartup) {     getConfiguration().setAutoStartup(autoStartup). }
+false;public;1;4;;@ManagedAttribute public void setCacheLevel(int cacheLevel) {     getConfiguration().setCacheLevel(cacheLevel). }
+false;public;1;4;;@ManagedAttribute public void setCacheLevelName(String cacheName) {     getConfiguration().setCacheLevelName(cacheName). }
+false;public;1;4;;@ManagedAttribute public void setReplyToCacheLevelName(String cacheName) {     getConfiguration().setReplyToCacheLevelName(cacheName). }
+false;public;1;4;;@ManagedAttribute public void setClientId(String consumerClientId) {     getConfiguration().setClientId(consumerClientId). }
+false;public;1;4;;@ManagedAttribute public void setConcurrentConsumers(int concurrentConsumers) {     getConfiguration().setConcurrentConsumers(concurrentConsumers). }
+false;public;1;4;;@ManagedAttribute public void setReplyToConcurrentConsumers(int concurrentConsumers) {     getConfiguration().setReplyToConcurrentConsumers(concurrentConsumers). }
+false;public;1;3;;public void setConnectionFactory(ConnectionFactory connectionFactory) {     getConfiguration().setConnectionFactory(connectionFactory). }
+false;public;1;4;;@ManagedAttribute public void setDeliveryPersistent(boolean deliveryPersistent) {     getConfiguration().setDeliveryPersistent(deliveryPersistent). }
+false;public;1;4;;@ManagedAttribute public void setDeliveryMode(Integer deliveryMode) {     getConfiguration().setDeliveryMode(deliveryMode). }
+false;public;1;3;;public void setDestinationResolver(DestinationResolver destinationResolver) {     getConfiguration().setDestinationResolver(destinationResolver). }
+false;public;1;4;;@ManagedAttribute public void setDisableReplyTo(boolean disableReplyTo) {     getConfiguration().setDisableReplyTo(disableReplyTo). }
+false;public;1;4;;@ManagedAttribute public void setDurableSubscriptionName(String durableSubscriptionName) {     getConfiguration().setDurableSubscriptionName(durableSubscriptionName). }
+false;public;1;4;;@ManagedAttribute public void setEagerLoadingOfProperties(boolean eagerLoadingOfProperties) {     getConfiguration().setEagerLoadingOfProperties(eagerLoadingOfProperties). }
+false;public;1;3;;public void setExceptionListener(ExceptionListener exceptionListener) {     getConfiguration().setExceptionListener(exceptionListener). }
+false;public;1;3;;public void setErrorHandler(ErrorHandler errorHandler) {     getConfiguration().setErrorHandler(errorHandler). }
+false;public;1;4;;@ManagedAttribute public void setExplicitQosEnabled(boolean explicitQosEnabled) {     getConfiguration().setExplicitQosEnabled(explicitQosEnabled). }
+false;public;1;4;;@ManagedAttribute public void setExposeListenerSession(boolean exposeListenerSession) {     getConfiguration().setExposeListenerSession(exposeListenerSession). }
+false;public;1;4;;@ManagedAttribute public void setIdleTaskExecutionLimit(int idleTaskExecutionLimit) {     getConfiguration().setIdleTaskExecutionLimit(idleTaskExecutionLimit). }
+false;public;1;4;;@ManagedAttribute public void setIdleConsumerLimit(int idleConsumerLimit) {     getConfiguration().setIdleConsumerLimit(idleConsumerLimit). }
+false;public;1;3;;public void setJmsOperations(JmsOperations jmsOperations) {     getConfiguration().setJmsOperations(jmsOperations). }
+false;public;1;3;;public void setListenerConnectionFactory(ConnectionFactory listenerConnectionFactory) {     getConfiguration().setListenerConnectionFactory(listenerConnectionFactory). }
+false;public;1;4;;@ManagedAttribute public void setMaxConcurrentConsumers(int maxConcurrentConsumers) {     getConfiguration().setMaxConcurrentConsumers(maxConcurrentConsumers). }
+false;public;1;4;;@ManagedAttribute public void setReplyToMaxConcurrentConsumers(int maxConcurrentConsumers) {     getConfiguration().setReplyToMaxConcurrentConsumers(maxConcurrentConsumers). }
+false;public;1;4;;@ManagedAttribute public void setMaxMessagesPerTask(int maxMessagesPerTask) {     getConfiguration().setMaxMessagesPerTask(maxMessagesPerTask). }
+false;public;1;3;;public void setMessageConverter(MessageConverter messageConverter) {     getConfiguration().setMessageConverter(messageConverter). }
+false;public;1;4;;@ManagedAttribute public void setMessageIdEnabled(boolean messageIdEnabled) {     getConfiguration().setMessageIdEnabled(messageIdEnabled). }
+false;public;1;4;;@ManagedAttribute public void setMessageTimestampEnabled(boolean messageTimestampEnabled) {     getConfiguration().setMessageTimestampEnabled(messageTimestampEnabled). }
+false;public;1;3;;public void setMetadataJmsOperations(JmsOperations metadataJmsOperations) {     getConfiguration().setMetadataJmsOperations(metadataJmsOperations). }
+false;public;1;4;;@ManagedAttribute public void setPreserveMessageQos(boolean preserveMessageQos) {     getConfiguration().setPreserveMessageQos(preserveMessageQos). }
+false;public;1;4;;@ManagedAttribute public void setPriority(int priority) {     getConfiguration().setPriority(priority). }
+false;public;1;3;;public void setProviderMetadata(JmsProviderMetadata providerMetadata) {     getConfiguration().setProviderMetadata(providerMetadata). }
+false;public;1;4;;@ManagedAttribute public void setPubSubNoLocal(boolean pubSubNoLocal) {     getConfiguration().setPubSubNoLocal(pubSubNoLocal). }
+false;public;1;4;;@ManagedAttribute public void setReceiveTimeout(long receiveTimeout) {     getConfiguration().setReceiveTimeout(receiveTimeout). }
+false;public;1;4;;@ManagedAttribute public void setRecoveryInterval(long recoveryInterval) {     getConfiguration().setRecoveryInterval(recoveryInterval). }
+false;public;1;4;;@ManagedAttribute public void setReplyTo(String replyToDestination) {     getConfiguration().setReplyTo(replyToDestination). }
+false;public;1;4;;@ManagedAttribute public void setReplyToOverride(String replyToDestination) {     getConfiguration().setReplyToOverride(replyToDestination). }
+false;public;1;4;;@ManagedAttribute public void setReplyToSameDestinationAllowed(boolean replyToSameDestinationAllowed) {     getConfiguration().setReplyToSameDestinationAllowed(replyToSameDestinationAllowed). }
+false;public;1;4;;@ManagedAttribute public void setReplyToDeliveryPersistent(boolean replyToDeliveryPersistent) {     getConfiguration().setReplyToDeliveryPersistent(replyToDeliveryPersistent). }
+false;public;1;4;;@ManagedAttribute public void setReplyToDestinationSelectorName(String replyToDestinationSelectorName) {     getConfiguration().setReplyToDestinationSelectorName(replyToDestinationSelectorName). }
+false;public;1;4;;@ManagedAttribute public void setRequestTimeout(long requestTimeout) {     getConfiguration().setRequestTimeout(requestTimeout). }
+false;public;1;3;;public void setTaskExecutor(TaskExecutor taskExecutor) {     getConfiguration().setTaskExecutor(taskExecutor). }
+false;public;1;3;;public void setTemplateConnectionFactory(ConnectionFactory templateConnectionFactory) {     getConfiguration().setTemplateConnectionFactory(templateConnectionFactory). }
+false;public;1;4;;@ManagedAttribute public void setTimeToLive(long timeToLive) {     getConfiguration().setTimeToLive(timeToLive). }
+false;public;1;4;;@ManagedAttribute public void setTransacted(boolean consumerTransacted) {     getConfiguration().setTransacted(consumerTransacted). }
+false;public;1;4;;@ManagedAttribute public void setLazyCreateTransactionManager(boolean lazyCreating) {     getConfiguration().setLazyCreateTransactionManager(lazyCreating). }
+false;public;1;3;;public void setTransactionManager(PlatformTransactionManager transactionManager) {     getConfiguration().setTransactionManager(transactionManager). }
+false;public;1;4;;@ManagedAttribute public void setTransactionName(String transactionName) {     getConfiguration().setTransactionName(transactionName). }
+false;public;1;4;;@ManagedAttribute public void setTransactionTimeout(int transactionTimeout) {     getConfiguration().setTransactionTimeout(transactionTimeout). }
+false;public;1;4;;@ManagedAttribute public void setUseMessageIDAsCorrelationID(boolean useMessageIDAsCorrelationID) {     getConfiguration().setUseMessageIDAsCorrelationID(useMessageIDAsCorrelationID). }
+false;public;0;3;;public JmsMessageType getJmsMessageType() {     return getConfiguration().getJmsMessageType(). }
+false;public;1;3;;public void setJmsMessageType(JmsMessageType jmsMessageType) {     getConfiguration().setJmsMessageType(jmsMessageType). }
+false;public;0;3;;public JmsKeyFormatStrategy getJmsKeyFormatStrategy() {     return getConfiguration().getJmsKeyFormatStrategy(). }
+false;public;1;3;;public void setJmsKeyFormatStrategy(JmsKeyFormatStrategy jmsHeaderStrategy) {     getConfiguration().setJmsKeyFormatStrategy(jmsHeaderStrategy). }
+false;public;0;3;;public MessageCreatedStrategy getMessageCreatedStrategy() {     return getConfiguration().getMessageCreatedStrategy(). }
+false;public;1;3;;public void setMessageCreatedStrategy(MessageCreatedStrategy messageCreatedStrategy) {     getConfiguration().setMessageCreatedStrategy(messageCreatedStrategy). }
+false;public;0;4;;@ManagedAttribute public boolean isTransferExchange() {     return getConfiguration().isTransferExchange(). }
+false;public;1;4;;@ManagedAttribute public void setTransferExchange(boolean transferExchange) {     getConfiguration().setTransferExchange(transferExchange). }
+false;public;0;4;;@ManagedAttribute public boolean isAllowSerializedHeaders() {     return getConfiguration().isAllowSerializedHeaders(). }
+false;public;1;4;;@ManagedAttribute public void setAllowSerializedHeaders(boolean allowSerializedHeaders) {     getConfiguration().setAllowSerializedHeaders(allowSerializedHeaders). }
+false;public;0;4;;@ManagedAttribute public boolean isTransferException() {     return getConfiguration().isTransferException(). }
+false;public;1;4;;@ManagedAttribute public void setTransferException(boolean transferException) {     getConfiguration().setTransferException(transferException). }
+false;public;1;4;;@ManagedAttribute public void setTransferFault(boolean transferFault) {     getConfiguration().setTransferFault(transferFault). }
+false;public;0;4;;@ManagedAttribute public boolean isTransferFault() {     return getConfiguration().isTransferFault(). }
+false;public;0;4;;@ManagedAttribute public boolean isTestConnectionOnStartup() {     return configuration.isTestConnectionOnStartup(). }
+false;public;1;4;;@ManagedAttribute public void setTestConnectionOnStartup(boolean testConnectionOnStartup) {     configuration.setTestConnectionOnStartup(testConnectionOnStartup). }
+false;public;0;4;;@ManagedAttribute public boolean isForceSendOriginalMessage() {     return configuration.isForceSendOriginalMessage(). }
+false;public;1;4;;@ManagedAttribute public void setForceSendOriginalMessage(boolean forceSendOriginalMessage) {     configuration.setForceSendOriginalMessage(forceSendOriginalMessage). }
+false;public;0;4;;@ManagedAttribute public boolean isDisableTimeToLive() {     return configuration.isDisableTimeToLive(). }
+false;public;1;4;;@ManagedAttribute public void setDisableTimeToLive(boolean disableTimeToLive) {     configuration.setDisableTimeToLive(disableTimeToLive). }
+false;public;1;4;;@ManagedAttribute public void setAsyncConsumer(boolean asyncConsumer) {     configuration.setAsyncConsumer(asyncConsumer). }
+false;public;0;4;;@ManagedAttribute public boolean isAsyncConsumer() {     return configuration.isAsyncConsumer(). }
+false;public;1;4;;@ManagedAttribute public void setAsyncStartListener(boolean asyncStartListener) {     configuration.setAsyncStartListener(asyncStartListener). }
+false;public;0;4;;@ManagedAttribute public boolean isAsyncStartListener() {     return configuration.isAsyncStartListener(). }
+false;public;1;4;;@ManagedAttribute public void setAsyncStopListener(boolean asyncStopListener) {     configuration.setAsyncStopListener(asyncStopListener). }
+false;public;0;4;;@ManagedAttribute public boolean isAsyncStopListener() {     return configuration.isAsyncStopListener(). }
+false;public;0;4;;@ManagedAttribute public boolean isAllowNullBody() {     return configuration.isAllowNullBody(). }
+false;public;1;4;;@ManagedAttribute public void setAllowNullBody(boolean allowNullBody) {     configuration.setAllowNullBody(allowNullBody). }
+false;public;0;4;;@ManagedAttribute public boolean isIncludeSentJMSMessageID() {     return configuration.isIncludeSentJMSMessageID(). }
+false;public;1;4;;@ManagedAttribute public void setIncludeSentJMSMessageID(boolean includeSentJMSMessageID) {     configuration.setIncludeSentJMSMessageID(includeSentJMSMessageID). }
+false;public;0;4;;@ManagedAttribute public boolean isIncludeAllJMSXProperties() {     return configuration.isIncludeAllJMSXProperties(). }
+false;public;1;4;;@ManagedAttribute public void setIncludeAllJMSXProperties(boolean includeAllJMSXProperties) {     configuration.setIncludeAllJMSXProperties(includeAllJMSXProperties). }
+false;public;0;4;;@ManagedAttribute public DefaultTaskExecutorType getDefaultTaskExecutorType() {     return configuration.getDefaultTaskExecutorType(). }
+false;public;1;3;;public void setDefaultTaskExecutorType(DefaultTaskExecutorType type) {     configuration.setDefaultTaskExecutorType(type). }
+false;public;0;4;;@ManagedAttribute public String getAllowAdditionalHeaders() {     return configuration.getAllowAdditionalHeaders(). }
+false;public;1;4;;@ManagedAttribute public void setAllowAdditionalHeaders(String allowAdditionalHeaders) {     configuration.setAllowAdditionalHeaders(allowAdditionalHeaders). }
+false;public;0;3;;public MessageListenerContainerFactory getMessageListenerContainerFactory() {     return configuration.getMessageListenerContainerFactory(). }
+false;public;1;4;;public void setMessageListenerContainerFactory(MessageListenerContainerFactory messageListenerContainerFactory) {     configuration.setMessageListenerContainerFactory(messageListenerContainerFactory).     configuration.setConsumerType(ConsumerType.Custom). }
+false;public;0;4;;@ManagedAttribute public boolean isSubscriptionDurable() {     return getConfiguration().isSubscriptionDurable(). }
+false;public;1;4;;@ManagedAttribute public void setSubscriptionDurable(boolean subscriptionDurable) {     getConfiguration().setSubscriptionDurable(subscriptionDurable). }
+false;public;0;4;;@ManagedAttribute public boolean isSubscriptionShared() {     return getConfiguration().isSubscriptionShared(). }
+false;public;1;4;;@ManagedAttribute public void setSubscriptionShared(boolean subscriptionShared) {     getConfiguration().setSubscriptionShared(subscriptionShared). }
+false;public;0;4;;@ManagedAttribute public String getSubscriptionName() {     return getConfiguration().getSubscriptionName(). }
+false;public;1;4;;@ManagedAttribute public void setSubscriptionName(String subscriptionName) {     getConfiguration().setSubscriptionName(subscriptionName). }
+false;public;0;8;;@ManagedAttribute public String getReplyToType() {     if (configuration.getReplyToType() != null) {         return configuration.getReplyToType().name().     } else {         return null.     } }
+false;public;1;5;;@ManagedAttribute public void setReplyToType(String replyToType) {     ReplyToType type = ReplyToType.valueOf(replyToType).     configuration.setReplyToType(type). }
+false;public;0;4;;@ManagedAttribute(description = "Number of running message listeners") public int getRunningMessageListeners() {     return runningMessageListeners.get(). }
+false;public;0;4;;@ManagedAttribute public String getSelector() {     return configuration.getSelector(). }
+false;public;1;3;;public void setSelector(String selector) {     configuration.setSelector(selector). }
+false;public;0;4;;@ManagedAttribute public int getWaitForProvisionCorrelationToBeUpdatedCounter() {     return configuration.getWaitForProvisionCorrelationToBeUpdatedCounter(). }
+false;public;1;4;;@ManagedAttribute public void setWaitForProvisionCorrelationToBeUpdatedCounter(int counter) {     configuration.setWaitForProvisionCorrelationToBeUpdatedCounter(counter). }
+false;public;0;4;;@ManagedAttribute public long getWaitForProvisionCorrelationToBeUpdatedThreadSleepingTime() {     return configuration.getWaitForProvisionCorrelationToBeUpdatedThreadSleepingTime(). }
+false;public;1;4;;@ManagedAttribute public void setWaitForProvisionCorrelationToBeUpdatedThreadSleepingTime(long sleepingTime) {     configuration.setWaitForProvisionCorrelationToBeUpdatedThreadSleepingTime(sleepingTime). }
+false;public;0;4;;@ManagedAttribute public boolean isFormatDateHeadersToIso8601() {     return configuration.isFormatDateHeadersToIso8601(). }
+false;public;1;4;;@ManagedAttribute public void setFormatDateHeadersToIso8601(boolean formatDateHeadersToIso8601) {     configuration.setFormatDateHeadersToIso8601(formatDateHeadersToIso8601). }
+false;protected;0;14;;// Implementation methods // ------------------------------------------------------------------------- @Override protected String createEndpointUri() {     String scheme = "jms".     if (destination != null) {         return scheme + ":" + destination.     } else if (destinationName != null) {         return scheme + ":" + destinationName.     }     DestinationResolver resolver = getDestinationResolver().     if (resolver != null) {         return scheme + ":" + resolver.     }     return super.createEndpointUri(). }

@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;0;3;;private boolean isConnectionOpened() {     return connection != null && connection.isOpen(). }
+false;private;0;7;;private Connection openConnection() throws IOException, TimeoutException {     if (!isConnectionOpened()) {         LOGGER.info("Open connection").         connection = connectionFactory.newConnection().     }     return connection. }
+false;private;0;3;;private boolean isChannelOpened() {     return channel != null && channel.isOpen(). }
+false;private;0;7;;private Channel openChannel() throws IOException, TimeoutException {     if (!isChannelOpened()) {         LOGGER.info("Open channel").         channel = openConnection().createChannel().     }     return channel. }
+false;public;0;4;;@Before public void bindQueueExchange() throws IOException, TimeoutException {     openChannel(). }
+false;public;0;17;;@After public void closeConnection() throws TimeoutException {     if (isChannelOpened()) {         try {             LOGGER.info("Close channel").             channel.close().         } catch (IOException e) {         }     }     if (isConnectionOpened()) {         try {             LOGGER.info("Close connection").             connection.close().         } catch (IOException e) {         }     } }
+false;public;4;5;;@Override public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {     lastBody = body.     super.handleDelivery(consumerTag, envelope, properties, body). }
+false;public;0;3;;public byte[] getLastBody() {     return lastBody. }
+false;public;0;3;;public String getLastBodyAsString() {     return lastBody == null ? null : new String(lastBody). }
+false;public;0;15;;@Test public void testSendCustomConnectionFactory() throws Exception {     String body = "Hello Rabbit".     template.sendBodyAndHeader(body, RabbitMQConstants.ROUTING_KEY, "rk2").     openChannel().     LastDeliveryConsumer consumer = new LastDeliveryConsumer(channel).     channel.basicConsume("q2", true, consumer).     int i = 10.     while (consumer.getLastBody() == null && i > 0) {         Thread.sleep(1000L).         i--.     }     assertEquals(body, consumer.getLastBodyAsString()). }

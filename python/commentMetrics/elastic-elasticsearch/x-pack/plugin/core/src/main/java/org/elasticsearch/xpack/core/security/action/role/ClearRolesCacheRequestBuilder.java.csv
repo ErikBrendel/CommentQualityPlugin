@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;4;/**  * Set the roles to be cleared  *  * @param names the names of the roles that should be cleared  * @return the builder instance  */ ;/**  * Set the roles to be cleared  *  * @param names the names of the roles that should be cleared  * @return the builder instance  */ public ClearRolesCacheRequestBuilder names(String... names) {     request.names(names).     return this. }

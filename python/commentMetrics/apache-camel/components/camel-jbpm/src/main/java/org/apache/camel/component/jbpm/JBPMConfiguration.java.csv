@@ -1,0 +1,58 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getOperation() {     return operation. }
+true;public;1;3;/**  * The operation to perform  */ ;/**  * The operation to perform  */ public void setOperation(String operation) {     this.operation = operation. }
+false;public;0;3;;public Object getValue() {     return value. }
+true;public;1;3;/**  * the value to assign to the global identifier  */ ;/**  * the value to assign to the global identifier  */ public void setValue(Object value) {     this.value = value. }
+false;public;0;3;;public String getProcessId() {     return processId. }
+true;public;1;3;/**  * the id of the process that should be acted upon  */ ;/**  * the id of the process that should be acted upon  */ public void setProcessId(String processId) {     this.processId = processId. }
+false;public;0;3;;public Map<String, Object> getParameters() {     return parameters. }
+true;public;1;3;/**  * the variables that should be set for various operations  */ ;/**  * the variables that should be set for various operations  */ public void setParameters(Map<String, Object> parameters) {     this.parameters = parameters. }
+false;public;0;3;;public Long getProcessInstanceId() {     return processInstanceId. }
+true;public;1;3;/**  * the id of the process instance  */ ;/**  * the id of the process instance  */ public void setProcessInstanceId(Long processInstanceId) {     this.processInstanceId = processInstanceId. }
+false;public;0;3;;public String getEventType() {     return eventType. }
+true;public;1;3;/**  * the type of event to use when signalEvent operation is performed  */ ;/**  * the type of event to use when signalEvent operation is performed  */ public void setEventType(String eventType) {     this.eventType = eventType. }
+false;public;0;3;;public Object getEvent() {     return event. }
+true;public;1;3;/**  * the data associated with this event when signalEvent operation is  * performed  */ ;/**  * the data associated with this event when signalEvent operation is  * performed  */ public void setEvent(Object event) {     this.event = event. }
+false;public;0;3;;public Integer getMaxNumber() {     return maxNumber. }
+true;public;1;3;/**  * the maximum number of rules that should be fired  */ ;/**  * the maximum number of rules that should be fired  */ public void setMaxNumber(Integer maxNumber) {     this.maxNumber = maxNumber. }
+false;public;0;3;;public String getIdentifier() {     return identifier. }
+true;public;1;3;/**  * identifier the global identifier  */ ;/**  * identifier the global identifier  */ public void setIdentifier(String identifier) {     this.identifier = identifier. }
+false;public;0;3;;public Long getWorkItemId() {     return workItemId. }
+true;public;1;3;/**  * the id of the work item  */ ;/**  * the id of the work item  */ public void setWorkItemId(Long workItemId) {     this.workItemId = workItemId. }
+false;public;0;3;;public Long getTaskId() {     return taskId. }
+true;public;1;3;/**  * the id of the task  */ ;/**  * the id of the task  */ public void setTaskId(Long taskId) {     this.taskId = taskId. }
+false;public;0;3;;public String getUserId() {     return userId. }
+true;public;1;3;/**  * userId to use with task operations  */ ;/**  * userId to use with task operations  */ public void setUserId(String userId) {     this.userId = userId. }
+false;public;0;3;;public Task getTask() {     return task. }
+true;public;1;3;/**  * The task instance to use with task operations  */ ;/**  * The task instance to use with task operations  */ public void setTask(Task task) {     this.task = task. }
+false;public;0;3;;public Integer getPage() {     return page. }
+true;public;1;3;/**  * The page to use when retrieving user tasks  */ ;/**  * The page to use when retrieving user tasks  */ public void setPage(Integer page) {     this.page = page. }
+false;public;0;3;;public Integer getPageSize() {     return pageSize. }
+true;public;1;3;/**  * The page size to use when retrieving user tasks  */ ;/**  * The page size to use when retrieving user tasks  */ public void setPageSize(Integer pageSize) {     this.pageSize = pageSize. }
+false;public;0;3;;public String getTargetUserId() {     return targetUserId. }
+true;public;1;3;/**  * The targetUserId used when delegating a task  */ ;/**  * The targetUserId used when delegating a task  */ public void setTargetUserId(String targetUserId) {     this.targetUserId = targetUserId. }
+false;public;0;3;;public Long getAttachmentId() {     return attachmentId. }
+true;public;1;3;/**  * attachId to use when retrieving attachments  */ ;/**  * attachId to use when retrieving attachments  */ public void setAttachmentId(Long attachmentId) {     this.attachmentId = attachmentId. }
+false;public;0;3;;public Long getContentId() {     return contentId. }
+true;public;1;3;/**  * contentId to use when retrieving attachments  */ ;/**  * contentId to use when retrieving attachments  */ public void setContentId(Long contentId) {     this.contentId = contentId. }
+false;public;0;3;;public List<String> getEntities() {     return entities. }
+true;public;1;3;/**  * The potentialOwners when nominateTask operation is performed  */ ;/**  * The potentialOwners when nominateTask operation is performed  */ public void setEntities(List<String> entities) {     this.entities = entities. }
+false;public;0;3;;public List<String> getStatuses() {     return statuses. }
+true;public;1;3;/**  * The list of status to use when filtering tasks  */ ;/**  * The list of status to use when filtering tasks  */ public void setStatuses(List<String> statuses) {     this.statuses = statuses. }
+false;public;0;3;;public String getUserName() {     return userName. }
+true;public;1;3;/**  * Username for authentication  */ ;/**  * Username for authentication  */ public void setUserName(String userName) {     this.userName = userName. }
+false;public;0;3;;public String getPassword() {     return password. }
+true;public;1;3;/**  * Password for authentication  */ ;/**  * Password for authentication  */ public void setPassword(String password) {     this.password = password. }
+false;public;0;3;;public URL getConnectionURL() {     return connectionURL. }
+true;public;1;3;/**  * The URL to the jBPM server.  */ ;/**  * The URL to the jBPM server.  */ public void setConnectionURL(URL connectionURL) {     this.connectionURL = connectionURL. }
+false;public;0;3;;public String getDeploymentId() {     return deploymentId. }
+true;public;1;3;/**  * The id of the deployment  */ ;/**  * The id of the deployment  */ public void setDeploymentId(String deploymentId) {     this.deploymentId = deploymentId. }
+false;public;0;3;;public Integer getTimeout() {     return timeout. }
+true;public;1;3;/**  * A timeout value  */ ;/**  * A timeout value  */ public void setTimeout(Integer timeout) {     this.timeout = timeout. }
+false;public;0;3;;public Class[] getExtraJaxbClasses() {     return extraJaxbClasses. }
+true;public;1;3;/**  * To load additional classes when working with XML  */ ;/**  * To load additional classes when working with XML  */ public void setExtraJaxbClasses(Class[] extraJaxbClasses) {     this.extraJaxbClasses = extraJaxbClasses. }
+false;public;0;3;;public String getEventListenerType() {     return eventListenerType. }
+true;public;1;3;/**  * Sets the event listener type to attach to  */ ;/**  * Sets the event listener type to attach to  */ public void setEventListenerType(String eventListenerType) {     this.eventListenerType = eventListenerType. }
+false;public;0;3;;public Boolean getEmitterSendItems() {     return emitterSendItems. }
+true;public;1;3;/**  * Sets if event produced by emitter should be sent as single items or  * complete collection  */ ;/**  * Sets if event produced by emitter should be sent as single items or  * complete collection  */ public void setEmitterSendItems(Boolean emiterSendItems) {     this.emitterSendItems = emiterSendItems. }
+false;public;0;9;;@Override public String toString() {     return "JBPMConfiguration [connectionURL=" + connectionURL + ", operation=" + operation + ", deploymentId=" + deploymentId + ", processInstanceId=" + processInstanceId + ", value=" + value + ", processId=" + processId + ", eventType=" + eventType + ", event=" + event + ", maxNumber=" + maxNumber + ", identifier=" + identifier + ", workItemId=" + workItemId + ", taskId=" + taskId + ", userId=" + userId + ", page=" + page + ", pageSize=" + pageSize + ", targetUserId=" + targetUserId + ", attachmentId=" + attachmentId + ", contentId=" + contentId + ", task=" + task + ", entities=" + entities + ", statuses=" + statuses + ", userName=" + userName + ", password=" + password + ", timeout=" + timeout + ", parameters=" + parameters + ", extraJaxbClasses=" + Arrays.toString(extraJaxbClasses) + ", eventListenerType=" + eventListenerType + "]". }

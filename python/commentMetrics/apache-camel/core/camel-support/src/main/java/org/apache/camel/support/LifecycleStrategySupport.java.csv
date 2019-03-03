@@ -1,0 +1,16 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void onContextStart(CamelContext context) throws VetoCamelContextStartException { // noop }
+false;public;1;4;;@Override public void onContextStop(CamelContext context) { // noop }
+false;public;2;4;;@Override public void onComponentAdd(String name, Component component) { // noop }
+false;public;2;4;;@Override public void onComponentRemove(String name, Component component) { // noop }
+false;public;1;4;;@Override public void onEndpointAdd(Endpoint endpoint) { // noop }
+false;public;1;4;;@Override public void onEndpointRemove(Endpoint endpoint) { // noop }
+false;public;3;4;;@Override public void onServiceAdd(CamelContext context, Service service, Route route) { // noop }
+false;public;3;4;;@Override public void onServiceRemove(CamelContext context, Service service, Route route) { // noop }
+false;public;1;4;;@Override public void onRoutesAdd(Collection<Route> routes) { // noop }
+false;public;1;4;;@Override public void onRoutesRemove(Collection<Route> routes) { // noop }
+false;public;1;4;;@Override public void onRouteContextCreate(RouteContext routeContext) { // noop }
+false;public;3;4;;@Override public void onErrorHandlerAdd(RouteContext routeContext, Processor errorHandler, ErrorHandlerFactory errorHandlerBuilder) { // noop }
+false;public;3;4;;@Override public void onErrorHandlerRemove(RouteContext routeContext, Processor errorHandler, ErrorHandlerFactory errorHandlerBuilder) { // noop }
+false;public;6;5;;@Override public void onThreadPoolAdd(CamelContext camelContext, ThreadPoolExecutor threadPool, String id, String sourceId, String routeId, String threadPoolProfileId) { // noop }
+false;public;2;4;;@Override public void onThreadPoolRemove(CamelContext camelContext, ThreadPoolExecutor threadPool) { // noop }

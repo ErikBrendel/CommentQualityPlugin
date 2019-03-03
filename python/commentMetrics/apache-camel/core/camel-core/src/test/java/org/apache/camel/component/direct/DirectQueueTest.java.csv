@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void testQueue() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedBodiesReceivedInAnyOrder("Hello World", "Bye World", "Bar").     template.sendBody("direct:foo", "Hello World").     template.sendBody("direct:foo", "Bye World").     template.sendBody("direct:bar", "Bar"). }
+false;public;0;6;;@Override public void configure() throws Exception {     from("direct:foo").to("mock:result").     from("direct:bar").to("mock:result"). }
+false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:foo").to("mock:result").             from("direct:bar").to("mock:result").         }     }. }

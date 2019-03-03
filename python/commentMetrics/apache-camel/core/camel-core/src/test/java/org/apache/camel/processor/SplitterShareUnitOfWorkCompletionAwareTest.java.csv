@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@Test public void testCompletionAware() throws Exception {     getMockEndpoint("mock:line").expectedBodiesReceived("A", "B", "C").     getMockEndpoint("mock:result").expectedBodiesReceived("A+B+C").     getMockEndpoint("mock:result").expectedHeaderReceived("foo", "bar").     template.sendBody("direct:start", "A,B,C").     assertMockEndpointsSatisfied(). }
+false;public;0;7;;public void configure() {     from("direct:start").split(body(), new MyStrategy()).shareUnitOfWork().to("mock:line").end().to("mock:result"). }
+false;protected;0;11;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("direct:start").split(body(), new MyStrategy()).shareUnitOfWork().to("mock:line").end().to("mock:result").         }     }. }
+false;public;2;9;;@Override public Exchange aggregate(Exchange oldExchange, Exchange newExchange) {     if (oldExchange == null) {         return newExchange.     }     String body = oldExchange.getIn().getBody() + "+" + newExchange.getIn().getBody().     oldExchange.getIn().setBody(body).     return oldExchange. }
+false;public;1;4;;@Override public void onCompletion(Exchange exchange) {     exchange.getIn().setHeader("foo", "bar"). }

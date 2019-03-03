@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Return the name of the instance that was of the wrong type.  */ ;/**  * Return the name of the instance that was of the wrong type.  */ public String getBeanName() {     return this.beanName. }
+true;public;0;3;/**  * Return the expected type for the bean.  */ ;/**  * Return the expected type for the bean.  */ public Class<?> getRequiredType() {     return this.requiredType. }
+true;public;0;3;/**  * Return the actual type of the instance found.  */ ;/**  * Return the actual type of the instance found.  */ public Class<?> getActualType() {     return this.actualType. }

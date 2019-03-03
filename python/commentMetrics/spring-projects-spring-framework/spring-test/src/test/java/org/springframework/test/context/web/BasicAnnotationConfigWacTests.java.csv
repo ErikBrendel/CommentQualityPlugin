@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Bean public String foo() {     return "enigma". }
+false;public;0;4;;@Bean public ServletContextAwareBean servletContextAwareBean() {     return new ServletContextAwareBean(). }
+false;public;0;4;;@Test public void fooEnigmaAutowired() {     assertEquals("enigma", foo). }
+false;public;0;5;;@Test public void servletContextAwareBeanProcessed() {     assertNotNull(servletContextAwareBean).     assertNotNull(servletContextAwareBean.servletContext). }

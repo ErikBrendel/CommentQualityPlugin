@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public void onApplicationEvent(ContextRefreshedEvent event) {     ReflectionUtils.clearCache().     clearClassLoaderCaches(Thread.currentThread().getContextClassLoader()). }
+false;private;1;14;;private void clearClassLoaderCaches(ClassLoader classLoader) {     if (classLoader == null) {         return.     }     try {         Method clearCacheMethod = classLoader.getClass().getDeclaredMethod("clearCache").         clearCacheMethod.invoke(classLoader).     } catch (Exception ex) {     // Ignore     }     clearClassLoaderCaches(classLoader.getParent()). }

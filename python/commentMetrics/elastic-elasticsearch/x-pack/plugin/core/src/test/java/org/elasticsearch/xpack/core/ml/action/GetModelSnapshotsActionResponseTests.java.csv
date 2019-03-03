@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;10;;@Override protected Response createTestInstance() {     int listSize = randomInt(10).     List<ModelSnapshot> hits = new ArrayList<>(listSize).     for (int j = 0. j < listSize. j++) {         hits.add(ModelSnapshotTests.createRandomized()).     }     QueryPage<ModelSnapshot> snapshots = new QueryPage<>(hits, listSize, ModelSnapshot.RESULTS_FIELD).     return new Response(snapshots). }
+false;protected;0;4;;@Override protected Response createBlankInstance() {     return new Response(). }

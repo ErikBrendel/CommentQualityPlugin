@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public void configure() {     weaveAddLast().to("mock:messages"). }
+false;;3;16;;void advice(@Observes CamelContextStartingEvent event, @Uri("mock:messages") MockEndpoint messages, ModelCamelContext context) throws Exception {     messages.expectedMessageCount(2).     messages.expectedBodiesReceived("Hello", "Bye").     verifier.messages = messages.     RouteReifier.adviceWith(context.getRouteDefinition("route"), context, new AdviceWithRouteBuilder() {          @Override         public void configure() {             weaveAddLast().to("mock:messages").         }     }). }
+false;public;0;3;;@Test public void test() { }
+false;protected;0;4;;@Override protected void verify() throws InterruptedException {     assertIsSatisfied(2L, TimeUnit.SECONDS, messages). }

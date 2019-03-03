@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void testResourceConverterRegistry() {     Assert.assertNotNull(getResourceTypeConverter()). }
+false;public;0;9;;@Test public void testNonNullConversion() throws IOException {     Resource resource = new ClassPathResource("testresource.txt", ResourceConverterTest.class).     Assert.assertTrue(resource.exists()).     InputStream inputStream = getResourceTypeConverter().convertTo(InputStream.class, resource).     byte[] resourceBytes = IOConverter.toBytes(resource.getInputStream()).     byte[] inputStreamBytes = IOConverter.toBytes(inputStream).     Assert.assertArrayEquals(resourceBytes, inputStreamBytes). }
+false;private;0;5;;private TypeConverter getResourceTypeConverter() {     CamelContext camelContext = new DefaultCamelContext().     TypeConverter typeConverter = camelContext.getTypeConverterRegistry().lookup(InputStream.class, Resource.class).     return typeConverter. }

@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Override public ActionRequestValidationException validate() {     ActionRequestValidationException validationException = null.     if (requestInfo == null || requestInfo.mode() == null) {         validationException = addValidationError("[mode] is required", validationException).     }     return validationException. }
+false;public,final;1;4;;@Override public final void readFrom(StreamInput in) throws IOException {     throw new UnsupportedOperationException("usage of Streamable is to be replaced by Writeable"). }
+false;public;1;6;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeEnum(requestInfo.mode()).     out.writeOptionalString(requestInfo.clientId()). }
+false;public;0;3;;public RequestInfo requestInfo() {     return requestInfo. }
+false;public;1;3;;public void requestInfo(RequestInfo requestInfo) {     this.requestInfo = requestInfo. }
+false;public;0;3;;public Mode mode() {     return requestInfo.mode(). }
+false;public;1;3;;public void mode(Mode mode) {     this.requestInfo.mode(mode). }
+false;public;1;3;;public void mode(String mode) {     this.requestInfo.mode(Mode.fromString(mode)). }
+false;public;0;3;;public String clientId() {     return requestInfo.clientId(). }
+false;public;1;3;;public void clientId(String clientId) {     this.requestInfo.clientId(clientId). }
+false;public;1;7;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     AbstractSqlRequest that = (AbstractSqlRequest) o.     return Objects.equals(requestInfo, that.requestInfo). }
+false;public;0;4;;@Override public int hashCode() {     return requestInfo.hashCode(). }

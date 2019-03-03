@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,static;0;3;/**  * Returns true if we successfully loaded native libraries.  * <p>  * If this returns false, then native operations such as locking  * memory did not work.  */ ;/**  * Returns true if we successfully loaded native libraries.  * <p>  * If this returns false, then native operations such as locking  * memory did not work.  */ public static boolean isNativesAvailable() {     return Natives.JNA_AVAILABLE. }
+true;public,static;0;3;/**  * Returns true if we were able to lock the process's address space.  */ ;/**  * Returns true if we were able to lock the process's address space.  */ public static boolean isMemoryLocked() {     return Natives.isMemoryLocked(). }
+true;public,static;0;3;/**  * Returns true if system call filter is installed (supported systems only)  */ ;/**  * Returns true if system call filter is installed (supported systems only)  */ public static boolean isSystemCallFilterInstalled() {     return Natives.isSystemCallFilterInstalled(). }
+false;public;0;4;;@Override public int size() {     return sysprops.size(). }
+false;public;0;4;;@Override public boolean isEmpty() {     return sysprops.isEmpty(). }
+false;public;0;4;;@Override public Enumeration<Object> keys() {     return sysprops.keys(). }
+false;public;0;4;;@Override public Enumeration<Object> elements() {     return sysprops.elements(). }
+false;public;1;4;;@Override public Object get(Object key) {     return sysprops.get(key). }
+false;public;2;4;;@Override public Object put(Object key, Object value) {     throw new UnsupportedOperationException("treat system properties as immutable"). }
+false;public;1;4;;@Override public Object remove(Object key) {     throw new UnsupportedOperationException("treat system properties as immutable"). }
+true;public,static;0;7;/**  * Returns a read-only view of all system properties  */ ;/**  * Returns a read-only view of all system properties  */ public static Dictionary<Object, Object> getSystemProperties() {     SecurityManager sm = System.getSecurityManager().     if (sm != null) {         sm.checkPropertyAccess("*").     }     return SYSTEM_PROPERTIES. }
+false;public,static;0;2;;public static void init() { }

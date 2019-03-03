@@ -1,0 +1,41 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static <A extends InternalTerms<A, B>, B extends InternalTerms.Bucket<B>> boolean hasValue(InternalTerms<A, B> agg) {     return agg.getBuckets().stream().anyMatch(bucket -> bucket.getDocCount() > 0). }
+false;public,static;1;3;;public static boolean hasValue(UnmappedTerms agg) {     return false. }
+false;public,static;1;3;;public static boolean hasValue(UnmappedSignificantTerms agg) {     return false. }
+false;public,static;1;3;;public static boolean hasValue(UnmappedSampler agg) {     return false. }
+false;public,static;1;3;;public static boolean hasValue(InternalAdjacencyMatrix agg) {     return agg.getBuckets().stream().anyMatch(bucket -> bucket.getDocCount() > 0). }
+false;public,static;1;3;;public static boolean hasValue(InternalFilters agg) {     return agg.getBuckets().stream().anyMatch(bucket -> bucket.getDocCount() > 0). }
+false;public,static;1;3;;public static boolean hasValue(InternalFilter agg) {     return agg.getDocCount() > 0. }
+false;public,static;1;3;;public static boolean hasValue(InternalGeoGrid<?> agg) {     return agg.getBuckets().stream().anyMatch(bucket -> bucket.getDocCount() > 0). }
+false;public,static;1;3;;public static boolean hasValue(InternalGlobal agg) {     return agg.getDocCount() > 0. }
+false;public,static;1;3;;public static boolean hasValue(InternalHistogram agg) {     return agg.getBuckets().stream().anyMatch(bucket -> bucket.getDocCount() > 0). }
+false;public,static;1;3;;public static boolean hasValue(InternalDateHistogram agg) {     return agg.getBuckets().stream().anyMatch(bucket -> bucket.getDocCount() > 0). }
+false;public,static;1;3;;public static boolean hasValue(InternalAutoDateHistogram agg) {     return agg.getBuckets().stream().anyMatch(bucket -> bucket.getDocCount() > 0). }
+false;public,static;1;3;;public static boolean hasValue(InternalComposite agg) {     return agg.getBuckets().stream().anyMatch(bucket -> bucket.getDocCount() > 0). }
+false;public,static;1;3;;public static boolean hasValue(InternalMissing agg) {     return agg.getDocCount() > 0. }
+false;public,static;1;3;;public static boolean hasValue(InternalNested agg) {     return agg.getDocCount() > 0. }
+false;public,static;1;3;;public static boolean hasValue(InternalReverseNested agg) {     return agg.getDocCount() > 0. }
+false;public,static;1;3;;public static <B extends InternalRange.Bucket, R extends InternalRange<B, R>> boolean hasValue(InternalRange<B, R> agg) {     return agg.getBuckets().stream().anyMatch(bucket -> bucket.getDocCount() > 0). }
+false;public,static;1;3;;public static boolean hasValue(InternalSampler agg) {     return agg.getDocCount() > 0. }
+false;public,static;1;4;;public static <A extends InternalSignificantTerms<A, B>, B extends InternalSignificantTerms.Bucket<B>> boolean hasValue(InternalSignificantTerms<A, B> agg) {     return agg.getBuckets().stream().anyMatch(bucket -> bucket.getDocCount() > 0). }
+false;public,static;1;3;;public static boolean hasValue(InternalAvg agg) {     return MetricInspectionHelper.hasValue(agg). }
+false;public,static;1;4;;public static boolean hasValue(InternalSum agg) {     // TODO this could be incorrect... e.g. +1 + -1     return agg.getValue() != 0.0. }
+false;public,static;1;3;;public static boolean hasValue(InternalCardinality agg) {     return MetricInspectionHelper.hasValue(agg). }
+false;public,static;1;3;;public static boolean hasValue(InternalExtendedStats agg) {     return agg.getCount() > 0. }
+false;public,static;1;3;;public static boolean hasValue(InternalGeoBounds agg) {     return (agg.topLeft() == null && agg.bottomRight() == null) == false. }
+false;public,static;1;3;;public static boolean hasValue(InternalGeoCentroid agg) {     return agg.centroid() != null && agg.count() > 0. }
+false;public,static;1;3;;public static boolean hasValue(InternalHDRPercentileRanks agg) {     return MetricInspectionHelper.hasValue(agg). }
+false;public,static;1;3;;public static boolean hasValue(InternalHDRPercentiles agg) {     return MetricInspectionHelper.hasValue(agg). }
+false;public,static;1;3;;public static boolean hasValue(InternalMax agg) {     return agg.getValue() != Double.NEGATIVE_INFINITY. }
+false;public,static;1;3;;public static boolean hasValue(InternalMedianAbsoluteDeviation agg) {     return MetricInspectionHelper.hasValue(agg). }
+false;public,static;1;3;;public static boolean hasValue(InternalMin agg) {     return agg.getValue() != Double.POSITIVE_INFINITY. }
+false;public,static;1;3;;public static boolean hasValue(InternalScriptedMetric agg) {     return MetricInspectionHelper.hasValue(agg). }
+false;public,static;1;3;;public static boolean hasValue(InternalStats agg) {     return agg.getCount() > 0. }
+false;public,static;1;3;;public static boolean hasValue(InternalTDigestPercentileRanks agg) {     return MetricInspectionHelper.hasValue(agg). }
+false;public,static;1;3;;public static boolean hasValue(InternalTDigestPercentiles agg) {     return MetricInspectionHelper.hasValue(agg). }
+false;public,static;1;3;;public static boolean hasValue(InternalTopHits agg) {     return MetricInspectionHelper.hasValue(agg). }
+false;public,static;1;3;;public static boolean hasValue(InternalValueCount agg) {     return agg.getValue() > 0. }
+false;public,static;1;3;;public static boolean hasValue(InternalWeightedAvg agg) {     return MetricInspectionHelper.hasValue(agg). }
+false;public,static;1;4;;public static boolean hasValue(InternalSimpleValue agg) {     // This is a coarse approximation, since some aggs use positive/negative infinity or NaN     return (Double.isInfinite(agg.getValue()) || Double.isNaN(agg.getValue())) == false. }
+false;public,static;1;3;;public static boolean hasValue(InternalBucketMetricValue agg) {     return Double.isInfinite(agg.value()) == false. }
+false;public,static;1;3;;public static boolean hasValue(InternalPercentilesBucket agg) {     return StreamSupport.stream(agg.spliterator(), false).allMatch(p -> Double.isNaN(p.getValue())) == false. }

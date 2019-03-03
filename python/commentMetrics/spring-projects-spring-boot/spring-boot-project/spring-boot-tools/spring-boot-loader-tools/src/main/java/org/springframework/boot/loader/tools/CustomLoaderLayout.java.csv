@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;1;1;/**  * Write the required loader classes into the JAR.  * @param writer the writer used to write the classes  * @throws IOException if the classes cannot be written  */ ;/**  * Write the required loader classes into the JAR.  * @param writer the writer used to write the classes  * @throws IOException if the classes cannot be written  */ void writeLoadedClasses(LoaderClassesWriter writer) throws IOException.

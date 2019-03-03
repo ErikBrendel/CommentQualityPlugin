@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void onMessage(Message<Object> objectMessage) {     this.sendExchange(HazelcastConstants.RECEIVED, null, objectMessage). }

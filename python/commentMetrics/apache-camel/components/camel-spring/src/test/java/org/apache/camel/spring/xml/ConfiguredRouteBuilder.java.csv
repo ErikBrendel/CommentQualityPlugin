@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;public void configure() throws Exception {     ObjectHelper.notNull(fromUri, "fromUri").     ObjectHelper.notNull(toUri, "toUri").     from(fromUri).to(toUri). }
+false;public;0;3;;public String getFromUri() {     return fromUri. }
+false;public;1;3;;public void setFromUri(String fromUri) {     this.fromUri = fromUri. }
+false;public;0;3;;public String getToUri() {     return toUri. }
+false;public;1;3;;public void setToUri(String toUri) {     this.toUri = toUri. }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;public void checkClientTrusted(X509Certificate[] chain, String authType) throws CertificateException {     // everything is trusted     logCertificateChain("Client", chain). }
+false;public;2;4;;public void checkServerTrusted(X509Certificate[] chain, String authType) throws CertificateException {     // everything is trusted     logCertificateChain("Server", chain). }
+false;public;0;4;;public X509Certificate[] getAcceptedIssuers() {     // everything is trusted     return new X509Certificate[0]. }
+false;private,static;2;7;;private static void logCertificateChain(String type, X509Certificate[] chain) {     if (LOG.isDebugEnabled()) {         for (X509Certificate certificate : chain) {             LOG.debug("{} certificate is trusted: {}", type, certificate).         }     } }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public String interpolate(String message, Context context) {     return this.targetInterpolator.interpolate(message, context, LocaleContextHolder.getLocale()). }
+false;public;3;4;;@Override public String interpolate(String message, Context context, Locale locale) {     return this.targetInterpolator.interpolate(message, context, locale). }

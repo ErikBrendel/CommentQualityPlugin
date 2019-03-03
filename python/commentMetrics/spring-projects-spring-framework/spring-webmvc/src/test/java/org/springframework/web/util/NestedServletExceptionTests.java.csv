@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void testNestedServletExceptionString() {     NestedServletException exception = new NestedServletException("foo").     assertEquals("foo", exception.getMessage()). }
+false;public;0;7;;@Test public void testNestedServletExceptionStringThrowable() {     Throwable cause = new RuntimeException().     NestedServletException exception = new NestedServletException("foo", cause).     assertEquals(NestedExceptionUtils.buildMessage("foo", cause), exception.getMessage()).     assertEquals(cause, exception.getCause()). }
+false;public;0;6;;@Test public void testNestedServletExceptionStringNullThrowable() {     // This can happen if someone is sloppy with Throwable causes...     NestedServletException exception = new NestedServletException("foo", null).     assertEquals("foo", exception.getMessage()). }

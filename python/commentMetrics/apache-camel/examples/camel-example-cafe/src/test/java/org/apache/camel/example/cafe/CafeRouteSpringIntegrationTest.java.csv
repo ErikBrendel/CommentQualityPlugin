@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Before public void setUp() throws Exception {     applicationContext = new ClassPathXmlApplicationContext("META-INF/spring/camel-context.xml").     CamelContext camelContext = getCamelContext().     template = camelContext.createProducerTemplate(). }
+false;public;0;12;;@Test public void testCafeRoute() throws Exception {     Order order = new Order(2).     order.addItem(DrinkType.ESPRESSO, 2, true).     order.addItem(DrinkType.CAPPUCCINO, 4, false).     order.addItem(DrinkType.LATTE, 4, false).     order.addItem(DrinkType.MOCHA, 2, false).     template.sendBody("direct:cafe", order).     Thread.sleep(7000). }
+false;public;0;6;;@After public void tearDown() throws Exception {     if (applicationContext != null) {         applicationContext.stop().     } }
+false;protected;0;3;;protected CamelContext getCamelContext() throws Exception {     return applicationContext.getBean("camel", CamelContext.class). }

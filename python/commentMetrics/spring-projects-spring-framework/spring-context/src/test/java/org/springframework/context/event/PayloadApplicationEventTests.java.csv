@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void testEventClassWithInterface() {     ApplicationContext ac = new AnnotationConfigApplicationContext(AuditableListener.class).     AuditablePayloadEvent event = new AuditablePayloadEvent<>(this, "xyz").     ac.publishEvent(event).     assertTrue(ac.getBean(AuditableListener.class).events.contains(event)). }
+false;public;1;4;;@EventListener public void onEvent(Auditable event) {     events.add(event). }

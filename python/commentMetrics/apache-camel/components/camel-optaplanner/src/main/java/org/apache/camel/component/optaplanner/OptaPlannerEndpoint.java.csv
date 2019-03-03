@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;10;;protected Solver<Object> getOrCreateSolver(String solverId) throws Exception {     synchronized (SOLVERS) {         Solver<Object> solver = SOLVERS.get(solverId).         if (solver == null) {             solver = createSolver().             SOLVERS.put(solverId, solver).         }         return solver.     } }
+false;protected;0;3;;protected Solver<Object> createSolver() {     return solverFactory.buildSolver(). }
+false;protected;1;5;;protected Solver<Object> getSolver(String solverId) {     synchronized (SOLVERS) {         return SOLVERS.get(solverId).     } }
+false;public;0;4;;@Override public Producer createProducer() throws Exception {     return new OptaPlannerProducer(this, configuration). }
+false;public;1;4;;@Override public Consumer createConsumer(Processor processor) throws Exception {     return new OptaPlannerConsumer(this, processor, configuration). }
+false;public;0;4;;@Override public boolean isSingleton() {     return true. }
+false;protected;0;10;;@Override protected void doStop() throws Exception {     synchronized (SOLVERS) {         for (Solver<Object> solver : SOLVERS.values()) {             solver.terminateEarly().             SOLVERS.remove(solver).         }     }     super.doStop(). }

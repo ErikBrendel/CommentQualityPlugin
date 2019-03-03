@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getName() {     return "verify_repository_action". }
+false;public;2;7;;@Override public RestChannelConsumer prepareRequest(final RestRequest request, final NodeClient client) throws IOException {     VerifyRepositoryRequest verifyRepositoryRequest = verifyRepositoryRequest(request.param("repository")).     verifyRepositoryRequest.masterNodeTimeout(request.paramAsTime("master_timeout", verifyRepositoryRequest.masterNodeTimeout())).     verifyRepositoryRequest.timeout(request.paramAsTime("timeout", verifyRepositoryRequest.timeout())).     return channel -> client.admin().cluster().verifyRepository(verifyRepositoryRequest, new RestToXContentListener<>(channel)). }

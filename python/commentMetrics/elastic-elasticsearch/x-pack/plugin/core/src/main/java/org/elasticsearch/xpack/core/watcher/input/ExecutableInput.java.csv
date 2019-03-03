@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,final;0;3;/**  * @return the type of this input  */ ;/**  * @return the type of this input  */ public final String type() {     return input.type(). }
+false;public;0;3;;public I input() {     return input. }
+true;public,abstract;2;1;/**  * Executes this input  */ ;/**  * Executes this input  */ public abstract R execute(WatchExecutionContext ctx, @Nullable Payload payload).
+false;public;2;4;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     return input.toXContent(builder, params). }
+false;public;1;9;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     ExecutableInput<?, ?> that = (ExecutableInput<?, ?>) o.     return input.equals(that.input). }
+false;public;0;4;;@Override public int hashCode() {     return input.hashCode(). }

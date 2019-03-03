@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;8;;public static <T> Iterator<T> concat(Iterator<? extends T>... iterators) {     if (iterators == null) {         throw new NullPointerException("iterators").     }     // explicit generic type argument needed for type inference     return new ConcatenatedIterator<T>(iterators). }
+false;public;0;9;;@Override public boolean hasNext() {     boolean hasNext = false.     while (index < iterators.length && !(hasNext = iterators[index].hasNext())) {         index++.     }     return hasNext. }
+false;public;0;7;;@Override public T next() {     if (!hasNext()) {         throw new NoSuchElementException().     }     return iterators[index].next(). }

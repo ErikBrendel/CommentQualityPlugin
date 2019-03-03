@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;1;4;;@Override void extractVariables(Set<String> variables) {     throw createError(new IllegalStateException("Illegal tree structure.")). }
+false;;1;12;;@Override void analyze(Locals locals) {     if ("length".equals(value)) {         if (write) {             throw createError(new IllegalArgumentException("Cannot write to read-only field [length] for an array.")).         }         actual = int.class.     } else {         throw createError(new IllegalArgumentException("Field [" + value + "] does not exist for type [" + type + "].")).     } }
+false;;2;5;;@Override void write(MethodWriter writer, Globals globals) {     writer.writeDebugInfo(location).     writer.arrayLength(). }
+false;;0;4;;@Override int accessElementCount() {     throw new IllegalStateException("Illegal tree structure."). }
+false;;0;4;;@Override boolean isDefOptimized() {     throw new IllegalStateException("Illegal tree structure."). }
+false;;1;4;;@Override void updateActual(Class<?> actual) {     throw new IllegalStateException("Illegal tree structure."). }
+false;;2;4;;@Override void setup(MethodWriter writer, Globals globals) {     throw new IllegalStateException("Illegal tree structure."). }
+false;;2;4;;@Override void load(MethodWriter writer, Globals globals) {     throw new IllegalStateException("Illegal tree structure."). }
+false;;2;4;;@Override void store(MethodWriter writer, Globals globals) {     throw new IllegalStateException("Illegal tree structure."). }
+false;public;0;4;;@Override public String toString() {     return singleLineToString(prefix). }

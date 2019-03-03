@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static GetAutoFollowPatternResponse fromXContent(final XContentParser parser) {     return PARSER.apply(parser, null). }
+false;public;0;3;;public NavigableMap<String, Pattern> getPatterns() {     return patterns. }
+false;public;1;7;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     GetAutoFollowPatternResponse that = (GetAutoFollowPatternResponse) o.     return Objects.equals(patterns, that.patterns). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(patterns). }
+false;public;0;3;;public String getRemoteCluster() {     return remoteCluster. }
+false;public;0;3;;public List<String> getLeaderIndexPatterns() {     return leaderIndexPatterns. }
+false;public;0;3;;public String getFollowIndexNamePattern() {     return followIndexNamePattern. }
+false;public;1;10;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     if (!super.equals(o))         return false.     Pattern pattern = (Pattern) o.     return Objects.equals(remoteCluster, pattern.remoteCluster) && Objects.equals(leaderIndexPatterns, pattern.leaderIndexPatterns) && Objects.equals(followIndexNamePattern, pattern.followIndexNamePattern). }
+false;public;0;9;;@Override public int hashCode() {     return Objects.hash(super.hashCode(), remoteCluster, leaderIndexPatterns, followIndexNamePattern). }

@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getProfileName() {     return channel.getProfileName(). }
+false;public;0;4;;@Override public String getChannelType() {     return channel.getChannelType(). }
+false;public;1;5;;@Override public void sendResponse(TransportResponse response) throws IOException {     endTask().     channel.sendResponse(response). }
+false;public;1;5;;@Override public void sendResponse(Exception exception) throws IOException {     endTask().     channel.sendResponse(exception). }
+false;public;0;4;;@Override public Version getVersion() {     return channel.getVersion(). }
+false;public;0;3;;public TransportChannel getChannel() {     return channel. }
+false;private;0;3;;private void endTask() {     taskManager.unregister(task). }

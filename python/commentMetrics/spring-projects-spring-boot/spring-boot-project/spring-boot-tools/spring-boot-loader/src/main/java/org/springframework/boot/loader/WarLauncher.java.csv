@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;10;;@Override public boolean isNestedArchive(Archive.Entry entry) {     if (entry.isDirectory()) {         return entry.getName().equals(WEB_INF_CLASSES).     } else {         return entry.getName().startsWith(WEB_INF_LIB) || entry.getName().startsWith(WEB_INF_LIB_PROVIDED).     } }
+false;public,static;1;3;;public static void main(String[] args) throws Exception {     new WarLauncher().launch(args). }

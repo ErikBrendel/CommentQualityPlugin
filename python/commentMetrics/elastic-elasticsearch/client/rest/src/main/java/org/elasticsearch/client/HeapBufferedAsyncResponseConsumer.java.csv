@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Get the limit of the buffer.  */ ;/**  * Get the limit of the buffer.  */ public int getBufferLimit() {     return bufferLimitBytes. }
+false;protected;1;4;;@Override protected void onResponseReceived(HttpResponse response) throws HttpException, IOException {     this.response = response. }
+false;protected;2;13;;@Override protected void onEntityEnclosed(HttpEntity entity, ContentType contentType) throws IOException {     long len = entity.getContentLength().     if (len > bufferLimitBytes) {         throw new ContentTooLongException("entity content is too long [" + len + "] for the configured buffer limit [" + bufferLimitBytes + "]").     }     if (len < 0) {         len = 4096.     }     this.buf = new SimpleInputBuffer((int) len, getByteBufferAllocator()).     this.response.setEntity(new ContentBufferEntity(entity, this.buf)). }
+true;protected;0;3;/**  * Returns the instance of {@link ByteBufferAllocator} to use for content buffering.  * Allows to plug in any {@link ByteBufferAllocator} implementation.  */ ;/**  * Returns the instance of {@link ByteBufferAllocator} to use for content buffering.  * Allows to plug in any {@link ByteBufferAllocator} implementation.  */ protected ByteBufferAllocator getByteBufferAllocator() {     return HeapByteBufferAllocator.INSTANCE. }
+false;protected;2;4;;@Override protected void onContentReceived(ContentDecoder decoder, IOControl ioctrl) throws IOException {     this.buf.consumeContent(decoder). }
+false;protected;1;4;;@Override protected HttpResponse buildResult(HttpContext context) throws Exception {     return response. }
+false;protected;0;4;;@Override protected void releaseResources() {     response = null. }

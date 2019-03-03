@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public void configure() throws Exception {     from("direct:start").to("guava-eventbus:eventBus"). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").to("guava-eventbus:eventBus").         }     }. }
+false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry registry = super.createRegistry().     registry.bind("eventBus", eventBus).     return registry. }
+false;public;0;12;;@Test public void shouldReceiveMessageFromCamel() throws InterruptedException {     // Given     String message = "message".     eventBus.register(this).     // When     sendBody("direct:start", message).     // Then     assertEquals(message, receivedEvent). }
+false;public;1;4;;@Subscribe public void receiveEvent(Object event) {     this.receivedEvent = event. }

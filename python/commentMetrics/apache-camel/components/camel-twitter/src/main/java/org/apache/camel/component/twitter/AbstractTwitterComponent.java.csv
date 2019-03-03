@@ -1,0 +1,20 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;3;18;;@Override protected Endpoint createEndpoint(String uri, String remaining, Map<String, Object> parameters) throws Exception {     TwitterConfiguration properties = new TwitterConfiguration().     properties.setConsumerKey(consumerKey).     properties.setConsumerSecret(consumerSecret).     properties.setAccessToken(accessToken).     properties.setAccessTokenSecret(accessTokenSecret).     properties.setHttpProxyHost(httpProxyHost).     properties.setHttpProxyUser(httpProxyUser).     properties.setHttpProxyPassword(httpProxyPassword).     if (httpProxyPort != null) {         properties.setHttpProxyPort(httpProxyPort).     }     // and then override from parameters     setProperties(properties, parameters).     return doCreateEndpoint(properties, uri, remaining, parameters). }
+false;protected,abstract;4;1;;protected abstract Endpoint doCreateEndpoint(TwitterConfiguration properties, String uri, String remaining, Map<String, Object> parameters) throws Exception.
+false;public;0;3;;public String getAccessToken() {     return accessToken. }
+true;public;1;3;/**  * The access token  */ ;/**  * The access token  */ public void setAccessToken(String accessToken) {     this.accessToken = accessToken. }
+false;public;0;3;;public String getAccessTokenSecret() {     return accessTokenSecret. }
+true;public;1;3;/**  * The access token secret  */ ;/**  * The access token secret  */ public void setAccessTokenSecret(String accessTokenSecret) {     this.accessTokenSecret = accessTokenSecret. }
+false;public;0;3;;public String getConsumerKey() {     return consumerKey. }
+true;public;1;3;/**  * The consumer key  */ ;/**  * The consumer key  */ public void setConsumerKey(String consumerKey) {     this.consumerKey = consumerKey. }
+false;public;0;3;;public String getConsumerSecret() {     return consumerSecret. }
+true;public;1;3;/**  * The consumer secret  */ ;/**  * The consumer secret  */ public void setConsumerSecret(String consumerSecret) {     this.consumerSecret = consumerSecret. }
+true;public;1;3;/**  * The http proxy host which can be used for the camel-twitter.  */ ;/**  * The http proxy host which can be used for the camel-twitter.  */ public void setHttpProxyHost(String httpProxyHost) {     this.httpProxyHost = httpProxyHost. }
+false;public;0;3;;public String getHttpProxyHost() {     return httpProxyHost. }
+true;public;1;3;/**  * The http proxy user which can be used for the camel-twitter.  */ ;/**  * The http proxy user which can be used for the camel-twitter.  */ public void setHttpProxyUser(String httpProxyUser) {     this.httpProxyUser = httpProxyUser. }
+false;public;0;3;;public String getHttpProxyUser() {     return httpProxyUser. }
+true;public;1;3;/**  * The http proxy password which can be used for the camel-twitter.  */ ;/**  * The http proxy password which can be used for the camel-twitter.  */ public void setHttpProxyPassword(String httpProxyPassword) {     this.httpProxyPassword = httpProxyPassword. }
+false;public;0;3;;public String getHttpProxyPassword() {     return httpProxyPassword. }
+true;public;1;3;/**  * The http proxy port which can be used for the camel-twitter.  */ ;/**  * The http proxy port which can be used for the camel-twitter.  */ public void setHttpProxyPort(int httpProxyPort) {     this.httpProxyPort = httpProxyPort. }
+false;public;0;3;;public Integer getHttpProxyPort() {     return httpProxyPort. }
+true;public;0;3;/**  * Get a verifier for the component.  */ ;/**  * Get a verifier for the component.  */ public ComponentVerifierExtension getVerifier() {     return (scope, parameters) -> getExtension(ComponentVerifierExtension.class).orElseThrow(UnsupportedOperationException::new).verify(scope, parameters). }

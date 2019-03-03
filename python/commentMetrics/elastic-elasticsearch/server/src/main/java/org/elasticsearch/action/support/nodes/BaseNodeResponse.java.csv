@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * The node this information relates to.  */ ;/**  * The node this information relates to.  */ public DiscoveryNode getNode() {     return node. }
+false;public;1;5;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     node = new DiscoveryNode(in). }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     node.writeTo(out). }

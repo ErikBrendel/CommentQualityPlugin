@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;3;6;;public static <T> void addIfNotNull(T object, String argKey, List<String> command) {     if (object != null) {         String param = argKey + object.         command.add(param).     } }
+false;public,static;3;3;;public static void addIfNotNull(TimeValue timeValue, String argKey, List<String> command) {     addIfNotNull(timeValue == null ? null : timeValue.getSeconds(), argKey, command). }
+true;public,static;1;5;/**  * Return true if there is a file ES_HOME/config/mlmodel.conf  */ ;/**  * Return true if there is a file ES_HOME/config/mlmodel.conf  */ public static boolean modelConfigFilePresent(Environment env) {     Path modelConfPath = XPackPlugin.resolveConfigFile(env, ML_MODEL_CONF).     return Files.isRegularFile(modelConfPath). }

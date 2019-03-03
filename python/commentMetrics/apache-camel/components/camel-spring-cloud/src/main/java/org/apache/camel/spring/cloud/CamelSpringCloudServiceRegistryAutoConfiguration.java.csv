@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;8;;@Bean @ConditionalOnMissingBean public ServiceRegistry camelServiceRegistry(Collection<org.springframework.core.convert.ConversionService> conversionServices, org.springframework.cloud.client.serviceregistry.ServiceRegistry serviceRegistry) {     return new CamelSpringCloudServiceRegistry(conversionServices, serviceRegistry). }

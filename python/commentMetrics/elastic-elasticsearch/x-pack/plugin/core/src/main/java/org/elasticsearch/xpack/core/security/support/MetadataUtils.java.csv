@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;8;;public static boolean containsReservedMetadata(Map<String, Object> metadata) {     for (String key : metadata.keySet()) {         if (key.startsWith(RESERVED_PREFIX)) {             return true.         }     }     return false. }

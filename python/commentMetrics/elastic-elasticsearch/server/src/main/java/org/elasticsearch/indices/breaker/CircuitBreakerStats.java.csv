@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeLong(limit).     out.writeLong(estimated).     out.writeDouble(overhead).     out.writeLong(trippedCount).     out.writeString(name). }
+false;public;0;3;;public String getName() {     return this.name. }
+false;public;0;3;;public long getLimit() {     return this.limit. }
+false;public;0;3;;public long getEstimated() {     return this.estimated. }
+false;public;0;3;;public long getTrippedCount() {     return this.trippedCount. }
+false;public;0;3;;public double getOverhead() {     return this.overhead. }
+false;public;2;12;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject(name.toLowerCase(Locale.ROOT)).     builder.field(Fields.LIMIT, limit).     builder.field(Fields.LIMIT_HUMAN, new ByteSizeValue(limit)).     builder.field(Fields.ESTIMATED, estimated).     builder.field(Fields.ESTIMATED_HUMAN, new ByteSizeValue(estimated)).     builder.field(Fields.OVERHEAD, overhead).     builder.field(Fields.TRIPPED_COUNT, trippedCount).     builder.endObject().     return builder. }
+false;public;0;7;;@Override public String toString() {     return "[" + this.name + ",limit=" + this.limit + "/" + new ByteSizeValue(this.limit) + ",estimated=" + this.estimated + "/" + new ByteSizeValue(this.estimated) + ",overhead=" + this.overhead + ",tripped=" + this.trippedCount + "]". }

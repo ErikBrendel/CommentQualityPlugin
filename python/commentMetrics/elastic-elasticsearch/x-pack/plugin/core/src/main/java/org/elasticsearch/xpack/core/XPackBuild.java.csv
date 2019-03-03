@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;static;0;9;/**  * Returns path to xpack codebase path  */ ;/**  * Returns path to xpack codebase path  */ @SuppressForbidden(reason = "looks up path of xpack.jar directly") static Path getElasticsearchCodebase() {     URL url = XPackBuild.class.getProtectionDomain().getCodeSource().getLocation().     try {         return PathUtils.get(url.toURI()).     } catch (URISyntaxException bogus) {         throw new RuntimeException(bogus).     } }
+false;public;0;3;;public String shortHash() {     return shortHash. }
+false;public;0;3;;public String date() {     return date. }

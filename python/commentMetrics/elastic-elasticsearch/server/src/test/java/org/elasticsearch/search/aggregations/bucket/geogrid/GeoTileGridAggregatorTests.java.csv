@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected int randomPrecision() {     return randomIntBetween(0, GeoTileUtils.MAX_ZOOM). }
+false;protected;3;4;;@Override protected String hashAsString(double lng, double lat, int precision) {     return GeoTileUtils.stringEncode(GeoTileUtils.longEncode(lng, lat, precision)). }
+false;protected;1;4;;@Override protected GeoGridAggregationBuilder createBuilder(String name) {     return new GeoTileGridAggregationBuilder(name). }
+false;public;0;10;;public void testPrecision() {     final GeoGridAggregationBuilder builder = createBuilder("_name").     expectThrows(IllegalArgumentException.class, () -> builder.precision(-1)).     expectThrows(IllegalArgumentException.class, () -> builder.precision(30)).     int precision = randomIntBetween(0, 29).     builder.precision(precision).     assertEquals(precision, builder.precision()). }

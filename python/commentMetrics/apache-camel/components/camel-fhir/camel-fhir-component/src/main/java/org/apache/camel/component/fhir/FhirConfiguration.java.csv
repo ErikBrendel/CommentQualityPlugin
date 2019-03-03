@@ -1,0 +1,53 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getServerUrl() {     return serverUrl. }
+false;public;1;3;;public void setServerUrl(String serverUrl) {     this.serverUrl = serverUrl. }
+false;public;0;3;;public FhirVersionEnum getFhirVersion() {     return fhirVersion. }
+false;public;1;3;;public void setFhirVersion(String fhirVersion) {     this.fhirVersion = FhirVersionEnum.valueOf(fhirVersion). }
+false;public;0;3;;public EncodingEnum getEncoding() {     return encoding. }
+false;public;1;3;;public void setEncoding(String encoding) {     this.encoding = EncodingEnum.valueOf(encoding). }
+false;public;0;3;;public boolean isPrettyPrint() {     return prettyPrint. }
+false;public;1;3;;public void setPrettyPrint(boolean prettyPrint) {     this.prettyPrint = prettyPrint. }
+false;public;0;3;;public SummaryEnum getSummary() {     return summary. }
+false;public;1;3;;public void setSummary(String summary) {     this.summary = SummaryEnum.valueOf(summary). }
+false;public;0;3;;public FhirApiName getApiName() {     return apiName. }
+true;public;1;3;/**  * What kind of operation to perform  */ ;/**  * What kind of operation to perform  */ public void setApiName(FhirApiName apiName) {     this.apiName = apiName. }
+false;public;0;3;;public String getMethodName() {     return methodName. }
+true;public;1;3;/**  * What sub operation to use for the selected operation  */ ;/**  * What sub operation to use for the selected operation  */ public void setMethodName(String methodName) {     this.methodName = methodName. }
+false;public;0;3;;public FhirContext getFhirContext() {     return fhirContext. }
+false;public;1;3;;public void setFhirContext(FhirContext fhirContext) {     this.fhirContext = fhirContext. }
+false;public;0;3;;public boolean isForceConformanceCheck() {     return forceConformanceCheck. }
+false;public;1;3;;public void setForceConformanceCheck(boolean forceConformanceCheck) {     this.forceConformanceCheck = forceConformanceCheck. }
+false;public;0;3;;public String getUsername() {     return username. }
+false;public;1;3;;public void setUsername(String username) {     this.username = username. }
+false;public;0;3;;public String getPassword() {     return password. }
+false;public;1;3;;public void setPassword(String password) {     this.password = password. }
+false;public;0;3;;public String getAccessToken() {     return accessToken. }
+false;public;1;3;;public void setAccessToken(String accessToken) {     this.accessToken = accessToken. }
+false;public;0;3;;public boolean isLog() {     return log. }
+false;public;1;3;;public void setLog(boolean log) {     this.log = log. }
+false;public;0;3;;public boolean isCompress() {     return compress. }
+false;public;1;3;;public void setCompress(boolean compress) {     this.compress = compress. }
+false;public;0;3;;public String getSessionCookie() {     return sessionCookie. }
+false;public;1;3;;public void setSessionCookie(String sessionCookie) {     this.sessionCookie = sessionCookie. }
+false;public;0;3;;public ServerValidationModeEnum getValidationMode() {     return validationMode. }
+false;public;1;3;;public void setValidationMode(String validationMode) {     this.validationMode = ServerValidationModeEnum.valueOf(validationMode). }
+false;public;0;3;;public boolean isDeferModelScanning() {     return deferModelScanning. }
+false;public;1;3;;public void setDeferModelScanning(boolean deferModelScanning) {     this.deferModelScanning = deferModelScanning. }
+false;public;0;3;;public Integer getConnectionTimeout() {     return connectionTimeout. }
+false;public;1;3;;public void setConnectionTimeout(Integer connectionTimeout) {     this.connectionTimeout = connectionTimeout. }
+false;public;0;3;;public Integer getSocketTimeout() {     return socketTimeout. }
+false;public;1;3;;public void setSocketTimeout(Integer socketTimeout) {     this.socketTimeout = socketTimeout. }
+false;public;0;3;;public String getProxyHost() {     return proxyHost. }
+false;public;1;3;;public void setProxyHost(String proxyHost) {     this.proxyHost = proxyHost. }
+false;public;0;3;;public String getProxyPassword() {     return proxyPassword. }
+false;public;1;3;;public void setProxyPassword(String proxyPassword) {     this.proxyPassword = proxyPassword. }
+false;public;0;3;;public Integer getProxyPort() {     return proxyPort. }
+false;public;1;3;;public void setProxyPort(Integer proxyPort) {     this.proxyPort = proxyPort. }
+false;public;0;3;;public String getProxyUser() {     return proxyUser. }
+false;public;1;3;;public void setProxyUser(String proxyUser) {     this.proxyUser = proxyUser. }
+false;public;0;3;;public IGenericClient getClient() {     return client. }
+false;public;1;3;;public void setClient(IGenericClient client) {     this.client = client. }
+false;public;0;3;;public IRestfulClientFactory getClientFactory() {     return clientFactory. }
+false;public;1;3;;public void setClientFactory(IRestfulClientFactory clientFactory) {     this.clientFactory = clientFactory. }
+false;public;1;27;;@Override public boolean equals(Object other) {     if (other instanceof FhirConfiguration) {         FhirConfiguration otherFhirConfiguration = (FhirConfiguration) other.         return ObjectHelper.equal(prettyPrint, otherFhirConfiguration.isPrettyPrint()) && ObjectHelper.equal(log, otherFhirConfiguration.isLog()) && ObjectHelper.equal(compress, otherFhirConfiguration.isCompress()) && ObjectHelper.equal(forceConformanceCheck, otherFhirConfiguration.isForceConformanceCheck()) && ObjectHelper.equal(fhirVersion, otherFhirConfiguration.getFhirVersion()) && ObjectHelper.equal(deferModelScanning, otherFhirConfiguration.isDeferModelScanning()) && ObjectHelper.equal(encoding, otherFhirConfiguration.getEncoding()) && ObjectHelper.equal(username, otherFhirConfiguration.getUsername()) && ObjectHelper.equal(password, otherFhirConfiguration.getPassword()) && ObjectHelper.equal(accessToken, otherFhirConfiguration.getAccessToken()) && ObjectHelper.equal(summary, otherFhirConfiguration.getSummary()) && ObjectHelper.equal(sessionCookie, otherFhirConfiguration.getSessionCookie()) && ObjectHelper.equal(validationMode, otherFhirConfiguration.getValidationMode()) && ObjectHelper.equal(connectionTimeout, otherFhirConfiguration.getConnectionTimeout()) && ObjectHelper.equal(socketTimeout, otherFhirConfiguration.getSocketTimeout()) && ObjectHelper.equal(proxyHost, otherFhirConfiguration.getProxyHost()) && ObjectHelper.equal(proxyPort, otherFhirConfiguration.getProxyPort()) && ObjectHelper.equal(proxyUser, otherFhirConfiguration.getProxyUser()) && ObjectHelper.equal(proxyPassword, otherFhirConfiguration.getProxyPassword()) && ObjectHelper.equal(serverUrl, otherFhirConfiguration.getServerUrl()).     }     return false. }
+false;public;0;24;;@Override public int hashCode() {     int result = serverUrl != null ? serverUrl.hashCode() : 0.     result = 31 * result + (fhirVersion != null ? fhirVersion.hashCode() : 0).     result = 31 * result + (prettyPrint ? 1 : 0).     result = 31 * result + (encoding != null ? encoding.hashCode() : 0).     result = 31 * result + (username != null ? username.hashCode() : 0).     result = 31 * result + (password != null ? password.hashCode() : 0).     result = 31 * result + (accessToken != null ? accessToken.hashCode() : 0).     result = 31 * result + (log ? 1 : 0).     result = 31 * result + (compress ? 1 : 0).     result = 31 * result + (summary != null ? summary.hashCode() : 0).     result = 31 * result + (sessionCookie != null ? sessionCookie.hashCode() : 0).     result = 31 * result + (forceConformanceCheck ? 1 : 0).     result = 31 * result + (validationMode != null ? validationMode.hashCode() : 0).     result = 31 * result + (deferModelScanning ? 1 : 0).     result = 31 * result + (connectionTimeout != null ? connectionTimeout.hashCode() : 0).     result = 31 * result + (socketTimeout != null ? socketTimeout.hashCode() : 0).     result = 31 * result + (proxyHost != null ? proxyHost.hashCode() : 0).     result = 31 * result + (proxyPort != null ? proxyPort.hashCode() : 0).     result = 31 * result + (proxyUser != null ? proxyUser.hashCode() : 0).     result = 31 * result + (proxyPassword != null ? proxyPassword.hashCode() : 0).     return result. }

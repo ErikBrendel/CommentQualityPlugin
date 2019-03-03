@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void checkProducerBeanInjection() {     AbstractApplicationContext applicationContext = createApplicationContext().     MyProduceBean bean = applicationContext.getBean("myProduceBean", MyProduceBean.class).     assertNotNull("The producerTemplate should not be null.", bean.getProducerTemplate()).     assertEquals("Get a wrong response", "Camel rocks!", bean.getProducerTemplate().requestBody("Camel")). }
+false;protected;0;3;;protected AbstractApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/test/patterns/ProduceBeanInjectTest.xml"). }

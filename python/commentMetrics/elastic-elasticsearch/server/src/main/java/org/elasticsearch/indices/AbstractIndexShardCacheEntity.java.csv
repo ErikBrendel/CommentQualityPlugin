@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;protected,abstract;0;1;/**  * Get the {@linkplain ShardRequestCache} used to track cache statistics.  */ ;/**  * Get the {@linkplain ShardRequestCache} used to track cache statistics.  */ protected abstract ShardRequestCache stats().
+false;public,final;2;4;;@Override public final void onCached(IndicesRequestCache.Key key, BytesReference value) {     stats().onCached(key, value). }
+false;public,final;0;4;;@Override public final void onHit() {     stats().onHit(). }
+false;public,final;0;4;;@Override public final void onMiss() {     stats().onMiss(). }
+false;public,final;1;5;;@Override public final void onRemoval(RemovalNotification<IndicesRequestCache.Key, BytesReference> notification) {     stats().onRemoval(notification.getKey(), notification.getValue(), notification.getRemovalReason() == RemovalNotification.RemovalReason.EVICTED). }

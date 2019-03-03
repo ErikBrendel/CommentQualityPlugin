@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;16;;@Test public void testSecurityFilterDoesNotCauseEarlyInitialization() {     try (AnnotationConfigServletWebServerApplicationContext context = new AnnotationConfigServletWebServerApplicationContext()) {         TestPropertyValues.of("server.port:0").applyTo(context).         context.register(Config.class).         context.refresh().         int port = context.getWebServer().getPort().         String password = this.output.toString().split("Using generated security password: ")[1].split("\n")[0].trim().         new TestRestTemplate("user", password).getForEntity("http://localhost:" + port, Object.class).     // If early initialization occurred a ConverterNotFoundException is thrown     } }
+false;public;0;6;;@Bean public TomcatServletWebServerFactory webServerFactory() {     TomcatServletWebServerFactory factory = new TomcatServletWebServerFactory().     factory.setPort(0).     return factory. }
+false;public;2;4;;@Override public SourceType deserialize(JsonParser p, DeserializationContext ctxt) {     return new SourceType(). }
+false;public;0;4;;@RequestMapping("/") public void convert() {     this.conversionService.convert(new SourceType(), DestinationType.class). }
+false;public;1;4;;@Override public DestinationType convert(SourceType source) {     return new DestinationType(). }

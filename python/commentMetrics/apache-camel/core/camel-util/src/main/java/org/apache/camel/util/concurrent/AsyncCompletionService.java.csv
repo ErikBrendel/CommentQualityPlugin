@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public ReentrantLock getLock() {     return lock. }
+false;public;1;4;;public void submit(Consumer<Consumer<V>> runner) {     Task f = new Task(nextId.getAndIncrement(), runner).     this.executor.execute(f). }
+false;public;0;3;;public void skip() {     index.incrementAndGet(). }
+false;public;0;10;;public V pollUnordered() {     final ReentrantLock lock = this.lock.     lock.lock().     try {         Task t = queue.poll().         return t != null ? t.result : null.     } finally {         lock.unlock().     } }
+false;public;0;15;;public V poll() {     final ReentrantLock lock = this.lock.     lock.lock().     try {         Task t = queue.peek().         if (t != null && (!ordered || index.compareAndSet(t.id, t.id + 1))) {             queue.poll().             return t.result.         } else {             return null.         }     } finally {         lock.unlock().     } }
+false;public;2;21;;public V poll(long timeout, TimeUnit unit) throws InterruptedException {     long nanos = unit.toNanos(timeout).     final ReentrantLock lock = this.lock.     lock.lockInterruptibly().     try {         for (. . ) {             Task t = queue.peek().             if (t != null && (!ordered || index.compareAndSet(t.id, t.id + 1))) {                 queue.poll().                 return t.result.             }             if (nanos <= 0) {                 return null.             } else {                 nanos = available.awaitNanos(nanos).             }         }     } finally {         lock.unlock().     } }
+false;public;0;16;;public V take() throws InterruptedException {     final ReentrantLock lock = this.lock.     lock.lockInterruptibly().     try {         for (. . ) {             Task t = queue.peek().             if (t != null && (!ordered || index.compareAndSet(t.id, t.id + 1))) {                 queue.poll().                 return t.result.             }             available.await().         }     } finally {         lock.unlock().     } }
+false;private;1;10;;private void complete(Task task) {     final ReentrantLock lock = this.lock.     lock.lock().     try {         queue.add(task).         available.signalAll().     } finally {         lock.unlock().     } }
+false;public;0;4;;@Override public void run() {     runner.accept(this::setResult). }
+false;protected;1;4;;protected void setResult(V result) {     this.result = result.     complete(this). }
+false;public;1;3;;public int compareTo(Task other) {     return Long.compare(this.id, other.id). }
+false;public;0;3;;public String toString() {     return "SubmitOrderedFutureTask[" + this.id + "]". }

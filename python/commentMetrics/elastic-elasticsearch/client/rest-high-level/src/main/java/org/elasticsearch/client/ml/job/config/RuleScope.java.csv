@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;21;;public static ContextParser<Void, RuleScope> parser() {     return (p, c) -> {         Map<String, Object> unparsedScope = p.map().         if (unparsedScope.isEmpty()) {             return new RuleScope().         }         Map<String, FilterRef> scope = new HashMap<>().         for (Map.Entry<String, Object> entry : unparsedScope.entrySet()) {             try (XContentBuilder builder = XContentFactory.jsonBuilder()) {                 @SuppressWarnings("unchecked")                 Map<String, ?> value = (Map<String, ?>) entry.getValue().                 builder.map(value).                 try (XContentParser scopeParser = XContentFactory.xContent(builder.contentType()).createParser(NamedXContentRegistry.EMPTY, DEPRECATION_HANDLER, Strings.toString(builder))) {                     scope.put(entry.getKey(), FilterRef.PARSER.parse(scopeParser, null)).                 }             }         }         return new RuleScope(scope).     }. }
+false;public;2;2;;@Override public void usedDeprecatedName(String usedName, String modernName) { }
+false;public;2;2;;@Override public void usedDeprecatedField(String usedName, String replacedWith) { }
+false;public;2;4;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     return builder.map(scope). }
+false;public;0;3;;public boolean isEmpty() {     return scope.isEmpty(). }
+false;public;0;3;;public Set<String> getReferencedFilters() {     return scope.values().stream().map(FilterRef::getFilterId).collect(Collectors.toSet()). }
+false;public;1;13;;@Override public boolean equals(Object obj) {     if (this == obj) {         return true.     }     if (obj instanceof RuleScope == false) {         return false.     }     RuleScope other = (RuleScope) obj.     return Objects.equals(scope, other.scope). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(scope). }
+false;public,static;0;3;;public static Builder builder() {     return new Builder(). }
+false;public;2;4;;public Builder exclude(String field, String filterId) {     scope.put(field, new FilterRef(filterId, FilterRef.FilterType.EXCLUDE)).     return this. }
+false;public;2;4;;public Builder include(String field, String filterId) {     scope.put(field, new FilterRef(filterId, FilterRef.FilterType.INCLUDE)).     return this. }
+false;public;0;3;;public RuleScope build() {     return new RuleScope(scope). }

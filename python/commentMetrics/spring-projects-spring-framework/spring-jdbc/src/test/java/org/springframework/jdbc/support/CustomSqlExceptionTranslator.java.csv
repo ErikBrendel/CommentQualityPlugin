@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;7;;@Override public DataAccessException translate(String task, @Nullable String sql, SQLException ex) {     if (ex.getErrorCode() == 2) {         return new TransientDataAccessResourceException("Custom", ex).     }     return null. }

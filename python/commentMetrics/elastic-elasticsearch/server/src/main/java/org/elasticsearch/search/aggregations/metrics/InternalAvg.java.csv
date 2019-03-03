@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;6;;@Override protected void doWriteTo(StreamOutput out) throws IOException {     out.writeNamedWriteable(format).     out.writeDouble(sum).     out.writeVLong(count). }
+false;public;0;4;;@Override public double value() {     return getValue(). }
+false;public;0;4;;@Override public double getValue() {     return sum / count. }
+false;;0;3;;double getSum() {     return sum. }
+false;;0;3;;long getCount() {     return count. }
+false;;0;3;;DocValueFormat getFormatter() {     return format. }
+false;public;0;4;;@Override public String getWriteableName() {     return AvgAggregationBuilder.NAME. }
+false;public;2;21;;@Override public InternalAvg doReduce(List<InternalAggregation> aggregations, ReduceContext reduceContext) {     long count = 0.     double sum = 0.     double compensation = 0.     // accurate than naive summation.     for (InternalAggregation aggregation : aggregations) {         InternalAvg avg = (InternalAvg) aggregation.         count += avg.count.         if (Double.isFinite(avg.sum) == false) {             sum += avg.sum.         } else if (Double.isFinite(sum)) {             double corrected = avg.sum - compensation.             double newSum = sum + corrected.             compensation = (newSum - sum) - corrected.             sum = newSum.         }     }     return new InternalAvg(getName(), sum, count, format, pipelineAggregators(), getMetaData()). }
+false;public;2;8;;@Override public XContentBuilder doXContentBody(XContentBuilder builder, Params params) throws IOException {     builder.field(CommonFields.VALUE.getPreferredName(), count != 0 ? getValue() : null).     if (count != 0 && format != DocValueFormat.RAW) {         builder.field(CommonFields.VALUE_AS_STRING.getPreferredName(), format.format(getValue()).toString()).     }     return builder. }
+false;protected;0;4;;@Override protected int doHashCode() {     return Objects.hash(sum, count, format.getWriteableName()). }
+false;protected;1;7;;@Override protected boolean doEquals(Object obj) {     InternalAvg other = (InternalAvg) obj.     return Objects.equals(sum, other.sum) && Objects.equals(count, other.count) && Objects.equals(format.getWriteableName(), other.format.getWriteableName()). }

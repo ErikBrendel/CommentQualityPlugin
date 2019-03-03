@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void testBothBeansAreProxies() {     Object tb = ctx.getBean("testBean").     assertTrue(AopUtils.isAopProxy(tb)).     Object tb2 = ctx.getBean("testBean2").     assertTrue(AopUtils.isAopProxy(tb2)). }

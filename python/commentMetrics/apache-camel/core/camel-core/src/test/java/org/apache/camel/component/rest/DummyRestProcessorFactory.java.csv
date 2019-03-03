@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void process(Exchange exchange) throws Exception { // noop }
+false;public;6;10;;@Override public Processor createApiProcessor(CamelContext camelContext, String contextPath, String contextIdPattern, boolean contextIdListing, RestConfiguration configuration, Map<String, Object> parameters) throws Exception {     return new Processor() {          @Override         public void process(Exchange exchange) throws Exception {         // noop         }     }. }

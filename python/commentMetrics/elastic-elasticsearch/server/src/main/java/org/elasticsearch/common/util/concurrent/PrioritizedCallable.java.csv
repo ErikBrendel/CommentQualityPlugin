@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;2;3;;public static <T> PrioritizedCallable<T> wrap(Callable<T> callable, Priority priority) {     return new Wrapped<>(callable, priority). }
+false;public;1;4;;@Override public int compareTo(PrioritizedCallable pc) {     return priority.compareTo(pc.priority). }
+false;public;0;3;;public Priority priority() {     return priority. }
+false;public;0;4;;@Override public T call() throws Exception {     return callable.call(). }

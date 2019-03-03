@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;public void destroy() {     // Clean up the BusFactory's defaultBus     // This method is not called magically, blueprint     // needs you to set the destroy-method.     BusFactory.setDefaultBus(null).     BusFactory.setThreadDefaultBus(null). }
+false;public;1;3;;public void setServiceClass(String n) throws ClassNotFoundException {     setServiceClass(bundleContext.getBundle().loadClass(n)). }
+false;protected;2;5;;// Package private methods // ------------------------------------------------------------------------- protected void checkName(Object value, String name) {     if (ObjectHelper.isEmpty(value)) {         log.warn("The " + name + " of " + this.getEndpointUri() + " is empty, cxf will try to load the first one in wsdl for you.").     } }
+false;public;0;3;;public BlueprintContainer getBlueprintContainer() {     return blueprintContainer. }
+false;public;1;3;;public void setBlueprintContainer(BlueprintContainer blueprintContainer) {     this.blueprintContainer = blueprintContainer. }
+false;public;0;3;;public BundleContext getBundleContext() {     return bundleContext. }
+false;public;1;3;;public void setBundleContext(BundleContext bundleContext) {     this.bundleContext = bundleContext. }
+false;public;0;3;;public BlueprintCamelContext getBlueprintCamelContext() {     return blueprintCamelContext. }
+false;public;1;3;;public void setBlueprintCamelContext(BlueprintCamelContext blueprintCamelContext) {     this.blueprintCamelContext = blueprintCamelContext. }
+false;public;0;3;;public CxfBlueprintEndpoint getBean() {     return this. }

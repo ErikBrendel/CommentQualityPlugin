@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;1;1;/**  * Return the field values for the given element.  * @param element the element to inspect  * @return a map of field names to values.  * @throws Exception if the values cannot be extracted  */ ;/**  * Return the field values for the given element.  * @param element the element to inspect  * @return a map of field names to values.  * @throws Exception if the values cannot be extracted  */ Map<String, Object> getFieldValues(TypeElement element) throws Exception.

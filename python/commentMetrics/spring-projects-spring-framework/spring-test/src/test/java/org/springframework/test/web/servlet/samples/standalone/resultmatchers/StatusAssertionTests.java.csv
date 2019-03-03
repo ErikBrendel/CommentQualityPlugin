@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void testStatusInt() throws Exception {     this.mockMvc.perform(get("/created")).andExpect(status().is(201)).     this.mockMvc.perform(get("/createdWithComposedAnnotation")).andExpect(status().is(201)).     this.mockMvc.perform(get("/badRequest")).andExpect(status().is(400)). }
+false;public;0;6;;@Test public void testHttpStatus() throws Exception {     this.mockMvc.perform(get("/created")).andExpect(status().isCreated()).     this.mockMvc.perform(get("/createdWithComposedAnnotation")).andExpect(status().isCreated()).     this.mockMvc.perform(get("/badRequest")).andExpect(status().isBadRequest()). }
+false;public;0;4;;@Test public void testMatcher() throws Exception {     this.mockMvc.perform(get("/badRequest")).andExpect(status().is(equalTo(400))). }
+false;public;0;7;;@Test public void testReasonEqualTo() throws Exception {     this.mockMvc.perform(get("/badRequest")).andExpect(status().reason("Expired token")).     // Hamcrest matchers...     this.mockMvc.perform(get("/badRequest")).andExpect(status().reason(equalTo("Expired token"))). }
+false;public;0;4;;@Test public void testReasonMatcher() throws Exception {     this.mockMvc.perform(get("/badRequest")).andExpect(status().reason(endsWith("token"))). }
+false;public;0;4;;@RequestMapping("/created") @ResponseStatus(CREATED) @ResponseBody public void created() { }
+false;public;0;3;;@Get(path = "/createdWithComposedAnnotation", status = CREATED) @ResponseBody public void createdWithComposedAnnotation() { }
+false;public;0;4;;@RequestMapping("/badRequest") @ResponseStatus(code = BAD_REQUEST, reason = "Expired token") @ResponseBody public void badRequest() { }
+false;public;0;4;;@RequestMapping("/notImplemented") @ResponseStatus(NOT_IMPLEMENTED) @ResponseBody public void notImplemented() { }

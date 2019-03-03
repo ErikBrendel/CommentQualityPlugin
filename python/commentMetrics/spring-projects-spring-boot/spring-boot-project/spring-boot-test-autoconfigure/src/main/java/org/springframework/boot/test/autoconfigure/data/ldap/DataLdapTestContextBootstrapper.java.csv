@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;6;;@Override protected String[] getProperties(Class<?> testClass) {     DataLdapTest annotation = AnnotatedElementUtils.getMergedAnnotation(testClass, DataLdapTest.class).     return (annotation != null) ? annotation.properties() : null. }

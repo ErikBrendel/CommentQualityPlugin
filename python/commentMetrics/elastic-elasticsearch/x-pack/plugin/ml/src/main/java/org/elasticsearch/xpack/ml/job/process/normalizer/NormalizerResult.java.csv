@@ -1,0 +1,23 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;14;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeOptionalString(level).     out.writeOptionalString(partitionFieldName).     out.writeOptionalString(partitionFieldValue).     out.writeOptionalString(personFieldName).     if (out.getVersion().onOrAfter(Version.V_6_5_0)) {         out.writeOptionalString(personFieldValue).     }     out.writeOptionalString(functionName).     out.writeOptionalString(valueFieldName).     out.writeDouble(probability).     out.writeDouble(normalizedScore). }
+false;public;2;15;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(LEVEL_FIELD.getPreferredName(), level).     builder.field(PARTITION_FIELD_NAME_FIELD.getPreferredName(), partitionFieldName).     builder.field(PARTITION_FIELD_VALUE_FIELD.getPreferredName(), partitionFieldValue).     builder.field(PERSON_FIELD_NAME_FIELD.getPreferredName(), personFieldName).     builder.field(PERSON_FIELD_VALUE_FIELD.getPreferredName(), personFieldValue).     builder.field(FUNCTION_NAME_FIELD.getPreferredName(), functionName).     builder.field(VALUE_FIELD_NAME_FIELD.getPreferredName(), valueFieldName).     builder.field(PROBABILITY_FIELD.getPreferredName(), probability).     builder.field(NORMALIZED_SCORE_FIELD.getPreferredName(), normalizedScore).     builder.endObject().     return builder. }
+false;public;0;3;;public String getLevel() {     return level. }
+false;public;1;3;;public void setLevel(String level) {     this.level = level. }
+false;public;0;3;;public String getPartitionFieldName() {     return partitionFieldName. }
+false;public;1;3;;public void setPartitionFieldName(String partitionFieldName) {     this.partitionFieldName = partitionFieldName. }
+false;public;0;3;;public String getPartitionFieldValue() {     return partitionFieldValue. }
+false;public;1;3;;public void setPartitionFieldValue(String partitionFieldValue) {     this.partitionFieldValue = partitionFieldValue. }
+false;public;0;3;;public String getPersonFieldName() {     return personFieldName. }
+false;public;1;3;;public void setPersonFieldName(String personFieldName) {     this.personFieldName = personFieldName. }
+false;public;0;3;;public String getPersonFieldValue() {     return personFieldValue. }
+false;public;1;3;;public void setPersonFieldValue(String personFieldValue) {     this.personFieldValue = personFieldValue. }
+false;public;0;3;;public String getFunctionName() {     return functionName. }
+false;public;1;3;;public void setFunctionName(String functionName) {     this.functionName = functionName. }
+false;public;0;3;;public String getValueFieldName() {     return valueFieldName. }
+false;public;1;3;;public void setValueFieldName(String valueFieldName) {     this.valueFieldName = valueFieldName. }
+false;public;0;3;;public double getProbability() {     return probability. }
+false;public;1;3;;public void setProbability(double probability) {     this.probability = probability. }
+false;public;0;3;;public double getNormalizedScore() {     return normalizedScore. }
+false;public;1;3;;public void setNormalizedScore(double normalizedScore) {     this.normalizedScore = normalizedScore. }
+false;public;0;5;;@Override public int hashCode() {     return Objects.hash(level, partitionFieldName, partitionFieldValue, personFieldName, personFieldValue, functionName, valueFieldName, probability, normalizedScore). }
+true;public;1;22;/**  * Compare all the fields.  */ ;/**  * Compare all the fields.  */ @Override public boolean equals(Object other) {     if (this == other) {         return true.     }     if (!(other instanceof NormalizerResult)) {         return false.     }     NormalizerResult that = (NormalizerResult) other.     return Objects.equals(this.level, that.level) && Objects.equals(this.partitionFieldName, that.partitionFieldName) && Objects.equals(this.partitionFieldValue, that.partitionFieldValue) && Objects.equals(this.personFieldName, that.personFieldName) && Objects.equals(this.personFieldValue, that.personFieldValue) && Objects.equals(this.functionName, that.functionName) && Objects.equals(this.valueFieldName, that.valueFieldName) && this.probability == that.probability && this.normalizedScore == that.normalizedScore. }

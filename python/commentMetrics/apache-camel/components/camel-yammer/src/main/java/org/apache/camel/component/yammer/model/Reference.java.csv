@@ -1,0 +1,16 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getUrl() {     return url. }
+false;public;1;3;;public void setUrl(String url) {     this.url = url. }
+false;public;0;3;;public String getPermalink() {     return permalink. }
+false;public;1;3;;public void setPermalink(String permalink) {     this.permalink = permalink. }
+false;public;0;3;;public String getNormalizedName() {     return normalizedName. }
+false;public;1;3;;public void setNormalizedName(String normalizedName) {     this.normalizedName = normalizedName. }
+false;public;0;3;;public Long getId() {     return id. }
+false;public;1;3;;public void setId(Long id) {     this.id = id. }
+false;public;0;3;;public String getType() {     return type. }
+false;public;1;3;;public void setType(String type) {     this.type = type. }
+false;public;0;3;;public String getName() {     return name. }
+false;public;1;3;;public void setName(String name) {     this.name = name. }
+false;public;0;3;;public String getWebUrl() {     return webUrl. }
+false;public;1;3;;public void setWebUrl(String webUrl) {     this.webUrl = webUrl. }
+false;public;0;4;;@Override public String toString() {     return "Reference [url=" + url + ", permalink=" + permalink + ", normalizedName=" + normalizedName + ", id=" + id + ", type=" + type + ", name=" + name + ", webUrl=" + webUrl + "]". }

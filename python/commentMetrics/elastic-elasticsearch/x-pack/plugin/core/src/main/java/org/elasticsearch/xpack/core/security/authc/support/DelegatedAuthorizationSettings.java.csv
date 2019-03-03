@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static Collection<Setting.AffixSetting<?>> getSettings(String realmType) {     return Collections.singleton(AUTHZ_REALMS.apply(realmType)). }

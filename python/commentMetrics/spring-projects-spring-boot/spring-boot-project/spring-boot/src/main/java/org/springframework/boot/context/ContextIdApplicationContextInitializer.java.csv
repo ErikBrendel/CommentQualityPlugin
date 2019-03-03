@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void setOrder(int order) {     this.order = order. }
+false;public;0;4;;@Override public int getOrder() {     return this.order. }
+false;public;1;7;;@Override public void initialize(ConfigurableApplicationContext applicationContext) {     ContextId contextId = getContextId(applicationContext).     applicationContext.setId(contextId.getId()).     applicationContext.getBeanFactory().registerSingleton(ContextId.class.getName(), contextId). }
+false;private;1;7;;private ContextId getContextId(ConfigurableApplicationContext applicationContext) {     ApplicationContext parent = applicationContext.getParent().     if (parent != null && parent.containsBean(ContextId.class.getName())) {         return parent.getBean(ContextId.class).createChildId().     }     return new ContextId(getApplicationId(applicationContext.getEnvironment())). }
+false;private;1;4;;private String getApplicationId(ConfigurableEnvironment environment) {     String name = environment.getProperty("spring.application.name").     return StringUtils.hasText(name) ? name : "application". }
+false;;0;3;;ContextId createChildId() {     return new ContextId(this.id + "-" + this.children.incrementAndGet()). }
+false;;0;3;;String getId() {     return this.id. }

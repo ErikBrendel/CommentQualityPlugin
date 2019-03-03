@@ -1,0 +1,16 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public BigDecimal getBg() {     return bg. }
+false;public;1;3;;public void setBg(final BigDecimal bg) {     this.bg = bg. }
+false;public;0;3;;public int getIntNumber() {     return intNumber. }
+false;public;1;3;;public void setIntNumber(final int intNumber) {     this.intNumber = intNumber. }
+false;public;0;3;;public long getLongNumber() {     return longNumber. }
+false;public;1;3;;public void setLongNumber(final long longNumber) {     this.longNumber = longNumber. }
+false;public;0;3;;public double getDoubleNumber() {     return doubleNumber. }
+false;public;1;3;;public void setDoubleNumber(final double doubleNumber) {     this.doubleNumber = doubleNumber. }
+false;public;0;3;;public float getFloatNumber() {     return floatNumber. }
+false;public;1;3;;public void setFloatNumber(final float floatNumber) {     this.floatNumber = floatNumber. }
+false;public;0;3;;public boolean isBool() {     return bool. }
+false;public;1;3;;public void setBool(final boolean bool) {     this.bool = bool. }
+false;public;0;14;;@Override public int hashCode() {     final int prime = 31.     int result = 1.     result = prime * result + ((bg == null) ? 0 : bg.hashCode()).     result = prime * result + (bool ? 1231 : 1237).     long temp.     temp = Double.doubleToLongBits(doubleNumber).     result = prime * result + (int) (temp ^ (temp >>> 32)).     result = prime * result + Float.floatToIntBits(floatNumber).     result = prime * result + intNumber.     result = prime * result + (int) (longNumber ^ (longNumber >>> 32)).     return result. }
+false;public;1;36;;@Override public boolean equals(final Object obj) {     if (this == obj) {         return true.     }     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     final NumberPojo other = (NumberPojo) obj.     if (bg == null) {         if (other.bg != null) {             return false.         }     } else if (!bg.equals(other.bg)) {         return false.     }     if (bool != other.bool) {         return false.     }     if (Double.doubleToLongBits(doubleNumber) != Double.doubleToLongBits(other.doubleNumber)) {         return false.     }     if (Float.floatToIntBits(floatNumber) != Float.floatToIntBits(other.floatNumber)) {         return false.     }     if (intNumber != other.intNumber) {         return false.     }     if (longNumber != other.longNumber) {         return false.     }     return true. }
+false;public;0;5;;@Override public String toString() {     return "NumberPojo [bg=" + bg + ", intNumber=" + intNumber + ", longNumber=" + longNumber + ", doubleNumber=" + doubleNumber + ", floatNumber=" + floatNumber + ", bool=" + bool + "]". }

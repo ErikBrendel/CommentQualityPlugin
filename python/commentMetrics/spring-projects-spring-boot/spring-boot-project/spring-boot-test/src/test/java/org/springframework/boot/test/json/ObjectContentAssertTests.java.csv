@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void isEqualToWhenObjectsAreEqualShouldPass() {     assertThat(forObject(SOURCE)).isEqualTo(SOURCE). }
+false;public;0;5;;@Test public void isEqualToWhenObjectsAreDifferentShouldFail() {     assertThatExceptionOfType(AssertionError.class).isThrownBy(() -> assertThat(forObject(SOURCE)).isEqualTo(DIFFERENT)). }
+false;public;0;5;;@Test public void asArrayForArrayShouldReturnObjectArrayAssert() {     ExampleObject[] source = new ExampleObject[] { SOURCE }.     assertThat(forObject(source)).asArray().containsExactly(SOURCE). }
+false;public;0;5;;@Test public void asArrayForNonArrayShouldFail() {     assertThatExceptionOfType(AssertionError.class).isThrownBy(() -> assertThat(forObject(SOURCE)).asArray()). }
+false;public;0;5;;@Test public void asMapForMapShouldReturnMapAssert() {     Map<String, ExampleObject> source = Collections.singletonMap("a", SOURCE).     assertThat(forObject(source)).asMap().containsEntry("a", SOURCE). }
+false;public;0;5;;@Test public void asMapForNonMapShouldFail() {     assertThatExceptionOfType(AssertionError.class).isThrownBy(() -> assertThat(forObject(SOURCE)).asMap()). }
+false;private;1;3;;private AssertProvider<ObjectContentAssert<Object>> forObject(Object source) {     return () -> new ObjectContentAssert<>(source). }

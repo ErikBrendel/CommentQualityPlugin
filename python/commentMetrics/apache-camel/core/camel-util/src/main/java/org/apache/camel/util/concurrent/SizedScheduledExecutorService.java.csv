@@ -1,0 +1,42 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Gets the wrapped {@link ScheduledThreadPoolExecutor}  */ ;/**  * Gets the wrapped {@link ScheduledThreadPoolExecutor}  */ public ScheduledThreadPoolExecutor getScheduledThreadPoolExecutor() {     return delegate. }
+false;public;3;8;;@Override public <V> ScheduledFuture<V> schedule(Callable<V> task, long delay, TimeUnit timeUnit) {     if (canScheduleOrExecute()) {         return delegate.schedule(task, delay, timeUnit).     } else {         throw new RejectedExecutionException("Task rejected due queue size limit reached").     } }
+false;public;3;8;;@Override public ScheduledFuture<?> schedule(Runnable task, long delay, TimeUnit timeUnit) {     if (canScheduleOrExecute()) {         return delegate.schedule(task, delay, timeUnit).     } else {         throw new RejectedExecutionException("Task rejected due queue size limit reached").     } }
+false;public;4;8;;@Override public ScheduledFuture<?> scheduleAtFixedRate(Runnable task, long initialDelay, long period, TimeUnit timeUnit) {     if (canScheduleOrExecute()) {         return delegate.scheduleAtFixedRate(task, initialDelay, period, timeUnit).     } else {         throw new RejectedExecutionException("Task rejected due queue size limit reached").     } }
+false;public;4;8;;@Override public ScheduledFuture<?> scheduleWithFixedDelay(Runnable task, long initialDelay, long period, TimeUnit timeUnit) {     if (canScheduleOrExecute()) {         return delegate.scheduleWithFixedDelay(task, initialDelay, period, timeUnit).     } else {         throw new RejectedExecutionException("Task rejected due queue size limit reached").     } }
+false;public;2;4;;@Override public boolean awaitTermination(long timeout, TimeUnit timeUnit) throws InterruptedException {     return delegate.awaitTermination(timeout, timeUnit). }
+false;public;0;3;;public int getActiveCount() {     return delegate.getActiveCount(). }
+false;public;0;3;;public long getCompletedTaskCount() {     return delegate.getCompletedTaskCount(). }
+false;public;0;3;;public int getCorePoolSize() {     return delegate.getCorePoolSize(). }
+false;public;1;3;;public long getKeepAliveTime(TimeUnit timeUnit) {     return delegate.getKeepAliveTime(timeUnit). }
+false;public;0;3;;public int getLargestPoolSize() {     return delegate.getLargestPoolSize(). }
+false;public;0;3;;public int getMaximumPoolSize() {     return delegate.getMaximumPoolSize(). }
+false;public;0;3;;public int getPoolSize() {     return delegate.getPoolSize(). }
+false;public;0;3;;public RejectedExecutionHandler getRejectedExecutionHandler() {     return delegate.getRejectedExecutionHandler(). }
+false;public;0;3;;public long getTaskCount() {     return delegate.getTaskCount(). }
+false;public;0;3;;public ThreadFactory getThreadFactory() {     return delegate.getThreadFactory(). }
+false;public;1;8;;@Override public <T> List<Future<T>> invokeAll(Collection<? extends Callable<T>> tasks) throws InterruptedException {     if (canScheduleOrExecute()) {         return delegate.invokeAll(tasks).     } else {         throw new RejectedExecutionException("Task rejected due queue size limit reached").     } }
+false;public;3;8;;@Override public <T> List<Future<T>> invokeAll(Collection<? extends Callable<T>> tasks, long timeout, TimeUnit timeUnit) throws InterruptedException {     if (canScheduleOrExecute()) {         return delegate.invokeAll(tasks, timeout, timeUnit).     } else {         throw new RejectedExecutionException("Task rejected due queue size limit reached").     } }
+false;public;1;8;;@Override public <T> T invokeAny(Collection<? extends Callable<T>> tasks) throws InterruptedException, ExecutionException {     if (canScheduleOrExecute()) {         return delegate.invokeAny(tasks).     } else {         throw new RejectedExecutionException("Task rejected due queue size limit reached").     } }
+false;public;3;8;;@Override public <T> T invokeAny(Collection<? extends Callable<T>> tasks, long timeout, TimeUnit timeUnit) throws InterruptedException, ExecutionException, TimeoutException {     if (canScheduleOrExecute()) {         return delegate.invokeAny(tasks, timeout, timeUnit).     } else {         throw new RejectedExecutionException("Task rejected due queue size limit reached").     } }
+false;public;0;4;;@Override public boolean isShutdown() {     return delegate.isShutdown(). }
+false;public;0;4;;@Override public boolean isTerminated() {     return delegate.isTerminated(). }
+false;public;0;3;;public boolean isTerminating() {     return delegate.isTerminating(). }
+false;public;0;3;;public int prestartAllCoreThreads() {     return delegate.prestartAllCoreThreads(). }
+false;public;0;3;;public boolean prestartCoreThread() {     return delegate.prestartCoreThread(). }
+false;public;0;3;;public void purge() {     delegate.purge(). }
+false;public;1;3;;public void setCorePoolSize(int corePoolSize) {     delegate.setCorePoolSize(corePoolSize). }
+false;public;2;3;;public void setKeepAliveTime(long keepAliveTime, TimeUnit timeUnit) {     delegate.setKeepAliveTime(keepAliveTime, timeUnit). }
+false;public;1;3;;public void setMaximumPoolSize(int maximumPoolSize) {     delegate.setMaximumPoolSize(maximumPoolSize). }
+false;public;1;3;;public void setRejectedExecutionHandler(RejectedExecutionHandler rejectedExecutionHandler) {     delegate.setRejectedExecutionHandler(rejectedExecutionHandler). }
+false;public;1;3;;public void setThreadFactory(ThreadFactory threadFactory) {     delegate.setThreadFactory(threadFactory). }
+false;public;0;4;;@Override public void shutdown() {     delegate.shutdown(). }
+false;public;0;4;;@Override public List<Runnable> shutdownNow() {     return delegate.shutdownNow(). }
+false;public;1;8;;@Override public <T> Future<T> submit(Callable<T> task) {     if (canScheduleOrExecute()) {         return delegate.submit(task).     } else {         throw new RejectedExecutionException("Task rejected due queue size limit reached").     } }
+false;public;1;8;;@Override public Future<?> submit(Runnable task) {     if (canScheduleOrExecute()) {         return delegate.submit(task).     } else {         throw new RejectedExecutionException("Task rejected due queue size limit reached").     } }
+false;public;2;8;;@Override public <T> Future<T> submit(Runnable task, T result) {     if (canScheduleOrExecute()) {         return delegate.submit(task, result).     } else {         throw new RejectedExecutionException("Task rejected due queue size limit reached").     } }
+false;public;1;8;;@Override public void execute(Runnable task) {     if (canScheduleOrExecute()) {         delegate.execute(task).     } else {         throw new RejectedExecutionException("Task rejected due queue size limit reached").     } }
+false;public;1;3;;public void allowCoreThreadTimeOut(boolean value) {     delegate.allowCoreThreadTimeOut(value). }
+false;public;0;3;;public boolean allowsCoreThreadTimeOut() {     return delegate.allowsCoreThreadTimeOut(). }
+true;protected;0;12;/**  * Can the task be scheduled or executed?  *  * @return <tt>true</tt> to accept, <tt>false</tt> to not accept  */ ;/**  * Can the task be scheduled or executed?  *  * @return <tt>true</tt> to accept, <tt>false</tt> to not accept  */ protected boolean canScheduleOrExecute() {     if (queueSize <= 0) {         return true.     }     int size = delegate.getQueue().size().     boolean answer = size < queueSize.     if (LOG.isTraceEnabled()) {         LOG.trace("canScheduleOrExecute {} < {} -> {}", size, queueSize, answer).     }     return answer. }
+false;public;0;10;;@Override public String toString() {     // the thread factory often have more precise details what the thread pool is used for     if (delegate.getThreadFactory() instanceof CamelThreadFactory) {         String name = ((CamelThreadFactory) delegate.getThreadFactory()).getName().         return super.toString() + "[" + name + "]".     } else {         return super.toString().     } }

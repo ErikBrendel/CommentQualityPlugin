@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void testContextLoads() {     assertThat(this.ctx).isNotNull().     assertThat(this.ctx.containsBean("helloWorldService")).isTrue().     assertThat(this.ctx.containsBean("sampleSimpleApplication")).isTrue(). }

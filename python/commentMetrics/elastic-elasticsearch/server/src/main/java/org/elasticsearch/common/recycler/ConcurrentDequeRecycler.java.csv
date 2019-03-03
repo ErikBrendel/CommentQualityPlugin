@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Override public void close() {     assert deque.size() == size.get().     super.close().     size.set(0). }
+false;public;1;8;;@Override public V<T> obtain(int sizing) {     final V<T> v = super.obtain(sizing).     if (v.isRecycled()) {         size.decrementAndGet().     }     return v. }
+false;protected;0;4;;@Override protected boolean beforeRelease() {     return size.incrementAndGet() <= maxSize. }
+false;protected;1;6;;@Override protected void afterRelease(boolean recycled) {     if (!recycled) {         size.decrementAndGet().     } }

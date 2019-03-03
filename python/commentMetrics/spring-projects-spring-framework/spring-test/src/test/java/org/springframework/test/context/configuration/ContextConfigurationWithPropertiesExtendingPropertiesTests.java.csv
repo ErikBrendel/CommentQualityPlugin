@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Test public void verifyExtendedAnnotationAutowiredFields() {     assertNotNull("The dog field should have been autowired.", this.dog).     assertEquals("Fido", this.dog.getName()).     assertNotNull("The testString2 field should have been autowired.", this.testString2).     assertEquals("Test String #2", this.testString2). }

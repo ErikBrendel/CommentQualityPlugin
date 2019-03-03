@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Bean public Foo foo() {     return new Foo(). }
+false;public;1;4;;@Bean public ExampleFactoryBean exampleBeanFactoryBean(Foo foo) {     return new ExampleFactoryBean("foo"). }

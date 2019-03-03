@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;4;;public static void main(String[] args) throws Exception {     MyMainAppTest me = new MyMainAppTest().     me.testMyMain(). }
+false;public;0;8;;@Test public void testMyMain() throws Exception {     Main main = new Main().     run(main).     CamelContext camelContext = main.getCamelContext().     assertNotNull(camelContext). }
+false;public;1;11;;public void run(Main main) throws Exception {     main.setBundleName("MyMainBundle").     // as we run this test without packing ourselves as bundle, then include ourselves     main.setIncludeSelfAsBundle(true).     // we support *.xml to find any blueprint xml files     main.setDescriptors("org/apache/camel/test/blueprint/xpath/*.xml").     // run for 1 second and then stop automatic     main.setDuration(1).     main.run(). }

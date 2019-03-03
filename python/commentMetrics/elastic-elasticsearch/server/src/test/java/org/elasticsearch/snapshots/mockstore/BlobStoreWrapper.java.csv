@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public BlobContainer blobContainer(BlobPath path) {     return delegate.blobContainer(path). }
+false;public;1;4;;@Override public void delete(BlobPath path) throws IOException {     delegate.delete(path). }
+false;public;0;4;;@Override public void close() throws IOException {     delegate.close(). }
+false;protected;0;3;;protected BlobStore delegate() {     return delegate. }

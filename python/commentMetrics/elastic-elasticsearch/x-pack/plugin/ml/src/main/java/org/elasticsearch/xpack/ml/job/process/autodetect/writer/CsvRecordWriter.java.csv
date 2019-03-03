@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void writeRecord(String[] record) throws IOException {     writer.write(record). }
+false;public;1;4;;@Override public void writeRecord(List<String> record) throws IOException {     writer.write(record). }
+false;public;0;4;;@Override public void flush() throws IOException {     writer.flush(). }

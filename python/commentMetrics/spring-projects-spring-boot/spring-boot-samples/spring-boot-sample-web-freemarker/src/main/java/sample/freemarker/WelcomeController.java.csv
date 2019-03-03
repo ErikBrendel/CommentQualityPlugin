@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@GetMapping("/") public String welcome(Map<String, Object> model) {     model.put("time", new Date()).     model.put("message", this.message).     return "welcome". }

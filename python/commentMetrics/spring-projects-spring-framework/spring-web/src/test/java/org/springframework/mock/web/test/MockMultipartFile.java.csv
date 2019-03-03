@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getName() {     return this.name. }
+false;public;0;4;;@Override public String getOriginalFilename() {     return this.originalFilename. }
+false;public;0;5;;@Override @Nullable public String getContentType() {     return this.contentType. }
+false;public;0;4;;@Override public boolean isEmpty() {     return (this.content.length == 0). }
+false;public;0;4;;@Override public long getSize() {     return this.content.length. }
+false;public;0;4;;@Override public byte[] getBytes() throws IOException {     return this.content. }
+false;public;0;4;;@Override public InputStream getInputStream() throws IOException {     return new ByteArrayInputStream(this.content). }
+false;public;1;4;;@Override public void transferTo(File dest) throws IOException, IllegalStateException {     FileCopyUtils.copy(this.content, dest). }

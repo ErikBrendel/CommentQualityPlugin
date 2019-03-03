@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void recordHits(int count) {     hitCount.inc(count). }
+false;public;1;4;;@Override public void recordMisses(int count) {     missCount.inc(count). }
+false;public;1;5;;@Override public void recordLoadSuccess(long loadTime) {     loadSuccessCount.inc().     totalLoadTime.update(loadTime, TimeUnit.NANOSECONDS). }
+false;public;1;5;;@Override public void recordLoadFailure(long loadTime) {     loadFailureCount.inc().     totalLoadTime.update(loadTime, TimeUnit.NANOSECONDS). }
+false;public;0;4;;@Override public void recordEviction() {     recordEviction(1). }
+false;public;1;5;;@Override public void recordEviction(int weight) {     evictionCount.inc().     evictionWeight.inc(weight). }
+false;public;0;5;;@Override public CacheStats snapshot() {     return new CacheStats(hitCount.getCount(), missCount.getCount(), loadSuccessCount.getCount(), loadFailureCount.getCount(), totalLoadTime.getCount(), evictionCount.getCount(), evictionWeight.getCount()). }
+false;public;0;4;;@Override public String toString() {     return snapshot().toString(). }

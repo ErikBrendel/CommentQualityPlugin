@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Response newResponse() {     return new Response(). }
+false;public;0;4;;@Override public ActionRequestValidationException validate() {     return null. }
+false;public;1;5;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     info = in.readMap(). }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeMap(info). }
+false;public;2;5;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.map(info).     return builder. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(info). }
+false;public;1;11;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     Response other = (Response) obj.     return Objects.equals(info, other.info). }

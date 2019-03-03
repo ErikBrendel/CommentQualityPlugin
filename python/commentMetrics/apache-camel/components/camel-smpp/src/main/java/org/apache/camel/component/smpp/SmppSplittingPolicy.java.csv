@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;14;;public static SmppSplittingPolicy fromString(String policyName) throws SmppException {     if (policyName == null) {         throw new SmppException("policyName must not be null").     }     for (SmppSplittingPolicy nextPolicy : values()) {         if (nextPolicy.name().equals(policyName)) {             return nextPolicy.         }     }     throw new SmppException("Unrecognised SmppSplittingPolicy: " + policyName). }

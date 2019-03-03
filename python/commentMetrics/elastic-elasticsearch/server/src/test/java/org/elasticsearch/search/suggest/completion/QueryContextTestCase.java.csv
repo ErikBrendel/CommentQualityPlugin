@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;protected,abstract;0;1;/**  * create random model that is put under test  */ ;/**  * create random model that is put under test  */ protected abstract QC createTestModel().
+true;protected,abstract;1;1;/**  * read the context  */ ;/**  * read the context  */ protected abstract QC fromXContent(XContentParser parser) throws IOException.
+false;public;0;12;;public void testToXContext() throws IOException {     for (int i = 0. i < NUMBER_OF_RUNS. i++) {         QC toXContent = createTestModel().         XContentBuilder builder = XContentFactory.jsonBuilder().         toXContent.toXContent(builder, ToXContent.EMPTY_PARAMS).         XContentParser parser = createParser(builder).         parser.nextToken().         QC fromXContext = fromXContent(parser).         assertEquals(toXContent, fromXContext).         assertEquals(toXContent.hashCode(), fromXContext.hashCode()).     } }

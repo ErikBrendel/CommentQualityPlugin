@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void outputResults() {     SampleJooqApplication.main(NO_ARGS).     assertThat(this.output.toString()).contains("jOOQ Fetch 1 Greg Turnquest").     assertThat(this.output.toString()).contains("jOOQ Fetch 2 Craig Walls").     assertThat(this.output.toString()).contains("jOOQ SQL " + "[Learning Spring Boot : Greg Turnquest, " + "Spring Boot in Action : Craig Walls]"). }

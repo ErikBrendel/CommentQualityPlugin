@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeString(this.type). }
+true;public;0;3;/**  * @return The unique processor type  */ ;/**  * @return The unique processor type  */ public String getType() {     return type. }
+false;public;2;7;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field("type", type).     builder.endObject().     return null. }
+false;public;1;10;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     ProcessorInfo that = (ProcessorInfo) o.     return type.equals(that.type). }
+false;public;0;4;;@Override public int hashCode() {     return type.hashCode(). }
+false;public;1;4;;@Override public int compareTo(ProcessorInfo o) {     return type.compareTo(o.type). }

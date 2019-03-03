@@ -1,0 +1,23 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;14;;@Override public void writeTo(StreamOutput out) throws IOException {     long longFlags = 0.     for (Flag flag : flags) {         longFlags |= (1 << flag.getIndex()).     }     out.writeLong(longFlags).     out.writeStringArrayNullable(types).     out.writeStringArrayNullable(groups).     out.writeStringArrayNullable(fieldDataFields).     out.writeStringArrayNullable(completionDataFields).     out.writeBoolean(includeSegmentFileSizes). }
+true;public;0;9;/**  * Sets all flags to return all stats.  */ ;/**  * Sets all flags to return all stats.  */ public CommonStatsFlags all() {     flags = EnumSet.allOf(Flag.class).     types = null.     groups = null.     fieldDataFields = null.     completionDataFields = null.     includeSegmentFileSizes = false.     return this. }
+true;public;0;9;/**  * Clears all stats.  */ ;/**  * Clears all stats.  */ public CommonStatsFlags clear() {     flags = EnumSet.noneOf(Flag.class).     types = null.     groups = null.     fieldDataFields = null.     completionDataFields = null.     includeSegmentFileSizes = false.     return this. }
+false;public;0;3;;public boolean anySet() {     return !flags.isEmpty(). }
+false;public;0;3;;public Flag[] getFlags() {     return flags.toArray(new Flag[flags.size()]). }
+true;public;1;4;/**  * Document types to return stats for. Mainly affects {@link Flag#Indexing} when  * enabled, returning specific indexing stats for those types.  */ ;/**  * Document types to return stats for. Mainly affects {@link Flag#Indexing} when  * enabled, returning specific indexing stats for those types.  */ public CommonStatsFlags types(String... types) {     this.types = types.     return this. }
+true;public;0;3;/**  * Document types to return stats for. Mainly affects {@link Flag#Indexing} when  * enabled, returning specific indexing stats for those types.  */ ;/**  * Document types to return stats for. Mainly affects {@link Flag#Indexing} when  * enabled, returning specific indexing stats for those types.  */ public String[] types() {     return this.types. }
+true;public;1;4;/**  * Sets specific search group stats to retrieve the stats for. Mainly affects search  * when enabled.  */ ;/**  * Sets specific search group stats to retrieve the stats for. Mainly affects search  * when enabled.  */ public CommonStatsFlags groups(String... groups) {     this.groups = groups.     return this. }
+false;public;0;3;;public String[] groups() {     return this.groups. }
+true;public;1;4;/**  * Sets specific search group stats to retrieve the stats for. Mainly affects search  * when enabled.  */ ;/**  * Sets specific search group stats to retrieve the stats for. Mainly affects search  * when enabled.  */ public CommonStatsFlags fieldDataFields(String... fieldDataFields) {     this.fieldDataFields = fieldDataFields.     return this. }
+false;public;0;3;;public String[] fieldDataFields() {     return this.fieldDataFields. }
+false;public;1;4;;public CommonStatsFlags completionDataFields(String... completionDataFields) {     this.completionDataFields = completionDataFields.     return this. }
+false;public;0;3;;public String[] completionDataFields() {     return this.completionDataFields. }
+false;public;1;4;;public CommonStatsFlags includeSegmentFileSizes(boolean includeSegmentFileSizes) {     this.includeSegmentFileSizes = includeSegmentFileSizes.     return this. }
+false;public;0;3;;public boolean includeSegmentFileSizes() {     return this.includeSegmentFileSizes. }
+false;public;1;3;;public boolean isSet(Flag flag) {     return flags.contains(flag). }
+false;;1;3;;boolean unSet(Flag flag) {     return flags.remove(flag). }
+false;;1;3;;void set(Flag flag) {     flags.add(flag). }
+false;public;2;8;;public CommonStatsFlags set(Flag flag, boolean add) {     if (add) {         set(flag).     } else {         unSet(flag).     }     return this. }
+false;public;0;10;;@Override public CommonStatsFlags clone() {     try {         CommonStatsFlags cloned = (CommonStatsFlags) super.clone().         cloned.flags = flags.clone().         return cloned.     } catch (CloneNotSupportedException e) {         throw new AssertionError(e).     } }
+false;public;0;3;;public String getRestName() {     return restName. }
+false;private;0;3;;private int getIndex() {     return index. }

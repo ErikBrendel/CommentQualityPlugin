@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;public ThreadPoolProfileBuilder defaultProfile(Boolean defaultProfile) {     this.profile.setDefaultProfile(defaultProfile).     return this. }
+false;public;1;4;;public ThreadPoolProfileBuilder poolSize(Integer poolSize) {     profile.setPoolSize(poolSize).     return this. }
+false;public;1;4;;public ThreadPoolProfileBuilder maxPoolSize(Integer maxPoolSize) {     profile.setMaxPoolSize(maxPoolSize).     return this. }
+false;public;2;5;;public ThreadPoolProfileBuilder keepAliveTime(Long keepAliveTime, TimeUnit timeUnit) {     profile.setKeepAliveTime(keepAliveTime).     profile.setTimeUnit(timeUnit).     return this. }
+false;public;1;4;;public ThreadPoolProfileBuilder keepAliveTime(Long keepAliveTime) {     profile.setKeepAliveTime(keepAliveTime).     return this. }
+false;public;1;6;;public ThreadPoolProfileBuilder maxQueueSize(Integer maxQueueSize) {     if (maxQueueSize != null) {         profile.setMaxQueueSize(maxQueueSize).     }     return this. }
+false;public;1;4;;public ThreadPoolProfileBuilder allowCoreThreadTimeOut(Boolean allowCoreThreadTimeOut) {     profile.setAllowCoreThreadTimeOut(allowCoreThreadTimeOut).     return this. }
+false;public;1;4;;public ThreadPoolProfileBuilder rejectedPolicy(ThreadPoolRejectedPolicy rejectedPolicy) {     profile.setRejectedPolicy(rejectedPolicy).     return this. }
+true;public;0;3;/**  * Builds the thread pool profile  *  * @return the thread pool profile  */ ;/**  * Builds the thread pool profile  *  * @return the thread pool profile  */ public ThreadPoolProfile build() {     return profile. }

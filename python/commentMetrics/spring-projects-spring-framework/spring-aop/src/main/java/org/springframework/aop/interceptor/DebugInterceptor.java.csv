@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;7;;@Override public Object invoke(MethodInvocation invocation) throws Throwable {     synchronized (this) {         this.count++.     }     return super.invoke(invocation). }
+false;protected;1;4;;@Override protected String getInvocationDescription(MethodInvocation invocation) {     return invocation + ". count=" + this.count. }
+true;public;0;3;/**  * Return the number of times this interceptor has been invoked.  */ ;/**  * Return the number of times this interceptor has been invoked.  */ public long getCount() {     return this.count. }
+true;public,synchronized;0;3;/**  * Reset the invocation count to zero.  */ ;/**  * Reset the invocation count to zero.  */ public synchronized void resetCount() {     this.count = 0. }

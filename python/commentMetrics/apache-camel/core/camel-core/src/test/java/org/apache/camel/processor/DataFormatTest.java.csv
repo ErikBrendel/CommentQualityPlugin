@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;13;;@Test public void testMarshalThenUnmarshalBean() throws Exception {     MyBean bean = new MyBean().     bean.name = "James".     bean.counter = 5.     MockEndpoint resultEndpoint = resolveMandatoryEndpoint("mock:result", MockEndpoint.class).     resultEndpoint.expectedBodiesReceived(bean).     template.sendBody("direct:start", bean).     resultEndpoint.assertIsSatisfied(). }
+false;public;0;10;;@Test public void testMarshalNonSerializableBean() throws Exception {     MyNonSerializableBean bean = new MyNonSerializableBean("James").     try {         template.sendBody("direct:start", bean).         fail("Should throw exception").     } catch (CamelExecutionException e) {         assertIsInstanceOf(NotSerializableException.class, e.getCause()).     } }
+false;public;0;4;;public void configure() {     from("direct:start").marshal().serialization().to("direct:marshalled").     from("direct:marshalled").unmarshal().serialization().to("mock:result"). }
+false;protected;0;8;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("direct:start").marshal().serialization().to("direct:marshalled").             from("direct:marshalled").unmarshal().serialization().to("mock:result").         }     }. }
+false;public;1;8;;@Override public boolean equals(Object o) {     if (o instanceof MyBean) {         MyBean that = (MyBean) o.         return equal(this.name, that.name) && equal(this.counter, that.counter).     }     return false. }
+false;public;0;4;;@Override public int hashCode() {     return name.hashCode() + counter. }
+false;public;0;3;;public String getName() {     return name. }

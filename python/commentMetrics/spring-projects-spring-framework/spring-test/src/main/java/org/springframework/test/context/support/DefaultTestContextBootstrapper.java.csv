@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;protected;1;4;/**  * Returns {@link DelegatingSmartContextLoader}.  */ ;/**  * Returns {@link DelegatingSmartContextLoader}.  */ @Override protected Class<? extends ContextLoader> getDefaultContextLoaderClass(Class<?> testClass) {     return DelegatingSmartContextLoader.class. }

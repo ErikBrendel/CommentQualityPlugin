@@ -1,0 +1,29 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getResourceUri() {     return resourceUri. }
+true;public;1;3;/**  * The name of the template to load from classpath or file system  */ ;/**  * The name of the template to load from classpath or file system  */ public void setResourceUri(String resourceUri) {     this.resourceUri = resourceUri. }
+false;public;0;3;;public Configuration getConfiguration() {     return configuration. }
+true;public;1;3;/**  * To use a custom Saxon configuration  */ ;/**  * To use a custom Saxon configuration  */ public void setConfiguration(Configuration configuration) {     this.configuration = configuration. }
+false;public;0;3;;public Map<String, Object> getConfigurationProperties() {     return configurationProperties. }
+true;public;1;3;/**  * To set custom Saxon configuration properties  */ ;/**  * To set custom Saxon configuration properties  */ public void setConfigurationProperties(Map<String, Object> configurationProperties) {     this.configurationProperties = configurationProperties. }
+false;public;0;3;;public StaticQueryContext getStaticQueryContext() {     return staticQueryContext. }
+true;public;1;3;/**  * To use a custom Saxon StaticQueryContext  */ ;/**  * To use a custom Saxon StaticQueryContext  */ public void setStaticQueryContext(StaticQueryContext staticQueryContext) {     this.staticQueryContext = staticQueryContext. }
+false;public;0;3;;public Map<String, Object> getParameters() {     return parameters. }
+true;public;1;3;/**  * Additional parameters  */ ;/**  * Additional parameters  */ public void setParameters(Map<String, Object> parameters) {     this.parameters = parameters. }
+false;public;0;3;;public Map<String, String> getNamespacePrefixes() {     return namespacePrefixes. }
+true;public;1;3;/**  * Allows to control which namespace prefixes to use for a set of namespace mappings  */ ;/**  * Allows to control which namespace prefixes to use for a set of namespace mappings  */ public void setNamespacePrefixes(Map<String, String> namespacePrefixes) {     this.namespacePrefixes = namespacePrefixes. }
+false;public;0;3;;public ResultFormat getResultsFormat() {     return resultsFormat. }
+true;public;1;3;/**  * What output result to use  */ ;/**  * What output result to use  */ public void setResultsFormat(ResultFormat resultsFormat) {     this.resultsFormat = resultsFormat. }
+false;public;0;3;;public Properties getProperties() {     return properties. }
+true;public;1;3;/**  * Properties to configure the serialization parameters  */ ;/**  * Properties to configure the serialization parameters  */ public void setProperties(Properties properties) {     this.properties = properties. }
+false;public;0;3;;public Class<?> getResultType() {     return resultType. }
+true;public;1;3;/**  * What output result to use defined as a class  */ ;/**  * What output result to use defined as a class  */ public void setResultType(Class<?> resultType) {     this.resultType = resultType. }
+false;public;0;3;;public boolean isStripsAllWhiteSpace() {     return stripsAllWhiteSpace. }
+true;public;1;3;/**  * Whether to strip all whitespaces  */ ;/**  * Whether to strip all whitespaces  */ public void setStripsAllWhiteSpace(boolean stripsAllWhiteSpace) {     this.stripsAllWhiteSpace = stripsAllWhiteSpace. }
+false;public;0;3;;public ModuleURIResolver getModuleURIResolver() {     return moduleURIResolver. }
+true;public;1;3;/**  * To use the custom {@link ModuleURIResolver}  */ ;/**  * To use the custom {@link ModuleURIResolver}  */ public void setModuleURIResolver(ModuleURIResolver moduleURIResolver) {     this.moduleURIResolver = moduleURIResolver. }
+false;public;0;3;;public boolean isAllowStAX() {     return allowStAX. }
+true;public;1;3;/**  * Whether to allow using StAX mode  */ ;/**  * Whether to allow using StAX mode  */ public void setAllowStAX(boolean allowStAX) {     this.allowStAX = allowStAX. }
+false;public;0;3;;public String getHeaderName() {     return headerName. }
+true;public;1;3;/**  * To use a Camel Message header as the input source instead of Message body.  */ ;/**  * To use a Camel Message header as the input source instead of Message body.  */ public void setHeaderName(String headerName) {     this.headerName = headerName. }
+false;protected;0;25;;@Override protected void doStart() throws Exception {     super.doStart().     log.debug("{} using schema resource: {}", this, resourceUri).     URL url = ResourceHelper.resolveMandatoryResourceAsUrl(getCamelContext().getClassResolver(), resourceUri).     this.xquery = XQueryBuilder.xquery(url).     this.xquery.setConfiguration(getConfiguration()).     this.xquery.setConfigurationProperties(getConfigurationProperties()).     this.xquery.setStaticQueryContext(getStaticQueryContext()).     this.xquery.setParameters(getParameters()).     this.xquery.setNamespaces(namespacePrefixes).     this.xquery.setResultsFormat(getResultsFormat()).     this.xquery.setProperties(getProperties()).     this.xquery.setResultType(getResultType()).     this.xquery.setStripsAllWhiteSpace(isStripsAllWhiteSpace()).     this.xquery.setAllowStAX(isAllowStAX()).     this.xquery.setHeaderName(getHeaderName()).     this.xquery.setModuleURIResolver(getModuleURIResolver()).     setProcessor(xquery).     ServiceHelper.startService(xquery). }
+false;protected;0;6;;@Override protected void doStop() throws Exception {     super.doStop().     ServiceHelper.stopService(xquery). }

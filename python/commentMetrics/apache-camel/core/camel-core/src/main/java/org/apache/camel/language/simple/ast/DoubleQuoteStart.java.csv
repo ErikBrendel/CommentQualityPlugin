@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Override public String toString() {     // output a nice toString so it makes debugging easier as we can see the entire block     return "\"" + block + "\"". }
+false;public;1;12;;@Override public Expression createExpression(String expression) {     Expression answer = null.     if (block != null) {         answer = block.createExpression(expression).     }     if (answer == null) {         // there quoted literal is empty         answer = ExpressionBuilder.constantExpression("").     }     return answer. }
+false;public;1;5;;@Override public boolean acceptAndAddNode(SimpleNode node) {     block.addChild(node).     return true. }

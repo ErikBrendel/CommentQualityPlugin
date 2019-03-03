@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Test public void producesConfigurationWithShutdownHookDisabled() throws IOException {     ConfigurationSource source = new ConfigurationSource(new ByteArrayInputStream(new byte[0])).     assertThat(new SpringBootConfigurationFactory().getConfiguration(new LoggerContext(""), source).isShutdownHookEnabled()).isFalse(). }

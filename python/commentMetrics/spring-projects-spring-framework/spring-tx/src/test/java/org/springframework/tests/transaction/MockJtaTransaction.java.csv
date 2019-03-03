@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public int getStatus() {     return Status.STATUS_ACTIVE. }
+false;public;1;4;;@Override public void registerSynchronization(Synchronization synchronization) {     this.synchronization = synchronization. }
+false;public;0;3;;public Synchronization getSynchronization() {     return synchronization. }
+false;public;1;4;;@Override public boolean enlistResource(XAResource xaResource) {     return false. }
+false;public;2;4;;@Override public boolean delistResource(XAResource xaResource, int i) {     return false. }
+false;public;0;3;;@Override public void commit() { }
+false;public;0;3;;@Override public void rollback() { }
+false;public;0;3;;@Override public void setRollbackOnly() { }

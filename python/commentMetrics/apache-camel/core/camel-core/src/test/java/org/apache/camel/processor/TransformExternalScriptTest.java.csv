@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;public void configure() {     // START SNIPPET: example     from("direct:start").transform().simple("resource:classpath:org/apache/camel/processor/mysimplescript.txt").to("mock:result"). // END SNIPPET: example }
+false;protected;0;11;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             // START SNIPPET: example             from("direct:start").transform().simple("resource:classpath:org/apache/camel/processor/mysimplescript.txt").to("mock:result").         // END SNIPPET: example         }     }. }

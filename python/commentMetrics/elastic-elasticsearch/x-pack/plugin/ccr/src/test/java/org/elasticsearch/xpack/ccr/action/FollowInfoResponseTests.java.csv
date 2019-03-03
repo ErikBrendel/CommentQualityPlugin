@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected FollowInfoAction.Response doParseInstance(XContentParser parser) throws IOException {     return PARSER.apply(parser, null). }
+false;protected;0;4;;@Override protected Writeable.Reader<FollowInfoAction.Response> instanceReader() {     return FollowInfoAction.Response::new. }
+false;protected;0;15;;@Override protected FollowInfoAction.Response createTestInstance() {     int numInfos = randomIntBetween(0, 32).     List<FollowerInfo> infos = new ArrayList<>(numInfos).     for (int i = 0. i < numInfos. i++) {         FollowParameters followParameters = null.         if (randomBoolean()) {             followParameters = FollowParametersTests.randomInstance().         }         infos.add(new FollowerInfo(randomAlphaOfLength(4), randomAlphaOfLength(4), randomAlphaOfLength(4), randomFrom(Status.values()), followParameters)).     }     return new FollowInfoAction.Response(infos). }

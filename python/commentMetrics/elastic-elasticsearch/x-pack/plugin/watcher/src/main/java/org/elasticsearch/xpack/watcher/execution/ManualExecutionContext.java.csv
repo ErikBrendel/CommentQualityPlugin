@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean knownWatch() {     return knownWatch. }
+false;public,final;1;8;;@Override public final boolean simulateAction(String actionId) {     ActionExecutionMode mode = actionModes.get(Builder.ALL).     if (mode == null) {         mode = actionModes.get(actionId).     }     return mode != null && mode.simulate(). }
+false;public;1;8;;@Override public boolean skipThrottling(String actionId) {     ActionExecutionMode mode = actionModes.get(Builder.ALL).     if (mode == null) {         mode = actionModes.get(actionId).     }     return mode != null && mode.force(). }
+false;public;0;6;;@Override public boolean shouldBeExecuted() {     // external API call     return true. }
+false;public,final;0;4;;@Override public final boolean recordExecution() {     return recordExecution. }
+false;public,static;4;3;;public static Builder builder(Watch watch, boolean knownWatch, ManualTriggerEvent event, TimeValue defaultThrottlePeriod) {     return new Builder(watch, knownWatch, event, defaultThrottlePeriod). }
+false;public;1;4;;public Builder executionTime(ZonedDateTime executionTime) {     this.executionTime = executionTime.     return this. }
+false;public;1;4;;public Builder recordExecution(boolean recordExecution) {     this.recordExecution = recordExecution.     return this. }
+false;public;1;3;;public Builder allActionsMode(ActionExecutionMode mode) {     return actionMode(ALL, mode). }
+false;public;2;10;;public Builder actionMode(String id, ActionExecutionMode mode) {     if (actionModes == null) {         throw new IllegalStateException("ManualExecutionContext has already been built!").     }     if (ALL.equals(id)) {         actionModes = new HashMap<>().     }     actionModes.put(id, mode).     return this. }
+false;public;1;4;;public Builder withInput(Input.Result inputResult) {     this.inputResult = inputResult.     return this. }
+false;public;1;4;;public Builder withCondition(Condition.Result conditionResult) {     this.conditionResult = conditionResult.     return this. }
+false;public;0;9;;public ManualExecutionContext build() throws Exception {     if (executionTime == null) {         executionTime = ZonedDateTime.now(ZoneOffset.UTC).     }     ManualExecutionContext context = new ManualExecutionContext(watch, knownWatch, executionTime, triggerEvent, defaultThrottlePeriod, inputResult, conditionResult, unmodifiableMap(actionModes), recordExecution).     actionModes = null.     return context. }

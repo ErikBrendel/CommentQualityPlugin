@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,static;0;3;/**  * Gets the comparator that sorts a..z  */ ;/**  * Gets the comparator that sorts a..z  */ public static OrderedComparator get() {     return INSTANCE. }
+true;public,static;0;3;/**  * Gets the comparator that sorts z..a (reverse)  */ ;/**  * Gets the comparator that sorts z..a (reverse)  */ public static OrderedComparator getReverse() {     return INSTANCE_REVERSE. }
+false;public;2;12;;public int compare(Object o1, Object o2) {     Integer num1 = 0.     Integer num2 = 0.     if (o1 instanceof Ordered) {         num1 = ((Ordered) o1).getOrder().     }     if (o2 instanceof Ordered) {         num2 = ((Ordered) o2).getOrder().     }     int answer = num1.compareTo(num2).     return reverse ? -1 * answer : answer. }

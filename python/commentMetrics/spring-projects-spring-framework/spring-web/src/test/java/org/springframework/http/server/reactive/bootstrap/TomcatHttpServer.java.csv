@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void setContextPath(String contextPath) {     this.contextPath = contextPath. }
+false;public;1;3;;public void setServletMapping(String servletMapping) {     this.servletMapping = servletMapping. }
+false;protected;0;17;;@Override protected void initServer() throws Exception {     this.tomcatServer = new Tomcat().     this.tomcatServer.setBaseDir(baseDir).     this.tomcatServer.setHostname(getHost()).     this.tomcatServer.setPort(getPort()).     ServletHttpHandlerAdapter servlet = initServletAdapter().     File base = new File(System.getProperty("java.io.tmpdir")).     Context rootContext = tomcatServer.addContext(this.contextPath, base.getAbsolutePath()).     Tomcat.addServlet(rootContext, "httpHandlerServlet", servlet).setAsyncSupported(true).     rootContext.addServletMappingDecoded(this.servletMapping, "httpHandlerServlet").     if (wsListener != null) {         rootContext.addApplicationListener(wsListener.getName()).     } }
+false;private;0;3;;private ServletHttpHandlerAdapter initServletAdapter() {     return new TomcatHttpHandlerAdapter(resolveHttpHandler()). }
+false;protected;0;5;;@Override protected void startInternal() throws LifecycleException {     this.tomcatServer.start().     setPort(this.tomcatServer.getConnector().getLocalPort()). }
+false;protected;0;5;;@Override protected void stopInternal() throws Exception {     this.tomcatServer.stop().     this.tomcatServer.destroy(). }
+false;protected;0;4;;@Override protected void resetInternal() {     this.tomcatServer = null. }

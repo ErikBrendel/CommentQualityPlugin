@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;2;1;/**  * Sets the state value for the given key.  *  * @param key State key  * @param value State value  */ ;/**  * Sets the state value for the given key.  *  * @param key State key  * @param value State value  */ void setState(K key, V value).
+true;;1;1;/**  * Gets the state value for the given key. It returns {@code null} if the key is unknown.  *  * @param key State key  * @return State value or null the key is unknown  */ ;/**  * Gets the state value for the given key. It returns {@code null} if the key is unknown.  *  * @param key State key  * @return State value or null the key is unknown  */ V getState(K key).

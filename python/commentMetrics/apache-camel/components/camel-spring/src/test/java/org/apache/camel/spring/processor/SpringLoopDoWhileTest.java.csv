@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Override @Test public void testLoopDoWhileFunctional() throws Exception { // not applicable in XML }
+false;protected;0;4;;@Override protected CamelContext createCamelContext() throws Exception {     return createSpringCamelContext(this, "org/apache/camel/spring/processor/SpringLoopDoWhileTest.xml"). }

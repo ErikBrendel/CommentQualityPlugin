@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@ReadOperation public WebEndpointResponse<Health> health(SecurityContext securityContext) {     return this.responseMapper.map(this.delegate.health(), securityContext). }
+false;public;2;6;;@ReadOperation public WebEndpointResponse<Health> healthForComponent(SecurityContext securityContext, @Selector String component) {     Supplier<Health> health = () -> this.delegate.healthForComponent(component).     return this.responseMapper.mapDetails(health, securityContext). }
+false;public;3;8;;@ReadOperation public WebEndpointResponse<Health> healthForComponentInstance(SecurityContext securityContext, @Selector String component, @Selector String instance) {     Supplier<Health> health = () -> this.delegate.healthForComponentInstance(component, instance).     return this.responseMapper.mapDetails(health, securityContext). }
+false;public;2;5;;public WebEndpointResponse<Health> getHealth(SecurityContext securityContext, ShowDetails showDetails) {     return this.responseMapper.map(this.delegate.health(), securityContext, showDetails). }

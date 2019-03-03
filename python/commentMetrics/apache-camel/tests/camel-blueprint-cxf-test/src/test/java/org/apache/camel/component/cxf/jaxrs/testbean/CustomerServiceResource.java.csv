@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;1;3;;@GET @Path("/customers/{id}/") Customer getCustomer(@PathParam("id") String id).
+false;;1;3;;@PUT @Path("/customers/") Response updateCustomer(Customer customer).

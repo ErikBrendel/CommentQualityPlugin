@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Before public void createCompiler() throws IOException {     this.compiler = new TestCompiler(this.temporaryFolder). }
+false;protected;0;3;;protected TestCompiler getCompiler() {     return this.compiler. }
+false;protected;1;6;;protected ConfigurationMetadata compile(Class<?>... types) {     TestConfigurationMetadataAnnotationProcessor processor = new TestConfigurationMetadataAnnotationProcessor(this.compiler.getOutputLocation()).     this.compiler.getTask(types).call(processor).     return processor.getMetadata(). }

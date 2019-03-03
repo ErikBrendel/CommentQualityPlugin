@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public TransportResponse.Empty read(StreamInput in) {     return TransportResponse.Empty.INSTANCE. }
+false;public;1;3;;@Override public void handleResponse(TransportResponse.Empty response) { }
+false;public;1;3;;@Override public void handleException(TransportException exp) { }
+false;public;0;4;;@Override public String executor() {     return executor. }

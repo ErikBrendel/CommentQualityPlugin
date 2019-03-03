@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public BookStore getBookStore() {     return bookStore. }
+false;public;1;7;;public BookNotFoundFault fromResponse(Response r) {     Object value = r.getMetadata().getFirst("BOOK-HEADER").     if (value != null) {         return new BookNotFoundFault(value.toString()).     }     throw new WebApplicationException(). }

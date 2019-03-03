@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test(expected = TypeConversionException.class) public void shouldComplainOnInvalidStringUrisConvertingToUri() {     UriTypeConverter.toUri(INVALID). }
+false;public;0;4;;@Test public void shouldConvertFromStringsToUris() {     assertEquals(EXAMPLE_URI, UriTypeConverter.toUri(EXAMPLE)). }
+false;public;0;4;;@Test public void shouldConvertFromUrisToStrings() {     assertEquals(EXAMPLE, UriTypeConverter.toCharSequence(EXAMPLE_URI)). }

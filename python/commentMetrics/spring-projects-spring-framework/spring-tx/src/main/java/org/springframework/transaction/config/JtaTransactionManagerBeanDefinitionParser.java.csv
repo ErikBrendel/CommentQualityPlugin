@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected String getBeanClassName(Element element) {     return JtaTransactionManagerFactoryBean.resolveJtaTransactionManagerClassName(). }
+false;protected;3;4;;@Override protected String resolveId(Element element, AbstractBeanDefinition definition, ParserContext parserContext) {     return TxNamespaceHandler.DEFAULT_TRANSACTION_MANAGER_BEAN_NAME. }

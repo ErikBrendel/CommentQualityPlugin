@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public void customize(UndertowServletWebServerFactory factory) {     WebsocketDeploymentInfoCustomizer customizer = new WebsocketDeploymentInfoCustomizer().     factory.addDeploymentInfoCustomizers(customizer). }
+false;public;0;4;;@Override public int getOrder() {     return 0. }
+false;public;1;6;;@Override public void customize(DeploymentInfo deploymentInfo) {     WebSocketDeploymentInfo info = new WebSocketDeploymentInfo().     deploymentInfo.addServletContextAttribute(WebSocketDeploymentInfo.ATTRIBUTE_NAME, info). }

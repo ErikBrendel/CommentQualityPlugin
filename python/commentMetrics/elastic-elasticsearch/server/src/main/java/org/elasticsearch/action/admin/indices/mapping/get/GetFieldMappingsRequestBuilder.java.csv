@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;public GetFieldMappingsRequestBuilder setIndices(String... indices) {     request.indices(indices).     return this. }
+false;public;1;4;;public GetFieldMappingsRequestBuilder addIndices(String... indices) {     request.indices(ArrayUtils.concat(request.indices(), indices)).     return this. }
+false;public;1;4;;public GetFieldMappingsRequestBuilder setTypes(String... types) {     request.types(types).     return this. }
+false;public;1;4;;public GetFieldMappingsRequestBuilder addTypes(String... types) {     request.types(ArrayUtils.concat(request.types(), types)).     return this. }
+false;public;1;4;;public GetFieldMappingsRequestBuilder setIndicesOptions(IndicesOptions indicesOptions) {     request.indicesOptions(indicesOptions).     return this. }
+true;public;1;4;/**  * Sets the fields to retrieve.  */ ;/**  * Sets the fields to retrieve.  */ public GetFieldMappingsRequestBuilder setFields(String... fields) {     request.fields(fields).     return this. }
+true;public;1;4;/**  * Indicates whether default mapping settings should be returned  */ ;/**  * Indicates whether default mapping settings should be returned  */ public GetFieldMappingsRequestBuilder includeDefaults(boolean includeDefaults) {     request.includeDefaults(includeDefaults).     return this. }

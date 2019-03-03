@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public boolean hasValue(String paramName) {     return false. }
+false;public;1;5;;@Override @Nullable public Object getValue(String paramName) throws IllegalArgumentException {     throw new IllegalArgumentException("This SqlParameterSource is empty"). }
+false;public;1;4;;@Override public int getSqlType(String paramName) {     return TYPE_UNKNOWN. }
+false;public;1;5;;@Override @Nullable public String getTypeName(String paramName) {     return null. }
+false;public;0;5;;@Override @Nullable public String[] getParameterNames() {     return null. }

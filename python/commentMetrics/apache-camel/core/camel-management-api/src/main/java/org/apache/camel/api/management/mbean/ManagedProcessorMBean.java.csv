@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;2;;@ManagedAttribute(description = "Processor State") String getState().
+false;;0;2;;@ManagedAttribute(description = "Camel ID") String getCamelId().
+false;;0;2;;@ManagedAttribute(description = "Camel ManagementName") String getCamelManagementName().
+false;;0;2;;@ManagedAttribute(description = "Route ID") String getRouteId().
+false;;0;2;;@ManagedAttribute(description = "Processor ID") String getProcessorId().
+false;;0;2;;@ManagedAttribute(description = "Processor Index") Integer getIndex().
+false;;0;2;;@ManagedAttribute(description = "Whether this processor supports extended JMX information") Boolean getSupportExtendedInformation().
+false;;0;2;;@ManagedOperation(description = "Start Processor") void start() throws Exception.
+false;;0;2;;@ManagedOperation(description = "Stop Processor") void stop() throws Exception.
+false;;0;2;;@ManagedOperation(description = "Processor information as JSon") String informationJson().
+false;;1;2;;@ManagedOperation(description = "Explain how this processor is configured") TabularData explain(boolean allOptions).
+false;;0;2;;@ManagedOperation(description = "Dumps the processor as XML") String dumpProcessorAsXml() throws Exception.

@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void attributeExists() throws Exception {     new FlashAttributeResultMatchers().attributeExists("good").match(getStubMvcResult()). }
+false;public;0;4;;@Test(expected = AssertionError.class) public void attributeExists_doesntExist() throws Exception {     new FlashAttributeResultMatchers().attributeExists("bad").match(getStubMvcResult()). }
+false;public;0;4;;@Test public void attribute() throws Exception {     new FlashAttributeResultMatchers().attribute("good", "good").match(getStubMvcResult()). }
+false;public;0;4;;@Test(expected = AssertionError.class) public void attribute_incorrectValue() throws Exception {     new FlashAttributeResultMatchers().attribute("good", "not good").match(getStubMvcResult()). }
+false;private;0;6;;private StubMvcResult getStubMvcResult() {     FlashMap flashMap = new FlashMap().     flashMap.put("good", "good").     StubMvcResult mvcResult = new StubMvcResult(null, null, null, null, null, flashMap, null).     return mvcResult. }

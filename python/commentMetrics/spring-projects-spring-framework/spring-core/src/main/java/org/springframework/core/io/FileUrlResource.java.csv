@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@Override public File getFile() throws IOException {     File file = this.file.     if (file != null) {         return file.     }     file = super.getFile().     this.file = file.     return file. }
+false;public;0;17;;@Override public boolean isWritable() {     try {         URL url = getURL().         if (ResourceUtils.isFileURL(url)) {             // Proceed with file system resolution             File file = getFile().             return (file.canWrite() && !file.isDirectory()).         } else {             return true.         }     } catch (IOException ex) {         return false.     } }
+false;public;0;4;;@Override public OutputStream getOutputStream() throws IOException {     return Files.newOutputStream(getFile().toPath()). }
+false;public;0;4;;@Override public WritableByteChannel writableChannel() throws IOException {     return FileChannel.open(getFile().toPath(), StandardOpenOption.WRITE). }
+false;public;1;7;;@Override public Resource createRelative(String relativePath) throws MalformedURLException {     if (relativePath.startsWith("/")) {         relativePath = relativePath.substring(1).     }     return new FileUrlResource(new URL(getURL(), relativePath)). }

@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String field() {     return field. }
+false;public;0;3;;public String query() {     return query. }
+false;public;0;4;;@Override public QueryBuilder asBuilder() {     return wildcardQuery(field, query). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(field, query). }
+false;public;1;14;;@Override public boolean equals(Object obj) {     if (this == obj) {         return true.     }     if (obj == null || getClass() != obj.getClass()) {         return false.     }     WildcardQuery other = (WildcardQuery) obj.     return Objects.equals(field, other.field) && Objects.equals(query, other.query). }
+false;protected;0;4;;@Override protected String innerToString() {     return field + ":" + query. }

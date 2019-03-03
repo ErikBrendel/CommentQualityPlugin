@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;3;7;/**  * Reads characters into a portion of an array.  *  * @exception IOException  *                If an I/O error occurs  */ ;/**  * Reads characters into a portion of an array.  *  * @exception IOException  *                If an I/O error occurs  */ public int read(char[] cbuf, int off, int len) throws IOException {     int read = in.read(cbuf, off, len).     if (read > 0) {         nonXmlCharFilterer.filter(cbuf, off, read).     }     return read. }

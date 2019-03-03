@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;5;;@Override public void pre(Span span, Exchange exchange, Endpoint endpoint) {     super.pre(span, exchange, endpoint).     span.setTag("pre", "test"). }
+false;public;3;5;;@Override public void post(Span span, Exchange exchange, Endpoint endpoint) {     super.post(span, exchange, endpoint).     span.setTag("post", "test"). }

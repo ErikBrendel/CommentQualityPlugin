@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public String display(MyCurrency currency) {     return "Currency is " + currency.getSymbol(). }
+false;public;2;3;;public String displayPrice(MyCurrency currency, int amount) {     return "Price is " + currency.getSymbol() + amount. }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void testSendingCamelExchangeToEndpointResultsInValidApplicationEventAfterTheRefreshEvent() throws Exception {     MockEndpoint result = resolveMandatoryEndpoint("mock:result", MockEndpoint.class).     result.expectedMessageCount(1).     template.sendBody(uri, expectedBody).     result.assertIsSatisfied(). }
+false;protected;0;3;;protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/component/log/SpringLogTest-context.xml"). }

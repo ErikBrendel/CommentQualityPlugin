@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void runShouldHaveEndpointBean() {     this.contextRunner.withPropertyValues("management.endpoint.shutdown.enabled:true").run((context) -> assertThat(context).hasSingleBean(InfoEndpoint.class)). }
+false;public;0;6;;@Test public void runShouldHaveEndpointBeanEvenIfDefaultIsDisabled() {     // FIXME     this.contextRunner.withPropertyValues("management.endpoint.default.enabled:false").run((context) -> assertThat(context).hasSingleBean(InfoEndpoint.class)). }
+false;public;0;6;;@Test public void runWhenEnabledPropertyIsFalseShouldNotHaveEndpointBean() {     this.contextRunner.withPropertyValues("management.endpoint.info.enabled:false").run((context) -> assertThat(context).doesNotHaveBean(InfoEndpoint.class)). }

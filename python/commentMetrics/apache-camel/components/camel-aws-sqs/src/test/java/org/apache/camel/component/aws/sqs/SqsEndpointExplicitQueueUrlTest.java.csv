@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@Before public void setUp() {     amazonSQSClient = Mockito.mock(AmazonSQSClient.class).     SqsConfiguration config = new SqsConfiguration().     config.setQueueUrl(QUEUE_URL).     config.setAmazonSQSClient(amazonSQSClient).     endpoint = new SqsEndpoint("aws-sqs://test-queue", new SqsComponent(new DefaultCamelContext()), config). }
+false;public;0;6;;@Test public void doStartWithExplicitQueueUrlInConfigShouldNotCallSqsClientListQueues() throws Exception {     endpoint.doStart().     assertEquals(endpoint.getQueueUrl(), QUEUE_URL). }

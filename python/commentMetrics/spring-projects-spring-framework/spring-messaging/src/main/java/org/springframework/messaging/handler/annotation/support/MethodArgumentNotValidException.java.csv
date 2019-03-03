@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,final;0;4;/**  * Return the BindingResult if the failure is validation-related,  * or {@code null} if none.  */ ;/**  * Return the BindingResult if the failure is validation-related,  * or {@code null} if none.  */ @Nullable public final BindingResult getBindingResult() {     return this.bindingResult. }
+false;private,static;1;8;;private static String getValidationErrorMessage(BindingResult bindingResult) {     StringBuilder sb = new StringBuilder().     sb.append(bindingResult.getErrorCount()).append(" error(s): ").     for (ObjectError error : bindingResult.getAllErrors()) {         sb.append("[").append(error).append("] ").     }     return sb.toString(). }

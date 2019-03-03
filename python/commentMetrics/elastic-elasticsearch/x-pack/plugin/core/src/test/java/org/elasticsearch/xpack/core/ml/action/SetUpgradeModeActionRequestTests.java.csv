@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected Request createTestInstance() {     return new Request(randomBoolean()). }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return false. }
+false;protected;0;4;;@Override protected Writeable.Reader<Request> instanceReader() {     return Request::new. }
+false;protected;1;4;;@Override protected Request doParseInstance(XContentParser parser) {     return Request.PARSER.apply(parser, null). }

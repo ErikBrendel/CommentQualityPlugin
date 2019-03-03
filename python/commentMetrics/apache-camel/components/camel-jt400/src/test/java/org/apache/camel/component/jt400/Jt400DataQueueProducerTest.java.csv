@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Override @Before public void setUp() throws Exception {     super.setUp().     Jt400Endpoint endpoint = resolveMandatoryEndpoint("jt400://user:" + PASSWORD + "@host/qsys.lib/library.lib/queue.dtaq?connectionPool=#mockPool", Jt400Endpoint.class).     producer = new Jt400DataQueueProducer(endpoint). }
+false;public;0;4;;@Test public void testToStringHidesPassword() {     assertFalse(producer.toString().contains(PASSWORD)). }

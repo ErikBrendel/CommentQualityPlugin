@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static,synchronized;0;6;;public static synchronized GoogleMailPropertiesHelper getHelper() {     if (helper == null) {         helper = new GoogleMailPropertiesHelper().     }     return helper. }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void autoConfiguredConnectionFactoryIsInstrumented() {     this.contextRunner.run((context) -> {         MeterRegistry registry = context.getBean(MeterRegistry.class).         registry.get("rabbitmq.connections").meter().     }). }
+false;public;0;8;;@Test public void rabbitmqNativeConnectionFactoryInstrumentationCanBeDisabled() {     this.contextRunner.withPropertyValues("management.metrics.enable.rabbitmq=false").run((context) -> {         MeterRegistry registry = context.getBean(MeterRegistry.class).         assertThat(registry.find("rabbitmq.connections").meter()).isNull().     }). }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;public void testMlockall() {     if (Constants.MAC_OS_X) {         assertFalse("Memory locking is not available on OS X platforms", JNANatives.LOCAL_MLOCKALL).     } }
+false;public;0;9;;public void testConsoleCtrlHandler() {     if (Constants.WINDOWS) {         assertNotNull(JNAKernel32Library.getInstance()).         assertThat(JNAKernel32Library.getInstance().getCallbacks().size(), equalTo(1)).     } else {         assertNotNull(JNAKernel32Library.getInstance()).         assertThat(JNAKernel32Library.getInstance().getCallbacks().size(), equalTo(0)).     } }

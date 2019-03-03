@@ -1,0 +1,21 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public NagiosConfigurationNestedConfiguration getConfiguration() {     return configuration. }
+false;public;1;4;;public void setConfiguration(NagiosConfigurationNestedConfiguration configuration) {     this.configuration = configuration. }
+false;public;0;3;;public Boolean getResolvePropertyPlaceholders() {     return resolvePropertyPlaceholders. }
+false;public;1;4;;public void setResolvePropertyPlaceholders(Boolean resolvePropertyPlaceholders) {     this.resolvePropertyPlaceholders = resolvePropertyPlaceholders. }
+false;public;0;3;;public NagiosSettings getNagiosSettings() {     return nagiosSettings. }
+false;public;1;3;;public void setNagiosSettings(NagiosSettings nagiosSettings) {     this.nagiosSettings = nagiosSettings. }
+false;public;0;3;;public String getHost() {     return host. }
+false;public;1;3;;public void setHost(String host) {     this.host = host. }
+false;public;0;3;;public Integer getPort() {     return port. }
+false;public;1;3;;public void setPort(Integer port) {     this.port = port. }
+false;public;0;3;;public Integer getConnectionTimeout() {     return connectionTimeout. }
+false;public;1;3;;public void setConnectionTimeout(Integer connectionTimeout) {     this.connectionTimeout = connectionTimeout. }
+false;public;0;3;;public Integer getTimeout() {     return timeout. }
+false;public;1;3;;public void setTimeout(Integer timeout) {     this.timeout = timeout. }
+false;public;0;3;;public String getPassword() {     return password. }
+false;public;1;3;;public void setPassword(String password) {     this.password = password. }
+false;public;0;5;;@Deprecated @DeprecatedConfigurationProperty public NagiosEncryptionMethod getEncryptionMethod() {     return encryptionMethod. }
+false;public;1;4;;@Deprecated public void setEncryptionMethod(NagiosEncryptionMethod encryptionMethod) {     this.encryptionMethod = encryptionMethod. }
+false;public;0;3;;public Encryption getEncryption() {     return encryption. }
+false;public;1;3;;public void setEncryption(Encryption encryption) {     this.encryption = encryption. }

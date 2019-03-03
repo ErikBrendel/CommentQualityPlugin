@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;1;6;;@Test @DisplayName("ApplicationContext injected into method") void applicationContextInjected(ApplicationContext applicationContext) {     assertNotNull(applicationContext, "ApplicationContext should have been injected into method by Spring").     assertEquals(dilbert, applicationContext.getBean("dilbert", Person.class)). }
+false;;0;7;;@Test @DisplayName("Spring @Beans injected into fields") void springBeansInjected() {     assertNotNull(dilbert, "Person should have been @Autowired by Spring").     assertEquals("Dilbert", dilbert.getName(), "Person's name").     assertEquals(2, people.size(), "Number of Person objects in context"). }

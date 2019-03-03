@@ -1,0 +1,73 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public SqsConfigurationNestedConfiguration getConfiguration() {     return configuration. }
+false;public;1;4;;public void setConfiguration(SqsConfigurationNestedConfiguration configuration) {     this.configuration = configuration. }
+false;public;0;3;;public String getAccessKey() {     return accessKey. }
+false;public;1;3;;public void setAccessKey(String accessKey) {     this.accessKey = accessKey. }
+false;public;0;3;;public String getSecretKey() {     return secretKey. }
+false;public;1;3;;public void setSecretKey(String secretKey) {     this.secretKey = secretKey. }
+false;public;0;3;;public String getRegion() {     return region. }
+false;public;1;3;;public void setRegion(String region) {     this.region = region. }
+false;public;0;3;;public Boolean getResolvePropertyPlaceholders() {     return resolvePropertyPlaceholders. }
+false;public;1;4;;public void setResolvePropertyPlaceholders(Boolean resolvePropertyPlaceholders) {     this.resolvePropertyPlaceholders = resolvePropertyPlaceholders. }
+false;public;0;3;;public String getAmazonAWSHost() {     return amazonAWSHost. }
+false;public;1;3;;public void setAmazonAWSHost(String amazonAWSHost) {     this.amazonAWSHost = amazonAWSHost. }
+false;public;0;3;;public String getQueueName() {     return queueName. }
+false;public;1;3;;public void setQueueName(String queueName) {     this.queueName = queueName. }
+false;public;0;3;;public String getAccessKey() {     return accessKey. }
+false;public;1;3;;public void setAccessKey(String accessKey) {     this.accessKey = accessKey. }
+false;public;0;3;;public String getSecretKey() {     return secretKey. }
+false;public;1;3;;public void setSecretKey(String secretKey) {     this.secretKey = secretKey. }
+false;public;0;3;;public Boolean getDeleteAfterRead() {     return deleteAfterRead. }
+false;public;1;3;;public void setDeleteAfterRead(Boolean deleteAfterRead) {     this.deleteAfterRead = deleteAfterRead. }
+false;public;0;3;;public AmazonSQS getAmazonSQSClient() {     return amazonSQSClient. }
+false;public;1;3;;public void setAmazonSQSClient(AmazonSQS amazonSQSClient) {     this.amazonSQSClient = amazonSQSClient. }
+false;public;0;3;;public Integer getVisibilityTimeout() {     return visibilityTimeout. }
+false;public;1;3;;public void setVisibilityTimeout(Integer visibilityTimeout) {     this.visibilityTimeout = visibilityTimeout. }
+false;public;0;3;;public String getAttributeNames() {     return attributeNames. }
+false;public;1;3;;public void setAttributeNames(String attributeNames) {     this.attributeNames = attributeNames. }
+false;public;0;3;;public String getMessageAttributeNames() {     return messageAttributeNames. }
+false;public;1;3;;public void setMessageAttributeNames(String messageAttributeNames) {     this.messageAttributeNames = messageAttributeNames. }
+false;public;0;3;;public Integer getDefaultVisibilityTimeout() {     return defaultVisibilityTimeout. }
+false;public;1;3;;public void setDefaultVisibilityTimeout(Integer defaultVisibilityTimeout) {     this.defaultVisibilityTimeout = defaultVisibilityTimeout. }
+false;public;0;3;;public Integer getDelaySeconds() {     return delaySeconds. }
+false;public;1;3;;public void setDelaySeconds(Integer delaySeconds) {     this.delaySeconds = delaySeconds. }
+false;public;0;3;;public Boolean getDelayQueue() {     return delayQueue. }
+false;public;1;3;;public void setDelayQueue(Boolean delayQueue) {     this.delayQueue = delayQueue. }
+false;public;0;3;;public Integer getMaximumMessageSize() {     return maximumMessageSize. }
+false;public;1;3;;public void setMaximumMessageSize(Integer maximumMessageSize) {     this.maximumMessageSize = maximumMessageSize. }
+false;public;0;3;;public Integer getMessageRetentionPeriod() {     return messageRetentionPeriod. }
+false;public;1;3;;public void setMessageRetentionPeriod(Integer messageRetentionPeriod) {     this.messageRetentionPeriod = messageRetentionPeriod. }
+false;public;0;3;;public String getPolicy() {     return policy. }
+false;public;1;3;;public void setPolicy(String policy) {     this.policy = policy. }
+false;public;0;3;;public String getRedrivePolicy() {     return redrivePolicy. }
+false;public;1;3;;public void setRedrivePolicy(String redrivePolicy) {     this.redrivePolicy = redrivePolicy. }
+false;public;0;3;;public Boolean getExtendMessageVisibility() {     return extendMessageVisibility. }
+false;public;1;3;;public void setExtendMessageVisibility(Boolean extendMessageVisibility) {     this.extendMessageVisibility = extendMessageVisibility. }
+false;public;0;3;;public Integer getReceiveMessageWaitTimeSeconds() {     return receiveMessageWaitTimeSeconds. }
+false;public;1;4;;public void setReceiveMessageWaitTimeSeconds(Integer receiveMessageWaitTimeSeconds) {     this.receiveMessageWaitTimeSeconds = receiveMessageWaitTimeSeconds. }
+false;public;0;3;;public Integer getWaitTimeSeconds() {     return waitTimeSeconds. }
+false;public;1;3;;public void setWaitTimeSeconds(Integer waitTimeSeconds) {     this.waitTimeSeconds = waitTimeSeconds. }
+false;public;0;3;;public String getQueueOwnerAWSAccountId() {     return queueOwnerAWSAccountId. }
+false;public;1;3;;public void setQueueOwnerAWSAccountId(String queueOwnerAWSAccountId) {     this.queueOwnerAWSAccountId = queueOwnerAWSAccountId. }
+false;public;0;3;;public Boolean getDeleteIfFiltered() {     return deleteIfFiltered. }
+false;public;1;3;;public void setDeleteIfFiltered(Boolean deleteIfFiltered) {     this.deleteIfFiltered = deleteIfFiltered. }
+false;public;0;3;;public String getRegion() {     return region. }
+false;public;1;3;;public void setRegion(String region) {     this.region = region. }
+false;public;0;3;;public Integer getConcurrentConsumers() {     return concurrentConsumers. }
+false;public;1;3;;public void setConcurrentConsumers(Integer concurrentConsumers) {     this.concurrentConsumers = concurrentConsumers. }
+false;public;0;3;;public String getQueueUrl() {     return queueUrl. }
+false;public;1;3;;public void setQueueUrl(String queueUrl) {     this.queueUrl = queueUrl. }
+false;public;0;3;;public String getProxyHost() {     return proxyHost. }
+false;public;1;3;;public void setProxyHost(String proxyHost) {     this.proxyHost = proxyHost. }
+false;public;0;3;;public Integer getProxyPort() {     return proxyPort. }
+false;public;1;3;;public void setProxyPort(Integer proxyPort) {     this.proxyPort = proxyPort. }
+false;public;0;3;;public String getKmsMasterKeyId() {     return kmsMasterKeyId. }
+false;public;1;3;;public void setKmsMasterKeyId(String kmsMasterKeyId) {     this.kmsMasterKeyId = kmsMasterKeyId. }
+false;public;0;3;;public Integer getKmsDataKeyReusePeriodSeconds() {     return kmsDataKeyReusePeriodSeconds. }
+false;public;1;4;;public void setKmsDataKeyReusePeriodSeconds(Integer kmsDataKeyReusePeriodSeconds) {     this.kmsDataKeyReusePeriodSeconds = kmsDataKeyReusePeriodSeconds. }
+false;public;0;3;;public Boolean getServerSideEncryptionEnabled() {     return serverSideEncryptionEnabled. }
+false;public;1;4;;public void setServerSideEncryptionEnabled(Boolean serverSideEncryptionEnabled) {     this.serverSideEncryptionEnabled = serverSideEncryptionEnabled. }
+false;public;0;3;;public String getMessageGroupIdStrategy() {     return messageGroupIdStrategy. }
+false;public;1;3;;public void setMessageGroupIdStrategy(String messageGroupIdStrategy) {     this.messageGroupIdStrategy = messageGroupIdStrategy. }
+false;public;0;3;;public String getMessageDeduplicationIdStrategy() {     return messageDeduplicationIdStrategy. }
+false;public;1;4;;public void setMessageDeduplicationIdStrategy(String messageDeduplicationIdStrategy) {     this.messageDeduplicationIdStrategy = messageDeduplicationIdStrategy. }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;12;;@Override @Before public void setUp() throws Exception {     deleteDirectory("target/data/issue").     deleteDirectory("target/data/done").     start = new File("target/data/issue").getAbsolutePath().     done = new File("target/data/done").getAbsolutePath().     uri = "file:" + start + "?initialDelay=0&delay=10&move=" + done + "/${file:name}".     super.setUp(). }
+false;public;0;10;;@Test public void testMoveAbsolute() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMessageCount(1).     mock.expectedFileExists(done + "/hello.txt").     template.sendBodyAndHeader("file:" + start, "Hello World", Exchange.FILE_NAME, "hello.txt").     assertMockEndpointsSatisfied(). }
+false;public;0;4;;@Override public void configure() throws Exception {     from(uri).to("mock:result"). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from(uri).to("mock:result").         }     }. }

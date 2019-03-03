@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void shouldNotProcessIfExistingHttpHandler() {     this.contextRunner.withUserConfiguration(CustomHttpHandler.class).run((context) -> {         assertThat(context).hasSingleBean(HttpHandler.class).         assertThat(context).getBean(HttpHandler.class).isSameAs(context.getBean("customHttpHandler")).     }). }
+false;public;0;6;;@Test public void shouldConfigureHttpHandlerAnnotation() {     this.contextRunner.withConfiguration(AutoConfigurations.of(WebFluxAutoConfiguration.class)).run((context) -> assertThat(context).hasSingleBean(HttpHandler.class)). }
+false;public;0;4;;@Bean public HttpHandler customHttpHandler() {     return (serverHttpRequest, serverHttpResponse) -> null. }
+false;public;0;4;;@Bean public RouterFunction<ServerResponse> routerFunction() {     return route(GET("/test"), (serverRequest) -> null). }

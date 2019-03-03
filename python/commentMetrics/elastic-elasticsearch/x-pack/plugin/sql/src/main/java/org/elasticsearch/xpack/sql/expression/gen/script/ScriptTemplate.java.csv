@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String template() {     return template. }
+false;public;0;3;;public Params params() {     return params. }
+false;public;0;3;;public Map<String, String> aggPaths() {     return params.asAggPaths(). }
+false;public;0;3;;public DataType outputType() {     return outputType. }
+false;public;0;3;;public Script toPainless() {     return new Script(ScriptType.INLINE, Script.DEFAULT_SCRIPT_LANG, bindTemplate(), params.asParams()). }
+false;private;0;4;;private String bindTemplate() {     List<String> binding = params.asCodeNames().     return binding.isEmpty() ? template : format(Locale.ROOT, template, binding.toArray()). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(template, params, outputType). }
+false;public;1;15;;@Override public boolean equals(Object obj) {     if (this == obj) {         return true.     }     if (obj == null || getClass() != obj.getClass()) {         return false.     }     ScriptTemplate other = (ScriptTemplate) obj.     return Objects.equals(template, other.template) && Objects.equals(params, other.params) && Objects.equals(outputType, other.outputType). }
+false;public;0;4;;@Override public String toString() {     return bindTemplate(). }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static boolean isNotSslRecordException(Throwable e) {     return e instanceof NotSslRecordException && e.getCause() == null. }
+false;public,static;1;5;;public static boolean isCloseDuringHandshakeException(Throwable e) {     return e instanceof SSLException && e.getCause() == null && "Received close_notify during handshake".equals(e.getMessage()). }
+false;public,static;1;5;;public static boolean isReceivedCertificateUnknownException(Throwable e) {     return e instanceof DecoderException && e.getCause() instanceof SSLException && "Received fatal alert: certificate_unknown".equals(e.getCause().getMessage()). }

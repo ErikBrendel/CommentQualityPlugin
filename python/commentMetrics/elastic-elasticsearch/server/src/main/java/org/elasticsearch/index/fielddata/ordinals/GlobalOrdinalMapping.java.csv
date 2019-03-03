@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public long getValueCount() {     return ordinalMap.getValueCount(). }
+false;public;1;3;;public long getGlobalOrd(long segmentOrd) {     return mapping.get(segmentOrd). }
+false;public;1;4;;@Override public boolean advanceExact(int target) throws IOException {     return values.advanceExact(target). }
+false;public;0;9;;@Override public long nextOrd() throws IOException {     long segmentOrd = values.nextOrd().     if (segmentOrd == SortedSetDocValues.NO_MORE_ORDS) {         return SortedSetDocValues.NO_MORE_ORDS.     } else {         return getGlobalOrd(segmentOrd).     } }
+false;public;1;6;;@Override public BytesRef lookupOrd(long globalOrd) throws IOException {     final long segmentOrd = ordinalMap.getFirstSegmentOrd(globalOrd).     int readerIndex = ordinalMap.getFirstSegmentNumber(globalOrd).     return bytesValues[readerIndex].lookupOrd(segmentOrd). }
+false;public;0;4;;@Override public int docID() {     return values.docID(). }
+false;public;0;4;;@Override public int nextDoc() throws IOException {     return values.nextDoc(). }
+false;public;1;4;;@Override public int advance(int target) throws IOException {     return values.advance(target). }
+false;public;0;4;;@Override public long cost() {     return values.cost(). }

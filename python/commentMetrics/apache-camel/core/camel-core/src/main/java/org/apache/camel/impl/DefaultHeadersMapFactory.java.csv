@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Map<String, Object> newMap() {     return new CaseInsensitiveMap(). }
+false;public;1;4;;@Override public Map<String, Object> newMap(Map<String, Object> map) {     return new CaseInsensitiveMap(map). }
+false;public;1;4;;@Override public boolean isInstanceOf(Map<String, Object> map) {     return map instanceof CaseInsensitiveMap. }
+false;public;0;4;;@Override public boolean isCaseInsensitive() {     return true. }

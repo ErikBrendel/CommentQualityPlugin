@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getSedol() {     return sedol. }
+false;public;1;3;;public void setSedol(String sedol) {     this.sedol = sedol. }
+false;public;0;3;;public String getSource() {     return source. }
+false;public;1;3;;public void setSource(String source) {     this.source = source. }
+false;public;0;6;;@Override public int hashCode() {     int result = sedol != null ? sedol.hashCode() : 0.     result = 31 * result + (source != null ? source.hashCode() : 0).     return result. }
+false;public;1;11;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     } else if (obj == this) {         return true.     } else {         Record record = (Record) obj.         return sedol.equals(record.getSedol()) && source.equals(record.getSource()).     } }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;2;1;/**  * Deterimine element name for given type  *  * @param soapAction  * @param type  * @return resolved element name  */ ;/**  * Deterimine element name for given type  *  * @param soapAction  * @param type  * @return resolved element name  */ QName findQNameForSoapActionOrType(String soapAction, Class<?> type).
+true;;1;1;/**  * Determine exception class for given SOAP Fault QName  * @param faultName  * @return  */ ;/**  * Determine exception class for given SOAP Fault QName  * @param faultName  * @return  */ Class<? extends Exception> findExceptionForFaultName(QName faultName).

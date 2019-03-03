@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Returns the headers of this entity.  */ ;/**  * Returns the headers of this entity.  */ public HttpHeaders getHeaders() {     return this.headers. }
+true;public;0;4;/**  * Returns the body of this entity.  */ ;/**  * Returns the body of this entity.  */ @Nullable public T getBody() {     return this.body. }
+true;public;0;3;/**  * Indicates whether this entity has a body.  */ ;/**  * Indicates whether this entity has a body.  */ public boolean hasBody() {     return (this.body != null). }
+false;public;1;12;;@Override public boolean equals(@Nullable Object other) {     if (this == other) {         return true.     }     if (other == null || other.getClass() != getClass()) {         return false.     }     HttpEntity<?> otherEntity = (HttpEntity<?>) other.     return (ObjectUtils.nullSafeEquals(this.headers, otherEntity.headers) && ObjectUtils.nullSafeEquals(this.body, otherEntity.body)). }
+false;public;0;4;;@Override public int hashCode() {     return (ObjectUtils.nullSafeHashCode(this.headers) * 29 + ObjectUtils.nullSafeHashCode(this.body)). }
+false;public;0;11;;@Override public String toString() {     StringBuilder builder = new StringBuilder("<").     if (this.body != null) {         builder.append(this.body).         builder.append(',').     }     builder.append(this.headers).     builder.append('>').     return builder.toString(). }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected PointBuilder createTestShapeBuilder() {     return createRandomShape(). }
+false;protected;1;4;;@Override protected PointBuilder createMutation(PointBuilder original) throws IOException {     return mutate(original). }
+false;static;1;3;;static PointBuilder mutate(PointBuilder original) {     return new PointBuilder().coordinate(new Coordinate(original.longitude() / 2, original.latitude() / 2)). }
+false;static;0;3;;static PointBuilder createRandomShape() {     return (PointBuilder) RandomShapeGenerator.createShape(random(), ShapeType.POINT). }

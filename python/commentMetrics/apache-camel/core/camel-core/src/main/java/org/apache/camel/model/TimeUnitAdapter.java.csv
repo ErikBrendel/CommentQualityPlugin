@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public String marshal(TimeUnit v) throws Exception {     String result = null.     if (v != null) {         result = v.toString().     }     return result. }
+false;public;1;8;;@Override public TimeUnit unmarshal(String v) throws Exception {     TimeUnit result = null.     if (v != null) {         result = TimeUnit.valueOf(v.toUpperCase(Locale.ENGLISH)).     }     return result. }

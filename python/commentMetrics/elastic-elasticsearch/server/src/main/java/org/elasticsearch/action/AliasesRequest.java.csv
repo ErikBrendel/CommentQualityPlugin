@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * Returns the array of aliases that the action relates to  */ ;/**  * Returns the array of aliases that the action relates to  */ String[] aliases().
+true;;0;1;/**  * Returns the aliases as they were originally requested, before any potential name resolution  */ ;/**  * Returns the aliases as they were originally requested, before any potential name resolution  */ String[] getOriginalAliases().
+true;;1;1;/**  * Replaces current aliases with the provided aliases.  *  * Sometimes aliases expressions need to be resolved to concrete aliases prior to executing the transport action.  */ ;/**  * Replaces current aliases with the provided aliases.  *  * Sometimes aliases expressions need to be resolved to concrete aliases prior to executing the transport action.  */ void replaceAliases(String... aliases).
+true;;0;1;/**  * Returns true if wildcards expressions among aliases should be resolved, false otherwise  */ ;/**  * Returns true if wildcards expressions among aliases should be resolved, false otherwise  */ boolean expandAliasesWildcards().

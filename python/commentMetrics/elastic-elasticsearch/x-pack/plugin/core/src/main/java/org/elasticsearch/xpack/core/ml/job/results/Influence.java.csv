@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private,static;1;9;;private static ConstructingObjectParser<Influence, Void> createParser(boolean ignoreUnknownFields) {     ConstructingObjectParser<Influence, Void> parser = new ConstructingObjectParser<>(INFLUENCER.getPreferredName(), ignoreUnknownFields, a -> new Influence((String) a[0], (List<String>) a[1])).     parser.declareString(ConstructingObjectParser.constructorArg(), INFLUENCER_FIELD_NAME).     parser.declareStringArray(ConstructingObjectParser.constructorArg(), INFLUENCER_FIELD_VALUES).     return parser. }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeString(field).     out.writeStringArray(fieldValues.toArray(new String[fieldValues.size()])). }
+false;public;2;8;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(INFLUENCER_FIELD_NAME.getPreferredName(), field).     builder.field(INFLUENCER_FIELD_VALUES.getPreferredName(), fieldValues).     builder.endObject().     return builder. }
+false;public;0;3;;public String getInfluencerFieldName() {     return field. }
+false;public;0;3;;public List<String> getInfluencerFieldValues() {     return fieldValues. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(field, fieldValues). }
+false;public;1;17;;@Override public boolean equals(Object obj) {     if (this == obj) {         return true.     }     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     Influence other = (Influence) obj.     return Objects.equals(field, other.field) && Objects.equals(fieldValues, other.fieldValues). }

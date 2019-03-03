@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;9;;@Override public void collect(int doc, long bucket) throws IOException {     collectTimer.start().     try {         delegate.collect(doc, bucket).     } finally {         collectTimer.stop().     } }
+false;public;1;4;;@Override public void setScorer(Scorable scorer) throws IOException {     delegate.setScorer(scorer). }

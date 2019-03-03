@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;// Camel fixtures @Override protected void doPostSetup() throws Exception {     camelItemWriter = new CamelItemWriter<>(template(), "seda:queue"). }
+false;public;0;8;;// Tests @Test public void shouldReadMessage() throws Exception {     // When     camelItemWriter.write(Collections.singletonList(message)).     // Then     assertEquals(message, consumer().receiveBody("seda:queue")). }

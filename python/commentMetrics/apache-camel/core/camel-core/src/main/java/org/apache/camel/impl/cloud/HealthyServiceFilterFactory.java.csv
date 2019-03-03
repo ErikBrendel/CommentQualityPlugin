@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;// ************************************************************************* // Factory // ************************************************************************* @Override public ServiceFilter newInstance(CamelContext camelContext) throws Exception {     return new HealthyServiceFilter(). }

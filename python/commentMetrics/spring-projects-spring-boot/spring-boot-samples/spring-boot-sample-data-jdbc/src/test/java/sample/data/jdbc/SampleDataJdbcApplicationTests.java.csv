@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Before public void setUp() {     this.mvc = MockMvcBuilders.webAppContextSetup(this.context).build(). }
+false;public;0;5;;@Test public void testCustomers() throws Exception {     this.mvc.perform(get("/").param("name", "merEDith")).andExpect(status().isOk()).andExpect(content().string(containsString("Meredith"))). }

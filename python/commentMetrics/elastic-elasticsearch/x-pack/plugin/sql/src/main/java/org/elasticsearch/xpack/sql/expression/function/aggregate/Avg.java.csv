@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected NodeInfo<Avg> info() {     return NodeInfo.create(this, Avg::new, field()). }
+false;public;1;7;;@Override public Avg replaceChildren(List<Expression> newChildren) {     if (newChildren.size() != 1) {         throw new IllegalArgumentException("expected [1] child but received [" + newChildren.size() + "]").     }     return new Avg(source(), newChildren.get(0)). }
+false;public;0;4;;@Override public String innerName() {     return "avg". }
+false;public;0;4;;@Override public DataType dataType() {     return DataType.DOUBLE. }

@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;2;;@ManagedAttribute(description = "Service State") String getState().
+false;;0;2;;@ManagedAttribute(description = "Camel ID") String getCamelId().
+false;;0;2;;@ManagedAttribute(description = "Camel ManagementName") String getCamelManagementName().
+false;;0;2;;@ManagedAttribute(description = "Route ID") String getRouteId().
+false;;0;2;;@ManagedAttribute(description = "Service Type") String getServiceType().
+false;;0;2;;@ManagedOperation(description = "Start Service") void start() throws Exception.
+false;;0;2;;@ManagedOperation(description = "Stop Service") void stop() throws Exception.
+false;;0;2;;@ManagedAttribute(description = "Whether this service supports suspension") boolean isSupportSuspension().
+false;;0;2;;@ManagedAttribute(description = "Whether this service is static") boolean isStaticService().
+false;;0;2;;@ManagedAttribute(description = "Whether this service is suspended") boolean isSuspended().
+false;;0;2;;@ManagedOperation(description = "Suspend Service") void suspend() throws Exception.
+false;;0;2;;@ManagedOperation(description = "Resume Service") void resume() throws Exception.

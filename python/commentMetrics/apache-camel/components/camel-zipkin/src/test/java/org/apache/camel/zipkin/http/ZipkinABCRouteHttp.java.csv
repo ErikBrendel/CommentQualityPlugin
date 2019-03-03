@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;5;;@Override protected void setSpanReporter(ZipkinTracer zipkin) {     zipkin.setSpanReporter(AsyncReporter.create(URLConnectionSender.create("http://locahost:9411/api/v2/spans"))). }

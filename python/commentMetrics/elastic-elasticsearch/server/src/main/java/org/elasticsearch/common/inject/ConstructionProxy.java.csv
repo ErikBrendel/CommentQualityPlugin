@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;1;1;/**  * Constructs an instance of {@code T} for the given arguments.  */ ;/**  * Constructs an instance of {@code T} for the given arguments.  */ T newInstance(Object... arguments) throws InvocationTargetException.
+true;;0;1;/**  * Returns the injection point for this constructor.  */ ;/**  * Returns the injection point for this constructor.  */ InjectionPoint getInjectionPoint().
+true;;0;1;/**  * Returns the injected constructor. If the injected constructor is synthetic (such as generated  * code for method interception), the natural constructor is returned.  */ ;/**  * Returns the injected constructor. If the injected constructor is synthetic (such as generated  * code for method interception), the natural constructor is returned.  */ Constructor<T> getConstructor().

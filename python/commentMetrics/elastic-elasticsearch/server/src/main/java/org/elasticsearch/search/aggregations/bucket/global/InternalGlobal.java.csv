@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getWriteableName() {     return GlobalAggregationBuilder.NAME. }
+false;protected;3;4;;@Override protected InternalSingleBucketAggregation newAggregation(String name, long docCount, InternalAggregations subAggregations) {     return new InternalGlobal(name, docCount, subAggregations, pipelineAggregators(), getMetaData()). }

@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;7;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry registry = super.createRegistry().     this.pubnub = createPubNubInstance().     registry.bind("pubnub", this.pubnub).     return registry. }
+false;public;0;4;;@Before public void beforeEach() throws IOException {     wireMockRule.start(). }
+false;public;0;4;;@After public void afterEach() {     pubnub.destroy(). }
+false;protected;0;3;;protected PubNub getPubnub() {     return pubnub. }
+false;public;0;4;;@Override public int getTimestamp() {     return 1337. }
+false;public;0;4;;@Override public String getVersion() {     return "suchJava". }
+false;public;0;4;;@Override public String getInstanceId() {     return "PubNubInstanceId". }
+false;public;0;4;;@Override public String getRequestId() {     return "PubNubRequestId". }
+false;private;0;40;;private PubNub createPubNubInstance() {     PNConfiguration pnConfiguration = new PNConfiguration().     pnConfiguration.setOrigin("localhost" + ":" + port).     pnConfiguration.setSecure(false).     pnConfiguration.setSubscribeKey("mySubscribeKey").     pnConfiguration.setPublishKey("myPublishKey").     pnConfiguration.setUuid("myUUID").     pnConfiguration.setLogVerbosity(PNLogVerbosity.NONE).     pnConfiguration.setHeartbeatNotificationOptions(NONE).     class MockedTimePubNub extends PubNub {          MockedTimePubNub(PNConfiguration initialConfig) {             super(initialConfig).         }          @Override         public int getTimestamp() {             return 1337.         }          @Override         public String getVersion() {             return "suchJava".         }          @Override         public String getInstanceId() {             return "PubNubInstanceId".         }          @Override         public String getRequestId() {             return "PubNubRequestId".         }     }     return new MockedTimePubNub(pnConfiguration). }

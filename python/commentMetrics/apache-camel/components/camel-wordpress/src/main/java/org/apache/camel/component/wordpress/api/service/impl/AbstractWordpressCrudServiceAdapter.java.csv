@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,final;1;4;;public final T create(T object) {     checkNotNull(object, "Please define an object to create").     return this.doCreate(object). }
+false;protected,abstract;1;1;;protected abstract T doCreate(T object).
+false;public,final;1;4;;public final T delete(Integer id) {     checkArgument(id > 0, "The id is mandatory").     return this.doDelete(id). }
+false;public,final;1;4;;public final DeletedModel<T> forceDelete(Integer id) {     checkArgument(id > 0, "The id is mandatory").     return this.doForceDelete(id). }
+false;protected,abstract;1;1;;protected abstract T doDelete(Integer id).
+false;protected;1;8;;protected DeletedModel<T> doForceDelete(Integer id) {     final DeletedModel<T> deletedModel = new DeletedModel<>().     deletedModel.setPrevious(this.doDelete(id)).     deletedModel.setDeleted(false).     return deletedModel. }
+false;public,final;2;5;;public final T update(Integer id, T object) {     checkNotNull(object, "Please define an object to update").     checkArgument(id > 0, "The id is mandatory").     return this.doUpdate(id, object). }
+false;protected,abstract;2;1;;protected abstract T doUpdate(Integer id, T object).
+false;public;1;4;;@Override public T retrieve(Integer entityID) {     return this.retrieve(entityID, Context.view). }
+false;public,final;2;7;;@Override public final T retrieve(Integer entityID, Context context) {     checkArgument(entityID > 0, "Please provide a non zero id").     checkNotNull(context, "Provide a context").     // return this.getSpi().retrieve(getApiVersion(), entityID, context).     return doRetrieve(entityID, context). }
+false;protected,abstract;2;1;;protected abstract T doRetrieve(Integer entityID, Context context).

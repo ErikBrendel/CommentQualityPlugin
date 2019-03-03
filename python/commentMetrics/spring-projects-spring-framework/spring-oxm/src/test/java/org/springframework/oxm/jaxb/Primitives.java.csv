@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;// following methods are used to test support for primitives ;// following methods are used to test support for primitives public JAXBElement<Boolean> primitiveBoolean() {     return new JAXBElement<>(NAME, Boolean.class, true). }
+false;public;0;3;;public JAXBElement<Byte> primitiveByte() {     return new JAXBElement<>(NAME, Byte.class, (byte) 42). }
+false;public;0;3;;public JAXBElement<Short> primitiveShort() {     return new JAXBElement<>(NAME, Short.class, (short) 42). }
+false;public;0;3;;public JAXBElement<Integer> primitiveInteger() {     return new JAXBElement<>(NAME, Integer.class, 42). }
+false;public;0;3;;public JAXBElement<Long> primitiveLong() {     return new JAXBElement<>(NAME, Long.class, 42L). }
+false;public;0;3;;public JAXBElement<Double> primitiveDouble() {     return new JAXBElement<>(NAME, Double.class, 42D). }
+false;public;0;3;;public JAXBElement<byte[]> primitiveByteArray() {     return new JAXBElement<>(NAME, byte[].class, new byte[] { 42 }). }

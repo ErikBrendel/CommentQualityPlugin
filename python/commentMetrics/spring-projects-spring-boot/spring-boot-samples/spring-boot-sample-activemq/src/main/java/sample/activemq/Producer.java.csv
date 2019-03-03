@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public void run(String... args) throws Exception {     send("Sample message").     System.out.println("Message was sent to the Queue"). }
+false;public;1;3;;public void send(String msg) {     this.jmsMessagingTemplate.convertAndSend(this.queue, msg). }

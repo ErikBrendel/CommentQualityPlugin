@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String type() {     return ManualTriggerEngine.TYPE. }
+false;public;2;6;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(triggerEvent.type(), triggerEvent, params).     return builder.endObject(). }
+false;public;2;6;;@Override public void recordDataXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject(ManualTriggerEngine.TYPE).     triggerEvent.recordDataXContent(builder, params).     builder.endObject(). }
+false;public,static;4;5;;public static ManualTriggerEvent parse(TriggerService triggerService, String watchId, String context, XContentParser parser) throws IOException {     TriggerEvent parsedTriggerEvent = triggerService.parseTriggerEvent(watchId, context, parser).     return new ManualTriggerEvent(context, parsedTriggerEvent). }

@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;protected,abstract;0;1;/**  * Get the delegate instance to forward calls to.  */ ;/**  * Get the delegate instance to forward calls to.  */ protected abstract Recycler<T> getDelegate().
+true;protected;1;3;/**  * Wrap a recycled reference.  */ ;/**  * Wrap a recycled reference.  */ protected Recycler.V<T> wrap(Recycler.V<T> delegate) {     return delegate. }
+false;public;1;4;;@Override public Recycler.V<T> obtain(int sizing) {     return wrap(getDelegate().obtain(sizing)). }
+false;public;0;4;;@Override public Recycler.V<T> obtain() {     return wrap(getDelegate().obtain()). }
+false;public;0;4;;@Override public void close() {     getDelegate().close(). }

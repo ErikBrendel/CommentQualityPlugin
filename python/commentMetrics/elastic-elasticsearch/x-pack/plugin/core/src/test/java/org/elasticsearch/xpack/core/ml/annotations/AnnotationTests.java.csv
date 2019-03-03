@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected Annotation doParseInstance(XContentParser parser) {     return Annotation.PARSER.apply(parser, null). }
+false;protected;0;12;;@Override protected Annotation createTestInstance() {     return new Annotation(randomAlphaOfLengthBetween(100, 1000), new Date(randomNonNegativeLong()), randomAlphaOfLengthBetween(5, 20), new Date(randomNonNegativeLong()), randomBoolean() ? new Date(randomNonNegativeLong()) : null, randomBoolean() ? randomAlphaOfLengthBetween(10, 30) : null, randomBoolean() ? new Date(randomNonNegativeLong()) : null, randomBoolean() ? randomAlphaOfLengthBetween(5, 20) : null, randomAlphaOfLengthBetween(10, 15)). }
+false;protected;0;4;;@Override protected Writeable.Reader<Annotation> instanceReader() {     return Annotation::new. }
+false;public;0;6;;public void testCopyConstructor() {     for (int i = 0. i < NUMBER_OF_TEST_RUNS. i++) {         Annotation testAnnotation = createTestInstance().         assertThat(testAnnotation, equalTo(new Annotation(testAnnotation))).     } }

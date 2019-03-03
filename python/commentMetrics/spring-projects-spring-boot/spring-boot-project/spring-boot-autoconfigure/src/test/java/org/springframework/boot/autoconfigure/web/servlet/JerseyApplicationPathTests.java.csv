@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;11;;@Test public void getRelativePathReturnsRelativePath() {     assertThat(((JerseyApplicationPath) () -> "spring").getRelativePath("boot")).isEqualTo("spring/boot").     assertThat(((JerseyApplicationPath) () -> "spring/").getRelativePath("boot")).isEqualTo("spring/boot").     assertThat(((JerseyApplicationPath) () -> "spring").getRelativePath("/boot")).isEqualTo("spring/boot").     assertThat(((JerseyApplicationPath) () -> "spring/*").getRelativePath("/boot")).isEqualTo("spring/boot"). }
+false;public;0;5;;@Test public void getPrefixWhenHasSimplePathReturnPath() {     assertThat(((JerseyApplicationPath) () -> "spring").getPrefix()).isEqualTo("spring"). }
+false;public;0;5;;@Test public void getPrefixWhenHasPatternRemovesPattern() {     assertThat(((JerseyApplicationPath) () -> "spring/*.do").getPrefix()).isEqualTo("spring"). }
+false;public;0;5;;@Test public void getPrefixWhenPathEndsWithSlashRemovesSlash() {     assertThat(((JerseyApplicationPath) () -> "spring/").getPrefix()).isEqualTo("spring"). }
+false;public;0;4;;@Test public void getUrlMappingWhenPathIsEmptyReturnsSlash() {     assertThat(((JerseyApplicationPath) () -> "").getUrlMapping()).isEqualTo("/*"). }
+false;public;0;4;;@Test public void getUrlMappingWhenPathIsSlashReturnsSlash() {     assertThat(((JerseyApplicationPath) () -> "/").getUrlMapping()).isEqualTo("/*"). }
+false;public;0;5;;@Test public void getUrlMappingWhenPathContainsStarReturnsPath() {     assertThat(((JerseyApplicationPath) () -> "/spring/*.do").getUrlMapping()).isEqualTo("/spring/*.do"). }
+false;public;0;5;;@Test public void getUrlMappingWhenHasPathNotEndingSlashReturnsSlashStarPattern() {     assertThat(((JerseyApplicationPath) () -> "/spring/boot").getUrlMapping()).isEqualTo("/spring/boot/*"). }
+false;public;0;5;;@Test public void getUrlMappingWhenHasPathDoesNotStartWithSlashPrependsSlash() {     assertThat(((JerseyApplicationPath) () -> "spring/boot").getUrlMapping()).isEqualTo("/spring/boot/*"). }
+false;public;0;5;;@Test public void getUrlMappingWhenHasPathEndingWithSlashReturnsSlashStarPattern() {     assertThat(((JerseyApplicationPath) () -> "/spring/boot/").getUrlMapping()).isEqualTo("/spring/boot/*"). }

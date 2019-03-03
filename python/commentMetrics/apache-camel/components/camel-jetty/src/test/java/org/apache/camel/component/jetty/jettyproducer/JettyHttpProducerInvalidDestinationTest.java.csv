@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;11;;@Test public void testInvalidDestination() throws Exception {     final MyInputStream is = new MyInputStream("Content".getBytes()).     try {         template.requestBody("jetty:http://localhost:50000/invalidDestination", is).         fail("Should have thrown exception").     } catch (Exception ex) {         // need to check if the input stream is closed         assertTrue("The input stream should be closed", is.isClosed()).     } }

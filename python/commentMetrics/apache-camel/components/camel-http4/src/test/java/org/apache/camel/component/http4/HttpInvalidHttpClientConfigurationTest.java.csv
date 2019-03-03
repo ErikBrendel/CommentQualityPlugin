@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;11;;@Before @Override public void setUp() throws Exception {     try {         super.setUp().         fail("Should have thrown ResolveEndpointFailedException").     } catch (FailedToCreateRouteException e) {         ResolveEndpointFailedException cause = assertIsInstanceOf(ResolveEndpointFailedException.class, e.getCause()).         assertTrue(cause.getMessage().endsWith("Unknown parameters=[{xxx=true}]")).     } }
+false;public;0;4;;@Test public void testInvalidHostConfiguration() { // dummy }
+false;public;0;3;;public void configure() {     from("direct:start").setHeader(Exchange.HTTP_METHOD, POST).to("http4://www.google.com?httpClient.xxx=true"). }
+false;protected;0;8;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() {             from("direct:start").setHeader(Exchange.HTTP_METHOD, POST).to("http4://www.google.com?httpClient.xxx=true").         }     }. }

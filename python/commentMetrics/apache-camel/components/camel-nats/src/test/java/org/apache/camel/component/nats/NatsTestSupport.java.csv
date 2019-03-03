@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected GenericContainer<?> createContainer() {     return natsContainer(). }
+false;public,static;0;5;;public static GenericContainer natsContainer() {     return new GenericContainer(CONTAINER_IMAGE).withNetworkAliases(CONTAINER_NAME).waitingFor(Wait.forLogMessageContaining("Listening for route connections", 1)). }
+false;public;0;7;;public String getNatsUrl() {     return String.format("%s:%d", getContainerHost(CONTAINER_NAME), getContainerPort(CONTAINER_NAME, 4222)). }

@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public ApplicationContext getApplicationContext() {     return applicationContext. }
+true;public;1;3;/**  * The Spring ApplicationContext  */ ;/**  * The Spring ApplicationContext  */ public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {     this.applicationContext = applicationContext. }
+false;public;0;8;;public ConfigurableApplicationContext getConfigurableApplicationContext() {     ApplicationContext applicationContext = getApplicationContext().     if (applicationContext instanceof ConfigurableApplicationContext) {         return (ConfigurableApplicationContext) applicationContext.     } else {         throw new IllegalArgumentException("Class: " + applicationContext.getClass().getName() + " is not an instanceof ConfigurableApplicationContext.").     } }
+false;protected;3;5;;protected EventEndpoint createEndpoint(String uri, String remaining, Map<String, Object> parameters) throws Exception {     EventEndpoint answer = new EventEndpoint(uri, this, remaining).     setProperties(answer, parameters).     return answer. }
+false;protected;1;3;;protected void consumerStarted(EventEndpoint endpoint) {     endpoints.add(endpoint). }
+false;protected;1;3;;protected void consumerStopped(EventEndpoint endpoint) {     endpoints.remove(endpoint). }
+false;public;1;10;;public void onApplicationEvent(ApplicationEvent event) {     // broadcast to the endpoints in use     for (EventEndpoint endpoint : endpoints) {         try {             endpoint.onApplicationEvent(event).         } catch (Exception e) {             LOG.warn("Error on application event " + event + ". This exception will be ignored.", e).         }     } }
+false;protected;0;5;;@Override protected void doStop() throws Exception {     endpoints.clear().     super.doStop(). }

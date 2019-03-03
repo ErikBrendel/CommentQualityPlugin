@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getName() {     return "migration_assistance". }
+false;public;2;8;;@Override public RestChannelConsumer prepareRequest(RestRequest request, NodeClient client) throws IOException {     if (request.method().equals(GET)) {         return handleGet(request, client).     } else {         throw new IllegalArgumentException("illegal method [" + request.method() + "] for request [" + request.path() + "]").     } }
+false;private;2;5;;private RestChannelConsumer handleGet(final RestRequest request, NodeClient client) {     IndexUpgradeInfoRequest infoRequest = new IndexUpgradeInfoRequest(Strings.splitStringByCommaToArray(request.param("index"))).     infoRequest.indicesOptions(IndicesOptions.fromRequest(request, infoRequest.indicesOptions())).     return channel -> client.execute(IndexUpgradeInfoAction.INSTANCE, infoRequest, new RestToXContentListener<>(channel)). }

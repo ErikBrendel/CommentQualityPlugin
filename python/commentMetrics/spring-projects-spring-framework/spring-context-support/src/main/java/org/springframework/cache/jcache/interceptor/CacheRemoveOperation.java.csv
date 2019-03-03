@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public ExceptionTypeFilter getExceptionTypeFilter() {     return this.exceptionTypeFilter. }
+true;public;0;3;/**  * Specify if the cache entry should be remove before invoking the method. By default, the  * cache entry is removed after the method invocation.  * @see javax.cache.annotation.CacheRemove#afterInvocation()  */ ;/**  * Specify if the cache entry should be remove before invoking the method. By default, the  * cache entry is removed after the method invocation.  * @see javax.cache.annotation.CacheRemove#afterInvocation()  */ public boolean isEarlyRemove() {     return !getCacheAnnotation().afterInvocation(). }

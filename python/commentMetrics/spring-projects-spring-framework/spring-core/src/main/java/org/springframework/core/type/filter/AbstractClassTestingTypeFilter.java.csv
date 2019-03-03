@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,final;2;6;;@Override public final boolean match(MetadataReader metadataReader, MetadataReaderFactory metadataReaderFactory) throws IOException {     return match(metadataReader.getClassMetadata()). }
+true;protected,abstract;1;1;/**  * Determine a match based on the given ClassMetadata object.  * @param metadata the ClassMetadata object  * @return whether this filter matches on the specified type  */ ;/**  * Determine a match based on the given ClassMetadata object.  * @param metadata the ClassMetadata object  * @return whether this filter matches on the specified type  */ protected abstract boolean match(ClassMetadata metadata).

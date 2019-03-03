@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;6;;@Override protected String[] findPackageNames() throws IOException {     // this method doesn't change the behavior of the CorePackageScanClassResolver     String name = typeConverters.getClass().getPackage().getName().     return new String[] { name }. }

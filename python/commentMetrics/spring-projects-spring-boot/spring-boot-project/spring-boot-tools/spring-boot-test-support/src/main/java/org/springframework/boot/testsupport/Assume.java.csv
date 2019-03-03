@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;5;;public static void javaEight() {     if (ClassUtils.isPresent("java.security.cert.URICertStoreParameters", null)) {         throw new AssumptionViolatedException("Assumed Java 8 but got Java 9").     } }

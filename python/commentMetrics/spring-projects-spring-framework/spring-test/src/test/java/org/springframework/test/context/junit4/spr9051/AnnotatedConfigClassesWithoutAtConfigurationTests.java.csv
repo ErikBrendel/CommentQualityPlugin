@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Bean public String enigma() {     return "enigma #" + enigmaCallCount.incrementAndGet(). }
+false;public;0;9;;@Bean public LifecycleBean lifecycleBean() {     // The following call to enigma() literally invokes the local     // enigma() method, not a CGLIB proxied version, since these methods     // are essentially factory bean methods.     LifecycleBean bean = new LifecycleBean(enigma()).     assertFalse(bean.isInitialized()).     return bean. }
+false;public;0;10;;@Test public void testSPR_9051() throws Exception {     assertNotNull(enigma).     assertNotNull(lifecycleBean).     assertTrue(lifecycleBean.isInitialized()).     Set<String> names = new HashSet<>().     names.add(enigma.toString()).     names.add(lifecycleBean.getName()).     assertEquals(names, new HashSet<>(Arrays.asList("enigma #1", "enigma #2"))). }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void queryParameter() throws Exception {     standaloneSetup(new PersonController()).build().perform(get("/search?name=George").accept(MediaType.APPLICATION_JSON)).andExpect(status().isOk()).andExpect(content().contentType("application/json.charset=UTF-8")).andExpect(jsonPath("$.name").value("George")). }
+false;public;1;6;;@RequestMapping(value = "/search") @ResponseBody public Person get(@RequestParam String name) {     Person person = new Person(name).     return person. }

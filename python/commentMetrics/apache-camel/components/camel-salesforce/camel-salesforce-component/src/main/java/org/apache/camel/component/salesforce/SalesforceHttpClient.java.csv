@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;6;;@Override public HttpRequest newHttpRequest(HttpConversation conversation, URI uri) {     final SalesforceHttpRequest request = new SalesforceHttpRequest(this, conversation, uri).     request.timeout(timeout, TimeUnit.MILLISECONDS).     return request. }
+false;public;2;4;;@Override public Request copyRequest(HttpRequest oldRequest, URI newURI) {     return super.copyRequest(oldRequest, newURI). }
+false;protected;0;12;;@Override protected void doStart() throws Exception {     if (getSession() == null) {         throw new IllegalStateException("Missing SalesforceSession in property session!").     }     // compensate for Jetty 9.2 vs 9.3 API change     final Object protocolHandlers = getProtocolHandlersMethod.invoke(this).     addProtocolHandlerMethod.invoke(protocolHandlers, new SalesforceSecurityHandler(this)).     super.doStart(). }
+false;public;0;3;;public SalesforceSession getSession() {     return session. }
+false;public;1;3;;public void setSession(SalesforceSession session) {     this.session = session. }
+false;public;0;3;;public int getMaxRetries() {     return maxRetries. }
+false;public;1;3;;public void setMaxRetries(int maxRetries) {     this.maxRetries = maxRetries. }
+false;public;0;3;;public int getMaxContentLength() {     return maxContentLength. }
+false;public;1;3;;public void setMaxContentLength(int maxContentLength) {     this.maxContentLength = maxContentLength. }
+false;public;0;3;;public long getTimeout() {     return timeout. }
+false;public;1;3;;public void setTimeout(long timeout) {     this.timeout = timeout. }

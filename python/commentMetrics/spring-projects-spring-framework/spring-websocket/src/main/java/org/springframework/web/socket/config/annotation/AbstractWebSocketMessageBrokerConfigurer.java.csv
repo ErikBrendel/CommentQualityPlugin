@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;@Override public void configureWebSocketTransport(WebSocketTransportRegistration registration) { }
+false;public;1;3;;@Override public void configureClientInboundChannel(ChannelRegistration registration) { }
+false;public;1;3;;@Override public void configureClientOutboundChannel(ChannelRegistration registration) { }
+false;public;1;4;;@Override public boolean configureMessageConverters(List<MessageConverter> messageConverters) {     return true. }
+false;public;1;3;;@Override public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers) { }
+false;public;1;3;;@Override public void addReturnValueHandlers(List<HandlerMethodReturnValueHandler> returnValueHandlers) { }
+false;public;1;3;;@Override public void configureMessageBroker(MessageBrokerRegistry registry) { }

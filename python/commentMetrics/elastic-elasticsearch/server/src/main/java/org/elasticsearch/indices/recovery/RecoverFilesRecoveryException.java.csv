@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public int numberOfFiles() {     return numberOfFiles. }
+false;public;0;3;;public ByteSizeValue totalFilesSize() {     return totalFilesSize. }
+false;public;1;6;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeInt(numberOfFiles).     totalFilesSize.writeTo(out). }

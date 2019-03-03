@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;4;5;;@Override protected FlushResponse createTestInstance(int totalShards, int successfulShards, int failedShards, List<DefaultShardOperationFailedException> failures) {     return new FlushResponse(totalShards, successfulShards, failedShards, failures). }
+false;protected;1;4;;@Override protected FlushResponse doParseInstance(XContentParser parser) {     return FlushResponse.fromXContent(parser). }

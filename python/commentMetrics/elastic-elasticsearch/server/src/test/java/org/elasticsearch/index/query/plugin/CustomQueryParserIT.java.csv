@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected Collection<Class<? extends Plugin>> nodePlugins() {     return Arrays.asList(DummyQueryParserPlugin.class). }
+false;protected;0;4;;@Override protected Collection<Class<? extends Plugin>> transportClientPlugins() {     return Arrays.asList(DummyQueryParserPlugin.class). }
+false;public;0;9;;@Override @Before public void setUp() throws Exception {     super.setUp().     createIndex("test").     ensureGreen().     client().prepareIndex("index", "type", "1").setSource("field", "value").get().     refresh(). }
+false;protected;0;4;;@Override protected int numberOfShards() {     return cluster().numDataNodes(). }
+false;public;0;3;;public void testCustomDummyQuery() {     assertHitCount(client().prepareSearch("index").setQuery(new DummyQueryBuilder()).get(), 1L). }
+false;public;0;3;;public void testCustomDummyQueryWithinBooleanQuery() {     assertHitCount(client().prepareSearch("index").setQuery(new BoolQueryBuilder().must(new DummyQueryBuilder())).get(), 1L). }
+false;private,static;0;5;;private static QueryShardContext queryShardContext() {     IndicesService indicesService = internalCluster().getDataNodeInstance(IndicesService.class).     return indicesService.indexServiceSafe(resolveIndex("index")).newQueryShardContext(randomInt(20), null, () -> {         throw new UnsupportedOperationException().     }, null). }

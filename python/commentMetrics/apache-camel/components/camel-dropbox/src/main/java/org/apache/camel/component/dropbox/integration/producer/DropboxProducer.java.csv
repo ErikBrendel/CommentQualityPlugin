@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;11;;@Override protected void doStart() throws Exception {     if (configuration.getClient() == null) {         // create dropbox client         configuration.createClient().         LOG.debug("Producer DropBox client created").     }     super.doStart(). }
+false;protected;0;9;;@Override protected void doStop() throws Exception {     if (configuration.getClient() == null) {         configuration.setClient(null).         LOG.debug("Producer DropBox client deleted").     }     super.doStop(). }

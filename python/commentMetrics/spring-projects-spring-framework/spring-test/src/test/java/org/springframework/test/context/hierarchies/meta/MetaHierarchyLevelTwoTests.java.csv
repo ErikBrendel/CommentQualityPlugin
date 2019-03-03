@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Bean public String bar() {     return "Prod Bar". }
+false;public;0;4;;@Test public void bar() {     assertEquals("Prod Bar", bar). }
+false;public;0;6;;@Test public void contextHierarchy() {     assertNotNull("child ApplicationContext", context).     assertNotNull("parent ApplicationContext", context.getParent()).     assertNull("grandparent ApplicationContext", context.getParent().getParent()). }

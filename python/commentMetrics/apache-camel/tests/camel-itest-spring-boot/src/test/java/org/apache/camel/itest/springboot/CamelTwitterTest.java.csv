@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;4;;@Deployment public static Archive<?> createSpringBootPackage() throws Exception {     return ArquillianPackager.springBootPackage(createTestConfig()). }
+false;public,static;0;6;;public static ITestConfig createTestConfig() {     return new ITestConfigBuilder().module(inferModuleName(CamelTwitterTest.class)).unitTestInclusionPattern(".*UriConfigurationTest$").build(). }
+false;public;0;9;;@Test public void componentTests() throws Exception {     this.runComponentTest(config, "twitter-directmessage").     this.runComponentTest(config, "twitter-search").     this.runComponentTest(config, "twitter-timeline").     this.runComponentTest(config, "twitter-streaming").     this.runModuleUnitTestsIfEnabled(config). }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;8;;@Override protected JndiRegistry createRegistry() throws Exception {     // START SNIPPET: register     JndiRegistry reg = super.createRegistry().     reg.bind("testdb", db).     return reg. // END SNIPPET: register }
+false;public;0;8;;@Before @Override public void setUp() throws Exception {     db = new EmbeddedDatabaseBuilder().setType(EmbeddedDatabaseType.DERBY).addScript("sql/init.sql").build().     super.setUp(). }
+false;public;0;7;;@After @Override public void tearDown() throws Exception {     super.tearDown().     db.shutdown(). }

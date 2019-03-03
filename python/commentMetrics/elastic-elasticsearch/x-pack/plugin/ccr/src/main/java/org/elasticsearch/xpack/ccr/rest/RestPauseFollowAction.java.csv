@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getName() {     return "ccr_pause_follow_action". }
+false;protected;2;5;;@Override protected RestChannelConsumer prepareRequest(RestRequest restRequest, NodeClient client) throws IOException {     Request request = new Request(restRequest.param("index")).     return channel -> client.execute(INSTANCE, request, new RestToXContentListener<>(channel)). }

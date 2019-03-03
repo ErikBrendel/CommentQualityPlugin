@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;public GetIndexRequestBuilder setFeatures(Feature... features) {     request.features(features).     return this. }
+false;public;1;4;;public GetIndexRequestBuilder addFeatures(Feature... features) {     request.addFeatures(features).     return this. }

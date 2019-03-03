@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void testBothValue() {     ExamplePojo fooBar = new ExamplePojo().     fooBar.setFoo("foo1").     fooBar.setBar("bar2").     String result = template.requestBody("direct:start", fooBar, String.class).     assertEquals("foo: foo1. bar: bar2", result). }
+false;public;0;9;;@Test public void testNullValue() {     ExamplePojo fooBar = new ExamplePojo().     fooBar.setFoo(null).     fooBar.setBar("test").     String result = template.requestBody("direct:start", fooBar, String.class).     assertEquals("foo: null. bar: test", result). }
+false;public;0;5;;@Override public void configure() throws Exception {     from("direct:start").bean(new ExampleBean(), "doWithFooBar(${body.foo}, ${body.bar})"). }
+false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").bean(new ExampleBean(), "doWithFooBar(${body.foo}, ${body.bar})").         }     }. }
+false;public;2;3;;public String doWithFooBar(String foo, String bar) {     return String.format("foo: %s. bar: %s", foo, bar). }
+false;public;0;3;;public String getFoo() {     return foo. }
+false;public;1;3;;public void setFoo(String foo) {     this.foo = foo. }
+false;public;0;3;;public String getBar() {     return bar. }
+false;public;1;3;;public void setBar(String bar) {     this.bar = bar. }

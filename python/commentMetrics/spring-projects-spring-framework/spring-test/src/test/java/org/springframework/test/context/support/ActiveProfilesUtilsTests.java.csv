@@ -1,0 +1,35 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;2;3;;private void assertResolvedProfiles(Class<?> testClass, String... expected) {     assertArrayEquals(expected, resolveActiveProfiles(testClass)). }
+false;public;0;4;;@Test public void resolveActiveProfilesWithoutAnnotation() {     assertResolvedProfiles(Enigma.class, EMPTY_STRING_ARRAY). }
+false;public;0;4;;@Test public void resolveActiveProfilesWithNoProfilesDeclared() {     assertResolvedProfiles(BareAnnotations.class, EMPTY_STRING_ARRAY). }
+false;public;0;4;;@Test public void resolveActiveProfilesWithEmptyProfiles() {     assertResolvedProfiles(EmptyProfiles.class, EMPTY_STRING_ARRAY). }
+false;public;0;4;;@Test public void resolveActiveProfilesWithDuplicatedProfiles() {     assertResolvedProfiles(DuplicatedProfiles.class, "foo", "bar", "baz"). }
+false;public;0;4;;@Test public void resolveActiveProfilesWithLocalAndInheritedDuplicatedProfiles() {     assertResolvedProfiles(ExtendedDuplicatedProfiles.class, "foo", "bar", "baz", "cat", "dog"). }
+false;public;0;4;;@Test public void resolveActiveProfilesWithLocalAnnotation() {     assertResolvedProfiles(LocationsFoo.class, "foo"). }
+false;public;0;4;;@Test public void resolveActiveProfilesWithInheritedAnnotationAndLocations() {     assertResolvedProfiles(InheritedLocationsFoo.class, "foo"). }
+false;public;0;4;;@Test public void resolveActiveProfilesWithInheritedAnnotationAndClasses() {     assertResolvedProfiles(InheritedClassesFoo.class, "foo"). }
+false;public;0;4;;@Test public void resolveActiveProfilesWithLocalAndInheritedAnnotations() {     assertResolvedProfiles(LocationsBar.class, "foo", "bar"). }
+false;public;0;4;;@Test public void resolveActiveProfilesWithOverriddenAnnotation() {     assertResolvedProfiles(Animals.class, "dog", "cat"). }
+true;public;0;4;/**  * @since 4.0  */ ;/**  * @since 4.0  */ @Test public void resolveActiveProfilesWithMetaAnnotation() {     assertResolvedProfiles(MetaLocationsFoo.class, "foo"). }
+true;public;0;4;/**  * @since 4.0  */ ;/**  * @since 4.0  */ @Test public void resolveActiveProfilesWithMetaAnnotationAndOverrides() {     assertResolvedProfiles(MetaLocationsFooWithOverrides.class, "foo"). }
+true;public;0;4;/**  * @since 4.0  */ ;/**  * @since 4.0  */ @Test public void resolveActiveProfilesWithMetaAnnotationAndOverriddenAttributes() {     assertResolvedProfiles(MetaLocationsFooWithOverriddenAttributes.class, "foo1", "foo2"). }
+true;public;0;4;/**  * @since 4.0  */ ;/**  * @since 4.0  */ @Test public void resolveActiveProfilesWithLocalAndInheritedMetaAnnotations() {     assertResolvedProfiles(MetaLocationsBar.class, "foo", "bar"). }
+true;public;0;4;/**  * @since 4.0  */ ;/**  * @since 4.0  */ @Test public void resolveActiveProfilesWithOverriddenMetaAnnotation() {     assertResolvedProfiles(MetaAnimals.class, "dog", "cat"). }
+true;public;0;4;/**  * @since 4.0  */ ;/**  * @since 4.0  */ @Test public void resolveActiveProfilesWithResolver() {     assertResolvedProfiles(FooActiveProfilesResolverTestCase.class, "foo"). }
+true;public;0;4;/**  * @since 4.0  */ ;/**  * @since 4.0  */ @Test public void resolveActiveProfilesWithInheritedResolver() {     assertResolvedProfiles(InheritedFooActiveProfilesResolverTestCase.class, "foo"). }
+true;public;0;4;/**  * @since 4.0  */ ;/**  * @since 4.0  */ @Test public void resolveActiveProfilesWithMergedInheritedResolver() {     assertResolvedProfiles(MergedInheritedFooActiveProfilesResolverTestCase.class, "foo", "bar"). }
+true;public;0;4;/**  * @since 4.0  */ ;/**  * @since 4.0  */ @Test public void resolveActiveProfilesWithOverridenInheritedResolver() {     assertResolvedProfiles(OverridenInheritedFooActiveProfilesResolverTestCase.class, "bar"). }
+true;public;0;4;/**  * @since 4.0  */ ;/**  * @since 4.0  */ @Test public void resolveActiveProfilesWithResolverAndProfiles() {     assertResolvedProfiles(ResolverAndProfilesTestCase.class, "bar"). }
+true;public;0;4;/**  * @since 4.0  */ ;/**  * @since 4.0  */ @Test public void resolveActiveProfilesWithResolverAndValue() {     assertResolvedProfiles(ResolverAndValueTestCase.class, "bar"). }
+true;public;0;4;/**  * @since 4.0  */ ;/**  * @since 4.0  */ @Test(expected = AnnotationConfigurationException.class) public void resolveActiveProfilesWithConflictingProfilesAndValue() {     resolveActiveProfiles(ConflictingProfilesAndValueTestCase.class). }
+true;public;0;4;/**  * @since 4.0  */ ;/**  * @since 4.0  */ @Test(expected = IllegalStateException.class) public void resolveActiveProfilesWithResolverWithoutDefaultConstructor() {     resolveActiveProfiles(NoDefaultConstructorActiveProfilesResolverTestCase.class). }
+true;public;0;3;/**  * @since 4.0  */ ;/**  * @since 4.0  */ public void resolveActiveProfilesWithResolverThatReturnsNull() {     assertResolvedProfiles(NullActiveProfilesResolverTestCase.class). }
+true;public;0;5;/**  * This test verifies that the actual test class, not the composed annotation,  * is passed to the resolver.  * @since 4.0.3  */ ;/**  * This test verifies that the actual test class, not the composed annotation,  * is passed to the resolver.  * @since 4.0.3  */ @Test public void resolveActiveProfilesWithMetaAnnotationAndTestClassVerifyingResolver() {     Class<TestClassVerifyingActiveProfilesResolverTestCase> testClass = TestClassVerifyingActiveProfilesResolverTestCase.class.     assertResolvedProfiles(testClass, testClass.getSimpleName()). }
+true;public;0;4;/**  * This test verifies that {@link DefaultActiveProfilesResolver} can be declared explicitly.  * @since 4.1.5  */ ;/**  * This test verifies that {@link DefaultActiveProfilesResolver} can be declared explicitly.  * @since 4.1.5  */ @Test public void resolveActiveProfilesWithDefaultActiveProfilesResolver() {     assertResolvedProfiles(DefaultActiveProfilesResolverTestCase.class, "default"). }
+true;public;0;4;/**  * This test verifies that {@link DefaultActiveProfilesResolver} can be extended.  * @since 4.1.5  */ ;/**  * This test verifies that {@link DefaultActiveProfilesResolver} can be extended.  * @since 4.1.5  */ @Test public void resolveActiveProfilesWithExtendedDefaultActiveProfilesResolver() {     assertResolvedProfiles(ExtendedDefaultActiveProfilesResolverTestCase.class, "default", "foo"). }
+false;public;1;4;;@Override public String[] resolve(Class<?> testClass) {     return new String[] { "foo" }. }
+false;public;1;4;;@Override public String[] resolve(Class<?> testClass) {     return new String[] { "bar" }. }
+false;public;1;4;;@Override public String[] resolve(Class<?> testClass) {     return null. }
+false;public;1;4;;@Override public String[] resolve(Class<?> testClass) {     return null. }
+false;public;1;5;;@Override public String[] resolve(Class<?> testClass) {     return testClass.isAnnotation() ? new String[] { "@" + testClass.getSimpleName() } : new String[] { testClass.getSimpleName() }. }
+false;public;1;6;;@Override public String[] resolve(Class<?> testClass) {     List<String> profiles = new ArrayList<>(Arrays.asList(super.resolve(testClass))).     profiles.add("foo").     return StringUtils.toStringArray(profiles). }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Converter public MyBean fromString(String text) {     String[] values = StringHelper.splitOnCharacter(text, ":", 2).     return new MyBean(values[0], values[1]). }

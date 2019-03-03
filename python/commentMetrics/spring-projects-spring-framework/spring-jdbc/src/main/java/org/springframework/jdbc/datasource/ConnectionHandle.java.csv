@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * Fetch the JDBC Connection that this handle refers to.  */ ;/**  * Fetch the JDBC Connection that this handle refers to.  */ Connection getConnection().
+true;default;1;2;/**  * Release the JDBC Connection that this handle refers to.  * <p>The default implementation is empty, assuming that the lifecycle  * of the connection is managed externally.  * @param con the JDBC Connection to release  */ ;/**  * Release the JDBC Connection that this handle refers to.  * <p>The default implementation is empty, assuming that the lifecycle  * of the connection is managed externally.  * @param con the JDBC Connection to release  */ default void releaseConnection(Connection con) { }

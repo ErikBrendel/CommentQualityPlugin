@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@Test public void testToDynamic() throws Exception {     getMockEndpoint("mock:foo").expectedBodiesReceived("<order uri=\"foo\"/>").     getMockEndpoint("mock:bar").expectedBodiesReceived("<order uri=\"bar\"/>").     template.sendBody("direct:start", "<order uri=\"foo\"/>").     template.sendBody("direct:start", "<order uri=\"bar\"/>").     assertMockEndpointsSatisfied(). }
+false;public;0;5;;@Override public void configure() throws Exception {     from("direct:start").toD("mock:+language:xpath:/order/@uri"). }
+false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").toD("mock:+language:xpath:/order/@uri").         }     }. }

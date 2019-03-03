@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private,static;1;9;;private static ConstructingObjectParser<ModelPlotConfig, Void> createParser(boolean ignoreUnknownFields) {     ConstructingObjectParser<ModelPlotConfig, Void> parser = new ConstructingObjectParser<>(TYPE_FIELD.getPreferredName(), ignoreUnknownFields, a -> new ModelPlotConfig((boolean) a[0], (String) a[1])).     parser.declareBoolean(ConstructingObjectParser.constructorArg(), ENABLED_FIELD).     parser.declareString(ConstructingObjectParser.optionalConstructorArg(), TERMS_FIELD).     return parser. }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeBoolean(enabled).     out.writeOptionalString(terms). }
+false;public;2;10;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(ENABLED_FIELD.getPreferredName(), enabled).     if (terms != null) {         builder.field(TERMS_FIELD.getPreferredName(), terms).     }     builder.endObject().     return builder. }
+false;public;0;3;;public boolean isEnabled() {     return enabled. }
+false;public;0;3;;public String getTerms() {     return this.terms. }
+false;public;1;13;;@Override public boolean equals(Object other) {     if (this == other) {         return true.     }     if (other instanceof ModelPlotConfig == false) {         return false.     }     ModelPlotConfig that = (ModelPlotConfig) other.     return this.enabled == that.enabled && Objects.equals(this.terms, that.terms). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(enabled, terms). }

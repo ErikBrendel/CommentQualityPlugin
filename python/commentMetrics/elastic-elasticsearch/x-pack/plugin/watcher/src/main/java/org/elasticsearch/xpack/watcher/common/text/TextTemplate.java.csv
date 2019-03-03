@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Script getScript() {     return script. }
+false;public;0;3;;public String getTemplate() {     return script != null ? script.getIdOrCode() : inlineTemplate. }
+false;public;0;3;;public boolean isUsingMustache() {     return isUsingMustache. }
+false;public;0;13;;public XContentType getContentType() {     if (script == null || script.getOptions() == null) {         return null.     }     String mediaType = script.getOptions().get(Script.CONTENT_TYPE_OPTION).     if (mediaType == null) {         return null.     }     return XContentType.fromMediaTypeOrFormat(mediaType). }
+false;public;0;3;;public ScriptType getType() {     return script != null ? script.getType() : ScriptType.INLINE. }
+false;public;0;3;;public Map<String, Object> getParams() {     return script != null ? script.getParams() : null. }
+false;public;1;9;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     TextTemplate template1 = (TextTemplate) o.     return Objects.equals(script, template1.script) && Objects.equals(inlineTemplate, template1.inlineTemplate). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(script, inlineTemplate). }
+false;public;2;9;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     if (script != null) {         script.toXContent(builder, params).     } else {         builder.value(inlineTemplate).     }     return builder. }
+false;public,static;1;8;;public static TextTemplate parse(XContentParser parser) throws IOException {     if (parser.currentToken() == XContentParser.Token.VALUE_STRING) {         return new TextTemplate(parser.text()).     } else {         Script template = Script.parse(parser, Script.DEFAULT_TEMPLATE_LANG).         return new TextTemplate(template).     } }

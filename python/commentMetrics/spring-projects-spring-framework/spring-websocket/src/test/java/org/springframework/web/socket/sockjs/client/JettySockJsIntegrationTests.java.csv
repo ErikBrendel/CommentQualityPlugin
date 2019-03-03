@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected Class<?> upgradeStrategyConfigClass() {     return JettyTestConfig.class. }
+false;protected;0;4;;@Override protected JettyWebSocketTestServer createWebSocketTestServer() {     return new JettyWebSocketTestServer(). }
+false;protected;0;4;;@Override protected Transport createWebSocketTransport() {     return new WebSocketTransport(new JettyWebSocketClient()). }
+false;protected;0;4;;@Override protected AbstractXhrTransport createXhrTransport() {     return new JettyXhrTransport(new HttpClient()). }
+false;public;0;4;;@Bean public RequestUpgradeStrategy upgradeStrategy() {     return new JettyRequestUpgradeStrategy(). }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;14;;public static Calendar testInstance() {     int size = randomInt(10).     List<String> items = new ArrayList<>(size).     for (int i = 0. i < size. i++) {         items.add(randomAlphaOfLengthBetween(1, 20)).     }     String description = null.     if (randomBoolean()) {         description = randomAlphaOfLength(20).     }     CodepointSetGenerator generator = new CodepointSetGenerator("abcdefghijklmnopqrstuvwxyz".toCharArray()).     return new Calendar(generator.ofCodePointsLength(random(), 10, 10), items, description). }
+false;protected;0;4;;@Override protected Calendar createTestInstance() {     return testInstance(). }
+false;protected;1;4;;@Override protected Calendar doParseInstance(XContentParser parser) throws IOException {     return Calendar.PARSER.apply(parser, null). }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }

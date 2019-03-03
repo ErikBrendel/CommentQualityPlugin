@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;public void init() {     registerBeanDefinitionParser("conduit", new CamelConduitDefinitionParser()).     registerBeanDefinitionParser("destination", new CamelDestinationDefinitionParser()). }

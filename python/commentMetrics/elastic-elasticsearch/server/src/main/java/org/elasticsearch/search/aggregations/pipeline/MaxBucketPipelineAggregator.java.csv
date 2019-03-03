@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getWriteableName() {     return MaxBucketPipelineAggregationBuilder.NAME. }
+false;protected;0;5;;@Override protected void preCollection() {     maxBucketKeys = new ArrayList<>().     maxValue = Double.NEGATIVE_INFINITY. }
+false;protected;2;10;;@Override protected void collectBucketValue(String bucketKey, Double bucketValue) {     if (bucketValue > maxValue) {         maxBucketKeys.clear().         maxBucketKeys.add(bucketKey).         maxValue = bucketValue.     } else if (bucketValue.equals(maxValue)) {         maxBucketKeys.add(bucketKey).     } }
+false;protected;2;5;;@Override protected InternalAggregation buildAggregation(List<PipelineAggregator> pipelineAggregators, Map<String, Object> metadata) {     String[] keys = maxBucketKeys.toArray(new String[maxBucketKeys.size()]).     return new InternalBucketMetricValue(name(), keys, maxValue, format, Collections.emptyList(), metaData()). }

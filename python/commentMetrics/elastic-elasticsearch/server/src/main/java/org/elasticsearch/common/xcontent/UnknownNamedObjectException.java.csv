@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeString(categoryClass).     out.writeString(name). }
+true;public;0;3;/**  * Category class that was missing a parser. This is a String instead of a class because the class might not be on the classpath  * of all nodes or it might be exclusive to a plugin or something.  */ ;/**  * Category class that was missing a parser. This is a String instead of a class because the class might not be on the classpath  * of all nodes or it might be exclusive to a plugin or something.  */ public String getCategoryClass() {     return categoryClass. }
+true;public;0;3;/**  * Name of the missing parser.  */ ;/**  * Name of the missing parser.  */ public String getName() {     return name. }

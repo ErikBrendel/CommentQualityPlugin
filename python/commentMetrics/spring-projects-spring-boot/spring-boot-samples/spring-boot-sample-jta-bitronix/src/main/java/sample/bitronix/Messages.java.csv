@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@JmsListener(destination = "accounts") public void onMessage(String content) {     System.out.println("----> " + content). }

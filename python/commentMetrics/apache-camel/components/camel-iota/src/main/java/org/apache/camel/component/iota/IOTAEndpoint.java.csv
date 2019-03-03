@@ -1,0 +1,21 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Producer createProducer() throws Exception {     return new IOTAProducer(this). }
+false;public;1;3;;public Consumer createConsumer(Processor processor) throws Exception {     throw new UnsupportedOperationException("IOTAConsumer is not supported!"). }
+false;public;0;3;;public boolean isSingleton() {     return true. }
+false;protected;0;7;;@Override protected void doStart() throws Exception {     final URL u = new URL(url).     apiClient = new IotaAPI.Builder().protocol(u.getProtocol()).host(u.getHost()).port(String.valueOf(u.getPort())).build().     super.doStart(). }
+false;protected;0;6;;@Override protected void doStop() throws Exception {     super.doStop().     apiClient = null. }
+false;public;0;3;;public String getName() {     return name. }
+true;public;1;3;/**  * Component name  *  * @param url  */ ;/**  * Component name  *  * @param url  */ public void setName(String name) {     this.name = name. }
+false;public;0;3;;public String getUrl() {     return url. }
+true;public;1;3;/**  * Node url  *  * @param url  */ ;/**  * Node url  *  * @param url  */ public void setUrl(String url) {     this.url = url. }
+false;public;0;3;;public String getTag() {     return tag. }
+true;public;1;3;/**  * TAG  *  * @param tag  */ ;/**  * TAG  *  * @param tag  */ public void setTag(String tag) {     this.tag = tag. }
+false;public;0;3;;public Integer getSecurityLevel() {     return securityLevel. }
+true;public;1;3;/**  * Address security level  *  * @param security level  */ ;/**  * Address security level  *  * @param security level  */ public void setSecurityLevel(Integer securityLevel) {     this.securityLevel = securityLevel. }
+false;public;0;3;;public Integer getMinWeightMagnitude() {     return minWeightMagnitude. }
+false;public;1;3;;/**  * The minWeightMagnitude is the minimum number of zeroes that a  * proof-of-work output/transaction hash must end with to be considered  * valid by full nodes  *  * @param minWeightMagnitude  */ public void setMinWeightMagnitude(Integer minWeightMagnitude) {     this.minWeightMagnitude = minWeightMagnitude. }
+false;public;0;3;;public Integer getDepth() {     return depth. }
+true;public;1;3;/**  * The depth determines how deep the tangle is analysed for getting Tips  *  * @param depth  */ ;/**  * The depth determines how deep the tangle is analysed for getting Tips  *  * @param depth  */ public void setDepth(Integer depth) {     this.depth = depth. }
+false;public;0;3;;public IotaAPI getApiClient() {     return apiClient. }
+false;public;0;3;;public String getOperation() {     return operation. }
+true;public;1;3;/**  * Supported operations are 'sendTransfer', 'getNewAddress'  *  * @param operation  */ ;/**  * Supported operations are 'sendTransfer', 'getNewAddress'  *  * @param operation  */ public void setOperation(String operation) {     this.operation = operation. }

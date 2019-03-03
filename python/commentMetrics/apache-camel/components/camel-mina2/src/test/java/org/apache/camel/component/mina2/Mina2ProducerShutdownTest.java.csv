@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;4;;public static void main(String[] args) throws Exception {     Mina2ProducerShutdownTest me = new Mina2ProducerShutdownTest().     me.testProducer(). }
+false;public;0;16;;@Test public void testProducer() throws Exception {     // use shutdown hook to verify that we have stopped within 5 seconds     Thread hook = new AssertShutdownHook().     Runtime.getRuntime().addShutdownHook(hook).     start = System.currentTimeMillis().     context = new DefaultCamelContext().     context.addRoutes(createRouteBuilder()).     context.start().     sendMessage().     context.stop(). }
+false;public;0;6;;public void run() {     long diff = System.currentTimeMillis() - start.     if (diff > 5000) {         log.error("ERROR: MinaProducer should be able to shutdown within 5000 millis: time=" + diff).     } }
+false;private;0;11;;private void sendMessage() throws Exception {     Endpoint endpoint = context.getEndpoint(URI).     Producer producer = endpoint.createProducer().     Exchange exchange = endpoint.createExchange().     exchange.getIn().setBody("Hello World").     producer.start().     producer.process(exchange).     producer.stop(). }
+false;public;0;3;;public void configure() {     from(URI).to("mock:result"). }
+false;private;0;8;;private RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from(URI).to("mock:result").         }     }. }

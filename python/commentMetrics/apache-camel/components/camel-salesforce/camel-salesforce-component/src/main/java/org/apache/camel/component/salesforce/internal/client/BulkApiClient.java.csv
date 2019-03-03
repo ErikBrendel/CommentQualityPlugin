@@ -1,0 +1,18 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;3;1;;void onResponse(JobInfo jobInfo, Map<String, String> headers, SalesforceException ex).
+false;;3;1;;void onResponse(BatchInfo batchInfo, Map<String, String> headers, SalesforceException ex).
+false;;3;1;;void onResponse(List<BatchInfo> batchInfoList, Map<String, String> headers, SalesforceException ex).
+false;;3;1;;void onResponse(InputStream inputStream, Map<String, String> headers, SalesforceException ex).
+false;;3;1;;void onResponse(List<String> ids, Map<String, String> headers, SalesforceException ex).
+true;;3;2;/**  * Creates a Bulk Job  *  * @param jobInfo  {@link JobInfo} with required fields  * @param callback {@link JobInfoResponseCallback} to be invoked on response or error  */ ;/**  * Creates a Bulk Job  *  * @param jobInfo  {@link JobInfo} with required fields  * @param callback {@link JobInfoResponseCallback} to be invoked on response or error  */ void createJob(JobInfo jobInfo, Map<String, List<String>> header, JobInfoResponseCallback callback).
+false;;3;2;;void getJob(String jobId, Map<String, List<String>> header, JobInfoResponseCallback callback).
+false;;3;2;;void closeJob(String jobId, Map<String, List<String>> header, JobInfoResponseCallback callback).
+false;;3;2;;void abortJob(String jobId, Map<String, List<String>> header, JobInfoResponseCallback callback).
+false;;5;2;;void createBatch(InputStream batchStream, String jobId, ContentType contentTypeEnum, Map<String, List<String>> header, BatchInfoResponseCallback callback).
+false;;4;2;;void getBatch(String jobId, String batchId, Map<String, List<String>> header, BatchInfoResponseCallback callback).
+false;;3;2;;void getAllBatches(String jobId, Map<String, List<String>> header, BatchInfoListResponseCallback callback).
+false;;4;2;;void getRequest(String jobId, String batchId, Map<String, List<String>> header, StreamResponseCallback callback).
+false;;4;2;;void getResults(String jobId, String batchId, Map<String, List<String>> header, StreamResponseCallback callback).
+false;;5;2;;void createBatchQuery(String jobId, String soqlQuery, ContentType jobContentType, Map<String, List<String>> header, BatchInfoResponseCallback callback).
+false;;4;2;;void getQueryResultIds(String jobId, String batchId, Map<String, List<String>> header, QueryResultIdsCallback callback).
+false;;5;2;;void getQueryResult(String jobId, String batchId, String resultId, Map<String, List<String>> header, StreamResponseCallback callback).

@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;3;/**  * Set the interval between two attempts in milliseconds.  */ ;/**  * Set the interval between two attempts in milliseconds.  */ public void setInterval(long interval) {     this.interval = interval. }
+true;public;0;3;/**  * Return the interval between two attempts in milliseconds.  */ ;/**  * Return the interval between two attempts in milliseconds.  */ public long getInterval() {     return this.interval. }
+true;public;1;3;/**  * Set the maximum number of attempts in milliseconds.  */ ;/**  * Set the maximum number of attempts in milliseconds.  */ public void setMaxAttempts(long maxAttempts) {     this.maxAttempts = maxAttempts. }
+true;public;0;3;/**  * Return the maximum number of attempts in milliseconds.  */ ;/**  * Return the maximum number of attempts in milliseconds.  */ public long getMaxAttempts() {     return this.maxAttempts. }
+false;public;0;4;;@Override public BackOffExecution start() {     return new FixedBackOffExecution(). }
+false;public;0;10;;@Override public long nextBackOff() {     this.currentAttempts++.     if (this.currentAttempts <= getMaxAttempts()) {         return getInterval().     } else {         return STOP.     } }
+false;public;0;11;;@Override public String toString() {     final StringBuilder sb = new StringBuilder("FixedBackOff{").     sb.append("interval=").append(FixedBackOff.this.interval).     String attemptValue = (FixedBackOff.this.maxAttempts == Long.MAX_VALUE ? "unlimited" : String.valueOf(FixedBackOff.this.maxAttempts)).     sb.append(", currentAttempts=").append(this.currentAttempts).     sb.append(", maxAttempts=").append(attemptValue).     sb.append('}').     return sb.toString(). }

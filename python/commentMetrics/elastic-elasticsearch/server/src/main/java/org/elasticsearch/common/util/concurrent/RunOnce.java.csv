@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Override public void run() {     if (hasRun.compareAndSet(false, true)) {         delegate.run().     } }
+true;public;0;3;/**  * {@code true} if the {@link RunOnce} has been executed once.  */ ;/**  * {@code true} if the {@link RunOnce} has been executed once.  */ public boolean hasRun() {     return hasRun.get(). }

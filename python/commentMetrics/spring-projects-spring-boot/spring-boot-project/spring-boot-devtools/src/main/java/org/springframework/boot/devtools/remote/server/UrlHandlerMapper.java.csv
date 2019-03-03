@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;7;;@Override public Handler getHandler(ServerHttpRequest request) {     if (this.requestUri.equals(request.getURI().getPath())) {         return this.handler.     }     return null. }

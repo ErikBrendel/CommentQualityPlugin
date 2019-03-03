@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Create an instance of {@link PersonType }  */ ;/**  * Create an instance of {@link PersonType }  */ public PersonType createPersonType() {     return new PersonType(). }
+false;public;1;4;;/**  * Create an instance of {@link JAXBElement }{@code <}{@link PersonType }{@code >}}  */ @XmlElementDecl(namespace = "", name = "Person") public JAXBElement<PersonType> createPerson(PersonType value) {     return new JAXBElement<>(personQNAME, PersonType.class, null, value). }

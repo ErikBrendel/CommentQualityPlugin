@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Before public void setUp() {     endpoint = new MicrometerEndpoint(null, null, registry, Meter.Type.COUNTER, METRICS_NAME, Tags.empty()).     inOrder = Mockito.inOrder(registry). }
+false;public;0;4;;@After public void tearDown() {     inOrder.verifyNoMoreInteractions(). }
+false;public;0;7;;@Test public void testCounterEndpoint() {     assertThat(endpoint.getRegistry(), is(registry)).     assertThat(endpoint.getMetricsName(), is(METRICS_NAME)).     assertThat(endpoint.getIncrement(), is(nullValue())).     assertThat(endpoint.getDecrement(), is(nullValue())). }
+false;public;0;6;;@Test public void testCreateProducer() {     Producer producer = endpoint.createProducer().     assertThat(producer, is(notNullValue())).     assertThat(producer, is(instanceOf(CounterProducer.class))). }
+false;public;0;4;;@Test public void testGetIncrement() {     assertThat(endpoint.getIncrement(), is(nullValue())). }
+false;public;0;6;;@Test public void testSetIncrement() {     assertThat(endpoint.getIncrement(), is(nullValue())).     endpoint.setIncrement(VALUE.toString()).     assertThat(Double.valueOf(endpoint.getIncrement()), is(VALUE)). }
+false;public;0;4;;@Test public void testGetDecrement() {     assertThat(endpoint.getDecrement(), is(nullValue())). }
+false;public;0;6;;@Test public void testSetDecrement() {     assertThat(endpoint.getDecrement(), is(nullValue())).     endpoint.setDecrement(VALUE.toString()).     assertThat(Double.valueOf(endpoint.getDecrement()), is(VALUE)). }

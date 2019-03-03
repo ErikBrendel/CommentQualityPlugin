@@ -1,0 +1,36 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Producer createProducer() throws Exception {     return new SshProducer(this). }
+false;public;1;6;;@Override public Consumer createConsumer(Processor processor) throws Exception {     SshConsumer consumer = new SshConsumer(this, processor).     configureConsumer(consumer).     return consumer. }
+false;public;0;5;;@Override public boolean isSingleton() {     // SshClient is not thread-safe to be shared     return true. }
+false;public;0;3;;public SshConfiguration getConfiguration() {     return sshConfiguration. }
+false;public;1;3;;public void setConfiguration(SshConfiguration configuration) {     this.sshConfiguration = configuration. }
+false;public;0;3;;public String getHost() {     return getConfiguration().getHost(). }
+false;public;1;3;;public void setHost(String host) {     getConfiguration().setHost(host). }
+false;public;0;3;;public int getPort() {     return getConfiguration().getPort(). }
+false;public;1;3;;public void setPort(int port) {     getConfiguration().setPort(port). }
+false;public;0;3;;public String getUsername() {     return getConfiguration().getUsername(). }
+false;public;1;3;;public void setUsername(String username) {     getConfiguration().setUsername(username). }
+false;public;0;3;;public String getPassword() {     return getConfiguration().getPassword(). }
+false;public;1;3;;public void setPassword(String password) {     getConfiguration().setPassword(password). }
+false;public;0;3;;public String getPollCommand() {     return getConfiguration().getPollCommand(). }
+false;public;1;3;;public void setPollCommand(String pollCommand) {     getConfiguration().setPollCommand(pollCommand). }
+false;public;0;3;;public KeyPairProvider getKeyPairProvider() {     return getConfiguration().getKeyPairProvider(). }
+false;public;1;3;;public void setKeyPairProvider(KeyPairProvider keyPairProvider) {     getConfiguration().setKeyPairProvider(keyPairProvider). }
+false;public;0;3;;public String getKeyType() {     return getConfiguration().getKeyType(). }
+false;public;1;3;;public void setKeyType(String keyType) {     getConfiguration().setKeyType(keyType). }
+false;public;0;3;;public long getTimeout() {     return getConfiguration().getTimeout(). }
+false;public;1;3;;public void setTimeout(long timeout) {     getConfiguration().setTimeout(timeout). }
+true;public;0;4;/**  * @deprecated As of version 2.11, replaced by {@link #getCertResource()}  */ ;/**  * @deprecated As of version 2.11, replaced by {@link #getCertResource()}  */ @Deprecated public String getCertFilename() {     return getConfiguration().getCertFilename(). }
+true;public;1;4;/**  * @deprecated As of version 2.11, replaced by {@link #setCertResource(String)}  */ ;/**  * @deprecated As of version 2.11, replaced by {@link #setCertResource(String)}  */ @Deprecated public void setCertFilename(String certFilename) {     getConfiguration().setCertFilename(certFilename). }
+false;public;0;3;;public String getCertResource() {     return getConfiguration().getCertResource(). }
+false;public;1;3;;public void setCertResource(String certResource) {     getConfiguration().setCertResource(certResource). }
+false;public;0;3;;public String getKnownHostsResource() {     return getConfiguration().getKnownHostsResource(). }
+false;public;1;3;;public void setKnownHostsResource(String knownHostsResource) {     getConfiguration().setKnownHostsResource(knownHostsResource). }
+false;public;0;3;;public boolean isFailOnUnknownHost() {     return getConfiguration().isFailOnUnknownHost(). }
+false;public;1;3;;public void setFailOnUnknownHost(boolean failOnUnknownHost) {     getConfiguration().setFailOnUnknownHost(failOnUnknownHost). }
+false;public;0;3;;public String getChannelType() {     return getConfiguration().getChannelType(). }
+false;public;1;3;;public void setChannelType(String channelType) {     getConfiguration().setChannelType(channelType). }
+false;public;0;3;;public String getShellPrompt() {     return getConfiguration().getShellPrompt(). }
+false;public;1;3;;public void setShellPrompt(String shellPrompt) {     getConfiguration().setShellPrompt(shellPrompt). }
+false;public;0;3;;public long getSleepForShellPrompt() {     return getConfiguration().getSleepForShellPrompt(). }
+false;public;1;3;;public void setSleepForShellPrompt(long sleepForShellPrompt) {     getConfiguration().setSleepForShellPrompt(sleepForShellPrompt). }

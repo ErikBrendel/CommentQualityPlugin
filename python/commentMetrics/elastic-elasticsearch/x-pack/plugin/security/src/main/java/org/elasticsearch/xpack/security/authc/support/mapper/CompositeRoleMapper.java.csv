@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;7;;@Override public void resolveRoles(UserData user, ActionListener<Set<String>> listener) {     GroupedActionListener<Set<String>> groupListener = new GroupedActionListener<>(ActionListener.wrap(composite -> listener.onResponse(composite.stream().flatMap(Set::stream).collect(Collectors.toSet())), listener::onFailure), delegates.size(), Collections.emptyList()).     this.delegates.forEach(mapper -> mapper.resolveRoles(user, groupListener)). }
+false;public;1;4;;@Override public void refreshRealmOnChange(CachingRealm realm) {     this.delegates.forEach(mapper -> mapper.refreshRealmOnChange(realm)). }

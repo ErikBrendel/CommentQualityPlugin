@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Returns an authenticator object for use in sessions  */ ;/**  * Returns an authenticator object for use in sessions  */ public PasswordAuthentication getPasswordAuthentication() {     return new PasswordAuthentication(username, password). }

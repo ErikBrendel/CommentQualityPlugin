@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Set<ConvertiblePair> getConvertibleTypes() {     return Collections.singleton(new ConvertiblePair(String.class, DataSize.class)). }
+false;public;3;8;;@Override public Object convert(Object source, TypeDescriptor sourceType, TypeDescriptor targetType) {     if (ObjectUtils.isEmpty(source)) {         return null.     }     return convert(source.toString(), getDataUnit(targetType)). }
+false;private;1;4;;private DataUnit getDataUnit(TypeDescriptor targetType) {     DataSizeUnit annotation = targetType.getAnnotation(DataSizeUnit.class).     return (annotation != null) ? annotation.value() : null. }
+false;private;2;3;;private DataSize convert(String source, DataUnit unit) {     return DataSize.parse(source, unit). }

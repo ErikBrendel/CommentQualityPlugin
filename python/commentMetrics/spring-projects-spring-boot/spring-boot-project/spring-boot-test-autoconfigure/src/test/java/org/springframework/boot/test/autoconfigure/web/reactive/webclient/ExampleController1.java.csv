@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@GetMapping("/one") public Mono<String> one() {     return Mono.just("one"). }
+false;public;0;4;;@GetMapping("/one/error") public Mono<String> error() {     throw new RuntimeException("foo"). }

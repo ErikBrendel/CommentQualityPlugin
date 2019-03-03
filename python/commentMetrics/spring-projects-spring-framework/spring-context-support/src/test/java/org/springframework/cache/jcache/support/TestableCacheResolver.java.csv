@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;7;;@Override public <K, V> Cache<K, V> resolveCache(CacheInvocationContext<? extends Annotation> cacheInvocationContext) {     String cacheName = cacheInvocationContext.getCacheName().     Cache<K, V> mock = mock(Cache.class).     given(mock.getName()).willReturn(cacheName).     return mock. }

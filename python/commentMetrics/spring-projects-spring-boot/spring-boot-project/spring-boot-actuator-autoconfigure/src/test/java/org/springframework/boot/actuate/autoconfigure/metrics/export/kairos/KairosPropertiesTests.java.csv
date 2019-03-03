@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;11;;@Override public void defaultValuesAreConsistent() {     KairosProperties properties = new KairosProperties().     KairosConfig config = KairosConfig.DEFAULT.     assertStepRegistryDefaultValues(properties, config).     assertThat(properties.getUri()).isEqualToIgnoringWhitespace(config.uri()).     assertThat(properties.getUserName()).isEqualToIgnoringWhitespace(config.userName()).     assertThat(properties.getPassword()).isEqualToIgnoringWhitespace(config.password()). }

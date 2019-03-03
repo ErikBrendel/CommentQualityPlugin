@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public AlgorithmIdentifier getSignatureAlgorithm() {     return signatureAlgorithm. }
+false;public;0;3;;public String getSignatureAlgorithmName() {     return name().replace("_", "-"). }
+false;public;0;3;;public String getDigestAlgorithmName() {     return digestAlgorithmName. }
+false;public;0;3;;public String getEncryptionAlgorithmName() {     return encryptionAlgorithmName. }

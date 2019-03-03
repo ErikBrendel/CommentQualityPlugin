@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public byte get(int index) {     return bytes[offset + index]. }
+false;public;0;4;;@Override public int length() {     return length. }
+false;public;2;8;;@Override public BytesReference slice(int from, int length) {     if (from < 0 || (from + length) > this.length) {         throw new IllegalArgumentException("can't slice a buffer with length [" + this.length + "], with slice parameters from [" + from + "], length [" + length + "]").     }     return new BytesArray(bytes, offset + from, length). }
+false;public;0;3;;public byte[] array() {     return bytes. }
+false;public;0;3;;public int offset() {     return offset. }
+false;public;0;4;;@Override public BytesRef toBytesRef() {     return new BytesRef(bytes, offset, length). }
+false;public;0;4;;@Override public long ramBytesUsed() {     return bytes.length. }

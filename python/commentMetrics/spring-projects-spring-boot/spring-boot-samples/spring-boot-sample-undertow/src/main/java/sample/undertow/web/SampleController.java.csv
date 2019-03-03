@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@GetMapping("/") public String helloWorld() {     return "Hello World". }
+false;public;0;4;;@GetMapping("/async") public Callable<String> helloWorldAsync() {     return () -> "async: Hello World". }

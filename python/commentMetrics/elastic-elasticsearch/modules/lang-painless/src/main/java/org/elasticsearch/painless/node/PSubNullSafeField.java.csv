@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;1;4;;@Override void extractVariables(Set<String> variables) {     guarded.extractVariables(variables). }
+false;;1;12;;@Override void analyze(Locals locals) {     if (write) {         throw createError(new IllegalArgumentException("Can't write to null safe reference")).     }     guarded.read = read.     guarded.analyze(locals).     actual = guarded.actual.     if (actual.isPrimitive()) {         throw new IllegalArgumentException("Result of null safe operator must be nullable").     } }
+false;;0;4;;@Override int accessElementCount() {     return guarded.accessElementCount(). }
+false;;0;4;;@Override boolean isDefOptimized() {     return guarded.isDefOptimized(). }
+false;;1;4;;@Override void updateActual(Class<?> actual) {     guarded.updateActual(actual). }
+false;;2;8;;@Override void write(MethodWriter writer, Globals globals) {     Label end = new Label().     writer.dup().     writer.ifNull(end).     guarded.write(writer, globals).     writer.mark(end). }
+false;;2;4;;@Override void setup(MethodWriter writer, Globals globals) {     throw createError(new IllegalArgumentException("Can't write to null safe field")). }
+false;;2;4;;@Override void load(MethodWriter writer, Globals globals) {     throw createError(new IllegalArgumentException("Can't write to null safe field")). }
+false;;2;4;;@Override void store(MethodWriter writer, Globals globals) {     throw createError(new IllegalArgumentException("Can't write to null safe field")). }
+false;public;0;4;;@Override public String toString() {     return singleLineToString(guarded). }

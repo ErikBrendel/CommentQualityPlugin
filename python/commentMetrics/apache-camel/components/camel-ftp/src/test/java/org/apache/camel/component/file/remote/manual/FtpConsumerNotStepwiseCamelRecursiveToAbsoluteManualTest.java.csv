@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Override @Before public void setUp() throws Exception {     deleteDirectory("target/ftptest").     super.setUp(). }
+false;public;0;5;;@Test public void testFtpConsumerManual() throws Exception {     getMockEndpoint("mock:result").expectedMessageCount(3).     assertMockEndpointsSatisfied(). }
+false;public;0;6;;@Override public void configure() throws Exception {     from("ftp:localhost/one/two?username=camel&password=camel&recursive=true&noop=true&stepwise=false").to("file:E:/temp/sample/file2ftp").to("mock:result"). }
+false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("ftp:localhost/one/two?username=camel&password=camel&recursive=true&noop=true&stepwise=false").to("file:E:/temp/sample/file2ftp").to("mock:result").         }     }. }

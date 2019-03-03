@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,abstract;0;1;/**  * @return  The type of the input  */ ;/**  * @return  The type of the input  */ public abstract String type().
+true;public,abstract;2;1;/**  * Parses the given xcontent and creates a concrete input  *  * @param watchId               The id of the watch  * @param parser                The parser containing the input content of the watch  */ ;/**  * Parses the given xcontent and creates a concrete input  *  * @param watchId               The id of the watch  * @param parser                The parser containing the input content of the watch  */ public abstract I parseInput(String watchId, XContentParser parser) throws IOException.
+true;public,abstract;1;1;/**  * Creates an executable input out of the given input.  */ ;/**  * Creates an executable input out of the given input.  */ public abstract E createExecutable(I input).
+false;public;2;4;;public E parseExecutable(String watchId, XContentParser parser) throws IOException {     I input = parseInput(watchId, parser).     return createExecutable(input). }

@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;2;3;;public static InfinispanIdempotentRepository infinispanIdempotentRepository(BasicCacheContainer cacheContainer, String processorName) {     return new InfinispanIdempotentRepository(cacheContainer, processorName). }
+false;public,static;1;3;;public static InfinispanIdempotentRepository infinispanIdempotentRepository(String processorName) {     return new InfinispanIdempotentRepository(processorName). }
+false;public,static;0;3;;public static InfinispanIdempotentRepository infinispanIdempotentRepository() {     return new InfinispanIdempotentRepository(). }
+false;public;1;12;;@Override @ManagedOperation(description = "Adds the key to the store") public boolean add(String key) {     // need to check first as put will update the entry lifetime so it can not expire its cache lifespan     if (getCache().containsKey(key)) {         // there is already an entry so return false         return false.     }     Boolean put = getCache().put(key, true).     return put == null. }
+false;public;1;5;;@Override @ManagedOperation(description = "Does the store contain the given key") public boolean contains(String key) {     return getCache().containsKey(key). }
+false;public;1;5;;@Override @ManagedOperation(description = "Remove the key from the store") public boolean remove(String key) {     return getCache().remove(key) != null. }
+false;public;0;5;;@Override @ManagedOperation(description = "Clear the store") public void clear() {     getCache().clear(). }
+false;public;0;4;;@ManagedAttribute(description = "The processor name") public String getCacheName() {     return cacheName. }
+false;public;1;4;;@Override public boolean confirm(String key) {     return true. }
+false;protected;0;4;;@Override protected void doStart() throws Exception { // noop }
+false;protected;0;4;;@Override protected void doStop() throws Exception { // noop }
+false;protected;0;8;;@Override protected void doShutdown() throws Exception {     if (isManagedCacheContainer) {         cacheContainer.stop().     }     super.doShutdown(). }
+false;private;0;19;;private BasicCache<String, Boolean> getCache() {     if (cache == null) {         // them so force it.         if (InfinispanUtil.isRemote(cacheContainer)) {             RemoteCacheManager manager = InfinispanUtil.asRemote(cacheContainer).             cache = cacheName != null ? manager.getCache(cacheName, true) : manager.getCache(true).         } else {             cache = cacheName != null ? cacheContainer.getCache(cacheName) : cacheContainer.getCache().         }     }     return cache. }

@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void setScheme(String scheme) {     this.scheme = scheme. }
+false;public;0;4;;@Override public String getScheme() {     return scheme. }
+false;public;3;10;;@Override public DynamicAwareEntry prepare(Exchange exchange, String uri, String originalUri) throws Exception {     String query = StringHelper.after(uri, "?").     if (query != null) {         Map<String, String> map = new LinkedHashMap(URISupport.parseQuery(query)).         return new DynamicAwareEntry(uri, originalUri, map, null).     } else {         return new DynamicAwareEntry(uri, originalUri, null, null).     } }
+false;public;2;10;;@Override public Processor createPreProcessor(Exchange exchange, DynamicAwareEntry entry) throws Exception {     if (entry.getProperties().containsKey("drink")) {         Object value = entry.getProperties().get("drink").         return new SetHeaderProcessor(ExpressionBuilder.constantExpression(BarConstants.DRINK), ExpressionBuilder.constantExpression(value)).     } else {         return null.     } }
+false;public;2;5;;@Override public Processor createPostProcessor(Exchange exchange, DynamicAwareEntry entry) throws Exception {     // remove header after use     return new RemoveHeaderProcessor(BarConstants.DRINK). }
+false;public;2;6;;@Override public String resolveStaticUri(Exchange exchange, DynamicAwareEntry entry) throws Exception {     // before the ?     String uri = entry.getOriginalUri().     return StringHelper.before(uri, "?"). }

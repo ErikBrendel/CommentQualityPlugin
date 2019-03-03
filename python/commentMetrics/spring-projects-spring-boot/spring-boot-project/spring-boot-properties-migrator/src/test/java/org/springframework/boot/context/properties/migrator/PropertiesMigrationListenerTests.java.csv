@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@After public void closeContext() {     if (this.context != null) {         this.context.close().     } }
+false;public;0;8;;@Test public void sampleReport() {     this.context = createSampleApplication().run("--banner.charset=UTF8").     assertThat(this.output.toString()).contains("commandLineArgs").contains("spring.banner.charset").contains("Each configuration key has been temporarily mapped").doesNotContain("Please refer to the migration guide"). }
+false;private;0;3;;private SpringApplication createSampleApplication() {     return new SpringApplication(TestApplication.class). }

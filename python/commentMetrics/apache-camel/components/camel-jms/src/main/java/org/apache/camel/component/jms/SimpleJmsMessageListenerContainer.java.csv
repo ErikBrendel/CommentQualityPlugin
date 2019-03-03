@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;5;;@Override protected boolean runningAllowed() {     // do not run if we have been stopped     return endpoint.isRunning(). }

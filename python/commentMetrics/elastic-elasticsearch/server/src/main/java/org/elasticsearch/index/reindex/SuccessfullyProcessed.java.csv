@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;default;0;3;/**  * Total number of successfully processed documents.  */ ;/**  * Total number of successfully processed documents.  */ default long getSuccessfullyProcessed() {     return getUpdated() + getCreated() + getDeleted(). }
+true;;0;1;/**  * Count of documents updated.  */ ;/**  * Count of documents updated.  */ long getUpdated().
+true;;0;1;/**  * Count of documents created.  */ ;/**  * Count of documents created.  */ long getCreated().
+true;;0;1;/**  * Count of successful delete operations.  */ ;/**  * Count of successful delete operations.  */ long getDeleted().

@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public void afterTest() { }
+false;public;0;4;;@Override public Client client() {     return client. }
+false;public;0;4;;@Override public int size() {     return httpAddresses.length. }
+false;public;0;4;;@Override public int numDataNodes() {     return numDataNodes. }
+false;public;0;4;;@Override public int numDataAndMasterNodes() {     return numMasterAndDataNodes. }
+false;public;0;4;;@Override public InetSocketAddress[] httpAddresses() {     return httpAddresses. }
+false;public;0;4;;@Override public void close() throws IOException {     client.close(). }
+false;public;0;25;;@Override public void ensureEstimatedStats() {     if (size() > 0) {         NodesStatsResponse nodeStats = client().admin().cluster().prepareNodesStats().clear().setBreaker(true).setIndices(true).execute().actionGet().         for (NodeStats stats : nodeStats.getNodes()) {             assertThat("Fielddata breaker not reset to 0 on node: " + stats.getNode(), stats.getBreaker().getStats(CircuitBreaker.FIELDDATA).getEstimated(), equalTo(0L)).             assertThat("Accounting breaker not reset to " + stats.getIndices().getSegments().getMemoryInBytes() + " on node: " + stats.getNode(), stats.getBreaker().getStats(CircuitBreaker.ACCOUNTING).getEstimated(), equalTo(stats.getIndices().getSegments().getMemoryInBytes())).             // ExternalTestCluster does not check the request breaker,             // because checking it requires a network request, which in             // turn increments the breaker, making it non-0             assertThat("Fielddata size must be 0 on node: " + stats.getNode(), stats.getIndices().getFieldData().getMemorySizeInBytes(), equalTo(0L)).             assertThat("Query cache size must be 0 on node: " + stats.getNode(), stats.getIndices().getQueryCache().getMemorySizeInBytes(), equalTo(0L)).             assertThat("FixedBitSet cache size must be 0 on node: " + stats.getNode(), stats.getIndices().getSegments().getBitsetMemoryInBytes(), equalTo(0L)).         }     } }
+false;public;0;4;;@Override public Iterable<Client> getClients() {     return Collections.singleton(client). }
+false;public;0;4;;@Override public NamedWriteableRegistry getNamedWriteableRegistry() {     return client.getNamedWriteableRegistry(). }
+false;public;0;4;;@Override public String getClusterName() {     return clusterName. }

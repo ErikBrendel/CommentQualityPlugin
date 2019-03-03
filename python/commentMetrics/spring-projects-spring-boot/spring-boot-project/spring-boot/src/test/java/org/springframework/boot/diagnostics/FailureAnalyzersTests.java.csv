@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Before public void configureMock() {     failureAnalyzer = mock(AwareFailureAnalyzer.class). }
+false;public;0;6;;@Test public void analyzersAreLoadedAndCalled() {     RuntimeException failure = new RuntimeException().     analyzeAndReport("basic.factories", failure).     verify(failureAnalyzer, times(2)).analyze(failure). }
+false;public;0;6;;@Test public void beanFactoryIsInjectedIntoBeanFactoryAwareFailureAnalyzers() {     RuntimeException failure = new RuntimeException().     analyzeAndReport("basic.factories", failure).     verify(failureAnalyzer).setBeanFactory(any(BeanFactory.class)). }
+false;public;0;6;;@Test public void environmentIsInjectedIntoEnvironmentAwareFailureAnalyzers() {     RuntimeException failure = new RuntimeException().     analyzeAndReport("basic.factories", failure).     verify(failureAnalyzer).setEnvironment(any(Environment.class)). }
+false;public;0;6;;@Test public void analyzerThatFailsDuringInitializationDoesNotPreventOtherAnalyzersFromBeingCalled() {     RuntimeException failure = new RuntimeException().     analyzeAndReport("broken-initialization.factories", failure).     verify(failureAnalyzer, times(1)).analyze(failure). }
+false;public;0;6;;@Test public void analyzerThatFailsDuringAnalysisDoesNotPreventOtherAnalyzersFromBeingCalled() {     RuntimeException failure = new RuntimeException().     analyzeAndReport("broken-analysis.factories", failure).     verify(failureAnalyzer, times(1)).analyze(failure). }
+false;private;2;5;;private void analyzeAndReport(String factoriesName, Throwable failure) {     AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext().     ClassLoader classLoader = new CustomSpringFactoriesClassLoader(factoriesName).     new FailureAnalyzers(context, classLoader).reportException(failure). }
+false;public;1;4;;@Override public FailureAnalysis analyze(Throwable failure) {     return failureAnalyzer.analyze(failure). }
+false;public;1;4;;@Override public FailureAnalysis analyze(Throwable failure) {     return null. }
+false;public;1;4;;@Override public FailureAnalysis analyze(Throwable failure) {     throw new NoClassDefFoundError(). }
+false;public;1;4;;@Override public void setEnvironment(Environment environment) {     failureAnalyzer.setEnvironment(environment). }
+false;public;1;4;;@Override public void setBeanFactory(BeanFactory beanFactory) throws BeansException {     failureAnalyzer.setBeanFactory(beanFactory). }
+false;public;1;8;;@Override public Enumeration<URL> getResources(String name) throws IOException {     if ("META-INF/spring.factories".equals(name)) {         return super.getResources("failure-analyzers-tests/" + this.factoriesName).     }     return super.getResources(name). }

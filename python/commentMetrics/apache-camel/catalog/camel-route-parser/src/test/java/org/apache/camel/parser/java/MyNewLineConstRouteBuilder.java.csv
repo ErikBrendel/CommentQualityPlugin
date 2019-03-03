@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Override public void configure() throws Exception {     from("timer:foo").toD("file:output?fileExist=" + EXISTS + "&chmod=" + (MOD + 6 + 1) + "&allowNullBody=true").to("log:b"). }

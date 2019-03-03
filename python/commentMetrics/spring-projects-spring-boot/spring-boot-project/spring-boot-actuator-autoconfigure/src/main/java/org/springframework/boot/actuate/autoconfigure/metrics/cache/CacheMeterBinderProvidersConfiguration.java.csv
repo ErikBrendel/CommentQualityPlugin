@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Bean public CaffeineCacheMeterBinderProvider caffeineCacheMeterBinderProvider() {     return new CaffeineCacheMeterBinderProvider(). }
+false;public;0;4;;@Bean public EhCache2CacheMeterBinderProvider ehCache2CacheMeterBinderProvider() {     return new EhCache2CacheMeterBinderProvider(). }
+false;public;0;4;;@Bean public HazelcastCacheMeterBinderProvider hazelcastCacheMeterBinderProvider() {     return new HazelcastCacheMeterBinderProvider(). }
+false;public;0;4;;@Bean public JCacheCacheMeterBinderProvider jCacheCacheMeterBinderProvider() {     return new JCacheCacheMeterBinderProvider(). }

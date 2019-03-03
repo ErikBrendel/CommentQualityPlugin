@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static boolean hasValue(InternalAvg agg) {     return agg.getCount() > 0. }
+false;public,static;1;3;;public static boolean hasValue(InternalCardinality agg) {     return agg.getCounts() != null. }
+false;public,static;1;3;;public static boolean hasValue(InternalHDRPercentileRanks agg) {     return agg.getState().getTotalCount() > 0. }
+false;public,static;1;3;;public static boolean hasValue(InternalHDRPercentiles agg) {     return agg.getState().getTotalCount() > 0. }
+false;public,static;1;3;;public static boolean hasValue(InternalMedianAbsoluteDeviation agg) {     return agg.getValuesSketch().size() > 0. }
+false;public,static;1;5;;public static boolean hasValue(InternalScriptedMetric agg) {     // Could check for null too, but a script might return null on purpose...     return agg.getAggregation().size() > 0. }
+false;public,static;1;3;;public static boolean hasValue(InternalTDigestPercentileRanks agg) {     return agg.getState().size() > 0. }
+false;public,static;1;3;;public static boolean hasValue(InternalTDigestPercentiles agg) {     return agg.getState().size() > 0. }
+false;public,static;1;5;;public static boolean hasValue(InternalTopHits agg) {     return (agg.getHits().getTotalHits().value == 0 && Double.isNaN(agg.getHits().getMaxScore()) && Double.isNaN(agg.getTopDocs().maxScore)) == false. }
+false;public,static;1;3;;public static boolean hasValue(InternalWeightedAvg agg) {     return (agg.getSum() == 0.0 && agg.getWeight() == 0L) == false. }
+false;public,static;1;3;;public static boolean hasValue(InternalDerivative agg) {     return true. }

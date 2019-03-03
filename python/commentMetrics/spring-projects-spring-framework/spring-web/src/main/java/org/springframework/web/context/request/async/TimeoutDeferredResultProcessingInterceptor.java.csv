@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;5;;@Override public <T> boolean handleTimeout(NativeWebRequest request, DeferredResult<T> result) throws Exception {     result.setErrorResult(new AsyncRequestTimeoutException()).     return false. }

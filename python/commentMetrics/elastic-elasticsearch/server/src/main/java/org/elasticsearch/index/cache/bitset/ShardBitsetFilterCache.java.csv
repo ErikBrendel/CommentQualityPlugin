@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void onCached(long sizeInBytes) {     totalMetric.inc(sizeInBytes). }
+false;public;1;3;;public void onRemoval(long sizeInBytes) {     totalMetric.dec(sizeInBytes). }
+false;public;0;3;;public long getMemorySizeInBytes() {     return totalMetric.count(). }

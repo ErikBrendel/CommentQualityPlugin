@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;5;;@Override protected void configureValidator(ValidatingProcessor validator) throws Exception {     super.configureValidator(validator).     validator.setSchemaLanguage(XMLConstants.RELAXNG_NS_URI). }
+false;protected;0;9;;@Override protected void doStart() throws Exception {     super.doStart().     // use relax schema factory by default     if (getSchemaFactory() == null) {         setSchemaFactory(new RELAXNGSchemaFactoryImpl()).     } }

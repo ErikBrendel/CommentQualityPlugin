@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public GetBasicStatusResponse doHlrcParseInstance(XContentParser parser) {     return GetBasicStatusResponse.fromXContent(parser). }
+false;public;1;4;;@Override public org.elasticsearch.license.GetBasicStatusResponse convertHlrcToInternal(GetBasicStatusResponse instance) {     return new org.elasticsearch.license.GetBasicStatusResponse(instance.isEligibleToStartBasic()). }
+false;protected;0;4;;@Override protected org.elasticsearch.license.GetBasicStatusResponse createBlankInstance() {     return new org.elasticsearch.license.GetBasicStatusResponse(false). }
+false;protected;0;4;;@Override protected org.elasticsearch.license.GetBasicStatusResponse createTestInstance() {     return new org.elasticsearch.license.GetBasicStatusResponse(randomBoolean()). }

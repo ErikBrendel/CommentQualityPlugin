@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void testDataSetWithSeda() throws Exception {     MockEndpoint endpoint = getMockEndpoint(uri).     endpoint.expectedMessageCount((int) dataSet.getSize()).     context.getRouteController().startAllRoutes().     assertMockEndpointsSatisfied(). }
+false;protected;0;6;;@Override protected Context createJndiContext() throws Exception {     Context context = super.createJndiContext().     context.bind("foo", dataSet).     return context. }
+false;public;0;5;;public void configure() throws Exception {     from(uri).to("seda:test").noAutoStartup().     from("seda:test").to(uri). }
+false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from(uri).to("seda:test").noAutoStartup().             from("seda:test").to(uri).         }     }. }

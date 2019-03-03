@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@After public void close() {     this.context.close(). }
+false;public;0;7;;@Test public void testDefaultRepositoryConfiguration() {     initContext(TestConfiguration.class).     assertThat(this.context.getBean(CityRepository.class)).isNotNull().     assertThat(this.context.getBean(SolrClient.class)).isInstanceOf(HttpSolrClient.class). }
+false;public;0;6;;@Test public void testNoRepositoryConfiguration() {     initContext(EmptyConfiguration.class).     assertThat(this.context.getBean(SolrClient.class)).isInstanceOf(HttpSolrClient.class). }
+false;public;0;5;;@Test public void doesNotTriggerDefaultRepositoryDetectionIfCustomized() {     initContext(CustomizedConfiguration.class).     assertThat(this.context.getBean(CitySolrRepository.class)).isNotNull(). }
+false;public;0;6;;@Test public void autoConfigurationShouldNotKickInEvenIfManualConfigDidNotCreateAnyRepositories() {     initContext(SortOfInvalidCustomConfiguration.class).     assertThatExceptionOfType(NoSuchBeanDefinitionException.class).isThrownBy(() -> this.context.getBean(CityRepository.class)). }
+false;private;1;8;;private void initContext(Class<?> configClass) {     this.context = new AnnotationConfigApplicationContext().     this.context.register(configClass, SolrAutoConfiguration.class, SolrRepositoriesAutoConfiguration.class, PropertyPlaceholderAutoConfiguration.class).     this.context.refresh(). }

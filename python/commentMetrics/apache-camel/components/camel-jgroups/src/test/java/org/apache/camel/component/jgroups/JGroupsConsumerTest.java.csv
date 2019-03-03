@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public void configure() throws Exception {     from("jgroups:" + clusterName).to(mockEndpoint). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("jgroups:" + clusterName).to(mockEndpoint).         }     }. }
+false;protected;0;6;;// Fixture setup @Override protected void doPreSetup() throws Exception {     super.doPreSetup().     channel = new JChannel().     channel.connect(clusterName). }
+false;public;0;6;;@Override @After public void tearDown() throws Exception {     channel.close().     super.tearDown(). }
+false;public;0;14;;// Tests @Test public void shouldConsumeMulticastedMessage() throws Exception {     // Given     mockEndpoint.setExpectedMessageCount(1).     mockEndpoint.expectedBodiesReceived(message).     // When     Message msg = new Message(null, message).     msg.setSrc(null).     channel.send(msg).     // Then     assertMockEndpointsSatisfied(). }
+false;public;0;14;;@Test public void shouldKeepOriginalMessage() throws Exception {     // Given     mockEndpoint.setExpectedMessageCount(1).     mockEndpoint.message(0).header(HEADER_JGROUPS_ORIGINAL_MESSAGE).isInstanceOf(Message.class).     // When     Message msg = new Message(null, message).     msg.setSrc(null).     channel.send(msg).     // Then     assertMockEndpointsSatisfied(). }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void testMarshal() throws Exception {     TestPojoView in = new TestPojoView().     Object marshalled = template.requestBody("direct:in", in).     String marshalledAsString = context.getTypeConverter().convertTo(String.class, marshalled).     // we enable the wrap root type feature so we should have TestPojoView     assertEquals("{\"TestPojoView\":{\"age\":30,\"height\":190,\"weight\":70}}", marshalledAsString). }
+false;protected;0;4;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/component/jackson/SpringJacksonEnableFeatureTest.xml"). }

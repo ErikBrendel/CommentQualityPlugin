@@ -1,0 +1,20 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Return the wrapped request.  */ ;/**  * Return the wrapped request.  */ public ClientResponse response() {     return this.delegate. }
+false;public;0;4;;@Override public ExchangeStrategies strategies() {     return this.delegate.strategies(). }
+false;public;0;4;;@Override public HttpStatus statusCode() {     return this.delegate.statusCode(). }
+false;public;0;4;;@Override public int rawStatusCode() {     return this.delegate.rawStatusCode(). }
+false;public;0;4;;@Override public Headers headers() {     return this.delegate.headers(). }
+false;public;0;4;;@Override public MultiValueMap<String, ResponseCookie> cookies() {     return this.delegate.cookies(). }
+false;public;1;4;;@Override public <T> T body(BodyExtractor<T, ? super ClientHttpResponse> extractor) {     return this.delegate.body(extractor). }
+false;public;1;4;;@Override public <T> Mono<T> bodyToMono(Class<? extends T> elementClass) {     return this.delegate.bodyToMono(elementClass). }
+false;public;1;4;;@Override public <T> Mono<T> bodyToMono(ParameterizedTypeReference<T> typeReference) {     return this.delegate.bodyToMono(typeReference). }
+false;public;1;4;;@Override public <T> Flux<T> bodyToFlux(Class<? extends T> elementClass) {     return this.delegate.bodyToFlux(elementClass). }
+false;public;1;4;;@Override public <T> Flux<T> bodyToFlux(ParameterizedTypeReference<T> typeReference) {     return this.delegate.bodyToFlux(typeReference). }
+false;public;1;4;;@Override public <T> Mono<ResponseEntity<T>> toEntity(Class<T> bodyType) {     return this.delegate.toEntity(bodyType). }
+false;public;1;4;;@Override public <T> Mono<ResponseEntity<T>> toEntity(ParameterizedTypeReference<T> typeReference) {     return this.delegate.toEntity(typeReference). }
+false;public;1;4;;@Override public <T> Mono<ResponseEntity<List<T>>> toEntityList(Class<T> elementType) {     return this.delegate.toEntityList(elementType). }
+false;public;1;4;;@Override public <T> Mono<ResponseEntity<List<T>>> toEntityList(ParameterizedTypeReference<T> typeReference) {     return this.delegate.toEntityList(typeReference). }
+false;public;0;4;;@Override public OptionalLong contentLength() {     return this.headers.contentLength(). }
+false;public;0;4;;@Override public Optional<MediaType> contentType() {     return this.headers.contentType(). }
+false;public;1;4;;@Override public List<String> header(String headerName) {     return this.headers.header(headerName). }
+false;public;0;4;;@Override public HttpHeaders asHttpHeaders() {     return this.headers.asHttpHeaders(). }

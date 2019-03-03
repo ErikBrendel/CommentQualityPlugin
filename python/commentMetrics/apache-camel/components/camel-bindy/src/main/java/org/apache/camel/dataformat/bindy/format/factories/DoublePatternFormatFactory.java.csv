@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public boolean canBuild(FormattingOptions formattingOptions) {     return super.canBuild(formattingOptions) && ObjectHelper.isNotEmpty(formattingOptions.getPattern()). }
+false;public;1;5;;@Override public Format<?> build(FormattingOptions formattingOptions) {     return new DoublePatternFormat(formattingOptions.getPattern(), formattingOptions.getLocale()). }
+false;public;1;8;;@Override public Double parse(String string) throws Exception {     if (getNumberFormat() != null) {         return getNumberFormat().parse(string).doubleValue().     } else {         return Double.valueOf(string).     } }

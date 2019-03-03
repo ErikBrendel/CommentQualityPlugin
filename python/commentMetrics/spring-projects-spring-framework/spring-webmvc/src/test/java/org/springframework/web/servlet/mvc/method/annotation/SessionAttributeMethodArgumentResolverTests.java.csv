@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected HandlerMethodArgumentResolver createResolver() {     return new SessionAttributeMethodArgumentResolver(). }
+false;protected;0;4;;@Override protected String getHandleMethodName() {     return "handleWithSessionAttribute". }
+false;protected;0;4;;@Override protected int getScope() {     return RequestAttributes.SCOPE_SESSION. }

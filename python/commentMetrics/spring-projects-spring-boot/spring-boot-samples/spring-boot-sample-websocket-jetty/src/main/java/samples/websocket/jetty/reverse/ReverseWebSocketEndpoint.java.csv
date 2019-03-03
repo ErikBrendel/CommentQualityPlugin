@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;5;;@OnMessage public void handleMessage(Session session, String message) throws IOException {     session.getBasicRemote().sendText("Reversed: " + new StringBuilder(message).reverse()). }

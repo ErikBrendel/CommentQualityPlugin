@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public void shutdown() {     shutdown = true. }
+false;public;0;4;;public List<Runnable> shutdownNow() {     // not implemented     return null. }
+false;public;0;3;;public boolean isShutdown() {     return shutdown. }
+false;public;0;3;;public boolean isTerminated() {     return shutdown. }
+false;public;2;4;;public boolean awaitTermination(long time, TimeUnit unit) throws InterruptedException {     // not implemented     return true. }
+false;public;1;4;;public void execute(Runnable runnable) {     // run the task synchronously     runnable.run(). }

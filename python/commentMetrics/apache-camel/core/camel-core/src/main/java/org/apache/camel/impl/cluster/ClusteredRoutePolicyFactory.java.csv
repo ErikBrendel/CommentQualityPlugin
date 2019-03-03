@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;10;;@Override public RoutePolicy createRoutePolicy(CamelContext camelContext, String routeId, NamedNode route) {     try {         return clusterService != null ? ClusteredRoutePolicy.forNamespace(clusterService, namespace) : ClusteredRoutePolicy.forNamespace(camelContext, clusterServiceSelector, namespace).     } catch (Exception e) {         throw new RuntimeCamelException(e).     } }
+false;public,static;1;3;;// **************************************************** // Static helpers // **************************************************** public static ClusteredRoutePolicyFactory forNamespace(String namespace) {     return new ClusteredRoutePolicyFactory(namespace). }
+false;public,static;2;3;;public static ClusteredRoutePolicyFactory forNamespace(CamelClusterService.Selector selector, String namespace) {     return new ClusteredRoutePolicyFactory(selector, namespace). }
+false;public,static;2;3;;public static ClusteredRoutePolicyFactory forNamespace(CamelClusterService clusterService, String namespace) {     return new ClusteredRoutePolicyFactory(clusterService, namespace). }

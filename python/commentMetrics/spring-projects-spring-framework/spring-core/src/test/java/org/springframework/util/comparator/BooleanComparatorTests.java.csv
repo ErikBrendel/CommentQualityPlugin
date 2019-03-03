@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void shouldCompareWithTrueLow() {     Comparator<Boolean> c = new BooleanComparator(true).     assertThat(c.compare(true, false), is(-1)).     assertThat(c.compare(Boolean.TRUE, Boolean.TRUE), is(0)). }
+false;public;0;6;;@Test public void shouldCompareWithTrueHigh() {     Comparator<Boolean> c = new BooleanComparator(false).     assertThat(c.compare(true, false), is(1)).     assertThat(c.compare(Boolean.TRUE, Boolean.TRUE), is(0)). }
+false;public;0;6;;@Test public void shouldCompareFromTrueLow() {     Comparator<Boolean> c = BooleanComparator.TRUE_LOW.     assertThat(c.compare(true, false), is(-1)).     assertThat(c.compare(Boolean.TRUE, Boolean.TRUE), is(0)). }
+false;public;0;6;;@Test public void shouldCompareFromTrueHigh() {     Comparator<Boolean> c = BooleanComparator.TRUE_HIGH.     assertThat(c.compare(true, false), is(1)).     assertThat(c.compare(Boolean.TRUE, Boolean.TRUE), is(0)). }

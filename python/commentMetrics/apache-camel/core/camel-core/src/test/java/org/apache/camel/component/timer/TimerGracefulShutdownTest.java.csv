@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry jndi = super.createRegistry().     jndi.bind("eh", eh).     return jndi. }
+false;public;0;7;;@Test public void testTimerShutdown() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMinimumMessageCount(1).     assertMockEndpointsSatisfied(). }
+false;public;0;7;;@Override @After public void tearDown() throws Exception {     super.tearDown().     assertFalse("Should not throw exception during graceful shutdown", eh.isError()). }
+false;public;0;7;;@Override public void configure() throws Exception {     from("timer:foo?period=10&delay=10&exceptionHandler=#eh").delay(10).to("log:time").to("mock:result"). }
+false;protected;0;12;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("timer:foo?period=10&delay=10&exceptionHandler=#eh").delay(10).to("log:time").to("mock:result").         }     }. }
+false;public;1;4;;@Override public void handleException(Throwable exception) {     error = true. }
+false;public;2;4;;@Override public void handleException(String message, Throwable exception) {     error = true. }
+false;public;3;4;;@Override public void handleException(String message, Exchange exchange, Throwable exception) {     error = true. }
+false;public;0;3;;public boolean isError() {     return error. }

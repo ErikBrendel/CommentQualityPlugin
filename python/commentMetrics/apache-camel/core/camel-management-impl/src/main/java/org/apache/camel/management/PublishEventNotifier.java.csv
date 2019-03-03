@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;27;;public void notify(CamelEvent event) throws Exception {     // only notify when we are started     if (!isStarted()) {         log.debug("Cannot publish event as notifier is not started: {}", event).         return.     }     // only notify when camel context is running     if (!camelContext.getStatus().isStarted()) {         log.debug("Cannot publish event as CamelContext is not started: {}", event).         return.     }     Exchange exchange = producer.getEndpoint().createExchange().     exchange.getIn().setBody(event).     // make sure we don't send out events for this as well     // mark exchange as being published to event, to prevent creating new events     // for this as well (causing a endless flood of events)     exchange.setProperty(Exchange.NOTIFY_EVENT, Boolean.TRUE).     try {         producer.process(exchange).     } finally {         // and remove it when its done         exchange.removeProperty(Exchange.NOTIFY_EVENT).     } }
+false;public;1;3;;public boolean isEnabled(CamelEvent event) {     return true. }
+false;public;0;3;;public CamelContext getCamelContext() {     return camelContext. }
+false;public;1;3;;public void setCamelContext(CamelContext camelContext) {     this.camelContext = camelContext. }
+false;public;0;3;;public Endpoint getEndpoint() {     return endpoint. }
+false;public;1;3;;public void setEndpoint(Endpoint endpoint) {     this.endpoint = endpoint. }
+false;public;0;3;;public String getEndpointUri() {     return endpointUri. }
+false;public;1;3;;public void setEndpointUri(String endpointUri) {     this.endpointUri = endpointUri. }
+false;protected;0;14;;@Override protected void doStart() throws Exception {     ObjectHelper.notNull(camelContext, "camelContext", this).     if (endpoint == null && endpointUri == null) {         throw new IllegalArgumentException("Either endpoint or endpointUri must be configured").     }     if (endpoint == null) {         endpoint = camelContext.getEndpoint(endpointUri).     }     producer = endpoint.createProducer().     ServiceHelper.startService(producer). }
+false;protected;0;4;;@Override protected void doStop() throws Exception {     ServiceHelper.stopService(producer). }
+false;public;0;4;;@Override public String toString() {     return "PublishEventNotifier[" + (endpoint != null ? endpoint : URISupport.sanitizeUri(endpointUri)) + "]". }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public void customize(T component) {     // set it or if no cache manager is already configured on component     if (configuration.isOverride() || component.getHazelcastInstance() == null) {         component.setHazelcastInstance(hazelcastInstance).     } }

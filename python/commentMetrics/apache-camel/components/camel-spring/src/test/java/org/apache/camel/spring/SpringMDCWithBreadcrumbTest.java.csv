@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/spring/SpringMDCWithBreadcrumbTest.xml"). }
+false;public;1;5;;public void process(Exchange exchange) throws Exception {     assertEquals("route-a", MDC.get("camel.routeId")).     assertEquals(exchange.getExchangeId(), MDC.get("camel.exchangeId")).     assertEquals(exchange.getExchangeId(), MDC.get("camel.breadcrumbId")). }
+false;public;1;4;;public void process(Exchange exchange) throws Exception {     assertEquals("route-b", MDC.get("camel.routeId")).     assertEquals(exchange.getExchangeId(), MDC.get("camel.breadcrumbId")). }

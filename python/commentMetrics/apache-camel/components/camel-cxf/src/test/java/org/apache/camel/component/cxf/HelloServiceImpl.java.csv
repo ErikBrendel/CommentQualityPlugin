@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;public String echo(String text) {     LOG.info("call for echo with " + text).     return "echo " + text. }
+false;public;0;4;;public void ping() {     invocationCount++.     LOG.info("call for oneway ping"). }
+false;public;0;3;;public int getInvocationCount() {     return invocationCount. }
+false;public;0;3;;public String sayHello() {     return "hello" + name. }
+false;public;1;3;;public Boolean echoBoolean(Boolean bool) {     return bool. }
+false;public;2;7;;public String complexParameters(List<String> par1, List<String> par2) {     String result = "param".     if (par1 != null && par2 != null) {         result = result + ":" + par1.get(0) + par2.get(0).     }     return result. }

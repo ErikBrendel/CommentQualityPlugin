@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;1;1;;String getName(Route route).
+false;default;2;8;;default Tags getTags(Route route, Exchange exchange) {     return Tags.of(CAMEL_CONTEXT_TAG, route.getRouteContext().getCamelContext().getName(), SERVICE_NAME, MicrometerRoutePolicyService.class.getSimpleName(), ROUTE_ID_TAG, route.getId(), FAILED_TAG, Boolean.toString(exchange.isFailed())). }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;public SamlAuthenticateRequestBuilder saml(byte[] saml) {     request.setSaml(saml).     return this. }
+false;public;1;4;;public SamlAuthenticateRequestBuilder validRequestIds(List<String> validRequestIds) {     request.setValidRequestIds(validRequestIds).     return this. }

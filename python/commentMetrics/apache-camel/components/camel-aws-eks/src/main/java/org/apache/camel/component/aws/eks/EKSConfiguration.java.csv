@@ -1,0 +1,16 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public AmazonEKS getEksClient() {     return eksClient. }
+true;public;1;3;/**  * To use a existing configured AWS EKS as client  */ ;/**  * To use a existing configured AWS EKS as client  */ public void setEksClient(AmazonEKS eksClient) {     this.eksClient = eksClient. }
+false;public;0;3;;public String getAccessKey() {     return accessKey. }
+true;public;1;3;/**  * Amazon AWS Access Key  */ ;/**  * Amazon AWS Access Key  */ public void setAccessKey(String accessKey) {     this.accessKey = accessKey. }
+false;public;0;3;;public String getSecretKey() {     return secretKey. }
+true;public;1;3;/**  * Amazon AWS Secret Key  */ ;/**  * Amazon AWS Secret Key  */ public void setSecretKey(String secretKey) {     this.secretKey = secretKey. }
+false;public;0;3;;public EKSOperations getOperation() {     return operation. }
+true;public;1;3;/**  * The operation to perform  */ ;/**  * The operation to perform  */ public void setOperation(EKSOperations operation) {     this.operation = operation. }
+false;public;0;3;;public String getProxyHost() {     return proxyHost. }
+true;public;1;3;/**  * To define a proxy host when instantiating the EKS client  */ ;/**  * To define a proxy host when instantiating the EKS client  */ public void setProxyHost(String proxyHost) {     this.proxyHost = proxyHost. }
+false;public;0;3;;public Integer getProxyPort() {     return proxyPort. }
+true;public;1;3;/**  * To define a proxy port when instantiating the EKS client  */ ;/**  * To define a proxy port when instantiating the EKS client  */ public void setProxyPort(Integer proxyPort) {     this.proxyPort = proxyPort. }
+false;public;0;3;;public String getRegion() {     return region. }
+true;public;1;3;/**  * The region in which EKS client needs to work  */ ;/**  * The region in which EKS client needs to work  */ public void setRegion(String region) {     this.region = region. }
+false;public;0;7;;// ************************************************* //  // ************************************************* public EKSConfiguration copy() {     try {         return (EKSConfiguration) super.clone().     } catch (CloneNotSupportedException e) {         throw new RuntimeCamelException(e).     } }

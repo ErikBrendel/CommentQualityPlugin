@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;11;;@Test public void testSend() throws Exception {     String body = "<body/>".     tap.expectedBodiesReceived(body).     result.expectedBodiesReceived(body).     expectsMessageCount(1, tap, result).     template.sendBody("direct:start", body).     assertMockEndpointsSatisfied(). }
+false;public;0;7;;@Override @Before public void setUp() throws Exception {     super.setUp().     tap = getMockEndpoint("mock:tap").     result = getMockEndpoint("mock:result"). }
+false;public;0;3;;public void configure() {     from("direct:start").multicast().to("mock:tap", "mock:result"). }
+false;protected;0;7;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("direct:start").multicast().to("mock:tap", "mock:result").         }     }. }

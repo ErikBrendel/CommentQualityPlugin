@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;public EntityManager getEntityManager() {     Assert.state(this.entityManager != null, "No EntityManager available").     return this.entityManager. }
+false;protected;1;3;;protected void setTransactionActive(boolean transactionActive) {     this.transactionActive = transactionActive. }
+false;protected;0;3;;protected boolean isTransactionActive() {     return this.transactionActive. }
+false;protected;1;3;;protected void setSavepointManager(@Nullable SavepointManager savepointManager) {     this.savepointManager = savepointManager. }
+false;protected;0;4;;@Nullable protected SavepointManager getSavepointManager() {     return this.savepointManager. }
+false;public;0;6;;@Override public void clear() {     super.clear().     this.transactionActive = false.     this.savepointManager = null. }

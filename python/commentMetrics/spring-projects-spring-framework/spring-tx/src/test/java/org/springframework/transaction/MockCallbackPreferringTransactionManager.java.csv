@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;6;;@Override public <T> T execute(TransactionDefinition definition, TransactionCallback<T> callback) throws TransactionException {     this.definition = definition.     this.status = new SimpleTransactionStatus().     return callback.doInTransaction(this.status). }
+false;public;0;3;;public TransactionDefinition getDefinition() {     return this.definition. }
+false;public;0;3;;public TransactionStatus getStatus() {     return this.status. }
+false;public;1;4;;@Override public TransactionStatus getTransaction(@Nullable TransactionDefinition definition) throws TransactionException {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public void commit(TransactionStatus status) throws TransactionException {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public void rollback(TransactionStatus status) throws TransactionException {     throw new UnsupportedOperationException(). }

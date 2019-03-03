@@ -1,0 +1,128 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Class<BlueprintCamelContext> getObjectType() {     return BlueprintCamelContext.class. }
+false;public;1;10;;@Override public BlueprintCamelContext getContext(boolean create) {     if (context == null && create) {         context = createContext().         if (!isImplicitId()) {             context.setName(getId()).         }     }     return context. }
+false;public;1;3;;public void setBlueprintContainer(BlueprintContainer blueprintContainer) {     this.blueprintContainer = blueprintContainer. }
+false;public;1;3;;public void setBundleContext(BundleContext bundleContext) {     this.bundleContext = bundleContext. }
+false;protected;0;3;;protected BlueprintCamelContext createContext() {     return new BlueprintCamelContext(bundleContext, blueprintContainer). }
+false;protected;1;8;;@Override protected void initCustomRegistry(BlueprintCamelContext context) {     Registry registry = getBeanForType(Registry.class).     if (registry != null) {         LOG.info("Using custom Registry: {}", registry).         context.setRegistry(registry).     } }
+false;protected;1;8;;@Override protected <S> S getBeanForType(Class<S> clazz) {     Collection<S> objects = BlueprintContainerBeanRepository.lookupByType(blueprintContainer, clazz).values().     if (objects.size() == 1) {         return objects.iterator().next().     }     return null. }
+false;protected;0;42;;@Override protected void initPropertyPlaceholder() throws Exception {     super.initPropertyPlaceholder().     // if blueprint property resolver is enabled on CamelContext then bridge PropertiesComponent to blueprint     if (isUseBlueprintPropertyResolver()) {         // lookup existing configured properties component         PropertiesComponent pc = getContext().getComponent("properties", PropertiesComponent.class).         BlueprintPropertiesParser parser = new BlueprintPropertiesParser(pc, blueprintContainer, pc.getPropertiesParser()).         BlueprintPropertiesResolver resolver = new BlueprintPropertiesResolver(pc.getPropertiesResolver(), parser).         // any extra properties         ServiceReference<?> ref = bundleContext.getServiceReference(PropertiesComponent.OVERRIDE_PROPERTIES).         if (ref != null) {             Properties extra = (Properties) bundleContext.getService(ref).             if (extra != null) {                 pc.setOverrideProperties(extra).             }         }         // no locations has been set, so its a default component         if (pc.getLocations() == null) {             String[] ids = parser.lookupPropertyPlaceholderIds().             for (int i = 0. i < ids.length. i++) {                 if (!ids[i].startsWith("blueprint:")) {                     ids[i] = "blueprint:" + ids[i].                 }             }             if (ids.length > 0) {                 // location supports multiple separated by comma                 pc.setLocations(ids).             }         }         if (pc.getLocations() != null) {             // bridge camel properties with blueprint             pc.setPropertiesParser(parser).             pc.setPropertiesResolver(resolver).         }     } }
+false;protected;1;3;;@Override protected void initBeanPostProcessor(BlueprintCamelContext context) { }
+false;protected;1;3;;@Override protected void postProcessBeforeInit(RouteBuilder builder) { }
+false;protected;3;12;;@Override protected void findRouteBuildersByPackageScan(String[] packages, PackageScanFilter filter, List<RoutesBuilder> builders) throws Exception {     // add filter to class resolver which then will filter     getContext().getPackageScanClassResolver().addFilter(filter).     ClassLoader classLoader = new BundleDelegatingClassLoader(bundleContext.getBundle()).     PackageScanRouteBuilderFinder finder = new PackageScanRouteBuilderFinder(getContext(), packages, classLoader, getContext().getPackageScanClassResolver()).     finder.appendBuilders(builders).     // and remove the filter     getContext().getPackageScanClassResolver().removeFilter(filter). }
+false;protected;3;5;;@Override protected void findRouteBuildersByContextScan(PackageScanFilter filter, boolean includeNonSingletons, List<RoutesBuilder> builders) throws Exception {     ContextScanRouteBuilderFinder finder = new ContextScanRouteBuilderFinder(getContext(), filter, includeNonSingletons).     finder.appendBuilders(builders). }
+false;public;0;20;;@Override public void afterPropertiesSet() throws Exception {     super.afterPropertiesSet().     // setup the application context classloader with the bundle delegating classloader     ClassLoader cl = new BundleDelegatingClassLoader(bundleContext.getBundle()).     LOG.debug("Set the application context classloader to: {}", cl).     getContext().setApplicationContextClassLoader(cl).     osgiCamelContextPublisher = new OsgiCamelContextPublisher(bundleContext).     osgiCamelContextPublisher.start().     getContext().getManagementStrategy().addEventNotifier(osgiCamelContextPublisher).     try {         getClass().getClassLoader().loadClass("org.osgi.service.event.EventAdmin").         getContext().getManagementStrategy().addEventNotifier(new OsgiEventAdminNotifier(bundleContext)).     } catch (Throwable t) {         // Ignore, if the EventAdmin package is not available, just don't use it         LOG.debug("EventAdmin package is not available, just don't use it").     }     // ensure routes is setup     setupRoutes(). }
+false;public;0;7;;@Override public void destroy() throws Exception {     super.destroy().     if (osgiCamelContextPublisher != null) {         osgiCamelContextPublisher.shutdown().     } }
+false;public;0;3;;public String getDependsOn() {     return dependsOn. }
+false;public;1;3;;public void setDependsOn(String dependsOn) {     this.dependsOn = dependsOn. }
+false;public;0;3;;public String getAutoStartup() {     return autoStartup. }
+false;public;1;3;;public void setAutoStartup(String autoStartup) {     this.autoStartup = autoStartup. }
+false;public;0;3;;public String getUseMDCLogging() {     return useMDCLogging. }
+false;public;1;3;;public void setUseMDCLogging(String useMDCLogging) {     this.useMDCLogging = useMDCLogging. }
+false;public;0;3;;public String getUseDataType() {     return useDataType. }
+false;public;1;3;;public void setUseDataType(String useDataType) {     this.useDataType = useDataType. }
+false;public;0;3;;public String getUseBreadcrumb() {     return useBreadcrumb. }
+false;public;1;3;;public void setUseBreadcrumb(String useBreadcrumb) {     this.useBreadcrumb = useBreadcrumb. }
+false;public;0;3;;public String getAllowUseOriginalMessage() {     return allowUseOriginalMessage. }
+false;public;1;3;;public void setAllowUseOriginalMessage(String allowUseOriginalMessage) {     this.allowUseOriginalMessage = allowUseOriginalMessage. }
+false;public;0;3;;public String getRuntimeEndpointRegistryEnabled() {     return runtimeEndpointRegistryEnabled. }
+false;public;1;3;;public void setRuntimeEndpointRegistryEnabled(String runtimeEndpointRegistryEnabled) {     this.runtimeEndpointRegistryEnabled = runtimeEndpointRegistryEnabled. }
+false;public;0;3;;public String getManagementNamePattern() {     return managementNamePattern. }
+false;public;1;3;;public void setManagementNamePattern(String managementNamePattern) {     this.managementNamePattern = managementNamePattern. }
+false;public;0;3;;public String getThreadNamePattern() {     return threadNamePattern. }
+false;public;1;3;;public void setThreadNamePattern(String threadNamePattern) {     this.threadNamePattern = threadNamePattern. }
+false;public;0;4;;@Override public Boolean getLoadTypeConverters() {     return loadTypeConverters. }
+false;public;1;3;;public void setLoadTypeConverters(Boolean loadTypeConverters) {     this.loadTypeConverters = loadTypeConverters. }
+false;public;0;3;;public Boolean getTypeConverterStatisticsEnabled() {     return typeConverterStatisticsEnabled. }
+false;public;1;3;;public void setTypeConverterStatisticsEnabled(Boolean typeConverterStatisticsEnabled) {     this.typeConverterStatisticsEnabled = typeConverterStatisticsEnabled. }
+false;public;0;3;;public TypeConverterExists getTypeConverterExists() {     return typeConverterExists. }
+false;public;1;3;;public void setTypeConverterExists(TypeConverterExists typeConverterExists) {     this.typeConverterExists = typeConverterExists. }
+false;public;0;3;;public LoggingLevel getTypeConverterExistsLoggingLevel() {     return typeConverterExistsLoggingLevel. }
+false;public;1;3;;public void setTypeConverterExistsLoggingLevel(LoggingLevel typeConverterExistsLoggingLevel) {     this.typeConverterExistsLoggingLevel = typeConverterExistsLoggingLevel. }
+false;public;0;3;;public ShutdownRoute getShutdownRoute() {     return shutdownRoute. }
+false;public;1;3;;public void setShutdownRoute(ShutdownRoute shutdownRoute) {     this.shutdownRoute = shutdownRoute. }
+false;public;0;3;;public ShutdownRunningTask getShutdownRunningTask() {     return shutdownRunningTask. }
+false;public;1;3;;public void setShutdownRunningTask(ShutdownRunningTask shutdownRunningTask) {     this.shutdownRunningTask = shutdownRunningTask. }
+false;public;0;3;;public CamelPropertyPlaceholderDefinition getCamelPropertyPlaceholder() {     return camelPropertyPlaceholder. }
+false;public;1;3;;public void setCamelPropertyPlaceholder(CamelPropertyPlaceholderDefinition camelPropertyPlaceholder) {     this.camelPropertyPlaceholder = camelPropertyPlaceholder. }
+false;public;0;3;;public List<RouteContextRefDefinition> getRouteRefs() {     return routeRefs. }
+false;public;1;3;;public void setRouteRefs(List<RouteContextRefDefinition> routeRefs) {     this.routeRefs = routeRefs. }
+false;public;0;3;;public List<RestContextRefDefinition> getRestRefs() {     return restRefs. }
+false;public;1;3;;public void setRestRefs(List<RestContextRefDefinition> restRefs) {     this.restRefs = restRefs. }
+false;public;0;3;;public List<CamelRedeliveryPolicyFactoryBean> getRedeliveryPolicies() {     return redeliveryPolicies. }
+false;public;1;3;;public void setRedeliveryPolicies(List<CamelRedeliveryPolicyFactoryBean> redeliveryPolicies) {     this.redeliveryPolicies = redeliveryPolicies. }
+false;public;0;3;;public List<ThreadPoolProfileDefinition> getThreadPoolProfiles() {     return threadPoolProfiles. }
+false;public;1;3;;public void setThreadPoolProfiles(List<ThreadPoolProfileDefinition> threadPoolProfiles) {     this.threadPoolProfiles = threadPoolProfiles. }
+false;public;0;3;;public List<CamelThreadPoolFactoryBean> getThreadPools() {     return threadPools. }
+false;public;1;3;;public void setThreadPools(List<CamelThreadPoolFactoryBean> threadPools) {     this.threadPools = threadPools. }
+false;public;0;3;;public String getTrace() {     return trace. }
+false;public;1;3;;public void setTrace(String trace) {     this.trace = trace. }
+false;public;0;3;;public String getMessageHistory() {     return messageHistory. }
+false;public;1;3;;public void setMessageHistory(String messageHistory) {     this.messageHistory = messageHistory. }
+false;public;0;3;;public String getLogMask() {     return logMask. }
+false;public;1;3;;public void setLogMask(String logMask) {     this.logMask = logMask. }
+false;public;0;3;;public String getLogExhaustedMessageBody() {     return logExhaustedMessageBody. }
+false;public;1;3;;public void setLogExhaustedMessageBody(String logExhaustedMessageBody) {     this.logExhaustedMessageBody = logExhaustedMessageBody. }
+false;public;0;3;;public String getStreamCache() {     return streamCache. }
+false;public;1;3;;public void setStreamCache(String streamCache) {     this.streamCache = streamCache. }
+false;public;0;3;;public String getDelayer() {     return delayer. }
+false;public;1;3;;public void setDelayer(String delayer) {     this.delayer = delayer. }
+false;public;0;3;;public String getHandleFault() {     return handleFault. }
+false;public;1;3;;public void setHandleFault(String handleFault) {     this.handleFault = handleFault. }
+false;public;0;3;;public String getErrorHandlerRef() {     return errorHandlerRef. }
+false;public;1;3;;public void setErrorHandlerRef(String errorHandlerRef) {     this.errorHandlerRef = errorHandlerRef. }
+false;public;0;4;;@Override public GlobalOptionsDefinition getGlobalOptions() {     return globalOptions. }
+false;public;1;3;;public void setGlobalOptions(GlobalOptionsDefinition globalOptions) {     this.globalOptions = globalOptions. }
+false;public;0;3;;public String[] getPackages() {     return packages. }
+false;public;1;3;;public void setPackages(String[] packages) {     this.packages = packages. }
+false;public;0;3;;public PackageScanDefinition getPackageScan() {     return packageScan. }
+false;public;1;3;;public void setPackageScan(PackageScanDefinition packageScan) {     this.packageScan = packageScan. }
+false;public;0;3;;public ContextScanDefinition getContextScan() {     return contextScan. }
+false;public;1;3;;public void setContextScan(ContextScanDefinition contextScan) {     this.contextScan = contextScan. }
+false;public;0;3;;public CamelJMXAgentDefinition getCamelJMXAgent() {     return camelJMXAgent. }
+false;public;1;3;;public void setCamelJMXAgent(CamelJMXAgentDefinition camelJMXAgent) {     this.camelJMXAgent = camelJMXAgent. }
+false;public;0;3;;public CamelStreamCachingStrategyDefinition getCamelStreamCachingStrategy() {     return camelStreamCachingStrategy. }
+false;public;1;3;;public void setCamelStreamCachingStrategy(CamelStreamCachingStrategyDefinition camelStreamCachingStrategy) {     this.camelStreamCachingStrategy = camelStreamCachingStrategy. }
+false;public;0;4;;@Override public List<AbstractCamelFactoryBean<?>> getBeansFactory() {     return beansFactory. }
+false;public;1;3;;public void setBeansFactory(List<AbstractCamelFactoryBean<?>> beansFactory) {     this.beansFactory = beansFactory. }
+false;public;0;4;;@Override public List<?> getBeans() {     return beans. }
+false;public;1;3;;public void setBeans(List<?> beans) {     this.beans = beans. }
+false;public;0;4;;@Override public ServiceCallConfigurationDefinition getDefaultServiceCallConfiguration() {     return defaultServiceCallConfiguration. }
+false;public;1;3;;public void setDefaultServiceCallConfiguration(ServiceCallConfigurationDefinition defaultServiceCallConfiguration) {     this.defaultServiceCallConfiguration = defaultServiceCallConfiguration. }
+false;public;0;4;;@Override public List<ServiceCallConfigurationDefinition> getServiceCallConfigurations() {     return serviceCallConfigurations. }
+false;public;1;3;;public void setServiceCallConfigurations(List<ServiceCallConfigurationDefinition> serviceCallConfigurations) {     this.serviceCallConfigurations = serviceCallConfigurations. }
+false;public;0;4;;@Override public HystrixConfigurationDefinition getDefaultHystrixConfiguration() {     return defaultHystrixConfiguration. }
+false;public;1;3;;public void setDefaultHystrixConfiguration(HystrixConfigurationDefinition defaultHystrixConfiguration) {     this.defaultHystrixConfiguration = defaultHystrixConfiguration. }
+false;public;0;4;;@Override public List<HystrixConfigurationDefinition> getHystrixConfigurations() {     return hystrixConfigurations. }
+false;public;1;3;;public void setHystrixConfigurations(List<HystrixConfigurationDefinition> hystrixConfigurations) {     this.hystrixConfigurations = hystrixConfigurations. }
+false;public;0;3;;public List<RouteBuilderDefinition> getBuilderRefs() {     return builderRefs. }
+false;public;1;3;;public void setBuilderRefs(List<RouteBuilderDefinition> builderRefs) {     this.builderRefs = builderRefs. }
+false;public;0;3;;public List<CamelEndpointFactoryBean> getEndpoints() {     return endpoints. }
+false;public;1;3;;public void setEndpoints(List<CamelEndpointFactoryBean> endpoints) {     this.endpoints = endpoints. }
+false;public;0;3;;public DataFormatsDefinition getDataFormats() {     return dataFormats. }
+false;public;1;3;;public void setDataFormats(DataFormatsDefinition dataFormats) {     this.dataFormats = dataFormats. }
+false;public;1;3;;public void setTransformers(TransformersDefinition transformers) {     this.transformers = transformers. }
+false;public;0;3;;public TransformersDefinition getTransformers() {     return transformers. }
+false;public;1;3;;public void setValidators(ValidatorsDefinition validators) {     this.validators = validators. }
+false;public;0;3;;public ValidatorsDefinition getValidators() {     return validators. }
+false;public;0;3;;public List<OnExceptionDefinition> getOnExceptions() {     return onExceptions. }
+false;public;1;3;;public void setOnExceptions(List<OnExceptionDefinition> onExceptions) {     this.onExceptions = onExceptions. }
+false;public;0;3;;public List<OnCompletionDefinition> getOnCompletions() {     return onCompletions. }
+false;public;1;3;;public void setOnCompletions(List<OnCompletionDefinition> onCompletions) {     this.onCompletions = onCompletions. }
+false;public;0;3;;public List<InterceptDefinition> getIntercepts() {     return intercepts. }
+false;public;1;3;;public void setIntercepts(List<InterceptDefinition> intercepts) {     this.intercepts = intercepts. }
+false;public;0;3;;public List<InterceptFromDefinition> getInterceptFroms() {     return interceptFroms. }
+false;public;1;3;;public void setInterceptFroms(List<InterceptFromDefinition> interceptFroms) {     this.interceptFroms = interceptFroms. }
+false;public;0;3;;public List<InterceptSendToEndpointDefinition> getInterceptSendToEndpoints() {     return interceptSendToEndpoints. }
+false;public;1;3;;public void setInterceptSendToEndpoints(List<InterceptSendToEndpointDefinition> interceptSendToEndpoints) {     this.interceptSendToEndpoints = interceptSendToEndpoints. }
+false;public;0;3;;public List<RouteDefinition> getRoutes() {     return routes. }
+false;public;1;3;;public void setRoutes(List<RouteDefinition> routes) {     this.routes = routes. }
+false;public;0;3;;public List<RestDefinition> getRests() {     return rests. }
+false;public;1;3;;public void setRests(List<RestDefinition> rests) {     this.rests = rests. }
+false;public;0;3;;public RestConfigurationDefinition getRestConfiguration() {     return restConfiguration. }
+false;public;1;3;;public void setRestConfiguration(RestConfigurationDefinition restConfiguration) {     this.restConfiguration = restConfiguration. }
+false;public;0;3;;public boolean isImplicitId() {     return implicitId. }
+false;public;1;3;;public void setImplicitId(boolean flag) {     implicitId = flag. }
+false;public;0;3;;public Boolean getUseBlueprintPropertyResolver() {     return useBlueprintPropertyResolver. }
+false;public;1;3;;public void setUseBlueprintPropertyResolver(Boolean useBlueprintPropertyResolver) {     this.useBlueprintPropertyResolver = useBlueprintPropertyResolver. }
+false;public;0;4;;public boolean isUseBlueprintPropertyResolver() {     // enable by default     return useBlueprintPropertyResolver == null || useBlueprintPropertyResolver.booleanValue(). }

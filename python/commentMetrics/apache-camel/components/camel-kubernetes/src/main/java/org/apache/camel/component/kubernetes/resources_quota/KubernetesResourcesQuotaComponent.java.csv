@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;3;4;;protected KubernetesResourcesQuotaEndpoint doCreateEndpoint(String uri, String remaining, KubernetesConfiguration config) throws Exception {     KubernetesResourcesQuotaEndpoint endpoint = new KubernetesResourcesQuotaEndpoint(uri, this, config).     return endpoint. }

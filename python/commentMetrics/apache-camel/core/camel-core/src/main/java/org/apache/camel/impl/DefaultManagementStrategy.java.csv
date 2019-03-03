@@ -1,0 +1,25 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public List<EventNotifier> getEventNotifiers() {     return eventNotifiers. }
+false;public;1;3;;public void addEventNotifier(EventNotifier eventNotifier) {     this.eventNotifiers.add(eventNotifier). }
+false;public;1;3;;public boolean removeEventNotifier(EventNotifier eventNotifier) {     return eventNotifiers.remove(eventNotifier). }
+false;public;0;3;;public EventFactory getEventFactory() {     return eventFactory. }
+false;public;1;3;;public void setEventFactory(EventFactory eventFactory) {     this.eventFactory = eventFactory. }
+false;public;0;6;;public ManagementObjectNameStrategy getManagementObjectNameStrategy() {     if (managementObjectNameStrategy == null) {         managementObjectNameStrategy = createManagementObjectNameStrategy(null).     }     return managementObjectNameStrategy. }
+false;public;1;3;;public void setManagementObjectNameStrategy(ManagementObjectNameStrategy managementObjectNameStrategy) {     this.managementObjectNameStrategy = managementObjectNameStrategy. }
+false;public;0;6;;public ManagementObjectStrategy getManagementObjectStrategy() {     if (managementObjectStrategy == null) {         managementObjectStrategy = createManagementObjectStrategy().     }     return managementObjectStrategy. }
+false;public;1;3;;public void setManagementObjectStrategy(ManagementObjectStrategy managementObjectStrategy) {     this.managementObjectStrategy = managementObjectStrategy. }
+false;public;0;3;;public ManagementAgent getManagementAgent() {     return managementAgent. }
+false;public;1;3;;public void setManagementAgent(ManagementAgent managementAgent) {     this.managementAgent = managementAgent. }
+false;public;1;3;;public boolean manageProcessor(NamedNode definition) {     return false. }
+false;public;1;3;;public void manageObject(Object managedObject) throws Exception { // noop }
+false;public;1;3;;public void unmanageObject(Object managedObject) throws Exception { // noop }
+false;public;1;4;;public boolean isManaged(Object managedObject) {     // noop     return false. }
+false;public;1;4;;public boolean isManagedName(Object name) {     // noop     return false. }
+false;public;0;3;;public CamelContext getCamelContext() {     return camelContext. }
+false;public;1;3;;public void setCamelContext(CamelContext camelContext) {     this.camelContext = camelContext. }
+false;public;1;9;;public void notify(CamelEvent event) throws Exception {     if (!eventNotifiers.isEmpty()) {         for (EventNotifier notifier : eventNotifiers) {             if (notifier.isEnabled(event)) {                 notifier.notify(event).             }         }     } }
+false;protected;0;4;;protected void doStart() throws Exception {     log.info("JMX is disabled").     doStartManagementStrategy(). }
+false;protected;0;26;;protected void doStartManagementStrategy() throws Exception {     ObjectHelper.notNull(camelContext, "CamelContext").     for (EventNotifier notifier : eventNotifiers) {         // inject CamelContext if the service is aware         if (notifier instanceof CamelContextAware) {             CamelContextAware aware = (CamelContextAware) notifier.             aware.setCamelContext(camelContext).         }         ServiceHelper.startService(notifier).     }     if (managementAgent != null) {         ServiceHelper.startService(managementAgent).         // set the naming strategy using the domain name from the agent         if (managementObjectNameStrategy == null) {             String domain = managementAgent.getMBeanObjectDomainName().             managementObjectNameStrategy = createManagementObjectNameStrategy(domain).         }     }     if (managementObjectNameStrategy instanceof CamelContextAware) {         ((CamelContextAware) managementObjectNameStrategy).setCamelContext(getCamelContext()).     } }
+false;protected;0;3;;protected void doStop() throws Exception {     ServiceHelper.stopService(managementAgent, eventNotifiers). }
+false;protected;1;3;;protected ManagementObjectNameStrategy createManagementObjectNameStrategy(String domain) {     return null. }
+false;protected;0;3;;protected ManagementObjectStrategy createManagementObjectStrategy() {     return null. }

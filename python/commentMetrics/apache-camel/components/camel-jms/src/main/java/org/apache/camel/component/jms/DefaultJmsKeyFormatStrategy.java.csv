@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;public String encodeKey(String key) {     String answer = StringHelper.replaceAll(key, DOT, DOT_REPLACEMENT).     answer = StringHelper.replaceAll(answer, HYPHEN, HYPHEN_REPLACEMENT).     return answer. }
+false;public;1;5;;public String decodeKey(String key) {     String answer = StringHelper.replaceAll(key, DOT_REPLACEMENT, DOT).     answer = StringHelper.replaceAll(answer, HYPHEN_REPLACEMENT, HYPHEN).     return answer. }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;7;;@Override public Processor createProcessor(RouteContext routeContext) throws Exception {     ObjectHelper.notNull(definition.getHeaderName(), "headerName").     Expression expr = definition.getExpression().createExpression(routeContext).     Expression nameExpr = ExpressionBuilder.parseSimpleOrFallbackToConstantExpression(definition.getHeaderName(), routeContext.getCamelContext()).     return new SetHeaderProcessor(nameExpr, expr). }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected AS2ApiName getApiName(String apiNameStr) throws IllegalArgumentException {     return AS2ApiName.fromValue(apiNameStr). }
+false;protected;4;7;;@Override protected Endpoint createEndpoint(String uri, String methodName, AS2ApiName apiName, AS2Configuration endpointConfiguration) {     endpointConfiguration.setApiName(apiName).     endpointConfiguration.setMethodName(methodName).     return new AS2Endpoint(uri, this, apiName, methodName, endpointConfiguration). }
+true;public;1;4;/**  * To use the shared configuration  */ ;/**  * To use the shared configuration  */ @Override public void setConfiguration(AS2Configuration configuration) {     super.setConfiguration(configuration). }
+false;protected;0;8;;@Override protected void doStart() throws Exception {     super.doStart().     if (Security.getProvider("BC") == null) {         log.debug("Adding BouncyCastleProvider as security provider").         Security.addProvider(new BouncyCastleProvider()).     } }

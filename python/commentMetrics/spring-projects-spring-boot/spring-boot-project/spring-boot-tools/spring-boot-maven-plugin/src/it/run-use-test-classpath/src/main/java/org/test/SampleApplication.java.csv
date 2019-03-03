@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;11;;public static void main(String[] args) {     Class<?> appContext = null.     try {         appContext = Class.forName("org.springframework.context.ApplicationContext").     } catch (ClassNotFoundException e) {         throw new IllegalStateException("Test dependencies not added to classpath", e).     }     System.out.println("I haz been run"). }

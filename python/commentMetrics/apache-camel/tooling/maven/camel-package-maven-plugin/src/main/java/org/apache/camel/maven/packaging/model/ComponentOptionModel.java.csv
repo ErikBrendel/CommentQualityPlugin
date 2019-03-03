@@ -1,0 +1,34 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getName() {     return name. }
+false;public;1;3;;public void setName(String name) {     this.name = name. }
+false;public;0;3;;public String getDisplayName() {     return displayName. }
+false;public;1;3;;public void setDisplayName(String displayName) {     this.displayName = displayName. }
+false;public;0;3;;public String getKind() {     return kind. }
+false;public;1;3;;public void setKind(String kind) {     this.kind = kind. }
+false;public;0;3;;public String getGroup() {     return group. }
+false;public;1;3;;public void setGroup(String group) {     this.group = group. }
+false;public;0;3;;public String getRequired() {     return required. }
+false;public;1;3;;public void setRequired(String required) {     this.required = required. }
+false;public;0;3;;public String getType() {     return type. }
+false;public;1;3;;public void setType(String type) {     this.type = type. }
+false;public;0;3;;public String getJavaType() {     return javaType. }
+false;public;1;3;;public void setJavaType(String javaType) {     this.javaType = javaType. }
+false;public;0;3;;public String getDeprecated() {     return deprecated. }
+false;public;1;3;;public void setDeprecated(String deprecated) {     this.deprecated = deprecated. }
+false;public;0;3;;public String getDeprecationNote() {     return deprecationNote. }
+false;public;1;3;;public void setDeprecationNote(String deprecationNote) {     this.deprecationNote = deprecationNote. }
+false;public;0;3;;public String getSecret() {     return secret. }
+false;public;1;3;;public void setSecret(String secret) {     this.secret = secret. }
+false;public;0;3;;public String getDescription() {     return description. }
+false;public;1;3;;public void setDescription(String description) {     this.description = description. }
+false;public;0;3;;public String getDefaultValue() {     return defaultValue. }
+false;public;1;3;;public void setDefaultValue(String defaultValue) {     this.defaultValue = defaultValue. }
+false;public;0;3;;public String getEnums() {     return enums. }
+false;public;1;3;;public void setEnums(String enums) {     this.enums = enums. }
+false;public;0;3;;public boolean isNewGroup() {     return newGroup. }
+false;public;1;3;;public void setNewGroup(boolean newGroup) {     this.newGroup = newGroup. }
+false;public;0;4;;public String getShortJavaType() {     // TODO: use watermark in the others     return getShortJavaType(40). }
+false;public;1;10;;public String getShortJavaType(int watermark) {     String text = StringHelper.getClassShortName(javaType).     // if its some kind of java object then lets wrap it as its long     if ("object".equals(type)) {         text = wrapCamelCaseWords(text, watermark, " ").     }     return text. }
+false;public;0;6;;public String getShortGroup() {     if (group.endsWith(" (advanced)")) {         return group.substring(0, group.length() - 11).     }     return group. }
+false;public;1;18;;public String getShortDefaultValue(int watermark) {     if (defaultValue.isEmpty()) {         return "".     }     String text = defaultValue.     if (text.endsWith("<T>")) {         text = text.substring(0, text.length() - 3).     } else if (text.endsWith("<T>>")) {         text = text.substring(0, text.length() - 4).     }     // TODO: dirty hack for AUTO_ACKNOWLEDGE which we should wrap     if ("AUTO_ACKNOWLEDGE".equals(text)) {         return "AUTO_ ACKNOWLEDGE".     }     return text. }
+false;public;1;5;;public String getShortName(int watermark) {     String text = wrapCamelCaseWords(name, watermark, " ").     // ensure the option name starts with lower-case     return Character.toLowerCase(text.charAt(0)) + text.substring(1). }

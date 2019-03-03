@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@RequestMapping("/") public String email(Principal principal) {     return "Hello " + principal.getName(). }

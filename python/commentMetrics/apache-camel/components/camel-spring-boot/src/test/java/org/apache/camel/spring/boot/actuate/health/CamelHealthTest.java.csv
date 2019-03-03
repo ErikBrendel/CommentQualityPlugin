@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;11;;@Test public void shouldHaveHealth() throws Exception {     Health health = indicator.health().     assertNotNull(health).     String code = health.getStatus().getCode().     assertEquals("UP", code).     String version = (String) health.getDetails().get("version").     assertEquals(camelContext.getVersion(), version). }

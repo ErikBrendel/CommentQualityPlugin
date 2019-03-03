@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;11;;@Override public List<Exchange> pollConsume() throws TwitterException {     List<Exchange> result.     synchronized (receivedStatuses) {         clear = true.         result = Collections.unmodifiableList(new ArrayList<>(receivedStatuses)).     }     return result. }
+false;public;0;4;;@Override public List<Exchange> directConsume() throws TwitterException {     return Collections.emptyList(). }
+false;public;1;3;;@Override public void onException(Exception ex) { }
+false;public;1;4;;@Override public void onStatus(Status status) {     onEvent(TwitterEventType.STATUS.createExchange(endpoint, status)). }
+false;public;1;4;;@Override public void onDeletionNotice(StatusDeletionNotice statusDeletionNotice) { // noop }
+false;public;1;4;;@Override public void onTrackLimitationNotice(int numberOfLimitedStatuses) { // noop }
+false;public;2;4;;@Override public void onScrubGeo(long userId, long upToStatusId) { // noop }
+false;public;1;3;;public void setEventListener(TwitterEventListener tweeterStatusListener) {     twitterEventListener.set(tweeterStatusListener). }
+false;public;1;3;;public void removeEventListener(TwitterEventListener tweeterStatusListener) {     twitterEventListener.compareAndSet(tweeterStatusListener, null). }
+false;public;0;6;;@Override public void stop() {     twitterStream.removeListener(this).     twitterStream.shutdown().     twitterStream.cleanUp(). }
+false;protected;0;3;;protected TwitterStream getTwitterStream() {     return twitterStream. }
+false;protected;1;14;;protected void onEvent(Exchange exchange) {     TwitterEventListener listener = twitterEventListener.get().     if (listener != null) {         listener.onEvent(exchange).     } else {         synchronized (receivedStatuses) {             if (clear) {                 receivedStatuses.clear().                 clear = false.             }             receivedStatuses.add(exchange).         }     } }

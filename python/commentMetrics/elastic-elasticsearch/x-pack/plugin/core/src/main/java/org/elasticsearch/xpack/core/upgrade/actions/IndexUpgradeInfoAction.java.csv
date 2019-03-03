@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public IndexUpgradeInfoResponse newResponse() {     return new IndexUpgradeInfoResponse(). }
+false;public;1;4;;public RequestBuilder setIndices(String... indices) {     request.indices(indices).     return this. }
+false;public;1;4;;public RequestBuilder setIndicesOptions(IndicesOptions indicesOptions) {     request.indicesOptions(indicesOptions).     return this. }

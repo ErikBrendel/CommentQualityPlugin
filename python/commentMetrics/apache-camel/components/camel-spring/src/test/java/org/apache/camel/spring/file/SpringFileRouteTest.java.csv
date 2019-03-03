@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;13;;@Test public void testMocksAreValid() throws Exception {     // lets check that our injected endpoint is valid     FileEndpoint fileEndpoint = assertIsInstanceOf(FileEndpoint.class, inputFile).     assertEquals("File", new File("target/test-default-inbox"), fileEndpoint.getFile()).     result.expectedBodiesReceived(expectedBody).     result.setResultWaitTime(5000).     template.sendBodyAndHeader(inputFile, expectedBody, Exchange.FILE_NAME, "hello.txt").     result.assertIsSatisfied(). }
+false;public;0;5;;@Before public void setUp() throws Exception {     deleteDirectory("target/test-default-inbox").     super.setUp(). }

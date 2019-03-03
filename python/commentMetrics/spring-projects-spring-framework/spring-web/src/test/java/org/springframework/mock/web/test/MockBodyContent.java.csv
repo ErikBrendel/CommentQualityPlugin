@@ -1,0 +1,30 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private,static;2;8;;private static JspWriter adaptJspWriter(@Nullable Writer targetWriter, @Nullable HttpServletResponse response) {     if (targetWriter instanceof JspWriter) {         return (JspWriter) targetWriter.     } else {         return new MockJspWriter(response, targetWriter).     } }
+false;public;0;4;;@Override public Reader getReader() {     return new StringReader(this.content). }
+false;public;0;4;;@Override public String getString() {     return this.content. }
+false;public;1;4;;@Override public void writeOut(Writer writer) throws IOException {     writer.write(this.content). }
+false;public;0;4;;// --------------------------------------------------------------------- // Delegating implementations of JspWriter's abstract methods // --------------------------------------------------------------------- @Override public void clear() throws IOException {     getEnclosingWriter().clear(). }
+false;public;0;4;;@Override public void clearBuffer() throws IOException {     getEnclosingWriter().clearBuffer(). }
+false;public;0;4;;@Override public void close() throws IOException {     getEnclosingWriter().close(). }
+false;public;0;4;;@Override public int getRemaining() {     return getEnclosingWriter().getRemaining(). }
+false;public;0;4;;@Override public void newLine() throws IOException {     getEnclosingWriter().println(). }
+false;public;3;4;;@Override public void write(char[] value, int offset, int length) throws IOException {     getEnclosingWriter().write(value, offset, length). }
+false;public;1;4;;@Override public void print(boolean value) throws IOException {     getEnclosingWriter().print(value). }
+false;public;1;4;;@Override public void print(char value) throws IOException {     getEnclosingWriter().print(value). }
+false;public;1;4;;@Override public void print(char[] value) throws IOException {     getEnclosingWriter().print(value). }
+false;public;1;4;;@Override public void print(double value) throws IOException {     getEnclosingWriter().print(value). }
+false;public;1;4;;@Override public void print(float value) throws IOException {     getEnclosingWriter().print(value). }
+false;public;1;4;;@Override public void print(int value) throws IOException {     getEnclosingWriter().print(value). }
+false;public;1;4;;@Override public void print(long value) throws IOException {     getEnclosingWriter().print(value). }
+false;public;1;4;;@Override public void print(Object value) throws IOException {     getEnclosingWriter().print(value). }
+false;public;1;4;;@Override public void print(String value) throws IOException {     getEnclosingWriter().print(value). }
+false;public;0;4;;@Override public void println() throws IOException {     getEnclosingWriter().println(). }
+false;public;1;4;;@Override public void println(boolean value) throws IOException {     getEnclosingWriter().println(value). }
+false;public;1;4;;@Override public void println(char value) throws IOException {     getEnclosingWriter().println(value). }
+false;public;1;4;;@Override public void println(char[] value) throws IOException {     getEnclosingWriter().println(value). }
+false;public;1;4;;@Override public void println(double value) throws IOException {     getEnclosingWriter().println(value). }
+false;public;1;4;;@Override public void println(float value) throws IOException {     getEnclosingWriter().println(value). }
+false;public;1;4;;@Override public void println(int value) throws IOException {     getEnclosingWriter().println(value). }
+false;public;1;4;;@Override public void println(long value) throws IOException {     getEnclosingWriter().println(value). }
+false;public;1;4;;@Override public void println(Object value) throws IOException {     getEnclosingWriter().println(value). }
+false;public;1;4;;@Override public void println(String value) throws IOException {     getEnclosingWriter().println(value). }

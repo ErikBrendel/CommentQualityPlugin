@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Override public void start() throws Exception {     super.start().     getEndpoint().connect(this). }
+false;public;0;5;;@Override public void stop() throws Exception {     getEndpoint().disconnect(this).     super.stop(). }
+false;public;0;4;;@Override public WsEndpoint getEndpoint() {     return (WsEndpoint) super.getEndpoint(). }
+false;public;1;3;;public void sendMessage(String message) {     sendMessageInternal(message). }
+false;public;1;3;;public void sendMessage(Throwable throwable) {     sendMessageInternal(throwable). }
+false;public;1;3;;public void sendMessage(byte[] message) {     sendMessageInternal(message). }
+false;public;1;3;;public void sendMessage(InputStream message) {     sendMessageInternal(message). }
+false;public;1;3;;public void sendMessage(Reader message) {     sendMessageInternal(message). }
+false;public;1;5;;public void done(boolean doneSync) {     if (exchange.getException() != null) {         getExceptionHandler().handleException("Error processing exchange", exchange, exchange.getException()).     } }
+false;private;1;21;;private void sendMessageInternal(Object message) {     final Exchange exchange = getEndpoint().createExchange().     if (message instanceof Throwable) {         exchange.setException((Throwable) message).     } else {         exchange.getIn().setBody(message).     }     // send exchange using the async routing engine     getAsyncProcessor().process(exchange, new AsyncCallback() {          public void done(boolean doneSync) {             if (exchange.getException() != null) {                 getExceptionHandler().handleException("Error processing exchange", exchange, exchange.getException()).             }         }     }). }

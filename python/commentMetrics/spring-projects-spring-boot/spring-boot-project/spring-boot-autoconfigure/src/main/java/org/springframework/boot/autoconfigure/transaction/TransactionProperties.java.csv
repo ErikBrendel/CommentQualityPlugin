@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Duration getDefaultTimeout() {     return this.defaultTimeout. }
+false;public;1;3;;public void setDefaultTimeout(Duration defaultTimeout) {     this.defaultTimeout = defaultTimeout. }
+false;public;0;3;;public Boolean getRollbackOnCommitFailure() {     return this.rollbackOnCommitFailure. }
+false;public;1;3;;public void setRollbackOnCommitFailure(Boolean rollbackOnCommitFailure) {     this.rollbackOnCommitFailure = rollbackOnCommitFailure. }
+false;public;1;9;;@Override public void customize(AbstractPlatformTransactionManager transactionManager) {     if (this.defaultTimeout != null) {         transactionManager.setDefaultTimeout((int) this.defaultTimeout.getSeconds()).     }     if (this.rollbackOnCommitFailure != null) {         transactionManager.setRollbackOnCommitFailure(this.rollbackOnCommitFailure).     } }

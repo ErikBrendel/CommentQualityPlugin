@@ -1,0 +1,60 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;17;;@Override public IngestDocument execute(IngestDocument ingestDocument) throws Exception {     if (evaluate(ingestDocument)) {         long startTimeInNanos = relativeTimeProvider.getAsLong().         try {             metric.preIngest().             return processor.execute(ingestDocument).         } catch (Exception e) {             metric.ingestFailed().             throw e.         } finally {             long ingestTimeInMillis = TimeUnit.NANOSECONDS.toMillis(relativeTimeProvider.getAsLong() - startTimeInNanos).             metric.postIngest(ingestTimeInMillis).         }     }     return ingestDocument. }
+false;;1;6;;boolean evaluate(IngestDocument ingestDocument) {     IngestConditionalScript script = scriptService.compile(condition, IngestConditionalScript.CONTEXT).newInstance(condition.getParams()).     return script.execute(new UnmodifiableIngestData(new DeprecationMap(ingestDocument.getSourceAndMetadata(), DEPRECATIONS, "conditional-processor"))). }
+false;;0;3;;Processor getProcessor() {     return processor. }
+false;;0;3;;IngestMetric getMetric() {     return metric. }
+false;public;0;4;;@Override public String getType() {     return TYPE. }
+false;private,static;1;12;;private static Object wrapUnmodifiable(Object raw) {     // Any inputs not wrapped are assumed to be immutable     if (raw instanceof Map) {         return new UnmodifiableIngestData((Map<String, Object>) raw).     } else if (raw instanceof List) {         return new UnmodifiableIngestList((List<Object>) raw).     } else if (raw instanceof byte[]) {         return ((byte[]) raw).clone().     }     return raw. }
+false;private,static;0;3;;private static UnsupportedOperationException unmodifiableException() {     return new UnsupportedOperationException("Mutating ingest documents in conditionals is not supported"). }
+false;public;0;4;;@Override public int size() {     return data.size(). }
+false;public;0;4;;@Override public boolean isEmpty() {     return data.isEmpty(). }
+false;public;1;4;;@Override public boolean containsKey(final Object key) {     return data.containsKey(key). }
+false;public;1;4;;@Override public boolean containsValue(final Object value) {     return data.containsValue(value). }
+false;public;1;4;;@Override public Object get(final Object key) {     return wrapUnmodifiable(data.get(key)). }
+false;public;2;4;;@Override public Object put(final String key, final Object value) {     throw unmodifiableException(). }
+false;public;1;4;;@Override public Object remove(final Object key) {     throw unmodifiableException(). }
+false;public;1;4;;@Override public void putAll(final Map<? extends String, ?> m) {     throw unmodifiableException(). }
+false;public;0;4;;@Override public void clear() {     throw unmodifiableException(). }
+false;public;0;4;;@Override public Set<String> keySet() {     return Collections.unmodifiableSet(data.keySet()). }
+false;public;0;4;;@Override public Collection<Object> values() {     return new UnmodifiableIngestList(new ArrayList<>(data.values())). }
+false;public;0;4;;@Override public String getKey() {     return entry.getKey(). }
+false;public;0;4;;@Override public Object getValue() {     return wrapUnmodifiable(entry.getValue()). }
+false;public;1;4;;@Override public Object setValue(final Object value) {     throw unmodifiableException(). }
+false;public;1;4;;@Override public boolean equals(final Object o) {     return entry.equals(o). }
+false;public;0;4;;@Override public int hashCode() {     return entry.hashCode(). }
+false;public;0;30;;@Override public Set<Entry<String, Object>> entrySet() {     return data.entrySet().stream().map(entry -> new Entry<String, Object>() {          @Override         public String getKey() {             return entry.getKey().         }          @Override         public Object getValue() {             return wrapUnmodifiable(entry.getValue()).         }          @Override         public Object setValue(final Object value) {             throw unmodifiableException().         }          @Override         public boolean equals(final Object o) {             return entry.equals(o).         }          @Override         public int hashCode() {             return entry.hashCode().         }     }).collect(Collectors.toSet()). }
+false;public;0;4;;@Override public int size() {     return data.size(). }
+false;public;0;4;;@Override public boolean isEmpty() {     return data.isEmpty(). }
+false;public;1;4;;@Override public boolean contains(final Object o) {     return data.contains(o). }
+false;public;0;4;;@Override public boolean hasNext() {     return wrapped.hasNext(). }
+false;public;0;4;;@Override public Object next() {     return wrapped.next(). }
+false;public;0;4;;@Override public void remove() {     throw unmodifiableException(). }
+false;public;0;20;;@Override public Iterator<Object> iterator() {     Iterator<Object> wrapped = data.iterator().     return new Iterator<Object>() {          @Override         public boolean hasNext() {             return wrapped.hasNext().         }          @Override         public Object next() {             return wrapped.next().         }          @Override         public void remove() {             throw unmodifiableException().         }     }. }
+false;public;0;8;;@Override public Object[] toArray() {     Object[] wrapped = data.toArray(new Object[0]).     for (int i = 0. i < wrapped.length. i++) {         wrapped[i] = wrapUnmodifiable(wrapped[i]).     }     return wrapped. }
+false;public;1;9;;@Override public <T> T[] toArray(final T[] a) {     Object[] raw = data.toArray(new Object[0]).     T[] wrapped = (T[]) Arrays.copyOf(raw, a.length, a.getClass()).     for (int i = 0. i < wrapped.length. i++) {         wrapped[i] = (T) wrapUnmodifiable(wrapped[i]).     }     return wrapped. }
+false;public;1;4;;@Override public boolean add(final Object o) {     throw unmodifiableException(). }
+false;public;1;4;;@Override public boolean remove(final Object o) {     throw unmodifiableException(). }
+false;public;1;4;;@Override public boolean containsAll(final Collection<?> c) {     return data.contains(c). }
+false;public;1;4;;@Override public boolean addAll(final Collection<?> c) {     throw unmodifiableException(). }
+false;public;2;4;;@Override public boolean addAll(final int index, final Collection<?> c) {     throw unmodifiableException(). }
+false;public;1;4;;@Override public boolean removeAll(final Collection<?> c) {     throw unmodifiableException(). }
+false;public;1;4;;@Override public boolean retainAll(final Collection<?> c) {     throw unmodifiableException(). }
+false;public;0;4;;@Override public void clear() {     throw unmodifiableException(). }
+false;public;1;4;;@Override public Object get(final int index) {     return wrapUnmodifiable(data.get(index)). }
+false;public;2;4;;@Override public Object set(final int index, final Object element) {     throw unmodifiableException(). }
+false;public;2;4;;@Override public void add(final int index, final Object element) {     throw unmodifiableException(). }
+false;public;1;4;;@Override public Object remove(final int index) {     throw unmodifiableException(). }
+false;public;1;4;;@Override public int indexOf(final Object o) {     return data.indexOf(o). }
+false;public;1;4;;@Override public int lastIndexOf(final Object o) {     return data.lastIndexOf(o). }
+false;public;0;4;;@Override public ListIterator<Object> listIterator() {     return new UnmodifiableListIterator(data.listIterator()). }
+false;public;1;4;;@Override public ListIterator<Object> listIterator(final int index) {     return new UnmodifiableListIterator(data.listIterator(index)). }
+false;public;2;4;;@Override public List<Object> subList(final int fromIndex, final int toIndex) {     return new UnmodifiableIngestList(data.subList(fromIndex, toIndex)). }
+false;public;0;4;;@Override public boolean hasNext() {     return data.hasNext(). }
+false;public;0;4;;@Override public Object next() {     return wrapUnmodifiable(data.next()). }
+false;public;0;4;;@Override public boolean hasPrevious() {     return data.hasPrevious(). }
+false;public;0;4;;@Override public Object previous() {     return wrapUnmodifiable(data.previous()). }
+false;public;0;4;;@Override public int nextIndex() {     return data.nextIndex(). }
+false;public;0;4;;@Override public int previousIndex() {     return data.previousIndex(). }
+false;public;0;4;;@Override public void remove() {     throw unmodifiableException(). }
+false;public;1;4;;@Override public void set(final Object o) {     throw unmodifiableException(). }
+false;public;1;4;;@Override public void add(final Object o) {     throw unmodifiableException(). }

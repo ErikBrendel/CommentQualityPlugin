@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;1;4;;@Override void extractVariables(Set<String> variables) {     variables.add(name). }
+false;;1;10;;@Override void analyze(Locals locals) {     variable = locals.getVariable(location, name).     if (write && variable.readonly) {         throw createError(new IllegalArgumentException("Variable [" + variable.name + "] is read-only.")).     }     actual = variable.clazz. }
+false;;2;4;;@Override void write(MethodWriter writer, Globals globals) {     writer.visitVarInsn(MethodWriter.getType(actual).getOpcode(Opcodes.ILOAD), variable.getSlot()). }
+false;;0;4;;@Override int accessElementCount() {     return 0. }
+false;;0;4;;@Override boolean isDefOptimized() {     return false. }
+false;;1;4;;@Override void updateActual(Class<?> actual) {     throw new IllegalArgumentException("Illegal tree structure."). }
+false;;2;4;;@Override void setup(MethodWriter writer, Globals globals) { // Do nothing. }
+false;;2;4;;@Override void load(MethodWriter writer, Globals globals) {     writer.visitVarInsn(MethodWriter.getType(actual).getOpcode(Opcodes.ILOAD), variable.getSlot()). }
+false;;2;4;;@Override void store(MethodWriter writer, Globals globals) {     writer.visitVarInsn(MethodWriter.getType(actual).getOpcode(Opcodes.ISTORE), variable.getSlot()). }
+false;public;0;4;;@Override public String toString() {     return singleLineToString(name). }

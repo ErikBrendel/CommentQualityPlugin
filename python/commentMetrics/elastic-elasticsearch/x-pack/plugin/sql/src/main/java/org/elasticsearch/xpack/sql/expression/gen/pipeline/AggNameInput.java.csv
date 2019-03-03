@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected NodeInfo<AggNameInput> info() {     return NodeInfo.create(this, AggNameInput::new, expression(), context()). }
+false;public,final;0;4;;@Override public final boolean supportedByAggsOnlyQuery() {     return true. }
+false;public,final;0;4;;@Override public final boolean resolved() {     return false. }

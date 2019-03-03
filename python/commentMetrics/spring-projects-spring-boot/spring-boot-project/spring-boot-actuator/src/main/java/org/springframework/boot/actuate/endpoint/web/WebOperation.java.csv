@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * Returns the ID of the operation that uniquely identifies it within its endpoint.  * @return the ID  */ ;/**  * Returns the ID of the operation that uniquely identifies it within its endpoint.  * @return the ID  */ String getId().
+true;;0;1;/**  * Returns if the underlying operation is blocking.  * @return {@code true} if the operation is blocking  */ ;/**  * Returns if the underlying operation is blocking.  * @return {@code true} if the operation is blocking  */ boolean isBlocking().
+true;;0;1;/**  * Returns the predicate for requests that can be handled by this operation.  * @return the predicate  */ ;/**  * Returns the predicate for requests that can be handled by this operation.  * @return the predicate  */ WebOperationRequestPredicate getRequestPredicate().

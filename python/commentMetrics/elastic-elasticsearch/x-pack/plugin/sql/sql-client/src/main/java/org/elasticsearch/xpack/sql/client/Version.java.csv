@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static Version fromString(String version) {     return new Version(version, "Unknown", from(version)). }
+false;static;1;10;;static byte[] from(String ver) {     String[] parts = ver.split("[.-]").     // Allow for optional snapshot and qualifier     if (parts.length < 3 || parts.length > 5) {         throw new IllegalArgumentException("Invalid version " + ver).     } else {         return new byte[] { Byte.parseByte(parts[0]), Byte.parseByte(parts[1]), Byte.parseByte(parts[2]) }.     } }
+false;public;0;4;;@Override public String toString() {     return "v" + version + " [" + hash + "]". }
+false;public,static;0;3;;public static int jdbcMajorVersion() {     return 4. }
+false;public,static;0;3;;public static int jdbcMinorVersion() {     return 2. }

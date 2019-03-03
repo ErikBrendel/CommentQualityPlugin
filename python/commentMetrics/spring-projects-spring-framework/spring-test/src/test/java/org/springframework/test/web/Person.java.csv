@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getName() {     return name. }
+false;public;1;4;;public Person setName(String name) {     this.name = name.     return this. }
+false;public;0;3;;public double getSomeDouble() {     return someDouble. }
+false;public;1;4;;public Person setSomeDouble(double someDouble) {     this.someDouble = someDouble.     return this. }
+false;public;0;3;;public boolean isSomeBoolean() {     return someBoolean. }
+false;public;1;4;;public Person setSomeBoolean(boolean someBoolean) {     this.someBoolean = someBoolean.     return this. }
+false;public;1;13;;@Override public boolean equals(Object other) {     if (this == other) {         return true.     }     if (!(other instanceof Person)) {         return false.     }     Person otherPerson = (Person) other.     return (ObjectUtils.nullSafeEquals(this.name, otherPerson.name) && ObjectUtils.nullSafeEquals(this.someDouble, otherPerson.someDouble) && ObjectUtils.nullSafeEquals(this.someBoolean, otherPerson.someBoolean)). }
+false;public;0;4;;@Override public int hashCode() {     return Person.class.hashCode(). }
+false;public;0;5;;@Override public String toString() {     return "Person [name=" + this.name + ", someDouble=" + this.someDouble + ", someBoolean=" + this.someBoolean + "]". }

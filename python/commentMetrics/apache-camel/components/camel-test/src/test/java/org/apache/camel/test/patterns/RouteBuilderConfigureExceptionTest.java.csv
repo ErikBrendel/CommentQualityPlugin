@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@Override @Before public void setUp() throws Exception {     try {         super.setUp().         fail("Should have thrown exception").     } catch (Exception e) {     // expected     } }
+false;public;0;3;;@Test public void testFoo() throws Exception { }
+false;public;0;5;;public void configure() {     from("direct:start").choice().when(iAmNull).to("mock:dead"). }
+false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("direct:start").choice().when(iAmNull).to("mock:dead").         }     }. }

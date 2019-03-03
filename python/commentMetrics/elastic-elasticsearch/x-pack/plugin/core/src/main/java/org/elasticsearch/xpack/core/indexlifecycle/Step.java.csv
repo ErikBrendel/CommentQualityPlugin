@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,final;0;3;;public final StepKey getKey() {     return key. }
+false;public;0;3;;public StepKey getNextStepKey() {     return nextStepKey. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(key, nextStepKey). }
+false;public;1;12;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     Step other = (Step) obj.     return Objects.equals(key, other.key) && Objects.equals(nextStepKey, other.nextStepKey). }
+false;public;0;4;;@Override public String toString() {     return key + " => " + nextStepKey. }
+false;public,static;1;3;;public static StepKey parse(XContentParser parser) {     return PARSER.apply(parser, null). }
+false;public;1;6;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeString(phase).     out.writeString(action).     out.writeString(name). }
+false;public;0;3;;public String getPhase() {     return phase. }
+false;public;0;3;;public String getAction() {     return action. }
+false;public;0;3;;public String getName() {     return name. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(phase, action, name). }
+false;public;1;13;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     StepKey other = (StepKey) obj.     return Objects.equals(phase, other.phase) && Objects.equals(action, other.action) && Objects.equals(name, other.name). }
+false;public;0;4;;@Override public String toString() {     return Strings.toString(this). }
+false;public;2;9;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(PHASE_FIELD.getPreferredName(), phase).     builder.field(ACTION_FIELD.getPreferredName(), action).     builder.field(NAME_FIELD.getPreferredName(), name).     builder.endObject().     return builder. }

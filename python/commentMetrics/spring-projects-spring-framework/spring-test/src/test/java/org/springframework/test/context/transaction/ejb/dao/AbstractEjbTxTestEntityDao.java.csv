@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected,final;1;8;;protected final TestEntity getTestEntity(String name) {     TestEntity te = entityManager.find(TestEntity.class, name).     if (te == null) {         te = new TestEntity(name, 0).         entityManager.persist(te).     }     return te. }
+false;protected,final;1;3;;protected final int getCountInternal(String name) {     return getTestEntity(name).getCount(). }
+false;protected,final;1;7;;protected final int incrementCountInternal(String name) {     TestEntity te = getTestEntity(name).     int count = te.getCount().     count++.     te.setCount(count).     return count. }

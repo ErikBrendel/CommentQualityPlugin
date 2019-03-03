@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void testTwoScheduler() throws Exception {     getMockEndpoint("mock:a").expectedMinimumMessageCount(4).     getMockEndpoint("mock:b").expectedMinimumMessageCount(2).     assertMockEndpointsSatisfied(). }
+false;public;0;7;;public void configure() {     from("scheduler://foo?delay=100").to("mock:a").     from("scheduler://foo?delay=200").to("mock:b"). }
+false;protected;0;12;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() {             from("scheduler://foo?delay=100").to("mock:a").             from("scheduler://foo?delay=200").to("mock:b").         }     }. }

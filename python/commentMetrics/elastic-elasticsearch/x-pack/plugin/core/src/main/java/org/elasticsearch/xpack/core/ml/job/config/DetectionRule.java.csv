@@ -1,0 +1,16 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private,static;1;10;;private static ObjectParser<Builder, Void> createParser(boolean ignoreUnknownFields) {     ObjectParser<Builder, Void> parser = new ObjectParser<>(DETECTION_RULE_FIELD.getPreferredName(), ignoreUnknownFields, Builder::new).     parser.declareStringArray(Builder::setActions, ACTIONS_FIELD).     parser.declareObject(Builder::setScope, RuleScope.parser(ignoreUnknownFields), SCOPE_FIELD).     parser.declareObjectArray(Builder::setConditions, ignoreUnknownFields ? RuleCondition.LENIENT_PARSER : RuleCondition.STRICT_PARSER, CONDITIONS_FIELD).     return parser. }
+false;public;1;6;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeEnumSet(actions).     scope.writeTo(out).     out.writeList(conditions). }
+false;public;2;13;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(ACTIONS_FIELD.getPreferredName(), actions).     if (scope.isEmpty() == false) {         builder.field(SCOPE_FIELD.getPreferredName(), scope).     }     if (conditions.isEmpty() == false) {         builder.field(CONDITIONS_FIELD.getPreferredName(), conditions).     }     builder.endObject().     return builder. }
+false;public;0;3;;public EnumSet<RuleAction> getActions() {     return actions. }
+false;public;0;3;;public RuleScope getScope() {     return scope. }
+false;public;0;3;;public List<RuleCondition> getConditions() {     return conditions. }
+false;public;0;3;;public Set<String> extractReferencedFilters() {     return scope.getReferencedFilters(). }
+false;public;1;15;;@Override public boolean equals(Object obj) {     if (this == obj) {         return true.     }     if (obj instanceof DetectionRule == false) {         return false.     }     DetectionRule other = (DetectionRule) obj.     return Objects.equals(actions, other.actions) && Objects.equals(scope, other.scope) && Objects.equals(conditions, other.conditions). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(actions, scope, conditions). }
+false;public;1;5;;public Builder setActions(List<String> actions) {     this.actions.clear().     actions.stream().map(RuleAction::fromString).forEach(this.actions::add).     return this. }
+false;public;1;4;;public Builder setActions(EnumSet<RuleAction> actions) {     this.actions = Objects.requireNonNull(actions, ACTIONS_FIELD.getPreferredName()).     return this. }
+false;public;1;5;;public Builder setActions(RuleAction... actions) {     this.actions.clear().     Arrays.stream(actions).forEach(this.actions::add).     return this. }
+false;public;1;4;;public Builder setScope(RuleScope scope) {     this.scope = Objects.requireNonNull(scope).     return this. }
+false;public;1;4;;public Builder setConditions(List<RuleCondition> conditions) {     this.conditions = ExceptionsHelper.requireNonNull(conditions, CONDITIONS_FIELD.getPreferredName()).     return this. }
+false;public;0;7;;public DetectionRule build() {     if (scope.isEmpty() && conditions.isEmpty()) {         String msg = Messages.getMessage(Messages.JOB_CONFIG_DETECTION_RULE_REQUIRES_SCOPE_OR_CONDITION).         throw ExceptionsHelper.badRequestException(msg).     }     return new DetectionRule(actions, scope, conditions). }

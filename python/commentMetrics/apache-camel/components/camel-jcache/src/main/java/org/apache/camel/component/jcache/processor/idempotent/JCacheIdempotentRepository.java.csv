@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public JCacheConfiguration getConfiguration() {     return configuration. }
+false;public;1;3;;public void setConfiguration(JCacheConfiguration configuration) {     this.configuration = configuration. }
+false;public;0;3;;public Cache<String, Boolean> getCache() {     return cache. }
+false;public;1;3;;public void setCache(Cache<String, Boolean> cache) {     this.cache = cache. }
+false;public;1;5;;@Override @ManagedOperation(description = "Adds the key to the store") public boolean add(String key) {     return cache.putIfAbsent(key, true). }
+false;public;1;5;;@Override @ManagedOperation(description = "Does the store contain the given key") public boolean contains(String key) {     return cache.containsKey(key). }
+false;public;1;5;;@Override @ManagedOperation(description = "Remove the key from the store") public boolean remove(String key) {     return cache.remove(key). }
+false;public;0;5;;@Override @ManagedOperation(description = "Clear the store") public void clear() {     cache.clear(). }
+false;public;1;3;;public void setCacheName(String cacheName) {     configuration.setCacheName(cacheName). }
+false;public;0;4;;@ManagedAttribute(description = "The processor name") public String getCacheName() {     return configuration.getCacheName(). }
+false;public;1;4;;@Override public boolean confirm(String key) {     return cache.replace(key, false, true). }
+false;protected;0;12;;@Override protected void doStart() throws Exception {     if (cache != null) {         cacheManager = new JCacheManager<>(cache).     } else {         cacheManager = JCacheHelper.createManager(ObjectHelper.notNull(configuration, "configuration")).         cache = cacheManager.getCache().     } }
+false;protected;0;4;;@Override protected void doStop() throws Exception {     cacheManager.close(). }

@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected ReindexRequestBuilder self() {     return this. }
+false;public;0;3;;public IndexRequestBuilder destination() {     return destination. }
+true;public;1;4;/**  * Set the destination index.  */ ;/**  * Set the destination index.  */ public ReindexRequestBuilder destination(String index) {     destination.setIndex(index).     return this. }
+true;public;2;4;/**  * Set the destination index and type.  */ ;/**  * Set the destination index and type.  */ public ReindexRequestBuilder destination(String index, String type) {     destination.setIndex(index).setType(type).     return this. }
+true;public;1;4;/**  * Setup reindexing from a remote cluster.  */ ;/**  * Setup reindexing from a remote cluster.  */ public ReindexRequestBuilder setRemoteInfo(RemoteInfo remoteInfo) {     request().setRemoteInfo(remoteInfo).     return this. }

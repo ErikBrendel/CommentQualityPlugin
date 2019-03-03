@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;14;;@Override public Producer createProducer() throws Exception {     DockerOperation operation = configuration.getOperation().     if (operation != null && operation.canProduce()) {         if (operation.isAsync()) {             return new AsyncDockerProducer(this).         } else {             return new DockerProducer(this).         }     } else {         throw new DockerException(operation + " is not a valid producer operation").     } }
+false;public;1;13;;@Override public Consumer createConsumer(Processor processor) throws Exception {     DockerOperation operation = configuration.getOperation().     switch(operation) {         case EVENTS:             return new DockerEventsConsumer(this, processor).         case STATS:             return new DockerStatsConsumer(this, processor).         default:             throw new DockerException(operation + " is not a valid consumer operation").     } }
+false;public;0;4;;@Override public boolean isSingleton() {     return true. }
+false;public;0;3;;public DockerConfiguration getConfiguration() {     return configuration. }
+false;public;0;4;;@Override public boolean isLenientProperties() {     return true. }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;3;3;;Page<City> findByNameContainingAndCountryContainingAllIgnoringCase(@Param("name") String name, @Param("country") String country, Pageable pageable).
+false;;2;2;;City findByNameAndCountryAllIgnoringCase(@Param("name") String name, @Param("country") String country).

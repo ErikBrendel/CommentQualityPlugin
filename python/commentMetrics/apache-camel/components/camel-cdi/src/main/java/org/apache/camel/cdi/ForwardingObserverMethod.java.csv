@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Class<?> getBeanClass() {     return CamelContext.class. }
+false;public;0;4;;@Override public Type getObservedType() {     return endpoint.getType(). }
+false;public;0;4;;@Override public Set<Annotation> getObservedQualifiers() {     return endpoint.getQualifiers(). }
+false;public;0;4;;@Override public Reception getReception() {     return Reception.ALWAYS. }
+false;public;0;4;;@Override public TransactionPhase getTransactionPhase() {     return TransactionPhase.IN_PROGRESS. }
+false;public;1;4;;@Override public void notify(T event) {     endpoint.notify(event). }

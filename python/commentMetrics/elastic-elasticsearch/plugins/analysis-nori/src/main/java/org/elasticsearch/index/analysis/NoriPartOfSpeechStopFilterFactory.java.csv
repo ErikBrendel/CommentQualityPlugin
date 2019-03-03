@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public TokenStream create(TokenStream tokenStream) {     return new KoreanPartOfSpeechStopFilter(tokenStream, stopTags). }
+false;static;1;7;;static Set<POS.Tag> resolvePOSList(List<String> tagList) {     Set<POS.Tag> stopTags = new HashSet<>().     for (String tag : tagList) {         stopTags.add(POS.resolveTag(tag)).     }     return stopTags. }

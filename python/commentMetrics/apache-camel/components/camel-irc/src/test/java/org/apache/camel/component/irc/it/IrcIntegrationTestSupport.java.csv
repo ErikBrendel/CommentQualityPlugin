@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Before public void doBefore() throws IOException {     properties = loadProperties().     resetMock(resultEndpoint). }
+false;protected;1;4;;protected void resetMock(MockEndpoint mock) {     mock.reset().     mock.setResultWaitTime(TimeUnit.MINUTES.toMillis(1)). }
+false;private;0;5;;private Properties loadProperties() throws IOException {     Properties p = new Properties().     p.load(this.getClass().getResourceAsStream("/it-tests.properties")).     return p. }
+false;protected;0;9;;@Override protected Properties useOverridePropertiesWithPropertiesComponent() {     try {         return loadProperties().     } catch (IOException e) {         log.error("Can't load configuration properties").         return null.     } }
+false;protected;0;3;;protected String sendUri() {     return "ircs://{{camelTo}}@{{server}}?channels={{channel1}}". }
+false;protected;0;3;;protected String fromUri() {     return "ircs://{{camelFrom}}@{{server}}?&channels={{channel1}}". }

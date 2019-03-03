@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getExpression() {     return expression. }
+false;public;0;8;;@Override public Integer getBatchSize() {     if (processor != null) {         return processor.getBatchSize().     } else {         return null.     } }
+false;public;0;8;;@Override public Long getTimeout() {     if (processor != null) {         return processor.getBatchTimeout().     } else {         return streamProcessor.getTimeout().     } }
+false;public;0;8;;@Override public Boolean isAllowDuplicates() {     if (processor != null) {         return processor.isAllowDuplicates().     } else {         return null.     } }
+false;public;0;8;;@Override public Boolean isReverse() {     if (processor != null) {         return processor.isReverse().     } else {         return null.     } }
+false;public;0;8;;@Override public Boolean isIgnoreInvalidExchanges() {     if (processor != null) {         return processor.isIgnoreInvalidExchanges().     } else {         return streamProcessor.isIgnoreInvalidExchanges().     } }
+false;public;0;8;;@Override public Integer getCapacity() {     if (processor != null) {         return null.     } else {         return streamProcessor.getCapacity().     } }
+false;public;0;8;;@Override public Boolean isRejectOld() {     if (processor != null) {         return null.     } else {         return streamProcessor.isRejectOld().     } }

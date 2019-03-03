@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getComponent() {     return "aws-sqs". }
+false;public;1;4;;@Override public String getMessageId(Exchange exchange) {     return (String) exchange.getIn().getHeader(CAMEL_AWS_SQS_MESSAGE_ID). }

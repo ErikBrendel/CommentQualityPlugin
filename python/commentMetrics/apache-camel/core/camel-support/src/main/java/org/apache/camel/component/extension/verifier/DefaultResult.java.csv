@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public ComponentVerifierExtension.Scope getScope() {     return scope. }
+false;public;0;4;;@Override public Status getStatus() {     return status. }
+false;public;0;4;;@Override public List<ComponentVerifierExtension.VerificationError> getErrors() {     return verificationErrors. }
+false;public;0;8;;@Override public String toString() {     return "DefaultResult{" + "scope=" + scope + ", status=" + status + ", errors=" + verificationErrors + '}'. }

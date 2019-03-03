@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected Collection<Class<? extends Plugin>> nodePlugins() {     return Arrays.asList(ReindexPlugin.class). }
+false;protected;0;4;;@Override protected Collection<Class<? extends Plugin>> transportClientPlugins() {     return Arrays.asList(ReindexPlugin.class). }
+false;protected;0;3;;protected ReindexRequestBuilder reindex() {     return new ReindexRequestBuilder(client(), ReindexAction.INSTANCE). }
+false;protected;0;3;;protected UpdateByQueryRequestBuilder updateByQuery() {     return new UpdateByQueryRequestBuilder(client(), UpdateByQueryAction.INSTANCE). }
+false;protected;0;3;;protected DeleteByQueryRequestBuilder deleteByQuery() {     return new DeleteByQueryRequestBuilder(client(), DeleteByQueryAction.INSTANCE). }
+false;protected;0;3;;protected RethrottleRequestBuilder rethrottle() {     return new RethrottleRequestBuilder(client(), RethrottleAction.INSTANCE). }
+false;public,static;0;3;;public static BulkIndexByScrollResponseMatcher matcher() {     return new BulkIndexByScrollResponseMatcher(). }
+false;static;2;7;;static int randomSlices(int min, int max) {     if (randomBoolean()) {         return AbstractBulkByScrollRequest.AUTO_SLICES.     } else {         return between(min, max).     } }
+false;static;0;3;;static int randomSlices() {     return randomSlices(2, 10). }
+true;protected;2;10;/**  * Figures out how many slices the request handling will use  */ ;/**  * Figures out how many slices the request handling will use  */ protected int expectedSlices(int requestSlices, Collection<String> indices) {     if (requestSlices == AbstractBulkByScrollRequest.AUTO_SLICES) {         int leastNumShards = Collections.min(indices.stream().map(sourceIndex -> getNumShards(sourceIndex).numPrimaries).collect(Collectors.toList())).         return Math.min(leastNumShards, BulkByScrollParallelizationHelper.AUTO_SLICE_CEILING).     } else {         return requestSlices.     } }
+false;protected;2;3;;protected int expectedSlices(int requestSlices, String index) {     return expectedSlices(requestSlices, singleton(index)). }
+true;protected;2;9;/**  * Figures out how many slice statuses to expect in the response  */ ;/**  * Figures out how many slice statuses to expect in the response  */ protected int expectedSliceStatuses(int requestSlices, Collection<String> indices) {     int slicesConfigured = expectedSlices(requestSlices, indices).     if (slicesConfigured > 1) {         return slicesConfigured.     } else {         return 0.     } }
+false;protected;2;3;;protected int expectedSliceStatuses(int slicesConfigured, String index) {     return expectedSliceStatuses(slicesConfigured, singleton(index)). }

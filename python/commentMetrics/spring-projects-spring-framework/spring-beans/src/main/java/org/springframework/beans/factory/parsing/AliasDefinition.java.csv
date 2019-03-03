@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,final;0;3;/**  * Return the canonical name of the bean.  */ ;/**  * Return the canonical name of the bean.  */ public final String getBeanName() {     return this.beanName. }
+true;public,final;0;3;/**  * Return the alias registered for the bean.  */ ;/**  * Return the alias registered for the bean.  */ public final String getAlias() {     return this.alias. }
+false;public,final;0;5;;@Override @Nullable public final Object getSource() {     return this.source. }

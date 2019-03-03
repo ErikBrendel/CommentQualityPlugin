@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Response newResponse() {     return new Response(null). }
+false;public;0;4;;@Override public ActionRequestValidationException validate() {     return null. }
+false;public;0;3;;public Map<String, String> getGrokPatterns() {     return grokPatterns. }
+false;public;2;8;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field("patterns").     builder.map(grokPatterns).     builder.endObject().     return builder. }
+false;public;1;5;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     grokPatterns = in.readMap(StreamInput::readString, StreamInput::readString). }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeMap(grokPatterns, StreamOutput::writeString, StreamOutput::writeString). }
+false;protected;3;8;;@Override protected void doExecute(Task task, Request request, ActionListener<Response> listener) {     try {         listener.onResponse(new Response(GROK_PATTERNS)).     } catch (Exception e) {         listener.onFailure(e).     } }
+false;public;0;4;;@Override public String getName() {     return "ingest_processor_grok_get". }
+false;public;2;5;;@Override public RestResponse buildResponse(Response response, XContentBuilder builder) throws Exception {     response.toXContent(builder, ToXContent.EMPTY_PARAMS).     return new BytesRestResponse(OK, builder). }
+false;protected;2;10;;@Override protected RestChannelConsumer prepareRequest(RestRequest request, NodeClient client) throws IOException {     return channel -> client.executeLocally(INSTANCE, new Request(), new RestBuilderListener<Response>(channel) {          @Override         public RestResponse buildResponse(Response response, XContentBuilder builder) throws Exception {             response.toXContent(builder, ToXContent.EMPTY_PARAMS).             return new BytesRestResponse(OK, builder).         }     }). }

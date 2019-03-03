@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected String getBlueprintDescriptor() {     return "org/apache/camel/test/blueprint/DefaultErrorHandlerOnPrepareTestTest.xml". }
+false;public;1;4;;@Override public void process(Exchange exchange) throws Exception {     exchange.getIn().setBody("Hello World"). }
+false;public;0;13;;@Test public void testDefaultErrorHandlerOnPrepare() throws Exception {     Exchange out = template.request("direct:start", new Processor() {          @Override         public void process(Exchange exchange) throws Exception {             exchange.getIn().setBody("Hello World").         }     }).     assertNotNull(out).     assertTrue("Should be failed", out.isFailed()).     assertIsInstanceOf(IllegalArgumentException.class, out.getException()).     assertEquals("Forced", out.getIn().getHeader("FailedBecause")). }
+false;public;1;5;;@Override public void process(Exchange exchange) throws Exception {     Exception cause = exchange.getProperty(Exchange.EXCEPTION_CAUGHT, Exception.class).     exchange.getIn().setHeader("FailedBecause", cause.getMessage()). }

@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;public LRAUrlBuilder host(String host) {     if (this.host != null) {         throw new IllegalStateException("Host already set").     }     LRAUrlBuilder copy = copy().     copy.host = host.     return copy. }
+false;public;1;5;;public LRAUrlBuilder path(String path) {     LRAUrlBuilder copy = copy().     copy.path = joinPath(this.path, path).     return copy. }
+false;public;1;6;;public LRAUrlBuilder compensation(Optional<Endpoint> endpoint) {     if (endpoint.isPresent()) {         return compensation(endpoint.get().getEndpointUri()).     }     return this. }
+false;public;1;3;;public LRAUrlBuilder compensation(String uri) {     return this.query(URL_COMPENSATION_KEY, uri). }
+false;public;1;6;;public LRAUrlBuilder completion(Optional<Endpoint> endpoint) {     if (endpoint.isPresent()) {         return completion(endpoint.get().getEndpointUri()).     }     return this. }
+false;public;1;3;;public LRAUrlBuilder completion(String uri) {     return this.query(URL_COMPLETION_KEY, uri). }
+false;public;1;7;;public LRAUrlBuilder options(Map<String, ?> options) {     LRAUrlBuilder result = this.     for (Map.Entry<String, ?> entry : options.entrySet()) {         result = result.query(entry.getKey(), entry.getValue()).     }     return result. }
+false;public;2;16;;public LRAUrlBuilder query(String key, Object value) {     LRAUrlBuilder copy = copy().     try {         key = URLEncoder.encode(toNonnullString(key), StandardCharsets.UTF_8.name()).         value = URLEncoder.encode(toNonnullString(value), StandardCharsets.UTF_8.name()).         if (copy.query.length() == 0) {             copy.query += "?".         } else {             copy.query += "&".         }         copy.query += key + "=" + value.     } catch (UnsupportedEncodingException e) {         throw new IllegalStateException(e).     }     return copy. }
+false;public;0;6;;public String build() {     if (this.host == null) {         throw new IllegalStateException("Host not set").     }     return joinPath(this.host, this.path) + query. }
+false;private;2;11;;private String joinPath(String first, String second) {     first = toNonnullString(first).     second = toNonnullString(second).     while (first.endsWith("/")) {         first = first.substring(0, first.length() - 1).     }     while (second.startsWith("/")) {         second = second.substring(1).     }     return first + "/" + second. }
+false;private;1;3;;private String toNonnullString(Object obj) {     return obj != null ? obj.toString() : "". }
+false;private;0;3;;private LRAUrlBuilder copy() {     return new LRAUrlBuilder(this.host, this.path, this.query). }

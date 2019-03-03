@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void loadContextHierarchy() {     assertNotNull("child ApplicationContext", context).     assertNotNull("parent ApplicationContext", context.getParent()).     assertNull("grandparent ApplicationContext", context.getParent().getParent()).     assertEquals("foo", foo).     assertEquals("bar", bar).     assertEquals("baz-child", baz). }

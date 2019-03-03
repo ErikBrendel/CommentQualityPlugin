@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Bean @ConditionalOnMissingBean(HttpTraceRepository.class) public InMemoryHttpTraceRepository traceRepository() {     return new InMemoryHttpTraceRepository(). }
+false;public;1;5;;@Bean @ConditionalOnMissingBean public HttpExchangeTracer httpExchangeTracer(HttpTraceProperties traceProperties) {     return new HttpExchangeTracer(traceProperties.getInclude()). }
+false;public;2;6;;@Bean @ConditionalOnMissingBean public HttpTraceFilter httpTraceFilter(HttpTraceRepository repository, HttpExchangeTracer tracer) {     return new HttpTraceFilter(repository, tracer). }
+false;public;3;7;;@Bean @ConditionalOnMissingBean public HttpTraceWebFilter httpTraceWebFilter(HttpTraceRepository repository, HttpExchangeTracer tracer, HttpTraceProperties traceProperties) {     return new HttpTraceWebFilter(repository, tracer, traceProperties.getInclude()). }

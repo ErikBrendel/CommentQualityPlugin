@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;4;/**  * Waits for the Machine Learning templates to be created by {@link org.elasticsearch.plugins.MetaDataUpgrader}  */ ;/**  * Waits for the Machine Learning templates to be created by {@link org.elasticsearch.plugins.MetaDataUpgrader}  */ @Before public void waitForTemplates() throws Exception {     XPackRestTestHelper.waitForTemplates(client(), XPackRestTestHelper.ML_POST_V660_TEMPLATES). }
+false;protected;0;4;;@Override protected boolean preserveIndicesUponCompletion() {     return true. }
+false;protected;0;4;;@Override protected boolean preserveTemplatesUponCompletion() {     return true. }
+false;protected;0;4;;@Override protected boolean preserveRollupJobsUponCompletion() {     return true. }
+false;protected;0;4;;@Override protected boolean preserveILMPoliciesUponCompletion() {     return true. }
+false;public,static;0;4;;@ParametersFactory public static Iterable<Object[]> parameters() throws Exception {     return createParameters(). }
+false;protected;0;11;;@Override protected Settings restClientSettings() {     String token = "Basic " + Base64.getEncoder().encodeToString(("test_user:x-pack-test-password").getBytes(StandardCharsets.UTF_8)).     return Settings.builder().put(ThreadContext.PREFIX + ".Authorization", token).put(ESRestTestCase.CLIENT_SOCKET_TIMEOUT, "90s").build(). }

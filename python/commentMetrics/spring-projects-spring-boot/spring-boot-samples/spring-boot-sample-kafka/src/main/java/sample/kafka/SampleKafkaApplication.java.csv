@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static void main(String[] args) {     SpringApplication.run(SampleKafkaApplication.class, args). }
+false;public;1;4;;@Bean public ApplicationRunner runner(Producer producer) {     return (args) -> producer.send(new SampleMessage(1, "A simple test message")). }

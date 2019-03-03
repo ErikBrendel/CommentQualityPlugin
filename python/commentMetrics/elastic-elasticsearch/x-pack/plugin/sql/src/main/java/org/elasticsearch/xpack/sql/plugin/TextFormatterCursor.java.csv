@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,static;2;6;/**  * If the newCursor is empty, returns an empty cursor. Otherwise, creates a new  * TextFormatterCursor that wraps the newCursor.  */ ;/**  * If the newCursor is empty, returns an empty cursor. Otherwise, creates a new  * TextFormatterCursor that wraps the newCursor.  */ public static Cursor wrap(Cursor newCursor, BasicFormatter formatter) {     if (newCursor == EMPTY) {         return EMPTY.     }     return new TextFormatterCursor(newCursor, formatter). }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeNamedWriteable(delegate).     formatter.writeTo(out). }
+false;public;0;3;;public BasicFormatter getFormatter() {     return formatter. }
+false;public;4;4;;@Override public void nextPage(Configuration cfg, Client client, NamedWriteableRegistry registry, ActionListener<RowSet> listener) {     delegate.nextPage(cfg, client, registry, listener). }
+false;public;3;4;;@Override public void clear(Configuration cfg, Client client, ActionListener<Boolean> listener) {     delegate.clear(cfg, client, listener). }
+false;public;0;4;;@Override public String getWriteableName() {     return NAME. }
+false;public;1;12;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     TextFormatterCursor that = (TextFormatterCursor) o.     return Objects.equals(delegate, that.delegate) && Objects.equals(formatter, that.formatter). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(delegate, formatter). }

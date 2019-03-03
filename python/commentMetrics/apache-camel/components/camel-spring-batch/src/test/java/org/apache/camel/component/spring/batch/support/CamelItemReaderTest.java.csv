@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;5;;// Camel fixtures @Override protected void doPostSetup() throws Exception {     camelItemReader = new CamelItemReader<>(consumer(), "seda:start").     sendBody("seda:start", message). }
+false;public;0;8;;// Tests @Test public void shouldReadMessage() throws Exception {     // When     String messageRead = camelItemReader.read().     // Then     assertEquals(message, messageRead). }

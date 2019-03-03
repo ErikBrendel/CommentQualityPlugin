@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void runShouldHaveEndpointBean() {     this.contextRunner.run((context) -> assertThat(context).hasSingleBean(SessionsEndpoint.class)). }
+false;public;0;7;;@Test public void runWhenEnabledPropertyIsFalseShouldNotHaveEndpointBean() {     this.contextRunner.withPropertyValues("management.endpoint.sessions.enabled:false").run((context) -> assertThat(context).doesNotHaveBean(SessionsEndpoint.class)). }
+false;public;0;4;;@Bean public FindByIndexNameSessionRepository<?> sessionRepository() {     return mock(FindByIndexNameSessionRepository.class). }

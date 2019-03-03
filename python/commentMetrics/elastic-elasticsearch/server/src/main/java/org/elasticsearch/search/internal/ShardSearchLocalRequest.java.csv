@@ -1,0 +1,21 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected,final;2;28;;protected final void innerWriteTo(StreamOutput out, boolean asKey) throws IOException {     shardId.writeTo(out).     out.writeByte(searchType.id()).     if (!asKey) {         out.writeVInt(numberOfShards).     }     out.writeOptionalWriteable(scroll).     out.writeOptionalWriteable(source).     out.writeStringArray(types).     aliasFilter.writeTo(out).     out.writeFloat(indexBoost).     if (asKey == false) {         out.writeVLong(nowInMillis).     }     out.writeOptionalBoolean(requestCache).     out.writeOptionalString(clusterAlias).     if (out.getVersion().onOrAfter(Version.V_7_0_0)) {         out.writeBoolean(allowPartialSearchResults).     } else if (out.getVersion().onOrAfter(Version.V_6_3_0)) {         out.writeOptionalBoolean(allowPartialSearchResults).     }     if (asKey == false) {         if (out.getVersion().onOrAfter(Version.V_6_4_0)) {             out.writeStringArray(indexRoutings).             out.writeOptionalString(preference).         }     } }
+false;public;0;4;;@Override public ShardId shardId() {     return shardId. }
+false;public;0;4;;@Override public String[] types() {     return types. }
+false;public;0;4;;@Override public SearchSourceBuilder source() {     return source. }
+false;public;0;4;;@Override public AliasFilter getAliasFilter() {     return aliasFilter. }
+false;public;1;4;;@Override public void setAliasFilter(AliasFilter aliasFilter) {     this.aliasFilter = aliasFilter. }
+false;public;1;4;;@Override public void source(SearchSourceBuilder source) {     this.source = source. }
+false;public;0;4;;@Override public int numberOfShards() {     return numberOfShards. }
+false;public;0;4;;@Override public SearchType searchType() {     return searchType. }
+false;public;0;4;;@Override public float indexBoost() {     return indexBoost. }
+false;public;0;4;;@Override public long nowInMillis() {     return nowInMillis. }
+false;public;0;4;;@Override public Boolean requestCache() {     return requestCache. }
+false;public;0;4;;@Override public boolean allowPartialSearchResults() {     return allowPartialSearchResults. }
+false;public;0;4;;@Override public Scroll scroll() {     return scroll. }
+false;public;0;4;;@Override public String[] indexRoutings() {     return indexRoutings. }
+false;public;0;4;;@Override public String preference() {     return preference. }
+false;public;0;8;;@Override public BytesReference cacheKey() throws IOException {     BytesStreamOutput out = new BytesStreamOutput().     this.innerWriteTo(out, true).     // do a deep copy     return new BytesArray(out.bytes().toBytesRef(), true). }
+false;public;0;4;;@Override public String getClusterAlias() {     return clusterAlias. }
+false;public;0;4;;@Override public Rewriteable<Rewriteable> getRewriteable() {     return new RequestRewritable(this). }
+false;public;1;12;;@Override public Rewriteable rewrite(QueryRewriteContext ctx) throws IOException {     SearchSourceBuilder newSource = request.source() == null ? null : Rewriteable.rewrite(request.source(), ctx).     AliasFilter newAliasFilter = Rewriteable.rewrite(request.getAliasFilter(), ctx).     if (newSource == request.source() && newAliasFilter == request.getAliasFilter()) {         return this.     } else {         request.source(newSource).         request.setAliasFilter(newAliasFilter).         return new RequestRewritable(request).     } }

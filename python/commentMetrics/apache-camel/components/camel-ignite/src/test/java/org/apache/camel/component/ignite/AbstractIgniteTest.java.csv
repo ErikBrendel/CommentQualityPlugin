@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;6;;@Override protected CamelContext createCamelContext() throws Exception {     CamelContext context = super.createCamelContext().     context.addComponent(getScheme(), createComponent()).     return context. }
+false;protected;0;7;;protected IgniteConfiguration createConfiguration() {     IgniteConfiguration config = new IgniteConfiguration().     config.setIgniteInstanceName(UUID.randomUUID().toString()).     config.setIncludeEventTypes(EventType.EVT_JOB_FINISHED, EventType.EVT_JOB_RESULTED).     config.setDiscoverySpi(new TcpDiscoverySpi().setIpFinder(LOCAL_IP_FINDER)).     return config. }
+false;protected,abstract;0;1;;protected abstract String getScheme().
+false;protected,abstract;0;1;;protected abstract AbstractIgniteComponent createComponent().
+false;protected;0;6;;protected Ignite ignite() {     if (ignite == null) {         ignite = context.getComponent(getScheme(), AbstractIgniteComponent.class).getIgnite().     }     return ignite. }

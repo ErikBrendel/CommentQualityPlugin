@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public void addTransformer(ClassFileTransformer transformer) {     Assert.notNull(transformer, "Transformer must not be null").     ReflectionUtils.invokeMethod(this.addTransformerMethod, this.classLoader, transformer). }
+false;public;0;4;;@Override public ClassLoader getInstrumentableClassLoader() {     return this.classLoader. }
+false;public;0;12;;@Override public ClassLoader getThrowawayClassLoader() {     if (this.getThrowawayClassLoaderMethod != null) {         ClassLoader target = (ClassLoader) ReflectionUtils.invokeMethod(this.getThrowawayClassLoaderMethod, this.classLoader).         return (target instanceof DecoratingClassLoader ? target : new OverridingClassLoader(this.classLoader, target)).     } else {         return new SimpleThrowawayClassLoader(this.classLoader).     } }

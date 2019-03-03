@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Before public void setUp() {     exchange = new DefaultExchange(new DefaultCamelContext()). }
+false;public;0;4;;@Test public void createSmppSubmitSmCommand() {     assertSame(SmppCommandType.SUBMIT_SM, SmppCommandType.fromExchange(exchange)). }
+false;public;0;6;;@Test public void createSmppSubmitMultiCommand() {     exchange.getIn().setHeader(SmppConstants.COMMAND, "SubmitMulti").     assertSame(SmppCommandType.SUBMIT_MULTI, SmppCommandType.fromExchange(exchange)). }
+false;public;0;6;;@Test public void createSmppDataSmCommand() {     exchange.getIn().setHeader(SmppConstants.COMMAND, "DataSm").     assertSame(SmppCommandType.DATA_SHORT_MESSAGE, SmppCommandType.fromExchange(exchange)). }
+false;public;0;6;;@Test public void createSmppReplaceSmCommand() {     exchange.getIn().setHeader(SmppConstants.COMMAND, "ReplaceSm").     assertSame(SmppCommandType.REPLACE_SM, SmppCommandType.fromExchange(exchange)). }
+false;public;0;6;;@Test public void createSmppQuerySmCommand() {     exchange.getIn().setHeader(SmppConstants.COMMAND, "QuerySm").     assertSame(SmppCommandType.QUERY_SM, SmppCommandType.fromExchange(exchange)). }
+false;public;0;6;;@Test public void createSmppCancelSmCommand() {     exchange.getIn().setHeader(SmppConstants.COMMAND, "CancelSm").     assertSame(SmppCommandType.CANCEL_SM, SmppCommandType.fromExchange(exchange)). }

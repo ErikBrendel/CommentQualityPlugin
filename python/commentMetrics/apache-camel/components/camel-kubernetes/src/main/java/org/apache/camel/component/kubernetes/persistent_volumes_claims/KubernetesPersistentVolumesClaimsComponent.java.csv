@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;3;4;;protected KubernetesPersistentVolumesClaimsEndpoint doCreateEndpoint(String uri, String remaining, KubernetesConfiguration config) throws Exception {     KubernetesPersistentVolumesClaimsEndpoint endpoint = new KubernetesPersistentVolumesClaimsEndpoint(uri, this, config).     return endpoint. }

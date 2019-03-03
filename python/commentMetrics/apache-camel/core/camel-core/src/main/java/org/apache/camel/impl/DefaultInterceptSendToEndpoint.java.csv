@@ -1,0 +1,22 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void setDetour(Processor detour) {     this.detour = detour. }
+false;public;0;4;;@Override public Processor getDetour() {     return detour. }
+false;public;0;4;;@Override public Endpoint getOriginalEndpoint() {     return delegate. }
+false;public;0;4;;@Override public boolean isSkip() {     return skip. }
+false;public;0;3;;public String getEndpointUri() {     return delegate.getEndpointUri(). }
+false;public;0;3;;public String getEndpointKey() {     return delegate.getEndpointKey(). }
+false;public;0;3;;public Exchange createExchange() {     return delegate.createExchange(). }
+false;public;1;3;;public Exchange createExchange(ExchangePattern pattern) {     return delegate.createExchange(pattern). }
+false;public;0;3;;public CamelContext getCamelContext() {     return delegate.getCamelContext(). }
+false;public;0;3;;public Producer createProducer() throws Exception {     return createAsyncProducer(). }
+false;public;0;5;;@Override public AsyncProducer createAsyncProducer() throws Exception {     AsyncProducer producer = delegate.createAsyncProducer().     return new InterceptSendToEndpointProcessor(this, delegate, producer, skip). }
+false;public;1;3;;public Consumer createConsumer(Processor processor) throws Exception {     return delegate.createConsumer(processor). }
+false;public;0;3;;public PollingConsumer createPollingConsumer() throws Exception {     return delegate.createPollingConsumer(). }
+false;public;1;3;;public void configureProperties(Map<String, Object> options) {     delegate.configureProperties(options). }
+false;public;1;3;;public void setCamelContext(CamelContext context) {     delegate.setCamelContext(context). }
+false;public;0;3;;public boolean isLenientProperties() {     return delegate.isLenientProperties(). }
+false;public;0;3;;public boolean isSingleton() {     return delegate.isSingleton(). }
+false;public;0;3;;public void start() throws Exception {     ServiceHelper.startService(detour, delegate). }
+false;public;0;3;;public void stop() throws Exception {     ServiceHelper.stopService(delegate, detour). }
+false;public;0;4;;@Override public void shutdown() throws Exception {     ServiceHelper.stopAndShutdownServices(delegate, detour). }
+false;public;0;4;;@Override public String toString() {     return delegate.toString(). }

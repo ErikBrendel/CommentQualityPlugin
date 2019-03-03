@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void injectedBean() {     assertEquals("foo", foo). }
+false;protected;0;7;;@Override protected List<ContextCustomizerFactory> getContextCustomizerFactories() {     return singletonList((ContextCustomizerFactory) (testClass, configAttributes) -> (ContextCustomizer) (context, mergedConfig) -> context.getBeanFactory().registerSingleton("foo", "foo")). }

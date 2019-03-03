@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * @return The ID of the watch to be activated.  */ ;/**  * @return The ID of the watch to be activated.  */ public String getWatchId() {     return watchId. }
+false;public;1;7;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     ActivateWatchRequest that = (ActivateWatchRequest) o.     return Objects.equals(watchId, that.watchId). }
+false;public;0;5;;@Override public int hashCode() {     int result = Objects.hash(watchId).     return result. }

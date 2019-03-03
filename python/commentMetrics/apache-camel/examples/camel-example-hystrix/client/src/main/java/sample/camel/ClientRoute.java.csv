@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;18;;@Override public void configure() {     // you can configure the route rule with Java DSL here     from("timer:trigger?period=500").streamCaching().bean("counterBean").log(" Client request: ${body}").hystrix().to("http://localhost:9090/service1").onFallbackViaNetwork().to("http://localhost:7070/service2").end().log("Client response: ${body}"). }

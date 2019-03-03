@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;12;;@Override @Before public void setUp() throws Exception {     try {         super.setUp().         fail("Should have thrown exception").     } catch (FailedToCreateRouteException e) {         assertEquals("route1", e.getRouteId()).         assertIsInstanceOf(IllegalArgumentException.class, e.getCause()).         assertEquals("Route route1 has no output processors. You need to add outputs to the route such as to(\"log:foo\").", e.getCause().getMessage()).     } }
+false;public;0;4;;@Test public void testDummy() { // noop }
+false;public;0;4;;@Override public void configure() throws Exception {     from("direct:start"). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").         }     }. }

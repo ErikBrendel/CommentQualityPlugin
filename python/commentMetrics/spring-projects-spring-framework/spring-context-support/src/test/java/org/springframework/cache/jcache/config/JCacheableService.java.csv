@@ -1,0 +1,22 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;1;1;;T cache(String id).
+false;;1;1;;T cacheNull(String id).
+false;;2;1;;T cacheWithException(String id, boolean matchFilter).
+false;;2;1;;T cacheWithCheckedException(String id, boolean matchFilter) throws IOException.
+false;;1;1;;T cacheAlwaysInvoke(String id).
+false;;2;1;;T cacheWithPartialKey(String id, boolean notUsed).
+false;;1;1;;T cacheWithCustomCacheResolver(String id).
+false;;2;1;;T cacheWithCustomKeyGenerator(String id, String anotherId).
+false;;2;1;;void put(String id, Object value).
+false;;3;1;;void putWithException(String id, Object value, boolean matchFilter).
+false;;2;1;;void earlyPut(String id, Object value).
+false;;3;1;;void earlyPutWithException(String id, Object value, boolean matchFilter).
+false;;1;1;;void remove(String id).
+false;;2;1;;void removeWithException(String id, boolean matchFilter).
+false;;1;1;;void earlyRemove(String id).
+false;;2;1;;void earlyRemoveWithException(String id, boolean matchFilter).
+false;;0;1;;void removeAll().
+false;;1;1;;void removeAllWithException(boolean matchFilter).
+false;;0;1;;void earlyRemoveAll().
+false;;1;1;;void earlyRemoveAllWithException(boolean matchFilter).
+false;;0;1;;long exceptionInvocations().

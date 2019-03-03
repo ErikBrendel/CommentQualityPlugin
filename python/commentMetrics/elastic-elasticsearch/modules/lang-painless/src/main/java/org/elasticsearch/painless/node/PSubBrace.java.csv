@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;1;4;;@Override void extractVariables(Set<String> variables) {     index.extractVariables(variables). }
+false;;1;8;;@Override void analyze(Locals locals) {     index.expected = int.class.     index.analyze(locals).     index = index.cast(locals).     actual = clazz.getComponentType(). }
+false;;2;5;;@Override void write(MethodWriter writer, Globals globals) {     setup(writer, globals).     load(writer, globals). }
+false;;0;4;;@Override int accessElementCount() {     return 2. }
+false;;0;4;;@Override boolean isDefOptimized() {     return false. }
+false;;1;4;;@Override void updateActual(Class<?> actual) {     throw createError(new IllegalStateException("Illegal tree structure.")). }
+false;;2;5;;@Override void setup(MethodWriter writer, Globals globals) {     index.write(writer, globals).     writeIndexFlip(writer, MethodWriter::arrayLength). }
+false;;2;5;;@Override void load(MethodWriter writer, Globals globals) {     writer.writeDebugInfo(location).     writer.arrayLoad(MethodWriter.getType(actual)). }
+false;;2;5;;@Override void store(MethodWriter writer, Globals globals) {     writer.writeDebugInfo(location).     writer.arrayStore(MethodWriter.getType(actual)). }
+false;public;0;4;;@Override public String toString() {     return singleLineToString(prefix, index). }

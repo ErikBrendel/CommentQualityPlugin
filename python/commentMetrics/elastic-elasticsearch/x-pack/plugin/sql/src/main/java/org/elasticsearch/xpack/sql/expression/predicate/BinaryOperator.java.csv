@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected,abstract;2;1;;protected abstract TypeResolution resolveInputType(Expression e, Expressions.ParamOrdinal paramOrdinal).
+false;public,abstract;0;1;;public abstract BinaryOperator<T, U, R, F> swapLeftAndRight().
+false;protected;0;12;;@Override protected TypeResolution resolveType() {     if (!childrenResolved()) {         return new TypeResolution("Unresolved children").     }     TypeResolution resolution = resolveInputType(left(), ParamOrdinal.FIRST).     if (resolution.unresolved()) {         return resolution.     }     return resolveInputType(right(), ParamOrdinal.SECOND). }

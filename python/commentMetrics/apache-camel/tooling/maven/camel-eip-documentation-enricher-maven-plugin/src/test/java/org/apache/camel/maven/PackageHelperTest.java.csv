@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void testFileToString() throws Exception {     assertEquals("dk19i21)@+#(OR", PackageHelper.fileToString(ResourceUtils.getResourceAsFile("filecontent/a.txt"))). }
+false;public;0;8;;@Test public void testFindJsonFiles() throws Exception {     Map<String, File> jsonFiles = PackageHelper.findJsonFiles(ResourceUtils.getResourceAsFile("json")).     assertTrue("Files a.json must be found", jsonFiles.containsKey("a")).     assertTrue("Files b.json must be found", jsonFiles.containsKey("b")).     assertFalse("File c.txt must not be found", jsonFiles.containsKey("c")). }

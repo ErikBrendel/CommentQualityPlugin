@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void testDefaultListDataSet() throws Exception {     MockEndpoint result = getMockEndpoint(resultUri).     result.expectedMinimumMessageCount((int) dataSet.getSize()).     result.assertIsSatisfied(). }
+false;public;0;8;;@Test public void testDefaultListDataSetWithSizeGreaterThanListSize() throws Exception {     MockEndpoint result = getMockEndpoint(resultUri).     dataSet.setSize(20).     result.expectedMinimumMessageCount((int) dataSet.getSize()).     result.assertIsSatisfied(). }
+false;public;0;7;;@Override @Before public void setUp() throws Exception {     dataSet = new FileDataSet(testDataFileName, "\n").     assertEquals("Unexpected DataSet size", testDataFileRecordCount, dataSet.getSize()).     super.setUp(). }
+false;protected;0;6;;@Override protected Context createJndiContext() throws Exception {     Context context = super.createJndiContext().     context.bind(dataSetName, dataSet).     return context. }
+false;public;0;4;;public void configure() throws Exception {     from(dataSetUri).to("mock://result"). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from(dataSetUri).to("mock://result").         }     }. }

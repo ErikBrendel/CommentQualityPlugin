@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;16;;@Override public ZookeeperRegistration convert(ServiceDefinition source) {     ZookeeperInstance instance = new ZookeeperInstance(source.getId(), source.getName(), source.getMetadata()).     return ServiceInstanceRegistration.builder().address(properties.getServiceRegistry().getServiceHost()).port(source.getPort()).name(source.getName()).payload(instance).uriSpec(ZookeeperDiscoveryProperties.DEFAULT_URI_SPEC).build(). }

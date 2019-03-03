@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;2;9;;@Override protected AbstractBeanDefinition parseInternal(Element element, ParserContext parserContext) {     BeanDefinitionBuilder builder = BeanDefinitionBuilder.genericBeanDefinition(DataSourceInitializer.class).     builder.addPropertyReference("dataSource", element.getAttribute("data-source")).     builder.addPropertyValue("enabled", element.getAttribute("enabled")).     DatabasePopulatorConfigUtils.setDatabasePopulator(element, builder).     builder.getRawBeanDefinition().setSource(parserContext.extractSource(element)).     return builder.getBeanDefinition(). }
+false;protected;0;4;;@Override protected boolean shouldGenerateId() {     return true. }

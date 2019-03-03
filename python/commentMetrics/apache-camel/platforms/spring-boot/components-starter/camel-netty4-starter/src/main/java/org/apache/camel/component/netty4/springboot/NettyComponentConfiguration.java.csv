@@ -1,0 +1,157 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Integer getMaximumPoolSize() {     return maximumPoolSize. }
+false;public;1;3;;public void setMaximumPoolSize(Integer maximumPoolSize) {     this.maximumPoolSize = maximumPoolSize. }
+false;public;0;3;;public NettyConfigurationNestedConfiguration getConfiguration() {     return configuration. }
+false;public;1;4;;public void setConfiguration(NettyConfigurationNestedConfiguration configuration) {     this.configuration = configuration. }
+false;public;0;3;;public String getExecutorService() {     return executorService. }
+false;public;1;3;;public void setExecutorService(String executorService) {     this.executorService = executorService. }
+false;public;0;3;;public Boolean getUseGlobalSslContextParameters() {     return useGlobalSslContextParameters. }
+false;public;1;4;;public void setUseGlobalSslContextParameters(Boolean useGlobalSslContextParameters) {     this.useGlobalSslContextParameters = useGlobalSslContextParameters. }
+false;public;0;3;;public String getSslContextParameters() {     return sslContextParameters. }
+false;public;1;3;;public void setSslContextParameters(String sslContextParameters) {     this.sslContextParameters = sslContextParameters. }
+false;public;0;3;;public Boolean getResolvePropertyPlaceholders() {     return resolvePropertyPlaceholders. }
+false;public;1;4;;public void setResolvePropertyPlaceholders(Boolean resolvePropertyPlaceholders) {     this.resolvePropertyPlaceholders = resolvePropertyPlaceholders. }
+false;public;0;3;;public Long getRequestTimeout() {     return requestTimeout. }
+false;public;1;3;;public void setRequestTimeout(Long requestTimeout) {     this.requestTimeout = requestTimeout. }
+false;public;0;3;;public Boolean getSync() {     return sync. }
+false;public;1;3;;public void setSync(Boolean sync) {     this.sync = sync. }
+false;public;0;3;;public Boolean getTextline() {     return textline. }
+false;public;1;3;;public void setTextline(Boolean textline) {     this.textline = textline. }
+false;public;0;3;;public Integer getDecoderMaxLineLength() {     return decoderMaxLineLength. }
+false;public;1;3;;public void setDecoderMaxLineLength(Integer decoderMaxLineLength) {     this.decoderMaxLineLength = decoderMaxLineLength. }
+false;public;0;3;;public TextLineDelimiter getDelimiter() {     return delimiter. }
+false;public;1;3;;public void setDelimiter(TextLineDelimiter delimiter) {     this.delimiter = delimiter. }
+false;public;0;3;;public Boolean getAutoAppendDelimiter() {     return autoAppendDelimiter. }
+false;public;1;3;;public void setAutoAppendDelimiter(Boolean autoAppendDelimiter) {     this.autoAppendDelimiter = autoAppendDelimiter. }
+false;public;0;3;;public String getEncoding() {     return encoding. }
+false;public;1;3;;public void setEncoding(String encoding) {     this.encoding = encoding. }
+false;public;0;3;;public List getDecoders() {     return decoders. }
+false;public;1;3;;public void setDecoders(List decoders) {     this.decoders = decoders. }
+false;public;0;3;;public List getEncoders() {     return encoders. }
+false;public;1;3;;public void setEncoders(List encoders) {     this.encoders = encoders. }
+false;public;0;5;;@Deprecated @DeprecatedConfigurationProperty public ChannelHandler getEncoder() {     return encoder. }
+false;public;1;4;;@Deprecated public void setEncoder(ChannelHandler encoder) {     this.encoder = encoder. }
+false;public;0;5;;@Deprecated @DeprecatedConfigurationProperty public ChannelHandler getDecoder() {     return decoder. }
+false;public;1;4;;@Deprecated public void setDecoder(ChannelHandler decoder) {     this.decoder = decoder. }
+false;public;0;3;;public Boolean getDisconnect() {     return disconnect. }
+false;public;1;3;;public void setDisconnect(Boolean disconnect) {     this.disconnect = disconnect. }
+false;public;0;3;;public Boolean getLazyChannelCreation() {     return lazyChannelCreation. }
+false;public;1;3;;public void setLazyChannelCreation(Boolean lazyChannelCreation) {     this.lazyChannelCreation = lazyChannelCreation. }
+false;public;0;3;;public Boolean getTransferExchange() {     return transferExchange. }
+false;public;1;3;;public void setTransferExchange(Boolean transferExchange) {     this.transferExchange = transferExchange. }
+false;public;0;3;;public Boolean getAllowSerializedHeaders() {     return allowSerializedHeaders. }
+false;public;1;3;;public void setAllowSerializedHeaders(Boolean allowSerializedHeaders) {     this.allowSerializedHeaders = allowSerializedHeaders. }
+false;public;0;3;;public Boolean getDisconnectOnNoReply() {     return disconnectOnNoReply. }
+false;public;1;3;;public void setDisconnectOnNoReply(Boolean disconnectOnNoReply) {     this.disconnectOnNoReply = disconnectOnNoReply. }
+false;public;0;3;;public LoggingLevel getNoReplyLogLevel() {     return noReplyLogLevel. }
+false;public;1;3;;public void setNoReplyLogLevel(LoggingLevel noReplyLogLevel) {     this.noReplyLogLevel = noReplyLogLevel. }
+false;public;0;3;;public LoggingLevel getServerExceptionCaughtLogLevel() {     return serverExceptionCaughtLogLevel. }
+false;public;1;4;;public void setServerExceptionCaughtLogLevel(LoggingLevel serverExceptionCaughtLogLevel) {     this.serverExceptionCaughtLogLevel = serverExceptionCaughtLogLevel. }
+false;public;0;3;;public LoggingLevel getServerClosedChannelExceptionCaughtLogLevel() {     return serverClosedChannelExceptionCaughtLogLevel. }
+false;public;1;4;;public void setServerClosedChannelExceptionCaughtLogLevel(LoggingLevel serverClosedChannelExceptionCaughtLogLevel) {     this.serverClosedChannelExceptionCaughtLogLevel = serverClosedChannelExceptionCaughtLogLevel. }
+false;public;0;3;;public Boolean getAllowDefaultCodec() {     return allowDefaultCodec. }
+false;public;1;3;;public void setAllowDefaultCodec(Boolean allowDefaultCodec) {     this.allowDefaultCodec = allowDefaultCodec. }
+false;public;0;5;;@Deprecated @DeprecatedConfigurationProperty public ClientInitializerFactory getClientPipelineFactory() {     return clientPipelineFactory. }
+false;public;1;5;;@Deprecated public void setClientPipelineFactory(ClientInitializerFactory clientPipelineFactory) {     this.clientPipelineFactory = clientPipelineFactory. }
+false;public;0;3;;public ClientInitializerFactory getClientInitializerFactory() {     return clientInitializerFactory. }
+false;public;1;4;;public void setClientInitializerFactory(ClientInitializerFactory clientInitializerFactory) {     this.clientInitializerFactory = clientInitializerFactory. }
+false;public;0;3;;public Boolean getUsingExecutorService() {     return usingExecutorService. }
+false;public;1;3;;public void setUsingExecutorService(Boolean usingExecutorService) {     this.usingExecutorService = usingExecutorService. }
+false;public;0;3;;public Integer getProducerPoolMaxActive() {     return producerPoolMaxActive. }
+false;public;1;3;;public void setProducerPoolMaxActive(Integer producerPoolMaxActive) {     this.producerPoolMaxActive = producerPoolMaxActive. }
+false;public;0;3;;public Integer getProducerPoolMinIdle() {     return producerPoolMinIdle. }
+false;public;1;3;;public void setProducerPoolMinIdle(Integer producerPoolMinIdle) {     this.producerPoolMinIdle = producerPoolMinIdle. }
+false;public;0;3;;public Integer getProducerPoolMaxIdle() {     return producerPoolMaxIdle. }
+false;public;1;3;;public void setProducerPoolMaxIdle(Integer producerPoolMaxIdle) {     this.producerPoolMaxIdle = producerPoolMaxIdle. }
+false;public;0;3;;public Long getProducerPoolMinEvictableIdle() {     return producerPoolMinEvictableIdle. }
+false;public;1;4;;public void setProducerPoolMinEvictableIdle(Long producerPoolMinEvictableIdle) {     this.producerPoolMinEvictableIdle = producerPoolMinEvictableIdle. }
+false;public;0;3;;public Boolean getProducerPoolEnabled() {     return producerPoolEnabled. }
+false;public;1;3;;public void setProducerPoolEnabled(Boolean producerPoolEnabled) {     this.producerPoolEnabled = producerPoolEnabled. }
+false;public;0;3;;public Boolean getUdpConnectionlessSending() {     return udpConnectionlessSending. }
+false;public;1;3;;public void setUdpConnectionlessSending(Boolean udpConnectionlessSending) {     this.udpConnectionlessSending = udpConnectionlessSending. }
+false;public;0;3;;public Boolean getClientMode() {     return clientMode. }
+false;public;1;3;;public void setClientMode(Boolean clientMode) {     this.clientMode = clientMode. }
+false;public;0;3;;public Boolean getUseByteBuf() {     return useByteBuf. }
+false;public;1;3;;public void setUseByteBuf(Boolean useByteBuf) {     this.useByteBuf = useByteBuf. }
+false;public;0;3;;public Boolean getUdpByteArrayCodec() {     return udpByteArrayCodec. }
+false;public;1;3;;public void setUdpByteArrayCodec(Boolean udpByteArrayCodec) {     this.udpByteArrayCodec = udpByteArrayCodec. }
+false;public;0;3;;public Boolean getReuseChannel() {     return reuseChannel. }
+false;public;1;3;;public void setReuseChannel(Boolean reuseChannel) {     this.reuseChannel = reuseChannel. }
+false;public;0;3;;public NettyCamelStateCorrelationManager getCorrelationManager() {     return correlationManager. }
+false;public;1;4;;public void setCorrelationManager(NettyCamelStateCorrelationManager correlationManager) {     this.correlationManager = correlationManager. }
+false;public;0;3;;public String getProtocol() {     return protocol. }
+false;public;1;3;;public void setProtocol(String protocol) {     this.protocol = protocol. }
+false;public;0;3;;public String getHost() {     return host. }
+false;public;1;3;;public void setHost(String host) {     this.host = host. }
+false;public;0;3;;public Integer getPort() {     return port. }
+false;public;1;3;;public void setPort(Integer port) {     this.port = port. }
+false;public;0;3;;public Boolean getBroadcast() {     return broadcast. }
+false;public;1;3;;public void setBroadcast(Boolean broadcast) {     this.broadcast = broadcast. }
+false;public;0;3;;public Integer getSendBufferSize() {     return sendBufferSize. }
+false;public;1;3;;public void setSendBufferSize(Integer sendBufferSize) {     this.sendBufferSize = sendBufferSize. }
+false;public;0;3;;public Integer getReceiveBufferSize() {     return receiveBufferSize. }
+false;public;1;3;;public void setReceiveBufferSize(Integer receiveBufferSize) {     this.receiveBufferSize = receiveBufferSize. }
+false;public;0;3;;public Integer getReceiveBufferSizePredictor() {     return receiveBufferSizePredictor. }
+false;public;1;4;;public void setReceiveBufferSizePredictor(Integer receiveBufferSizePredictor) {     this.receiveBufferSizePredictor = receiveBufferSizePredictor. }
+false;public;0;3;;public Integer getWorkerCount() {     return workerCount. }
+false;public;1;3;;public void setWorkerCount(Integer workerCount) {     this.workerCount = workerCount. }
+false;public;0;3;;public Integer getBossCount() {     return bossCount. }
+false;public;1;3;;public void setBossCount(Integer bossCount) {     this.bossCount = bossCount. }
+false;public;0;3;;public Boolean getKeepAlive() {     return keepAlive. }
+false;public;1;3;;public void setKeepAlive(Boolean keepAlive) {     this.keepAlive = keepAlive. }
+false;public;0;3;;public Boolean getTcpNoDelay() {     return tcpNoDelay. }
+false;public;1;3;;public void setTcpNoDelay(Boolean tcpNoDelay) {     this.tcpNoDelay = tcpNoDelay. }
+false;public;0;3;;public Boolean getReuseAddress() {     return reuseAddress. }
+false;public;1;3;;public void setReuseAddress(Boolean reuseAddress) {     this.reuseAddress = reuseAddress. }
+false;public;0;3;;public Integer getConnectTimeout() {     return connectTimeout. }
+false;public;1;3;;public void setConnectTimeout(Integer connectTimeout) {     this.connectTimeout = connectTimeout. }
+false;public;0;3;;public Integer getBacklog() {     return backlog. }
+false;public;1;3;;public void setBacklog(Integer backlog) {     this.backlog = backlog. }
+false;public;0;3;;public Boolean getSsl() {     return ssl. }
+false;public;1;3;;public void setSsl(Boolean ssl) {     this.ssl = ssl. }
+false;public;0;3;;public Boolean getSslClientCertHeaders() {     return sslClientCertHeaders. }
+false;public;1;3;;public void setSslClientCertHeaders(Boolean sslClientCertHeaders) {     this.sslClientCertHeaders = sslClientCertHeaders. }
+false;public;0;3;;public SslHandler getSslHandler() {     return sslHandler. }
+false;public;1;3;;public void setSslHandler(SslHandler sslHandler) {     this.sslHandler = sslHandler. }
+false;public;0;3;;public SSLContextParameters getSslContextParameters() {     return sslContextParameters. }
+false;public;1;4;;public void setSslContextParameters(SSLContextParameters sslContextParameters) {     this.sslContextParameters = sslContextParameters. }
+false;public;0;3;;public Boolean getNeedClientAuth() {     return needClientAuth. }
+false;public;1;3;;public void setNeedClientAuth(Boolean needClientAuth) {     this.needClientAuth = needClientAuth. }
+false;public;0;5;;@Deprecated @DeprecatedConfigurationProperty public File getKeyStoreFile() {     return keyStoreFile. }
+false;public;1;4;;@Deprecated public void setKeyStoreFile(File keyStoreFile) {     this.keyStoreFile = keyStoreFile. }
+false;public;0;5;;@Deprecated @DeprecatedConfigurationProperty public File getTrustStoreFile() {     return trustStoreFile. }
+false;public;1;4;;@Deprecated public void setTrustStoreFile(File trustStoreFile) {     this.trustStoreFile = trustStoreFile. }
+false;public;0;3;;public String getKeyStoreResource() {     return keyStoreResource. }
+false;public;1;3;;public void setKeyStoreResource(String keyStoreResource) {     this.keyStoreResource = keyStoreResource. }
+false;public;0;3;;public String getTrustStoreResource() {     return trustStoreResource. }
+false;public;1;3;;public void setTrustStoreResource(String trustStoreResource) {     this.trustStoreResource = trustStoreResource. }
+false;public;0;3;;public String getKeyStoreFormat() {     return keyStoreFormat. }
+false;public;1;3;;public void setKeyStoreFormat(String keyStoreFormat) {     this.keyStoreFormat = keyStoreFormat. }
+false;public;0;3;;public String getSecurityProvider() {     return securityProvider. }
+false;public;1;3;;public void setSecurityProvider(String securityProvider) {     this.securityProvider = securityProvider. }
+false;public;0;3;;public String getPassphrase() {     return passphrase. }
+false;public;1;3;;public void setPassphrase(String passphrase) {     this.passphrase = passphrase. }
+false;public;0;5;;@Deprecated @DeprecatedConfigurationProperty public ServerInitializerFactory getServerPipelineFactory() {     return serverPipelineFactory. }
+false;public;1;5;;@Deprecated public void setServerPipelineFactory(ServerInitializerFactory serverPipelineFactory) {     this.serverPipelineFactory = serverPipelineFactory. }
+false;public;0;3;;public ServerInitializerFactory getServerInitializerFactory() {     return serverInitializerFactory. }
+false;public;1;4;;public void setServerInitializerFactory(ServerInitializerFactory serverInitializerFactory) {     this.serverInitializerFactory = serverInitializerFactory. }
+false;public;0;3;;public NettyServerBootstrapFactory getNettyServerBootstrapFactory() {     return nettyServerBootstrapFactory. }
+false;public;1;4;;public void setNettyServerBootstrapFactory(NettyServerBootstrapFactory nettyServerBootstrapFactory) {     this.nettyServerBootstrapFactory = nettyServerBootstrapFactory. }
+false;public;0;3;;public Map getOptions() {     return options. }
+false;public;1;3;;public void setOptions(Map options) {     this.options = options. }
+false;public;0;3;;public Boolean getNativeTransport() {     return nativeTransport. }
+false;public;1;3;;public void setNativeTransport(Boolean nativeTransport) {     this.nativeTransport = nativeTransport. }
+false;public;0;3;;public EventLoopGroup getBossGroup() {     return bossGroup. }
+false;public;1;3;;public void setBossGroup(EventLoopGroup bossGroup) {     this.bossGroup = bossGroup. }
+false;public;0;3;;public EventLoopGroup getWorkerGroup() {     return workerGroup. }
+false;public;1;3;;public void setWorkerGroup(EventLoopGroup workerGroup) {     this.workerGroup = workerGroup. }
+false;public;0;3;;public ChannelGroup getChannelGroup() {     return channelGroup. }
+false;public;1;3;;public void setChannelGroup(ChannelGroup channelGroup) {     this.channelGroup = channelGroup. }
+false;public;0;3;;public String getNetworkInterface() {     return networkInterface. }
+false;public;1;3;;public void setNetworkInterface(String networkInterface) {     this.networkInterface = networkInterface. }
+false;public;0;3;;public String getEnabledProtocols() {     return enabledProtocols. }
+false;public;1;3;;public void setEnabledProtocols(String enabledProtocols) {     this.enabledProtocols = enabledProtocols. }
+false;public;0;3;;public Boolean getReconnect() {     return reconnect. }
+false;public;1;3;;public void setReconnect(Boolean reconnect) {     this.reconnect = reconnect. }
+false;public;0;3;;public Integer getReconnectInterval() {     return reconnectInterval. }
+false;public;1;3;;public void setReconnectInterval(Integer reconnectInterval) {     this.reconnectInterval = reconnectInterval. }

@@ -1,0 +1,19 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public ServerWebExchange getDelegate() {     return this.delegate. }
+false;public;0;4;;// ServerWebExchange delegation methods... @Override public ServerHttpRequest getRequest() {     return getDelegate().getRequest(). }
+false;public;0;4;;@Override public ServerHttpResponse getResponse() {     return getDelegate().getResponse(). }
+false;public;0;4;;@Override public Map<String, Object> getAttributes() {     return getDelegate().getAttributes(). }
+false;public;0;4;;@Override public Mono<WebSession> getSession() {     return getDelegate().getSession(). }
+false;public;0;4;;@Override public <T extends Principal> Mono<T> getPrincipal() {     return getDelegate().getPrincipal(). }
+false;public;0;4;;@Override public LocaleContext getLocaleContext() {     return getDelegate().getLocaleContext(). }
+false;public;0;4;;@Override public ApplicationContext getApplicationContext() {     return getDelegate().getApplicationContext(). }
+false;public;0;4;;@Override public Mono<MultiValueMap<String, String>> getFormData() {     return getDelegate().getFormData(). }
+false;public;0;4;;@Override public Mono<MultiValueMap<String, Part>> getMultipartData() {     return getDelegate().getMultipartData(). }
+false;public;0;4;;@Override public boolean isNotModified() {     return getDelegate().isNotModified(). }
+false;public;1;4;;@Override public boolean checkNotModified(Instant lastModified) {     return getDelegate().checkNotModified(lastModified). }
+false;public;1;4;;@Override public boolean checkNotModified(String etag) {     return getDelegate().checkNotModified(etag). }
+false;public;2;4;;@Override public boolean checkNotModified(@Nullable String etag, Instant lastModified) {     return getDelegate().checkNotModified(etag, lastModified). }
+false;public;1;4;;@Override public String transformUrl(String url) {     return getDelegate().transformUrl(url). }
+false;public;1;4;;@Override public void addUrlTransformer(Function<String, String> transformer) {     getDelegate().addUrlTransformer(transformer). }
+false;public;0;4;;@Override public String getLogPrefix() {     return getDelegate().getLogPrefix(). }
+false;public;0;4;;@Override public String toString() {     return getClass().getSimpleName() + " [delegate=" + getDelegate() + "]". }

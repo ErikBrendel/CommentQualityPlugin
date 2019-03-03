@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public JCacheOperation<A> getOperation() {     return this.operation. }
+false;public;0;4;;@Override public Method getMethod() {     return this.operation.getMethod(). }
+false;public;0;4;;@Override public Object[] getArgs() {     return this.args.clone(). }
+false;public;0;4;;@Override public Set<Annotation> getAnnotations() {     return this.operation.getAnnotations(). }
+false;public;0;4;;@Override public A getCacheAnnotation() {     return this.operation.getCacheAnnotation(). }
+false;public;0;4;;@Override public String getCacheName() {     return this.operation.getCacheName(). }
+false;public;0;4;;@Override public Object getTarget() {     return this.target. }
+false;public;0;4;;@Override public CacheInvocationParameter[] getAllParameters() {     return this.allParameters.clone(). }
+false;public;1;4;;@Override public <T> T unwrap(Class<T> cls) {     throw new IllegalArgumentException("Cannot unwrap to " + cls). }
+false;public;0;10;;@Override public String toString() {     StringBuilder sb = new StringBuilder("CacheInvocationContext{").     sb.append("operation=").append(this.operation).     sb.append(", target=").append(this.target).     sb.append(", args=").append(Arrays.toString(this.args)).     sb.append(", allParameters=").append(Arrays.toString(this.allParameters)).     sb.append('}').     return sb.toString(). }

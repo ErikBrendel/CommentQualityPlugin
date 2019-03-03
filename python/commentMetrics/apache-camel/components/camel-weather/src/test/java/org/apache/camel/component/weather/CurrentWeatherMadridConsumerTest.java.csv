@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public void configure() throws Exception {     from("weather:foo?location=Madrid,Spain&appid=9162755b2efa555823cfe0451d7fff38").to("mock:result"). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("weather:foo?location=Madrid,Spain&appid=9162755b2efa555823cfe0451d7fff38").to("mock:result").         }     }. }

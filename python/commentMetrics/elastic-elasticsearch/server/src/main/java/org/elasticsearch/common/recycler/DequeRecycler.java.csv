@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Override public void close() {     // call destroy() for every cached object     for (T t : deque) {         c.destroy(t).     }     // finally get rid of all references     deque.clear(). }
+false;public;1;8;;@Override public V<T> obtain(int sizing) {     final T v = deque.pollFirst().     if (v == null) {         return new DV(c.newInstance(sizing), false).     }     return new DV(v, true). }
+true;protected;0;3;/**  * Called before releasing an object, returns true if the object should be recycled and false otherwise.  */ ;/**  * Called before releasing an object, returns true if the object should be recycled and false otherwise.  */ protected boolean beforeRelease() {     return deque.size() < maxSize. }
+true;protected;1;3;/**  * Called after a release.  */ ;/**  * Called after a release.  */ protected void afterRelease(boolean recycled) { // nothing to do }
+false;public;0;4;;@Override public T v() {     return value. }
+false;public;0;4;;@Override public boolean isRecycled() {     return recycled. }
+false;public;0;16;;@Override public void close() {     if (value == null) {         throw new IllegalStateException("recycler entry already released...").     }     final boolean recycle = beforeRelease().     if (recycle) {         c.recycle(value).         deque.addFirst(value).     } else {         c.destroy(value).     }     value = null.     afterRelease(recycle). }

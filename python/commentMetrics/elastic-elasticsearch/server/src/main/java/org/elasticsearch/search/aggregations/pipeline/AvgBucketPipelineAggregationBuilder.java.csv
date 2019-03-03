@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected void innerWriteTo(StreamOutput out) throws IOException { // Do nothing, no extra state to write to stream }
+false;protected;1;4;;@Override protected PipelineAggregator createInternal(Map<String, Object> metaData) throws IOException {     return new AvgBucketPipelineAggregator(name, bucketsPaths, gapPolicy(), formatter(), metaData). }
+false;protected;2;4;;@Override protected XContentBuilder doXContentBody(XContentBuilder builder, Params params) throws IOException {     return builder. }
+false;protected;3;5;;@Override protected AvgBucketPipelineAggregationBuilder buildFactory(String pipelineAggregatorName, String bucketsPath, Map<String, Object> params) {     return new AvgBucketPipelineAggregationBuilder(pipelineAggregatorName, bucketsPath). }
+false;protected;0;4;;@Override protected int innerHashCode() {     return 0. }
+false;protected;1;4;;@Override protected boolean innerEquals(BucketMetricsPipelineAggregationBuilder<AvgBucketPipelineAggregationBuilder> other) {     return true. }
+false;public;0;4;;@Override public String getWriteableName() {     return NAME. }

@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * Gets the service id.  */ ;/**  * Gets the service id.  */ String getId().
+true;;0;1;/**  * Gets the service name.  */ ;/**  * Gets the service name.  */ String getName().
+true;;0;1;/**  * Gets the IP or hostname of the server hosting the service.  */ ;/**  * Gets the IP or hostname of the server hosting the service.  */ String getHost().
+true;;0;1;/**  * Gets the port number of the server hosting the service.  */ ;/**  * Gets the port number of the server hosting the service.  */ int getPort().
+true;;0;1;/**  * Gets the health.  */ ;/**  * Gets the health.  */ ServiceHealth getHealth().
+true;;0;1;/**  * Gets a key/value metadata associated with the service.  */ ;/**  * Gets a key/value metadata associated with the service.  */ Map<String, String> getMetadata().
+true;default;1;10;/**  * Check if a service definition matches.  */ ;/**  * Check if a service definition matches.  */ default boolean matches(ServiceDefinition other) {     if (this.equals(other)) {         return true.     }     return getPort() == other.getPort() && StringHelper.matches(getName(), other.getName()) && StringHelper.matches(getId(), other.getId()) && StringHelper.matches(getHost(), other.getHost()). }

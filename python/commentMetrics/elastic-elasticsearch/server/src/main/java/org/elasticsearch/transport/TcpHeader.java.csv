@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;5;9;;public static void writeHeader(StreamOutput output, long requestId, byte status, Version version, int messageSize) throws IOException {     output.writeByte((byte) 'E').     output.writeByte((byte) 'S').     // write the size, the size indicates the remaining message size, not including the size int     output.writeInt(messageSize + REQUEST_ID_SIZE + STATUS_SIZE + VERSION_ID_SIZE).     output.writeLong(requestId).     output.writeByte(status).     output.writeInt(version.id). }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;0;5;;private String createRandomString() {     Random random = new Random(System.currentTimeMillis()).     long randomLong = random.nextLong().     return Long.toHexString(randomLong). }
+false;public;1;12;;public void onMessage(Message message) {     String messageText = null.     try {         if (message instanceof TextMessage) {             TextMessage textMessage = (TextMessage) message.             messageText = textMessage.getText().             LOG.info("messageText = " + messageText).         }     } catch (JMSException e) {     // Handle the exception appropriately     } }

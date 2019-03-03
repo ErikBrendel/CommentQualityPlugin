@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Override @Deprecated public String[] getTokenNames() {     return tokenNames. }
+false;public;0;5;;@Override public Vocabulary getVocabulary() {     return VOCABULARY. }
+true;protected,abstract;1;1;/**  * Check against the current whitelist to determine whether a token is a type  * or not. Called by the {@code TYPE} token defined in {@code PainlessLexer.g4}.  * See also  * <a href="https://en.wikipedia.org/wiki/The_lexer_hack">The lexer hack</a>.  */ ;/**  * Check against the current whitelist to determine whether a token is a type  * or not. Called by the {@code TYPE} token defined in {@code PainlessLexer.g4}.  * See also  * <a href="https://en.wikipedia.org/wiki/The_lexer_hack">The lexer hack</a>.  */ protected abstract boolean isType(String name).
+true;protected,abstract;0;1;/**  * Is the preceding {@code /} a the beginning of a regex (true) or a division  * (false).  */ ;/**  * Is the preceding {@code /} a the beginning of a regex (true) or a division  * (false).  */ protected abstract boolean slashIsRegex().
+false;public;0;2;;@Override public String getGrammarFileName() {     return "PainlessLexer.g4". }
+false;public;0;2;;@Override public String[] getRuleNames() {     return ruleNames. }
+false;public;0;2;;@Override public String getSerializedATN() {     return _serializedATN. }
+false;public;0;2;;@Override public String[] getModeNames() {     return modeNames. }
+false;public;0;2;;@Override public ATN getATN() {     return _ATN. }
+false;public;3;12;;@Override public boolean sempred(RuleContext _localctx, int ruleIndex, int predIndex) {     switch(ruleIndex) {         case 30:             return DIV_sempred((RuleContext) _localctx, predIndex).         case 76:             return REGEX_sempred((RuleContext) _localctx, predIndex).         case 80:             return TYPE_sempred((RuleContext) _localctx, predIndex).     }     return true. }
+false;private;2;7;;private boolean DIV_sempred(RuleContext _localctx, int predIndex) {     switch(predIndex) {         case 0:             return false == slashIsRegex().     }     return true. }
+false;private;2;7;;private boolean REGEX_sempred(RuleContext _localctx, int predIndex) {     switch(predIndex) {         case 1:             return slashIsRegex().     }     return true. }
+false;private;2;7;;private boolean TYPE_sempred(RuleContext _localctx, int predIndex) {     switch(predIndex) {         case 2:             return isType(getText()).     }     return true. }

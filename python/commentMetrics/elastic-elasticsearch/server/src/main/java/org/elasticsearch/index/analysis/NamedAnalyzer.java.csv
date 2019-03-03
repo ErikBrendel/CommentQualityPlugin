@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * The name of the analyzer.  */ ;/**  * The name of the analyzer.  */ public String name() {     return this.name. }
+true;public;0;3;/**  * The scope of the analyzer.  */ ;/**  * The scope of the analyzer.  */ public AnalyzerScope scope() {     return this.scope. }
+true;public;0;3;/**  * The actual analyzer.  */ ;/**  * The actual analyzer.  */ public Analyzer analyzer() {     return this.analyzer. }
+false;protected;1;4;;@Override protected Analyzer getWrappedAnalyzer(String fieldName) {     return this.analyzer. }
+false;public;1;7;;@Override public int getPositionIncrementGap(String fieldName) {     if (positionIncrementGap != Integer.MIN_VALUE) {         return positionIncrementGap.     }     return super.getPositionIncrementGap(fieldName). }
+false;public;0;4;;@Override public String toString() {     return "analyzer name[" + name + "], analyzer [" + analyzer + "]". }
+false;public;2;4;;@Override public TokenStreamComponents getReusableComponents(Analyzer a, String f) {     throw new IllegalStateException("NamedAnalyzer cannot be wrapped with a wrapper, only a delegator"). }
+false;public;3;4;;@Override public void setReusableComponents(Analyzer a, String f, TokenStreamComponents c) {     throw new IllegalStateException("NamedAnalyzer cannot be wrapped with a wrapper, only a delegator"). }
+false;public;1;7;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (!(o instanceof NamedAnalyzer))         return false.     NamedAnalyzer that = (NamedAnalyzer) o.     return Objects.equals(name, that.name). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(name). }
+false;public;0;7;;@Override public void close() {     super.close().     if (scope == AnalyzerScope.INDEX) {         analyzer.close().     } }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void test() {     assertThat(this.restTemplate).isInstanceOf(CustomTestRestTemplate.class). }
+false;public;0;4;;@Bean public TomcatServletWebServerFactory webServerFactory() {     return new TomcatServletWebServerFactory(0). }
+false;public;0;4;;@Bean public TestRestTemplate template() {     return new CustomTestRestTemplate(). }
+false;public;2;7;;@Override public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {     try (PrintWriter writer = response.getWriter()) {         writer.println("hello").     } }

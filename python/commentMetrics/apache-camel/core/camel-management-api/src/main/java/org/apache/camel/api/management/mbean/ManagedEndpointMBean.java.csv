@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;2;;@ManagedAttribute(description = "Camel ID") String getCamelId().
+false;;0;2;;@ManagedAttribute(description = "Camel ManagementName") String getCamelManagementName().
+false;;0;2;;@ManagedAttribute(description = "Endpoint URI", mask = true) String getEndpointUri().
+false;;0;2;;@ManagedAttribute(description = "Singleton") boolean isSingleton().
+false;;0;2;;@ManagedAttribute(description = "Endpoint State") String getState().
+false;;0;2;;@ManagedOperation(description = "Endpoint information as JSon") String informationJson().
+false;;1;2;;@ManagedOperation(description = "Explain how this endpoint is configured") TabularData explain(boolean allOptions).

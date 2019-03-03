@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Before public void setup() {     this.mockMvc = standaloneSetup(new SimpleController()).build(). }
+false;public;0;4;;@Test public void testRedirect() throws Exception {     this.mockMvc.perform(get("/persons")).andExpect(redirectedUrl("/persons/1")). }
+false;public;0;4;;@Test public void testRedirectPattern() throws Exception {     this.mockMvc.perform(get("/persons")).andExpect(redirectedUrlPattern("/persons/*")). }
+false;public;0;4;;@Test public void testForward() throws Exception {     this.mockMvc.perform(get("/")).andExpect(forwardedUrl("/home")). }
+false;public;0;4;;@Test public void testForwardPattern() throws Exception {     this.mockMvc.perform(get("/")).andExpect(forwardedUrlPattern("/ho?e")). }
+false;public;0;4;;@RequestMapping("/persons") public String save() {     return "redirect:/persons/1". }
+false;public;0;4;;@RequestMapping("/") public String forward() {     return "forward:/home". }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;0;3;;private String whatToDoWhenExists() {     return "Override". }
+false;public;0;6;;@Override public void configure() throws Exception {     from("timer:foo").to("file:output?fileExist=" + whatToDoWhenExists()).to("log:b"). }

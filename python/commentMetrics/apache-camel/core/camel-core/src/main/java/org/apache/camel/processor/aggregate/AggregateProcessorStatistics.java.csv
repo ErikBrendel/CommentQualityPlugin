@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * Total number of exchanges arrived into the aggregator  */ ;/**  * Total number of exchanges arrived into the aggregator  */ long getTotalIn().
+true;;0;1;/**  * Total number of exchanges completed and outgoing from the aggregator  */ ;/**  * Total number of exchanges completed and outgoing from the aggregator  */ long getTotalCompleted().
+true;;0;1;/**  * Total number of exchanged completed by completion size trigger  */ ;/**  * Total number of exchanged completed by completion size trigger  */ long getCompletedBySize().
+true;;0;1;/**  * Total number of exchanged completed by completion strategy trigger  */ ;/**  * Total number of exchanged completed by completion strategy trigger  */ long getCompletedByStrategy().
+true;;0;1;/**  * Total number of exchanged completed by completion interval trigger  */ ;/**  * Total number of exchanged completed by completion interval trigger  */ long getCompletedByInterval().
+true;;0;1;/**  * Total number of exchanged completed by completion timeout trigger  */ ;/**  * Total number of exchanged completed by completion timeout trigger  */ long getCompletedByTimeout().
+true;;0;1;/**  * Total number of exchanged completed by completion predicate trigger  */ ;/**  * Total number of exchanged completed by completion predicate trigger  */ long getCompletedByPredicate().
+true;;0;1;/**  * Total number of exchanged completed by completion batch consumer trigger  */ ;/**  * Total number of exchanged completed by completion batch consumer trigger  */ long getCompletedByBatchConsumer().
+true;;0;1;/**  * Total number of exchanged completed by completion force trigger  */ ;/**  * Total number of exchanged completed by completion force trigger  */ long getCompletedByForce().
+true;;0;1;/**  * Reset the counters  */ ;/**  * Reset the counters  */ void reset().
+true;;0;1;/**  * Whether statistics is enabled.  */ ;/**  * Whether statistics is enabled.  */ boolean isStatisticsEnabled().
+true;;1;1;/**  * Sets whether statistics is enabled.  *  * @param statisticsEnabled <tt>true</tt> to enable  */ ;/**  * Sets whether statistics is enabled.  *  * @param statisticsEnabled <tt>true</tt> to enable  */ void setStatisticsEnabled(boolean statisticsEnabled).

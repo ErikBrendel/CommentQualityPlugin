@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void afterTestExecution() throws Exception {     test("afterTestExecution", FailingAfterTestExecutionTestCase.class, (tcm, c, m) -> tcm.afterTestExecution(this, m, null)). }
+false;public;0;5;;@Test public void afterTestMethod() throws Exception {     test("afterTestMethod", FailingAfterTestMethodTestCase.class, (tcm, c, m) -> tcm.afterTestMethod(this, m, null)). }
+false;public;0;4;;@Test public void afterTestClass() throws Exception {     test("afterTestClass", FailingAfterTestClassTestCase.class, (tcm, c, m) -> tcm.afterTestClass()). }
+false;private;3;17;;private void test(String useCase, Class<?> testClass, Callback callback) throws Exception {     TestContextManager testContextManager = new TestContextManager(testClass).     assertEquals("Registered TestExecutionListeners", 2, testContextManager.getTestExecutionListeners().size()).     try {         Method testMethod = getClass().getMethod("toString").         callback.invoke(testContextManager, testClass, testMethod).         fail("should have thrown an AssertionError").     } catch (AssertionError err) {         // 'after' callbacks are reversed, so 2 comes before 1.         assertEquals(useCase + "-2", err.getMessage()).         Throwable[] suppressed = err.getSuppressed().         assertEquals(1, suppressed.length).         assertEquals(useCase + "-1", suppressed[0].getMessage()).     } }
+false;;3;1;;void invoke(TestContextManager tcm, Class<?> clazz, Method method) throws Exception.
+false;public;1;4;;@Override public void afterTestClass(TestContext testContext) {     fail("afterTestClass-1"). }
+false;public;1;4;;@Override public void afterTestClass(TestContext testContext) {     fail("afterTestClass-2"). }
+false;public;1;4;;@Override public void afterTestMethod(TestContext testContext) {     fail("afterTestMethod-1"). }
+false;public;1;4;;@Override public void afterTestMethod(TestContext testContext) {     fail("afterTestMethod-2"). }
+false;public;1;4;;@Override public void afterTestExecution(TestContext testContext) {     fail("afterTestExecution-1"). }
+false;public;1;4;;@Override public void afterTestExecution(TestContext testContext) {     fail("afterTestExecution-2"). }

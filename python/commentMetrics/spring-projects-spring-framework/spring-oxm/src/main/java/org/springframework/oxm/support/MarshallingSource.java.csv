@@ -1,0 +1,21 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Return the {@code Marshaller} used by this {@code MarshallingSource}.  */ ;/**  * Return the {@code Marshaller} used by this {@code MarshallingSource}.  */ public Marshaller getMarshaller() {     return this.marshaller. }
+true;public;0;3;/**  * Return the object to be marshalled.  */ ;/**  * Return the object to be marshalled.  */ public Object getContent() {     return this.content. }
+true;public;1;4;/**  * Throws a {@code UnsupportedOperationException}.  */ ;/**  * Throws a {@code UnsupportedOperationException}.  */ @Override public void setInputSource(InputSource inputSource) {     throw new UnsupportedOperationException("setInputSource is not supported"). }
+true;public;1;4;/**  * Throws a {@code UnsupportedOperationException}.  */ ;/**  * Throws a {@code UnsupportedOperationException}.  */ @Override public void setXMLReader(XMLReader reader) {     throw new UnsupportedOperationException("setXMLReader is not supported"). }
+false;public;1;4;;@Override public void setContentHandler(@Nullable ContentHandler contentHandler) {     this.contentHandler = contentHandler. }
+false;public;0;5;;@Override @Nullable public ContentHandler getContentHandler() {     return this.contentHandler. }
+false;public;1;4;;@Override public void setDTDHandler(@Nullable DTDHandler dtdHandler) {     this.dtdHandler = dtdHandler. }
+false;public;0;5;;@Override @Nullable public DTDHandler getDTDHandler() {     return this.dtdHandler. }
+false;public;1;4;;@Override public void setEntityResolver(@Nullable EntityResolver entityResolver) {     this.entityResolver = entityResolver. }
+false;public;0;5;;@Override @Nullable public EntityResolver getEntityResolver() {     return this.entityResolver. }
+false;public;1;4;;@Override public void setErrorHandler(@Nullable ErrorHandler errorHandler) {     this.errorHandler = errorHandler. }
+false;public;0;5;;@Override @Nullable public ErrorHandler getErrorHandler() {     return this.errorHandler. }
+false;protected;0;4;;@Nullable protected LexicalHandler getLexicalHandler() {     return this.lexicalHandler. }
+false;public;1;4;;@Override public boolean getFeature(String name) throws SAXNotRecognizedException {     throw new SAXNotRecognizedException(name). }
+false;public;2;4;;@Override public void setFeature(String name, boolean value) throws SAXNotRecognizedException {     throw new SAXNotRecognizedException(name). }
+false;public;1;10;;@Override @Nullable public Object getProperty(String name) throws SAXNotRecognizedException {     if ("http://xml.org/sax/properties/lexical-handler".equals(name)) {         return this.lexicalHandler.     } else {         throw new SAXNotRecognizedException(name).     } }
+false;public;2;9;;@Override public void setProperty(String name, Object value) throws SAXNotRecognizedException {     if ("http://xml.org/sax/properties/lexical-handler".equals(name)) {         this.lexicalHandler = (LexicalHandler) value.     } else {         throw new SAXNotRecognizedException(name).     } }
+false;public;1;4;;@Override public void parse(InputSource input) throws SAXException {     parse(). }
+false;public;1;4;;@Override public void parse(String systemId) throws SAXException {     parse(). }
+false;private;0;17;;private void parse() throws SAXException {     SAXResult result = new SAXResult(getContentHandler()).     result.setLexicalHandler(getLexicalHandler()).     try {         this.marshaller.marshal(this.content, result).     } catch (IOException ex) {         SAXParseException saxException = new SAXParseException(ex.getMessage(), null, null, -1, -1, ex).         ErrorHandler errorHandler = getErrorHandler().         if (errorHandler != null) {             errorHandler.fatalError(saxException).         } else {             throw saxException.         }     } }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;10;;public Exchange aggregate(Exchange oldExchange, Exchange newExchange) {     if (oldExchange == null) {         return newExchange.     }     String oldBody = oldExchange.getIn().getBody(String.class).     String newBody = newExchange.getIn().getBody(String.class).     oldExchange.getIn().setBody(oldBody + "+" + newBody).     return oldExchange. }
+false;public;0;4;;@Override public boolean canPreComplete() {     return true. }
+false;public;2;6;;@Override public boolean preComplete(Exchange oldExchange, Exchange newExchange) {     // pre complete when new body has an X     String newBody = newExchange.getIn().getBody(String.class).     return newBody.contains("X"). }

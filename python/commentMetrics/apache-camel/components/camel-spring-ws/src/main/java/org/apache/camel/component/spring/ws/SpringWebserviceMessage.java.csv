@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;7;;@Override protected Object createBody() {     if (webServiceMessage != null) {         return webServiceMessage.getPayloadSource().     }     return null. }
+false;public;0;3;;public WebServiceMessage getWebServiceMessage() {     return webServiceMessage. }
+false;public;1;3;;public void setWebServiceMessage(WebServiceMessage webServiceMessage) {     this.webServiceMessage = webServiceMessage. }
+false;public;0;4;;@Override public DefaultMessage newInstance() {     return new SpringWebserviceMessage(getCamelContext(), webServiceMessage). }
+false;public;0;4;;@Override public String toString() {     return "SpringWebserviceMessage[" + webServiceMessage + "]". }

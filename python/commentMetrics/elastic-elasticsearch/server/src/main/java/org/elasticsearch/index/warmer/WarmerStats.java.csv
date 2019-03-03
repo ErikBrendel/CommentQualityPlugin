@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;5;;public void add(long current, long total, long totalTimeInMillis) {     this.current += current.     this.total += total.     this.totalTimeInMillis += totalTimeInMillis. }
+false;public;1;8;;public void add(WarmerStats warmerStats) {     if (warmerStats == null) {         return.     }     this.current += warmerStats.current.     this.total += warmerStats.total.     this.totalTimeInMillis += warmerStats.totalTimeInMillis. }
+false;public;0;3;;public long current() {     return this.current. }
+true;public;0;3;/**  * The total number of warmer executed.  */ ;/**  * The total number of warmer executed.  */ public long total() {     return this.total. }
+true;public;0;3;/**  * The total time warmer have been executed (in milliseconds).  */ ;/**  * The total time warmer have been executed (in milliseconds).  */ public long totalTimeInMillis() {     return this.totalTimeInMillis. }
+true;public;0;3;/**  * The total time warmer have been executed.  */ ;/**  * The total time warmer have been executed.  */ public TimeValue totalTime() {     return new TimeValue(totalTimeInMillis). }
+false;public;2;9;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject(Fields.WARMER).     builder.field(Fields.CURRENT, current).     builder.field(Fields.TOTAL, total).     builder.humanReadableField(Fields.TOTAL_TIME_IN_MILLIS, Fields.TOTAL_TIME, totalTime()).     builder.endObject().     return builder. }
+false;public;1;6;;@Override public void readFrom(StreamInput in) throws IOException {     current = in.readVLong().     total = in.readVLong().     totalTimeInMillis = in.readVLong(). }
+false;public;1;6;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeVLong(current).     out.writeVLong(total).     out.writeVLong(totalTimeInMillis). }

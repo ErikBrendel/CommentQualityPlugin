@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;2;4;;@Override protected JiraAccount createAccount(String name, Settings settings) {     return new JiraAccount(name, settings, httpClient). }
+false;private,static;0;3;;private static List<Setting<?>> getDynamicSettings() {     return Arrays.asList(SETTING_DEFAULT_ACCOUNT, SETTING_ALLOW_HTTP, SETTING_DEFAULTS). }
+false;private,static;0;3;;private static List<Setting<?>> getSecureSettings() {     return Arrays.asList(SETTING_SECURE_USER, SETTING_SECURE_PASSWORD, SETTING_SECURE_URL). }
+false;public,static;0;5;;public static List<Setting<?>> getSettings() {     List<Setting<?>> allSettings = new ArrayList<Setting<?>>(getDynamicSettings()).     allSettings.addAll(getSecureSettings()).     return allSettings. }

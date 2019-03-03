@@ -1,0 +1,22 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,abstract;0;1;/**  * The document ID of the underlying result.  * @return The document Id string  */ ;/**  * The document ID of the underlying result.  * @return The document Id string  */ public abstract String getId().
+true;abstract;0;1;/**  * A {@code Normalizable} may be the owner of scores or just a  * container of other {@code Normalizable} objects. A container only  * {@code Normalizable} does not have any scores to be normalized.  * It contains scores that are aggregates of its children.  *  * @return true if this {@code Normalizable} is only a container  */ ;/**  * A {@code Normalizable} may be the owner of scores or just a  * container of other {@code Normalizable} objects. A container only  * {@code Normalizable} does not have any scores to be normalized.  * It contains scores that are aggregates of its children.  *  * @return true if this {@code Normalizable} is only a container  */ abstract boolean isContainerOnly().
+false;abstract;0;1;;abstract Level getLevel().
+false;abstract;0;1;;abstract String getPartitionFieldName().
+false;abstract;0;1;;abstract String getPartitionFieldValue().
+false;abstract;0;1;;abstract String getPersonFieldName().
+false;abstract;0;1;;abstract String getPersonFieldValue().
+false;abstract;0;1;;abstract String getFunctionName().
+false;abstract;0;1;;abstract String getValueFieldName().
+false;abstract;0;1;;abstract double getProbability().
+false;abstract;0;1;;abstract double getNormalizedScore().
+false;abstract;1;1;;abstract void setNormalizedScore(double normalizedScore).
+false;abstract;0;1;;abstract List<ChildType> getChildrenTypes().
+false;abstract;0;1;;abstract List<Normalizable> getChildren().
+false;abstract;1;1;;abstract List<Normalizable> getChildren(ChildType type).
+true;abstract;2;1;/**  * Set the aggregate normalized score for a type of children  *  * @param type         the child type  * @param maxScore     the aggregate normalized score of the children  * @return true if the score has changed or false otherwise  */ ;/**  * Set the aggregate normalized score for a type of children  *  * @param type         the child type  * @param maxScore     the aggregate normalized score of the children  * @return true if the score has changed or false otherwise  */ abstract boolean setMaxChildrenScore(ChildType type, double maxScore).
+true;abstract;1;1;/**  * If this {@code Normalizable} holds the score of its parent,  * set the parent score  *  * @param parentScore the score of the parent {@code Normalizable}  */ ;/**  * If this {@code Normalizable} holds the score of its parent,  * set the parent score  *  * @param parentScore the score of the parent {@code Normalizable}  */ abstract void setParentScore(double parentScore).
+false;public;0;3;;public boolean hadBigNormalizedUpdate() {     return hadBigNormalizedUpdate. }
+false;public;0;3;;public void resetBigChangeFlag() {     hadBigNormalizedUpdate = false. }
+false;public;0;3;;public void raiseBigChangeFlag() {     hadBigNormalizedUpdate = true. }
+false;public;0;3;;public String getOriginatingIndex() {     return indexName. }

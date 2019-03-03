@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@Test public void testConstantBinary() throws Exception {     byte[] data = template.requestBody("direct:start", "", byte[].class).     // should have X number of bytes     assertNotNull(data).     assertEquals(10249, data.length).     // store the logo     template.sendBodyAndHeader("file:target/data", data, Exchange.FILE_NAME, "savedlogo.jpeg"). }
+false;public;0;5;;@Override public void configure() throws Exception {     from("direct:start").to("language:constant:resource:classpath:org/apache/camel/logo.jpeg?binary=true"). }
+false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").to("language:constant:resource:classpath:org/apache/camel/logo.jpeg?binary=true").         }     }. }

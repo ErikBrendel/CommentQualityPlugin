@@ -1,0 +1,375 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public void catching(Level level, Throwable t) { }
+false;public;1;4;;@Override public void catching(Throwable t) { }
+false;public;2;4;;@Override public void debug(Marker marker, Message msg) { }
+false;public;3;4;;@Override public void debug(Marker marker, Message msg, Throwable t) { }
+false;public;2;4;;@Override public void debug(Marker marker, MessageSupplier msgSupplier) { }
+false;public;3;4;;@Override public void debug(Marker marker, MessageSupplier msgSupplier, Throwable t) { }
+false;public;2;4;;@Override public void debug(Marker marker, CharSequence message) { }
+false;public;3;4;;@Override public void debug(Marker marker, CharSequence message, Throwable t) { }
+false;public;2;4;;@Override public void debug(Marker marker, Object message) { }
+false;public;3;4;;@Override public void debug(Marker marker, Object message, Throwable t) { }
+false;public;2;4;;@Override public void debug(Marker marker, String message) { }
+false;public;3;4;;@Override public void debug(Marker marker, String message, Object... params) { }
+false;public;3;4;;@Override public void debug(Marker marker, String message, Supplier<?>... paramSuppliers) { }
+false;public;3;4;;@Override public void debug(Marker marker, String message, Throwable t) { }
+false;public;2;4;;@Override public void debug(Marker marker, Supplier<?> msgSupplier) { }
+false;public;3;4;;@Override public void debug(Marker marker, Supplier<?> msgSupplier, Throwable t) { }
+false;public;1;4;;@Override public void debug(Message msg) { }
+false;public;2;4;;@Override public void debug(Message msg, Throwable t) { }
+false;public;1;4;;@Override public void debug(MessageSupplier msgSupplier) { }
+false;public;2;4;;@Override public void debug(MessageSupplier msgSupplier, Throwable t) { }
+false;public;1;4;;@Override public void debug(CharSequence message) { }
+false;public;2;4;;@Override public void debug(CharSequence message, Throwable t) { }
+false;public;1;4;;@Override public void debug(Object message) { }
+false;public;2;4;;@Override public void debug(Object message, Throwable t) { }
+false;public;1;4;;@Override public void debug(String message) { }
+false;public;2;4;;@Override public void debug(String message, Object... params) { }
+false;public;2;4;;@Override public void debug(String message, Supplier<?>... paramSuppliers) { }
+false;public;2;4;;@Override public void debug(String message, Throwable t) { }
+false;public;1;4;;@Override public void debug(Supplier<?> msgSupplier) { }
+false;public;2;4;;@Override public void debug(Supplier<?> msgSupplier, Throwable t) { }
+false;public;3;4;;@Override public void debug(Marker marker, String message, Object p0) { }
+false;public;4;4;;@Override public void debug(Marker marker, String message, Object p0, Object p1) { }
+false;public;5;4;;@Override public void debug(Marker marker, String message, Object p0, Object p1, Object p2) { }
+false;public;6;4;;@Override public void debug(Marker marker, String message, Object p0, Object p1, Object p2, Object p3) { }
+false;public;7;4;;@Override public void debug(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4) { }
+false;public;8;4;;@Override public void debug(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5) { }
+false;public;9;4;;@Override public void debug(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6) { }
+false;public;10;14;;@Override public void debug(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7) { }
+false;public;11;15;;@Override public void debug(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7, Object p8) { }
+false;public;12;16;;@Override public void debug(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7, Object p8, Object p9) { }
+false;public;2;4;;@Override public void debug(String message, Object p0) { }
+false;public;3;4;;@Override public void debug(String message, Object p0, Object p1) { }
+false;public;4;4;;@Override public void debug(String message, Object p0, Object p1, Object p2) { }
+false;public;5;4;;@Override public void debug(String message, Object p0, Object p1, Object p2, Object p3) { }
+false;public;6;4;;@Override public void debug(String message, Object p0, Object p1, Object p2, Object p3, Object p4) { }
+false;public;7;4;;@Override public void debug(String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5) { }
+false;public;8;4;;@Override public void debug(String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6) { }
+false;public;9;4;;@Override public void debug(String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7) { }
+false;public;10;4;;@Override public void debug(String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7, Object p8) { }
+false;public;11;15;;@Override public void debug(String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7, Object p8, Object p9) { }
+false;public;0;4;;@Override public void entry() { }
+false;public;1;4;;@Override public void entry(Object... params) { }
+false;public;2;4;;@Override public void error(Marker marker, Message msg) { }
+false;public;3;4;;@Override public void error(Marker marker, Message msg, Throwable t) { }
+false;public;2;4;;@Override public void error(Marker marker, MessageSupplier msgSupplier) { }
+false;public;3;4;;@Override public void error(Marker marker, MessageSupplier msgSupplier, Throwable t) { }
+false;public;2;4;;@Override public void error(Marker marker, CharSequence message) { }
+false;public;3;4;;@Override public void error(Marker marker, CharSequence message, Throwable t) { }
+false;public;2;4;;@Override public void error(Marker marker, Object message) { }
+false;public;3;4;;@Override public void error(Marker marker, Object message, Throwable t) { }
+false;public;2;4;;@Override public void error(Marker marker, String message) { }
+false;public;3;4;;@Override public void error(Marker marker, String message, Object... params) { }
+false;public;3;4;;@Override public void error(Marker marker, String message, Supplier<?>... paramSuppliers) { }
+false;public;3;4;;@Override public void error(Marker marker, String message, Throwable t) { }
+false;public;2;4;;@Override public void error(Marker marker, Supplier<?> msgSupplier) { }
+false;public;3;4;;@Override public void error(Marker marker, Supplier<?> msgSupplier, Throwable t) { }
+false;public;1;4;;@Override public void error(Message msg) { }
+false;public;2;4;;@Override public void error(Message msg, Throwable t) { }
+false;public;1;4;;@Override public void error(MessageSupplier msgSupplier) { }
+false;public;2;4;;@Override public void error(MessageSupplier msgSupplier, Throwable t) { }
+false;public;1;4;;@Override public void error(CharSequence message) { }
+false;public;2;4;;@Override public void error(CharSequence message, Throwable t) { }
+false;public;1;4;;@Override public void error(Object message) { }
+false;public;2;4;;@Override public void error(Object message, Throwable t) { }
+false;public;1;4;;@Override public void error(String message) { }
+false;public;2;4;;@Override public void error(String message, Object... params) { }
+false;public;2;4;;@Override public void error(String message, Supplier<?>... paramSuppliers) { }
+false;public;2;4;;@Override public void error(String message, Throwable t) { }
+false;public;1;4;;@Override public void error(Supplier<?> msgSupplier) { }
+false;public;2;4;;@Override public void error(Supplier<?> msgSupplier, Throwable t) { }
+false;public;3;4;;@Override public void error(Marker marker, String message, Object p0) { }
+false;public;4;4;;@Override public void error(Marker marker, String message, Object p0, Object p1) { }
+false;public;5;4;;@Override public void error(Marker marker, String message, Object p0, Object p1, Object p2) { }
+false;public;6;4;;@Override public void error(Marker marker, String message, Object p0, Object p1, Object p2, Object p3) { }
+false;public;7;4;;@Override public void error(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4) { }
+false;public;8;4;;@Override public void error(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5) { }
+false;public;9;4;;@Override public void error(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6) { }
+false;public;10;14;;@Override public void error(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7) { }
+false;public;11;15;;@Override public void error(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7, Object p8) { }
+false;public;12;16;;@Override public void error(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7, Object p8, Object p9) { }
+false;public;2;4;;@Override public void error(String message, Object p0) { }
+false;public;3;4;;@Override public void error(String message, Object p0, Object p1) { }
+false;public;4;4;;@Override public void error(String message, Object p0, Object p1, Object p2) { }
+false;public;5;4;;@Override public void error(String message, Object p0, Object p1, Object p2, Object p3) { }
+false;public;6;4;;@Override public void error(String message, Object p0, Object p1, Object p2, Object p3, Object p4) { }
+false;public;7;4;;@Override public void error(String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5) { }
+false;public;8;4;;@Override public void error(String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6) { }
+false;public;9;4;;@Override public void error(String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7) { }
+false;public;10;4;;@Override public void error(String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7, Object p8) { }
+false;public;11;15;;@Override public void error(String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7, Object p8, Object p9) { }
+false;public;0;4;;@Override public void exit() { }
+false;public;1;4;;@Override public <R> R exit(R result) {     return null. }
+false;public;2;4;;@Override public void fatal(Marker marker, Message msg) { }
+false;public;3;4;;@Override public void fatal(Marker marker, Message msg, Throwable t) { }
+false;public;2;4;;@Override public void fatal(Marker marker, MessageSupplier msgSupplier) { }
+false;public;3;4;;@Override public void fatal(Marker marker, MessageSupplier msgSupplier, Throwable t) { }
+false;public;2;4;;@Override public void fatal(Marker marker, CharSequence message) { }
+false;public;3;4;;@Override public void fatal(Marker marker, CharSequence message, Throwable t) { }
+false;public;2;4;;@Override public void fatal(Marker marker, Object message) { }
+false;public;3;4;;@Override public void fatal(Marker marker, Object message, Throwable t) { }
+false;public;2;4;;@Override public void fatal(Marker marker, String message) { }
+false;public;3;4;;@Override public void fatal(Marker marker, String message, Object... params) { }
+false;public;3;4;;@Override public void fatal(Marker marker, String message, Supplier<?>... paramSuppliers) { }
+false;public;3;4;;@Override public void fatal(Marker marker, String message, Throwable t) { }
+false;public;2;4;;@Override public void fatal(Marker marker, Supplier<?> msgSupplier) { }
+false;public;3;4;;@Override public void fatal(Marker marker, Supplier<?> msgSupplier, Throwable t) { }
+false;public;1;4;;@Override public void fatal(Message msg) { }
+false;public;2;4;;@Override public void fatal(Message msg, Throwable t) { }
+false;public;1;4;;@Override public void fatal(MessageSupplier msgSupplier) { }
+false;public;2;4;;@Override public void fatal(MessageSupplier msgSupplier, Throwable t) { }
+false;public;1;4;;@Override public void fatal(CharSequence message) { }
+false;public;2;4;;@Override public void fatal(CharSequence message, Throwable t) { }
+false;public;1;4;;@Override public void fatal(Object message) { }
+false;public;2;4;;@Override public void fatal(Object message, Throwable t) { }
+false;public;1;4;;@Override public void fatal(String message) { }
+false;public;2;4;;@Override public void fatal(String message, Object... params) { }
+false;public;2;4;;@Override public void fatal(String message, Supplier<?>... paramSuppliers) { }
+false;public;2;4;;@Override public void fatal(String message, Throwable t) { }
+false;public;1;4;;@Override public void fatal(Supplier<?> msgSupplier) { }
+false;public;2;4;;@Override public void fatal(Supplier<?> msgSupplier, Throwable t) { }
+false;public;3;4;;@Override public void fatal(Marker marker, String message, Object p0) { }
+false;public;4;4;;@Override public void fatal(Marker marker, String message, Object p0, Object p1) { }
+false;public;5;4;;@Override public void fatal(Marker marker, String message, Object p0, Object p1, Object p2) { }
+false;public;6;4;;@Override public void fatal(Marker marker, String message, Object p0, Object p1, Object p2, Object p3) { }
+false;public;7;4;;@Override public void fatal(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4) { }
+false;public;8;4;;@Override public void fatal(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5) { }
+false;public;9;4;;@Override public void fatal(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6) { }
+false;public;10;14;;@Override public void fatal(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7) { }
+false;public;11;15;;@Override public void fatal(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7, Object p8) { }
+false;public;12;16;;@Override public void fatal(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7, Object p8, Object p9) { }
+false;public;2;4;;@Override public void fatal(String message, Object p0) { }
+false;public;3;4;;@Override public void fatal(String message, Object p0, Object p1) { }
+false;public;4;4;;@Override public void fatal(String message, Object p0, Object p1, Object p2) { }
+false;public;5;4;;@Override public void fatal(String message, Object p0, Object p1, Object p2, Object p3) { }
+false;public;6;4;;@Override public void fatal(String message, Object p0, Object p1, Object p2, Object p3, Object p4) { }
+false;public;7;4;;@Override public void fatal(String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5) { }
+false;public;8;4;;@Override public void fatal(String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6) { }
+false;public;9;4;;@Override public void fatal(String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7) { }
+false;public;10;4;;@Override public void fatal(String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7, Object p8) { }
+false;public;11;15;;@Override public void fatal(String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7, Object p8, Object p9) { }
+false;public;0;4;;@Override public Level getLevel() {     return null. }
+false;public;0;4;;@Override public <MF extends MessageFactory> MF getMessageFactory() {     return null. }
+false;public;0;4;;@Override public String getName() {     return null. }
+false;public;2;4;;@Override public void info(Marker marker, Message msg) { }
+false;public;3;4;;@Override public void info(Marker marker, Message msg, Throwable t) { }
+false;public;2;4;;@Override public void info(Marker marker, MessageSupplier msgSupplier) { }
+false;public;3;4;;@Override public void info(Marker marker, MessageSupplier msgSupplier, Throwable t) { }
+false;public;2;4;;@Override public void info(Marker marker, CharSequence message) { }
+false;public;3;4;;@Override public void info(Marker marker, CharSequence message, Throwable t) { }
+false;public;2;4;;@Override public void info(Marker marker, Object message) { }
+false;public;3;4;;@Override public void info(Marker marker, Object message, Throwable t) { }
+false;public;2;4;;@Override public void info(Marker marker, String message) { }
+false;public;3;4;;@Override public void info(Marker marker, String message, Object... params) { }
+false;public;3;4;;@Override public void info(Marker marker, String message, Supplier<?>... paramSuppliers) { }
+false;public;3;4;;@Override public void info(Marker marker, String message, Throwable t) { }
+false;public;2;4;;@Override public void info(Marker marker, Supplier<?> msgSupplier) { }
+false;public;3;4;;@Override public void info(Marker marker, Supplier<?> msgSupplier, Throwable t) { }
+false;public;1;4;;@Override public void info(Message msg) { }
+false;public;2;4;;@Override public void info(Message msg, Throwable t) { }
+false;public;1;4;;@Override public void info(MessageSupplier msgSupplier) { }
+false;public;2;4;;@Override public void info(MessageSupplier msgSupplier, Throwable t) { }
+false;public;1;4;;@Override public void info(CharSequence message) { }
+false;public;2;4;;@Override public void info(CharSequence message, Throwable t) { }
+false;public;1;4;;@Override public void info(Object message) { }
+false;public;2;4;;@Override public void info(Object message, Throwable t) { }
+false;public;1;4;;@Override public void info(String message) { }
+false;public;2;4;;@Override public void info(String message, Object... params) { }
+false;public;2;4;;@Override public void info(String message, Supplier<?>... paramSuppliers) { }
+false;public;2;4;;@Override public void info(String message, Throwable t) { }
+false;public;1;4;;@Override public void info(Supplier<?> msgSupplier) { }
+false;public;2;4;;@Override public void info(Supplier<?> msgSupplier, Throwable t) { }
+false;public;3;4;;@Override public void info(Marker marker, String message, Object p0) { }
+false;public;4;4;;@Override public void info(Marker marker, String message, Object p0, Object p1) { }
+false;public;5;4;;@Override public void info(Marker marker, String message, Object p0, Object p1, Object p2) { }
+false;public;6;4;;@Override public void info(Marker marker, String message, Object p0, Object p1, Object p2, Object p3) { }
+false;public;7;4;;@Override public void info(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4) { }
+false;public;8;4;;@Override public void info(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5) { }
+false;public;9;4;;@Override public void info(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6) { }
+false;public;10;14;;@Override public void info(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7) { }
+false;public;11;15;;@Override public void info(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7, Object p8) { }
+false;public;12;16;;@Override public void info(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7, Object p8, Object p9) { }
+false;public;2;4;;@Override public void info(String message, Object p0) { }
+false;public;3;4;;@Override public void info(String message, Object p0, Object p1) { }
+false;public;4;4;;@Override public void info(String message, Object p0, Object p1, Object p2) { }
+false;public;5;4;;@Override public void info(String message, Object p0, Object p1, Object p2, Object p3) { }
+false;public;6;4;;@Override public void info(String message, Object p0, Object p1, Object p2, Object p3, Object p4) { }
+false;public;7;4;;@Override public void info(String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5) { }
+false;public;8;4;;@Override public void info(String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6) { }
+false;public;9;4;;@Override public void info(String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7) { }
+false;public;10;4;;@Override public void info(String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7, Object p8) { }
+false;public;11;15;;@Override public void info(String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7, Object p8, Object p9) { }
+false;public;0;4;;@Override public boolean isDebugEnabled() {     return false. }
+false;public;1;4;;@Override public boolean isDebugEnabled(Marker marker) {     return false. }
+false;public;1;4;;@Override public boolean isEnabled(Level level) {     return false. }
+false;public;2;4;;@Override public boolean isEnabled(Level level, Marker marker) {     return false. }
+false;public;0;4;;@Override public boolean isErrorEnabled() {     return false. }
+false;public;1;4;;@Override public boolean isErrorEnabled(Marker marker) {     return false. }
+false;public;0;4;;@Override public boolean isFatalEnabled() {     return false. }
+false;public;1;4;;@Override public boolean isFatalEnabled(Marker marker) {     return false. }
+false;public;0;4;;@Override public boolean isInfoEnabled() {     return false. }
+false;public;1;4;;@Override public boolean isInfoEnabled(Marker marker) {     return false. }
+false;public;0;4;;@Override public boolean isTraceEnabled() {     return false. }
+false;public;1;4;;@Override public boolean isTraceEnabled(Marker marker) {     return false. }
+false;public;0;4;;@Override public boolean isWarnEnabled() {     return false. }
+false;public;1;4;;@Override public boolean isWarnEnabled(Marker marker) {     return false. }
+false;public;3;4;;@Override public void log(Level level, Marker marker, Message msg) { }
+false;public;4;4;;@Override public void log(Level level, Marker marker, Message msg, Throwable t) { }
+false;public;3;4;;@Override public void log(Level level, Marker marker, MessageSupplier msgSupplier) { }
+false;public;4;4;;@Override public void log(Level level, Marker marker, MessageSupplier msgSupplier, Throwable t) { }
+false;public;3;4;;@Override public void log(Level level, Marker marker, CharSequence message) { }
+false;public;4;4;;@Override public void log(Level level, Marker marker, CharSequence message, Throwable t) { }
+false;public;3;4;;@Override public void log(Level level, Marker marker, Object message) { }
+false;public;4;4;;@Override public void log(Level level, Marker marker, Object message, Throwable t) { }
+false;public;3;4;;@Override public void log(Level level, Marker marker, String message) { }
+false;public;4;4;;@Override public void log(Level level, Marker marker, String message, Object... params) { }
+false;public;4;4;;@Override public void log(Level level, Marker marker, String message, Supplier<?>... paramSuppliers) { }
+false;public;4;4;;@Override public void log(Level level, Marker marker, String message, Throwable t) { }
+false;public;3;4;;@Override public void log(Level level, Marker marker, Supplier<?> msgSupplier) { }
+false;public;4;4;;@Override public void log(Level level, Marker marker, Supplier<?> msgSupplier, Throwable t) { }
+false;public;2;4;;@Override public void log(Level level, Message msg) { }
+false;public;3;4;;@Override public void log(Level level, Message msg, Throwable t) { }
+false;public;2;4;;@Override public void log(Level level, MessageSupplier msgSupplier) { }
+false;public;3;4;;@Override public void log(Level level, MessageSupplier msgSupplier, Throwable t) { }
+false;public;2;4;;@Override public void log(Level level, CharSequence message) { }
+false;public;3;4;;@Override public void log(Level level, CharSequence message, Throwable t) { }
+false;public;2;4;;@Override public void log(Level level, Object message) { }
+false;public;3;4;;@Override public void log(Level level, Object message, Throwable t) { }
+false;public;2;4;;@Override public void log(Level level, String message) { }
+false;public;3;4;;@Override public void log(Level level, String message, Object... params) { }
+false;public;3;4;;@Override public void log(Level level, String message, Supplier<?>... paramSuppliers) { }
+false;public;3;4;;@Override public void log(Level level, String message, Throwable t) { }
+false;public;2;4;;@Override public void log(Level level, Supplier<?> msgSupplier) { }
+false;public;3;4;;@Override public void log(Level level, Supplier<?> msgSupplier, Throwable t) { }
+false;public;4;4;;@Override public void log(Level level, Marker marker, String message, Object p0) { }
+false;public;5;4;;@Override public void log(Level level, Marker marker, String message, Object p0, Object p1) { }
+false;public;6;4;;@Override public void log(Level level, Marker marker, String message, Object p0, Object p1, Object p2) { }
+false;public;7;4;;@Override public void log(Level level, Marker marker, String message, Object p0, Object p1, Object p2, Object p3) { }
+false;public;8;4;;@Override public void log(Level level, Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4) { }
+false;public;9;4;;@Override public void log(Level level, Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5) { }
+false;public;10;14;;@Override public void log(Level level, Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6) { }
+false;public;11;15;;@Override public void log(Level level, Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7) { }
+false;public;12;16;;@Override public void log(Level level, Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7, Object p8) { }
+false;public;13;17;;@Override public void log(Level level, Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7, Object p8, Object p9) { }
+false;public;3;4;;@Override public void log(Level level, String message, Object p0) { }
+false;public;4;4;;@Override public void log(Level level, String message, Object p0, Object p1) { }
+false;public;5;4;;@Override public void log(Level level, String message, Object p0, Object p1, Object p2) { }
+false;public;6;4;;@Override public void log(Level level, String message, Object p0, Object p1, Object p2, Object p3) { }
+false;public;7;4;;@Override public void log(Level level, String message, Object p0, Object p1, Object p2, Object p3, Object p4) { }
+false;public;8;4;;@Override public void log(Level level, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5) { }
+false;public;9;4;;@Override public void log(Level level, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6) { }
+false;public;10;4;;@Override public void log(Level level, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7) { }
+false;public;11;15;;@Override public void log(Level level, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7, Object p8) { }
+false;public;12;16;;@Override public void log(Level level, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7, Object p8, Object p9) { }
+false;public;4;4;;@Override public void printf(Level level, Marker marker, String format, Object... params) { }
+false;public;3;4;;@Override public void printf(Level level, String format, Object... params) { }
+false;public;2;4;;@Override public <T extends Throwable> T throwing(Level level, T t) {     return null. }
+false;public;1;4;;@Override public <T extends Throwable> T throwing(T t) {     return null. }
+false;public;2;4;;@Override public void trace(Marker marker, Message msg) { }
+false;public;3;4;;@Override public void trace(Marker marker, Message msg, Throwable t) { }
+false;public;2;4;;@Override public void trace(Marker marker, MessageSupplier msgSupplier) { }
+false;public;3;4;;@Override public void trace(Marker marker, MessageSupplier msgSupplier, Throwable t) { }
+false;public;2;4;;@Override public void trace(Marker marker, CharSequence message) { }
+false;public;3;4;;@Override public void trace(Marker marker, CharSequence message, Throwable t) { }
+false;public;2;4;;@Override public void trace(Marker marker, Object message) { }
+false;public;3;4;;@Override public void trace(Marker marker, Object message, Throwable t) { }
+false;public;2;4;;@Override public void trace(Marker marker, String message) { }
+false;public;3;4;;@Override public void trace(Marker marker, String message, Object... params) { }
+false;public;3;4;;@Override public void trace(Marker marker, String message, Supplier<?>... paramSuppliers) { }
+false;public;3;4;;@Override public void trace(Marker marker, String message, Throwable t) { }
+false;public;2;4;;@Override public void trace(Marker marker, Supplier<?> msgSupplier) { }
+false;public;3;4;;@Override public void trace(Marker marker, Supplier<?> msgSupplier, Throwable t) { }
+false;public;1;4;;@Override public void trace(Message msg) { }
+false;public;2;4;;@Override public void trace(Message msg, Throwable t) { }
+false;public;1;4;;@Override public void trace(MessageSupplier msgSupplier) { }
+false;public;2;4;;@Override public void trace(MessageSupplier msgSupplier, Throwable t) { }
+false;public;1;4;;@Override public void trace(CharSequence message) { }
+false;public;2;4;;@Override public void trace(CharSequence message, Throwable t) { }
+false;public;1;4;;@Override public void trace(Object message) { }
+false;public;2;4;;@Override public void trace(Object message, Throwable t) { }
+false;public;1;4;;@Override public void trace(String message) { }
+false;public;2;4;;@Override public void trace(String message, Object... params) { }
+false;public;2;4;;@Override public void trace(String message, Supplier<?>... paramSuppliers) { }
+false;public;2;4;;@Override public void trace(String message, Throwable t) { }
+false;public;1;4;;@Override public void trace(Supplier<?> msgSupplier) { }
+false;public;2;4;;@Override public void trace(Supplier<?> msgSupplier, Throwable t) { }
+false;public;3;4;;@Override public void trace(Marker marker, String message, Object p0) { }
+false;public;4;4;;@Override public void trace(Marker marker, String message, Object p0, Object p1) { }
+false;public;5;4;;@Override public void trace(Marker marker, String message, Object p0, Object p1, Object p2) { }
+false;public;6;4;;@Override public void trace(Marker marker, String message, Object p0, Object p1, Object p2, Object p3) { }
+false;public;7;4;;@Override public void trace(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4) { }
+false;public;8;4;;@Override public void trace(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5) { }
+false;public;9;4;;@Override public void trace(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6) { }
+false;public;10;14;;@Override public void trace(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7) { }
+false;public;11;15;;@Override public void trace(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7, Object p8) { }
+false;public;12;16;;@Override public void trace(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7, Object p8, Object p9) { }
+false;public;2;4;;@Override public void trace(String message, Object p0) { }
+false;public;3;4;;@Override public void trace(String message, Object p0, Object p1) { }
+false;public;4;4;;@Override public void trace(String message, Object p0, Object p1, Object p2) { }
+false;public;5;4;;@Override public void trace(String message, Object p0, Object p1, Object p2, Object p3) { }
+false;public;6;4;;@Override public void trace(String message, Object p0, Object p1, Object p2, Object p3, Object p4) { }
+false;public;7;4;;@Override public void trace(String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5) { }
+false;public;8;4;;@Override public void trace(String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6) { }
+false;public;9;4;;@Override public void trace(String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7) { }
+false;public;10;4;;@Override public void trace(String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7, Object p8) { }
+false;public;11;15;;@Override public void trace(String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7, Object p8, Object p9) { }
+false;public;0;4;;@Override public EntryMessage traceEntry() {     return null. }
+false;public;2;4;;@Override public EntryMessage traceEntry(String format, Object... params) {     return null. }
+false;public;1;4;;@Override public EntryMessage traceEntry(Supplier<?>... paramSuppliers) {     return null. }
+false;public;2;4;;@Override public EntryMessage traceEntry(String format, Supplier<?>... paramSuppliers) {     return null. }
+false;public;1;4;;@Override public EntryMessage traceEntry(Message message) {     return null. }
+false;public;0;4;;@Override public void traceExit() { }
+false;public;1;4;;@Override public <R> R traceExit(R result) {     return null. }
+false;public;2;4;;@Override public <R> R traceExit(String format, R result) {     return null. }
+false;public;1;4;;@Override public void traceExit(EntryMessage message) { }
+false;public;2;4;;@Override public <R> R traceExit(EntryMessage message, R result) {     return null. }
+false;public;2;4;;@Override public <R> R traceExit(Message message, R result) {     return null. }
+false;public;2;4;;@Override public void warn(Marker marker, Message msg) { }
+false;public;3;4;;@Override public void warn(Marker marker, Message msg, Throwable t) { }
+false;public;2;4;;@Override public void warn(Marker marker, MessageSupplier msgSupplier) { }
+false;public;3;4;;@Override public void warn(Marker marker, MessageSupplier msgSupplier, Throwable t) { }
+false;public;2;4;;@Override public void warn(Marker marker, CharSequence message) { }
+false;public;3;4;;@Override public void warn(Marker marker, CharSequence message, Throwable t) { }
+false;public;2;4;;@Override public void warn(Marker marker, Object message) { }
+false;public;3;4;;@Override public void warn(Marker marker, Object message, Throwable t) { }
+false;public;2;4;;@Override public void warn(Marker marker, String message) { }
+false;public;3;4;;@Override public void warn(Marker marker, String message, Object... params) { }
+false;public;3;4;;@Override public void warn(Marker marker, String message, Supplier<?>... paramSuppliers) { }
+false;public;3;4;;@Override public void warn(Marker marker, String message, Throwable t) { }
+false;public;2;4;;@Override public void warn(Marker marker, Supplier<?> msgSupplier) { }
+false;public;3;4;;@Override public void warn(Marker marker, Supplier<?> msgSupplier, Throwable t) { }
+false;public;1;4;;@Override public void warn(Message msg) { }
+false;public;2;4;;@Override public void warn(Message msg, Throwable t) { }
+false;public;1;4;;@Override public void warn(MessageSupplier msgSupplier) { }
+false;public;2;4;;@Override public void warn(MessageSupplier msgSupplier, Throwable t) { }
+false;public;1;4;;@Override public void warn(CharSequence message) { }
+false;public;2;4;;@Override public void warn(CharSequence message, Throwable t) { }
+false;public;1;4;;@Override public void warn(Object message) { }
+false;public;2;4;;@Override public void warn(Object message, Throwable t) { }
+false;public;1;4;;@Override public void warn(String message) { }
+false;public;2;4;;@Override public void warn(String message, Object... params) { }
+false;public;2;4;;@Override public void warn(String message, Supplier<?>... paramSuppliers) { }
+false;public;2;4;;@Override public void warn(String message, Throwable t) { }
+false;public;1;4;;@Override public void warn(Supplier<?> msgSupplier) { }
+false;public;2;4;;@Override public void warn(Supplier<?> msgSupplier, Throwable t) { }
+false;public;3;4;;@Override public void warn(Marker marker, String message, Object p0) { }
+false;public;4;4;;@Override public void warn(Marker marker, String message, Object p0, Object p1) { }
+false;public;5;4;;@Override public void warn(Marker marker, String message, Object p0, Object p1, Object p2) { }
+false;public;6;4;;@Override public void warn(Marker marker, String message, Object p0, Object p1, Object p2, Object p3) { }
+false;public;7;4;;@Override public void warn(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4) { }
+false;public;8;4;;@Override public void warn(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5) { }
+false;public;9;4;;@Override public void warn(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6) { }
+false;public;10;14;;@Override public void warn(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7) { }
+false;public;11;15;;@Override public void warn(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7, Object p8) { }
+false;public;12;16;;@Override public void warn(Marker marker, String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7, Object p8, Object p9) { }
+false;public;2;4;;@Override public void warn(String message, Object p0) { }
+false;public;3;4;;@Override public void warn(String message, Object p0, Object p1) { }
+false;public;4;4;;@Override public void warn(String message, Object p0, Object p1, Object p2) { }
+false;public;5;4;;@Override public void warn(String message, Object p0, Object p1, Object p2, Object p3) { }
+false;public;6;4;;@Override public void warn(String message, Object p0, Object p1, Object p2, Object p3, Object p4) { }
+false;public;7;4;;@Override public void warn(String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5) { }
+false;public;8;4;;@Override public void warn(String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6) { }
+false;public;9;4;;@Override public void warn(String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7) { }
+false;public;10;4;;@Override public void warn(String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7, Object p8) { }
+false;public;11;15;;@Override public void warn(String message, Object p0, Object p1, Object p2, Object p3, Object p4, Object p5, Object p6, Object p7, Object p8, Object p9) { }

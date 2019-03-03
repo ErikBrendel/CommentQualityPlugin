@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected NodeInfo<Stats> info() {     return NodeInfo.create(this, Stats::new, field()). }
+false;public;1;7;;@Override public Stats replaceChildren(List<Expression> newChildren) {     if (newChildren.size() != 1) {         throw new IllegalArgumentException("expected [1] child but received [" + newChildren.size() + "]").     }     return new Stats(source(), newChildren.get(0)). }
+false;public,static;1;3;;public static boolean isTypeCompatible(Expression e) {     return e instanceof Min || e instanceof Max || e instanceof Avg || e instanceof Sum. }

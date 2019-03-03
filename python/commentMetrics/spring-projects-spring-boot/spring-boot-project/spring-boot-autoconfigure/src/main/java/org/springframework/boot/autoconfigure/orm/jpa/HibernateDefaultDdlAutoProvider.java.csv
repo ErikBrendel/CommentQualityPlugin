@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;11;;public String getDefaultDdlAuto(DataSource dataSource) {     if (!EmbeddedDatabaseConnection.isEmbedded(dataSource)) {         return "none".     }     SchemaManagement schemaManagement = getSchemaManagement(dataSource).     if (SchemaManagement.MANAGED.equals(schemaManagement)) {         return "none".     }     return "create-drop". }
+false;public;1;7;;@Override public SchemaManagement getSchemaManagement(DataSource dataSource) {     return StreamSupport.stream(this.providers.spliterator(), false).map((provider) -> provider.getSchemaManagement(dataSource)).filter(SchemaManagement.MANAGED::equals).findFirst().orElse(SchemaManagement.UNMANAGED). }

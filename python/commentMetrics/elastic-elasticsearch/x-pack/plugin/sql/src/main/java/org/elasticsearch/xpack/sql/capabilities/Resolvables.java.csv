@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;8;;public static boolean resolved(Iterable<? extends Resolvable> resolvables) {     for (Resolvable resolvable : resolvables) {         if (!resolvable.resolved()) {             return false.         }     }     return true. }

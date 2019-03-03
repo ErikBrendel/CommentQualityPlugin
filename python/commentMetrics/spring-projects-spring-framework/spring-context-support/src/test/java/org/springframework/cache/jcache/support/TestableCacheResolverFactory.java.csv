@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public CacheResolver getCacheResolver(CacheMethodDetails<? extends Annotation> cacheMethodDetails) {     return new TestableCacheResolver(). }
+false;public;1;4;;@Override public CacheResolver getExceptionCacheResolver(CacheMethodDetails<CacheResult> cacheMethodDetails) {     return new TestableCacheResolver(). }

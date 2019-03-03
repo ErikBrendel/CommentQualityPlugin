@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;6;;@Override protected NodeInfo<ScalarFunctionAttribute> info() {     return NodeInfo.create(this, ScalarFunctionAttribute::new, name(), dataType(), qualifier(), nullable(), id(), synthetic(), functionId(), script, orderBy, pipe). }
+false;public;0;3;;public ScriptTemplate script() {     return script. }
+false;public;0;3;;public Expression orderBy() {     return orderBy. }
+false;public;0;4;;@Override public Pipe asPipe() {     return pipe. }
+false;protected;0;5;;@Override protected Expression canonicalize() {     return new ScalarFunctionAttribute(source(), "<none>", dataType(), null, Nullability.TRUE, id(), false, functionId(), script, orderBy, pipe). }
+false;protected;6;6;;@Override protected Attribute clone(Source source, String name, String qualifier, Nullability nullability, ExpressionId id, boolean synthetic) {     return new ScalarFunctionAttribute(source, name, dataType(), qualifier, nullability, id, synthetic, functionId(), script, orderBy, pipe). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(super.hashCode(), script(), pipe, orderBy). }
+false;public;1;10;;@Override public boolean equals(Object obj) {     if (super.equals(obj)) {         ScalarFunctionAttribute other = (ScalarFunctionAttribute) obj.         return Objects.equals(script, other.script()) && Objects.equals(pipe, other.asPipe()) && Objects.equals(orderBy, other.orderBy()).     }     return false. }
+false;protected;0;4;;@Override protected String label() {     return "s->" + functionId(). }

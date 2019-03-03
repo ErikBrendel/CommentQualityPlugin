@@ -1,0 +1,39 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Before public void setup() {     request = new MockHttpServletRequest().     request.setContextPath("/context").     response = new MockHttpServletResponse().     filterChain = new MockFilterChain().     delegate = new MockFilter(). }
+false;public;0;7;;@Test public void init() throws Exception {     FilterConfig config = new MockFilterConfig().     filter = new PatternMappingFilterProxy(delegate, "/").     filter.init(config).     assertThat(delegate.filterConfig, is(config)). }
+false;public;0;6;;@Test public void destroy() throws Exception {     filter = new PatternMappingFilterProxy(delegate, "/").     filter.destroy().     assertThat(delegate.destroy, is(true)). }
+false;public;0;4;;@Test public void matchExact() throws Exception {     assertFilterInvoked("/test", "/test"). }
+false;public;0;4;;@Test public void matchExactEmpty() throws Exception {     assertFilterInvoked("", ""). }
+false;public;0;4;;@Test public void matchPathMappingAllFolder() throws Exception {     assertFilterInvoked("/test/this", "/*"). }
+false;public;0;4;;@Test public void matchPathMappingAll() throws Exception {     assertFilterInvoked("/test", "/*"). }
+false;public;0;4;;@Test public void matchPathMappingAllContextRoot() throws Exception {     assertFilterInvoked("", "/*"). }
+false;public;0;4;;@Test public void matchPathMappingContextRootAndSlash() throws Exception {     assertFilterInvoked("/", "/*"). }
+false;public;0;4;;@Test public void matchPathMappingFolderPatternWithMultiFolderPath() throws Exception {     assertFilterInvoked("/test/this/here", "/test/*"). }
+false;public;0;4;;@Test public void matchPathMappingFolderPattern() throws Exception {     assertFilterInvoked("/test/this", "/test/*"). }
+false;public;0;4;;@Test public void matchPathMappingNoSuffix() throws Exception {     assertFilterInvoked("/test/", "/test/*"). }
+false;public;0;4;;@Test public void matchPathMappingMissingSlash() throws Exception {     assertFilterInvoked("/test", "/test/*"). }
+false;public;0;4;;@Test public void noMatchPathMappingMulti() throws Exception {     assertFilterNotInvoked("/this/test/here", "/test/*"). }
+false;public;0;4;;@Test public void noMatchPathMappingEnd() throws Exception {     assertFilterNotInvoked("/this/test", "/test/*"). }
+false;public;0;4;;@Test public void noMatchPathMappingEndSuffix() throws Exception {     assertFilterNotInvoked("/test2/", "/test/*"). }
+false;public;0;4;;@Test public void noMatchPathMappingMissingSlash() throws Exception {     assertFilterNotInvoked("/test2", "/test/*"). }
+false;public;0;4;;@Test public void matchExtensionMulti() throws Exception {     assertFilterInvoked("/test/this/here.html", "*.html"). }
+false;public;0;4;;@Test public void matchExtension() throws Exception {     assertFilterInvoked("/test/this.html", "*.html"). }
+false;public;0;4;;@Test public void matchExtensionNoPrefix() throws Exception {     assertFilterInvoked("/.html", "*.html"). }
+false;public;0;4;;@Test public void matchExtensionNoFolder() throws Exception {     assertFilterInvoked("/test.html", "*.html"). }
+false;public;0;4;;@Test public void noMatchExtensionNoSlash() throws Exception {     assertFilterNotInvoked(".html", "*.html"). }
+false;public;0;4;;@Test public void noMatchExtensionSlashEnd() throws Exception {     assertFilterNotInvoked("/index.html/", "*.html"). }
+false;public;0;4;;@Test public void noMatchExtensionPeriodEnd() throws Exception {     assertFilterNotInvoked("/index.html.", "*.html"). }
+false;public;0;4;;@Test public void noMatchExtensionLarger() throws Exception {     assertFilterNotInvoked("/index.htm", "*.html"). }
+false;public;0;5;;@Test public void noMatchInvalidPattern() throws Exception {     // pattern uses extension mapping but starts with / (treated as exact match)     assertFilterNotInvoked("/index.html", "/*.html"). }
+true;public;0;4;/* 	 * Below are tests from Table 12-1 of the Servlet Specification 	 */ ;/* 	 * Below are tests from Table 12-1 of the Servlet Specification 	 */ @Test public void specPathMappingMultiFolderPattern() throws Exception {     assertFilterInvoked("/foo/bar/index.html", "/foo/bar/*"). }
+false;public;0;4;;@Test public void specPathMappingMultiFolderPatternAlternate() throws Exception {     assertFilterInvoked("/foo/bar/index.bop", "/foo/bar/*"). }
+false;public;0;4;;@Test public void specPathMappingNoSlash() throws Exception {     assertFilterInvoked("/baz", "/baz/*"). }
+false;public;0;4;;@Test public void specPathMapping() throws Exception {     assertFilterInvoked("/baz/index.html", "/baz/*"). }
+false;public;0;4;;@Test public void specExactMatch() throws Exception {     assertFilterInvoked("/catalog", "/catalog"). }
+false;public;0;4;;@Test public void specExtensionMappingSingleFolder() throws Exception {     assertFilterInvoked("/catalog/racecar.bop", "*.bop"). }
+false;public;0;4;;@Test public void specExtensionMapping() throws Exception {     assertFilterInvoked("/index.bop", "*.bop"). }
+false;private;2;13;;private void assertFilterNotInvoked(String requestUri, String pattern) throws Exception {     request.setRequestURI(request.getContextPath() + requestUri).     filter = new PatternMappingFilterProxy(delegate, pattern).     filter.doFilter(request, response, filterChain).     assertThat(delegate.request, equalTo((ServletRequest) null)).     assertThat(delegate.response, equalTo((ServletResponse) null)).     assertThat(delegate.chain, equalTo((FilterChain) null)).     assertThat(filterChain.getRequest(), equalTo((ServletRequest) request)).     assertThat(filterChain.getResponse(), equalTo((ServletResponse) response)).     filterChain = new MockFilterChain(). }
+false;private;2;10;;private void assertFilterInvoked(String requestUri, String pattern) throws Exception {     request.setRequestURI(request.getContextPath() + requestUri).     filter = new PatternMappingFilterProxy(delegate, pattern).     filter.doFilter(request, response, filterChain).     assertThat(delegate.request, equalTo((ServletRequest) request)).     assertThat(delegate.response, equalTo((ServletResponse) response)).     assertThat(delegate.chain, equalTo((FilterChain) filterChain)).     delegate = new MockFilter(). }
+false;public;1;4;;@Override public void init(FilterConfig filterConfig) throws ServletException {     this.filterConfig = filterConfig. }
+false;public;3;6;;@Override public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) {     this.request = request.     this.response = response.     this.chain = chain. }
+false;public;0;4;;@Override public void destroy() {     this.destroy = true. }

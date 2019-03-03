@@ -1,0 +1,18 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@After public void closeContext() {     try {         this.context.close().     } catch (Exception ex) {     // Ignore     } }
+false;public;0;6;;@Test public void tomcat() throws Exception {     this.context = new AnnotationConfigServletWebServerApplicationContext(TomcatConfig.class).     doTest(this.context, "/hello"). }
+false;public;0;6;;@Test public void jetty() throws Exception {     this.context = new AnnotationConfigServletWebServerApplicationContext(JettyConfig.class).     doTest(this.context, "/hello"). }
+false;public;0;6;;@Test public void undertow() throws Exception {     this.context = new AnnotationConfigServletWebServerApplicationContext(UndertowConfig.class).     doTest(this.context, "/hello"). }
+false;public;0;6;;@Test public void advancedConfig() throws Exception {     this.context = new AnnotationConfigServletWebServerApplicationContext(AdvancedConfig.class).     doTest(this.context, "/example/spring/hello"). }
+false;private;2;12;;private void doTest(AnnotationConfigServletWebServerApplicationContext context, String resourcePath) throws Exception {     SimpleClientHttpRequestFactory clientHttpRequestFactory = new SimpleClientHttpRequestFactory().     ClientHttpRequest request = clientHttpRequestFactory.createRequest(new URI("http://localhost:" + context.getWebServer().getPort() + resourcePath), HttpMethod.GET).     try (ClientHttpResponse response = request.execute()) {         String actual = StreamUtils.copyToString(response.getBody(), StandardCharsets.UTF_8).         assertThat(actual).isEqualTo("Hello World").     } }
+true;public,static;1;5;// Simple main method for testing in a browser ;// Simple main method for testing in a browser @SuppressWarnings("resource") public static void main(String[] args) {     new AnnotationConfigServletWebServerApplicationContext(JettyServletWebServerFactory.class, Config.class). }
+false;public;0;4;;@Bean public ServletWebServerFactory webServerFactory() {     return new TomcatServletWebServerFactory(0). }
+false;public;0;4;;@Bean public ServletWebServerFactory webServerFactory() {     return new JettyServletWebServerFactory(0). }
+false;public;0;4;;@Bean public ServletWebServerFactory webServerFactory() {     return new UndertowServletWebServerFactory(0). }
+false;public;0;7;;@Bean public DispatcherServlet dispatcherServlet() {     return new DispatcherServlet(). // Alternatively you can use ServletContextInitializer beans including // ServletRegistration and FilterRegistration. Read the // EmbeddedWebApplicationContext Javadoc for details. }
+false;public;0;4;;@Bean public HelloWorldController helloWorldController() {     return new HelloWorldController(). }
+false;public;0;6;;@Bean public ServletWebServerFactory webServerFactory() {     JettyServletWebServerFactory factory = new JettyServletWebServerFactory(0).     factory.setContextPath(this.env.getProperty("context")).     return factory. }
+false;public;0;7;;@Bean public ServletRegistrationBean<DispatcherServlet> dispatcherRegistration() {     ServletRegistrationBean<DispatcherServlet> registration = new ServletRegistrationBean<>(dispatcherServlet()).     registration.addUrlMappings("/spring/*").     return registration. }
+false;public;0;6;;@Bean public DispatcherServlet dispatcherServlet() {     DispatcherServlet dispatcherServlet = new DispatcherServlet().     // Can configure dispatcher servlet here as would usually do via init-params     return dispatcherServlet. }
+false;public;0;4;;@Bean public HelloWorldController helloWorldController() {     return new HelloWorldController(). }
+false;public;0;5;;@RequestMapping("/hello") @ResponseBody public String sayHello() {     return "Hello World". }

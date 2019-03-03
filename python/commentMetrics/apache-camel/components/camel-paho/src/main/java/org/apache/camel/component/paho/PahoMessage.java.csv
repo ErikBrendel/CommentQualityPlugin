@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public MqttMessage getMqttMessage() {     return mqttMessage. }
+false;public;1;3;;public void setMqttMessage(MqttMessage mqttMessage) {     this.mqttMessage = mqttMessage. }
+false;public;0;4;;@Override public PahoMessage newInstance() {     return new PahoMessage(getCamelContext(), mqttMessage). }

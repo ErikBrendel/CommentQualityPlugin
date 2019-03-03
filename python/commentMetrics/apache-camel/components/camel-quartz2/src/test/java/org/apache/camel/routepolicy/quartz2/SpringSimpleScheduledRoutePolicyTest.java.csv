@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Before public void setUp() {     setApplicationContext(new ClassPathXmlApplicationContext("org/apache/camel/routepolicy/quartz2/SimplePolicies.xml")).     setTestType(TestType.SIMPLE). }
+false;public;0;4;;@Test public void testScheduledStartRoutePolicy() throws Exception {     startTest(). }
+false;public;0;4;;@Test public void testScheduledStopRoutePolicy() throws Exception {     stopTest(). }
+false;public;0;4;;@Test public void testScheduledSuspendRoutePolicy() throws Exception {     suspendTest(). }
+false;public;0;4;;@Test public void testScheduledResumeRoutePolicy() throws Exception {     resumeTest(). }

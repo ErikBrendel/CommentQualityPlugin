@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public Double unmarshal(String value) {     return javax.xml.bind.DatatypeConverter.parseDouble(value). }
+false;public;1;6;;public String marshal(Double value) {     if (value == null) {         return null.     }     return javax.xml.bind.DatatypeConverter.printDouble(value). }

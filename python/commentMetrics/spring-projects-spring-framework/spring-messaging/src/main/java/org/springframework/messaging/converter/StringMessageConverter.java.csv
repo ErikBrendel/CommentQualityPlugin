@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected boolean supports(Class<?> clazz) {     return (String.class == clazz). }
+false;protected;3;6;;@Override protected Object convertFromInternal(Message<?> message, Class<?> targetClass, @Nullable Object conversionHint) {     Charset charset = getContentTypeCharset(getMimeType(message.getHeaders())).     Object payload = message.getPayload().     return (payload instanceof String ? payload : new String((byte[]) payload, charset)). }
+false;protected;3;11;;@Override @Nullable protected Object convertToInternal(Object payload, @Nullable MessageHeaders headers, @Nullable Object conversionHint) {     if (byte[].class == getSerializedPayloadClass()) {         Charset charset = getContentTypeCharset(getMimeType(headers)).         payload = ((String) payload).getBytes(charset).     }     return payload. }
+false;private;1;8;;private Charset getContentTypeCharset(@Nullable MimeType mimeType) {     if (mimeType != null && mimeType.getCharset() != null) {         return mimeType.getCharset().     } else {         return this.defaultCharset.     } }

@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected Class<CommentsSPI> getSpiType() {     return CommentsSPI.class. }
+true;public;1;6;// @formatter:off ;// @formatter:off @Override public List<Comment> list(CommentSearchCriteria c) {     checkNotNull(c, "The search criteria must be defined").     return getSpi().list(this.getApiVersion(), c.getContext(), c.getPage(), c.getPerPage(), c.getSearch(), c.getAfter(), c.getAuthor(), c.getAuthorExclude(), c.getAuthorEmail(), c.getBefore(), c.getExclude(), c.getInclude(), c.getKarma(), c.getOffset(), c.getOrder(), c.getOrderBy(), c.getParent(), c.getParentExclude(), c.getPost(), c.getStatus(), c.getType()). }
+false;protected;1;4;;// @formatter:on @Override protected Comment doCreate(Comment object) {     return getSpi().create(getApiVersion(), object). }
+false;protected;1;4;;@Override protected Comment doDelete(Integer id) {     return getSpi().delete(getApiVersion(), id, false). }
+false;protected;2;4;;@Override protected Comment doUpdate(Integer id, Comment object) {     return getSpi().update(getApiVersion(), id, object). }
+false;protected;2;4;;@Override protected Comment doRetrieve(Integer entityID, Context context) {     return getSpi().retrieve(getApiVersion(), entityID, context). }

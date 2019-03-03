@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;7;;@Override public boolean supports(HandlerResult result) {     MethodParameter returnType = result.getReturnTypeSource().     Class<?> containingClass = returnType.getContainingClass().     return (AnnotatedElementUtils.hasAnnotation(containingClass, ResponseBody.class) || returnType.hasMethodAnnotation(ResponseBody.class)). }
+false;public;2;6;;@Override public Mono<Void> handleResult(ServerWebExchange exchange, HandlerResult result) {     Object body = result.getReturnValue().     MethodParameter bodyTypeParameter = result.getReturnTypeSource().     return writeBody(body, bodyTypeParameter, exchange). }

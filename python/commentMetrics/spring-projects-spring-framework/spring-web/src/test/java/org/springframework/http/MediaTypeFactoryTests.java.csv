@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void getMediaType() {     assertEquals(MediaType.APPLICATION_XML, MediaTypeFactory.getMediaType("file.xml").get()).     assertEquals(MediaType.parseMediaType("application/javascript"), MediaTypeFactory.getMediaType("file.js").get()).     assertEquals(MediaType.parseMediaType("text/css"), MediaTypeFactory.getMediaType("file.css").get()).     assertFalse(MediaTypeFactory.getMediaType("file.foobar").isPresent()). }
+false;public;0;6;;@Test public void nullParameter() {     assertFalse(MediaTypeFactory.getMediaType((String) null).isPresent()).     assertFalse(MediaTypeFactory.getMediaType((Resource) null).isPresent()).     assertTrue(MediaTypeFactory.getMediaTypes(null).isEmpty()). }

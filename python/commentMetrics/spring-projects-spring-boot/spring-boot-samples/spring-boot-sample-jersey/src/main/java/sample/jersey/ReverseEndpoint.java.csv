@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@GET public String reverse(@QueryParam("input") @NotNull String input) {     return new StringBuilder(input).reverse().toString(). }

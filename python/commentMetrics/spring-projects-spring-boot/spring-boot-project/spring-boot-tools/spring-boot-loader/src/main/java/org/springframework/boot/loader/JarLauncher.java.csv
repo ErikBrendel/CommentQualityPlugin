@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;7;;@Override protected boolean isNestedArchive(Archive.Entry entry) {     if (entry.isDirectory()) {         return entry.getName().equals(BOOT_INF_CLASSES).     }     return entry.getName().startsWith(BOOT_INF_LIB). }
+false;public,static;1;3;;public static void main(String[] args) throws Exception {     new JarLauncher().launch(args). }

@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;// Simple @CacheResult(cacheName = "simpleCache") public SampleObject simpleGet(Long id) {     return null. }
+false;public;2;3;;@CachePut(cacheName = "simpleCache") public void simplePut(Long id, @CacheValue SampleObject instance) { }
+false;public;1;3;;@CacheRemove(cacheName = "simpleCache") public void simpleRemove(Long id) { }
+false;public;0;3;;@CacheRemoveAll(cacheName = "simpleCache") public void simpleRemoveAll() { }
+false;public;2;4;;@CacheResult(cacheName = "testSimple") public SampleObject anotherSimpleGet(String foo, Long bar) {     return null. }
+false;public;3;5;;// @CacheKey @CacheResult public SampleObject multiKeysGet(@CacheKey Long id, Boolean notUsed, @CacheKey String domain) {     return null. }
+false;public;1;3;;// @CacheValue @CachePut(cacheName = "simpleCache") public void noCacheValue(Long id) { }
+false;public;3;4;;@CachePut(cacheName = "simpleCache") public void multiCacheValues(Long id, @CacheValue SampleObject instance, @CacheValue SampleObject anotherInstance) { }
+false;public;2;4;;// Parameter annotation @CacheResult(cacheName = "simpleCache") public SampleObject annotatedGet(@CacheKey Long id, @Value("${foo}") String foo) {     return null. }
+false;public;1;5;;// Full config @CacheResult(cacheName = "simpleCache", skipGet = true, cachedExceptions = Exception.class, nonCachedExceptions = RuntimeException.class) public SampleObject fullGetConfig(@CacheKey Long id) {     return null. }
+false;public;2;4;;@CachePut(cacheName = "simpleCache", afterInvocation = false, cacheFor = Exception.class, noCacheFor = RuntimeException.class) public void fullPutConfig(@CacheKey Long id, @CacheValue SampleObject instance) { }

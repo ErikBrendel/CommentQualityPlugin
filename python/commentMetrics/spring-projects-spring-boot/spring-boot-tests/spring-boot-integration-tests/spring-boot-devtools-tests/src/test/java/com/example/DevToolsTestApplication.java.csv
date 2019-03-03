@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;4;;public static void main(String[] args) {     new SpringApplicationBuilder(DevToolsTestApplication.class).listeners(new WebServerPortFileWriter(args[0])).run(args). }

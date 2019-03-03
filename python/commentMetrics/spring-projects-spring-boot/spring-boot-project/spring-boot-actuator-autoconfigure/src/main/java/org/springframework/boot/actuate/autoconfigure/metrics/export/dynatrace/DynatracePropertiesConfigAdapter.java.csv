@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String apiToken() {     return get(DynatraceProperties::getApiToken, DynatraceConfig.super::apiToken). }
+false;public;0;4;;@Override public String deviceId() {     return get(DynatraceProperties::getDeviceId, DynatraceConfig.super::deviceId). }
+false;public;0;5;;@Override public String technologyType() {     return get(DynatraceProperties::getTechnologyType, DynatraceConfig.super::technologyType). }
+false;public;0;4;;@Override public String uri() {     return get(DynatraceProperties::getUri, DynatraceConfig.super::uri). }

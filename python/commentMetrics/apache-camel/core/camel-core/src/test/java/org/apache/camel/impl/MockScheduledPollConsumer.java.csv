@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;7;;@Override protected int poll() throws Exception {     if (exceptionToThrowOnPoll != null) {         throw exceptionToThrowOnPoll.     }     return 0. }
+false;public;1;3;;public void setExceptionToThrowOnPoll(Exception exceptionToThrowOnPoll) {     this.exceptionToThrowOnPoll = exceptionToThrowOnPoll. }
+false;public;0;4;;@Override public String toString() {     return "MockScheduled". }

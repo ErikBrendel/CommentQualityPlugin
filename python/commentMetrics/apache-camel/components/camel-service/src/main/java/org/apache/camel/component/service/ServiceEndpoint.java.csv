@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Endpoint getEndpoint() {     return this.delegateEndpoint. }
+false;public;0;4;;@ManagedAttribute(description = "The consumer endpoint to expose as a service", mask = true) public String getDelegateEndpointUri() {     return this.delegateEndpoint.getEndpointUri(). }
+false;public;0;3;;public ServiceDefinition getServiceDefinition() {     return this.serviceDefinition. }
+false;public;0;4;;@Override public Producer createProducer() throws Exception {     throw new UnsupportedOperationException("Not yet implemented"). }
+false;public;1;4;;@Override public Consumer createConsumer(Processor processor) throws Exception {     return new ServiceConsumer(this, processor, serviceRegistry). }
+false;public;0;4;;@Override public boolean isSingleton() {     return true. }
+false;private;2;12;;private ServiceDefinition computeServiceDefinition(CamelContext context, Endpoint delegateEndpoint) {     Map<String, String> parameters = new HashMap<>().     if (delegateEndpoint instanceof DiscoverableService) {         parameters.putAll(((DiscoverableService) delegateEndpoint).getServiceProperties()).     }     parameters.putAll(serviceParameters).     parameters.computeIfAbsent(ServiceDefinition.SERVICE_META_ID, k -> context.getUuidGenerator().generateUuid()).     return DefaultServiceDefinition.builder().from(parameters).build(). }

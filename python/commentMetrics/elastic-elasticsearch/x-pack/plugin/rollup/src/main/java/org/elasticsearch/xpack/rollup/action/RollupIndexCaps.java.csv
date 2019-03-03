@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;3;;protected List<RollupJobCaps> getJobCaps() {     return jobCaps. }
+false;;1;4;;List<RollupJobCaps> getJobCapsByIndexPattern(String index) {     return jobCaps.stream().filter(cap -> index.equals(MetaData.ALL) || cap.getIndexPattern().equals(index)).collect(Collectors.toList()). }
+false;;1;3;;void setJobs(List<RollupJobConfig> jobs) {     this.jobCaps = jobs.stream().map(RollupJobCaps::new).collect(Collectors.toList()). }
+false;;0;3;;boolean hasCaps() {     return jobCaps.isEmpty() == false. }
+false;public;0;3;;public List<String> getRollupIndices() {     return jobCaps.stream().map(RollupJobCaps::getRollupIndex).collect(Collectors.toList()). }
+false;static;2;11;;static RollupIndexCaps parseMetadataXContent(BytesReference source, String indexName) {     XContentParser parser.     try {         parser = XContentHelper.createParser(NamedXContentRegistry.EMPTY, LoggingDeprecationHandler.INSTANCE, source, XContentType.JSON).     } catch (Exception e) {         throw new RuntimeException("Unable to parse mapping metadata for index [" + indexName + "]", e).     }     return METADATA_PARSER.apply(parser, null). }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeString(rollupIndexName).     out.writeList(jobCaps). }
+false;public;2;7;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject(rollupIndexName).     builder.field(ROLLUP_JOBS.getPreferredName(), jobCaps).     builder.endObject().     return builder. }
+false;public;1;15;;@Override public boolean equals(Object other) {     if (this == other) {         return true.     }     if (other == null || getClass() != other.getClass()) {         return false.     }     RollupIndexCaps that = (RollupIndexCaps) other.     return Objects.equals(this.rollupIndexName, that.rollupIndexName) && Objects.equals(this.jobCaps, that.jobCaps). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(rollupIndexName, jobCaps). }

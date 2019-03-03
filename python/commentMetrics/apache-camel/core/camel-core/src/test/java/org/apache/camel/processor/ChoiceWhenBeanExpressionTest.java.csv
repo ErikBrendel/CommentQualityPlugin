@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;8;;protected void verifyGradeA(String endpointUri) throws Exception {     gradeA.reset().     otherGrade.reset().     gradeA.expectedMessageCount(1).     otherGrade.expectedMessageCount(0).     template.sendBody(endpointUri, new Student(95)).     assertMockEndpointsSatisfied(). }
+false;public;1;8;;public void verifyOtherGrade(String endpointUri) throws Exception {     gradeA.reset().     otherGrade.reset().     gradeA.expectedMessageCount(0).     otherGrade.expectedMessageCount(1).     template.sendBody(endpointUri, new Student(60)).     assertMockEndpointsSatisfied(). }
+false;public;0;5;;@Test public void testBeanExpression() throws Exception {     verifyGradeA("direct:expression").     verifyOtherGrade("direct:expression"). }
+false;public;0;5;;@Test public void testMethod() throws Exception {     verifyGradeA("direct:method").     verifyOtherGrade("direct:method"). }
+false;public;0;8;;@Override @Before public void setUp() throws Exception {     super.setUp().     gradeA = getMockEndpoint("mock:gradeA").     otherGrade = getMockEndpoint("mock:otherGrade"). }
+false;public;0;13;;public void configure() {     from("direct:expression").choice().when().expression(method(MyBean.class, "isGradeA")).to("mock:gradeA").otherwise().to("mock:otherGrade").end().     from("direct:method").choice().when().method(MyBean.class).to("mock:gradeA").otherwise().to("mock:otherGrade").end(). }
+false;protected;0;17;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("direct:expression").choice().when().expression(method(MyBean.class, "isGradeA")).to("mock:gradeA").otherwise().to("mock:otherGrade").end().             from("direct:method").choice().when().method(MyBean.class).to("mock:gradeA").otherwise().to("mock:otherGrade").end().         }     }. }
+false;public;1;3;;public boolean isGradeA(@Body Student student) {     return student.getGrade() >= 90. }
+false;public;0;3;;public int getGrade() {     return grade. }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getName() {     return "data_frame_put_transform_action". }
+false;protected;2;9;;@Override protected RestChannelConsumer prepareRequest(RestRequest restRequest, NodeClient client) throws IOException {     String id = restRequest.param(DataFrameField.ID.getPreferredName()).     XContentParser parser = restRequest.contentParser().     PutDataFrameTransformAction.Request request = PutDataFrameTransformAction.Request.fromXContent(parser, id).     return channel -> client.execute(PutDataFrameTransformAction.INSTANCE, request, new RestToXContentListener<>(channel)). }

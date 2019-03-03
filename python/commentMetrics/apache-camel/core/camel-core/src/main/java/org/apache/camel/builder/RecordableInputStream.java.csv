@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Override public int read() throws IOException {     int c = super.read().     if (c > 0 && recording) {         buf.write(c).     }     return c. }
+false;public;3;8;;@Override public int read(byte[] b, int off, int len) throws IOException {     int n = super.read(b, off, len).     if (n > 0 && recording) {         buf.write(b, off, n).     }     return n. }
+false;public;1;17;;public String getText(int pos) {     String t = null.     recording = false.     try {         if (charset == null) {             t = new String(buf.getByteArray(), 0, pos).         } else {             t = new String(buf.getByteArray(), 0, pos, charset).         }     } catch (UnsupportedEncodingException e) {     // ignore it as this encoding exception should have been caught earlier while scanning.     } finally {         buf.trim(pos, 0).     }     return t. }
+false;public;1;6;;public byte[] getBytes(int pos) {     recording = false.     byte[] b = buf.toByteArray(pos).     buf.trim(pos, 0).     return b. }
+false;public;0;3;;public void record() {     recording = true. }
+false;;0;3;;int size() {     return buf.size(). }
+false;public;2;4;;public void trim(int head, int tail) {     System.arraycopy(buf, head, buf, 0, count - head - tail).     count -= head + tail. }
+false;public;1;5;;public byte[] toByteArray(int len) {     byte[] b = new byte[len].     System.arraycopy(buf, 0, b, 0, len).     return b. }
+false;;0;3;;byte[] getByteArray() {     return buf. }

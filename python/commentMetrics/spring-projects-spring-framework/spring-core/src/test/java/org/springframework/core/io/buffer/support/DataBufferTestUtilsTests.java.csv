@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;12;;@Test public void dumpBytes() {     DataBuffer buffer = this.bufferFactory.allocateBuffer(4).     byte[] source = { 'a', 'b', 'c', 'd' }.     buffer.write(source).     byte[] result = DataBufferTestUtils.dumpBytes(buffer).     assertArrayEquals(source, result).     release(buffer). }
+false;public;0;12;;@Test public void dumpString() {     DataBuffer buffer = this.bufferFactory.allocateBuffer(4).     String source = "abcd".     buffer.write(source.getBytes(StandardCharsets.UTF_8)).     String result = DataBufferTestUtils.dumpString(buffer, StandardCharsets.UTF_8).     assertEquals(source, result).     release(buffer). }

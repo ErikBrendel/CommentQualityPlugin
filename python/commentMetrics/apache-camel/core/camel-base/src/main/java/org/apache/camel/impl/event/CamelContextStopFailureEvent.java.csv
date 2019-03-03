@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Throwable getCause() {     return cause. }
+false;public;0;4;;@Override public String toString() {     return "Failed to stop Camel: " + getContext().getName() + " due to " + cause.getMessage(). }

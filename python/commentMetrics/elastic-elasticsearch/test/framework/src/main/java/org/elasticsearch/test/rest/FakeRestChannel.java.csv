@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;10;;@Override public void sendResponse(RestResponse response) {     this.capturedRestResponse = response.     if (response.status() == RestStatus.OK) {         responses.incrementAndGet().     } else {         errors.incrementAndGet().     }     latch.countDown(). }
+false;public;0;3;;public RestResponse capturedResponse() {     return capturedRestResponse. }
+false;public;0;3;;public AtomicInteger responses() {     return responses. }
+false;public;0;3;;public AtomicInteger errors() {     return errors. }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;8;;@Override protected CamelContext createCamelContext() throws Exception {     CamelContext context = super.createCamelContext().     context.setSSLContextParameters(createSSLContextParameters()).     ((SSLContextParametersAware) context.getComponent("ahc")).setUseGlobalSslContextParameters(true).     ((SSLContextParametersAware) context.getComponent("jetty")).setUseGlobalSslContextParameters(true).     return context. }
+false;protected;0;4;;@Override protected boolean isHttps() {     return true. }

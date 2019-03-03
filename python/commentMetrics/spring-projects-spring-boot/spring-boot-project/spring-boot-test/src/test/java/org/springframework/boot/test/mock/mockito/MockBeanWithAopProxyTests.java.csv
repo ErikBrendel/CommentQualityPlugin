@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;12;;@Test public void verifyShouldUseProxyTarget() {     given(this.dateService.getDate(false)).willReturn(1L).     Long d1 = this.dateService.getDate(false).     assertThat(d1).isEqualTo(1L).     given(this.dateService.getDate(false)).willReturn(2L).     Long d2 = this.dateService.getDate(false).     assertThat(d2).isEqualTo(2L).     verify(this.dateService, times(2)).getDate(false).     verify(this.dateService, times(2)).getDate(eq(false)).     verify(this.dateService, times(2)).getDate(anyBoolean()). }
+false;public;1;6;;@Bean public CacheResolver cacheResolver(CacheManager cacheManager) {     SimpleCacheResolver resolver = new SimpleCacheResolver().     resolver.setCacheManager(cacheManager).     return resolver. }
+false;public;0;6;;@Bean public ConcurrentMapCacheManager cacheManager() {     ConcurrentMapCacheManager cacheManager = new ConcurrentMapCacheManager().     cacheManager.setCacheNames(Arrays.asList("test")).     return cacheManager. }
+false;public;1;4;;@Cacheable(cacheNames = "test") public Long getDate(boolean argument) {     return System.nanoTime(). }

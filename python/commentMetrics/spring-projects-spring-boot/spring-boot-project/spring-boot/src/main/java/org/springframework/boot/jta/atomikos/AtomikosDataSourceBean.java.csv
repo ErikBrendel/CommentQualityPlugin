@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void setBeanName(String name) {     this.beanName = name. }
+false;public;0;7;;@Override public void afterPropertiesSet() throws Exception {     if (!StringUtils.hasLength(getUniqueResourceName())) {         setUniqueResourceName(this.beanName).     }     init(). }
+false;public;0;4;;@Override public void destroy() throws Exception {     close(). }

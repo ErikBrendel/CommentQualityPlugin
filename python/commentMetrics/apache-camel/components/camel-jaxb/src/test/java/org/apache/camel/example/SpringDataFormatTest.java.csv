@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;14;;@Test public void testMarshalThenUnmarshalBean() throws Exception {     PurchaseOrder bean = new PurchaseOrder().     bean.setName("Beer").     bean.setAmount(23).     bean.setPrice(2.5).     MockEndpoint resultEndpoint = resolveMandatoryEndpoint("mock:result", MockEndpoint.class).     resultEndpoint.expectedBodiesReceived(bean).     template.sendBody("direct:start", bean).     resultEndpoint.assertIsSatisfied(). }
+false;protected;0;3;;protected ClassPathXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/example/springDataFormat.xml"). }

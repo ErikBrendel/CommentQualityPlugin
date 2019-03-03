@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * The source folder being watched.  * @return the source folder  */ ;/**  * The source folder being watched.  * @return the source folder  */ public File getSourceFolder() {     return this.sourceFolder. }
+false;public;0;4;;@Override public Iterator<ChangedFile> iterator() {     return getFiles().iterator(). }
+true;public;0;3;/**  * The files that have been changed.  * @return the changed files  */ ;/**  * The files that have been changed.  * @return the changed files  */ public Set<ChangedFile> getFiles() {     return this.files. }
+false;public;1;15;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (obj == this) {         return true.     }     if (obj instanceof ChangedFiles) {         ChangedFiles other = (ChangedFiles) obj.         return this.sourceFolder.equals(other.sourceFolder) && this.files.equals(other.files).     }     return super.equals(obj). }
+false;public;0;4;;@Override public int hashCode() {     return this.files.hashCode(). }
+false;public;0;4;;@Override public String toString() {     return this.sourceFolder + " " + this.files. }

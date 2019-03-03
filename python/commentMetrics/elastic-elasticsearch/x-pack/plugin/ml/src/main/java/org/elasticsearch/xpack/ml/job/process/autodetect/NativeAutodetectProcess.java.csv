@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getName() {     return NAME. }
+false;public;2;14;;@Override public void restoreState(StateStreamer stateStreamer, ModelSnapshot modelSnapshot) {     if (modelSnapshot != null) {         try (OutputStream r = processRestoreStream()) {             stateStreamer.restoreStateToStream(jobId(), modelSnapshot, r).         } catch (Exception e) {             // TODO: should we fail to start?             if (isProcessKilled() == false) {                 LOGGER.error("Error restoring model state for job " + jobId(), e).             }         }     }     setReady(). }
+false;public;1;4;;@Override public void writeResetBucketsControlMessage(DataLoadParams params) throws IOException {     newMessageWriter().writeResetBucketsMessage(params). }
+false;public;1;4;;@Override public void writeUpdateModelPlotMessage(ModelPlotConfig modelPlotConfig) throws IOException {     newMessageWriter().writeUpdateModelPlotMessage(modelPlotConfig). }
+false;public;2;4;;@Override public void writeUpdateDetectorRulesMessage(int detectorIndex, List<DetectionRule> rules) throws IOException {     newMessageWriter().writeUpdateDetectorRulesMessage(detectorIndex, rules). }
+false;public;1;4;;@Override public void writeUpdateFiltersMessage(List<MlFilter> filters) throws IOException {     newMessageWriter().writeUpdateFiltersMessage(filters). }
+false;public;2;4;;@Override public void writeUpdateScheduledEventsMessage(List<ScheduledEvent> events, TimeValue bucketSpan) throws IOException {     newMessageWriter().writeUpdateScheduledEventsMessage(events, bucketSpan). }
+false;public;1;6;;@Override public String flushJob(FlushJobParams params) throws IOException {     AutodetectControlMsgWriter writer = newMessageWriter().     writer.writeFlushControlMessage(params).     return writer.writeFlushMessage(). }
+false;public;1;4;;@Override public void forecastJob(ForecastParams params) throws IOException {     newMessageWriter().writeForecastMessage(params). }
+false;public;0;4;;@Override public void persistState() throws IOException {     newMessageWriter().writeStartBackgroundPersistMessage(). }
+false;public;0;4;;@Override public Iterator<AutodetectResult> readAutodetectResults() {     return resultsParser.parseResults(processOutStream()). }
+false;private;0;3;;private AutodetectControlMsgWriter newMessageWriter() {     return new AutodetectControlMsgWriter(recordWriter(), numberOfFields()). }
+false;public;0;12;;@Override public void consumeAndCloseOutputStream() {     try {         byte[] buff = new byte[512].         while (processOutStream().read(buff) >= 0) {         // Do nothing         }         processOutStream().close().     } catch (IOException e) {         throw new RuntimeException("Error closing result parser input stream", e).     } }

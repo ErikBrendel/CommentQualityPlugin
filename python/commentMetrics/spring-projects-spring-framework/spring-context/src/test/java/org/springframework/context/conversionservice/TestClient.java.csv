@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public List<Bar> getBars() {     return bars. }
+false;public;1;4;;@Autowired public void setBars(List<Bar> bars) {     this.bars = bars. }
+false;public;0;3;;public boolean isBool() {     return bool. }
+false;public;1;3;;public void setBool(boolean bool) {     this.bool = bool. }
+false;public;0;3;;public List<String> getStringList() {     return stringList. }
+false;public;1;3;;public void setStringList(List<String> stringList) {     this.stringList = stringList. }
+false;public;0;3;;public Resource[] getResourceArray() {     return resourceArray. }
+false;public;1;3;;public void setResourceArray(Resource[] resourceArray) {     this.resourceArray = resourceArray. }
+false;public;0;3;;public List<Resource> getResourceList() {     return resourceList. }
+false;public;1;3;;public void setResourceList(List<Resource> resourceList) {     this.resourceList = resourceList. }
+false;public;0;3;;public Map<String, Resource> getResourceMap() {     return resourceMap. }
+false;public;1;3;;public void setResourceMap(Map<String, Resource> resourceMap) {     this.resourceMap = resourceMap. }

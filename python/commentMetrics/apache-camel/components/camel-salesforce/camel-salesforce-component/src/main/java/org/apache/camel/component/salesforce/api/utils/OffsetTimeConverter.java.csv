@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public boolean canConvert(@SuppressWarnings("rawtypes") final Class type) {     return OffsetTime.class.equals(type). }
+false;public;1;4;;@Override public Object fromString(final String value) {     return OffsetTime.parse(value, ISO_OFFSET_TIME). }
+false;public;1;10;;@Override public String toString(final Object value) {     if (value == null) {         return null.     }     final OffsetTime offsetTime = (OffsetTime) value.     return ISO_OFFSET_TIME.format(offsetTime). }

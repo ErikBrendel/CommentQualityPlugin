@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public AsyncClientHttpRequest createAsyncRequest(URI uri, HttpMethod method) {     return new InterceptingAsyncClientHttpRequest(this.delegate, this.interceptors, uri, method). }

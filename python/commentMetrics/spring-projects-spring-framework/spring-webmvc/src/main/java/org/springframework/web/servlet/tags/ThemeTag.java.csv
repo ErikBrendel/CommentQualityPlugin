@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;protected;0;4;/**  * Use the theme MessageSource for theme message resolution.  */ ;/**  * Use the theme MessageSource for theme message resolution.  */ @Override protected MessageSource getMessageSource() {     return getRequestContext().getTheme().getMessageSource(). }
+true;protected;1;4;/**  * Return exception message that indicates the current theme.  */ ;/**  * Return exception message that indicates the current theme.  */ @Override protected String getNoSuchMessageExceptionDescription(NoSuchMessageException ex) {     return "Theme '" + getRequestContext().getTheme().getName() + "': " + ex.getMessage(). }

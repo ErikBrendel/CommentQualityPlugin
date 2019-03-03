@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;9;;@Override protected LibraryScope getLibraryScope(File file) {     String fileName = file.getName().     if (fileName.contains("tomcat-embed") || fileName.contains("spring-boot-starter-tomcat")) {         return LibraryScope.PROVIDED.     }     return LibraryScope.COMPILE. }
+false;protected;1;6;;@Override protected void addCliClasses(JarWriter writer) throws IOException {     addClass(writer, null, "org.springframework.boot." + "cli.app.SpringApplicationWebApplicationInitializer").     super.addCliClasses(writer). }
+false;protected;2;6;;@Override protected void writeClasspathEntry(JarWriter writer, ResourceMatcher.MatchedResource entry) throws IOException {     writer.writeEntry(getLayout().getClassesLocation() + entry.getName(), new FileInputStream(entry.getFile())). }

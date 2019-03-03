@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String label() {     return label. }
+false;public;1;4;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeString(label). }
+false;public,static;1;3;;public static LicenseStatus readFrom(StreamInput in) throws IOException {     return fromString(in.readString()). }
+false;public,static;1;12;;public static LicenseStatus fromString(String value) {     switch(value) {         case "active":             return ACTIVE.         case "invalid":             return INVALID.         case "expired":             return EXPIRED.         default:             throw new IllegalArgumentException("unknown license status [" + value + "]").     } }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;6;;public NumericDoubleValues getField(final int ordinal, LeafReaderContext ctx) throws IOException {     if (ordinal > names.length) {         throw new IndexOutOfBoundsException("ValuesSource array index " + ordinal + " out of bounds").     }     return multiValueMode.select(values[ordinal].doubleValues(ctx)). }
+false;public;2;3;;public Object getField(final int ordinal, LeafReaderContext ctx) throws IOException {     return values[ordinal].bytesValues(ctx). }
+false;public;0;7;;public boolean needsScores() {     boolean needsScores = false.     for (ValuesSource value : values) {         needsScores |= value.needsScores().     }     return needsScores. }
+false;public;0;3;;public String[] fieldNames() {     return this.names. }

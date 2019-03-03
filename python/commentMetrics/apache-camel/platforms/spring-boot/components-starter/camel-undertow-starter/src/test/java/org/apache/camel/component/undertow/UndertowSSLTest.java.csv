@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;4;;@BeforeClass public static void init() {     port = AvailablePortFinder.getNextAvailable(). }
+false;public;0;5;;@Test public void testEndpoint() throws Exception {     String result = producerTemplate.requestBody("undertow:https://localhost:" + port, null, String.class).     assertEquals("Hello", result). }
+false;public;0;5;;@Override public void configure() throws Exception {     from("undertow:https://localhost:" + port).transform().constant("Hello"). }

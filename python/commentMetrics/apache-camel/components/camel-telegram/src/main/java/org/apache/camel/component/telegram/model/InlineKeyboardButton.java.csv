@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;public String getText() {     return text. }
+false;public;1;4;;public void setText(String text) {     this.text = text. }
+false;public;0;7;;@Override public String toString() {     final StringBuilder sb = new StringBuilder("InlineKeyboardButton{").     sb.append("text='").append(text).     sb.append('}').     return sb.toString(). }
+false;public,static;0;4;;public static Builder builder() {     return new Builder(). }
+false;public;1;5;;public Builder text(String text) {     this.text = text.     return this. }
+false;public;0;3;;public InlineKeyboardButton build() {     return new InlineKeyboardButton(text). }

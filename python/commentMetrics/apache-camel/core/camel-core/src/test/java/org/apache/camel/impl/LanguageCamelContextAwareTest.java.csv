@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry jndi = super.createRegistry().     jndi.bind("my", my).     return jndi. }
+false;public;0;8;;@Test public void testLanguageCamelContextAware() throws Exception {     Language lan = context.resolveLanguage("my").     assertNotNull(lan).     MyLanguage me = assertIsInstanceOf(MyLanguage.class, lan).     assertNotNull(me.getCamelContext()). }
+false;public;0;3;;public CamelContext getCamelContext() {     return camelContext. }
+false;public;1;3;;public void setCamelContext(CamelContext camelContext) {     this.camelContext = camelContext. }
+false;public;1;3;;public Predicate createPredicate(String expression) {     return null. }
+false;public;1;3;;public Expression createExpression(String expression) {     return null. }

@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public MetaJoinFieldMapper build(BuilderContext context) {     fieldType.setName(NAME).     return new MetaJoinFieldMapper(name, fieldType, context.indexSettings()). }
+false;public;0;3;;public MetaJoinFieldType clone() {     return new MetaJoinFieldType(this). }
+false;public;0;4;;@Override public String typeName() {     return CONTENT_TYPE. }
+false;public;1;5;;@Override public IndexFieldData.Builder fielddataBuilder(String fullyQualifiedIndexName) {     failIfNoDocValues().     return new DocValuesIndexFieldData.Builder(). }
+false;public;1;8;;@Override public Object valueForDisplay(Object value) {     if (value == null) {         return null.     }     BytesRef binaryValue = (BytesRef) value.     return binaryValue.utf8ToString(). }
+false;public;0;3;;public ParentJoinFieldMapper getMapper() {     return mapper. }
+false;public;1;4;;@Override public Query existsQuery(QueryShardContext context) {     throw new UnsupportedOperationException("Exists query not supported for fields of type" + typeName()). }
+false;;1;3;;void setFieldMapper(ParentJoinFieldMapper mapper) {     fieldType().mapper = mapper. }
+false;public;0;4;;@Override public MetaJoinFieldType fieldType() {     return (MetaJoinFieldType) super.fieldType(). }
+false;protected;0;4;;@Override protected MetaJoinFieldMapper clone() {     return (MetaJoinFieldMapper) super.clone(). }
+false;protected;2;4;;@Override protected void parseCreateField(ParseContext context, List<IndexableField> fields) throws IOException {     throw new IllegalStateException("Should never be called"). }
+false;protected;0;4;;@Override protected String contentType() {     return CONTENT_TYPE. }

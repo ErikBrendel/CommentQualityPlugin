@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Before public void setup() {     this.mockMvc = MockMvcBuilders.webAppContextSetup(this.applicationContext).apply(MockMvcRestDocumentation.documentationConfiguration(this.restDocumentation).uris()).build(). }
+false;protected;0;3;;protected WebApplicationContext getApplicationContext() {     return this.applicationContext. }

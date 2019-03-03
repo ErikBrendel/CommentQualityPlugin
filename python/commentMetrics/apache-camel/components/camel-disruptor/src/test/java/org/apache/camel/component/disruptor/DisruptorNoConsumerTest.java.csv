@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void testInOnly() throws Exception {     // no problem for in only as we do not expect a reply     template.sendBody("direct:start", "Hello World"). }
+false;public;0;9;;@Test public void testInOut() throws Exception {     try {         template.requestBody("direct:start", "Hello World").         fail("Should throw an exception").     } catch (CamelExecutionException e) {         assertIsInstanceOf(ExchangeTimedOutException.class, e.getCause()).     } }
+false;public;0;4;;@Override public void configure() throws Exception {     from("direct:start").to("disruptor:foo?timeout=1000"). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").to("disruptor:foo?timeout=1000").         }     }. }

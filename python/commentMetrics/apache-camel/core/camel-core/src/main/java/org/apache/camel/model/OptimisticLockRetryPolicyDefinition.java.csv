@@ -1,0 +1,19 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;19;;public OptimisticLockRetryPolicy createOptimisticLockRetryPolicy() {     OptimisticLockRetryPolicy policy = new OptimisticLockRetryPolicy().     if (maximumRetries != null) {         policy.setMaximumRetries(maximumRetries).     }     if (retryDelay != null) {         policy.setRetryDelay(retryDelay).     }     if (maximumRetryDelay != null) {         policy.setMaximumRetryDelay(maximumRetryDelay).     }     if (exponentialBackOff != null) {         policy.setExponentialBackOff(exponentialBackOff).     }     if (randomBackOff != null) {         policy.setRandomBackOff(randomBackOff).     }     return policy. }
+true;public;1;4;/**  * Sets the maximum number of retries  */ ;/**  * Sets the maximum number of retries  */ public OptimisticLockRetryPolicyDefinition maximumRetries(int maximumRetries) {     setMaximumRetries(maximumRetries).     return this. }
+false;public;0;3;;public Integer getMaximumRetries() {     return maximumRetries. }
+false;public;1;3;;public void setMaximumRetries(Integer maximumRetries) {     this.maximumRetries = maximumRetries. }
+true;public;1;4;/**  * Sets the delay in millis between retries  */ ;/**  * Sets the delay in millis between retries  */ public OptimisticLockRetryPolicyDefinition retryDelay(long retryDelay) {     setRetryDelay(retryDelay).     return this. }
+false;public;0;3;;public Long getRetryDelay() {     return retryDelay. }
+false;public;1;3;;public void setRetryDelay(Long retryDelay) {     this.retryDelay = retryDelay. }
+true;public;1;4;/**  * Sets the upper value of retry in millis between retries, when using exponential or random backoff  */ ;/**  * Sets the upper value of retry in millis between retries, when using exponential or random backoff  */ public OptimisticLockRetryPolicyDefinition maximumRetryDelay(long maximumRetryDelay) {     setMaximumRetryDelay(maximumRetryDelay).     return this. }
+false;public;0;3;;public Long getMaximumRetryDelay() {     return maximumRetryDelay. }
+false;public;1;3;;public void setMaximumRetryDelay(Long maximumRetryDelay) {     this.maximumRetryDelay = maximumRetryDelay. }
+true;public;0;3;/**  * Enable exponential backoff  */ ;/**  * Enable exponential backoff  */ public OptimisticLockRetryPolicyDefinition exponentialBackOff() {     return exponentialBackOff(true). }
+false;public;1;4;;public OptimisticLockRetryPolicyDefinition exponentialBackOff(boolean exponentialBackOff) {     setExponentialBackOff(exponentialBackOff).     return this. }
+false;public;0;3;;public Boolean getExponentialBackOff() {     return exponentialBackOff. }
+false;public;1;3;;public void setExponentialBackOff(Boolean exponentialBackOff) {     this.exponentialBackOff = exponentialBackOff. }
+false;public;0;3;;public OptimisticLockRetryPolicyDefinition randomBackOff() {     return randomBackOff(true). }
+true;public;1;4;/**  * Enables random backoff  */ ;/**  * Enables random backoff  */ public OptimisticLockRetryPolicyDefinition randomBackOff(boolean randomBackOff) {     setRandomBackOff(randomBackOff).     return this. }
+false;public;0;3;;public Boolean getRandomBackOff() {     return randomBackOff. }
+false;public;1;3;;public void setRandomBackOff(Boolean randomBackOff) {     this.randomBackOff = randomBackOff. }

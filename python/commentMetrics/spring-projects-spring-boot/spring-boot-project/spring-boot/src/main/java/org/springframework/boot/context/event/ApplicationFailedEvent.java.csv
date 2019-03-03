@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Return the application context.  * @return the context  */ ;/**  * Return the application context.  * @return the context  */ public ConfigurableApplicationContext getApplicationContext() {     return this.context. }
+true;public;0;3;/**  * Return the exception that caused the failure.  * @return the exception  */ ;/**  * Return the exception that caused the failure.  * @return the exception  */ public Throwable getException() {     return this.exception. }

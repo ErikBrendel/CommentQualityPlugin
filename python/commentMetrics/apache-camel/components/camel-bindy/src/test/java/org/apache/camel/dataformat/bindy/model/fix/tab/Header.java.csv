@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getBeginString() {     return beginString. }
+false;public;1;3;;public void setBeginString(String beginString) {     this.beginString = beginString. }
+false;public;0;3;;public int getBodyLength() {     return bodyLength. }
+false;public;1;3;;public void setBodyLength(int bodyLength) {     this.bodyLength = bodyLength. }
+false;public;0;3;;public int getMsgSeqNum() {     return msgSeqNum. }
+false;public;1;3;;public void setMsgSeqNum(int msgSeqNum) {     this.msgSeqNum = msgSeqNum. }
+false;public;0;3;;public String getMsgType() {     return msgType. }
+false;public;1;3;;public void setMsgType(String msgType) {     this.msgType = msgType. }
+false;public;0;3;;public String getSendCompId() {     return sendCompId. }
+false;public;1;3;;public void setSendCompId(String sendCompId) {     this.sendCompId = sendCompId. }
+false;public;0;3;;public String getTargetCompId() {     return targetCompId. }
+false;public;1;3;;public void setTargetCompId(String targetCompId) {     this.targetCompId = targetCompId. }
+false;public;0;5;;@Override public String toString() {     return Header.class.getName() + " --> 8: " + this.beginString + ", 9: " + this.bodyLength + ", 34: " + this.msgSeqNum + " , 35: " + this.msgType + ", 49: " + this.sendCompId + ", 56: " + this.targetCompId. }

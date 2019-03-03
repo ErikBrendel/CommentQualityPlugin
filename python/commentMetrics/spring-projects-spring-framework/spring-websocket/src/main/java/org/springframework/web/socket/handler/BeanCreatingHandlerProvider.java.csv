@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Override public void setBeanFactory(BeanFactory beanFactory) {     if (beanFactory instanceof AutowireCapableBeanFactory) {         this.beanFactory = (AutowireCapableBeanFactory) beanFactory.     } }
+false;public;1;5;;public void destroy(T handler) {     if (this.beanFactory != null) {         this.beanFactory.destroyBean(handler).     } }
+false;public;0;3;;public Class<? extends T> getHandlerType() {     return this.handlerType. }
+false;public;0;8;;public T getHandler() {     if (this.beanFactory != null) {         return this.beanFactory.createBean(this.handlerType).     } else {         return BeanUtils.instantiateClass(this.handlerType).     } }
+false;public;0;4;;@Override public String toString() {     return "BeanCreatingHandlerProvider[handlerType=" + this.handlerType + "]". }

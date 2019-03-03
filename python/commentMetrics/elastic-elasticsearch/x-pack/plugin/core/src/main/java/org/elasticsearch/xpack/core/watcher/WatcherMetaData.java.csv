@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public boolean manuallyStopped() {     return manuallyStopped. }
+false;public;0;4;;@Override public String getWriteableName() {     return TYPE. }
+false;public;0;4;;@Override public Version getMinimalSupportedVersion() {     return Version.CURRENT.minimumCompatibilityVersion(). }
+false;public;0;4;;@Override public EnumSet<MetaData.XContentContext> context() {     return EnumSet.of(MetaData.XContentContext.GATEWAY). }
+false;public,static;1;3;;public static NamedDiff<MetaData.Custom> readDiffFrom(StreamInput streamInput) throws IOException {     return readDiffFrom(MetaData.Custom.class, TYPE, streamInput). }
+false;public;1;4;;@Override public void writeTo(StreamOutput streamOutput) throws IOException {     streamOutput.writeBoolean(manuallyStopped). }
+false;public;0;4;;@Override public String toString() {     return "manuallyStopped[" + manuallyStopped + "]". }
+false;public;1;9;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     WatcherMetaData action = (WatcherMetaData) o.     return manuallyStopped == action.manuallyStopped. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(manuallyStopped). }
+false;public,static;1;21;;public static MetaData.Custom fromXContent(XContentParser parser) throws IOException {     XContentParser.Token token.     Boolean manuallyStopped = null.     String currentFieldName = null.     while ((token = parser.nextToken()) != XContentParser.Token.END_OBJECT) {         switch(token) {             case FIELD_NAME:                 currentFieldName = parser.currentName().                 break.             case VALUE_BOOLEAN:                 if (Field.MANUALLY_STOPPED.match(currentFieldName, parser.getDeprecationHandler())) {                     manuallyStopped = parser.booleanValue().                 }                 break.         }     }     if (manuallyStopped != null) {         return new WatcherMetaData(manuallyStopped).     }     return null. }
+false;public;2;5;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.field(Field.MANUALLY_STOPPED.getPreferredName(), manuallyStopped).     return builder. }

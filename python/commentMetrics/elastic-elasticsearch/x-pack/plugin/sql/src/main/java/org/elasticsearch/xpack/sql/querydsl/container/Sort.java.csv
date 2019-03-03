@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static Direction from(OrderDirection dir) {     return dir == null || dir == OrderDirection.ASC ? ASC : DESC. }
+false;public;0;3;;public SortOrder asOrder() {     return this == Direction.ASC ? SortOrder.ASC : SortOrder.DESC. }
+false;public,static;1;3;;public static Missing from(NullsPosition pos) {     return pos == null || pos == NullsPosition.FIRST ? FIRST : LAST. }
+false;public;0;3;;public String position() {     return position. }
+false;public;0;3;;public Direction direction() {     return direction. }
+false;public;0;3;;public Missing missing() {     return missing. }

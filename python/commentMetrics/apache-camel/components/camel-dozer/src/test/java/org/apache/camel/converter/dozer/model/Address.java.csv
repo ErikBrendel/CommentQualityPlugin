@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getZipCode() {     return zipCode. }
+false;public;1;3;;public void setZipCode(String zipCode) {     this.zipCode = zipCode. }
+false;public;0;3;;public String getStreetName() {     return streetName. }
+false;public;1;3;;public void setStreetName(String streetName) {     this.streetName = streetName. }
+false;public;1;4;;@Override public boolean equals(Object obj) {     return EqualsBuilder.reflectionEquals(this, obj). }
+false;public;0;4;;@Override public int hashCode() {     return HashCodeBuilder.reflectionHashCode(this). }
+false;public;0;4;;@Override public String toString() {     return ToStringBuilder.reflectionToString(this). }

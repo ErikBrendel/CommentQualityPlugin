@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public boolean test(NioSocketChannel nioChannel) {     if (filter != null) {         return filter.accept(profile, nioChannel.getRemoteAddress()).     } else {         return true.     } }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Before public void copyData() throws IOException {     FileUtils.copyDirectory(new File("src/main/data"), new File("target/work/fhir/testinput")). }
+false;public;0;6;;@Test public void shouldPushConvertedCsvtoFhir() throws Exception {     mock.expectedMessageCount(1).     mock.assertIsSatisfied(). }

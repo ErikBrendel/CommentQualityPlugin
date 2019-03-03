@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;5;;@Deprecated @Override public AS400 getConnection(String systemName, String userID) throws ConnectionPoolException {     throw new UnsupportedOperationException(). }
+false;public;3;5;;@Deprecated @Override public AS400 getConnection(String systemName, String userID, int service) throws ConnectionPoolException {     throw new UnsupportedOperationException(). }
+false;public;3;4;;@Override public AS400 getConnection(String systemName, String userID, String password) throws ConnectionPoolException {     return new AS400(systemName, userID, password). }
+false;public;4;4;;@Override public AS400 getConnection(String systemName, String userID, String password, int service) throws ConnectionPoolException {     return getConnection(systemName, userID, password). }
+false;public;5;4;;@Override public AS400 getConnection(String systemName, String userID, String password, int service, Locale locale) throws ConnectionPoolException {     return getConnection(systemName, userID, password, locale). }
+false;public;4;6;;@Override public AS400 getConnection(String systemName, String userID, String password, Locale locale) throws ConnectionPoolException {     AS400 connection = getConnection(systemName, userID, password).     connection.setLocale(locale).     return connection. }

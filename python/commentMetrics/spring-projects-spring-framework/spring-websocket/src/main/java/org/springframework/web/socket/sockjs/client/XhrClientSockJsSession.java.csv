@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public HttpHeaders getHeaders() {     return this.headers. }
+false;public;0;4;;@Override public InetSocketAddress getLocalAddress() {     return null. }
+false;public;0;5;;@Override public InetSocketAddress getRemoteAddress() {     URI uri = getUri().     return (uri != null ? new InetSocketAddress(uri.getHost(), uri.getPort()) : null). }
+false;public;0;4;;@Override public String getAcceptedProtocol() {     return null. }
+false;public;1;4;;@Override public void setTextMessageSizeLimit(int messageSizeLimit) {     this.textMessageSizeLimit = messageSizeLimit. }
+false;public;0;4;;@Override public int getTextMessageSizeLimit() {     return this.textMessageSizeLimit. }
+false;public;1;4;;@Override public void setBinaryMessageSizeLimit(int messageSizeLimit) {     this.binaryMessageSizeLimit = -1. }
+false;public;0;4;;@Override public int getBinaryMessageSizeLimit() {     return this.binaryMessageSizeLimit. }
+false;public;0;4;;@Override public List<WebSocketExtension> getExtensions() {     return Collections.emptyList(). }
+false;protected;1;4;;@Override protected void sendInternal(TextMessage message) {     this.transport.executeSendRequest(this.sendUrl, this.sendHeaders, message). }
+false;protected;1;4;;@Override protected void disconnect(CloseStatus status) { // Nothing to do: XHR transports check if session is disconnected. }

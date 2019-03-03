@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;9;;@Override protected Request createTestInstance() {     RevertModelSnapshotAction.Request request = new RevertModelSnapshotAction.Request(randomAlphaOfLengthBetween(1, 20), randomAlphaOfLengthBetween(1, 20)).     if (randomBoolean()) {         request.setDeleteInterveningResults(randomBoolean()).     }     return request. }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return false. }
+false;protected;0;4;;@Override protected Request createBlankInstance() {     return new RevertModelSnapshotAction.Request(). }
+false;protected;1;4;;@Override protected Request doParseInstance(XContentParser parser) {     return RevertModelSnapshotAction.Request.parseRequest(null, null, parser). }

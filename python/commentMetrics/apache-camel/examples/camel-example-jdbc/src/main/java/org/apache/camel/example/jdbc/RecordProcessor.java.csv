@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;public void process(Exchange msg) {     log.trace("Processing msg {}", msg).     Map<String, Object> record = msg.getIn().getBody(Map.class).     log.info("Processing record {}", record). // Do something useful with this record. }

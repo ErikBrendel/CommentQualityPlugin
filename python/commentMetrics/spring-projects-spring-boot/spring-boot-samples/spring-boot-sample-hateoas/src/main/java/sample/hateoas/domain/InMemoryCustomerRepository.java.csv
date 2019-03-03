@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public List<Customer> findAll() {     return this.customers. }
+false;public;1;9;;@Override public Customer findOne(Long id) {     for (Customer customer : this.customers) {         if (ObjectUtils.nullSafeEquals(customer.getId(), id)) {             return customer.         }     }     return null. }

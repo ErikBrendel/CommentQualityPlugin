@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;13;;@Test public void listImageHeaderTest() {     String imageId = "be29975e0098".     Map<String, Object> headers = getDefaultParameters().     headers.put(DockerConstants.DOCKER_IMAGE_ID, imageId).     template.sendBodyAndHeaders("direct:in", "", headers).     Mockito.verify(dockerClient, Mockito.times(1)).inspectImageCmd(eq(imageId)). }
+false;protected;0;6;;@Override protected void setupMocks() {     Mockito.when(dockerClient.inspectImageCmd(anyString())).thenReturn(mockObject). }
+false;protected;0;4;;@Override protected DockerOperation getOperation() {     return DockerOperation.INSPECT_IMAGE. }

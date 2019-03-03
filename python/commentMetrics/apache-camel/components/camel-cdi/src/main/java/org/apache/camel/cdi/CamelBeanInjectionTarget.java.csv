@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;11;;@Override public void inject(T instance, CreationalContext<T> ctx) {     super.inject(instance, ctx).     try {         // TODO: see how to retrieve the bean name         processor.postProcessBeforeInitialization(instance, instance.getClass().getName()).         processor.postProcessAfterInitialization(instance, instance.getClass().getName()).     } catch (Exception cause) {         throw new InjectionException("Camel annotations post processing of [" + delegate + "] failed!", cause).     } }

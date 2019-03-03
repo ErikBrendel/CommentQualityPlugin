@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getComponent() {     return "cometd". }
+false;protected;2;5;;@Override protected String getDestination(Exchange exchange, Endpoint endpoint) {     // Extract path, and remove leading '/'     return URI.create(endpoint.getEndpointUri()).getPath().substring(1). }

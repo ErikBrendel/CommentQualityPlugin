@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;13;;@Override @Nullable public String parameterNameToUse(@Nullable String parameterName) {     if (parameterName == null) {         return null.     } else if (parameterName.length() > 1 && parameterName.startsWith(REMOVABLE_COLUMN_PREFIX)) {         return super.parameterNameToUse(parameterName.substring(1)).     } else {         return super.parameterNameToUse(parameterName).     } }
+false;public;1;5;;@Override public boolean byPassReturnParameter(String parameterName) {     return (RETURN_VALUE_NAME.equals(parameterName) || RETURN_VALUE_NAME.equals(parameterNameToUse(parameterName))). }

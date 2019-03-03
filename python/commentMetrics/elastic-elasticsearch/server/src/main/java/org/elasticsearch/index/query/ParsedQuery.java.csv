@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * The query parsed.  */ ;/**  * The query parsed.  */ public Query query() {     return this.query. }
+false;public;0;3;;public Map<String, Query> namedFilters() {     return namedFilters. }
+false;public,static;0;3;;public static ParsedQuery parsedMatchAllQuery() {     return new ParsedQuery(Queries.newMatchAllQuery(), emptyMap()). }

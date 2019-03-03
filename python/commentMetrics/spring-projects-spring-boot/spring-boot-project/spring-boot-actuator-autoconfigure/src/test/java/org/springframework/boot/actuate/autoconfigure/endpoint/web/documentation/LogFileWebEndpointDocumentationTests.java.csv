@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void logFile() throws Exception {     this.mockMvc.perform(get("/actuator/logfile")).andExpect(status().isOk()).andDo(MockMvcRestDocumentation.document("logfile/entire")). }
+false;public;0;6;;@Test public void logFileRange() throws Exception {     this.mockMvc.perform(get("/actuator/logfile").header("Range", "bytes=0-1023")).andExpect(status().isPartialContent()).andDo(MockMvcRestDocumentation.document("logfile/range")). }
+false;public;1;4;;@Bean public LogFileWebEndpoint endpoint(Environment environment) {     return new LogFileWebEndpoint(environment). }

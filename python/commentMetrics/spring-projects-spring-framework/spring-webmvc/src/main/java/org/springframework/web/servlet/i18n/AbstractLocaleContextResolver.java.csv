@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;3;/**  * Set a default TimeZone that this resolver will return if no other time zone found.  */ ;/**  * Set a default TimeZone that this resolver will return if no other time zone found.  */ public void setDefaultTimeZone(@Nullable TimeZone defaultTimeZone) {     this.defaultTimeZone = defaultTimeZone. }
+true;public;0;4;/**  * Return the default TimeZone that this resolver is supposed to fall back to, if any.  */ ;/**  * Return the default TimeZone that this resolver is supposed to fall back to, if any.  */ @Nullable public TimeZone getDefaultTimeZone() {     return this.defaultTimeZone. }
+false;public;1;5;;@Override public Locale resolveLocale(HttpServletRequest request) {     Locale locale = resolveLocaleContext(request).getLocale().     return (locale != null ? locale : request.getLocale()). }
+false;public;3;4;;@Override public void setLocale(HttpServletRequest request, @Nullable HttpServletResponse response, @Nullable Locale locale) {     setLocaleContext(request, response, (locale != null ? new SimpleLocaleContext(locale) : null)). }

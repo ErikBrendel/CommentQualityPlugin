@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void testDefaultMethodFromSimpleExpression() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived(DEFAULT_METHOD_CONTENT).     template.sendBodyAndProperty("direct:defaultMethod", "", "myObject", new B() {     }).     assertMockEndpointsSatisfied(). }
+false;public;0;4;;@Override public void configure() throws Exception {     from("direct:defaultMethod").setBody(simple("${exchangeProperty.myObject.defaultMethod}")).to("mock:result"). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:defaultMethod").setBody(simple("${exchangeProperty.myObject.defaultMethod}")).to("mock:result").         }     }. }
+false;default;0;3;;default String defaultMethod() {     return DEFAULT_METHOD_CONTENT. }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;10;;@Override public void onDone(Exchange exchange) {     try {         if (entityManager.isOpen()) {             entityManager.close().         }     } catch (Exception e) {     // ignore     } }
+false;public;0;5;;@Override public int getOrder() {     // we want to run as last as possible     return Ordered.LOWEST. }

@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Order getOrder() {     return this.order. }
+false;public;0;3;;public boolean isIced() {     return this.iced. }
+false;public;0;3;;public int getShots() {     return shots. }
+false;public;0;3;;public DrinkType getDrinkType() {     return this.type. }
+false;public;0;3;;public String toString() {     return ((this.iced) ? "iced " : "hot ") + this.shots + " shot " + this.type. }
+false;public;1;11;;@Override public boolean equals(Object o) {     if (o instanceof OrderItem) {         OrderItem that = (OrderItem) o.         return ObjectHelper.equal(this.type, that.type) && ObjectHelper.equal(this.order.getNumber(), that.order.getNumber()) && ObjectHelper.equal(this.iced, that.iced) && ObjectHelper.equal(this.shots, that.shots).     }     return false. }
+false;public;0;8;;@Override public int hashCode() {     if (iced) {         return type.hashCode() + order.getNumber() * 10000 + shots * 100.     } else {         return type.hashCode() + order.getNumber() * 10000 + shots * 100 + 5.     } }

@@ -1,0 +1,18 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public CamelCatalog getCamelCatalog() {     return camelCatalog. }
+false;public;1;4;;@Override public void setCamelCatalog(CamelCatalog camelCatalog) {     this.camelCatalog = camelCatalog. }
+false;public;0;4;;@Override public String getProviderName() {     return "default". }
+false;public;0;4;;@Override public String getProviderGroupId() {     return "org.apache.camel". }
+false;public;0;4;;@Override public String getProviderArtifactId() {     return "camel-catalog". }
+false;public;0;4;;@Override public String getComponentJSonSchemaDirectory() {     return COMPONENT_DIR. }
+false;public;0;4;;@Override public String getDataFormatJSonSchemaDirectory() {     return DATAFORMAT_DIR. }
+false;public;0;4;;@Override public String getLanguageJSonSchemaDirectory() {     return LANGUAGE_DIR. }
+false;public;0;4;;@Override public String getOtherJSonSchemaDirectory() {     return OTHER_DIR. }
+false;protected;0;3;;protected String getComponentsCatalog() {     return COMPONENTS_CATALOG. }
+false;protected;0;3;;protected String getDataFormatsCatalog() {     return DATA_FORMATS_CATALOG. }
+false;protected;0;3;;protected String getLanguageCatalog() {     return LANGUAGE_CATALOG. }
+false;protected;0;3;;protected String getOtherCatalog() {     return OTHER_CATALOG. }
+false;public;0;13;;@Override public List<String> findComponentNames() {     List<String> names = new ArrayList<>().     InputStream is = getCamelCatalog().getVersionManager().getResourceAsStream(getComponentsCatalog()).     if (is != null) {         try {             CatalogHelper.loadLines(is, names).         } catch (IOException e) {         // ignore         }     }     return names. }
+false;public;0;13;;@Override public List<String> findDataFormatNames() {     List<String> names = new ArrayList<>().     InputStream is = getCamelCatalog().getVersionManager().getResourceAsStream(getDataFormatsCatalog()).     if (is != null) {         try {             CatalogHelper.loadLines(is, names).         } catch (IOException e) {         // ignore         }     }     return names. }
+false;public;0;13;;@Override public List<String> findLanguageNames() {     List<String> names = new ArrayList<>().     InputStream is = getCamelCatalog().getVersionManager().getResourceAsStream(getLanguageCatalog()).     if (is != null) {         try {             CatalogHelper.loadLines(is, names).         } catch (IOException e) {         // ignore         }     }     return names. }
+false;public;0;13;;@Override public List<String> findOtherNames() {     List<String> names = new ArrayList<>().     InputStream is = getCamelCatalog().getVersionManager().getResourceAsStream(getOtherCatalog()).     if (is != null) {         try {             CatalogHelper.loadLines(is, names).         } catch (IOException e) {         // ignore         }     }     return names. }

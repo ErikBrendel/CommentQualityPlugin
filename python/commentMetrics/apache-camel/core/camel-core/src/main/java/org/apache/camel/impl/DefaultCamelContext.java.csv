@@ -1,0 +1,34 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;protected;0;7;/**  * Lazily create a default implementation  */ ;/**  * Lazily create a default implementation  */ protected TypeConverter createTypeConverter() {     BaseTypeConverterRegistry answer.     answer = new DefaultTypeConverter(getPackageScanClassResolver(), getInjector(), getDefaultFactoryFinder(), isLoadTypeConverters()).     answer.setCamelContext(this).     setTypeConverterRegistry(answer).     return answer. }
+false;protected;0;8;;@Override protected TypeConverterRegistry createTypeConverterRegistry() {     TypeConverter typeConverter = getTypeConverter().     if (typeConverter instanceof TypeConverterRegistry) {         return (TypeConverterRegistry) typeConverter.     }     return null. }
+true;protected;0;9;/**  * Lazily create a default implementation  */ ;/**  * Lazily create a default implementation  */ protected Injector createInjector() {     FactoryFinder finder = getDefaultFactoryFinder().     try {         return (Injector) finder.newInstance("Injector").     } catch (NoFactoryAvailableException e) {         // lets use the default injector         return new DefaultInjector(this).     } }
+true;protected;0;3;/**  * Lazily create a default implementation  */ ;/**  * Lazily create a default implementation  */ protected ComponentResolver createComponentResolver() {     return new DefaultComponentResolver(). }
+true;protected;0;3;/**  * Lazily create a default implementation  */ ;/**  * Lazily create a default implementation  */ protected Registry createRegistry() {     return new DefaultRegistry(). }
+false;protected;0;3;;protected UuidGenerator createUuidGenerator() {     return new DefaultUuidGenerator(). }
+false;protected;0;3;;protected ModelJAXBContextFactory createModelJAXBContextFactory() {     return new DefaultModelJAXBContextFactory(). }
+false;protected;0;3;;protected NodeIdFactory createNodeIdFactory() {     return new DefaultNodeIdFactory(). }
+false;protected;0;3;;protected FactoryFinderResolver createFactoryFinderResolver() {     return new DefaultFactoryFinderResolver(). }
+false;protected;0;3;;protected ClassResolver createClassResolver() {     return new DefaultClassResolver(this). }
+false;protected;0;3;;protected ProcessorFactory createProcessorFactory() {     return new DefaultProcessorFactory(). }
+false;protected;0;3;;protected DataFormatResolver createDataFormatResolver() {     return new DefaultDataFormatResolver(). }
+false;protected;0;3;;protected MessageHistoryFactory createMessageHistoryFactory() {     return new DefaultMessageHistoryFactory(). }
+false;protected;0;3;;protected InflightRepository createInflightRepository() {     return new DefaultInflightRepository(). }
+false;protected;0;3;;protected AsyncProcessorAwaitManager createAsyncProcessorAwaitManager() {     return new DefaultAsyncProcessorAwaitManager(). }
+false;protected;0;3;;protected RouteController createRouteController() {     return new DefaultRouteController(this). }
+false;protected;0;3;;protected HealthCheckRegistry createHealthCheckRegistry() {     return new DefaultHealthCheckRegistry(this). }
+false;protected;0;3;;protected ShutdownStrategy createShutdownStrategy() {     return new DefaultShutdownStrategy(this). }
+false;protected;0;11;;protected PackageScanClassResolver createPackageScanClassResolver() {     PackageScanClassResolver packageScanClassResolver.     // use WebSphere specific resolver if running on WebSphere     if (WebSpherePackageScanClassResolver.isWebSphereClassLoader(this.getClass().getClassLoader())) {         log.info("Using WebSphere specific PackageScanClassResolver").         packageScanClassResolver = new WebSpherePackageScanClassResolver("META-INF/services/org/apache/camel/TypeConverter").     } else {         packageScanClassResolver = new DefaultPackageScanClassResolver().     }     return packageScanClassResolver. }
+false;protected;0;3;;protected ExecutorServiceManager createExecutorServiceManager() {     return new DefaultExecutorServiceManager(this). }
+false;protected;0;3;;protected ServicePool<Producer> createProducerServicePool() {     return new ServicePool<>(Endpoint::createProducer, Producer::getEndpoint, 100). }
+false;protected;0;3;;protected ServicePool<PollingConsumer> createPollingConsumerServicePool() {     return new ServicePool<>(Endpoint::createPollingConsumer, PollingConsumer::getEndpoint, 100). }
+false;protected;0;3;;protected UnitOfWorkFactory createUnitOfWorkFactory() {     return new DefaultUnitOfWorkFactory(). }
+false;protected;0;3;;protected RuntimeCamelCatalog createRuntimeCamelCatalog() {     return new DefaultRuntimeCamelCatalog(this, true). }
+false;protected;0;3;;protected CamelContextNameStrategy createCamelContextNameStrategy() {     return new DefaultCamelContextNameStrategy(). }
+false;protected;0;3;;protected ManagementNameStrategy createManagementNameStrategy() {     return new DefaultManagementNameStrategy(this). }
+false;protected;0;3;;protected HeadersMapFactory createHeadersMapFactory() {     return new HeadersMapFactoryResolver().resolve(this). }
+false;protected;0;3;;protected LanguageResolver createLanguageResolver() {     return new DefaultLanguageResolver(). }
+false;protected;0;4;;@Override protected RestRegistry createRestRegistry() {     return new DefaultRestRegistry(). }
+false;protected;1;3;;protected EndpointRegistry<EndpointKey> createEndpointRegistry(Map<EndpointKey, Endpoint> endpoints) {     return new DefaultEndpointRegistry(this, endpoints). }
+false;protected;1;3;;protected ValidatorRegistry<ValidatorKey> createValidatorRegistry(List<ValidatorDefinition> validators) throws Exception {     return new DefaultValidatorRegistry(this, validators). }
+false;protected;1;3;;protected TransformerRegistry<TransformerKey> createTransformerRegistry(List<TransformerDefinition> transformers) throws Exception {     return new DefaultTransformerRegistry(this, transformers). }
+false;protected;0;4;;@Override protected StreamCachingStrategy createStreamCachingStrategy() {     return new DefaultStreamCachingStrategy(). }

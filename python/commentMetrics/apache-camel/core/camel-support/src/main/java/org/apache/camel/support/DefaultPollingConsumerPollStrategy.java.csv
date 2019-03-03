@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;3;;public boolean begin(Consumer consumer, Endpoint endpoint) {     return true. }
+false;public;3;3;;public void commit(Consumer consumer, Endpoint endpoint, int polledMessages) { // noop }
+false;public;4;4;;public boolean rollback(Consumer consumer, Endpoint endpoint, int retryCounter, Exception e) throws Exception {     // we do not want to retry     return false. }

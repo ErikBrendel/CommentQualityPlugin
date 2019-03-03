@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Index getIndex() {     return index. }
+false;public;0;3;;public String getIndexName() {     return index.getName(). }
+false;public;0;3;;public int id() {     return this.shardId. }
+false;public;0;3;;public int getId() {     return id(). }
+false;public;0;4;;@Override public String toString() {     return "[" + index.getName() + "][" + shardId + "]". }
+true;public,static;1;9;/**  * Parse the string representation of this shardId back to an object.  * We lose index uuid information here, but since we use toString in  * rest responses, this is the best we can do to reconstruct the object  * on the client side.  */ ;/**  * Parse the string representation of this shardId back to an object.  * We lose index uuid information here, but since we use toString in  * rest responses, this is the best we can do to reconstruct the object  * on the client side.  */ public static ShardId fromString(String shardIdString) {     int splitPosition = shardIdString.indexOf("][").     if (splitPosition <= 0 || shardIdString.charAt(0) != '[' || shardIdString.charAt(shardIdString.length() - 1) != ']') {         throw new IllegalArgumentException("Unexpected shardId string format, expected [indexName][shardId] but got " + shardIdString).     }     String indexName = shardIdString.substring(1, splitPosition).     int shardId = Integer.parseInt(shardIdString.substring(splitPosition + 2, shardIdString.length() - 1)).     return new ShardId(new Index(indexName, IndexMetaData.INDEX_UUID_NA_VALUE), shardId). }
+false;public;1;7;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     ShardId shardId1 = (ShardId) o.     return shardId == shardId1.shardId && index.equals(shardId1.index). }
+false;public;0;4;;@Override public int hashCode() {     return hashCode. }
+false;private;0;5;;private int computeHashCode() {     int result = index != null ? index.hashCode() : 0.     result = 31 * result + shardId.     return result. }
+false;public,static;1;5;;public static ShardId readShardId(StreamInput in) throws IOException {     ShardId shardId = new ShardId().     shardId.readFrom(in).     return shardId. }
+false;public;1;6;;@Override public void readFrom(StreamInput in) throws IOException {     index = new Index(in).     shardId = in.readVInt().     hashCode = computeHashCode(). }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     index.writeTo(out).     out.writeVInt(shardId). }
+false;public;1;11;;@Override public int compareTo(ShardId o) {     if (o.getId() == shardId) {         int compare = index.getName().compareTo(o.getIndex().getName()).         if (compare != 0) {             return compare.         }         return index.getUUID().compareTo(o.getIndex().getUUID()).     }     return Integer.compare(shardId, o.getId()). }
+false;public;2;4;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     return builder.value(toString()). }

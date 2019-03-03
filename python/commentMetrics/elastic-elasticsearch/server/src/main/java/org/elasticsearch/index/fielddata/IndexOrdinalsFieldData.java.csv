@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;1;2;/**  * Load a global view of the ordinals for the given {@link IndexReader},  * potentially from a cache.  */ ;/**  * Load a global view of the ordinals for the given {@link IndexReader},  * potentially from a cache.  */ @Override IndexOrdinalsFieldData loadGlobal(DirectoryReader indexReader).
+true;;1;2;/**  * Load a global view of the ordinals for the given {@link IndexReader}.  */ ;/**  * Load a global view of the ordinals for the given {@link IndexReader}.  */ @Override IndexOrdinalsFieldData localGlobalDirect(DirectoryReader indexReader) throws Exception.
+true;;0;1;/**  * Returns the underlying {@link OrdinalMap} for this fielddata  * or null if global ordinals are not needed (constant value or single segment).  */ ;/**  * Returns the underlying {@link OrdinalMap} for this fielddata  * or null if global ordinals are not needed (constant value or single segment).  */ OrdinalMap getOrdinalMap().

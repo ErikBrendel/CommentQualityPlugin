@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;16;;public Book getBook(Long id) throws BookNotFoundFault {     if (books.get(id) == null) {         BookNotFoundDetails details = new BookNotFoundDetails().         details.setId(id).         if (!isRest) {             throw new BookNotFoundFault("Can't find the Book with id " + id, details).         } else {             Response r = Response.status(404).header("BOOK-HEADER", "No Book with id " + id + " is available").entity(details).build().             throw new WebApplicationException(r).         }     }     return books.get(id). }
+false;public;1;4;;public Book addBook(Book book) {     books.put(book.getId(), book).     return books.get(book.getId()). }
+false;private;0;6;;private void init() {     Book book = new Book().     book.setId(101).     book.setName("CXF User Guide").     books.put(book.getId(), book). }

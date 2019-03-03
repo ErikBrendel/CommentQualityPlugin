@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Object getBody() {     return body. }
+false;public;0;3;;public Method getMethod() {     return method. }
+false;public;0;3;;public String getReferenceId() {     return referenceId. }
+false;public;0;3;;public String getUrl() {     return url. }
+false;public;0;4;;@Override public String toString() {     return "Batch: " + method + " " + url + ", " + referenceId + ", data:" + body. }

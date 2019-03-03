@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void shouldHaveInfo() throws Exception {     Info.Builder builder = new Info.Builder().     indicator.contribute(builder).     assertNotNull(builder).     assertEquals(camelContext.getName(), builder.build().get("camel.name")).     assertEquals(camelContext.getVersion(), builder.build().get("camel.version")). }

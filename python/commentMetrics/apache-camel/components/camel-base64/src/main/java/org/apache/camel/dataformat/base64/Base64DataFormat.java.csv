@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getDataFormatName() {     return "base64". }
+false;public;3;8;;@Override public void marshal(Exchange exchange, Object graph, OutputStream stream) throws Exception {     if (urlSafe) {         marshalUrlSafe(exchange, graph, stream).     } else {         marshalStreaming(exchange, graph, stream).     } }
+false;private;3;10;;private void marshalStreaming(Exchange exchange, Object graph, OutputStream stream) throws Exception {     InputStream decoded = ExchangeHelper.convertToMandatoryType(exchange, InputStream.class, graph).     Base64OutputStream base64Output = new Base64OutputStream(stream, true, lineLength, lineSeparator).     try {         IOHelper.copy(decoded, base64Output).     } finally {         IOHelper.close(decoded, base64Output).     } }
+false;private;3;9;;private void marshalUrlSafe(Exchange exchange, Object graph, OutputStream stream) throws Exception {     byte[] decoded = ExchangeHelper.convertToMandatoryType(exchange, byte[].class, graph).     Base64 codec = new Base64(lineLength, lineSeparator, true).     byte[] encoded = codec.encode(decoded).     stream.write(encoded).     stream.flush(). }
+false;public;2;4;;@Override public Object unmarshal(Exchange exchange, InputStream input) throws Exception {     return new Base64InputStream(input, false, lineLength, lineSeparator). }
+false;public;0;3;;public int getLineLength() {     return lineLength. }
+false;public;1;3;;public void setLineLength(int lineLength) {     this.lineLength = lineLength. }
+false;public;0;3;;public byte[] getLineSeparator() {     return lineSeparator. }
+false;public;1;3;;public void setLineSeparator(byte[] lineSeparator) {     this.lineSeparator = lineSeparator. }
+false;public;0;3;;public boolean isUrlSafe() {     return urlSafe. }
+false;public;1;3;;public void setUrlSafe(boolean urlSafe) {     this.urlSafe = urlSafe. }
+false;protected;0;4;;@Override protected void doStart() throws Exception { // noop }
+false;protected;0;4;;@Override protected void doStop() throws Exception { // noop }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Test public void testXslt() throws Exception {     resultEndpoint.expectedBodiesReceived("<?xml version=\"1.0\" encoding=\"UTF-8\"?><goodbye>world!</goodbye>").     template.sendBody("<hello>world!</hello>").     resultEndpoint.assertIsSatisfied(). }

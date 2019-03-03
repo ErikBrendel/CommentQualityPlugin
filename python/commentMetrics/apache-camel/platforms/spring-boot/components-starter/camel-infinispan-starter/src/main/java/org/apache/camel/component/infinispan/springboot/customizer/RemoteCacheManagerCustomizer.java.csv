@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public void customize(InfinispanComponent component) {     // set it or if no cache manager is already configured on component     if (configuration.isOverride() || component.getCacheContainer() == null) {         component.setCacheContainer(cacheManager).     } }
+false;public;0;4;;@Override public String getId() {     return "camel.component.infinispan.customizer.remote-cache-manager". }

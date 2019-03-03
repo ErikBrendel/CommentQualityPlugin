@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void testSafeConstructor() throws Exception {     SnakeYAMLTypeFilterHelper.testSafeConstructor(template). }
+false;public;0;4;;@Test public void testTypeConstructor() throws Exception {     SnakeYAMLTypeFilterHelper.testTypeConstructor(template). }
+false;public;0;4;;@Test public void testTypeConstructorFromDefinition() throws Exception {     SnakeYAMLTypeFilterHelper.testTypeConstructorFromDefinition(template). }
+false;public;0;4;;@Test public void testAllowAllConstructor() throws Exception {     SnakeYAMLTypeFilterHelper.testAllowAllConstructor(template). }
+false;protected;0;4;;@Override protected String getBlueprintDescriptor() {     return "OSGI-INF/blueprint/blueprint-typefilter.xml". }

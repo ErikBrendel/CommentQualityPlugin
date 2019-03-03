@@ -1,0 +1,25 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;2;;@ManagedAttribute(description = "Camel ID") String getCamelId().
+false;;0;2;;@ManagedAttribute(description = "Camel ManagementName") String getCamelManagementName().
+false;;0;2;;@ManagedAttribute(description = "Thread Pool ID") String getId().
+false;;0;2;;@ManagedAttribute(description = "ID of source for creating Thread Pool") String getSourceId().
+false;;0;2;;@ManagedAttribute(description = "Route ID for the source, which created the Thread Pool") String getRouteId().
+false;;0;2;;@ManagedAttribute(description = "ID of the thread pool profile which this pool is based upon") String getThreadPoolProfileId().
+false;;0;2;;@ManagedAttribute(description = "Core pool size") int getCorePoolSize().
+false;;1;2;;@ManagedAttribute(description = "Core pool size") void setCorePoolSize(int corePoolSize).
+false;;0;2;;@ManagedAttribute(description = "Pool size") int getPoolSize().
+false;;0;2;;@ManagedAttribute(description = "Maximum pool size") int getMaximumPoolSize().
+false;;1;2;;@ManagedAttribute(description = "Maximum pool size") void setMaximumPoolSize(int maximumPoolSize).
+false;;0;2;;@ManagedAttribute(description = "Largest pool size") int getLargestPoolSize().
+false;;0;2;;@ManagedAttribute(description = "Active count") int getActiveCount().
+false;;0;2;;@ManagedAttribute(description = "Task count") long getTaskCount().
+false;;0;2;;@ManagedAttribute(description = "Completed task count") long getCompletedTaskCount().
+false;;0;2;;@ManagedAttribute(description = "Task queue size") long getTaskQueueSize().
+false;;0;2;;@ManagedAttribute(description = "Is task queue empty") boolean isTaskQueueEmpty().
+false;;0;2;;@ManagedAttribute(description = "Keep alive time in seconds") long getKeepAliveTime().
+false;;1;2;;@ManagedAttribute(description = "Keep alive time in seconds") void setKeepAliveTime(long keepAliveTimeInSeconds).
+false;;0;2;;@ManagedAttribute(description = "Whether core threads is allowed to timeout if no tasks in queue to process") boolean isAllowCoreThreadTimeout().
+false;;1;2;;@ManagedAttribute(description = "Whether core threads is allowed to timeout if no tasks in queue to process") void setAllowCoreThreadTimeout(boolean allowCoreThreadTimeout).
+false;;0;2;;@ManagedAttribute(description = "Is shutdown") boolean isShutdown().
+false;;0;2;;@ManagedOperation(description = "Purges the pool") void purge().
+false;;0;3;;@ManagedOperation(description = "Returns the number of additional elements that the Task queue can" + " ideally (in the absence of memory or resource constraints) accept") int getTaskQueueRemainingCapacity().

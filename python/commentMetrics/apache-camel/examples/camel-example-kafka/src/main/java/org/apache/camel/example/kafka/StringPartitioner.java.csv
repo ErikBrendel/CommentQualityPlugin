@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;@Override public void configure(Map<String, ?> configs) { }
+false;public;6;14;;@Override public int partition(String topic, Object key, byte[] keyBytes, Object value, byte[] valueBytes, Cluster cluster) {     int partId = 0.     if (key instanceof String) {         String sKey = (String) key.         int len = sKey.length().         // This will return either 1 or zero         partId = len % 2.     }     return partId. }
+false;public;0;3;;@Override public void close() { }

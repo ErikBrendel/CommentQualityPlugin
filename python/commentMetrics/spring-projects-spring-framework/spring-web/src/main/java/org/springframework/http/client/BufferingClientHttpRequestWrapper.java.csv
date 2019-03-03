@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Override @Nullable public HttpMethod getMethod() {     return this.request.getMethod(). }
+false;public;0;4;;@Override public String getMethodValue() {     return this.request.getMethodValue(). }
+false;public;0;4;;@Override public URI getURI() {     return this.request.getURI(). }
+false;protected;2;7;;@Override protected ClientHttpResponse executeInternal(HttpHeaders headers, byte[] bufferedOutput) throws IOException {     this.request.getHeaders().putAll(headers).     StreamUtils.copy(bufferedOutput, this.request.getBody()).     ClientHttpResponse response = this.request.execute().     return new BufferingClientHttpResponseWrapper(response). }

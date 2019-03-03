@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getComponent() {     return "timer". }
+false;public;2;5;;@Override public String getOperationName(Exchange exchange, Endpoint endpoint) {     Object name = exchange.getProperty(Exchange.TIMER_NAME).     return name instanceof String ? (String) name : super.getOperationName(exchange, endpoint). }

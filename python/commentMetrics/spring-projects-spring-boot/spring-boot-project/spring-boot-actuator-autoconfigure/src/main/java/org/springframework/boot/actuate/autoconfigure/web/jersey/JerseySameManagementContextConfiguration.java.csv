@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;6;;@Bean @ConditionalOnMissingBean(JerseyApplicationPath.class) public JerseyApplicationPath jerseyApplicationPath(JerseyProperties properties, ResourceConfig config) {     return new DefaultJerseyApplicationPath(properties.getApplicationPath(), config). }

@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Override public String toString() {     throw new LegacyEntityException("Invoking toString() on the default collaborator causes an undesirable side effect"). }
+false;public;2;4;;public void configure(Integer number, String text) {     this.number = number.     this.text = text. }
+false;public;0;3;;public Integer getNumber() {     return this.number. }
+false;public;0;3;;public String getText() {     return this.text. }
+false;public;0;3;;public Object getCollaborator() {     return this.collaborator. }
+false;public;1;3;;public void setCollaborator(Object collaborator) {     this.collaborator = collaborator. }
+false;public;0;6;;@Override public String toString() {     return //      new ToStringCreator(this).append("collaborator", //      this.collaborator).toString(). }

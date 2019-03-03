@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@After public void shutdownDataSource() throws IOException {     if (this.dataSource instanceof Closeable) {         ((Closeable) this.dataSource).close().     } }
+false;public;0;5;;@Test public void defaultToHikari() {     this.dataSource = DataSourceBuilder.create().url("jdbc:h2:test").build().     assertThat(this.dataSource).isInstanceOf(HikariDataSource.class). }
+false;public;0;8;;@Test public void defaultToTomcatIfHikariIsNotAvailable() {     this.dataSource = DataSourceBuilder.create(new HidePackagesClassLoader("com.zaxxer.hikari")).url("jdbc:h2:test").build().     assertThat(this.dataSource).isInstanceOf(org.apache.tomcat.jdbc.pool.DataSource.class). }
+false;public;0;8;;@Test public void defaultToCommonsDbcp2AsLastResort() {     this.dataSource = DataSourceBuilder.create(new HidePackagesClassLoader("com.zaxxer.hikari", "org.apache.tomcat.jdbc.pool")).url("jdbc:h2:test").build().     assertThat(this.dataSource).isInstanceOf(BasicDataSource.class). }
+false;public;0;6;;@Test public void specificTypeOfDataSource() {     HikariDataSource hikariDataSource = DataSourceBuilder.create().type(HikariDataSource.class).build().     assertThat(hikariDataSource).isInstanceOf(HikariDataSource.class). }
+false;protected;2;8;;@Override protected Class<?> loadClass(String name, boolean resolve) throws ClassNotFoundException {     if (Arrays.stream(this.hiddenPackages).anyMatch(name::startsWith)) {         throw new ClassNotFoundException().     }     return super.loadClass(name, resolve). }

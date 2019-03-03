@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private,static;3;3;;private static Method getAsmMethod(final Class<?> rtype, final String name, final Class<?>... ptypes) {     return new Method(name, MethodType.methodType(rtype, ptypes).toMethodDescriptorString()). }

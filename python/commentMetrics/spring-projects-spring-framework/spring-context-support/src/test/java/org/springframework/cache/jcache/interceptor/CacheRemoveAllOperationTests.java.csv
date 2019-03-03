@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;7;;@Override protected CacheRemoveAllOperation createSimpleOperation() {     CacheMethodDetails<CacheRemoveAll> methodDetails = create(CacheRemoveAll.class, SampleObject.class, "simpleRemoveAll").     return new CacheRemoveAllOperation(methodDetails, defaultCacheResolver). }
+false;public;0;7;;@Test public void simpleRemoveAll() {     CacheRemoveAllOperation operation = createSimpleOperation().     CacheInvocationParameter[] allParameters = operation.getAllParameters().     assertEquals(0, allParameters.length). }

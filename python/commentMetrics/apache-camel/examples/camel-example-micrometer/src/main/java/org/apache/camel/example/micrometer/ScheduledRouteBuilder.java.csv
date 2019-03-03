@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;15;;@Override public void configure() throws Exception {     from("timer:foo?period=1s&fixedRate=true").routeId(TIMER_ROUTE_ID).setHeader("random").exchange(exchange -> random.nextInt(100)).log(LoggingLevel.INFO, "Delay is ${header.random}").to("direct:bar").     from("direct:bar").routeId("direct:bar").to("micrometer:summary:summary?value=${header.random}").to("micrometer:timer:timer?action=start").delay().exchange(exchange -> random.nextInt(100)).to("micrometer:timer:timer?action=stop"). }

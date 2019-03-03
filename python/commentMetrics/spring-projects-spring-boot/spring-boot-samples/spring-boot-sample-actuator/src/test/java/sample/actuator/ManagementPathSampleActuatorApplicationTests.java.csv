@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Test public void testHealth() {     ResponseEntity<String> entity = this.restTemplate.withBasicAuth("user", getPassword()).getForEntity("/admin/health", String.class).     assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.OK).     assertThat(entity.getBody()).contains("\"status\":\"UP\""). }
+false;public;0;10;;@Test public void testHomeIsSecure() {     @SuppressWarnings("rawtypes")     ResponseEntity<Map> entity = this.restTemplate.getForEntity("/", Map.class).     assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.UNAUTHORIZED).     @SuppressWarnings("unchecked")     Map<String, Object> body = entity.getBody().     assertThat(body.get("error")).isEqualTo("Unauthorized").     assertThat(entity.getHeaders()).doesNotContainKey("Set-Cookie"). }
+false;private;0;3;;private String getPassword() {     return "password". }

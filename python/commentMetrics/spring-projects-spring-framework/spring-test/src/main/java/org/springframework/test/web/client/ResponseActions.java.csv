@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;1;1;/**  * Add a request expectation.  * @return the expectation  */ ;/**  * Add a request expectation.  * @return the expectation  */ ResponseActions andExpect(RequestMatcher requestMatcher).
+true;;1;1;/**  * Define the response.  * @param responseCreator the creator of the response  */ ;/**  * Define the response.  * @param responseCreator the creator of the response  */ void andRespond(ResponseCreator responseCreator).

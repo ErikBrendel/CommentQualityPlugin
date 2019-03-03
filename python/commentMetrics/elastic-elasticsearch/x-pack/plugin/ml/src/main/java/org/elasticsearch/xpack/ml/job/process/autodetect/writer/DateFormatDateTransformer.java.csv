@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;9;;@Override public long transform(String timestamp) throws CannotParseTimestampException {     try {         return dateToEpochConverter.toEpochMillis(timestamp).     } catch (DateTimeParseException e) {         String message = String.format(Locale.ROOT, "Cannot parse date '%s' with format string '%s'", timestamp, timeFormat).         throw new CannotParseTimestampException(message, e).     } }

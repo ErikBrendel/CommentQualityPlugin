@@ -1,0 +1,17 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String name() {     return config.name. }
+false;public;0;3;;public Config config() {     return config. }
+true;public;0;3;/**  * Returns true if only one instance of this exporter should be allowed.  */ ;/**  * Returns true if only one instance of this exporter should be allowed.  */ public boolean isSingleton() {     return false. }
+true;public,abstract;1;1;/**  * Opens up a new export bulk.  *  * @param listener Returns {@code null} to indicate that this exporter is not ready to export the docs.  */ ;/**  * Opens up a new export bulk.  *  * @param listener Returns {@code null} to indicate that this exporter is not ready to export the docs.  */ public abstract void openBulk(ActionListener<ExportBulk> listener).
+false;protected,final;0;3;;protected final boolean isClosed() {     return closed.get(). }
+false;public;0;6;;@Override public void close() {     if (closed.compareAndSet(false, true)) {         doClose().     } }
+false;protected,abstract;0;1;;protected abstract void doClose().
+false;protected,static;1;10;;protected static DateFormatter dateTimeFormatter(final Config config) {     Setting<String> setting = INDEX_NAME_TIME_FORMAT_SETTING.getConcreteSettingForNamespace(config.name).     String format = setting.exists(config.settings()) ? setting.get(config.settings()) : INDEX_FORMAT.     try {         return DateFormatter.forPattern(format).withZone(ZoneOffset.UTC).     } catch (IllegalArgumentException e) {         throw new SettingsException("[" + INDEX_NAME_TIME_FORMAT_SETTING.getKey() + "] invalid index name time format: [" + format + "]", e).     } }
+false;public,static;0;4;;public static List<Setting.AffixSetting<?>> getSettings() {     return Arrays.asList(USE_INGEST_PIPELINE_SETTING, CLUSTER_ALERTS_MANAGEMENT_SETTING, TYPE_SETTING, ENABLED_SETTING, INDEX_NAME_TIME_FORMAT_SETTING, CLUSTER_ALERTS_BLACKLIST_SETTING). }
+false;public;0;3;;public String name() {     return name. }
+false;public;0;3;;public String type() {     return type. }
+false;public;0;3;;public boolean enabled() {     return enabled. }
+false;public;0;3;;public Settings settings() {     return settings. }
+false;public;0;3;;public ClusterService clusterService() {     return clusterService. }
+false;public;0;3;;public XPackLicenseState licenseState() {     return licenseState. }
+true;;1;1;/**  * Create an exporter with the given configuration.  */ ;/**  * Create an exporter with the given configuration.  */ Exporter create(Config config).

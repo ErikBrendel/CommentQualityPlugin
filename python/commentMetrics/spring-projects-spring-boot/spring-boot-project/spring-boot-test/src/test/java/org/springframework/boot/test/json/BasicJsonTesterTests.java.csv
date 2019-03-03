@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void createWhenResourceLoadClassIsNullShouldThrowException() {     assertThatIllegalArgumentException().isThrownBy(() -> new BasicJsonTester(null)).withMessageContaining("ResourceLoadClass must not be null"). }
+false;public;0;4;;@Test public void fromJsonStringShouldReturnJsonContent() {     assertThat(this.json.from(JSON)).isEqualToJson("source.json"). }
+false;public;0;4;;@Test public void fromResourceStringShouldReturnJsonContent() {     assertThat(this.json.from("source.json")).isEqualToJson(JSON). }
+false;public;0;4;;@Test public void fromResourceStringWithClassShouldReturnJsonContent() {     assertThat(this.json.from("source.json", getClass())).isEqualToJson(JSON). }
+false;public;0;4;;@Test public void fromByteArrayShouldReturnJsonContent() {     assertThat(this.json.from(JSON.getBytes())).isEqualToJson("source.json"). }
+false;public;0;6;;@Test public void fromFileShouldReturnJsonContent() throws Exception {     File file = this.temp.newFile("file.json").     FileCopyUtils.copy(JSON.getBytes(), file).     assertThat(this.json.from(file)).isEqualToJson("source.json"). }
+false;public;0;5;;@Test public void fromInputStreamShouldReturnJsonContent() {     InputStream inputStream = new ByteArrayInputStream(JSON.getBytes()).     assertThat(this.json.from(inputStream)).isEqualToJson("source.json"). }
+false;public;0;5;;@Test public void fromResourceShouldReturnJsonContent() {     Resource resource = new ByteArrayResource(JSON.getBytes()).     assertThat(this.json.from(resource)).isEqualToJson("source.json"). }

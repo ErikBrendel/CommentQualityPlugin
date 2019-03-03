@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public byte get(int index) {     return buffer.getByte(offset + index). }
+false;public;0;4;;@Override public int length() {     return length. }
+false;public;2;4;;@Override public BytesReference slice(int from, int length) {     return new ByteBufBytesReference(buffer.slice(offset + from, length), length). }
+false;public;0;4;;@Override public StreamInput streamInput() {     return new ByteBufStreamInput(buffer.duplicate(), length). }
+false;public;1;4;;@Override public void writeTo(OutputStream os) throws IOException {     buffer.getBytes(offset, os, length). }
+false;;0;3;;ByteBuf toByteBuf() {     return buffer.duplicate(). }
+false;public;0;4;;@Override public String utf8ToString() {     return buffer.toString(offset, length, StandardCharsets.UTF_8). }
+false;public;0;9;;@Override public BytesRef toBytesRef() {     if (buffer.hasArray()) {         return new BytesRef(buffer.array(), buffer.arrayOffset() + offset, length).     }     final byte[] copy = new byte[length].     buffer.getBytes(offset, copy).     return new BytesRef(copy). }
+false;public;0;4;;@Override public long ramBytesUsed() {     return buffer.capacity(). }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;8;;protected GoogleBigQuerySQLProducer createAndStartProducer() throws Exception {     configuration.setProjectId(projectId).     configuration.setQuery(sql).     GoogleBigQuerySQLProducer sqlProducer = new GoogleBigQuerySQLProducer(bigquery, endpoint, configuration).     sqlProducer.start().     return sqlProducer. }
+false;protected;0;9;;protected void setupBigqueryMock() throws Exception {     bigquery = mock(Bigquery.class).     when(bigquery.jobs()).thenReturn(mockJobs).     when(bigquery.jobs().query(anyString(), any())).thenReturn(mockQuery).     QueryResponse mockResponse = new QueryResponse().setNumDmlAffectedRows(1L).     when(mockQuery.execute()).thenReturn(mockResponse). }

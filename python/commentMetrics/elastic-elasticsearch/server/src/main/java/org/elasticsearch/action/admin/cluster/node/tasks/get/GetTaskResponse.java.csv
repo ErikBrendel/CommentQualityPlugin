@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     task = in.readOptionalWriteable(TaskResult::new). }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeOptionalWriteable(task). }
+true;public;0;3;/**  * Get the actual result of the fetch.  */ ;/**  * Get the actual result of the fetch.  */ public TaskResult getTask() {     return task. }
+false;public;2;7;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     task.innerToXContent(builder, params).     builder.endObject().     return builder. }
+false;public;0;4;;@Override public String toString() {     return Strings.toString(this). }

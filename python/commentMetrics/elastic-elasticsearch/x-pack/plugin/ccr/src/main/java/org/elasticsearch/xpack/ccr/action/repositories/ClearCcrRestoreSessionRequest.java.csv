@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public ActionRequestValidationException validate() {     return null. }
+false;public;1;4;;@Override public void readFrom(StreamInput in) throws IOException {     throw new UnsupportedOperationException(). }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeString(sessionUUID). }
+false;;0;3;;String getSessionUUID() {     return sessionUUID. }
+false;public;0;4;;@Override public DiscoveryNode getPreferredTargetNode() {     return node. }

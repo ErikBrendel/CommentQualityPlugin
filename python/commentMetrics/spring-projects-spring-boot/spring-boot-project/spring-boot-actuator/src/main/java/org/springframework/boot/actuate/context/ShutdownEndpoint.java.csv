@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;14;;@WriteOperation public Map<String, String> shutdown() {     if (this.context == null) {         return NO_CONTEXT_MESSAGE.     }     try {         return SHUTDOWN_MESSAGE.     } finally {         Thread thread = new Thread(this::performShutdown).         thread.setContextClassLoader(getClass().getClassLoader()).         thread.start().     } }
+false;private;0;9;;private void performShutdown() {     try {         Thread.sleep(500L).     } catch (InterruptedException ex) {         Thread.currentThread().interrupt().     }     this.context.close(). }
+false;public;1;6;;@Override public void setApplicationContext(ApplicationContext context) throws BeansException {     if (context instanceof ConfigurableApplicationContext) {         this.context = (ConfigurableApplicationContext) context.     } }

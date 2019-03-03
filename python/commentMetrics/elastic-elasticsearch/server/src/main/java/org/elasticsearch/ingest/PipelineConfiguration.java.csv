@@ -1,0 +1,16 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;3;;public static ContextParser<Void, PipelineConfiguration> getParser() {     return (parser, context) -> PARSER.apply(parser, null).build(). }
+false;;1;3;;void setId(String id) {     this.id = id. }
+false;;2;4;;void setConfig(BytesReference config, XContentType xContentType) {     this.config = config.     this.xContentType = xContentType. }
+false;;0;3;;PipelineConfiguration build() {     return new PipelineConfiguration(id, config, xContentType). }
+false;public;0;3;;public String getId() {     return id. }
+false;public;0;3;;public Map<String, Object> getConfigAsMap() {     return XContentHelper.convertToMap(config, true, xContentType).v2(). }
+true;;0;3;// pkg-private for tests ;// pkg-private for tests XContentType getXContentType() {     return xContentType. }
+true;;0;3;// pkg-private for tests ;// pkg-private for tests BytesReference getConfig() {     return config. }
+false;public;2;8;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field("id", id).     builder.field("config", getConfigAsMap()).     builder.endObject().     return builder. }
+false;public,static;1;3;;public static PipelineConfiguration readFrom(StreamInput in) throws IOException {     return new PipelineConfiguration(in.readString(), in.readBytesReference(), in.readEnum(XContentType.class)). }
+false;public,static;1;3;;public static Diff<PipelineConfiguration> readDiffFrom(StreamInput in) throws IOException {     return readDiffFrom(PipelineConfiguration::readFrom, in). }
+false;public;0;4;;@Override public String toString() {     return Strings.toString(this). }
+false;public;1;6;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeString(id).     out.writeBytesReference(config).     out.writeEnum(xContentType). }
+false;public;1;11;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     PipelineConfiguration that = (PipelineConfiguration) o.     if (!id.equals(that.id))         return false.     return getConfigAsMap().equals(that.getConfigAsMap()). }
+false;public;0;6;;@Override public int hashCode() {     int result = id.hashCode().     result = 31 * result + getConfigAsMap().hashCode().     return result. }

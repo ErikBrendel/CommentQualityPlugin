@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;4;;@BeforeClass public static void init() {     hazelcastServer = Hazelcast.newHazelcastInstance(). }
+false;public,static;0;6;;@AfterClass public static void close() {     if (hazelcastServer != null) {         hazelcastServer.shutdown().     } }
+false;public;0;10;;@Test public void systemProperty() {     this.contextRunner.withSystemProperties(HazelcastClientConfiguration.CONFIG_SYSTEM_PROPERTY + "=classpath:org/springframework/boot/autoconfigure/hazelcast/" + "hazelcast-client-specific.xml").run((context) -> assertThat(context).getBean(HazelcastInstance.class).isInstanceOf(HazelcastInstance.class).has(nameStartingWith("hz.client_"))). }
+false;public;0;10;;@Test public void explicitConfigFile() {     this.contextRunner.withPropertyValues("spring.hazelcast.config=org/springframework/boot/autoconfigure/" + "hazelcast/hazelcast-client-specific.xml").run((context) -> assertThat(context).getBean(HazelcastInstance.class).isInstanceOf(HazelcastClientProxy.class).has(nameStartingWith("hz.client_"))). }
+false;public;0;9;;@Test public void explicitConfigUrl() {     this.contextRunner.withPropertyValues("spring.hazelcast.config=hazelcast-client-default.xml").run((context) -> assertThat(context).getBean(HazelcastInstance.class).isInstanceOf(HazelcastClientProxy.class).has(nameStartingWith("hz.client_"))). }
+false;public;0;8;;@Test public void unknownConfigFile() {     this.contextRunner.withPropertyValues("spring.hazelcast.config=foo/bar/unknown.xml").run((context) -> assertThat(context).getFailure().isInstanceOf(BeanCreationException.class).hasMessageContaining("foo/bar/unknown.xml")). }
+false;public;0;7;;@Test public void clientConfigTakesPrecedence() {     this.contextRunner.withUserConfiguration(HazelcastServerAndClientConfig.class).withPropertyValues("spring.hazelcast.config=this-is-ignored.xml").run((context) -> assertThat(context).getBean(HazelcastInstance.class).isInstanceOf(HazelcastClientProxy.class)). }
+false;private;1;4;;private Condition<HazelcastInstance> nameStartingWith(String prefix) {     return new Condition<>((o) -> o.getName().startsWith(prefix), "Name starts with " + prefix). }
+false;public;0;4;;@Bean public Config config() {     return new Config(). }
+false;public;0;4;;@Bean public ClientConfig clientConfig() {     return new ClientConfig(). }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void mockedMethodsAreNotAsync() {     given(this.transformer.transform("foo")).willReturn("bar").     assertThat(this.service.transform("foo")).isEqualTo("bar"). }
+false;;1;2;;@Async String transform(String input).
+false;public;1;3;;public String transform(String input) {     return this.transformer.transform(input). }
+false;public;1;4;;@Bean public MyService myService(Transformer transformer) {     return new MyService(transformer). }

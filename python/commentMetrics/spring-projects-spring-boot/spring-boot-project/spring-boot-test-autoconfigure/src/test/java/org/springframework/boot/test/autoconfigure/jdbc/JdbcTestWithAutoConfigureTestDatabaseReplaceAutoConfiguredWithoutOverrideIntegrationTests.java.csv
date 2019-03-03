@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void usesDefaultEmbeddedDatabase() throws Exception {     String product = this.dataSource.getConnection().getMetaData().getDatabaseProductName().     // @AutoConfigureTestDatabase would use H2 but HSQL is manually defined     assertThat(product).startsWith("HSQL"). }

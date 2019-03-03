@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;3;14;;@Override protected Endpoint createEndpoint(String uri, String remaining, Map<String, Object> parameters) throws Exception {     AtomixValueConfiguration configuration = this.configuration.copy().     // Bind options to the configuration object     setConfigurationProperties(configuration, parameters).     AtomixValueEndpoint endpoint = new AtomixValueEndpoint(uri, this, remaining).     endpoint.setConfiguration(configuration).     setProperties(endpoint, parameters).     return endpoint. }
+false;public;0;3;;// ********************************************** // Properties // ********************************************** public AtomixValueConfiguration getConfiguration() {     return this.configuration. }
+true;public;1;3;/**  * The shared component configuration  */ ;/**  * The shared component configuration  */ public void setConfiguration(AtomixValueConfiguration configuration) {     this.configuration = configuration. }
+false;protected;0;4;;@Override protected AtomixValueConfiguration getComponentConfiguration() {     return getConfiguration(). }

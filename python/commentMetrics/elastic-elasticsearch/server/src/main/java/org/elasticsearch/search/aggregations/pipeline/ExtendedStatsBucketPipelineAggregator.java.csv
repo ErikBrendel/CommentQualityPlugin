@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected void innerWriteTo(StreamOutput out) throws IOException {     out.writeDouble(sigma). }
+false;public;0;4;;@Override public String getWriteableName() {     return ExtendedStatsBucketPipelineAggregationBuilder.NAME. }
+false;protected;0;8;;@Override protected void preCollection() {     sum = 0.     count = 0.     min = Double.POSITIVE_INFINITY.     max = Double.NEGATIVE_INFINITY.     sumOfSqrs = 0. }
+false;protected;2;8;;@Override protected void collectBucketValue(String bucketKey, Double bucketValue) {     sum += bucketValue.     min = Math.min(min, bucketValue).     max = Math.max(max, bucketValue).     count += 1.     sumOfSqrs += bucketValue * bucketValue. }
+false;protected;2;4;;@Override protected InternalAggregation buildAggregation(List<PipelineAggregator> pipelineAggregators, Map<String, Object> metadata) {     return new InternalExtendedStatsBucket(name(), count, sum, min, max, sumOfSqrs, sigma, format, pipelineAggregators, metadata). }

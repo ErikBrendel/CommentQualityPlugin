@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * The name of the type of aggregation built by this builder.  */ ;/**  * The name of the type of aggregation built by this builder.  */ String getType().
+true;;1;1;/**  * Set the aggregation's metadata. Returns {@code this} for chaining.  */ ;/**  * Set the aggregation's metadata. Returns {@code this} for chaining.  */ BaseAggregationBuilder setMetaData(Map<String, Object> metaData).
+true;;1;1;/**  * Set the sub aggregations if this aggregation supports sub aggregations. Returns {@code this} for chaining.  */ ;/**  * Set the sub aggregations if this aggregation supports sub aggregations. Returns {@code this} for chaining.  */ BaseAggregationBuilder subAggregations(Builder subFactories).

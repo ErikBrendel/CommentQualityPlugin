@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getRouteId() {     return routeId. }
+false;public;0;3;;public NamedNode getNode() {     return node. }
+false;public;0;4;;@Override public long getTime() {     return timestamp. }
+false;public;0;3;;public long getElapsed() {     return elapsed. }
+false;public;0;5;;public void nodeProcessingDone() {     if (timestamp > 0) {         elapsed = System.currentTimeMillis() - timestamp.     } }
+false;public;0;7;;@Override public String toString() {     return "DefaultMessageHistory[" + "routeId=" + routeId + ", node=" + nodeId + ']'. }

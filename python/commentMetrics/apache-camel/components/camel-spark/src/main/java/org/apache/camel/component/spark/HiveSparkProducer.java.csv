@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;7;;@Override public void process(Exchange exchange) throws Exception {     HiveContext hiveContext = resolveHiveContext().     String sql = exchange.getIn().getBody(String.class).     Dataset<Row> resultFrame = hiveContext.sql(sql).     exchange.getIn().setBody(getEndpoint().isCollect() ? resultFrame.collectAsList() : resultFrame.count()). }
+false;public;0;4;;@Override public SparkEndpoint getEndpoint() {     return (SparkEndpoint) super.getEndpoint(). }
+false;protected;0;7;;// Helpers protected HiveContext resolveHiveContext() {     Set<HiveContext> hiveContexts = getEndpoint().getComponent().getCamelContext().getRegistry().findByType(HiveContext.class).     if (hiveContexts.size() == 1) {         return hiveContexts.iterator().next().     }     return null. }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;1;1;/**  * Called during Spring Boot is starting up and is starting up {@link CamelContext}.  */ ;/**  * Called during Spring Boot is starting up and is starting up {@link CamelContext}.  */ void beforeApplicationStart(CamelContext camelContext).
+true;;1;1;/**  * Called after Spring Boot and {@link CamelContext} has just been started up.  * This means there Camel routes may already be active and have started processing incoming messages.  */ ;/**  * Called after Spring Boot and {@link CamelContext} has just been started up.  * This means there Camel routes may already be active and have started processing incoming messages.  */ void afterApplicationStart(CamelContext camelContext).

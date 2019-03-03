@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;static;2;3;;static TermsValuesSourceBuilder parse(String name, XContentParser parser) throws IOException {     return PARSER.parse(parser, new TermsValuesSourceBuilder(name), null). }
+false;protected;1;2;;@Override protected void innerWriteTo(StreamOutput out) throws IOException { }
+false;protected;2;2;;@Override protected void doXContentBody(XContentBuilder builder, Params params) throws IOException { }
+false;protected;0;4;;@Override protected int innerHashCode() {     return 0. }
+false;protected;1;4;;@Override protected boolean innerEquals(TermsValuesSourceBuilder builder) {     return true. }
+false;public;0;4;;@Override public String type() {     return TYPE. }
+false;protected;2;16;;@Override protected CompositeValuesSourceConfig innerBuild(SearchContext context, ValuesSourceConfig<?> config) throws IOException {     ValuesSource vs = config.toValuesSource(context.getQueryShardContext()).     if (vs == null) {         vs = ValuesSource.Numeric.EMPTY.     }     final MappedFieldType fieldType = config.fieldContext() != null ? config.fieldContext().fieldType() : null.     final DocValueFormat format.     if (format() == null && fieldType instanceof DateFieldMapper.DateFieldType) {         // defaults to the raw format on date fields (preserve timestamp as longs).         format = DocValueFormat.RAW.     } else {         format = config.format().     }     return new CompositeValuesSourceConfig(name, fieldType, vs, format, order(), missingBucket()). }

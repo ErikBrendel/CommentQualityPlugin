@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;5;;@Override protected void postProcessTest() throws Exception {     super.postProcessTest().     socketListener.getReceivedData().clear(). }
+false;protected;0;4;;@Override protected void resetMocks() {     super.resetMocks(). }
+false;protected;0;15;;@Override protected CamelContext createCamelContext() throws Exception {     CamelContext context = super.createCamelContext().     context.setTracing(true).     XRayTracer xRayTracer = new XRayTracer().     xRayTracer.setCamelContext(context).     xRayTracer.setTracingStrategy(getTracingStrategy()).     xRayTracer.setExcludePatterns(getExcludePatterns()).     xRayTracer.init(context).     return context. }
+false;protected;0;3;;protected InterceptStrategy getTracingStrategy() {     return new NoopTracingStrategy(). }
+false;protected;0;3;;protected Set<String> getExcludePatterns() {     return new HashSet<>(). }
+false;protected;0;10;;protected void verify() {     try {         // give the socket listener a bit time to receive the data and transform it to Java objects         Thread.sleep(500).     } catch (InterruptedException iEx) {     // ignore     }     Map<String, TestTrace> receivedData = socketListener.getReceivedData().     TestUtils.checkData(receivedData, testData). }

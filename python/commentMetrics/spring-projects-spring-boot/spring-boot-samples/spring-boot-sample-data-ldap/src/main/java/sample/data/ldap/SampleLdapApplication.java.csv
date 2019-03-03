@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;16;;@Override public void run(String... args) throws Exception {     // fetch all people     System.out.println("People found with findAll():").     System.out.println("-------------------------------").     for (Person person : this.repository.findAll()) {         System.out.println(person).     }     System.out.println().     // fetch an individual person     System.out.println("Person found with findByPhone('+46 555-123456'):").     System.out.println("--------------------------------").     System.out.println(this.repository.findByPhone("+46 555-123456")). }
+false;public,static;1;3;;public static void main(String[] args) {     SpringApplication.run(SampleLdapApplication.class, args).close(). }

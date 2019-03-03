@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected String getBlueprintDescriptor() {     return "org/apache/camel/test/blueprint/BlueprintAddServiceTest.xml". }
+false;protected;1;4;;@Override protected void addServicesOnStartup(Map<String, KeyValueHolder<Object, Dictionary>> services) {     services.put("myService", asService(myService, "beer", "Carlsberg")). }
+false;public;0;13;;@Test public void testAddService() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("CamelCamel").     template.sendBody("direct:start", "Camel").     assertMockEndpointsSatisfied().     ServiceReference<?> ref = getBundleContext().getServiceReference("myService").     assertEquals("Carlsberg", ref.getProperty("beer")).     Object service = getBundleContext().getService(ref).     assertSame(myService, service). }

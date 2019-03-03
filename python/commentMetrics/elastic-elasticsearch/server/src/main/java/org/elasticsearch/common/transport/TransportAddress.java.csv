@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;11;;@Override public void writeTo(StreamOutput out) throws IOException {     // 4 bytes (IPv4) or 16 bytes (IPv6)     byte[] bytes = address.getAddress().getAddress().     // 1 byte     out.writeByte((byte) bytes.length).     out.write(bytes, 0, bytes.length).     out.writeString(address.getHostString()).     // don't serialize scope ids over the network!!!!     // these only make sense with respect to the local machine, and will only formulate     // the address incorrectly remotely.     out.writeInt(address.getPort()). }
+true;public;0;3;/**  * Returns a string representation of the enclosed {@link InetSocketAddress}  * @see NetworkAddress#format(InetAddress)  */ ;/**  * Returns a string representation of the enclosed {@link InetSocketAddress}  * @see NetworkAddress#format(InetAddress)  */ public String getAddress() {     return NetworkAddress.format(address.getAddress()). }
+true;public;0;3;/**  * Returns the addresses port  */ ;/**  * Returns the addresses port  */ public int getPort() {     return address.getPort(). }
+true;public;0;3;/**  * Returns the enclosed {@link InetSocketAddress}  */ ;/**  * Returns the enclosed {@link InetSocketAddress}  */ public InetSocketAddress address() {     return this.address. }
+false;public;1;7;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     TransportAddress address1 = (TransportAddress) o.     return address.equals(address1.address). }
+false;public;0;4;;@Override public int hashCode() {     return address != null ? address.hashCode() : 0. }
+false;public;0;4;;@Override public String toString() {     return NetworkAddress.format(address). }
+false;public;2;4;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     return builder.value(toString()). }

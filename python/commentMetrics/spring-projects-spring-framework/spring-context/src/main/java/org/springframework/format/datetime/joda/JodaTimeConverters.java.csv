@@ -1,0 +1,16 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,static;1;19;/**  * Install the converters into the converter registry.  * @param registry the converter registry  */ ;/**  * Install the converters into the converter registry.  * @param registry the converter registry  */ @SuppressWarnings("deprecation") public static void registerConverters(ConverterRegistry registry) {     DateFormatterRegistrar.addDateConverters(registry).     registry.addConverter(new DateTimeToLocalDateConverter()).     registry.addConverter(new DateTimeToLocalTimeConverter()).     registry.addConverter(new DateTimeToLocalDateTimeConverter()).     registry.addConverter(new DateTimeToDateMidnightConverter()).     registry.addConverter(new DateTimeToMutableDateTimeConverter()).     registry.addConverter(new DateTimeToInstantConverter()).     registry.addConverter(new DateTimeToDateConverter()).     registry.addConverter(new DateTimeToCalendarConverter()).     registry.addConverter(new DateTimeToLongConverter()).     registry.addConverter(new DateToReadableInstantConverter()).     registry.addConverter(new CalendarToReadableInstantConverter()).     registry.addConverter(new LongToReadableInstantConverter()).     registry.addConverter(new LocalDateTimeToLocalDateConverter()).     registry.addConverter(new LocalDateTimeToLocalTimeConverter()). }
+false;public;1;4;;@Override public LocalDate convert(DateTime source) {     return source.toLocalDate(). }
+false;public;1;4;;@Override public LocalTime convert(DateTime source) {     return source.toLocalTime(). }
+false;public;1;4;;@Override public LocalDateTime convert(DateTime source) {     return source.toLocalDateTime(). }
+false;public;1;4;;@Override public org.joda.time.DateMidnight convert(DateTime source) {     return source.toDateMidnight(). }
+false;public;1;4;;@Override public MutableDateTime convert(DateTime source) {     return source.toMutableDateTime(). }
+false;public;1;4;;@Override public Instant convert(DateTime source) {     return source.toInstant(). }
+false;public;1;4;;@Override public Date convert(DateTime source) {     return source.toDate(). }
+false;public;1;4;;@Override public Calendar convert(DateTime source) {     return source.toGregorianCalendar(). }
+false;public;1;4;;@Override public Long convert(DateTime source) {     return source.getMillis(). }
+false;public;1;4;;@Override public ReadableInstant convert(Date source) {     return new DateTime(source). }
+false;public;1;4;;@Override public ReadableInstant convert(Calendar source) {     return new DateTime(source). }
+false;public;1;4;;@Override public ReadableInstant convert(Long source) {     return new DateTime(source.longValue()). }
+false;public;1;4;;@Override public LocalDate convert(LocalDateTime source) {     return source.toLocalDate(). }
+false;public;1;4;;@Override public LocalTime convert(LocalDateTime source) {     return source.toLocalTime(). }

@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Before public void setup() {     MockConfigurationPropertySource source = new MockConfigurationPropertySource().     source.put("example.foo", "bar").     this.sources.add(source).     this.binder = new Binder(this.sources). }
+false;public;0;5;;@Test public void bindWhenNotIgnoringErrorsShouldFail() {     assertThatExceptionOfType(BindException.class).isThrownBy(() -> this.binder.bind("example", Bindable.of(Example.class))). }
+false;public;0;6;;@Test public void bindWhenIgnoringErrorsShouldBind() {     Example bound = this.binder.bind("example", Bindable.of(Example.class), new IgnoreErrorsBindHandler()).get().     assertThat(bound.getFoo()).isEqualTo(0). }
+false;public;0;3;;public int getFoo() {     return this.foo. }
+false;public;1;3;;public void setFoo(int foo) {     this.foo = foo. }

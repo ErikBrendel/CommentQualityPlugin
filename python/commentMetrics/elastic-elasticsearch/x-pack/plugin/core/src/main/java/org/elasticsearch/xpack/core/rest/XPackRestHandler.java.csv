@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,final;2;4;;@Override public final RestChannelConsumer prepareRequest(RestRequest request, NodeClient client) throws IOException {     return doPrepareRequest(request, new XPackClient(client)). }
+false;protected,abstract;2;1;;protected abstract RestChannelConsumer doPrepareRequest(RestRequest request, XPackClient client) throws IOException.

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;0;3;;private String getFtpUrl() {     return "ftp://admin@localhost:" + getPort() + "/incoming/?password=admin&delete=true". }
+false;public;0;9;;@Test public void testFtpRoute() throws Exception {     MockEndpoint resultEndpoint = getMockEndpoint("mock:result").     resultEndpoint.expectedBodiesReceived("line1", "line2", "line3").     template.sendBodyAndHeader(getFtpUrl(), new File("src/test/data/ftptextfile/textexample.txt"), Exchange.FILE_NAME, "textexample.txt").     resultEndpoint.assertIsSatisfied(). }
+false;public;0;7;;public void configure() throws Exception {     from(getFtpUrl()).to("log:file").split(body().tokenize(LS)).to("log:line").to("mock:result"). }
+false;protected;0;11;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from(getFtpUrl()).to("log:file").split(body().tokenize(LS)).to("log:line").to("mock:result").         }     }. }

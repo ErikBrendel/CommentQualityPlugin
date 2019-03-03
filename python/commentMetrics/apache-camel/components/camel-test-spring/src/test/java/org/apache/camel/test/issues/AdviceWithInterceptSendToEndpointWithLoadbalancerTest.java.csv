@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected AbstractApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/test/issues/AdviceWithInterceptSendToEndpointWithLoadbalancerTest.xml"). }
+false;public;0;4;;@Override public boolean isUseAdviceWith() {     return true. }
+false;public;0;5;;public void configure() throws Exception {     interceptSendToEndpoint("seda:end1").skipSendToOriginalEndpoint().to("mock:end"). }
+false;public;0;19;;@Test public void testSimpleMultipleAdvice() throws Exception {     RouteDefinition route = context.getRouteDefinitions().get(0).     RouteReifier.adviceWith(route, context, new RouteBuilder() {          public void configure() throws Exception {             interceptSendToEndpoint("seda:end1").skipSendToOriginalEndpoint().to("mock:end").         }     }).     context.start().     getMockEndpoint("mock:end").expectedMessageCount(1).     template.sendBody("direct:start", "Hello World").     assertMockEndpointsSatisfied(). }
+false;public;0;6;;@Override public void configure() throws Exception {     from("direct:start").loadBalance().failover().to("seda:end1", "seda:end2"). }

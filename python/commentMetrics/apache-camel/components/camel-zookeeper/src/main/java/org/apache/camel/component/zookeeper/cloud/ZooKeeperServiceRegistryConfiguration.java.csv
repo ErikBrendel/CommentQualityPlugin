@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;// *********************************************** // Properties // *********************************************** public boolean isDeregisterServicesOnStop() {     return deregisterServicesOnStop. }
+false;public;1;3;;public void setDeregisterServicesOnStop(boolean deregisterServicesOnStop) {     this.deregisterServicesOnStop = deregisterServicesOnStop. }
+false;public;0;3;;public boolean isOverrideServiceHost() {     return overrideServiceHost. }
+false;public;1;3;;public void setOverrideServiceHost(boolean overrideServiceHost) {     this.overrideServiceHost = overrideServiceHost. }
+false;public;0;3;;public String getServiceHost() {     return serviceHost. }
+false;public;1;3;;public void setServiceHost(String serviceHost) {     this.serviceHost = serviceHost. }
+false;public;0;8;;// *********************************************** //  // *********************************************** @Override public ZooKeeperServiceRegistryConfiguration copy() {     try {         return (ZooKeeperServiceRegistryConfiguration) super.clone().     } catch (CloneNotSupportedException e) {         throw new RuntimeCamelException(e).     } }

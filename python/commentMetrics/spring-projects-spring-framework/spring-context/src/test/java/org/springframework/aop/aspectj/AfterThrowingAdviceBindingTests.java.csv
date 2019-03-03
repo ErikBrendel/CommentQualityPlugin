@@ -1,0 +1,19 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;11;;@Before public void setup() {     ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext(getClass().getSimpleName() + ".xml", getClass()).     testBean = (ITestBean) ctx.getBean("testBean").     afterThrowingAdviceAspect = (AfterThrowingAdviceBindingTestAspect) ctx.getBean("testAspect").     mockCollaborator = mock(AfterThrowingAdviceBindingCollaborator.class).     afterThrowingAdviceAspect.setCollaborator(mockCollaborator). }
+false;public;0;5;;@Test(expected = Throwable.class) public void testSimpleAfterThrowing() throws Throwable {     this.testBean.exceptional(new Throwable()).     verify(mockCollaborator).noArgs(). }
+false;public;0;6;;@Test(expected = Throwable.class) public void testAfterThrowingWithBinding() throws Throwable {     Throwable t = new Throwable().     this.testBean.exceptional(t).     verify(mockCollaborator).oneThrowable(t). }
+false;public;0;8;;@Test(expected = Throwable.class) public void testAfterThrowingWithNamedTypeRestriction() throws Throwable {     Throwable t = new Throwable().     this.testBean.exceptional(t).     verify(mockCollaborator).noArgs().     verify(mockCollaborator).oneThrowable(t).     verify(mockCollaborator).noArgsOnThrowableMatch(). }
+false;public;0;6;;@Test(expected = Throwable.class) public void testAfterThrowingWithRuntimeExceptionBinding() throws Throwable {     RuntimeException ex = new RuntimeException().     this.testBean.exceptional(ex).     verify(mockCollaborator).oneRuntimeException(ex). }
+false;public;0;5;;@Test(expected = Throwable.class) public void testAfterThrowingWithTypeSpecified() throws Throwable {     this.testBean.exceptional(new Throwable()).     verify(mockCollaborator).noArgsOnThrowableMatch(). }
+false;public;0;5;;@Test(expected = Throwable.class) public void testAfterThrowingWithRuntimeTypeSpecified() throws Throwable {     this.testBean.exceptional(new RuntimeException()).     verify(mockCollaborator).noArgsOnRuntimeExceptionMatch(). }
+false;;0;1;;void noArgs().
+false;;1;1;;void oneThrowable(Throwable t).
+false;;1;1;;void oneRuntimeException(RuntimeException re).
+false;;0;1;;void noArgsOnThrowableMatch().
+false;;0;1;;void noArgsOnRuntimeExceptionMatch().
+false;public;1;3;;public void setCollaborator(AfterThrowingAdviceBindingCollaborator aCollaborator) {     this.collaborator = aCollaborator. }
+false;public;0;3;;public void noArgs() {     this.collaborator.noArgs(). }
+false;public;1;3;;public void oneThrowable(Throwable t) {     this.collaborator.oneThrowable(t). }
+false;public;1;3;;public void oneRuntimeException(RuntimeException ex) {     this.collaborator.oneRuntimeException(ex). }
+false;public;0;3;;public void noArgsOnThrowableMatch() {     this.collaborator.noArgsOnThrowableMatch(). }
+false;public;0;3;;public void noArgsOnRuntimeExceptionMatch() {     this.collaborator.noArgsOnRuntimeExceptionMatch(). }

@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;21;;@Test public void testConversionService() {     Collection<?> source = Arrays.asList(new Person("Name", 30)).     Assert.assertFalse(conversionService.canConvert(Person.class, String.class)).     Assert.assertTrue(conversionService.canConvert(source.getClass(), String.class)).     try {         conversionService.convert(source, String.class).     } catch (ConversionFailedException e) {         // Expected as Person can't be converted to a string according to         // Spring's FallbackObjectToStringConverter, see javadoc for:         //          // org.springframework.core.convert.support.FallbackObjectToStringConverter         //          Assert.assertTrue(e.getCause() instanceof ConverterNotFoundException).     }     Assert.assertNull(converter.convertTo(String.class, source)). }
+false;public;0;3;;public String getName() {     return name. }
+false;public;1;3;;public void setName(String name) {     this.name = name. }
+false;public;0;3;;public int getAge() {     return age. }
+false;public;1;3;;public void setAge(int age) {     this.age = age. }
+false;public;0;7;;@Override public String toString() {     return "Person{" + "name='" + name + '\'' + ", age=" + age + '}'. }
+false;;1;9;;@Bean ConversionService camelSpringConversionService(ApplicationContext applicationContext) {     DefaultConversionService service = new DefaultConversionService().     for (Converter converter : applicationContext.getBeansOfType(Converter.class).values()) {         service.addConverter(converter).     }     return service. }
+false;;1;4;;@Bean SpringTypeConverter camelSpringTypeConverter(List<ConversionService> conversionServices) {     return new SpringTypeConverter(conversionServices). }

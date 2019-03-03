@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;5;4;;@Override public DefaultWebsocket newInstance(ServletUpgradeRequest request, String protocol, String pathSpec, NodeSynchronization sync, WebsocketConsumer consumer) {     return new DefaultWebsocket(sync, pathSpec, consumer). }

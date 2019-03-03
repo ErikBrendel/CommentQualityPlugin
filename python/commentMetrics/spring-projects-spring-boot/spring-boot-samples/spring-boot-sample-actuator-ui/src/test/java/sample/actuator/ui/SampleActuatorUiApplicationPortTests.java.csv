@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void testHome() {     ResponseEntity<String> entity = new TestRestTemplate().getForEntity("http://localhost:" + this.port, String.class).     assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.OK). }
+false;public;0;8;;@Test public void testMetrics() {     @SuppressWarnings("rawtypes")     ResponseEntity<Map> entity = new TestRestTemplate().getForEntity("http://localhost:" + this.managementPort + "/actuator/metrics", Map.class).     assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.UNAUTHORIZED). }
+false;public;0;9;;@Test public void testHealth() {     ResponseEntity<String> entity = new TestRestTemplate().withBasicAuth("user", getPassword()).getForEntity("http://localhost:" + this.managementPort + "/actuator/health", String.class).     assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.OK).     assertThat(entity.getBody()).contains("\"status\":\"UP\""). }
+false;private;0;3;;private String getPassword() {     return "password". }

@@ -1,0 +1,17 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Response newResponse() {     return new Response(). }
+false;public;0;4;;@Override public IndicesOptions indicesOptions() {     return options. }
+false;public;0;4;;@Override public String[] indices() {     return indices. }
+false;public;1;9;;@Override public IndicesRequest indices(String... indices) {     Objects.requireNonNull(indices, "indices must not be null").     for (String index : indices) {         Objects.requireNonNull(index, "index must not be null").     }     this.indices = indices.     return this. }
+false;public;1;6;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     this.indices = in.readStringArray().     this.options = IndicesOptions.readIndicesOptions(in). }
+false;public;1;6;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeStringArray(indices).     options.writeIndicesOptions(out). }
+false;public;0;4;;@Override public ActionRequestValidationException validate() {     return null. }
+false;public;2;6;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.array(RollupField.ID.getPreferredName(), indices).     builder.field(INDICES_OPTIONS.getPreferredName(), options).     return builder. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(Arrays.hashCode(indices), options). }
+false;public;1;12;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     Request other = (Request) obj.     return Arrays.equals(indices, other.indices) && Objects.equals(options, other.options). }
+false;public;0;3;;public Map<String, RollableIndexCaps> getJobs() {     return jobs. }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeMap(jobs, StreamOutput::writeString, (out1, value) -> value.writeTo(out1)). }
+false;public;2;9;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     for (Map.Entry<String, RollableIndexCaps> entry : jobs.entrySet()) {         entry.getValue().toXContent(builder, params).     }     builder.endObject().     return builder. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(jobs). }
+false;public;1;11;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     Response other = (Response) obj.     return Objects.equals(jobs, other.jobs). }
+false;public,final;0;4;;@Override public final String toString() {     return Strings.toString(this). }

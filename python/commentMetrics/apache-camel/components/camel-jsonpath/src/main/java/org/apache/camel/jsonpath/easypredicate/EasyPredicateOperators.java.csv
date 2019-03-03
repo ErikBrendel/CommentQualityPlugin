@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;static;1;4;/**  * Does the expression have any operator (with single space around)?  */ ;/**  * Does the expression have any operator (with single space around)?  */ static boolean hasOperator(String exp) {     // need to have space around operator to not match eg in used in some other word     return Arrays.stream(OPS).anyMatch(o -> exp.contains(" " + o + "")). }
+true;static;1;3;/**  * Is this an operator (with no space around)  */ ;/**  * Is this an operator (with no space around)  */ static boolean isOperator(String exp) {     return Arrays.stream(OPS).anyMatch(s -> Objects.equals(s, exp)). }
+true;static;1;3;/**  * Gets the operator (with single space around)  */ ;/**  * Gets the operator (with single space around)  */ static String getOperatorAtStart(String exp) {     return Arrays.stream(OPS).filter(o -> exp.startsWith(" " + o + "")).findFirst().orElse(null). }

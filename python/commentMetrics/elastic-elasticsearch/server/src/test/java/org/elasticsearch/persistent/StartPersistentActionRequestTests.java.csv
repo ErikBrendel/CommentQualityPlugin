@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;11;;@Override protected Request createTestInstance() {     TestParams testParams = new TestParams().     if (randomBoolean()) {         testParams.setTestParam(randomAlphaOfLengthBetween(1, 20)).     }     if (randomBoolean()) {         testParams.setExecutorNodeAttr(randomAlphaOfLengthBetween(1, 20)).     }     return new Request(UUIDs.base64UUID(), randomAlphaOfLengthBetween(1, 20), testParams). }
+false;protected;0;4;;@Override protected Request createBlankInstance() {     return new Request(). }
+false;protected;0;6;;@Override protected NamedWriteableRegistry getNamedWriteableRegistry() {     return new NamedWriteableRegistry(Collections.singletonList(new Entry(PersistentTaskParams.class, TestPersistentTasksExecutor.NAME, TestParams::new))). }

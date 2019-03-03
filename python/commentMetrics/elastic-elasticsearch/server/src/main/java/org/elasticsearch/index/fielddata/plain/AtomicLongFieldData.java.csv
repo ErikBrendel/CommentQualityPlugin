@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public long ramBytesUsed() {     return ramBytesUsed. }
+false;public,final;0;15;;@Override public final ScriptDocValues<?> getScriptValues() {     switch(numericType) {         // for now, dates and nanoseconds are treated the same, which also means, that the precision is only on millisecond level         case DATE:             return new ScriptDocValues.Dates(getLongValues(), false).         case DATE_NANOSECONDS:             assert this instanceof SortedNumericDVIndexFieldData.NanoSecondFieldData.             return new ScriptDocValues.Dates(((SortedNumericDVIndexFieldData.NanoSecondFieldData) this).getLongValuesAsNanos(), true).         case BOOLEAN:             return new ScriptDocValues.Booleans(getLongValues()).         default:             return new ScriptDocValues.Longs(getLongValues()).     } }
+false;public,final;0;4;;@Override public final SortedBinaryDocValues getBytesValues() {     return FieldData.toString(getLongValues()). }
+false;public,final;0;4;;@Override public final SortedNumericDoubleValues getDoubleValues() {     return FieldData.castToDouble(getLongValues()). }
+false;public;0;2;;@Override public void close() { }

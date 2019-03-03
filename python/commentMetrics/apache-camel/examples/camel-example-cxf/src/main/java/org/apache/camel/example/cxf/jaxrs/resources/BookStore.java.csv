@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;1;5;;@WebMethod @GET @Path("/{id}") @Consumes("*/*") Book getBook(@PathParam("id") @WebParam(name = "id") Long id) throws BookNotFoundFault.
+false;;1;4;;@WebMethod @POST @Path("/books") Book addBook(@WebParam(name = "book") Book book).

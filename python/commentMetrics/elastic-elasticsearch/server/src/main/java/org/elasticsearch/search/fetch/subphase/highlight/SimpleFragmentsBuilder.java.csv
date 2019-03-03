@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;7;6;;@Override protected String makeFragment(StringBuilder buffer, int[] index, Field[] values, WeightedFragInfo fragInfo, String[] preTags, String[] postTags, Encoder encoder) {     WeightedFragInfo weightedFragInfo = FragmentBuilderHelper.fixWeightedFragInfo(fieldType, values, fragInfo).     return super.makeFragment(buffer, index, values, weightedFragInfo, preTags, postTags, encoder). }

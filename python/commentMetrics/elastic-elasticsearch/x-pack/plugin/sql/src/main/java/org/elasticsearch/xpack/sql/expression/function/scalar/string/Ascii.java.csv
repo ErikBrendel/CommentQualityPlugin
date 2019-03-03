@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected NodeInfo<Ascii> info() {     return NodeInfo.create(this, Ascii::new, field()). }
+false;protected;1;4;;@Override protected Ascii replaceChild(Expression newChild) {     return new Ascii(source(), newChild). }
+false;protected;0;4;;@Override protected StringOperation operation() {     return StringOperation.ASCII. }
+false;public;0;4;;@Override public DataType dataType() {     return DataType.INTEGER. }

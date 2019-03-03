@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getGuid() {     return guid. }
+false;public;1;3;;public void setGuid(String guid) {     this.guid = guid. }
+false;public;0;3;;public Integer getParent() {     return parent. }
+false;public;1;3;;public void setParent(Integer parent) {     this.parent = parent. }
+false;public;0;3;;public String getContent() {     return content. }
+false;public;1;3;;public void setContent(String content) {     this.content = content. }
+false;public;0;3;;public String getTitle() {     return title. }
+false;public;1;3;;public void setTitle(String title) {     this.title = title. }
+false;public;0;3;;public String getExcerpt() {     return excerpt. }
+false;public;1;3;;public void setExcerpt(String excerpt) {     this.excerpt = excerpt. }
+false;public;0;4;;@Override public String toString() {     return toStringHelper(this).add("ID", this.getId()).add("PostID", this.parent).addValue(this.getTitle()).toString(). }

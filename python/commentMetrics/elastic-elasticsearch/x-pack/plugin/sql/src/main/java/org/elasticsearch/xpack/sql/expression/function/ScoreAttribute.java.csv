@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected NodeInfo<ScoreAttribute> info() {     return NodeInfo.create(this). }
+false;protected;6;5;;@Override protected Attribute clone(Source source, String name, String qualifier, Nullability nullability, ExpressionId id, boolean synthetic) {     return new ScoreAttribute(source, name, dataType(), qualifier, nullability, id, synthetic). }
+false;protected;0;4;;@Override protected Pipe makePipe() {     return new ScorePipe(source(), this). }
+false;protected;0;4;;@Override protected String label() {     return "SCORE". }

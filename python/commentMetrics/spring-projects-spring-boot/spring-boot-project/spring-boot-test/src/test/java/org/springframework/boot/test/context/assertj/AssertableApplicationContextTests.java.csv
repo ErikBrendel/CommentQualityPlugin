@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void getShouldReturnProxy() {     AssertableApplicationContext context = AssertableApplicationContext.get(() -> mock(ConfigurableApplicationContext.class)).     assertThat(context).isInstanceOf(ConfigurableApplicationContext.class). }

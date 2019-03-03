@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Producer createProducer() throws Exception {     return new CordaProducer(this, configuration, proxy). }
+false;public;1;6;;@Override public Consumer createConsumer(Processor processor) throws Exception {     CordaConsumer consumer = new CordaConsumer(this, processor, configuration, proxy).     configureConsumer(consumer).     return consumer. }
+false;protected;0;8;;@Override protected void doStart() throws Exception {     NetworkHostAndPort rpcAddress = new NetworkHostAndPort(configuration.getHost(), configuration.getPort()).     CordaRPCClient rpcClient = new CordaRPCClient(rpcAddress).     rpcConnection = rpcClient.start(this.configuration.getUsername(), this.configuration.getPassword()).     proxy = rpcConnection.getProxy().     super.doStart(). }
+false;protected;0;7;;@Override protected void doStop() throws Exception {     if (rpcConnection != null) {         rpcConnection.notifyServerAndClose().     }     super.doStop(). }
+false;public;0;3;;public boolean isSingleton() {     return true. }

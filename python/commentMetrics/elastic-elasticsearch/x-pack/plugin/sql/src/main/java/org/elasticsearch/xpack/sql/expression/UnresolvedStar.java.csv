@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected NodeInfo<UnresolvedStar> info() {     return NodeInfo.create(this, UnresolvedStar::new, qualifier). }
+false;public;1;4;;@Override public Expression replaceChildren(List<Expression> newChildren) {     throw new UnsupportedOperationException("this type of node doesn't have any children to replace"). }
+false;public;0;4;;@Override public Nullability nullable() {     throw new UnresolvedException("nullable", this). }
+false;public;0;3;;public UnresolvedAttribute qualifier() {     return qualifier. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(qualifier). }
+false;public;1;16;;@Override public boolean equals(Object obj) {     /*          * Intentionally not calling the superclass          * equals because it uses id which we always          * mutate when we make a clone. So we need          * to ignore it in equals for the transform          * tests to pass.          */     if (obj == null || obj.getClass() != getClass()) {         return false.     }     UnresolvedStar other = (UnresolvedStar) obj.     return Objects.equals(qualifier, other.qualifier). }
+false;private;0;3;;private String message() {     return (qualifier() != null ? qualifier().qualifiedName() + "." : "") + "*". }
+false;public;0;4;;@Override public String unresolvedMessage() {     return "Cannot determine columns for [" + message() + "]". }
+false;public;0;4;;@Override public String toString() {     return UNRESOLVED_PREFIX + message(). }

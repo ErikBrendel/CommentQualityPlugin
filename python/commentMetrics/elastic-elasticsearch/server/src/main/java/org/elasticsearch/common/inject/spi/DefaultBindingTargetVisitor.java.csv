@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;protected;1;3;/**  * Default visit implementation. Returns {@code null}.  */ ;/**  * Default visit implementation. Returns {@code null}.  */ protected V visitOther(Binding<? extends T> binding) {     return null. }
+false;public;1;4;;@Override public V visit(InstanceBinding<? extends T> instanceBinding) {     return visitOther(instanceBinding). }
+false;public;1;4;;@Override public V visit(ProviderInstanceBinding<? extends T> providerInstanceBinding) {     return visitOther(providerInstanceBinding). }
+false;public;1;4;;@Override public V visit(ProviderKeyBinding<? extends T> providerKeyBinding) {     return visitOther(providerKeyBinding). }
+false;public;1;4;;@Override public V visit(LinkedKeyBinding<? extends T> linkedKeyBinding) {     return visitOther(linkedKeyBinding). }
+false;public;1;4;;@Override public V visit(ExposedBinding<? extends T> exposedBinding) {     return visitOther(exposedBinding). }
+false;public;1;4;;@Override public V visit(UntargettedBinding<? extends T> untargettedBinding) {     return visitOther(untargettedBinding). }
+false;public;1;4;;@Override public V visit(ConstructorBinding<? extends T> constructorBinding) {     return visitOther(constructorBinding). }
+false;public;1;4;;@Override public V visit(ConvertedConstantBinding<? extends T> convertedConstantBinding) {     return visitOther(convertedConstantBinding). }
+true;public;1;4;// javac says it's an error to cast ProviderBinding<? extends T> to Binding<? extends T> ;// javac says it's an error to cast ProviderBinding<? extends T> to Binding<? extends T> @Override public V visit(ProviderBinding<? extends T> providerBinding) {     return visitOther(providerBinding). }

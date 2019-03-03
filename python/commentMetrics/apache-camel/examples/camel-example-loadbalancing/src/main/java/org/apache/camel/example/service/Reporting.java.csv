@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;6;;public Report updateReport(@Body Report report, @Header("minaServer") String name) {     report.setReply("Report updated from MINA server running on: " + name).     // send the report updated     return report. }

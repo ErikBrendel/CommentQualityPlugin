@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public FilterProcessor createProcessor(RouteContext routeContext) throws Exception {     return createFilterProcessor(routeContext). }
+false;protected;1;6;;@Override protected FilterProcessor createFilterProcessor(RouteContext routeContext) throws Exception {     // filter EIP should have child outputs     Processor childProcessor = this.createChildProcessor(routeContext, true).     return new FilterProcessor(createPredicate(routeContext), childProcessor). }

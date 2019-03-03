@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void shouldOnlyBeActiveInWebApplicationContext() {     this.contextRunner.run((context) -> assertThat(context).doesNotHaveBean(ResourceConfigCustomizer.class)). }
+false;public;0;6;;@Test public void shouldProvideAllNecessaryBeans() {     this.webContextRunner.run((context) -> assertThat(context).hasSingleBean(DefaultJerseyTagsProvider.class).hasSingleBean(ResourceConfigCustomizer.class)). }
+false;public;0;7;;@Test public void shouldHonorExistingTagProvider() {     this.webContextRunner.withUserConfiguration(CustomJerseyTagsProviderConfiguration.class).run((context) -> assertThat(context).hasSingleBean(CustomJerseyTagsProvider.class)). }
+false;public;0;10;;@Test public void httpRequestsAreTimed() {     this.webContextRunner.run((context) -> {         doRequest(context).         MeterRegistry registry = context.getBean(MeterRegistry.class).         Timer timer = registry.get("http.server.requests").tag("uri", "/users/{id}").timer().         assertThat(timer.count()).isEqualTo(1).     }). }
+false;public;0;12;;@Test public void noHttpRequestsTimedWhenJerseyInstrumentationMissingFromClasspath() {     this.webContextRunner.withClassLoader(new FilteredClassLoader(MetricsApplicationEventListener.class)).run((context) -> {         doRequest(context).         MeterRegistry registry = context.getBean(MeterRegistry.class).         assertThat(registry.find("http.server.requests").timer()).isNull().     }). }
+false;private,static;1;9;;private static void doRequest(AssertableWebApplicationContext context) {     int port = context.getSourceApplicationContext(AnnotationConfigServletWebServerApplicationContext.class).getWebServer().getPort().     RestTemplate restTemplate = new RestTemplate().     restTemplate.getForEntity(URI.create("http://localhost:" + port + "/users/3"), String.class). }
+false;;0;4;;@Bean ResourceConfig resourceConfig() {     return new ResourceConfig().register(new TestResource()). }
+false;public;1;5;;@GET @Path("/{id}") public String getUser(@PathParam("id") String id) {     return id. }
+false;;0;4;;@Bean JerseyTagsProvider customJerseyTagsProvider() {     return new CustomJerseyTagsProvider(). }
+false;public;1;4;;@Override public Iterable<Tag> httpRequestTags(RequestEvent event) {     return null. }
+false;public;1;4;;@Override public Iterable<Tag> httpLongRequestTags(RequestEvent event) {     return null. }

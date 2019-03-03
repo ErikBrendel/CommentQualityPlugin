@@ -1,0 +1,24 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@Test public void testInterfaceBeanMethod() throws Exception {     BeanInfo info = new BeanInfo(context, MyConcreteBean.class).     Exchange exchange = new DefaultExchange(context).     MyConcreteBean pojo = new MyConcreteBean().     MethodInvocation mi = info.createInvocation(pojo, exchange).     assertNotNull(mi).     assertEquals("hello", mi.getMethod().getName()). }
+false;public;0;10;;@Test public void testNoHandleMethod() throws Exception {     BeanInfo info = new BeanInfo(context, MyNoDummyBean.class).     Exchange exchange = new DefaultExchange(context).     MyNoDummyBean pojo = new MyNoDummyBean().     MethodInvocation mi = info.createInvocation(pojo, exchange).     assertNotNull(mi).     assertEquals("hello", mi.getMethod().getName()). }
+false;public;0;13;;@Test public void testAmbigiousMethod() throws Exception {     BeanInfo info = new BeanInfo(context, MyAmbigiousBean.class).     Exchange exchange = new DefaultExchange(context).     MyAmbigiousBean pojo = new MyAmbigiousBean().     try {         info.createInvocation(pojo, exchange).         fail("Should have thrown an exception").     } catch (AmbiguousMethodCallException e) {         assertEquals(2, e.getMethods().size()).     } }
+false;public;0;10;;@Test public void testHandleMethod() throws Exception {     BeanInfo info = new BeanInfo(context, MyDummyBean.class).     Exchange exchange = new DefaultExchange(context).     MyDummyBean pojo = new MyDummyBean().     MethodInvocation mi = info.createInvocation(pojo, exchange).     assertNotNull(mi).     assertEquals("hello", mi.getMethod().getName()). }
+false;public;0;10;;@Test public void testHandleAndBodyMethod() throws Exception {     BeanInfo info = new BeanInfo(context, MyOtherDummyBean.class).     Exchange exchange = new DefaultExchange(context).     MyOtherDummyBean pojo = new MyOtherDummyBean().     MethodInvocation mi = info.createInvocation(pojo, exchange).     assertNotNull(mi).     assertEquals("hello", mi.getMethod().getName()). }
+false;public;0;13;;@Test public void testHandleAmbigious() throws Exception {     BeanInfo info = new BeanInfo(context, MyReallyDummyBean.class).     Exchange exchange = new DefaultExchange(context).     MyReallyDummyBean pojo = new MyReallyDummyBean().     try {         info.createInvocation(pojo, exchange).         fail("Should throw exception").     } catch (AmbiguousMethodCallException e) {         assertEquals(2, e.getMethods().size()).     } }
+false;public;0;13;;@Test public void testNoHandlerAmbigious() throws Exception {     BeanInfo info = new BeanInfo(context, MyNoHandlerBean.class).     Exchange exchange = new DefaultExchange(context).     MyNoHandlerBean pojo = new MyNoHandlerBean().     try {         info.createInvocation(pojo, exchange).         fail("Should throw exception").     } catch (AmbiguousMethodCallException e) {         assertEquals(3, e.getMethods().size()).     } }
+false;;1;2;;@Handler String hello(@Body String hi).
+false;public;1;3;;public String hello(@Body String hi) {     return "Hello " + hi. }
+false;public;1;4;;public String doCompute(String input) {     fail("Should not invoke me").     return null. }
+false;public;1;3;;public String hello(@Body String hi) {     return "Hello " + hi. }
+false;public;1;4;;public String doCompute(String input) {     fail("Should not invoke me").     return null. }
+false;public;1;4;;public String hello(String hi) {     fail("Should not invoke me").     return "Hello " + hi. }
+false;public;1;4;;public String doCompute(String input) {     fail("Should not invoke me").     return null. }
+false;public;1;4;;@Handler public String hello(String hi) {     return "Hello " + hi. }
+false;public;1;4;;public String doCompute(String input) {     fail("Should not invoke me").     return null. }
+false;public;1;4;;@Handler public String hello(String hi) {     return "Hello " + hi. }
+false;public;1;4;;public String bye(@Body String input) {     fail("Should not invoke me").     return null. }
+false;public;3;4;;public String hello(@Body String input, @Header("name") String name, @Header("age") int age) {     fail("Should not invoke me").     return null. }
+false;public;2;4;;public String greeting(@Body String input, @Header("name") String name) {     fail("Should not invoke me").     return null. }
+false;public;1;4;;public String bye(String input) {     fail("Should not invoke me").     return null. }
+false;public;1;4;;@Handler public String hello(String hi) {     return "Hello " + hi. }
+false;public;1;5;;@Handler public String bye(@Body String input) {     fail("Should not invoke me").     return null. }

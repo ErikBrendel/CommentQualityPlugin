@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected XContentBuilder keyToXContent(XContentBuilder builder) throws IOException {     return builder.field(Aggregation.CommonFields.KEY.getPreferredName(), hashAsString). }

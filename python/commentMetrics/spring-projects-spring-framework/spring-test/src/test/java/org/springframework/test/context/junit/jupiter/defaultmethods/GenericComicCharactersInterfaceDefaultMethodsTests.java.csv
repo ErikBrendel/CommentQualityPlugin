@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;default;1;4;;@Test default void autowiredParameterWithParameterizedList(@Autowired List<C> characters) {     assertEquals(getExpectedNumCharacters(), characters.size(), "Number of characters in context"). }
+false;default;1;5;;@Test default void autowiredParameterWithGenericBean(@Autowired C character) {     assertNotNull(character, "Character should have been @Autowired by Spring").     assertEquals(getExpectedName(), character.getName(), "character's name"). }
+false;;0;1;;int getExpectedNumCharacters().
+false;;0;1;;String getExpectedName().

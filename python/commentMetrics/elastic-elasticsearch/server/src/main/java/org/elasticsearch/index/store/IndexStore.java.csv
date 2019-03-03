@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;3;/**  * The shard store class that should be used for each shard.  */ ;/**  * The shard store class that should be used for each shard.  */ public DirectoryService newDirectoryService(ShardPath path) {     return new FsDirectoryService(indexSettings, path). }

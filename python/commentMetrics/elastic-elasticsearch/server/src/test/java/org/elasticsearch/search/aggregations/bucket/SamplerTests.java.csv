@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected,final;0;8;;@Override protected final SamplerAggregationBuilder createTestAggregatorBuilder() {     SamplerAggregationBuilder factory = new SamplerAggregationBuilder(randomAlphaOfLengthBetween(3, 10)).     if (randomBoolean()) {         factory.shardSize(randomIntBetween(1, 1000)).     }     return factory. }

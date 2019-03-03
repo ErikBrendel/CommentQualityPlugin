@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Override public void close() { // Doesn't close the wrapped client since this client object is shared // among multiple instances }
+false;protected;3;5;;@Override protected <Request extends ActionRequest, Response extends ActionResponse> void doExecute(Action<Response> action, Request request, ActionListener<Response> listener) {     ClientHelper.executeWithHeadersAsync(headers, origin, client, action, request, listener). }

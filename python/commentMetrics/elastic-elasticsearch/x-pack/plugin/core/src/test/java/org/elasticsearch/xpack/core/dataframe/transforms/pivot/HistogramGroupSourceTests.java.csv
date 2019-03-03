@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;5;;public static HistogramGroupSource randomHistogramGroupSource() {     String field = randomAlphaOfLengthBetween(1, 20).     double interval = randomDoubleBetween(Math.nextUp(0), Double.MAX_VALUE, false).     return new HistogramGroupSource(field, interval). }
+false;protected;1;4;;@Override protected HistogramGroupSource doParseInstance(XContentParser parser) throws IOException {     return HistogramGroupSource.fromXContent(parser, false). }
+false;protected;0;4;;@Override protected HistogramGroupSource createTestInstance() {     return randomHistogramGroupSource(). }
+false;protected;0;4;;@Override protected Reader<HistogramGroupSource> instanceReader() {     return HistogramGroupSource::new. }

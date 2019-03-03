@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public ScriptEngine getScriptEngine(Settings settings, Collection<ScriptContext<?>> contexts) {     return new MockPainlessScriptEngine(). }
+false;protected;0;4;;@Override protected Map<String, Function<Map<String, Object>, Object>> pluginScripts() {     return Collections.emptyMap(). }
+false;public;0;4;;@Override public String getType() {     return NAME. }
+false;public;4;7;;@Override public <T> T compile(String name, String script, ScriptContext<T> context, Map<String, String> options) {     if (context.instanceClazz.equals(ScoreScript.class)) {         return context.factoryClazz.cast(new MockScoreScript(p -> 0.0)).     }     throw new IllegalArgumentException("mock painless does not know how to handle context [" + context.name + "]"). }

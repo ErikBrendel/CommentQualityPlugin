@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Override public void afterPropertiesSet() {     try {         super.afterPropertiesSet().     } catch (ValidationException ex) {         LogFactory.getLog(getClass()).debug("Failed to set up a Bean Validation provider", ex).     } }

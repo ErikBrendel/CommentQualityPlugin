@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Bean public Employee employee() {     Employee employee = new Employee().     employee.setName("John Smith").     employee.setAge(42).     employee.setCompany("Acme Widgets, Inc.").     return employee. }
+false;public;0;4;;@Bean public PlatformTransactionManager transactionManager() {     return new DataSourceTransactionManager(dataSource()). }
+false;public;0;8;;@Bean public DataSource dataSource() {     return //      new EmbeddedDatabaseBuilder().addScript(//      "classpath:/org/springframework/test/jdbc/schema.sql").setName(//      getClass().getName()).build(). }
+false;public;0;5;;@Before public void compareDataSources() throws Exception {     // NOTE: the two DataSource instances ARE the same!     assertSame(dataSourceFromTxManager, dataSourceViaInjection). }

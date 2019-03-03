@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Before public void setUp() throws Exception {     CSVFormat format = CSVFormat.DEFAULT.withHeader("A", "B", "C").     CSVParser parser = new CSVParser(new StringReader("1,2,3"), format).     List<CSVRecord> records = parser.getRecords().     record = records.get(0). }
+false;public;0;10;;@Test public void shouldConvertAsList() {     List<String> list = CsvRecordConverters.listConverter().convertRecord(record).     assertNotNull(list).     assertEquals(3, list.size()).     assertEquals("1", list.get(0)).     assertEquals("2", list.get(1)).     assertEquals("3", list.get(2)). }
+false;public;0;10;;@Test public void shouldConvertAsMap() {     Map<String, String> map = CsvRecordConverters.mapConverter().convertRecord(record).     assertNotNull(map).     assertEquals(3, map.size()).     assertEquals("1", map.get("A")).     assertEquals("2", map.get("B")).     assertEquals("3", map.get("C")). }

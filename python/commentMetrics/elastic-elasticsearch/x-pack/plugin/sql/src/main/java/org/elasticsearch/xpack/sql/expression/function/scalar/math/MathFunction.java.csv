@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean foldable() {     return field().foldable(). }
+false;public;0;4;;@Override public Object fold() {     return operation().apply(field().fold()). }
+false;public;1;5;;@Override public String processScript(String template) {     return super.processScript(format(Locale.ROOT, "{sql}.%s(%s)", getClass().getSimpleName().toLowerCase(Locale.ROOT), template)). }
+false;public;0;4;;@Override public DataType dataType() {     return DataType.DOUBLE. }
+false;protected;0;8;;@Override protected TypeResolution resolveType() {     if (!childrenResolved()) {         return new TypeResolution("Unresolved children").     }     return isNumeric(field(), sourceText(), ParamOrdinal.DEFAULT). }
+false;protected;0;4;;@Override protected Processor makeProcessor() {     return new MathProcessor(operation()). }
+false;protected,abstract;0;1;;protected abstract MathOperation operation().
+false;public;1;8;;@Override public boolean equals(Object obj) {     if (obj == null || obj.getClass() != getClass()) {         return false.     }     MathFunction other = (MathFunction) obj.     return Objects.equals(other.field(), field()). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(field()). }

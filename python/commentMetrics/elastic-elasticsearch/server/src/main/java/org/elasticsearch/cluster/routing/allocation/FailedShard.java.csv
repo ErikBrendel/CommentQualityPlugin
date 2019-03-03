@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Override public String toString() {     return "failed shard, shard " + routingEntry + ", message [" + message + "], failure [" + ExceptionsHelper.detailedMessage(failure) + "], markAsStale [" + markAsStale + "]". }
+true;public;0;3;/**  * The shard routing entry for the failed shard.  */ ;/**  * The shard routing entry for the failed shard.  */ public ShardRouting getRoutingEntry() {     return routingEntry. }
+true;public;0;4;/**  * The failure message, if available, explaining why the shard failed.  */ ;/**  * The failure message, if available, explaining why the shard failed.  */ @Nullable public String getMessage() {     return message. }
+true;public;0;4;/**  * The exception, if present, causing the shard to fail.  */ ;/**  * The exception, if present, causing the shard to fail.  */ @Nullable public Exception getFailure() {     return failure. }
+true;public;0;3;/**  * Whether or not to mark the shard as stale (eg. removing from in-sync set) when failing the shard.  */ ;/**  * Whether or not to mark the shard as stale (eg. removing from in-sync set) when failing the shard.  */ public boolean markAsStale() {     return markAsStale. }

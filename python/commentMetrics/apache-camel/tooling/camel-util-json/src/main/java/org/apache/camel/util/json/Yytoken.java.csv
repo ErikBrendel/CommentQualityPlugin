@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;3;/**  * @return which of the Types the token is.  * @see Types  */ ;/**  * @return which of the Types the token is.  * @see Types  */ Types getType() {     return this.type. }
+true;;0;3;/**  * @return what the token is.  * @see Types  */ ;/**  * @return what the token is.  * @see Types  */ Object getValue() {     return this.value. }
+false;public;0;6;;@Override public String toString() {     final StringBuffer sb = new StringBuffer().     sb.append(this.type.toString()).append("(").append(this.value).append(")").     return sb.toString(). }

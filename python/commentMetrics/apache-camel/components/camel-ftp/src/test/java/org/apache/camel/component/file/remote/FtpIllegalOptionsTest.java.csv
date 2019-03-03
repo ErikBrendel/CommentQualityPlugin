@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;2;;public void process(Exchange exchange) throws Exception { }
+false;public;1;2;;public void process(Exchange exchange) throws Exception { }
+false;public;0;22;;@Test public void testIllegalOptions() throws Exception {     try {         context.getEndpoint("ftp://target?move=../done/${file:name}&delete=true").createConsumer(new Processor() {              public void process(Exchange exchange) throws Exception {             }         }).         fail("Should have thrown an exception").     } catch (IllegalArgumentException e) {     // ok     }     try {         context.getEndpoint("file://target?move=../done/${file:name}&delete=true").createConsumer(new Processor() {              public void process(Exchange exchange) throws Exception {             }         }).         fail("Should have thrown an exception").     } catch (IllegalArgumentException e) {     // ok     } }

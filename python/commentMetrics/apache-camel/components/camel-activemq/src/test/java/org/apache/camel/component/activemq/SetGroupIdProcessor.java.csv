@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;public void process(Exchange exchange) throws Exception {     // lets copy the IN to the OUT message     Message out = exchange.getOut().     out.copyFrom(exchange.getIn()).     // now lets set a header     out.setHeader("JMSXGroupID", "ABC"). }

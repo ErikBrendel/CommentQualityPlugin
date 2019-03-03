@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public int getNextPort() {     return 8080. }
+false;public;0;4;;@Test public void testFoo() throws Exception { // noop }
+false;public;0;9;;@Override public void configure() throws Exception {     from("netty-http:http://0.0.0.0:{{port}}/foo").to("mock:input1").to("netty-http:http://0.0.0.0:" + port2 + "/bar").     from("netty-http:http://0.0.0.0:" + port2 + "/bar").to("mock:input2").transform().constant("Bye World"). }
+false;protected;0;16;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          int port2 = getNextPort().          @Override         public void configure() throws Exception {             from("netty-http:http://0.0.0.0:{{port}}/foo").to("mock:input1").to("netty-http:http://0.0.0.0:" + port2 + "/bar").             from("netty-http:http://0.0.0.0:" + port2 + "/bar").to("mock:input2").transform().constant("Bye World").         }     }. }

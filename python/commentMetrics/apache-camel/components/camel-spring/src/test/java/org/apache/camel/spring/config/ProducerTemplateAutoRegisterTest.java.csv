@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void testHasTemplate() {     assertNotNull("Should have injected a producer template", template).     ProducerTemplate lookup = context.getRegistry().lookupByNameAndType("template", ProducerTemplate.class).     assertNotNull("Should lookup producer template", lookup). }

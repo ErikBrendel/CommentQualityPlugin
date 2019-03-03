@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void testFunctions() throws Exception {     raleighEndpoint.expectedMessageCount(1).     tampaEndpoint.expectedMessageCount(0).     template.sendBody("direct:start", "<person name='Hadrian' city='Raleigh'/>").     assertMockEndpointsSatisfied(). }
+false;public;0;8;;@Override @Before public void setUp() throws Exception {     super.setUp().     raleighEndpoint = getMockEndpoint("mock:foo.Raleigh").     tampaEndpoint = getMockEndpoint("mock:foo.Tampa"). }
+false;protected;0;3;;protected ClassPathXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/component/xquery/xqueryWithExplicitTypeContext.xml"). }

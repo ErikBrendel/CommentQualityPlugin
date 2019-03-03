@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public boolean isEmpty() {     return (coordinate == null && (children == null || children.isEmpty())). }
+false;protected;0;9;;protected int numDimensions() {     if (isEmpty()) {         throw new ElasticsearchException("attempting to get number of dimensions on an empty coordinate node").     }     if (coordinate != null) {         return Double.isNaN(coordinate.z) ? 2 : 3.     }     return children.get(0).numDimensions(). }
+false;public;2;13;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     if (children == null) {         builder.startArray().value(coordinate.x).value(coordinate.y).endArray().     } else {         builder.startArray().         for (CoordinateNode child : children) {             child.toXContent(builder, params).         }         builder.endArray().     }     return builder. }

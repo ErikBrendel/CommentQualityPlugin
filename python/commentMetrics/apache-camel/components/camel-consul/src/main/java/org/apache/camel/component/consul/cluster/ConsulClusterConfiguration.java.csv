@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;// *********************************************** // Properties // *********************************************** public int getSessionTtl() {     return sessionTtl. }
+false;public;1;3;;public void setSessionTtl(int sessionTtl) {     this.sessionTtl = sessionTtl. }
+false;public;0;3;;public int getSessionLockDelay() {     return sessionLockDelay. }
+false;public;1;3;;public void setSessionLockDelay(int sessionLockDelay) {     this.sessionLockDelay = sessionLockDelay. }
+false;public;0;3;;public String getRootPath() {     return rootPath. }
+false;public;1;3;;public void setRootPath(String rootPath) {     this.rootPath = rootPath. }
+false;public;0;3;;public int getSessionRefreshInterval() {     return sessionRefreshInterval. }
+false;public;1;3;;public void setSessionRefreshInterval(int sessionRefreshInterval) {     this.sessionRefreshInterval = sessionRefreshInterval. }
+false;public;0;8;;// *********************************************** //  // *********************************************** @Override public ConsulClusterConfiguration copy() {     try {         return (ConsulClusterConfiguration) super.clone().     } catch (CloneNotSupportedException e) {         throw new RuntimeCamelException(e).     } }

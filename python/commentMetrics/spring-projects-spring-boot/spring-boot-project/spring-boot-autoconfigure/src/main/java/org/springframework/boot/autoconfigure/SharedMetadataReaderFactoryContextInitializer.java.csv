@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public void initialize(ConfigurableApplicationContext applicationContext) {     applicationContext.addBeanFactoryPostProcessor(new CachingMetadataReaderFactoryPostProcessor()). }
+false;public;0;4;;@Override public int getOrder() {     return 0. }
+false;public;0;5;;@Override public int getOrder() {     // Must happen before the ConfigurationClassPostProcessor is created     return Ordered.HIGHEST_PRECEDENCE. }
+false;public;1;4;;@Override public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException { }
+false;public;1;6;;@Override public void postProcessBeanDefinitionRegistry(BeanDefinitionRegistry registry) throws BeansException {     register(registry).     configureConfigurationClassPostProcessor(registry). }
+false;private;1;7;;private void register(BeanDefinitionRegistry registry) {     BeanDefinition definition = BeanDefinitionBuilder.genericBeanDefinition(SharedMetadataReaderFactoryBean.class, SharedMetadataReaderFactoryBean::new).getBeanDefinition().     registry.registerBeanDefinition(BEAN_NAME, definition). }
+false;private;1;11;;private void configureConfigurationClassPostProcessor(BeanDefinitionRegistry registry) {     try {         BeanDefinition definition = registry.getBeanDefinition(AnnotationConfigUtils.CONFIGURATION_ANNOTATION_PROCESSOR_BEAN_NAME).         definition.getPropertyValues().add("metadataReaderFactory", new RuntimeBeanReference(BEAN_NAME)).     } catch (NoSuchBeanDefinitionException ex) {     } }
+false;public;1;5;;@Override public void setBeanClassLoader(ClassLoader classLoader) {     this.metadataReaderFactory = new ConcurrentReferenceCachingMetadataReaderFactory(classLoader). }
+false;public;0;5;;@Override public ConcurrentReferenceCachingMetadataReaderFactory getObject() throws Exception {     return this.metadataReaderFactory. }
+false;public;0;4;;@Override public Class<?> getObjectType() {     return CachingMetadataReaderFactory.class. }
+false;public;0;4;;@Override public boolean isSingleton() {     return true. }
+false;public;1;4;;@Override public void onApplicationEvent(ContextRefreshedEvent event) {     this.metadataReaderFactory.clearCache(). }

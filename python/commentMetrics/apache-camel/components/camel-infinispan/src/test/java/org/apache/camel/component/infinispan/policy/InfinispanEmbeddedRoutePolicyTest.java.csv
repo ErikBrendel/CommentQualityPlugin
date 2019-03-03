@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected BasicCacheContainer createCacheManager() throws Exception {     return new DefaultCacheManager(new ConfigurationBuilder().build()). }

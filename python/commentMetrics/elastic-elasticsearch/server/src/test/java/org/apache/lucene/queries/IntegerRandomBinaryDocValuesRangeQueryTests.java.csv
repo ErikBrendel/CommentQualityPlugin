@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected String fieldName() {     return "int_range_dv_field". }
+false;protected;0;4;;@Override protected RangeFieldMapper.RangeType rangeType() {     return RangeFieldMapper.RangeType.INTEGER. }
+false;protected;1;8;;@Override protected Range nextRange(int dimensions) throws Exception {     int value1 = nextIntInternal().     int value2 = nextIntInternal().     int min = Math.min(value1, value2).     int max = Math.max(value1, value2).     return new IntTestRange(min, max). }
+false;private;0;21;;private int nextIntInternal() {     switch(random().nextInt(5)) {         case 0:             return Integer.MIN_VALUE.         case 1:             return Integer.MAX_VALUE.         default:             int bpv = random().nextInt(32).             switch(bpv) {                 case 32:                     return random().nextInt().                 default:                     int v = TestUtil.nextInt(random(), 0, (1 << bpv) - 1).                     if (bpv > 0) {                         // negative values sometimes                         v -= 1 << (bpv - 1).                     }                     return v.             }     } }
+false;public;0;4;;@Override public Integer getMin() {     return min. }
+false;protected;2;10;;@Override protected void setMin(int dim, Object val) {     assert dim == 0.     int v = (Integer) val.     if (min < v) {         max = v.     } else {         min = v.     } }
+false;public;0;4;;@Override public Integer getMax() {     return max. }
+false;protected;2;10;;@Override protected void setMax(int dim, Object val) {     assert dim == 0.     int v = (Integer) val.     if (max > v) {         min = v.     } else {         max = v.     } }
+false;protected;1;5;;@Override protected boolean isDisjoint(Range o) {     IntTestRange other = (IntTestRange) o.     return this.min > other.max || this.max < other.min. }
+false;protected;1;9;;@Override protected boolean isWithin(Range o) {     IntTestRange other = (IntTestRange) o.     if ((this.min >= other.min && this.max <= other.max) == false) {         // not within:         return false.     }     return true. }
+false;protected;1;9;;@Override protected boolean contains(Range o) {     IntTestRange other = (IntTestRange) o.     if ((this.min <= other.min && this.max >= other.max) == false) {         // not contains:         return false.     }     return true. }

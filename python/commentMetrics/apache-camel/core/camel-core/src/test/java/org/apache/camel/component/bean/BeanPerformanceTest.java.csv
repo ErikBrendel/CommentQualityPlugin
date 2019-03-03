@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;4;;public static void doSomething(String payload) {     assertEquals("Hello World", payload).     INVOKED.incrementAndGet(). }
+false;public;0;12;;@Test public void testBeanPerformance() throws Exception {     StopWatch watch = new StopWatch().     log.info("Invoking a bean in a route {} times", times).     for (int i = 0. i < times. i++) {         template.sendBody("direct:start", "Hello World").     }     log.info("Took {} to invoke the bean {} times", TimeUtils.printDuration(watch.taken()), times).     assertEquals(times, INVOKED.get()). }
+false;public;0;5;;@Override public void configure() throws Exception {     from("direct:start").bean(BeanPerformanceTest.class, "doSomething"). }
+false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").bean(BeanPerformanceTest.class, "doSomething").         }     }. }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Before public void setUp() throws Exception {     CamelContext context = new DefaultCamelContext().     context.setUuidGenerator(new SimpleUuidGenerator()).     unitOfWork = new DefaultUnitOfWork(new DefaultExchange(context)). }
+false;public;0;6;;@Test public void testGetId() {     String id = unitOfWork.getId().     assertNotNull(id).     assertEquals(id, unitOfWork.getId()). }

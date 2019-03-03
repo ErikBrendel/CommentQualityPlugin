@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;public void testIndexRamBytesUsed() {     Translog.Location translogLoc = null.     if (randomBoolean()) {         translogLoc = new Translog.Location(randomNonNegativeLong(), randomNonNegativeLong(), randomInt()).     }     IndexVersionValue versionValue = new IndexVersionValue(translogLoc, randomLong(), randomLong(), randomLong()).     assertEquals(RamUsageTester.sizeOf(versionValue), versionValue.ramBytesUsed()). }
+false;public;0;4;;public void testDeleteRamBytesUsed() {     DeleteVersionValue versionValue = new DeleteVersionValue(randomLong(), randomLong(), randomLong(), randomLong()).     assertEquals(RamUsageTester.sizeOf(versionValue), versionValue.ramBytesUsed()). }

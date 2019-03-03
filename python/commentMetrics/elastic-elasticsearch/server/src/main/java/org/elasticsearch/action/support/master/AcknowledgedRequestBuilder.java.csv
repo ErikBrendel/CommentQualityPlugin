@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;5;/**  * Sets the maximum wait for acknowledgement from other nodes  */ ;/**  * Sets the maximum wait for acknowledgement from other nodes  */ @SuppressWarnings("unchecked") public RequestBuilder setTimeout(TimeValue timeout) {     request.timeout(timeout).     return (RequestBuilder) this. }
+true;public;1;5;/**  * Timeout to wait for the operation to be acknowledged by current cluster nodes. Defaults  * to {@code 10s}.  */ ;/**  * Timeout to wait for the operation to be acknowledged by current cluster nodes. Defaults  * to {@code 10s}.  */ @SuppressWarnings("unchecked") public RequestBuilder setTimeout(String timeout) {     request.timeout(timeout).     return (RequestBuilder) this. }

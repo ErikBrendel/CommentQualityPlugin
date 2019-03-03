@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@Override public String toString() {     try {         StringWriter writer = new StringWriter().         MAPPER.writeValue(writer, this).         return writer.toString().     } catch (IOException e) {         return "Error in toString " + e.getMessage().     } }

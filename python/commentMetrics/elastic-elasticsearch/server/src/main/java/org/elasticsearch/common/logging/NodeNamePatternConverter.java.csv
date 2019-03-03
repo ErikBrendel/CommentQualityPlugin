@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;static;1;3;/**  * Set the name of this node.  */ ;/**  * Set the name of this node.  */ static void setNodeName(String nodeName) {     NODE_NAME.set(nodeName). }
+true;public,static;1;11;/**  * Called by log4j2 to initialize this converter.  */ ;/**  * Called by log4j2 to initialize this converter.  */ public static NodeNamePatternConverter newInstance(final String[] options) {     if (options.length > 0) {         throw new IllegalArgumentException("no options supported but options provided: " + Arrays.toString(options)).     }     String nodeName = NODE_NAME.get().     if (nodeName == null) {         throw new IllegalStateException("the node name hasn't been set").     }     return new NodeNamePatternConverter(nodeName). }
+false;public;2;4;;@Override public void format(LogEvent event, StringBuilder toAppendTo) {     toAppendTo.append(nodeName). }

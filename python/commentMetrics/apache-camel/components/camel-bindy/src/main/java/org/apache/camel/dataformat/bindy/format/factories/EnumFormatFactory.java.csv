@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public boolean canBuild(FormattingOptions formattingOptions) {     return formattingOptions.getClazz().isEnum(). }
+false;public;1;6;;@Override public Format<?> build(FormattingOptions formattingOptions) {     @SuppressWarnings({ "rawtypes", "unchecked" })     EnumFormat enumFormat = new EnumFormat(formattingOptions.getClazz()).     return enumFormat. }
+false;public;1;3;;public String format(final T object) throws Exception {     return object.name(). }
+false;public;1;3;;public T parse(final String string) throws Exception {     return Enum.valueOf(clazz, string). }

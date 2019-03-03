@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public <V> V acceptTargetVisitor(BindingTargetVisitor<? super T, V> visitor) {     return visitor.visit(this). }
+false;public;0;4;;@Override public Key<? extends T> getLinkedKey() {     return targetKey. }
+false;public;1;4;;@Override public BindingImpl<T> withScoping(Scoping scoping) {     return new LinkedBindingImpl<>(getSource(), getKey(), scoping, targetKey). }
+false;public;1;4;;@Override public BindingImpl<T> withKey(Key<T> key) {     return new LinkedBindingImpl<>(getSource(), key, getScoping(), targetKey). }
+false;public;1;4;;@Override public void applyTo(Binder binder) {     getScoping().applyTo(binder.withSource(getSource()).bind(getKey()).to(getLinkedKey())). }
+false;public;0;9;;@Override public String toString() {     return new ToStringBuilder(LinkedKeyBinding.class).add("key", getKey()).add("source", getSource()).add("scope", getScoping()).add("target", targetKey).toString(). }

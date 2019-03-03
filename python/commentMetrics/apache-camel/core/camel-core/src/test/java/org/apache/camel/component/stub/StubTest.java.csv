@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;12;;@Override public void configure() throws Exception {     from("direct:InOnly").setExchangePattern(ExchangePattern.InOnly).to("stub:foo").to("mock:result").     from("direct:InOut").setExchangePattern(ExchangePattern.InOut).to("stub:foo").to("mock:result"). }
+false;protected;0;17;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:InOnly").setExchangePattern(ExchangePattern.InOnly).to("stub:foo").to("mock:result").             from("direct:InOut").setExchangePattern(ExchangePattern.InOut).to("stub:foo").to("mock:result").         }     }. }
+false;final;1;8;;final void test(ExchangePattern mep) throws InterruptedException {     getMockEndpoint("mock:result").expectedBodiesReceived("Hello World").     getMockEndpoint("mock:result").setExpectedMessageCount(1).     template.sendBody("direct:" + mep.name(), "Hello World").     assertMockEndpointsSatisfied(). }
+false;public;0;4;;@Test public void testInOnly() throws InterruptedException {     test(ExchangePattern.InOnly). }
+false;public;0;4;;@Test public void testInOut() throws InterruptedException {     test(ExchangePattern.InOut). }

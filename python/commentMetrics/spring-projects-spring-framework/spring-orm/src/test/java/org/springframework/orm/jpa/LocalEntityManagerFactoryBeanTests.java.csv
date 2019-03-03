@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@After public void verifyClosed() throws Exception {     verify(mockEmf).close(). }
+false;public;0;4;;@Test public void testValidUsageWithDefaultProperties() throws Exception {     testValidUsage(null). }
+false;public;0;4;;@Test public void testValidUsageWithExplicitProperties() throws Exception {     testValidUsage(new Properties()). }
+false;protected;1;23;;protected void testValidUsage(Properties props) throws Exception {     // This will be set by DummyPersistenceProvider     actualName = null.     actualProps = null.     LocalEntityManagerFactoryBean lemfb = new LocalEntityManagerFactoryBean().     String entityManagerName = "call me Bob".     lemfb.setPersistenceUnitName(entityManagerName).     lemfb.setPersistenceProviderClass(DummyPersistenceProvider.class).     if (props != null) {         lemfb.setJpaProperties(props).     }     lemfb.afterPropertiesSet().     assertSame(entityManagerName, actualName).     if (props != null) {         assertEquals(props, actualProps).     }     checkInvariants(lemfb).     lemfb.destroy(). }
+false;public;2;4;;@Override public EntityManagerFactory createContainerEntityManagerFactory(PersistenceUnitInfo pui, Map map) {     throw new UnsupportedOperationException(). }
+false;public;2;6;;@Override public EntityManagerFactory createEntityManagerFactory(String emfName, Map properties) {     actualName = emfName.     actualProps = properties.     return mockEmf. }
+false;public;0;4;;@Override public ProviderUtil getProviderUtil() {     throw new UnsupportedOperationException(). }
+true;public;2;3;// JPA 2.1 method ;// JPA 2.1 method public void generateSchema(PersistenceUnitInfo persistenceUnitInfo, Map map) {     throw new UnsupportedOperationException(). }
+true;public;2;3;// JPA 2.1 method ;// JPA 2.1 method public boolean generateSchema(String persistenceUnitName, Map map) {     throw new UnsupportedOperationException(). }

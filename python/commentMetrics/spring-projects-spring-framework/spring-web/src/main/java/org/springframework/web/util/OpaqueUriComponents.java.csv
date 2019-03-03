@@ -1,0 +1,17 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Override @Nullable public String getSchemeSpecificPart() {     return this.ssp. }
+false;public;0;5;;@Override @Nullable public String getUserInfo() {     return null. }
+false;public;0;5;;@Override @Nullable public String getHost() {     return null. }
+false;public;0;4;;@Override public int getPort() {     return -1. }
+false;public;0;5;;@Override @Nullable public String getPath() {     return null. }
+false;public;0;4;;@Override public List<String> getPathSegments() {     return Collections.emptyList(). }
+false;public;0;5;;@Override @Nullable public String getQuery() {     return null. }
+false;public;0;4;;@Override public MultiValueMap<String, String> getQueryParams() {     return QUERY_PARAMS_NONE. }
+false;public;1;4;;@Override public UriComponents encode(Charset charset) {     return this. }
+false;protected;1;7;;@Override protected UriComponents expandInternal(UriTemplateVariables uriVariables) {     String expandedScheme = expandUriComponent(getScheme(), uriVariables).     String expandedSsp = expandUriComponent(getSchemeSpecificPart(), uriVariables).     String expandedFragment = expandUriComponent(getFragment(), uriVariables).     return new OpaqueUriComponents(expandedScheme, expandedSsp, expandedFragment). }
+false;public;0;4;;@Override public UriComponents normalize() {     return this. }
+false;public;0;18;;@Override public String toUriString() {     StringBuilder uriBuilder = new StringBuilder().     if (getScheme() != null) {         uriBuilder.append(getScheme()).         uriBuilder.append(':').     }     if (this.ssp != null) {         uriBuilder.append(this.ssp).     }     if (getFragment() != null) {         uriBuilder.append('#').         uriBuilder.append(getFragment()).     }     return uriBuilder.toString(). }
+false;public;0;9;;@Override public URI toUri() {     try {         return new URI(getScheme(), this.ssp, getFragment()).     } catch (URISyntaxException ex) {         throw new IllegalStateException("Could not create URI object: " + ex.getMessage(), ex).     } }
+false;protected;1;12;;@Override protected void copyToUriComponentsBuilder(UriComponentsBuilder builder) {     if (getScheme() != null) {         builder.scheme(getScheme()).     }     if (getSchemeSpecificPart() != null) {         builder.schemeSpecificPart(getSchemeSpecificPart()).     }     if (getFragment() != null) {         builder.fragment(getFragment()).     } }
+false;public;1;13;;@Override public boolean equals(Object other) {     if (this == other) {         return true.     }     if (!(other instanceof OpaqueUriComponents)) {         return false.     }     OpaqueUriComponents otherComp = (OpaqueUriComponents) other.     return (ObjectUtils.nullSafeEquals(getScheme(), otherComp.getScheme()) && ObjectUtils.nullSafeEquals(this.ssp, otherComp.ssp) && ObjectUtils.nullSafeEquals(getFragment(), otherComp.getFragment())). }
+false;public;0;7;;@Override public int hashCode() {     int result = ObjectUtils.nullSafeHashCode(getScheme()).     result = 31 * result + ObjectUtils.nullSafeHashCode(this.ssp).     result = 31 * result + ObjectUtils.nullSafeHashCode(getFragment()).     return result. }

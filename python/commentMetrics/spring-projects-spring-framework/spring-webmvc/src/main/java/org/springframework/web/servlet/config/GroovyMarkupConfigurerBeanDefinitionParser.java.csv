@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;3;4;;@Override protected String resolveId(Element element, AbstractBeanDefinition definition, ParserContext parserContext) {     return BEAN_NAME. }
+false;protected;1;4;;@Override protected String getBeanClassName(Element element) {     return "org.springframework.web.servlet.view.groovy.GroovyMarkupConfigurer". }
+false;protected;1;4;;@Override protected boolean isEligibleAttribute(String name) {     return (name.equals("auto-indent") || name.equals("cache-templates") || name.equals("resource-loader-path")). }

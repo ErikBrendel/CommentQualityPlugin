@@ -1,0 +1,28 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public String getFirst(String key) {     return this.headers.getHeader(key). }
+false;public;2;4;;@Override public void add(String key, @Nullable String value) {     this.headers.addValue(key).setString(value). }
+false;public;2;4;;@Override public void addAll(String key, List<? extends String> values) {     values.forEach(value -> add(key, value)). }
+false;public;1;4;;@Override public void addAll(MultiValueMap<String, String> values) {     values.forEach(this::addAll). }
+false;public;2;4;;@Override public void set(String key, @Nullable String value) {     this.headers.setValue(key).setString(value). }
+false;public;1;4;;@Override public void setAll(Map<String, String> values) {     values.forEach(this::set). }
+false;public;0;6;;@Override public Map<String, String> toSingleValueMap() {     Map<String, String> singleValueMap = new LinkedHashMap<>(this.headers.size()).     this.keySet().forEach(key -> singleValueMap.put(key, getFirst(key))).     return singleValueMap. }
+false;public;0;10;;@Override public int size() {     Enumeration<String> names = this.headers.names().     int size = 0.     while (names.hasMoreElements()) {         size++.         names.nextElement().     }     return size. }
+false;public;0;4;;@Override public boolean isEmpty() {     return (this.headers.size() == 0). }
+false;public;1;7;;@Override public boolean containsKey(Object key) {     if (key instanceof String) {         return (this.headers.findHeader((String) key, 0) != -1).     }     return false. }
+false;public;1;13;;@Override public boolean containsValue(Object value) {     if (value instanceof String) {         MessageBytes needle = MessageBytes.newInstance().         needle.setString((String) value).         for (int i = 0. i < this.headers.size(). i++) {             if (this.headers.getValue(i).equals(needle)) {                 return true.             }         }     }     return false. }
+false;public;1;8;;@Override @Nullable public List<String> get(Object key) {     if (containsKey(key)) {         return Collections.list(this.headers.values((String) key)).     }     return null. }
+false;public;2;8;;@Override @Nullable public List<String> put(String key, List<String> value) {     List<String> previousValues = get(key).     this.headers.removeHeader(key).     value.forEach(v -> this.headers.addValue(key).setString(v)).     return previousValues. }
+false;public;1;10;;@Override @Nullable public List<String> remove(Object key) {     if (key instanceof String) {         List<String> previousValues = get(key).         this.headers.removeHeader((String) key).         return previousValues.     }     return null. }
+false;public;1;4;;@Override public void putAll(Map<? extends String, ? extends List<String>> map) {     map.forEach(this::put). }
+false;public;0;4;;@Override public void clear() {     this.headers.clear(). }
+false;public;0;9;;@Override public Set<String> keySet() {     Set<String> result = new HashSet<>(8).     Enumeration<String> names = this.headers.names().     while (names.hasMoreElements()) {         result.add(names.nextElement()).     }     return result. }
+false;public;0;4;;@Override public Collection<List<String>> values() {     return keySet().stream().map(this::get).collect(Collectors.toList()). }
+false;public;0;4;;@Override public Iterator<Entry<String, List<String>>> iterator() {     return new EntryIterator(). }
+false;public;0;4;;@Override public int size() {     return headers.size(). }
+false;public;0;14;;@Override public Set<Entry<String, List<String>>> entrySet() {     return new AbstractSet<Entry<String, List<String>>>() {          @Override         public Iterator<Entry<String, List<String>>> iterator() {             return new EntryIterator().         }          @Override         public int size() {             return headers.size().         }     }. }
+false;public;0;4;;@Override public String toString() {     return HttpHeaders.formatHeaders(this). }
+false;public;0;4;;@Override public boolean hasNext() {     return this.names.hasMoreElements(). }
+false;public;0;4;;@Override public Entry<String, List<String>> next() {     return new HeaderEntry(this.names.nextElement()). }
+false;public;0;4;;@Override public String getKey() {     return this.key. }
+false;public;0;5;;@Nullable @Override public List<String> getValue() {     return get(this.key). }
+false;public;1;8;;@Nullable @Override public List<String> setValue(List<String> value) {     List<String> previous = getValue().     headers.removeHeader(this.key).     addAll(this.key, value).     return previous. }

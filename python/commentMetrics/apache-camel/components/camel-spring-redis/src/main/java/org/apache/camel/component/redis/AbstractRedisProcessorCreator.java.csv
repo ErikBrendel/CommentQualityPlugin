@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Map<Command, Processor> getRedisProcessors() {     return result. }
+false;protected;2;3;;protected void bind(Command command, Processor processor) {     result.put(command, processor). }
+false;private;2;10;;private void setResult(Exchange exchange, Object result) {     Message message.     if (exchange.getPattern().isOutCapable()) {         message = exchange.getOut().         message.copyFrom(exchange.getIn()).     } else {         message = exchange.getIn().     }     message.setBody(result). }
+false;protected;1;6;;protected Processor wrap(Function<Exchange, Object> supplier) {     return exchange -> {         Object result = supplier.apply(exchange).         setResult(exchange, result).     }. }

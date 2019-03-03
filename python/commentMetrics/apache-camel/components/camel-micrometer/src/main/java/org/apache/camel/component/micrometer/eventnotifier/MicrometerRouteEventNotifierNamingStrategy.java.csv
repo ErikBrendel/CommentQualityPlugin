@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getRouteAddedName() {     return DEFAULT_CAMEL_ROUTES_ADDED. }
+false;public;0;4;;@Override public String getRouteRunningName() {     return DEFAULT_CAMEL_ROUTES_RUNNING. }
+false;;0;1;;String getRouteAddedName().
+false;;0;1;;String getRouteRunningName().
+false;default;1;6;;default Tags getTags(CamelContext camelContext) {     return Tags.of(SERVICE_NAME, MicrometerEventNotifierService.class.getSimpleName(), CAMEL_CONTEXT_TAG, camelContext.getName(), EVENT_TYPE_TAG, RouteEvent.class.getSimpleName()). }

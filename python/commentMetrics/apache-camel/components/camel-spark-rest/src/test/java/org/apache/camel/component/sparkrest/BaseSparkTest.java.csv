@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public int getPort() {     return port. }
+false;public;0;7;;@Override @Before public void setUp() throws Exception {     port = AvailablePortFinder.getNextAvailable(25500).     super.setUp().     Thread.sleep(200). }
+false;protected;0;9;;@Override protected CamelContext createCamelContext() throws Exception {     CamelContext context = super.createCamelContext().     SparkComponent spark = context.getComponent("spark-rest", SparkComponent.class).     spark.setPort(port).     return context. }

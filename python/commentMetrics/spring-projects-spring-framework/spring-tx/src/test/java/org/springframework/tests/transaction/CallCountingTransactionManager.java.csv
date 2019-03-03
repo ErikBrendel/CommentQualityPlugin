@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected Object doGetTransaction() {     return new Object(). }
+false;protected;2;6;;@Override protected void doBegin(Object transaction, TransactionDefinition definition) {     this.lastDefinition = definition.     ++begun.     ++inflight. }
+false;protected;1;5;;@Override protected void doCommit(DefaultTransactionStatus status) {     ++commits.     --inflight. }
+false;protected;1;5;;@Override protected void doRollback(DefaultTransactionStatus status) {     ++rollbacks.     --inflight. }
+false;public;0;3;;public void clear() {     begun = commits = rollbacks = inflight = 0. }

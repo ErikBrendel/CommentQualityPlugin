@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@GetMapping("/one") public String one() {     return "one". }
+false;public;0;4;;@GetMapping("/error") public String error() {     throw new ExampleException(). }
+false;public;0;4;;@GetMapping(path = "/html", produces = "text/html") public String html() {     return "<html><body>Hello</body></html>". }

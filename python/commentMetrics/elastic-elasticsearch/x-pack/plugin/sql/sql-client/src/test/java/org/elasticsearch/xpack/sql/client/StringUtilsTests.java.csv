@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;public void testNullAsEmpty() {     assertEquals("", nullAsEmpty(null)).     assertEquals("", nullAsEmpty("")).     String rando = randomRealisticUnicodeOfCodepointLength(5).     assertEquals(rando, nullAsEmpty(rando)). }

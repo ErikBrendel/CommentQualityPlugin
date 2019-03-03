@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;7;;@Override protected Settings restClientSettings() {     String token = "Basic " + Base64.getEncoder().encodeToString("test_user:x-pack-test-password".getBytes(StandardCharsets.UTF_8)).     return Settings.builder().put(ThreadContext.PREFIX + ".Authorization", token).build(). }

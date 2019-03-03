@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;public Bus getObject() throws Exception {     bf = new SpringBusFactory().     if (cfgFiles != null) {         return bf.createBus(cfgFiles, includeDefaultBus).     } else {         return bf.createBus().     } }
+false;public;0;3;;public Class<?> getObjectType() {     return Bus.class. }
+false;public;1;3;;public void setCfgFiles(String cfgFiles) {     this.cfgFiles = cfgFiles.split("."). }
+false;public;1;3;;public void setIncludeDefaultBus(boolean includeDefaultBus) {     this.includeDefaultBus = includeDefaultBus. }
+false;public;0;3;;public boolean isSingleton() {     return true. }
+false;public;0;3;;public boolean isEagerInit() {     return true. }
+false;public;0;3;;public boolean isPrototype() {     return false. }

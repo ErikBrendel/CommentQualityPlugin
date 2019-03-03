@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;6;;@Override protected UpdateModelSnapshotResponse createTestInstance() {     Boolean acknowledged = randomBoolean().     ModelSnapshot.Builder modelBuilder = ModelSnapshotTests.createRandomizedBuilder().     return new UpdateModelSnapshotResponse(acknowledged, modelBuilder). }
+false;protected;1;4;;@Override protected UpdateModelSnapshotResponse doParseInstance(XContentParser parser) throws IOException {     return UpdateModelSnapshotResponse.fromXContent(parser). }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }

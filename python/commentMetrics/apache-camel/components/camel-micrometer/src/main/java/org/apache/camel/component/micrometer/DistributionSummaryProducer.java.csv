@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;2;4;;@Override protected Function<MeterRegistry, DistributionSummary> registrar(String name, Iterable<Tag> tags) {     return meterRegistry -> meterRegistry.summary(name, tags). }
+false;protected;3;10;;@Override protected void doProcess(Exchange exchange, MicrometerEndpoint endpoint, DistributionSummary summary) {     Double value = simple(exchange, endpoint.getValue(), Double.class).     Double finalValue = getDoubleHeader(exchange.getIn(), HEADER_HISTOGRAM_VALUE, value).     if (finalValue != null) {         summary.record(finalValue).     } else {         LOG.warn("Cannot update histogram \"{}\" with null value", summary.getId().getName()).     } }

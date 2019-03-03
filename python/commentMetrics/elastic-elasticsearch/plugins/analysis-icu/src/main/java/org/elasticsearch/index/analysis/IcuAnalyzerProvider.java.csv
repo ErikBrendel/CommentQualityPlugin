@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;2;4;;@Override protected Reader initReader(String fieldName, Reader reader) {     return new ICUNormalizer2CharFilter(reader, normalizer). }
+false;protected;1;5;;@Override protected TokenStreamComponents createComponents(String fieldName) {     Tokenizer source = new ICUTokenizer().     return new TokenStreamComponents(source, new ICUFoldingFilter(source)). }
+false;public;0;16;;@Override public Analyzer get() {     return new Analyzer() {          @Override         protected Reader initReader(String fieldName, Reader reader) {             return new ICUNormalizer2CharFilter(reader, normalizer).         }          @Override         protected TokenStreamComponents createComponents(String fieldName) {             Tokenizer source = new ICUTokenizer().             return new TokenStreamComponents(source, new ICUFoldingFilter(source)).         }     }. }

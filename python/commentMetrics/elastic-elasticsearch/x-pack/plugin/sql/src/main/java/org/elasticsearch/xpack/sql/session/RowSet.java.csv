@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;1;;boolean hasCurrentRow().
+false;;0;1;;boolean advanceRow().
+true;;0;1;// number or rows in this set. while not really necessary (the return of advanceRow works) ;// number or rows in this set. while not really necessary (the return of advanceRow works) int size().
+false;;0;1;;void reset().
+true;;0;1;/**  * The key used by PlanExecutor#nextPage to fetch the next page.  */ ;/**  * The key used by PlanExecutor#nextPage to fetch the next page.  */ Cursor nextPageCursor().
+false;default;1;5;;default void forEachRow(Consumer<? super RowView> action) {     for (boolean hasRows = hasCurrentRow(). hasRows. hasRows = advanceRow()) {         action.accept(this).     } }

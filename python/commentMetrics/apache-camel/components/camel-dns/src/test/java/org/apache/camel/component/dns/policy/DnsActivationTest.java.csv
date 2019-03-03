@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Test public void testDnsActivation() throws Exception {     DnsActivation dnsActivationActive = new DnsActivation("localhost", Arrays.asList("127.0.0.1")).     assertTrue(dnsActivationActive.isActive()).     DnsActivation dnsActivationInactive = new DnsActivation("localhost", Arrays.asList("127.0.0.2")).     assertFalse(dnsActivationInactive.isActive()). }

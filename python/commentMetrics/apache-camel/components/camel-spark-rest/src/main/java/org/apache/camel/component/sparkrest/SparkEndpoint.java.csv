@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public SparkConfiguration getSparkConfiguration() {     return sparkConfiguration. }
+true;public;1;3;/**  * To use the SparkConfiguration  */ ;/**  * To use the SparkConfiguration  */ public void setSparkConfiguration(SparkConfiguration sparkConfiguration) {     this.sparkConfiguration = sparkConfiguration. }
+false;public;0;3;;public SparkBinding getSparkBinding() {     return sparkBinding. }
+true;public;1;3;/**  * To use a custom SparkBinding to map to/from Camel message.  */ ;/**  * To use a custom SparkBinding to map to/from Camel message.  */ public void setSparkBinding(SparkBinding sparkBinding) {     this.sparkBinding = sparkBinding. }
+false;public;0;3;;public String getVerb() {     return verb. }
+true;public;1;3;/**  * get, post, put, patch, delete, head, trace, connect, or options.  */ ;/**  * get, post, put, patch, delete, head, trace, connect, or options.  */ public void setVerb(String verb) {     this.verb = verb. }
+false;public;0;3;;public String getPath() {     return path. }
+true;public;1;3;/**  * The content path which support Spark syntax.  */ ;/**  * The content path which support Spark syntax.  */ public void setPath(String path) {     this.path = path. }
+false;public;0;3;;public String getAccept() {     return accept. }
+true;public;1;3;/**  * Accept type such as: 'text/xml', or 'application/json'. By default we accept all kinds of types.  */ ;/**  * Accept type such as: 'text/xml', or 'application/json'. By default we accept all kinds of types.  */ public void setAccept(String accept) {     this.accept = accept. }
+false;public;0;4;;@Override public Producer createProducer() throws Exception {     throw new UnsupportedOperationException("Producer not supported"). }
+false;public;1;7;;@Override public Consumer createConsumer(Processor processor) throws Exception {     CamelSparkRoute route = new CamelSparkRoute(this, processor).     Consumer consumer = new SparkConsumer(this, processor, route).     configureConsumer(consumer).     return consumer. }
+false;public;0;4;;@Override public boolean isSingleton() {     return true. }
+false;protected;0;11;;@Override protected void doStart() throws Exception {     super.doStart().     StringHelper.notEmpty(verb, "verb", this).     StringHelper.notEmpty(path, "path", this).     // verb must be supported by Spark and lets convert to the actual name     HttpMethod method = getCamelContext().getTypeConverter().mandatoryConvertTo(HttpMethod.class, verb).     verb = method.name(). }

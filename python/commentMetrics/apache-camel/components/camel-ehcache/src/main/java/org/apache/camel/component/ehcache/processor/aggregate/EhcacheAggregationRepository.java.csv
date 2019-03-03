@@ -1,0 +1,33 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public CamelContext getCamelContext() {     return camelContext. }
+false;public;1;3;;public void setCamelContext(CamelContext camelContext) {     this.camelContext = camelContext. }
+false;public;0;3;;public CacheManager getCacheManager() {     return cacheManager. }
+false;public;1;3;;public void setCacheManager(CacheManager cacheManager) {     this.cacheManager = cacheManager. }
+false;public;0;3;;public String getCacheName() {     return cacheName. }
+false;public;1;3;;public void setCacheName(String cacheName) {     this.cacheName = cacheName. }
+false;public;0;3;;public Cache<String, DefaultExchangeHolder> getCache() {     return cache. }
+false;public;1;3;;public void setCache(Cache<String, DefaultExchangeHolder> cache) {     this.cache = cache. }
+false;public;0;3;;public boolean isAllowSerializedHeaders() {     return allowSerializedHeaders. }
+false;public;1;3;;public void setAllowSerializedHeaders(boolean allowSerializedHeaders) {     this.allowSerializedHeaders = allowSerializedHeaders. }
+false;public;1;4;;@Override public void setDeadLetterUri(String deadLetterUri) {     this.deadLetterChannel = deadLetterUri. }
+false;public;0;4;;@Override public String getDeadLetterUri() {     return deadLetterChannel. }
+false;public;0;4;;@Override public boolean isUseRecovery() {     return useRecovery. }
+false;public;1;4;;@Override public void setUseRecovery(boolean useRecovery) {     this.useRecovery = useRecovery. }
+false;public;0;3;;public String getDeadLetterChannel() {     return deadLetterChannel. }
+false;public;1;3;;public void setDeadLetterChannel(String deadLetterChannel) {     this.deadLetterChannel = deadLetterChannel. }
+false;public;0;3;;public long getRecoveryInterval() {     return recoveryInterval. }
+false;public;0;4;;@Override public long getRecoveryIntervalInMillis() {     return recoveryInterval. }
+false;public;1;4;;@Override public void setRecoveryInterval(long recoveryInterval) {     this.recoveryInterval = recoveryInterval. }
+false;public;2;4;;@Override public void setRecoveryInterval(long interval, TimeUnit timeUnit) {     this.recoveryInterval = timeUnit.toMillis(interval). }
+false;public;0;4;;@Override public int getMaximumRedeliveries() {     return maximumRedeliveries. }
+false;public;1;4;;@Override public void setMaximumRedeliveries(int maximumRedeliveries) {     this.maximumRedeliveries = maximumRedeliveries. }
+false;public;3;11;;@Override public Exchange add(final CamelContext camelContext, final String key, final Exchange exchange) {     log.trace("Adding an Exchange with ID {} for key {} in a thread-safe manner.", exchange.getExchangeId(), key).     final DefaultExchangeHolder oldHolder = cache.get(key).     final DefaultExchangeHolder newHolder = DefaultExchangeHolder.marshal(exchange, true, allowSerializedHeaders).     cache.put(key, newHolder).     return unmarshallExchange(camelContext, oldHolder). }
+false;public;2;4;;@Override public Exchange get(CamelContext camelContext, String key) {     return unmarshallExchange(camelContext, cache.get(key)). }
+false;public;3;5;;@Override public void remove(CamelContext camelContext, String key, Exchange exchange) {     log.trace("Removing an exchange with ID {} for key {}", exchange.getExchangeId(), key).     cache.remove(key). }
+false;public;2;5;;@Override public void confirm(CamelContext camelContext, String exchangeId) {     log.trace("Confirming an exchange with ID {}.", exchangeId).     cache.remove(exchangeId). }
+false;public;0;7;;@Override public Set<String> getKeys() {     Set<String> keys = new HashSet<>().     cache.forEach(e -> keys.add(e.getKey())).     return Collections.unmodifiableSet(keys). }
+false;public;1;7;;@Override public Set<String> scan(CamelContext camelContext) {     log.trace("Scanning for exchanges to recover in {} context", camelContext.getName()).     Set<String> scanned = Collections.unmodifiableSet(getKeys()).     log.trace("Found {} keys for exchanges to recover in {} context", scanned.size(), camelContext.getName()).     return scanned. }
+false;public;2;5;;@Override public Exchange recover(CamelContext camelContext, String exchangeId) {     log.trace("Recovering an Exchange with ID {}.", exchangeId).     return useRecovery ? unmarshallExchange(camelContext, cache.get(exchangeId)) : null. }
+false;protected;0;14;;@Override protected void doStart() throws Exception {     if (maximumRedeliveries < 0) {         throw new IllegalArgumentException("Maximum redelivery retries must be zero or a positive integer.").     }     if (recoveryInterval < 0) {         throw new IllegalArgumentException("Recovery interval must be zero or a positive integer.").     }     if (cache == null) {         ObjectHelper.notNull(cacheManager, "cacheManager").         cache = cacheManager.getCache(cacheName, String.class, DefaultExchangeHolder.class).     } }
+false;protected;0;3;;@Override protected void doStop() throws Exception { }
+false;public,static;2;9;;public static Exchange unmarshallExchange(CamelContext camelContext, DefaultExchangeHolder holder) {     Exchange exchange = null.     if (holder != null) {         exchange = new DefaultExchange(camelContext).         DefaultExchangeHolder.unmarshal(exchange, holder).     }     return exchange. }

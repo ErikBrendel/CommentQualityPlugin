@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void springBootVersion() {     assertThat(this.dependencyManagement.getSpringBootVersion()).isNotNull(). }
+false;public;0;7;;@Test public void find() {     Dependency dependency = this.dependencyManagement.find("spring-boot").     assertThat(dependency).isNotNull().     assertThat(dependency.getGroupId()).isEqualTo("org.springframework.boot").     assertThat(dependency.getArtifactId()).isEqualTo("spring-boot"). }
+false;public;0;4;;@Test public void getDependencies() {     assertThat(this.dependencyManagement.getDependencies()).isNotEqualTo(empty()). }

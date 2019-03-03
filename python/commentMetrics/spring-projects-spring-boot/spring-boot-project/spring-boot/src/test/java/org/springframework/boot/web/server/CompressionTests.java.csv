@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void defaultCompressableMimeTypesMatchesTomcatsDefault() {     assertThat(new Compression().getMimeTypes()).containsExactlyInAnyOrder(getTomcatDefaultCompressableMimeTypes()). }
+false;private;0;4;;private String[] getTomcatDefaultCompressableMimeTypes() {     Http11NioProtocol protocol = new Http11NioProtocol().     return protocol.getCompressibleMimeTypes(). }

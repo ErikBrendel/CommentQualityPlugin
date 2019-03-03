@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected S3BlobStore createBlobStore() {     return new S3BlobStore(service, bucket, serverSideEncryption, bufferSize, cannedACL, storageClass, repositoryMetaData). }
+true;protected;0;4;// only use for testing ;// only use for testing @Override protected BlobStore blobStore() {     return super.blobStore(). }
+true;protected;0;4;// only use for testing ;// only use for testing @Override protected BlobStore getBlobStore() {     return super.getBlobStore(). }
+false;protected;0;4;;@Override protected BlobPath basePath() {     return basePath. }
+false;protected;0;4;;@Override protected ByteSizeValue chunkSize() {     return chunkSize. }

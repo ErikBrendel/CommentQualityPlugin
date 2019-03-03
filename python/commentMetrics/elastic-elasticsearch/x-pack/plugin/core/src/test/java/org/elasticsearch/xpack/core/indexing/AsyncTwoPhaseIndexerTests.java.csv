@@ -1,0 +1,27 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected String getJobId() {     return "mock". }
+false;protected;1;7;;@Override protected IterationResult<Integer> doProcess(SearchResponse searchResponse) {     awaitForLatch().     assertThat(step, equalTo(3)).     ++step.     return new IterationResult<Integer>(Collections.emptyList(), 3, true). }
+false;private;0;7;;private void awaitForLatch() {     try {         latch.await(10, TimeUnit.SECONDS).     } catch (InterruptedException e) {         throw new RuntimeException(e).     } }
+false;protected;0;6;;@Override protected SearchRequest buildSearchRequest() {     assertThat(step, equalTo(1)).     ++step.     return null. }
+false;protected;1;5;;@Override protected void onStartJob(long now) {     assertThat(step, equalTo(0)).     ++step. }
+false;protected;2;9;;@Override protected void doNextSearch(SearchRequest request, ActionListener<SearchResponse> nextPhase) {     assertThat(step, equalTo(2)).     ++step.     final SearchResponseSections sections = new SearchResponseSections(new SearchHits(new SearchHit[0], new TotalHits(0, TotalHits.Relation.EQUAL_TO), 0), null, null, false, null, null, 1).     nextPhase.onResponse(new SearchResponse(sections, null, 1, 1, 0, 0, ShardSearchFailure.EMPTY_ARRAY, null)). }
+false;protected;2;4;;@Override protected void doNextBulk(BulkRequest request, ActionListener<BulkResponse> nextPhase) {     fail("should not be called"). }
+false;protected;3;6;;@Override protected void doSaveState(IndexerState state, Integer position, Runnable next) {     assertThat(step, equalTo(4)).     ++step.     next.run(). }
+false;protected;1;4;;@Override protected void onFailure(Exception exc) {     fail(exc.getMessage()). }
+false;protected;0;6;;@Override protected void onFinish() {     assertThat(step, equalTo(5)).     ++step.     isFinished.set(true). }
+false;protected;0;3;;@Override protected void onAbort() { }
+false;public;0;3;;public int getStep() {     return step. }
+false;protected;0;4;;@Override protected String getJobId() {     return "mock". }
+false;protected;1;5;;@Override protected IterationResult<Integer> doProcess(SearchResponse searchResponse) {     fail("should not be called").     return null. }
+false;protected;0;6;;@Override protected SearchRequest buildSearchRequest() {     assertThat(step, equalTo(1)).     ++step.     return null. }
+false;protected;1;5;;@Override protected void onStartJob(long now) {     assertThat(step, equalTo(0)).     ++step. }
+false;protected;2;4;;@Override protected void doNextSearch(SearchRequest request, ActionListener<SearchResponse> nextPhase) {     throw new RuntimeException("Failed to build search request"). }
+false;protected;2;4;;@Override protected void doNextBulk(BulkRequest request, ActionListener<BulkResponse> nextPhase) {     fail("should not be called"). }
+false;protected;3;6;;@Override protected void doSaveState(IndexerState state, Integer position, Runnable next) {     assertThat(step, equalTo(2)).     ++step.     next.run(). }
+false;protected;1;6;;@Override protected void onFailure(Exception exc) {     assertThat(step, equalTo(3)).     ++step.     isFinished.set(true). }
+false;protected;0;4;;@Override protected void onFinish() {     fail("should not be called"). }
+false;protected;0;4;;@Override protected void onAbort() {     fail("should not be called"). }
+false;public;0;3;;public int getStep() {     return step. }
+false;public;2;4;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     return null. }
+false;public;0;24;;public void testStateMachine() throws InterruptedException {     AtomicReference<IndexerState> state = new AtomicReference<>(IndexerState.STOPPED).     final ExecutorService executor = Executors.newFixedThreadPool(1).     isFinished.set(false).     try {         CountDownLatch countDownLatch = new CountDownLatch(1).         MockIndexer indexer = new MockIndexer(executor, state, 2, countDownLatch).         indexer.start().         assertThat(indexer.getState(), equalTo(IndexerState.STARTED)).         assertTrue(indexer.maybeTriggerAsyncJob(System.currentTimeMillis())).         assertThat(indexer.getState(), equalTo(IndexerState.INDEXING)).         countDownLatch.countDown().         assertThat(indexer.getPosition(), equalTo(2)).         ESTestCase.awaitBusy(() -> isFinished.get()).         assertThat(indexer.getStep(), equalTo(6)).         assertThat(indexer.getStats().getNumInvocations(), equalTo(1L)).         assertThat(indexer.getStats().getNumPages(), equalTo(1L)).         assertThat(indexer.getStats().getOutputDocuments(), equalTo(0L)).         assertTrue(indexer.abort()).     } finally {         executor.shutdownNow().     } }
+false;public;0;17;;public void testStateMachineBrokenSearch() throws InterruptedException {     AtomicReference<IndexerState> state = new AtomicReference<>(IndexerState.STOPPED).     final ExecutorService executor = Executors.newFixedThreadPool(1).     isFinished.set(false).     try {         MockIndexerThrowsFirstSearch indexer = new MockIndexerThrowsFirstSearch(executor, state, 2).         indexer.start().         assertThat(indexer.getState(), equalTo(IndexerState.STARTED)).         assertTrue(indexer.maybeTriggerAsyncJob(System.currentTimeMillis())).         assertTrue(ESTestCase.awaitBusy(() -> isFinished.get())).         assertThat(indexer.getStep(), equalTo(4)).     } finally {         executor.shutdownNow().     } }

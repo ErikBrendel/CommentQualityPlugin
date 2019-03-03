@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public GeoGridAggregationBuilder precision(int precision) {     this.precision = GeoTileUtils.checkPrecisionRange(precision).     return this. }
+false;protected;9;9;;@Override protected ValuesSourceAggregatorFactory<ValuesSource.GeoPoint, ?> createFactory(String name, ValuesSourceConfig<ValuesSource.GeoPoint> config, int precision, int requiredSize, int shardSize, SearchContext context, AggregatorFactory<?> parent, AggregatorFactories.Builder subFactoriesBuilder, Map<String, Object> metaData) throws IOException {     return new GeoTileGridAggregatorFactory(name, config, precision, requiredSize, shardSize, context, parent, subFactoriesBuilder, metaData). }
+false;protected;2;4;;@Override protected AggregationBuilder shallowCopy(AggregatorFactories.Builder factoriesBuilder, Map<String, Object> metaData) {     return new GeoTileGridAggregationBuilder(this, factoriesBuilder, metaData). }
+false;public,static;2;3;;public static GeoGridAggregationBuilder parse(String aggregationName, XContentParser parser) throws IOException {     return PARSER.parse(parser, new GeoTileGridAggregationBuilder(aggregationName), null). }
+false;public;0;4;;@Override public String getType() {     return NAME. }

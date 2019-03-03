@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeBoolean(detailed).     out.writeBoolean(waitForCompletion). }
+true;public;0;3;/**  * Should the detailed task information be returned.  */ ;/**  * Should the detailed task information be returned.  */ public boolean getDetailed() {     return this.detailed. }
+true;public;1;4;/**  * Should the detailed task information be returned.  */ ;/**  * Should the detailed task information be returned.  */ public ListTasksRequest setDetailed(boolean detailed) {     this.detailed = detailed.     return this. }
+true;public;0;3;/**  * Should this request wait for all found tasks to complete?  */ ;/**  * Should this request wait for all found tasks to complete?  */ public boolean getWaitForCompletion() {     return waitForCompletion. }
+true;public;1;4;/**  * Should this request wait for all found tasks to complete?  */ ;/**  * Should this request wait for all found tasks to complete?  */ public ListTasksRequest setWaitForCompletion(boolean waitForCompletion) {     this.waitForCompletion = waitForCompletion.     return this. }

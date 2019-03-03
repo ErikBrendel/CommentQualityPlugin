@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Override @Before public void setUp() throws Exception {     super.setUp().     mock = getMockEndpoint("mock:result"). }
+false;public;0;6;;@Test public void testEnrich() throws Exception {     mock.expectedBodiesReceived("test:blah").     template.sendBody("direct:start", "test").     mock.assertIsSatisfied(). }
+false;protected;0;3;;protected CamelContext createCamelContext() throws Exception {     return createSpringCamelContext(this, "org/apache/camel/spring/processor/enricher.xml"). }

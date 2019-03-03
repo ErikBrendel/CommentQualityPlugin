@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public T read(StreamInput in, String key) throws IOException {     return in.readNamedWriteable(tClass, key). }
+false;public;2;4;;@Override public boolean supportsVersion(Diff<T> value, Version version) {     return version.onOrAfter(((NamedDiff<?>) value).getMinimalSupportedVersion()). }
+false;public;2;4;;@Override public boolean supportsVersion(T value, Version version) {     return version.onOrAfter(value.getMinimalSupportedVersion()). }
+false;public;2;5;;@SuppressWarnings("unchecked") @Override public Diff<T> readDiff(StreamInput in, String key) throws IOException {     return in.readNamedWriteable(NamedDiff.class, key). }

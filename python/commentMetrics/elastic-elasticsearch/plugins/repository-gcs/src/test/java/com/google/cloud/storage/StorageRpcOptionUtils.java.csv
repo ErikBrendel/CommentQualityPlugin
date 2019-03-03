@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;11;;public static String getPrefix(final Storage.BlobListOption... options) {     if (options != null) {         for (final Option option : options) {             final StorageRpc.Option rpcOption = option.getRpcOption().             if (StorageRpc.Option.PREFIX.equals(rpcOption)) {                 return (String) option.getValue().             }         }     }     return null. }

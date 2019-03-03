@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public AcknowledgedResponse newResponse() {     return new AcknowledgedResponse(). }
+false;public;0;3;;public String getFollowIndex() {     return followIndex. }
+false;public;0;4;;@Override public ActionRequestValidationException validate() {     return null. }
+false;public;1;5;;@Override public void writeTo(final StreamOutput out) throws IOException {     super.writeTo(out).     out.writeString(followIndex). }

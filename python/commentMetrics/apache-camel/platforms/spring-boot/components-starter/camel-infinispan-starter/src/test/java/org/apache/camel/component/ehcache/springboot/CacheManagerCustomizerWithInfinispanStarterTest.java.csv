@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void testComponentConfiguration() throws Exception {     Assert.assertNotNull(cacheManager).     Assert.assertNotNull(component).     Assert.assertEquals(cacheManager, component.getCacheContainer()). }

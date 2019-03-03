@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void contribute(Info.Builder builder) {     builder.withDetail("build", generateContent()). }
+false;protected;0;10;;@Override protected PropertySource<?> toSimplePropertySource() {     Properties props = new Properties().     copyIfSet(props, "group").     copyIfSet(props, "artifact").     copyIfSet(props, "name").     copyIfSet(props, "version").     copyIfSet(props, "time").     return new PropertiesPropertySource("build", props). }
+false;protected;1;4;;@Override protected void postProcessContent(Map<String, Object> content) {     replaceValue(content, "time", getProperties().getTime()). }

@@ -1,0 +1,25 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Cookie getCookie() {     return this.cookie. }
+false;public;0;3;;public Duration getTimeout() {     return this.timeout. }
+false;public;1;3;;public void setTimeout(Duration timeout) {     this.timeout = timeout. }
+true;public;0;3;/**  * Return the {@link SessionTrackingMode session tracking modes}.  * @return the session tracking modes  */ ;/**  * Return the {@link SessionTrackingMode session tracking modes}.  * @return the session tracking modes  */ public Set<Session.SessionTrackingMode> getTrackingModes() {     return this.trackingModes. }
+false;public;1;3;;public void setTrackingModes(Set<Session.SessionTrackingMode> trackingModes) {     this.trackingModes = trackingModes. }
+true;public;0;3;/**  * Return whether to persist session data between restarts.  * @return {@code true} to persist session data between restarts.  */ ;/**  * Return whether to persist session data between restarts.  * @return {@code true} to persist session data between restarts.  */ public boolean isPersistent() {     return this.persistent. }
+false;public;1;3;;public void setPersistent(boolean persistent) {     this.persistent = persistent. }
+true;public;0;3;/**  * Return the directory used to store session data.  * @return the session data store directory  */ ;/**  * Return the directory used to store session data.  * @return the session data store directory  */ public File getStoreDir() {     return this.storeDir. }
+false;public;1;4;;public void setStoreDir(File storeDir) {     this.sessionStoreDirectory.setDirectory(storeDir).     this.storeDir = storeDir. }
+false;;0;3;;SessionStoreDirectory getSessionStoreDirectory() {     return this.sessionStoreDirectory. }
+true;public;0;3;/**  * Return the session cookie name.  * @return the session cookie name  */ ;/**  * Return the session cookie name.  * @return the session cookie name  */ public String getName() {     return this.name. }
+false;public;1;3;;public void setName(String name) {     this.name = name. }
+true;public;0;3;/**  * Return the domain for the session cookie.  * @return the session cookie domain  */ ;/**  * Return the domain for the session cookie.  * @return the session cookie domain  */ public String getDomain() {     return this.domain. }
+false;public;1;3;;public void setDomain(String domain) {     this.domain = domain. }
+true;public;0;3;/**  * Return the path of the session cookie.  * @return the session cookie path  */ ;/**  * Return the path of the session cookie.  * @return the session cookie path  */ public String getPath() {     return this.path. }
+false;public;1;3;;public void setPath(String path) {     this.path = path. }
+true;public;0;3;/**  * Return the comment for the session cookie.  * @return the session cookie comment  */ ;/**  * Return the comment for the session cookie.  * @return the session cookie comment  */ public String getComment() {     return this.comment. }
+false;public;1;3;;public void setComment(String comment) {     this.comment = comment. }
+true;public;0;3;/**  * Return whether to use "HttpOnly" cookies for session cookies.  * @return {@code true} to use "HttpOnly" cookies for session cookies.  */ ;/**  * Return whether to use "HttpOnly" cookies for session cookies.  * @return {@code true} to use "HttpOnly" cookies for session cookies.  */ public Boolean getHttpOnly() {     return this.httpOnly. }
+false;public;1;3;;public void setHttpOnly(Boolean httpOnly) {     this.httpOnly = httpOnly. }
+true;public;0;3;/**  * Return whether to always mark the session cookie as secure.  * @return {@code true} to mark the session cookie as secure even if the request  * that initiated the corresponding session is using plain HTTP  */ ;/**  * Return whether to always mark the session cookie as secure.  * @return {@code true} to mark the session cookie as secure even if the request  * that initiated the corresponding session is using plain HTTP  */ public Boolean getSecure() {     return this.secure. }
+false;public;1;3;;public void setSecure(Boolean secure) {     this.secure = secure. }
+true;public;0;3;/**  * Return the maximum age of the session cookie.  * @return the maximum age of the session cookie  */ ;/**  * Return the maximum age of the session cookie.  * @return the maximum age of the session cookie  */ public Duration getMaxAge() {     return this.maxAge. }
+false;public;1;3;;public void setMaxAge(Duration maxAge) {     this.maxAge = maxAge. }

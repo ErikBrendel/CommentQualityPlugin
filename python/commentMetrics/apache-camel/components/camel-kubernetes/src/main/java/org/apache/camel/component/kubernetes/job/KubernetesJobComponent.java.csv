@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;3;4;;protected KubernetesJobEndpoint doCreateEndpoint(String uri, String remaining, KubernetesConfiguration config) throws Exception {     KubernetesJobEndpoint endpoint = new KubernetesJobEndpoint(uri, this, config).     return endpoint. }

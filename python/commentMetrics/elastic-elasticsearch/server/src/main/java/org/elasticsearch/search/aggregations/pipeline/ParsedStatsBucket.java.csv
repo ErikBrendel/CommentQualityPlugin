@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getType() {     return StatsBucketPipelineAggregationBuilder.NAME. }
+false;public,static;2;5;;public static ParsedStatsBucket fromXContent(XContentParser parser, final String name) {     ParsedStatsBucket parsedStatsBucket = PARSER.apply(parser, null).     parsedStatsBucket.setName(name).     return parsedStatsBucket. }

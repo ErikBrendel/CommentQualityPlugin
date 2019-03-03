@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;7;;@Override public List<User> list(UserSearchCriteria s) {     // @formatter:off     return getSpi().list(getApiVersion(), s.getContext(), s.getPage(), s.getPerPage(), s.getSearch(), s.getExclude(), s.getInclude(), s.getOffset(), s.getOrder(), s.getOrderBy(), s.getSlug(), s.getRoles()). // @formatter:on }
+false;protected;0;4;;@Override protected Class<UsersSPI> getSpiType() {     return UsersSPI.class. }
+false;protected;1;4;;@Override protected User doCreate(User object) {     return getSpi().create(getApiVersion(), object). }
+false;protected;1;4;;@Override protected DeletedModel<User> doForceDelete(Integer id) {     return getSpi().delete(getApiVersion(), id, true, 1). }
+false;protected;1;4;;@Override protected User doDelete(Integer id) {     return this.forceDelete(id).getPrevious(). }
+false;protected;2;4;;@Override protected User doUpdate(Integer id, User object) {     return getSpi().update(getApiVersion(), id, object). }
+false;protected;2;4;;@Override protected User doRetrieve(Integer entityID, Context context) {     return getSpi().retrieve(getApiVersion(), entityID, context). }

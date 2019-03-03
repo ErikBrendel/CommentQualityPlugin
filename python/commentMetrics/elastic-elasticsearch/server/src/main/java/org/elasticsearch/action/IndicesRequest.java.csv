@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * Returns the array of indices that the action relates to  */ ;/**  * Returns the array of indices that the action relates to  */ String[] indices().
+true;;0;1;/**  * Returns the indices options used to resolve indices. They tell for instance whether a single index is  * accepted, whether an empty array will be converted to _all, and how wildcards will be expanded if needed.  */ ;/**  * Returns the indices options used to resolve indices. They tell for instance whether a single index is  * accepted, whether an empty array will be converted to _all, and how wildcards will be expanded if needed.  */ IndicesOptions indicesOptions().
+true;;1;1;/**  * Sets the indices that the action relates to.  */ ;/**  * Sets the indices that the action relates to.  */ IndicesRequest indices(String... indices).

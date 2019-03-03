@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public int getMappedTransportPort() {     return getContainer().getMappedPort(9300). }
+false;public;0;10;;@Override public void evaluate() throws Throwable {     System.setProperty("es.set.netty.runtime.available.processors", "false").     try {         wrapped.evaluate().     } finally {         System.clearProperty("es.set.netty.runtime.available.processors").     } }
+false;public;2;19;;@Override public Statement apply(Statement base, Description description) {     Statement wrapped = super.apply(base, description).     return new Statement() {          @Override         public void evaluate() throws Throwable {             System.setProperty("es.set.netty.runtime.available.processors", "false").             try {                 wrapped.evaluate().             } finally {                 System.clearProperty("es.set.netty.runtime.available.processors").             }         }     }. }

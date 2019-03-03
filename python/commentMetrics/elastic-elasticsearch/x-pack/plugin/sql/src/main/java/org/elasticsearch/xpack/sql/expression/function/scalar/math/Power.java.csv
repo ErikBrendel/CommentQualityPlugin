@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected NodeInfo<Power> info() {     return NodeInfo.create(this, Power::new, left(), right()). }
+false;protected;2;4;;@Override protected Power replaceChildren(Expression newLeft, Expression newRight) {     return new Power(source(), newLeft, newRight). }

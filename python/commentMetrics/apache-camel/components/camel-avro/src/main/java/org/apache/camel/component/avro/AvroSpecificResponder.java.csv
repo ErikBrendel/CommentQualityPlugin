@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public Object respond(Protocol.Message message, Object request) throws Exception {     return listener.respond(message, request, SpecificData.get()). }

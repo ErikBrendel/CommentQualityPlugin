@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public ThrottlingInflightRoutePolicy getPolicy() {     return policy. }
+false;public;0;3;;public int getMaxInflightExchanges() {     return getPolicy().getMaxInflightExchanges(). }
+false;public;1;3;;public void setMaxInflightExchanges(int maxInflightExchanges) {     getPolicy().setMaxInflightExchanges(maxInflightExchanges). }
+false;public;0;3;;public int getResumePercentOfMax() {     return getPolicy().getResumePercentOfMax(). }
+false;public;1;3;;public void setResumePercentOfMax(int resumePercentOfMax) {     getPolicy().setResumePercentOfMax(resumePercentOfMax). }
+false;public;0;3;;public String getScope() {     return getPolicy().getScope().name(). }
+false;public;1;3;;public void setScope(String scope) {     getPolicy().setScope(ThrottlingInflightRoutePolicy.ThrottlingScope.valueOf(scope)). }
+false;public;0;3;;public String getLoggingLevel() {     return getPolicy().getLoggingLevel().name(). }
+false;public;1;5;;public void setLoggingLevel(String loggingLevel) {     LoggingLevel level = LoggingLevel.valueOf(loggingLevel).     getPolicy().setLoggingLevel(level).     getPolicy().getLogger().setLevel(level). }

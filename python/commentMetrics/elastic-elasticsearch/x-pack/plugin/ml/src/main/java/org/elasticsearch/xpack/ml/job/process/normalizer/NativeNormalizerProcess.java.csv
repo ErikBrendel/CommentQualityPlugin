@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getName() {     return NAME. }
+false;public;0;4;;@Override public boolean isReady() {     return true. }
+false;public;0;4;;@Override public void persistState() { // nothing to persist }
+false;public;0;4;;@Override public NormalizerResultHandler createNormalizedResultsHandler() {     return new NormalizerResultHandler(processOutStream()). }

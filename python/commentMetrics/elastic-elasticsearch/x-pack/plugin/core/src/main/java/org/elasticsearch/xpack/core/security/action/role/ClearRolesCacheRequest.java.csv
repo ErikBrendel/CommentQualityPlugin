@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;4;/**  * Sets the roles for which caches will be evicted. When not set all the roles will be evicted from the cache.  *  * @param names    The role names  */ ;/**  * Sets the roles for which caches will be evicted. When not set all the roles will be evicted from the cache.  *  * @param names    The role names  */ public ClearRolesCacheRequest names(String... names) {     this.names = names.     return this. }
+true;public;0;3;/**  * @return an array of role names that will have the cache evicted or <code>null</code> if all  */ ;/**  * @return an array of role names that will have the cache evicted or <code>null</code> if all  */ public String[] names() {     return names. }
+false;public;1;5;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     names = in.readOptionalStringArray(). }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeOptionalStringArray(names). }
+false;public;0;1;;public String[] getNames() {     return names. }
+false;public;1;5;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     names = in.readOptionalStringArray(). }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeOptionalStringArray(names). }

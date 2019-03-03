@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;15;;@Override protected int poll() throws Exception {     int count = 0.     List<Ref> call = getGit().tagList().call().     for (Ref ref : call) {         if (!tagsConsumed.contains(ref.getName())) {             Exchange e = getEndpoint().createExchange().             e.getOut().setBody(ref).             getProcessor().process(e).             tagsConsumed.add(ref.getName()).             count++.         }     }     return count. }

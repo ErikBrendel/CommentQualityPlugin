@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public JobUpdate getJobUpdate() {     return update. }
+false;public;2;4;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     return update.toXContent(builder, params). }
+false;public;1;13;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     UpdateJobRequest that = (UpdateJobRequest) o.     return Objects.equals(update, that.update). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(update). }
+false;public,final;0;4;;@Override public final String toString() {     return Strings.toString(this). }
+false;public;0;4;;@Override public ActionRequestValidationException validate() {     return null. }

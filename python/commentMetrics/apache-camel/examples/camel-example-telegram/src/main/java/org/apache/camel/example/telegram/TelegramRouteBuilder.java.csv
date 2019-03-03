@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public void configure() {     from("direct:start").to("telegram:bots/" + Application.AUTHORIZATION_TOKEN + "?chatId=" + Application.CHAT_ID). }

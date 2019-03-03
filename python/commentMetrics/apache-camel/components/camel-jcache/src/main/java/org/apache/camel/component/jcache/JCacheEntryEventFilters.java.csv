@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public boolean evaluate(CacheEntryEvent<?, ?> event) throws CacheEntryListenerException {     if (filteredEvents == null) {         return true.     }     return !filteredEvents.contains(event.getEventType()). }
+false;public;1;14;;@Override public boolean evaluate(CacheEntryEvent<?, ?> event) throws CacheEntryListenerException {     if (filteredEvents == null) {         return true.     }     for (int i = 0. i < filteredEventsSize. i++) {         if (!filteredEvents.get(i).evaluate(event)) {             return false.         }     }     return true. }

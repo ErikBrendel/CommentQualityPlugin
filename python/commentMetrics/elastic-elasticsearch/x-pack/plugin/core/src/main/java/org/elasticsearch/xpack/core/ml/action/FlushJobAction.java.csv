@@ -1,0 +1,24 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Response newResponse() {     throw new UnsupportedOperationException("usage of Streamable is to be replaced by Writeable"). }
+false;public;0;4;;@Override public Writeable.Reader<Response> getResponseReader() {     return Response::new. }
+false;public,static;2;7;;public static Request parseRequest(String jobId, XContentParser parser) {     Request request = PARSER.apply(parser, null).     if (jobId != null) {         request.jobId = jobId.     }     return request. }
+false;public;1;9;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeBoolean(calcInterim).     out.writeOptionalString(start).     out.writeOptionalString(end).     out.writeOptionalString(advanceTime).     out.writeOptionalString(skipTime). }
+false;public;0;3;;public boolean getCalcInterim() {     return calcInterim. }
+false;public;1;3;;public void setCalcInterim(boolean calcInterim) {     this.calcInterim = calcInterim. }
+false;public;0;3;;public String getStart() {     return start. }
+false;public;1;3;;public void setStart(String start) {     this.start = start. }
+false;public;0;3;;public String getEnd() {     return end. }
+false;public;1;3;;public void setEnd(String end) {     this.end = end. }
+false;public;0;3;;public String getAdvanceTime() {     return advanceTime. }
+false;public;1;3;;public void setAdvanceTime(String advanceTime) {     this.advanceTime = advanceTime. }
+false;public;0;3;;public String getSkipTime() {     return skipTime. }
+false;public;1;3;;public void setSkipTime(String skipTime) {     this.skipTime = skipTime. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(jobId, calcInterim, start, end, advanceTime, skipTime). }
+false;public;1;16;;@Override public boolean equals(Object obj) {     if (this == obj) {         return true.     }     if (obj == null || getClass() != obj.getClass()) {         return false.     }     Request other = (Request) obj.     return Objects.equals(jobId, other.jobId) && calcInterim == other.calcInterim && Objects.equals(start, other.start) && Objects.equals(end, other.end) && Objects.equals(advanceTime, other.advanceTime) && Objects.equals(skipTime, other.skipTime). }
+false;public;2;20;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(Job.ID.getPreferredName(), jobId).     builder.field(CALC_INTERIM.getPreferredName(), calcInterim).     if (start != null) {         builder.field(START.getPreferredName(), start).     }     if (end != null) {         builder.field(END.getPreferredName(), end).     }     if (advanceTime != null) {         builder.field(ADVANCE_TIME.getPreferredName(), advanceTime).     }     if (skipTime != null) {         builder.field(SKIP_TIME.getPreferredName(), skipTime).     }     builder.endObject().     return builder. }
+false;public;1;6;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeBoolean(flushed).     out.writeVLong(lastFinalizedBucketEnd.getTime()). }
+false;public;0;3;;public boolean isFlushed() {     return flushed. }
+false;public;0;3;;public Date getLastFinalizedBucketEnd() {     return lastFinalizedBucketEnd. }
+false;public;2;11;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field("flushed", flushed).     if (lastFinalizedBucketEnd != null) {         builder.timeField(FlushAcknowledgement.LAST_FINALIZED_BUCKET_END.getPreferredName(), FlushAcknowledgement.LAST_FINALIZED_BUCKET_END.getPreferredName() + "_string", lastFinalizedBucketEnd.getTime()).     }     builder.endObject().     return builder. }
+false;public;1;8;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     Response response = (Response) o.     return flushed == response.flushed && Objects.equals(lastFinalizedBucketEnd, response.lastFinalizedBucketEnd). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(flushed, lastFinalizedBucketEnd). }

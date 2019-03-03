@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Returns whether the requisite number of shard copies started before the completion of the operation.  */ ;/**  * Returns whether the requisite number of shard copies started before the completion of the operation.  */ public boolean isShardsAcknowledged() {     return shardsAcknowledged. }

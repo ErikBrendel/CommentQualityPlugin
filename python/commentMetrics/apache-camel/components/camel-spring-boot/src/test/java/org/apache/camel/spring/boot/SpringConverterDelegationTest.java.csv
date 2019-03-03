@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void shouldConvertUsingSpringConverter() {     String result = typeConverter.convertTo(String.class, new Convertable()).     assertEquals("converted!", result). }
+false;;0;4;;@Bean ConvertableConverter convertableConverter() {     return new ConvertableConverter(). }
+false;public;1;4;;@Override public String convert(Convertable source) {     return "converted!". }

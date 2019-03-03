@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String cluster() {     return cluster. }
+false;public;0;3;;public String index() {     return index. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(cluster, index). }
+false;public;1;13;;@Override public boolean equals(Object obj) {     if (this == obj) {         return true.     }     if (obj == null || getClass() != obj.getClass()) {         return false.     }     TableIdentifier other = (TableIdentifier) obj.     return Objects.equals(index, other.index) && Objects.equals(cluster, other.cluster). }
+false;public;0;3;;public Source source() {     return source. }
+false;public;0;3;;public String qualifiedIndex() {     return cluster != null ? cluster + ":" + index : index. }
+false;public;0;10;;@Override public String toString() {     StringBuilder builder = new StringBuilder().     if (cluster != null) {         builder.append(cluster).         builder.append(":").     }     builder.append(index).     return builder.toString(). }

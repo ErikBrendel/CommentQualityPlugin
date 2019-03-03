@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected,abstract;0;1;;protected abstract ConfigurationClassParser newParser().
+false;protected,abstract;1;1;;protected abstract String loadAsConfigurationSource(Class<?> clazz) throws Exception.
+false;public;0;15;;@Test public void simpleCircularImportIsDetected() throws Exception {     boolean threw = false.     try {         newParser().parse(loadAsConfigurationSource(A.class), "A").     } catch (BeanDefinitionParsingException ex) {         assertTrue("Wrong message. Got: " + ex.getMessage(), ex.getMessage().contains("Illegal attempt by @Configuration class 'AbstractCircularImportDetectionTests.B' " + "to import class 'AbstractCircularImportDetectionTests.A'")).         threw = true.     }     assertTrue(threw). }
+false;public;0;15;;@Test public void complexCircularImportIsDetected() throws Exception {     boolean threw = false.     try {         newParser().parse(loadAsConfigurationSource(X.class), "X").     } catch (BeanDefinitionParsingException ex) {         assertTrue("Wrong message. Got: " + ex.getMessage(), ex.getMessage().contains("Illegal attempt by @Configuration class 'AbstractCircularImportDetectionTests.Z2' " + "to import class 'AbstractCircularImportDetectionTests.Z'")).         threw = true.     }     assertTrue(threw). }
+false;;0;4;;@Bean TestBean b1() {     return new TestBean(). }
+false;;0;4;;@Bean TestBean b2() {     return new TestBean(). }
+false;;0;4;;@Bean TestBean x() {     return new TestBean(). }
+false;;0;4;;@Bean TestBean y() {     return new TestBean(). }
+false;;0;4;;@Bean TestBean z() {     return new TestBean(). }
+false;;0;4;;@Bean TestBean z1() {     return new TestBean(). }
+false;;0;4;;@Bean TestBean z2() {     return new TestBean(). }

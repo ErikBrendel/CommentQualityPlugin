@@ -1,0 +1,57 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void setBeanClassLoader(ClassLoader classLoader) {     this.classLoader = classLoader. }
+false;public;0;5;;@Override public void afterPropertiesSet() throws Exception {     this.embeddedDatabaseConnection = EmbeddedDatabaseConnection.get(this.classLoader). }
+true;public;0;5;/**  * Initialize a {@link DataSourceBuilder} with the state of this instance.  * @return a {@link DataSourceBuilder} initialized with the customizations defined on  * this instance  */ ;/**  * Initialize a {@link DataSourceBuilder} with the state of this instance.  * @return a {@link DataSourceBuilder} initialized with the customizations defined on  * this instance  */ public DataSourceBuilder<?> initializeDataSourceBuilder() {     return DataSourceBuilder.create(getClassLoader()).type(getType()).driverClassName(determineDriverClassName()).url(determineUrl()).username(determineUsername()).password(determinePassword()). }
+false;public;0;3;;public String getName() {     return this.name. }
+false;public;1;3;;public void setName(String name) {     this.name = name. }
+false;public;0;3;;public boolean isGenerateUniqueName() {     return this.generateUniqueName. }
+false;public;1;3;;public void setGenerateUniqueName(boolean generateUniqueName) {     this.generateUniqueName = generateUniqueName. }
+false;public;0;3;;public Class<? extends DataSource> getType() {     return this.type. }
+false;public;1;3;;public void setType(Class<? extends DataSource> type) {     this.type = type. }
+true;public;0;3;/**  * Return the configured driver or {@code null} if none was configured.  * @return the configured driver  * @see #determineDriverClassName()  */ ;/**  * Return the configured driver or {@code null} if none was configured.  * @return the configured driver  * @see #determineDriverClassName()  */ public String getDriverClassName() {     return this.driverClassName. }
+false;public;1;3;;public void setDriverClassName(String driverClassName) {     this.driverClassName = driverClassName. }
+true;public;0;20;/**  * Determine the driver to use based on this configuration and the environment.  * @return the driver to use  * @since 1.4.0  */ ;/**  * Determine the driver to use based on this configuration and the environment.  * @return the driver to use  * @since 1.4.0  */ public String determineDriverClassName() {     if (StringUtils.hasText(this.driverClassName)) {         Assert.state(driverClassIsLoadable(), () -> "Cannot load driver class: " + this.driverClassName).         return this.driverClassName.     }     String driverClassName = null.     if (StringUtils.hasText(this.url)) {         driverClassName = DatabaseDriver.fromJdbcUrl(this.url).getDriverClassName().     }     if (!StringUtils.hasText(driverClassName)) {         driverClassName = this.embeddedDatabaseConnection.getDriverClassName().     }     if (!StringUtils.hasText(driverClassName)) {         throw new DataSourceBeanCreationException("Failed to determine a suitable driver class", this, this.embeddedDatabaseConnection).     }     return driverClassName. }
+false;private;0;13;;private boolean driverClassIsLoadable() {     try {         ClassUtils.forName(this.driverClassName, null).         return true.     } catch (UnsupportedClassVersionError ex) {         // Driver library has been compiled with a later JDK, propagate error         throw ex.     } catch (Throwable ex) {         return false.     } }
+true;public;0;3;/**  * Return the configured url or {@code null} if none was configured.  * @return the configured url  * @see #determineUrl()  */ ;/**  * Return the configured url or {@code null} if none was configured.  * @return the configured url  * @see #determineUrl()  */ public String getUrl() {     return this.url. }
+false;public;1;3;;public void setUrl(String url) {     this.url = url. }
+true;public;0;14;/**  * Determine the url to use based on this configuration and the environment.  * @return the url to use  * @since 1.4.0  */ ;/**  * Determine the url to use based on this configuration and the environment.  * @return the url to use  * @since 1.4.0  */ public String determineUrl() {     if (StringUtils.hasText(this.url)) {         return this.url.     }     String databaseName = determineDatabaseName().     String url = (databaseName != null) ? this.embeddedDatabaseConnection.getUrl(databaseName) : null.     if (!StringUtils.hasText(url)) {         throw new DataSourceBeanCreationException("Failed to determine suitable jdbc url", this, this.embeddedDatabaseConnection).     }     return url. }
+true;public;0;15;/**  * Determine the name to used based on this configuration.  * @return the database name to use or {@code null}  * @since 2.0.0  */ ;/**  * Determine the name to used based on this configuration.  * @return the database name to use or {@code null}  * @since 2.0.0  */ public String determineDatabaseName() {     if (this.generateUniqueName) {         if (this.uniqueName == null) {             this.uniqueName = UUID.randomUUID().toString().         }         return this.uniqueName.     }     if (StringUtils.hasLength(this.name)) {         return this.name.     }     if (this.embeddedDatabaseConnection != EmbeddedDatabaseConnection.NONE) {         return "testdb".     }     return null. }
+true;public;0;3;/**  * Return the configured username or {@code null} if none was configured.  * @return the configured username  * @see #determineUsername()  */ ;/**  * Return the configured username or {@code null} if none was configured.  * @return the configured username  * @see #determineUsername()  */ public String getUsername() {     return this.username. }
+false;public;1;3;;public void setUsername(String username) {     this.username = username. }
+true;public;0;9;/**  * Determine the username to use based on this configuration and the environment.  * @return the username to use  * @since 1.4.0  */ ;/**  * Determine the username to use based on this configuration and the environment.  * @return the username to use  * @since 1.4.0  */ public String determineUsername() {     if (StringUtils.hasText(this.username)) {         return this.username.     }     if (EmbeddedDatabaseConnection.isEmbedded(determineDriverClassName())) {         return "sa".     }     return null. }
+true;public;0;3;/**  * Return the configured password or {@code null} if none was configured.  * @return the configured password  * @see #determinePassword()  */ ;/**  * Return the configured password or {@code null} if none was configured.  * @return the configured password  * @see #determinePassword()  */ public String getPassword() {     return this.password. }
+false;public;1;3;;public void setPassword(String password) {     this.password = password. }
+true;public;0;9;/**  * Determine the password to use based on this configuration and the environment.  * @return the password to use  * @since 1.4.0  */ ;/**  * Determine the password to use based on this configuration and the environment.  * @return the password to use  * @since 1.4.0  */ public String determinePassword() {     if (StringUtils.hasText(this.password)) {         return this.password.     }     if (EmbeddedDatabaseConnection.isEmbedded(determineDriverClassName())) {         return "".     }     return null. }
+false;public;0;3;;public String getJndiName() {     return this.jndiName. }
+true;public;1;3;/**  * Allows the DataSource to be managed by the container and obtained via JNDI. The  * {@code URL}, {@code driverClassName}, {@code username} and {@code password} fields  * will be ignored when using JNDI lookups.  * @param jndiName the JNDI name  */ ;/**  * Allows the DataSource to be managed by the container and obtained via JNDI. The  * {@code URL}, {@code driverClassName}, {@code username} and {@code password} fields  * will be ignored when using JNDI lookups.  * @param jndiName the JNDI name  */ public void setJndiName(String jndiName) {     this.jndiName = jndiName. }
+false;public;0;3;;public DataSourceInitializationMode getInitializationMode() {     return this.initializationMode. }
+false;public;1;3;;public void setInitializationMode(DataSourceInitializationMode initializationMode) {     this.initializationMode = initializationMode. }
+false;public;0;3;;public String getPlatform() {     return this.platform. }
+false;public;1;3;;public void setPlatform(String platform) {     this.platform = platform. }
+false;public;0;3;;public List<String> getSchema() {     return this.schema. }
+false;public;1;3;;public void setSchema(List<String> schema) {     this.schema = schema. }
+false;public;0;3;;public String getSchemaUsername() {     return this.schemaUsername. }
+false;public;1;3;;public void setSchemaUsername(String schemaUsername) {     this.schemaUsername = schemaUsername. }
+false;public;0;3;;public String getSchemaPassword() {     return this.schemaPassword. }
+false;public;1;3;;public void setSchemaPassword(String schemaPassword) {     this.schemaPassword = schemaPassword. }
+false;public;0;3;;public List<String> getData() {     return this.data. }
+false;public;1;3;;public void setData(List<String> data) {     this.data = data. }
+false;public;0;3;;public String getDataUsername() {     return this.dataUsername. }
+false;public;1;3;;public void setDataUsername(String dataUsername) {     this.dataUsername = dataUsername. }
+false;public;0;3;;public String getDataPassword() {     return this.dataPassword. }
+false;public;1;3;;public void setDataPassword(String dataPassword) {     this.dataPassword = dataPassword. }
+false;public;0;3;;public boolean isContinueOnError() {     return this.continueOnError. }
+false;public;1;3;;public void setContinueOnError(boolean continueOnError) {     this.continueOnError = continueOnError. }
+false;public;0;3;;public String getSeparator() {     return this.separator. }
+false;public;1;3;;public void setSeparator(String separator) {     this.separator = separator. }
+false;public;0;3;;public Charset getSqlScriptEncoding() {     return this.sqlScriptEncoding. }
+false;public;1;3;;public void setSqlScriptEncoding(Charset sqlScriptEncoding) {     this.sqlScriptEncoding = sqlScriptEncoding. }
+false;public;0;3;;public ClassLoader getClassLoader() {     return this.classLoader. }
+false;public;0;3;;public Xa getXa() {     return this.xa. }
+false;public;1;3;;public void setXa(Xa xa) {     this.xa = xa. }
+false;public;0;3;;public String getDataSourceClassName() {     return this.dataSourceClassName. }
+false;public;1;3;;public void setDataSourceClassName(String dataSourceClassName) {     this.dataSourceClassName = dataSourceClassName. }
+false;public;0;3;;public Map<String, String> getProperties() {     return this.properties. }
+false;public;1;3;;public void setProperties(Map<String, String> properties) {     this.properties = properties. }
+false;public;0;3;;public DataSourceProperties getProperties() {     return this.properties. }
+false;public;0;3;;public EmbeddedDatabaseConnection getConnection() {     return this.connection. }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void done(boolean doneSync) { // nnop }
+false;public;0;15;;@Test public void testFindsSingleMethodMatchingBody() throws Throwable {     MethodInvocation invocation = info.createInvocation(bean, exchange).     assertNotNull("Should have found a method invocation!", invocation).     AtomicBoolean sync = new AtomicBoolean(true).     invocation.proceed(new AsyncCallback() {          public void done(boolean doneSync) {         // nnop         }     }).     assertEquals(true, sync.get()).     assertEquals("Hello James!", exchange.getIn().getBody()). }
+false;public;0;6;;@Test public void testBeanProcessor() throws Exception {     BeanProcessor processor = new BeanProcessor(bean, info).     processor.process(exchange).     assertEquals("Hello James!", exchange.getIn().getBody()). }
+false;public;0;6;;@Before public void setUp() throws Exception {     exchange.getIn().setBody("James").     info = new BeanInfo(camelContext, bean.getClass(), strategy). }

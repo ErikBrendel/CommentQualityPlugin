@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void testPgEventPublishSubscribe() throws Exception {     mockEndpoint.expectedBodiesReceived(TEST_MESSAGE_BODY).     mockEndpoint.assertIsSatisfied(5000). }
+false;public;0;9;;@Override public void configure() throws Exception {     from(timerEndpoint).setBody(constant(TEST_MESSAGE_BODY)).to(notifyEndpoint).     from(subscribeEndpoint).to(mockEndpoint). }
+false;protected;0;14;;@Override protected RoutesBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from(timerEndpoint).setBody(constant(TEST_MESSAGE_BODY)).to(notifyEndpoint).             from(subscribeEndpoint).to(mockEndpoint).         }     }. }

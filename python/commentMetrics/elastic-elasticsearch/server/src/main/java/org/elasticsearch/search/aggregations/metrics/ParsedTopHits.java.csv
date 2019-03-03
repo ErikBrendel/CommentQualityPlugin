@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getType() {     return TopHitsAggregationBuilder.NAME. }
+false;public;0;4;;@Override public SearchHits getHits() {     return searchHits. }
+false;protected;2;4;;@Override protected XContentBuilder doXContentBody(XContentBuilder builder, Params params) throws IOException {     return searchHits.toXContent(builder, params). }
+false;public,static;2;5;;public static ParsedTopHits fromXContent(XContentParser parser, String name) throws IOException {     ParsedTopHits aggregation = PARSER.parse(parser, null).     aggregation.setName(name).     return aggregation. }

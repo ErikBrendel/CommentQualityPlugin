@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;17;;@Override public boolean process(Exchange exchange, AsyncCallback callback) {     boolean matches = false.     try {         matches = matches(exchange).     } catch (Exception e) {         exchange.setException(e).     }     if (matches) {         return processor.process(exchange, callback).     } else {         callback.done(true).         return true.     } }
+false;public;1;14;;public boolean matches(Exchange exchange) {     boolean matches = predicate.matches(exchange).     log.debug("Filter matches: {} for exchange: {}", matches, exchange).     // set property whether the filter matches or not     exchange.setProperty(Exchange.FILTER_MATCHED, matches).     if (matches) {         filtered++.     }     return matches. }
+false;public;0;4;;@Override public String toString() {     return "Filter[if: " + predicate + " do: " + getProcessor() + "]". }
+false;public;0;3;;public String getId() {     return id. }
+false;public;1;3;;public void setId(String id) {     this.id = id. }
+false;public;0;3;;public String getTraceLabel() {     return "filter[if: " + predicate + "]". }
+false;public;0;3;;public Predicate getPredicate() {     return predicate. }
+true;public;0;3;/**  * Gets the number of Exchanges that matched the filter predicate and therefore as filtered.  */ ;/**  * Gets the number of Exchanges that matched the filter predicate and therefore as filtered.  */ public long getFilteredCount() {     return filtered. }
+true;public;0;3;/**  * Reset counters.  */ ;/**  * Reset counters.  */ public void reset() {     filtered = 0. }
+false;protected;0;7;;@Override protected void doStart() throws Exception {     super.doStart().     // restart counter     reset().     ServiceHelper.startService(predicate). }
+false;protected;0;5;;@Override protected void doStop() throws Exception {     ServiceHelper.stopService(predicate).     super.doStop(). }

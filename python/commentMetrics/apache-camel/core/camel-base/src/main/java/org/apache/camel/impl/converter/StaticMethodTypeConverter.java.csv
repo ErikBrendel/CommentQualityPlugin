@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String toString() {     return "StaticMethodTypeConverter: " + method. }
+false;public;0;4;;@Override public boolean allowNull() {     return allowNull. }
+false;public;3;5;;@SuppressWarnings("unchecked") public <T> T convertTo(Class<T> type, Exchange exchange, Object value) {     return useExchange ? (T) ObjectHelper.invokeMethod(method, null, value, exchange) : (T) ObjectHelper.invokeMethod(method, null, value). }

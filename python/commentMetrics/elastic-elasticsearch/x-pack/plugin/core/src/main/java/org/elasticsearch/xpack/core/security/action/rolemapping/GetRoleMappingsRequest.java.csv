@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Override public ActionRequestValidationException validate() {     ActionRequestValidationException validationException = null.     if (names == null) {         validationException = addValidationError("role-mapping names are missing", validationException).     }     return validationException. }
+true;public;1;3;/**  * Specify (by name) which role-mappings to delete.  * @see ExpressionRoleMapping#getName()  */ ;/**  * Specify (by name) which role-mappings to delete.  * @see ExpressionRoleMapping#getName()  */ public void setNames(String... names) {     this.names = names. }
+true;public;0;3;/**  * @see #setNames(String...)  */ ;/**  * @see #setNames(String...)  */ public String[] getNames() {     return names. }
+false;public;1;5;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     names = in.readStringArray(). }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeStringArray(names). }

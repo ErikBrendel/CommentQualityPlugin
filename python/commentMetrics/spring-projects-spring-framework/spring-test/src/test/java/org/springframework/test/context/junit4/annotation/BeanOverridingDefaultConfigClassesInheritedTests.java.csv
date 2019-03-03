@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Bean public Employee employee() {     Employee employee = new Employee().     employee.setName("Yoda").     employee.setAge(900).     employee.setCompany("The Force").     return employee. }
+false;public;0;6;;@Test @Override public void verifyEmployeeSetFromBaseContextConfig() {     assertNotNull("The employee should have been autowired.", this.employee).     assertEquals("The employee bean should have been overridden.", "Yoda", this.employee.getName()). }

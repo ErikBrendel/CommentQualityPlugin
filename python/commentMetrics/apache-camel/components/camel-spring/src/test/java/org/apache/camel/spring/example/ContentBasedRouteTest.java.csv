@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void testMatchesPredicate() throws Exception {     matchedEndpoint.expectedMessageCount(1).     notMatchedEndpoint.expectedMessageCount(0).     template.sendBodyAndHeader("direct:start", body, header, "firstChoice").     assertIsSatisfied(matchedEndpoint, notMatchedEndpoint). }
+false;public;0;9;;@Test public void testDoesNotMatchPredicate() throws Exception {     matchedEndpoint.expectedMessageCount(0).     notMatchedEndpoint.expectedMessageCount(1).     template.sendBodyAndHeader("direct:start", body, header, "notMatchedValue").     assertIsSatisfied(matchedEndpoint, notMatchedEndpoint). }
+false;public;0;8;;@Override @Before public void setUp() throws Exception {     super.setUp().     matchedEndpoint = getMockEndpoint("mock:matched").     notMatchedEndpoint = getMockEndpoint("mock:notMatched"). }
+false;protected;0;3;;protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/spring/example/contentBasedRoute.xml"). }

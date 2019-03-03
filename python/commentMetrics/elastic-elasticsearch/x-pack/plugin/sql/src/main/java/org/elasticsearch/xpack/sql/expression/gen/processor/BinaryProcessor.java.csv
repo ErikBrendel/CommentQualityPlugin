@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,final;1;6;;@Override public final void writeTo(StreamOutput out) throws IOException {     out.writeNamedWriteable(left).     out.writeNamedWriteable(right).     doWrite(out). }
+false;protected,abstract;1;1;;protected abstract void doWrite(StreamOutput out) throws IOException.
+false;public;1;16;;@Override public Object process(Object input) {     Object l = left.process(input).     if (l == null) {         return null.     }     checkParameter(l).     Object r = right.process(input).     if (r == null) {         return null.     }     checkParameter(r).     return doProcess(l, r). }
+true;protected;1;3;/**  * Checks the parameter (typically for its type) if the value is not null.  */ ;/**  * Checks the parameter (typically for its type) if the value is not null.  */ protected void checkParameter(Object param) { // no-op }
+false;protected;0;3;;protected Processor left() {     return left. }
+false;protected;0;3;;protected Processor right() {     return right. }
+false;protected,abstract;2;1;;protected abstract Object doProcess(Object left, Object right).

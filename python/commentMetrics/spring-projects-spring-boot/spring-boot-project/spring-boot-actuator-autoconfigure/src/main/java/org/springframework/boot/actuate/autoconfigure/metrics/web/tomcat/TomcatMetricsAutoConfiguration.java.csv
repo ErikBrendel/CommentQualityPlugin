@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Bean @ConditionalOnBean(MeterRegistry.class) @ConditionalOnMissingBean({ TomcatMetrics.class, TomcatMetricsBinder.class }) public TomcatMetricsBinder tomcatMetricsBinder(MeterRegistry meterRegistry) {     return new TomcatMetricsBinder(meterRegistry). }

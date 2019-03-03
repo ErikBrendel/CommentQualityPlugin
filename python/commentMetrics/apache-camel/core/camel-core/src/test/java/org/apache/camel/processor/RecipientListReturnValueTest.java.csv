@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry jndi = super.createRegistry().     jndi.bind("myBean", new MyBean()).     return jndi. }
+false;public;0;4;;@Test public void testRecipientListWithRecipientList() throws Exception {     doTestRecipientList("direct:recipientList"). }
+false;public;0;4;;@Test public void testRecipientListWithBeanRef() throws Exception {     doTestRecipientList("direct:beanRef"). }
+false;private;1;12;;private void doTestRecipientList(String uri) throws InterruptedException {     MockEndpoint a = getMockEndpoint("mock:a").     a.expectedBodiesReceived("Hello a").     MockEndpoint b = getMockEndpoint("mock:b").     b.expectedBodiesReceived("Hello b").     String out = template.requestBody(uri, "Hello " + uri, String.class).     assertEquals("Hello b", out).     assertMockEndpointsSatisfied(). }
+false;public;0;7;;public void configure() {     from("direct:beanRef").bean("myBean", "route").     from("direct:recipientList").recipientList().method("myBean", "recipientList").     from("direct:a").transform(constant("Hello a")).to("mock:a").     from("direct:b").transform(constant("Hello b")).to("mock:b"). }
+false;protected;0;11;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("direct:beanRef").bean("myBean", "route").             from("direct:recipientList").recipientList().method("myBean", "recipientList").             from("direct:a").transform(constant("Hello a")).to("mock:a").             from("direct:b").transform(constant("Hello b")).to("mock:b").         }     }. }
+false;public;0;6;;@org.apache.camel.RecipientList public String[] route() {     return new String[] { "direct:a", "direct:b" }. }
+false;public;0;5;;public String[] recipientList() {     return new String[] { "direct:a", "direct:b" }. }

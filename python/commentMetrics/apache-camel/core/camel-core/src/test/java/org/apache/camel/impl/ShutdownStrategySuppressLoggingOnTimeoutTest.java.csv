@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;11;;@Test public void testSuppressLogging() throws Exception {     context.getShutdownStrategy().setTimeout(1).     context.getShutdownStrategy().setSuppressLoggingOnTimeout(true).     template.sendBody("seda:foo", "Hello World").     Thread.sleep(2000).     context.stop(). }
+false;public;0;6;;@Override public void configure() throws Exception {     from("seda:foo").delay(8000).to("log:out"). }
+false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("seda:foo").delay(8000).to("log:out").         }     }. }

@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getName() {     return name. }
+false;public;1;3;;public void setName(String name) {     this.name = name. }
+false;public;0;3;;public XChangeService getService() {     return service. }
+false;public;1;3;;public void setService(XChangeService service) {     this.service = service. }
+false;public;0;3;;public XChangeMethod getMethod() {     return method. }
+false;public;1;3;;public void setMethod(XChangeMethod method) {     this.method = method. }
+false;public;0;3;;public Currency getCurrency() {     return currency. }
+false;public;1;3;;public void setCurrency(String curr) {     this.currency = Currency.getInstanceNoCreate(curr). }
+false;public;0;3;;public CurrencyPair getCurrencyPair() {     return currencyPair. }
+false;public;1;3;;public void setCurrencyPair(String pair) {     this.currencyPair = new CurrencyPair(pair). }
+false;public;0;15;;@SuppressWarnings("unchecked") public Class<? extends Exchange> getXChangeClass() {     Class<? extends Exchange> xchangeClass = xchangeMapping.get(name).     if (xchangeClass == null) {         String firstUpper = name.substring(0, 1).toUpperCase() + name.substring(1).         String className = "org.knowm.xchange." + name + "." + firstUpper + "Exchange".         ClassLoader classLoader = getClass().getClassLoader().         try {             xchangeClass = (Class<? extends Exchange>) classLoader.loadClass(className).         } catch (ClassNotFoundException e) {         // ignore         }     }     return xchangeClass. }
+false;public;0;3;;public Set<String> getSupportedXChangeNames() {     return xchangeMapping.keySet(). }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;4;/**  * Starts watcher if not already started.  */ ;/**  * Starts watcher if not already started.  */ public WatcherServiceRequestBuilder start() {     request.start().     return this. }
+true;public;0;4;/**  * Stops watcher if not already stopped.  */ ;/**  * Stops watcher if not already stopped.  */ public WatcherServiceRequestBuilder stop() {     request.stop().     return this. }

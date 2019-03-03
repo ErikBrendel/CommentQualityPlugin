@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;6;;@Override public boolean match(MetadataReader metadataReader, MetadataReaderFactory metadataReaderFactory) throws IOException {     return metadataReader.getClassMetadata().getClassName().equals(ExampleFilteredComponent.class.getName()). }

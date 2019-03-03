@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;8;;@Override public void handleUncaughtException(Throwable ex, Method method, Object... params) {     descriptor = new UncaughtExceptionDescriptor(ex, method).     this.latch.countDown().     if (throwUnexpectedException) {         throw new IllegalStateException("Test exception").     } }
+false;public;0;3;;public boolean isCalled() {     return descriptor != null. }
+false;public;2;5;;public void assertCalledWith(Method expectedMethod, Class<? extends Throwable> expectedExceptionType) {     assertNotNull("Handler not called", descriptor).     assertEquals("Wrong exception type", expectedExceptionType, descriptor.ex.getClass()).     assertEquals("Wrong method", expectedMethod, descriptor.method). }
+false;public;1;8;;public void await(long timeout) {     try {         this.latch.await(timeout, TimeUnit.MILLISECONDS).     } catch (Exception e) {         Thread.currentThread().interrupt().     } }

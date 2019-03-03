@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;2;;@ManagedAttribute(description = "Maximum inflight exchanges") int getMaxInflightExchanges().
+false;;1;2;;@ManagedAttribute(description = "Maximum inflight exchanges") void setMaxInflightExchanges(int maxInflightExchanges).
+false;;0;2;;@ManagedAttribute(description = "Resume percentage of maximum inflight exchanges") int getResumePercentOfMax().
+false;;1;2;;@ManagedAttribute(description = "Resume percentage of maximum inflight exchanges") void setResumePercentOfMax(int resumePercentOfMax).
+false;;0;2;;@ManagedAttribute(description = "Scope") String getScope().
+false;;1;2;;@ManagedAttribute(description = "Scope") void setScope(String scope).
+false;;0;2;;@ManagedAttribute(description = "Logging Level") String getLoggingLevel().
+false;;1;2;;@ManagedAttribute(description = "Logging Level") void setLoggingLevel(String loggingLevel).

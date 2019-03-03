@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void replacesDefinedDataSourceWithExplicit() throws Exception {     // Look that the datasource is replaced with an H2 DB.     String product = this.dataSource.getConnection().getMetaData().getDatabaseProductName().     assertThat(product).startsWith("H2"). }
+false;public;0;6;;@Bean @Primary public DataSource dataSource() {     return new EmbeddedDatabaseBuilder().generateUniqueName(true).setType(EmbeddedDatabaseType.HSQL).build(). }
+false;public;0;5;;@Bean public DataSource secondaryDataSource() {     return new EmbeddedDatabaseBuilder().generateUniqueName(true).setType(EmbeddedDatabaseType.HSQL).build(). }

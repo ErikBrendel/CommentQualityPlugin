@@ -1,0 +1,20 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;// Tests @Test public void shouldCreateCamelContext() {     assertNotNull(camelContext). }
+false;public;0;8;;@Test public void shouldDetectRoutes() {     // When     Route route = camelContext.getRoute(TestConfig.ROUTE_ID).     // Then     assertNotNull(route). }
+false;public;0;4;;@Test public void shouldLoadProducerTemplate() {     assertNotNull(producerTemplate). }
+false;public;0;4;;@Test public void shouldLoadConsumerTemplate() {     assertNotNull(consumerTemplate). }
+false;public;0;4;;@Test public void shouldLoadConsumerTemplateWithSizeFromProperties() {     assertEquals(100, consumerTemplate.getMaximumCacheSize()). }
+false;public;0;13;;@Test public void shouldSendAndReceiveMessageWithTemplates() {     // Given     String message = "message".     String seda = "seda:test".     // When     producerTemplate.sendBody(seda, message).     String receivedBody = consumerTemplate.receiveBody(seda, String.class).     // Then     assertEquals(message, receivedBody). }
+false;public;0;11;;@Test public void shouldLoadTypeConverters() {     // Given     Long hundred = 100L.     // When     Long convertedLong = typeConverter.convertTo(Long.class, hundred.toString()).     // Then     assertEquals(hundred, convertedLong). }
+false;public;0;5;;@Test public void shouldCallCamelContextConfiguration() {     verify(camelContextConfiguration).beforeApplicationStart(camelContext).     verify(camelContextConfiguration).afterApplicationStart(camelContext). }
+false;public;0;5;;@Test public void shouldChangeContextNameViaConfigurationCallback() {     assertEquals("customName", camelContext.getName()).     assertEquals(camelContext.getName(), camelContext.getManagementName()). }
+false;public;0;12;;@Test public void shouldStartRoute() {     // Given     String message = "msg".     // When     producerTemplate.sendBody("seda:test", message).     String receivedMessage = consumerTemplate.receiveBody("seda:test", String.class).     // Then     assertEquals(message, receivedMessage). }
+false;public;0;12;;@Test public void shouldLoadXmlRoutes() throws InterruptedException {     // Given     String message = "msg".     xmlAutoLoadingMock.expectedBodiesReceived(message).     // When     producerTemplate.sendBody("direct:xmlAutoLoading", message).     // Then     xmlAutoLoadingMock.assertIsSatisfied(). }
+false;public;0;4;;@Test public void shouldChangeThreadNamePattern() {     assertEquals(camelContext.getExecutorServiceManager().getThreadNamePattern(), "customThreadName #counter#"). }
+false;public;0;5;;@Test public void shouldComposeRegistries() {     final Registry registry = camelContext.getRegistry().     Assertions.assertThat(registry.lookupByName("bean")).isEqualTo(Ordered.HIGHEST_PRECEDENCE). }
+false;public;0;4;;@Override public void configure() throws Exception {     from("direct:test").routeId(ROUTE_ID).to("mock:test"). }
+true;;0;9;// Test bean ;// Test bean @Bean RouteBuilder routeBuilder() {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:test").routeId(ROUTE_ID).to("mock:test").         }     }. }
+false;;0;4;;@Bean CamelContextConfiguration camelContextConfiguration() {     return mock(CamelContextConfiguration.class). }
+false;;0;4;;@Bean BeanRepository customRegistry1() {     return mockBeanRepositoryWithBeanValueAndOrder(Ordered.LOWEST_PRECEDENCE). }
+false;;0;4;;@Bean BeanRepository customRegistry2() {     return mockBeanRepositoryWithBeanValueAndOrder(Ordered.HIGHEST_PRECEDENCE). }
+false;private;1;6;;private BeanRepository mockBeanRepositoryWithBeanValueAndOrder(int value) {     final BeanRepository repo = mock(BeanRepository.class, withSettings().extraInterfaces(Ordered.class)).     when(repo.lookupByName("bean")).thenReturn(value).     when(((Ordered) repo).getOrder()).thenReturn(value).     return repo. }

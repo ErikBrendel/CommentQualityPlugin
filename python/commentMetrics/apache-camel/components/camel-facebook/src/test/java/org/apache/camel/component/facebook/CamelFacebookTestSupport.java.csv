@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;3;;protected FacebookConfiguration getConfiguration() {     return configuration. }
+false;protected;0;5;;protected String getOauthParams() {     return "oAuthAppId=" + properties.get("oAuthAppId") + "&oAuthAppSecret=" + properties.get("oAuthAppSecret") + (properties.get("oAuthAccessToken") != null ? ("&oAuthAccessToken=" + properties.get("oAuthAccessToken")) : ""). }
+false;protected;0;4;;protected String getAppOauthParams() {     return "oAuthAppId=" + properties.get("oAuthAppId") + "&oAuthAppSecret=" + properties.get("oAuthAppSecret"). }
+false;protected;1;8;;protected String getShortName(String name) {     if (name.startsWith("get")) {         name = Character.toLowerCase(name.charAt(3)) + name.substring(4).     } else if (name.startsWith("search") && !"search".equals(name)) {         name = Character.toLowerCase(name.charAt(6)) + name.substring(7).     }     return name. }

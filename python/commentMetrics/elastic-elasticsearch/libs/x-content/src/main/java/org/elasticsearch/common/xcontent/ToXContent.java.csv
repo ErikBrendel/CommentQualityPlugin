@@ -1,0 +1,19 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;1;1;;String param(String key).
+false;;2;1;;String param(String key, String defaultValue).
+false;;2;1;;boolean paramAsBoolean(String key, boolean defaultValue).
+false;;2;1;;Boolean paramAsBoolean(String key, Boolean defaultValue).
+false;public;1;4;;@Override public String param(String key) {     return null. }
+false;public;2;4;;@Override public String param(String key, String defaultValue) {     return defaultValue. }
+false;public;2;4;;@Override public boolean paramAsBoolean(String key, boolean defaultValue) {     return defaultValue. }
+false;public;2;4;;@Override public Boolean paramAsBoolean(String key, Boolean defaultValue) {     return defaultValue. }
+false;public;1;4;;@Override public String param(String key) {     return params.get(key). }
+false;public;2;8;;@Override public String param(String key, String defaultValue) {     String value = params.get(key).     if (value == null) {         return defaultValue.     }     return value. }
+false;public;2;4;;@Override public boolean paramAsBoolean(String key, boolean defaultValue) {     return Booleans.parseBoolean(param(key), defaultValue). }
+false;public;2;4;;@Override public Boolean paramAsBoolean(String key, Boolean defaultValue) {     return Booleans.parseBoolean(param(key), defaultValue). }
+false;public;1;4;;@Override public String param(String key) {     return super.param(key, delegate.param(key)). }
+false;public;2;4;;@Override public String param(String key, String defaultValue) {     return super.param(key, delegate.param(key, defaultValue)). }
+false;public;2;4;;@Override public boolean paramAsBoolean(String key, boolean defaultValue) {     return super.paramAsBoolean(key, delegate.paramAsBoolean(key, defaultValue)). }
+false;public;2;4;;@Override public Boolean paramAsBoolean(String key, Boolean defaultValue) {     return super.paramAsBoolean(key, delegate.paramAsBoolean(key, defaultValue)). }
+false;;2;1;;XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException.
+false;default;0;3;;default boolean isFragment() {     return true. }

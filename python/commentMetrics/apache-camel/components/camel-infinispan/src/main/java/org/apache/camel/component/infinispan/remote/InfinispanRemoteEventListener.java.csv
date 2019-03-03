@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@ClientCacheEntryCreated public void processEvent(ClientCacheEntryCreatedEvent<Object> event) {     logger.trace("Received ClientEvent [{}]", event).     dispatch(event.getType().toString(), false, cacheName, event.getKey()). }
+false;public;1;5;;@ClientCacheEntryModified public void processEvent(ClientCacheEntryModifiedEvent<Object> event) {     logger.trace("Received ClientEvent [{}]", event).     dispatch(event.getType().toString(), false, cacheName, event.getKey()). }
+false;public;1;5;;@ClientCacheEntryRemoved public void processEvent(ClientCacheEntryRemovedEvent<Object> event) {     logger.trace("Received ClientEvent [{}]", event).     dispatch(event.getType().toString(), false, cacheName, event.getKey()). }
+false;public;1;5;;@ClientCacheFailover public void processEvent(ClientCacheFailoverEvent event) {     logger.trace("Received ClientEvent [{}]", event).     dispatch(event.getType().toString(), false, cacheName, null). }
+false;public;1;5;;@ClientCacheEntryExpired public void processEvent(ClientCacheEntryExpiredEvent<Object> event) {     logger.trace("Received ClientEvent [{}]", event).     dispatch(event.getType().toString(), false, cacheName, event.getKey()). }
+false;private;4;5;;private void dispatch(String eventType, boolean isPre, String cacheName, Object key) {     if (isAccepted(eventType)) {         infinispanConsumer.processEvent(eventType, isPre, cacheName, key, null).     } }

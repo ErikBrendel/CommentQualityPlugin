@@ -1,0 +1,18 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;5;5;;@Override public IndexFieldData<?> build(IndexSettings indexSettings, MappedFieldType fieldType, IndexFieldDataCache cache, CircuitBreakerService breakerService, MapperService mapperService) {     return new ConstantIndexFieldData(indexSettings, fieldType.name(), valueFunction.apply(mapperService)). }
+false;public;0;4;;@Override public long ramBytesUsed() {     return 0. }
+false;public;0;4;;@Override public Collection<Accountable> getChildResources() {     return Collections.emptyList(). }
+false;public;1;4;;@Override public BytesRef lookupOrd(int ord) {     return term. }
+false;public;0;4;;@Override public int getValueCount() {     return 1. }
+false;public;0;4;;@Override public int ordValue() {     return 0. }
+false;public;1;5;;@Override public boolean advanceExact(int target) throws IOException {     docID = target.     return true. }
+false;public;0;4;;@Override public int docID() {     return docID. }
+false;public;0;35;;@Override public SortedSetDocValues getOrdinalsValues() {     final BytesRef term = new BytesRef(value).     final SortedDocValues sortedValues = new AbstractSortedDocValues() {          private int docID = -1.          @Override         public BytesRef lookupOrd(int ord) {             return term.         }          @Override         public int getValueCount() {             return 1.         }          @Override         public int ordValue() {             return 0.         }          @Override         public boolean advanceExact(int target) throws IOException {             docID = target.             return true.         }          @Override         public int docID() {             return docID.         }     }.     return (SortedSetDocValues) DocValues.singleton(sortedValues). }
+false;public;0;3;;@Override public void close() { }
+false;public;0;3;;@Override public void clear() { }
+false;public,final;1;4;;@Override public final AtomicOrdinalsFieldData load(LeafReaderContext context) {     return atomicFieldData. }
+false;public;1;5;;@Override public AtomicOrdinalsFieldData loadDirect(LeafReaderContext context) throws Exception {     return atomicFieldData. }
+false;public;4;6;;@Override public SortField sortField(@Nullable Object missingValue, MultiValueMode sortMode, XFieldComparatorSource.Nested nested, boolean reverse) {     final XFieldComparatorSource source = new BytesRefFieldComparatorSource(this, missingValue, sortMode, nested).     return new SortField(getFieldName(), source, reverse). }
+false;public;1;4;;@Override public IndexOrdinalsFieldData loadGlobal(DirectoryReader indexReader) {     return this. }
+false;public;1;4;;@Override public IndexOrdinalsFieldData localGlobalDirect(DirectoryReader indexReader) throws Exception {     return loadGlobal(indexReader). }
+false;public;0;3;;public String getValue() {     return atomicFieldData.value. }

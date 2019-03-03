@@ -1,0 +1,87 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private,static;0;8;;private static SObjectDescription createDescription() {     final SObjectDescription description = new SObjectDescription().     description.setName("Contact").     description.setLabelPlural("Contacts").     return description. }
+false;public;0;4;;@Override public SObjectDescription description() {     return DESCRIPTION. }
+false;public;0;4;;@JsonProperty("AccountId") public String getAccountId() {     return this.AccountId. }
+false;public;0;4;;@JsonProperty("AssistantName") public String getAssistantName() {     return this.AssistantName. }
+false;public;0;4;;@JsonProperty("AssistantPhone") public String getAssistantPhone() {     return this.AssistantPhone. }
+false;public;0;4;;@JsonProperty("Birthdate") public java.time.ZonedDateTime getBirthdate() {     return this.Birthdate. }
+false;public;0;4;;@JsonProperty("Department") public String getDepartment() {     return this.Department. }
+false;public;0;4;;@JsonProperty("Description") public String getDescription() {     return this.Description. }
+false;public;0;4;;@JsonProperty("Email") public String getEmail() {     return this.Email. }
+false;public;0;4;;@JsonProperty("EmailBouncedDate") public java.time.ZonedDateTime getEmailBouncedDate() {     return this.EmailBouncedDate. }
+false;public;0;4;;@JsonProperty("EmailBouncedReason") public String getEmailBouncedReason() {     return this.EmailBouncedReason. }
+false;public;0;4;;@JsonProperty("Fax") public String getFax() {     return this.Fax. }
+false;public;0;4;;@JsonProperty("FirstName") public String getFirstName() {     return this.FirstName. }
+false;public;0;4;;@JsonProperty("HomePhone") public String getHomePhone() {     return this.HomePhone. }
+false;public;0;4;;@JsonProperty("IsEmailBounced") public Boolean getIsEmailBounced() {     return this.IsEmailBounced. }
+false;public;0;4;;@JsonProperty("Jigsaw") public String getJigsaw() {     return this.Jigsaw. }
+false;public;0;4;;@JsonProperty("JigsawContactId") public String getJigsawContactId() {     return this.JigsawContactId. }
+false;public;0;4;;@JsonProperty("Languages__c") public String getLanguages__c() {     return this.Languages__c. }
+false;public;0;4;;@JsonProperty("LastCURequestDate") public java.time.ZonedDateTime getLastCURequestDate() {     return this.LastCURequestDate. }
+false;public;0;4;;@JsonProperty("LastCUUpdateDate") public java.time.ZonedDateTime getLastCUUpdateDate() {     return this.LastCUUpdateDate. }
+false;public;0;4;;@JsonProperty("LastName") public String getLastName() {     return this.LastName. }
+false;public;0;4;;@JsonProperty("MailingAddress") public org.apache.camel.component.salesforce.api.dto.Address getMailingAddress() {     return this.MailingAddress. }
+false;public;0;4;;@JsonProperty("MailingCity") public String getMailingCity() {     return this.MailingCity. }
+false;public;0;4;;@JsonProperty("MailingCountry") public String getMailingCountry() {     return this.MailingCountry. }
+false;public;0;4;;@JsonProperty("MailingLatitude") public Double getMailingLatitude() {     return this.MailingLatitude. }
+false;public;0;4;;@JsonProperty("MailingLongitude") public Double getMailingLongitude() {     return this.MailingLongitude. }
+false;public;0;4;;@JsonProperty("MailingPostalCode") public String getMailingPostalCode() {     return this.MailingPostalCode. }
+false;public;0;4;;@JsonProperty("MailingState") public String getMailingState() {     return this.MailingState. }
+false;public;0;4;;@JsonProperty("MailingStreet") public String getMailingStreet() {     return this.MailingStreet. }
+false;public;0;4;;@JsonProperty("MasterRecordId") public String getMasterRecordId() {     return this.MasterRecordId. }
+false;public;0;4;;@JsonProperty("MobilePhone") public String getMobilePhone() {     return this.MobilePhone. }
+false;public;0;4;;@JsonProperty("OtherAddress") public org.apache.camel.component.salesforce.api.dto.Address getOtherAddress() {     return this.OtherAddress. }
+false;public;0;4;;@JsonProperty("OtherCity") public String getOtherCity() {     return this.OtherCity. }
+false;public;0;4;;@JsonProperty("OtherCountry") public String getOtherCountry() {     return this.OtherCountry. }
+false;public;0;4;;@JsonProperty("OtherLatitude") public Double getOtherLatitude() {     return this.OtherLatitude. }
+false;public;0;4;;@JsonProperty("OtherLongitude") public Double getOtherLongitude() {     return this.OtherLongitude. }
+false;public;0;4;;@JsonProperty("OtherPhone") public String getOtherPhone() {     return this.OtherPhone. }
+false;public;0;4;;@JsonProperty("OtherPostalCode") public String getOtherPostalCode() {     return this.OtherPostalCode. }
+false;public;0;4;;@JsonProperty("OtherState") public String getOtherState() {     return this.OtherState. }
+false;public;0;4;;@JsonProperty("OtherStreet") public String getOtherStreet() {     return this.OtherStreet. }
+false;public;0;4;;@JsonProperty("Phone") public String getPhone() {     return this.Phone. }
+false;public;0;4;;@JsonProperty("PhotoUrl") public String getPhotoUrl() {     return this.PhotoUrl. }
+false;public;0;4;;@JsonProperty("ReportsToId") public String getReportsToId() {     return this.ReportsToId. }
+false;public;0;4;;@JsonProperty("Title") public String getTitle() {     return this.Title. }
+false;public;1;4;;@JsonProperty("AccountId") public void setAccountId(final String AccountId) {     this.AccountId = AccountId. }
+false;public;1;4;;@JsonProperty("AssistantName") public void setAssistantName(final String AssistantName) {     this.AssistantName = AssistantName. }
+false;public;1;4;;@JsonProperty("AssistantPhone") public void setAssistantPhone(final String AssistantPhone) {     this.AssistantPhone = AssistantPhone. }
+false;public;1;4;;@JsonProperty("Birthdate") public void setBirthdate(final java.time.ZonedDateTime Birthdate) {     this.Birthdate = Birthdate. }
+false;public;1;4;;@JsonProperty("Department") public void setDepartment(final String Department) {     this.Department = Department. }
+false;public;1;4;;@JsonProperty("Description") public void setDescription(final String Description) {     this.Description = Description. }
+false;public;1;4;;@JsonProperty("Email") public void setEmail(final String Email) {     this.Email = Email. }
+false;public;1;4;;@JsonProperty("EmailBouncedDate") public void setEmailBouncedDate(final java.time.ZonedDateTime EmailBouncedDate) {     this.EmailBouncedDate = EmailBouncedDate. }
+false;public;1;4;;@JsonProperty("EmailBouncedReason") public void setEmailBouncedReason(final String EmailBouncedReason) {     this.EmailBouncedReason = EmailBouncedReason. }
+false;public;1;4;;@JsonProperty("Fax") public void setFax(final String Fax) {     this.Fax = Fax. }
+false;public;1;4;;@JsonProperty("FirstName") public void setFirstName(final String FirstName) {     this.FirstName = FirstName. }
+false;public;1;4;;@JsonProperty("HomePhone") public void setHomePhone(final String HomePhone) {     this.HomePhone = HomePhone. }
+false;public;1;4;;@JsonProperty("IsEmailBounced") public void setIsEmailBounced(final Boolean IsEmailBounced) {     this.IsEmailBounced = IsEmailBounced. }
+false;public;1;4;;@JsonProperty("Jigsaw") public void setJigsaw(final String Jigsaw) {     this.Jigsaw = Jigsaw. }
+false;public;1;4;;@JsonProperty("JigsawContactId") public void setJigsawContactId(final String JigsawContactId) {     this.JigsawContactId = JigsawContactId. }
+false;public;1;4;;@JsonProperty("Languages__c") public void setLanguages__c(final String Languages__c) {     this.Languages__c = Languages__c. }
+false;public;1;4;;@JsonProperty("LastCURequestDate") public void setLastCURequestDate(final java.time.ZonedDateTime LastCURequestDate) {     this.LastCURequestDate = LastCURequestDate. }
+false;public;1;4;;@JsonProperty("LastCUUpdateDate") public void setLastCUUpdateDate(final java.time.ZonedDateTime LastCUUpdateDate) {     this.LastCUUpdateDate = LastCUUpdateDate. }
+false;public;1;4;;@JsonProperty("LastName") public void setLastName(final String LastName) {     this.LastName = LastName. }
+false;public;1;4;;@JsonProperty("MailingAddress") public void setMailingAddress(final org.apache.camel.component.salesforce.api.dto.Address MailingAddress) {     this.MailingAddress = MailingAddress. }
+false;public;1;4;;@JsonProperty("MailingCity") public void setMailingCity(final String MailingCity) {     this.MailingCity = MailingCity. }
+false;public;1;4;;@JsonProperty("MailingCountry") public void setMailingCountry(final String MailingCountry) {     this.MailingCountry = MailingCountry. }
+false;public;1;4;;@JsonProperty("MailingLatitude") public void setMailingLatitude(final Double MailingLatitude) {     this.MailingLatitude = MailingLatitude. }
+false;public;1;4;;@JsonProperty("MailingLongitude") public void setMailingLongitude(final Double MailingLongitude) {     this.MailingLongitude = MailingLongitude. }
+false;public;1;4;;@JsonProperty("MailingPostalCode") public void setMailingPostalCode(final String MailingPostalCode) {     this.MailingPostalCode = MailingPostalCode. }
+false;public;1;4;;@JsonProperty("MailingState") public void setMailingState(final String MailingState) {     this.MailingState = MailingState. }
+false;public;1;4;;@JsonProperty("MailingStreet") public void setMailingStreet(final String MailingStreet) {     this.MailingStreet = MailingStreet. }
+false;public;1;4;;@JsonProperty("MasterRecordId") public void setMasterRecordId(final String MasterRecordId) {     this.MasterRecordId = MasterRecordId. }
+false;public;1;4;;@JsonProperty("MobilePhone") public void setMobilePhone(final String MobilePhone) {     this.MobilePhone = MobilePhone. }
+false;public;1;4;;@JsonProperty("OtherAddress") public void setOtherAddress(final org.apache.camel.component.salesforce.api.dto.Address OtherAddress) {     this.OtherAddress = OtherAddress. }
+false;public;1;4;;@JsonProperty("OtherCity") public void setOtherCity(final String OtherCity) {     this.OtherCity = OtherCity. }
+false;public;1;4;;@JsonProperty("OtherCountry") public void setOtherCountry(final String OtherCountry) {     this.OtherCountry = OtherCountry. }
+false;public;1;4;;@JsonProperty("OtherLatitude") public void setOtherLatitude(final Double OtherLatitude) {     this.OtherLatitude = OtherLatitude. }
+false;public;1;4;;@JsonProperty("OtherLongitude") public void setOtherLongitude(final Double OtherLongitude) {     this.OtherLongitude = OtherLongitude. }
+false;public;1;4;;@JsonProperty("OtherPhone") public void setOtherPhone(final String OtherPhone) {     this.OtherPhone = OtherPhone. }
+false;public;1;4;;@JsonProperty("OtherPostalCode") public void setOtherPostalCode(final String OtherPostalCode) {     this.OtherPostalCode = OtherPostalCode. }
+false;public;1;4;;@JsonProperty("OtherState") public void setOtherState(final String OtherState) {     this.OtherState = OtherState. }
+false;public;1;4;;@JsonProperty("OtherStreet") public void setOtherStreet(final String OtherStreet) {     this.OtherStreet = OtherStreet. }
+false;public;1;4;;@JsonProperty("Phone") public void setPhone(final String Phone) {     this.Phone = Phone. }
+false;public;1;4;;@JsonProperty("PhotoUrl") public void setPhotoUrl(final String PhotoUrl) {     this.PhotoUrl = PhotoUrl. }
+false;public;1;4;;@JsonProperty("ReportsToId") public void setReportsToId(final String ReportsToId) {     this.ReportsToId = ReportsToId. }
+false;public;1;4;;@JsonProperty("Title") public void setTitle(final String Title) {     this.Title = Title. }

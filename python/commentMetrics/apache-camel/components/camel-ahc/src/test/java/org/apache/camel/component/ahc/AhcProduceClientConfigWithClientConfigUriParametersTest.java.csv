@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;11;;@Test public void testAhcProduceClientConfig() throws Exception {     super.testAhcProduceClientConfig().     Endpoint ahcEndpoint = context.getEndpoint(getAhcEndpointUri()).     assertTrue(ahcEndpoint instanceof AhcEndpoint).     assertEquals(1, ((AhcEndpoint) ahcEndpoint).getClientConfig().getMaxConnections()).     assertEquals(3, ((AhcEndpoint) ahcEndpoint).getClientConfig().getMaxRequestRetry()).     assertEquals(true, ((AhcEndpoint) ahcEndpoint).getClientConfig().isFollowRedirect()). }
+false;protected;0;4;;@Override protected String getAhcEndpointUri() {     return super.getAhcEndpointUri() + "&clientConfig.maxConnections=1". }

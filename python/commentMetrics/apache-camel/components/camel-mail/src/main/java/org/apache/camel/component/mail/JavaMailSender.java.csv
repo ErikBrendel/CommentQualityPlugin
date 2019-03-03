@@ -1,0 +1,16 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;1;1;/**  * Send the mail  *  * @param mimeMessage the message to send  * @throws javax.mail.MessagingException is thrown if error sending the mail.  */ ;/**  * Send the mail  *  * @param mimeMessage the message to send  * @throws javax.mail.MessagingException is thrown if error sending the mail.  */ void send(MimeMessage mimeMessage) throws MessagingException.
+false;;0;1;;Properties getJavaMailProperties().
+false;;1;1;;void setJavaMailProperties(Properties javaMailProperties).
+false;;1;1;;void setHost(String host).
+false;;0;1;;String getHost().
+false;;1;1;;void setPort(int port).
+false;;0;1;;int getPort().
+false;;1;1;;void setUsername(String username).
+false;;0;1;;String getUsername().
+false;;1;1;;void setPassword(String password).
+false;;0;1;;String getPassword().
+false;;1;1;;void setProtocol(String protocol).
+false;;0;1;;String getProtocol().
+false;;1;1;;void setSession(Session session).
+false;;0;1;;Session getSession().

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public <T extends Number> Converter<String, T> getConverter(Class<T> targetType) {     return new StringToNumber<>(targetType). }
+false;public;1;7;;@Override public T convert(String source) {     if (source.isEmpty()) {         return null.     }     return NumberUtils.parseNumber(source, this.targetType). }

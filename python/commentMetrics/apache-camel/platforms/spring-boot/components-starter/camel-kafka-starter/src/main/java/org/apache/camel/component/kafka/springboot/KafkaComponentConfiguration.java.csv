@@ -1,0 +1,199 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public KafkaConfigurationNestedConfiguration getConfiguration() {     return configuration. }
+false;public;1;4;;public void setConfiguration(KafkaConfigurationNestedConfiguration configuration) {     this.configuration = configuration. }
+false;public;0;3;;public String getBrokers() {     return brokers. }
+false;public;1;3;;public void setBrokers(String brokers) {     this.brokers = brokers. }
+false;public;0;3;;public String getWorkerPool() {     return workerPool. }
+false;public;1;3;;public void setWorkerPool(String workerPool) {     this.workerPool = workerPool. }
+false;public;0;3;;public Boolean getUseGlobalSslContextParameters() {     return useGlobalSslContextParameters. }
+false;public;1;4;;public void setUseGlobalSslContextParameters(Boolean useGlobalSslContextParameters) {     this.useGlobalSslContextParameters = useGlobalSslContextParameters. }
+false;public;0;3;;public Boolean getBreakOnFirstError() {     return breakOnFirstError. }
+false;public;1;3;;public void setBreakOnFirstError(Boolean breakOnFirstError) {     this.breakOnFirstError = breakOnFirstError. }
+false;public;0;3;;public Boolean getAllowManualCommit() {     return allowManualCommit. }
+false;public;1;3;;public void setAllowManualCommit(Boolean allowManualCommit) {     this.allowManualCommit = allowManualCommit. }
+false;public;0;3;;public String getKafkaManualCommitFactory() {     return kafkaManualCommitFactory. }
+false;public;1;3;;public void setKafkaManualCommitFactory(String kafkaManualCommitFactory) {     this.kafkaManualCommitFactory = kafkaManualCommitFactory. }
+false;public;0;3;;public Boolean getResolvePropertyPlaceholders() {     return resolvePropertyPlaceholders. }
+false;public;1;4;;public void setResolvePropertyPlaceholders(Boolean resolvePropertyPlaceholders) {     this.resolvePropertyPlaceholders = resolvePropertyPlaceholders. }
+false;public;0;3;;public Boolean getTopicIsPattern() {     return topicIsPattern. }
+false;public;1;3;;public void setTopicIsPattern(Boolean topicIsPattern) {     this.topicIsPattern = topicIsPattern. }
+false;public;0;3;;public String getGroupId() {     return groupId. }
+false;public;1;3;;public void setGroupId(String groupId) {     this.groupId = groupId. }
+false;public;0;3;;public Boolean getBridgeEndpoint() {     return bridgeEndpoint. }
+false;public;1;3;;public void setBridgeEndpoint(Boolean bridgeEndpoint) {     this.bridgeEndpoint = bridgeEndpoint. }
+false;public;0;3;;public Boolean getCircularTopicDetection() {     return circularTopicDetection. }
+false;public;1;3;;public void setCircularTopicDetection(Boolean circularTopicDetection) {     this.circularTopicDetection = circularTopicDetection. }
+false;public;0;3;;public String getPartitioner() {     return partitioner. }
+false;public;1;3;;public void setPartitioner(String partitioner) {     this.partitioner = partitioner. }
+false;public;0;3;;public String getTopic() {     return topic. }
+false;public;1;3;;public void setTopic(String topic) {     this.topic = topic. }
+false;public;0;3;;public Integer getConsumerStreams() {     return consumerStreams. }
+false;public;1;3;;public void setConsumerStreams(Integer consumerStreams) {     this.consumerStreams = consumerStreams. }
+false;public;0;3;;public Integer getConsumersCount() {     return consumersCount. }
+false;public;1;3;;public void setConsumersCount(Integer consumersCount) {     this.consumersCount = consumersCount. }
+false;public;0;3;;public String getClientId() {     return clientId. }
+false;public;1;3;;public void setClientId(String clientId) {     this.clientId = clientId. }
+false;public;0;3;;public Boolean getAutoCommitEnable() {     return autoCommitEnable. }
+false;public;1;3;;public void setAutoCommitEnable(Boolean autoCommitEnable) {     this.autoCommitEnable = autoCommitEnable. }
+false;public;0;3;;public Boolean getAllowManualCommit() {     return allowManualCommit. }
+false;public;1;3;;public void setAllowManualCommit(Boolean allowManualCommit) {     this.allowManualCommit = allowManualCommit. }
+false;public;0;3;;public StateRepository getOffsetRepository() {     return offsetRepository. }
+false;public;1;3;;public void setOffsetRepository(StateRepository offsetRepository) {     this.offsetRepository = offsetRepository. }
+false;public;0;3;;public Integer getAutoCommitIntervalMs() {     return autoCommitIntervalMs. }
+false;public;1;3;;public void setAutoCommitIntervalMs(Integer autoCommitIntervalMs) {     this.autoCommitIntervalMs = autoCommitIntervalMs. }
+false;public;0;3;;public Integer getFetchMinBytes() {     return fetchMinBytes. }
+false;public;1;3;;public void setFetchMinBytes(Integer fetchMinBytes) {     this.fetchMinBytes = fetchMinBytes. }
+false;public;0;3;;public Integer getFetchMaxBytes() {     return fetchMaxBytes. }
+false;public;1;3;;public void setFetchMaxBytes(Integer fetchMaxBytes) {     this.fetchMaxBytes = fetchMaxBytes. }
+false;public;0;3;;public Integer getFetchWaitMaxMs() {     return fetchWaitMaxMs. }
+false;public;1;3;;public void setFetchWaitMaxMs(Integer fetchWaitMaxMs) {     this.fetchWaitMaxMs = fetchWaitMaxMs. }
+false;public;0;3;;public String getAutoOffsetReset() {     return autoOffsetReset. }
+false;public;1;3;;public void setAutoOffsetReset(String autoOffsetReset) {     this.autoOffsetReset = autoOffsetReset. }
+false;public;0;3;;public String getAutoCommitOnStop() {     return autoCommitOnStop. }
+false;public;1;3;;public void setAutoCommitOnStop(String autoCommitOnStop) {     this.autoCommitOnStop = autoCommitOnStop. }
+false;public;0;3;;public Boolean getBreakOnFirstError() {     return breakOnFirstError. }
+false;public;1;3;;public void setBreakOnFirstError(Boolean breakOnFirstError) {     this.breakOnFirstError = breakOnFirstError. }
+false;public;0;3;;public String getBrokers() {     return brokers. }
+false;public;1;3;;public void setBrokers(String brokers) {     this.brokers = brokers. }
+false;public;0;3;;public String getSchemaRegistryURL() {     return schemaRegistryURL. }
+false;public;1;3;;public void setSchemaRegistryURL(String schemaRegistryURL) {     this.schemaRegistryURL = schemaRegistryURL. }
+false;public;0;3;;public String getCompressionCodec() {     return compressionCodec. }
+false;public;1;3;;public void setCompressionCodec(String compressionCodec) {     this.compressionCodec = compressionCodec. }
+false;public;0;3;;public Integer getRetryBackoffMs() {     return retryBackoffMs. }
+false;public;1;3;;public void setRetryBackoffMs(Integer retryBackoffMs) {     this.retryBackoffMs = retryBackoffMs. }
+false;public;0;3;;public Integer getSendBufferBytes() {     return sendBufferBytes. }
+false;public;1;3;;public void setSendBufferBytes(Integer sendBufferBytes) {     this.sendBufferBytes = sendBufferBytes. }
+false;public;0;3;;public Integer getRequestTimeoutMs() {     return requestTimeoutMs. }
+false;public;1;3;;public void setRequestTimeoutMs(Integer requestTimeoutMs) {     this.requestTimeoutMs = requestTimeoutMs. }
+false;public;0;3;;public Integer getQueueBufferingMaxMessages() {     return queueBufferingMaxMessages. }
+false;public;1;4;;public void setQueueBufferingMaxMessages(Integer queueBufferingMaxMessages) {     this.queueBufferingMaxMessages = queueBufferingMaxMessages. }
+false;public;0;3;;public String getSerializerClass() {     return serializerClass. }
+false;public;1;3;;public void setSerializerClass(String serializerClass) {     this.serializerClass = serializerClass. }
+false;public;0;3;;public String getKeySerializerClass() {     return keySerializerClass. }
+false;public;1;3;;public void setKeySerializerClass(String keySerializerClass) {     this.keySerializerClass = keySerializerClass. }
+false;public;0;3;;public String getKerberosInitCmd() {     return kerberosInitCmd. }
+false;public;1;3;;public void setKerberosInitCmd(String kerberosInitCmd) {     this.kerberosInitCmd = kerberosInitCmd. }
+false;public;0;3;;public Integer getKerberosBeforeReloginMinTime() {     return kerberosBeforeReloginMinTime. }
+false;public;1;4;;public void setKerberosBeforeReloginMinTime(Integer kerberosBeforeReloginMinTime) {     this.kerberosBeforeReloginMinTime = kerberosBeforeReloginMinTime. }
+false;public;0;3;;public Double getKerberosRenewJitter() {     return kerberosRenewJitter. }
+false;public;1;3;;public void setKerberosRenewJitter(Double kerberosRenewJitter) {     this.kerberosRenewJitter = kerberosRenewJitter. }
+false;public;0;3;;public Double getKerberosRenewWindowFactor() {     return kerberosRenewWindowFactor. }
+false;public;1;4;;public void setKerberosRenewWindowFactor(Double kerberosRenewWindowFactor) {     this.kerberosRenewWindowFactor = kerberosRenewWindowFactor. }
+false;public;0;3;;public String getKerberosPrincipalToLocalRules() {     return kerberosPrincipalToLocalRules. }
+false;public;1;4;;public void setKerberosPrincipalToLocalRules(String kerberosPrincipalToLocalRules) {     this.kerberosPrincipalToLocalRules = kerberosPrincipalToLocalRules. }
+false;public;0;3;;public String getSslCipherSuites() {     return sslCipherSuites. }
+false;public;1;3;;public void setSslCipherSuites(String sslCipherSuites) {     this.sslCipherSuites = sslCipherSuites. }
+false;public;0;3;;public String getSslEndpointAlgorithm() {     return sslEndpointAlgorithm. }
+false;public;1;3;;public void setSslEndpointAlgorithm(String sslEndpointAlgorithm) {     this.sslEndpointAlgorithm = sslEndpointAlgorithm. }
+false;public;0;3;;public String getSslKeymanagerAlgorithm() {     return sslKeymanagerAlgorithm. }
+false;public;1;3;;public void setSslKeymanagerAlgorithm(String sslKeymanagerAlgorithm) {     this.sslKeymanagerAlgorithm = sslKeymanagerAlgorithm. }
+false;public;0;3;;public String getSslTrustmanagerAlgorithm() {     return sslTrustmanagerAlgorithm. }
+false;public;1;3;;public void setSslTrustmanagerAlgorithm(String sslTrustmanagerAlgorithm) {     this.sslTrustmanagerAlgorithm = sslTrustmanagerAlgorithm. }
+false;public;0;3;;public String getSslEnabledProtocols() {     return sslEnabledProtocols. }
+false;public;1;3;;public void setSslEnabledProtocols(String sslEnabledProtocols) {     this.sslEnabledProtocols = sslEnabledProtocols. }
+false;public;0;3;;public String getSslKeystoreType() {     return sslKeystoreType. }
+false;public;1;3;;public void setSslKeystoreType(String sslKeystoreType) {     this.sslKeystoreType = sslKeystoreType. }
+false;public;0;3;;public String getSslProtocol() {     return sslProtocol. }
+false;public;1;3;;public void setSslProtocol(String sslProtocol) {     this.sslProtocol = sslProtocol. }
+false;public;0;3;;public String getSslProvider() {     return sslProvider. }
+false;public;1;3;;public void setSslProvider(String sslProvider) {     this.sslProvider = sslProvider. }
+false;public;0;3;;public String getSslTruststoreType() {     return sslTruststoreType. }
+false;public;1;3;;public void setSslTruststoreType(String sslTruststoreType) {     this.sslTruststoreType = sslTruststoreType. }
+false;public;0;3;;public String getSaslKerberosServiceName() {     return saslKerberosServiceName. }
+false;public;1;3;;public void setSaslKerberosServiceName(String saslKerberosServiceName) {     this.saslKerberosServiceName = saslKerberosServiceName. }
+false;public;0;3;;public String getSaslMechanism() {     return saslMechanism. }
+false;public;1;3;;public void setSaslMechanism(String saslMechanism) {     this.saslMechanism = saslMechanism. }
+false;public;0;3;;public String getSaslJaasConfig() {     return saslJaasConfig. }
+false;public;1;3;;public void setSaslJaasConfig(String saslJaasConfig) {     this.saslJaasConfig = saslJaasConfig. }
+false;public;0;3;;public String getSecurityProtocol() {     return securityProtocol. }
+false;public;1;3;;public void setSecurityProtocol(String securityProtocol) {     this.securityProtocol = securityProtocol. }
+false;public;0;3;;public SSLContextParameters getSslContextParameters() {     return sslContextParameters. }
+false;public;1;4;;public void setSslContextParameters(SSLContextParameters sslContextParameters) {     this.sslContextParameters = sslContextParameters. }
+false;public;0;3;;public String getSslKeyPassword() {     return sslKeyPassword. }
+false;public;1;3;;public void setSslKeyPassword(String sslKeyPassword) {     this.sslKeyPassword = sslKeyPassword. }
+false;public;0;3;;public String getSslKeystoreLocation() {     return sslKeystoreLocation. }
+false;public;1;3;;public void setSslKeystoreLocation(String sslKeystoreLocation) {     this.sslKeystoreLocation = sslKeystoreLocation. }
+false;public;0;3;;public String getSslKeystorePassword() {     return sslKeystorePassword. }
+false;public;1;3;;public void setSslKeystorePassword(String sslKeystorePassword) {     this.sslKeystorePassword = sslKeystorePassword. }
+false;public;0;3;;public String getSslTruststoreLocation() {     return sslTruststoreLocation. }
+false;public;1;3;;public void setSslTruststoreLocation(String sslTruststoreLocation) {     this.sslTruststoreLocation = sslTruststoreLocation. }
+false;public;0;3;;public String getSslTruststorePassword() {     return sslTruststorePassword. }
+false;public;1;3;;public void setSslTruststorePassword(String sslTruststorePassword) {     this.sslTruststorePassword = sslTruststorePassword. }
+false;public;0;3;;public Integer getBufferMemorySize() {     return bufferMemorySize. }
+false;public;1;3;;public void setBufferMemorySize(Integer bufferMemorySize) {     this.bufferMemorySize = bufferMemorySize. }
+false;public;0;3;;public String getKey() {     return key. }
+false;public;1;3;;public void setKey(String key) {     this.key = key. }
+false;public;0;3;;public Integer getPartitionKey() {     return partitionKey. }
+false;public;1;3;;public void setPartitionKey(Integer partitionKey) {     this.partitionKey = partitionKey. }
+false;public;0;3;;public String getRequestRequiredAcks() {     return requestRequiredAcks. }
+false;public;1;3;;public void setRequestRequiredAcks(String requestRequiredAcks) {     this.requestRequiredAcks = requestRequiredAcks. }
+false;public;0;3;;public Integer getRetries() {     return retries. }
+false;public;1;3;;public void setRetries(Integer retries) {     this.retries = retries. }
+false;public;0;3;;public Integer getProducerBatchSize() {     return producerBatchSize. }
+false;public;1;3;;public void setProducerBatchSize(Integer producerBatchSize) {     this.producerBatchSize = producerBatchSize. }
+false;public;0;3;;public Integer getConnectionMaxIdleMs() {     return connectionMaxIdleMs. }
+false;public;1;3;;public void setConnectionMaxIdleMs(Integer connectionMaxIdleMs) {     this.connectionMaxIdleMs = connectionMaxIdleMs. }
+false;public;0;3;;public Integer getLingerMs() {     return lingerMs. }
+false;public;1;3;;public void setLingerMs(Integer lingerMs) {     this.lingerMs = lingerMs. }
+false;public;0;3;;public Integer getMaxBlockMs() {     return maxBlockMs. }
+false;public;1;3;;public void setMaxBlockMs(Integer maxBlockMs) {     this.maxBlockMs = maxBlockMs. }
+false;public;0;3;;public Integer getMaxRequestSize() {     return maxRequestSize. }
+false;public;1;3;;public void setMaxRequestSize(Integer maxRequestSize) {     this.maxRequestSize = maxRequestSize. }
+false;public;0;3;;public Integer getReceiveBufferBytes() {     return receiveBufferBytes. }
+false;public;1;3;;public void setReceiveBufferBytes(Integer receiveBufferBytes) {     this.receiveBufferBytes = receiveBufferBytes. }
+false;public;0;3;;public Integer getMaxInFlightRequest() {     return maxInFlightRequest. }
+false;public;1;3;;public void setMaxInFlightRequest(Integer maxInFlightRequest) {     this.maxInFlightRequest = maxInFlightRequest. }
+false;public;0;3;;public Integer getMetadataMaxAgeMs() {     return metadataMaxAgeMs. }
+false;public;1;3;;public void setMetadataMaxAgeMs(Integer metadataMaxAgeMs) {     this.metadataMaxAgeMs = metadataMaxAgeMs. }
+false;public;0;3;;public String getMetricReporters() {     return metricReporters. }
+false;public;1;3;;public void setMetricReporters(String metricReporters) {     this.metricReporters = metricReporters. }
+false;public;0;3;;public Integer getNoOfMetricsSample() {     return noOfMetricsSample. }
+false;public;1;3;;public void setNoOfMetricsSample(Integer noOfMetricsSample) {     this.noOfMetricsSample = noOfMetricsSample. }
+false;public;0;3;;public Integer getMetricsSampleWindowMs() {     return metricsSampleWindowMs. }
+false;public;1;3;;public void setMetricsSampleWindowMs(Integer metricsSampleWindowMs) {     this.metricsSampleWindowMs = metricsSampleWindowMs. }
+false;public;0;3;;public Integer getReconnectBackoffMs() {     return reconnectBackoffMs. }
+false;public;1;3;;public void setReconnectBackoffMs(Integer reconnectBackoffMs) {     this.reconnectBackoffMs = reconnectBackoffMs. }
+false;public;0;3;;public Integer getHeartbeatIntervalMs() {     return heartbeatIntervalMs. }
+false;public;1;3;;public void setHeartbeatIntervalMs(Integer heartbeatIntervalMs) {     this.heartbeatIntervalMs = heartbeatIntervalMs. }
+false;public;0;3;;public Integer getMaxPartitionFetchBytes() {     return maxPartitionFetchBytes. }
+false;public;1;3;;public void setMaxPartitionFetchBytes(Integer maxPartitionFetchBytes) {     this.maxPartitionFetchBytes = maxPartitionFetchBytes. }
+false;public;0;3;;public Integer getSessionTimeoutMs() {     return sessionTimeoutMs. }
+false;public;1;3;;public void setSessionTimeoutMs(Integer sessionTimeoutMs) {     this.sessionTimeoutMs = sessionTimeoutMs. }
+false;public;0;3;;public Integer getMaxPollRecords() {     return maxPollRecords. }
+false;public;1;3;;public void setMaxPollRecords(Integer maxPollRecords) {     this.maxPollRecords = maxPollRecords. }
+false;public;0;3;;public Long getPollTimeoutMs() {     return pollTimeoutMs. }
+false;public;1;3;;public void setPollTimeoutMs(Long pollTimeoutMs) {     this.pollTimeoutMs = pollTimeoutMs. }
+false;public;0;3;;public Long getMaxPollIntervalMs() {     return maxPollIntervalMs. }
+false;public;1;3;;public void setMaxPollIntervalMs(Long maxPollIntervalMs) {     this.maxPollIntervalMs = maxPollIntervalMs. }
+false;public;0;3;;public String getPartitionAssignor() {     return partitionAssignor. }
+false;public;1;3;;public void setPartitionAssignor(String partitionAssignor) {     this.partitionAssignor = partitionAssignor. }
+false;public;0;3;;public Integer getConsumerRequestTimeoutMs() {     return consumerRequestTimeoutMs. }
+false;public;1;3;;public void setConsumerRequestTimeoutMs(Integer consumerRequestTimeoutMs) {     this.consumerRequestTimeoutMs = consumerRequestTimeoutMs. }
+false;public;0;3;;public Boolean getCheckCrcs() {     return checkCrcs. }
+false;public;1;3;;public void setCheckCrcs(Boolean checkCrcs) {     this.checkCrcs = checkCrcs. }
+false;public;0;3;;public String getKeyDeserializer() {     return keyDeserializer. }
+false;public;1;3;;public void setKeyDeserializer(String keyDeserializer) {     this.keyDeserializer = keyDeserializer. }
+false;public;0;3;;public String getValueDeserializer() {     return valueDeserializer. }
+false;public;1;3;;public void setValueDeserializer(String valueDeserializer) {     this.valueDeserializer = valueDeserializer. }
+false;public;0;3;;public String getSeekTo() {     return seekTo. }
+false;public;1;3;;public void setSeekTo(String seekTo) {     this.seekTo = seekTo. }
+false;public;0;3;;public ExecutorService getWorkerPool() {     return workerPool. }
+false;public;1;3;;public void setWorkerPool(ExecutorService workerPool) {     this.workerPool = workerPool. }
+false;public;0;3;;public Integer getWorkerPoolCoreSize() {     return workerPoolCoreSize. }
+false;public;1;3;;public void setWorkerPoolCoreSize(Integer workerPoolCoreSize) {     this.workerPoolCoreSize = workerPoolCoreSize. }
+false;public;0;3;;public Integer getWorkerPoolMaxSize() {     return workerPoolMaxSize. }
+false;public;1;3;;public void setWorkerPoolMaxSize(Integer workerPoolMaxSize) {     this.workerPoolMaxSize = workerPoolMaxSize. }
+false;public;0;3;;public Boolean getRecordMetadata() {     return recordMetadata. }
+false;public;1;3;;public void setRecordMetadata(Boolean recordMetadata) {     this.recordMetadata = recordMetadata. }
+false;public;0;3;;public String getInterceptorClasses() {     return interceptorClasses. }
+false;public;1;3;;public void setInterceptorClasses(String interceptorClasses) {     this.interceptorClasses = interceptorClasses. }
+false;public;0;3;;public Boolean getEnableIdempotence() {     return enableIdempotence. }
+false;public;1;3;;public void setEnableIdempotence(Boolean enableIdempotence) {     this.enableIdempotence = enableIdempotence. }
+false;public;0;3;;public Integer getReconnectBackoffMaxMs() {     return reconnectBackoffMaxMs. }
+false;public;1;3;;public void setReconnectBackoffMaxMs(Integer reconnectBackoffMaxMs) {     this.reconnectBackoffMaxMs = reconnectBackoffMaxMs. }
+false;public;0;3;;public HeaderFilterStrategy getHeaderFilterStrategy() {     return headerFilterStrategy. }
+false;public;1;4;;public void setHeaderFilterStrategy(HeaderFilterStrategy headerFilterStrategy) {     this.headerFilterStrategy = headerFilterStrategy. }
+false;public;0;3;;public KafkaHeaderDeserializer getKafkaHeaderDeserializer() {     return kafkaHeaderDeserializer. }
+false;public;1;4;;public void setKafkaHeaderDeserializer(KafkaHeaderDeserializer kafkaHeaderDeserializer) {     this.kafkaHeaderDeserializer = kafkaHeaderDeserializer. }
+false;public;0;3;;public KafkaHeaderSerializer getKafkaHeaderSerializer() {     return kafkaHeaderSerializer. }
+false;public;1;4;;public void setKafkaHeaderSerializer(KafkaHeaderSerializer kafkaHeaderSerializer) {     this.kafkaHeaderSerializer = kafkaHeaderSerializer. }

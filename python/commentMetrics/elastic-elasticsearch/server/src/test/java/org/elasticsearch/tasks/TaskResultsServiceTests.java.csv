@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;public void testRetryTotalTime() {     Iterator<TimeValue> times = TaskResultsService.STORE_BACKOFF_POLICY.iterator().     long total = 0.     while (times.hasNext()) {         total += times.next().millis().     }     assertEquals(600000L, total). }

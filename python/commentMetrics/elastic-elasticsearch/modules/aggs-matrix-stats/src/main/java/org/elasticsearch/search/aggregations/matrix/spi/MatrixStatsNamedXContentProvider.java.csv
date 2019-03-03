@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Override public List<NamedXContentRegistry.Entry> getNamedXContentParsers() {     ParseField parseField = new ParseField(MatrixStatsAggregationBuilder.NAME).     ContextParser<Object, Aggregation> contextParser = (p, name) -> ParsedMatrixStats.fromXContent(p, (String) name).     return singletonList(new NamedXContentRegistry.Entry(Aggregation.class, parseField, contextParser)). }

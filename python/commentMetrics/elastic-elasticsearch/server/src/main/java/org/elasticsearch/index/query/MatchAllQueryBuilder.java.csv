@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected void doWriteTo(StreamOutput out) { // only superclass has state }
+false;protected;2;6;;@Override protected void doXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject(NAME).     printBoostAndQueryName(builder).     builder.endObject(). }
+false;public,static;1;7;;public static MatchAllQueryBuilder fromXContent(XContentParser parser) {     try {         return PARSER.apply(parser, null).     } catch (IllegalArgumentException e) {         throw new ParsingException(parser.getTokenLocation(), e.getMessage(), e).     } }
+false;protected;1;4;;@Override protected Query doToQuery(QueryShardContext context) {     return Queries.newMatchAllQuery(). }
+false;protected;1;4;;@Override protected boolean doEquals(MatchAllQueryBuilder other) {     return true. }
+false;protected;0;4;;@Override protected int doHashCode() {     return 0. }
+false;public;0;4;;@Override public String getWriteableName() {     return NAME. }

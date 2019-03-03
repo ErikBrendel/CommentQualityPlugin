@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getUri() {     return uri. }
+false;public;1;3;;public void setUri(String uri) {     this.uri = uri. }
+false;public;0;3;;public String getChannelId() {     return channelId. }
+false;public;1;3;;public void setChannelId(String channelId) {     this.channelId = channelId. }
+false;public;0;3;;public String getAuthenticationToken() {     return authenticationToken. }
+false;public;1;3;;public void setAuthenticationToken(String authenticationToken) {     this.authenticationToken = authenticationToken. }
+false;public;0;4;;@Override public String toString() {     return "Realtime [uri=" + uri + ", channelId=" + channelId + ", authenticationToken=" + authenticationToken + "]". }

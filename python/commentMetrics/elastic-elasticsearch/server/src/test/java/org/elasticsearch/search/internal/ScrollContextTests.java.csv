@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;public void testStoringObjectsInScrollContext() {     final ScrollContext scrollContext = new ScrollContext().     final String key = randomAlphaOfLengthBetween(1, 16).     assertNull(scrollContext.getFromContext(key)).     final String value = randomAlphaOfLength(6).     scrollContext.putInContext(key, value).     assertEquals(value, scrollContext.getFromContext(key)). }

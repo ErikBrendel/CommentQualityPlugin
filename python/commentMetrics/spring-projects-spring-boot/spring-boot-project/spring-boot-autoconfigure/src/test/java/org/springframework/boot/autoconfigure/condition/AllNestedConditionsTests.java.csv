@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void neither() {     this.contextRunner.withUserConfiguration(Config.class).run(match(false)). }
+false;public;0;5;;@Test public void propertyA() {     this.contextRunner.withUserConfiguration(Config.class).withPropertyValues("a:a").run(match(false)). }
+false;public;0;5;;@Test public void propertyB() {     this.contextRunner.withUserConfiguration(Config.class).withPropertyValues("b:b").run(match(false)). }
+false;public;0;5;;@Test public void both() {     this.contextRunner.withUserConfiguration(Config.class).withPropertyValues("a:a", "b:b").run(match(true)). }
+false;private;1;10;;private ContextConsumer<AssertableApplicationContext> match(boolean expected) {     return (context) -> {         if (expected) {             assertThat(context).hasBean("myBean").         } else {             assertThat(context).doesNotHaveBean("myBean").         }     }. }
+false;public;0;4;;@Bean public String myBean() {     return "myBean". }
+false;public;2;4;;@Override public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {     return true. }

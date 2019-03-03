@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;6;;public static Set<Setting.AffixSetting<?>> getSettings(String realmType) {     Set<Setting.AffixSetting<?>> settings = new HashSet<>().     settings.add(LOAD_BALANCE_TYPE_SETTING.apply(realmType)).     settings.add(CACHE_TTL_SETTING.apply(realmType)).     return settings. }

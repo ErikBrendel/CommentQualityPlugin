@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected AbstractApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/component/infinispan/processor/idempotent/SpringInfinispanIdempotentRepositoryIT.xml"). }
+false;public;0;12;;@Test public void testIdempotent() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMessageCount(1).     String messageId = UUID.randomUUID().toString().     for (int i = 0. i < 5. i++) {         template.sendBodyAndHeader("direct:start", UUID.randomUUID().toString(), "MessageId", messageId).     }     mock.assertIsSatisfied(). }

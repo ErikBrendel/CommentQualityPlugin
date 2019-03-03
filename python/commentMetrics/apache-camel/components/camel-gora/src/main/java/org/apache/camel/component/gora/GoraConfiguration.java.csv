@@ -1,0 +1,37 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getKeyClass() {     return keyClass. }
+true;public;1;7;/**  * The type class of the key  */ ;/**  * The type class of the key  */ public void setKeyClass(final String keyClass) {     if (isNullOrEmpty(keyClass)) {         throw new IllegalArgumentException("Key class could not be null or empty!").     }     this.keyClass = keyClass. }
+false;public;0;3;;public String getValueClass() {     return valueClass. }
+true;public;1;6;/**  * The type of the value  */ ;/**  * The type of the value  */ public void setValueClass(final String valueClass) {     if (isNullOrEmpty(valueClass)) {         throw new IllegalArgumentException("Value class  could not be null or empty!").     }     this.valueClass = valueClass. }
+false;public;0;3;;public String getDataStoreClass() {     return dataStoreClass. }
+true;public;1;6;/**  * The type of the dataStore  */ ;/**  * The type of the dataStore  */ public void setDataStoreClass(String dataStoreClass) {     if (isNullOrEmpty(dataStoreClass)) {         throw new IllegalArgumentException("DataStore class could not be null or empty!").     }     this.dataStoreClass = dataStoreClass. }
+false;public;0;3;;public Configuration getHadoopConfiguration() {     return hadoopConfiguration. }
+false;public;0;3;;public long getStartTime() {     return startTime. }
+true;public;1;3;/**  * The Start Time  */ ;/**  * The Start Time  */ public void setStartTime(long startTime) {     this.startTime = startTime. }
+false;public;0;3;;public long getEndTime() {     return endTime. }
+true;public;1;3;/**  * The End Time  */ ;/**  * The End Time  */ public void setEndTime(long endTime) {     this.endTime = endTime. }
+false;public;0;3;;public long getTimeRangeFrom() {     return timeRangeFrom. }
+true;public;1;3;/**  * The Time Range From  */ ;/**  * The Time Range From  */ public void setTimeRangeFrom(long timeRangeFrom) {     this.timeRangeFrom = timeRangeFrom. }
+false;public;0;3;;public long getTimeRangeTo() {     return timeRangeTo. }
+true;public;1;3;/**  * The Time Range To  */ ;/**  * The Time Range To  */ public void setTimeRangeTo(long timeRangeTo) {     this.timeRangeTo = timeRangeTo. }
+false;public;0;3;;public long getLimit() {     return limit. }
+true;public;1;3;/**  * The Limit  */ ;/**  * The Limit  */ public void setLimit(long limit) {     this.limit = limit. }
+false;public;0;3;;public long getTimestamp() {     return timestamp. }
+true;public;1;3;/**  * The Timestamp  */ ;/**  * The Timestamp  */ public void setTimestamp(long timestamp) {     this.timestamp = timestamp. }
+false;public;0;3;;public Object getStartKey() {     return startKey. }
+true;public;1;3;/**  * The Start Key  */ ;/**  * The Start Key  */ public void setStartKey(Object startKey) {     this.startKey = startKey. }
+false;public;0;3;;public Object getEndKey() {     return endKey. }
+true;public;1;3;/**  * The End Key  */ ;/**  * The End Key  */ public void setEndKey(Object endKey) {     this.endKey = endKey. }
+false;public;0;3;;public Object getKeyRangeFrom() {     return keyRangeFrom. }
+true;public;1;3;/**  * The Key Range From  */ ;/**  * The Key Range From  */ public void setKeyRangeFrom(Object keyRangeFrom) {     this.keyRangeFrom = keyRangeFrom. }
+false;public;0;3;;public Object getKeyRangeTo() {     return keyRangeTo. }
+true;public;1;3;/**  * The Key Range To  */ ;/**  * The Key Range To  */ public void setKeyRangeTo(Object keyRangeTo) {     this.keyRangeTo = keyRangeTo. }
+false;public;0;3;;public Strings getFields() {     return fields. }
+true;public;1;3;/**  * The Fields  */ ;/**  * The Fields  */ public void setFields(Strings fields) {     this.fields = fields. }
+false;public;0;3;;public int getConcurrentConsumers() {     return concurrentConsumers. }
+true;public;1;3;/**  * Number of concurrent consumers  */ ;/**  * Number of concurrent consumers  */ public void setConcurrentConsumers(int concurrentConsumers) {     this.concurrentConsumers = concurrentConsumers. }
+false;public;0;3;;public boolean isFlushOnEveryOperation() {     return flushOnEveryOperation. }
+true;public;1;3;/**  * Flush on every operation  */ ;/**  * Flush on every operation  */ public void setFlushOnEveryOperation(boolean flushOnEveryOperation) {     this.flushOnEveryOperation = flushOnEveryOperation. }
+true;public;1;4;/**  * Hadoop Configuration  */ ;/**  * Hadoop Configuration  */ public void setHadoopConfiguration(Configuration hadoopConfiguration) {     checkNotNull(hadoopConfiguration, "Hadoop Configuration could not be null!").     this.hadoopConfiguration = hadoopConfiguration. }
+false;public;0;3;;public String getName() {     return name. }
+true;public;1;3;/**  * Instance name  */ ;/**  * Instance name  */ public void setName(String name) {     this.name = name. }

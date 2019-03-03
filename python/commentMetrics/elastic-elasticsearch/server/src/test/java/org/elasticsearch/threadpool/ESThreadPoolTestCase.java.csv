@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected,final;2;9;;protected final ThreadPool.Info info(final ThreadPool threadPool, final String name) {     for (final ThreadPool.Info info : threadPool.info()) {         if (info.getName().equals(name)) {             return info.         }     }     assert "same".equals(name).     return null. }
+false;protected,final;2;8;;protected final ThreadPoolStats.Stats stats(final ThreadPool threadPool, final String name) {     for (final ThreadPoolStats.Stats stats : threadPool.stats()) {         if (name.equals(stats.getName())) {             return stats.         }     }     throw new IllegalArgumentException(name). }
+false;protected,final;1;5;;protected final void terminateThreadPoolIfNeeded(final ThreadPool threadPool) throws InterruptedException {     if (threadPool != null) {         terminate(threadPool).     } }
+false;static;1;8;;static String randomThreadPool(final ThreadPool.ThreadPoolType type) {     return randomFrom(ThreadPool.THREAD_POOL_TYPES.entrySet().stream().filter(t -> t.getValue().equals(type)).map(Map.Entry::getKey).collect(Collectors.toList())). }

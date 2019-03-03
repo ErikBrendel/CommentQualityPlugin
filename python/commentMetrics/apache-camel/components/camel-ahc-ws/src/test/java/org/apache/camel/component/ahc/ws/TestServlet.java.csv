@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@OnWebSocketConnect public void handleConnect(Session session) {     this.session = session. }
+false;public;1;6;;@OnWebSocketMessage public void handleMessage(String message) {     TestMessages.getInstance().addMessage(message).     // send back same data     send(message). }
+false;public;3;6;;@OnWebSocketMessage public void handleMessage(byte[] message, int offset, int length) {     TestMessages.getInstance().addMessage(message).     // send back same data     send(message). }
+false;private;1;9;;private void send(String message) {     try {         if (session.isOpen()) {             session.getRemote().sendString(message).         }     } catch (IOException e) {     // ignore     } }
+false;private;1;9;;private void send(byte[] bytes) {     try {         if (session.isOpen()) {             session.getRemote().sendBytes(ByteBuffer.wrap(bytes)).         }     } catch (IOException e) {     // ignore     } }

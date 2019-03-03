@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;5;;@Override @ManagedOperation(description = "Adds the value of the given key to the store") public void setState(String key, String value) {     cache.put(key, value). }
+false;public;1;5;;@Override @ManagedOperation(description = "Gets the value of the given key from store") public String getState(String key) {     return cache.get(key). }
+false;protected;0;4;;@Override protected void doStart() throws Exception { // noop }
+false;protected;0;4;;@Override protected void doStop() throws Exception {     cache.clear(). }

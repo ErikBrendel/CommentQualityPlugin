@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;6;;@Override protected CamelContext createCamelContext() throws Exception {     CamelContext context = super.createCamelContext().     context.setHeadersMapFactory(custom).     return context. }
+false;public;0;17;;@Test public void testCustomHeaders() throws Exception {     getMockEndpoint("mock:result").expectedHeaderReceived("foo", 123).     getMockEndpoint("mock:result").expectedHeaderReceived("FOO", 456).     getMockEndpoint("mock:result").expectedHeaderReceived("Bar", "yes").     Map<String, Object> headers = new HashMap<>().     headers.put("foo", 123).     headers.put("FOO", 456).     headers.put("Bar", "yes").     template.sendBodyAndHeaders("direct:start", "Hello World", headers).     assertMockEndpointsSatisfied().     assertSame(custom, context.getHeadersMapFactory()). }
+false;public;0;5;;@Override public void configure() throws Exception {     from("direct:start").to("mock:result"). }
+false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").to("mock:result").         }     }. }
+false;public;0;4;;@Override public Map<String, Object> newMap() {     return new HashMap<>(). }
+false;public;1;4;;@Override public Map<String, Object> newMap(Map<String, Object> map) {     return new HashMap<>(map). }
+false;public;1;4;;@Override public boolean isInstanceOf(Map<String, Object> map) {     return map instanceof HashMap. }
+false;public;0;4;;@Override public boolean isCaseInsensitive() {     return false. }

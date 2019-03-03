@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void setTook(long took) {     setTook(new TimeValue(took, TimeUnit.MILLISECONDS)). }
+false;public;1;3;;public void setTook(TimeValue took) {     this.took = took. }
+false;public;1;3;;public void setStatus(BulkByScrollTask.Status status) {     this.status = status. }
+false;public;1;11;;public void setFailures(List<Object> failures) {     if (failures != null) {         for (Object object : failures) {             if (object instanceof Failure) {                 bulkFailures.add((Failure) object).             } else if (object instanceof SearchFailure) {                 searchFailures.add((SearchFailure) object).             }         }     } }
+false;public;1;3;;public void setTimedOut(boolean timedOut) {     this.timedOut = timedOut. }
+false;public;0;4;;public BulkByScrollResponse buildResponse() {     status = super.buildStatus().     return new BulkByScrollResponse(took, status, bulkFailures, searchFailures, timedOut). }

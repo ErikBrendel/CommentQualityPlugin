@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String type() {     return NoneInput.TYPE. }
+false;public;2;4;;@Override public NoneInput parseInput(String watchId, XContentParser parser) throws IOException {     return NoneInput.parse(watchId, parser). }
+false;public;1;4;;@Override public ExecutableNoneInput createExecutable(NoneInput input) {     return new ExecutableNoneInput(). }

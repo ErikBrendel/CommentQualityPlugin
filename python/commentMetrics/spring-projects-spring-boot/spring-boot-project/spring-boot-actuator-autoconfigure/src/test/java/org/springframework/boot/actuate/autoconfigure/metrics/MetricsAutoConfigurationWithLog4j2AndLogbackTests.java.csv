@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void doesNotConfigureLogbackMetrics() {     this.contextRunner.run((context) -> assertThat(context).doesNotHaveBean(LogbackMetrics.class)). }

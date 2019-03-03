@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String toString() {     return "Otherwise[" + getOutputs() + "]". }
+false;public;0;4;;@Override public String getShortName() {     return "otherwise". }
+false;public;0;10;;@Override public String getLabel() {     CollectionStringBuffer buffer = new CollectionStringBuffer("otherwise[").     List<ProcessorDefinition<?>> list = getOutputs().     for (ProcessorDefinition<?> type : list) {         buffer.append(type.getLabel()).     }     buffer.append("]").     return buffer.toString(). }

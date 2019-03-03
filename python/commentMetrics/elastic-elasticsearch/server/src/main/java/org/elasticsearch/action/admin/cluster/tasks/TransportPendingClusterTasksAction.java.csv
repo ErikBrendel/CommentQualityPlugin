@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;5;;@Override protected String executor() {     // very lightweight operation in memory, no need to fork to a thread     return ThreadPool.Names.SAME. }
+false;protected;2;4;;@Override protected ClusterBlockException checkBlock(PendingClusterTasksRequest request, ClusterState state) {     return state.blocks().globalBlockedException(ClusterBlockLevel.METADATA_READ). }
+false;protected;0;4;;@Override protected PendingClusterTasksResponse newResponse() {     return new PendingClusterTasksResponse(). }
+false;protected;3;8;;@Override protected void masterOperation(PendingClusterTasksRequest request, ClusterState state, ActionListener<PendingClusterTasksResponse> listener) {     logger.trace("fetching pending tasks from cluster service").     final List<PendingClusterTask> pendingTasks = clusterService.getMasterService().pendingTasks().     logger.trace("done fetching pending tasks from cluster service").     listener.onResponse(new PendingClusterTasksResponse(pendingTasks)). }

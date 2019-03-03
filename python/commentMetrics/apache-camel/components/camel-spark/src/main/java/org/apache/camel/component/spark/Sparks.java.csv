@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;3;;public static JavaSparkContext createLocalSparkContext() {     return new JavaSparkContext("local[*]", "local-camel-spark-context"). }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public File getPath() {     return this.path. }
+false;public;1;5;;public void setPath(File path) {     Assert.isTrue(path.exists(), () -> "Path '" + path + "' does not exist").     Assert.isTrue(path.canRead(), () -> "Path '" + path + "' cannot be read").     this.path = path. }
+false;public;0;3;;public DataSize getThreshold() {     return this.threshold. }
+false;public;1;5;;public void setThreshold(DataSize threshold) {     Assert.isTrue(!threshold.isNegative(), "threshold must be greater than or equal to 0").     this.threshold = threshold. }

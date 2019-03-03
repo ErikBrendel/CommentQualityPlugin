@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;11;;@Test public void testTimerName() throws Exception {     getMockEndpoint("mock:result").expectedMinimumMessageCount(1).     context.getRouteController().startAllRoutes().     assertMockEndpointsSatisfied().     TimerEndpoint te = context.getEndpoint(uri, TimerEndpoint.class).     assertEquals("bar", te.getTimerName()). }
+false;public;0;5;;@Override public void configure() throws Exception {     from(uri).noAutoStartup().to("mock:result"). }
+false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from(uri).noAutoStartup().to("mock:result").         }     }. }

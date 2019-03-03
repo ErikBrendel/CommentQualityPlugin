@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;5;;@Converter public static Date toDate(String text) throws ParseException {     DateFormat sdf = new SimpleDateFormat(DATE_PATTERN_NO_TIMEZONE).     return sdf.parse(text). }

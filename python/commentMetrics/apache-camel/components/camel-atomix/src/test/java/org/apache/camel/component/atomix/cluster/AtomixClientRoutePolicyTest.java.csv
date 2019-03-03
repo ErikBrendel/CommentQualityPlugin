@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;2;9;;@Override protected CamelClusterService createClusterService(String id, Address bootstrapNode) {     AtomixClusterClientService service = new AtomixClusterClientService().     service.setId("node-" + id).     service.setNodes(Collections.singletonList(bootstrapNode)).     service.setEphemeral(false).     return service. }

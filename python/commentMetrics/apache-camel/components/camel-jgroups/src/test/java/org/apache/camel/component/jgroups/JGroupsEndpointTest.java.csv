@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public void configure() throws Exception {     from("jgroups:" + CLUSTER_NAME).to("mock:test"). }
+false;protected;0;9;;// Routes fixture @Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("jgroups:" + CLUSTER_NAME).to("mock:test").         }     }. }
+false;public;0;8;;// Tests @Test public void shouldSetClusterName() throws Exception {     // When     JGroupsEndpoint endpoint = getMandatoryEndpoint("jgroups:" + CLUSTER_NAME, JGroupsEndpoint.class).     // Then     assertEquals(CLUSTER_NAME, endpoint.getClusterName()). }
+false;public;0;8;;@Test public void shouldResolveDefaultChannel() throws Exception {     // When     JGroupsEndpoint endpoint = getMandatoryEndpoint("jgroups:" + CLUSTER_NAME, JGroupsEndpoint.class).     // Then     assertNotNull(endpoint.getResolvedChannel()). }

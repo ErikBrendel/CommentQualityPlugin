@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void onContextStart(CamelContext context) throws VetoCamelContextStartException {     throw new VetoCamelContextStartException("We do not like this route", context, false). }

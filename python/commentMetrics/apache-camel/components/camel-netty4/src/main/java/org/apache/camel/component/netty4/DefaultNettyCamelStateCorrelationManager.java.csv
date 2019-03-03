@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public void putState(Channel channel, NettyCamelState state) {     cache.put(channel, state). }
+false;public;2;4;;@Override public void removeState(ChannelHandlerContext ctx, Channel channel) {     cache.remove(channel). }
+false;public;3;4;;@Override public NettyCamelState getState(ChannelHandlerContext ctx, Channel channel, Object msg) {     return cache.get(channel). }
+false;public;3;4;;@Override public NettyCamelState getState(ChannelHandlerContext ctx, Channel channel, Throwable cause) {     return cache.get(channel). }

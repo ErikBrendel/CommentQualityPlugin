@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;8;;protected Class<?> resolveClass(ObjectStreamClass desc) throws ClassNotFoundException, IOException {     if (classLoader != null) {         return Class.forName(desc.getName(), false, classLoader).     } else {         // If the application classloader is not set we just fallback to use old behaivor         return super.resolveClass(desc).     } }

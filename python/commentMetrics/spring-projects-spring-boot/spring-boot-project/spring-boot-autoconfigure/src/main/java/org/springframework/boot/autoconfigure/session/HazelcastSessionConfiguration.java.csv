@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;10;;@Autowired public void customize(SessionProperties sessionProperties, HazelcastSessionProperties hazelcastSessionProperties) {     Duration timeout = sessionProperties.getTimeout().     if (timeout != null) {         setMaxInactiveIntervalInSeconds((int) timeout.getSeconds()).     }     setSessionMapName(hazelcastSessionProperties.getMapName()).     setHazelcastFlushMode(hazelcastSessionProperties.getFlushMode()). }

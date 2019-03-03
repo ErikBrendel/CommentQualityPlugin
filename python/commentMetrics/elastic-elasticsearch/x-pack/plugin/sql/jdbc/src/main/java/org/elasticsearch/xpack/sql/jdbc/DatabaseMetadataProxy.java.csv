@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;2;7;;@Override protected Object postProcess(Object result, Object proxy) {     if (result instanceof ResultSet) {         return Debug.proxy(new ResultSetProxy(log, result, null)).     }     return result. }

@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;2;;@ManagedAttribute(description = "The name of the data format") String getName().
+false;;0;2;;@ManagedAttribute(description = "Camel ID") String getCamelId().
+false;;0;2;;@ManagedAttribute(description = "Camel ManagementName") String getCamelManagementName().
+false;;0;2;;@ManagedAttribute(description = "DataFormat State") String getState().
+false;;0;2;;@ManagedOperation(description = "DataFormat information as JSon") String informationJson().
+false;;1;2;;@ManagedOperation(description = "Explain how this data format is configured") TabularData explain(boolean allOptions).

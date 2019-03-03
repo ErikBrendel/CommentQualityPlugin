@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean isCreateCamelContextPerClass() {     return true. }
+false;protected;0;3;;protected ClassPathXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/component/cxf/WsdlFirstProcessor.xml"). }
+false;public,static;0;7;;@BeforeClass public static void startService() {     Object implementor = new PersonImpl().     String address = "http://localhost:" + getPort1() + "/CxfWsdlFirstProcessorTest/PersonService/".     Endpoint.publish(address, implementor). }
+false;protected;2;6;;@Override protected void verifyJaxwsHandlers(JaxwsTestHandler fromHandler, JaxwsTestHandler toHandler) {     assertEquals(2, fromHandler.getFaultCount()).     assertEquals(4, fromHandler.getMessageCount()).     assertEquals(0, toHandler.getGetHeadersCount()). }

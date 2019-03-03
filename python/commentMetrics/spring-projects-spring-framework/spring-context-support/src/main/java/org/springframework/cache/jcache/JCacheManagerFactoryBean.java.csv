@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;3;/**  * Specify the URI for the desired {@code CacheManager}.  * <p>Default is {@code null} (i.e. JCache's default).  */ ;/**  * Specify the URI for the desired {@code CacheManager}.  * <p>Default is {@code null} (i.e. JCache's default).  */ public void setCacheManagerUri(@Nullable URI cacheManagerUri) {     this.cacheManagerUri = cacheManagerUri. }
+true;public;1;3;/**  * Specify properties for the to-be-created {@code CacheManager}.  * <p>Default is {@code null} (i.e. no special properties to apply).  * @see javax.cache.spi.CachingProvider#getCacheManager(URI, ClassLoader, Properties)  */ ;/**  * Specify properties for the to-be-created {@code CacheManager}.  * <p>Default is {@code null} (i.e. no special properties to apply).  * @see javax.cache.spi.CachingProvider#getCacheManager(URI, ClassLoader, Properties)  */ public void setCacheManagerProperties(@Nullable Properties cacheManagerProperties) {     this.cacheManagerProperties = cacheManagerProperties. }
+false;public;1;4;;@Override public void setBeanClassLoader(ClassLoader classLoader) {     this.beanClassLoader = classLoader. }
+false;public;0;5;;@Override public void afterPropertiesSet() {     this.cacheManager = Caching.getCachingProvider().getCacheManager(this.cacheManagerUri, this.beanClassLoader, this.cacheManagerProperties). }
+false;public;0;5;;@Override @Nullable public CacheManager getObject() {     return this.cacheManager. }
+false;public;0;4;;@Override public Class<?> getObjectType() {     return (this.cacheManager != null ? this.cacheManager.getClass() : CacheManager.class). }
+false;public;0;4;;@Override public boolean isSingleton() {     return true. }
+false;public;0;6;;@Override public void destroy() {     if (this.cacheManager != null) {         this.cacheManager.close().     } }

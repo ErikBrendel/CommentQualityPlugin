@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@Test public void testStaticMethodCall() throws Exception {     getMockEndpoint("mock:camel").expectedBodiesReceived("Hello Camel").     getMockEndpoint("mock:other").expectedBodiesReceived("Hello World").     template.sendBody("direct:start", "Hello World").     template.sendBody("direct:start", "Hello Camel").     assertMockEndpointsSatisfied(). }
+false;public;0;9;;@Override public void configure() throws Exception {     from("direct:start").choice().when().method(MyStaticClass.class, "isCamel").to("mock:camel").otherwise().to("mock:other"). }
+false;protected;0;14;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").choice().when().method(MyStaticClass.class, "isCamel").to("mock:camel").otherwise().to("mock:other").         }     }. }

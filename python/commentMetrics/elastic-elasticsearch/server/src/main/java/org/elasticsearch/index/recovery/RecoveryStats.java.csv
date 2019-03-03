@@ -1,0 +1,16 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;7;;public void add(RecoveryStats recoveryStats) {     if (recoveryStats != null) {         this.currentAsSource.addAndGet(recoveryStats.currentAsSource()).         this.currentAsTarget.addAndGet(recoveryStats.currentAsTarget()).     }     addTotals(recoveryStats). }
+false;public;1;5;;public void addTotals(RecoveryStats recoveryStats) {     if (recoveryStats != null) {         this.throttleTimeInNanos.addAndGet(recoveryStats.throttleTime().nanos()).     } }
+true;public;0;3;/**  * Number of ongoing recoveries for which a shard serves as a source  */ ;/**  * Number of ongoing recoveries for which a shard serves as a source  */ public int currentAsSource() {     return currentAsSource.get(). }
+true;public;0;3;/**  * Number of ongoing recoveries for which a shard serves as a target  */ ;/**  * Number of ongoing recoveries for which a shard serves as a target  */ public int currentAsTarget() {     return currentAsTarget.get(). }
+true;public;0;3;/**  * Total time recoveries waited due to throttling  */ ;/**  * Total time recoveries waited due to throttling  */ public TimeValue throttleTime() {     return TimeValue.timeValueNanos(throttleTimeInNanos.get()). }
+false;public;0;3;;public void incCurrentAsTarget() {     currentAsTarget.incrementAndGet(). }
+false;public;0;3;;public void decCurrentAsTarget() {     currentAsTarget.decrementAndGet(). }
+false;public;0;3;;public void incCurrentAsSource() {     currentAsSource.incrementAndGet(). }
+false;public;0;3;;public void decCurrentAsSource() {     currentAsSource.decrementAndGet(). }
+false;public;1;3;;public void addThrottleTime(long nanos) {     throttleTimeInNanos.addAndGet(nanos). }
+false;public;2;9;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject(Fields.RECOVERY).     builder.field(Fields.CURRENT_AS_SOURCE, currentAsSource()).     builder.field(Fields.CURRENT_AS_TARGET, currentAsTarget()).     builder.humanReadableField(Fields.THROTTLE_TIME_IN_MILLIS, Fields.THROTTLE_TIME, throttleTime()).     builder.endObject().     return builder. }
+false;public,static;1;5;;public static RecoveryStats readRecoveryStats(StreamInput in) throws IOException {     RecoveryStats stats = new RecoveryStats().     stats.readFrom(in).     return stats. }
+false;public;1;6;;@Override public void readFrom(StreamInput in) throws IOException {     currentAsSource.set(in.readVInt()).     currentAsTarget.set(in.readVInt()).     throttleTimeInNanos.set(in.readLong()). }
+false;public;1;6;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeVInt(currentAsSource.get()).     out.writeVInt(currentAsTarget.get()).     out.writeLong(throttleTimeInNanos.get()). }
+false;public;0;5;;@Override public String toString() {     return "recoveryStats, currentAsSource [" + currentAsSource() + "],currentAsTarget [" + currentAsTarget() + "], throttle [" + throttleTime() + "]". }

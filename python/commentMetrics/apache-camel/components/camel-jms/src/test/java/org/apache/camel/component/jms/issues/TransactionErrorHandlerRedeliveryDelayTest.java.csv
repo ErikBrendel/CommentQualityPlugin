@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected AbstractApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/component/jms/issues/TransactionErrorHandlerRedeliveryDelayTest-context.xml"). }
+false;public;0;8;;@Test public void testTransactedRedeliveryDelay() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("Bye World").     template.sendBody("activemq:queue:in", "Hello World").     assertMockEndpointsSatisfied(). }
+false;public;1;7;;public void process(Exchange exchange) throws Exception {     if (counter++ < 3) {         throw new IllegalArgumentException("Forced exception as counter is " + counter).     }     assertTrue("Should be transacted", exchange.isTransacted()).     exchange.getIn().setBody("Bye World"). }

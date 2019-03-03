@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;16;;@Override public Outcome handle(Throwable failure) {     CountDownLatch latch = new CountDownLatch(1).     FileSystemWatcher watcher = this.fileSystemWatcherFactory.getFileSystemWatcher().     watcher.addSourceFolders(new ClassPathFolders(Restarter.getInstance().getInitialUrls())).     watcher.addListener(new Listener(latch)).     watcher.start().     try {         latch.await().     } catch (InterruptedException ex) {         Thread.currentThread().interrupt().     }     return Outcome.RETRY. }
+false;public;1;4;;@Override public void onChange(Set<ChangedFiles> changeSet) {     this.latch.countDown(). }

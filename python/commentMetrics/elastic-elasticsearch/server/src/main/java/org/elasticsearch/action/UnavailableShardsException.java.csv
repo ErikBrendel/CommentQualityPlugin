@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private,static;2;6;;private static String buildMessage(ShardId shardId, String message) {     if (shardId == null) {         return message.     }     return buildMessage(shardId.getIndexName(), shardId.id(), message). }
+false;private,static;3;1;;private static String buildMessage(String index, int shardId, String message) {     return "[" + index + "][" + shardId + "] " + message. }
+false;public;0;4;;@Override public RestStatus status() {     return RestStatus.SERVICE_UNAVAILABLE. }

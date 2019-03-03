@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String prefix() {     return null. }
+false;public;1;4;;@Override public String get(String k) {     return null. }
+false;public;0;4;;@Override public Duration step() {     return get(T::getStep, StepRegistryConfig.super::step). }
+false;public;0;4;;@Override public boolean enabled() {     return get(T::isEnabled, StepRegistryConfig.super::enabled). }
+false;public;0;4;;@Override public int numThreads() {     return get(T::getNumThreads, StepRegistryConfig.super::numThreads). }
+false;public;0;4;;@Override public int batchSize() {     return get(T::getBatchSize, StepRegistryConfig.super::batchSize). }

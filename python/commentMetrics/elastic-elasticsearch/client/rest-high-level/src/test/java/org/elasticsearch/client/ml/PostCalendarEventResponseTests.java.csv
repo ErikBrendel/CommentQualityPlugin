@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;9;;@Override protected PostCalendarEventResponse createTestInstance() {     int numberOfEvents = randomIntBetween(1, 10).     List<ScheduledEvent> events = new ArrayList<>(numberOfEvents).     for (int i = 0. i < numberOfEvents. i++) {         events.add(ScheduledEventTests.testInstance()).     }     return new PostCalendarEventResponse(events). }
+false;protected;1;4;;@Override protected PostCalendarEventResponse doParseInstance(XContentParser parser) throws IOException {     return PostCalendarEventResponse.fromXContent(parser). }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }

@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * The sum of the squares of the collected values.  */ ;/**  * The sum of the squares of the collected values.  */ double getSumOfSquares().
+true;;0;1;/**  * The variance of the collected values.  */ ;/**  * The variance of the collected values.  */ double getVariance().
+true;;0;1;/**  * The standard deviation of the collected values.  */ ;/**  * The standard deviation of the collected values.  */ double getStdDeviation().
+true;;1;1;/**  * The upper or lower bounds of the stdDeviation  */ ;/**  * The upper or lower bounds of the stdDeviation  */ double getStdDeviationBound(Bounds bound).
+true;;0;1;/**  * The standard deviation of the collected values as a String.  */ ;/**  * The standard deviation of the collected values as a String.  */ String getStdDeviationAsString().
+true;;1;1;/**  * The upper or lower bounds of stdDev of the collected values as a String.  */ ;/**  * The upper or lower bounds of stdDev of the collected values as a String.  */ String getStdDeviationBoundAsString(Bounds bound).
+true;;0;1;/**  * The sum of the squares of the collected values as a String.  */ ;/**  * The sum of the squares of the collected values as a String.  */ String getSumOfSquaresAsString().
+true;;0;1;/**  * The variance of the collected values as a String.  */ ;/**  * The variance of the collected values as a String.  */ String getVarianceAsString().

@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getUri() {     return uri. }
+false;public;0;3;;public boolean isRedirectError() {     return statusCode >= 300 && statusCode < 400. }
+false;public;0;3;;public boolean hasRedirectLocation() {     return ObjectHelper.isNotEmpty(redirectLocation). }
+false;public;0;3;;public String getRedirectLocation() {     return redirectLocation. }
+false;public;0;3;;public int getStatusCode() {     return statusCode. }
+false;public;0;3;;public String getStatusText() {     return statusText. }
+true;public;0;4;/**  * Gets the {@link HttpContent}.  * <p/>  * Notice this may be <tt>null</tt> if this exception has been serialized,  * as the {@link HttpContent} instance is marked as transient in this class.  *  * @deprecated use getContentAsString().  */ ;/**  * Gets the {@link HttpContent}.  * <p/>  * Notice this may be <tt>null</tt> if this exception has been serialized,  * as the {@link HttpContent} instance is marked as transient in this class.  *  * @deprecated use getContentAsString().  */ @Deprecated public HttpContent getHttpContent() {     return content. }
+true;public;0;3;/**  * Gets the HTTP content as a String  * <p/>  * Notice this may be <tt>null</tt> if it was not possible to read the content  */ ;/**  * Gets the HTTP content as a String  * <p/>  * Notice this may be <tt>null</tt> if it was not possible to read the content  */ public String getContentAsString() {     return contentAsString. }

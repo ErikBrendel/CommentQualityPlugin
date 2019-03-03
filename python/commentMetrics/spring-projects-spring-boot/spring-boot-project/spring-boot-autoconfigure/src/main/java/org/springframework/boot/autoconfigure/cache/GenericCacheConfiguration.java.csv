@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;7;;@Bean public SimpleCacheManager cacheManager(CacheManagerCustomizers customizers, Collection<Cache> caches) {     SimpleCacheManager cacheManager = new SimpleCacheManager().     cacheManager.setCaches(caches).     return customizers.customize(cacheManager). }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Override public Object invoke(MethodInvocation mi) throws Throwable {     Object retVal = mi.proceed().     this.advice.afterReturning(retVal, mi.getMethod(), mi.getArguments(), mi.getThis()).     return retVal. }

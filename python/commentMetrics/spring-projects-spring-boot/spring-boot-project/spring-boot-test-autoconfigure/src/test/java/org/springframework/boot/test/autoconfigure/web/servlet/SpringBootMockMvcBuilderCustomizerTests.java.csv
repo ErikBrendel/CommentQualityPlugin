@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;19;;@Test @SuppressWarnings("unchecked") public void customizeShouldAddFilters() {     AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext().     MockServletContext servletContext = new MockServletContext().     context.setServletContext(servletContext).     context.register(ServletConfiguration.class, FilterConfiguration.class).     context.refresh().     DefaultMockMvcBuilder builder = MockMvcBuilders.webAppContextSetup(context).     this.customizer = new SpringBootMockMvcBuilderCustomizer(context).     this.customizer.customize(builder).     FilterRegistrationBean<?> registrationBean = (FilterRegistrationBean<?>) context.getBean("filterRegistrationBean").     Filter testFilter = (Filter) context.getBean("testFilter").     Filter otherTestFilter = registrationBean.getFilter().     List<Filter> filters = (List<Filter>) ReflectionTestUtils.getField(builder, "filters").     assertThat(filters).containsExactlyInAnyOrder(testFilter, otherTestFilter). }
+false;public;0;4;;@Bean public TestServlet testServlet() {     return new TestServlet(). }
+false;public;0;4;;@Bean public FilterRegistrationBean<OtherTestFilter> filterRegistrationBean() {     return new FilterRegistrationBean<>(new OtherTestFilter()). }
+false;public;0;4;;@Bean public TestFilter testFilter() {     return new TestFilter(). }
+false;public;1;4;;@Override public void init(FilterConfig filterConfig) { }
+false;public;3;5;;@Override public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) { }
+false;public;0;4;;@Override public void destroy() { }
+false;public;1;4;;@Override public void init(FilterConfig filterConfig) { }
+false;public;3;5;;@Override public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) { }
+false;public;0;4;;@Override public void destroy() { }

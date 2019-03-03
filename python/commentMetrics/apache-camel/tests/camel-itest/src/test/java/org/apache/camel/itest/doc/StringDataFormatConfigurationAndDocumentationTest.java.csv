@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean isUseRouteBuilder() {     return false. }
+false;public;0;11;;@Test public void testDataFormatJsonSchema() throws Exception {     CamelContext context = new DefaultCamelContext().     String json = context.getDataFormatParameterJsonSchema("string").     assertNotNull("Should have found some auto-generated JSON", json).     log.info(json).     assertTrue(json.contains("\"name\": \"string\"")).     assertTrue(json.contains("\"modelName\": \"string\"")).     assertTrue(json.contains("\"charset\": { \"kind\": \"attribute\", \"displayName\": \"Charset\", \"required\": false, \"type\": \"string\"")). }

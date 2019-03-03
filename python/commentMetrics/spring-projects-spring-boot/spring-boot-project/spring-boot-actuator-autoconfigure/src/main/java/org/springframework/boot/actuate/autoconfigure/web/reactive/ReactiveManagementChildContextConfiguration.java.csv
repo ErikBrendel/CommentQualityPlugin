@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Bean public ReactiveManagementWebServerFactoryCustomizer reactiveManagementWebServerFactoryCustomizer(ListableBeanFactory beanFactory) {     return new ReactiveManagementWebServerFactoryCustomizer(beanFactory). }
+false;public;1;4;;@Bean public HttpHandler httpHandler(ApplicationContext applicationContext) {     return WebHttpHandlerBuilder.applicationContext(applicationContext).build(). }

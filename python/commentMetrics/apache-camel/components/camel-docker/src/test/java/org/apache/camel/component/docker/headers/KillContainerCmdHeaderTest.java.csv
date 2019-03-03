@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;16;;@Test public void stopContainerHeaderTest() {     String containerId = "9c09acd48a25".     String signal = "signal".     Map<String, Object> headers = getDefaultParameters().     headers.put(DockerConstants.DOCKER_CONTAINER_ID, containerId).     headers.put(DockerConstants.DOCKER_SIGNAL, signal).     template.sendBodyAndHeaders("direct:in", "", headers).     Mockito.verify(dockerClient, Mockito.times(1)).killContainerCmd(containerId).     Mockito.verify(mockObject, Mockito.times(1)).withSignal(eq(signal)). }
+false;protected;0;4;;@Override protected void setupMocks() {     Mockito.when(dockerClient.killContainerCmd(anyString())).thenReturn(mockObject). }
+false;protected;0;4;;@Override protected DockerOperation getOperation() {     return DockerOperation.KILL_CONTAINER. }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;4;10;;@Override public void handle(String target, Request baseRequest, HttpServletRequest request, HttpServletResponse response) throws IOException {     String method = request.getMethod().     if (!HttpMethod.GET.is(method) && !HttpMethod.POST.is(method) && !HttpMethod.HEAD.is(method)) {         request = new ErrorHttpServletRequest(request).     }     this.delegate.handle(target, baseRequest, request, response). }
+false;public;0;5;;@Override public String getMethod() {     return (this.simulateGetMethod ? HttpMethod.GET.toString() : super.getMethod()). }
+false;public;0;5;;@Override public ServletContext getServletContext() {     this.simulateGetMethod = false.     return super.getServletContext(). }

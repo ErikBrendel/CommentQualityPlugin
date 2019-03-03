@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public boolean process(Exchange exchange, AsyncCallback callback) {     return validatingProcessor.process(exchange, callback). }
+false;protected;0;5;;@Override protected void doStart() throws Exception {     super.doStart().     ServiceHelper.startService(validatingProcessor). }
+false;protected;0;5;;@Override protected void doStop() throws Exception {     super.doStop().     ServiceHelper.stopService(validatingProcessor). }
+false;protected;0;5;;@Override protected void doShutdown() throws Exception {     super.doStop().     ServiceHelper.stopAndShutdownService(validatingProcessor). }

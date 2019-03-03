@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void setInfinispanConsumer(InfinispanConsumer infinispanConsumer) {     this.infinispanConsumer = infinispanConsumer. }
+false;public;1;3;;public void setEventTypes(Set<String> eventTypes) {     this.eventTypes = eventTypes. }
+false;public;1;3;;public void setCacheName(String cacheName) {     this.cacheName = cacheName. }
+false;protected;1;3;;protected boolean isAccepted(String eventType) {     return eventTypes == null || eventTypes.isEmpty() || eventTypes.contains(eventType). }

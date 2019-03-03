@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected NodeInfo<IsNotNull> info() {     return NodeInfo.create(this, IsNotNull::new, field()). }
+false;protected;1;4;;@Override protected IsNotNull replaceChild(Expression newChild) {     return new IsNotNull(source(), newChild). }
+false;public;0;4;;@Override public Object fold() {     return field().fold() != null && !DataTypes.isNull(field().dataType()). }
+false;protected;0;4;;@Override protected Processor makeProcessor() {     return new CheckNullProcessor(CheckNullOperation.IS_NOT_NULL). }
+false;public;1;4;;@Override public String processScript(String script) {     return Scripts.formatTemplate(Scripts.SQL_SCRIPTS + ".isNotNull(" + script + ")"). }
+false;public;0;4;;@Override public Nullability nullable() {     return Nullability.FALSE. }
+false;public;0;4;;@Override public DataType dataType() {     return DataType.BOOLEAN. }
+false;public;0;4;;@Override public UnaryScalarFunction negate() {     return new IsNull(source(), field()). }

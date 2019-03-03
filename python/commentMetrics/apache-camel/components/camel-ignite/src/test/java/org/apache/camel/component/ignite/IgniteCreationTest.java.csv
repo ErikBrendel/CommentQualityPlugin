@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected String getScheme() {     return "ignite-cache". }
+false;protected;0;5;;@Override protected AbstractIgniteComponent createComponent() {     ignite = Ignition.start(createConfiguration()).     return IgniteCacheComponent.fromIgnite(ignite). }
+false;public;0;4;;@Test public void testCAMEL11382() {     assertNotNull(ignite()). }
+false;public;0;4;;@Override public boolean isCreateCamelContextPerClass() {     return true. }
+false;public;0;6;;@After public void stopUserManagedIgnite() {     if (ignite != null) {         Ignition.stop(ignite.name(), true).     } }

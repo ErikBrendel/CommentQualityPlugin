@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;7;;@Override public Object deserialize(final JsonParser parser, final DeserializationContext context) throws IOException, JsonProcessingException {     final List<Result> results = parser.readValueAs(RESULTS_TYPE).     return new ApprovalResult(results). }
+false;public;0;3;;public List<String> getActorIds() {     return actorIds. }
+false;public;0;3;;public String getEntityId() {     return entityId. }
+false;public;0;3;;public List<RestError> getErrors() {     return errors. }
+false;public;0;3;;public String getInstanceId() {     return instanceId. }
+false;public;0;3;;public String getInstanceStatus() {     return instanceStatus. }
+false;public;0;3;;public List<String> getNewWorkitemIds() {     return newWorkitemIds. }
+false;public;0;3;;public boolean isSuccess() {     return success. }
+false;public;0;4;;@Override public Iterator<Result> iterator() {     return results.listIterator(). }
+false;public;0;3;;public int size() {     return results.size(). }

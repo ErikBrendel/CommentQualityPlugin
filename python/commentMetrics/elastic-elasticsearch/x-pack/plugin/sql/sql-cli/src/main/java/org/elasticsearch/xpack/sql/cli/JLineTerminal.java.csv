@@ -1,0 +1,18 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public LineBuilder line() {     return new LineBuilder(). }
+false;public;1;4;;@Override public void print(String text) {     terminal.writer().print(text). }
+false;public;1;5;;@Override public void println(String text) {     print(text).     print("\n"). }
+false;public;2;9;;@Override public void error(String type, String message) {     AttributedStringBuilder sb = new AttributedStringBuilder().     sb.append(type + " [", BOLD.foreground(RED)).     sb.append(message, DEFAULT.boldOff().italic().foreground(YELLOW)).     sb.append("]", BOLD.underlineOff().foreground(RED)).     terminal.writer().print(sb.toAnsi(terminal)).     terminal.flush(). }
+false;public;0;4;;@Override public void println() {     print("\n"). }
+false;public;0;4;;@Override public void clear() {     terminal.puts(InfoCmp.Capability.clear_screen). }
+false;public;0;4;;@Override public void flush() {     terminal.flush(). }
+false;public;1;4;;@Override public void printStackTrace(Exception ex) {     ex.printStackTrace(terminal.writer()). }
+false;public;1;17;;@Override public String readPassword(String prompt) throws UserException {     try {         String password = reader.readLine(prompt, (char) 0).         if (password == null) {             /*                  * The docs say this can't return null but they lie. Lies, I tell you!                  * This returns null when you pipe an empty file into the process.                  * Since that is a lot like an EOF we throw the same exception.                  */             throw new UserException(ExitCodes.NOPERM, "password required").         }         return password.     } catch (UserInterruptException | EndOfFileException ex) {         throw new UserException(ExitCodes.NOPERM, "password required").     } }
+false;public;1;11;;@Override public String readLine(String prompt) {     String attributedString = new AttributedString(prompt, DEFAULT.foreground(YELLOW)).toAnsi(terminal).     try {         return reader.readLine(attributedString).     } catch (UserInterruptException ex) {         return "".     } catch (EndOfFileException ex) {         return null.     } }
+false;public;0;4;;@Override public void close() throws IOException {     terminal.close(). }
+false;public;1;4;;public LineBuilder text(String text) {     line.append(text, DEFAULT).     return this. }
+false;public;1;4;;public LineBuilder em(String text) {     line.append(text, DEFAULT.foreground(BRIGHT)).     return this. }
+false;public;1;4;;public LineBuilder error(String text) {     line.append(text, BOLD.foreground(RED)).     return this. }
+false;public;1;4;;public LineBuilder param(String text) {     line.append(text, DEFAULT.italic().foreground(YELLOW)).     return this. }
+false;public;0;3;;public void ln() {     println(line.toAnsi(terminal)). }
+false;public;0;4;;public void end() {     terminal.writer().print(line.toAnsi(terminal)).     terminal.writer().flush(). }

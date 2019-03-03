@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;2;;@ManagedAttribute(description = "Message to use in rollback exception") String getMessage().
+false;;0;2;;@ManagedAttribute(description = "Mark the transaction for rollback only (cannot be overruled to commit)") Boolean isMarkRollbackOnly().
+false;;0;2;;@ManagedAttribute(description = "Mark only last sub transaction for rollback only") Boolean isMarkRollbackOnlyLast().

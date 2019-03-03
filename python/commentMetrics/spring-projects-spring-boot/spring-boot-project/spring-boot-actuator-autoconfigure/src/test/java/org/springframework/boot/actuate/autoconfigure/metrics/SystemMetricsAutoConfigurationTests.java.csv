@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void autoConfiguresUptimeMetrics() {     this.contextRunner.run((context) -> assertThat(context).hasSingleBean(UptimeMetrics.class)). }
+false;public;0;6;;@Test public void allowsCustomUptimeMetricsToBeUsed() {     this.contextRunner.withUserConfiguration(CustomUptimeMetricsConfiguration.class).run((context) -> assertThat(context).hasSingleBean(UptimeMetrics.class).hasBean("customUptimeMetrics")). }
+false;public;0;5;;@Test public void autoConfiguresProcessorMetrics() {     this.contextRunner.run((context) -> assertThat(context).hasSingleBean(ProcessorMetrics.class)). }
+false;public;0;8;;@Test public void allowsCustomProcessorMetricsToBeUsed() {     this.contextRunner.withUserConfiguration(CustomProcessorMetricsConfiguration.class).run((context) -> assertThat(context).hasSingleBean(ProcessorMetrics.class).hasBean("customProcessorMetrics")). }
+false;public;0;5;;@Test public void autoConfiguresFileDescriptorMetrics() {     this.contextRunner.run((context) -> assertThat(context).hasSingleBean(FileDescriptorMetrics.class)). }
+false;public;0;8;;@Test public void allowsCustomFileDescriptorMetricsToBeUsed() {     this.contextRunner.withUserConfiguration(CustomFileDescriptorMetricsConfiguration.class).run((context) -> assertThat(context).hasSingleBean(FileDescriptorMetrics.class).hasBean("customFileDescriptorMetrics")). }
+false;public;0;4;;@Bean public UptimeMetrics customUptimeMetrics() {     return new UptimeMetrics(). }
+false;public;0;4;;@Bean public ProcessorMetrics customProcessorMetrics() {     return new ProcessorMetrics(). }
+false;public;0;4;;@Bean public FileDescriptorMetrics customFileDescriptorMetrics() {     return new FileDescriptorMetrics(). }

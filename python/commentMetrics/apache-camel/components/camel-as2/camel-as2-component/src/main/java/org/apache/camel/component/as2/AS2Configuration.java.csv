@@ -1,0 +1,59 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public AS2ApiName getApiName() {     return apiName. }
+true;public;1;3;/**  * What kind of operation to perform  */ ;/**  * What kind of operation to perform  */ public void setApiName(AS2ApiName apiName) {     this.apiName = apiName. }
+false;public;0;3;;public String getMethodName() {     return methodName. }
+true;public;1;3;/**  * What sub operation to use for the selected operation  */ ;/**  * What sub operation to use for the selected operation  */ public void setMethodName(String methodName) {     this.methodName = methodName. }
+false;public;0;3;;public String getAs2Version() {     return as2Version. }
+true;public;1;7;/**  * The version of the AS2 protocol.  */ ;/**  * The version of the AS2 protocol.  */ public void setAs2Version(String as2Version) {     if (!as2Version.equals("1.0") && !as2Version.equals("1.1")) {         throw new IllegalArgumentException(String.format("Value '%s' of configuration parameter 'as2Version' must be either '1.0' or '1.1'", as2Version)).     }     this.as2Version = as2Version. }
+false;public;0;3;;public String getUserAgent() {     return userAgent. }
+true;public;1;3;/**  * The value included in the User-Agent message header identifying  * the AS2 user agent.  */ ;/**  * The value included in the User-Agent message header identifying  * the AS2 user agent.  */ public void setUserAgent(String userAgent) {     this.userAgent = userAgent. }
+false;public;0;3;;public String getServer() {     return server. }
+true;public;1;3;/**  * The value included in the Server message header identifying the  * AS2 Server.  */ ;/**  * The value included in the Server message header identifying the  * AS2 Server.  */ public void setServer(String server) {     this.server = server. }
+false;public;0;3;;public String getServerFqdn() {     return serverFqdn. }
+true;public;1;6;/**  * The Server Fully Qualified Domain Name (FQDN).  * Used in message ids sent by endpoint.  */ ;/**  * The Server Fully Qualified Domain Name (FQDN).  * Used in message ids sent by endpoint.  */ public void setServerFqdn(String serverFqdn) {     if (clientFqdn == null) {         throw new RuntimeCamelException("Parameter 'serverFqdn' can not be null").     }     this.serverFqdn = serverFqdn. }
+false;public;0;3;;public String getTargetHostname() {     return targetHostname. }
+true;public;1;3;/**  * The host name (IP or DNS name) of target host.  */ ;/**  * The host name (IP or DNS name) of target host.  */ public void setTargetHostname(String targetHostname) {     this.targetHostname = targetHostname. }
+false;public;0;3;;public int getTargetPortNumber() {     return targetPortNumber. }
+true;public;1;7;/**  * The port number of target host. -1 indicates the scheme default port.  */ ;/**  * The port number of target host. -1 indicates the scheme default port.  */ public void setTargetPortNumber(String targetPortNumber) {     try {         this.targetPortNumber = Integer.valueOf(targetPortNumber).     } catch (NumberFormatException e) {         throw new RuntimeCamelException(String.format("Invalid target port number: %s", targetPortNumber)).     } }
+true;public;1;3;/**  * The port number of target host. -1 indicates the scheme default port.  */ ;/**  * The port number of target host. -1 indicates the scheme default port.  */ public void setTargetPortNumber(Integer targetPortNumber) {     this.targetPortNumber = targetPortNumber. }
+false;public;0;3;;public String getClientFqdn() {     return clientFqdn. }
+true;public;1;6;/**  * The Client Fully Qualified Domain Name (FQDN).  * Used in message ids sent by endpoint.  */ ;/**  * The Client Fully Qualified Domain Name (FQDN).  * Used in message ids sent by endpoint.  */ public void setClientFqdn(String clientFqdn) {     if (clientFqdn == null) {         throw new RuntimeCamelException("Parameter 'clientFqdn' can not be null").     }     this.clientFqdn = clientFqdn. }
+false;public;0;3;;public Integer getServerPortNumber() {     return serverPortNumber. }
+true;public;1;7;/**  * The port number of server.  */ ;/**  * The port number of server.  */ public void setServerPortNumber(String serverPortNumber) {     try {         this.serverPortNumber = Integer.valueOf(serverPortNumber).     } catch (NumberFormatException e) {         throw new RuntimeCamelException(String.format("Invalid target port number: %s", targetPortNumber)).     } }
+true;public;1;3;/**  * The port number of server.  */ ;/**  * The port number of server.  */ public void setServerPortNumber(Integer serverPortNumber) {     this.serverPortNumber = serverPortNumber. }
+false;public;0;3;;public String getRequestUri() {     return requestUri. }
+true;public;1;3;/**  * The request URI of EDI message.  */ ;/**  * The request URI of EDI message.  */ public void setRequestUri(String requestUri) {     this.requestUri = requestUri. }
+false;public;0;3;;public ContentType getEdiMessageType() {     return ediMessageType. }
+true;public;1;3;/**  * The content type of EDI message.  * One of application/edifact, application/edi-x12, application/edi-consent  */ ;/**  * The content type of EDI message.  * One of application/edifact, application/edi-x12, application/edi-consent  */ public void setEdiMessageType(ContentType ediMessageType) {     this.ediMessageType = ediMessageType. }
+false;public;0;3;;public String getEdiMessageTransferEncoding() {     return ediMessageTransferEncoding. }
+true;public;1;3;/**  * The transfer encoding of EDI message.  */ ;/**  * The transfer encoding of EDI message.  */ public void setEdiMessageTransferEncoding(String ediMessageTransferEncoding) {     this.ediMessageTransferEncoding = ediMessageTransferEncoding. }
+false;public;0;3;;public AS2MessageStructure getAs2MessageStructure() {     return as2MessageStructure. }
+true;public;1;3;/**  * The structure of AS2 Message. One of:  * PLAIN - No encryption, no signature,  * SIGNED - No encryption, signature,  * ENCRYPTED - Encryption, no signature,  * ENCRYPTED_SIGNED - Encryption, signature  */ ;/**  * The structure of AS2 Message. One of:  * PLAIN - No encryption, no signature,  * SIGNED - No encryption, signature,  * ENCRYPTED - Encryption, no signature,  * ENCRYPTED_SIGNED - Encryption, signature  */ public void setAs2MessageStructure(AS2MessageStructure as2MessageStructure) {     this.as2MessageStructure = as2MessageStructure. }
+false;public;0;3;;public String getSubject() {     return subject. }
+true;public;1;3;/**  * The value of Subject header of AS2 message.  */ ;/**  * The value of Subject header of AS2 message.  */ public void setSubject(String subject) {     this.subject = subject. }
+false;public;0;3;;public String getFrom() {     return from. }
+true;public;1;3;/**  * The value of the From header of AS2 message.  */ ;/**  * The value of the From header of AS2 message.  */ public void setFrom(String from) {     this.from = from. }
+false;public;0;3;;public String getAs2From() {     return as2From. }
+true;public;1;3;/**  * The value of the AS2From header of AS2 message.  */ ;/**  * The value of the AS2From header of AS2 message.  */ public void setAs2From(String as2From) {     this.as2From = as2From. }
+false;public;0;3;;public String getAs2To() {     return as2To. }
+true;public;1;3;/**  * The value of the AS2To header of AS2 message.  */ ;/**  * The value of the AS2To header of AS2 message.  */ public void setAs2To(String as2To) {     this.as2To = as2To. }
+false;public;0;3;;public AS2SignatureAlgorithm getSigningAlgorithm() {     return signingAlgorithm. }
+true;public;1;3;/**  * The algorithm used to sign EDI message.  */ ;/**  * The algorithm used to sign EDI message.  */ public void setSigningAlgorithm(AS2SignatureAlgorithm signingAlgorithm) {     this.signingAlgorithm = signingAlgorithm. }
+false;public;0;3;;public Certificate[] getSigningCertificateChain() {     return signingCertificateChain. }
+true;public;1;3;/**  * The chain of certificates used to sign EDI message.  */ ;/**  * The chain of certificates used to sign EDI message.  */ public void setSigningCertificateChain(Certificate[] signingCertificateChain) {     this.signingCertificateChain = signingCertificateChain. }
+false;public;0;3;;public PrivateKey getSigningPrivateKey() {     return signingPrivateKey. }
+true;public;1;3;/**  * The key used to sign the EDI message.  */ ;/**  * The key used to sign the EDI message.  */ public void setSigningPrivateKey(PrivateKey signingPrivateKey) {     this.signingPrivateKey = signingPrivateKey. }
+false;public;0;3;;public AS2CompressionAlgorithm getCompressionAlgorithm() {     return compressionAlgorithm. }
+true;public;1;3;/**  * The algorithm used to compress EDI message.  */ ;/**  * The algorithm used to compress EDI message.  */ public void setCompressionAlgorithm(AS2CompressionAlgorithm compressionAlgorithm) {     this.compressionAlgorithm = compressionAlgorithm. }
+false;public;0;3;;public String getDispositionNotificationTo() {     return dispositionNotificationTo. }
+true;public;1;3;/**  * The value of the Disposition-Notification-To header.  *  * Assigning a value to this parameter requests a message disposition  * notification (MDN) for the AS2 message.  */ ;/**  * The value of the Disposition-Notification-To header.  *  * Assigning a value to this parameter requests a message disposition  * notification (MDN) for the AS2 message.  */ public void setDispositionNotificationTo(String dispositionNotificationTo) {     this.dispositionNotificationTo = dispositionNotificationTo. }
+false;public;0;3;;public String[] getSignedReceiptMicAlgorithms() {     return signedReceiptMicAlgorithms. }
+true;public;1;3;/**  * The list of algorithms, in order of preference, requested to generate a  * message integrity check (MIC) returned in message dispostion notification  * (MDN)  */ ;/**  * The list of algorithms, in order of preference, requested to generate a  * message integrity check (MIC) returned in message dispostion notification  * (MDN)  */ public void setSignedReceiptMicAlgorithms(String[] signedReceiptMicAlgorithms) {     this.signedReceiptMicAlgorithms = signedReceiptMicAlgorithms. }
+false;public;0;3;;public AS2EncryptionAlgorithm getEncryptingAlgorithm() {     return encryptingAlgorithm. }
+true;public;1;3;/**  * The algorithm used to encrypt EDI message.  */ ;/**  * The algorithm used to encrypt EDI message.  */ public void setEncryptingAlgorithm(AS2EncryptionAlgorithm encryptingAlgorithm) {     this.encryptingAlgorithm = encryptingAlgorithm. }
+false;public;0;3;;public Certificate[] getEncryptingCertificateChain() {     return encryptingCertificateChain. }
+true;public;1;3;/**  * The chain of certificates used to encrypt EDI message.  */ ;/**  * The chain of certificates used to encrypt EDI message.  */ public void setEncryptingCertificateChain(Certificate[] signingCertificateChain) {     this.encryptingCertificateChain = signingCertificateChain. }
+false;public;0;3;;public PrivateKey getDecryptingPrivateKey() {     return decryptingPrivateKey. }
+true;public;1;3;/**  * The key used to encrypt the EDI message.  */ ;/**  * The key used to encrypt the EDI message.  */ public void setDecryptingPrivateKey(PrivateKey signingPrivateKey) {     this.decryptingPrivateKey = signingPrivateKey. }
+false;public;0;3;;public String getMdnMessageTemplate() {     return mdnMessageTemplate. }
+true;public;1;3;/**  * The template used to format MDN message  */ ;/**  * The template used to format MDN message  */ public void setMdnMessageTemplate(String mdnMessageTemplate) {     this.mdnMessageTemplate = mdnMessageTemplate. }

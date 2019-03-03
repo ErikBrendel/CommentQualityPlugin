@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Autowired(required = false) public void setConfigurers(List<WebSocketConfigurer> configurers) {     if (!CollectionUtils.isEmpty(configurers)) {         this.configurers.addAll(configurers).     } }
+false;protected;1;6;;@Override protected void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {     for (WebSocketConfigurer configurer : this.configurers) {         configurer.registerWebSocketHandlers(registry).     } }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;3;/**  * Throws an ElasticsearchSecurityException if the specified mode is not allowed  */ ;/**  * Throws an ElasticsearchSecurityException if the specified mode is not allowed  */ public void checkIfSqlAllowed(Mode mode) {     checkIfSqlAllowed.accept(mode). }

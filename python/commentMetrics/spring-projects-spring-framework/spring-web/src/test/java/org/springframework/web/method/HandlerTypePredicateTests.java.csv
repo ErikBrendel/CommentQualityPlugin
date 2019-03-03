@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void forAnnotation() {     Predicate<Class<?>> predicate = HandlerTypePredicate.forAnnotation(Controller.class).     assertTrue(predicate.test(HtmlController.class)).     assertTrue(predicate.test(ApiController.class)).     assertTrue(predicate.test(AnotherApiController.class)). }
+false;public;0;10;;@Test public void forAnnotationWithException() {     Predicate<Class<?>> predicate = HandlerTypePredicate.forAnnotation(Controller.class).and(HandlerTypePredicate.forAssignableType(Special.class)).     assertFalse(predicate.test(HtmlController.class)).     assertFalse(predicate.test(ApiController.class)).     assertTrue(predicate.test(AnotherApiController.class)). }

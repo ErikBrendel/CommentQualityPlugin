@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;1;6;;private String pattern(String type) {     if (Strings.isEmpty(type)) {         throw new IllegalArgumentException("layout parameter 'type_name' cannot be empty").     }     return PATTERN.replace("${TYPE}", type). }
+false;public,static;2;5;;@PluginFactory public static ESJsonLayout createLayout(@PluginAttribute("type_name") String type, @PluginAttribute(value = "charset", defaultString = "UTF-8") Charset charset) {     return new ESJsonLayout(type, charset). }
+false;public;1;4;;@Override public String toSerializable(final LogEvent event) {     return patternLayout.toSerializable(event). }
+false;public;0;4;;@Override public Map<String, String> getContentFormat() {     return patternLayout.getContentFormat(). }
+false;public;2;4;;@Override public void encode(final LogEvent event, final ByteBufferDestination destination) {     patternLayout.encode(event, destination). }
+false;public;0;7;;@Override public String toString() {     final StringBuilder sb = new StringBuilder("ESJsonLayout{").     sb.append("patternLayout=").append(patternLayout).     sb.append('}').     return sb.toString(). }

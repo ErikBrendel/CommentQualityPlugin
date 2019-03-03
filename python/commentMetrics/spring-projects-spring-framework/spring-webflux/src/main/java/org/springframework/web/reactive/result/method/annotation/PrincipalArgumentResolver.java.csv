@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public boolean supportsParameter(MethodParameter parameter) {     return checkParameterType(parameter, Principal.class::isAssignableFrom). }
+false;public;3;8;;@Override public Mono<Object> resolveArgument(MethodParameter parameter, BindingContext context, ServerWebExchange exchange) {     Mono<Principal> principal = exchange.getPrincipal().     ReactiveAdapter adapter = getAdapterRegistry().getAdapter(parameter.getParameterType()).     return (adapter != null ? Mono.just(adapter.fromPublisher(principal)) : Mono.from(principal)). }

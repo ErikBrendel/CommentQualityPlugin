@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,abstract;1;1;;public abstract void updateValue(long newValue).
+false;public;0;3;;public void increment() {     updateValue(1). }
+false;public;0;3;;public void decrement() {     updateValue(-1). }
+false;public,abstract;0;1;;public abstract long getValue().
+true;public,abstract;0;1;/**  * Whether the statistic has been updated one or more times.  * Notice this is only working for value, maximum and minimum modes.  */ ;/**  * Whether the statistic has been updated one or more times.  * Notice this is only working for value, maximum and minimum modes.  */ public abstract boolean isUpdated().
+false;public,abstract;0;1;;public abstract void reset().

@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getProvider() {     return provider. }
+false;public;1;3;;public void setProvider(String provider) {     this.provider = provider. }
+false;public;1;4;;@Override public KeySelector getKeySelector(Message message) throws Exception {     return this. }
+false;public;3;4;;@Override public KeyInfo getKeyInfo(Message message, Node messageBody, KeyInfoFactory factory) throws Exception {     return createKeyInfo(factory). }
+false;private;1;9;;private KeyInfo createKeyInfo(KeyInfoFactory kif) throws Exception {     X509Certificate[] chain = getCertificateChain().     if (chain == null) {         return null.     }     X509Data x509D = kif.newX509Data(Arrays.asList(chain)).     return kif.newKeyInfo(Collections.singletonList(x509D), "_" + UUID.randomUUID().toString()). }
+false;private;0;21;;private X509Certificate[] getCertificateChain() throws Exception {     KeyStore keystore = getKeyStore().     if (keystore == null) {         return null.     }     String alias = getAlias().     if (alias == null) {         return null.     }     Certificate[] certs = keystore.getCertificateChain(alias).     if (certs == null) {         return null.     }     ArrayList<X509Certificate> certList = new ArrayList<>(certs.length).     for (Certificate cert : certs) {         if (cert instanceof X509Certificate) {             certList.add((X509Certificate) cert).         }     }     return certList.toArray(new X509Certificate[certList.size()]). }

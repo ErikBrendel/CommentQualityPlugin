@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;4;;@Deployment public static Archive<?> createSpringBootPackage() throws Exception {     return ArquillianPackager.springBootPackage(createTestConfig()). }
+false;public,static;0;5;;public static ITestConfig createTestConfig() {     return new ITestConfigBuilder().module(inferModuleName(CamelOpenstackTest.class)).build(). }
+false;public;0;10;;@Test public void componentTests() throws Exception {     this.runComponentTest(config, "openstack-cinder").     this.runComponentTest(config, "openstack-glance").     this.runComponentTest(config, "openstack-keystone").     this.runComponentTest(config, "openstack-neutron").     this.runComponentTest(config, "openstack-nova").     this.runComponentTest(config, "openstack-swift").     this.runModuleUnitTestsIfEnabled(config). }

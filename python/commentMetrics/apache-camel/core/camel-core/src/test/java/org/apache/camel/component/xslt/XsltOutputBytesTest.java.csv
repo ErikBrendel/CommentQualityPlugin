@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@Test public void testXsltOutput() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedBodiesReceived("<?xml version=\"1.0\" encoding=\"UTF-8\"?><goodbye>world!</goodbye>").     mock.message(0).body().isInstanceOf(byte[].class).     template.sendBody("direct:start", "<hello>world!</hello>").     assertMockEndpointsSatisfied(). }
+false;public;0;6;;@Override public void configure() throws Exception {     from("direct:start").to("xslt:org/apache/camel/component/xslt/example.xsl?output=bytes").to("mock:result"). }
+false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").to("xslt:org/apache/camel/component/xslt/example.xsl?output=bytes").to("mock:result").         }     }. }

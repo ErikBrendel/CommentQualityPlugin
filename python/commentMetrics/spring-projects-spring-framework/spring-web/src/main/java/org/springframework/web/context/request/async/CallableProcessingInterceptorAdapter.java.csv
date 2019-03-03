@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;3;;@Override public <T> void beforeConcurrentHandling(NativeWebRequest request, Callable<T> task) throws Exception { }
+false;public;2;3;;@Override public <T> void preProcess(NativeWebRequest request, Callable<T> task) throws Exception { }
+false;public;3;3;;@Override public <T> void postProcess(NativeWebRequest request, Callable<T> task, Object concurrentResult) throws Exception { }
+false;public;2;4;;@Override public <T> Object handleTimeout(NativeWebRequest request, Callable<T> task) throws Exception {     return RESULT_NONE. }
+false;public;3;4;;@Override public <T> Object handleError(NativeWebRequest request, Callable<T> task, Throwable t) throws Exception {     return RESULT_NONE. }
+false;public;2;3;;@Override public <T> void afterCompletion(NativeWebRequest request, Callable<T> task) throws Exception { }

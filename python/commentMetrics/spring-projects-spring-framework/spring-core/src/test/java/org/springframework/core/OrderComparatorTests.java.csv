@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void compareOrderedInstancesBefore() {     assertEquals(-1, this.comparator.compare(new StubOrdered(100), new StubOrdered(2000))). }
+false;public;0;4;;@Test public void compareOrderedInstancesSame() {     assertEquals(0, this.comparator.compare(new StubOrdered(100), new StubOrdered(100))). }
+false;public;0;4;;@Test public void compareOrderedInstancesAfter() {     assertEquals(1, this.comparator.compare(new StubOrdered(982300), new StubOrdered(100))). }
+false;public;0;4;;@Test public void compareOrderedInstancesNullFirst() {     assertEquals(1, this.comparator.compare(null, new StubOrdered(100))). }
+false;public;0;4;;@Test public void compareOrderedInstancesNullLast() {     assertEquals(-1, this.comparator.compare(new StubOrdered(100), null)). }
+false;public;0;4;;@Test public void compareOrderedInstancesDoubleNull() {     assertEquals(0, this.comparator.compare(null, null)). }
+false;public;0;4;;@Test public void compareTwoNonOrderedInstancesEndsUpAsSame() {     assertEquals(0, this.comparator.compare(new Object(), new Object())). }
+false;public;0;6;;@Test public void compareWithSimpleSourceProvider() {     Comparator<Object> customComparator = this.comparator.withSourceProvider(new TestSourceProvider(5L, new StubOrdered(25))).     assertEquals(-1, customComparator.compare(new StubOrdered(10), 5L)). }
+false;public;0;6;;@Test public void compareWithSourceProviderArray() {     Comparator<Object> customComparator = this.comparator.withSourceProvider(new TestSourceProvider(5L, new Object[] { new StubOrdered(10), new StubOrdered(-25) })).     assertEquals(-1, customComparator.compare(5L, new Object())). }
+false;public;0;6;;@Test public void compareWithSourceProviderArrayNoMatch() {     Comparator<Object> customComparator = this.comparator.withSourceProvider(new TestSourceProvider(5L, new Object[] { new Object(), new Object() })).     assertEquals(0, customComparator.compare(new Object(), 5L)). }
+false;public;0;6;;@Test public void compareWithSourceProviderEmpty() {     Comparator<Object> customComparator = this.comparator.withSourceProvider(new TestSourceProvider(50L, new Object())).     assertEquals(0, customComparator.compare(new Object(), 5L)). }
+false;public;1;7;;@Override public Object getOrderSource(Object obj) {     if (target.equals(obj)) {         return orderSource.     }     return null. }
+false;public;0;4;;@Override public int getOrder() {     return this.order. }

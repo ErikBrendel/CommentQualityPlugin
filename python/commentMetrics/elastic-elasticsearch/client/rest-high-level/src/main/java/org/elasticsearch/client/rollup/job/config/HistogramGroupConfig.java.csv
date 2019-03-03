@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;14;;@Override public Optional<ValidationException> validate() {     final ValidationException validationException = new ValidationException().     if (fields == null || fields.length == 0) {         validationException.addValidationError("Fields must have at least one value").     }     if (interval <= 0) {         validationException.addValidationError("Interval must be a positive long").     }     if (validationException.validationErrors().isEmpty()) {         return Optional.empty().     }     return Optional.of(validationException). }
+false;public;0;3;;public long getInterval() {     return interval. }
+false;public;0;3;;public String[] getFields() {     return fields. }
+false;public;2;10;;@Override public XContentBuilder toXContent(final XContentBuilder builder, final Params params) throws IOException {     builder.startObject().     {         builder.field(INTERVAL, interval).         builder.field(FIELDS, fields).     }     builder.endObject().     return builder. }
+false;public;1;11;;@Override public boolean equals(final Object other) {     if (this == other) {         return true.     }     if (other == null || getClass() != other.getClass()) {         return false.     }     final HistogramGroupConfig that = (HistogramGroupConfig) other.     return Objects.equals(interval, that.interval) && Arrays.equals(fields, that.fields). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(interval, Arrays.hashCode(fields)). }
+false;public,static;1;3;;public static HistogramGroupConfig fromXContent(final XContentParser parser) throws IOException {     return PARSER.parse(parser, null). }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;2;6;;private boolean welcomeTemplateExists(TemplateAvailabilityProviders templateAvailabilityProviders, ApplicationContext applicationContext) {     return templateAvailabilityProviders.getProvider("index", applicationContext) != null. }
+false;private;1;6;;private void setRootViewName(String viewName) {     ParameterizableViewController controller = new ParameterizableViewController().     controller.setViewName(viewName).     setRootHandler(controller).     setOrder(2). }
+false;public;1;9;;@Override public Object getHandlerInternal(HttpServletRequest request) throws Exception {     for (MediaType mediaType : getAcceptedMediaTypes(request)) {         if (mediaType.includes(MediaType.TEXT_HTML)) {             return super.getHandlerInternal(request).         }     }     return null. }
+false;private;1;7;;private List<MediaType> getAcceptedMediaTypes(HttpServletRequest request) {     String acceptHeader = request.getHeader(HttpHeaders.ACCEPT).     if (StringUtils.hasText(acceptHeader)) {         return MediaType.parseMediaTypes(acceptHeader).     }     return MEDIA_TYPES_ALL. }

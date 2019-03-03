@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;4;// This should *not* recognized as a bean since it does not reside inside an @Component ;// This should *not* recognized as a bean since it does not reside inside an @Component @Bean public TestBean getPublicInstance() {     return new TestBean("publicInstance"). }

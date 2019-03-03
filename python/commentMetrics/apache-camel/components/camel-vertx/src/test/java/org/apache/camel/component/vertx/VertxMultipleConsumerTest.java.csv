@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void shouldSendMessageToMultpleConsumers() throws Exception {     resultEndpoint = context.getEndpoint(resultUri, MockEndpoint.class).     resultEndpoint.expectedMessageCount(2).     template.sendBody(startUri, "msg").     resultEndpoint.assertIsSatisfied(). }
+false;public;0;4;;public void configure() throws Exception {     from(startUri).to(resultUri).     from(startUri).to(resultUri). }
+false;protected;0;8;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from(startUri).to(resultUri).             from(startUri).to(resultUri).         }     }. }

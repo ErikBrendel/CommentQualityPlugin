@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;3;21;;@Override protected Endpoint createEndpoint(String uri, String remaining, Map<String, Object> parameters) throws Exception {     IAMConfiguration configuration = this.configuration.copy().     setProperties(configuration, parameters).     if (ObjectHelper.isEmpty(configuration.getAccessKey())) {         setAccessKey(accessKey).     }     if (ObjectHelper.isEmpty(configuration.getSecretKey())) {         setSecretKey(secretKey).     }     if (ObjectHelper.isEmpty(configuration.getRegion())) {         setRegion(region).     }     if (configuration.getIamClient() == null && (configuration.getAccessKey() == null || configuration.getSecretKey() == null)) {         throw new IllegalArgumentException("Amazon IAM client or accessKey and secretKey must be specified").     }     IAMEndpoint endpoint = new IAMEndpoint(uri, this, configuration).     return endpoint. }
+false;public;0;3;;public IAMConfiguration getConfiguration() {     return configuration. }
+true;public;1;3;/**  * The AWS IAM default configuration  */ ;/**  * The AWS IAM default configuration  */ public void setConfiguration(IAMConfiguration configuration) {     this.configuration = configuration. }
+false;public;0;3;;public String getAccessKey() {     return configuration.getAccessKey(). }
+true;public;1;3;/**  * Amazon AWS Access Key  */ ;/**  * Amazon AWS Access Key  */ public void setAccessKey(String accessKey) {     configuration.setAccessKey(accessKey). }
+false;public;0;3;;public String getSecretKey() {     return configuration.getSecretKey(). }
+true;public;1;3;/**  * Amazon AWS Secret Key  */ ;/**  * Amazon AWS Secret Key  */ public void setSecretKey(String secretKey) {     configuration.setSecretKey(secretKey). }
+false;public;0;3;;public String getRegion() {     return configuration.getRegion(). }
+true;public;1;3;/**  * The region in which IAM client needs to work  */ ;/**  * The region in which IAM client needs to work  */ public void setRegion(String region) {     configuration.setRegion(region). }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;8;;@Override protected CamelContext createCamelContext() throws Exception {     CamelContext context = super.createCamelContext().     context.setSSLContextParameters(getClientSSLContextParameters()).     ((SSLContextParametersAware) context.getComponent("stomp")).setUseGlobalSslContextParameters(true).     return context. }
+false;protected;0;4;;@Override protected boolean isUseSsl() {     return true. }
+false;public;0;5;;public void configure() {     fromF("stomp:test?brokerURL=ssl://localhost:%d", getPort()).transform(body().convertToString()).to("mock:result"). }
+false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             fromF("stomp:test?brokerURL=ssl://localhost:%d", getPort()).transform(body().convertToString()).to("mock:result").         }     }. }

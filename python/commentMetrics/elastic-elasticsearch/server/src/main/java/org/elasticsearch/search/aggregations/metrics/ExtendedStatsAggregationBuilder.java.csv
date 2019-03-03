@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;2;3;;public static AggregationBuilder parse(String aggregationName, XContentParser parser) throws IOException {     return PARSER.parse(parser, new ExtendedStatsAggregationBuilder(aggregationName), null). }
+false;protected;2;4;;@Override protected AggregationBuilder shallowCopy(Builder factoriesBuilder, Map<String, Object> metaData) {     return new ExtendedStatsAggregationBuilder(this, factoriesBuilder, metaData). }
+false;protected;1;4;;@Override protected void innerWriteTo(StreamOutput out) throws IOException {     out.writeDouble(sigma). }
+false;public;1;7;;public ExtendedStatsAggregationBuilder sigma(double sigma) {     if (sigma < 0.0) {         throw new IllegalArgumentException("[sigma] must be greater than or equal to 0. Found [" + sigma + "] in [" + name + "]").     }     this.sigma = sigma.     return this. }
+false;public;0;3;;public double sigma() {     return sigma. }
+false;protected;4;5;;@Override protected ExtendedStatsAggregatorFactory innerBuild(SearchContext context, ValuesSourceConfig<Numeric> config, AggregatorFactory<?> parent, Builder subFactoriesBuilder) throws IOException {     return new ExtendedStatsAggregatorFactory(name, config, sigma, context, parent, subFactoriesBuilder, metaData). }
+false;public;2;5;;@Override public XContentBuilder doXContentBody(XContentBuilder builder, Params params) throws IOException {     builder.field(ExtendedStatsAggregator.SIGMA_FIELD.getPreferredName(), sigma).     return builder. }
+false;protected;0;4;;@Override protected int innerHashCode() {     return Objects.hash(sigma). }
+false;protected;1;5;;@Override protected boolean innerEquals(Object obj) {     ExtendedStatsAggregationBuilder other = (ExtendedStatsAggregationBuilder) obj.     return Objects.equals(sigma, other.sigma). }
+false;public;0;4;;@Override public String getType() {     return NAME. }

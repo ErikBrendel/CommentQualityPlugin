@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;12;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     try {         new ClassPathXmlApplicationContext("org/apache/camel/spring/processor/filterNoChild.xml").         fail("Should thrown an exception").     } catch (RuntimeCamelException e) {         FailedToCreateRouteException cause = assertIsInstanceOf(FailedToCreateRouteException.class, e.getCause()).         IllegalArgumentException iae = assertIsInstanceOf(IllegalArgumentException.class, cause.getCause()).         assertEquals("Definition has no children on Filter[xpath{$foo = 'bar'} -> []]", iae.getMessage()).     }     return null. }
+false;public;0;6;;@Override @Before public void setUp() throws Exception {     // must override as there is no valid spring xml file     createApplicationContext(). }
+false;public;0;4;;@Test public void testFilterNoOutput() throws Exception { // noop }

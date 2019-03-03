@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void toStaticResourcesShouldReturnStaticResourceRequest() {     assertThat(PathRequest.toStaticResources()).isInstanceOf(StaticResourceRequest.class). }
+false;public;0;7;;@Test public void toH2ConsoleShouldMatchH2ConsolePath() {     RequestMatcher matcher = PathRequest.toH2Console().     assertMatcher(matcher).matches("/h2-console").     assertMatcher(matcher).matches("/h2-console/subpath").     assertMatcher(matcher).doesNotMatch("/js/file.js"). }
+false;private;1;6;;private RequestMatcherAssert assertMatcher(RequestMatcher matcher) {     StaticWebApplicationContext context = new StaticWebApplicationContext().     context.registerBean(ServerProperties.class).     context.registerBean(H2ConsoleProperties.class).     return assertThat(new RequestMatcherAssert(context, matcher)). }
+false;public;1;3;;public void matches(String path) {     matches(mockRequest(path)). }
+false;private;1;4;;private void matches(HttpServletRequest request) {     assertThat(this.matcher.matches(request)).as("Matches " + getRequestPath(request)).isTrue(). }
+false;public;1;3;;public void doesNotMatch(String path) {     doesNotMatch(mockRequest(path)). }
+false;private;1;4;;private void doesNotMatch(HttpServletRequest request) {     assertThat(this.matcher.matches(request)).as("Does not match " + getRequestPath(request)).isFalse(). }
+false;private;1;9;;private MockHttpServletRequest mockRequest(String path) {     MockServletContext servletContext = new MockServletContext().     servletContext.setAttribute(WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE, this.context).     MockHttpServletRequest request = new MockHttpServletRequest(servletContext).     request.setPathInfo(path).     return request. }
+false;private;1;7;;private String getRequestPath(HttpServletRequest request) {     String url = request.getServletPath().     if (request.getPathInfo() != null) {         url += request.getPathInfo().     }     return url. }

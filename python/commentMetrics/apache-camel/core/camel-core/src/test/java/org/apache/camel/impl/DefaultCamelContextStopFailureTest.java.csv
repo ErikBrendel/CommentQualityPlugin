@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;8;;@Override protected CamelContext createCamelContext() throws Exception {     CamelContext context = super.createCamelContext().     context.addService(new MyService("A", false)).     context.addService(new MyService("B", true)).     context.addService(new MyService("C", false)).     return context. }
+false;public;0;8;;@Test public void testStopWithFailure() throws Exception {     stopOrder = "".     context.stop().     assertEquals("CBA", stopOrder). }
+false;public;0;2;;public void start() throws Exception { }
+false;public;0;7;;public void stop() throws Exception {     stopOrder = stopOrder + name.     if (fail) {         throw new IllegalArgumentException("Fail " + name).     } }

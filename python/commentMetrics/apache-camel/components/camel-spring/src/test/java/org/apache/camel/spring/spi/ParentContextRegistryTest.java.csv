@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;9;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     ClassPathXmlApplicationContext parentContext = new ClassPathXmlApplicationContext("parentContextRegistryTestParent.xml", ParentContextRegistryTest.class).     return new ClassPathXmlApplicationContext(new String[] { "parentContextRegistryTestChild.xml" }, ParentContextRegistryTest.class, parentContext). }
+false;public;0;4;;@Test public void testLookupByName() {     assertEquals(EXPECTED_BEAN, context.getRegistry().lookupByName("testParentBean")). }
+false;public;0;4;;@Test public void testLookupByNameAndType() {     assertEquals(EXPECTED_BEAN, context.getRegistry().lookupByNameAndType("testParentBean", List.class)). }
+false;public;0;4;;@Test public void testFindByType() {     assertEquals(Collections.singleton(EXPECTED_BEAN), context.getRegistry().findByType(List.class)). }
+false;public;0;5;;@Test public void testFindByTypeWithName() {     assertEquals(Collections.singletonMap("testParentBean", EXPECTED_BEAN), context.getRegistry().findByTypeWithName(List.class)). }

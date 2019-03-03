@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;8;;@Override protected AsyncListenableTaskExecutor buildExecutor() {     ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor().     executor.setThreadNamePrefix(THREAD_NAME_PREFIX).     executor.setMaxPoolSize(1).     executor.afterPropertiesSet().     return executor. }

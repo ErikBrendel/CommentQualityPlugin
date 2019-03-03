@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected Request createTestInstance() {     return new PutFilterAction.Request(MlFilterTests.createRandom(filterId)). }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return false. }
+false;protected;0;4;;@Override protected Request createBlankInstance() {     return new PutFilterAction.Request(). }
+false;protected;1;4;;@Override protected Request doParseInstance(XContentParser parser) {     return PutFilterAction.Request.parseRequest(filterId, parser). }

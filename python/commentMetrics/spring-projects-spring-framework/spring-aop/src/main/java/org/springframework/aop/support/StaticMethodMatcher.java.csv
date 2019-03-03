@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,final;0;4;;@Override public final boolean isRuntime() {     return false. }
+false;public,final;3;5;;@Override public final boolean matches(Method method, Class<?> targetClass, Object... args) {     // should never be invoked because isRuntime() returns false     throw new UnsupportedOperationException("Illegal MethodMatcher usage"). }

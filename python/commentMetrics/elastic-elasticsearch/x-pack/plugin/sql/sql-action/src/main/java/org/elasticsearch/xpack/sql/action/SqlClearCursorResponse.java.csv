@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * @return Whether the attempt to clear a cursor was successful.  */ ;/**  * @return Whether the attempt to clear a cursor was successful.  */ public boolean isSucceeded() {     return succeeded. }
+false;public;1;4;;public SqlClearCursorResponse setSucceeded(boolean succeeded) {     this.succeeded = succeeded.     return this. }
+false;public;0;4;;@Override public RestStatus status() {     return succeeded ? NOT_FOUND : OK. }
+false;public;2;7;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(SUCCEEDED.getPreferredName(), succeeded).     builder.endObject().     return builder. }
+false;public;1;5;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     succeeded = in.readBoolean(). }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeBoolean(succeeded). }
+false;public;1;7;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     SqlClearCursorResponse response = (SqlClearCursorResponse) o.     return succeeded == response.succeeded. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(succeeded). }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;6;;@Override protected boolean isEndpointExposed(Object endpointBean) {     Class<?> type = ClassUtils.getUserClass(endpointBean.getClass()).     return AnnotatedElementUtils.isAnnotated(type, ControllerEndpoint.class) || AnnotatedElementUtils.isAnnotated(type, RestControllerEndpoint.class). }
+false;protected;4;7;;@Override protected ExposableControllerEndpoint createEndpoint(Object endpointBean, EndpointId id, boolean enabledByDefault, Collection<Operation> operations) {     String rootPath = PathMapper.getRootPath(this.endpointPathMappers, id).     return new DiscoveredControllerEndpoint(this, endpointBean, id, rootPath, enabledByDefault). }
+false;protected;3;6;;@Override protected Operation createOperation(EndpointId endpointId, DiscoveredOperationMethod operationMethod, OperationInvoker invoker) {     throw new IllegalStateException("ControllerEndpoints must not declare operations"). }
+false;protected;1;5;;@Override protected OperationKey createOperationKey(Operation operation) {     throw new IllegalStateException("ControllerEndpoints must not declare operations"). }

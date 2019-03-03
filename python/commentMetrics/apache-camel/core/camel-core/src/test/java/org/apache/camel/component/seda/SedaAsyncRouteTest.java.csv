@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;12;;@Test public void testSendAsync() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedBodiesReceived("Hello World").     // START SNIPPET: e2     Object out = template.requestBody("direct:start", "Hello World").     assertEquals("OK", out).     // END SNIPPET: e2     assertMockEndpointsSatisfied(). }
+true;public;0;9;// START SNIPPET: e1 ;// START SNIPPET: e1 public void configure() throws Exception {     from("direct:start").to("seda:next").transform(constant("OK")).     from("seda:next").to("mock:result"). }
+false;protected;0;16;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          // START SNIPPET: e1         public void configure() throws Exception {             from("direct:start").to("seda:next").transform(constant("OK")).             from("seda:next").to("mock:result").         }     }. }

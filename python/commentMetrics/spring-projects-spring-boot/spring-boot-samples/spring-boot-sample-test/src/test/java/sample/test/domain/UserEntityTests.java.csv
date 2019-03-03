@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void createWhenUsernameIsNullShouldThrowException() {     assertThatIllegalArgumentException().isThrownBy(() -> new User(null, VIN)).withMessage("Username must not be empty"). }
+false;public;0;5;;@Test public void createWhenUsernameIsEmptyShouldThrowException() {     assertThatIllegalArgumentException().isThrownBy(() -> new User("", VIN)).withMessage("Username must not be empty"). }
+false;public;0;5;;@Test public void createWhenVinIsNullShouldThrowException() {     assertThatIllegalArgumentException().isThrownBy(() -> new User("sboot", null)).withMessage("VIN must not be null"). }
+false;public;0;6;;@Test public void saveShouldPersistData() {     User user = this.entityManager.persistFlushFind(new User("sboot", VIN)).     assertThat(user.getUsername()).isEqualTo("sboot").     assertThat(user.getVin()).isEqualTo(VIN). }

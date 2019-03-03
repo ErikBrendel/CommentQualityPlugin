@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;@Override public void start() throws Exception { }
+false;public;0;4;;@Override public void stop() throws Exception {     InvokerHelper.removeClass(script). }
+false;public,static;1;3;;public static GroovyExpression groovy(String expression) {     return new GroovyLanguage().createExpression(expression). }
+false;public;1;3;;public GroovyExpression createPredicate(String expression) {     return createExpression(expression). }
+false;public;1;4;;public GroovyExpression createExpression(String expression) {     expression = loadResource(expression).     return new GroovyExpression(expression). }
+false;;1;9;;Class<Script> getScriptFromCache(String script) {     final GroovyClassService cached = scriptCache.get(script).     if (cached == null) {         return null.     }     return cached.script. }
+false;;2;3;;void addScriptToCache(String script, Class<Script> scriptClass) {     scriptCache.put(script, new GroovyClassService(scriptClass)). }

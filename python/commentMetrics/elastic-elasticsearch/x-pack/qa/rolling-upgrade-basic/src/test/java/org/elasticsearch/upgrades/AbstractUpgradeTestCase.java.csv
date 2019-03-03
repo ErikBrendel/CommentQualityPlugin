@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected boolean preserveIndicesUponCompletion() {     return true. }
+false;protected;0;4;;@Override protected boolean preserveReposUponCompletion() {     return true. }
+false;protected;0;4;;@Override protected boolean preserveTemplatesUponCompletion() {     return true. }
+false;protected;0;4;;@Override protected boolean preserveRollupJobsUponCompletion() {     return true. }
+false;protected;0;4;;@Override protected boolean preserveILMPoliciesUponCompletion() {     return true. }
+false;public,static;1;12;;public static CLUSTER_TYPE parse(String value) {     switch(value) {         case "old_cluster":             return OLD.         case "mixed_cluster":             return MIXED.         case "upgraded_cluster":             return UPGRADED.         default:             throw new AssertionError("unknown cluster type: " + value).     } }

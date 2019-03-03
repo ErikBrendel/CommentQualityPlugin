@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Version getVersion() {     return version. }
+false;public;0;3;;public long getRequestId() {     return requestId. }
+false;;0;3;;boolean isCompress() {     return TransportStatus.isCompress(status). }
+false;;0;3;;ThreadContext.StoredContext getStoredContext() {     return storedContext. }
+false;;0;3;;boolean isResponse() {     return TransportStatus.isRequest(status) == false. }
+false;;0;3;;boolean isRequest() {     return TransportStatus.isRequest(status). }
+false;;0;3;;boolean isHandshake() {     return TransportStatus.isHandshake(status). }
+false;;0;3;;boolean isError() {     return TransportStatus.isError(status). }

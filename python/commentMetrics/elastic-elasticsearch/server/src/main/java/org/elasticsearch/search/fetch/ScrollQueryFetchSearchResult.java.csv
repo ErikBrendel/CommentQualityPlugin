@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public QueryFetchSearchResult result() {     return result. }
+false;public;1;5;;@Override public void setSearchShardTarget(SearchShardTarget shardTarget) {     super.setSearchShardTarget(shardTarget).     result.setSearchShardTarget(shardTarget). }
+false;public;1;5;;@Override public void setShardIndex(int shardIndex) {     super.setShardIndex(shardIndex).     result.setShardIndex(shardIndex). }
+false;public;0;4;;@Override public QuerySearchResult queryResult() {     return result.queryResult(). }
+false;public;0;4;;@Override public FetchSearchResult fetchResult() {     return result.fetchResult(). }
+false;public;1;7;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     SearchShardTarget searchShardTarget = new SearchShardTarget(in).     result = readQueryFetchSearchResult(in).     setSearchShardTarget(searchShardTarget). }
+false;public;1;6;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     getSearchShardTarget().writeTo(out).     result.writeTo(out). }

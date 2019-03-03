@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;11;;@DirtiesContext @Test public void testSendMatchingMessage() throws Exception {     String expectedBody = "<matched/>".     resultEndpoint.expectedBodiesReceived(expectedBody).     template.sendBodyAndHeader(expectedBody, "foo", "bar").     resultEndpoint.assertIsSatisfied(). }
+false;public;0;9;;@DirtiesContext @Test public void testSendNotMatchingMessage() throws Exception {     resultEndpoint.expectedMessageCount(0).     template.sendBodyAndHeader("<notMatched/>", "foo", "notMatchedHeaderValue").     resultEndpoint.assertIsSatisfied(). }
+false;public;0;3;;public void configure() {     from("direct:start").filter(header("foo").isEqualTo("bar")).to("mock:result"). }
+false;public;0;8;;@Bean public RouteBuilder route() {     return new RouteBuilder() {          public void configure() {             from("direct:start").filter(header("foo").isEqualTo("bar")).to("mock:result").         }     }. }

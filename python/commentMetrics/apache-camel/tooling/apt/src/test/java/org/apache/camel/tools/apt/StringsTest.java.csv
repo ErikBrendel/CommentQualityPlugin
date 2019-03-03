@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void testBetween() {     assertEquals("org.apache.camel.model.OnCompletionDefinition", between("java.util.List<org.apache.camel.model.OnCompletionDefinition>", "<", ">")). }
+false;public;0;6;;@Test public void testAsTitle() {     assertEquals("Broker URL", asTitle("brokerURL")).     assertEquals("Expose All Queues", asTitle("exposeAllQueues")).     assertEquals("Reply To Concurrent Consumers", asTitle("replyToConcurrentConsumers")). }

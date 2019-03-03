@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Override public void generate(final Filer destination) throws IOException {     final JavaFile javaFile = generateSourceCode().     javaFile.writeTo(destination). }

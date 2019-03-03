@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/spring/processor/SpringRouteContextProduceBeanTest.xml"). }
+false;public;0;8;;@Test public void testRouteContextProduceBean() throws Exception {     getMockEndpoint("mock:result").expectedMessageCount(1).     template.sendBody("direct:start", "Hello World").     assertMockEndpointsSatisfied(). }

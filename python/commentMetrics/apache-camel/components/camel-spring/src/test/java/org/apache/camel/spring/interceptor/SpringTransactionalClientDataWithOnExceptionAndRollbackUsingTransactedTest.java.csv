@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;13;;@Test public void testTransactionRollback() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:error").     mock.expectedMessageCount(1).     String out = template.requestBody("direct:fail", "Hello World", String.class).     assertEquals("Sorry", out).     assertMockEndpointsSatisfied().     int count = jdbc.queryForObject("select count(*) from books", Integer.class).     assertEquals("Number of books", 1, count). }
+false;protected;0;4;;protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("/org/apache/camel/spring/interceptor/springTransactionalClientDataWithOnExceptionAndRollbackUsingTransacted.xml"). }

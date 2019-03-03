@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void testIsValidPackage() {     boolean valid = PackageHelper.isValidVersion("org.apache.camel", 2.0).     assertEquals("Should be Camel 2.0 or higher", true, valid). }

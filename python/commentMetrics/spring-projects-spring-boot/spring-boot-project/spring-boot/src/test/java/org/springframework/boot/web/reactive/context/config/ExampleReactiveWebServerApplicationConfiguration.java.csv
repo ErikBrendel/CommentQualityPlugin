@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Bean public MockReactiveWebServerFactory webServerFactory() {     return new MockReactiveWebServerFactory(). }
+false;public;0;4;;@Bean public HttpHandler httpHandler() {     return mock(HttpHandler.class). }

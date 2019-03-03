@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public QuartzEndpoint getEndpoint() {     return (QuartzEndpoint) super.getEndpoint(). }
+false;protected;0;5;;@Override protected void doStart() throws Exception {     super.doStart().     getEndpoint().onConsumerStart(this). }
+false;protected;0;5;;@Override protected void doStop() throws Exception {     getEndpoint().onConsumerStop(this).     super.doStop(). }

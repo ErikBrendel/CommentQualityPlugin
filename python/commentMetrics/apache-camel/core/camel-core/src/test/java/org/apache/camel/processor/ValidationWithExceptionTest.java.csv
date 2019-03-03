@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;public void configure() {     errorHandler(deadLetterChannel("mock:error")).     onException(ValidationException.class).to("mock:invalid").     from("direct:start").process(validator).to("mock:valid"). }
+false;protected;0;13;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             errorHandler(deadLetterChannel("mock:error")).             onException(ValidationException.class).to("mock:invalid").             from("direct:start").process(validator).to("mock:valid").         }     }. }

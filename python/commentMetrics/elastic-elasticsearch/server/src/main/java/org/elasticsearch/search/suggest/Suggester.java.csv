@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected,abstract;4;2;;protected abstract Suggest.Suggestion<? extends Suggest.Suggestion.Entry<? extends Suggest.Suggestion.Entry.Option>> innerExecute(String name, T suggestion, IndexSearcher searcher, CharsRefBuilder spare) throws IOException.
+false;public;4;9;;public Suggest.Suggestion<? extends Suggest.Suggestion.Entry<? extends Suggest.Suggestion.Entry.Option>> execute(String name, T suggestion, IndexSearcher searcher, CharsRefBuilder spare) throws IOException {     if (searcher.getIndexReader().numDocs() == 0) {         return null.     }     return innerExecute(name, suggestion, searcher, spare). }

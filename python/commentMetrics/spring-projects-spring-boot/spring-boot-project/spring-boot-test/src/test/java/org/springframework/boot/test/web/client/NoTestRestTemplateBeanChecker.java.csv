@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public void setBeanFactory(BeanFactory beanFactory) throws BeansException {     assertThat(BeanFactoryUtils.beanNamesForTypeIncludingAncestors((ListableBeanFactory) beanFactory, TestRestTemplate.class)).isEmpty(). }
+false;public;1;4;;@Override public String[] selectImports(AnnotationMetadata importingClassMetadata) {     return new String[0]. }

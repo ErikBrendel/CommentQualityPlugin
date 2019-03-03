@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;13;;public static MavenCoordinates parseMavenCoordinates(String coordinates) {     String[] coordinatesParts = coordinates.split("/").     String clazzifier = "".     if (coordinatesParts.length < 3 || coordinatesParts.length > 4) {         throw new IllegalArgumentException("Invalid coordinates: " + coordinates).     }     if (coordinatesParts.length == 4) {         clazzifier = coordinatesParts[3].     }     return new MavenCoordinates(coordinatesParts[0], coordinatesParts[1], coordinatesParts[2], clazzifier). }
+false;public;0;3;;public String getGroupId() {     return groupId. }
+false;public;0;3;;public String getArtifactId() {     return artifactId. }
+false;public;0;3;;public String getVersion() {     return version. }
+false;public;0;3;;public String getClassifier() {     return classifier. }

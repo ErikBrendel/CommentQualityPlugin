@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;3;;public ComponentMetadata decorate(Node node, ComponentMetadata componentMetadata, ParserContext parserContext) {     return null. }
+false;public;0;4;;@SuppressWarnings("rawtypes") public Set<Class> getManagedClasses() {     return new HashSet<>(Arrays.asList(CamelTransportNameSpaceHandler.class)). }
+false;public;1;6;;public URL getSchemaLocation(String s) {     if ("http://cxf.apache.org/transports/camel/blueprint".equals(s)) {         return getClass().getClassLoader().getResource("schema/blueprint/camel.xsd").     }     return super.findCoreSchemaLocation(s). }
+false;public;2;14;;@Override public Metadata parse(Element element, ParserContext context) {     Metadata answer = null.     String s = element.getLocalName().     if ("conduit".equals(s)) {         LOG.debug("parsing the conduit element").         answer = new CamelConduitDefinitionParser().parse(element, context).     }     if ("destination".equals(s)) {         LOG.debug("parsing the detination element").         answer = new CamelDestinationDefinitionParser().parse(element, context).     }     return answer. }

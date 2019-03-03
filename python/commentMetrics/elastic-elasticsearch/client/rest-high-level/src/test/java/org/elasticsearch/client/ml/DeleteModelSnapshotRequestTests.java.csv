@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;public void test_WithNullJobId() {     NullPointerException ex = expectThrows(NullPointerException.class, () -> new DeleteModelSnapshotRequest(null, randomAlphaOfLength(10))).     assertEquals("[job_id] must not be null", ex.getMessage()). }
+false;public;0;5;;public void test_WithNullSnapshotId() {     NullPointerException ex = expectThrows(NullPointerException.class, () -> new DeleteModelSnapshotRequest(randomAlphaOfLength(10), null)).     assertEquals("[snapshot_id] must not be null", ex.getMessage()). }
+false;private;0;3;;private DeleteModelSnapshotRequest createTestInstance() {     return new DeleteModelSnapshotRequest(randomAlphaOfLength(10), randomAlphaOfLength(10)). }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected String getFieldDataType() {     return "long". }
+false;protected;4;6;;@Override protected IndexFieldData.XFieldComparatorSource createFieldComparator(String fieldName, MultiValueMode sortMode, Object missingValue, Nested nested) {     IndexNumericFieldData fieldData = getForField(fieldName).     return new LongValuesComparatorSource(fieldData, missingValue, sortMode, nested). }
+false;protected;2;4;;@Override protected IndexableField createField(String name, int value) {     return new SortedNumericDocValuesField(name, value). }

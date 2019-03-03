@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Before public void setup() {     this.mockMvc = standaloneSetup(new MusicController()).defaultRequest(get("/").accept(MediaType.APPLICATION_XML, MediaType.parseMediaType("application/xml.charset=UTF-8"))).alwaysExpect(status().isOk()).alwaysExpect(content().contentType(MediaType.parseMediaType("application/xml.charset=UTF-8"))).build(). }
+false;public;0;4;;@Test public void testXmlEqualTo() throws Exception {     this.mockMvc.perform(get("/music/people")).andExpect(content().xml(PEOPLE_XML)). }
+false;public;0;5;;@Test public void testNodeHamcrestMatcher() throws Exception {     this.mockMvc.perform(get("/music/people")).andExpect(content().node(hasXPath("/people/composers/composer[1]"))). }
+false;public;0;11;;@RequestMapping(value = "/music/people") @ResponseBody public PeopleWrapper getPeople() {     List<Person> composers = Arrays.asList(new Person("Johann Sebastian Bach").setSomeDouble(21), new Person("Johannes Brahms").setSomeDouble(.0025), new Person("Edvard Grieg").setSomeDouble(1.6035), new Person("Robert Schumann").setSomeDouble(Double.NaN)).     return new PeopleWrapper(composers). }
+false;public;0;3;;public List<Person> getComposers() {     return this.composers. }

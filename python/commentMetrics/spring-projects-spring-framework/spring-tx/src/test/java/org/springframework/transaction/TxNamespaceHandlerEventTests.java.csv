@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Before public void setUp() throws Exception {     XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(this.beanFactory).     reader.setEventListener(this.eventListener).     reader.loadBeanDefinitions(new ClassPathResource("txNamespaceHandlerTests.xml", getClass())). }
+false;public;0;5;;@Test public void componentEventReceived() {     ComponentDefinition component = this.eventListener.getComponentDefinition("txAdvice").     assertThat(component, instanceOf(BeanComponentDefinition.class)). }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void testMixedCase() throws Exception {     getMockEndpoint("mock:input").expectedHeaderReceived(Exchange.HTTP_PATH, "/HelloWorld").     String out = template.requestBody("netty4-http:http://localhost:{{port}}/SHoppING/HelloWorld", "Camel", String.class).     assertEquals("Bye Camel", out).     assertMockEndpointsSatisfied(). }
+false;public;0;6;;@Override public void configure() throws Exception {     from("netty4-http:http://0.0.0.0:{{port}}/Shopping?matchOnUriPrefix=true").to("mock:input").transform(body().prepend("Bye ")). }
+false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("netty4-http:http://0.0.0.0:{{port}}/Shopping?matchOnUriPrefix=true").to("mock:input").transform(body().prepend("Bye ")).         }     }. }

@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public PutCalendarAction.Response newResponse() {     return new PutCalendarAction.Response(). }
+false;public;0;3;;public String getCalendarId() {     return calendarId. }
+false;public;0;3;;public String getJobIdsToAddExpression() {     return jobIdsToAddExpression. }
+false;public;0;3;;public String getJobIdsToRemoveExpression() {     return jobIdsToRemoveExpression. }
+false;public;0;4;;@Override public ActionRequestValidationException validate() {     return null. }
+false;public;1;7;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     calendarId = in.readString().     jobIdsToAddExpression = in.readOptionalString().     jobIdsToRemoveExpression = in.readOptionalString(). }
+false;public;1;7;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeString(calendarId).     out.writeOptionalString(jobIdsToAddExpression).     out.writeOptionalString(jobIdsToRemoveExpression). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(calendarId, jobIdsToAddExpression, jobIdsToRemoveExpression). }
+false;public;1;12;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     Request other = (Request) obj.     return Objects.equals(calendarId, other.calendarId) && Objects.equals(jobIdsToAddExpression, other.jobIdsToAddExpression) && Objects.equals(jobIdsToRemoveExpression, other.jobIdsToRemoveExpression). }

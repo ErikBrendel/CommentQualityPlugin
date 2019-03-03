@@ -1,0 +1,18 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public RemoveIndexLifecyclePolicyAction.Response newResponse() {     return new Response(). }
+false;public;0;3;;public List<String> getFailedIndexes() {     return failedIndexes. }
+false;public;0;3;;public boolean hasFailures() {     return failedIndexes.isEmpty() == false. }
+false;public;2;8;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(HAS_FAILURES_FIELD.getPreferredName(), hasFailures()).     builder.field(FAILED_INDEXES_FIELD.getPreferredName(), failedIndexes).     builder.endObject().     return builder. }
+false;public;1;5;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     failedIndexes = in.readStringList(). }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeStringCollection(failedIndexes). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(failedIndexes). }
+false;public;1;11;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     Response other = (Response) obj.     return Objects.equals(failedIndexes, other.failedIndexes). }
+false;public;1;5;;@Override public Request indices(String... indices) {     this.indices = indices.     return this. }
+false;public;0;4;;@Override public String[] indices() {     return indices. }
+false;public;1;3;;public void indicesOptions(IndicesOptions indicesOptions) {     this.indicesOptions = indicesOptions. }
+false;public;0;3;;public IndicesOptions indicesOptions() {     return indicesOptions. }
+false;public;0;4;;@Override public ActionRequestValidationException validate() {     return null. }
+false;public;1;6;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     indices = in.readStringArray().     indicesOptions = IndicesOptions.readIndicesOptions(in). }
+false;public;1;6;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeStringArray(indices).     indicesOptions.writeIndicesOptions(out). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(Arrays.hashCode(indices), indicesOptions). }
+false;public;1;12;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     Request other = (Request) obj.     return Objects.deepEquals(indices, other.indices) && Objects.equals(indicesOptions, other.indicesOptions). }

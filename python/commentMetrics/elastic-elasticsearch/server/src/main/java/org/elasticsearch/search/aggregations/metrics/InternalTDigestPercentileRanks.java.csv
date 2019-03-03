@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getWriteableName() {     return NAME. }
+false;public;0;4;;@Override public Iterator<Percentile> iterator() {     return new Iter(keys, state). }
+false;public;1;4;;@Override public double percent(double value) {     return percentileRank(state, value). }
+false;public;1;4;;@Override public String percentAsString(double value) {     return valueAsString(String.valueOf(value)). }
+false;public;1;4;;@Override public double value(double key) {     return percent(key). }
+false;protected;6;5;;@Override protected AbstractInternalTDigestPercentiles createReduced(String name, double[] keys, TDigestState merged, boolean keyed, List<PipelineAggregator> pipelineAggregators, Map<String, Object> metaData) {     return new InternalTDigestPercentileRanks(name, keys, merged, keyed, format, pipelineAggregators, metaData). }
+false;static;2;10;;static double percentileRank(TDigestState state, double value) {     double percentileRank = state.cdf(value).     if (percentileRank < 0) {         percentileRank = 0.     } else if (percentileRank > 1) {         percentileRank = 1.     }     return percentileRank * 100. }
+false;public;0;4;;@Override public boolean hasNext() {     return i < values.length. }
+false;public;0;6;;@Override public Percentile next() {     final Percentile next = new Percentile(percentileRank(state, values[i]), values[i]).     ++i.     return next. }
+false;public,final;0;4;;@Override public final void remove() {     throw new UnsupportedOperationException(). }

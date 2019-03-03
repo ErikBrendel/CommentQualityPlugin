@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String toString() {     return "SetHeader[" + getHeaderName() + ", " + getExpression() + "]". }
+false;public;0;4;;@Override public String getShortName() {     return "setHeader". }
+false;public;0;4;;@Override public String getLabel() {     return "setHeader[" + getHeaderName() + "]". }
+true;public;1;5;/**  * Expression to return the value of the header  */ ;/**  * Expression to return the value of the header  */ @Override public void setExpression(ExpressionDefinition expression) {     // override to include javadoc what the expression is used for     super.setExpression(expression). }
+true;public;1;3;/**  * Name of message header to set a new value  * <p/>  * The <tt>simple</tt> language can be used to define a dynamic evaluated header name to be used.  * Otherwise a constant name will be used.  */ ;/**  * Name of message header to set a new value  * <p/>  * The <tt>simple</tt> language can be used to define a dynamic evaluated header name to be used.  * Otherwise a constant name will be used.  */ public void setHeaderName(String headerName) {     this.headerName = headerName. }
+false;public;0;3;;public String getHeaderName() {     return headerName. }

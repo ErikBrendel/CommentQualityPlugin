@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public ShardId shardId() {     return this.shardId. }
+false;public;0;4;;@Override public String[] indices() {     return originalIndices.indices(). }
+false;public;0;4;;@Override public IndicesOptions indicesOptions() {     return originalIndices.indicesOptions(). }
+false;public;1;6;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     shardId = ShardId.readShardId(in).     originalIndices = OriginalIndices.readOriginalIndices(in). }
+false;public;1;6;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     shardId.writeTo(out).     OriginalIndices.writeOriginalIndices(originalIndices, out). }

@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public boolean isStartable() {     return this == Stopped || this == Suspended. }
+false;public;0;3;;public boolean isStoppable() {     return this == Started || this == Suspended. }
+false;public;0;3;;public boolean isSuspendable() {     return this == Started. }
+false;public;0;3;;public boolean isStarting() {     return this == Starting. }
+false;public;0;3;;public boolean isStarted() {     return this == Started. }
+false;public;0;3;;public boolean isStopping() {     return this == Stopping. }
+false;public;0;3;;public boolean isStopped() {     return this == Stopped. }
+false;public;0;3;;public boolean isSuspending() {     return this == Suspending. }
+false;public;0;3;;public boolean isSuspended() {     return this == Suspended. }

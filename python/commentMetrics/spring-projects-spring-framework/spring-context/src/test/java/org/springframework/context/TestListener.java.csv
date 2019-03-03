@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public int getEventCount() {     return eventCount. }
+false;public;0;3;;public void zeroCounter() {     eventCount = 0. }
+false;public;1;4;;@Override public void onApplicationEvent(ApplicationEvent e) {     ++eventCount. }

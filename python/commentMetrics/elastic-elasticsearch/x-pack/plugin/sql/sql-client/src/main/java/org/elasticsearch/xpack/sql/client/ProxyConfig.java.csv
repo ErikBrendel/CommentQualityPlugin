@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;2;4;;@SuppressForbidden(reason = "create the actual proxy") private Proxy createProxy(Proxy.Type type, Object[] address) {     return new Proxy(type, new InetSocketAddress((String) address[0], (int) address[1])). }
+false;;0;3;;boolean enabled() {     return proxy != null. }
+false;;0;3;;Proxy proxy() {     return proxy. }
+true;private,static;2;12;// returns hostname (string), port (int) ;// returns hostname (string), port (int) private static Object[] host(String address, int defaultPort) {     if (!StringUtils.hasText(address)) {         return null.     }     try {         URI uri = new URI(address).         Object[] results = { uri.getHost(), uri.getPort() > 0 ? uri.getPort() : defaultPort }.         return results.     } catch (URISyntaxException ex) {         throw new ClientException("Unrecognized address format " + address, ex).     } }

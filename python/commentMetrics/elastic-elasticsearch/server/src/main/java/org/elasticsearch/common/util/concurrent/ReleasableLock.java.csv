@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Override public void close() {     lock.unlock().     assert removeCurrentThread(). }
+false;public;0;5;;public ReleasableLock acquire() throws EngineException {     lock.lock().     assert addCurrentThread().     return this. }
+false;private;0;5;;private boolean addCurrentThread() {     final Integer current = holdingThreads.get().     holdingThreads.set(current == null ? 1 : current + 1).     return true. }
+false;private;0;10;;private boolean removeCurrentThread() {     final Integer count = holdingThreads.get().     assert count != null && count > 0.     if (count == 1) {         holdingThreads.remove().     } else {         holdingThreads.set(count - 1).     }     return true. }
+false;public;0;7;;public boolean isHeldByCurrentThread() {     if (holdingThreads == null) {         throw new UnsupportedOperationException("asserts must be enabled").     }     final Integer count = holdingThreads.get().     return count != null && count > 0. }

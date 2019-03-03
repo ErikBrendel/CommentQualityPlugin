@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;public void testReleaseOnce() {     AtomicInteger count = new AtomicInteger(0).     Releasable releasable = Releasables.releaseOnce(count::incrementAndGet, count::incrementAndGet).     assertEquals(0, count.get()).     releasable.close().     assertEquals(2, count.get()).     releasable.close().     assertEquals(2, count.get()). }

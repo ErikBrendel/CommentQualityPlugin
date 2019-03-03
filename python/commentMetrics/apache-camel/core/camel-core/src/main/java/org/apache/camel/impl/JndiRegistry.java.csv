@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;8;;@Override public void bind(String name, Object object) {     try {         getContext().bind(name, object).     } catch (NamingException e) {         throw new RuntimeCamelException(e).     } }

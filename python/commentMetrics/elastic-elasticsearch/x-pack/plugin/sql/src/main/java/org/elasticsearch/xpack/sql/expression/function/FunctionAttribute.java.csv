@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String functionId() {     return functionId. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(super.hashCode(), functionId). }
+false;public;1;4;;@Override public boolean equals(Object obj) {     return super.equals(obj) && Objects.equals(functionId, ((FunctionAttribute) obj).functionId()). }

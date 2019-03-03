@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;9;;public static Exchange getExchange() {     CamelContext context = new DefaultCamelContext().     Message in = new DefaultMessage(context).     Message out = new DefaultMessage(context).     Exchange exchange = new DefaultExchange(context).     exchange.setIn(in).     exchange.setOut(out).     return exchange. }

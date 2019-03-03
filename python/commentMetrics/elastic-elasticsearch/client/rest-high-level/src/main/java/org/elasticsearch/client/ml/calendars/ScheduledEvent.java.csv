@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getDescription() {     return description. }
+false;public;0;3;;public Date getStartTime() {     return startTime. }
+false;public;0;3;;public Date getEndTime() {     return endTime. }
+false;public;0;3;;public String getCalendarId() {     return calendarId. }
+false;public;0;3;;public String getEventId() {     return eventId. }
+false;public;2;13;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(DESCRIPTION.getPreferredName(), description).     builder.timeField(START_TIME.getPreferredName(), START_TIME.getPreferredName() + "_string", startTime.getTime()).     builder.timeField(END_TIME.getPreferredName(), END_TIME.getPreferredName() + "_string", endTime.getTime()).     builder.field(Calendar.ID.getPreferredName(), calendarId).     if (eventId != null) {         builder.field(EVENT_ID.getPreferredName(), eventId).     }     builder.endObject().     return builder. }
+false;public;1;16;;@Override public boolean equals(Object obj) {     if (obj == this) {         return true.     }     if (obj == null || getClass() != obj.getClass()) {         return false.     }     ScheduledEvent other = (ScheduledEvent) obj.     return Objects.equals(this.description, other.description) && Objects.equals(this.startTime, other.startTime) && Objects.equals(this.endTime, other.endTime) && Objects.equals(this.calendarId, other.calendarId). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(description, startTime, endTime, calendarId). }

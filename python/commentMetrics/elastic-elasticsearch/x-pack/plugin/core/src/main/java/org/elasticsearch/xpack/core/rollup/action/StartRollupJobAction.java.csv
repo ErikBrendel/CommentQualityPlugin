@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Response newResponse() {     throw new UnsupportedOperationException("usage of Streamable is to be replaced by Writeable"). }
+false;public;0;4;;@Override public Writeable.Reader<Response> getResponseReader() {     return Response::new. }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeString(id). }
+false;public;0;3;;public String getId() {     return id. }
+false;public;0;4;;@Override public ActionRequestValidationException validate() {     return null. }
+false;public;2;5;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.field(RollupField.ID.getPreferredName(), id).     return builder. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(id). }
+false;public;1;11;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     Request other = (Request) obj.     return Objects.equals(id, other.id). }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeBoolean(started). }
+false;public;0;3;;public boolean isStarted() {     return started. }
+false;public;2;7;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field("started", started).     builder.endObject().     return builder. }
+false;public;1;7;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     Response response = (Response) o.     return started == response.started. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(started). }

@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Test public void testInOnly() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("Hello World").     template2.sendBody("direct:start", "Hello World").     assertMockEndpointsSatisfied(). }
+false;public;0;4;;@Override public void configure() throws Exception {     from("vm:foo").to("mock:result"). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("vm:foo").to("mock:result").         }     }. }
+false;public;0;4;;@Override public void configure() throws Exception {     from("direct:start").to("vm:foo"). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilderForSecondContext() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").to("vm:foo").         }     }. }

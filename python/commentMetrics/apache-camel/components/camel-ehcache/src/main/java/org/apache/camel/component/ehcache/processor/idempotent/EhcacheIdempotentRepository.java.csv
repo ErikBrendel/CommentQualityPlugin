@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@ManagedAttribute(description = "The processor name") public String getCacheName() {     return cacheName. }
+false;public;1;5;;@Override @ManagedOperation(description = "Adds the key to the store") public boolean add(String key) {     return cache.putIfAbsent(key, false) == null. }
+false;public;1;4;;@Override public boolean confirm(String key) {     return cache.replace(key, false, true). }
+false;public;1;5;;@Override @ManagedOperation(description = "Does the store contain the given key") public boolean contains(String key) {     return this.cache.containsKey(key). }
+false;public;1;6;;@Override @ManagedOperation(description = "Remove the key from the store") public boolean remove(String key) {     cache.remove(key).     return true. }
+false;public;0;5;;@Override @ManagedOperation(description = "Clear the store") public void clear() {     cache.clear(). }
+false;protected;0;5;;@Override protected void doStart() throws Exception {     cacheManager.start().     cache = cacheManager.getCache(cacheName, String.class, Boolean.class). }
+false;protected;0;4;;@Override protected void doStop() throws Exception {     cacheManager.stop(). }

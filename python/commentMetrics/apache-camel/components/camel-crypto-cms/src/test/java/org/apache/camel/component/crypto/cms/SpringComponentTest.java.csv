@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;5;;protected CamelContext createCamelContext() throws Exception {     return SpringCamelContext.springCamelContext(new ClassPathXmlApplicationContext("SpringCryptoCmsTests.xml"), true). }
+false;protected;0;4;;@Override protected JndiRegistry createRegistry() throws Exception {     return super.createRegistry(). }
+false;public;0;4;;@Override public void configure() { // no routes added by default }
+false;protected;0;8;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() {         // no routes added by default         }     }. }
+false;protected;0;4;;@Override protected RouteBuilder[] createRouteBuilders() throws Exception {     return new RouteBuilder[] {}. }

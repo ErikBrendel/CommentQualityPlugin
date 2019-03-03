@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected PainlessExecuteAction.Response createBlankInstance() {     return new PainlessExecuteAction.Response(). }
+false;protected;0;4;;@Override protected PainlessExecuteAction.Response createTestInstance() {     return new PainlessExecuteAction.Response(randomAlphaOfLength(10)). }

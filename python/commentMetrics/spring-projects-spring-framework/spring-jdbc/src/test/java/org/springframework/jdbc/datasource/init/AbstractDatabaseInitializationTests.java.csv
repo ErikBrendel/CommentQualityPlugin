@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Before public void setUp() {     db = new EmbeddedDatabaseBuilder().setType(getEmbeddedDatabaseType()).build().     jdbcTemplate = new JdbcTemplate(db). }
+false;public;0;8;;@After public void shutDown() {     if (TransactionSynchronizationManager.isSynchronizationActive()) {         TransactionSynchronizationManager.clear().         TransactionSynchronizationManager.unbindResource(db).     }     db.shutdown(). }
+false;abstract;0;1;;abstract EmbeddedDatabaseType getEmbeddedDatabaseType().
+false;;1;3;;Resource resource(String path) {     return resourceLoader.getResource(path). }
+false;;0;3;;Resource defaultSchema() {     return resource("db-schema.sql"). }
+false;;0;3;;Resource usersSchema() {     return resource("users-schema.sql"). }
+false;;1;7;;void assertUsersDatabaseCreated(String... lastNames) {     for (String lastName : lastNames) {         assertThat("Did not find user with last name [" + lastName + "].", jdbcTemplate.queryForObject("select count(0) from users where last_name = ?", Integer.class, lastName), equalTo(1)).     } }

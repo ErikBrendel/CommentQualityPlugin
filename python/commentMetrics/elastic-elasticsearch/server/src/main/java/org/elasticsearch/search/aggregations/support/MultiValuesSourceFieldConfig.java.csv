@@ -1,0 +1,19 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Object getMissing() {     return missing. }
+false;public;0;3;;public Script getScript() {     return script. }
+false;public;0;3;;public ZoneId getTimeZone() {     return timeZone. }
+false;public;0;3;;public String getFieldName() {     return fieldName. }
+false;public;1;11;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeString(fieldName).     out.writeGenericValue(missing).     out.writeOptionalWriteable(script).     if (out.getVersion().before(Version.V_7_0_0)) {         out.writeOptionalTimeZone(DateUtils.zoneIdToDateTimeZone(timeZone)).     } else {         out.writeOptionalZoneId(timeZone).     } }
+false;public;2;18;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     if (missing != null) {         builder.field(ParseField.CommonFields.MISSING.getPreferredName(), missing).     }     if (script != null) {         builder.field(Script.SCRIPT_PARSE_FIELD.getPreferredName(), script).     }     if (fieldName != null) {         builder.field(ParseField.CommonFields.FIELD.getPreferredName(), fieldName).     }     if (timeZone != null) {         builder.field(ParseField.CommonFields.TIME_ZONE.getPreferredName(), timeZone.getId()).     }     builder.endObject().     return builder. }
+false;public;1;10;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     MultiValuesSourceFieldConfig that = (MultiValuesSourceFieldConfig) o.     return Objects.equals(fieldName, that.fieldName) && Objects.equals(missing, that.missing) && Objects.equals(script, that.script) && Objects.equals(timeZone, that.timeZone). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(fieldName, missing, script, timeZone). }
+false;public;0;4;;@Override public String toString() {     return Strings.toString(this). }
+false;public;0;3;;public String getFieldName() {     return fieldName. }
+false;public;1;4;;public Builder setFieldName(String fieldName) {     this.fieldName = fieldName.     return this. }
+false;public;0;3;;public Object getMissing() {     return missing. }
+false;public;1;4;;public Builder setMissing(Object missing) {     this.missing = missing.     return this. }
+false;public;0;3;;public Script getScript() {     return script. }
+false;public;1;4;;public Builder setScript(Script script) {     this.script = script.     return this. }
+false;public;0;3;;public ZoneId getTimeZone() {     return timeZone. }
+false;public;1;4;;public Builder setTimeZone(ZoneId timeZone) {     this.timeZone = timeZone.     return this. }
+false;public;0;15;;public MultiValuesSourceFieldConfig build() {     if (Strings.isNullOrEmpty(fieldName) && script == null) {         throw new IllegalArgumentException("[" + ParseField.CommonFields.FIELD.getPreferredName() + "] and [" + Script.SCRIPT_PARSE_FIELD.getPreferredName() + "] cannot both be null.  " + "Please specify one or the other.").     }     if (Strings.isNullOrEmpty(fieldName) == false && script != null) {         throw new IllegalArgumentException("[" + ParseField.CommonFields.FIELD.getPreferredName() + "] and [" + Script.SCRIPT_PARSE_FIELD.getPreferredName() + "] cannot both be configured.  " + "Please specify one or the other.").     }     return new MultiValuesSourceFieldConfig(fieldName, missing, script, timeZone). }

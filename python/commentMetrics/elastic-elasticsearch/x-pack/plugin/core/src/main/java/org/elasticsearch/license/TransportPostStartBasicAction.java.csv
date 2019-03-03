@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected String executor() {     return ThreadPool.Names.SAME. }
+false;protected;0;4;;@Override protected PostStartBasicResponse newResponse() {     return new PostStartBasicResponse(). }
+false;protected;3;5;;@Override protected void masterOperation(PostStartBasicRequest request, ClusterState state, ActionListener<PostStartBasicResponse> listener) throws Exception {     licenseService.startBasicLicense(request, listener). }
+false;protected;2;4;;@Override protected ClusterBlockException checkBlock(PostStartBasicRequest request, ClusterState state) {     return state.blocks().globalBlockedException(ClusterBlockLevel.METADATA_WRITE). }

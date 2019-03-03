@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void setVerfiyDrinks(List<Drink> drinks) {     this.expectDrinks = drinks. }
+false;public;1;4;;public void deliverCafes(Delivery delivery) {     super.deliverCafes(delivery).     deliveredDrinks = delivery.getDeliveredDrinks(). }
+false;public;0;12;;public void verifyDrinks() {     if (deliveredDrinks == null || expectDrinks.size() != deliveredDrinks.size()) {         throw new AssertionError("Did not deliver expected number of drinks " + expectDrinks.size() + " was " + (deliveredDrinks != null ? deliveredDrinks.size() : "null")).     }     for (Drink drink : expectDrinks) {         if (!deliveredDrinks.contains(drink)) {             throw new AssertionError("Cannot find expected drink " + drink + " in the delivered drinks").         }     } }

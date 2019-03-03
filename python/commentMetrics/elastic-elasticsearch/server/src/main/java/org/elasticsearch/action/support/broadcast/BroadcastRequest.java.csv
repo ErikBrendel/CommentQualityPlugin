@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String[] indices() {     return indices. }
+false;public,final;1;6;;@SuppressWarnings("unchecked") @Override public final Request indices(String... indices) {     this.indices = indices.     return (Request) this. }
+false;public;0;4;;@Override public ActionRequestValidationException validate() {     return null. }
+false;public;0;4;;@Override public IndicesOptions indicesOptions() {     return indicesOptions. }
+false;public,final;1;5;;@SuppressWarnings("unchecked") public final Request indicesOptions(IndicesOptions indicesOptions) {     this.indicesOptions = indicesOptions.     return (Request) this. }
+false;public;1;6;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeStringArrayNullable(indices).     indicesOptions.writeIndicesOptions(out). }
+false;public;1;6;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     indices = in.readStringArray().     indicesOptions = IndicesOptions.readIndicesOptions(in). }

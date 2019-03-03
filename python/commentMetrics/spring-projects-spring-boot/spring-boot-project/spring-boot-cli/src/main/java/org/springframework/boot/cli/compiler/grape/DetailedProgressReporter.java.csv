@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public void transferStarted(TransferEvent event) throws TransferCancelledException {     out.println("Downloading: " + getResourceIdentifier(event.getResource())). }
+false;public;1;6;;@Override public void transferSucceeded(TransferEvent event) {     out.printf("Downloaded: %s (%s)%n", getResourceIdentifier(event.getResource()), getTransferSpeed(event)). }
+false;private;1;3;;private String getResourceIdentifier(TransferResource resource) {     return resource.getRepositoryUrl() + resource.getResourceName(). }
+false;private;1;7;;private String getTransferSpeed(TransferEvent event) {     long kb = event.getTransferredBytes() / 1024.     float seconds = (System.currentTimeMillis() - event.getResource().getTransferStartTime()) / 1000.0f.     return String.format("%dKB at %.1fKB/sec", kb, (kb / seconds)). }
+false;public;0;3;;@Override public void finished() { }

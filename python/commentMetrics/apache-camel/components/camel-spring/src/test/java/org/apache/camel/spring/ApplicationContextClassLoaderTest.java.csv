@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/spring/disableJmxConfig.xml"). }
+false;public;0;6;;@Test public void testClassLoader() {     ClassLoader cl = context.getApplicationContextClassLoader().     assertNotNull("The application context class loader should not be null", cl).     assertEquals("Get a wrong class loader", this.getClass().getClassLoader(), cl). }

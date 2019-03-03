@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public JmsEndpoint getEndpoint() {     return (JmsEndpoint) super.getEndpoint(). }
+false;public;0;3;;public Exchange receiveNoWait() {     return receive(JmsDestinationAccessor.RECEIVE_TIMEOUT_NO_WAIT). }
+false;public;0;3;;public Exchange receive() {     return receive(JmsDestinationAccessor.RECEIVE_TIMEOUT_INDEFINITE_WAIT). }
+false;public;1;14;;public Exchange receive(long timeout) {     setReceiveTimeout(timeout).     Message message.     // using the selector     if (ObjectHelper.isNotEmpty(jmsEndpoint.getSelector())) {         message = template.receiveSelected(jmsEndpoint.getSelector()).     } else {         message = template.receive().     }     if (message != null) {         return getEndpoint().createExchange(message, null).     }     return null. }
+false;protected;0;3;;protected void doStart() throws Exception { // noop }
+false;protected;0;3;;protected void doStop() throws Exception { // noop }
+false;protected;1;8;;protected void setReceiveTimeout(long timeout) {     if (template instanceof JmsTemplate) {         JmsTemplate jmsTemplate = (JmsTemplate) template.         jmsTemplate.setReceiveTimeout(timeout).     } else {         throw new IllegalArgumentException("Cannot set the receiveTimeout property on unknown JmsOperations type: " + template.getClass().getName()).     } }

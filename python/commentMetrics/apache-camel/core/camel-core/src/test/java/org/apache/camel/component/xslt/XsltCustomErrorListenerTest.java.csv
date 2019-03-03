@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void warning(TransformerException exception) throws TransformerException {     warning = true. }
+false;public;1;4;;@Override public void error(TransformerException exception) throws TransformerException {     error = true. }
+false;public;1;4;;@Override public void fatalError(TransformerException exception) throws TransformerException {     fatalError = true. }
+false;public;0;3;;public boolean isWarning() {     return warning. }
+false;public;0;3;;public boolean isError() {     return error. }
+false;public;0;3;;public boolean isFatalError() {     return fatalError. }
+false;public;0;18;;@Test public void testErrorListener() throws Exception {     try {         RouteBuilder builder = createRouteBuilder().         CamelContext context = new DefaultCamelContext().         context.getRegistry().bind("myListener", listener).         context.addRoutes(builder).         context.start().         fail("Should have thrown an exception due XSLT file not found").     } catch (FailedToCreateRouteException e) {     // expected     }     assertFalse(listener.isWarning()).     assertTrue("My error listener should been invoked", listener.isError()).     assertTrue("My error listener should been invoked", listener.isFatalError()). }
+false;public;0;3;;public void configure() throws Exception {     from("seda:a").to("xslt:org/apache/camel/builder/xml/example-with-errors.xsl?errorListener=#myListener"). }
+false;protected;0;7;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from("seda:a").to("xslt:org/apache/camel/builder/xml/example-with-errors.xsl?errorListener=#myListener").         }     }. }

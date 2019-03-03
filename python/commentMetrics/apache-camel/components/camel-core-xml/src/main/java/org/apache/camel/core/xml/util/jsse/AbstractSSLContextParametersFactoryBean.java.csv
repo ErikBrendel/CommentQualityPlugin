@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;37;;@Override protected SSLContextParameters createInstance() throws Exception {     SSLContextParameters newInstance = new SSLContextParameters().     if (getKeyManagers() != null) {         getKeyManagers().setCamelContext(getCamelContext()).         newInstance.setKeyManagers(getKeyManagers().getObject()).     }     if (getTrustManagers() != null) {         getTrustManagers().setCamelContext(getCamelContext()).         newInstance.setTrustManagers(getTrustManagers().getObject()).     }     if (getSecureRandom() != null) {         getSecureRandom().setCamelContext(getCamelContext()).         newInstance.setSecureRandom(getSecureRandom().getObject()).     }     if (getClientParameters() != null) {         getClientParameters().setCamelContext(getCamelContext()).         newInstance.setClientParameters(getClientParameters().getObject()).     }     if (getServerParameters() != null) {         getServerParameters().setCamelContext(getCamelContext()).         newInstance.setServerParameters(getServerParameters().getObject()).     }     newInstance.setProvider(provider).     newInstance.setSecureSocketProtocol(secureSocketProtocol).     newInstance.setCertAlias(certAlias).     newInstance.setCamelContext(getCamelContext()).     return newInstance. }
+false;public;0;4;;@Override public Class<? extends SSLContextParameters> getObjectType() {     return SSLContextParameters.class. }
+false;public;0;3;;public String getProvider() {     return provider. }
+false;public;1;3;;public void setProvider(String provider) {     this.provider = provider. }
+false;public;0;3;;public String getSecureSocketProtocol() {     return secureSocketProtocol. }
+false;public;1;3;;public void setSecureSocketProtocol(String secureSocketProtocol) {     this.secureSocketProtocol = secureSocketProtocol. }
+false;public;0;3;;public String getCertAlias() {     return certAlias. }
+false;public;1;3;;public void setCertAlias(String certAlias) {     this.certAlias = certAlias. }
+false;protected,abstract;0;1;;protected abstract AbstractKeyManagersParametersFactoryBean getKeyManagers().
+false;protected,abstract;0;1;;protected abstract AbstractTrustManagersParametersFactoryBean getTrustManagers().
+false;protected,abstract;0;1;;protected abstract AbstractSecureRandomParametersFactoryBean getSecureRandom().
+false;protected,abstract;0;1;;protected abstract AbstractSSLContextClientParametersFactoryBean getClientParameters().
+false;protected,abstract;0;1;;protected abstract AbstractSSLContextServerParametersFactoryBean getServerParameters().

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,final;0;3;/**  * Return the MethodParameter that was rejected.  */ ;/**  * Return the MethodParameter that was rejected.  */ public final MethodParameter getMethodParameter() {     return this.parameter. }
+false;private,static;1;4;;private static String getMethodParameterMessage(MethodParameter parameter) {     return "Could not resolve method parameter at index " + parameter.getParameterIndex() + " in " + parameter.getExecutable().toGenericString(). }

@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;7;;public static String getOsRelease() {     if (LINUX) {         return slurp(Paths.get("/etc/os-release")).     } else {         throw new RuntimeException("os-release is only supported on linux").     } }
+false;public,static;0;6;;public static boolean isDPKG() {     if (WINDOWS) {         return false.     }     return new Shell().runIgnoreExitCode("which dpkg").isSuccess(). }
+false;public,static;0;6;;public static boolean isRPM() {     if (WINDOWS) {         return false.     }     return new Shell().runIgnoreExitCode("which rpm").isSuccess(). }
+false;public,static;0;6;;public static boolean isSystemd() {     if (WINDOWS) {         return false.     }     return new Shell().runIgnoreExitCode("which systemctl").isSuccess(). }
+false;public,static;0;6;;public static boolean isSysVInit() {     if (WINDOWS) {         return false.     }     return new Shell().runIgnoreExitCode("which service").isSuccess(). }
+false;public,static;1;5;;public static void onWindows(PlatformAction action) {     if (WINDOWS) {         action.run().     } }
+false;public,static;1;5;;public static void onLinux(PlatformAction action) {     if (LINUX) {         action.run().     } }
+false;public,static;1;5;;public static void onRPM(PlatformAction action) {     if (isRPM()) {         action.run().     } }
+false;public,static;1;5;;public static void onDPKG(PlatformAction action) {     if (isDPKG()) {         action.run().     } }
+false;;0;1;;void run().

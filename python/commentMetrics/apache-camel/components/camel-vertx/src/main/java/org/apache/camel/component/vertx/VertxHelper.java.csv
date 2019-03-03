@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;11;;public static Object getVertxBody(Exchange exchange) {     Message msg = exchange.hasOut() ? exchange.getOut() : exchange.getIn().     Object body = msg.getBody(JsonObject.class).     if (body == null) {         body = msg.getBody(JsonArray.class).     }     if (body == null) {         body = msg.getBody(String.class).     }     return body. }

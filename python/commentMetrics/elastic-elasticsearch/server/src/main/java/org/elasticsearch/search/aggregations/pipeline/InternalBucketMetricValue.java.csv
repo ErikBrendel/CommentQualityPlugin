@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;6;;@Override protected void doWriteTo(StreamOutput out) throws IOException {     out.writeNamedWriteable(format).     out.writeDouble(value).     out.writeStringArray(keys). }
+false;public;0;4;;@Override public String getWriteableName() {     return NAME. }
+false;public;0;4;;@Override public double value() {     return value. }
+false;public;0;4;;@Override public String[] keys() {     return keys. }
+false;;0;3;;DocValueFormat formatter() {     return format. }
+false;public;2;4;;@Override public InternalAggregation doReduce(List<InternalAggregation> aggregations, ReduceContext reduceContext) {     throw new UnsupportedOperationException("Not supported"). }
+false;public;1;12;;@Override public Object getProperty(List<String> path) {     if (path.isEmpty()) {         return this.     } else if (path.size() == 1 && "value".equals(path.get(0))) {         return value().     } else if (path.size() == 1 && KEYS_FIELD.getPreferredName().equals(path.get(0))) {         return keys().     } else {         throw new IllegalArgumentException("path not supported for [" + getName() + "]: " + path).     } }
+false;public;2;14;;@Override public XContentBuilder doXContentBody(XContentBuilder builder, Params params) throws IOException {     boolean hasValue = !Double.isInfinite(value).     builder.field(CommonFields.VALUE.getPreferredName(), hasValue ? value : null).     if (hasValue && format != DocValueFormat.RAW) {         builder.field(CommonFields.VALUE_AS_STRING.getPreferredName(), format.format(value).toString()).     }     builder.startArray(KEYS_FIELD.getPreferredName()).     for (String key : keys) {         builder.value(key).     }     builder.endArray().     return builder. }
+false;protected;0;4;;@Override protected int doHashCode() {     return Objects.hash(value, Arrays.hashCode(keys)). }
+false;protected;1;6;;@Override protected boolean doEquals(Object obj) {     InternalBucketMetricValue other = (InternalBucketMetricValue) obj.     return Objects.equals(value, other.value) && Arrays.equals(keys, other.keys). }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;11;;@Test public void testTimerInvoked() throws Exception {     mock.expectedMessageCount(2).     direct.sendBody("select * from customer").     direct.sendBody("select * from customer").     assertMockEndpointsSatisfied().     Assert.assertEquals(2, mock.getReceivedExchanges().get(1).getIn().getBody(List.class).size()). }
+false;public;0;4;;public void configure() throws Exception {     from("direct:start").to("jdbc:testdb?statement.maxRows=2").to("mock:result"). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from("direct:start").to("jdbc:testdb?statement.maxRows=2").to("mock:result").         }     }. }

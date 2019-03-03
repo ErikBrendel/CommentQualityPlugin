@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Before public void setup() {     this.context = new ClassPathXmlApplicationContext("schedulerContext.xml", SchedulerBeanDefinitionParserTests.class). }
+false;public;0;6;;@Test public void defaultScheduler() {     ThreadPoolTaskScheduler scheduler = (ThreadPoolTaskScheduler) this.context.getBean("defaultScheduler").     Integer size = (Integer) new DirectFieldAccessor(scheduler).getPropertyValue("poolSize").     assertEquals(new Integer(1), size). }
+false;public;0;6;;@Test public void customScheduler() {     ThreadPoolTaskScheduler scheduler = (ThreadPoolTaskScheduler) this.context.getBean("customScheduler").     Integer size = (Integer) new DirectFieldAccessor(scheduler).getPropertyValue("poolSize").     assertEquals(new Integer(42), size). }
+false;public;0;5;;@Test public void threadNamePrefix() {     ThreadPoolTaskScheduler scheduler = (ThreadPoolTaskScheduler) this.context.getBean("customScheduler").     assertEquals("customScheduler-", scheduler.getThreadNamePrefix()). }

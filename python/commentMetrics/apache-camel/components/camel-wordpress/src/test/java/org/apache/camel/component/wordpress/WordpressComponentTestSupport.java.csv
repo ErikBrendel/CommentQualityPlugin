@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;4;;@BeforeClass public static void beforeClass() throws IOException {     WordpressMockServerTestSupport.setUpMockServer(). }
+false;public,static;0;4;;@AfterClass public static void afterClass() {     WordpressMockServerTestSupport.tearDownMockServer(). }
+false;protected;0;3;;protected String getServerBaseUrl() {     return WordpressMockServerTestSupport.getServerBaseUrl(). }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;13;;@Test public void testMailEndpointAsSpringBean() throws Exception {     Mailbox.clearAll().     String body = "Hello Claus.\nYes it does.\n\nRegards James.".     result.expectedBodiesReceived(body).     result.expectedHeaderReceived("subject", "Hello Camel").     template.sendBodyAndHeader("smtp://james2@localhost", body, "subject", "Hello Camel").     result.assertIsSatisfied(). }

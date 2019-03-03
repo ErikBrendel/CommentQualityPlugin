@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Override public void afterPropertiesSet() throws Exception {     ObjectHelper.notNull(camelContext, "CamelContext", this).     // register this as service so we get lifecycle callback when Camel is starting/stopping     camelContext.addService(this). }
+false;public;0;8;;@Override @SuppressWarnings("unchecked") public I read() throws Exception {     LOG.debug("reading new item...").     I item = (I) consumerTemplate.receiveBody(endpointUri).     LOG.debug("read item [{}]", item).     return item. }
+false;protected;0;4;;@Override protected void doStart() throws Exception {     ServiceHelper.startService(consumerTemplate). }
+false;protected;0;4;;@Override protected void doStop() throws Exception {     ServiceHelper.stopService(consumerTemplate). }

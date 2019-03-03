@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Bean @ConditionalOnMissingBean(name = "neo4jHealthIndicator") public HealthIndicator neo4jHealthIndicator(Map<String, SessionFactory> sessionFactories) {     return createHealthIndicator(sessionFactories). }

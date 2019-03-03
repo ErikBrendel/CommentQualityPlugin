@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Before public void setup() {     this.servletRequest = new MockHttpServletRequest().     this.servletResponse = new MockHttpServletResponse().     this.request = new ServletServerHttpRequest(this.servletRequest).     this.response = new ServletServerHttpResponse(this.servletResponse). }
+false;public;0;5;;@Test public void statusMustNotBeNull() {     assertThatIllegalArgumentException().isThrownBy(() -> new HttpStatusHandler(null)).withMessageContaining("Status must not be null"). }
+false;public;0;6;;@Test public void respondsOk() throws Exception {     HttpStatusHandler handler = new HttpStatusHandler().     handler.handle(this.request, this.response).     assertThat(this.servletResponse.getStatus()).isEqualTo(200). }
+false;public;0;6;;@Test public void respondsWithStatus() throws Exception {     HttpStatusHandler handler = new HttpStatusHandler(HttpStatus.I_AM_A_TEAPOT).     handler.handle(this.request, this.response).     assertThat(this.servletResponse.getStatus()).isEqualTo(418). }

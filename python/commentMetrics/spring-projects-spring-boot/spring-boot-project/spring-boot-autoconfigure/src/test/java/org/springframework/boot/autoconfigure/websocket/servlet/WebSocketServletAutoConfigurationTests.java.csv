@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Before public void createContext() {     this.context = new AnnotationConfigServletWebServerApplicationContext(). }
+false;public;0;6;;@After public void close() {     if (this.context != null) {         this.context.close().     } }
+false;public;0;5;;@Test public void tomcatServerContainerIsAvailableFromTheServletContext() {     serverContainerIsAvailableFromTheServletContext(TomcatConfiguration.class, WebSocketServletAutoConfiguration.TomcatWebSocketConfiguration.class). }
+false;public;0;5;;@Test public void jettyServerContainerIsAvailableFromTheServletContext() {     serverContainerIsAvailableFromTheServletContext(JettyConfiguration.class, WebSocketServletAutoConfiguration.JettyWebSocketConfiguration.class). }
+false;private;1;9;;private void serverContainerIsAvailableFromTheServletContext(Class<?>... configuration) {     this.context.register(configuration).     this.context.refresh().     Object serverContainer = this.context.getServletContext().getAttribute("javax.websocket.server.ServerContainer").     assertThat(serverContainer).isInstanceOf(ServerContainer.class). }
+false;public;0;4;;@Bean public WebServerFactoryCustomizerBeanPostProcessor ServletWebServerCustomizerBeanPostProcessor() {     return new WebServerFactoryCustomizerBeanPostProcessor(). }
+false;public;0;6;;@Bean public ServletWebServerFactory webServerFactory() {     TomcatServletWebServerFactory factory = new TomcatServletWebServerFactory().     factory.setPort(0).     return factory. }
+false;public;0;6;;@Bean public ServletWebServerFactory webServerFactory() {     JettyServletWebServerFactory JettyServletWebServerFactory = new JettyServletWebServerFactory().     JettyServletWebServerFactory.setPort(0).     return JettyServletWebServerFactory. }

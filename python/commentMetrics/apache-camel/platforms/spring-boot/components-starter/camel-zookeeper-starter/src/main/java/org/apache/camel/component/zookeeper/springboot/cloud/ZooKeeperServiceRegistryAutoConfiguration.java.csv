@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;12;;@Bean(name = "zookeeper-service-registry") @Scope(ConfigurableBeanFactory.SCOPE_SINGLETON) public ZooKeeperServiceRegistry zookeeperServiceRegistry(ZooKeeperServiceRegistryConfiguration configuration) throws Exception {     ZooKeeperServiceRegistry service = new ZooKeeperServiceRegistry().     IntrospectionSupport.setProperties(service, IntrospectionSupport.getNonNullProperties(configuration)).     return service. }

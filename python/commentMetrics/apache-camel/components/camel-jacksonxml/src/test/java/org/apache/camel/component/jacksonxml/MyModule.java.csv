@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getModuleName() {     return "MyModule". }
+false;public;0;4;;@Override public Version version() {     return Version.unknownVersion(). }
+false;public;1;4;;@Override public String translate(String propertyName) {     return "my-" + propertyName. }
+false;public;1;9;;@Override public void setupModule(SetupContext context) {     context.setNamingStrategy(new PropertyNamingStrategy.PropertyNamingStrategyBase() {          @Override         public String translate(String propertyName) {             return "my-" + propertyName.         }     }). }

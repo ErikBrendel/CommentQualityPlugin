@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Test public void testToTimeZone() throws Exception {     String id = TimeZone.getDefault().getID().     TimeZone zone = context.getTypeConverter().convertTo(TimeZone.class, id).     assertNotNull(zone).     assertEquals(id, zone.getID()). }
+false;public;0;7;;@Test public void testLongToDate() {     long value = 0.     Date date = context.getTypeConverter().convertTo(Date.class, value).     Date expected = new Date(value).     assertEquals(expected, date). }
+false;public;0;6;;@Test public void testDateToLong() {     Date date = new Date(0).     long l = context.getTypeConverter().convertTo(Long.class, date).     assertEquals(date.getTime(), l). }

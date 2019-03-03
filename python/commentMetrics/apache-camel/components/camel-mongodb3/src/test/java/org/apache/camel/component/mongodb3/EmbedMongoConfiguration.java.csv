@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Bean public MongoClient myDb() throws UnknownHostException {     return new MongoClient(defaultHost(), PORT). }
+false;public;0;5;;@Bean public MongoClient myDbP() throws UnknownHostException {     MongoClientURI uri = new MongoClientURI("mongodb://localhost:" + PORT, builder().readPreference(ReadPreference.primary())).     return new MongoClient(uri). }
+false;public;0;5;;@Bean public MongoClient myDbPP() throws UnknownHostException {     MongoClientURI uri = new MongoClientURI("mongodb://localhost:" + PORT, builder().readPreference(ReadPreference.primaryPreferred())).     return new MongoClient(uri). }
+false;public;0;5;;@Bean public MongoClient myDbS() throws UnknownHostException {     MongoClientURI uri = new MongoClientURI("mongodb://localhost:" + PORT, builder().readPreference(ReadPreference.secondary())).     return new MongoClient(uri). }
+false;public;0;5;;@Bean public MongoClient myDbWCA() throws UnknownHostException {     MongoClientURI uri = new MongoClientURI("mongodb://localhost:" + PORT, builder().writeConcern(WriteConcern.ACKNOWLEDGED)).     return new MongoClient(uri). }
+false;public;0;5;;@Bean public MongoClient myDbSP() throws UnknownHostException {     MongoClientURI uri = new MongoClientURI("mongodb://localhost:" + PORT, builder().readPreference(ReadPreference.secondaryPreferred())).     return new MongoClient(uri). }
+false;public;0;5;;@Bean public MongoClient myDbN() throws UnknownHostException {     MongoClientURI uri = new MongoClientURI("mongodb://localhost:" + PORT, builder().readPreference(ReadPreference.nearest())).     return new MongoClient(uri). }

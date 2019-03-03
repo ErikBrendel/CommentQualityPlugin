@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void set(int index) {     fill(index, true). }
+false;public;1;3;;public void clear(int index) {     fill(index, false). }
+false;public;1;5;;public boolean get(int index) {     int wordNum = index >> 6.     long bitmask = 1L << index.     return (bits.get(wordNum) & bitmask) != 0. }
+false;private;2;7;;private void fill(int index, boolean bit) {     int wordNum = index >> 6.     bits = bigArrays.grow(bits, wordNum + 1).     long bitmask = 1L << index.     long value = bit ? bits.get(wordNum) | bitmask : bits.get(wordNum) & ~bitmask.     bits.set(wordNum, value). }
+false;public;0;4;;@Override public void close() {     Releasables.close(bits). }

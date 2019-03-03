@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void requestResponseHeaderPair() throws Exception {     this.client.get().uri("/header-echo").header("h1", "in").exchange().expectStatus().isOk().expectHeader().valueEquals("h1", "in-out"). }
+false;public;0;7;;@Test public void headerMultipleValues() throws Exception {     this.client.get().uri("/header-multi-value").exchange().expectStatus().isOk().expectHeader().valueEquals("h1", "v1", "v2", "v3"). }
+false;public;0;7;;@Test public void setCookies() {     this.client.get().uri("/cookie-echo").cookies(cookies -> cookies.add("k1", "v1")).exchange().expectHeader().valueMatches("Set-Cookie", "k1=v1"). }
+false;;1;5;;@GetMapping("header-echo") ResponseEntity<Void> handleHeader(@RequestHeader("h1") String myHeader) {     String value = myHeader + "-out".     return ResponseEntity.ok().header("h1", value).build(). }
+false;;0;4;;@GetMapping("header-multi-value") ResponseEntity<Void> multiValue() {     return ResponseEntity.ok().header("h1", "v1", "v2", "v3").build(). }
+false;;1;6;;@GetMapping("cookie-echo") ResponseEntity<Void> handleCookie(@CookieValue("k1") String cookieValue) {     HttpHeaders headers = new HttpHeaders().     headers.set("Set-Cookie", "k1=" + cookieValue).     return new ResponseEntity<>(headers, HttpStatus.OK). }

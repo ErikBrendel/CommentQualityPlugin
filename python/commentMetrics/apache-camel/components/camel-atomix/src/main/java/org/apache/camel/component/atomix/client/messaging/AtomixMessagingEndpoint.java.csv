@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Producer createProducer() throws Exception {     return new AtomixMessagingProducer(this). }
+false;public;1;4;;@Override public Consumer createConsumer(Processor processor) throws Exception {     return new AtomixMessagingConsumer(this, processor). }
+false;public;0;4;;@Override public AtomixMessagingConfiguration getConfiguration() {     return this.configuration. }
+false;public;1;4;;@Override public void setConfiguration(AtomixMessagingConfiguration configuration) {     this.configuration = configuration. }

@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public long recoveryId() {     return this.recoveryId. }
+false;public;0;3;;public ShardId shardId() {     return shardId. }
+false;public;1;8;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     recoveryId = in.readLong().     shardId = ShardId.readShardId(in).     snapshotFiles = new Store.MetadataSnapshot(in).     totalTranslogOps = in.readVInt(). }
+false;public;1;8;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeLong(recoveryId).     shardId.writeTo(out).     snapshotFiles.writeTo(out).     out.writeVInt(totalTranslogOps). }
+false;public;0;3;;public Store.MetadataSnapshot sourceMetaSnapshot() {     return snapshotFiles. }
+false;public;0;3;;public int totalTranslogOps() {     return totalTranslogOps. }

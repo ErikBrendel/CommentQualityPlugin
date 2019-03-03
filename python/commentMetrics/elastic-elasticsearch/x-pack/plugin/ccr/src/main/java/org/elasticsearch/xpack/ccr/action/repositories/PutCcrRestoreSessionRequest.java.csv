@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public ActionRequestValidationException validate() {     return null. }
+false;public;1;6;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     sessionUUID = in.readString().     shardId = ShardId.readShardId(in). }
+false;public;1;6;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeString(sessionUUID).     shardId.writeTo(out). }
+false;;0;3;;String getSessionUUID() {     return sessionUUID. }
+false;;0;3;;ShardId getShardId() {     return shardId. }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public boolean isEnabled(CamelEvent event) {     return event instanceof CamelContextStoppingEvent. }
+false;public;1;6;;@Override public void notify(CamelEvent event) throws Exception {     CamelContext context = ((CamelContextStoppingEvent) event).getContext().     String testName = (String) testMethodName.apply(this).     RouteCoverageDumper.dumpRouteCoverage(context, testClassName, testName). }

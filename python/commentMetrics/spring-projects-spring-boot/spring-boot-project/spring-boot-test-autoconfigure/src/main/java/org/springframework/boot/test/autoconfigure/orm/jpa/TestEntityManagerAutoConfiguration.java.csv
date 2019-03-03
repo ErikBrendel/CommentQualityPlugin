@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Bean @ConditionalOnMissingBean public TestEntityManager testEntityManager(EntityManagerFactory entityManagerFactory) {     return new TestEntityManager(entityManagerFactory). }

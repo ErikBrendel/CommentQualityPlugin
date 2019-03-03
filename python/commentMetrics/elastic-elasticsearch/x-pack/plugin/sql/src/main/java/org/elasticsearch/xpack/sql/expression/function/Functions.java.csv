@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static boolean isAggregate(Expression e) {     return e instanceof AggregateFunction. }
+false;public,static;1;3;;public static boolean isGrouping(Expression e) {     return e instanceof GroupingFunction. }
+false;public,static;1;10;;public static Map<String, Function> collectFunctions(QueryPlan<?> plan) {     Map<String, Function> resolvedFunctions = new LinkedHashMap<>().     plan.forEachExpressionsDown(e -> {         if (e.resolved() && e instanceof Function) {             Function f = (Function) e.             resolvedFunctions.put(f.functionId(), f).         }     }).     return resolvedFunctions. }

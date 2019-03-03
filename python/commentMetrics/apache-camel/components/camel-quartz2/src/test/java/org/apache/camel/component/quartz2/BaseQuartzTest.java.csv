@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected boolean useJmx() {     return true. }
+false;protected;0;9;;@Override protected CamelContext createCamelContext() throws Exception {     CamelContext context = super.createCamelContext().     QuartzComponent quartz = context.getComponent("quartz2", QuartzComponent.class).     quartz.setEnableJmx(useJmx()).     return context. }

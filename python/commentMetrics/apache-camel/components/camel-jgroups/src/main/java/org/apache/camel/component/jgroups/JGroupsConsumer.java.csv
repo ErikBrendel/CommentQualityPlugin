@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;7;;@Override protected void doStart() throws Exception {     super.doStart().     log.debug("Connecting receiver: {} to the cluster: {}.", receiver, clusterName).     channel.setReceiver(receiver).     endpoint.connect(). }
+false;protected;0;7;;@Override protected void doStop() throws Exception {     log.debug("Closing connection to cluster: {} from receiver: {}.", clusterName, receiver).     channel.setReceiver(null).     endpoint.disconnect().     super.doStop(). }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;11;;@Override public List<SearchPlugin.SuggesterSpec<?>> getSuggesters() {     return Collections.singletonList(new SearchPlugin.SuggesterSpec<>(CustomSuggestionBuilder.SUGGESTION_NAME, CustomSuggestionBuilder::new, CustomSuggestionBuilder::fromXContent, CustomSuggestion::new)). }

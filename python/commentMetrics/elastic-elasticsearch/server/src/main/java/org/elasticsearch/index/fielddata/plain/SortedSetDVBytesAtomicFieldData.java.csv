@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Override public SortedSetDocValues getOrdinalsValues() {     try {         return DocValues.getSortedSet(reader, field).     } catch (IOException e) {         throw new IllegalStateException("cannot load docvalues", e).     } }
+false;public;0;3;;@Override public void close() { }
+false;public;0;4;;@Override public long ramBytesUsed() {     // unknown     return 0. }
+false;public;0;4;;@Override public Collection<Accountable> getChildResources() {     return Collections.emptyList(). }

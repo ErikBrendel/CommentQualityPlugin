@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;5;;protected JndiRegistry createRegistry() throws Exception {     JndiRegistry jndi = super.createRegistry().     jndi.bind("splitterBean", new SplitWordsBean()).     return jndi. }
+false;public;0;9;;@Test public void testSplitUsingMethodCall() throws Exception {     MockEndpoint resultEndpoint = getMockEndpoint("mock:result").     resultEndpoint.expectedBodiesReceived("Claus", "James", "Willem").     template2.sendBody("direct:start", "Claus@James@Willem").     assertMockEndpointsSatisfied(). }
+false;public;0;4;;@Override public void configure() throws Exception {     from("disruptor-vm:server").split().method("splitterBean", "splitWords").to("mock:result"). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("disruptor-vm:server").split().method("splitterBean", "splitWords").to("mock:result").         }     }. }
+false;public;0;4;;@Override public void configure() throws Exception {     from("direct:start").to("disruptor-vm:server"). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilderForSecondContext() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").to("disruptor-vm:server").         }     }. }
+false;public,static;1;6;;public static List<String> splitWords(String body) {     // as we like. As this is based on a unit test we just do it easy     return Arrays.asList(body.split("@")). }

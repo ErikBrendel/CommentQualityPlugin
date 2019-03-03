@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;12;;@Test public void testSpying() {     ApplicationContext context = this.childConfig.getContext().     ApplicationContext parentContext = context.getParent().     assertThat(parentContext.getBeanNamesForType(ExampleService.class)).hasSize(1).     assertThat(parentContext.getBeanNamesForType(ExampleServiceCaller.class)).hasSize(0).     assertThat(context.getBeanNamesForType(ExampleService.class)).hasSize(0).     assertThat(context.getBeanNamesForType(ExampleServiceCaller.class)).hasSize(1).     assertThat(context.getBean(ExampleService.class)).isNotNull().     assertThat(context.getBean(ExampleServiceCaller.class)).isNotNull(). }
+false;public;1;5;;@Override public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {     this.context = applicationContext. }
+false;public;0;3;;public ApplicationContext getContext() {     return this.context. }

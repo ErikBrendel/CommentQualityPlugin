@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Around("execution(int *.getAge())") public int returnCountAsAge() {     return count++. }
+false;public;0;4;;@Before("execution(void *.set*(int))") public void countSetter() {     ++count. }
+false;public;0;4;;@Override public int getOrder() {     return this.order. }
+false;public;1;3;;public void setOrder(int order) {     this.order = order. }

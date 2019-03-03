@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;12;;@Override public void add(CharsRef input, CharsRef output, boolean includeOrig) {     // quietly ignore it. For more details on the control-flow see SolrSynonymParser::addInternal.     if (lenient == false || (input.length > 0 && output.length > 0)) {         super.add(input, output, includeOrig).     } }
+false;public;2;13;;@Override public CharsRef analyze(String text, CharsRefBuilder reuse) throws IOException {     try {         return super.analyze(text, reuse).     } catch (IllegalArgumentException ex) {         if (lenient) {             logger.info("Synonym rule for [" + text + "] was ignored").             return new CharsRef("").         } else {             throw ex.         }     } }

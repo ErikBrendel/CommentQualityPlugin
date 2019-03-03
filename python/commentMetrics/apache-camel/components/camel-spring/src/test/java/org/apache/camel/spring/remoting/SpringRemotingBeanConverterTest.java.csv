@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;13;;@Test public void testBeanRoutes() throws Exception {     AbstractXmlApplicationContext applicationContext = createApplicationContext().     CamelContext camelContext = SpringCamelContext.springCamelContext(applicationContext, true).     Invoker invoker = applicationContext.getBean("invokerProxy", Invoker.class).     String response = invoker.invoke(new Bean.SubClass()).     assertEquals("Hello from Sub", response).     camelContext.stop().     IOHelper.close(applicationContext). }
+false;protected;0;3;;protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/spring/remoting/beanConverter.xml"). }

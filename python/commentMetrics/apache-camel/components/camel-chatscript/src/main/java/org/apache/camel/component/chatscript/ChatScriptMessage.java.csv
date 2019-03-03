@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getUserName() {     return username. }
+false;public;1;3;;public void setUserName(String userName) {     this.username = userName. }
+false;public;0;3;;public String getBotName() {     return botname. }
+false;public;1;3;;public void setBotName(String botName) {     this.botname = botName. }
+false;public;0;3;;public String getBody() {     return body. }
+false;public;1;3;;public void setBody(String iBody) {     this.body = iBody. }
+false;public;0;3;;public String getReply() {     return reply. }
+false;public;1;3;;public void setReply(String iReply) {     this.reply = iReply. }
+false;public;0;6;;public String toCSFormat() {     String s.     final char nullChar = (char) 0.     s = this.username + nullChar + this.botname + nullChar + this.body + nullChar.     return s. }
+false;public;0;4;;@Override public String toString() {     return "ChatScriptMessage [username=" + username + ", botname=" + botname + ", message=" + body + ", reply=" + reply + "]". }

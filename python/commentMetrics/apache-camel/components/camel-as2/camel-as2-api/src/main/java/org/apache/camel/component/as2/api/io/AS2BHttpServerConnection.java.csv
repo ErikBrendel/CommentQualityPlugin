@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public void receiveRequestEntity(HttpEntityEnclosingRequest request) throws HttpException, IOException {     super.receiveRequestEntity(request).     EntityParser.parseAS2MessageEntity(request). }

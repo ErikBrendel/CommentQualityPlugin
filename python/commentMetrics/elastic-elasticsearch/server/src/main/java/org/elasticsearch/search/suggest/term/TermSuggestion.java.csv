@@ -1,0 +1,21 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;9;;@Override public int compare(Suggestion.Entry.Option first, Suggestion.Entry.Option second) {     // first criteria: the distance     int cmp = Float.compare(second.getScore(), first.getScore()).     if (cmp != 0) {         return cmp.     }     return FREQUENCY.compare(first, second). }
+false;public;2;18;;@Override public int compare(Suggestion.Entry.Option first, Suggestion.Entry.Option second) {     // first criteria: the popularity     int cmp = ((TermSuggestion.Entry.Option) second).getFreq() - ((TermSuggestion.Entry.Option) first).getFreq().     if (cmp != 0) {         return cmp.     }     // second criteria (if first criteria is equal): the distance     cmp = Float.compare(second.getScore(), first.getScore()).     if (cmp != 0) {         return cmp.     }     // third criteria: term text     return first.getText().compareTo(second.getText()). }
+false;public;0;4;;@Override public int getWriteableType() {     return TYPE. }
+false;public;1;3;;public void setSort(SortBy sort) {     this.sort = sort. }
+false;public;0;3;;public SortBy getSort() {     return sort. }
+false;protected;0;11;;@Override protected Comparator<Option> sortComparator() {     switch(sort) {         case SCORE:             return SCORE.         case FREQUENCY:             return FREQUENCY.         default:             throw new ElasticsearchException("Could not resolve comparator for sort key: [" + sort + "]").     } }
+false;public;1;8;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     if (out.getVersion().onOrAfter(Version.V_7_0_0)) {         sort.writeTo(out).     } }
+false;public;0;4;;@Override public String getWriteableName() {     return TermSuggestionBuilder.SUGGESTION_NAME. }
+false;public,static;2;6;;public static TermSuggestion fromXContent(XContentParser parser, String name) throws IOException {     // the "size" parameter and the SortBy for TermSuggestion cannot be parsed from the response, use default values     TermSuggestion suggestion = new TermSuggestion(name, -1, SortBy.SCORE).     parseEntries(parser, suggestion, TermSuggestion.Entry::fromXContent).     return suggestion. }
+false;protected;1;4;;@Override protected Entry newEntry(StreamInput in) throws IOException {     return new Entry(in). }
+false;public;1;5;;@Override public boolean equals(Object other) {     return super.equals(other) && Objects.equals(sort, ((TermSuggestion) other).sort). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(super.hashCode(), sort). }
+false;protected;1;4;;@Override protected Option newOption(StreamInput in) throws IOException {     return new Option(in). }
+false;public,static;1;3;;public static Entry fromXContent(XContentParser parser) {     return PARSER.apply(parser, null). }
+false;protected;1;5;;@Override protected void mergeInto(Suggestion.Entry.Option otherOption) {     super.mergeInto(otherOption).     freq += ((Option) otherOption).freq. }
+false;public;1;3;;public void setFreq(int freq) {     this.freq = freq. }
+true;public;0;3;/**  * @return How often this suggested text appears in the index.  */ ;/**  * @return How often this suggested text appears in the index.  */ public int getFreq() {     return freq. }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeVInt(freq). }
+false;public;2;6;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder = super.toXContent(builder, params).     builder.field(FREQ.getPreferredName(), freq).     return builder. }
+false;public,static;1;3;;public static Option fromXContent(XContentParser parser) {     return PARSER.apply(parser, null). }

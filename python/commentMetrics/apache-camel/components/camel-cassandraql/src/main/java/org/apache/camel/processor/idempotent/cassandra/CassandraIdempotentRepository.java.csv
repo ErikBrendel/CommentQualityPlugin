@@ -1,0 +1,29 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;1;10;;private boolean isKey(ResultSet resultSet) {     Row row = resultSet.one().     if (row == null) {         LOGGER.debug("No row to check key").         return false.     } else {         LOGGER.debug("Row with {} columns to check key", row.getColumnDefinitions()).         return row.getColumnDefinitions().size() >= pkColumns.length.     } }
+false;protected,final;1;4;;protected final boolean isApplied(ResultSet resultSet) {     Row row = resultSet.one().     return row == null || row.getBool("[applied]"). }
+false;protected;1;3;;protected Object[] getPKValues(String key) {     return append(prefixPKValues, key). }
+false;protected;0;8;;// ------------------------------------------------------------------------- // Lifecycle methods @Override protected void doStart() throws Exception {     sessionHolder.start().     initInsertStatement().     initSelectStatement().     initDeleteStatement().     initClearStatement(). }
+false;protected;0;4;;@Override protected void doStop() throws Exception {     sessionHolder.stop(). }
+false;protected;0;6;;// ------------------------------------------------------------------------- // Add key to repository protected void initInsertStatement() {     Insert insert = generateInsert(table, pkColumns, true, ttl).     insert = applyConsistencyLevel(insert, writeConsistencyLevel).     LOGGER.debug("Generated Insert {}", insert).     insertStatement = getSession().prepare(insert). }
+false;public;1;6;;@Override public boolean add(String key) {     Object[] idValues = getPKValues(key).     LOGGER.debug("Inserting key {}", (Object) idValues).     return isApplied(getSession().execute(insertStatement.bind(idValues))). }
+false;protected;0;6;;// ------------------------------------------------------------------------- // Check if key is in repository protected void initSelectStatement() {     Select select = generateSelect(table, pkColumns, pkColumns).     select = applyConsistencyLevel(select, readConsistencyLevel).     LOGGER.debug("Generated Select {}", select).     selectStatement = getSession().prepare(select). }
+false;public;1;6;;@Override public boolean contains(String key) {     Object[] idValues = getPKValues(key).     LOGGER.debug("Checking key {}", (Object) idValues).     return isKey(getSession().execute(selectStatement.bind(idValues))). }
+false;public;1;4;;@Override public boolean confirm(String key) {     return true. }
+false;protected;0;6;;// ------------------------------------------------------------------------- // Remove key from repository protected void initDeleteStatement() {     Delete delete = generateDelete(table, pkColumns, true).     delete = applyConsistencyLevel(delete, writeConsistencyLevel).     LOGGER.debug("Generated Delete {}", delete).     deleteStatement = getSession().prepare(delete). }
+false;public;1;6;;@Override public boolean remove(String key) {     Object[] idValues = getPKValues(key).     LOGGER.debug("Deleting key {}", (Object) idValues).     return isApplied(getSession().execute(deleteStatement.bind(idValues))). }
+false;protected;0;6;;// ------------------------------------------------------------------------- // Clear the repository protected void initClearStatement() {     Truncate truncate = generateTruncate(table).     truncate = applyConsistencyLevel(truncate, writeConsistencyLevel).     LOGGER.debug("Generated truncate for clear operation {}", truncate).     truncateStatement = getSession().prepare(truncate). }
+false;public;0;5;;@Override public void clear() {     LOGGER.debug("Clear table {}", table).     getSession().execute(truncateStatement.bind()). }
+false;public;0;3;;// ------------------------------------------------------------------------- // Getters & Setters public Session getSession() {     return sessionHolder.getSession(). }
+false;public;1;3;;public void setSession(Session session) {     this.sessionHolder = new CassandraSessionHolder(session). }
+false;public;0;3;;public String getTable() {     return table. }
+false;public;1;3;;public void setTable(String table) {     this.table = table. }
+false;public;0;3;;public String[] getPKColumns() {     return pkColumns. }
+false;public;1;3;;public void setPKColumns(String... pkColumns) {     this.pkColumns = pkColumns. }
+false;public;0;3;;public Integer getTtl() {     return ttl. }
+false;public;1;3;;public void setTtl(Integer ttl) {     this.ttl = ttl. }
+false;public;0;3;;public ConsistencyLevel getWriteConsistencyLevel() {     return writeConsistencyLevel. }
+false;public;1;3;;public void setWriteConsistencyLevel(ConsistencyLevel writeConsistencyLevel) {     this.writeConsistencyLevel = writeConsistencyLevel. }
+false;public;0;3;;public ConsistencyLevel getReadConsistencyLevel() {     return readConsistencyLevel. }
+false;public;1;3;;public void setReadConsistencyLevel(ConsistencyLevel readConsistencyLevel) {     this.readConsistencyLevel = readConsistencyLevel. }
+false;public;0;3;;public String[] getPrefixPKValues() {     return prefixPKValues. }
+false;public;1;3;;public void setPrefixPKValues(String[] prefixPKValues) {     this.prefixPKValues = prefixPKValues. }

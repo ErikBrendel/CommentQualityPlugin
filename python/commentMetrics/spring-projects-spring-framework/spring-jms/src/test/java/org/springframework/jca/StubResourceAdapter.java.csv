@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;@Override public void start(BootstrapContext bootstrapContext) throws ResourceAdapterInternalException { }
+false;public;0;3;;@Override public void stop() { }
+false;public;2;3;;@Override public void endpointActivation(MessageEndpointFactory messageEndpointFactory, ActivationSpec activationSpec) throws ResourceException { }
+false;public;2;3;;@Override public void endpointDeactivation(MessageEndpointFactory messageEndpointFactory, ActivationSpec activationSpec) { }
+false;public;1;4;;@Override public XAResource[] getXAResources(ActivationSpec[] activationSpecs) throws ResourceException {     return null. }

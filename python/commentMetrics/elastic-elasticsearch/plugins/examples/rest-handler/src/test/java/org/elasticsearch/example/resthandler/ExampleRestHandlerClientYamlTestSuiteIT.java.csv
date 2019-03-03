@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;6;;@ParametersFactory public static Iterable<Object[]> parameters() throws Exception {     // see ESClientYamlSuiteTestCase.REST_TESTS_SUITE     return ESClientYamlSuiteTestCase.createParameters(). }

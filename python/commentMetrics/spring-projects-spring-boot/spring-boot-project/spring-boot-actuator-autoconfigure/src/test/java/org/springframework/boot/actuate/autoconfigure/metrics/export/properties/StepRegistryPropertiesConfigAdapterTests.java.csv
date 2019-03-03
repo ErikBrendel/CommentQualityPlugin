@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected,abstract;0;1;;protected abstract P createProperties().
+false;protected,abstract;1;1;;protected abstract A createConfigAdapter(P properties).
+false;public;0;7;;@Test public void whenPropertiesStepIsSetAdapterStepReturnsIt() {     P properties = createProperties().     properties.setStep(Duration.ofSeconds(42)).     assertThat(createConfigAdapter(properties).step()).isEqualTo(Duration.ofSeconds(42)). }
+false;public;0;6;;@Test public void whenPropertiesEnabledIsSetAdapterEnabledReturnsIt() {     P properties = createProperties().     properties.setEnabled(false).     assertThat(createConfigAdapter(properties).enabled()).isFalse(). }
+false;public;0;6;;@Test public void whenPropertiesNumThreadsIsSetAdapterNumThreadsReturnsIt() {     P properties = createProperties().     properties.setNumThreads(42).     assertThat(createConfigAdapter(properties).numThreads()).isEqualTo(42). }
+false;public;0;6;;@Test public void whenPropertiesBatchSizeIsSetAdapterBatchSizeReturnsIt() {     P properties = createProperties().     properties.setBatchSize(10042).     assertThat(createConfigAdapter(properties).batchSize()).isEqualTo(10042). }

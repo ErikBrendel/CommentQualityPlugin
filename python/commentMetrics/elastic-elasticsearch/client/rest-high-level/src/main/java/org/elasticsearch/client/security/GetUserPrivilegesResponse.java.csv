@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private,static;1;10;;@SuppressWarnings("unchecked") private static GetUserPrivilegesResponse buildResponseFromParserArgs(Object[] args) {     return new GetUserPrivilegesResponse((Collection<String>) args[0], (Collection<GlobalPrivileges>) args[1], (Collection<UserIndicesPrivileges>) args[2], (Collection<ApplicationResourcePrivileges>) args[3], (Collection<String>) args[4]). }
+false;public,static;1;3;;public static GetUserPrivilegesResponse fromXContent(XContentParser parser) throws IOException {     return PARSER.parse(parser, null). }
+false;public;0;3;;public Set<String> getClusterPrivileges() {     return clusterPrivileges. }
+false;public;0;3;;public Set<GlobalPrivileges> getGlobalPrivileges() {     return globalPrivileges. }
+false;public;0;3;;public Set<UserIndicesPrivileges> getIndicesPrivileges() {     return indicesPrivileges. }
+false;public;0;3;;public Set<ApplicationResourcePrivileges> getApplicationPrivileges() {     return applicationPrivileges. }
+false;public;0;3;;public Set<String> getRunAsPrivilege() {     return runAsPrivilege. }
+false;public;0;10;;@Override public String toString() {     return "GetUserPrivilegesResponse{" + "clusterPrivileges=" + clusterPrivileges + ", globalPrivileges=" + globalPrivileges + ", indicesPrivileges=" + indicesPrivileges + ", applicationPrivileges=" + applicationPrivileges + ", runAsPrivilege=" + runAsPrivilege + '}'. }
+false;public;1;15;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     final GetUserPrivilegesResponse that = (GetUserPrivilegesResponse) o.     return Objects.equals(this.clusterPrivileges, that.clusterPrivileges) && Objects.equals(this.globalPrivileges, that.globalPrivileges) && Objects.equals(this.indicesPrivileges, that.indicesPrivileges) && Objects.equals(this.applicationPrivileges, that.applicationPrivileges) && Objects.equals(this.runAsPrivilege, that.runAsPrivilege). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(clusterPrivileges, globalPrivileges, indicesPrivileges, applicationPrivileges, runAsPrivilege). }

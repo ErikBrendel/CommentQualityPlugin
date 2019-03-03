@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static EmailAction.Builder emailAction(EmailTemplate.Builder email) {     return emailAction(email.build()). }
+false;public,static;1;3;;public static EmailAction.Builder emailAction(EmailTemplate email) {     return EmailAction.builder(email). }
+false;public,static;2;3;;public static IndexAction.Builder indexAction(String index, String type) {     return IndexAction.builder(index, type). }
+false;public,static;2;3;;public static JiraAction.Builder jiraAction(String account, MapBuilder<String, Object> fields) {     return jiraAction(account, fields.immutableMap()). }
+false;public,static;2;3;;public static JiraAction.Builder jiraAction(String account, Map<String, Object> fields) {     return JiraAction.builder(account, fields). }
+false;public,static;1;3;;public static WebhookAction.Builder webhookAction(HttpRequestTemplate.Builder httpRequest) {     return webhookAction(httpRequest.build()). }
+false;public,static;1;3;;public static WebhookAction.Builder webhookAction(HttpRequestTemplate httpRequest) {     return WebhookAction.builder(httpRequest). }
+false;public,static;1;3;;public static LoggingAction.Builder loggingAction(String text) {     return loggingAction(new TextTemplate(text)). }
+false;public,static;1;3;;public static LoggingAction.Builder loggingAction(TextTemplate text) {     return LoggingAction.builder(text). }
+false;public,static;2;3;;public static SlackAction.Builder slackAction(String account, SlackMessage.Template.Builder message) {     return slackAction(account, message.build()). }
+false;public,static;2;3;;public static SlackAction.Builder slackAction(String account, SlackMessage.Template message) {     return SlackAction.builder(account, message). }
+false;public,static;2;3;;public static PagerDutyAction.Builder triggerPagerDutyAction(String account, String description) {     return pagerDutyAction(IncidentEvent.templateBuilder(description).setAccount(account)). }
+false;public,static;1;3;;public static PagerDutyAction.Builder pagerDutyAction(IncidentEvent.Template.Builder event) {     return PagerDutyAction.builder(event.build()). }
+false;public,static;1;3;;public static PagerDutyAction.Builder pagerDutyAction(IncidentEvent.Template event) {     return PagerDutyAction.builder(event). }

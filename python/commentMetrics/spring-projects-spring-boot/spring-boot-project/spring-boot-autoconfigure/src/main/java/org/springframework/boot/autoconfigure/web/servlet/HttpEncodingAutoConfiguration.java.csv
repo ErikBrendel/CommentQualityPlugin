@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Bean @ConditionalOnMissingBean public CharacterEncodingFilter characterEncodingFilter() {     CharacterEncodingFilter filter = new OrderedCharacterEncodingFilter().     filter.setEncoding(this.properties.getCharset().name()).     filter.setForceRequestEncoding(this.properties.shouldForce(Type.REQUEST)).     filter.setForceResponseEncoding(this.properties.shouldForce(Type.RESPONSE)).     return filter. }
+false;public;0;4;;@Bean public LocaleCharsetMappingsCustomizer localeCharsetMappingsCustomizer() {     return new LocaleCharsetMappingsCustomizer(this.properties). }
+false;public;1;6;;@Override public void customize(ConfigurableServletWebServerFactory factory) {     if (this.properties.getMapping() != null) {         factory.setLocaleCharsetMappings(this.properties.getMapping()).     } }
+false;public;0;4;;@Override public int getOrder() {     return 0. }

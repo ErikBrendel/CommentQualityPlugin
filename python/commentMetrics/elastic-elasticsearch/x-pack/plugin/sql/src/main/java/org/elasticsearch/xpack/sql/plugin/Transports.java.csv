@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;static;1;3;;static String username(SecurityContext securityContext) {     return securityContext != null && securityContext.getUser() != null ? securityContext.getUser().principal() : null. }
+false;static;1;3;;static String clusterName(ClusterService clusterService) {     return clusterService.getClusterName().value(). }

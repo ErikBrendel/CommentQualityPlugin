@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected NodeInfo<BinaryArithmeticPipe> info() {     return NodeInfo.create(this, BinaryArithmeticPipe::new, expression(), left(), right(), operation). }
+false;protected;2;4;;@Override protected BinaryPipe replaceChildren(Pipe left, Pipe right) {     return new BinaryArithmeticPipe(source(), expression(), left, right, operation). }
+false;public;0;4;;@Override public BinaryArithmeticProcessor asProcessor() {     return new BinaryArithmeticProcessor(left().asProcessor(), right().asProcessor(), operation). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(super.hashCode(), operation). }
+false;public;1;8;;@Override public boolean equals(Object obj) {     if (super.equals(obj)) {         BinaryArithmeticPipe other = (BinaryArithmeticPipe) obj.         return Objects.equals(operation, other.operation).     }     return false. }

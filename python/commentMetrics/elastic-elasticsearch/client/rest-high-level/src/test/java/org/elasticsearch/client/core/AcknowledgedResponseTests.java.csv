@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;public void testFromXContent() throws IOException {     xContentTester(this::createParser, this::createTestInstance, AcknowledgedResponseTests::toXContent, AcknowledgedResponse::fromXContent).supportsUnknownFields(false).test(). }
+false;private;0;3;;private AcknowledgedResponse createTestInstance() {     return new AcknowledgedResponse(randomBoolean()). }
+false;public,static;2;7;;public static void toXContent(AcknowledgedResponse response, XContentBuilder builder) throws IOException {     builder.startObject().     {         builder.field(response.getFieldName(), response.isAcknowledged()).     }     builder.endObject(). }

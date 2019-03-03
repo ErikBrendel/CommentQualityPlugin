@@ -1,0 +1,22 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Override public Producer createProducer() throws Exception {     SlackProducer producer = new SlackProducer(this).     return producer. }
+false;public;1;9;;@Override public Consumer createConsumer(Processor processor) throws Exception {     if (ObjectHelper.isEmpty(token)) {         throw new RuntimeCamelException("Missing required endpoint configuration: token must be defined for Slack consumer").     }     SlackConsumer consumer = new SlackConsumer(this, processor).     configureConsumer(consumer).     return consumer. }
+false;public;0;4;;@Override public boolean isSingleton() {     return true. }
+true;public;1;3;/**  * The incoming webhook URL  */ ;/**  * The incoming webhook URL  */ public void setWebhookUrl(String webhookUrl) {     this.webhookUrl = webhookUrl. }
+false;public;0;3;;public String getWebhookUrl() {     return webhookUrl. }
+false;public;0;3;;public String getChannel() {     return channel. }
+true;public;1;3;/**  * The channel name (syntax #name) or slackuser (syntax @userName) to send a  * message directly to an user.  */ ;/**  * The channel name (syntax #name) or slackuser (syntax @userName) to send a  * message directly to an user.  */ public void setChannel(String channel) {     this.channel = channel. }
+false;public;0;3;;public String getUsername() {     return username. }
+true;public;1;3;/**  * This is the username that the bot will have when sending messages to a  * channel or user.  */ ;/**  * This is the username that the bot will have when sending messages to a  * channel or user.  */ public void setUsername(String username) {     this.username = username. }
+false;public;0;3;;public String getIconUrl() {     return iconUrl. }
+true;public;1;3;/**  * The avatar that the component will use when sending message to a channel  * or user.  */ ;/**  * The avatar that the component will use when sending message to a channel  * or user.  */ public void setIconUrl(String iconUrl) {     this.iconUrl = iconUrl. }
+false;public;0;3;;public String getIconEmoji() {     return iconEmoji. }
+true;public;1;3;/**  * Use a Slack emoji as an avatar  */ ;/**  * Use a Slack emoji as an avatar  */ public void setIconEmoji(String iconEmoji) {     this.iconEmoji = iconEmoji. }
+false;public;0;3;;public String getToken() {     return token. }
+true;public;1;3;/**  * The token to use  */ ;/**  * The token to use  */ public void setToken(String token) {     this.token = token. }
+false;public;0;3;;public String getMaxResults() {     return maxResults. }
+true;public;1;3;/**  * The Max Result for the poll  */ ;/**  * The Max Result for the poll  */ public void setMaxResults(String maxResult) {     this.maxResults = maxResult. }
+false;public;0;3;;public String getServerUrl() {     return serverUrl. }
+true;public;1;3;/**  * The Server URL of the Slack instance  */ ;/**  * The Server URL of the Slack instance  */ public void setServerUrl(String serverUrl) {     this.serverUrl = serverUrl. }
+false;public;1;3;;public Exchange createExchange(JsonObject object) {     return createExchange(getExchangePattern(), object). }
+false;public;2;17;;public Exchange createExchange(ExchangePattern pattern, JsonObject object) {     Exchange exchange = super.createExchange(pattern).     SlackMessage slackMessage = new SlackMessage().     String text = object.getString("text").     String username = object.getString("username").     slackMessage.setText(text).     slackMessage.setUsername(username).     if (ObjectHelper.isNotEmpty(object.get("icons"))) {         JsonObject icons = object.getMap("icons").         if (ObjectHelper.isNotEmpty(icons.get("emoji"))) {             slackMessage.setIconEmoji(icons.getString("emoji")).         }     }     Message message = exchange.getIn().     message.setBody(slackMessage).     return exchange. }

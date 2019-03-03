@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Override public ConfigurationProperty getConfigurationProperty(ConfigurationPropertyName name) {     boolean filtered = getFilter().test(name).     return filtered ? getSource().getConfigurationProperty(name) : null. }
+false;public;1;10;;@Override public ConfigurationPropertyState containsDescendantOf(ConfigurationPropertyName name) {     ConfigurationPropertyState result = this.source.containsDescendantOf(name).     if (result == ConfigurationPropertyState.PRESENT) {         // We can't be sure a contained descendant won't be filtered         return ConfigurationPropertyState.UNKNOWN.     }     return result. }
+false;public;0;4;;@Override public Object getUnderlyingSource() {     return this.source.getUnderlyingSource(). }
+false;protected;0;3;;protected ConfigurationPropertySource getSource() {     return this.source. }
+false;protected;0;3;;protected Predicate<ConfigurationPropertyName> getFilter() {     return this.filter. }
+false;public;0;4;;@Override public String toString() {     return this.source.toString() + " (filtered)". }

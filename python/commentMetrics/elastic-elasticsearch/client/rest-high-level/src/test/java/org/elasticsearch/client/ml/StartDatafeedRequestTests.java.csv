@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;15;;public static StartDatafeedRequest createRandomInstance(String datafeedId) {     StartDatafeedRequest request = new StartDatafeedRequest(datafeedId).     if (randomBoolean()) {         request.setStart(String.valueOf(randomLongBetween(1, 1000))).     }     if (randomBoolean()) {         request.setEnd(String.valueOf(randomLongBetween(1, 1000))).     }     if (randomBoolean()) {         request.setTimeout(TimeValue.timeValueMinutes(randomLongBetween(1, 1000))).     }     return request. }
+false;protected;0;5;;@Override protected StartDatafeedRequest createTestInstance() {     String datafeedId = DatafeedConfigTests.randomValidDatafeedId().     return createRandomInstance(datafeedId). }
+false;protected;1;4;;@Override protected StartDatafeedRequest doParseInstance(XContentParser parser) throws IOException {     return StartDatafeedRequest.PARSER.parse(parser, null). }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return false. }

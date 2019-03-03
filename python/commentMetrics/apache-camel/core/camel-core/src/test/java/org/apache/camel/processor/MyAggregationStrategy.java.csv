@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;11;;@Override public Exchange aggregate(Exchange oldExchange, Exchange newExchange) {     Exchange result = super.aggregate(oldExchange, newExchange).     if (oldExchange == null) {         result.setProperty("aggregated", 1).     } else {         Integer old = oldExchange.getProperty("aggregated", Integer.class).         result.setProperty("aggregated", old + 1).     }     return result. }

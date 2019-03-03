@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;1;1;/**  * Initializes this consumer channel factory with the given port.  */ ;/**  * Initializes this consumer channel factory with the given port.  */ void init(int port).
+true;;0;1;/**  * The port number this consumer channel factory is using.  */ ;/**  * The port number this consumer channel factory is using.  */ int getPort().
+true;;1;1;/**  * Adds the given consumer.  */ ;/**  * Adds the given consumer.  */ void addConsumer(NettyHttpConsumer consumer).
+true;;1;1;/**  * Removes the given consumer  */ ;/**  * Removes the given consumer  */ void removeConsumer(NettyHttpConsumer consumer).
+true;;0;1;/**  * Number of active consumers  */ ;/**  * Number of active consumers  */ int consumers().
+true;;0;1;/**  * Gets the {@link ChannelHandler}  */ ;/**  * Gets the {@link ChannelHandler}  */ ChannelHandler getChannelHandler().

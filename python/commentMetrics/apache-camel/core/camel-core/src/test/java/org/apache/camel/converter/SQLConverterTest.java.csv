@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void testTimestamp() {     long value = System.currentTimeMillis().     Timestamp ts = context.getTypeConverter().convertTo(Timestamp.class, value).     Timestamp expected = new Timestamp(value).     assertEquals(expected, ts). }
+false;public;0;7;;@Test public void testToLong() {     long value = System.currentTimeMillis().     Timestamp ts = new Timestamp(value).     long l = context.getTypeConverter().convertTo(Long.class, ts).     assertEquals(value, l). }

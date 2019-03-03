@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void testDefaultRedisConfiguration() {     this.contextRunner.run((context) -> {         Map<String, ?> beans = context.getBeansOfType(ReactiveRedisTemplate.class).         assertThat(beans).containsOnlyKeys("reactiveRedisTemplate").     }). }

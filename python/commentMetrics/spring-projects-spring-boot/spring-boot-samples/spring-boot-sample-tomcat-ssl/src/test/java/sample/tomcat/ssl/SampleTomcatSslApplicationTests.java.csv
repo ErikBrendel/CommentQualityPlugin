@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void testSsl() {     assertThat(this.webServerFactory.getSsl().isEnabled()).isTrue(). }
+false;public;0;6;;@Test public void testHome() {     ResponseEntity<String> entity = this.restTemplate.getForEntity("/", String.class).     assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.OK).     assertThat(entity.getBody()).isEqualTo("Hello, world"). }

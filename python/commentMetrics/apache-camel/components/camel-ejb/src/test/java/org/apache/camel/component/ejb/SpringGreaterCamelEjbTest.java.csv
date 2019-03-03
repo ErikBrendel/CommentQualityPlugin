@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/component/ejb/SpringGreaterCamelEjbTest.xml"). }
+false;public;0;8;;@Test public void testGreaterViaCamelEjb() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("Hello World").     template.sendBody("direct:start", "World").     assertMockEndpointsSatisfied(). }
+false;public;0;5;;@Test public void testLocateOtherBeans() throws Exception {     GreaterLocal mySpringBean = context().getRegistry().lookupByNameAndType("mySpringBean", GreaterLocal.class).     assertNotNull("We should get the instance of spring bean", mySpringBean). }

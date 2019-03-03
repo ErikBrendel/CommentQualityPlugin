@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;7;;public void addAliases(String name, String... aliases) {     Assert.notNull(name, "Name must not be null").     Assert.notNull(aliases, "Aliases must not be null").     addAliases(ConfigurationPropertyName.of(name), Arrays.stream(aliases).map(ConfigurationPropertyName::of).toArray(ConfigurationPropertyName[]::new)). }
+false;public;2;6;;public void addAliases(ConfigurationPropertyName name, ConfigurationPropertyName... aliases) {     Assert.notNull(name, "Name must not be null").     Assert.notNull(aliases, "Aliases must not be null").     this.aliases.addAll(name, Arrays.asList(aliases)). }
+false;public;1;3;;public List<ConfigurationPropertyName> getAliases(ConfigurationPropertyName name) {     return this.aliases.getOrDefault(name, Collections.emptyList()). }
+false;public;1;5;;public ConfigurationPropertyName getNameForAlias(ConfigurationPropertyName alias) {     return this.aliases.entrySet().stream().filter((e) -> e.getValue().contains(alias)).map(Map.Entry::getKey).findFirst().orElse(null). }
+false;public;0;4;;@Override public Iterator<ConfigurationPropertyName> iterator() {     return this.aliases.keySet().iterator(). }

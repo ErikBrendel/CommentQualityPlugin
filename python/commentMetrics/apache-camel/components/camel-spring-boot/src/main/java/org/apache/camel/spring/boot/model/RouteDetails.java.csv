@@ -1,0 +1,27 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public long getDeltaProcessingTime() {     return deltaProcessingTime. }
+false;public;0;3;;public long getExchangesInflight() {     return exchangesInflight. }
+false;public;0;3;;public long getExchangesTotal() {     return exchangesTotal. }
+false;public;0;3;;public long getExternalRedeliveries() {     return externalRedeliveries. }
+false;public;0;3;;public long getFailuresHandled() {     return failuresHandled. }
+false;public;0;3;;public String getFirstExchangeCompletedExchangeId() {     return firstExchangeCompletedExchangeId. }
+false;public;0;3;;public Date getFirstExchangeCompletedTimestamp() {     return firstExchangeCompletedTimestamp. }
+false;public;0;3;;public String getFirstExchangeFailureExchangeId() {     return firstExchangeFailureExchangeId. }
+false;public;0;3;;public Date getFirstExchangeFailureTimestamp() {     return firstExchangeFailureTimestamp. }
+false;public;0;3;;public String getLastExchangeCompletedExchangeId() {     return lastExchangeCompletedExchangeId. }
+false;public;0;3;;public Date getLastExchangeCompletedTimestamp() {     return lastExchangeCompletedTimestamp. }
+false;public;0;3;;public String getLastExchangeFailureExchangeId() {     return lastExchangeFailureExchangeId. }
+false;public;0;3;;public Date getLastExchangeFailureTimestamp() {     return lastExchangeFailureTimestamp. }
+false;public;0;3;;public long getLastProcessingTime() {     return lastProcessingTime. }
+false;public;0;3;;public String getLoad01() {     return load01. }
+false;public;0;3;;public String getLoad05() {     return load05. }
+false;public;0;3;;public String getLoad15() {     return load15. }
+false;public;0;3;;public long getMaxProcessingTime() {     return maxProcessingTime. }
+false;public;0;3;;public long getMeanProcessingTime() {     return meanProcessingTime. }
+false;public;0;3;;public long getMinProcessingTime() {     return minProcessingTime. }
+false;public;0;3;;public Long getOldestInflightDuration() {     return oldestInflightDuration. }
+false;public;0;3;;public String getOldestInflightExchangeId() {     return oldestInflightExchangeId. }
+false;public;0;3;;public long getRedeliveries() {     return redeliveries. }
+false;public;0;3;;public long getTotalProcessingTime() {     return totalProcessingTime. }
+false;public;0;3;;public RouteError getLastError() {     return lastError. }
+false;public;0;3;;public boolean getHasRouteController() {     return hasRouteController. }

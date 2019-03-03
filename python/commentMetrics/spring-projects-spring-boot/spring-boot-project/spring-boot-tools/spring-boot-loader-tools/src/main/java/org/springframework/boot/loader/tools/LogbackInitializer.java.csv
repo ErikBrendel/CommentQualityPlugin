@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;6;;public static void initialize() {     if (ClassUtils.isPresent("org.slf4j.impl.StaticLoggerBinder", null) && ClassUtils.isPresent("ch.qos.logback.classic.Logger", null)) {         new Initializer().setRootLogLevel().     } }
+false;public;0;5;;public void setRootLogLevel() {     ILoggerFactory factory = StaticLoggerBinder.getSingleton().getLoggerFactory().     Logger logger = factory.getLogger(Logger.ROOT_LOGGER_NAME).     ((ch.qos.logback.classic.Logger) logger).setLevel(Level.INFO). }

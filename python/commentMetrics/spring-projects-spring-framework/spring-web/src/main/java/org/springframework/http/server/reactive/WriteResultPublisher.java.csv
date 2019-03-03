@@ -1,0 +1,24 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,final;1;7;;@Override public final void subscribe(Subscriber<? super Void> subscriber) {     if (rsWriteResultLogger.isTraceEnabled()) {         rsWriteResultLogger.trace(this.logPrefix + this.state + " subscribe: " + subscriber).     }     this.state.get().subscribe(this, subscriber). }
+true;public;0;6;/**  * Invoke this to delegate a completion signal to the subscriber.  */ ;/**  * Invoke this to delegate a completion signal to the subscriber.  */ public void publishComplete() {     if (rsWriteResultLogger.isTraceEnabled()) {         rsWriteResultLogger.trace(this.logPrefix + this.state + " publishComplete").     }     this.state.get().publishComplete(this). }
+true;public;1;6;/**  * Invoke this to delegate an error signal to the subscriber.  */ ;/**  * Invoke this to delegate an error signal to the subscriber.  */ public void publishError(Throwable t) {     if (rsWriteResultLogger.isTraceEnabled()) {         rsWriteResultLogger.trace(this.logPrefix + this.state + " publishError: " + t).     }     this.state.get().publishError(this, t). }
+false;private;2;3;;private boolean changeState(State oldState, State newState) {     return this.state.compareAndSet(oldState, newState). }
+false;public,final;1;7;;@Override public final void request(long n) {     if (rsWriteResultLogger.isTraceEnabled()) {         rsWriteResultLogger.trace(this.publisher.logPrefix + state() + " request: " + n).     }     state().request(this.publisher, n). }
+false;public,final;0;7;;@Override public final void cancel() {     if (rsWriteResultLogger.isTraceEnabled()) {         rsWriteResultLogger.trace(this.publisher.logPrefix + state() + " cancel").     }     state().cancel(this.publisher). }
+false;private;0;3;;private State state() {     return this.publisher.state.get(). }
+false;;2;21;;@Override void subscribe(WriteResultPublisher publisher, Subscriber<? super Void> subscriber) {     Assert.notNull(subscriber, "Subscriber must not be null").     if (publisher.changeState(this, SUBSCRIBING)) {         Subscription subscription = new WriteResultSubscription(publisher).         publisher.subscriber = subscriber.         subscriber.onSubscribe(subscription).         publisher.changeState(SUBSCRIBING, SUBSCRIBED).         // Now safe to check "beforeSubscribed" flags, they won't change once in NO_DEMAND         if (publisher.completedBeforeSubscribed) {             publisher.publishComplete().         }         Throwable publisherError = publisher.errorBeforeSubscribed.         if (publisherError != null) {             publisher.publishError(publisherError).         }     } else {         throw new IllegalStateException(toString()).     } }
+false;;1;4;;@Override void publishComplete(WriteResultPublisher publisher) {     publisher.completedBeforeSubscribed = true. }
+false;;2;4;;@Override void publishError(WriteResultPublisher publisher, Throwable ex) {     publisher.errorBeforeSubscribed = ex. }
+false;;2;4;;@Override void request(WriteResultPublisher publisher, long n) {     Operators.validate(n). }
+false;;1;4;;@Override void publishComplete(WriteResultPublisher publisher) {     publisher.completedBeforeSubscribed = true. }
+false;;2;4;;@Override void publishError(WriteResultPublisher publisher, Throwable ex) {     publisher.errorBeforeSubscribed = ex. }
+false;;2;4;;@Override void request(WriteResultPublisher publisher, long n) {     Operators.validate(n). }
+false;;2;4;;@Override void request(WriteResultPublisher publisher, long n) { // ignore }
+false;;1;4;;@Override void cancel(WriteResultPublisher publisher) { // ignore }
+false;;1;4;;@Override void publishComplete(WriteResultPublisher publisher) { // ignore }
+false;;2;4;;@Override void publishError(WriteResultPublisher publisher, Throwable t) { // ignore }
+false;;2;3;;void subscribe(WriteResultPublisher publisher, Subscriber<? super Void> subscriber) {     throw new IllegalStateException(toString()). }
+false;;2;3;;void request(WriteResultPublisher publisher, long n) {     throw new IllegalStateException(toString()). }
+false;;1;5;;void cancel(WriteResultPublisher publisher) {     if (!publisher.changeState(this, COMPLETED)) {         publisher.state.get().cancel(publisher).     } }
+false;;1;10;;void publishComplete(WriteResultPublisher publisher) {     if (publisher.changeState(this, COMPLETED)) {         Subscriber<? super Void> s = publisher.subscriber.         Assert.state(s != null, "No subscriber").         s.onComplete().     } else {         publisher.state.get().publishComplete(publisher).     } }
+false;;2;10;;void publishError(WriteResultPublisher publisher, Throwable t) {     if (publisher.changeState(this, COMPLETED)) {         Subscriber<? super Void> s = publisher.subscriber.         Assert.state(s != null, "No subscriber").         s.onError(t).     } else {         publisher.state.get().publishError(publisher, t).     } }

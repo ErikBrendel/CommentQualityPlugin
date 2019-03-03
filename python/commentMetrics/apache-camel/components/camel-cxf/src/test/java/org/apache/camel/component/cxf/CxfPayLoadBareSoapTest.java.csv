@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;4;;@BeforeClass public static void startService() {     Endpoint.publish(ORIGINAL_URL, IMPLEMENTATION). }
+false;protected;0;3;;protected String getRouterEndpointURI() {     return String.format("cxf:%s?dataFormat=PAYLOAD&wsdlURL=classpath:bare.wsdl", PROXY_URL). }
+false;protected;0;3;;protected String getServiceEndpointURI() {     return String.format("cxf:%s?dataFormat=PAYLOAD&wsdlURL=classpath:bare.wsdl", ORIGINAL_URL). }
+false;public;0;3;;public void configure() {     from(getRouterEndpointURI()).to(getServiceEndpointURI()). }
+false;protected;0;8;;@Override protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from(getRouterEndpointURI()).to(getServiceEndpointURI()).         }     }. }
+false;public;0;12;;@Test public void testInvokeProxyService() {     JaxWsProxyFactoryBean factory = new JaxWsProxyFactoryBean().     factory.setServiceClass(BareSoapService.class).     factory.setAddress(PROXY_URL).     factory.setBus(BusFactory.newInstance().createBus()).     BareSoapService client = (BareSoapService) factory.create().     client.doSomething().     assertEquals("Proxied service should have been invoked once", 1, IMPLEMENTATION.invocations.get()). }
+false;;0;1;;void doSomething().
+false;public;0;3;;public void doSomething() {     invocations.incrementAndGet(). }

@@ -1,0 +1,17 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void setCamelContext(CamelContext camelContext) {     this.camelContext = camelContext. }
+false;public;0;3;;public CamelContext getCamelContext() {     return camelContext. }
+false;public;1;8;;public Class<?> resolveClass(String name) {     Class<?> answer = loadClass(name, DefaultClassResolver.class.getClassLoader()).     if (answer == null && getApplicationContextClassLoader() != null) {         // fallback and use application context class loader         answer = loadClass(name, getApplicationContextClassLoader()).     }     return answer. }
+false;public;2;8;;public <T> Class<T> resolveClass(String name, Class<T> type) {     Class<T> answer = CastUtils.cast(loadClass(name, DefaultClassResolver.class.getClassLoader())).     if (answer == null && getApplicationContextClassLoader() != null) {         // fallback and use application context class loader         answer = CastUtils.cast(loadClass(name, getApplicationContextClassLoader())).     }     return answer. }
+false;public;2;3;;public Class<?> resolveClass(String name, ClassLoader loader) {     return loadClass(name, loader). }
+false;public;3;3;;public <T> Class<T> resolveClass(String name, Class<T> type, ClassLoader loader) {     return CastUtils.cast(loadClass(name, loader)). }
+false;public;1;7;;public Class<?> resolveMandatoryClass(String name) throws ClassNotFoundException {     Class<?> answer = resolveClass(name).     if (answer == null) {         throw new ClassNotFoundException(name).     }     return answer. }
+false;public;2;7;;public <T> Class<T> resolveMandatoryClass(String name, Class<T> type) throws ClassNotFoundException {     Class<T> answer = resolveClass(name, type).     if (answer == null) {         throw new ClassNotFoundException(name).     }     return answer. }
+false;public;2;7;;public Class<?> resolveMandatoryClass(String name, ClassLoader loader) throws ClassNotFoundException {     Class<?> answer = resolveClass(name, loader).     if (answer == null) {         throw new ClassNotFoundException(name).     }     return answer. }
+false;public;3;7;;public <T> Class<T> resolveMandatoryClass(String name, Class<T> type, ClassLoader loader) throws ClassNotFoundException {     Class<T> answer = resolveClass(name, type, loader).     if (answer == null) {         throw new ClassNotFoundException(name).     }     return answer. }
+false;public;1;4;;public InputStream loadResourceAsStream(String uri) {     StringHelper.notEmpty(uri, "uri").     return ObjectHelper.loadResourceAsStream(uri, getApplicationContextClassLoader()). }
+false;public;1;4;;public URL loadResourceAsURL(String uri) {     StringHelper.notEmpty(uri, "uri").     return ObjectHelper.loadResourceAsURL(uri, getApplicationContextClassLoader()). }
+false;public;1;3;;public Enumeration<URL> loadResourcesAsURL(String uri) {     return loadAllResourcesAsURL(uri). }
+false;public;1;4;;public Enumeration<URL> loadAllResourcesAsURL(String uri) {     StringHelper.notEmpty(uri, "uri").     return ObjectHelper.loadResourcesAsURL(uri). }
+false;protected;2;4;;protected Class<?> loadClass(String name, ClassLoader loader) {     StringHelper.notEmpty(name, "name").     return ObjectHelper.loadClass(name, loader). }
+false;protected;0;3;;protected ClassLoader getApplicationContextClassLoader() {     return camelContext != null ? camelContext.getApplicationContextClassLoader() : null. }

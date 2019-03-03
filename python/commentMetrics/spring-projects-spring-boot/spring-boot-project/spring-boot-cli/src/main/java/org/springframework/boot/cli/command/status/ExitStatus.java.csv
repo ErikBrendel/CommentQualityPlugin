@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * An exit code appropriate for use in {@code System.exit()}.  * @return an exit code  */ ;/**  * An exit code appropriate for use in {@code System.exit()}.  * @return an exit code  */ public int getCode() {     return this.code. }
+true;public;0;3;/**  * A name describing the outcome.  * @return a name  */ ;/**  * A name describing the outcome.  * @return a name  */ public String getName() {     return this.name. }
+true;public;0;3;/**  * Flag to signal that the caller can (or should) hangup. A server process with  * non-daemon threads should set this to false.  * @return the flag  */ ;/**  * Flag to signal that the caller can (or should) hangup. A server process with  * non-daemon threads should set this to false.  * @return the flag  */ public boolean isHangup() {     return this.hangup. }
+true;public;0;3;/**  * Convert the existing code to a hangup.  * @return a new ExitStatus with hangup=true  */ ;/**  * Convert the existing code to a hangup.  * @return a new ExitStatus with hangup=true  */ public ExitStatus hangup() {     return new ExitStatus(this.code, this.name, true). }
+false;public;0;4;;@Override public String toString() {     return getName() + ":" + getCode(). }

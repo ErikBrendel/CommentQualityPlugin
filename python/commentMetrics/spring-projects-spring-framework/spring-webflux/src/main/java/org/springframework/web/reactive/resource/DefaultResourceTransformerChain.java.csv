@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;2;10;;private DefaultResourceTransformerChain initTransformerChain(ResourceResolverChain resolverChain, ArrayList<ResourceTransformer> transformers) {     DefaultResourceTransformerChain chain = new DefaultResourceTransformerChain(resolverChain, null, null).     ListIterator<? extends ResourceTransformer> it = transformers.listIterator(transformers.size()).     while (it.hasPrevious()) {         chain = new DefaultResourceTransformerChain(resolverChain, it.previous(), chain).     }     return chain. }
+false;public;0;4;;@Override public ResourceResolverChain getResolverChain() {     return this.resolverChain. }
+false;public;2;6;;@Override public Mono<Resource> transform(ServerWebExchange exchange, Resource resource) {     return (this.transformer != null && this.nextChain != null ? this.transformer.transform(exchange, resource, this.nextChain) : Mono.just(resource)). }

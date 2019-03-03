@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected NodeInfo<OctetLength> info() {     return NodeInfo.create(this, OctetLength::new, field()). }
+false;protected;1;4;;@Override protected OctetLength replaceChild(Expression newChild) {     return new OctetLength(source(), newChild). }
+false;protected;0;4;;@Override protected StringOperation operation() {     return StringOperation.OCTET_LENGTH. }
+false;public;0;4;;@Override public DataType dataType() {     return DataType.INTEGER. }

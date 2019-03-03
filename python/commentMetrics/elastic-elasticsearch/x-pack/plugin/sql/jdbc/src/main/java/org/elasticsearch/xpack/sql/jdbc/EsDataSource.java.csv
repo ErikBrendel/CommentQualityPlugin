@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public PrintWriter getLogWriter() throws SQLException {     return writer. }
+false;public;1;4;;@Override public void setLogWriter(PrintWriter out) throws SQLException {     this.writer = out. }
+false;public;1;7;;@Override public void setLoginTimeout(int seconds) throws SQLException {     if (seconds < 0) {         throw new SQLException("Negative timeout specified " + seconds).     }     loginTimeout = seconds. }
+false;public;0;4;;@Override public int getLoginTimeout() throws SQLException {     return loginTimeout. }
+false;public;0;4;;@Override public Logger getParentLogger() throws SQLFeatureNotSupportedException {     throw new SQLFeatureNotSupportedException(). }
+false;public;0;3;;public String getUrl() {     return url. }
+false;public;1;3;;public void setUrl(String url) {     this.url = url. }
+false;public;0;7;;public Properties getProperties() {     Properties copy = new Properties().     if (props != null) {         copy.putAll(props).     }     return copy. }
+false;public;1;4;;public void setProperties(Properties props) {     this.props = new Properties().     this.props.putAll(props). }
+false;public;0;4;;@Override public Connection getConnection() throws SQLException {     return doGetConnection(getProperties()). }
+false;public;2;7;;@Override public Connection getConnection(String username, String password) throws SQLException {     Properties p = getProperties().     p.setProperty(ConnectionConfiguration.AUTH_USER, username).     p.setProperty(ConnectionConfiguration.AUTH_PASS, password).     return doGetConnection(p). }
+false;private;1;6;;private Connection doGetConnection(Properties p) throws SQLException {     JdbcConfiguration cfg = JdbcConfiguration.create(url, p, loginTimeout).     JdbcConnection con = new JdbcConnection(cfg).     // enable logging if needed     return cfg.debug() ? Debug.proxy(cfg, con, writer) : con. }
+false;public;1;4;;@Override public boolean isWrapperFor(Class<?> iface) throws SQLException {     return iface != null && iface.isAssignableFrom(getClass()). }
+false;public;1;8;;@SuppressWarnings("unchecked") @Override public <T> T unwrap(Class<T> iface) throws SQLException {     if (isWrapperFor(iface)) {         return (T) this.     }     throw new SQLException(). }

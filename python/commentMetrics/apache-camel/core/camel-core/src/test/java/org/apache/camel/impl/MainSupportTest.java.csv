@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected ProducerTemplate findOrCreateCamelTemplate() {     return context.createProducerTemplate(). }
+false;protected;0;4;;@Override protected CamelContext createCamelContext() {     return null. }
+false;public;0;5;;@Test public void testMainSupport() throws Exception {     MyMainSupport my = new MyMainSupport().     my.run(new String[] { "-d", "1" }). }
+false;public;0;5;;@Test public void testMainSupportMaxMessages() throws Exception {     MyMainSupport my = new MyMainSupport().     my.run(new String[] { "-d", "1", "-dm", "2" }). }
+false;public;0;5;;@Test public void testMainSupportHelp() throws Exception {     MyMainSupport my = new MyMainSupport().     my.run(new String[] { "-h" }). }

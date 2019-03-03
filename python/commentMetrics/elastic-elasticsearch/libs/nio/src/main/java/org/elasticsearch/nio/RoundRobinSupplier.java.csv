@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Override public S get() {     S[] selectors = this.selectors.     return selectors[counter.getAndIncrement() % selectors.length]. }
+false;;1;7;;void setSelectors(S[] selectors) {     if (selectorsSet.compareAndSet(false, true)) {         this.selectors = selectors.     } else {         throw new AssertionError("Selectors already set. Should only be set once.").     } }
+false;;0;3;;int count() {     return selectors.length. }

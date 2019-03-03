@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void testLoadActiveProfile() throws InterruptedException {     MockEndpoint mock = camelContext.getEndpoint("mock:test", MockEndpoint.class).     mock.expectedBodiesReceived("Hello World").     start.sendBody("World").     mock.assertIsSatisfied(). }

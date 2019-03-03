@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public GetCertificateInfoAction.Response newResponse() {     return new GetCertificateInfoAction.Response(). }
+false;public;0;4;;@Override public ActionRequestValidationException validate() {     return null. }
+false;public;2;8;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startArray().     for (CertificateInfo cert : certificates) {         cert.toXContent(builder, params).     }     return builder.endArray(). }
+false;public;1;8;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeVInt(certificates.size()).     for (CertificateInfo cert : certificates) {         cert.writeTo(out).     } }
+false;public;1;9;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     this.certificates = new ArrayList<>().     int count = in.readVInt().     for (int i = 0. i < count. i++) {         certificates.add(new CertificateInfo(in)).     } }

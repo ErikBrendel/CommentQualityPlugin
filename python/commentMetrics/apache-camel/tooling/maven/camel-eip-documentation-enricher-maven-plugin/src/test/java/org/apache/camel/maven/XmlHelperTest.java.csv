@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void testBuildNamespaceAwareDocument() throws Exception {     assertNotNull(XmlHelper.buildNamespaceAwareDocument(ResourceUtils.getResourceAsFile("xmls/empty.xml"))). }
+false;public;0;4;;@Test public void testBuildTransformer() throws Exception {     assertNotNull(XmlHelper.buildTransformer()). }
+false;public;0;4;;@Test public void testBuildXPath() throws Exception {     assertNotNull(XmlHelper.buildXPath(new CamelSpringNamespace())). }
+false;public;0;9;;@Test public void testBuildXPathNullPointerExpected() throws Exception {     try {         XmlHelper.buildXPath(null).         fail("NullPointerException expected").     } catch (NullPointerException e) {     // Expected.     } }

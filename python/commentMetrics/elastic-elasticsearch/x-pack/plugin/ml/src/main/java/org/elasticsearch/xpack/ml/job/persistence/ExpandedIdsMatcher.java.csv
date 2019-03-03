@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,static;1;3;/**  * Split {@code expression} into tokens separated by a ','  *  * @param expression Expression containing zero or more ','s  * @return Array of tokens  */ ;/**  * Split {@code expression} into tokens separated by a ','  *  * @param expression Expression containing zero or more ','s  * @return Array of tokens  */ public static String[] tokenizeExpression(String expression) {     return Strings.tokenizeToStringArray(expression, ","). }
+true;public;1;13;/**  * For each {@code requiredMatchers} check there is an element  * present in {@code ids} that matches. Once a match is made the  * matcher is removed from {@code requiredMatchers}.  */ ;/**  * For each {@code requiredMatchers} check there is an element  * present in {@code ids} that matches. Once a match is made the  * matcher is removed from {@code requiredMatchers}.  */ public void filterMatchedIds(Collection<String> ids) {     for (String id : ids) {         Iterator<IdMatcher> itr = requiredMatches.iterator().         if (itr.hasNext() == false) {             break.         }         while (itr.hasNext()) {             if (itr.next().matches(id)) {                 itr.remove().             }         }     } }
+false;public;0;3;;public boolean hasUnmatchedIds() {     return requiredMatches.isEmpty() == false. }
+false;public;0;3;;public List<String> unmatchedIds() {     return requiredMatches.stream().map(IdMatcher::getId).collect(Collectors.toList()). }
+false;public;0;3;;public String unmatchedIdsString() {     return requiredMatches.stream().map(IdMatcher::getId).collect(Collectors.joining(",")). }
+false;public;0;3;;public String getId() {     return id. }
+false;public,abstract;1;1;;public abstract boolean matches(String jobId).
+false;public;1;4;;@Override public boolean matches(String id) {     return this.id.equals(id). }
+false;public;1;4;;@Override public boolean matches(String id) {     return Regex.simpleMatch(this.id, id). }

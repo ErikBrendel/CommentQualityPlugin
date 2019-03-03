@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public boolean isValidChange(OperationMode nextMode) {     return nextMode == RUNNING. }
+false;public;1;4;;@Override public boolean isValidChange(OperationMode nextMode) {     return nextMode == RUNNING || nextMode == STOPPED. }
+false;public;1;4;;@Override public boolean isValidChange(OperationMode nextMode) {     return nextMode == STOPPING. }
+false;public,abstract;1;1;;public abstract boolean isValidChange(OperationMode nextMode).
+false;static;1;5;;static OperationMode fromString(String string) {     return EnumSet.allOf(OperationMode.class).stream().filter(e -> string.equalsIgnoreCase(e.name())).findFirst().orElseThrow(() -> new IllegalArgumentException(String.format(Locale.ROOT, "%s is not a valid operation_mode", string))). }

@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Override public void doStart() throws Exception {     super.doStart().     endpoint.connect(this). }
+false;public;0;5;;@Override public void doStop() throws Exception {     endpoint.disconnect(this).     super.doStop(). }
+false;public;0;3;;public WebsocketEndpoint getEndpoint() {     return endpoint. }
+false;public;0;3;;public String getPath() {     return endpoint.getPath(). }
+false;public;3;6;;public void sendMessage(final String connectionKey, final String message, final InetSocketAddress remote) {     sendMessage(connectionKey, (Object) message, remote). }
+false;public;1;5;;public void done(boolean doneSync) {     if (exchange.getException() != null) {         getExceptionHandler().handleException("Error processing exchange", exchange, exchange.getException()).     } }
+false;public;3;21;;public void sendMessage(final String connectionKey, final Object message, final InetSocketAddress remote) {     final Exchange exchange = getEndpoint().createExchange().     // set header and body     exchange.getIn().setHeader(WebsocketConstants.REMOTE_ADDRESS, remote).     exchange.getIn().setHeader(WebsocketConstants.CONNECTION_KEY, connectionKey).     exchange.getIn().setBody(message).     // send exchange using the async routing engine     getAsyncProcessor().process(exchange, new AsyncCallback() {          public void done(boolean doneSync) {             if (exchange.getException() != null) {                 getExceptionHandler().handleException("Error processing exchange", exchange, exchange.getException()).             }         }     }). }

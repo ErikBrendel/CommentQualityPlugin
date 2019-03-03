@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected Response createTestInstance() {     return new Response(randomBoolean(), randomAlphaOfLength(20)). }
+false;protected;0;4;;@Override protected Writeable.Reader<Response> instanceReader() {     return Response::new. }

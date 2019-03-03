@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;4;/**  * Subclasses can override this for greater filtering (and performance).  */ ;/**  * Subclasses can override this for greater filtering (and performance).  */ @Override public boolean matches(Class<?> clazz) {     return true. }
+true;public;2;4;/**  * Subclasses can override this if it's possible to filter out some candidate classes.  */ ;/**  * Subclasses can override this if it's possible to filter out some candidate classes.  */ @Override public boolean matches(Method method, Class<?> targetClass) {     return true. }
+false;public;0;4;;@Override public boolean isRuntime() {     return true. }
+false;public;3;12;;@Override public boolean matches(Method method, Class<?> targetClass, Object... args) {     this.evaluations.incrementAndGet().     for (StackTraceElement element : new Throwable().getStackTrace()) {         if (element.getClassName().equals(this.clazz.getName()) && (this.methodName == null || element.getMethodName().equals(this.methodName))) {             return true.         }     }     return false. }
+true;public;0;3;/**  * It's useful to know how many times we've fired, for optimization.  */ ;/**  * It's useful to know how many times we've fired, for optimization.  */ public int getEvaluations() {     return this.evaluations.get(). }
+false;public;0;4;;@Override public ClassFilter getClassFilter() {     return this. }
+false;public;0;4;;@Override public MethodMatcher getMethodMatcher() {     return this. }
+false;public;1;11;;@Override public boolean equals(Object other) {     if (this == other) {         return true.     }     if (!(other instanceof ControlFlowPointcut)) {         return false.     }     ControlFlowPointcut that = (ControlFlowPointcut) other.     return (this.clazz.equals(that.clazz)) && ObjectUtils.nullSafeEquals(this.methodName, that.methodName). }
+false;public;0;8;;@Override public int hashCode() {     int code = this.clazz.hashCode().     if (this.methodName != null) {         code = 37 * code + this.methodName.hashCode().     }     return code. }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;8;;public static UnaryOperatorType asOperator(String text) {     if ("++".equals(text)) {         return INC.     } else if ("--".equals(text)) {         return DEC.     }     throw new IllegalArgumentException("Operator not supported: " + text). }
+false;public;1;8;;public String getOperatorText(UnaryOperatorType operator) {     if (operator == INC) {         return "++".     } else if (operator == DEC) {         return "--".     }     return "". }
+false;public;0;4;;@Override public String toString() {     return getOperatorText(this). }

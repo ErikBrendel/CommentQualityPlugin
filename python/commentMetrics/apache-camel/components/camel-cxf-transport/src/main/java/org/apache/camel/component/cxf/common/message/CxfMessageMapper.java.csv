@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;2;2;/**  * Create a CXF {@link Message} from a Camel exchange.  */ ;/**  * Create a CXF {@link Message} from a Camel exchange.  */ Message createCxfMessageFromCamelExchange(Exchange camelExchange, HeaderFilterStrategy headerFilterStrategy).
+true;;3;2;/**  * Given a CXF out/response Message, this method propagates response headers to a  * Camel exchange.  */ ;/**  * Given a CXF out/response Message, this method propagates response headers to a  * Camel exchange.  */ void propagateResponseHeadersToCamel(Message cxfMessage, Exchange camelExchange, HeaderFilterStrategy headerFilterStrategy).

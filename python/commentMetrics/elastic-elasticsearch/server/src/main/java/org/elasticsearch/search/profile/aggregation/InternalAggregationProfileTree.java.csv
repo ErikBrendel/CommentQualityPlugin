@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected AggregationProfileBreakdown createProfileBreakdown() {     return new AggregationProfileBreakdown(). }
+false;protected;1;13;;@Override protected String getTypeFromElement(Aggregator element) {     // we need to get the super class     if (element.getClass().getSimpleName().isEmpty() == true) {         return element.getClass().getSuperclass().getSimpleName().     }     if (element instanceof MultiBucketAggregatorWrapper) {         return ((MultiBucketAggregatorWrapper) element).getWrappedClass().getSimpleName().     }     return element.getClass().getSimpleName(). }
+false;protected;1;4;;@Override protected String getDescriptionFromElement(Aggregator element) {     return element.name(). }

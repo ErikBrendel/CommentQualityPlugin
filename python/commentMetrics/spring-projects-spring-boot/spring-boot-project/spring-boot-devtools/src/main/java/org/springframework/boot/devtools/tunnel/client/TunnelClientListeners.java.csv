@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;public void addListener(TunnelClientListener listener) {     Assert.notNull(listener, "Listener must not be null").     this.listeners.add(listener). }
+false;public;1;4;;public void removeListener(TunnelClientListener listener) {     Assert.notNull(listener, "Listener must not be null").     this.listeners.remove(listener). }
+false;public;1;5;;public void fireOpenEvent(SocketChannel socket) {     for (TunnelClientListener listener : this.listeners) {         listener.onOpen(socket).     } }
+false;public;1;5;;public void fireCloseEvent(SocketChannel socket) {     for (TunnelClientListener listener : this.listeners) {         listener.onClose(socket).     } }

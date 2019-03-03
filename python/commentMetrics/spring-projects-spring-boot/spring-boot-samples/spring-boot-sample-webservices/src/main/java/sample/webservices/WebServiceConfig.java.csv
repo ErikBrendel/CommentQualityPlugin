@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;9;;@Bean(name = "holiday") public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema countriesSchema) {     DefaultWsdl11Definition wsdl = new DefaultWsdl11Definition().     wsdl.setPortTypeName("HumanResource").     wsdl.setLocationUri("/holidayService/").     wsdl.setTargetNamespace("http://mycompany.com/hr/definitions").     wsdl.setSchema(countriesSchema).     return wsdl. }

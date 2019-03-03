@@ -1,0 +1,32 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;7;;@Override public Exchange add(final CamelContext camelContext, final String key, final Exchange exchange) {     LOG.trace("Adding an Exchange with ID {} for key {} in a thread-safe manner.", exchange.getExchangeId(), key).     DefaultExchangeHolder newHolder = DefaultExchangeHolder.marshal(exchange, true, allowSerializedHeaders).     DefaultExchangeHolder oldHolder = cache.put(key, newHolder).     return unmarshallExchange(camelContext, oldHolder). }
+false;public;2;4;;@Override public Exchange get(CamelContext camelContext, String key) {     return unmarshallExchange(camelContext, cache.get(key)). }
+false;public;3;5;;@Override public void remove(CamelContext camelContext, String key, Exchange exchange) {     LOG.trace("Removing an exchange with ID {} for key {}", exchange.getExchangeId(), key).     cache.remove(key). }
+false;public;2;5;;@Override public void confirm(CamelContext camelContext, String exchangeId) {     LOG.trace("Confirming an exchange with ID {}.", exchangeId).     cache.remove(exchangeId). }
+false;public;0;4;;@Override public Set<String> getKeys() {     return Collections.unmodifiableSet(cache.keySet()). }
+false;public;1;7;;@Override public Set<String> scan(CamelContext camelContext) {     LOG.trace("Scanning for exchanges to recover in {} context", camelContext.getName()).     Set<String> scanned = Collections.unmodifiableSet(cache.keySet()).     LOG.trace("Found {} keys for exchanges to recover in {} context", scanned.size(), camelContext.getName()).     return scanned. }
+false;public;2;5;;@Override public Exchange recover(CamelContext camelContext, String exchangeId) {     LOG.trace("Recovering an Exchange with ID {}.", exchangeId).     return useRecovery ? unmarshallExchange(camelContext, cache.get(exchangeId)) : null. }
+false;public;2;4;;@Override public void setRecoveryInterval(long interval, TimeUnit timeUnit) {     this.recoveryInterval = timeUnit.toMillis(interval). }
+false;public;1;4;;@Override public void setRecoveryInterval(long interval) {     this.recoveryInterval = interval. }
+false;public;0;4;;@Override public long getRecoveryIntervalInMillis() {     return recoveryInterval. }
+false;public;1;4;;@Override public void setUseRecovery(boolean useRecovery) {     this.useRecovery = useRecovery. }
+false;public;0;4;;@Override public boolean isUseRecovery() {     return useRecovery. }
+false;public;1;4;;@Override public void setDeadLetterUri(String deadLetterUri) {     this.deadLetterChannel = deadLetterUri. }
+false;public;0;4;;@Override public String getDeadLetterUri() {     return deadLetterChannel. }
+false;public;1;4;;@Override public void setMaximumRedeliveries(int maximumRedeliveries) {     this.maximumRedeliveries = maximumRedeliveries. }
+false;public;0;4;;@Override public int getMaximumRedeliveries() {     return maximumRedeliveries. }
+false;protected;0;21;;@Override protected void doStart() throws Exception {     if (maximumRedeliveries < 0) {         throw new IllegalArgumentException("Maximum redelivery retries must be zero or a positive integer.").     }     if (recoveryInterval < 0) {         throw new IllegalArgumentException("Recovery interval must be zero or a positive integer.").     }     if (ObjectHelper.isEmpty(configuration)) {         manager = new RemoteCacheManager().         manager.start().     } else {         manager = new RemoteCacheManager(configuration).         manager.start().     }     if (ObjectHelper.isEmpty(cacheName)) {         cache = manager.getCache().     } else {         cache = manager.getCache(cacheName).     } }
+false;protected;0;4;;@Override protected void doStop() throws Exception {     manager.stop(). }
+false;protected;2;8;;protected Exchange unmarshallExchange(CamelContext camelContext, DefaultExchangeHolder holder) {     Exchange exchange = null.     if (holder != null) {         exchange = new DefaultExchange(camelContext).         DefaultExchangeHolder.unmarshal(exchange, holder).     }     return exchange. }
+false;public;0;3;;public RemoteCacheManager getManager() {     return manager. }
+false;public;1;3;;public void setManager(RemoteCacheManager manager) {     this.manager = manager. }
+false;public;0;3;;public String getCacheName() {     return cacheName. }
+false;public;1;3;;public void setCacheName(String cacheName) {     this.cacheName = cacheName. }
+false;public;0;3;;public String getDeadLetterChannel() {     return deadLetterChannel. }
+false;public;1;3;;public void setDeadLetterChannel(String deadLetterChannel) {     this.deadLetterChannel = deadLetterChannel. }
+false;public;0;3;;public boolean isAllowSerializedHeaders() {     return allowSerializedHeaders. }
+false;public;1;3;;public void setAllowSerializedHeaders(boolean allowSerializedHeaders) {     this.allowSerializedHeaders = allowSerializedHeaders. }
+false;public;0;3;;public BasicCache<String, DefaultExchangeHolder> getCache() {     return cache. }
+false;public;1;3;;public void setCache(BasicCache<String, DefaultExchangeHolder> cache) {     this.cache = cache. }
+false;public;0;3;;public Configuration getConfiguration() {     return configuration. }
+false;public;1;3;;public void setConfiguration(Configuration configuration) {     this.configuration = configuration. }

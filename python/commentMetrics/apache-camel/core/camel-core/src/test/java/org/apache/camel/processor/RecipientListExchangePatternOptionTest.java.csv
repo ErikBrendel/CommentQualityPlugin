@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Override public void configure() throws Exception {     from("direct:start").recipientList(constant("stub:foo?exchangePattern=InOnly")).to("mock:result").     from("stub:foo").to("mock:stub"). }
+false;protected;0;14;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").recipientList(constant("stub:foo?exchangePattern=InOnly")).to("mock:result").             from("stub:foo").to("mock:stub").         }     }. }

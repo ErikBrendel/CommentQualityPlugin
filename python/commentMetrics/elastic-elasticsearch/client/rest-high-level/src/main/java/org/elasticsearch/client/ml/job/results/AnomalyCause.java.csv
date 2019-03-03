@@ -1,0 +1,32 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;46;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(PROBABILITY.getPreferredName(), probability).     if (byFieldName != null) {         builder.field(BY_FIELD_NAME.getPreferredName(), byFieldName).     }     if (byFieldValue != null) {         builder.field(BY_FIELD_VALUE.getPreferredName(), byFieldValue).     }     if (correlatedByFieldValue != null) {         builder.field(CORRELATED_BY_FIELD_VALUE.getPreferredName(), correlatedByFieldValue).     }     if (partitionFieldName != null) {         builder.field(PARTITION_FIELD_NAME.getPreferredName(), partitionFieldName).     }     if (partitionFieldValue != null) {         builder.field(PARTITION_FIELD_VALUE.getPreferredName(), partitionFieldValue).     }     if (function != null) {         builder.field(FUNCTION.getPreferredName(), function).     }     if (functionDescription != null) {         builder.field(FUNCTION_DESCRIPTION.getPreferredName(), functionDescription).     }     if (typical != null) {         builder.field(TYPICAL.getPreferredName(), typical).     }     if (actual != null) {         builder.field(ACTUAL.getPreferredName(), actual).     }     if (fieldName != null) {         builder.field(FIELD_NAME.getPreferredName(), fieldName).     }     if (overFieldName != null) {         builder.field(OVER_FIELD_NAME.getPreferredName(), overFieldName).     }     if (overFieldValue != null) {         builder.field(OVER_FIELD_VALUE.getPreferredName(), overFieldValue).     }     if (influencers != null) {         builder.field(INFLUENCERS.getPreferredName(), influencers).     }     builder.endObject().     return builder. }
+false;public;0;3;;public double getProbability() {     return probability. }
+false;;1;3;;void setProbability(double value) {     probability = value. }
+false;public;0;3;;public String getByFieldName() {     return byFieldName. }
+false;;1;3;;void setByFieldName(String value) {     byFieldName = value. }
+false;public;0;3;;public String getByFieldValue() {     return byFieldValue. }
+false;;1;3;;void setByFieldValue(String value) {     byFieldValue = value. }
+false;public;0;3;;public String getCorrelatedByFieldValue() {     return correlatedByFieldValue. }
+false;;1;3;;void setCorrelatedByFieldValue(String value) {     correlatedByFieldValue = value. }
+false;public;0;3;;public String getPartitionFieldName() {     return partitionFieldName. }
+false;;1;3;;void setPartitionFieldName(String field) {     partitionFieldName = field. }
+false;public;0;3;;public String getPartitionFieldValue() {     return partitionFieldValue. }
+false;;1;3;;void setPartitionFieldValue(String value) {     partitionFieldValue = value. }
+false;public;0;3;;public String getFunction() {     return function. }
+false;;1;3;;void setFunction(String name) {     function = name. }
+false;public;0;3;;public String getFunctionDescription() {     return functionDescription. }
+false;;1;3;;void setFunctionDescription(String functionDescription) {     this.functionDescription = functionDescription. }
+false;public;0;3;;public List<Double> getTypical() {     return typical. }
+false;;1;3;;void setTypical(List<Double> typical) {     this.typical = Collections.unmodifiableList(typical). }
+false;public;0;3;;public List<Double> getActual() {     return actual. }
+false;;1;3;;void setActual(List<Double> actual) {     this.actual = Collections.unmodifiableList(actual). }
+false;public;0;3;;public String getFieldName() {     return fieldName. }
+false;;1;3;;void setFieldName(String field) {     fieldName = field. }
+false;public;0;3;;public String getOverFieldName() {     return overFieldName. }
+false;;1;3;;void setOverFieldName(String name) {     overFieldName = name. }
+false;public;0;3;;public String getOverFieldValue() {     return overFieldValue. }
+false;;1;3;;void setOverFieldValue(String value) {     overFieldValue = value. }
+false;public;0;3;;public List<Influence> getInfluencers() {     return influencers. }
+false;;1;3;;void setInfluencers(List<Influence> influencers) {     this.influencers = Collections.unmodifiableList(influencers). }
+false;public;0;5;;@Override public int hashCode() {     return Objects.hash(probability, actual, typical, byFieldName, byFieldValue, correlatedByFieldValue, fieldName, function, functionDescription, overFieldName, overFieldValue, partitionFieldName, partitionFieldValue, influencers). }
+false;public;1;27;;@Override public boolean equals(Object other) {     if (this == other) {         return true.     }     if (other == null || getClass() != other.getClass()) {         return false.     }     AnomalyCause that = (AnomalyCause) other.     return this.probability == that.probability && Objects.equals(this.typical, that.typical) && Objects.equals(this.actual, that.actual) && Objects.equals(this.function, that.function) && Objects.equals(this.functionDescription, that.functionDescription) && Objects.equals(this.fieldName, that.fieldName) && Objects.equals(this.byFieldName, that.byFieldName) && Objects.equals(this.byFieldValue, that.byFieldValue) && Objects.equals(this.correlatedByFieldValue, that.correlatedByFieldValue) && Objects.equals(this.partitionFieldName, that.partitionFieldName) && Objects.equals(this.partitionFieldValue, that.partitionFieldValue) && Objects.equals(this.overFieldName, that.overFieldName) && Objects.equals(this.overFieldValue, that.overFieldValue) && Objects.equals(this.influencers, that.influencers). }

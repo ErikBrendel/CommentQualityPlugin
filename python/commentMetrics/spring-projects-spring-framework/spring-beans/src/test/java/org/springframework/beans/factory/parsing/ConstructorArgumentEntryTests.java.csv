@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test(expected = IllegalArgumentException.class) public void testCtorBailsOnNegativeCtorIndexArgument() {     new ConstructorArgumentEntry(-1). }

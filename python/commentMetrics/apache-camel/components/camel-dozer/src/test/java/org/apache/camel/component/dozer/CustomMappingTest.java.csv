@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@After public void tearDown() {     resultEndpoint.reset(). }
+false;public;0;14;;@Test public void testCustomMapping() throws Exception {     resultEndpoint.expectedMessageCount(1).     ABCOrder abcOrder = new ABCOrder().     abcOrder.setHeader(new Header()).     abcOrder.getHeader().setStatus("GOLD").     abcOrder.getHeader().setCustomerNum("ACME").     startEndpoint.sendBody(abcOrder).     // check results     resultEndpoint.assertIsSatisfied().     XYZOrder result = resultEndpoint.getExchanges().get(0).getIn().getBody(XYZOrder.class).     Assert.assertEquals(result.getPriority(), "custom2:GOLD").     Assert.assertEquals(result.getCustId(), "mapCustomer:ACME"). }

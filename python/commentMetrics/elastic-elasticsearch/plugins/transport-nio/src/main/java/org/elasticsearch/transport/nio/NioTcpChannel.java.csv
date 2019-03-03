@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;3;;public void sendMessage(BytesReference reference, ActionListener<Void> listener) {     getContext().sendMessage(BytesReference.toByteBuffers(reference), ActionListener.toBiConsumer(listener)). }
+false;public;0;4;;@Override public boolean isServerChannel() {     return isServer. }
+false;public;0;4;;@Override public String getProfile() {     return profile. }
+false;public;1;4;;@Override public void addCloseListener(ActionListener<Void> listener) {     addCloseListener(ActionListener.toBiConsumer(listener)). }
+false;public;1;4;;@Override public void addConnectListener(ActionListener<Void> listener) {     addConnectListener(ActionListener.toBiConsumer(listener)). }
+false;public;0;4;;@Override public ChannelStats getChannelStats() {     return stats. }
+false;public;0;4;;@Override public void close() {     getContext().closeChannel(). }
+false;public;0;7;;@Override public String toString() {     return "TcpNioSocketChannel{" + "localAddress=" + getLocalAddress() + ", remoteAddress=" + getRemoteAddress() + '}'. }

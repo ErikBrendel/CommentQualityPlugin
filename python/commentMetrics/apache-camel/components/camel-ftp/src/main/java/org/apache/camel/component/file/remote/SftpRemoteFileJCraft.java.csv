@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public ChannelSftp.LsEntry getRemoteFile() {     return entry. }
+false;public;0;4;;@Override public String getFilename() {     return entry.getFilename(). }
+false;public;0;4;;@Override public String getLongname() {     return entry.getLongname(). }
+false;public;0;4;;@Override public boolean isDirectory() {     return entry.getAttrs().isDir(). }
+false;public;0;4;;@Override public long getFileLength() {     return entry.getAttrs().getSize(). }
+false;public;0;4;;@Override public long getLastModified() {     return entry.getAttrs().getMTime() * 1000L. }

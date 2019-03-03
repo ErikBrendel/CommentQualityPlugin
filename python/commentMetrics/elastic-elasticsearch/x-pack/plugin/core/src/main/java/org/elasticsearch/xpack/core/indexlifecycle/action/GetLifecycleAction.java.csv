@@ -1,0 +1,21 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Response newResponse() {     return new Response(). }
+false;public;0;3;;public List<LifecyclePolicyResponseItem> getPolicies() {     return policies. }
+false;public;2;13;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     for (LifecyclePolicyResponseItem item : policies) {         builder.startObject(item.getLifecyclePolicy().getName()).         builder.field("version", item.getVersion()).         builder.field("modified_date", item.getModifiedDate()).         builder.field("policy", item.getLifecyclePolicy()).         builder.endObject().     }     builder.endObject().     return builder. }
+false;public;1;4;;@Override public void readFrom(StreamInput in) throws IOException {     this.policies = in.readList(LifecyclePolicyResponseItem::new). }
+false;public;1;4;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeList(policies). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(policies). }
+false;public;1;11;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (obj.getClass() != getClass()) {         return false.     }     Response other = (Response) obj.     return Objects.equals(policies, other.policies). }
+false;public;0;4;;@Override public String toString() {     return Strings.toString(this, true, true). }
+false;public;0;3;;public String[] getPolicyNames() {     return policyNames. }
+false;public;0;4;;@Override public ActionRequestValidationException validate() {     return null. }
+false;public;1;5;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     policyNames = in.readStringArray(). }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeStringArray(policyNames). }
+false;public;0;4;;@Override public int hashCode() {     return Arrays.hashCode(policyNames). }
+false;public;1;11;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (obj.getClass() != getClass()) {         return false.     }     Request other = (Request) obj.     return Arrays.equals(policyNames, other.policyNames). }
+false;public;1;6;;@Override public void writeTo(StreamOutput out) throws IOException {     lifecyclePolicy.writeTo(out).     out.writeVLong(version).     out.writeString(modifiedDate). }
+false;public;0;3;;public LifecyclePolicy getLifecyclePolicy() {     return lifecyclePolicy. }
+false;public;0;3;;public long getVersion() {     return version. }
+false;public;0;3;;public String getModifiedDate() {     return modifiedDate. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(lifecyclePolicy, version, modifiedDate). }
+false;public;1;13;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (obj.getClass() != getClass()) {         return false.     }     LifecyclePolicyResponseItem other = (LifecyclePolicyResponseItem) obj.     return Objects.equals(lifecyclePolicy, other.lifecyclePolicy) && Objects.equals(version, other.version) && Objects.equals(modifiedDate, other.modifiedDate). }

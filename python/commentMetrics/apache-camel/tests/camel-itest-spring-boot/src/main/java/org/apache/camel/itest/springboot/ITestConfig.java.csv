@@ -1,0 +1,49 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getModuleName() {     return moduleName. }
+false;public;1;3;;public void setModuleName(String moduleName) {     this.moduleName = moduleName. }
+false;public;0;3;;public String getMavenGroup() {     return mavenGroup. }
+false;public;1;3;;public void setMavenGroup(String mavenGroup) {     this.mavenGroup = mavenGroup. }
+false;public;0;3;;public String getMavenVersion() {     return mavenVersion. }
+false;public;1;3;;public void setMavenVersion(String mavenVersion) {     this.mavenVersion = mavenVersion. }
+false;public;0;3;;public Boolean getMavenOfflineResolution() {     return mavenOfflineResolution. }
+false;public;1;3;;public void setMavenOfflineResolution(Boolean mavenOfflineResolution) {     this.mavenOfflineResolution = mavenOfflineResolution. }
+false;public;0;3;;public String getModulesPath() {     return modulesPath. }
+false;public;1;3;;public void setModulesPath(String modulesPath) {     this.modulesPath = modulesPath. }
+false;public;0;3;;public String getModuleBasePath() {     return moduleBasePath. }
+false;public;1;3;;public void setModuleBasePath(String moduleBasePath) {     this.moduleBasePath = moduleBasePath. }
+false;public;0;3;;public Boolean getIncludeTestDependencies() {     return includeTestDependencies. }
+false;public;1;3;;public void setIncludeTestDependencies(Boolean includeTestDependencies) {     this.includeTestDependencies = includeTestDependencies. }
+false;public;0;3;;public Boolean getIncludeProvidedDependencies() {     return includeProvidedDependencies. }
+false;public;1;3;;public void setIncludeProvidedDependencies(Boolean includeProvidedDependencies) {     this.includeProvidedDependencies = includeProvidedDependencies. }
+false;public;0;3;;public Boolean getUnitTestEnabled() {     return unitTestEnabled. }
+false;public;1;3;;public void setUnitTestEnabled(Boolean unitTestEnabled) {     this.unitTestEnabled = unitTestEnabled. }
+false;public;0;3;;public String getUnitTestInclusionPattern() {     return unitTestInclusionPattern. }
+false;public;1;3;;public void setUnitTestInclusionPattern(String unitTestInclusionPattern) {     this.unitTestInclusionPattern = unitTestInclusionPattern. }
+false;public;0;3;;public String getUnitTestExclusionPattern() {     return unitTestExclusionPattern. }
+false;public;1;3;;public void setUnitTestExclusionPattern(String unitTestExclusionPattern) {     this.unitTestExclusionPattern = unitTestExclusionPattern. }
+false;public;0;3;;public String getUnitTestBasePackage() {     return unitTestBasePackage. }
+false;public;1;3;;public void setUnitTestBasePackage(String unitTestBasePackage) {     this.unitTestBasePackage = unitTestBasePackage. }
+false;public;0;3;;public Integer getUnitTestsExpectedNumber() {     return unitTestsExpectedNumber. }
+false;public;1;3;;public void setUnitTestsExpectedNumber(Integer unitTestsExpectedNumber) {     this.unitTestsExpectedNumber = unitTestsExpectedNumber. }
+false;public;0;3;;public Map<String, String> getResources() {     return resources. }
+false;public;0;3;;public Set<String> getAdditionalDependencies() {     return additionalDependencies. }
+false;public;1;3;;public void setAdditionalDependencies(Set<String> additionalDependencies) {     this.additionalDependencies = additionalDependencies. }
+false;public;0;3;;public Set<String> getMavenExclusions() {     return mavenExclusions. }
+false;public;1;3;;public void setMavenExclusions(Set<String> mavenExclusions) {     this.mavenExclusions = mavenExclusions. }
+false;public;1;3;;public void setResources(Map<String, String> resources) {     this.resources = resources. }
+false;public;0;3;;public Boolean getAutoStartComponent() {     return autoStartComponent. }
+false;public;1;3;;public void setAutoStartComponent(Boolean autoStartComponent) {     this.autoStartComponent = autoStartComponent. }
+false;public;0;3;;public Set<String> getJmxDisabledNames() {     return jmxDisabledNames. }
+false;public;1;3;;public void setJmxDisabledNames(Set<String> jmxDisabledNames) {     this.jmxDisabledNames = jmxDisabledNames. }
+false;public;0;3;;public Map<String, String> getSystemProperties() {     return systemProperties. }
+false;public;1;3;;public void setSystemProperties(Map<String, String> systemProperties) {     this.systemProperties = systemProperties. }
+false;public;0;3;;public Boolean getUseCustomLog() {     return useCustomLog. }
+false;public;1;3;;public void setUseCustomLog(Boolean useCustomLog) {     this.useCustomLog = useCustomLog. }
+false;public;0;3;;public Set<String> getIgnoreLibraryMismatch() {     return ignoreLibraryMismatch. }
+false;public;1;3;;public void setIgnoreLibraryMismatch(Set<String> ignoreLibraryMismatch) {     this.ignoreLibraryMismatch = ignoreLibraryMismatch. }
+false;public;0;3;;public Map<String, String> getTestLibraryVersions() {     return testLibraryVersions. }
+false;public;1;3;;public void setTestLibraryVersions(Map<String, String> testLibraryVersions) {     this.testLibraryVersions = testLibraryVersions. }
+false;public;0;3;;public String getSpringBootVersion() {     return springBootVersion. }
+false;public;0;7;;public Integer getSpringBootMajorVersion() {     if (springBootVersion != null) {         return Integer.parseInt(springBootVersion.substring(0, 1)).     } else {         return DEFAULT_SPRING_BOOT_MAJOR_VERSION.     } }
+false;public;1;3;;public void setSpringBootVersion(String springBootVersion) {     this.springBootVersion = springBootVersion. }
+false;public;0;28;;@Override public String toString() {     return "ITestConfig{" + "moduleName='" + moduleName + '\'' + ", mavenGroup='" + mavenGroup + '\'' + ", mavenVersion='" + mavenVersion + '\'' + ", mavenOfflineResolution=" + mavenOfflineResolution + ", modulesPath='" + modulesPath + '\'' + ", moduleBasePath='" + moduleBasePath + '\'' + ", includeTestDependencies=" + includeTestDependencies + ", includeProvidedDependencies=" + includeProvidedDependencies + ", unitTestEnabled=" + unitTestEnabled + ", unitTestInclusionPattern='" + unitTestInclusionPattern + '\'' + ", unitTestExclusionPattern='" + unitTestExclusionPattern + '\'' + ", unitTestBasePackage='" + unitTestBasePackage + '\'' + ", unitTestsExpectedNumber=" + unitTestsExpectedNumber + ", resources=" + resources + ", additionalDependencies=" + additionalDependencies + ", mavenExclusions=" + mavenExclusions + ", autoStartComponent=" + autoStartComponent + ", jmxDisabledNames=" + jmxDisabledNames + ", systemProperties=" + systemProperties + ", useCustomLog=" + useCustomLog + ", ignoreLibraryMismatch=" + ignoreLibraryMismatch + ", testLibraryVersions=" + testLibraryVersions + ", springBootVersion=" + springBootVersion + '}'. }

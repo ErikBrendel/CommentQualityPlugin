@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected Object doFold(ZonedDateTime dateTime) {     return dateTimeChrono(dateTime, extractor.chronoField()). }
+false;public,static;3;4;;public static Integer dateTimeChrono(ZonedDateTime dateTime, String tzId, String chronoName) {     ZonedDateTime zdt = dateTime.withZoneSameInstant(ZoneId.of(tzId)).     return dateTimeChrono(zdt, ChronoField.valueOf(chronoName)). }
+false;private,static;2;3;;private static Integer dateTimeChrono(ZonedDateTime dateTime, ChronoField field) {     return Integer.valueOf(dateTime.get(field)). }
+false;public;0;13;;@Override public ScriptTemplate asScript() {     ParamsBuilder params = paramsBuilder().     ScriptTemplate script = super.asScript().     String template = formatTemplate("{sql}.dateTimeChrono(" + script.template() + ", {}, {})").     params.script(script.params()).variable(zoneId().getId()).variable(extractor.chronoField().name()).     return new ScriptTemplate(template, params.build(), dataType()). }
+false;protected;0;4;;@Override protected Processor makeProcessor() {     return new DateTimeProcessor(extractor, zoneId()). }
+false;public;0;4;;@Override public DataType dataType() {     return DataType.INTEGER. }
+true;public,abstract;0;1;// used for applying ranges ;// used for applying ranges public abstract String dateTimeFormat().

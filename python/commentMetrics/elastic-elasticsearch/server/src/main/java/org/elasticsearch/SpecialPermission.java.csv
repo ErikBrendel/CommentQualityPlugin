@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,static;0;6;/**  * Check that the current stack has {@link SpecialPermission} access according to the {@link SecurityManager}.  */ ;/**  * Check that the current stack has {@link SpecialPermission} access according to the {@link SecurityManager}.  */ public static void check() {     SecurityManager sm = System.getSecurityManager().     if (sm != null) {         sm.checkPermission(INSTANCE).     } }

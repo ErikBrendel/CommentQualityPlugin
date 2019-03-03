@@ -1,0 +1,26 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getAccessKey() {     return accessKey. }
+true;public;1;3;/**  * Amazon AWS Access Key  */ ;/**  * Amazon AWS Access Key  */ public void setAccessKey(String accessKey) {     this.accessKey = accessKey. }
+false;public;0;3;;public AmazonSimpleEmailService getAmazonSESClient() {     return amazonSESClient. }
+true;public;1;3;/**  * To use the AmazonSimpleEmailService as the client  */ ;/**  * To use the AmazonSimpleEmailService as the client  */ public void setAmazonSESClient(AmazonSimpleEmailService amazonSESClient) {     this.amazonSESClient = amazonSESClient. }
+false;public;0;3;;public String getFrom() {     return from. }
+true;public;1;3;/**  * The sender's email address.  */ ;/**  * The sender's email address.  */ public void setFrom(String from) {     this.from = from. }
+false;public;0;3;;public List<String> getTo() {     return to. }
+true;public;1;3;/**  * List of destination email address. Can be overriden with 'CamelAwsSesTo' header.  */ ;/**  * List of destination email address. Can be overriden with 'CamelAwsSesTo' header.  */ public void setTo(List<String> to) {     this.to = to. }
+true;public;1;3;/**  * List of destination email address. Can be overriden with 'CamelAwsSesTo' header.  */ ;/**  * List of destination email address. Can be overriden with 'CamelAwsSesTo' header.  */ public void setTo(String to) {     this.to = Arrays.asList(to.split(",")). }
+false;public;0;3;;public String getSecretKey() {     return secretKey. }
+true;public;1;3;/**  * Amazon AWS Secret Key  */ ;/**  * Amazon AWS Secret Key  */ public void setSecretKey(String secretKey) {     this.secretKey = secretKey. }
+false;public;0;3;;public String getSubject() {     return subject. }
+true;public;1;3;/**  * The subject which is used if the message header 'CamelAwsSesSubject' is not present.  */ ;/**  * The subject which is used if the message header 'CamelAwsSesSubject' is not present.  */ public void setSubject(String subject) {     this.subject = subject. }
+false;public;0;3;;public String getReturnPath() {     return returnPath. }
+true;public;1;3;/**  * The email address to which bounce notifications are to be forwarded, override it using 'CamelAwsSesReturnPath' header.  */ ;/**  * The email address to which bounce notifications are to be forwarded, override it using 'CamelAwsSesReturnPath' header.  */ public void setReturnPath(String returnPath) {     this.returnPath = returnPath. }
+false;public;0;3;;public List<String> getReplyToAddresses() {     return replyToAddresses. }
+true;public;1;3;/**  * List of reply-to email address(es) for the message, override it using 'CamelAwsSesReplyToAddresses' header.  */ ;/**  * List of reply-to email address(es) for the message, override it using 'CamelAwsSesReplyToAddresses' header.  */ public void setReplyToAddresses(List<String> replyToAddresses) {     this.replyToAddresses = replyToAddresses. }
+false;public;1;3;;public void setReplyToAddresses(String replyToAddresses) {     this.replyToAddresses = Arrays.asList(replyToAddresses.split(",")). }
+false;public;0;3;;public String getProxyHost() {     return proxyHost. }
+true;public;1;3;/**  * To define a proxy host when instantiating the SES client  */ ;/**  * To define a proxy host when instantiating the SES client  */ public void setProxyHost(String proxyHost) {     this.proxyHost = proxyHost. }
+false;public;0;3;;public Integer getProxyPort() {     return proxyPort. }
+true;public;1;3;/**  * To define a proxy port when instantiating the SES client  */ ;/**  * To define a proxy port when instantiating the SES client  */ public void setProxyPort(Integer proxyPort) {     this.proxyPort = proxyPort. }
+false;public;0;3;;public String getRegion() {     return region. }
+true;public;1;3;/**  * The region in which SES client needs to work  */ ;/**  * The region in which SES client needs to work  */ public void setRegion(String region) {     this.region = region. }
+false;public;0;7;;// ************************************************* //  // ************************************************* public SesConfiguration copy() {     try {         return (SesConfiguration) super.clone().     } catch (CloneNotSupportedException e) {         throw new RuntimeCamelException(e).     } }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getWriteableName() {     return StatsBucketPipelineAggregationBuilder.NAME. }
+false;protected;0;7;;@Override protected void preCollection() {     sum = 0.     count = 0.     min = Double.POSITIVE_INFINITY.     max = Double.NEGATIVE_INFINITY. }
+false;protected;2;7;;@Override protected void collectBucketValue(String bucketKey, Double bucketValue) {     sum += bucketValue.     min = Math.min(min, bucketValue).     max = Math.max(max, bucketValue).     count += 1. }
+false;protected;2;4;;@Override protected InternalAggregation buildAggregation(List<PipelineAggregator> pipelineAggregators, Map<String, Object> metadata) {     return new InternalStatsBucket(name(), count, sum, min, max, format, pipelineAggregators, metadata). }

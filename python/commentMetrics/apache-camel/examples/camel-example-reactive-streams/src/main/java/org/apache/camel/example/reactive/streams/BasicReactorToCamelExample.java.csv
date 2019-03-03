@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;12;;@PostConstruct public void setupStreams() {     // Get a subscriber from camel     Subscriber<String> elements = camel.streamSubscriber("elements", String.class).     // Emit a string every 7 seconds and push it to the Camel "elements" stream     Flux.interval(Duration.ofSeconds(7)).map(item -> "element " + item).subscribe(elements). }
+false;public;0;9;;@Override public void configure() throws Exception {     // Transform the body of received items and log     from("reactive-streams:elements").setBody().simple("BasicReactorToCamel - Camel received ${body}").to("log:INFO"). }

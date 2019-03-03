@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Override public InputStream exportAsInputStream() {     // Create export delegate     final AbstractExporterDelegate<InputStream> exportDelegate = new SpringBootZipExporterDelegate(this.getArchive()).     // Export and get result     return exportDelegate.export(). }

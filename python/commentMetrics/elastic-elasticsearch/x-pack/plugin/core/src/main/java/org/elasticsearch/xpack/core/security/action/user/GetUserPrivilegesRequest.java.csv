@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public ActionRequestValidationException validate() {     return null. }
+true;public;0;3;/**  * @return the username that this request applies to.  */ ;/**  * @return the username that this request applies to.  */ public String username() {     return username. }
+true;public;1;3;/**  * Set the username that the request applies to. Must not be {@code null}  */ ;/**  * Set the username that the request applies to. Must not be {@code null}  */ public void username(String username) {     this.username = username. }
+false;public;0;4;;@Override public String[] usernames() {     return new String[] { username }. }
+true;public;1;5;/**  * Always throws {@link UnsupportedOperationException} as this object should be deserialized using  * the {@link #GetUserPrivilegesRequest(StreamInput)} constructor instead.  */ ;/**  * Always throws {@link UnsupportedOperationException} as this object should be deserialized using  * the {@link #GetUserPrivilegesRequest(StreamInput)} constructor instead.  */ @Override @Deprecated public void readFrom(StreamInput in) throws IOException {     throw new UnsupportedOperationException("Use " + getClass() + " as Writeable not Streamable"). }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeString(username). }

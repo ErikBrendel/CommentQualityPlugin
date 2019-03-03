@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public GoogleMailApiName getApiName() {     return apiName. }
+true;public;1;3;/**  * What kind of operation to perform  */ ;/**  * What kind of operation to perform  */ public void setApiName(GoogleMailApiName apiName) {     this.apiName = apiName. }
+false;public;0;3;;public String getMethodName() {     return methodName. }
+true;public;1;3;/**  * What sub operation to use for the selected operation  */ ;/**  * What sub operation to use for the selected operation  */ public void setMethodName(String methodName) {     this.methodName = methodName. }
+false;public;0;3;;public String getClientId() {     return clientId. }
+true;public;1;3;/**  * Client ID of the mail application  */ ;/**  * Client ID of the mail application  */ public void setClientId(String clientId) {     this.clientId = clientId. }
+false;public;0;3;;public String getClientSecret() {     return clientSecret. }
+true;public;1;3;/**  * Client secret of the mail application  */ ;/**  * Client secret of the mail application  */ public void setClientSecret(String clientSecret) {     this.clientSecret = clientSecret. }
+false;public;0;3;;public String getAccessToken() {     return accessToken. }
+true;public;1;3;/**  * OAuth 2 access token. This typically expires after an hour so refreshToken is recommended for long term usage.  */ ;/**  * OAuth 2 access token. This typically expires after an hour so refreshToken is recommended for long term usage.  */ public void setAccessToken(String accessToken) {     this.accessToken = accessToken. }
+false;public;0;3;;public String getRefreshToken() {     return refreshToken. }
+true;public;1;3;/**  * OAuth 2 refresh token. Using this, the Google Calendar component can obtain a new accessToken whenever the current one expires - a necessity if the application is long-lived.  */ ;/**  * OAuth 2 refresh token. Using this, the Google Calendar component can obtain a new accessToken whenever the current one expires - a necessity if the application is long-lived.  */ public void setRefreshToken(String refreshToken) {     this.refreshToken = refreshToken. }
+false;public;0;3;;public String getApplicationName() {     return applicationName. }
+true;public;1;3;/**  * Google mail application name. Example would be "camel-google-mail/1.0"  */ ;/**  * Google mail application name. Example would be "camel-google-mail/1.0"  */ public void setApplicationName(String applicationName) {     this.applicationName = applicationName. }

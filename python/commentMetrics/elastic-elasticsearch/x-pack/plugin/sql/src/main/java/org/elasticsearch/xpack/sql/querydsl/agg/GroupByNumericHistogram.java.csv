@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;5;;@Override protected CompositeValuesSourceBuilder<?> createSourceBuilder() {     return new HistogramValuesSourceBuilder(id()).interval(interval). }
+false;protected;4;4;;@Override protected GroupByKey copy(String id, String fieldName, ScriptTemplate script, Direction direction) {     return new GroupByNumericHistogram(id, fieldName, script, direction, interval). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(super.hashCode(), interval). }
+false;public;1;8;;@Override public boolean equals(Object obj) {     if (super.equals(obj)) {         GroupByNumericHistogram other = (GroupByNumericHistogram) obj.         return interval == other.interval.     }     return false. }

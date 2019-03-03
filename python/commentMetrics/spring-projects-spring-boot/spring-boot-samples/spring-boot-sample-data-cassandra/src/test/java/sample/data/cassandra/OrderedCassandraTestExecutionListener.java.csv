@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public int getOrder() {     return Ordered.HIGHEST_PRECEDENCE. }
+false;protected;0;9;;@Override protected void cleanServer() {     try {         super.cleanServer().     } catch (Exception ex) {         logger.warn("Failure during server cleanup", ex).     } }

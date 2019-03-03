@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public CamelContext getCamelContext() {     return camelContext. }
+false;public;1;4;;@Override public void setCamelContext(CamelContext camelContext) {     this.camelContext = camelContext. }
+false;protected;2;16;;@Override protected void doCall(HealthCheckResultBuilder builder, Map<String, Object> options) {     builder.unknown().     if (camelContext != null) {         builder.detail("context.name", camelContext.getName()).         builder.detail("context.version", camelContext.getVersion()).         builder.detail("context.status", camelContext.getStatus().name()).         if (camelContext.getStatus().isStarted()) {             builder.up().         } else if (camelContext.getStatus().isStopped()) {             builder.down().         }     } }

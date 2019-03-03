@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@Test @DirtiesContext public void testMarshallMessage() throws Exception {     expected = "Mr,John,Doeeeeeeee,Cityyyyyyy\r\n".     result.expectedBodiesReceived(expected).     template.sendBody(generateModel()).     result.assertIsSatisfied(). }
+false;public;0;8;;public Object generateModel() {     Customer customer = new Customer().     customer.setSalutation("Mr").     customer.setFirstName(" John ").     customer.setLastName("Doeeeeeeeeeeeee").     customer.setCity("Cityyyyyyy     ").     return customer. }
+false;public;0;6;;public void configure() {     BindyCsvDataFormat camelDataFormat = new BindyCsvDataFormat(org.apache.camel.dataformat.bindy.model.simple.oneclassandtrimandclip.Customer.class).     from(URI_DIRECT_START).marshal(camelDataFormat).to(URI_MOCK_RESULT). }

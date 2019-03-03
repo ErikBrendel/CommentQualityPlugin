@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;11;;@Override protected DataFrameFeatureSetUsage createTestInstance() {     Map<String, Long> transformCountByState = new HashMap<>().     if (randomBoolean()) {         transformCountByState.put(randomFrom(IndexerState.values()).toString(), randomLong()).     }     return new DataFrameFeatureSetUsage(randomBoolean(), randomBoolean(), transformCountByState, DataFrameIndexerTransformStatsTests.randomStats()). }
+false;protected;0;4;;@Override protected Reader<DataFrameFeatureSetUsage> instanceReader() {     return DataFrameFeatureSetUsage::new. }

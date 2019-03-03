@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;3;4;;protected AbstractKubernetesEndpoint doCreateEndpoint(String uri, String remaining, KubernetesConfiguration config) throws Exception {     OpenshiftBuildsEndpoint endpoint = new OpenshiftBuildsEndpoint(uri, this, config).     return endpoint. }

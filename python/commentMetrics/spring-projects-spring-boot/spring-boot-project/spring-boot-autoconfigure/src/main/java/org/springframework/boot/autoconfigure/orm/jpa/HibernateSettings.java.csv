@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;public HibernateSettings ddlAuto(Supplier<String> ddlAuto) {     this.ddlAuto = ddlAuto.     return this. }
+false;public;0;3;;public String getDdlAuto() {     return (this.ddlAuto != null) ? this.ddlAuto.get() : null. }
+false;public;1;6;;public HibernateSettings hibernatePropertiesCustomizers(Collection<HibernatePropertiesCustomizer> hibernatePropertiesCustomizers) {     this.hibernatePropertiesCustomizers = new ArrayList<>(hibernatePropertiesCustomizers).     return this. }
+false;public;0;3;;public Collection<HibernatePropertiesCustomizer> getHibernatePropertiesCustomizers() {     return this.hibernatePropertiesCustomizers. }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public void serialize(Object object, OutputStream outputStream) throws IOException {     this.serializer.serialize(object, outputStream). }
+false;public;1;4;;@Override public Object deserialize(InputStream inputStream) throws IOException {     return this.deserializer.deserialize(inputStream). }

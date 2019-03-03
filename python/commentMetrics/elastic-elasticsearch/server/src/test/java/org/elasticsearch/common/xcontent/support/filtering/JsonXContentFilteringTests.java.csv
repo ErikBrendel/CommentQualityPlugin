@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected XContentType getXContentType() {     return XContentType.JSON. }
+false;protected;2;8;;@Override protected void assertFilterResult(XContentBuilder expected, XContentBuilder actual) {     if (randomBoolean()) {         assertXContentBuilderAsString(expected, actual).     } else {         assertXContentBuilderAsBytes(expected, actual).     } }

@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public void updatePosition() {     this.pos = this.pos + posIncAtt.getPositionIncrement(). }
+false;public;0;3;;public CharSequence getTerm() {     return termAtt. }
+false;public;0;3;;public int getPositionIncrement() {     return posIncAtt.getPositionIncrement(). }
+false;public;0;3;;public int getPosition() {     return pos. }
+false;public;0;3;;public int getPositionLength() {     return posLenAtt.getPositionLength(). }
+false;public;0;3;;public int getStartOffset() {     return offsetAtt.startOffset(). }
+false;public;0;3;;public int getEndOffset() {     return offsetAtt.endOffset(). }
+false;public;0;3;;public String getType() {     return typeAtt.type(). }
+false;public;0;3;;public boolean isKeyword() {     return keywordAtt.isKeyword(). }
+true;public,abstract;1;1;/**  * Returns {@code true} if the current term matches the predicate  */ ;/**  * Returns {@code true} if the current term matches the predicate  */ public abstract boolean execute(Token token).
+false;;0;1;;AnalysisPredicateScript newInstance().

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;1;1;/**  * Return a handler for this request.  * @param exchange current server exchange  * @return a {@link Mono} that emits one value or none in case the request  * cannot be resolved to a handler  */ ;/**  * Return a handler for this request.  * @param exchange current server exchange  * @return a {@link Mono} that emits one value or none in case the request  * cannot be resolved to a handler  */ Mono<Object> getHandler(ServerWebExchange exchange).

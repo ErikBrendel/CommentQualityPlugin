@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;2;;@ManagedAttribute(description = "Delay") Long getDelay().
+false;;1;2;;@ManagedOperation(description = "Set a constant delay in millis") void constantDelay(Integer millis).
+false;;0;2;;@ManagedAttribute(description = "Number of exchanges currently delayed") int getDelayedCount().
+false;;0;2;;@ManagedAttribute(description = "Enables asynchronous delay which means the thread will not block while delaying") Boolean isAsyncDelayed().
+false;;0;2;;@ManagedAttribute(description = "Whether or not the caller should run the task when it was rejected by the thread pool") Boolean isCallerRunsWhenRejected().

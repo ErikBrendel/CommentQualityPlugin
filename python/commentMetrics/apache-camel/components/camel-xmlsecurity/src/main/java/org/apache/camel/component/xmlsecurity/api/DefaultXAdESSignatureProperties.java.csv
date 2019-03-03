@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void setKeystore(KeyStore keystore) {     keyStoreAndAlias.setKeyStore(keystore). }
+false;public;1;3;;public void setAlias(String alias) {     keyStoreAndAlias.setAlias(alias). }
+false;public;1;6;;public void setKeyStoreParameters(KeyStoreParameters parameters) throws GeneralSecurityException, IOException {     if (parameters != null) {         keyStoreAndAlias.setKeyStore(parameters.createKeyStore()).     } }
+false;protected;0;13;;@Override protected X509Certificate getSigningCertificate() throws Exception {     // NOPMD     if (keyStoreAndAlias.getKeyStore() == null) {         throw new XmlSignatureException("No keystore has been configured").     }     X509Certificate cert = (X509Certificate) keyStoreAndAlias.getKeyStore().getCertificate(keyStoreAndAlias.getAlias()).     if (cert == null) {         throw new XmlSignatureException(String.format("No certificate found in keystore for alias '%s'", keyStoreAndAlias.getAlias())).     }     return cert. }
+false;protected;0;4;;@Override protected X509Certificate[] getSigningCertificateChain() throws Exception {     // NOPMD     return null. }
+false;public;0;4;;@Override public CamelContext getCamelContext() {     return context. }
+false;public;1;4;;@Override public void setCamelContext(CamelContext context) {     this.context = context. }

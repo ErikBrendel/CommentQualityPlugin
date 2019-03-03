@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Override public void init(ExtProperties configuration) {     super.init(configuration).     resolver = (ClassResolver) this.rsvc.getProperty("CamelClassResolver").     ObjectHelper.notNull(resolver, "ClassResolver"). }
+false;public;2;9;;@Override public Reader getResourceReader(String name, String encoding) throws ResourceNotFoundException {     InputStream is = resolver.loadResourceAsStream(name).     if (is == null) {         return super.getResourceReader(name, encoding).     } else {         return new InputStreamReader(is).     } }

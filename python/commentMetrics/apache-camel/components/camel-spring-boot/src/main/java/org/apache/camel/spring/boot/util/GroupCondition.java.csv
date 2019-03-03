@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;9;;@Override public ConditionOutcome getMatchOutcome(ConditionContext conditionContext, AnnotatedTypeMetadata annotatedTypeMetadata) {     final ConditionMessage.Builder message = ConditionMessage.forCondition(this.single).     final Environment environment = conditionContext.getEnvironment().     return HierarchicalPropertiesEvaluator.evaluate(environment, this.group, this.single) ? ConditionOutcome.match(message.because("enabled")) : ConditionOutcome.noMatch(message.because("not enabled")). }

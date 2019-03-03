@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getName() {     return "security_clear_realm_cache_action". }
+false;public;2;9;;@Override public RestChannelConsumer innerPrepareRequest(RestRequest request, NodeClient client) throws IOException {     String[] realms = request.paramAsStringArrayOrEmptyIfAll("realms").     String[] usernames = request.paramAsStringArrayOrEmptyIfAll("usernames").     ClearRealmCacheRequest req = new ClearRealmCacheRequest().realms(realms).usernames(usernames).     return channel -> new SecurityClient(client).clearRealmCache(req, new NodesResponseRestListener<>(channel)). }

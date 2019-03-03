@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void testDefaultSettings() throws Exception {     SampleSpringXmlApplication.main(new String[0]).     String output = this.output.toString().     assertThat(output).contains("Hello World"). }

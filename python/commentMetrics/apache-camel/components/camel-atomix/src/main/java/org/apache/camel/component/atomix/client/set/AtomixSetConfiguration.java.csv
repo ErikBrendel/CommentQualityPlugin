@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;// **************************************** // Properties // **************************************** public AtomixSet.Action getDefaultAction() {     return defaultAction. }
+true;public;1;3;/**  * The default action.  */ ;/**  * The default action.  */ public void setDefaultAction(AtomixSet.Action defaultAction) {     this.defaultAction = defaultAction. }
+false;public;0;3;;public long getTtl() {     return ttl. }
+true;public;1;3;/**  * The resource ttl.  */ ;/**  * The resource ttl.  */ public void setTtl(long ttl) {     this.ttl = ttl. }
+false;public;0;7;;// **************************************** // Copy // **************************************** public AtomixSetConfiguration copy() {     try {         return (AtomixSetConfiguration) super.clone().     } catch (CloneNotSupportedException e) {         throw new RuntimeCamelException(e).     } }

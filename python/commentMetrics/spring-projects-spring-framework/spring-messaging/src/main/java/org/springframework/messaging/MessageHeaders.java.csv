@@ -1,0 +1,25 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;3;;protected Map<String, Object> getRawHeaders() {     return this.headers. }
+false;protected,static;0;4;;protected static IdGenerator getIdGenerator() {     IdGenerator generator = idGenerator.     return (generator != null ? generator : defaultIdGenerator). }
+false;public;0;4;;@Nullable public UUID getId() {     return get(ID, UUID.class). }
+false;public;0;4;;@Nullable public Long getTimestamp() {     return get(TIMESTAMP, Long.class). }
+false;public;0;4;;@Nullable public Object getReplyChannel() {     return get(REPLY_CHANNEL). }
+false;public;0;4;;@Nullable public Object getErrorChannel() {     return get(ERROR_CHANNEL). }
+false;public;2;13;;@SuppressWarnings("unchecked") @Nullable public <T> T get(Object key, Class<T> type) {     Object value = this.headers.get(key).     if (value == null) {         return null.     }     if (!type.isAssignableFrom(value.getClass())) {         throw new IllegalArgumentException("Incorrect type specified for header '" + key + "'. Expected [" + type + "] but actual type is [" + value.getClass() + "]").     }     return (T) value. }
+false;public;1;3;;// Delegating Map implementation public boolean containsKey(Object key) {     return this.headers.containsKey(key). }
+false;public;1;3;;public boolean containsValue(Object value) {     return this.headers.containsValue(value). }
+false;public;0;3;;public Set<Map.Entry<String, Object>> entrySet() {     return Collections.unmodifiableMap(this.headers).entrySet(). }
+false;public;1;4;;@Nullable public Object get(Object key) {     return this.headers.get(key). }
+false;public;0;3;;public boolean isEmpty() {     return this.headers.isEmpty(). }
+false;public;0;3;;public Set<String> keySet() {     return Collections.unmodifiableSet(this.headers.keySet()). }
+false;public;0;3;;public int size() {     return this.headers.size(). }
+false;public;0;3;;public Collection<Object> values() {     return Collections.unmodifiableCollection(this.headers.values()). }
+true;public;2;3;/**  * Since MessageHeaders are immutable, the call to this method  * will result in {@link UnsupportedOperationException}.  */ ;// Unsupported Map operations /**  * Since MessageHeaders are immutable, the call to this method  * will result in {@link UnsupportedOperationException}.  */ public Object put(String key, Object value) {     throw new UnsupportedOperationException("MessageHeaders is immutable"). }
+true;public;1;3;/**  * Since MessageHeaders are immutable, the call to this method  * will result in {@link UnsupportedOperationException}.  */ ;/**  * Since MessageHeaders are immutable, the call to this method  * will result in {@link UnsupportedOperationException}.  */ public void putAll(Map<? extends String, ? extends Object> map) {     throw new UnsupportedOperationException("MessageHeaders is immutable"). }
+true;public;1;3;/**  * Since MessageHeaders are immutable, the call to this method  * will result in {@link UnsupportedOperationException}.  */ ;/**  * Since MessageHeaders are immutable, the call to this method  * will result in {@link UnsupportedOperationException}.  */ public Object remove(Object key) {     throw new UnsupportedOperationException("MessageHeaders is immutable"). }
+true;public;0;3;/**  * Since MessageHeaders are immutable, the call to this method  * will result in {@link UnsupportedOperationException}.  */ ;/**  * Since MessageHeaders are immutable, the call to this method  * will result in {@link UnsupportedOperationException}.  */ public void clear() {     throw new UnsupportedOperationException("MessageHeaders is immutable"). }
+false;private;1;20;;// Serialization methods private void writeObject(ObjectOutputStream out) throws IOException {     Set<String> keysToIgnore = new HashSet<>().     this.headers.forEach((key, value) -> {         if (!(value instanceof Serializable)) {             keysToIgnore.add(key).         }     }).     if (keysToIgnore.isEmpty()) {         // All entries are serializable -> serialize the regular MessageHeaders instance         out.defaultWriteObject().     } else {         // Some non-serializable entries -> serialize a temporary MessageHeaders copy         if (logger.isDebugEnabled()) {             logger.debug("Ignoring non-serializable message headers: " + keysToIgnore).         }         out.writeObject(new MessageHeaders(this, keysToIgnore)).     } }
+false;private;1;3;;private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {     in.defaultReadObject(). }
+false;public;1;5;;// equals, hashCode, toString @Override public boolean equals(Object other) {     return (this == other || (other instanceof MessageHeaders && this.headers.equals(((MessageHeaders) other).headers))). }
+false;public;0;4;;@Override public int hashCode() {     return this.headers.hashCode(). }
+false;public;0;4;;@Override public String toString() {     return this.headers.toString(). }

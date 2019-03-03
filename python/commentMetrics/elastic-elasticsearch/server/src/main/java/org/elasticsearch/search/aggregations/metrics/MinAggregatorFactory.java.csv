@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;3;5;;@Override protected Aggregator createUnmapped(Aggregator parent, List<PipelineAggregator> pipelineAggregators, Map<String, Object> metaData) throws IOException {     return new MinAggregator(name, config, null, context, parent, pipelineAggregators, metaData). }
+false;protected;5;5;;@Override protected Aggregator doCreateInternal(ValuesSource.Numeric valuesSource, Aggregator parent, boolean collectsFromSingleBucket, List<PipelineAggregator> pipelineAggregators, Map<String, Object> metaData) throws IOException {     return new MinAggregator(name, config, valuesSource, context, parent, pipelineAggregators, metaData). }

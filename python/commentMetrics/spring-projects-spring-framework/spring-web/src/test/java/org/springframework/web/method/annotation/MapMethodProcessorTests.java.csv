@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;11;;@Before public void setUp() throws Exception {     processor = new MapMethodProcessor().     mavContainer = new ModelAndViewContainer().     Method method = getClass().getDeclaredMethod("map", Map.class).     paramMap = new MethodParameter(method, 0).     returnParamMap = new MethodParameter(method, 0).     webRequest = new ServletWebRequest(new MockHttpServletRequest()). }
+false;public;0;4;;@Test public void supportsParameter() {     assertTrue(processor.supportsParameter(paramMap)). }
+false;public;0;4;;@Test public void supportsReturnType() {     assertTrue(processor.supportsReturnType(returnParamMap)). }
+false;public;0;4;;@Test public void resolveArgumentValue() throws Exception {     assertSame(mavContainer.getModel(), processor.resolveArgument(paramMap, mavContainer, webRequest, null)). }
+false;public;0;10;;@Test public void handleMapReturnValue() throws Exception {     mavContainer.addAttribute("attr1", "value1").     Map<String, Object> returnValue = new ModelMap("attr2", "value2").     processor.handleReturnValue(returnValue, returnParamMap, mavContainer, webRequest).     assertEquals("value1", mavContainer.getModel().get("attr1")).     assertEquals("value2", mavContainer.getModel().get("attr2")). }
+false;private;1;4;;@SuppressWarnings("unused") private Map<String, Object> map(Map<String, Object> map) {     return null. }

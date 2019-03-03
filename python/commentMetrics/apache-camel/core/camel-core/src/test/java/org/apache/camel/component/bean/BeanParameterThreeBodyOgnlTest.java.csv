@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;12;;@Test public void testBeanParameterValue() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("3").     List<String> body = new ArrayList<>().     body.add("A").     body.add("B").     body.add("C").     template.sendBody("direct:start", body).     assertMockEndpointsSatisfied(). }
+false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry jndi = super.createRegistry().     jndi.bind("foo", new MyBean()).     return jndi. }
+false;public;0;6;;@Override public void configure() throws Exception {     from("direct:start").to("bean:foo?method=bar(${body[0]},${body[1]},${body[2]})").to("mock:result"). }
+false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").to("bean:foo?method=bar(${body[0]},${body[1]},${body[2]})").to("mock:result").         }     }. }
+false;public;3;7;;public String bar(String order1, String order2, String order3) {     assertEquals("A", order1).     assertEquals("B", order2).     assertEquals("C", order3).     return "3". }
+false;public;2;5;;public String bar(String order1, String order2) {     assertEquals("A", order1).     assertEquals("B", order2).     return "2". }
+false;public;1;4;;public String bar(String order1) {     assertEquals("A", order1).     return "1". }

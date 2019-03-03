@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void setHttpService(HttpService httpService) {     this.httpService = httpService. }
+false;public;1;3;;public void setAlias(String alias) {     this.alias = alias. }
+false;public;1;3;;public void setServletName(String servletName) {     this.servletName = servletName. }
+false;public;1;3;;public void setServlet(HttpServlet servlet) {     this.servlet = servlet. }
+false;public;1;3;;public void setHttpContext(HttpContext httpContext) {     this.httpContext = httpContext. }
+false;public;1;3;;public void setMatchOnUriPrefix(boolean matchOnUriPrefix) {     this.matchOnUriPrefix = matchOnUriPrefix. }
+false;public;0;13;;public void register() throws Exception {     StringHelper.notEmpty(alias, "alias", this).     StringHelper.notEmpty(servletName, "servletName", this).     HttpContext actualHttpContext = (httpContext == null) ? httpService.createDefaultHttpContext() : httpContext.     final Dictionary<String, String> initParams = new Hashtable<>().     initParams.put("matchOnUriPrefix", matchOnUriPrefix ? "true" : "false").     initParams.put("servlet-name", servletName).     httpService.registerServlet(alias, servlet, initParams, actualHttpContext).     alreadyRegistered = true. }
+false;public;0;6;;public void unregister() {     if (alreadyRegistered) {         httpService.unregister(alias).         alreadyRegistered = false.     } }

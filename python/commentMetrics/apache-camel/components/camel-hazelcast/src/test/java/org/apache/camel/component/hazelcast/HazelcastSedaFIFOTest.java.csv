@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;19;;@Test public void fifoTesting() throws Exception {     final int bodyCount = 5.     List<String> bodies = new ArrayList<>().     for (int i = 0. i < bodyCount. i++) {         bodies.add("test" + i).     }     mock.expectedBodiesReceived(bodies).     mock.expectedMessageCount(bodyCount).     for (int i = 0. i < bodyCount. i++) {         template.sendBody("hazelcast-seda:foo", "test" + i).     }     assertMockEndpointsSatisfied().     mock.reset(). }
+false;public;0;4;;@Override public void configure() throws Exception {     from("hazelcast-seda:foo").to("mock:result"). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("hazelcast-seda:foo").to("mock:result").         }     }. }

@@ -1,0 +1,24 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void setCamelContext(CamelContext camelContext) {     this.camelContext = camelContext. }
+false;public;0;4;;@Override public CamelContext getCamelContext() {     return camelContext. }
+false;public;0;4;;@Override public String getDataFormatName() {     return "json-johnzon". }
+false;public;0;3;;public Mapper getObjectMapper() {     return objectMapper. }
+false;public;1;3;;public void setObjectMapper(Mapper objectMapper) {     this.objectMapper = objectMapper. }
+false;public;0;3;;public Class<?> getUnmarshalType() {     return unmarshalType. }
+false;public;1;3;;public void setUnmarshalType(Class<?> unmarshalType) {     this.unmarshalType = unmarshalType. }
+false;public;0;3;;public JohnzonParameterizedType getParameterizedType() {     return parameterizedType. }
+false;public;1;3;;public void setParameterizedType(JohnzonParameterizedType parameterizedType) {     this.parameterizedType = parameterizedType. }
+false;public;0;3;;public boolean isPretty() {     return pretty. }
+false;public;1;3;;public void setPretty(boolean pretty) {     this.pretty = pretty. }
+false;public;0;3;;public String getEncoding() {     return encoding. }
+false;public;1;3;;public void setEncoding(String encoding) {     this.encoding = encoding. }
+false;public;0;3;;public boolean isSkipEmptyArray() {     return skipEmptyArray. }
+false;public;1;3;;public void setSkipEmptyArray(boolean skipEmptyArray) {     this.skipEmptyArray = skipEmptyArray. }
+false;public;0;3;;public boolean isSkipNull() {     return skipNull. }
+false;public;1;3;;public void setSkipNull(boolean skipNull) {     this.skipNull = skipNull. }
+false;public;0;3;;public Comparator<String> getAttributeOrder() {     return attributeOrder. }
+false;public;1;3;;public void setAttributeOrder(Comparator<String> attributeOrder) {     this.attributeOrder = attributeOrder. }
+false;public;3;4;;@Override public void marshal(Exchange exchange, Object graph, OutputStream stream) throws Exception {     objectMapper.writeObject(graph, stream). }
+false;public;2;14;;@Override public Object unmarshal(Exchange exchange, InputStream stream) throws Exception {     // is there a header with the unmarshal type?     Class<?> clazz = unmarshalType.     String type = exchange.getIn().getHeader(JohnzonConstants.UNMARSHAL_TYPE, String.class).     if (type != null) {         clazz = exchange.getContext().getClassResolver().resolveMandatoryClass(type).     }     if (parameterizedType != null) {         return this.objectMapper.readCollection(stream, parameterizedType).     } else {         return this.objectMapper.readObject(stream, clazz).     } }
+false;protected;0;16;;@Override protected void doStart() throws Exception {     if (objectMapper == null) {         MapperBuilder builder = new MapperBuilder().         builder.setPretty(pretty).         builder.setSkipNull(skipNull).         builder.setSkipEmptyArray(skipEmptyArray).         if (ObjectHelper.isNotEmpty(encoding)) {             builder.setEncoding(encoding).         }         if (ObjectHelper.isNotEmpty(attributeOrder)) {             builder.setAttributeOrder(attributeOrder).         }         objectMapper = builder.build().     } }
+false;protected;0;4;;@Override protected void doStop() throws Exception { // noop }

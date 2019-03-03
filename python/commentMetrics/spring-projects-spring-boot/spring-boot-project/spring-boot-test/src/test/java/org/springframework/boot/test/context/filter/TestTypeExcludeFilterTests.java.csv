@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void matchesJUnit4TestClass() throws Exception {     assertThat(this.filter.match(getMetadataReader(TestTypeExcludeFilterTests.class), this.metadataReaderFactory)).isTrue(). }
+false;public;0;5;;@Test public void matchesJUnitJupiterTestClass() throws Exception {     assertThat(this.filter.match(getMetadataReader(JupiterTestExample.class), this.metadataReaderFactory)).isTrue(). }
+false;public;0;5;;@Test public void matchesJUnitJupiterRepeatedTestClass() throws Exception {     assertThat(this.filter.match(getMetadataReader(JupiterRepeatedTestExample.class), this.metadataReaderFactory)).isTrue(). }
+false;public;0;5;;@Test public void matchesJUnitJupiterTestFactoryClass() throws Exception {     assertThat(this.filter.match(getMetadataReader(JupiterTestFactoryExample.class), this.metadataReaderFactory)).isTrue(). }
+false;public;0;5;;@Test public void matchesNestedConfiguration() throws Exception {     assertThat(this.filter.match(getMetadataReader(NestedConfig.class), this.metadataReaderFactory)).isTrue(). }
+false;public;0;7;;@Test public void matchesNestedConfigurationClassWithoutTestMethodsIfItHasRunWith() throws Exception {     assertThat(this.filter.match(getMetadataReader(AbstractTestWithConfigAndRunWith.Config.class), this.metadataReaderFactory)).isTrue(). }
+false;public;0;8;;@Test public void matchesNestedConfigurationClassWithoutTestMethodsIfItHasExtendWith() throws Exception {     assertThat(this.filter.match(getMetadataReader(AbstractJupiterTestWithConfigAndExtendWith.Config.class), this.metadataReaderFactory)).isTrue(). }
+false;public;0;5;;@Test public void matchesTestConfiguration() throws Exception {     assertThat(this.filter.match(getMetadataReader(SampleTestConfig.class), this.metadataReaderFactory)).isTrue(). }
+false;public;0;5;;@Test public void doesNotMatchRegularConfiguration() throws Exception {     assertThat(this.filter.match(getMetadataReader(SampleConfig.class), this.metadataReaderFactory)).isFalse(). }
+false;public;0;7;;@Test public void matchesNestedConfigurationClassWithoutTestNgAnnotation() throws Exception {     assertThat(this.filter.match(getMetadataReader(AbstractTestNgTestWithConfig.Config.class), this.metadataReaderFactory)).isTrue(). }
+false;private;1;3;;private MetadataReader getMetadataReader(Class<?> source) throws IOException {     return this.metadataReaderFactory.getMetadataReader(source.getName()). }

@@ -1,0 +1,38 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void setPersistenceUnitName(@Nullable String persistenceUnitName) {     this.persistenceUnitName = persistenceUnitName. }
+false;public;0;5;;@Override @Nullable public String getPersistenceUnitName() {     return this.persistenceUnitName. }
+false;public;1;3;;public void setPersistenceProviderClassName(@Nullable String persistenceProviderClassName) {     this.persistenceProviderClassName = persistenceProviderClassName. }
+false;public;0;5;;@Override @Nullable public String getPersistenceProviderClassName() {     return this.persistenceProviderClassName. }
+false;public;1;3;;public void setTransactionType(PersistenceUnitTransactionType transactionType) {     this.transactionType = transactionType. }
+false;public;0;10;;@Override public PersistenceUnitTransactionType getTransactionType() {     if (this.transactionType != null) {         return this.transactionType.     } else {         return (this.jtaDataSource != null ? PersistenceUnitTransactionType.JTA : PersistenceUnitTransactionType.RESOURCE_LOCAL).     } }
+false;public;1;3;;public void setJtaDataSource(@Nullable DataSource jtaDataSource) {     this.jtaDataSource = jtaDataSource. }
+false;public;0;5;;@Override @Nullable public DataSource getJtaDataSource() {     return this.jtaDataSource. }
+false;public;1;3;;public void setNonJtaDataSource(@Nullable DataSource nonJtaDataSource) {     this.nonJtaDataSource = nonJtaDataSource. }
+false;public;0;5;;@Override @Nullable public DataSource getNonJtaDataSource() {     return this.nonJtaDataSource. }
+false;public;1;3;;public void addMappingFileName(String mappingFileName) {     this.mappingFileNames.add(mappingFileName). }
+false;public;0;4;;@Override public List<String> getMappingFileNames() {     return this.mappingFileNames. }
+false;public;1;3;;public void addJarFileUrl(URL jarFileUrl) {     this.jarFileUrls.add(jarFileUrl). }
+false;public;0;4;;@Override public List<URL> getJarFileUrls() {     return this.jarFileUrls. }
+false;public;1;3;;public void setPersistenceUnitRootUrl(@Nullable URL persistenceUnitRootUrl) {     this.persistenceUnitRootUrl = persistenceUnitRootUrl. }
+false;public;0;5;;@Override @Nullable public URL getPersistenceUnitRootUrl() {     return this.persistenceUnitRootUrl. }
+true;public;1;3;/**  * Add a managed class name to the persistence provider's metadata.  * @see javax.persistence.spi.PersistenceUnitInfo#getManagedClassNames()  * @see #addManagedPackage  */ ;/**  * Add a managed class name to the persistence provider's metadata.  * @see javax.persistence.spi.PersistenceUnitInfo#getManagedClassNames()  * @see #addManagedPackage  */ public void addManagedClassName(String managedClassName) {     this.managedClassNames.add(managedClassName). }
+false;public;0;4;;@Override public List<String> getManagedClassNames() {     return this.managedClassNames. }
+true;public;1;3;/**  * Add a managed package to the persistence provider's metadata.  * <p>Note: This refers to annotated {@code package-info.java} files. It does  * <i>not</i> trigger entity scanning in the specified package. this is  * rather the job of {@link DefaultPersistenceUnitManager#setPackagesToScan}.  * @since 4.1  * @see SmartPersistenceUnitInfo#getManagedPackages()  * @see #addManagedClassName  */ ;/**  * Add a managed package to the persistence provider's metadata.  * <p>Note: This refers to annotated {@code package-info.java} files. It does  * <i>not</i> trigger entity scanning in the specified package. this is  * rather the job of {@link DefaultPersistenceUnitManager#setPackagesToScan}.  * @since 4.1  * @see SmartPersistenceUnitInfo#getManagedPackages()  * @see #addManagedClassName  */ public void addManagedPackage(String packageName) {     this.managedPackages.add(packageName). }
+false;public;0;4;;@Override public List<String> getManagedPackages() {     return this.managedPackages. }
+false;public;1;3;;public void setExcludeUnlistedClasses(boolean excludeUnlistedClasses) {     this.excludeUnlistedClasses = excludeUnlistedClasses. }
+false;public;0;4;;@Override public boolean excludeUnlistedClasses() {     return this.excludeUnlistedClasses. }
+false;public;1;3;;public void setSharedCacheMode(SharedCacheMode sharedCacheMode) {     this.sharedCacheMode = sharedCacheMode. }
+false;public;0;4;;@Override public SharedCacheMode getSharedCacheMode() {     return this.sharedCacheMode. }
+false;public;1;3;;public void setValidationMode(ValidationMode validationMode) {     this.validationMode = validationMode. }
+false;public;0;4;;@Override public ValidationMode getValidationMode() {     return this.validationMode. }
+false;public;2;3;;public void addProperty(String name, String value) {     this.properties.setProperty(name, value). }
+false;public;1;4;;public void setProperties(Properties properties) {     Assert.notNull(properties, "Properties must not be null").     this.properties = properties. }
+false;public;0;4;;@Override public Properties getProperties() {     return this.properties. }
+false;public;1;3;;public void setPersistenceXMLSchemaVersion(String persistenceXMLSchemaVersion) {     this.persistenceXMLSchemaVersion = persistenceXMLSchemaVersion. }
+false;public;0;4;;@Override public String getPersistenceXMLSchemaVersion() {     return this.persistenceXMLSchemaVersion. }
+false;public;1;4;;@Override public void setPersistenceProviderPackageName(@Nullable String persistenceProviderPackageName) {     this.persistenceProviderPackageName = persistenceProviderPackageName. }
+false;public;0;4;;@Nullable public String getPersistenceProviderPackageName() {     return this.persistenceProviderPackageName. }
+true;public;0;5;/**  * This implementation returns the default ClassLoader.  * @see org.springframework.util.ClassUtils#getDefaultClassLoader()  */ ;/**  * This implementation returns the default ClassLoader.  * @see org.springframework.util.ClassUtils#getDefaultClassLoader()  */ @Override @Nullable public ClassLoader getClassLoader() {     return ClassUtils.getDefaultClassLoader(). }
+true;public;1;4;/**  * This implementation throws an UnsupportedOperationException.  */ ;/**  * This implementation throws an UnsupportedOperationException.  */ @Override public void addTransformer(ClassTransformer classTransformer) {     throw new UnsupportedOperationException("addTransformer not supported"). }
+true;public;0;4;/**  * This implementation throws an UnsupportedOperationException.  */ ;/**  * This implementation throws an UnsupportedOperationException.  */ @Override public ClassLoader getNewTempClassLoader() {     throw new UnsupportedOperationException("getNewTempClassLoader not supported"). }
+false;public;0;5;;@Override public String toString() {     return "PersistenceUnitInfo: name '" + this.persistenceUnitName + "', root URL [" + this.persistenceUnitRootUrl + "]". }

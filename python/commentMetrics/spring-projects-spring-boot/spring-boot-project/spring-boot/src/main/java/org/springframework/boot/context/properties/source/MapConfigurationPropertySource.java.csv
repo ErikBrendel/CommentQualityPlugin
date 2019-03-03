@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;5;/**  * Add all entries from the specified map.  * @param map the source map  */ ;/**  * Add all entries from the specified map.  * @param map the source map  */ public void putAll(Map<?, ?> map) {     Assert.notNull(map, "Map must not be null").     assertNotReadOnlySystemAttributesMap(map).     map.forEach(this::put). }
+true;public;2;3;/**  * Add an individual entry.  * @param name the name  * @param value the value  */ ;/**  * Add an individual entry.  * @param name the name  * @param value the value  */ public void put(Object name, Object value) {     this.source.put((name != null) ? name.toString() : null, value). }
+false;public;0;4;;@Override public Object getUnderlyingSource() {     return this.source. }
+false;public;1;5;;@Override public ConfigurationProperty getConfigurationProperty(ConfigurationPropertyName name) {     return this.delegate.getConfigurationProperty(name). }
+false;public;0;4;;@Override public Iterator<ConfigurationPropertyName> iterator() {     return this.delegate.iterator(). }
+false;public;0;4;;@Override public Stream<ConfigurationPropertyName> stream() {     return this.delegate.stream(). }
+false;private;1;9;;private void assertNotReadOnlySystemAttributesMap(Map<?, ?> map) {     try {         map.size().     } catch (UnsupportedOperationException ex) {         throw new IllegalArgumentException("Security restricted maps are not supported", ex).     } }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void mockServerCall() {     this.server.expect(requestTo("/test")).andRespond(withSuccess("hello", MediaType.TEXT_HTML)).     assertThat(this.client.test()).isEqualTo("hello"). }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public Statement apply(Statement base, Description description) {     return neo4j.apply(base, description). }
+false;public;0;9;;@Test public void testRepository() {     ExampleGraph exampleGraph = new ExampleGraph().     exampleGraph.setDescription("Look, new @DataNeo4jTest!").     assertThat(exampleGraph.getId()).isNull().     ExampleGraph savedGraph = this.exampleRepository.save(exampleGraph).     assertThat(savedGraph.getId()).isNotNull().     assertThat(this.session.countEntitiesOfType(ExampleGraph.class)).isEqualTo(1). }
+false;public;0;5;;@Test public void didNotInjectExampleService() {     assertThatExceptionOfType(NoSuchBeanDefinitionException.class).isThrownBy(() -> this.applicationContext.getBean(ExampleService.class)). }
+false;public;1;7;;@Override public void initialize(ConfigurableApplicationContext configurableApplicationContext) {     TestPropertyValues.of("spring.data.neo4j.uri=" + neo4j.getContainer().getBoltUrl()).applyTo(configurableApplicationContext.getEnvironment()). }

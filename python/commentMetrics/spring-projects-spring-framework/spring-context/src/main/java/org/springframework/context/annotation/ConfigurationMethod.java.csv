@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public MethodMetadata getMetadata() {     return this.metadata. }
+false;public;0;3;;public ConfigurationClass getConfigurationClass() {     return this.configurationClass. }
+false;public;0;3;;public Location getResourceLocation() {     return new Location(this.configurationClass.getResource(), this.metadata). }
+false;;0;3;;String getFullyQualifiedMethodName() {     return this.metadata.getDeclaringClassName() + "#" + this.metadata.getMethodName(). }
+false;static;1;3;;static String getShortMethodName(String fullyQualifiedMethodName) {     return fullyQualifiedMethodName.substring(fullyQualifiedMethodName.indexOf('#') + 1). }
+false;public;1;2;;public void validate(ProblemReporter problemReporter) { }
+false;public;0;5;;@Override public String toString() {     return String.format("[%s:name=%s,declaringClass=%s]", getClass().getSimpleName(), getMetadata().getMethodName(), getMetadata().getDeclaringClassName()). }

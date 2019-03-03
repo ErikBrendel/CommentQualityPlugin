@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Before public void setUp() {     this.mvc = MockMvcBuilders.webAppContextSetup(this.context).build(). }
+false;public;0;6;;@Test public void testHome() throws Exception {     this.mvc.perform(get("/")).andExpect(status().isOk()).andExpect(content().string("Bath")). }
+false;public;0;6;;@Test public void testJmx() throws Exception {     assertThat(ManagementFactory.getPlatformMBeanServer().queryMBeans(new ObjectName("jpa.sample:type=HikariDataSource,*"), null)).hasSize(1). }

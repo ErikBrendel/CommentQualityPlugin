@@ -1,0 +1,20 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public CacheHelper getCoreCacheHelper() {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public Terms terms(String field) {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public NumericDocValues getNumericDocValues(String field) {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public BinaryDocValues getBinaryDocValues(String field) {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public SortedDocValues getSortedDocValues(String field) {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public SortedNumericDocValues getSortedNumericDocValues(String field) {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public SortedSetDocValues getSortedSetDocValues(String field) {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public NumericDocValues getNormValues(String field) {     throw new UnsupportedOperationException(). }
+false;public;0;4;;@Override public FieldInfos getFieldInfos() {     throw new UnsupportedOperationException(). }
+false;public;0;4;;@Override public Bits getLiveDocs() {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public PointValues getPointValues(String field) {     throw new UnsupportedOperationException(). }
+false;public;0;4;;@Override public void checkIntegrity() { }
+false;public;0;4;;@Override public LeafMetaData getMetaData() {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public Fields getTermVectors(int docID) {     throw new UnsupportedOperationException(). }
+false;public;0;4;;@Override public int numDocs() {     return 1. }
+false;public;0;4;;@Override public int maxDoc() {     return 1. }
+false;public;2;25;;@Override public void document(int docID, StoredFieldVisitor visitor) throws IOException {     if (docID != 0) {         throw new IllegalArgumentException("no such doc ID " + docID).     }     if (visitor.needsField(FAKE_SOURCE_FIELD) == StoredFieldVisitor.Status.YES) {         assert operation.source().toBytesRef().offset == 0.         assert operation.source().toBytesRef().length == operation.source().toBytesRef().bytes.length.         visitor.binaryField(FAKE_SOURCE_FIELD, operation.source().toBytesRef().bytes).     }     if (operation.routing() != null && visitor.needsField(FAKE_ROUTING_FIELD) == StoredFieldVisitor.Status.YES) {         visitor.stringField(FAKE_ROUTING_FIELD, operation.routing().getBytes(StandardCharsets.UTF_8)).     }     if (visitor.needsField(FAKE_ID_FIELD) == StoredFieldVisitor.Status.YES) {         final byte[] id.         if (indexVersionCreated.onOrAfter(Version.V_6_0_0)) {             BytesRef bytesRef = Uid.encodeId(operation.id()).             id = new byte[bytesRef.length].             System.arraycopy(bytesRef.bytes, bytesRef.offset, id, 0, bytesRef.length).         } else {             // TODO this can go away in 7.0 after backport             id = operation.id().getBytes(StandardCharsets.UTF_8).         }         visitor.stringField(FAKE_ID_FIELD, id).     } }
+false;protected;0;4;;@Override protected void doClose() { }
+false;public;0;4;;@Override public CacheHelper getReaderCacheHelper() {     throw new UnsupportedOperationException(). }

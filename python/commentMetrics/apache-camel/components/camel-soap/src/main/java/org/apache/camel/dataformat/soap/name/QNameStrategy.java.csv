@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;2;3;/**  * @return preset element name  */ ;/**  * @return preset element name  */ public QName findQNameForSoapActionOrType(String soapAction, Class<?> type) {     return elementName. }
+false;public;1;3;;public Class<? extends Exception> findExceptionForFaultName(QName faultName) {     throw new UnsupportedOperationException("Exception lookup is not supported for QNameStrategy"). }

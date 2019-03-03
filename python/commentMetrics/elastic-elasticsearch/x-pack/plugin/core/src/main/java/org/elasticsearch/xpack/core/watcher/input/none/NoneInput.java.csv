@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String type() {     return TYPE. }
+false;public;2;4;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     return builder.startObject().endObject(). }
+false;public,static;2;11;;public static NoneInput parse(String watchId, XContentParser parser) throws IOException {     if (parser.currentToken() != XContentParser.Token.START_OBJECT) {         String formattedMessage = "could not parse [{}] input for watch [{}]. expected an empty object but found [{}] instead".         throw new ElasticsearchParseException(formattedMessage, TYPE, watchId, parser.currentToken()).     }     if (parser.nextToken() != XContentParser.Token.END_OBJECT) {         String formattedMessage = "could not parse [{}] input for watch [{}]. expected an empty object but found [{}] instead".         throw new ElasticsearchParseException(formattedMessage, TYPE, watchId, parser.currentToken()).     }     return INSTANCE. }
+false;public,static;0;3;;public static Builder builder() {     return Builder.INSTANCE. }
+false;protected;2;4;;@Override protected XContentBuilder typeXContent(XContentBuilder builder, Params params) throws IOException {     return builder. }
+false;public;0;4;;@Override public NoneInput build() {     return NoneInput.INSTANCE. }

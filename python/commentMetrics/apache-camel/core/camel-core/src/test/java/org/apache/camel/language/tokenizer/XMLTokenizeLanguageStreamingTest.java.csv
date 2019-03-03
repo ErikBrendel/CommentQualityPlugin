@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;public void configure() {     from("direct:start").split().xtokenize("//C:child", ns).streaming().to("mock:result").end(). }
+false;protected;0;12;;@Override protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          Namespaces ns = new Namespaces("C", "urn:c").          public void configure() {             from("direct:start").split().xtokenize("//C:child", ns).streaming().to("mock:result").end().         }     }. }

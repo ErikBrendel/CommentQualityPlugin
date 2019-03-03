@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;6;;@Override protected RouterFunction<?> routerFunction() {     return RouterFunctions.route(RequestPredicates.GET("/"), request -> ServerResponse.ok().syncBody("FOO")).andRoute(RequestPredicates.all(), request -> ServerResponse.ok().syncBody("BAR")). }
+false;public;0;13;;@Test public void invalidHttpMethod() throws IOException {     OkHttpClient client = new OkHttpClient().     Request request = new Request.Builder().method("BAZ", null).url("http://localhost:" + port + "/").build().     try (Response response = client.newCall(request).execute()) {         assertEquals("BAR", response.body().string()).     } }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;7;;@Override public AtomikosDataSourceBean wrapDataSource(XADataSource dataSource) throws Exception {     AtomikosDataSourceBean bean = new AtomikosDataSourceBean().     bean.setXaDataSource(dataSource).     return bean. }

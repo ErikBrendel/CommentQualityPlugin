@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;2;3;;public static AggregationBuilder parse(String aggregationName, XContentParser parser) throws IOException {     return PARSER.parse(parser, new WeightedAvgAggregationBuilder(aggregationName), null). }
+false;public;1;5;;public WeightedAvgAggregationBuilder value(MultiValuesSourceFieldConfig valueConfig) {     valueConfig = Objects.requireNonNull(valueConfig, "Configuration for field [" + VALUE_FIELD + "] cannot be null").     field(VALUE_FIELD.getPreferredName(), valueConfig).     return this. }
+false;public;1;5;;public WeightedAvgAggregationBuilder weight(MultiValuesSourceFieldConfig weightConfig) {     weightConfig = Objects.requireNonNull(weightConfig, "Configuration for field [" + WEIGHT_FIELD + "] cannot be null").     field(WEIGHT_FIELD.getPreferredName(), weightConfig).     return this. }
+false;protected;2;4;;@Override protected AggregationBuilder shallowCopy(Builder factoriesBuilder, Map<String, Object> metaData) {     return new WeightedAvgAggregationBuilder(this, factoriesBuilder, metaData). }
+false;protected;1;4;;@Override protected void innerWriteTo(StreamOutput out) { // Do nothing, no extra state to write to stream }
+false;protected;5;8;;@Override protected MultiValuesSourceAggregatorFactory<Numeric, ?> innerBuild(SearchContext context, Map<String, ValuesSourceConfig<Numeric>> configs, DocValueFormat format, AggregatorFactory<?> parent, Builder subFactoriesBuilder) throws IOException {     return new WeightedAvgAggregatorFactory(name, configs, format, context, parent, subFactoriesBuilder, metaData). }
+false;public;2;4;;@Override public XContentBuilder doXContentBody(XContentBuilder builder, ToXContent.Params params) throws IOException {     return builder. }
+false;protected;0;4;;@Override protected int innerHashCode() {     return 0. }
+false;protected;1;4;;@Override protected boolean innerEquals(Object obj) {     return true. }
+false;public;0;4;;@Override public String getType() {     return NAME. }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Bean @Qualifier("synch") public PlatformTransactionManager transactionManager1() {     return new CallCountingTransactionManager(). }
+false;public;0;7;;@Bean @NoSynch public PlatformTransactionManager transactionManager2() {     CallCountingTransactionManager tm = new CallCountingTransactionManager().     tm.setTransactionSynchronization(CallCountingTransactionManager.SYNCHRONIZATION_NEVER).     return tm. }

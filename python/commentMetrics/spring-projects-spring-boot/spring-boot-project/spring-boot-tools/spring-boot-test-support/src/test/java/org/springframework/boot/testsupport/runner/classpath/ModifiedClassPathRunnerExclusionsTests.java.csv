@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void entriesAreFilteredFromTestClassClassLoader() {     assertThat(getClass().getClassLoader().getResource(EXCLUDED_RESOURCE)).isNull(). }
+false;public;0;5;;@Test public void entriesAreFilteredFromThreadContextClassLoader() {     assertThat(Thread.currentThread().getContextClassLoader().getResource(EXCLUDED_RESOURCE)).isNull(). }
+false;public;0;5;;@Test public void testsThatUseHamcrestWorkCorrectly() {     Matcher<IllegalStateException> matcher = isA(IllegalStateException.class).     assertThat(matcher.matches(new IllegalStateException())).isTrue(). }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;4;;@ParametersFactory public static Iterable<Object[]> parameters() throws Exception {     return ESClientYamlSuiteTestCase.createParameters(). }
+false;protected;0;6;;@Override protected Settings restClientSettings() {     return Settings.builder().put(ThreadContext.PREFIX + ".Authorization", BASIC_AUTH_VALUE).build(). }

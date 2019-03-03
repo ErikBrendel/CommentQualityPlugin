@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public TokenStream create(TokenStream tokenStream) {     return new HunspellStemFilter(tokenStream, dictionary, dedup, longestOnly). }
+false;public;0;3;;public boolean dedup() {     return dedup. }
+false;public;0;3;;public boolean longestOnly() {     return longestOnly. }

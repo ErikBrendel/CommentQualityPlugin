@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Before public void setUp() throws Exception {     applicationContext = new ClassPathXmlApplicationContext("META-INF/camel-routes.xml").     setUseRouteBuilder(false).     super.setUp().     waiter = applicationContext.getBean("waiter", TestWaiter.class).     driverRouter = applicationContext.getBean("drinkRouter", TestDrinkRouter.class). }
+false;public;0;7;;@After public void tearDown() throws Exception {     super.tearDown().     if (applicationContext != null) {         applicationContext.stop().     } }
+false;protected;0;3;;protected CamelContext createCamelContext() throws Exception {     return applicationContext.getBean("camel", CamelContext.class). }

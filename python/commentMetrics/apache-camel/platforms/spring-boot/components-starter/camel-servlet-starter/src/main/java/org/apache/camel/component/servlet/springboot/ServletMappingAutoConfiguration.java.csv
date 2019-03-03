@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;1;10;;@Bean ServletRegistrationBean servletRegistrationBean(ServletMappingConfiguration config) {     ServletRegistrationBean mapping = new ServletRegistrationBean().     mapping.setServlet(new CamelHttpTransportServlet()).     mapping.addUrlMappings(config.getContextPath()).     mapping.setName(config.getServletName()).     mapping.setLoadOnStartup(1).     return mapping. }

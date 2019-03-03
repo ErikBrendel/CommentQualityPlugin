@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getValueAsString() {     return format.format(value()).toString(). }
+false;public;1;10;;@Override public Object getProperty(List<String> path) {     if (path.isEmpty()) {         return this.     } else if (path.size() == 1 && "value".equals(path.get(0))) {         return value().     } else {         throw new IllegalArgumentException("path not supported for [" + getName() + "]: " + path).     } }
+false;public,abstract;1;1;;public abstract double value(String name).
+false;public;1;3;;public String valueAsString(String name) {     return format.format(value(name)).toString(). }
+false;public;1;10;;@Override public Object getProperty(List<String> path) {     if (path.isEmpty()) {         return this.     } else if (path.size() == 1) {         return value(path.get(0)).     } else {         throw new IllegalArgumentException("path not supported for [" + getName() + "]: " + path).     } }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(format, super.hashCode()). }
+false;public;1;12;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (obj.getClass() != getClass()) {         return false.     }     InternalNumericMetricsAggregation other = (InternalNumericMetricsAggregation) obj.     return super.equals(obj) && Objects.equals(format, other.format). }

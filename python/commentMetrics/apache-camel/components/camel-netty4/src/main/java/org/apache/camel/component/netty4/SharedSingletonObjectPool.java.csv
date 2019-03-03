@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,synchronized;0;15;;@Override public synchronized T borrowObject() throws Exception, NoSuchElementException, IllegalStateException {     if (t != null) {         // ensure the object is validate before we borrow it         if (!factory.validateObject(t)) {             invalidateObject(t).             LOG.info("Recreating new connection as current connection is invalid: {}", t).             t = null.         }     }     if (t == null) {         t = factory.makeObject().     }     return t. }
+false;public;1;4;;@Override public void returnObject(T obj) throws Exception { // noop }
+false;public;1;4;;@Override public void invalidateObject(T obj) throws Exception {     t = null. }
+false;public;0;4;;@Override public void addObject() throws Exception, IllegalStateException, UnsupportedOperationException { // noop }
+false;public;0;4;;@Override public int getNumIdle() throws UnsupportedOperationException {     return 0. }
+false;public;0;4;;@Override public int getNumActive() throws UnsupportedOperationException {     return 1. }
+false;public;0;4;;@Override public void clear() throws Exception, UnsupportedOperationException {     t = null. }
+false;public;0;4;;@Override public void close() throws Exception {     t = null. }
+false;public;1;4;;@Override public void setFactory(PoolableObjectFactory<T> factory) throws IllegalStateException, UnsupportedOperationException { // noop }

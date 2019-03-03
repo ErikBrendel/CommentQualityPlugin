@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;20;;@Test public void testMainIoC() throws Exception {     Main main = new Main().     // add as class so we get IoC     main.addRouteBuilder(MyRouteBuilder.class).     main.start().     CamelContext camelContext = main.getCamelContext().     assertNotNull(camelContext).     MockEndpoint endpoint = camelContext.getEndpoint("mock:results", MockEndpoint.class).     endpoint.expectedBodiesReceived("World").     main.getCamelTemplate().sendBody("direct:start", "<message>1</message>").     endpoint.assertIsSatisfied().     main.stop(). }
+false;public;0;4;;@Override public void configure() throws Exception {     from("direct:start").transform().constant(hello).to("mock:results"). }

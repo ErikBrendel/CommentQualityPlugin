@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;9;;@Override protected void doStart() throws Exception {     if (configuration.getClient() == null) {         // create atmos client         configuration.createClient().     }     super.doStart(). }
+false;protected;0;7;;@Override protected void doStop() throws Exception {     if (configuration.getClient() != null) {         configuration.setClient(null).     }     super.doStop(). }

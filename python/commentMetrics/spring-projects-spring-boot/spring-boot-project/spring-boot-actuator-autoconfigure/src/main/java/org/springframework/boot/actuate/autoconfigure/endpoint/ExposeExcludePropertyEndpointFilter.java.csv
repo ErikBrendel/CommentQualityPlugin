@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;2;4;;private Set<String> bind(Binder binder, String name) {     return asSet(binder.bind(name, Bindable.listOf(String.class)).map(this::cleanup).orElseGet(ArrayList::new)). }
+false;private;1;3;;private List<String> cleanup(List<String> values) {     return values.stream().map(this::cleanup).collect(Collectors.toList()). }
+false;private;1;4;;private String cleanup(String value) {     return "*".equals(value) ? "*" : EndpointId.fromPropertyValue(value).toLowerCaseString(). }
+false;private;1;7;;private Set<String> asSet(Collection<String> items) {     if (items == null) {         return Collections.emptySet().     }     return items.stream().map((item) -> item.toLowerCase(Locale.ENGLISH)).collect(Collectors.toSet()). }
+false;public;1;7;;@Override public boolean match(E endpoint) {     if (this.endpointType.isInstance(endpoint)) {         return isExposed(endpoint) && !isExcluded(endpoint).     }     return true. }
+false;private;1;7;;private boolean isExposed(ExposableEndpoint<?> endpoint) {     if (this.include.isEmpty()) {         return this.exposeDefaults.contains("*") || contains(this.exposeDefaults, endpoint).     }     return this.include.contains("*") || contains(this.include, endpoint). }
+false;private;1;6;;private boolean isExcluded(ExposableEndpoint<?> endpoint) {     if (this.exclude.isEmpty()) {         return false.     }     return this.exclude.contains("*") || contains(this.exclude, endpoint). }
+false;private;2;3;;private boolean contains(Set<String> items, ExposableEndpoint<?> endpoint) {     return items.contains(endpoint.getEndpointId().toLowerCaseString()). }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public void notify(Errors errors) {     try {         providerFactory = injector.getInternalFactory(providerKey, errors.withSource(source)).     } catch (ErrorsException e) {         errors.merge(e.getErrors()).     } }
+false;public;3;11;;@Override public T get(Errors errors, InternalContext context, Dependency<?> dependency) throws ErrorsException {     errors = errors.withSource(providerKey).     Provider<? extends T> provider = providerFactory.get(errors, context, dependency).     try {         return errors.checkForNull(provider.get(), source, dependency).     } catch (RuntimeException userException) {         throw errors.errorInProvider(userException).toException().     } }
+false;public;0;4;;@Override public String toString() {     return providerKey.toString(). }

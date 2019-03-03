@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;3;/**  * Allows to get alternative ssl context, like for the http client  */ ;/**  * Allows to get alternative ssl context, like for the http client  */ public SSLContext sslContext(Settings settings) {     return sslContextHolder(super.sslConfiguration(settings)).sslContext(). }
+false;public;1;3;;public SSLContext sslContext(String context) {     return sslContextHolder(super.getSSLConfiguration(context)).sslContext(). }

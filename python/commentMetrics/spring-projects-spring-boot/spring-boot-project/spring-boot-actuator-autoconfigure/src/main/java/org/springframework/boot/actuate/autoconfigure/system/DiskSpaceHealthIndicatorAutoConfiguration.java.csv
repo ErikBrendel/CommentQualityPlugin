@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;7;;@Bean @ConditionalOnMissingBean(name = "diskSpaceHealthIndicator") public DiskSpaceHealthIndicator diskSpaceHealthIndicator(DiskSpaceHealthIndicatorProperties properties) {     return new DiskSpaceHealthIndicator(properties.getPath(), properties.getThreshold()). }
+false;public;0;4;;@Bean public DiskSpaceHealthIndicatorProperties diskSpaceHealthIndicatorProperties() {     return new DiskSpaceHealthIndicatorProperties(). }

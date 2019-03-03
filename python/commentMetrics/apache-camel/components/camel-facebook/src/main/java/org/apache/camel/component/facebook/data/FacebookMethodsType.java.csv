@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,static;2;12;/**  * Find method type by name and argument types.  * @param name method name  * @param args ordered argument types  * @return matching method, null if not found  */ ;/**  * Find method type by name and argument types.  * @param name method name  * @param args ordered argument types  * @return matching method, null if not found  */ public static FacebookMethodsType findMethod(String name, Class<?>... args) {     for (FacebookMethodsType method : values()) {         if (method.name.equals(name)) {             if ((method.argTypes.isEmpty() && (args == null || args.length == 0)) || Arrays.equals(method.argTypes.toArray(), args)) {                 return method.             }         }     }     return null. }
+false;public;0;3;;public String getName() {     return name. }
+false;public;0;3;;public Class<?> getResultType() {     return resultType. }
+false;public;0;3;;public List<String> getArgNames() {     return Collections.unmodifiableList(argNames). }
+false;public;0;3;;public List<Class<?>> getArgTypes() {     return Collections.unmodifiableList(argTypes). }
+false;public;0;3;;public Method getMethod() {     return method. }
+false;public;0;11;;@Override public String toString() {     StringBuilder builder = new StringBuilder().     builder.append("{").append("name=").append(name).append(", resultType=").append(resultType).append(", argNames=").append(argNames).append(", argTypes=").append(argTypes).append("}").     return builder.toString(). }

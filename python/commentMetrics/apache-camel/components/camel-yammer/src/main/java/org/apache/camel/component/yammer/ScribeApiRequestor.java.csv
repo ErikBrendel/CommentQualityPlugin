@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;2;23;;private String send(Verb verb, String params) throws Exception {     String url = apiUrl + ((params != null) ? params : "").     OAuthRequest request = new OAuthRequest(verb, url).     request.addQuerystringParameter(OAuthConstants.ACCESS_TOKEN, apiAccessToken).     // For more details on the “Bearer” token refer to http://tools.ietf.org/html/draft-ietf-oauth-v2-bearer-23     StringBuilder sb = new StringBuilder().     sb.append("Bearer ").     sb.append(apiAccessToken).     request.addHeader("Authorization", sb.toString()).     if (LOG.isDebugEnabled()) {         LOG.debug("Yammer request url: {}", request.getCompleteUrl()).     }     Response response = request.send().     if (response.isSuccessful()) {         return response.getBody().     } else {         throw new Exception(String.format("Failed to poll %s. Got response code %s and body: %s", getApiUrl(), response.getCode(), response.getBody())).     } }
+false;public;0;3;;public String getApiUrl() {     return apiUrl. }
+false;public;1;3;;public void setApiUrl(String apiUrl) {     this.apiUrl = apiUrl. }
+false;public;0;3;;public String getApiAccessToken() {     return apiAccessToken. }
+false;public;1;3;;public void setApiAccessToken(String apiAccessToken) {     this.apiAccessToken = apiAccessToken. }
+false;public;0;4;;@Override public String get() throws Exception {     return send(Verb.GET, null). }
+false;public;1;4;;@Override public String post(String params) throws Exception {     return send(Verb.POST, params). }

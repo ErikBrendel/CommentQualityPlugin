@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;8;;protected void initialize() {     // filter out kafka record metadata     getInFilter().add("org.apache.kafka.clients.producer.RecordMetadata").     // filter headers begin with "Camel" or "org.apache.camel"     setOutFilterPattern("(?i)(Camel|org\\.apache\\.camel)[\\.|a-z|A-z|0-9]*").     setInFilterPattern("(?i)(Camel|org\\.apache\\.camel)[\\.|a-z|A-z|0-9]*"). }

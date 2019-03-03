@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void injection() {     try (ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("org/springframework/beans/factory/aspectj/beanConfigurerTests.xml")) {         ShouldBeConfiguredBySpring myObject = new ShouldBeConfiguredBySpring().         assertEquals("Rod", myObject.getName()).     } }

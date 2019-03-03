@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected PutDatafeedRequest createTestInstance() {     return new PutDatafeedRequest(DatafeedConfigTests.createRandom()). }
+false;protected;1;4;;@Override protected PutDatafeedRequest doParseInstance(XContentParser parser) {     return new PutDatafeedRequest(DatafeedConfig.PARSER.apply(parser, null).build()). }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return false. }

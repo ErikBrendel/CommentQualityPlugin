@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;public void testAllDatafeedRequest() {     GetDatafeedRequest request = GetDatafeedRequest.getAllDatafeedsRequest().     assertEquals(request.getDatafeedIds().size(), 1).     assertEquals(request.getDatafeedIds().get(0), "_all"). }
+false;public;0;4;;public void testNewWithDatafeedId() {     Exception exception = expectThrows(NullPointerException.class, () -> new GetDatafeedRequest("feed", null)).     assertEquals(exception.getMessage(), "datafeedIds must not contain null values"). }
+false;protected;0;17;;@Override protected GetDatafeedRequest createTestInstance() {     int count = randomIntBetween(0, 10).     List<String> datafeedIds = new ArrayList<>(count).     for (int i = 0. i < count. i++) {         datafeedIds.add(DatafeedConfigTests.randomValidDatafeedId()).     }     GetDatafeedRequest request = new GetDatafeedRequest(datafeedIds).     if (randomBoolean()) {         request.setAllowNoDatafeeds(randomBoolean()).     }     return request. }
+false;protected;1;4;;@Override protected GetDatafeedRequest doParseInstance(XContentParser parser) throws IOException {     return GetDatafeedRequest.PARSER.parse(parser, null). }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return false. }

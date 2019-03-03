@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;1;1;/**  * Handle the web server exchange.  * @param exchange the current server exchange  * @return {@code Mono<Void>} to indicate when request handling is complete  */ ;/**  * Handle the web server exchange.  * @param exchange the current server exchange  * @return {@code Mono<Void>} to indicate when request handling is complete  */ Mono<Void> handle(ServerWebExchange exchange).

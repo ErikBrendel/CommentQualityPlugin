@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Test public void testBean() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("abcABC").     template.sendBody("direct:start", new ByteArrayInputStream("aBc".getBytes())).     assertMockEndpointsSatisfied(). }
+false;public;0;6;;@Override public void configure() throws Exception {     from("direct:start").streamCaching().bean(Foo.class).to("mock:result"). }
+false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").streamCaching().bean(Foo.class).to("mock:result").         }     }. }
+false;public,static;2;5;;public static String hello(@Simple("${body}") String body, @Simple("${body}") String body2) {     // we should be able to read the stream multiple times     return body.toLowerCase() + body2.toUpperCase(). }

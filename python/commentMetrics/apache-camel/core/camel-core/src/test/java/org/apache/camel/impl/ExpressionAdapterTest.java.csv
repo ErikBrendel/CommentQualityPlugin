@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;3;;protected String assertionFailureMessage(Exchange exchange) {     return "foo". }
+false;public;2;8;;@SuppressWarnings("unchecked") public <T> T evaluate(Exchange exchange, Class<T> type) {     String in = exchange.getIn().getBody(String.class).     if ("Kabom".equals(in)) {         return null.     }     return (T) in. }
+false;public;0;9;;@Test public void testExpressionAdapter() throws Exception {     MyExpression my = new MyExpression().     Exchange e = new DefaultExchange(context).     e.getIn().setBody("bar").     my.assertMatches("bar", e). }
+false;public;0;13;;@Test public void testExpressionAdapterFail() throws Exception {     MyExpression my = new MyExpression().     Exchange e = new DefaultExchange(context).     e.getIn().setBody("Kabom").     try {         my.assertMatches("damn", e).         fail("Should have thrown exception").     } catch (AssertionError ae) {         assertTrue(ae.getMessage().contains("foo")).     } }

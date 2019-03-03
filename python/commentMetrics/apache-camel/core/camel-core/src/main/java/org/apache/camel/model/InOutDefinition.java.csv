@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String toString() {     return "InOut[" + getLabel() + "]". }
+false;public;0;4;;@Override public String getShortName() {     return "inOut". }
+false;public;0;4;;@Override public String getLabel() {     return "inOut". }
+false;public;0;4;;@Override public ExchangePattern getPattern() {     return ExchangePattern.InOut. }

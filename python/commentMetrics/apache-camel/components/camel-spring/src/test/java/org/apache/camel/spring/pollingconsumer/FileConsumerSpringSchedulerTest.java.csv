@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/spring/pollingconsumer/FileConsumerSpringSchedulerTest.xml"). }
+false;public;0;6;;@Override @Before public void setUp() throws Exception {     deleteDirectory("target/file/spring").     super.setUp(). }
+false;public;0;10;;@Test public void testSpringScheduler() throws Exception {     getMockEndpoint("mock:result").expectedMessageCount(1).     template.sendBodyAndHeader("file:target/file/spring", "Hello World", Exchange.FILE_NAME, "hello.txt").     context.getRouteController().startRoute("foo").     assertMockEndpointsSatisfied(). }

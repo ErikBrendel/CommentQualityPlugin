@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void testPing() throws Exception {     boolean pingResult = template.requestBody("direct:ping", "test", Boolean.class).     assertTrue("indexId should be set", pingResult). }
+false;public;0;4;;@Override public void configure() {     from("direct:ping").to("elasticsearch-rest://elasticsearch?operation=Ping&hostAddresses=localhost:" + ES_BASE_HTTP_PORT). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() {             from("direct:ping").to("elasticsearch-rest://elasticsearch?operation=Ping&hostAddresses=localhost:" + ES_BASE_HTTP_PORT).         }     }. }

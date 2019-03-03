@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;2;1;/**  * Extract from the given input message.  * @param inputMessage the request to extract from  * @param context the configuration to use  * @return the extracted data  */ ;/**  * Extract from the given input message.  * @param inputMessage the request to extract from  * @param context the configuration to use  * @return the extracted data  */ T extract(M inputMessage, Context context).
+true;;0;1;/**  * Return the {@link HttpMessageReader HttpMessageReaders} to be used for body extraction.  * @return the stream of message readers  */ ;/**  * Return the {@link HttpMessageReader HttpMessageReaders} to be used for body extraction.  * @return the stream of message readers  */ List<HttpMessageReader<?>> messageReaders().
+true;;0;1;/**  * Optionally return the {@link ServerHttpResponse}, if present.  */ ;/**  * Optionally return the {@link ServerHttpResponse}, if present.  */ Optional<ServerHttpResponse> serverResponse().
+true;;0;1;/**  * Return the map of hints to use to customize body extraction.  */ ;/**  * Return the map of hints to use to customize body extraction.  */ Map<String, Object> hints().

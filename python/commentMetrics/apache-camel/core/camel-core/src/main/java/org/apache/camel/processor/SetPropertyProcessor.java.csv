@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;20;;@Override public boolean process(Exchange exchange, AsyncCallback callback) {     try {         Object newProperty = expression.evaluate(exchange, Object.class).         if (exchange.getException() != null) {             // the expression threw an exception so we should break-out             callback.done(true).             return true.         }         String key = propertyName.evaluate(exchange, String.class).         exchange.setProperty(key, newProperty).     } catch (Throwable e) {         exchange.setException(e).     }     callback.done(true).     return true. }
+false;public;0;4;;@Override public String toString() {     return "SetProperty(" + propertyName + ", " + expression + ")". }
+false;public;0;3;;public String getTraceLabel() {     return "setProperty[" + propertyName + ", " + expression + "]". }
+false;public;0;3;;public String getId() {     return id. }
+false;public;1;3;;public void setId(String id) {     this.id = id. }
+false;public;0;3;;public String getPropertyName() {     return propertyName.toString(). }
+false;public;0;3;;public Expression getExpression() {     return expression. }
+false;protected;0;4;;@Override protected void doStart() throws Exception { // noop }
+false;protected;0;4;;@Override protected void doStop() throws Exception { // noop }

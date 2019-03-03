@@ -1,0 +1,16 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;11;;@SuppressWarnings("unchecked") @org.junit.Before public void setup() {     ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext(getClass().getSimpleName() + "-context.xml", getClass()).     counterAspect = (CounterAspect) ctx.getBean("counterAspect").     counterAspect.reset().     testBean = (GenericInterface<String>) ctx.getBean("testBean"). }
+false;public;0;5;;@Test public void testGenericInterfaceGenericArgExecution() {     testBean.save("").     assertEquals(1, counterAspect.genericInterfaceGenericArgExecutionCount). }
+false;public;0;5;;@Test public void testGenericInterfaceGenericCollectionArgExecution() {     testBean.saveAll(null).     assertEquals(1, counterAspect.genericInterfaceGenericCollectionArgExecutionCount). }
+false;public;0;5;;@Test public void testGenericInterfaceSubtypeGenericCollectionArgExecution() {     testBean.saveAll(null).     assertEquals(1, counterAspect.genericInterfaceSubtypeGenericCollectionArgExecutionCount). }
+false;public;1;1;;public void save(T bean).
+false;public;1;1;;public void saveAll(Collection<T> beans).
+false;public;1;3;;@Override public void save(T bean) { }
+false;public;1;3;;@Override public void saveAll(Collection<T> beans) { }
+false;public;0;5;;public void reset() {     genericInterfaceGenericArgExecutionCount = 0.     genericInterfaceGenericCollectionArgExecutionCount = 0.     genericInterfaceSubtypeGenericCollectionArgExecutionCount = 0. }
+false;public;0;2;;@Pointcut("execution(* org.springframework.aop.aspectj.generic.GenericParameterMatchingTests.GenericInterface.save(..))") public void genericInterfaceGenericArgExecution() { }
+false;public;0;2;;@Pointcut("execution(* org.springframework.aop.aspectj.generic.GenericParameterMatchingTests.GenericInterface.saveAll(..))") public void GenericInterfaceGenericCollectionArgExecution() { }
+false;public;0;2;;@Pointcut("execution(* org.springframework.aop.aspectj.generic.GenericParameterMatchingTests.GenericInterface+.saveAll(..))") public void genericInterfaceSubtypeGenericCollectionArgExecution() { }
+false;public;0;4;;@Before("genericInterfaceGenericArgExecution()") public void incrementGenericInterfaceGenericArgExecution() {     genericInterfaceGenericArgExecutionCount++. }
+false;public;0;4;;@Before("GenericInterfaceGenericCollectionArgExecution()") public void incrementGenericInterfaceGenericCollectionArgExecution() {     genericInterfaceGenericCollectionArgExecutionCount++. }
+false;public;0;4;;@Before("genericInterfaceSubtypeGenericCollectionArgExecution()") public void incrementGenericInterfaceSubtypeGenericCollectionArgExecution() {     genericInterfaceSubtypeGenericCollectionArgExecutionCount++. }

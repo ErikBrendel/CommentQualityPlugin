@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;12;;@Test public void testTransformPropogateHeaders() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMessageCount(1).     mock.expectedBodiesReceived("London").     mock.expectedHeaderReceived("foo", "bar").     template.sendBodyAndHeader("direct:in", "<person name='James' city='London'/>", "foo", "bar").     assertMockEndpointsSatisfied(). }
+false;public;0;5;;public void configure() {     from("direct:in").transform().constant("London").to("mock:result"). }
+false;protected;0;9;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("direct:in").transform().constant("London").to("mock:result").         }     }. }

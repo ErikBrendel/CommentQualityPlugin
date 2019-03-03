@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean isUseRouteBuilder() {     return false. }
+false;public;0;8;;@Test public void testEndpointExplain() throws Exception {     String json = context.explainEndpointJson("mock:foo?retainFirst=10", true).     assertNotNull(json).     assertTrue(json.contains("\"retainFirst\": { \"kind\": \"parameter\", \"group\": \"producer\", \"label\": \"producer\", \"type\": \"integer\"," + " \"javaType\": \"int\", \"deprecated\": \"false\", \"secret\": \"false\", \"value\": \"10\"")). }

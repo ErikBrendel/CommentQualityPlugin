@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getName() {     return "delete_license". }
+false;public;2;9;;@Override public RestChannelConsumer doPrepareRequest(final RestRequest request, final XPackClient client) throws IOException {     DeleteLicenseRequest deleteLicenseRequest = new DeleteLicenseRequest().     deleteLicenseRequest.timeout(request.paramAsTime("timeout", deleteLicenseRequest.timeout())).     deleteLicenseRequest.masterNodeTimeout(request.paramAsTime("master_timeout", deleteLicenseRequest.masterNodeTimeout())).     return channel -> client.es().admin().cluster().execute(DeleteLicenseAction.INSTANCE, deleteLicenseRequest, new RestToXContentListener<>(channel)). }

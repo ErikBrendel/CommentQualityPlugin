@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String db() {     return get(InfluxProperties::getDb, InfluxConfig.super::db). }
+false;public;0;4;;@Override public InfluxConsistency consistency() {     return get(InfluxProperties::getConsistency, InfluxConfig.super::consistency). }
+false;public;0;4;;@Override public String userName() {     return get(InfluxProperties::getUserName, InfluxConfig.super::userName). }
+false;public;0;4;;@Override public String password() {     return get(InfluxProperties::getPassword, InfluxConfig.super::password). }
+false;public;0;5;;@Override public String retentionPolicy() {     return get(InfluxProperties::getRetentionPolicy, InfluxConfig.super::retentionPolicy). }
+false;public;0;5;;@Override public Integer retentionReplicationFactor() {     return get(InfluxProperties::getRetentionReplicationFactor, InfluxConfig.super::retentionReplicationFactor). }
+false;public;0;5;;@Override public String retentionDuration() {     return get(InfluxProperties::getRetentionDuration, InfluxConfig.super::retentionDuration). }
+false;public;0;5;;@Override public String retentionShardDuration() {     return get(InfluxProperties::getRetentionShardDuration, InfluxConfig.super::retentionShardDuration). }
+false;public;0;4;;@Override public String uri() {     return get(InfluxProperties::getUri, InfluxConfig.super::uri). }
+false;public;0;4;;@Override public boolean compressed() {     return get(InfluxProperties::isCompressed, InfluxConfig.super::compressed). }
+false;public;0;4;;@Override public boolean autoCreateDb() {     return get(InfluxProperties::isAutoCreateDb, InfluxConfig.super::autoCreateDb). }

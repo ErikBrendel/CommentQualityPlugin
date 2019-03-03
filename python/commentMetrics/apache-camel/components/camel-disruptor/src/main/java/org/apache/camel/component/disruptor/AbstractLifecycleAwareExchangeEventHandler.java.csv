@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,abstract;3;3;;@Override public abstract void onEvent(ExchangeEvent event, long sequence, boolean endOfBatch) throws Exception.
+false;public;0;6;;@Override public void awaitStarted() throws InterruptedException {     if (!started) {         startedLatch.await().     } }
+false;public;2;4;;@Override public boolean awaitStarted(final long timeout, final TimeUnit unit) throws InterruptedException {     return started || startedLatch.await(timeout, unit). }
+false;public;0;6;;@Override public void awaitStopped() throws InterruptedException {     if (started) {         stoppedLatch.await().     } }
+false;public;2;4;;@Override public boolean awaitStopped(final long timeout, final TimeUnit unit) throws InterruptedException {     return !started || stoppedLatch.await(timeout, unit). }
+false;public;0;6;;@Override public void onStart() {     stoppedLatch = new CountDownLatch(1).     startedLatch.countDown().     started = true. }
+false;public;0;6;;@Override public void onShutdown() {     startedLatch = new CountDownLatch(1).     stoppedLatch.countDown().     started = false. }

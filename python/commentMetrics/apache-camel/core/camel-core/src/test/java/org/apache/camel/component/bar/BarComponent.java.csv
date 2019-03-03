@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;3;7;;@Override protected Endpoint createEndpoint(String uri, String remaining, Map<String, Object> parameters) throws Exception {     BarEndpoint answer = new BarEndpoint(uri, this).     answer.setName(remaining).     setProperties(answer, parameters).     return answer. }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static IsTrueAssertion parse(XContentParser parser) throws IOException {     return new IsTrueAssertion(parser.getTokenLocation(), ParserUtils.parseField(parser)). }
+false;protected;2;10;;@Override protected void doAssert(Object actualValue, Object expectedValue) {     logger.trace("assert that [{}] has a true value (field [{}])", actualValue, getField()).     String errorMessage = errorMessage().     assertThat(errorMessage, actualValue, notNullValue()).     String actualString = actualValue.toString().     assertThat(errorMessage, actualString, not(equalTo(""))).     assertThat(errorMessage, actualString, not(equalToIgnoringCase(Boolean.FALSE.toString()))).     assertThat(errorMessage, actualString, not(equalTo("0"))). }
+false;private;0;3;;private String errorMessage() {     return "field [" + getField() + "] doesn't have a true value". }

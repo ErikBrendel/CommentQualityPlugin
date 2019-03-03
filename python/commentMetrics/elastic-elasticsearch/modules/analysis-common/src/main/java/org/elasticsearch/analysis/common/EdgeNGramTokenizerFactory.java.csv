@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected boolean isTokenChar(int chr) {     return matcher.isTokenChar(chr). }
+false;public;0;13;;@Override public Tokenizer create() {     if (matcher == null) {         return new EdgeNGramTokenizer(minGram, maxGram).     } else {         return new EdgeNGramTokenizer(minGram, maxGram) {              @Override             protected boolean isTokenChar(int chr) {                 return matcher.isTokenChar(chr).             }         }.     } }

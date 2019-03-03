@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Before public void setUpMocks() {     writer = Mockito.mock(OutputStreamWriter.class). }
+false;public;0;4;;@After public void verifyNoMoreWriterInteractions() {     verifyNoMoreInteractions(writer). }
+false;public;0;8;;public void testWrite_GivenEnabledConfigWithoutTerms() throws IOException {     ModelPlotConfig modelPlotConfig = new ModelPlotConfig().     ModelPlotConfigWriter writer = new ModelPlotConfigWriter(modelPlotConfig, this.writer).     writer.write().     verify(this.writer).write("boundspercentile = 95.0\nterms = \n"). }
+false;public;0;8;;public void testWrite_GivenEnabledConfigWithTerms() throws IOException {     ModelPlotConfig modelPlotConfig = new ModelPlotConfig(true, "foo,bar").     ModelPlotConfigWriter writer = new ModelPlotConfigWriter(modelPlotConfig, this.writer).     writer.write().     verify(this.writer).write("boundspercentile = 95.0\nterms = foo,bar\n"). }
+false;public;0;8;;public void testWrite_GivenDisabledConfigWithTerms() throws IOException {     ModelPlotConfig modelPlotConfig = new ModelPlotConfig(false, "foo,bar").     ModelPlotConfigWriter writer = new ModelPlotConfigWriter(modelPlotConfig, this.writer).     writer.write().     verify(this.writer).write("boundspercentile = -1.0\nterms = foo,bar\n"). }

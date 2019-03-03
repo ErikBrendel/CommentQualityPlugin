@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public RankFeatureMetaFieldMapper build(BuilderContext context) {     setupFieldType(context).     return new RankFeatureMetaFieldMapper(fieldType, context.indexSettings()). }
+false;public;3;5;;@Override public MetadataFieldMapper.Builder<?, ?> parse(String name, Map<String, Object> node, ParserContext parserContext) throws MapperParsingException {     return new Builder(parserContext.mapperService().fullName(NAME)). }
+false;public;2;10;;@Override public MetadataFieldMapper getDefault(MappedFieldType fieldType, ParserContext context) {     final Settings indexSettings = context.mapperService().getIndexSettings().getSettings().     if (fieldType != null) {         return new RankFeatureMetaFieldMapper(indexSettings, fieldType).     } else {         return parse(NAME, Collections.emptyMap(), context).build(new BuilderContext(indexSettings, new ContentPath(1))).     } }
+false;public;0;4;;@Override public RankFeatureMetaFieldType clone() {     return new RankFeatureMetaFieldType(this). }
+false;public;0;4;;@Override public String typeName() {     return CONTENT_TYPE. }
+false;public;1;4;;@Override public Query existsQuery(QueryShardContext context) {     throw new UnsupportedOperationException("Cannot run exists query on [_feature]"). }
+false;public;2;4;;@Override public Query termQuery(Object value, QueryShardContext context) {     throw new UnsupportedOperationException("The [_feature] field may not be queried directly"). }
+false;public;1;2;;@Override public void preParse(ParseContext context) throws IOException { }
+false;protected;2;4;;@Override protected void parseCreateField(ParseContext context, List<IndexableField> fields) throws IOException {     throw new AssertionError("Should never be called"). }
+false;public;1;2;;@Override public void postParse(ParseContext context) throws IOException { }
+false;protected;0;4;;@Override protected String contentType() {     return CONTENT_TYPE. }
+false;public;2;4;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     return builder. }

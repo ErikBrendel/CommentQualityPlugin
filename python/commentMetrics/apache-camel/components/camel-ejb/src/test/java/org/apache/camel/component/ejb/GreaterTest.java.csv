@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Before public void setUp() throws Exception {     Properties properties = new Properties().     properties.setProperty(Context.INITIAL_CONTEXT_FACTORY, "org.apache.openejb.client.LocalInitialContextFactory").     initialContext = new InitialContext(properties). }
+false;public;0;10;;@Test public void testGreaterViaLocalInterface() throws Exception {     Object object = initialContext.lookup("GreaterImplLocal").     assertNotNull(object).     assertTrue(object instanceof GreaterLocal).     GreaterLocal greater = (GreaterLocal) object.     assertEquals("Hello World", greater.hello("World")). }

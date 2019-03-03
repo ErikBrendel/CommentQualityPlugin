@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Override @Bean public List<RouteBuilder> routes() {     return Collections.singletonList(route()). }
+true;public,abstract;0;1;/**  * Creates the single {@link RouteBuilder} to use in this configuration  */ ;/**  * Creates the single {@link RouteBuilder} to use in this configuration  */ public abstract RouteBuilder route().

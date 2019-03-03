@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getName() {     return this.command.getName(). }
+false;public;0;4;;@Override public String getDescription() {     return this.command.getDescription(). }
+false;public;0;4;;@Override public String getUsageHelp() {     return this.command.getUsageHelp(). }
+false;public;0;4;;@Override public String getHelp() {     return this.command.getHelp(). }
+false;public;0;4;;@Override public Collection<OptionHelp> getOptionsHelp() {     return this.command.getOptionsHelp(). }
+false;public;1;11;;@Override public ExitStatus run(String... args) throws Exception {     List<String> fullArgs = new ArrayList<>().     fullArgs.add("-cp").     fullArgs.add(System.getProperty("java.class.path")).     fullArgs.add(MAIN_CLASS).     fullArgs.add(this.command.getName()).     fullArgs.addAll(Arrays.asList(args)).     run(fullArgs).     return ExitStatus.OK. }

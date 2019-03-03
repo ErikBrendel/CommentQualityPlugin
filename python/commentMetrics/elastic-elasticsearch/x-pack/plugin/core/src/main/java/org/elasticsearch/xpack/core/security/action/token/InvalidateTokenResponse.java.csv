@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public TokensInvalidationResult getResult() {     return result. }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     result.writeTo(out). }
+false;public;1;5;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     result = new TokensInvalidationResult(in). }
+false;public;2;5;;@Override public XContentBuilder toXContent(XContentBuilder builder, ToXContent.Params params) throws IOException {     result.toXContent(builder, params).     return builder. }
+false;public;1;7;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     InvalidateTokenResponse that = (InvalidateTokenResponse) o.     return Objects.equals(result, that.result). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(result). }

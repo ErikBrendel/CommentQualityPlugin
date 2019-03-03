@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void setParentThemeSource(@Nullable ThemeSource parentThemeSource) {     this.parentThemeSource = parentThemeSource. }
+false;public;0;5;;@Override @Nullable public ThemeSource getParentThemeSource() {     return this.parentThemeSource. }
+false;public;1;10;;@Override @Nullable public Theme getTheme(String themeName) {     if (this.parentThemeSource != null) {         return this.parentThemeSource.getTheme(themeName).     } else {         return null.     } }

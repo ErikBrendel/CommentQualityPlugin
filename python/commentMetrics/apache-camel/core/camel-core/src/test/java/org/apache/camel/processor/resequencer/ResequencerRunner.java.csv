@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;18;;@Override public void run() {     while (!cancelRequested()) {         running = true.         try {             Thread.sleep(interval).         } catch (InterruptedException e) {             e.printStackTrace().         }         try {             resequencer.deliver().         } catch (Exception e) {             e.printStackTrace().         }     }     super.run().     running = false. }
+false;public,synchronized;0;3;;public synchronized void cancel() {     this.cancelRequested = true. }
+false;private,synchronized;0;3;;private synchronized boolean cancelRequested() {     return cancelRequested. }
+false;public;0;3;;public boolean isRunning() {     return running. }

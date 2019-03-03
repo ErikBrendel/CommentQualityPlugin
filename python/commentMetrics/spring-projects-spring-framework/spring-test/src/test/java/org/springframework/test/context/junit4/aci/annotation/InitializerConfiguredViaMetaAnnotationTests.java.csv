@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void beansFromInitializerAndComposedAnnotation() {     assertEquals(2, strings.size()).     assertEquals("foo", foo).     assertEquals("bar", bar). }
+false;public;1;4;;@Override public void initialize(GenericApplicationContext applicationContext) {     new AnnotatedBeanDefinitionReader(applicationContext).register(FooConfig.class). }

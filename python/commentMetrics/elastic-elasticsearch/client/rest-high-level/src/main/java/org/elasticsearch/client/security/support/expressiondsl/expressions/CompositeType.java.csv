@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getName() {     return field.getPreferredName(). }
+false;public;0;3;;public ParseField getParseField() {     return field. }
+false;public,static;1;3;;public static CompositeType fromName(String name) {     return nameToType.get(name). }
+false;private,static;0;7;;private static Map<String, CompositeType> initialize() {     Map<String, CompositeType> map = new HashMap<>().     for (CompositeType field : values()) {         map.put(field.getName(), field).     }     return map. }

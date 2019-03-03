@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public ServiceNowProducer get(ServiceNowEndpoint endpoint) throws Exception {     return new FujiServiceNowProducer(endpoint). }
+false;public;1;4;;@Override public ServiceNowProducer get(ServiceNowEndpoint endpoint) throws Exception {     return null. }
+false;public;1;4;;@Override public ServiceNowProducer get(ServiceNowEndpoint endpoint) throws Exception {     return new HelsinkiServiceNowProducer(endpoint). }

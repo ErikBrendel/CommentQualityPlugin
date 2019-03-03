@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void jdkProxyCausesInjectionFailure() {     FailureAnalysis analysis = performAnalysis(JdkProxyConfiguration.class).     assertThat(analysis.getDescription()).startsWith("The bean 'asyncBean'").     assertThat(analysis.getDescription()).contains("'" + AsyncBean.class.getName() + "'").     assertThat(analysis.getDescription()).endsWith(String.format("%s%n", SomeInterface.class.getName())). }
+false;private;1;5;;private FailureAnalysis performAnalysis(Class<?> configuration) {     FailureAnalysis analysis = this.analyzer.analyze(createFailure(configuration)).     assertThat(analysis).isNotNull().     return analysis. }
+false;private;1;10;;private Exception createFailure(Class<?> configuration) {     try (ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(configuration)) {         fail("Expected failure did not occur").         return null.     } catch (Exception ex) {         return ex.     } }
+false;public;0;4;;@Bean public AsyncBean asyncBean() {     return new AsyncBean(). }
+false;public;1;4;;@Bean public AsyncBeanUser user(AsyncBean bean) {     return new AsyncBeanUser(bean). }
+false;public;0;4;;@Async public void foo() { }
+false;public;0;4;;@Override public void bar() { }
+false;;0;1;;void bar().

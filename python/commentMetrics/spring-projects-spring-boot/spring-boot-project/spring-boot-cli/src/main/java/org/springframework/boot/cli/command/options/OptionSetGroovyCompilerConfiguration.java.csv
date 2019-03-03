@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;3;;protected OptionSet getOptions() {     return this.options. }
+false;public;0;4;;@Override public GroovyCompilerScope getScope() {     return GroovyCompilerScope.DEFAULT. }
+false;public;0;4;;@Override public boolean isGuessImports() {     return !this.options.has(this.optionHandler.getNoGuessImportsOption()). }
+false;public;0;4;;@Override public boolean isGuessDependencies() {     return !this.options.has(this.optionHandler.getNoGuessDependenciesOption()). }
+false;public;0;4;;@Override public boolean isAutoconfigure() {     return this.optionHandler.getAutoconfigureOption().value(this.options). }
+false;public;0;8;;@Override public String[] getClasspath() {     OptionSpec<String> classpathOption = this.optionHandler.getClasspathOption().     if (this.options.has(classpathOption)) {         return this.options.valueOf(classpathOption).split(":").     }     return DEFAULT_CLASSPATH. }
+false;public;0;4;;@Override public List<RepositoryConfiguration> getRepositoryConfiguration() {     return this.repositoryConfiguration. }
+false;public;0;4;;@Override public boolean isQuiet() {     return false. }

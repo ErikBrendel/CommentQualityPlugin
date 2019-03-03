@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;9;;@Override protected CamelContext createCamelContext() throws Exception {     applicationContext = new AnnotationConfigApplicationContext(MockedInfluxDbConfiguration.class).     CamelContext ctx = new SpringCamelContext(applicationContext).     ctx.init().     PropertiesComponent pc = new PropertiesComponent("classpath:influxdb.test.properties").     ctx.addComponent("properties", pc).     return ctx. }

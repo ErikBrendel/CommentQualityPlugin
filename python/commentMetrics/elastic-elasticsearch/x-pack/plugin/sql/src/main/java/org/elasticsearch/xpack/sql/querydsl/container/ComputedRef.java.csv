@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Pipe processor() {     return processor. }
+false;public;0;4;;@Override public boolean supportedByAggsOnlyQuery() {     return processor.supportedByAggsOnlyQuery(). }
+false;public;1;4;;@Override public void collectFields(SqlSourceBuilder sourceBuilder) {     processor.collectFields(sourceBuilder). }
+false;public;0;4;;@Override public String toString() {     return processor + "(" + processor + ")". }

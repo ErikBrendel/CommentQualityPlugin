@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Test public void sensibleClassException() {     assertThatIllegalStateException().isThrownBy(() -> new AnnotationConfigApplicationContext(ErrorOnClass.class)).withMessageContaining("Error processing condition on " + ErrorOnClass.class.getName()). }
+false;public;0;8;;@Test public void sensibleMethodException() {     assertThatIllegalStateException().isThrownBy(() -> new AnnotationConfigApplicationContext(ErrorOnMethod.class)).withMessageContaining("Error processing condition on " + ErrorOnMethod.class.getName() + ".myBean"). }
+false;public;0;5;;@Bean @Conditional(AlwaysThrowsCondition.class) public String myBean() {     return "bean". }
+false;public;2;5;;@Override public ConditionOutcome getMatchOutcome(ConditionContext context, AnnotatedTypeMetadata metadata) {     throw new RuntimeException("Oh no!"). }

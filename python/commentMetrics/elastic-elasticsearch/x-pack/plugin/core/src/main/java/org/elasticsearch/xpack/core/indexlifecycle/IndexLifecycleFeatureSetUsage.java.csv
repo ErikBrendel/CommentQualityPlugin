@@ -1,0 +1,19 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;9;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     boolean hasPolicyStats = policyStats != null.     out.writeBoolean(hasPolicyStats).     if (hasPolicyStats) {         out.writeList(policyStats).     } }
+false;protected;2;7;;@Override protected void innerXContent(XContentBuilder builder, Params params) throws IOException {     if (policyStats != null) {         builder.field("policy_count", policyStats.size()).         builder.field("policy_stats", policyStats).     } }
+false;public;0;3;;public List<PolicyStats> getPolicyStats() {     return policyStats. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(available, enabled, policyStats). }
+false;public;1;13;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     IndexLifecycleFeatureSetUsage other = (IndexLifecycleFeatureSetUsage) obj.     return Objects.equals(available, other.available) && Objects.equals(enabled, other.enabled) && Objects.equals(policyStats, other.policyStats). }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeMap(phaseStats, StreamOutput::writeString, (o, p) -> p.writeTo(o)).     out.writeVInt(indicesManaged). }
+false;public;2;8;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(LifecyclePolicy.PHASES_FIELD.getPreferredName(), phaseStats).     builder.field(INDICES_MANAGED_FIELD.getPreferredName(), indicesManaged).     builder.endObject().     return builder. }
+false;public;0;3;;public Map<String, PhaseStats> getPhaseStats() {     return phaseStats. }
+false;public;0;3;;public int getIndicesManaged() {     return indicesManaged. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(phaseStats, indicesManaged). }
+false;public;1;12;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     PolicyStats other = (PolicyStats) obj.     return Objects.equals(phaseStats, other.phaseStats) && Objects.equals(indicesManaged, other.indicesManaged). }
+false;public;0;4;;@Override public String toString() {     return Strings.toString(this). }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeStringArray(actionNames).     out.writeTimeValue(minimumAge). }
+false;public;2;8;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(Phase.MIN_AGE.getPreferredName(), minimumAge.getMillis()).     builder.field(Phase.ACTIONS_FIELD.getPreferredName(), actionNames).     builder.endObject().     return builder. }
+false;public;0;3;;public String[] getActionNames() {     return actionNames. }
+false;public;0;3;;public TimeValue getAfter() {     return minimumAge. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(Arrays.hashCode(actionNames), minimumAge). }
+false;public;1;12;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     PhaseStats other = (PhaseStats) obj.     return Objects.equals(minimumAge, other.minimumAge) && Objects.deepEquals(actionNames, other.actionNames). }

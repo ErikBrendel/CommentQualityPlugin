@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected DataFormat createDataFormat(RouteContext routeContext) {     return DataFormatDefinition.getDataFormat(routeContext, null, ref). }
+true;public;0;3;/**  * Reference to the custom {@link org.apache.camel.spi.DataFormat} to lookup from the Camel registry.  */ ;/**  * Reference to the custom {@link org.apache.camel.spi.DataFormat} to lookup from the Camel registry.  */ public String getRef() {     return ref. }
+true;public;1;3;/**  * Reference to the custom {@link org.apache.camel.spi.DataFormat} to lookup from the Camel registry.  */ ;/**  * Reference to the custom {@link org.apache.camel.spi.DataFormat} to lookup from the Camel registry.  */ public void setRef(String ref) {     this.ref = ref. }
+false;public;0;4;;@Override public String toString() {     return "CustomDataFormat[" + ref + "]". }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Before public void before() {     String apiKey = getApiKey().     if (apiKey == null) {         throw new AssumptionViolatedException("API key not found in CAMEL_GEOCODER_APIKEY environment variable, skipping this test").     } }
+false;protected;0;3;;protected String getApiKey() {     return System.getenv("CAMEL_GEOCODER_APIKEY"). }

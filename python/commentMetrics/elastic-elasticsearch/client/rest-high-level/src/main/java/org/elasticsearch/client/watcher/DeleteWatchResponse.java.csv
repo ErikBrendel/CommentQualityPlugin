@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getId() {     return id. }
+false;public;0;3;;public long getVersion() {     return version. }
+false;public;0;3;;public boolean isFound() {     return found. }
+false;private;1;3;;private void setId(String id) {     this.id = id. }
+false;private;1;3;;private void setVersion(long version) {     this.version = version. }
+false;private;1;3;;private void setFound(boolean found) {     this.found = found. }
+false;public;1;9;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     DeleteWatchResponse that = (DeleteWatchResponse) o.     return Objects.equals(id, that.id) && Objects.equals(version, that.version) && Objects.equals(found, that.found). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(id, version, found). }
+false;public,static;1;3;;public static DeleteWatchResponse fromXContent(XContentParser parser) throws IOException {     return PARSER.parse(parser, null). }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Test public void testQueryForBeers() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMessageCount(10).     assertMockEndpointsSatisfied(). }
+false;public;0;6;;@Override public void configure() throws Exception {     // need couchbase installed on localhost with beer-sample data     from("couchbase:http://localhost/beer-sample?designDocumentName=beer&viewName=brewery_beers&limit=10").to("mock:result"). }
+false;protected;0;12;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             // need couchbase installed on localhost with beer-sample data             from("couchbase:http://localhost/beer-sample?designDocumentName=beer&viewName=brewery_beers&limit=10").to("mock:result").         }     }. }

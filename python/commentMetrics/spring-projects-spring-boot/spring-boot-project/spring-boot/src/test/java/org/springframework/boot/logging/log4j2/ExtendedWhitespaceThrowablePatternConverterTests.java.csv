@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void noStackTrace() {     LogEvent event = Log4jLogEvent.newBuilder().build().     StringBuilder builder = new StringBuilder().     this.converter.format(event, builder).     assertThat(builder.toString()).isEqualTo(""). }
+false;public;0;8;;@Test public void withStackTrace() {     LogEvent event = Log4jLogEvent.newBuilder().setThrown(new Exception()).build().     StringBuilder builder = new StringBuilder().     this.converter.format(event, builder).     assertThat(builder).startsWith(System.lineSeparator()).endsWith(System.lineSeparator()). }

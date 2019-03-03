@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;7;;public RepositoryTag addTag(String tagName) {     RepositoryTag tag = new RepositoryTag().     tag.setName(tagName).     tags.add(tag).     return tag. }
+false;public;2;6;;@Override public Repository getRepository(final String owner, final String name) throws IOException {     Repository repository = new Repository().     repository.setName(name).     return repository. }
+false;public;1;5;;@Override public List<RepositoryTag> getTags(IRepositoryIdProvider repository) throws IOException {     LOG.debug("in MockRepositoryService returning " + tags.size() + " tags").     return tags. }

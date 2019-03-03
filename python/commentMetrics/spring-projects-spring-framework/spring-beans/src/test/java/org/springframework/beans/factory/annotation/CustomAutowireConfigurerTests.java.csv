@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;12;;@Test public void testCustomResolver() {     DefaultListableBeanFactory bf = new DefaultListableBeanFactory().     BeanDefinitionReader reader = new XmlBeanDefinitionReader(bf).     reader.loadBeanDefinitions(CONTEXT).     CustomAutowireConfigurer cac = new CustomAutowireConfigurer().     CustomResolver customResolver = new CustomResolver().     bf.setAutowireCandidateResolver(customResolver).     cac.postProcessBeanFactory(bf).     TestBean testBean = (TestBean) bf.getBean("testBean").     assertEquals("#1!", testBean.getName()). }
+false;public;0;3;;public String getName() {     return this.name. }
+false;public;2;13;;@Override public boolean isAutowireCandidate(BeanDefinitionHolder bdHolder, DependencyDescriptor descriptor) {     if (!bdHolder.getBeanDefinition().isAutowireCandidate()) {         return false.     }     if (!bdHolder.getBeanName().matches("[a-z-]+")) {         return false.     }     if (bdHolder.getBeanDefinition().getAttribute("priority").equals("1")) {         return true.     }     return false. }
+false;public;1;4;;@Override public Object getSuggestedValue(DependencyDescriptor descriptor) {     return null. }
+false;public;2;4;;@Override public Object getLazyResolutionProxyIfNecessary(DependencyDescriptor descriptor, String beanName) {     return null. }

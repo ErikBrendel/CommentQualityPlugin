@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;8;;@Bean @ConditionalOnMissingBean public JdbcSessionDataSourceInitializer jdbcSessionDataSourceInitializer(DataSource dataSource, ResourceLoader resourceLoader, JdbcSessionProperties properties) {     return new JdbcSessionDataSourceInitializer(dataSource, resourceLoader, properties). }
+false;public;2;10;;@Autowired public void customize(SessionProperties sessionProperties, JdbcSessionProperties jdbcSessionProperties) {     Duration timeout = sessionProperties.getTimeout().     if (timeout != null) {         setMaxInactiveIntervalInSeconds((int) timeout.getSeconds()).     }     setTableName(jdbcSessionProperties.getTableName()).     setCleanupCron(jdbcSessionProperties.getCleanupCron()). }

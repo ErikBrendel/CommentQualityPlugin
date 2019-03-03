@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,abstract;2;1;/**  * @param params The user-provided parameters  * @param values The values in the window that we are moving a function across  * @return A double representing the value from this particular window  */ ;/**  * @param params The user-provided parameters  * @param values The values in the window that we are moving a function across  * @return A double representing the value from this particular window  */ public abstract double execute(Map<String, Object> params, double[] values).
+false;;0;1;;MovingFunctionScript newInstance().

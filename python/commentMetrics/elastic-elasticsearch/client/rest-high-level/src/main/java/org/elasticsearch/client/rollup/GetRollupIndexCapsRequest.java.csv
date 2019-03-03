@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public IndicesOptions indicesOptions() {     return options. }
+false;public;0;3;;public String[] indices() {     return indices. }
+false;public;2;14;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     {         builder.array(INDICES, indices).         builder.startObject(INDICES_OPTIONS).         {             options.toXContent(builder, params).         }         builder.endObject().     }     builder.endObject().     return builder. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(Arrays.hashCode(indices), options). }
+false;public;1;12;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     GetRollupIndexCapsRequest other = (GetRollupIndexCapsRequest) obj.     return Arrays.equals(indices, other.indices) && Objects.equals(options, other.options). }

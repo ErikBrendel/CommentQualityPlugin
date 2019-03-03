@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean markSupported() {     return true. }
+false;public;0;4;;@Override public int read() throws IOException {     return buffer.readByte(). }
+false;public;1;4;;@Override public int read(byte[] b) throws IOException {     return read(b, 0, b.length). }
+false;public;3;15;;@Override public int read(byte[] b, int off, int len) throws IOException {     // are we at end, then return -1     if (buffer.readerIndex() == buffer.capacity()) {         return -1.     }     // ensure we don't read more than what we have in the buffer     int before = buffer.readerIndex().     int max = buffer.capacity() - before.     len = Math.min(max, len).     buffer.readBytes(b, off, len).     return buffer.readerIndex() - before. }
+false;public;0;4;;@Override public void reset() {     buffer.resetReaderIndex(). }
+false;public;1;11;;@Override public void writeTo(OutputStream os) throws IOException {     // must remember current index so we can reset back to it after the copy     int idx = buffer.readerIndex().     try {         buffer.resetReaderIndex().         IOHelper.copy(this, os).     } finally {         buffer.readerIndex(idx).     } }
+false;public;1;4;;@Override public StreamCache copy(Exchange exchange) throws IOException {     return new NettyChannelBufferStreamCache(buffer.copy()). }
+false;public;0;4;;@Override public boolean inMemory() {     return true. }
+false;public;0;4;;@Override public long length() {     return buffer.readableBytes(). }
+true;public;0;3;/**  * Release the buffer when we are done using it.  */ ;/**  * Release the buffer when we are done using it.  */ public void release() {     buffer.release(). }

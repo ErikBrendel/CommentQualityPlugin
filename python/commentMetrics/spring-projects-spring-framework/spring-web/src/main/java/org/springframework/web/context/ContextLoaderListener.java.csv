@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;4;/**  * Initialize the root web application context.  */ ;/**  * Initialize the root web application context.  */ @Override public void contextInitialized(ServletContextEvent event) {     initWebApplicationContext(event.getServletContext()). }
+true;public;1;5;/**  * Close the root web application context.  */ ;/**  * Close the root web application context.  */ @Override public void contextDestroyed(ServletContextEvent event) {     closeWebApplicationContext(event.getServletContext()).     ContextCleanupListener.cleanupAttributes(event.getServletContext()). }

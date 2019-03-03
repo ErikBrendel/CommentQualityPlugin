@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;9;;@Bean @ConditionalOnMissingBean(ClientRegistrationRepository.class) public InMemoryClientRegistrationRepository clientRegistrationRepository(OAuth2ClientProperties properties) {     List<ClientRegistration> registrations = new ArrayList<>(OAuth2ClientPropertiesRegistrationAdapter.getClientRegistrations(properties).values()).     return new InMemoryClientRegistrationRepository(registrations). }

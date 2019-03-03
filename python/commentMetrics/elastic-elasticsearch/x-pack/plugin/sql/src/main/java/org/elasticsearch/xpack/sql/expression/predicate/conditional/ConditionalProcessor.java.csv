@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;3;;String scriptMethodName() {     return name().toLowerCase(Locale.ROOT). }
+false;public;1;4;;@Override public Object apply(Collection<Object> objects) {     return process.apply(objects). }
+false;;2;3;;Object applyOnInput(List<Processor> processors, Object input) {     return inputProcess.apply(processors, input). }
+false;public;0;4;;@Override public String getWriteableName() {     return NAME. }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeNamedWriteableList(processors).     out.writeEnum(operation). }
+false;public;1;4;;@Override public Object process(Object input) {     return operation.applyOnInput(processors, input). }
+false;public;1;13;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     ConditionalProcessor that = (ConditionalProcessor) o.     return Objects.equals(processors, that.processors) && operation == that.operation. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(processors, operation). }

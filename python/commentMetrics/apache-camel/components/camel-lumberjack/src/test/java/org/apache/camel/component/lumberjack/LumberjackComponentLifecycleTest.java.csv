@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;4;;@BeforeClass public static void beforeClass() {     port = AvailablePortFinder.getNextAvailable(). }
+false;public;0;4;;public void configure() {     // Lumberjack configured with a specific port     from("lumberjack:0.0.0.0:" + port).to("mock:output"). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             // Lumberjack configured with a specific port             from("lumberjack:0.0.0.0:" + port).to("mock:output").         }     }. }
+false;public;0;12;;@Test(timeout = 30_000) public void shouldRestart() throws Exception {     // Given a started context     assertEquals(ServiceStatus.Started, context.getStatus()).     // When restarting it     context.stop().     context.start().     // Then the context is started     assertEquals(ServiceStatus.Started, context.getStatus()). }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * Returns the parameter name.  * @return the name  */ ;/**  * Returns the parameter name.  * @return the name  */ String getName().
+true;;0;1;/**  * Returns the parameter type.  * @return the type  */ ;/**  * Returns the parameter type.  * @return the type  */ Class<?> getType().
+true;;0;1;/**  * Return if the parameter is mandatory (does not accept null values).  * @return if the parameter is mandatory  */ ;/**  * Return if the parameter is mandatory (does not accept null values).  * @return if the parameter is mandatory  */ boolean isMandatory().

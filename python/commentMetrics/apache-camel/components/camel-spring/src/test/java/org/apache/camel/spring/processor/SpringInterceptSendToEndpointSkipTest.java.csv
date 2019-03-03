@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;3;;protected CamelContext createCamelContext() throws Exception {     return createSpringCamelContext(this, "org/apache/camel/spring/processor/interceptSendToEndpointSkip.xml"). }
+false;public;0;12;;@Test public void testInterceptEndpointSkip() throws Exception {     getMockEndpoint("mock:bar").expectedBodiesReceived("Hello World").     getMockEndpoint("mock:detour").expectedBodiesReceived("Bye World").     // mock:foo is skipped so no messages received     getMockEndpoint("mock:foo").expectedMessageCount(0).     getMockEndpoint("mock:result").expectedBodiesReceived("Bye World").     template.sendBody("direct:third", "Hello World").     assertMockEndpointsSatisfied(). }

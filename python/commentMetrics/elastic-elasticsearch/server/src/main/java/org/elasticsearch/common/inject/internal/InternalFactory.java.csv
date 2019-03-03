@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;4;;@Override public T get(Errors errors, InternalContext context, Dependency<?> dependency) throws ErrorsException {     return object. }
+false;public;0;4;;@Override public String toString() {     return object.toString(). }
+true;;3;2;/**  * Creates an object to be injected.  *  * @param context of this injection  * @return instance to be injected  * @throws org.elasticsearch.common.inject.internal.ErrorsException  *          if a value cannot be provided  */ ;/**  * Creates an object to be injected.  *  * @param context of this injection  * @return instance to be injected  * @throws org.elasticsearch.common.inject.internal.ErrorsException  *          if a value cannot be provided  */ T get(Errors errors, InternalContext context, Dependency<?> dependency) throws ErrorsException.

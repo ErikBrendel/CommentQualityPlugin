@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public List<String> getSubProtocols() {     return this.subProtocols. }
+false;protected;0;3;;protected SockJsServiceConfig getSockJsConfig() {     return this.sockJsServiceConfig. }
+false;public;1;5;;@Override public void afterConnectionEstablished(WebSocketSession wsSession) throws Exception {     Assert.isTrue(this.sessionCount.compareAndSet(0, 1), "Unexpected connection").     this.sockJsSession.initializeDelegateSession(wsSession). }
+false;public;2;4;;@Override public void handleTextMessage(WebSocketSession wsSession, TextMessage message) throws Exception {     this.sockJsSession.handleMessage(message, wsSession). }
+false;public;2;4;;@Override public void afterConnectionClosed(WebSocketSession wsSession, CloseStatus status) throws Exception {     this.sockJsSession.delegateConnectionClosed(status). }
+false;public;2;4;;@Override public void handleTransportError(WebSocketSession webSocketSession, Throwable exception) throws Exception {     this.sockJsSession.delegateError(exception). }

@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected Object doGetTransaction() {     return TRANSACTION. }
+false;protected;1;4;;@Override protected boolean isExistingTransaction(Object transaction) {     return existingTransaction. }
+false;protected;2;10;;@Override protected void doBegin(Object transaction, TransactionDefinition definition) {     if (!TRANSACTION.equals(transaction)) {         throw new IllegalArgumentException("Not the same transaction object").     }     if (!this.canCreateTransaction) {         throw new CannotCreateTransactionException("Cannot create transaction").     }     this.begin = true. }
+false;protected;1;7;;@Override protected void doCommit(DefaultTransactionStatus status) {     if (!TRANSACTION.equals(status.getTransaction())) {         throw new IllegalArgumentException("Not the same transaction object").     }     this.commit = true. }
+false;protected;1;7;;@Override protected void doRollback(DefaultTransactionStatus status) {     if (!TRANSACTION.equals(status.getTransaction())) {         throw new IllegalArgumentException("Not the same transaction object").     }     this.rollback = true. }
+false;protected;1;7;;@Override protected void doSetRollbackOnly(DefaultTransactionStatus status) {     if (!TRANSACTION.equals(status.getTransaction())) {         throw new IllegalArgumentException("Not the same transaction object").     }     this.rollbackOnly = true. }

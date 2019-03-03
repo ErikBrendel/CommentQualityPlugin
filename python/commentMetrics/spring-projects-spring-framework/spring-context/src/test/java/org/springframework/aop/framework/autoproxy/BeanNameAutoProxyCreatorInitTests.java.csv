@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test(expected = IllegalArgumentException.class) public void testIgnoreAdvisorThatIsCurrentlyInCreation() {     ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext(getClass().getSimpleName() + "-context.xml", getClass()).     TestBean bean = (TestBean) ctx.getBean("bean").     bean.setName("foo").     assertEquals("foo", bean.getName()).     // should throw     bean.setName(null). }
+false;public;3;4;;@Override public void before(Method method, Object[] args, @Nullable Object target) throws Throwable {     check(args). }
+false;private;1;7;;private void check(Object[] args) {     for (int i = 0. i < args.length. i++) {         if (args[i] == null) {             throw new IllegalArgumentException("Null argument at position " + i).         }     } }

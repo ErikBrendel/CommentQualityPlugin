@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;0;3;;private String getFtpUrl() {     return "ftp://admin@localhost:" + getPort() + "/recover?password=admin&pollStrategy=#myPoll". }
+false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry jndi = super.createRegistry().     jndi.bind("myPoll", new MyPollStrategy()).     return jndi. }
+false;public;0;15;;@Test public void testFtpRecover() throws Exception {     // should be able to download the file after recovering     MockEndpoint resultEndpoint = getMockEndpoint("mock:result").     resultEndpoint.expectedMinimumMessageCount(3).     template.sendBody(getFtpUrl(), "Hello World").     resultEndpoint.assertIsSatisfied().     Thread.sleep(2000).     assertTrue("Should have tried at least 3 times was " + counter, counter >= 3).     assertEquals(2, rollback). }
+false;public;0;3;;public void configure() throws Exception {     from(getFtpUrl()).to("mock:result"). }
+false;protected;0;7;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from(getFtpUrl()).to("mock:result").         }     }. }
+false;public;3;7;;@Override public void commit(Consumer consumer, Endpoint endpoint, int polledMessages) {     counter++.     if (counter < 3) {         throw new IllegalArgumentException("Forced by unit test").     } }
+false;public;4;5;;@Override public boolean rollback(Consumer consumer, Endpoint endpoint, int retryCounter, Exception e) throws Exception {     rollback++.     return super.rollback(consumer, endpoint, retryCounter, e). }

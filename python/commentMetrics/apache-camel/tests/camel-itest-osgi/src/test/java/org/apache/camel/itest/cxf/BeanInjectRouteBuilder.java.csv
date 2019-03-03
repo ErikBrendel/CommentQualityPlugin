@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Override public void configure() throws Exception {     from("cxf:bean:routerEndpoint").bean(// does nothing     simpleBean).transform(simple("scheme: ${headers.CamelCxfMessage.get(HTTP.REQUEST).scheme}" + ", x-forwarded-proto: ${headers.CamelCxfMessage.get(HTTP.REQUEST).getHeader(X-Forwarded-Proto)}")). }

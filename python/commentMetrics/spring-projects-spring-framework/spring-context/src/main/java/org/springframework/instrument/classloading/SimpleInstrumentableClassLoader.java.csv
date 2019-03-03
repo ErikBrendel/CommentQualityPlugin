@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;3;/**  * Add a {@link ClassFileTransformer} to be applied by this ClassLoader.  * @param transformer the {@link ClassFileTransformer} to register  */ ;/**  * Add a {@link ClassFileTransformer} to be applied by this ClassLoader.  * @param transformer the {@link ClassFileTransformer} to register  */ public void addTransformer(ClassFileTransformer transformer) {     this.weavingTransformer.addTransformer(transformer). }
+false;protected;2;4;;@Override protected byte[] transformIfNecessary(String name, byte[] bytes) {     return this.weavingTransformer.transformIfNecessary(name, bytes). }

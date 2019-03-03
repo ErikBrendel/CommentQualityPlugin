@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;8;;public void addTask(TimerTask task, long delay) {     try {         lock.writeLock().lock().         timer.schedule(task, delay).     } finally {         lock.writeLock().unlock().     } }
+false;public;0;8;;public void cancelTasks() {     try {         lock.writeLock().lock().         timer.cancel().     } finally {         lock.writeLock().unlock().     } }

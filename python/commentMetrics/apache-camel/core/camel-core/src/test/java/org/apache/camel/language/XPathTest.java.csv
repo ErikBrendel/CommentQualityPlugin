@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void testExpressions() throws Exception {     assertExpression("in:body()", "<hello id='m123'>world!</hello>").     assertExpression("in:header('foo')", "abc").     assertExpression("$foo", "abc"). }
+false;public;0;6;;@Test public void testPredicates() throws Exception {     assertPredicate("in:header('foo') = 'abc'").     assertPredicate("$foo = 'abc'").     assertPredicate("$foo = 'bar'", false). }
+false;public;0;6;;@Test public void testNormalXPathExpression() throws Exception {     assertExpression("hello", "world!").     assertExpression("hello/text()", "world!").     assertExpression("hello/@id", "m123"). }
+false;protected;0;3;;protected String getLanguageName() {     return "xpath". }
+false;protected;1;7;;@Override protected Language assertResolveLanguage(String languageName) {     XPathLanguage answer = new XPathLanguage().     answer.setResultType(XPathConstants.STRING).     assertEquals(XPathConstants.STRING, answer.getResultType()).     return answer. }

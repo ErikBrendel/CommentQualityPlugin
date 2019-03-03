@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void writeLoadedClasses(LoaderClassesWriter writer) throws IOException {     writer.writeEntry(this.name, new ByteArrayInputStream("test".getBytes())). }

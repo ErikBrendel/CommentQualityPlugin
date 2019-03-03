@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static int getTotal(FeatureTest ft) {     return ft.getX() + ft.getY(). }
+false;public,static;2;3;;public static int addToTotal(FeatureTest ft, int add) {     return getTotal(ft) + add. }

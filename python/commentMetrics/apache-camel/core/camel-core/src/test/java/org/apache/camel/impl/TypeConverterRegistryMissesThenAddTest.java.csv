@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;15;;@Test public void testMissThenAddTypeConverter() {     DefaultCamelContext context = new DefaultCamelContext().     MyOrder order = context.getTypeConverter().convertTo(MyOrder.class, "123").     assertNull(order).     // add missing type converter     context.getTypeConverterRegistry().addTypeConverter(MyOrder.class, String.class, new MyOrderTypeConverter()).     // this time it should work     order = context.getTypeConverter().convertTo(MyOrder.class, "123").     assertNotNull(order).     assertEquals(123, order.getId()). }
+false;public;0;3;;public int getId() {     return id. }
+false;public;1;3;;public void setId(int id) {     this.id = id. }
+false;public;3;7;;@SuppressWarnings("unchecked") public <T> T convertTo(Class<T> type, Exchange exchange, Object value) {     // converter from value to the MyOrder bean     MyOrder order = new MyOrder().     order.setId(Integer.parseInt(value.toString())).     return (T) order. }

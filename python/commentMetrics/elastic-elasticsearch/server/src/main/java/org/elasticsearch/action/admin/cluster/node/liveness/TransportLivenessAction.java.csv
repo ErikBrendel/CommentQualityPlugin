@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;4;;@Override public void messageReceived(LivenessRequest request, TransportChannel channel, Task task) throws Exception {     channel.sendResponse(new LivenessResponse(clusterService.getClusterName(), clusterService.localNode())). }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getName() {     return "security_clear_roles_cache_action". }
+false;public;2;8;;@Override public RestChannelConsumer innerPrepareRequest(RestRequest request, NodeClient client) throws IOException {     String[] roles = request.paramAsStringArrayOrEmptyIfAll("name").     ClearRolesCacheRequest req = new ClearRolesCacheRequest().names(roles).     return channel -> new SecurityClient(client).clearRolesCache(req, new NodesResponseRestListener<>(channel)). }

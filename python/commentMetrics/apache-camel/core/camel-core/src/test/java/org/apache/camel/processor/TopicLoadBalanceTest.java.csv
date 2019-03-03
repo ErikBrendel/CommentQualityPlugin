@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Override @Before public void setUp() throws Exception {     super.setUp().     x = getMockEndpoint("mock:x").     y = getMockEndpoint("mock:y").     z = getMockEndpoint("mock:z"). }
+false;public;0;4;;public void configure() {     from("direct:start").loadBalance().topic().to("mock:x", "mock:y", "mock:z"). }
+false;protected;0;8;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("direct:start").loadBalance().topic().to("mock:x", "mock:y", "mock:z").         }     }. }
+false;public;0;13;;@Test public void testTopicManyMessages() throws Exception {     // they should all get the message     x.expectedMessageCount(10).     y.expectedMessageCount(10).     z.expectedMessageCount(10).     for (int i = 0. i < 10. i++) {         template.sendBody("direct:start", "Hello World").     }     assertMockEndpointsSatisfied(). }
+false;public;0;12;;@Test public void testTopic() throws Exception {     // they should all get the message     x.expectedBodiesReceived("Hello World").     y.expectedBodiesReceived("Hello World").     z.expectedBodiesReceived("Hello World").     template.sendBody("direct:start", "Hello World").     assertMockEndpointsSatisfied(). }

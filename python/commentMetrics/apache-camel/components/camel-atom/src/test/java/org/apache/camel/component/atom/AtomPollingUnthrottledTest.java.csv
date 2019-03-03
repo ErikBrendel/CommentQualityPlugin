@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Test public void testLowDelay() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMessageCount(7).     mock.setResultWaitTime(3000L).     assertMockEndpointsSatisfied(). }
+false;public;0;3;;public void configure() throws Exception {     from("atom:file:src/test/data/feed.atom?splitEntries=true&throttleEntries=false&consumer.initialDelay=0").to("mock:result"). }
+false;protected;0;7;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from("atom:file:src/test/data/feed.atom?splitEntries=true&throttleEntries=false&consumer.initialDelay=0").to("mock:result").         }     }. }

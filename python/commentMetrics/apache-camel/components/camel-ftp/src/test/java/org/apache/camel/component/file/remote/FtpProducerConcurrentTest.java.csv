@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;0;3;;private String getFtpUrl() {     return "ftp://admin@localhost:" + getPort() + "/concurrent?binary=false&password=admin". }
+false;public;0;4;;@Test public void testNoConcurrentProducers() throws Exception {     doSendMessages(1, 1). }
+false;public;0;4;;@Test public void testConcurrentProducers() throws Exception {     doSendMessages(10, 5). }
+false;public;0;4;;public Object call() throws Exception {     sendFile("direct:start", "Hello World", index + ".txt").     return null. }
+false;private;2;19;;private void doSendMessages(int files, int poolSize) throws Exception {     getMockEndpoint("mock:result").expectedMessageCount(files).     ExecutorService executor = Executors.newFixedThreadPool(poolSize).     for (int i = 0. i < files. i++) {         getMockEndpoint("mock:result").expectedFileExists(FTP_ROOT_DIR + "/concurrent/" + i + ".txt").         final int index = i.         executor.submit(new Callable<Object>() {              public Object call() throws Exception {                 sendFile("direct:start", "Hello World", index + ".txt").                 return null.             }         }).     }     assertMockEndpointsSatisfied().     executor.shutdownNow(). }
+false;public;0;4;;@Override public void configure() throws Exception {     from("direct:start").to(getFtpUrl(), "mock:result"). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").to(getFtpUrl(), "mock:result").         }     }. }

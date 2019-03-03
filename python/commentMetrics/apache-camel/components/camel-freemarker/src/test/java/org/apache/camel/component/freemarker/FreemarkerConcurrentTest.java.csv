@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void testNoConcurrentProducers() throws Exception {     doSendMessages(1, 1). }
+false;public;0;4;;@Test public void testConcurrentProducers() throws Exception {     doSendMessages(10, 5). }
+false;public;0;4;;public Object call() throws Exception {     template.sendBody("direct:start", "Hello " + index).     return null. }
+false;private;2;19;;private void doSendMessages(int files, int poolSize) throws Exception {     getMockEndpoint("mock:result").expectedMessageCount(files).     getMockEndpoint("mock:result").assertNoDuplicates(body()).     getMockEndpoint("mock:result").message(0).body().contains("Bye").     ExecutorService executor = Executors.newFixedThreadPool(poolSize).     for (int i = 0. i < files. i++) {         final int index = i.         executor.submit(new Callable<Object>() {              public Object call() throws Exception {                 template.sendBody("direct:start", "Hello " + index).                 return null.             }         }).     }     assertMockEndpointsSatisfied().     executor.shutdownNow(). }
+false;public;0;5;;public void configure() {     from("direct:start").to("freemarker:org/apache/camel/component/freemarker/Concurrent.ftl").to("mock:result"). }
+false;protected;0;9;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("direct:start").to("freemarker:org/apache/camel/component/freemarker/Concurrent.ftl").to("mock:result").         }     }. }

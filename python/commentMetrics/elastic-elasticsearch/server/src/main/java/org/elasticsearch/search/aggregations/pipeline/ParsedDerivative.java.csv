@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public double normalizedValue() {     return this.normalizedValue. }
+false;public;0;4;;@Override public String getType() {     return DerivativePipelineAggregationBuilder.NAME. }
+false;public,static;2;5;;public static ParsedDerivative fromXContent(XContentParser parser, final String name) {     ParsedDerivative derivative = PARSER.apply(parser, null).     derivative.setName(name).     return derivative. }
+false;protected;2;12;;@Override protected XContentBuilder doXContentBody(XContentBuilder builder, Params params) throws IOException {     super.doXContentBody(builder, params).     if (hasNormalizationFactor) {         boolean hasValue = Double.isNaN(normalizedValue) == false.         builder.field(NORMALIZED.getPreferredName(), hasValue ? normalizedValue : null).         if (hasValue && normalizedAsString != null) {             builder.field(NORMALIZED_AS_STRING.getPreferredName(), normalizedAsString).         }     }     return builder. }

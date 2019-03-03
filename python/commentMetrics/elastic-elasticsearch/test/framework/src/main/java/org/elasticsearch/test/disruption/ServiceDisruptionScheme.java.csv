@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;1;1;;void applyToCluster(InternalTestCluster cluster).
+false;;1;1;;void removeFromCluster(InternalTestCluster cluster).
+false;;1;1;;void removeAndEnsureHealthy(InternalTestCluster cluster).
+false;;2;1;;void applyToNode(String node, InternalTestCluster cluster).
+false;;2;1;;void removeFromNode(String node, InternalTestCluster cluster).
+false;;0;1;;void startDisrupting().
+false;;0;1;;void stopDisrupting().
+false;;0;1;;void testClusterClosed().
+false;;0;1;;TimeValue expectedTimeToHeal().

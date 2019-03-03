@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void testRequest() {     HttpHeaders headers = this.template.getForEntity("/example", String.class).getHeaders().     assertThat(headers.getLocation()).hasHost("other.example.com"). }
+false;public;0;5;;@Bean public RestTemplateBuilder restTemplateBuilder() {     return new RestTemplateBuilder().setConnectTimeout(Duration.ofSeconds(1)).setReadTimeout(Duration.ofSeconds(1)). }

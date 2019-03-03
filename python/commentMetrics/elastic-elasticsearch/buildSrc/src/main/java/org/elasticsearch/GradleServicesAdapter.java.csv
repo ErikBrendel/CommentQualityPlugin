@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static GradleServicesAdapter getInstance(Project project) {     return new GradleServicesAdapter(project). }
+false;public;1;3;;public WorkResult copy(Action<? super CopySpec> action) {     return project.copy(action). }
+false;public;1;3;;public WorkResult sync(Action<? super CopySpec> action) {     return project.sync(action). }
+false;public;1;3;;public ExecResult javaexec(Action<? super JavaExecSpec> action) {     return project.javaexec(action). }
+false;public;1;3;;public FileTree zipTree(File zipPath) {     return project.zipTree(zipPath). }
+false;public;1;3;;public FileCollection fileTree(File dir) {     return project.fileTree(dir). }

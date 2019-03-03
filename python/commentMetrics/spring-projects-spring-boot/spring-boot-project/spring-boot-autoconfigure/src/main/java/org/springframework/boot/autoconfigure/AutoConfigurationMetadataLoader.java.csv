@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static AutoConfigurationMetadata loadMetadata(ClassLoader classLoader) {     return loadMetadata(classLoader, PATH). }
+false;static;2;16;;static AutoConfigurationMetadata loadMetadata(ClassLoader classLoader, String path) {     try {         Enumeration<URL> urls = (classLoader != null) ? classLoader.getResources(path) : ClassLoader.getSystemResources(path).         Properties properties = new Properties().         while (urls.hasMoreElements()) {             properties.putAll(PropertiesLoaderUtils.loadProperties(new UrlResource(urls.nextElement()))).         }         return loadMetadata(properties).     } catch (IOException ex) {         throw new IllegalArgumentException("Unable to load @ConditionalOnClass location [" + path + "]", ex).     } }
+false;static;1;3;;static AutoConfigurationMetadata loadMetadata(Properties properties) {     return new PropertiesAutoConfigurationMetadata(properties). }
+false;public;1;4;;@Override public boolean wasProcessed(String className) {     return this.properties.containsKey(className). }
+false;public;2;4;;@Override public Integer getInteger(String className, String key) {     return getInteger(className, key, null). }
+false;public;3;5;;@Override public Integer getInteger(String className, String key, Integer defaultValue) {     String value = get(className, key).     return (value != null) ? Integer.valueOf(value) : defaultValue. }
+false;public;2;4;;@Override public Set<String> getSet(String className, String key) {     return getSet(className, key, null). }
+false;public;3;7;;@Override public Set<String> getSet(String className, String key, Set<String> defaultValue) {     String value = get(className, key).     return (value != null) ? StringUtils.commaDelimitedListToSet(value) : defaultValue. }
+false;public;2;4;;@Override public String get(String className, String key) {     return get(className, key, null). }
+false;public;3;5;;@Override public String get(String className, String key, String defaultValue) {     String value = this.properties.getProperty(className + "." + key).     return (value != null) ? value : defaultValue. }

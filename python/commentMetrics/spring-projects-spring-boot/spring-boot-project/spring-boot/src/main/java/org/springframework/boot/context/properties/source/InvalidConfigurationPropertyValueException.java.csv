@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Return the name of the property.  * @return the property name  */ ;/**  * Return the name of the property.  * @return the property name  */ public String getName() {     return this.name. }
+true;public;0;3;/**  * Return the invalid value, can be {@code null}.  * @return the invalid value  */ ;/**  * Return the invalid value, can be {@code null}.  * @return the invalid value  */ public Object getValue() {     return this.value. }
+true;public;0;3;/**  * Return the reason why the value is invalid.  * @return the reason  */ ;/**  * Return the reason why the value is invalid.  * @return the reason  */ public String getReason() {     return this.reason. }

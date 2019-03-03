@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;public void testAllJobsRequest() {     GetJobStatsRequest request = GetJobStatsRequest.getAllJobStatsRequest().     assertEquals(request.getJobIds().size(), 1).     assertEquals(request.getJobIds().get(0), "_all"). }
+false;public;0;4;;public void testNewWithJobId() {     Exception exception = expectThrows(NullPointerException.class, () -> new GetJobStatsRequest("job", null)).     assertEquals(exception.getMessage(), "jobIds must not contain null values"). }
+false;protected;0;17;;@Override protected GetJobStatsRequest createTestInstance() {     int jobCount = randomIntBetween(0, 10).     List<String> jobIds = new ArrayList<>(jobCount).     for (int i = 0. i < jobCount. i++) {         jobIds.add(randomAlphaOfLength(10)).     }     GetJobStatsRequest request = new GetJobStatsRequest(jobIds).     if (randomBoolean()) {         request.setAllowNoJobs(randomBoolean()).     }     return request. }
+false;protected;1;4;;@Override protected GetJobStatsRequest doParseInstance(XContentParser parser) throws IOException {     return GetJobStatsRequest.PARSER.parse(parser, null). }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return false. }

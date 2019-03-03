@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@GetMapping("/two") public Mono<String> two() {     return Mono.just("two"). }
+false;public;1;4;;@GetMapping("/two/{id}") public Mono<String> two(@PathVariable ExampleId id) {     return Mono.just(id.getId() + "two"). }

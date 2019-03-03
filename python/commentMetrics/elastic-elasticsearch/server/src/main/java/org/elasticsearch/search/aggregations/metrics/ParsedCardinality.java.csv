@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getValueAsString() {     return Double.toString((double) cardinalityValue). }
+false;public;0;4;;@Override public double value() {     return getValue(). }
+false;public;0;4;;@Override public long getValue() {     return cardinalityValue. }
+false;public;0;4;;@Override public String getType() {     return CardinalityAggregationBuilder.NAME. }
+false;public,static;2;5;;public static ParsedCardinality fromXContent(XContentParser parser, final String name) {     ParsedCardinality cardinality = PARSER.apply(parser, null).     cardinality.setName(name).     return cardinality. }
+false;protected;2;6;;@Override protected XContentBuilder doXContentBody(XContentBuilder builder, Params params) throws IOException {     builder.field(CommonFields.VALUE.getPreferredName(), cardinalityValue).     return builder. }

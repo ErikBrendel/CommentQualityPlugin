@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;9;;@Override protected JndiRegistry createRegistry() throws Exception {     SimpleSearchTerm mySearchTerm = new SimpleSearchTerm().     mySearchTerm.setSubjectOrBody("Camel").     JndiRegistry jndi = super.createRegistry().     jndi.bind("mySearchTerm", mySearchTerm).     return jndi. }
+false;public;0;3;;public void configure() throws Exception {     from("pop3://bill@localhost?password=secret&searchTerm=#mySearchTerm").to("mock:result"). }
+false;protected;0;7;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from("pop3://bill@localhost?password=secret&searchTerm=#mySearchTerm").to("mock:result").         }     }. }

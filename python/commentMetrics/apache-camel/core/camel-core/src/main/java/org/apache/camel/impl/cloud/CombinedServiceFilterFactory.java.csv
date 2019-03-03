@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;// ************************************************************************* // Properties // ************************************************************************* public List<ServiceFilter> getServiceFilterList() {     return serviceFilterList. }
+false;public;1;3;;public void setServiceFilterList(List<ServiceFilter> serviceFilterList) {     this.serviceFilterList = serviceFilterList. }
+false;public;1;6;;// ************************************************************************* // Factory // ************************************************************************* @Override public ServiceFilter newInstance(CamelContext camelContext) throws Exception {     ObjectHelper.notNull(serviceFilterList, "ServiceFilter list").     return new CombinedServiceFilter(serviceFilterList). }

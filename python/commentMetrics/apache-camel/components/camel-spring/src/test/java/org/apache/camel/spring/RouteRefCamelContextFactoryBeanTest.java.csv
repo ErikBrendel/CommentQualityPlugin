@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public void configure() throws Exception {     from("seda:start").to("mock:result"). }
+false;public;1;3;;public void addRoutesToCamelContext(CamelContext camelContext) throws Exception {     camelContext.addRoutes(myRouteBuilder). }
+false;protected;0;3;;protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/spring/routeRefCamelContextFactory.xml"). }

@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void writeTo(StreamOutput out) throws IOException {     ExpressionParser.writeExpressionList(elements, out). }
+false;public;0;4;;@Override public String getWriteableName() {     return NAME. }
+false;public;1;4;;@Override public boolean match(ExpressionModel model) {     return elements.stream().allMatch(RoleMapperExpression.predicate(model)). }
+false;public;0;3;;public List<RoleMapperExpression> getElements() {     return Collections.unmodifiableList(elements). }
+false;public;1;12;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     final AllExpression that = (AllExpression) o.     return this.elements.equals(that.elements). }
+false;public;0;4;;@Override public int hashCode() {     return elements.hashCode(). }
+false;public;2;10;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.startArray(ExpressionParser.Fields.ALL.getPreferredName()).     for (RoleMapperExpression e : elements) {         e.toXContent(builder, params).     }     builder.endArray().     return builder.endObject(). }

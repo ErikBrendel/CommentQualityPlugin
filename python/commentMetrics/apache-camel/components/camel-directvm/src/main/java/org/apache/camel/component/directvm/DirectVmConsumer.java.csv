@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public DirectVmEndpoint getEndpoint() {     return (DirectVmEndpoint) super.getEndpoint(). }
+false;protected;0;5;;@Override protected void doStart() throws Exception {     super.doStart().     getEndpoint().getComponent().addConsumer(getEndpoint(), this). }
+false;protected;0;5;;@Override protected void doStop() throws Exception {     getEndpoint().getComponent().removeConsumer(getEndpoint(), this).     super.doStop(). }
+false;protected;0;4;;@Override protected void doSuspend() throws Exception {     getEndpoint().getComponent().removeConsumer(getEndpoint(), this). }
+false;protected;0;4;;@Override protected void doResume() throws Exception {     getEndpoint().getComponent().addConsumer(getEndpoint(), this). }

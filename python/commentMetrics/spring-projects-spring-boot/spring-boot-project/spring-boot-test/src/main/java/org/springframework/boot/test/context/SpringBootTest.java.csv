@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Return if the environment uses an {@link ServletWebServerApplicationContext}.  * @return if an {@link ServletWebServerApplicationContext} is used.  */ ;/**  * Return if the environment uses an {@link ServletWebServerApplicationContext}.  * @return if an {@link ServletWebServerApplicationContext} is used.  */ public boolean isEmbedded() {     return this.embedded. }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;public void testInvalidLevel() {     final NodeIndicesStats stats = new NodeIndicesStats().     final String level = randomAlphaOfLength(16).     final ToXContent.Params params = new ToXContent.MapParams(Collections.singletonMap("level", level)).     final IllegalArgumentException e = expectThrows(IllegalArgumentException.class, () -> stats.toXContent(null, params)).     assertThat(e, hasToString(containsString("level parameter must be one of [indices] or [node] or [shards] but was [" + level + "]"))). }

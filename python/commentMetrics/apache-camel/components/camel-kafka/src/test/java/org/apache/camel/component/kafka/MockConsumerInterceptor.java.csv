@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public ConsumerRecords<String, String> onConsume(ConsumerRecords<String, String> consumerRecords) {     recordsCaptured.add(consumerRecords).     return consumerRecords. }
+false;public;1;4;;@Override public void onCommit(Map<TopicPartition, OffsetAndMetadata> map) { // noop }
+false;public;0;4;;@Override public void close() { // noop }
+false;public;1;4;;@Override public void configure(Map<String, ?> map) { // noop }

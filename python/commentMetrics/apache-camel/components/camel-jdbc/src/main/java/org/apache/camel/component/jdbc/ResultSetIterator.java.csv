@@ -1,0 +1,19 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean hasNext() {     return !closed.get(). }
+false;public;0;22;;@Override public Map<String, Object> next() {     if (!hasNext()) {         throw new NoSuchElementException().     }     try {         Map<String, Object> row = new LinkedHashMap<>().         for (Column column : columns) {             if (useGetBytes && column instanceof BlobColumn) {                 row.put(column.getName(), ((BlobColumn) column).getBytes(resultSet)).             } else {                 row.put(column.getName(), column.getValue(resultSet)).             }         }         loadNext().         return row.     } catch (SQLException e) {         close().         throw new RuntimeCamelException("Cannot process result", e).     } }
+false;public;0;4;;@Override public void remove() {     throw new UnsupportedOperationException("Cannot remove from a database result"). }
+false;public;0;8;;public Set<String> getColumnNames() {     // New copy each time in order to ensure immutability     Set<String> columnNames = new LinkedHashSet<>(columns.length).     for (Column column : columns) {         columnNames.add(column.getName()).     }     return columnNames. }
+false;public;0;6;;public void close() {     if (closed.compareAndSet(false, true)) {         safeCloseResultSet().         safeCloseStatement().     } }
+false;public;0;3;;public void closeConnection() {     safeCloseConnection(). }
+false;private;0;6;;private void loadNext() throws SQLException {     boolean hasNext = resultSet.next().     if (!hasNext) {         close().     } }
+false;private;0;7;;private void safeCloseResultSet() {     try {         resultSet.close().     } catch (SQLException e) {         LOG.warn("Error by closing result set: {}", e, e).     } }
+false;private;0;7;;private void safeCloseStatement() {     try {         statement.close().     } catch (SQLException e) {         LOG.warn("Error by closing statement: {}", e, e).     } }
+false;private;0;7;;private void safeCloseConnection() {     try {         connection.close().     } catch (SQLException e) {         LOG.warn("Error by closing connection: {}", e, e).     } }
+false;private,static;3;13;;private static String getColumnName(ResultSetMetaData metaData, int columnNumber, boolean isJDBC4) throws SQLException {     if (isJDBC4) {         // jdbc 4 should use label to get the name         return metaData.getColumnLabel(columnNumber).     } else {         // jdbc 3 uses the label or name to get the name         try {             return metaData.getColumnLabel(columnNumber).         } catch (SQLException e) {             return metaData.getColumnName(columnNumber).         }     } }
+false;;0;1;;String getName().
+false;;1;1;;Object getValue(ResultSet resultSet) throws SQLException.
+false;public;0;4;;@Override public String getName() {     return name. }
+false;public;1;4;;@Override public Object getValue(ResultSet resultSet) throws SQLException {     return resultSet.getObject(columnNumber). }
+false;public;0;4;;@Override public String getName() {     return name. }
+false;public;1;4;;@Override public Object getValue(ResultSet resultSet) throws SQLException {     return resultSet.getString(columnNumber). }
+false;public;1;3;;public Object getBytes(ResultSet resultSet) throws SQLException {     return resultSet.getBytes(columnNumber). }

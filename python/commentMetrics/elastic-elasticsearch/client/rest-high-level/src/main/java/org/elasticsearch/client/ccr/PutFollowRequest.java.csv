@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;9;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(REMOTE_CLUSTER_FIELD.getPreferredName(), remoteCluster).     builder.field(LEADER_INDEX_FIELD.getPreferredName(), leaderIndex).     toXContentFragment(builder, params).     builder.endObject().     return builder. }
+false;public;0;3;;public String getRemoteCluster() {     return remoteCluster. }
+false;public;0;3;;public String getLeaderIndex() {     return leaderIndex. }
+false;public;0;3;;public String getFollowerIndex() {     return followerIndex. }
+false;public;0;3;;public ActiveShardCount waitForActiveShards() {     return waitForActiveShards. }
+false;public;1;11;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     if (!super.equals(o))         return false.     PutFollowRequest that = (PutFollowRequest) o.     return Objects.equals(waitForActiveShards, that.waitForActiveShards) && Objects.equals(remoteCluster, that.remoteCluster) && Objects.equals(leaderIndex, that.leaderIndex) && Objects.equals(followerIndex, that.followerIndex). }
+false;public;0;9;;@Override public int hashCode() {     return Objects.hash(super.hashCode(), remoteCluster, leaderIndex, followerIndex, waitForActiveShards). }

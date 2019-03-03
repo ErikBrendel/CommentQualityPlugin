@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getWriteableName() {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public double value(String name) {     return values.get(name). }
+false;protected;1;4;;@Override protected void doWriteTo(StreamOutput out) throws IOException {     throw new UnsupportedOperationException(). }
+false;public;2;4;;@Override public InternalAggregation doReduce(List<InternalAggregation> aggregations, ReduceContext reduceContext) {     throw new UnsupportedOperationException(). }
+false;public;2;4;;@Override public XContentBuilder doXContentBody(XContentBuilder builder, Params params) throws IOException {     throw new UnsupportedOperationException(). }
+false;protected;0;4;;@Override protected int doHashCode() {     throw new UnsupportedOperationException(). }
+false;protected;1;4;;@Override protected boolean doEquals(Object obj) {     throw new UnsupportedOperationException(). }

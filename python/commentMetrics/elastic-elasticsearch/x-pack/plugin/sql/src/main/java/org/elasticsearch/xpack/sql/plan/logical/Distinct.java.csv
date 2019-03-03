@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected NodeInfo<Distinct> info() {     return NodeInfo.create(this, Distinct::new, child()). }
+false;protected;1;4;;@Override protected Distinct replaceChild(LogicalPlan newChild) {     return new Distinct(source(), newChild). }
+false;public;0;4;;@Override public boolean expressionsResolved() {     return true. }

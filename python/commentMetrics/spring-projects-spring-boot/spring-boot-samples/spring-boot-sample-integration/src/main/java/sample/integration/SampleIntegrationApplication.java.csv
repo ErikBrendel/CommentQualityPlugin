@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Bean public FileReadingMessageSource fileReader() {     FileReadingMessageSource reader = new FileReadingMessageSource().     reader.setDirectory(this.serviceProperties.getInputDir()).     return reader. }
+false;public;0;4;;@Bean public DirectChannel inputChannel() {     return new DirectChannel(). }
+false;public;0;4;;@Bean public DirectChannel outputChannel() {     return new DirectChannel(). }
+false;public;0;7;;@Bean public FileWritingMessageHandler fileWriter() {     FileWritingMessageHandler writer = new FileWritingMessageHandler(this.serviceProperties.getOutputDir()).     writer.setExpectReply(false).     return writer. }
+false;public;1;6;;@Bean public IntegrationFlow integrationFlow(SampleEndpoint endpoint) {     return IntegrationFlows.from(fileReader(), new FixedRatePoller()).channel(inputChannel()).handle(endpoint).channel(outputChannel()).handle(fileWriter()).get(). }
+false;public,static;1;3;;public static void main(String[] args) {     SpringApplication.run(SampleIntegrationApplication.class, args). }
+false;public;1;4;;@Override public void accept(SourcePollingChannelAdapterSpec spec) {     spec.poller(Pollers.fixedRate(500)). }

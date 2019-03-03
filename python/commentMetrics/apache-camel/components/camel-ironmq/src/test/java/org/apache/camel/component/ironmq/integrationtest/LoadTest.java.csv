@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Before public void clearQueue() {     // make sure the queue is empty before test     template.sendBodyAndHeader(ironMQEndpoint, null, IronMQConstants.OPERATION, IronMQConstants.CLEARQUEUE). }
+false;public;0;7;;@Test public void testDataSet() throws Exception {     MockEndpoint endpoint = getMockEndpoint(datasetEndpoint).     endpoint.expectedMessageCount((int) dataSet.getSize()).     assertMockEndpointsSatisfied(4, TimeUnit.MINUTES). }
+false;protected;1;4;;@Override protected void bindToRegistry(Registry registry) throws Exception {     registry.bind("foo", dataSet). }
+false;public;0;4;;public void configure() throws Exception {     from(datasetEndpoint).to(ironMQEndpoint).     from(ironMQEndpoint).to(datasetEndpoint). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from(datasetEndpoint).to(ironMQEndpoint).             from(ironMQEndpoint).to(datasetEndpoint).         }     }. }
+false;protected;1;4;;@Override protected Object createMessageBody(long messageIndex) {     return "<hello>" + messageIndex. }

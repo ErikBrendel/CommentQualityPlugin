@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;3;;public static PageParams defaultParams() {     return new PageParams(DEFAULT_FROM, DEFAULT_SIZE). }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeVInt(from).     out.writeVInt(size). }
+false;public;0;3;;public int getFrom() {     return from. }
+false;public;0;3;;public int getSize() {     return size. }
+false;public;2;8;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(FROM.getPreferredName(), from).     builder.field(SIZE.getPreferredName(), size).     builder.endObject().     return builder. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(from, size). }
+false;public;1;12;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     PageParams other = (PageParams) obj.     return Objects.equals(from, other.from) && Objects.equals(size, other.size). }

@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Producer createProducer() throws Exception {     return new BraintreeProducer(this). }
+false;public;1;7;;@Override public Consumer createConsumer(Processor processor) throws Exception {     BraintreeConsumer consumer = new BraintreeConsumer(this, processor).     // also set consumer.* properties     configureConsumer(consumer).     return consumer. }
+false;public;0;4;;@Override public BraintreeComponent getComponent() {     return (BraintreeComponent) super.getComponent(). }
+false;protected;0;4;;@Override protected ApiMethodPropertiesHelper<BraintreeConfiguration> getPropertiesHelper() {     return BraintreePropertiesHelper.getHelper(). }
+false;protected;0;4;;@Override protected String getThreadProfileName() {     return BraintreeConstants.THREAD_PROFILE_NAME. }
+false;protected;0;18;;@Override protected void afterConfigureProperties() {     BraintreeGateway gateway = getComponent().getGateway(this.configuration).     try {         Method method = gateway.getClass().getMethod(apiName.getName()).         if (method != null) {             apiProxy = method.invoke(gateway).         } else {             throw new IllegalArgumentException("Invalid API name " + apiName).         }     } catch (NoSuchMethodException e) {         throw new IllegalArgumentException(e).     } catch (InvocationTargetException e) {         throw new IllegalArgumentException(e).     } catch (IllegalAccessException e) {         throw new IllegalArgumentException(e).     } }
+false;public;2;4;;@Override public Object getApiProxy(ApiMethod method, Map<String, Object> args) {     return apiProxy. }

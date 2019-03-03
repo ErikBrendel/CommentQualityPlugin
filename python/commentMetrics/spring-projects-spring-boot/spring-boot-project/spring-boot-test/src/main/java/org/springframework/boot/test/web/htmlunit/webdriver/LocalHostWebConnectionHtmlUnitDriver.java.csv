@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public void get(String url) {     if (url.startsWith("/")) {         String port = this.environment.getProperty("local.server.port", "8080").         url = "http://localhost:" + port + url.     }     super.get(url). }

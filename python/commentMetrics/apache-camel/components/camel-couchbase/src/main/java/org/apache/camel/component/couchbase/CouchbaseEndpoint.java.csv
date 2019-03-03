@@ -1,0 +1,69 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Producer createProducer() throws Exception {     return new CouchbaseProducer(this, createClient(), persistTo, replicateTo). }
+false;public;1;4;;@Override public Consumer createConsumer(Processor processor) throws Exception {     return new CouchbaseConsumer(this, createClient(), processor). }
+false;public;0;4;;@Override public boolean isSingleton() {     return true. }
+false;public;0;3;;public String getProtocol() {     return protocol. }
+true;public;1;3;/**  * The protocol to use  */ ;/**  * The protocol to use  */ public void setProtocol(String protocol) {     this.protocol = protocol. }
+false;public;0;3;;public String getBucket() {     return bucket. }
+true;public;1;3;/**  * The bucket to use  */ ;/**  * The bucket to use  */ public void setBucket(String bucket) {     this.bucket = bucket. }
+false;public;0;3;;public String getHostname() {     return hostname. }
+true;public;1;3;/**  * The hostname to use  */ ;/**  * The hostname to use  */ public void setHostname(String hostname) {     this.hostname = hostname. }
+false;public;0;3;;public int getPort() {     return port. }
+true;public;1;3;/**  * The port number to use  */ ;/**  * The port number to use  */ public void setPort(int port) {     this.port = port. }
+false;public;0;3;;public String getKey() {     return key. }
+true;public;1;3;/**  * The key to use  */ ;/**  * The key to use  */ public void setKey(String key) {     this.key = key. }
+false;public;0;3;;public String getUsername() {     return username. }
+true;public;1;3;/**  * The username to use  */ ;/**  * The username to use  */ public void setUsername(String username) {     this.username = username. }
+false;public;0;3;;public String getPassword() {     return password. }
+true;public;1;3;/**  * The password to use  */ ;/**  * The password to use  */ public void setPassword(String password) {     this.password = password. }
+false;public;0;3;;public String getAdditionalHosts() {     return additionalHosts. }
+true;public;1;3;/**  * The additional hosts  */ ;/**  * The additional hosts  */ public void setAdditionalHosts(String additionalHosts) {     this.additionalHosts = additionalHosts. }
+false;public;0;3;;public int getPersistTo() {     return persistTo. }
+true;public;1;3;/**  * Where to persist the data  */ ;/**  * Where to persist the data  */ public void setPersistTo(int persistTo) {     this.persistTo = persistTo. }
+false;public;0;3;;public int getReplicateTo() {     return replicateTo. }
+true;public;1;3;/**  * Where to replicate the data  */ ;/**  * Where to replicate the data  */ public void setReplicateTo(int replicateTo) {     this.replicateTo = replicateTo. }
+false;public;0;3;;public String getOperation() {     return operation. }
+true;public;1;3;/**  * The operation to do  */ ;/**  * The operation to do  */ public void setOperation(String operation) {     this.operation = operation. }
+false;public;0;3;;public boolean isAutoStartIdForInserts() {     return autoStartIdForInserts. }
+true;public;1;3;/**  * Define if we want an autostart Id when we are doing an insert operation  */ ;/**  * Define if we want an autostart Id when we are doing an insert operation  */ public void setAutoStartIdForInserts(boolean autoStartIdForInserts) {     this.autoStartIdForInserts = autoStartIdForInserts. }
+false;public;0;3;;public long getStartingIdForInsertsFrom() {     return startingIdForInsertsFrom. }
+true;public;1;3;/**  * Define the starting Id where we are doing an insert operation  */ ;/**  * Define the starting Id where we are doing an insert operation  */ public void setStartingIdForInsertsFrom(long startingIdForInsertsFrom) {     this.startingIdForInsertsFrom = startingIdForInsertsFrom. }
+false;public;0;3;;public int getProducerRetryAttempts() {     return producerRetryAttempts. }
+true;public;1;3;/**  * Define the number of retry attempts  */ ;/**  * Define the number of retry attempts  */ public void setProducerRetryAttempts(int producerRetryAttempts) {     this.producerRetryAttempts = producerRetryAttempts. }
+false;public;0;3;;public int getProducerRetryPause() {     return producerRetryPause. }
+true;public;1;3;/**  * Define the retry pause between different attempts  */ ;/**  * Define the retry pause between different attempts  */ public void setProducerRetryPause(int producerRetryPause) {     this.producerRetryPause = producerRetryPause. }
+false;public;0;3;;public String getDesignDocumentName() {     return designDocumentName. }
+true;public;1;3;/**  * The design document name to use  */ ;/**  * The design document name to use  */ public void setDesignDocumentName(String designDocumentName) {     this.designDocumentName = designDocumentName. }
+false;public;0;3;;public String getViewName() {     return viewName. }
+true;public;1;3;/**  * The view name to use  */ ;/**  * The view name to use  */ public void setViewName(String viewName) {     this.viewName = viewName. }
+false;public;0;3;;public int getLimit() {     return limit. }
+true;public;1;3;/**  * The output limit to use  */ ;/**  * The output limit to use  */ public void setLimit(int limit) {     this.limit = limit. }
+false;public;0;3;;public boolean isDescending() {     return descending. }
+true;public;1;3;/**  * Define if this operation is descending or not  */ ;/**  * Define if this operation is descending or not  */ public void setDescending(boolean descending) {     this.descending = descending. }
+false;public;0;3;;public int getSkip() {     return skip. }
+true;public;1;3;/**  * Define the skip to use  */ ;/**  * Define the skip to use  */ public void setSkip(int skip) {     this.skip = skip. }
+false;public;0;3;;public String getRangeStartKey() {     return rangeStartKey. }
+true;public;1;3;/**  * Define a range for the start key  */ ;/**  * Define a range for the start key  */ public void setRangeStartKey(String rangeStartKey) {     this.rangeStartKey = rangeStartKey. }
+false;public;0;3;;public String getRangeEndKey() {     return rangeEndKey. }
+true;public;1;3;/**  * Define a range for the end key  */ ;/**  * Define a range for the end key  */ public void setRangeEndKey(String rangeEndKey) {     this.rangeEndKey = rangeEndKey. }
+false;public;0;3;;public String getConsumerProcessedStrategy() {     return consumerProcessedStrategy. }
+true;public;1;3;/**  * Define the consumer Processed strategy to use  */ ;/**  * Define the consumer Processed strategy to use  */ public void setConsumerProcessedStrategy(String consumerProcessedStrategy) {     this.consumerProcessedStrategy = consumerProcessedStrategy. }
+false;public;0;3;;public long getOpTimeOut() {     return opTimeOut. }
+true;public;1;3;/**  * Define the operation timeout  */ ;/**  * Define the operation timeout  */ public void setOpTimeOut(long opTimeOut) {     this.opTimeOut = opTimeOut. }
+false;public;0;3;;public int getTimeoutExceptionThreshold() {     return timeoutExceptionThreshold. }
+true;public;1;3;/**  * Define the threshold for throwing a timeout Exception  */ ;/**  * Define the threshold for throwing a timeout Exception  */ public void setTimeoutExceptionThreshold(int timeoutExceptionThreshold) {     this.timeoutExceptionThreshold = timeoutExceptionThreshold. }
+false;public;0;3;;public int getReadBufferSize() {     return readBufferSize. }
+true;public;1;3;/**  * Define the buffer size  */ ;/**  * Define the buffer size  */ public void setReadBufferSize(int readBufferSize) {     this.readBufferSize = readBufferSize. }
+false;public;0;3;;public boolean isShouldOptimize() {     return shouldOptimize. }
+true;public;1;3;/**  * Define if we want to use optimization or not where possible  */ ;/**  * Define if we want to use optimization or not where possible  */ public void setShouldOptimize(boolean shouldOptimize) {     this.shouldOptimize = shouldOptimize. }
+false;public;0;3;;public long getMaxReconnectDelay() {     return maxReconnectDelay. }
+true;public;1;3;/**  * Define the max delay during a reconnection  */ ;/**  * Define the max delay during a reconnection  */ public void setMaxReconnectDelay(long maxReconnectDelay) {     this.maxReconnectDelay = maxReconnectDelay. }
+false;public;0;3;;public long getOpQueueMaxBlockTime() {     return opQueueMaxBlockTime. }
+true;public;1;3;/**  * Define the max time an operation can be in queue blocked  */ ;/**  * Define the max time an operation can be in queue blocked  */ public void setOpQueueMaxBlockTime(long opQueueMaxBlockTime) {     this.opQueueMaxBlockTime = opQueueMaxBlockTime. }
+false;public;0;3;;public long getObsPollInterval() {     return obsPollInterval. }
+true;public;1;3;/**  * Define the observation polling interval  */ ;/**  * Define the observation polling interval  */ public void setObsPollInterval(long obsPollInterval) {     this.obsPollInterval = obsPollInterval. }
+false;public;0;3;;public long getObsTimeout() {     return obsTimeout. }
+true;public;1;3;/**  * Define the observation timeout  */ ;/**  * Define the observation timeout  */ public void setObsTimeout(long obsTimeout) {     this.obsTimeout = obsTimeout. }
+false;public;0;8;;public URI[] makeBootstrapURI() throws URISyntaxException {     if (additionalHosts == null || "".equals(additionalHosts)) {         return new URI[] { new URI(protocol + "://" + hostname + ":" + port + "/pools") }.     }     return getAllUris(). }
+false;private;0;22;;private URI[] getAllUris() throws URISyntaxException {     String[] hosts = additionalHosts.split(",").     for (int i = 0. i < hosts.length. i++) {         hosts[i] = hosts[i].trim().     }     List<String> hostList = new ArrayList<>().     hostList.add(hostname).     hostList.addAll(Arrays.asList(hosts)).     Set<String> hostSet = new LinkedHashSet<>(hostList).     hosts = hostSet.toArray(new String[hostSet.size()]).     URI[] uriArray = new URI[hosts.length].     for (int i = 0. i < hosts.length. i++) {         uriArray[i] = new URI(protocol + "://" + hosts[i] + ":" + port + "/pools").     }     return uriArray. }
+false;private;0;33;;private CouchbaseClient createClient() throws IOException, URISyntaxException {     List<URI> hosts = Arrays.asList(makeBootstrapURI()).     CouchbaseConnectionFactoryBuilder cfb = new CouchbaseConnectionFactoryBuilder().     if (opTimeOut != DEFAULT_OP_TIMEOUT) {         cfb.setOpTimeout(opTimeOut).     }     if (timeoutExceptionThreshold != DEFAULT_TIMEOUT_EXCEPTION_THRESHOLD) {         cfb.setTimeoutExceptionThreshold(timeoutExceptionThreshold).     }     if (readBufferSize != DEFAULT_READ_BUFFER_SIZE) {         cfb.setReadBufferSize(readBufferSize).     }     if (shouldOptimize) {         cfb.setShouldOptimize(true).     }     if (maxReconnectDelay != DEFAULT_MAX_RECONNECT_DELAY) {         cfb.setMaxReconnectDelay(maxReconnectDelay).     }     if (opQueueMaxBlockTime != DEFAULT_OP_QUEUE_MAX_BLOCK_TIME) {         cfb.setOpQueueMaxBlockTime(opQueueMaxBlockTime).     }     if (obsPollInterval != DEFAULT_OBS_POLL_INTERVAL) {         cfb.setObsPollInterval(obsPollInterval).     }     if (obsTimeout != DEFAULT_OBS_TIMEOUT) {         cfb.setObsTimeout(obsTimeout).     }     return new CouchbaseClient(cfb.buildCouchbaseConnection(hosts, bucket, username, password)). }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public String get(String key) {     return null. }
+false;public;0;5;;@Override public boolean descriptions() {     return get(PrometheusProperties::isDescriptions, PrometheusConfig.super::descriptions). }
+false;public;0;4;;@Override public Duration step() {     return get(PrometheusProperties::getStep, PrometheusConfig.super::step). }

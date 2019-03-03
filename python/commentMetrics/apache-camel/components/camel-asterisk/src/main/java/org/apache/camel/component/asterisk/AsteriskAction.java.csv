@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public ManagerAction apply(Exchange exchange) {     return new QueueStatusAction(). }
+false;public;1;4;;@Override public ManagerAction apply(Exchange exchange) {     return new SipPeersAction(). }
+false;public;1;7;;@Override public ManagerAction apply(Exchange exchange) {     return new ExtensionStateAction(exchange.getIn().getHeader(AsteriskConstants.EXTENSION, String.class), exchange.getIn().getHeader(AsteriskConstants.CONTEXT, String.class)). }

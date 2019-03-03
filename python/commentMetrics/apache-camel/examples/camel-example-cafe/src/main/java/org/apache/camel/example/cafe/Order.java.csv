@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;3;;public void addItem(DrinkType drinkType, int shots, boolean iced) {     this.orderItems.add(new OrderItem(this, drinkType, shots, iced)). }
+false;public;0;3;;public int getNumber() {     return number. }
+false;public;0;3;;public List<OrderItem> getItems() {     return this.orderItems. }

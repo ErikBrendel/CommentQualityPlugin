@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;public void run(CamelContext context) {     TelegramService service = TelegramServiceProvider.get().getService().     UpdateResult message = service.getUpdates(Application.AUTHORIZATION_TOKEN, (long) 10, 10, 10).     System.out.println(message). }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public void receiveResponseEntity(HttpResponse response) throws HttpException, IOException {     super.receiveResponseEntity(response).     EntityParser.parseAS2MessageEntity(response). }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;4;;@BeforeClass public static void abortIfLongRunningTestGroupIsNotEnabled() {     Assume.group(TestGroup.LONG_RUNNING). }
+false;public;0;10;;@Test public void runAllTestsConcurrently() throws Exception {     final int FAILED = 0.     final int ABORTED = 0.     final int IGNORED = countAnnotatedMethods(Ignore.class).     final int TESTS = countAnnotatedMethods(Test.class) - IGNORED.     runTestsAndAssertCounters(new ParallelComputer(true, true), TESTS, FAILED, TESTS, IGNORED, ABORTED, this.testClasses). }
+false;private;1;7;;private int countAnnotatedMethods(Class<? extends Annotation> annotationType) {     return (int) Arrays.stream(this.testClasses).map(ReflectionUtils::getUniqueDeclaredMethods).flatMap(Arrays::stream).filter(method -> hasAnnotation(method, annotationType)).count(). }

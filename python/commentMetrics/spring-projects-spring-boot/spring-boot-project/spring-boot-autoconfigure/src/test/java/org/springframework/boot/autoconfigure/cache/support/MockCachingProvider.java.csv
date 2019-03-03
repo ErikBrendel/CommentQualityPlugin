@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;23;;@Override @SuppressWarnings("rawtypes") public CacheManager getCacheManager(URI uri, ClassLoader classLoader, Properties properties) {     CacheManager cacheManager = mock(CacheManager.class).     given(cacheManager.getURI()).willReturn(uri).     given(cacheManager.getClassLoader()).willReturn(classLoader).     final Map<String, Cache> caches = new HashMap<>().     given(cacheManager.getCacheNames()).willReturn(caches.keySet()).     given(cacheManager.getCache(anyString())).willAnswer((invocation) -> {         String cacheName = invocation.getArgument(0).         return caches.get(cacheName).     }).     given(cacheManager.createCache(anyString(), any(Configuration.class))).will((invocation) -> {         String cacheName = invocation.getArgument(0).         Cache cache = mock(Cache.class).         given(cache.getName()).willReturn(cacheName).         caches.put(cacheName, cache).         return cache.     }).     return cacheManager. }
+false;public;0;4;;@Override public ClassLoader getDefaultClassLoader() {     return mock(ClassLoader.class). }
+false;public;0;4;;@Override public URI getDefaultURI() {     return null. }
+false;public;0;4;;@Override public Properties getDefaultProperties() {     return new Properties(). }
+false;public;2;4;;@Override public CacheManager getCacheManager(URI uri, ClassLoader classLoader) {     return getCacheManager(uri, classLoader, getDefaultProperties()). }
+false;public;0;4;;@Override public CacheManager getCacheManager() {     return getCacheManager(getDefaultURI(), getDefaultClassLoader()). }
+false;public;0;3;;@Override public void close() { }
+false;public;1;3;;@Override public void close(ClassLoader classLoader) { }
+false;public;2;3;;@Override public void close(URI uri, ClassLoader classLoader) { }
+false;public;1;4;;@Override public boolean isSupported(OptionalFeature optionalFeature) {     return false. }

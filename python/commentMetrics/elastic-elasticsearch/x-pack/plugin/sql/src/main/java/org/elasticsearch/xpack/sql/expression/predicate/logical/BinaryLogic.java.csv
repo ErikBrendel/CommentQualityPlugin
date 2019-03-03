@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public DataType dataType() {     return DataType.BOOLEAN. }
+false;protected;2;4;;@Override protected TypeResolution resolveInputType(Expression e, Expressions.ParamOrdinal paramOrdinal) {     return isBoolean(e, sourceText(), paramOrdinal). }
+false;protected;0;4;;@Override protected Pipe makePipe() {     return new BinaryLogicPipe(source(), this, Expressions.pipe(left()), Expressions.pipe(right()), function()). }
+false;public;0;5;;@Override public Nullability nullable() {     // Cannot fold null due to 3vl, constant folding will do any possible folding.     return Nullability.UNKNOWN. }

@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;1;;String type().
+false;public;0;3;;public String value() {     return name().toLowerCase(Locale.ROOT). }
+false;public;0;3;;public String type() {     return type. }
+false;public;0;3;;public Status status() {     return status. }
+false;public;0;3;;public String reason() {     return reason. }
+false;public;2;4;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     return builder.field(REASON.getPreferredName(), reason). }
+false;public;0;3;;public Exception getException() {     return exception. }
+false;public;2;5;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     ElasticsearchException.generateFailureXContent(builder, params, exception, true).     return builder. }
+false;;0;1;;A build().

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;13;;@Test public void testSpelBeanExpressions() throws Exception {     context.getRegistry().bind("myDummy", new Dummy()).     assertExpression("#{@myDummy.foo == 'xyz'}", true).     assertExpression("#{@myDummy.bar == 789}", true).     assertExpression("#{@myDummy.bar.toString()}", "789").     try {         assertExpression("#{@notFound}", null).     } catch (ExpressionEvaluationException ex) {         assertStringContains(ex.getMessage(), "Could not resolve bean reference against Registry").     } }
+false;public;0;8;;@Test public void testSpelBeanPredicates() throws Exception {     context.getRegistry().bind("myDummy", new Dummy()).     assertPredicate("@myDummy.foo == 'xyz'").     assertPredicate("@myDummy.bar == 789").     assertPredicate("@myDummy.bar instanceof T(Integer)"). }
+false;protected;0;4;;@Override protected String getLanguageName() {     return "spel". }

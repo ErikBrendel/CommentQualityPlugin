@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,final;0;3;;public final ConfigurableBeanFactory getBeanFactory() {     return this.beanFactory. }
+false;public,final;0;4;;@Nullable public final Scope getScope() {     return this.scope. }
+false;public;1;4;;public boolean containsObject(String key) {     return (this.beanFactory.containsBean(key) || (this.scope != null && this.scope.resolveContextualObject(key) != null)). }
+false;public;1;12;;@Nullable public Object getObject(String key) {     if (this.beanFactory.containsBean(key)) {         return this.beanFactory.getBean(key).     } else if (this.scope != null) {         return this.scope.resolveContextualObject(key).     } else {         return null.     } }
+false;public;1;11;;@Override public boolean equals(Object other) {     if (this == other) {         return true.     }     if (!(other instanceof BeanExpressionContext)) {         return false.     }     BeanExpressionContext otherContext = (BeanExpressionContext) other.     return (this.beanFactory == otherContext.beanFactory && this.scope == otherContext.scope). }
+false;public;0;4;;@Override public int hashCode() {     return this.beanFactory.hashCode(). }

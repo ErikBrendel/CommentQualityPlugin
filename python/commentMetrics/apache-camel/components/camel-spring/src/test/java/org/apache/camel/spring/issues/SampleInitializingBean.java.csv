@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void setName(String name) {     this.name = name. }
+false;public;1;3;;public void setEntries(List<String> entries) {     this.entries = entries. }
+false;public;0;3;;public void afterPropertiesSet() {     entries.add(name). }

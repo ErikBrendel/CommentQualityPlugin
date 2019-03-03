@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getId() {     return this.delegate.getId(). }
+false;public;0;4;;@Override public Map<String, Object> getAttributes() {     return this.delegate.getAttributes(). }
+false;public;0;4;;@Override public void start() {     this.delegate.start(). }
+false;public;0;4;;@Override public boolean isStarted() {     return this.delegate.isStarted(). }
+false;public;0;4;;@Override public Mono<Void> changeSessionId() {     return this.delegate.changeSessionId(). }
+false;public;0;4;;@Override public Mono<Void> invalidate() {     return this.delegate.invalidate(). }
+false;public;0;4;;@Override public Mono<Void> save() {     return this.delegate.save(). }
+false;public;0;4;;@Override public boolean isExpired() {     return this.delegate.isExpired(). }
+false;public;0;4;;@Override public Instant getCreationTime() {     return this.delegate.getCreationTime(). }
+false;public;0;4;;@Override public Instant getLastAccessTime() {     return this.delegate.getLastAccessTime(). }
+false;public;1;4;;@Override public void setMaxIdleTime(Duration maxIdleTime) {     this.delegate.setMaxIdleTime(maxIdleTime). }
+false;public;0;4;;@Override public Duration getMaxIdleTime() {     return this.delegate.getMaxIdleTime(). }

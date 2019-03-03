@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Test public void testComponentConfiguration() throws Exception {     Assert.assertNotNull(remoteCacheManager).     Assert.assertNotNull(embeddedCacheManager).     Assert.assertNotNull(component).     Assert.assertNotNull(component.getCacheContainer()).     Assert.assertEquals(embeddedCacheManager, component.getCacheContainer()). }
+false;public;0;4;;@Bean public EmbeddedCacheManager embeddedCacheManagerInstance() {     return CacheManagerCustomizerTestSupport.newEmbeddedCacheManagerInstance(). }
+false;public;0;4;;@Bean public RemoteCacheManager remoteCacheManagerInstance() {     return CacheManagerCustomizerTestSupport.newRemoteCacheManagerInstance(). }

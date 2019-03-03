@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;8;;protected JndiRegistry createRegistry() throws Exception {     myConnectionFactory = new ConnectionFactory().     myConnectionFactory.setHost("myhost").     JndiRegistry registry = super.createRegistry().     registry.bind("myConnectionFactory", myConnectionFactory).     return registry. }
+false;public;0;6;;@Test public void testLookupConnectionFactory() throws Exception {     RabbitMQEndpoint endpoint = context.getEndpoint("rabbitmq:myexchange", RabbitMQEndpoint.class).     assertNotNull(endpoint).     assertSame(endpoint.getConnectionFactory(), myConnectionFactory). }

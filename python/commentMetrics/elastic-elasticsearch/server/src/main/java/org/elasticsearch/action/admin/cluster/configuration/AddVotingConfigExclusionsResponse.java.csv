@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void readFrom(StreamInput in) throws IOException {     throw new UnsupportedOperationException("usage of Streamable is to be replaced by Writeable"). }
+false;public;1;4;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out). }
+false;public;2;4;;@Override public XContentBuilder toXContent(final XContentBuilder builder, final Params params) throws IOException {     return builder. }

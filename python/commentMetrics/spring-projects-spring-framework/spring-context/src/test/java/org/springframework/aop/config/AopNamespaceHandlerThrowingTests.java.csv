@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void testThrowingOnThrowingAdvice() {     new ClassPathXmlApplicationContext(getClass().getSimpleName() + "-ok.xml", getClass()). }
+false;public;0;10;;@Test public void testParseThrowingOnOtherAdviceType() {     try {         new ClassPathXmlApplicationContext(getClass().getSimpleName() + "-error.xml", getClass()).         fail("Expected BeanDefinitionStoreException").     } catch (BeanDefinitionStoreException ex) {         assertTrue(ex.contains(SAXParseException.class)).     } }

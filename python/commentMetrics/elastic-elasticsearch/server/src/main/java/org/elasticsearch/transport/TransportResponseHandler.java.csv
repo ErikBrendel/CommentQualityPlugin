@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;1;1;;void handleResponse(T response).
+false;;1;1;;void handleException(TransportException exp).
+false;;0;1;;String executor().
+false;public;1;4;;@Override public void handleResponse(Q response) {     self.handleResponse(converter.apply(response)). }
+false;public;1;4;;@Override public void handleException(TransportException exp) {     self.handleException(exp). }
+false;public;0;4;;@Override public String executor() {     return self.executor(). }
+false;public;1;4;;@Override public Q read(StreamInput in) throws IOException {     return reader.read(in). }
+false;default;2;24;;default <Q extends TransportResponse> TransportResponseHandler<Q> wrap(Function<Q, T> converter, Writeable.Reader<Q> reader) {     final TransportResponseHandler<T> self = this.     return new TransportResponseHandler<Q>() {          @Override         public void handleResponse(Q response) {             self.handleResponse(converter.apply(response)).         }          @Override         public void handleException(TransportException exp) {             self.handleException(exp).         }          @Override         public String executor() {             return self.executor().         }          @Override         public Q read(StreamInput in) throws IOException {             return reader.read(in).         }     }. }

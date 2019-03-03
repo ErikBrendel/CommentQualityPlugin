@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void nameMustNotBeNull() {     assertThatIllegalArgumentException().isThrownBy(() -> new TriggerFileFilter(null)).withMessageContaining("Name must not be null"). }
+false;public;0;5;;@Test public void acceptNameMatch() throws Exception {     File file = this.temp.newFile("thefile.txt").     assertThat(new TriggerFileFilter("thefile.txt").accept(file)).isTrue(). }
+false;public;0;5;;@Test public void doesNotAcceptNameMismatch() throws Exception {     File file = this.temp.newFile("notthefile.txt").     assertThat(new TriggerFileFilter("thefile.txt").accept(file)).isFalse(). }
+false;public;0;5;;@Test public void testName() throws Exception {     File file = this.temp.newFile(".triggerfile").getAbsoluteFile().     assertThat(new TriggerFileFilter(".triggerfile").accept(file)).isTrue(). }

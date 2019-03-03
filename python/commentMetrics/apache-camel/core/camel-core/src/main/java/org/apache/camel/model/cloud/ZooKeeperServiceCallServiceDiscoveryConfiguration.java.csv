@@ -1,0 +1,25 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;// ************************************************************************* // Getter/Setter // ************************************************************************* public String getNodes() {     return nodes. }
+true;public;1;3;/**  * A comma separate list of servers to connect to in the form host:port  */ ;/**  * A comma separate list of servers to connect to in the form host:port  */ public void setNodes(String nodes) {     this.nodes = nodes. }
+false;public;0;3;;public String getNamespace() {     return namespace. }
+true;public;1;3;/**  * As ZooKeeper is a shared space, users of a given cluster should stay within  * a pre-defined namespace. If a namespace is set here, all paths will get pre-pended  * with the namespace  */ ;/**  * As ZooKeeper is a shared space, users of a given cluster should stay within  * a pre-defined namespace. If a namespace is set here, all paths will get pre-pended  * with the namespace  */ public void setNamespace(String namespace) {     this.namespace = namespace. }
+false;public;0;3;;public String getReconnectBaseSleepTime() {     return reconnectBaseSleepTime. }
+true;public;1;3;/**  * Initial amount of time to wait between retries.  */ ;/**  * Initial amount of time to wait between retries.  */ public void setReconnectBaseSleepTime(String reconnectBaseSleepTime) {     this.reconnectBaseSleepTime = reconnectBaseSleepTime. }
+false;public;0;3;;public String getReconnectMaxSleepTime() {     return reconnectMaxSleepTime. }
+true;public;1;3;/**  * Max time in ms to sleep on each retry  */ ;/**  * Max time in ms to sleep on each retry  */ public void setReconnectMaxSleepTime(String reconnectMaxSleepTime) {     this.reconnectMaxSleepTime = reconnectMaxSleepTime. }
+false;public;0;3;;public Integer getReconnectMaxRetries() {     return reconnectMaxRetries. }
+true;public;1;3;/**  * Max number of times to retry  */ ;/**  * Max number of times to retry  */ public void setReconnectMaxRetries(Integer reconnectMaxRetries) {     this.reconnectMaxRetries = reconnectMaxRetries. }
+false;public;0;3;;public String getSessionTimeout() {     return sessionTimeout. }
+true;public;1;3;/**  * Session timeout.  */ ;/**  * Session timeout.  */ public void setSessionTimeout(String sessionTimeout) {     this.sessionTimeout = sessionTimeout. }
+false;public;0;3;;public String getConnectionTimeout() {     return connectionTimeout. }
+true;public;1;3;/**  * Connection timeout.  */ ;/**  * Connection timeout.  */ public void setConnectionTimeout(String connectionTimeout) {     this.connectionTimeout = connectionTimeout. }
+false;public;0;3;;public String getBasePath() {     return basePath. }
+true;public;1;3;/**  * Set the base path to store in ZK  */ ;/**  * Set the base path to store in ZK  */ public void setBasePath(String basePath) {     this.basePath = basePath. }
+false;public;1;4;;// ************************************************************************* // Fluent API // ************************************************************************* public ZooKeeperServiceCallServiceDiscoveryConfiguration nodes(String nodes) {     setNodes(nodes).     return this. }
+false;public;1;4;;public ZooKeeperServiceCallServiceDiscoveryConfiguration namespace(String namespace) {     setNamespace(namespace).     return this. }
+false;public;1;4;;public ZooKeeperServiceCallServiceDiscoveryConfiguration reconnectBaseSleepTime(String reconnectBaseSleepTime) {     setReconnectBaseSleepTime(reconnectBaseSleepTime).     return this. }
+false;public;1;4;;public ZooKeeperServiceCallServiceDiscoveryConfiguration reconnectMaxSleepTime(String reconnectMaxSleepTime) {     setReconnectMaxSleepTime(reconnectMaxSleepTime).     return this. }
+false;public;1;4;;public ZooKeeperServiceCallServiceDiscoveryConfiguration reconnectMaxRetries(int reconnectMaxRetries) {     setReconnectMaxRetries(reconnectMaxRetries).     return this. }
+false;public;1;4;;public ZooKeeperServiceCallServiceDiscoveryConfiguration sessionTimeout(String sessionTimeout) {     setSessionTimeout(sessionTimeout).     return this. }
+false;public;1;4;;public ZooKeeperServiceCallServiceDiscoveryConfiguration connectionTimeout(String connectionTimeout) {     setConnectionTimeout(connectionTimeout).     return this. }
+false;public;1;4;;public ZooKeeperServiceCallServiceDiscoveryConfiguration basePath(String basePath) {     setBasePath(basePath).     return this. }

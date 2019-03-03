@@ -1,0 +1,17 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public State parent() {     return parent. }
+false;public;1;6;;@Override // we only put in BindingImpls that match their key types @SuppressWarnings("unchecked") public <T> BindingImpl<T> getExplicitBinding(Key<T> key) {     Binding<?> binding = explicitBindings.get(key).     return binding != null ? (BindingImpl<T>) binding : parent.getExplicitBinding(key). }
+false;public;0;4;;@Override public Map<Key<?>, Binding<?>> getExplicitBindingsThisLevel() {     return explicitBindings. }
+false;public;2;4;;@Override public void putBinding(Key<?> key, BindingImpl<?> binding) {     explicitBindingsMutable.put(key, binding). }
+false;public;1;5;;@Override public Scope getScope(Class<? extends Annotation> annotationType) {     Scope scope = scopes.get(annotationType).     return scope != null ? scope : parent.getScope(annotationType). }
+false;public;2;4;;@Override public void putAnnotation(Class<? extends Annotation> annotationType, Scope scope) {     scopes.put(annotationType, scope). }
+false;public;0;4;;@Override public Iterable<MatcherAndConverter> getConvertersThisLevel() {     return converters. }
+false;public;1;4;;@Override public void addConverter(MatcherAndConverter matcherAndConverter) {     converters.add(matcherAndConverter). }
+false;public;4;16;;@Override public MatcherAndConverter getConverter(String stringValue, TypeLiteral<?> type, Errors errors, Object source) {     MatcherAndConverter matchingConverter = null.     for (State s = this. s != State.NONE. s = s.parent()) {         for (MatcherAndConverter converter : s.getConvertersThisLevel()) {             if (converter.getTypeMatcher().matches(type)) {                 if (matchingConverter != null) {                     errors.ambiguousTypeConversion(stringValue, source, type, matchingConverter, converter).                 }                 matchingConverter = converter.             }         }     }     return matchingConverter. }
+false;public;1;4;;@Override public void addTypeListener(TypeListenerBinding listenerBinding) {     listenerBindings.add(listenerBinding). }
+false;public;0;9;;@Override public List<TypeListenerBinding> getTypeListenerBindings() {     List<TypeListenerBinding> parentBindings = parent.getTypeListenerBindings().     List<TypeListenerBinding> result = new ArrayList<>(parentBindings.size() + 1).     result.addAll(parentBindings).     result.addAll(listenerBindings).     return result. }
+false;public;1;5;;@Override public void blacklist(Key<?> key) {     parent.blacklist(key).     blacklistedKeys.add(key). }
+false;public;1;4;;@Override public boolean isBlacklisted(Key<?> key) {     return blacklistedKeys.contains(key). }
+false;public;0;4;;@Override public void clearBlacklisted() {     blacklistedKeys = new WeakKeySet(). }
+false;public;1;13;;@Override public void makeAllBindingsToEagerSingletons(Injector injector) {     Map<Key<?>, Binding<?>> x = new LinkedHashMap<>().     for (Map.Entry<Key<?>, Binding<?>> entry : this.explicitBindingsMutable.entrySet()) {         Key key = entry.getKey().         BindingImpl<?> binding = (BindingImpl<?>) entry.getValue().         Object value = binding.getProvider().get().         x.put(key, new InstanceBindingImpl<Object>(injector, key, SourceProvider.UNKNOWN_SOURCE, new InternalFactory.Instance(value), emptySet(), value)).     }     this.explicitBindingsMutable.clear().     this.explicitBindingsMutable.putAll(x). }
+false;public;0;4;;@Override public Object lock() {     return lock. }

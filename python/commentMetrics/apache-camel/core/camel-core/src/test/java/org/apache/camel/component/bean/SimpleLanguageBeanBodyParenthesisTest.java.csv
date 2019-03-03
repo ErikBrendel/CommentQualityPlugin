@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void testNo() throws Exception {     getMockEndpoint("mock:result").expectedMessageCount(0).     getMockEndpoint("mock:other").expectedMessageCount(1).     template.sendBody("direct:single", "Camel").     assertMockEndpointsSatisfied(). }
+false;public;0;9;;@Test public void testYes() throws Exception {     getMockEndpoint("mock:result").expectedMessageCount(1).     getMockEndpoint("mock:other").expectedMessageCount(0).     template.sendBody("direct:single", "Hello(World) how are you").     assertMockEndpointsSatisfied(). }
+false;public;0;10;;@Override public void configure() throws Exception {     from("direct:single").choice().when().simple("${body.contains(\")\")}").to("mock:result").otherwise().to("mock:other"). }
+false;protected;0;15;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:single").choice().when().simple("${body.contains(\")\")}").to("mock:result").otherwise().to("mock:other").         }     }. }

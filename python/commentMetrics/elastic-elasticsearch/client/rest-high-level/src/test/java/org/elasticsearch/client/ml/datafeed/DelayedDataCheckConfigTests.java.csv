@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected DelayedDataCheckConfig createTestInstance() {     return createRandomizedConfig(). }
+false;protected;1;4;;@Override protected DelayedDataCheckConfig doParseInstance(XContentParser parser) {     return DelayedDataCheckConfig.PARSER.apply(parser, null). }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }
+false;public;0;5;;public void testEnabledDelayedDataCheckConfig() {     DelayedDataCheckConfig delayedDataCheckConfig = DelayedDataCheckConfig.enabledDelayedDataCheckConfig(TimeValue.timeValueHours(5)).     assertThat(delayedDataCheckConfig.isEnabled(), equalTo(true)).     assertThat(delayedDataCheckConfig.getCheckWindow(), equalTo(TimeValue.timeValueHours(5))). }
+false;public;0;5;;public void testDisabledDelayedDataCheckConfig() {     DelayedDataCheckConfig delayedDataCheckConfig = DelayedDataCheckConfig.disabledDelayedDataCheckConfig().     assertThat(delayedDataCheckConfig.isEnabled(), equalTo(false)).     assertThat(delayedDataCheckConfig.getCheckWindow(), equalTo(null)). }
+false;public,static;0;8;;public static DelayedDataCheckConfig createRandomizedConfig() {     boolean enabled = randomBoolean().     TimeValue timeWindow = null.     if (enabled || randomBoolean()) {         timeWindow = TimeValue.timeValueMillis(randomLongBetween(1, 1_000)).     }     return new DelayedDataCheckConfig(enabled, timeWindow). }

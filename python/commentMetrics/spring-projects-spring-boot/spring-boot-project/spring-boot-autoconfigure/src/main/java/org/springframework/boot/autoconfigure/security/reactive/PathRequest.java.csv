@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,static;0;3;/**  * Returns a {@link StaticResourceRequest} that can be used to create a matcher for  * {@link StaticResourceLocation locations}.  * @return a {@link StaticResourceRequest}  */ ;/**  * Returns a {@link StaticResourceRequest} that can be used to create a matcher for  * {@link StaticResourceLocation locations}.  * @return a {@link StaticResourceRequest}  */ public static StaticResourceRequest toStaticResources() {     return StaticResourceRequest.INSTANCE. }

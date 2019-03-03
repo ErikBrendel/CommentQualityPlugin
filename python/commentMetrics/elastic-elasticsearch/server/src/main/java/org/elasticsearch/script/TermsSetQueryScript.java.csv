@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Return the parameters for this script.  */ ;/**  * Return the parameters for this script.  */ public Map<String, Object> getParams() {     return params. }
+true;public;0;3;/**  * The doc lookup for the Lucene segment this script was created for.  */ ;/**  * The doc lookup for the Lucene segment this script was created for.  */ public Map<String, ScriptDocValues<?>> getDoc() {     return leafLookup.doc(). }
+true;public;1;3;/**  * Set the current document to run the script on next.  */ ;/**  * Set the current document to run the script on next.  */ public void setDocument(int docid) {     leafLookup.setDocument(docid). }
+true;public;0;3;/**  * Return the result as a long. This is used by aggregation scripts over long fields.  */ ;/**  * Return the result as a long. This is used by aggregation scripts over long fields.  */ public long runAsLong() {     return execute().longValue(). }
+false;public,abstract;0;1;;public abstract Number execute().
+false;;1;1;;TermsSetQueryScript newInstance(LeafReaderContext ctx) throws IOException.
+false;;2;1;;LeafFactory newFactory(Map<String, Object> params, SearchLookup lookup).

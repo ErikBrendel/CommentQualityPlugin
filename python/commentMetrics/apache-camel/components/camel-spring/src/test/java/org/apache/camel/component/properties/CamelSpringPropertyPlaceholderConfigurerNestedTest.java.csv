@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/component/properties/CamelSpringPropertyPlaceholderConfigurerNestedTest.xml"). }
+false;public;0;8;;@Test public void testCamelSpringPropertyPlaceholderConfigurerTest() throws Exception {     getMockEndpoint("mock:bar").expectedBodiesReceived("And in French we say bonjour Camel").     template.sendBody("direct:bar", "Camel").     assertMockEndpointsSatisfied(). }

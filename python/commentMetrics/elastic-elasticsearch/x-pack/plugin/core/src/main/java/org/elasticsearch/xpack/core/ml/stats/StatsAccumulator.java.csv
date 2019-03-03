@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;public void add(double value) {     count++.     total += value.     min = min == null ? value : (value < min ? value : min).     max = max == null ? value : (value > max ? value : max). }
+false;public;0;3;;public double getMin() {     return min == null ? 0.0 : min. }
+false;public;0;3;;public double getMax() {     return max == null ? 0.0 : max. }
+false;public;0;3;;public double getAvg() {     return count == 0.0 ? 0.0 : total / count. }
+false;public;0;3;;public double getTotal() {     return total. }
+false;public;1;8;;public void merge(StatsAccumulator other) {     count += other.count.     total += other.total.     // note: not using Math.min/max as some internal prefetch optimization causes an NPE     min = min == null ? other.min : (other.min == null ? min : other.min < min ? other.min : min).     max = max == null ? other.max : (other.max == null ? max : other.max > max ? other.max : max). }
+false;public;0;8;;public Map<String, Double> asMap() {     Map<String, Double> map = new HashMap<>().     map.put(Fields.MIN, getMin()).     map.put(Fields.MAX, getMax()).     map.put(Fields.AVG, getAvg()).     map.put(Fields.TOTAL, getTotal()).     return map. }
+false;public;1;7;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeLong(count).     out.writeDouble(total).     out.writeOptionalDouble(min).     out.writeOptionalDouble(max). }
+false;public,static;1;4;;public static StatsAccumulator fromStatsAggregation(Stats statsAggregation) {     return new StatsAccumulator(statsAggregation.getCount(), statsAggregation.getSum(), statsAggregation.getMin(), statsAggregation.getMax()). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(count, total, min, max). }
+false;public;1;14;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     StatsAccumulator other = (StatsAccumulator) obj.     return Objects.equals(count, other.count) && Objects.equals(total, other.total) && Objects.equals(min, other.min) && Objects.equals(max, other.max). }

@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getFileId() {     return fileId. }
+false;public;1;3;;public void setFileId(String fileId) {     this.fileId = fileId. }
+false;public;0;3;;public IncomingPhotoSize getThumb() {     return thumb. }
+false;public;1;3;;public void setThumb(IncomingPhotoSize thumb) {     this.thumb = thumb. }
+false;public;0;3;;public String getFileName() {     return fileName. }
+false;public;1;3;;public void setFileName(String fileName) {     this.fileName = fileName. }
+false;public;0;3;;public String getMimeType() {     return mimeType. }
+false;public;1;3;;public void setMimeType(String mimeType) {     this.mimeType = mimeType. }
+false;public;0;3;;public Long getFileSize() {     return fileSize. }
+false;public;1;3;;public void setFileSize(Long fileSize) {     this.fileSize = fileSize. }
+false;public;0;11;;@Override public String toString() {     final StringBuilder sb = new StringBuilder("IncomingDocument{").     sb.append("fileId='").append(fileId).append('\'').     sb.append(", thumbSize='").append(thumb).append('\'').     sb.append(", fileName='").append(fileName).append('\'').     sb.append(", mimeType='").append(mimeType).append('\'').     sb.append(", fileSize=").append(fileSize).     sb.append('}').     return sb.toString(). }

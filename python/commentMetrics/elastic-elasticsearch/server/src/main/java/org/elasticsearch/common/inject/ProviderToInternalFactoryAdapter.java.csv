@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public T call(InternalContext context) throws ErrorsException {     Dependency dependency = context.getDependency().     return internalFactory.get(errors, context, dependency). }
+false;public;0;17;;@Override public T get() {     final Errors errors = new Errors().     try {         T t = injector.callInContext(new ContextualCallable<T>() {              @Override             public T call(InternalContext context) throws ErrorsException {                 Dependency dependency = context.getDependency().                 return internalFactory.get(errors, context, dependency).             }         }).         errors.throwIfNewErrors(0).         return t.     } catch (ErrorsException e) {         throw new ProvisionException(errors.merge(e.getErrors()).getMessages()).     } }
+false;public;0;4;;@Override public String toString() {     return internalFactory.toString(). }

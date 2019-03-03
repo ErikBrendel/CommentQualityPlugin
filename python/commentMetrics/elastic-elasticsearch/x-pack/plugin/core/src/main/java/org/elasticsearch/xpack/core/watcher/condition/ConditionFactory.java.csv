@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;3;1;/**  * Parses the given xcontent and creates a concrete condition  * @param watchId                   The id of the watch  * @param parser                    The parsing that contains the condition content  */ ;/**  * Parses the given xcontent and creates a concrete condition  * @param watchId                   The id of the watch  * @param parser                    The parsing that contains the condition content  */ ExecutableCondition parse(Clock clock, String watchId, XContentParser parser) throws IOException.

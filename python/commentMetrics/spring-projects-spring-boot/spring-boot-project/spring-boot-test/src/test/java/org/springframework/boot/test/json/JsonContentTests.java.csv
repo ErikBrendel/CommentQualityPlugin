@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void createWhenResourceLoadClassIsNullShouldThrowException() {     assertThatIllegalArgumentException().isThrownBy(() -> new JsonContent<ExampleObject>(null, TYPE, JSON)).withMessageContaining("ResourceLoadClass must not be null"). }
+false;public;0;6;;@Test public void createWhenJsonIsNullShouldThrowException() {     assertThatIllegalArgumentException().isThrownBy(() -> new JsonContent<ExampleObject>(getClass(), TYPE, null)).withMessageContaining("JSON must not be null"). }
+false;public;0;5;;@Test public void createWhenTypeIsNullShouldCreateContent() {     JsonContent<ExampleObject> content = new JsonContent<>(getClass(), null, JSON).     assertThat(content).isNotNull(). }
+false;public;0;6;;@Test @SuppressWarnings("deprecation") public void assertThatShouldReturnJsonContentAssert() {     JsonContent<ExampleObject> content = new JsonContent<>(getClass(), TYPE, JSON).     assertThat(content.assertThat()).isInstanceOf(JsonContentAssert.class). }
+false;public;0;6;;@Test public void getJsonShouldReturnJson() {     JsonContent<ExampleObject> content = new JsonContent<>(getClass(), TYPE, JSON).     assertThat(content.getJson()).isEqualTo(JSON). }
+false;public;0;6;;@Test public void toStringWhenHasTypeShouldReturnString() {     JsonContent<ExampleObject> content = new JsonContent<>(getClass(), TYPE, JSON).     assertThat(content.toString()).isEqualTo("JsonContent " + JSON + " created from " + TYPE). }
+false;public;0;5;;@Test public void toStringWhenHasNoTypeShouldReturnString() {     JsonContent<ExampleObject> content = new JsonContent<>(getClass(), null, JSON).     assertThat(content.toString()).isEqualTo("JsonContent " + JSON). }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Override @TestAnnotation("this value") public String doThis() {     return "doThis". }
+false;public;0;5;;@Override @TestAnnotation("that value") public String doThat() {     return "doThat". }
+false;public;0;5;;@Override @TestAnnotation("array value") public String[] doArray() {     return new String[] { "doThis", "doThat" }. }
+true;public;0;4;// not annotated ;// not annotated @Override public String doTheOther() {     return "doTheOther". }

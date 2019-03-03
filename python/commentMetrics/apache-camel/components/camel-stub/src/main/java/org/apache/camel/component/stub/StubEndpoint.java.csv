@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected StubConsumer createNewConsumer(Processor processor) {     return new StubConsumer(this, processor). }
+false;public;0;4;;@Override public Producer createProducer() throws Exception {     return new StubProducer(this, getWaitForTaskToComplete(), getTimeout(), isBlockWhenFull(), getOfferTimeout()). }

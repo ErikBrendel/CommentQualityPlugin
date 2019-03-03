@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry jndi = super.createRegistry().     jndi.bind("tap", myBean).     return jndi. }
+false;public;0;14;;@Test public void testBeanAsProcessor() throws Exception {     assertNull(myBean.getTapped()).     result.expectedBodiesReceived("Bye World").     template.sendBody("direct:start", "World").     assertMockEndpointsSatisfied().     await().atMost(2, TimeUnit.SECONDS).untilAsserted(() -> {         assertEquals("World", myBean.getTapped()).     }). }
+false;public;0;6;;@Override @Before public void setUp() throws Exception {     super.setUp().     result = getMockEndpoint("mock:result"). }
+false;public;0;7;;public void configure() {     from("direct:start").to("log:foo").wireTap("bean:tap").transform(body().prepend("Bye ")).to("mock:result"). }
+false;protected;0;11;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("direct:start").to("log:foo").wireTap("bean:tap").transform(body().prepend("Bye ")).to("mock:result").         }     }. }
+false;public;1;4;;@Override public void process(Exchange exchange) throws Exception {     tapped = exchange.getIn().getBody(String.class). }
+false;public;0;3;;public String getTapped() {     return tapped. }

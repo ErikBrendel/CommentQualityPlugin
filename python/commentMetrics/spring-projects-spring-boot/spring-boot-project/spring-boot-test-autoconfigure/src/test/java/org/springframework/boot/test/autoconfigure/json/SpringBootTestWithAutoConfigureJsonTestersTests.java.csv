@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void contextLoads() {     assertThat(this.basicJson).isNotNull().     assertThat(this.jacksonTester).isNotNull().     assertThat(this.jsonbTester).isNotNull().     assertThat(this.gsonTester).isNotNull(). }

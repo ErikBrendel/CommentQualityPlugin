@@ -1,0 +1,20 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public boolean isSupportedBy(TemporalAccessor temporal) {     return temporal.isSupported(ChronoField.INSTANT_SECONDS). }
+false;public;1;4;;@Override public long getFrom(TemporalAccessor temporal) {     return temporal.getLong(ChronoField.INSTANT_SECONDS). }
+false;public;3;11;;@Override public TemporalAccessor resolve(Map<TemporalField, Long> fieldValues, TemporalAccessor partialTemporal, ResolverStyle resolverStyle) {     long seconds = fieldValues.remove(this).     fieldValues.put(ChronoField.INSTANT_SECONDS, seconds).     Long nanos = fieldValues.remove(NANOS_OF_SECOND).     if (nanos != null) {         fieldValues.put(ChronoField.NANO_OF_SECOND, nanos).     }     return null. }
+false;public;1;4;;@Override public boolean isSupportedBy(TemporalAccessor temporal) {     return temporal.isSupported(ChronoField.NANO_OF_SECOND). }
+false;public;1;4;;@Override public long getFrom(TemporalAccessor temporal) {     return temporal.getLong(ChronoField.NANO_OF_SECOND). }
+false;public;1;4;;@Override public boolean isSupportedBy(TemporalAccessor temporal) {     return temporal.isSupported(ChronoField.INSTANT_SECONDS) && temporal.isSupported(ChronoField.MILLI_OF_SECOND). }
+false;public;1;4;;@Override public long getFrom(TemporalAccessor temporal) {     return temporal.getLong(ChronoField.INSTANT_SECONDS) * 1_000 + temporal.getLong(ChronoField.MILLI_OF_SECOND). }
+false;public;3;18;;@Override public TemporalAccessor resolve(Map<TemporalField, Long> fieldValues, TemporalAccessor partialTemporal, ResolverStyle resolverStyle) {     long secondsAndMillis = fieldValues.remove(this).     long seconds = secondsAndMillis / 1_000.     long nanos = secondsAndMillis % 1000 * 1_000_000.     Long nanosOfMilli = fieldValues.remove(NANOS_OF_MILLI).     if (nanosOfMilli != null) {         nanos += nanosOfMilli.     }     fieldValues.put(ChronoField.INSTANT_SECONDS, seconds).     fieldValues.put(ChronoField.NANO_OF_SECOND, nanos).     // if there is already a milli of second, we need to overwrite it     if (fieldValues.containsKey(ChronoField.MILLI_OF_SECOND)) {         fieldValues.put(ChronoField.MILLI_OF_SECOND, nanos / 1_000_000).     }     return null. }
+false;public;1;5;;@Override public boolean isSupportedBy(TemporalAccessor temporal) {     return temporal.isSupported(ChronoField.INSTANT_SECONDS) && temporal.isSupported(ChronoField.NANO_OF_SECOND) && temporal.getLong(ChronoField.NANO_OF_SECOND) % 1_000_000 != 0. }
+false;public;1;4;;@Override public long getFrom(TemporalAccessor temporal) {     return temporal.getLong(ChronoField.NANO_OF_SECOND) % 1_000_000. }
+false;public;1;4;;@Override public String getDisplayName(Locale locale) {     return toString(). }
+false;public;0;4;;@Override public String toString() {     return "Epoch" + baseUnit.toString() + (rangeUnit != ChronoUnit.FOREVER ? "Of" + rangeUnit.toString() : ""). }
+false;public;0;4;;@Override public TemporalUnit getBaseUnit() {     return baseUnit. }
+false;public;0;4;;@Override public TemporalUnit getRangeUnit() {     return rangeUnit. }
+false;public;0;4;;@Override public ValueRange range() {     return range. }
+false;public;0;4;;@Override public boolean isDateBased() {     return false. }
+false;public;0;4;;@Override public boolean isTimeBased() {     return true. }
+false;public;1;4;;@Override public ValueRange rangeRefinedBy(TemporalAccessor temporal) {     return range(). }
+false;public;2;5;;@SuppressWarnings("unchecked") @Override public <R extends Temporal> R adjustInto(R temporal, long newValue) {     return (R) temporal.with(this, newValue). }

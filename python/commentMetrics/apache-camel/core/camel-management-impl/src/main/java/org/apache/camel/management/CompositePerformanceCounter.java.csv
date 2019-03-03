@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;9;;@Override public void processExchange(Exchange exchange) {     if (counter1.isStatisticsEnabled()) {         counter1.processExchange(exchange).     }     if (counter2.isStatisticsEnabled()) {         counter2.processExchange(exchange).     } }
+false;public;2;9;;@Override public void completedExchange(Exchange exchange, long time) {     if (counter1.isStatisticsEnabled()) {         counter1.completedExchange(exchange, time).     }     if (counter2.isStatisticsEnabled()) {         counter2.completedExchange(exchange, time).     } }
+false;public;1;9;;@Override public void failedExchange(Exchange exchange) {     if (counter1.isStatisticsEnabled()) {         counter1.failedExchange(exchange).     }     if (counter2.isStatisticsEnabled()) {         counter2.failedExchange(exchange).     } }
+false;public;0;5;;@Override public boolean isStatisticsEnabled() {     // this method is not used     return true. }
+false;public;1;4;;@Override public void setStatisticsEnabled(boolean statisticsEnabled) { // this method is not used }

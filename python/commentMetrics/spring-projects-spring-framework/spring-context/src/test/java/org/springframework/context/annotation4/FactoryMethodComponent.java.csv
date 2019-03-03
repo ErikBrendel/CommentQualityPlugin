@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;3;;public static TestBean nullInstance() {     return null. }
+false;public;0;4;;@Bean @Qualifier("public") public TestBean publicInstance() {     return new TestBean("publicInstance"). }
+true;public;1;3;// to be ignored ;// to be ignored public TestBean publicInstance(boolean doIt) {     return new TestBean("publicInstance"). }
+false;protected;2;7;;@Bean @BeanAge(1) protected TestBean protectedInstance(@Qualifier("public") TestBean spouse, @Value("#{privateInstance.age}") String country) {     TestBean tb = new TestBean("protectedInstance", 1).     tb.setSpouse(tb).     tb.setCountry(country).     return tb. }
+false;private;0;4;;@Bean @Scope("prototype") private TestBean privateInstance() {     return new TestBean("privateInstance", i++). }
+false;public;0;4;;@Bean @Scope(value = "request", proxyMode = ScopedProxyMode.TARGET_CLASS) public TestBean requestScopedInstance() {     return new TestBean("requestScopedInstance", 3). }
+false;public;0;4;;@Bean public DependencyBean secondInstance() {     return new DependencyBean(). }

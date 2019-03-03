@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void beanWasImported() {     assertThat(this.bean).isNotNull(). }
+false;public;0;5;;@Test public void testItselfIsNotABean() {     assertThatExceptionOfType(NoSuchBeanDefinitionException.class).isThrownBy(() -> this.context.getBean(getClass())). }

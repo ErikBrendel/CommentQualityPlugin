@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Return the data the properties being merged.  * @return the data  */ ;/**  * Return the data the properties being merged.  * @return the data  */ public Properties getData() {     return this.data. }
+false;public;1;7;;@Override public boolean canTransformResource(String resource) {     if (this.resource != null && this.resource.equalsIgnoreCase(resource)) {         return true.     }     return false. }
+false;public;3;8;;@Override public void processResource(String resource, InputStream inputStream, List<Relocator> relocators) throws IOException {     Properties properties = new Properties().     properties.load(inputStream).     inputStream.close().     properties.forEach((name, value) -> process((String) name, (String) value)). }
+false;private;2;4;;private void process(String name, String value) {     String existing = this.data.getProperty(name).     this.data.setProperty(name, (existing != null) ? existing + "," + value : value). }
+false;public;0;4;;@Override public boolean hasTransformedResource() {     return !this.data.isEmpty(). }
+false;public;1;7;;@Override public void modifyOutputStream(JarOutputStream os) throws IOException {     os.putNextEntry(new JarEntry(this.resource)).     this.data.store(os, "Merged by PropertiesMergingResourceTransformer").     os.flush().     this.data.clear(). }
+false;public;0;3;;public String getResource() {     return this.resource. }
+false;public;1;3;;public void setResource(String resource) {     this.resource = resource. }

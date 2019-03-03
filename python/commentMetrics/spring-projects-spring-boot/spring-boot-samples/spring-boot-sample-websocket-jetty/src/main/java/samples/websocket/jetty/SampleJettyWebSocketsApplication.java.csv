@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {     registry.addHandler(echoWebSocketHandler(), "/echo").withSockJS().     registry.addHandler(snakeWebSocketHandler(), "/snake").withSockJS(). }
+false;protected;1;4;;@Override protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {     return application.sources(SampleJettyWebSocketsApplication.class). }
+false;public;0;4;;@Bean public EchoService echoService() {     return new DefaultEchoService("Did you say \"%s\"?"). }
+false;public;0;4;;@Bean public GreetingService greetingService() {     return new SimpleGreetingService(). }
+false;public;0;4;;@Bean public WebSocketHandler echoWebSocketHandler() {     return new EchoWebSocketHandler(echoService()). }
+false;public;0;4;;@Bean public WebSocketHandler snakeWebSocketHandler() {     return new PerConnectionWebSocketHandler(SnakeWebSocketHandler.class). }
+false;public;0;4;;@Bean public ReverseWebSocketEndpoint reverseWebSocketEndpoint() {     return new ReverseWebSocketEndpoint(). }
+false;public;0;4;;@Bean public ServerEndpointExporter serverEndpointExporter() {     return new ServerEndpointExporter(). }
+false;public,static;1;3;;public static void main(String[] args) {     SpringApplication.run(SampleJettyWebSocketsApplication.class, args). }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;public String echo(String name) {     if (name.startsWith("Kabom")) {         throw new MyEchoRuntimeException("Damn something went wrong").     }     return name + " " + name. }

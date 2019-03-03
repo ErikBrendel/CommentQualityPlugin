@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;1;6;;private void mkdirs(Path path) throws IOException {     execute((Operation<Void>) fileContext -> {         fileContext.mkdir(path, null, true).         return null.     }). }
+false;public;1;7;;@Override public void delete(BlobPath path) throws IOException {     execute((Operation<Void>) fc -> {         fc.delete(translateToHdfsPath(path), true).         return null.     }). }
+false;public;0;4;;@Override public String toString() {     return root.toUri().toString(). }
+false;public;1;4;;@Override public BlobContainer blobContainer(BlobPath path) {     return new HdfsBlobContainer(path, this, buildHdfsPath(path), bufferSize, securityContext). }
+false;private;1;13;;private Path buildHdfsPath(BlobPath blobPath) {     final Path path = translateToHdfsPath(blobPath).     if (!readOnly) {         try {             mkdirs(path).         } catch (FileAlreadyExistsException ok) {         // behaves like Files.createDirectories         } catch (IOException ex) {             throw new ElasticsearchException("failed to create blob container", ex).         }     }     return path. }
+false;private;1;7;;private Path translateToHdfsPath(BlobPath blobPath) {     Path path = root.     for (String p : blobPath) {         path = new Path(path, p).     }     return path. }
+false;;1;1;;V run(FileContext fileContext) throws IOException.
+true;;1;9;/**  * Executes the provided operation against this store  */ ;/**  * Executes the provided operation against this store  */ <V> V execute(Operation<V> operation) throws IOException {     if (closed) {         throw new AlreadyClosedException("HdfsBlobStore is closed: " + this).     }     return securityContext.doPrivilegedOrThrow(() -> {         securityContext.ensureLogin().         return operation.run(fileContext).     }). }
+false;public;0;4;;@Override public void close() {     closed = true. }

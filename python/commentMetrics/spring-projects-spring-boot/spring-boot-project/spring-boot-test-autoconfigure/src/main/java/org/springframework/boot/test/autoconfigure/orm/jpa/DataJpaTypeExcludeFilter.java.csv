@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected boolean hasAnnotation() {     return this.annotation != null. }
+false;protected;1;10;;@Override protected Filter[] getFilters(FilterType type) {     switch(type) {         case INCLUDE:             return this.annotation.includeFilters().         case EXCLUDE:             return this.annotation.excludeFilters().     }     throw new IllegalStateException("Unsupported type " + type). }
+false;protected;0;4;;@Override protected boolean isUseDefaultFilters() {     return this.annotation.useDefaultFilters(). }
+false;protected;0;4;;@Override protected Set<Class<?>> getDefaultIncludes() {     return Collections.emptySet(). }
+false;protected;0;4;;@Override protected Set<Class<?>> getComponentIncludes() {     return Collections.emptySet(). }

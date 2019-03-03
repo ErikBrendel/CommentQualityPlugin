@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;3;4;// @formatter:off ;// @formatter:off @GET @Path("/v{apiVersion}/posts/{postId}/revisions") @Produces(MediaType.APPLICATION_JSON) List<PostRevision> list(@PathParam("apiVersion") String apiVersion, @PathParam("postId") int postId, @QueryParam("context") Context context).
+false;;4;4;;@GET @Path("/v{apiVersion}/posts/{postId}/revisions/{id}") @Produces(MediaType.APPLICATION_JSON) PostRevision retrieveRevision(@PathParam("apiVersion") String apiVersion, @PathParam("postId") int postId, @PathParam("id") int revisionId, @QueryParam("context") Context context).
+false;;3;4;;@DELETE @Path("/v{apiVersion}/posts/{postId}/revisions/{id}") @Produces(MediaType.APPLICATION_JSON) void delete(@PathParam("apiVersion") String apiVersion, @PathParam("postId") int postId, @PathParam("id") int revisionId).

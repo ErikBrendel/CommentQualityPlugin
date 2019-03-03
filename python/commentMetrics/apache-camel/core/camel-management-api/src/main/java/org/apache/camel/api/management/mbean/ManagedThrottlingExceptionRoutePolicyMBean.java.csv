@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;2;;@ManagedAttribute(description = "How long to wait before moving open circuit to half open") Long getHalfOpenAfter().
+false;;1;2;;@ManagedAttribute(description = "How long to wait before moving open circuit to half open") void setHalfOpenAfter(Long milliseconds).
+false;;0;2;;@ManagedAttribute(description = "The range of time that failures should occur within") Long getFailureWindow().
+false;;1;2;;@ManagedAttribute(description = "The range of time that failures should occur within") void setFailureWindow(Long milliseconds).
+false;;0;2;;@ManagedAttribute(description = "Number of failures before opening circuit") Integer getFailureThreshold().
+false;;1;2;;@ManagedAttribute(description = "Number of failures before opening circuit") void setFailureThreshold(Integer numberOfFailures).
+false;;0;2;;@ManagedOperation(description = "The current state of the circuit") String currentState().
+false;;0;2;;@ManagedAttribute(description = "The half open handler registered (if any)") String getHalfOpenHandlerName().
+false;;0;2;;@ManagedAttribute(description = "The number of failures caught") Integer getCurrentFailures().
+false;;0;2;;@ManagedAttribute(description = "Number of ms since the last failure was recorded") Long getLastFailure().
+false;;0;2;;@ManagedAttribute(description = "Number ms since the circuit was opened") Long getOpenAt().

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;1;3;;@Oneway @WebMethod(operationName = "InvokeOneWay") void invokeOneWay(@WebParam(partName = "InvokeOneWayRequest", mode = WebParam.Mode.IN) String in).
+false;;2;3;;@WebMethod(operationName = "Invoke") void invoke(@WebParam(partName = "InvokeRequest", mode = WebParam.Mode.IN) String in, @WebParam(partName = "InvokeResponse", mode = WebParam.Mode.OUT) String out).

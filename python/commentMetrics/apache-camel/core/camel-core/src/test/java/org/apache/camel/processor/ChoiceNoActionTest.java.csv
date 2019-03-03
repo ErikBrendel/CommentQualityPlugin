@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Test public void testWhen() throws Exception {     getMockEndpoint("mock:world").expectedMessageCount(1).     template.sendBody("direct:start", "Hello World").     assertMockEndpointsSatisfied(). }
+false;public;0;8;;@Test public void testNoAction() throws Exception {     getMockEndpoint("mock:world").expectedMessageCount(0).     template.sendBody("direct:start", "No action please").     assertMockEndpointsSatisfied(). }
+false;public;0;6;;public void configure() {     from("direct:start").choice().when(body().isEqualTo("Hello World")).to("mock:world"). // other kind of messages take no action }
+false;protected;0;10;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("direct:start").choice().when(body().isEqualTo("Hello World")).to("mock:world").         // other kind of messages take no action         }     }. }

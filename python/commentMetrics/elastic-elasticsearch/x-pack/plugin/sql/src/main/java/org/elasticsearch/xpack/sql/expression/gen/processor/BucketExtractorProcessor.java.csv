@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeNamedWriteable(extractor). }
+false;public;0;4;;@Override public String getWriteableName() {     return NAME. }
+false;public;1;7;;@Override public Object process(Object input) {     if (!(input instanceof Bucket)) {         throw new SqlIllegalArgumentException("Expected an agg bucket but received {}", input).     }     return extractor.extract((Bucket) input). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(extractor). }
+false;public;1;13;;@Override public boolean equals(Object obj) {     if (this == obj) {         return true.     }     if (obj == null || getClass() != obj.getClass()) {         return false.     }     BucketExtractorProcessor other = (BucketExtractorProcessor) obj.     return Objects.equals(extractor, other.extractor). }
+false;public;0;4;;@Override public String toString() {     return extractor.toString(). }

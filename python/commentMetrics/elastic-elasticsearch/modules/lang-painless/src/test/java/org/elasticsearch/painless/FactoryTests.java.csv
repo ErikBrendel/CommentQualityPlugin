@@ -1,0 +1,36 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;10;;@Override protected Map<ScriptContext<?>, List<Whitelist>> scriptContexts() {     Map<ScriptContext<?>, List<Whitelist>> contexts = super.scriptContexts().     contexts.put(StatefulFactoryTestScript.CONTEXT, Whitelist.BASE_WHITELISTS).     contexts.put(FactoryTestScript.CONTEXT, Whitelist.BASE_WHITELISTS).     contexts.put(EmptyTestScript.CONTEXT, Whitelist.BASE_WHITELISTS).     contexts.put(TemplateScript.CONTEXT, Whitelist.BASE_WHITELISTS).     return contexts. }
+false;public;0;3;;public int getX() {     return x. }
+false;public;0;3;;public int getY() {     return y * 2. }
+false;public;0;3;;public int getC() {     return -1. }
+false;public;0;3;;public int getD() {     return 2. }
+false;public,abstract;1;1;;public abstract Object execute(int test).
+false;public,abstract;0;1;;public abstract boolean needsTest().
+false;public,abstract;0;1;;public abstract boolean needsNothing().
+false;public,abstract;0;1;;public abstract boolean needsX().
+false;public,abstract;0;1;;public abstract boolean needsC().
+false;public,abstract;0;1;;public abstract boolean needsD().
+false;;2;1;;StatefulFactoryTestScript newInstance(int a, int b).
+false;;0;1;;boolean needsTest().
+false;;0;1;;boolean needsNothing().
+false;;0;1;;boolean needsX().
+false;;0;1;;boolean needsC().
+false;;0;1;;boolean needsD().
+false;;2;1;;StatefulFactory newFactory(int x, int y).
+false;;0;1;;boolean needsTest().
+false;;0;1;;boolean needsNothing().
+false;;0;1;;boolean needsX().
+false;;0;1;;boolean needsC().
+false;;0;1;;boolean needsD().
+false;public;0;24;;public void testStatefulFactory() {     StatefulFactoryTestScript.Factory factory = scriptEngine.compile("stateful_factory_test", "test + x + y + d", StatefulFactoryTestScript.CONTEXT, Collections.emptyMap()).     StatefulFactoryTestScript.StatefulFactory statefulFactory = factory.newFactory(1, 2).     StatefulFactoryTestScript script = statefulFactory.newInstance(3, 4).     assertEquals(24, script.execute(3)).     statefulFactory.newInstance(5, 6).     assertEquals(28, script.execute(7)).     assertEquals(true, script.needsTest()).     assertEquals(false, script.needsNothing()).     assertEquals(true, script.needsX()).     assertEquals(false, script.needsC()).     assertEquals(true, script.needsD()).     assertEquals(true, statefulFactory.needsTest()).     assertEquals(false, statefulFactory.needsNothing()).     assertEquals(true, statefulFactory.needsX()).     assertEquals(false, statefulFactory.needsC()).     assertEquals(true, statefulFactory.needsD()).     assertEquals(true, factory.needsTest()).     assertEquals(false, factory.needsNothing()).     assertEquals(true, factory.needsX()).     assertEquals(false, factory.needsC()).     assertEquals(true, factory.needsD()). }
+false;public;0;3;;public Map<String, Object> getParams() {     return params. }
+false;public,abstract;1;1;;public abstract Object execute(int test).
+false;;1;1;;FactoryTestScript newInstance(Map<String, Object> params).
+false;;0;1;;boolean needsTest().
+false;;0;1;;boolean needsNothing().
+false;public;0;12;;public void testFactory() {     FactoryTestScript.Factory factory = scriptEngine.compile("factory_test", "test + params.get('test')", FactoryTestScript.CONTEXT, Collections.emptyMap()).     FactoryTestScript script = factory.newInstance(Collections.singletonMap("test", 2)).     assertEquals(4, script.execute(2)).     assertEquals(5, script.execute(3)).     script = factory.newInstance(Collections.singletonMap("test", 3)).     assertEquals(5, script.execute(2)).     assertEquals(2, script.execute(-1)).     assertEquals(true, factory.needsTest()).     assertEquals(false, factory.needsNothing()). }
+false;public,abstract;0;1;;public abstract Object execute().
+false;;0;1;;EmptyTestScript newInstance().
+false;public;0;9;;public void testEmpty() {     EmptyTestScript.Factory factory = scriptEngine.compile("empty_test", "1", EmptyTestScript.CONTEXT, Collections.emptyMap()).     EmptyTestScript script = factory.newInstance().     assertEquals(1, script.execute()).     assertEquals(1, script.execute()).     script = factory.newInstance().     assertEquals(1, script.execute()).     assertEquals(1, script.execute()). }
+false;public;0;10;;public void testTemplate() {     TemplateScript.Factory factory = scriptEngine.compile("template_test", "params['test']", TemplateScript.CONTEXT, Collections.emptyMap()).     TemplateScript script = factory.newInstance(Collections.singletonMap("test", "abc")).     assertEquals("abc", script.execute()).     assertEquals("abc", script.execute()).     script = factory.newInstance(Collections.singletonMap("test", "def")).     assertEquals("def", script.execute()).     assertEquals("def", script.execute()). }
+false;public;0;8;;public void testGetterInLambda() {     FactoryTestScript.Factory factory = scriptEngine.compile("template_test", "IntSupplier createLambda(IntSupplier s) { return s. } createLambda(() -> params['x'] + test).getAsInt()", FactoryTestScript.CONTEXT, Collections.emptyMap()).     FactoryTestScript script = factory.newInstance(Collections.singletonMap("x", 1)).     assertEquals(2, script.execute(1)). }

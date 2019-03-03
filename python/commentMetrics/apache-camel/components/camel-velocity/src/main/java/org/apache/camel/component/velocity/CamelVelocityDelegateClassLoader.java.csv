@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;7;;protected Class<?> findClass(String name) throws ClassNotFoundException {     if (CAMLE_VELOCITY_CLASSPATH_RESOURCE_LOADER.equals(name)) {         return CamelVelocityClasspathResourceLoader.class.     }     return super.findClass(name). }

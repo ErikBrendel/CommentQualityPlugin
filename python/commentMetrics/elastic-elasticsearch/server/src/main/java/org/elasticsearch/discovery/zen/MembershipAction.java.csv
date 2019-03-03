@@ -1,0 +1,22 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;1;;void onSuccess().
+false;;1;1;;void onFailure(Exception e).
+false;;2;1;;void onJoin(DiscoveryNode node, JoinCallback callback).
+false;;1;1;;void onLeave(DiscoveryNode node).
+false;public;2;4;;public void sendLeaveRequest(DiscoveryNode masterNode, DiscoveryNode node) {     transportService.sendRequest(node, DISCOVERY_LEAVE_ACTION_NAME, new LeaveRequest(masterNode), EmptyTransportResponseHandler.INSTANCE_SAME). }
+false;public;3;4;;public void sendLeaveRequestBlocking(DiscoveryNode masterNode, DiscoveryNode node, TimeValue timeout) {     transportService.submitRequest(masterNode, DISCOVERY_LEAVE_ACTION_NAME, new LeaveRequest(node), EmptyTransportResponseHandler.INSTANCE_SAME).txGet(timeout.millis(), TimeUnit.MILLISECONDS). }
+false;public;3;4;;public void sendJoinRequestBlocking(DiscoveryNode masterNode, DiscoveryNode node, TimeValue timeout) {     transportService.submitRequest(masterNode, DISCOVERY_JOIN_ACTION_NAME, new JoinRequest(node), EmptyTransportResponseHandler.INSTANCE_SAME).txGet(timeout.millis(), TimeUnit.MILLISECONDS). }
+true;public;3;4;/**  * Validates the join request, throwing a failure if it failed.  */ ;/**  * Validates the join request, throwing a failure if it failed.  */ public void sendValidateJoinRequestBlocking(DiscoveryNode node, ClusterState state, TimeValue timeout) {     transportService.submitRequest(node, DISCOVERY_JOIN_VALIDATE_ACTION_NAME, new ValidateJoinRequest(state), EmptyTransportResponseHandler.INSTANCE_SAME).txGet(timeout.millis(), TimeUnit.MILLISECONDS). }
+false;public;0;3;;public DiscoveryNode getNode() {     return node. }
+false;public;1;5;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     node = new DiscoveryNode(in). }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     node.writeTo(out). }
+false;public;0;8;;@Override public void onSuccess() {     try {         channel.sendResponse(TransportResponse.Empty.INSTANCE).     } catch (Exception e) {         onFailure(e).     } }
+false;public;1;9;;@Override public void onFailure(Exception e) {     try {         channel.sendResponse(e).     } catch (Exception inner) {         inner.addSuppressed(e).         logger.warn("failed to send back failure on join request", inner).     } }
+false;public;3;23;;@Override public void messageReceived(final JoinRequest request, final TransportChannel channel, Task task) throws Exception {     listener.onJoin(request.getNode(), new JoinCallback() {          @Override         public void onSuccess() {             try {                 channel.sendResponse(TransportResponse.Empty.INSTANCE).             } catch (Exception e) {                 onFailure(e).             }         }          @Override         public void onFailure(Exception e) {             try {                 channel.sendResponse(e).             } catch (Exception inner) {                 inner.addSuppressed(e).                 logger.warn("failed to send back failure on join request", inner).             }         }     }). }
+false;public;1;5;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     this.state = ClusterState.readFrom(in, null). }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     this.state.writeTo(out). }
+false;public;0;3;;public ClusterState getState() {     return state. }
+false;public;3;7;;@Override public void messageReceived(ValidateJoinRequest request, TransportChannel channel, Task task) throws Exception {     DiscoveryNode node = localNodeSupplier.get().     assert node != null : "local node is null".     joinValidators.stream().forEach(action -> action.accept(node, request.state)).     channel.sendResponse(TransportResponse.Empty.INSTANCE). }
+false;public;1;5;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     node = new DiscoveryNode(in). }
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     node.writeTo(out). }
+false;public;3;5;;@Override public void messageReceived(LeaveRequest request, TransportChannel channel, Task task) throws Exception {     listener.onLeave(request.node).     channel.sendResponse(TransportResponse.Empty.INSTANCE). }

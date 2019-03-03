@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void testSQLEndpoint() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMessageCount(2).     template.sendBody("direct:start", "").     assertMockEndpointsSatisfied(). }
+false;protected;0;9;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry jndi = super.createRegistry().     // this is the database we create with some initial data for our unit test     db = new EmbeddedDatabaseBuilder().setType(EmbeddedDatabaseType.DERBY).addScript("sql/createAndPopulateDatabase.sql").build().     jndi.bind("jdbc/myDataSource", db).     return jndi. }
+false;public;0;5;;@After public void tearDown() throws Exception {     super.tearDown().     db.shutdown(). }
+false;public;0;6;;public void configure() throws Exception {     from("direct:start").to("sql:select * from projects where license like 'A%25'?dataSource=#jdbc/myDataSource").split(body()).to("mock:result"). }
+false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from("direct:start").to("sql:select * from projects where license like 'A%25'?dataSource=#jdbc/myDataSource").split(body()).to("mock:result").         }     }. }

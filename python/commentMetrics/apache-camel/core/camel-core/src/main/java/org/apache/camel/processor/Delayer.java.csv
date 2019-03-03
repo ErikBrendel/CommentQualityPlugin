@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String toString() {     return "Delayer[" + delay + " to: " + getProcessor() + "]". }
+false;public;0;3;;public String getId() {     return id. }
+false;public;1;3;;public void setId(String id) {     this.id = id. }
+false;public;0;3;;public String getTraceLabel() {     return "delay[" + delay + "]". }
+false;public;0;3;;public Expression getDelay() {     return delay. }
+false;public;0;3;;public long getDelayValue() {     return delayValue. }
+false;public;1;3;;public void setDelay(Expression delay) {     this.delay = delay. }
+false;protected;1;18;;// Implementation methods // ------------------------------------------------------------------------- protected long calculateDelay(Exchange exchange) {     long time = 0.     if (delay != null) {         Long longValue = delay.evaluate(exchange, Long.class).         if (longValue != null) {             delayValue = longValue.             time = longValue.         } else {             delayValue = 0.         }     }     if (time <= 0) {         // no delay         return 0.     }     return time. }

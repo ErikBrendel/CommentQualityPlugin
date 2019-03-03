@@ -1,0 +1,43 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;public Map<String, Object> get(int index) {     dataSet.absolute(index).     return FlatpackConverter.toMap(dataSet). }
+false;public;0;3;;public int size() {     return dataSet.getRowCount(). }
+false;public;0;3;;public boolean hasNext() {     return hasNext. }
+false;public;0;7;;public Map<String, Object> next() {     // because of a limitation in split() we need to create an object for the current position     // otherwise strangeness occurs when the same object is used to represent each row     Map<String, Object> result = FlatpackConverter.toMap(dataSet).     hasNext = dataSet.next().     return result. }
+false;public;0;3;;public void remove() {     throw new UnsupportedOperationException("remove() not supported"). }
+false;public;0;23;;@Override public Iterator<Map<String, Object>> iterator() {     dataSet.goTop().     return new Iterator<Map<String, Object>>() {          private boolean hasNext = dataSet.next().          public boolean hasNext() {             return hasNext.         }          public Map<String, Object> next() {             // because of a limitation in split() we need to create an object for the current position             // otherwise strangeness occurs when the same object is used to represent each row             Map<String, Object> result = FlatpackConverter.toMap(dataSet).             hasNext = dataSet.next().             return result.         }          public void remove() {             throw new UnsupportedOperationException("remove() not supported").         }     }. }
+false;public;0;4;;// delegate methods // -------------------------------------------------------------- @Override public void goTop() {     dataSet.goTop(). }
+false;public;0;4;;@Override public void goBottom() {     dataSet.goBottom(). }
+false;public;0;4;;@Override public boolean previous() {     return dataSet.previous(). }
+false;public;0;4;;@Override public List getErrors() {     return dataSet.getErrors(). }
+false;public;0;4;;@Override public void remove() {     dataSet.remove(). }
+false;public;0;4;;@Override public int getIndex() {     return dataSet.getIndex(). }
+false;public;0;4;;@Override public int getRowCount() {     return dataSet.getRowCount(). }
+false;public;0;4;;@Override public int getErrorCount() {     return dataSet.getErrorCount(). }
+false;public;1;4;;@Override public boolean isAnError(int lineNo) {     return dataSet.isAnError(lineNo). }
+false;public;1;4;;@Override public void orderRows(OrderBy ob) {     dataSet.orderRows(ob). }
+false;public;0;4;;@Override public void setLowerCase() {     dataSet.setLowerCase(). }
+false;public;0;4;;@Override public void setUpperCase() {     dataSet.setUpperCase(). }
+false;public;1;4;;@Override public void absolute(int localPointer) {     dataSet.absolute(localPointer). }
+false;public;1;4;;@Override public void setStrictNumericParse(boolean strictNumericParse) {     dataSet.setStrictNumericParse(strictNumericParse). }
+false;public;1;4;;@Override public void setPZConvertProps(Properties props) {     dataSet.setPZConvertProps(props). }
+false;public;2;4;;@Override public void setValue(String column, String value) {     dataSet.setValue(column, value). }
+false;public;0;4;;@Override public void clearRows() {     dataSet.clearRows(). }
+false;public;0;4;;@Override public void clearErrors() {     dataSet.clearErrors(). }
+false;public;0;4;;@Override public void clearAll() {     dataSet.clearAll(). }
+false;public;1;4;;@Override public String getString(String column) {     return dataSet.getString(column). }
+false;public;1;4;;@Override public double getDouble(String column) {     return dataSet.getDouble(column). }
+false;public;1;4;;@Override public BigDecimal getBigDecimal(String column) {     return dataSet.getBigDecimal(column). }
+false;public;1;4;;@Override public int getInt(String column) {     return dataSet.getInt(column). }
+false;public;1;4;;@Override public long getLong(String column) {     return dataSet.getLong(column). }
+false;public;1;4;;@Override public Date getDate(String column) throws ParseException {     return dataSet.getDate(column). }
+false;public;2;4;;@Override public Date getDate(String column, SimpleDateFormat sdf) throws ParseException {     return dataSet.getDate(column, sdf). }
+false;public;2;4;;@Override public Object getObject(String column, Class<?> classToConvertTo) {     return dataSet.getObject(column, classToConvertTo). }
+false;public;0;4;;@Override public String[] getColumns() {     return dataSet.getColumns(). }
+false;public;1;4;;@Override public String[] getColumns(String recordID) {     return dataSet.getColumns(recordID). }
+false;public;0;4;;@Override public int getRowNo() {     return dataSet.getRowNo(). }
+false;public;1;4;;@Override public boolean isRecordID(String recordID) {     return dataSet.isRecordID(recordID). }
+false;public;1;4;;@Override public boolean contains(String column) {     return dataSet.contains(column). }
+false;public;0;4;;@Override public boolean isRowEmpty() {     return dataSet.isRowEmpty(). }
+false;public;0;4;;@Override public String getRawData() {     return dataSet.getRawData(). }
+false;public;0;4;;@Override public boolean next() {     return dataSet.next(). }
+false;public;0;4;;@Override public Record getRecord() {     return dataSet.getRecord(). }

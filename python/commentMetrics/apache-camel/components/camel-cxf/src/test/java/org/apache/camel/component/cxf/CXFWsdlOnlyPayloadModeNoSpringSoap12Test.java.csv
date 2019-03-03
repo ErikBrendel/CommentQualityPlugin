@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean isCreateCamelContextPerClass() {     return true. }
+false;public;0;6;;@Before public void startService() {     endpoint = Endpoint.publish("http://localhost:" + port1 + "/" + getClass().getSimpleName() + "/PersonService", new PersonImpl12()). }
+false;protected;0;4;;@Override protected String getServiceName() {     return "{http://camel.apache.org/wsdl-first}PersonService12". }
+false;protected;1;4;;@Override protected void checkSOAPAction(Exchange exchange) {     assertEquals(exchange.getIn().getHeader("SOAPAction"), "GetPersonAction"). }

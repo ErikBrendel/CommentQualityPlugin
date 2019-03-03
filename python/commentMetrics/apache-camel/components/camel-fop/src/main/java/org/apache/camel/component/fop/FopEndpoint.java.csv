@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Producer createProducer() throws Exception {     return new FopProducer(this, fopFactory, outputType.getFormatExtended()). }
+false;public;1;3;;public Consumer createConsumer(Processor processor) throws Exception {     throw new UnsupportedOperationException("Consumer not supported for FOP endpoint"). }
+false;public;0;3;;public boolean isSingleton() {     return true. }
+false;public;0;3;;public FopOutputType getOutputType() {     return outputType. }
+true;public;1;3;/**  * The primary output format is PDF but other output formats are also supported.  */ ;/**  * The primary output format is PDF but other output formats are also supported.  */ public void setOutputType(FopOutputType outputType) {     this.outputType = outputType. }
+false;public;0;3;;public String getUserConfigURL() {     return userConfigURL. }
+true;public;1;3;/**  * The location of a configuration file which can be loaded from classpath or file system.  */ ;/**  * The location of a configuration file which can be loaded from classpath or file system.  */ public void setUserConfigURL(String userConfigURL) {     this.userConfigURL = userConfigURL. }
+false;public;0;3;;public FopFactory getFopFactory() {     return fopFactory. }
+true;public;1;3;/**  * Allows to use a custom configured or implementation of org.apache.fop.apps.FopFactory.  */ ;/**  * Allows to use a custom configured or implementation of org.apache.fop.apps.FopFactory.  */ public void setFopFactory(FopFactory fopFactory) {     this.fopFactory = fopFactory. }
+false;protected;0;14;;@Override protected void doStart() throws Exception {     super.doStart().     if (fopFactory == null && userConfigURL == null) {         fopFactory = FopFactory.newInstance(new URI("./")).     } else if (fopFactory != null && userConfigURL != null) {         throw new FopConfigException("More than one configuration. " + "You can configure fop either by config file or by supplying FopFactory but not both.").     } else if (fopFactory == null && userConfigURL != null) {         InputStream is = ResourceHelper.resolveMandatoryResourceAsInputStream(getCamelContext(), userConfigURL).         fopFactory = FopFactory.newInstance(new URI(userConfigURL), is).     } }

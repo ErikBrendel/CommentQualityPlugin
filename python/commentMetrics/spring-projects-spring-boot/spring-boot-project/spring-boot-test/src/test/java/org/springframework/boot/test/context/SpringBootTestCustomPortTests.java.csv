@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void validatePortIsNotOverwritten() {     String port = this.environment.getProperty("server.port").     assertThat(port).isEqualTo("12345"). }

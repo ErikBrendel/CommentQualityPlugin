@@ -1,0 +1,29 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getFhirVersion() {     return fhirVersion. }
+false;public;1;3;;public void setFhirVersion(String fhirVersion) {     this.fhirVersion = fhirVersion. }
+false;public;0;3;;public Boolean getPrettyPrint() {     return prettyPrint. }
+false;public;1;3;;public void setPrettyPrint(Boolean prettyPrint) {     this.prettyPrint = prettyPrint. }
+false;public;0;3;;public String getServerBaseUrl() {     return serverBaseUrl. }
+false;public;1;3;;public void setServerBaseUrl(String serverBaseUrl) {     this.serverBaseUrl = serverBaseUrl. }
+false;public;0;3;;public Boolean getOmitResourceId() {     return omitResourceId. }
+false;public;1;3;;public void setOmitResourceId(Boolean omitResourceId) {     this.omitResourceId = omitResourceId. }
+false;public;0;3;;public String getEncodeElementsAppliesToResourceTypes() {     return encodeElementsAppliesToResourceTypes. }
+false;public;1;4;;public void setEncodeElementsAppliesToResourceTypes(String encodeElementsAppliesToResourceTypes) {     this.encodeElementsAppliesToResourceTypes = encodeElementsAppliesToResourceTypes. }
+false;public;0;3;;public Boolean getEncodeElementsAppliesToChildResourcesOnly() {     return encodeElementsAppliesToChildResourcesOnly. }
+false;public;1;4;;public void setEncodeElementsAppliesToChildResourcesOnly(Boolean encodeElementsAppliesToChildResourcesOnly) {     this.encodeElementsAppliesToChildResourcesOnly = encodeElementsAppliesToChildResourcesOnly. }
+false;public;0;3;;public String getEncodeElements() {     return encodeElements. }
+false;public;1;3;;public void setEncodeElements(String encodeElements) {     this.encodeElements = encodeElements. }
+false;public;0;3;;public String getDontEncodeElements() {     return dontEncodeElements. }
+false;public;1;3;;public void setDontEncodeElements(String dontEncodeElements) {     this.dontEncodeElements = dontEncodeElements. }
+false;public;0;3;;public Boolean getStripVersionsFromReferences() {     return stripVersionsFromReferences. }
+false;public;1;4;;public void setStripVersionsFromReferences(Boolean stripVersionsFromReferences) {     this.stripVersionsFromReferences = stripVersionsFromReferences. }
+false;public;0;3;;public Boolean getOverrideResourceIdWithBundleEntryFullUrl() {     return overrideResourceIdWithBundleEntryFullUrl. }
+false;public;1;4;;public void setOverrideResourceIdWithBundleEntryFullUrl(Boolean overrideResourceIdWithBundleEntryFullUrl) {     this.overrideResourceIdWithBundleEntryFullUrl = overrideResourceIdWithBundleEntryFullUrl. }
+false;public;0;3;;public Boolean getSummaryMode() {     return summaryMode. }
+false;public;1;3;;public void setSummaryMode(Boolean summaryMode) {     this.summaryMode = summaryMode. }
+false;public;0;3;;public Boolean getSuppressNarratives() {     return suppressNarratives. }
+false;public;1;3;;public void setSuppressNarratives(Boolean suppressNarratives) {     this.suppressNarratives = suppressNarratives. }
+false;public;0;3;;public List<String> getDontStripVersionsFromReferencesAtPaths() {     return dontStripVersionsFromReferencesAtPaths. }
+false;public;1;4;;public void setDontStripVersionsFromReferencesAtPaths(List<String> dontStripVersionsFromReferencesAtPaths) {     this.dontStripVersionsFromReferencesAtPaths = dontStripVersionsFromReferencesAtPaths. }
+false;public;0;3;;public Boolean getContentTypeHeader() {     return contentTypeHeader. }
+false;public;1;3;;public void setContentTypeHeader(Boolean contentTypeHeader) {     this.contentTypeHeader = contentTypeHeader. }

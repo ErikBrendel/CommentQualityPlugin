@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public boolean isCreated() {     return created. }
+false;public;1;7;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     PutRoleResponse that = (PutRoleResponse) o.     return created == that.created. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(created). }
+false;public,static;1;12;;public static PutRoleResponse fromXContent(XContentParser parser) throws IOException {     if (parser.currentToken() == null) {         parser.nextToken().     }     // parse extraneous wrapper     ensureExpectedToken(Token.START_OBJECT, parser.currentToken(), parser::getTokenLocation).     ensureFieldName(parser, parser.nextToken(), "role").     parser.nextToken().     final PutRoleResponse roleResponse = PARSER.parse(parser, null).     ensureExpectedToken(Token.END_OBJECT, parser.nextToken(), parser::getTokenLocation).     return roleResponse. }

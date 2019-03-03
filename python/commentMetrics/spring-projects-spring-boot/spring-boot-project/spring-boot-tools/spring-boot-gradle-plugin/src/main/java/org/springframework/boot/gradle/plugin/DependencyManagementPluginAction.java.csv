@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Override public void execute(Project project) {     project.getExtensions().findByType(DependencyManagementExtension.class).imports((importsHandler) -> importsHandler.mavenBom(SpringBootPlugin.BOM_COORDINATES)). }
+false;public;0;4;;@Override public Class<? extends Plugin<Project>> getPluginClass() {     return DependencyManagementPlugin.class. }

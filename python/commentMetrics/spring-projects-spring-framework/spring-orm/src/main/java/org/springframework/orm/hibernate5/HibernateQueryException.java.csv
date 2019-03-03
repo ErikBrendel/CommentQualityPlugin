@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Return the HQL query string that was invalid.  */ ;/**  * Return the HQL query string that was invalid.  */ public String getQueryString() {     return ((QueryException) getCause()).getQueryString(). }

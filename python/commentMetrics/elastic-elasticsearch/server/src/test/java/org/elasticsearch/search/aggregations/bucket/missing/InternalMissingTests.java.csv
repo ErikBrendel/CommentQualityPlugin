@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;5;5;;@Override protected InternalMissing createTestInstance(String name, long docCount, InternalAggregations aggregations, List<PipelineAggregator> pipelineAggregators, Map<String, Object> metaData) {     return new InternalMissing(name, docCount, aggregations, pipelineAggregators, metaData). }
+false;protected;2;4;;@Override protected void extraAssertReduced(InternalMissing reduced, List<InternalMissing> inputs) { // Nothing extra to assert }
+false;protected;0;4;;@Override protected Reader<InternalMissing> instanceReader() {     return InternalMissing::new. }
+false;protected;0;4;;@Override protected Class<? extends ParsedSingleBucketAggregation> implementationClass() {     return ParsedMissing.class. }

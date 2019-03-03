@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;7;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeLong(id).     dfs.writeTo(out).     OriginalIndices.writeOriginalIndices(originalIndices, out). }
+false;public;0;3;;public long id() {     return id. }
+false;public;0;3;;public AggregatedDfs dfs() {     return dfs. }
+false;public;0;4;;@Override public String[] indices() {     return originalIndices.indices(). }
+false;public;0;4;;@Override public IndicesOptions indicesOptions() {     return originalIndices.indicesOptions(). }
+false;public;1;4;;@Override public void readFrom(StreamInput in) throws IOException {     throw new UnsupportedOperationException("usage of Streamable is to be replaced by Writeable"). }
+false;public;5;4;;@Override public Task createTask(long id, String type, String action, TaskId parentTaskId, Map<String, String> headers) {     return new SearchTask(id, type, action, getDescription(), parentTaskId, headers). }
+false;public;0;10;;public String getDescription() {     StringBuilder sb = new StringBuilder().     sb.append("id[").     sb.append(id).     sb.append("], ").     sb.append("indices[").     Strings.arrayToDelimitedString(originalIndices.indices(), ",", sb).     sb.append("]").     return sb.toString(). }

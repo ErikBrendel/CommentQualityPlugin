@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;3;;protected String getUrl() {     return "http://127.0.0.1:7545?". }
+false;protected;3;6;;protected Exchange createExchangeWithBodyAndHeader(Object body, String key, Object value) {     DefaultExchange exchange = new DefaultExchange(context).     exchange.getIn().setBody(body).     exchange.getIn().setHeader(key, value).     return exchange. }

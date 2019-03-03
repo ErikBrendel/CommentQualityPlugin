@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Before public void setup() {     this.dataSourceMetadata = new HikariDataSourcePoolMetadata(createDataSource(0, 2)). }
+false;protected;0;4;;@Override protected HikariDataSourcePoolMetadata getDataSourceMetadata() {     return this.dataSourceMetadata. }
+false;public;0;7;;@Override public void getValidationQuery() {     HikariDataSource dataSource = createDataSource(0, 4).     dataSource.setConnectionTestQuery("SELECT FROM FOO").     assertThat(new HikariDataSourcePoolMetadata(dataSource).getValidationQuery()).isEqualTo("SELECT FROM FOO"). }
+false;public;0;7;;@Override public void getDefaultAutoCommit() {     HikariDataSource dataSource = createDataSource(0, 4).     dataSource.setAutoCommit(false).     assertThat(new HikariDataSourcePoolMetadata(dataSource).getDefaultAutoCommit()).isFalse(). }
+false;private;2;7;;private HikariDataSource createDataSource(int minSize, int maxSize) {     HikariDataSource dataSource = initializeBuilder().type(HikariDataSource.class).build().     dataSource.setMinimumIdle(minSize).     dataSource.setMaximumPoolSize(maxSize).     return dataSource. }

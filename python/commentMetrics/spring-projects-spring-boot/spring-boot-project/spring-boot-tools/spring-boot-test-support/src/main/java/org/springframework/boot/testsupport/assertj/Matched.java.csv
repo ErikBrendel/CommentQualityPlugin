@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;10;;@Override public boolean matches(T value) {     if (this.matcher.matches(value)) {         return true.     }     StringDescription description = new StringDescription().     this.matcher.describeTo(description).     describedAs(description.toString()).     return false. }
+false;public,static;1;3;;public static <T> Condition<T> when(Matcher<? extends T> matcher) {     return by(matcher). }
+false;public,static;1;3;;public static <T> Condition<T> by(Matcher<? extends T> matcher) {     return new Matched<>(matcher). }

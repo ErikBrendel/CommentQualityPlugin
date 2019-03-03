@@ -1,0 +1,51 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static Format fromString(String name) {     return valueOf(name.trim().toUpperCase(Locale.ROOT)). }
+false;public;0;4;;@Override public String toString() {     return name().toLowerCase(Locale.ROOT). }
+false;public;0;3;;public int getNumLinesAnalyzed() {     return numLinesAnalyzed. }
+false;public;0;3;;public int getNumMessagesAnalyzed() {     return numMessagesAnalyzed. }
+false;public;0;3;;public String getSampleStart() {     return sampleStart. }
+false;public;0;3;;public String getCharset() {     return charset. }
+false;public;0;3;;public Boolean getHasByteOrderMarker() {     return hasByteOrderMarker. }
+false;public;0;3;;public Format getFormat() {     return format. }
+false;public;0;3;;public String getMultilineStartPattern() {     return multilineStartPattern. }
+false;public;0;3;;public String getExcludeLinesPattern() {     return excludeLinesPattern. }
+false;public;0;3;;public List<String> getColumnNames() {     return columnNames. }
+false;public;0;3;;public Boolean getHasHeaderRow() {     return hasHeaderRow. }
+false;public;0;3;;public Character getDelimiter() {     return delimiter. }
+false;public;0;3;;public Character getQuote() {     return quote. }
+false;public;0;3;;public Boolean getShouldTrimFields() {     return shouldTrimFields. }
+false;public;0;3;;public String getGrokPattern() {     return grokPattern. }
+false;public;0;3;;public String getTimestampField() {     return timestampField. }
+false;public;0;3;;public List<String> getJodaTimestampFormats() {     return jodaTimestampFormats. }
+false;public;0;3;;public List<String> getJavaTimestampFormats() {     return javaTimestampFormats. }
+false;public;0;3;;public boolean needClientTimezone() {     return needClientTimezone. }
+false;public;0;3;;public SortedMap<String, Object> getMappings() {     return mappings. }
+false;public;0;3;;public Map<String, Object> getIngestPipeline() {     return ingestPipeline. }
+false;public;0;3;;public SortedMap<String, FieldStats> getFieldStats() {     return fieldStats. }
+false;public;0;3;;public List<String> getExplanation() {     return explanation. }
+false;public;2;64;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(NUM_LINES_ANALYZED.getPreferredName(), numLinesAnalyzed).     builder.field(NUM_MESSAGES_ANALYZED.getPreferredName(), numMessagesAnalyzed).     builder.field(SAMPLE_START.getPreferredName(), sampleStart).     builder.field(CHARSET.getPreferredName(), charset).     if (hasByteOrderMarker != null) {         builder.field(HAS_BYTE_ORDER_MARKER.getPreferredName(), hasByteOrderMarker.booleanValue()).     }     builder.field(FORMAT.getPreferredName(), format).     if (multilineStartPattern != null && multilineStartPattern.isEmpty() == false) {         builder.field(MULTILINE_START_PATTERN.getPreferredName(), multilineStartPattern).     }     if (excludeLinesPattern != null && excludeLinesPattern.isEmpty() == false) {         builder.field(EXCLUDE_LINES_PATTERN.getPreferredName(), excludeLinesPattern).     }     if (columnNames != null && columnNames.isEmpty() == false) {         builder.field(COLUMN_NAMES.getPreferredName(), columnNames).     }     if (hasHeaderRow != null) {         builder.field(HAS_HEADER_ROW.getPreferredName(), hasHeaderRow.booleanValue()).     }     if (delimiter != null) {         builder.field(DELIMITER.getPreferredName(), String.valueOf(delimiter)).     }     if (quote != null) {         builder.field(QUOTE.getPreferredName(), String.valueOf(quote)).     }     if (shouldTrimFields != null) {         builder.field(SHOULD_TRIM_FIELDS.getPreferredName(), shouldTrimFields.booleanValue()).     }     if (grokPattern != null && grokPattern.isEmpty() == false) {         builder.field(GROK_PATTERN.getPreferredName(), grokPattern).     }     if (timestampField != null && timestampField.isEmpty() == false) {         builder.field(TIMESTAMP_FIELD.getPreferredName(), timestampField).     }     if (jodaTimestampFormats != null && jodaTimestampFormats.isEmpty() == false) {         builder.field(JODA_TIMESTAMP_FORMATS.getPreferredName(), jodaTimestampFormats).     }     if (javaTimestampFormats != null && javaTimestampFormats.isEmpty() == false) {         builder.field(JAVA_TIMESTAMP_FORMATS.getPreferredName(), javaTimestampFormats).     }     builder.field(NEED_CLIENT_TIMEZONE.getPreferredName(), needClientTimezone).     builder.field(MAPPINGS.getPreferredName(), mappings).     if (ingestPipeline != null) {         builder.field(INGEST_PIPELINE.getPreferredName(), ingestPipeline).     }     if (fieldStats.isEmpty() == false) {         builder.startObject(FIELD_STATS.getPreferredName()).         for (Map.Entry<String, FieldStats> entry : fieldStats.entrySet()) {             builder.field(entry.getKey(), entry.getValue()).         }         builder.endObject().     }     if (explanation != null && explanation.isEmpty() == false) {         builder.field(EXPLANATION.getPreferredName(), explanation).     }     builder.endObject().     return builder. }
+false;public;0;7;;@Override public int hashCode() {     return Objects.hash(numLinesAnalyzed, numMessagesAnalyzed, sampleStart, charset, hasByteOrderMarker, format, multilineStartPattern, excludeLinesPattern, columnNames, hasHeaderRow, delimiter, quote, shouldTrimFields, grokPattern, timestampField, jodaTimestampFormats, javaTimestampFormats, needClientTimezone, mappings, fieldStats, explanation). }
+false;public;1;34;;@Override public boolean equals(Object other) {     if (this == other) {         return true.     }     if (other == null || getClass() != other.getClass()) {         return false.     }     FileStructure that = (FileStructure) other.     return this.numLinesAnalyzed == that.numLinesAnalyzed && this.numMessagesAnalyzed == that.numMessagesAnalyzed && Objects.equals(this.sampleStart, that.sampleStart) && Objects.equals(this.charset, that.charset) && Objects.equals(this.hasByteOrderMarker, that.hasByteOrderMarker) && Objects.equals(this.format, that.format) && Objects.equals(this.multilineStartPattern, that.multilineStartPattern) && Objects.equals(this.excludeLinesPattern, that.excludeLinesPattern) && Objects.equals(this.columnNames, that.columnNames) && Objects.equals(this.hasHeaderRow, that.hasHeaderRow) && Objects.equals(this.delimiter, that.delimiter) && Objects.equals(this.quote, that.quote) && Objects.equals(this.shouldTrimFields, that.shouldTrimFields) && Objects.equals(this.grokPattern, that.grokPattern) && Objects.equals(this.timestampField, that.timestampField) && Objects.equals(this.jodaTimestampFormats, that.jodaTimestampFormats) && Objects.equals(this.javaTimestampFormats, that.javaTimestampFormats) && this.needClientTimezone == that.needClientTimezone && Objects.equals(this.mappings, that.mappings) && Objects.equals(this.fieldStats, that.fieldStats) && Objects.equals(this.explanation, that.explanation). }
+false;;1;4;;Builder setNumLinesAnalyzed(int numLinesAnalyzed) {     this.numLinesAnalyzed = numLinesAnalyzed.     return this. }
+false;;1;4;;Builder setNumMessagesAnalyzed(int numMessagesAnalyzed) {     this.numMessagesAnalyzed = numMessagesAnalyzed.     return this. }
+false;;1;4;;Builder setSampleStart(String sampleStart) {     this.sampleStart = Objects.requireNonNull(sampleStart).     return this. }
+false;;1;4;;Builder setCharset(String charset) {     this.charset = Objects.requireNonNull(charset).     return this. }
+false;;1;4;;Builder setHasByteOrderMarker(Boolean hasByteOrderMarker) {     this.hasByteOrderMarker = hasByteOrderMarker.     return this. }
+false;;1;4;;Builder setFormat(Format format) {     this.format = Objects.requireNonNull(format).     return this. }
+false;;1;4;;Builder setMultilineStartPattern(String multilineStartPattern) {     this.multilineStartPattern = multilineStartPattern.     return this. }
+false;;1;4;;Builder setExcludeLinesPattern(String excludeLinesPattern) {     this.excludeLinesPattern = excludeLinesPattern.     return this. }
+false;;1;4;;Builder setColumnNames(List<String> columnNames) {     this.columnNames = columnNames.     return this. }
+false;;1;4;;Builder setHasHeaderRow(Boolean hasHeaderRow) {     this.hasHeaderRow = hasHeaderRow.     return this. }
+false;;1;4;;Builder setDelimiter(Character delimiter) {     this.delimiter = delimiter.     return this. }
+false;;1;4;;Builder setQuote(Character quote) {     this.quote = quote.     return this. }
+false;;1;4;;Builder setShouldTrimFields(Boolean shouldTrimFields) {     this.shouldTrimFields = shouldTrimFields.     return this. }
+false;;1;4;;Builder setGrokPattern(String grokPattern) {     this.grokPattern = grokPattern.     return this. }
+false;;1;4;;Builder setTimestampField(String timestampField) {     this.timestampField = timestampField.     return this. }
+false;;1;4;;Builder setJodaTimestampFormats(List<String> jodaTimestampFormats) {     this.jodaTimestampFormats = jodaTimestampFormats.     return this. }
+false;;1;4;;Builder setJavaTimestampFormats(List<String> javaTimestampFormats) {     this.javaTimestampFormats = javaTimestampFormats.     return this. }
+false;;1;4;;Builder setNeedClientTimezone(boolean needClientTimezone) {     this.needClientTimezone = needClientTimezone.     return this. }
+false;;1;4;;Builder setMappings(Map<String, Object> mappings) {     this.mappings = Objects.requireNonNull(mappings).     return this. }
+false;;1;4;;Builder setIngestPipeline(Map<String, Object> ingestPipeline) {     this.ingestPipeline = ingestPipeline.     return this. }
+false;;1;4;;Builder setFieldStats(Map<String, FieldStats> fieldStats) {     this.fieldStats = Objects.requireNonNull(fieldStats).     return this. }
+false;;1;4;;Builder setExplanation(List<String> explanation) {     this.explanation = explanation.     return this. }
+false;public;0;7;;public FileStructure build() {     return new FileStructure(numLinesAnalyzed, numMessagesAnalyzed, sampleStart, charset, hasByteOrderMarker, format, multilineStartPattern, excludeLinesPattern, columnNames, hasHeaderRow, delimiter, quote, shouldTrimFields, grokPattern, timestampField, jodaTimestampFormats, javaTimestampFormats, needClientTimezone, mappings, ingestPipeline, fieldStats, explanation). }

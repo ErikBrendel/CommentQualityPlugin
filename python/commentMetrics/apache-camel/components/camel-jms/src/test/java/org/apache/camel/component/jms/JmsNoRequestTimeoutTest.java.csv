@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void testNoRequestTimeout() throws Exception {     String reply = template.requestBody("activemq:queue:hello?requestTimeout=0", "Hello World", String.class).     assertEquals("Bye World", reply). }
+false;protected;0;8;;protected CamelContext createCamelContext() throws Exception {     CamelContext camelContext = super.createCamelContext().     ConnectionFactory connectionFactory = CamelJmsTestHelper.createConnectionFactory().     camelContext.addComponent(componentName, jmsComponentAutoAcknowledge(connectionFactory)).     return camelContext. }
+false;public;0;3;;public void configure() throws Exception {     from("activemq:queue:hello").transform(constant("Bye World")). }
+false;protected;0;7;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from("activemq:queue:hello").transform(constant("Bye World")).         }     }. }

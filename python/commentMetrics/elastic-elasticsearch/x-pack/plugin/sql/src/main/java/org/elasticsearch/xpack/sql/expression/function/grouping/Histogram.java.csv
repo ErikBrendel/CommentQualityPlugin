@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Literal interval() {     return interval. }
+false;public;0;3;;public ZoneId zoneId() {     return zoneId. }
+false;protected;0;14;;@Override protected TypeResolution resolveType() {     TypeResolution resolution = isNumericOrDate(field(), "HISTOGRAM", ParamOrdinal.FIRST).     if (resolution == TypeResolution.TYPE_RESOLVED) {         // interval must be Literal interval         if (field().dataType().isDateBased()) {             resolution = isType(interval, DataTypes::isInterval, "(Date) HISTOGRAM", ParamOrdinal.SECOND, "interval").         } else {             resolution = isNumeric(interval, "(Numeric) HISTOGRAM", ParamOrdinal.SECOND).         }     }     return resolution. }
+false;public,final;1;7;;@Override public final GroupingFunction replaceChildren(List<Expression> newChildren) {     if (newChildren.size() != 2) {         throw new IllegalArgumentException("expected [2] children but received [" + newChildren.size() + "]").     }     return new Histogram(source(), newChildren.get(0), newChildren.get(1), zoneId). }
+false;public;0;4;;@Override public DataType dataType() {     return field().dataType(). }
+false;protected;0;4;;@Override protected NodeInfo<? extends Expression> info() {     return NodeInfo.create(this, Histogram::new, field(), interval, zoneId). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(field(), interval, zoneId). }
+false;public;1;9;;@Override public boolean equals(Object obj) {     if (super.equals(obj)) {         Histogram other = (Histogram) obj.         return Objects.equals(interval, other.interval) && Objects.equals(zoneId, other.zoneId).     }     return false. }

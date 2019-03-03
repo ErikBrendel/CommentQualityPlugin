@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;3;;protected EmbeddedDatabaseType getEmbeddedDatabaseType() {     return EmbeddedDatabaseType.HSQL. }
+false;public;0;4;;@Before public void setUpSchema() throws SQLException {     executeSqlScript(db.getConnection(), usersSchema()). }
+false;public;0;5;;@Test public void executeSqlScriptContainingMultiLineComments() throws SQLException {     executeSqlScript(db.getConnection(), resource("test-data-with-multi-line-comments.sql")).     assertUsersDatabaseCreated("Hoeller", "Brannen"). }
+true;public;0;5;/**  * @since 4.2  */ ;/**  * @since 4.2  */ @Test public void executeSqlScriptContainingSingleQuotesNestedInsideDoubleQuotes() throws SQLException {     executeSqlScript(db.getConnection(), resource("users-data-with-single-quotes-nested-in-double-quotes.sql")).     assertUsersDatabaseCreated("Hoeller", "Brannen"). }

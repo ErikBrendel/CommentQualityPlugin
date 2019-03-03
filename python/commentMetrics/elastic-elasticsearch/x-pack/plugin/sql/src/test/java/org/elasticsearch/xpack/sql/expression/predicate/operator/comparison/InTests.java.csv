@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;public void testInWithContainedValue() {     In in = new In(EMPTY, TWO, Arrays.asList(ONE, TWO, THREE)).     assertTrue(in.fold()). }
+false;public;0;4;;public void testInWithNotContainedValue() {     In in = new In(EMPTY, THREE, Arrays.asList(ONE, TWO)).     assertFalse(in.fold()). }
+false;public;0;7;;public void testHandleNullOnLeftValue() {     In in = new In(EMPTY, NULL, Arrays.asList(ONE, TWO, THREE)).     assertNull(in.fold()).     in = new In(EMPTY, NULL, Arrays.asList(ONE, NULL, THREE)).     assertNull(in.fold()). }
+false;public;0;6;;public void testHandleNullsOnRightValue() {     In in = new In(EMPTY, THREE, Arrays.asList(ONE, NULL, THREE)).     assertTrue(in.fold()).     in = new In(EMPTY, ONE, Arrays.asList(TWO, NULL, THREE)).     assertNull(in.fold()). }
+false;private,static;1;3;;private static Literal L(Object value) {     return Literal.of(EMPTY, value). }

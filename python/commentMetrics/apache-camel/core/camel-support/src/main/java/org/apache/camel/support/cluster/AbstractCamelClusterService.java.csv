@@ -1,0 +1,24 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public int getOrder() {     return order. }
+false;public;1;3;;public void setOrder(int order) {     this.order = order. }
+false;public;1;4;;@Override public void setId(String id) {     this.id = id. }
+false;public;0;4;;@Override public String getId() {     return id. }
+false;public;1;13;;@Override public void setCamelContext(CamelContext camelContext) {     this.camelContext = camelContext.     LockHelper.doWithWriteLock(lock, () -> {         for (ViewHolder<T> holder : views.values()) {             holder.get().setCamelContext(camelContext).         }     }). }
+false;public;0;4;;@Override public CamelContext getCamelContext() {     return camelContext. }
+false;public;1;4;;public void setAttributes(Map<String, Object> attributes) {     this.attributes.clear().     this.attributes.putAll(attributes). }
+false;public;2;3;;public void setAttribute(String key, Object value) {     this.attributes.put(key, value). }
+false;public;0;4;;@Override public Map<String, Object> getAttributes() {     return Collections.unmodifiableMap(attributes). }
+false;protected;0;11;;@Override protected void doStart() throws Exception {     LockHelper.doWithReadLockT(lock, () -> {         for (ViewHolder<T> holder : views.values()) {             holder.get().start().         }     }). }
+false;protected;0;11;;@Override protected void doStop() throws Exception {     LockHelper.doWithReadLockT(lock, () -> {         for (ViewHolder<T> holder : views.values()) {             holder.get().stop().         }     }). }
+false;public;1;21;;@Override public CamelClusterView getView(String namespace) throws Exception {     return LockHelper.callWithWriteLock(lock, () -> {         ViewHolder<T> holder = views.get(namespace).         if (holder == null) {             T view = createView(namespace).             view.setCamelContext(this.camelContext).             holder = new ViewHolder<>(view).             views.put(namespace, holder).         }         // Add reference and eventually start the route.         return holder.retain().     }). }
+false;public;1;13;;@Override public void releaseView(CamelClusterView view) throws Exception {     LockHelper.doWithWriteLock(lock, () -> {         ViewHolder<T> holder = views.get(view.getNamespace()).         if (holder != null) {             holder.release().         }     }). }
+false;public;0;11;;@Override public Collection<String> getNamespaces() {     return LockHelper.supplyWithReadLock(lock, () -> {         // thus a little inefficient.         return new HashSet<>(views.keySet()).     }). }
+false;public;1;16;;@Override public void startView(String namespace) throws Exception {     LockHelper.doWithWriteLockT(lock, () -> {         ViewHolder<T> holder = views.get(namespace).         if (holder != null) {             log.info("Force start of view {}", namespace).             holder.startView().         } else {             log.warn("Error forcing start of view {}: it does not exist", namespace).         }     }). }
+false;public;1;16;;@Override public void stopView(String namespace) throws Exception {     LockHelper.doWithWriteLockT(lock, () -> {         ViewHolder<T> holder = views.get(namespace).         if (holder != null) {             log.info("Force stop of view {}", namespace).             holder.stopView().         } else {             log.warn("Error forcing stop of view {}: it does not exist", namespace).         }     }). }
+false;public;1;17;;@Override public boolean isLeader(String namespace) {     return LockHelper.supplyWithReadLock(lock, () -> {         ViewHolder<T> holder = views.get(namespace).         if (holder != null) {             CamelClusterMember member = holder.get().getLocalMember().             if (member != null) {                 return member.isLeader().             }         }         return false.     }). }
+false;protected,abstract;1;1;;// ********************************** // Implementation // ********************************** protected abstract T createView(String namespace) throws Exception.
+false;;0;3;;V get() {     return view. }
+false;;0;7;;V retain() {     log.debug("Retain view {}, old-refs={}", view.getNamespace(), count.get()).     count.retain().     return get(). }
+false;;0;5;;void release() {     log.debug("Release view {}, old-refs={}", view.getNamespace(), count.get()).     count.release(). }
+false;;0;8;;void startView() throws Exception {     if (AbstractCamelClusterService.this.isRunAllowed()) {         log.debug("Start view {}", view.getNamespace()).         view.start().     } else {         log.debug("Can't start view {} as cluster service is not running, view will be started on service start-up", view.getNamespace()).     } }
+false;;0;4;;void stopView() throws Exception {     log.debug("Stop view {}", view.getNamespace()).     view.stop(). }

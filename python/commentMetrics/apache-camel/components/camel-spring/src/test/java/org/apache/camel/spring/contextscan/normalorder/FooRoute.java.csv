@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@Override public void configure() throws Exception {     onException(Exception.class).handled(true).to("mock:handle-foo").     from("direct:foo").routeId("foo").to("mock:foo").throwException(new IllegalArgumentException("Damn")). }

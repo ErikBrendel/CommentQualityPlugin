@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Override public String toString() {     if (xmppPacket != null) {         return "XmppMessage: " + xmppPacket.     } else {         return "XmppMessage: " + getBody().     } }
+true;public;0;3;/**  * Returns the underlying XMPP message  */ ;/**  * Returns the underlying XMPP message  */ public Message getXmppMessage() {     return (xmppPacket instanceof Message) ? (Message) xmppPacket : null. }
+false;public;1;3;;public void setXmppMessage(Message xmppMessage) {     this.xmppPacket = xmppMessage. }
+true;public;0;3;/**  * Returns the underlying XMPP packet  */ ;/**  * Returns the underlying XMPP packet  */ public Stanza getXmppPacket() {     return xmppPacket. }
+false;public;1;3;;public void setXmppPacket(Stanza xmppPacket) {     this.xmppPacket = xmppPacket. }
+false;public;0;5;;@Override public XmppMessage newInstance() {     XmppMessage answer = new XmppMessage(getCamelContext()).     return answer. }
+false;protected;0;10;;@Override protected Object createBody() {     if (xmppPacket != null) {         XmppBinding binding = ExchangeHelper.getBinding(getExchange(), XmppBinding.class).         if (binding != null) {             return (getHeader(XmppConstants.DOC_HEADER) == null) ? binding.extractBodyFromXmpp(getExchange(), xmppPacket) : getHeader(XmppConstants.DOC_HEADER).         }     }     return null. }
+false;protected;1;9;;@Override protected void populateInitialHeaders(Map<String, Object> map) {     if (xmppPacket != null) {         XmppBinding binding = ExchangeHelper.getBinding(getExchange(), XmppBinding.class).         if (binding != null) {             map.putAll(binding.extractHeadersFromXmpp(xmppPacket, getExchange())).         }     } }

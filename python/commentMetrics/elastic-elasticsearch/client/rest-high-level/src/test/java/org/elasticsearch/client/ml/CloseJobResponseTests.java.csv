@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected CloseJobResponse createTestInstance() {     return new CloseJobResponse(randomBoolean()). }
+false;protected;1;4;;@Override protected CloseJobResponse doParseInstance(XContentParser parser) throws IOException {     return CloseJobResponse.fromXContent(parser). }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }

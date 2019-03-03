@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;4;3;;<T extends CamelContext> Producer<T> camelContextProducer(Producer<T> delegate, Annotated annotated, BeanManager manager, CdiCamelExtension extension) {     return new CamelContextProducer<>(delegate, annotated, manager, extension). }
+false;;4;4;;<T extends CamelContext> InjectionTarget<T> camelContextInjectionTarget(InjectionTarget<T> delegate, Annotated annotated, BeanManager manager, CdiCamelExtension extension) {     CamelContextProducer<T> producer = new CamelContextProducer<>(delegate, annotated, manager, extension).     return new CamelContextInjectionTarget<>(delegate, producer). }

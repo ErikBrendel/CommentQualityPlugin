@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean isUseAdviceWith() {     return true. }
+false;public;0;8;;@Override public void configure() throws Exception {     replaceFromWith("direct:sftp").     interceptSendToEndpoint("file:*").skipSendToOriginalEndpoint().to("mock:file"). }
+false;public;0;14;;@Before public void doSomethingBefore() throws Exception {     AdviceWithRouteBuilder mocker = new AdviceWithRouteBuilder() {          @Override         public void configure() throws Exception {             replaceFromWith("direct:sftp").             interceptSendToEndpoint("file:*").skipSendToOriginalEndpoint().to("mock:file").         }     }.     RouteReifier.adviceWith(context.getRouteDefinition("myRoute"), context, mocker). }
+false;protected;0;7;;@Override protected Properties useOverridePropertiesWithPropertiesComponent() {     Properties pc = new Properties().     pc.put("ftp.username", "scott").     pc.put("ftp.password", "tiger").     return pc. }
+false;public;0;10;;@Test public void testOverride() throws Exception {     context.start().     getMockEndpoint("mock:file").expectedMessageCount(1).     template.sendBody("direct:sftp", "Hello World").     assertMockEndpointsSatisfied(). }
+false;public;0;4;;public void configure() {     from("ftp:somepath?username={{ftp.username}}&password={{ftp.password}}").routeId("myRoute").to("file:target/out"). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("ftp:somepath?username={{ftp.username}}&password={{ftp.password}}").routeId("myRoute").to("file:target/out").         }     }. }

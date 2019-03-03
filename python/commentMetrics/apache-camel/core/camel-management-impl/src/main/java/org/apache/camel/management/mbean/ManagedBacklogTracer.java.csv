@@ -1,0 +1,30 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void init(ManagementStrategy strategy) { // do nothing }
+false;public;0;3;;public CamelContext getContext() {     return camelContext. }
+false;public;0;3;;public BacklogTracer getBacklogTracer() {     return backlogTracer. }
+false;public;0;3;;public boolean getEnabled() {     return backlogTracer.isEnabled(). }
+false;public;0;3;;public String getCamelId() {     return camelContext.getName(). }
+false;public;0;3;;public String getCamelManagementName() {     return camelContext.getManagementName(). }
+false;public;1;3;;public void setEnabled(boolean enabled) {     backlogTracer.setEnabled(enabled). }
+false;public;0;3;;public boolean isEnabled() {     return backlogTracer.isEnabled(). }
+false;public;0;3;;public int getBacklogSize() {     return backlogTracer.getBacklogSize(). }
+false;public;1;3;;public void setBacklogSize(int backlogSize) {     backlogTracer.setBacklogSize(backlogSize). }
+false;public;0;3;;public boolean isRemoveOnDump() {     return backlogTracer.isRemoveOnDump(). }
+false;public;1;3;;public void setRemoveOnDump(boolean removeOnDump) {     backlogTracer.setRemoveOnDump(removeOnDump). }
+false;public;1;3;;public void setTracePattern(String pattern) {     backlogTracer.setTracePattern(pattern). }
+false;public;0;3;;public String getTracePattern() {     return backlogTracer.getTracePattern(). }
+false;public;1;3;;public void setTraceFilter(String predicate) {     backlogTracer.setTraceFilter(predicate). }
+false;public;0;3;;public String getTraceFilter() {     return backlogTracer.getTraceFilter(). }
+false;public;0;3;;public long getTraceCounter() {     return backlogTracer.getTraceCounter(). }
+false;public;0;3;;public void resetTraceCounter() {     backlogTracer.resetTraceCounter(). }
+false;public;0;3;;public int getBodyMaxChars() {     return backlogTracer.getBodyMaxChars(). }
+false;public;1;3;;public void setBodyMaxChars(int bodyMaxChars) {     backlogTracer.setBodyMaxChars(bodyMaxChars). }
+false;public;0;3;;public boolean isBodyIncludeStreams() {     return backlogTracer.isBodyIncludeStreams(). }
+false;public;1;3;;public void setBodyIncludeStreams(boolean bodyIncludeStreams) {     backlogTracer.setBodyIncludeStreams(bodyIncludeStreams). }
+false;public;0;3;;public boolean isBodyIncludeFiles() {     return backlogTracer.isBodyIncludeFiles(). }
+false;public;1;3;;public void setBodyIncludeFiles(boolean bodyIncludeFiles) {     backlogTracer.setBodyIncludeFiles(bodyIncludeFiles). }
+false;public;1;3;;public List<BacklogTracerEventMessage> dumpTracedMessages(String nodeOrRouteId) {     return backlogTracer.dumpTracedMessages(nodeOrRouteId). }
+false;public;0;3;;public List<BacklogTracerEventMessage> dumpAllTracedMessages() {     return backlogTracer.dumpAllTracedMessages(). }
+false;public;1;3;;public String dumpTracedMessagesAsXml(String nodeOrRouteId) {     return backlogTracer.dumpTracedMessagesAsXml(nodeOrRouteId). }
+false;public;0;3;;public String dumpAllTracedMessagesAsXml() {     return backlogTracer.dumpAllTracedMessagesAsXml(). }
+false;public;0;3;;public void clear() {     backlogTracer.clear(). }

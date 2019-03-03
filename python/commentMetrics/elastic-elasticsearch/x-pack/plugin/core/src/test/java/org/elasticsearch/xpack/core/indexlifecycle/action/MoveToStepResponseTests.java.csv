@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected Response createTestInstance() {     return new Response(randomBoolean()). }
+false;protected;0;4;;@Override protected Response createBlankInstance() {     return new Response(). }
+false;protected;1;4;;@Override protected Response mutateInstance(Response response) {     return new Response(response.isAcknowledged() == false). }

@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;10;;@Override public Resource getResource(String path) throws IOException {     URL url = new URL("jar:file:" + this.jarPath + "!" + (path.startsWith("/") ? path : "/" + path)).     URLResource resource = new URLResource(url, path).     if (resource.getContentLength() < 0) {         return null.     }     return resource. }
+false;public;0;4;;@Override public boolean isResourceChangeListenerSupported() {     return false. }
+false;public;1;5;;@Override public void registerResourceChangeListener(ResourceChangeListener listener) {     throw UndertowMessages.MESSAGES.resourceChangeListenerNotSupported(). }
+false;public;1;4;;@Override public void removeResourceChangeListener(ResourceChangeListener listener) {     throw UndertowMessages.MESSAGES.resourceChangeListenerNotSupported(). }
+false;public;0;4;;@Override public void close() throws IOException { }

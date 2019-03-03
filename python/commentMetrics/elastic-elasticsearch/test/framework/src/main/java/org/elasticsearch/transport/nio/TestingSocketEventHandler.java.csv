@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;7;;public void handleConnect(SocketChannelContext context) throws IOException {     assert hasConnectedMap.contains(context) == false : "handleConnect should only be called is a channel is not yet connected".     super.handleConnect(context).     if (context.isConnectComplete()) {         hasConnectedMap.add(context).     } }
+false;public;2;5;;public void connectException(SocketChannelContext context, Exception e) {     assert hasConnectExceptionMap.contains(context) == false : "connectException should only called at maximum once per channel".     hasConnectExceptionMap.add(context).     super.connectException(context, e). }

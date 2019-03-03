@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected NodeInfo<Div> info() {     return NodeInfo.create(this, Div::new, left(), right()). }
+false;protected;2;4;;@Override protected Div replaceChildren(Expression newLeft, Expression newRight) {     return new Div(source(), newLeft, newRight). }
+false;public;0;4;;@Override public DataType dataType() {     return DataTypeConversion.commonType(left().dataType(), right().dataType()). }

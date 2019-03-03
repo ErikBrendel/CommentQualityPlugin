@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public String print(InetAddress object, Locale locale) {     return object.getHostAddress(). }
+false;public;2;9;;@Override public InetAddress parse(String text, Locale locale) throws ParseException {     try {         return InetAddress.getByName(text).     } catch (UnknownHostException ex) {         throw new IllegalStateException("Unknown host " + text, ex).     } }

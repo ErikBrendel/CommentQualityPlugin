@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;7;;public Destination resolveDestinationName(Session session, String destinationName, boolean pubSubDomain) throws JMSException {     if ("logicalNameForTestBQueue".equals(destinationName)) {         return session.createQueue("test.b").     } else {         return session.createQueue(destinationName).     } }

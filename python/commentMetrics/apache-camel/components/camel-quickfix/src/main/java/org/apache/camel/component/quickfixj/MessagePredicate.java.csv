@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;2;5;;private void addHeaderFieldIfPresent(int tag, String value) {     if (!ObjectHelper.isEmpty(value)) {         withHeaderField(tag, value).     } }
+false;public;1;3;;public boolean evaluate(Message message) {     return evaluate(message, bodyCriteria) && evaluate(message.getHeader(), headerCriteria). }
+false;private;2;16;;private boolean evaluate(FieldMap fieldMap, List<Field<String>> criteria) {     for (Field<String> c : criteria) {         String value = null.         try {             if (fieldMap.isSetField(c.getField())) {                 value = fieldMap.getString(c.getField()).             }         } catch (FieldNotFound e) {             RuntimeCamelException.wrapRuntimeCamelException(e).         }         if (!c.getObject().equals(value)) {             return false.         }     }     return true. }
+false;public;2;4;;public MessagePredicate withField(int tag, String value) {     bodyCriteria.add(new Field<>(tag, value)).     return this. }
+false;public;2;4;;public MessagePredicate withHeaderField(int tag, String value) {     headerCriteria.add(new Field<>(tag, value)).     return this. }
+false;private;1;4;;private MessagePredicate withMessageType(String msgType) {     headerCriteria.add(new Field<>(MsgType.FIELD, msgType)).     return this. }

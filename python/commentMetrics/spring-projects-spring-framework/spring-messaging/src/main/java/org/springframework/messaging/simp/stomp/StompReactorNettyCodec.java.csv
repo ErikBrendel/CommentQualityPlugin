@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected List<Message<byte[]>> decodeInternal(ByteBuffer nioBuffer) {     return this.decoder.decode(nioBuffer). }
+false;protected;1;3;;protected ByteBuffer encodeInternal(Message<byte[]> message) {     return ByteBuffer.wrap(this.encoder.encode(message)). }

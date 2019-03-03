@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected CamelContext createCamelContext() throws Exception {     return SpringTestHelper.createSpringCamelContext(this, "org/apache/camel/language/spel/SpelSpringTest-context.xml"). }
+false;public;0;6;;@Test public void testSpelBeanExpressions() throws Exception {     assertExpression("#{@myDummy.foo == 'xyz'}", true).     assertExpression("#{@myDummy.bar == 789}", true).     assertExpression("#{@myDummy.bar.toString()}", "789"). }
+false;public;0;6;;@Test public void testSpelBeanPredicates() throws Exception {     assertPredicate("@myDummy.foo == 'xyz'").     assertPredicate("@myDummy.bar == 789").     assertPredicate("@myDummy.bar instanceof T(Integer)"). }
+false;protected;0;3;;protected String getLanguageName() {     return "spel". }

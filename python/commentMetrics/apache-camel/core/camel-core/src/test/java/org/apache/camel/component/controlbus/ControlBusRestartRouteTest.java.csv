@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;14;;@Test public void testControlBusRestart() throws Exception {     assertEquals(1, myRoutePolicy.getStart()).     assertEquals(0, myRoutePolicy.getStop()).     assertEquals("Started", context.getRouteController().getRouteStatus("foo").name()).     template.sendBody("controlbus:route?routeId=foo&action=restart&restartDelay=0", null).     assertEquals("Started", context.getRouteController().getRouteStatus("foo").name()).     assertEquals(2, myRoutePolicy.getStart()).     assertEquals(1, myRoutePolicy.getStop()). }
+false;public;0;5;;@Override public void configure() throws Exception {     from("seda:foo").routeId("foo").routePolicy(myRoutePolicy).to("mock:foo"). }
+false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("seda:foo").routeId("foo").routePolicy(myRoutePolicy).to("mock:foo").         }     }. }
+false;public;1;4;;@Override public void onStart(Route route) {     start++. }
+false;public;1;4;;@Override public void onStop(Route route) {     stop++. }
+false;public;0;3;;public int getStart() {     return start. }
+false;public;0;3;;public int getStop() {     return stop. }

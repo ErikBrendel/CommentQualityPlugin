@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public TokenStream create(TokenStream tokenStream) {     return new WordDelimiterGraphFilter(tokenStream, adjustOffsets, charTypeTable, flags, protoWords). }
+false;public;0;11;;@Override public TokenFilterFactory getSynonymFilter() {     if (indexSettings.getIndexVersionCreated().onOrAfter(Version.V_7_0_0)) {         throw new IllegalArgumentException("Token filter [" + name() + "] cannot be used to parse synonyms").     } else {         DEPRECATION_LOGGER.deprecatedAndMaybeLog("synonym_tokenfilters", "Token filter [" + name() + "] will not be usable to parse synonyms after v7.0").         return this.     } }
+false;private;4;6;;private int getFlag(int flag, Settings settings, String key, boolean defaultValue) {     if (settings.getAsBoolean(key, defaultValue)) {         return flag.     }     return 0. }

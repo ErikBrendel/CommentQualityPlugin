@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;11;;@Test public void testDisableJmx() throws Exception {     CamelContext context = new DefaultCamelContext(false).     context.disableJMX().     context.start().     // JMX should be disabled and therefore not a ManagedManagementStrategy instance     assertFalse(context.getManagementStrategy() instanceof JmxManagementStrategy).     context.stop(). }

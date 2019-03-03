@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Override public PhaseCompleteStep createRandomInstance() {     StepKey stepKey = randomStepKey().     StepKey nextStepKey = randomStepKey().     return new PhaseCompleteStep(stepKey, nextStepKey). }
+false;public;1;13;;@Override public PhaseCompleteStep mutateInstance(PhaseCompleteStep instance) {     StepKey key = instance.getKey().     StepKey nextKey = instance.getNextStepKey().     if (randomBoolean()) {         key = new StepKey(key.getPhase(), key.getAction(), key.getName() + randomAlphaOfLength(5)).     } else {         nextKey = new StepKey(key.getPhase(), key.getAction(), key.getName() + randomAlphaOfLength(5)).     }     return new PhaseCompleteStep(key, nextKey). }
+false;public;1;4;;@Override public PhaseCompleteStep copyInstance(PhaseCompleteStep instance) {     return new PhaseCompleteStep(instance.getKey(), instance.getNextStepKey()). }

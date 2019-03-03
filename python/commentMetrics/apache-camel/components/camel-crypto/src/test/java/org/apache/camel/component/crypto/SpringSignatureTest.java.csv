@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;5;;protected CamelContext createCamelContext() throws Exception {     rsaPair = getKeyPair("RSA").     return SpringCamelContext.springCamelContext(new ClassPathXmlApplicationContext("org/apache/camel/component/crypto/SpringSignatureTests.xml"), true). }
+false;public,static;0;3;;public static KeyStore keystore() throws Exception {     return loadKeystore(). }
+false;public,static;0;3;;public static PrivateKey privateKeyFromKeystore() throws Exception {     return new SignatureTests().getKeyFromKeystore(). }
+false;public,static;0;4;;public static Certificate certificateFromKeystore() throws Exception {     KeyStore keystore = loadKeystore().     return keystore.getCertificate("bob"). }
+false;public,static;0;4;;public static PrivateKey privateKey() throws Exception {     KeyStore keystore = loadKeystore().     return (PrivateKey) keystore.getKey("bob", "letmein".toCharArray()). }
+false;public,static;0;5;;public static PublicKey publicKey() throws Exception {     KeyStore keystore = loadKeystore().     Certificate cert = keystore.getCertificate("bob").     return cert.getPublicKey(). }
+false;public,static;0;3;;public static PrivateKey privateRSAKey() throws Exception {     return rsaPair.getPrivate(). }
+false;public,static;0;3;;public static PublicKey publicRSAKey() throws Exception {     return rsaPair.getPublic(). }
+false;public,static;0;3;;public static SecureRandom random() throws Exception {     return new SecureRandom(). }
+false;protected;0;4;;@Override protected JndiRegistry createRegistry() throws Exception {     return super.createRegistry(). }
+false;protected;0;4;;@Override protected RouteBuilder[] createRouteBuilders() throws Exception {     return new RouteBuilder[] {}. }

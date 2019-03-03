@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void getAsyncResultSuccess() {     this.mvcResult.setAsyncResult("Foo").     this.mvcResult.setAsyncDispatchLatch(new CountDownLatch(0)).     this.mvcResult.getAsyncResult(). }
+false;public;0;4;;@Test(expected = IllegalStateException.class) public void getAsyncResultFailure() {     this.mvcResult.getAsyncResult(0). }

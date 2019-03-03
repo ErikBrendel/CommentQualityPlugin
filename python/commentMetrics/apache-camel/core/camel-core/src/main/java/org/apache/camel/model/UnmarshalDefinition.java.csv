@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String toString() {     return "Unmarshal[" + description() + "]". }
+false;protected;0;7;;protected String description() {     if (dataFormatType != null) {         return dataFormatType.toString().     } else {         return "".     } }
+false;public;0;4;;@Override public String getShortName() {     return "unmarshal". }
+false;public;0;4;;@Override public String getLabel() {     return "unmarshal[" + description() + "]". }
+false;public;0;3;;public DataFormatDefinition getDataFormatType() {     return dataFormatType. }
+true;public;1;3;/**  * The data format to be used  */ ;/**  * The data format to be used  */ public void setDataFormatType(DataFormatDefinition dataFormatType) {     this.dataFormatType = dataFormatType. }

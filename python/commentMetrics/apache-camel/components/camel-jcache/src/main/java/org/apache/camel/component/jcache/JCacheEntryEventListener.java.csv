@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void onCreated(Iterable<CacheEntryEvent<?, ?>> events) throws CacheEntryListenerException {     onEvents(events). }
+false;public;1;4;;@Override public void onExpired(Iterable<CacheEntryEvent<?, ?>> events) throws CacheEntryListenerException {     onEvents(events). }
+false;public;1;4;;@Override public void onRemoved(Iterable<CacheEntryEvent<?, ?>> events) throws CacheEntryListenerException {     onEvents(events). }
+false;public;1;4;;@Override public void onUpdated(Iterable<CacheEntryEvent<?, ?>> events) throws CacheEntryListenerException {     onEvents(events). }
+false;protected;1;2;;protected void onEvents(Iterable<CacheEntryEvent<?, ?>> events) { }

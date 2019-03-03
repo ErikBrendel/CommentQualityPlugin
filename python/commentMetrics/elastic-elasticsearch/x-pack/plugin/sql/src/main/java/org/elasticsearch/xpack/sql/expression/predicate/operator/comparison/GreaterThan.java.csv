@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected NodeInfo<GreaterThan> info() {     return NodeInfo.create(this, GreaterThan::new, left(), right()). }
+false;protected;2;4;;@Override protected GreaterThan replaceChildren(Expression newLeft, Expression newRight) {     return new GreaterThan(source(), newLeft, newRight). }
+false;public;0;4;;@Override public LessThan swapLeftAndRight() {     return new LessThan(source(), right(), left()). }
+false;public;0;4;;@Override public LessThanOrEqual negate() {     return new LessThanOrEqual(source(), left(), right()). }

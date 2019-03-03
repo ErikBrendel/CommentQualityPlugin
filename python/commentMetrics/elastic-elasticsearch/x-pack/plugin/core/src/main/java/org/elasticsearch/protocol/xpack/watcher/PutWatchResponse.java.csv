@@ -1,0 +1,17 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;1;3;;private void setId(String id) {     this.id = id. }
+false;private;1;3;;private void setVersion(long version) {     this.version = version. }
+false;private;1;3;;private void setSeqNo(long seqNo) {     this.seqNo = seqNo. }
+false;private;1;3;;private void setPrimaryTerm(long primaryTerm) {     this.primaryTerm = primaryTerm. }
+false;private;1;3;;private void setCreated(boolean created) {     this.created = created. }
+false;public;0;3;;public String getId() {     return id. }
+false;public;0;3;;public long getVersion() {     return version. }
+false;public;0;3;;public long getSeqNo() {     return seqNo. }
+false;public;0;3;;public long getPrimaryTerm() {     return primaryTerm. }
+false;public;0;3;;public boolean isCreated() {     return created. }
+false;public;1;11;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     PutWatchResponse that = (PutWatchResponse) o.     return Objects.equals(id, that.id) && Objects.equals(version, that.version) && Objects.equals(seqNo, that.seqNo) && Objects.equals(primaryTerm, that.primaryTerm) && Objects.equals(created, that.created). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(id, version, seqNo, primaryTerm, created). }
+false;public;1;9;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeString(id).     out.writeVLong(version).     out.writeZLong(seqNo).     out.writeVLong(primaryTerm).     out.writeBoolean(created). }
+false;public;1;9;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     id = in.readString().     version = in.readVLong().     seqNo = in.readZLong().     primaryTerm = in.readVLong().     created = in.readBoolean(). }
+false;public;2;10;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     return builder.startObject().field("_id", id).field("_version", version).field("_seq_no", seqNo).field("_primary_term", primaryTerm).field("created", created).endObject(). }
+false;public,static;1;3;;public static PutWatchResponse fromXContent(XContentParser parser) throws IOException {     return PARSER.parse(parser, null). }

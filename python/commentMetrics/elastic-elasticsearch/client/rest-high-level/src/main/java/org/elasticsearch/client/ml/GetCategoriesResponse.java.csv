@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static GetCategoriesResponse fromXContent(XContentParser parser) throws IOException {     return PARSER.parse(parser, null). }
+true;public;0;3;/**  * The retrieved categories  * @return the retrieved categories  */ ;/**  * The retrieved categories  * @return the retrieved categories  */ public List<CategoryDefinition> categories() {     return results. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(count, results). }
+false;public;1;11;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     GetCategoriesResponse other = (GetCategoriesResponse) obj.     return count == other.count && Objects.equals(results, other.results). }

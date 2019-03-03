@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;1;1;/**  * Find a user by the given ID  *  * @param id  *            the ID of the user  * @return the user, or <code>null</code> if user not found.  */ ;/**  * Find a user by the given ID  *  * @param id  *            the ID of the user  * @return the user, or <code>null</code> if user not found.  */ User findUser(Integer id).
+true;;0;1;/**  * Find all users  *  * @return a collection of all users  */ ;/**  * Find all users  *  * @return a collection of all users  */ Collection<User> findUsers().
+true;;1;1;/**  * Update the given user  *  * @param user  *            the user  */ ;/**  * Update the given user  *  * @param user  *            the user  */ void updateUser(User user).

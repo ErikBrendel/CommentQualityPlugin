@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public File getDirectory() {     return this.directory. }
+false;public;1;3;;public void setDirectory(File directory) {     this.directory = directory. }
+false;public;1;14;;public File getValidDirectory(boolean mkdirs) {     File dir = getDirectory().     if (dir == null) {         return new ApplicationTemp().getDir("servlet-sessions").     }     if (!dir.isAbsolute()) {         dir = new File(new ApplicationHome().getDir(), dir.getPath()).     }     if (!dir.exists() && mkdirs) {         dir.mkdirs().     }     assertDirectory(mkdirs, dir).     return dir. }
+false;private;2;5;;private void assertDirectory(boolean mkdirs, File dir) {     Assert.state(!mkdirs || dir.exists(), () -> "Session dir " + dir + " does not exist").     Assert.state(!dir.isFile(), () -> "Session dir " + dir + " points to a file"). }

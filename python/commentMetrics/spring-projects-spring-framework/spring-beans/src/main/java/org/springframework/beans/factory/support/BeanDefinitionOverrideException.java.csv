@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;5;/**  * Return the description of the resource that the bean definition came from.  */ ;/**  * Return the description of the resource that the bean definition came from.  */ @Override @NonNull public String getResourceDescription() {     return String.valueOf(super.getResourceDescription()). }
+true;public;0;5;/**  * Return the name of the bean.  */ ;/**  * Return the name of the bean.  */ @Override @NonNull public String getBeanName() {     return String.valueOf(super.getBeanName()). }
+true;public;0;3;/**  * Return the newly registered bean definition.  * @see #getBeanName()  */ ;/**  * Return the newly registered bean definition.  * @see #getBeanName()  */ public BeanDefinition getBeanDefinition() {     return this.beanDefinition. }
+true;public;0;3;/**  * Return the existing bean definition for the same name.  * @see #getBeanName()  */ ;/**  * Return the existing bean definition for the same name.  * @see #getBeanName()  */ public BeanDefinition getExistingDefinition() {     return this.existingDefinition. }

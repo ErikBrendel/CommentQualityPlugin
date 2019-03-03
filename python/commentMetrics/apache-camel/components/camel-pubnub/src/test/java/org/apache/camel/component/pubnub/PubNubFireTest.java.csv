@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@Test public void testFire() throws Exception {     stubFor(get(urlPathEqualTo("/publish/myPublishKey/mySubscribeKey/0/someChannel/0/%22Hi%22")).willReturn(aResponse().withBody("[1,\"Sent\",\"14598111595318003\"]"))).     mockResult.expectedMessageCount(1).     mockResult.expectedHeaderReceived(TIMETOKEN, "14598111595318003").     template.sendBody("direct:publish", "Hi").     assertMockEndpointsSatisfied(). }
+false;public;0;3;;public void configure() {     from("direct:publish").to(endpoint).to("mock:result"). }
+false;protected;0;8;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() {             from("direct:publish").to(endpoint).to("mock:result").         }     }. }
+false;public;0;3;;public String getMessage() {     return message. }

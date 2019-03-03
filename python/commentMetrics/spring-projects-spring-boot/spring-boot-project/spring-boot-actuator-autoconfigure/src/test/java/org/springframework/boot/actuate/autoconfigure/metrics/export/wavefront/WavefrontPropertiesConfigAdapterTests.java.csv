@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected WavefrontProperties createProperties() {     return new WavefrontProperties(). }
+false;protected;1;5;;@Override protected WavefrontPropertiesConfigAdapter createConfigAdapter(WavefrontProperties properties) {     return new WavefrontPropertiesConfigAdapter(properties). }
+false;public;0;7;;@Test public void whenPropertiesUriIsSetAdapterUriReturnsIt() {     WavefrontProperties properties = createProperties().     properties.setUri(URI.create("https://wavefront.example.com")).     assertThat(createConfigAdapter(properties).uri()).isEqualTo("https://wavefront.example.com"). }
+false;public;0;6;;@Test public void whenPropertiesSourceIsSetAdapterSourceReturnsIt() {     WavefrontProperties properties = createProperties().     properties.setSource("test").     assertThat(createConfigAdapter(properties).source()).isEqualTo("test"). }
+false;public;0;6;;@Test public void whenPropertiesApiTokenIsSetAdapterApiTokenReturnsIt() {     WavefrontProperties properties = createProperties().     properties.setApiToken("ABC123").     assertThat(createConfigAdapter(properties).apiToken()).isEqualTo("ABC123"). }
+false;public;0;6;;@Test public void whenPropertiesGlobalPrefixIsSetAdapterGlobalPrefixReturnsIt() {     WavefrontProperties properties = createProperties().     properties.setGlobalPrefix("test").     assertThat(createConfigAdapter(properties).globalPrefix()).isEqualTo("test"). }

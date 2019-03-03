@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;3;;boolean isEligibleToStartTrial() {     return eligibleToStartTrial. }
+false;public;1;4;;@Override public void readFrom(StreamInput in) throws IOException {     eligibleToStartTrial = in.readBoolean(). }
+false;public;1;4;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeBoolean(eligibleToStartTrial). }
+false;public;1;11;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     GetTrialStatusResponse that = (GetTrialStatusResponse) o.     return eligibleToStartTrial == that.eligibleToStartTrial. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(eligibleToStartTrial). }
+false;public;2;7;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field("eligible_to_start_trial", eligibleToStartTrial).     builder.endObject().     return builder. }

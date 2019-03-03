@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean isUseRouteBuilder() {     return false. }
+false;public;0;5;;@Override public void configure() throws Exception {     from("direct:start").to("test:seda:testme?anyOrder=true&timeout=0"). }
+false;public;0;19;;@Test public void testAnyOrder() throws Exception {     template.sendBody("seda:testme", "Bye World").     template.sendBody("seda:testme", "Hello World").     context.addRoutes(new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").to("test:seda:testme?anyOrder=true&timeout=0").         }     }).     context.start().     template.sendBody("direct:start", "Hello World").     template.sendBody("direct:start", "Bye World").     assertMockEndpointsSatisfied(). }

@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;7;;public String format(T object) throws Exception {     if (getNumberFormat() != null) {         return this.getNumberFormat().format(object).     } else {         return object.toString().     } }
+false;public,abstract;1;1;;public abstract T parse(String string) throws Exception.
+true;protected;0;22;/**  * Gets the number format if in use.  *  * @return the number format, or <tt>null</tt> if not in use  */ ;/**  * Gets the number format if in use.  *  * @return the number format, or <tt>null</tt> if not in use  */ protected NumberFormat getNumberFormat() {     if (locale == null) {         return null.     }     NumberFormat format = NumberFormat.getNumberInstance(locale).     if (format instanceof DecimalFormat) {         DecimalFormat df = (DecimalFormat) format.         if (decimalSeparator != null && groupingSeparator != null) {             if (!decimalSeparator.isEmpty() && !groupingSeparator.isEmpty()) {                 DecimalFormatSymbols dfs = new DecimalFormatSymbols(locale).                 dfs.setDecimalSeparator(decimalSeparator.charAt(0)).                 dfs.setGroupingSeparator(groupingSeparator.charAt(0)).                 df.setDecimalFormatSymbols(dfs).             }         }         if (!pattern.isEmpty()) {             df.applyPattern(pattern).         }     }     return format. }
+false;public;0;3;;public String getPattern() {     return pattern. }
+false;public;1;3;;public void setPattern(String pattern) {     this.pattern = pattern. }
+false;public;0;3;;public int getPrecision() {     return precision. }
+false;public;1;3;;public void setPrecision(int precision) {     this.precision = precision. }
+false;public;0;3;;public String getRounding() {     return rounding. }
+false;public;1;3;;public void setRounding(String rounding) {     this.rounding = rounding. }
+false;public;0;3;;public Locale getLocale() {     return locale. }
+false;public;1;3;;public void setLocale(Locale locale) {     this.locale = locale. }

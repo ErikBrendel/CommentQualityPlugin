@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void getValueForTimerWhenFromLongShouldReturnMsToNanosValue() {     ServiceLevelAgreementBoundary sla = ServiceLevelAgreementBoundary.valueOf(123L).     assertThat(sla.getValue(Type.TIMER)).isEqualTo(123000000). }
+false;public;0;5;;@Test public void getValueForTimerWhenFromNumberStringShouldMsToNanosValue() {     ServiceLevelAgreementBoundary sla = ServiceLevelAgreementBoundary.valueOf("123").     assertThat(sla.getValue(Type.TIMER)).isEqualTo(123000000). }
+false;public;0;6;;@Test public void getValueForTimerWhenFromDurationStringShouldReturnDurationNanos() {     ServiceLevelAgreementBoundary sla = ServiceLevelAgreementBoundary.valueOf("123ms").     assertThat(sla.getValue(Type.TIMER)).isEqualTo(123000000). }

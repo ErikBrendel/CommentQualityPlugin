@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void setDataSource(DataSource ds) {     jdbc = new JdbcTemplate(ds). }
+false;public;1;8;;public void orderBook(String title) throws Exception {     if (title.startsWith("Donkey")) {         throw new IllegalArgumentException("We don't have Donkeys, only Camels").     }     // create new local datasource to store in DB     jdbc.update("insert into books (title) values (?)", title). }

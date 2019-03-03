@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Producer createProducer() throws Exception {     return new JCacheProducer(this, cacheConfiguration). }
+false;public;1;4;;@Override public Consumer createConsumer(Processor processor) throws Exception {     return new JCacheConsumer(this, processor). }
+false;public;0;4;;@Override public boolean isSingleton() {     return true. }
+false;protected;0;4;;@Override protected void doStart() throws Exception {     cacheManager = JCacheHelper.createManager(cacheConfiguration). }
+false;protected;0;6;;@Override protected void doStop() throws Exception {     if (cacheManager != null) {         cacheManager.close().     } }
+false;;0;3;;JCacheManager getManager() {     return cacheManager. }

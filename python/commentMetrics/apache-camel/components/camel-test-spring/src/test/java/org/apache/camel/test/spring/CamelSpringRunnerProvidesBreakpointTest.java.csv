@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;4;;@ProvidesBreakpoint public static Breakpoint createBreakpoint() {     return new TestBreakpoint(). }
+false;public;0;15;;@Test @Override public void testProvidesBreakpoint() {     assertNotNull(camelContext.getDebugger()).     assertNotNull(camelContext2.getDebugger()).     start.sendBody("David").     assertNotNull(camelContext.getDebugger()).     assertNotNull(camelContext.getDebugger().getBreakpoints()).     assertEquals(1, camelContext.getDebugger().getBreakpoints().size()).     assertTrue(camelContext.getDebugger().getBreakpoints().get(0) instanceof TestBreakpoint).     assertTrue(((TestBreakpoint) camelContext.getDebugger().getBreakpoints().get(0)).isBreakpointHit()). }
+false;public;3;4;;@Override public void beforeProcess(Exchange exchange, Processor processor, NamedNode definition) {     breakpointHit = true. }
+false;public;0;3;;public boolean isBreakpointHit() {     return breakpointHit. }

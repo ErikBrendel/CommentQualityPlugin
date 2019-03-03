@@ -1,0 +1,35 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;8;;@Override public void accept(Void v, Exception exception) {     if (exception == null) {         promise.setSuccess().     } else {         promise.setFailure(exception).     } }
+false;public;0;4;;@Override public Channel channel() {     return promise.channel(). }
+false;public;1;4;;@Override public ChannelPromise setSuccess(Void result) {     return promise.setSuccess(result). }
+false;public;1;4;;@Override public boolean trySuccess(Void result) {     return promise.trySuccess(result). }
+false;public;0;4;;@Override public ChannelPromise setSuccess() {     return promise.setSuccess(). }
+false;public;0;4;;@Override public boolean trySuccess() {     return promise.trySuccess(). }
+false;public;1;4;;@Override public ChannelPromise setFailure(Throwable cause) {     return promise.setFailure(cause). }
+false;public;1;4;;@Override public boolean tryFailure(Throwable cause) {     return promise.tryFailure(cause). }
+false;public;0;4;;@Override public boolean setUncancellable() {     return promise.setUncancellable(). }
+false;public;0;4;;@Override public boolean isSuccess() {     return promise.isSuccess(). }
+false;public;0;4;;@Override public boolean isCancellable() {     return promise.isCancellable(). }
+false;public;0;4;;@Override public Throwable cause() {     return promise.cause(). }
+false;public;1;4;;@Override public ChannelPromise addListener(GenericFutureListener<? extends Future<? super Void>> listener) {     return promise.addListener(listener). }
+false;public,final;1;6;;@Override @SafeVarargs @SuppressWarnings("varargs") public final ChannelPromise addListeners(GenericFutureListener<? extends Future<? super Void>>... listeners) {     return promise.addListeners(listeners). }
+false;public;1;4;;@Override public ChannelPromise removeListener(GenericFutureListener<? extends Future<? super Void>> listener) {     return promise.removeListener(listener). }
+false;public,final;1;6;;@Override @SafeVarargs @SuppressWarnings("varargs") public final ChannelPromise removeListeners(GenericFutureListener<? extends Future<? super Void>>... listeners) {     return promise.removeListeners(listeners). }
+false;public;0;4;;@Override public ChannelPromise sync() throws InterruptedException {     return promise.sync(). }
+false;public;0;4;;@Override public ChannelPromise syncUninterruptibly() {     return promise.syncUninterruptibly(). }
+false;public;0;4;;@Override public ChannelPromise await() throws InterruptedException {     return promise.await(). }
+false;public;0;4;;@Override public ChannelPromise awaitUninterruptibly() {     return promise.awaitUninterruptibly(). }
+false;public;2;4;;@Override public boolean await(long timeout, TimeUnit unit) throws InterruptedException {     return promise.await(timeout, unit). }
+false;public;1;4;;@Override public boolean await(long timeoutMillis) throws InterruptedException {     return promise.await(timeoutMillis). }
+false;public;2;4;;@Override public boolean awaitUninterruptibly(long timeout, TimeUnit unit) {     return promise.awaitUninterruptibly(timeout, unit). }
+false;public;1;4;;@Override public boolean awaitUninterruptibly(long timeoutMillis) {     return promise.awaitUninterruptibly(timeoutMillis). }
+false;public;0;4;;@Override public Void getNow() {     return promise.getNow(). }
+false;public;1;4;;@Override public boolean cancel(boolean mayInterruptIfRunning) {     return FutureUtils.cancel(promise). }
+false;public;0;4;;@Override public boolean isCancelled() {     return promise.isCancelled(). }
+false;public;0;4;;@Override public boolean isDone() {     return promise.isDone(). }
+false;public;0;4;;@Override public Void get() throws InterruptedException, ExecutionException {     return promise.get(). }
+false;public;2;4;;@Override public Void get(long timeout, TimeUnit unit) throws InterruptedException, ExecutionException, TimeoutException {     return promise.get(timeout, unit). }
+false;public;0;4;;@Override public boolean isVoid() {     return promise.isVoid(). }
+false;public;0;4;;@Override public ChannelPromise unvoid() {     return promise.unvoid(). }
+false;public,static;2;22;;public static NettyListener fromBiConsumer(BiConsumer<Void, Exception> biConsumer, Channel channel) {     if (biConsumer instanceof NettyListener) {         return (NettyListener) biConsumer.     } else {         ChannelPromise channelPromise = channel.newPromise().         channelPromise.addListener(f -> {             Throwable cause = f.cause().             if (cause == null) {                 biConsumer.accept(null, null).             } else {                 if (cause instanceof Error) {                     ExceptionsHelper.maybeDieOnAnotherThread(cause).                     biConsumer.accept(null, new Exception(cause)).                 } else {                     biConsumer.accept(null, (Exception) cause).                 }             }         }).         return new NettyListener(channelPromise).     } }
+false;public,static;1;7;;public static NettyListener fromChannelPromise(ChannelPromise channelPromise) {     if (channelPromise instanceof NettyListener) {         return (NettyListener) channelPromise.     } else {         return new NettyListener(channelPromise).     } }

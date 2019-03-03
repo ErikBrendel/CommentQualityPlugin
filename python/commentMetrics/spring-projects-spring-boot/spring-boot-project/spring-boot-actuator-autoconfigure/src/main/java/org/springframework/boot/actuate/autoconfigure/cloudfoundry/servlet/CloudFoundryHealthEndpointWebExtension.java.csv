@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@ReadOperation public WebEndpointResponse<Health> getHealth() {     return this.delegate.getHealth(null, ShowDetails.ALWAYS). }

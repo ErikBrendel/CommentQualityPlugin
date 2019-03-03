@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;public ResultHandler createResult(Exchange exchange) throws Exception {     String fileName = ExchangeHelper.getMandatoryHeader(exchange, Exchange.XSLT_FILE_NAME, String.class).     return new FileResultHandler(new File(fileName)). }

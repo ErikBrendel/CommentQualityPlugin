@@ -1,0 +1,17 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void onContextStart(CamelContext context) throws VetoCamelContextStartException {     events.add("onContextStart"). }
+false;public;1;3;;public void onContextStop(CamelContext context) {     events.add("onContextStop"). }
+false;public;2;3;;public void onComponentAdd(String name, Component component) {     events.add("onComponentAdd"). }
+false;public;2;3;;public void onComponentRemove(String name, Component component) {     events.add("onComponentRemove"). }
+false;public;1;3;;public void onEndpointAdd(Endpoint endpoint) {     events.add("onEndpointAdd"). }
+false;public;1;3;;public void onEndpointRemove(Endpoint endpoint) {     events.add("onEndpointRemove"). }
+false;public;3;3;;public void onServiceAdd(CamelContext context, Service service, Route route) {     events.add("onServiceAdd"). }
+false;public;3;3;;public void onServiceRemove(CamelContext context, Service service, Route route) {     events.add("onServiceRemove"). }
+false;public;1;3;;public void onRoutesAdd(Collection<Route> routes) {     events.add("onRoutesAdd"). }
+false;public;1;3;;public void onRoutesRemove(Collection<Route> routes) {     events.add("onRoutesRemove"). }
+false;public;1;3;;public void onRouteContextCreate(RouteContext routeContext) {     events.add("onRouteContextCreate"). }
+false;public;3;3;;public void onErrorHandlerAdd(RouteContext routeContext, Processor errorHandler, ErrorHandlerFactory errorHandlerBuilder) {     events.add("onErrorHandlerAdd"). }
+false;public;3;3;;public void onErrorHandlerRemove(RouteContext routeContext, Processor errorHandler, ErrorHandlerFactory errorHandlerBuilder) {     events.add("onErrorHandlerRemove"). }
+false;public;6;4;;public void onThreadPoolAdd(CamelContext camelContext, ThreadPoolExecutor threadPool, String id, String sourceId, String routeId, String threadPoolProfileId) {     events.add("onThreadPoolAdd"). }
+false;public;2;3;;public void onThreadPoolRemove(CamelContext camelContext, ThreadPoolExecutor threadPool) {     events.add("onThreadPoolRemove"). }
+false;public;0;3;;public List<String> getEvents() {     return events. }

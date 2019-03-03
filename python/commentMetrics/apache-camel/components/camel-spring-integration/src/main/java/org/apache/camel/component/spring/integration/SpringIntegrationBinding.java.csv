@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static org.springframework.messaging.Message<?> createSpringIntegrationMessage(Exchange exchange) {     return createSpringIntegrationMessage(exchange, exchange.getIn().getHeaders()). }
+false;public,static;2;4;;public static org.springframework.messaging.Message<?> createSpringIntegrationMessage(Exchange exchange, Map<String, Object> headers) {     org.apache.camel.Message message = exchange.getIn().     return new GenericMessage<>(message.getBody(), headers). }
+false;public,static;1;3;;public static org.springframework.messaging.Message<?> storeToSpringIntegrationMessage(org.apache.camel.Message message) {     return new GenericMessage<>(message.getBody(), message.getHeaders()). }
+false;public,static;2;4;;public static void storeToCamelMessage(org.springframework.messaging.Message<?> siMessage, org.apache.camel.Message cMessage) {     cMessage.setBody(siMessage.getPayload()).     cMessage.setHeaders(siMessage.getHeaders()). }

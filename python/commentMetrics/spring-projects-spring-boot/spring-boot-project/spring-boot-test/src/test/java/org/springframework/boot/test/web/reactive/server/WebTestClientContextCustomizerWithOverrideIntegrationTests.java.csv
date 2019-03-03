@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void test() {     assertThat(this.webTestClient).isInstanceOf(CustomWebTestClient.class). }
+false;public;0;4;;@Bean public TomcatReactiveWebServerFactory webServerFactory() {     return new TomcatReactiveWebServerFactory(0). }
+false;public;0;4;;@Bean public WebTestClient webTestClient() {     return mock(CustomWebTestClient.class). }
+false;public;2;5;;@Override public Mono<Void> handle(ServerHttpRequest request, ServerHttpResponse response) {     response.setStatusCode(HttpStatus.OK).     return response.writeWith(Mono.just(factory.wrap("hello".getBytes()))). }

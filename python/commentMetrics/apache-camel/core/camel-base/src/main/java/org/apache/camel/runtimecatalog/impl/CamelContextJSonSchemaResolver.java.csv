@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;9;;@Override public String getComponentJSonSchema(String name) {     try {         return camelContext.getComponentParameterJsonSchema(name).     } catch (IOException e) {     // ignore     }     return null. }
+false;public;1;9;;@Override public String getDataFormatJSonSchema(String name) {     try {         return camelContext.getDataFormatParameterJsonSchema(name).     } catch (IOException e) {     // ignore     }     return null. }
+false;public;1;9;;@Override public String getLanguageJSonSchema(String name) {     try {         return camelContext.getLanguageParameterJsonSchema(name).     } catch (IOException e) {     // ignore     }     return null. }
+false;public;1;5;;@Override public String getOtherJSonSchema(String name) {     // not supported     return null. }
+false;public;1;9;;@Override public String getModelJSonSchema(String name) {     try {         return camelContext.getEipParameterJsonSchema(name).     } catch (IOException e) {     // ignore     }     return null. }

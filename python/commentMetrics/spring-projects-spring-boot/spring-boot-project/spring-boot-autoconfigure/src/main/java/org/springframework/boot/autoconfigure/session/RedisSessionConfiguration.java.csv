@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;11;;@Autowired public void customize(SessionProperties sessionProperties, RedisSessionProperties redisSessionProperties) {     Duration timeout = sessionProperties.getTimeout().     if (timeout != null) {         setMaxInactiveIntervalInSeconds((int) timeout.getSeconds()).     }     setRedisNamespace(redisSessionProperties.getNamespace()).     setRedisFlushMode(redisSessionProperties.getFlushMode()).     setCleanupCron(redisSessionProperties.getCleanupCron()). }

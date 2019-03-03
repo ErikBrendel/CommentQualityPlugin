@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Collection<Class<?>> supportedClasses() {     return Collections.unmodifiableList(supportedClasses). }
+false;public;1;4;;@Override public boolean canBuild(FormattingOptions formattingOptions) {     return supportedClasses.contains(formattingOptions.getClazz()). }

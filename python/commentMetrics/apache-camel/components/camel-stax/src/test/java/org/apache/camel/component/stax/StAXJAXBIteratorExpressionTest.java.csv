@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;4;;@BeforeClass public static void initRouteExample() {     RecordsUtil.createXMLFile(). }
+false;public;0;10;;@Override public void configure() throws Exception {     // START SNIPPET: e1     from("file:target/in").split(stax(Record.class)).streaming().to("mock:records"). // END SNIPPET: e1 }
+false;public;0;15;;@Override public RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             // START SNIPPET: e1             from("file:target/in").split(stax(Record.class)).streaming().to("mock:records").         // END SNIPPET: e1         }     }. }
+false;public;0;11;;@Test public void testStaxExpression() throws InterruptedException {     recordsEndpoint.expectedMessageCount(10).     recordsEndpoint.allMessages().body().isInstanceOf(Record.class).     recordsEndpoint.assertIsSatisfied().     Record five = recordsEndpoint.getReceivedExchanges().get(4).getIn().getBody(Record.class).     assertEquals("4", five.getKey()).     assertEquals("#4", five.getValue()). }

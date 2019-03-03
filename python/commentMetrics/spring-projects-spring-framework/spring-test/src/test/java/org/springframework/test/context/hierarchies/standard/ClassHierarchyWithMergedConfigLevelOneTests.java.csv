@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Bean public String parent() {     return "parent". }
+false;public;0;4;;@Bean public String user() {     return appConfig.parent() + " + user". }
+false;public;0;4;;@Bean public String beanFromUserConfig() {     return "from UserConfig". }
+false;public;0;9;;@Test public void loadContextHierarchy() {     assertNotNull("child ApplicationContext", context).     assertNotNull("parent ApplicationContext", context.getParent()).     assertNull("grandparent ApplicationContext", context.getParent().getParent()).     assertEquals("parent", parent).     assertEquals("parent + user", user).     assertEquals("from UserConfig", beanFromUserConfig). }

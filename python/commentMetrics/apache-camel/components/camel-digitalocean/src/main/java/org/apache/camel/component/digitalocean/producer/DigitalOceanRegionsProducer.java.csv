@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;public void process(Exchange exchange) throws Exception {     Regions regions = getEndpoint().getDigitalOceanClient().getAvailableRegions(configuration.getPage()).     LOG.trace("All Regions : page {} [{}] ", regions.getRegions(), configuration.getPage()).     exchange.getOut().setBody(regions.getRegions()). }

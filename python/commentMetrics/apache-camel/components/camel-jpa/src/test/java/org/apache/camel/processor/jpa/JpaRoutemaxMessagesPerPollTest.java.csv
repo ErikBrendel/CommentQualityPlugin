@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;12;;@Test public void testRouteJpa() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMessageCount(2).     template.sendBody("direct:start", new SendEmail("one@somewhere.org")).     template.sendBody("direct:start", new SendEmail("two@somewhere.org")).     template.sendBody("direct:start", new SendEmail("three@somewhere.org")).     assertMockEndpointsSatisfied().     assertEntityInDB(3). }
+false;public;0;5;;public void configure() {     from("direct:start").to("jpa://" + SendEmail.class.getName()).     from("jpa://" + SendEmail.class.getName() + "?maxMessagesPerPoll=2&consumeDelete=false&delay=5000").to("mock:result"). }
+false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() {     return new SpringRouteBuilder() {          public void configure() {             from("direct:start").to("jpa://" + SendEmail.class.getName()).             from("jpa://" + SendEmail.class.getName() + "?maxMessagesPerPoll=2&consumeDelete=false&delay=5000").to("mock:result").         }     }. }
+false;protected;0;4;;@Override protected String routeXml() {     return "org/apache/camel/processor/jpa/springJpaRouteTest.xml". }
+false;protected;0;4;;@Override protected String selectAllString() {     return SELECT_ALL_STRING. }

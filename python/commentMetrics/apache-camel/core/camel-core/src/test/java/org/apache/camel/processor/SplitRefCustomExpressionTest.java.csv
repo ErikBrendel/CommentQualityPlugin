@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry jndi = super.createRegistry().     jndi.bind("myCustomExpression", new MyCustomExpression()).     return jndi. }
+false;public;0;8;;@Test public void testSplitCustomExpression() throws Exception {     getMockEndpoint("mock:split").expectedBodiesReceived("A", "B", "C").     template.sendBody("direct:start", "A,B,C").     assertMockEndpointsSatisfied(). }
+false;public;0;6;;@Override public void configure() throws Exception {     from("direct:start").split().ref("myCustomExpression").to("mock:split"). }
+false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").split().ref("myCustomExpression").to("mock:split").         }     }. }
+false;public;2;14;;@Override @SuppressWarnings("unchecked") public <T> T evaluate(Exchange exchange, Class<T> type) {     final String body = exchange.getIn().getBody(String.class).     // just split the body by comma     String[] parts = body.split(",").     List<String> list = new ArrayList<>().     for (String part : parts) {         list.add(part).     }     return (T) list.iterator(). }

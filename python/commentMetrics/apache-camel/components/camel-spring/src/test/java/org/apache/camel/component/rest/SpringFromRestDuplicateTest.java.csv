@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;12;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     System.setProperty("CamelSedaPollTimeout", "10").     try {         new ClassPathXmlApplicationContext("org/apache/camel/component/rest/SpringFromRestDuplicateTest.xml").         fail("Should throw exception").     } catch (RuntimeCamelException e) {         IllegalArgumentException iae = assertIsInstanceOf(IllegalArgumentException.class, e.getCause()).         assertEquals("Duplicate verb detected in rest-dsl: get:{id}", iae.getMessage()).     }     return null. }
+false;public;0;6;;@Override @Before public void setUp() throws Exception {     // must override as there is no valid spring xml file     createApplicationContext(). }
+false;public;0;4;;@Test public void testDuplicate() throws Exception { // noop }

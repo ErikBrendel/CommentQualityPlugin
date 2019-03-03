@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Return the child query.  */ ;/**  * Return the child query.  */ public Query getChildQuery() {     return query.getChildQuery(). }
+true;public;0;3;/**  * Return the path of results of this query, or {@code null} if matches are at the root level.  */ ;/**  * Return the path of results of this query, or {@code null} if matches are at the root level.  */ public String getPath() {     return path. }
+false;public;1;18;;@Override public Query rewrite(IndexReader reader) throws IOException {     Query innerRewrite = query.rewrite(reader).     if (innerRewrite != query) {         // about the nested path.         if (innerRewrite instanceof ToParentBlockJoinQuery) {             return new ESToParentBlockJoinQuery((ToParentBlockJoinQuery) innerRewrite, path).         } else {             return innerRewrite.         }     }     return super.rewrite(reader). }
+false;public;3;4;;@Override public Weight createWeight(IndexSearcher searcher, org.apache.lucene.search.ScoreMode scoreMode, float boost) throws IOException {     return query.createWeight(searcher, scoreMode, boost). }
+false;public;1;8;;@Override public boolean equals(Object obj) {     if (sameClassAs(obj) == false) {         return false.     }     ESToParentBlockJoinQuery that = (ESToParentBlockJoinQuery) obj.     return query.equals(that.query) && Objects.equals(path, that.path). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(getClass(), query, path). }
+false;public;1;4;;@Override public String toString(String field) {     return query.toString(field). }

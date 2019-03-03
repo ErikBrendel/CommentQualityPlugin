@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected LinksHandler getLinksHandler() {     return new WebFluxLinksHandler(). }
+false;public;1;10;;@Override @ResponseBody public Map<String, Map<String, Link>> links(ServerWebExchange exchange) {     String requestUri = UriComponentsBuilder.fromUri(exchange.getRequest().getURI()).replaceQuery(null).toUriString().     return Collections.singletonMap("_links", WebFluxEndpointHandlerMapping.this.linksResolver.resolveLinks(requestUri)). }
+false;public;0;4;;@Override public String toString() {     return "Actuator root web endpoint". }

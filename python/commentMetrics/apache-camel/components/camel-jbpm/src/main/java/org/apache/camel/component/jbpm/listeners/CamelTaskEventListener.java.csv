@@ -1,0 +1,35 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;7;;@Override public void beforeTaskActivatedEvent(TaskEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("beforeTaskActivatedEvent", event). }
+false;public;1;7;;@Override public void beforeTaskClaimedEvent(TaskEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("beforeTaskClaimedEvent", event). }
+false;public;1;7;;@Override public void beforeTaskSkippedEvent(TaskEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("beforeTaskSkippedEvent", event). }
+false;public;1;8;;@Override public void beforeTaskStartedEvent(TaskEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("beforeTaskStartedEvent", event). }
+false;public;1;8;;@Override public void beforeTaskStoppedEvent(TaskEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("beforeTaskStoppedEvent", event). }
+false;public;1;8;;@Override public void beforeTaskCompletedEvent(TaskEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("beforeTaskCompletedEvent", event). }
+false;public;1;8;;@Override public void beforeTaskFailedEvent(TaskEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("beforeTaskFailedEvent", event). }
+false;public;1;8;;@Override public void beforeTaskAddedEvent(TaskEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("beforeTaskAddedEvent", event). }
+false;public;1;8;;@Override public void beforeTaskExitedEvent(TaskEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("beforeTaskExitedEvent", event). }
+false;public;1;8;;@Override public void beforeTaskReleasedEvent(TaskEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("beforeTaskReleasedEvent", event). }
+false;public;1;8;;@Override public void beforeTaskResumedEvent(TaskEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("beforeTaskResumedEvent", event). }
+false;public;1;8;;@Override public void beforeTaskSuspendedEvent(TaskEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("beforeTaskSuspendedEvent", event). }
+false;public;1;8;;@Override public void beforeTaskForwardedEvent(TaskEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("beforeTaskForwardedEvent", event). }
+false;public;1;8;;@Override public void beforeTaskDelegatedEvent(TaskEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("beforeTaskDelegatedEvent", event). }
+false;public;1;8;;@Override public void beforeTaskNominatedEvent(TaskEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("beforeTaskNominatedEvent", event). }
+false;public;1;8;;@Override public void afterTaskActivatedEvent(TaskEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("afterTaskActivatedEvent", event). }
+false;public;1;8;;@Override public void afterTaskClaimedEvent(TaskEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("afterTaskClaimedEvent", event). }
+false;public;1;8;;@Override public void afterTaskSkippedEvent(TaskEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("afterTaskSkippedEvent", event). }
+false;public;1;8;;@Override public void afterTaskStartedEvent(TaskEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("afterTaskStartedEvent", event). }
+false;public;1;8;;@Override public void afterTaskStoppedEvent(TaskEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("afterTaskStoppedEvent", event). }
+false;public;1;8;;@Override public void afterTaskCompletedEvent(TaskEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("afterTaskCompletedEvent", event). }
+false;public;1;8;;@Override public void afterTaskFailedEvent(TaskEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("afterTaskFailedEvent", event). }
+false;public;1;8;;@Override public void afterTaskAddedEvent(TaskEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("afterTaskAddedEvent", event). }
+false;public;1;8;;@Override public void afterTaskExitedEvent(TaskEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("afterTaskExitedEvent", event). }
+false;public;1;8;;@Override public void afterTaskReleasedEvent(TaskEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("afterTaskReleasedEvent", event). }
+false;public;1;8;;@Override public void afterTaskResumedEvent(TaskEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("afterTaskResumedEvent", event). }
+false;public;1;8;;@Override public void afterTaskSuspendedEvent(TaskEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("afterTaskSuspendedEvent", event). }
+false;public;1;8;;@Override public void afterTaskForwardedEvent(TaskEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("afterTaskForwardedEvent", event). }
+false;public;1;8;;@Override public void afterTaskDelegatedEvent(TaskEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("afterTaskDelegatedEvent", event). }
+false;public;1;8;;@Override public void afterTaskNominatedEvent(TaskEvent event) {     if (consumers.isEmpty()) {         return.     }     sendMessage("afterTaskNominatedEvent", event). }
+false;public;0;4;;@Override public void close() { }
+false;public;1;4;;@Override public void addConsumer(JBPMConsumer consumer) {     this.consumers.add(consumer). }
+false;public;1;4;;@Override public void removeConsumer(JBPMConsumer consumer) {     this.consumers.remove(consumer). }
+false;protected;2;3;;protected void sendMessage(String eventType, Object event) {     this.consumers.stream().filter(c -> c.getStatus().isStarted()).forEach(c -> c.sendMessage(eventType, event)). }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Override public void configure() throws Exception {     rest().get("/thepath").produces("text/plain").route().transform().constant("Hello"). }
+false;public;0;13;;@Before public void setup() throws Exception {     context.addRoutes(new RouteBuilder() {          @Override         public void configure() throws Exception {             rest().get("/thepath").produces("text/plain").route().transform().constant("Hello").         }     }). }
+false;public;0;4;;@Test public void testServletMapping() {     Assert.assertEquals(404, restTemplate.getForEntity("/camel/thepath", String.class).getStatusCodeValue()). }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Override public void configure() throws Exception {     from("direct:foo").to("stub:foo?password={{mypassword}}"). }
+false;;0;10;;@Bean RouteBuilder routeBuilder() {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:foo").to("stub:foo?password={{mypassword}}").         }     }. }
+false;public;0;5;;@Test public void shouldSecret() throws InterruptedException {     Object endpoint = camelContext.hasEndpoint("stub:foo?password=1234").     assertNotNull(endpoint). }

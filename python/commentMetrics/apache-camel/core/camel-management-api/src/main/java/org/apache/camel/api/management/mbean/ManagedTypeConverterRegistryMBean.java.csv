@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;2;;@ManagedAttribute(description = "Number of noop attempts (no type conversion was needed)") long getNoopCounter().
+false;;0;2;;@ManagedAttribute(description = "Number of type conversion attempts") long getAttemptCounter().
+false;;0;2;;@ManagedAttribute(description = "Number of type conversion hits (successful conversions)") long getHitCounter().
+false;;0;2;;@ManagedAttribute(description = "Number of type conversion misses (no suitable type converter)") long getMissCounter().
+false;;0;2;;@ManagedAttribute(description = "Number of type conversion failures (failed conversions)") long getFailedCounter().
+false;;0;2;;@ManagedOperation(description = "Resets the type conversion counters") void resetTypeConversionCounters().
+false;;0;2;;@ManagedAttribute(description = "Utilization statistics enabled") boolean isStatisticsEnabled().
+false;;1;2;;@ManagedAttribute(description = "Utilization statistics enabled") void setStatisticsEnabled(boolean statisticsEnabled).
+false;;0;2;;@ManagedAttribute(description = "Number of type converters in the registry") int getNumberOfTypeConverters().
+false;;0;2;;@ManagedAttribute(description = "Logging level to use if attempting to add a duplicate type converter") String getTypeConverterExistsLoggingLevel().
+false;;0;2;;@ManagedAttribute(description = "What to do if attempting to add a duplicate type converter (Override, Ignore or Fail)") String getTypeConverterExists().
+false;;2;2;;@ManagedOperation(description = "Checks whether a type converter exists for converting (from -> to)") boolean hasTypeConverter(String fromType, String toType).
+false;;0;2;;@ManagedOperation(description = "Lists all the type converters in the registry (from -> to)") TabularData listTypeConverters().

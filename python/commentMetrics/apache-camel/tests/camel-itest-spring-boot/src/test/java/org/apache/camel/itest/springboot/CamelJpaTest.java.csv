@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;4;;@Deployment public static Archive<?> createSpringBootPackage() throws Exception {     return ArquillianPackager.springBootPackage(createTestConfig()). }
+false;public,static;0;10;;public static ITestConfig createTestConfig() {     return new ITestConfigBuilder().module(inferModuleName(CamelJpaTest.class)).dependency("org.apache.openjpa:openjpa:" + DependencyResolver.resolveParentProperty("${openjpa-version}")).dependency("org.apache.openjpa:openjpa-persistence-jdbc").exclusion("org.apache.geronimo.specs:geronimo-jpa_2.0_spec").unitTestExclusionPattern(".*(.*Idempotent.*Test$|JpaUsePersistTest$|JpaTraceEventMessageTest$)").build(). }
+false;public;0;5;;@Test public void componentTests() throws Exception {     this.runComponentTest(config).     this.runModuleUnitTestsIfEnabled(config). }

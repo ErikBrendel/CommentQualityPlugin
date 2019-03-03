@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public boolean supports(Object handler) {     return (handler instanceof HttpRequestHandler). }
+false;public;3;8;;@Override @Nullable public ModelAndView handle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {     ((HttpRequestHandler) handler).handleRequest(request, response).     return null. }
+false;public;2;7;;@Override public long getLastModified(HttpServletRequest request, Object handler) {     if (handler instanceof LastModified) {         return ((LastModified) handler).getLastModified(request).     }     return -1L. }

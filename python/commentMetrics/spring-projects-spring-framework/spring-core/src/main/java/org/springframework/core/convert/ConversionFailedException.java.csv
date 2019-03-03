@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;4;/**  * Return the source type we tried to convert the value from.  */ ;/**  * Return the source type we tried to convert the value from.  */ @Nullable public TypeDescriptor getSourceType() {     return this.sourceType. }
+true;public;0;3;/**  * Return the target type we tried to convert the value to.  */ ;/**  * Return the target type we tried to convert the value to.  */ public TypeDescriptor getTargetType() {     return this.targetType. }
+true;public;0;4;/**  * Return the offending value.  */ ;/**  * Return the offending value.  */ @Nullable public Object getValue() {     return this.value. }

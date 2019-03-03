@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String type() {     return HttpInput.TYPE. }
+false;public;2;4;;@Override public HttpInput parseInput(String watchId, XContentParser parser) throws IOException {     return HttpInput.parse(watchId, parser). }
+false;public;1;4;;@Override public ExecutableHttpInput createExecutable(HttpInput input) {     return new ExecutableHttpInput(input, httpClient, templateEngine). }

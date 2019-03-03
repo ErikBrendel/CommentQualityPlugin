@@ -1,0 +1,17 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public ScheduledPollConsumer getConsumer() {     return consumer. }
+false;public;0;3;;public long getDelay() {     return getConsumer().getDelay(). }
+false;public;1;3;;public void setDelay(long delay) {     getConsumer().setDelay(delay). }
+false;public;0;3;;public long getInitialDelay() {     return getConsumer().getInitialDelay(). }
+false;public;1;3;;public void setInitialDelay(long initialDelay) {     getConsumer().setInitialDelay(initialDelay). }
+false;public;0;3;;public boolean isUseFixedDelay() {     return getConsumer().isUseFixedDelay(). }
+false;public;1;3;;public void setUseFixedDelay(boolean useFixedDelay) {     getConsumer().setUseFixedDelay(useFixedDelay). }
+false;public;0;3;;public String getTimeUnit() {     return getConsumer().getTimeUnit().name(). }
+false;public;1;3;;public void setTimeUnit(String timeUnit) {     getConsumer().setTimeUnit(TimeUnit.valueOf(timeUnit)). }
+false;public;0;3;;public boolean isSchedulerStarted() {     return getConsumer().isSchedulerStarted(). }
+false;public;0;3;;public void startScheduler() {     getConsumer().startScheduler(). }
+false;public;0;3;;public String getSchedulerClassName() {     return getConsumer().getScheduler().getClass().getName(). }
+false;public;0;3;;public int getBackoffMultiplier() {     return getConsumer().getBackoffMultiplier(). }
+false;public;0;3;;public int getBackoffIdleThreshold() {     return getConsumer().getBackoffIdleThreshold(). }
+false;public;0;3;;public int getBackoffErrorThreshold() {     return getConsumer().getBackoffErrorThreshold(). }
+false;public;0;3;;public int getBackoffCounter() {     return getConsumer().getBackoffCounter(). }

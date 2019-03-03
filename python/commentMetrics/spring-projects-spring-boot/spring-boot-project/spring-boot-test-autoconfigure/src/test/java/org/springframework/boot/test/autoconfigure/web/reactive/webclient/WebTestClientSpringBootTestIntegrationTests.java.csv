@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void shouldFindController1() {     this.webClient.get().uri("/one").exchange().expectStatus().isOk().expectBody(String.class).isEqualTo("one"). }
+false;public;0;5;;@Test public void shouldFindController2() {     this.webClient.get().uri("/two").exchange().expectStatus().isOk().expectBody(String.class).isEqualTo("two"). }
+false;public;0;5;;@Test public void shouldHaveRealService() {     assertThat(this.applicationContext.getBeansOfType(ExampleRealService.class)).hasSize(1). }
+false;public;1;4;;@Bean public SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {     return http.authorizeExchange().anyExchange().permitAll().and().build(). }

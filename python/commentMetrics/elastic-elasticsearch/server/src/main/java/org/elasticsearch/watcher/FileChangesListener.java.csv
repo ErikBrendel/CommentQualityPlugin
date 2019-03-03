@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;default;1;1;/**  * Called for every file found in the watched directory during initialization  */ ;/**  * Called for every file found in the watched directory during initialization  */ default void onFileInit(Path file) { }
+true;default;1;1;/**  * Called for every subdirectory found in the watched directory during initialization  */ ;/**  * Called for every subdirectory found in the watched directory during initialization  */ default void onDirectoryInit(Path file) { }
+true;default;1;1;/**  * Called for every new file found in the watched directory  */ ;/**  * Called for every new file found in the watched directory  */ default void onFileCreated(Path file) { }
+true;default;1;1;/**  * Called for every file that disappeared in the watched directory  */ ;/**  * Called for every file that disappeared in the watched directory  */ default void onFileDeleted(Path file) { }
+true;default;1;1;/**  * Called for every file that was changed in the watched directory  */ ;/**  * Called for every file that was changed in the watched directory  */ default void onFileChanged(Path file) { }
+true;default;1;1;/**  * Called for every new subdirectory found in the watched directory  */ ;/**  * Called for every new subdirectory found in the watched directory  */ default void onDirectoryCreated(Path file) { }
+true;default;1;1;/**  * Called for every file that disappeared in the watched directory  */ ;/**  * Called for every file that disappeared in the watched directory  */ default void onDirectoryDeleted(Path file) { }

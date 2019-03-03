@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void testLogger() {     logger.info("Hello World").     Assertions.assertThat(this.output.toString()).contains("Hello World"). }
+false;public;0;9;;@Test public void validateLoggersEndpoint() throws Exception {     this.mvc.perform(get("/actuator/loggers/org.apache.coyote.http11.Http11NioProtocol").header("Authorization", "Basic " + getBasicAuth())).andExpect(status().isOk()).andExpect(content().string(equalTo("{\"configuredLevel\":\"WARN\"," + "\"effectiveLevel\":\"WARN\"}"))). }
+false;private;0;3;;private String getBasicAuth() {     return new String(Base64.getEncoder().encode(("user:password").getBytes())). }

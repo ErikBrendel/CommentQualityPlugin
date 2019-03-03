@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public long getInsertOrder() {     return insertOrder. }
+false;public;0;3;;public Priority getPriority() {     return priority. }
+false;public;0;3;;public Text getSource() {     return source. }
+false;public;0;3;;public long getTimeInQueueInMillis() {     return timeInQueue. }
+false;public;0;3;;public TimeValue getTimeInQueue() {     return new TimeValue(getTimeInQueueInMillis()). }
+false;public;0;3;;public boolean isExecuting() {     return executing. }
+false;public;1;8;;@Override public void readFrom(StreamInput in) throws IOException {     insertOrder = in.readVLong().     priority = Priority.readFrom(in).     source = in.readText().     timeInQueue = in.readLong().     executing = in.readBoolean(). }
+false;public;1;8;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeVLong(insertOrder).     Priority.writeTo(priority, out).     out.writeText(source).     out.writeLong(timeInQueue).     out.writeBoolean(executing). }

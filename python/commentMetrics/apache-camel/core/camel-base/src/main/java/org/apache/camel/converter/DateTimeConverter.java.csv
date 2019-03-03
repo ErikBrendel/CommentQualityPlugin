@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;4;;@Converter public static TimeZone toTimeZone(String s) {     return TimeZone.getTimeZone(s). }
+false;public,static;1;4;;@Converter public static Date toDate(Long l) {     return new Date(l). }
+false;public,static;1;4;;@Converter public static Long toLong(Date date) {     return date.getTime(). }

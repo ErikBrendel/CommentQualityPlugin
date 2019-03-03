@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public int getOrder() {     return Ordered.LOWEST_PRECEDENCE - 100. }
+false;public;1;9;;@Override public void afterTestMethod(TestContext testContext) throws Exception {     ApplicationContext applicationContext = testContext.getApplicationContext().     String[] names = applicationContext.getBeanNamesForType(MockRestServiceServer.class, false, false).     for (String name : names) {         applicationContext.getBean(name, MockRestServiceServer.class).reset().     } }

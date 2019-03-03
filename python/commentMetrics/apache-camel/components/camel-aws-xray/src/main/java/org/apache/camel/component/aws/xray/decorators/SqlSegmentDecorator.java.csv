@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getComponent() {     return "sql". }
+false;public;3;11;;@Override public void pre(Entity segment, Exchange exchange, Endpoint endpoint) {     super.pre(segment, exchange, endpoint).     segment.putMetadata("db.type", "sql").     Object sqlQuery = exchange.getIn().getHeader(CAMEL_SQL_QUERY).     if (sqlQuery instanceof String) {         segment.putSql("db.statement", sqlQuery).     } }

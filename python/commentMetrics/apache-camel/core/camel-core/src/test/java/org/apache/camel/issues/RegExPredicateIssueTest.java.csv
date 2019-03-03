@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Override public void configure() throws Exception {     from("direct:a").choice().when(bodyAs(String.class).regex("^0.*$")).to("mock:result").otherwise().to("mock:other").end(). }
+false;protected;0;13;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:a").choice().when(bodyAs(String.class).regex("^0.*$")).to("mock:result").otherwise().to("mock:other").end().         }     }. }
+false;public;0;9;;@Test public void testMatch() throws Exception {     getMockEndpoint("mock:result").expectedMessageCount(1).     getMockEndpoint("mock:other").expectedMessageCount(0).     template.sendBody("direct:a", "000000000001111111").     assertMockEndpointsSatisfied(). }
+false;public;0;9;;@Test public void testNotMatch() throws Exception {     getMockEndpoint("mock:result").expectedMessageCount(0).     getMockEndpoint("mock:other").expectedMessageCount(1).     template.sendBody("direct:a", "900000000001111111").     assertMockEndpointsSatisfied(). }

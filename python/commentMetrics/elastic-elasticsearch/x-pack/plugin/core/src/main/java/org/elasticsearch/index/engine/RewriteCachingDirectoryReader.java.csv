@@ -1,0 +1,38 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private,static;1;9;;private static LeafReader[] wrap(List<LeafReaderContext> readers) throws IOException {     LeafReader[] wrapped = new LeafReader[readers.size()].     int i = 0.     for (LeafReaderContext ctx : readers) {         LeafReader wrap = new RewriteCachingLeafReader(ctx.reader()).         wrapped[i++] = wrap.     }     return wrapped. }
+false;protected;0;4;;@Override protected DirectoryReader doOpenIfChanged() {     throw new UnsupportedOperationException(). }
+false;protected;1;4;;@Override protected DirectoryReader doOpenIfChanged(IndexCommit commit) {     throw new UnsupportedOperationException(). }
+false;protected;2;4;;@Override protected DirectoryReader doOpenIfChanged(IndexWriter writer, boolean applyAllDeletes) {     throw new UnsupportedOperationException(). }
+false;public;0;4;;@Override public long getVersion() {     throw new UnsupportedOperationException(). }
+false;public;0;4;;@Override public boolean isCurrent() {     throw new UnsupportedOperationException(). }
+false;public;0;4;;@Override public IndexCommit getIndexCommit() {     throw new UnsupportedOperationException(). }
+false;protected;0;4;;@Override protected void doClose() {     throw new UnsupportedOperationException(). }
+false;public;0;4;;@Override public CacheHelper getReaderCacheHelper() {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public void intersect(IntersectVisitor visitor) {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public long estimatePointCount(IntersectVisitor visitor) {     throw new UnsupportedOperationException(). }
+false;public;0;4;;@Override public byte[] getMinPackedValue() {     return minPackedValue. }
+false;public;0;4;;@Override public byte[] getMaxPackedValue() {     return maxPackedValue. }
+false;public;0;4;;@Override public int getNumDataDimensions() {     return numDataDimensions. }
+false;public;0;4;;@Override public int getNumIndexDimensions() {     return numDimensions. }
+false;public;0;4;;@Override public int getBytesPerDimension() {     return bytesPerDimension. }
+false;public;0;4;;@Override public long size() {     return size. }
+false;public;0;4;;@Override public int getDocCount() {     return docCount. }
+false;public;0;4;;@Override public CacheHelper getCoreCacheHelper() {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public Terms terms(String field) {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public NumericDocValues getNumericDocValues(String field) {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public BinaryDocValues getBinaryDocValues(String field) {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public SortedDocValues getSortedDocValues(String field) {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public SortedNumericDocValues getSortedNumericDocValues(String field) {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public SortedSetDocValues getSortedSetDocValues(String field) {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public NumericDocValues getNormValues(String field) {     throw new UnsupportedOperationException(). }
+false;public;0;4;;@Override public FieldInfos getFieldInfos() {     return fieldInfos. }
+false;public;0;4;;@Override public Bits getLiveDocs() {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public PointValues getPointValues(String field) {     return pointValuesMap.get(field). }
+false;public;0;3;;@Override public void checkIntegrity() { }
+false;public;0;4;;@Override public LeafMetaData getMetaData() {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public Fields getTermVectors(int docID) {     throw new UnsupportedOperationException(). }
+false;public;0;4;;@Override public int numDocs() {     return numDocs. }
+false;public;0;4;;@Override public int maxDoc() {     return maxDoc. }
+false;public;2;4;;@Override public void document(int docID, StoredFieldVisitor visitor) {     throw new UnsupportedOperationException(). }
+false;protected;0;3;;@Override protected void doClose() { }
+false;public;0;4;;@Override public CacheHelper getReaderCacheHelper() {     return null. }

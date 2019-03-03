@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;2;1;;<T> Setting<T> apply(String keyPart, Function<String, Setting<T>> template).
+false;public;2;4;;@Override public <T> Setting<T> apply(String key, Function<String, Setting<T>> template) {     return template.apply(prefix + key). }
+false;public,static;2;8;;public static X509KeyPairSettings withPrefix(String prefix, boolean acceptNonSecurePasswords) {     return new X509KeyPairSettings(acceptNonSecurePasswords, new SettingFactory() {          @Override         public <T> Setting<T> apply(String key, Function<String, Setting<T>> template) {             return template.apply(prefix + key).         }     }). }
+false;public;2;4;;@Override public <T> Setting<T> apply(String keyPart, Function<String, Setting<T>> template) {     return Setting.affixKeySetting(prefix, suffixPart + keyPart, template). }
+false;public,static;3;9;;public static Collection<Setting.AffixSetting<?>> affix(String prefix, String suffixPart, boolean acceptNonSecurePasswords) {     final X509KeyPairSettings settings = new X509KeyPairSettings(acceptNonSecurePasswords, new SettingFactory() {          @Override         public <T> Setting<T> apply(String keyPart, Function<String, Setting<T>> template) {             return Setting.affixKeySetting(prefix, suffixPart + keyPart, template).         }     }).     return settings.getAllSettings().stream().map(s -> (Setting.AffixSetting<?>) s).collect(Collectors.toList()). }
+false;public;0;3;;public Collection<Setting<?>> getAllSettings() {     return allSettings. }

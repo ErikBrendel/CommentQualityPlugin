@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/spring/processor/SpringRoutePoliciesTest.xml"). }
+false;public;0;11;;@Test public void testCustomPolicies() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedBodiesReceived("Hello World").     mock.expectedHeaderReceived("A", "A").     mock.expectedHeaderReceived("B", "B").     template.sendBody("direct:start", "Hello World").     assertMockEndpointsSatisfied(). }
+false;public;2;4;;@Override public void onExchangeBegin(Route route, Exchange exchange) {     exchange.getIn().setHeader(name, name). }

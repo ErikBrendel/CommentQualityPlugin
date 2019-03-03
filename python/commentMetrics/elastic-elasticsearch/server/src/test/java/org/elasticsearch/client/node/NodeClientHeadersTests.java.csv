@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;2;8;;@Override protected Client buildClient(Settings headersSettings, Action[] testedActions) {     Settings settings = HEADER_SETTINGS.     Actions actions = new Actions(settings, threadPool, testedActions).     NodeClient client = new NodeClient(settings, threadPool).     client.initialize(actions, () -> "test", null).     return client. }
+false;protected;3;4;;@Override protected void doExecute(Task task, ActionRequest request, ActionListener listener) {     listener.onFailure(new InternalException(actionName)). }

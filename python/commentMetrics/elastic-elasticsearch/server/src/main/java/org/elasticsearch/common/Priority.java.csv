@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static Priority readFrom(StreamInput input) throws IOException {     return fromByte(input.readByte()). }
+false;public,static;2;3;;public static void writeTo(Priority priority, StreamOutput output) throws IOException {     output.writeByte(priority.value). }
+false;public,static;1;12;;public static Priority fromByte(byte b) {     switch(b) {         case 0:             return IMMEDIATE.         case 1:             return URGENT.         case 2:             return HIGH.         case 3:             return NORMAL.         case 4:             return LOW.         case 5:             return LANGUID.         default:             throw new IllegalArgumentException("can't find priority for [" + b + "]").     } }
+false;public;1;3;;public boolean after(Priority p) {     return this.compareTo(p) > 0. }
+false;public;1;3;;public boolean sameOrAfter(Priority p) {     return this.compareTo(p) >= 0. }

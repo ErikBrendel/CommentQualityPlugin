@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;12;;@Override protected GetCategoriesRequest createTestInstance() {     GetCategoriesRequest request = new GetCategoriesRequest(randomAlphaOfLengthBetween(1, 20)).     if (randomBoolean()) {         request.setCategoryId(randomNonNegativeLong()).     } else {         int from = randomInt(10000).         int size = randomInt(10000).         request.setPageParams(new PageParams(from, size)).     }     return request. }
+false;protected;1;4;;@Override protected GetCategoriesRequest doParseInstance(XContentParser parser) throws IOException {     return GetCategoriesRequest.PARSER.apply(parser, null). }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return false. }

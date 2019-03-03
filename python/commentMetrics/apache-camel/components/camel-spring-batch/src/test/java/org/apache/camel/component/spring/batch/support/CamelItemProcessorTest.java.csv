@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;// Camel fixtures @Override protected void doPostSetup() throws Exception {     camelItemProcessor = new CamelItemProcessor<>(template(), "direct:start"). }
+false;public;0;5;;@Override public void configure() throws Exception {     from("direct:start").setExchangePattern(ExchangePattern.InOut).setBody().simple("${body}${body}"). }
+false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").setExchangePattern(ExchangePattern.InOut).setBody().simple("${body}${body}").         }     }. }
+false;public;0;8;;// Tests @Test public void shouldReturnDoubledMessage() throws Exception {     // When     String messageRead = camelItemProcessor.process(message).     // Then     assertEquals(message + message, messageRead). }

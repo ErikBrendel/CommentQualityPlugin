@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;// ************************************************************************* // Properties // ************************************************************************* public String getProto() {     return configuration.getProto(). }
+false;public;1;3;;public void setProto(String proto) {     configuration.setProto(proto). }
+false;public;0;3;;public String getDomain() {     return configuration.getDomain(). }
+false;public;1;3;;public void setDomain(String domain) {     configuration.setDomain(domain). }
+false;public;1;4;;// ************************************************************************* // Factory // ************************************************************************* @Override public ServiceDiscovery newInstance(CamelContext camelContext) throws Exception {     return new DnsServiceDiscovery(configuration). }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;4;12;;@Override protected void doProcess(Exchange exchange, MetricsEndpoint endpoint, MetricRegistry registry, String metricsName) throws Exception {     Message in = exchange.getIn().     Meter meter = registry.meter(metricsName).     Long mark = endpoint.getMark().     Long finalMark = getLongHeader(in, HEADER_METER_MARK, mark).     if (finalMark == null) {         meter.mark().     } else {         meter.mark(finalMark).     } }

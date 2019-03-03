@@ -1,0 +1,18 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Override public void run() {     try {         handleMessage(exchange).     } catch (Exception e) {         exchange.setException(e).     } }
+false;public;1;51;;@Override public void onMessage(Message message) {     RuntimeCamelException rce = null.     try {         final Exchange exchange = getEndpoint().createExchange(message, getSession()).         log.debug("Processing ExchangeId: {}", exchange.getExchangeId()).         if (isTransacted()) {             if (isSharedJMSSession()) {                 // Propagate a JMS Session as an initiator if sharedJMSSession is enabled                 exchange.getIn().setHeader(SjmsConstants.JMS_SESSION, getSession()).             }         }         try {             if (isTransacted() || isSynchronous()) {                 log.debug("Handling synchronous message: {}", exchange.getIn().getBody()).                 handleMessage(exchange).                 if (exchange.isFailed()) {                     synchronization.onFailure(exchange).                 } else {                     synchronization.onComplete(exchange).                 }             } else {                 log.debug("Handling asynchronous message: {}", exchange.getIn().getBody()).                 executor.execute(new Runnable() {                      @Override                     public void run() {                         try {                             handleMessage(exchange).                         } catch (Exception e) {                             exchange.setException(e).                         }                     }                 }).             }         } catch (Exception e) {             if (exchange.getException() == null) {                 exchange.setException(e).             } else {                 throw e.             }         }     } catch (Exception e) {         rce = wrapRuntimeCamelException(e).     } finally {         if (rce != null) {             throw rce.         }     } }
+false;public,abstract;1;1;;public abstract void handleMessage(Exchange exchange).
+true;public,abstract;0;1;/**  * Method will be called to  */ ;/**  * Method will be called to  */ public abstract void close().
+false;public;1;3;;public void setTransacted(boolean transacted) {     this.transacted = transacted. }
+false;public;0;3;;public boolean isTransacted() {     return transacted. }
+false;public;1;3;;public void setSharedJMSSession(boolean share) {     this.sharedJMSSession = share. }
+false;public;0;3;;public boolean isSharedJMSSession() {     return sharedJMSSession. }
+false;public;0;3;;public SjmsEndpoint getEndpoint() {     return endpoint. }
+false;public;0;3;;public AsyncProcessor getProcessor() {     return processor. }
+false;public;1;3;;public void setProcessor(AsyncProcessor processor) {     this.processor = processor. }
+false;public;1;3;;public void setSession(Session session) {     this.session = session. }
+false;public;0;3;;public Session getSession() {     return session. }
+false;public;1;3;;public void setSynchronous(boolean async) {     this.synchronous = async. }
+false;public;0;3;;public boolean isSynchronous() {     return synchronous. }
+false;public;1;3;;public void setTopic(boolean topic) {     this.topic = topic. }
+false;public;0;3;;public boolean isTopic() {     return topic. }

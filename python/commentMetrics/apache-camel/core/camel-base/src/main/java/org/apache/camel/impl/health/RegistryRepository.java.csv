@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void setCamelContext(CamelContext camelContext) {     this.context = camelContext. }
+false;public;0;4;;@Override public CamelContext getCamelContext() {     return context. }
+false;public;0;6;;@Override public Stream<HealthCheck> stream() {     return this.context != null ? this.context.getRegistry().findByType(HealthCheck.class).stream() : Stream.empty(). }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public List<String> convertRecord(CSVRecord record) {     assert record != null : "Unspecified record".     return Arrays.asList(this.record). }

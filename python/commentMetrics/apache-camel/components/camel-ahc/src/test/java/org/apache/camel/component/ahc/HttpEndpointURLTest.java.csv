@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void testHttpEndpointURLWithIPv6() {     AhcEndpoint endpoint = (AhcEndpoint) context.getEndpoint("ahc://http://[2a00:8a00:6000:40::1413]:30300/test?test=true").     assertEquals("http://[2a00:8a00:6000:40::1413]:30300/test?test=true", endpoint.getHttpUri().toString()). }

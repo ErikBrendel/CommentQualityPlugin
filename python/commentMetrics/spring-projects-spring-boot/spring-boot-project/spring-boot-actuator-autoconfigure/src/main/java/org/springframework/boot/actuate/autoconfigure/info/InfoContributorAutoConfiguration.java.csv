@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;7;;@Bean @ConditionalOnEnabledInfoContributor("env") @Order(DEFAULT_ORDER) public EnvironmentInfoContributor envInfoContributor(ConfigurableEnvironment environment) {     return new EnvironmentInfoContributor(environment). }
+false;public;2;10;;@Bean @ConditionalOnEnabledInfoContributor("git") @ConditionalOnSingleCandidate(GitProperties.class) @ConditionalOnMissingBean @Order(DEFAULT_ORDER) public GitInfoContributor gitInfoContributor(GitProperties gitProperties, InfoContributorProperties infoContributorProperties) {     return new GitInfoContributor(gitProperties, infoContributorProperties.getGit().getMode()). }
+false;public;1;7;;@Bean @ConditionalOnEnabledInfoContributor("build") @ConditionalOnSingleCandidate(BuildProperties.class) @Order(DEFAULT_ORDER) public InfoContributor buildInfoContributor(BuildProperties buildProperties) {     return new BuildInfoContributor(buildProperties). }

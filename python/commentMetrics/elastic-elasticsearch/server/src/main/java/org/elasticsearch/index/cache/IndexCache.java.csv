@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public QueryCache query() {     return queryCache. }
+true;public;0;3;/**  * Return the {@link BitsetFilterCache} for this index.  */ ;/**  * Return the {@link BitsetFilterCache} for this index.  */ public BitsetFilterCache bitsetFilterCache() {     return bitsetFilterCache. }
+false;public;0;4;;@Override public void close() throws IOException {     IOUtils.close(queryCache, bitsetFilterCache). }
+false;public;1;4;;public void clear(String reason) {     queryCache.clear(reason).     bitsetFilterCache.clear(reason). }

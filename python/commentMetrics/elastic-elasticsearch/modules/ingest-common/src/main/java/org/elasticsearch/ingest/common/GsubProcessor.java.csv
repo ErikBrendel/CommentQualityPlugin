@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;3;;Pattern getPattern() {     return pattern. }
+false;;0;3;;String getReplacement() {     return replacement. }
+false;protected;1;4;;@Override protected String process(String value) {     return pattern.matcher(value).replaceAll(replacement). }
+false;public;0;4;;@Override public String getType() {     return TYPE. }
+false;protected;5;13;;@Override protected AbstractStringProcessor newProcessor(String processorTag, Map<String, Object> config, String field, boolean ignoreMissing, String targetField) {     String pattern = readStringProperty(TYPE, processorTag, config, "pattern").     String replacement = readStringProperty(TYPE, processorTag, config, "replacement").     Pattern searchPattern.     try {         searchPattern = Pattern.compile(pattern).     } catch (Exception e) {         throw newConfigurationException(TYPE, processorTag, "pattern", "Invalid regex pattern. " + e.getMessage()).     }     return new GsubProcessor(processorTag, field, searchPattern, replacement, ignoreMissing, targetField). }

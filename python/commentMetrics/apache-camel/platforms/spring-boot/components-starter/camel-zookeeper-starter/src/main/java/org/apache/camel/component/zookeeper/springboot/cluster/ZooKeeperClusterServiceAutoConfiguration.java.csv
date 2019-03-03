@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;12;;@Bean(name = "zookeeper-cluster-service") @Scope(ConfigurableBeanFactory.SCOPE_SINGLETON) public CamelClusterService zookeeperClusterService() throws Exception {     ZooKeeperClusterService service = new ZooKeeperClusterService().     IntrospectionSupport.setProperties(service, IntrospectionSupport.getNonNullProperties(configuration)).     return service. }

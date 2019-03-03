@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void testSendMessage() throws Exception {     String response = (String) template.requestBody("direct:in1", "<a><b>hello</b></a>").     assertEquals("HELLO", response).     response = (String) template.requestBody("direct:in2", "<a><b>hello</b></a>").     assertEquals("HELLO", response). }
+false;protected;1;4;;@Override protected void bindToRegistry(Registry registry) throws Exception {     registry.bind("myBean", myBean). }
+false;public;0;5;;public void configure() {     System.setProperty(XPathFactory.DEFAULT_PROPERTY_NAME + ":" + NamespaceConstant.OBJECT_MODEL_SAXON, "net.sf.saxon.xpath.XPathFactoryImpl").     from("direct:in1").bean("myBean", "readImplicit").     from("direct:in2").bean("myBean", "readExplicit"). }
+false;protected;0;9;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             System.setProperty(XPathFactory.DEFAULT_PROPERTY_NAME + ":" + NamespaceConstant.OBJECT_MODEL_SAXON, "net.sf.saxon.xpath.XPathFactoryImpl").             from("direct:in1").bean("myBean", "readImplicit").             from("direct:in2").bean("myBean", "readExplicit").         }     }. }
+false;public;1;3;;public String readImplicit(@XPath("upper-case(//a/b/text())") String abText) {     return abText. }
+false;public;1;3;;public String readExplicit(@XPath(value = "upper-case(//a/b/text())", resultType = String.class) String abText) {     return abText. }

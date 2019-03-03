@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void testDefaultPersistenceContextSetterInjection() {     assertNotNull(defaultSetterInjected.getEntityManager()). }
+false;public;0;4;;@Test public void testSetterInjectionOfNamedPersistenceContext() {     assertNotNull(namedSetterInjected.getEntityManagerFactory()). }

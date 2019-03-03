@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getValue() {     return this.value. }
+false;public;1;3;;public void setValue(String value) {     this.value = value. }
+false;public;1;7;;@Override public boolean equals(Object obj) {     if (obj != null && obj.getClass() == getClass()) {         return this.value.equals(((ExampleBasicObject) obj).value).     }     return false. }
+false;public;0;4;;@Override public int hashCode() {     return this.value.hashCode(). }

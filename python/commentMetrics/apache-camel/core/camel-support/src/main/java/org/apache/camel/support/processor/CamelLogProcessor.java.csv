@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String toString() {     return "Logger[" + logger + "]". }
+false;public;0;3;;public String getId() {     return id. }
+false;public;1;3;;public void setId(String id) {     this.id = id. }
+false;public;2;12;;public boolean process(Exchange exchange, AsyncCallback callback) {     if (logger.shouldLog()) {         String output = formatter.format(exchange).         if (maskingFormatter != null) {             output = maskingFormatter.format(output).         }         output = fireListeners(exchange, output).         logger.log(output).     }     callback.done(true).     return true. }
+false;public;2;10;;public void process(Exchange exchange, Throwable exception) {     if (logger.shouldLog()) {         String output = formatter.format(exchange).         if (maskingFormatter != null) {             output = maskingFormatter.format(output).         }         output = fireListeners(exchange, output).         logger.log(output, exception).     } }
+false;public;2;10;;public void process(Exchange exchange, String message) {     if (logger.shouldLog()) {         String output = formatter.format(exchange) + message.         if (maskingFormatter != null) {             output = maskingFormatter.format(output).         }         output = fireListeners(exchange, output).         logger.log(output).     } }
+false;private;2;20;;private String fireListeners(Exchange exchange, String message) {     if (listeners == null) {         return message.     }     for (LogListener listener : listeners) {         if (listener == null) {             continue.         }         try {             String output = listener.onLog(exchange, logger, message).             message = output != null ? output : message.         } catch (Throwable t) {             log.warn("Ignoring an exception thrown by {}: {}", listener.getClass().getName(), t.getMessage()).             if (log.isDebugEnabled()) {                 log.debug("", t).             }         }     }     return message. }
+false;public;0;3;;public CamelLogger getLogger() {     return logger. }
+false;public;1;3;;public void setLogName(String logName) {     logger.setLogName(logName). }
+false;public;1;3;;public void setLevel(LoggingLevel level) {     logger.setLevel(level). }
+false;public;1;3;;public void setMarker(String marker) {     logger.setMarker(marker). }
+false;public;1;3;;public void setMaskingFormatter(MaskingFormatter maskingFormatter) {     this.maskingFormatter = maskingFormatter. }
+false;public;1;3;;public String format(Exchange exchange) {     return exchange.toString(). }

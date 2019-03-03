@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Test public void testDocker() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMinimumMessageCount(1).     assertMockEndpointsSatisfied(60, TimeUnit.SECONDS). }
+false;public;0;5;;public void configure() {     fromF("docker://stats?containerId=%s", CONTAINER_ID).log("${body}").to("mock:result"). }
+false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() {             fromF("docker://stats?containerId=%s", CONTAINER_ID).log("${body}").to("mock:result").         }     }. }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;18;;@Before public void setUp() throws Exception {     server = new Server(PORT).     ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS).     context.setContextPath("/").     server.setHandler(context).     if (startCamelContext) {         super.setUp().     }     servletHolder = new ServletHolder(new CamelWebSocketServlet()).     servletHolder.setName("CamelWsServlet").     context.addServlet(servletHolder, "/*").     server.start(). }
+false;public;0;9;;@After public void tearDown() throws Exception {     if (startCamelContext) {         super.tearDown().     }     server.stop().     server.destroy(). }

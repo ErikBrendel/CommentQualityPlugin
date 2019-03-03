@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;3;;public static ConstantProcessor randomConstantProcessor() {     return new ConstantProcessor(randomAlphaOfLength(5)). }
+false;protected;0;4;;@Override protected ConstantProcessor createTestInstance() {     return randomConstantProcessor(). }
+false;protected;0;4;;@Override protected Reader<ConstantProcessor> instanceReader() {     return ConstantProcessor::new. }
+false;protected;1;4;;@Override protected ConstantProcessor mutateInstance(ConstantProcessor instance) throws IOException {     return new ConstantProcessor(randomValueOtherThan(instance.process(null), () -> randomAlphaOfLength(5))). }
+false;public;0;5;;public void testApply() {     ConstantProcessor proc = new ConstantProcessor("test").     assertEquals("test", proc.process(null)).     assertEquals("test", proc.process("cat")). }

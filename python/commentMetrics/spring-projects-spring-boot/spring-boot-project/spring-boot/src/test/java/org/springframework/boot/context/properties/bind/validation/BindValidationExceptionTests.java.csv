@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void createWhenValidationErrorsIsNullShouldThrowException() {     assertThatIllegalArgumentException().isThrownBy(() -> new BindValidationException(null)).withMessageContaining("ValidationErrors must not be null"). }
+false;public;0;6;;@Test public void getValidationErrorsShouldReturnValidationErrors() {     ValidationErrors errors = mock(ValidationErrors.class).     BindValidationException exception = new BindValidationException(errors).     assertThat(exception.getValidationErrors()).isEqualTo(errors). }

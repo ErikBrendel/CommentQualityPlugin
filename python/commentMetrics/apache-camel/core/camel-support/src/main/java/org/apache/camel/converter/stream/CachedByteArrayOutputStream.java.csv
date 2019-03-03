@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Creates a new {@link InputStreamCache} view of the byte array  */ ;/**  * Creates a new {@link InputStreamCache} view of the byte array  */ public InputStreamCache newInputStreamCache() {     return new InputStreamCache(buf, count). }

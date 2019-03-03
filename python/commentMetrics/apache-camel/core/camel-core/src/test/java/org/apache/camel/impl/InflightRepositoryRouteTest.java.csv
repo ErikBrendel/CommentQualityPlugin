@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;11;;@Test public void testInflight() throws Exception {     context.setInflightRepository(new MyInflightRepo()).     assertEquals(0, context.getInflightRepository().size()).     template.sendBody("direct:start", "Hello World").     assertEquals(0, context.getInflightRepository().size()).     assertEquals(0, context.getInflightRepository().size("foo")). }
+false;public;0;4;;@Override public void configure() throws Exception {     from("direct:start").routeId("foo").to("mock:result"). }
+false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").routeId("foo").to("mock:result").         }     }. }
+false;public;1;5;;@Override public void add(Exchange exchange) {     super.add(exchange).     assertEquals(1, context.getInflightRepository().size()). }
+false;public;2;5;;@Override public void add(Exchange exchange, String routeId) {     super.add(exchange, routeId).     assertEquals(1, context.getInflightRepository().size("foo")). }

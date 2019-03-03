@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public void onExchangeBegin(Route route, Exchange exchange) {     begin = true. }
+false;public;2;4;;@Override public void onExchangeDone(Route route, Exchange exchange) {     done = true. }
+false;public;1;4;;@Override public void onInit(Route route) {     init = true. }
+false;public;1;4;;@Override public void onRemove(Route route) {     remove = true. }
+false;public;1;4;;@Override public void onResume(Route route) {     resume = true. }
+false;public;1;4;;@Override public void onStart(Route route) {     start = true. }
+false;public;1;4;;@Override public void onStop(Route route) {     stop = true. }
+false;public;1;4;;@Override public void onSuspend(Route route) {     suspend = true. }
+false;protected;0;4;;@Override protected void doStop() throws Exception {     doStop = true. }
+false;protected;0;4;;@Override protected void doStart() throws Exception {     doStart = true. }
+false;protected;0;3;;protected MyRoutePolicy getAndInitMyRoutePolicy() {     return policy. }
+false;public;0;42;;@Test public void testCallback() throws Exception {     policy = getAndInitMyRoutePolicy().     assertTrue(policy.doStart).     assertTrue(policy.init).     assertFalse(policy.begin).     assertFalse(policy.done).     getMockEndpoint("mock:result").expectedMessageCount(1).     template.sendBody("direct:start", "Hello World").     assertMockEndpointsSatisfied().     assertTrue(policy.begin).     assertTrue(policy.done).     assertFalse(policy.suspend).     context.getRouteController().suspendRoute("foo").     assertTrue(policy.suspend).     assertFalse(policy.resume).     context.getRouteController().resumeRoute("foo").     assertTrue(policy.resume).     assertFalse(policy.stop).     context.getRouteController().stopRoute("foo").     assertTrue(policy.stop).     // previously started, so force flag to be false     policy.start = false.     assertFalse(policy.start).     context.getRouteController().startRoute("foo").     assertTrue(policy.start).     assertFalse(policy.remove).     context.getRouteController().stopRoute("foo").     context.removeRoute("foo").     assertTrue(policy.remove).     // stop camel which should stop policy as well     context.stop().     assertTrue(policy.doStop). }
+false;public;0;5;;@Override public void configure() throws Exception {     from("direct:start").routeId("foo").routePolicy(policy).to("mock:result"). }
+false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").routeId("foo").routePolicy(policy).to("mock:result").         }     }. }

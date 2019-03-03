@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void writeTo(StreamOutput out) throws IOException { // Nothing to write }
+false;public;0;4;;@Override public String getWriteableName() {     return NAME. }
+false;public;4;4;;@Override public void nextPage(Configuration cfg, Client client, NamedWriteableRegistry registry, ActionListener<RowSet> listener) {     throw new IllegalArgumentException("there is no next page"). }
+false;public;3;5;;@Override public void clear(Configuration cfg, Client client, ActionListener<Boolean> listener) {     // There is nothing to clean     listener.onResponse(false). }
+false;public;1;4;;@Override public boolean equals(Object obj) {     return obj == this. }
+false;public;0;4;;@Override public int hashCode() {     return 27. }
+false;public;0;4;;@Override public String toString() {     return "no next page". }

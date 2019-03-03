@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected,abstract;0;1;;protected abstract T createRandomInstance().
+false;protected,abstract;1;1;;protected abstract T mutateInstance(T instance).
+false;protected,abstract;1;1;;protected abstract T copyInstance(T instance).
+false;public;0;5;;public void testHashcodeAndEquals() {     for (int runs = 0. runs < NUMBER_OF_TEST_RUNS. runs++) {         EqualsHashCodeTestUtils.checkEqualsAndHashCode(createRandomInstance(), this::copyInstance, this::mutateInstance).     } }
+false;public,static;0;6;;public static StepKey randomStepKey() {     String randomPhase = randomAlphaOfLength(10).     String randomAction = randomAlphaOfLength(10).     String randomStepName = randomAlphaOfLength(10).     return new StepKey(randomPhase, randomAction, randomStepName). }
+false;public;0;7;;public void testStepNameNotError() {     T instance = createRandomInstance().     StepKey stepKey = instance.getKey().     assertFalse(ErrorStep.NAME.equals(stepKey.getName())).     StepKey nextStepKey = instance.getKey().     assertFalse(ErrorStep.NAME.equals(nextStepKey.getName())). }

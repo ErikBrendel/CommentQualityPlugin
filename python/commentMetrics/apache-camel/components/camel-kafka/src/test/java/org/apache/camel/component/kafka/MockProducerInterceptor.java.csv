@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public ProducerRecord<String, String> onSend(ProducerRecord<String, String> producerRecord) {     recordsCaptured.add(producerRecord).     return producerRecord. }
+false;public;2;4;;@Override public void onAcknowledgement(RecordMetadata recordMetadata, Exception e) { // noop }
+false;public;0;4;;@Override public void close() { // noop }
+false;public;1;4;;@Override public void configure(Map<String, ?> map) { // noop }

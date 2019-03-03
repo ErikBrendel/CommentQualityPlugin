@@ -1,0 +1,26 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;13;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeString(logger).     out.writeVLong(timestamp.toEpochMilli()).     out.writeString(level).     out.writeVLong(pid).     out.writeString(thread).     out.writeString(message).     out.writeString(clazz).     out.writeString(method).     out.writeString(file).     out.writeVLong(line). }
+false;public;2;16;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(LOGGER_FIELD.getPreferredName(), logger).     builder.field(TIMESTAMP_FIELD.getPreferredName(), timestamp.toEpochMilli()).     builder.field(LEVEL_FIELD.getPreferredName(), level).     builder.field(PID_FIELD.getPreferredName(), pid).     builder.field(THREAD_FIELD.getPreferredName(), thread).     builder.field(MESSAGE_FIELD.getPreferredName(), message).     builder.field(CLASS_FIELD.getPreferredName(), clazz).     builder.field(METHOD_FIELD.getPreferredName(), method).     builder.field(FILE_FIELD.getPreferredName(), file).     builder.field(LINE_FIELD.getPreferredName(), line).     builder.endObject().     return builder. }
+false;public;0;3;;public String getLogger() {     return logger. }
+false;public;1;3;;public void setLogger(String logger) {     this.logger = logger. }
+false;public;0;3;;public Instant getTimestamp() {     return this.timestamp. }
+false;public;1;3;;public void setTimestamp(Instant d) {     this.timestamp = d. }
+false;public;0;3;;public String getLevel() {     return level. }
+false;public;1;3;;public void setLevel(String level) {     this.level = level. }
+false;public;0;3;;public long getPid() {     return pid. }
+false;public;1;3;;public void setPid(long pid) {     this.pid = pid. }
+false;public;0;3;;public String getThread() {     return thread. }
+false;public;1;3;;public void setThread(String thread) {     this.thread = thread. }
+false;public;0;3;;public String getMessage() {     return message. }
+false;public;1;3;;public void setMessage(String message) {     this.message = message. }
+true;public;0;3;/**  * This is unreliable for some C++ compilers - probably best not to display it prominently  */ ;/**  * This is unreliable for some C++ compilers - probably best not to display it prominently  */ public String getClazz() {     return clazz. }
+false;public;1;3;;public void setClazz(String clazz) {     this.clazz = clazz. }
+true;public;0;3;/**  * This is unreliable for some C++ compilers - probably best not to display it prominently  */ ;/**  * This is unreliable for some C++ compilers - probably best not to display it prominently  */ public String getMethod() {     return method. }
+false;public;1;3;;public void setMethod(String method) {     this.method = method. }
+false;public;0;3;;public String getFile() {     return file. }
+false;public;1;3;;public void setFile(String file) {     this.file = file. }
+false;public;0;3;;public long getLine() {     return line. }
+false;public;1;3;;public void setLine(long line) {     this.line = line. }
+true;public;1;3;/**  * Definition of similar message in order to summarize them.  *  * Note: Assuming line and file are already unique, paranoia: check that  * line logging is enabled.  *  * @param other  *            message to compare with  * @return true if messages are similar  */ ;/**  * Definition of similar message in order to summarize them.  *  * Note: Assuming line and file are already unique, paranoia: check that  * line logging is enabled.  *  * @param other  *            message to compare with  * @return true if messages are similar  */ public boolean isSimilarTo(CppLogMessage other) {     return other != null && line > 0 && line == other.line && file.equals(other.file) && level.equals(other.level). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(logger, timestamp, level, pid, thread, message, clazz, method, file, line). }
+true;public;1;18;/**  * Compare all the fields.  */ ;/**  * Compare all the fields.  */ @Override public boolean equals(Object other) {     if (this == other) {         return true.     }     if (!(other instanceof CppLogMessage)) {         return false.     }     CppLogMessage that = (CppLogMessage) other.     return Objects.equals(this.logger, that.logger) && Objects.equals(this.timestamp, that.timestamp) && Objects.equals(this.level, that.level) && this.pid == that.pid && Objects.equals(this.thread, that.thread) && Objects.equals(this.message, that.message) && Objects.equals(this.clazz, that.clazz) && Objects.equals(this.method, that.method) && Objects.equals(this.file, that.file) && this.line == that.line. }

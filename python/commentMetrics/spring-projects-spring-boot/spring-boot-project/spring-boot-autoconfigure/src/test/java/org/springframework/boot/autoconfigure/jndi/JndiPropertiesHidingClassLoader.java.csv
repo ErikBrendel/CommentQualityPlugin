@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;7;;@Override public Enumeration<URL> getResources(String name) throws IOException {     if ("jndi.properties".equals(name)) {         return Collections.enumeration(Collections.emptyList()).     }     return super.getResources(name). }

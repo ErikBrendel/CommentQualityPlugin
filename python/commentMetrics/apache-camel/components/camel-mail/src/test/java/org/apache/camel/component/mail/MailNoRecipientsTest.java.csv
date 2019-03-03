@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@Test public void testMailNoRecipients() throws Exception {     try {         template.sendBody("direct:a", "Hello World").         fail("Should have thrown exception").     } catch (CamelExecutionException e) {         IllegalArgumentException iae = assertIsInstanceOf(IllegalArgumentException.class, e.getCause()).         assertEquals("The mail message does not have any recipients set.", iae.getMessage()).     } }
+false;public;0;3;;public void configure() throws Exception {     from("direct:a").to("smtp://localhost"). }
+false;protected;0;7;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from("direct:a").to("smtp://localhost").         }     }. }

@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void setBeanClassLoader(ClassLoader beanClassLoader) {     this.beanClassLoader = beanClassLoader. }
+false;public;2;5;;@Override public boolean match(MetadataReader metadataReader, MetadataReaderFactory metadataReaderFactory) throws IOException {     return isConfiguration(metadataReader) && isAutoConfiguration(metadataReader). }
+false;private;1;4;;private boolean isConfiguration(MetadataReader metadataReader) {     return metadataReader.getAnnotationMetadata().isAnnotated(Configuration.class.getName()). }
+false;private;1;4;;private boolean isAutoConfiguration(MetadataReader metadataReader) {     return getAutoConfigurations().contains(metadataReader.getClassMetadata().getClassName()). }
+false;protected;0;7;;protected List<String> getAutoConfigurations() {     if (this.autoConfigurations == null) {         this.autoConfigurations = SpringFactoriesLoader.loadFactoryNames(EnableAutoConfiguration.class, this.beanClassLoader).     }     return this.autoConfigurations. }

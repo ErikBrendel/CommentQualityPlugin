@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public HttpCommonEndpoint getEndpoint() {     return (HttpCommonEndpoint) super.getEndpoint(). }
+false;public;0;3;;public HttpBinding getBinding() {     return getEndpoint().getHttpBinding(). }
+false;public;0;3;;public String getPath() {     return getEndpoint().getPath(). }
+false;protected;0;9;;@Override protected void doStart() throws Exception {     super.doStart().     if (getEndpoint().canConnect(this)) {         canConnected = true.         getEndpoint().connect(this).         suspended = false.     } }
+false;protected;0;9;;@Override protected void doStop() throws Exception {     suspended = false.     if (canConnected) {         canConnected = false.         getEndpoint().disconnect(this).     }     super.doStop(). }
+false;protected;0;5;;@Override protected void doSuspend() throws Exception {     suspended = true.     super.doSuspend(). }
+false;protected;0;5;;@Override protected void doResume() throws Exception {     suspended = false.     super.doResume(). }
+false;public;0;3;;public boolean isSuspended() {     return suspended. }
+false;public;0;3;;public boolean isTraceEnabled() {     return this.traceEnabled. }
+false;public;1;3;;public void setTraceEnabled(boolean traceEnabled) {     this.traceEnabled = traceEnabled. }
+false;public;0;3;;public boolean isOptionsEnabled() {     return optionsEnabled. }
+false;public;1;3;;public void setOptionsEnabled(boolean optionsEnabled) {     this.optionsEnabled = optionsEnabled. }

@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected NodeInfo<AggExtractorInput> info() {     return NodeInfo.create(this, AggExtractorInput::new, expression(), chained, context()). }
+false;public;0;5;;@Override public Processor asProcessor() {     Processor proc = new BucketExtractorProcessor(context()).     return chained != null ? new ChainingProcessor(proc, chained) : proc. }
+false;public,final;0;4;;@Override public final boolean supportedByAggsOnlyQuery() {     return true. }
+false;public;1;4;;@Override public Pipe resolveAttributes(AttributeResolver resolver) {     return this. }
+false;public,final;1;4;;@Override public final void collectFields(SqlSourceBuilder sourceBuilder) { // Nothing to collect }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected Class<?> requiredViewClass() {     return MustacheView.class. }
+true;public;1;3;/**  * Set the charset.  * @param charset the charset  */ ;/**  * Set the charset.  * @param charset the charset  */ public void setCharset(String charset) {     this.charset = charset. }
+false;protected;1;7;;@Override protected AbstractUrlBasedView buildView(String viewName) throws Exception {     MustacheView view = (MustacheView) super.buildView(viewName).     view.setCompiler(this.compiler).     view.setCharset(this.charset).     return view. }

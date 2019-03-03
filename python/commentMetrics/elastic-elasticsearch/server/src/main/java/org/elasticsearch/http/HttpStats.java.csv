@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeVLong(serverOpen).     out.writeVLong(totalOpen). }
+false;public;0;3;;public long getServerOpen() {     return this.serverOpen. }
+false;public;0;3;;public long getTotalOpen() {     return this.totalOpen. }
+false;public;2;8;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject(Fields.HTTP).     builder.field(Fields.CURRENT_OPEN, serverOpen).     builder.field(Fields.TOTAL_OPENED, totalOpen).     builder.endObject().     return builder. }

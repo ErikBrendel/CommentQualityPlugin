@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void writeByte(byte b) throws IOException {     out.writeByte(b). }
+false;public;3;4;;@Override public void writeBytes(byte[] b, int offset, int length) throws IOException {     out.write(b, offset, length). }
+false;public;0;4;;@Override public void flush() throws IOException { // nothing to do there... }
+false;public;0;4;;@Override public void reset() throws IOException { // nothing to do there... }
+false;public;0;6;;@Override public void close() throws IOException {     if (out instanceof Closeable) {         ((Closeable) out).close().     } }

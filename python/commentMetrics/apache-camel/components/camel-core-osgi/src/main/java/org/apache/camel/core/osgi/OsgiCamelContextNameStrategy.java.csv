@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Override public String getName() {     if (name == null) {         name = getNextName().     }     return name. }
+false;public,synchronized;0;5;;@Override public synchronized String getNextName() {     // false = do no check fist, but add the counter asap, so we have camel-1     return OsgiNamingHelper.findFreeCamelContextName(context, prefix, CONTEXT_NAME_PROPERTY, CONTEXT_COUNTER, false). }
+false;public;0;4;;@Override public boolean isFixedName() {     return false. }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;2;11;;@Override protected Object postProcess(Object result, Object proxy) {     if (result instanceof Statement) {         return Debug.proxy(result, new StatementProxy(log, result, proxy)).     }     if (result instanceof DatabaseMetaData) {         return Debug.proxy(new DatabaseMetadataProxy(log, result, proxy)).     }     return result. }

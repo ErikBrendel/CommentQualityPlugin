@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void asNull() {     Map<String, String> args = new EnvVariables(null).asMap().     assertThat(args).isEmpty(). }
+false;public;0;5;;@Test public void asArray() {     assertThat(new EnvVariables(getTestArgs()).asArray()).contains("key=My Value", "key1= tt ", "key2=   ", "key3="). }
+false;public;0;6;;@Test public void asMap() {     assertThat(new EnvVariables(getTestArgs()).asMap()).containsExactly(entry("key", "My Value"), entry("key1", " tt "), entry("key2", "   "), entry("key3", "")). }
+false;private;0;8;;private Map<String, String> getTestArgs() {     Map<String, String> args = new LinkedHashMap<>().     args.put("key", "My Value").     args.put("key1", " tt ").     args.put("key2", "   ").     args.put("key3", null).     return args. }

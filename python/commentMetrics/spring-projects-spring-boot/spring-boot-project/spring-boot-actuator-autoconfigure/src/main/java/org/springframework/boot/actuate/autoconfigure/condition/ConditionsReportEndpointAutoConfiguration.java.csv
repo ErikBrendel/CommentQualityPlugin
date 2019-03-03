@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Bean @ConditionalOnMissingBean(search = SearchStrategy.CURRENT) public ConditionsReportEndpoint conditionsReportEndpoint(ConfigurableApplicationContext context) {     return new ConditionsReportEndpoint(context). }

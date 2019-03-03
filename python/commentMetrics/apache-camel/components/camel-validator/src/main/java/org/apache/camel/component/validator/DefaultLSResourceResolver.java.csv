@@ -1,0 +1,21 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;1;7;;private String getUri(String systemId) {     if (resourcePath != null) {         return FileUtil.onlyPath(resourceUri) + "/" + systemId.     } else {         return systemId.     } }
+false;public;5;29;;@Override public LSInput resolveResource(String type, String namespaceURI, String publicId, String systemId, String baseURI) {     // systemId should be mandatory     if (systemId == null) {         throw new IllegalArgumentException(String.format("Resource: %s refers an invalid resource without SystemId." + " Invalid resource has type: %s, namespaceURI: %s, publicId: %s, systemId: %s, baseURI: %s", resourceUri, type, namespaceURI, publicId, systemId, baseURI)).     }     String resourceURI = null.     // Build up the relative path for using relatedURI and baseURI     if (baseURI == null) {         relatedURI = FileUtil.compactPath(getUri(systemId), '/').         resourceURI = relatedURI.     } else {         String relatedPath = relatedURIMap.get(baseURI).         if (relatedPath == null) {             relatedPath = FileUtil.onlyPath(relatedURI).             if (relatedPath == null) {                 relatedPath = "".             }             relatedURI = FileUtil.compactPath(FileUtil.onlyPath(relatedURI) + "/" + systemId, '/').             resourceURI = relatedURI.             relatedURIMap.put(baseURI, relatedPath).         } else {             resourceURI = FileUtil.compactPath(relatedPath + "/" + systemId, '/').             relatedURI = resourceURI.         }     }     return new DefaultLSInput(publicId, systemId, baseURI, resourceURI). }
+false;private;0;13;;private String getInputUri() {     // find the xsd with relative path     if (ObjectHelper.isNotEmpty(relatedURI)) {         try {             ResourceHelper.resolveMandatoryResourceAsInputStream(camelContext, relatedURI).             return relatedURI.         } catch (IOException e) {         // ignore the exception         }     }     // don't use the relative path     return getUri(systemId). }
+false;public;0;4;;@Override public Reader getCharacterStream() {     return null. }
+false;public;1;4;;@Override public void setCharacterStream(Reader reader) { // noop }
+false;public;0;8;;@Override public InputStream getByteStream() {     try {         return ResourceHelper.resolveMandatoryResourceAsInputStream(camelContext, uri).     } catch (IOException e) {         throw RuntimeCamelException.wrapRuntimeCamelException(e).     } }
+false;public;1;4;;@Override public void setByteStream(InputStream inputStream) { // noop }
+false;public;0;5;;@Override public String getStringData() {     InputStream is = getByteStream().     return camelContext.getTypeConverter().convertTo(String.class, is). }
+false;public;1;4;;@Override public void setStringData(String stringData) { // noop }
+false;public;0;4;;@Override public String getSystemId() {     return systemId. }
+false;public;1;4;;@Override public void setSystemId(String systemId) { // noop }
+false;public;0;4;;@Override public String getPublicId() {     return publicId. }
+false;public;1;4;;@Override public void setPublicId(String publicId) { // noop }
+false;public;0;4;;@Override public String getBaseURI() {     return baseURI. }
+false;public;1;4;;@Override public void setBaseURI(String baseURI) { // noop }
+false;public;0;4;;@Override public String getEncoding() {     return null. }
+false;public;1;4;;@Override public void setEncoding(String encoding) { // noop }
+false;public;0;4;;@Override public boolean getCertifiedText() {     return false. }
+false;public;1;4;;@Override public void setCertifiedText(boolean certifiedText) { // noop }
+false;public;0;4;;@Override public String toString() {     return "DefaultLSInput[" + uri + "]". }

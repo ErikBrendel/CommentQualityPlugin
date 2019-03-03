@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;2;1;/**  * Register the endpoint.  *  * @param uri  uri of endpoint  * @param endpoint the current endpoint to register  * @return the real endpoint to register, for instance a wrapped/enhanced endpoint.  */ ;/**  * Register the endpoint.  *  * @param uri  uri of endpoint  * @param endpoint the current endpoint to register  * @return the real endpoint to register, for instance a wrapped/enhanced endpoint.  */ Endpoint registerEndpoint(String uri, Endpoint endpoint).

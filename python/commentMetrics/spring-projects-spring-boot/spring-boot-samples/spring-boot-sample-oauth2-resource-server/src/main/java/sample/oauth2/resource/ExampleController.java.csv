@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@GetMapping("/") public String index(@AuthenticationPrincipal Jwt jwt) {     return String.format("Hello, %s!", jwt.getSubject()). }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected AbstractApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/component/ribbon/cloud/SpringDslRibbonPropertiesServiceCallRouteTest.xml"). }
+false;public;0;10;;@Test public void testServiceCallConfiguration() throws Exception {     DefaultServiceCallProcessor processor = findServiceCallProcessor().     Assert.assertNotNull(processor.getLoadBalancer()).     Assert.assertTrue(processor.getLoadBalancer() instanceof RibbonServiceLoadBalancer).     RibbonServiceLoadBalancer loadBalancer = (RibbonServiceLoadBalancer) processor.getLoadBalancer().     Assert.assertNull(loadBalancer.getServiceDiscovery()). }

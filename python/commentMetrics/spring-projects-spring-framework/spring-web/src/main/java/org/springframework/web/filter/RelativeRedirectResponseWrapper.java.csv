@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public void sendRedirect(String location) {     setStatus(this.redirectStatus.value()).     setHeader(HttpHeaders.LOCATION, location). }
+false;public,static;2;9;;public static HttpServletResponse wrapIfNecessary(HttpServletResponse response, HttpStatus redirectStatus) {     RelativeRedirectResponseWrapper wrapper = WebUtils.getNativeResponse(response, RelativeRedirectResponseWrapper.class).     return (wrapper != null ? response : new RelativeRedirectResponseWrapper(response, redirectStatus)). }

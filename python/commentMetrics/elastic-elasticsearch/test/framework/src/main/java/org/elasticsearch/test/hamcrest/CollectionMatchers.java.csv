@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected boolean matchesSafely(ImmutableOpenMap item) {     return item.containsKey(key). }
+false;public;2;8;;@Override public void describeMismatchSafely(final ImmutableOpenMap map, final Description mismatchDescription) {     if (map.size() == 0) {         mismatchDescription.appendText("was empty").     } else {         mismatchDescription.appendText(" was ").appendValue(map).     } }
+false;public;1;4;;@Override public void describeTo(Description description) {     description.appendText("ImmutableOpenMap should contain key " + key). }
+false;protected;1;11;;@Override protected boolean matchesSafely(ImmutableOpenMap item) {     for (String key : keys) {         if (!item.containsKey(key)) {             missingKey = key.             return false.         }     }     return true. }
+false;public;2;8;;@Override public void describeMismatchSafely(final ImmutableOpenMap map, final Description mismatchDescription) {     if (map.size() == 0) {         mismatchDescription.appendText("was empty").     } else {         mismatchDescription.appendText("was ").appendValue(map.keys()).     } }
+false;public;1;9;;@Override public void describeTo(Description description) {     description.appendText("ImmutableOpenMap should contain all keys ").appendValue(keys).appendText(", but key [").appendValue(missingKey).appendText("] is missing"). }

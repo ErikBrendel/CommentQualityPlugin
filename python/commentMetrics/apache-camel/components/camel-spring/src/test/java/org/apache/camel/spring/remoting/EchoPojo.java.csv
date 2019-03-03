@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Consume(uri = "direct:start") public String onEcho(String name) {     return (String) service.requestBody(name). }

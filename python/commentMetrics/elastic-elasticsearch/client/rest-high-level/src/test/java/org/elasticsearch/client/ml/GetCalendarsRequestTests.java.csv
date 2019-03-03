@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;9;;@Override protected GetCalendarsRequest createTestInstance() {     GetCalendarsRequest request = new GetCalendarsRequest().     request.setCalendarId(randomAlphaOfLength(9)).     if (randomBoolean()) {         request.setPageParams(new PageParams(1, 2)).     }     return request. }
+false;protected;1;4;;@Override protected GetCalendarsRequest doParseInstance(XContentParser parser) {     return GetCalendarsRequest.PARSER.apply(parser, null). }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return false. }

@@ -1,0 +1,42 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public boolean isPubSubDomain() {     return this.pubSubDomain. }
+false;public;1;3;;public void setPubSubDomain(boolean pubSubDomain) {     this.pubSubDomain = pubSubDomain. }
+false;public;0;3;;public String getJndiName() {     return this.jndiName. }
+false;public;1;3;;public void setJndiName(String jndiName) {     this.jndiName = jndiName. }
+false;public;0;3;;public Cache getCache() {     return this.cache. }
+false;public;0;3;;public Listener getListener() {     return this.listener. }
+false;public;0;3;;public Template getTemplate() {     return this.template. }
+false;public;0;3;;public boolean isEnabled() {     return this.enabled. }
+false;public;1;3;;public void setEnabled(boolean enabled) {     this.enabled = enabled. }
+false;public;0;3;;public boolean isConsumers() {     return this.consumers. }
+false;public;1;3;;public void setConsumers(boolean consumers) {     this.consumers = consumers. }
+false;public;0;3;;public boolean isProducers() {     return this.producers. }
+false;public;1;3;;public void setProducers(boolean producers) {     this.producers = producers. }
+false;public;0;3;;public int getSessionCacheSize() {     return this.sessionCacheSize. }
+false;public;1;3;;public void setSessionCacheSize(int sessionCacheSize) {     this.sessionCacheSize = sessionCacheSize. }
+false;public;0;3;;public boolean isAutoStartup() {     return this.autoStartup. }
+false;public;1;3;;public void setAutoStartup(boolean autoStartup) {     this.autoStartup = autoStartup. }
+false;public;0;3;;public AcknowledgeMode getAcknowledgeMode() {     return this.acknowledgeMode. }
+false;public;1;3;;public void setAcknowledgeMode(AcknowledgeMode acknowledgeMode) {     this.acknowledgeMode = acknowledgeMode. }
+false;public;0;3;;public Integer getConcurrency() {     return this.concurrency. }
+false;public;1;3;;public void setConcurrency(Integer concurrency) {     this.concurrency = concurrency. }
+false;public;0;3;;public Integer getMaxConcurrency() {     return this.maxConcurrency. }
+false;public;1;3;;public void setMaxConcurrency(Integer maxConcurrency) {     this.maxConcurrency = maxConcurrency. }
+false;public;0;8;;public String formatConcurrency() {     if (this.concurrency == null) {         return (this.maxConcurrency != null) ? "1-" + this.maxConcurrency : null.     }     return ((this.maxConcurrency != null) ? this.concurrency + "-" + this.maxConcurrency : String.valueOf(this.concurrency)). }
+false;public;0;3;;public String getDefaultDestination() {     return this.defaultDestination. }
+false;public;1;3;;public void setDefaultDestination(String defaultDestination) {     this.defaultDestination = defaultDestination. }
+false;public;0;3;;public Duration getDeliveryDelay() {     return this.deliveryDelay. }
+false;public;1;3;;public void setDeliveryDelay(Duration deliveryDelay) {     this.deliveryDelay = deliveryDelay. }
+false;public;0;3;;public DeliveryMode getDeliveryMode() {     return this.deliveryMode. }
+false;public;1;3;;public void setDeliveryMode(DeliveryMode deliveryMode) {     this.deliveryMode = deliveryMode. }
+false;public;0;3;;public Integer getPriority() {     return this.priority. }
+false;public;1;3;;public void setPriority(Integer priority) {     this.priority = priority. }
+false;public;0;3;;public Duration getTimeToLive() {     return this.timeToLive. }
+false;public;1;3;;public void setTimeToLive(Duration timeToLive) {     this.timeToLive = timeToLive. }
+false;public;0;7;;public boolean determineQosEnabled() {     if (this.qosEnabled != null) {         return this.qosEnabled.     }     return (getDeliveryMode() != null || getPriority() != null || getTimeToLive() != null). }
+false;public;0;3;;public Boolean getQosEnabled() {     return this.qosEnabled. }
+false;public;1;3;;public void setQosEnabled(Boolean qosEnabled) {     this.qosEnabled = qosEnabled. }
+false;public;0;3;;public Duration getReceiveTimeout() {     return this.receiveTimeout. }
+false;public;1;3;;public void setReceiveTimeout(Duration receiveTimeout) {     this.receiveTimeout = receiveTimeout. }
+false;public;0;3;;public int getMode() {     return this.mode. }
+false;public;0;3;;public int getValue() {     return this.value. }

@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public boolean accept(String from, String recipient) {     return true. }
+false;public;3;17;;@Override public void deliver(String from, String recipient, InputStream data) throws IOException {     try {         Session session = Session.getInstance(new Properties()).         MimeMessage msg = new MimeMessage(session, data).         for (Listener listener : listeners) {             try {                 listener.on(msg).             } catch (Exception e) {                 logger.error("Unexpected failure", e).                 fail(e.getMessage()).             }         }     } catch (MessagingException me) {         throw new RuntimeException("could not create mime message", me).     } }
+true;public;0;3;/**  * @return the port that the underlying server is listening on  */ ;/**  * @return the port that the underlying server is listening on  */ public int port() {     return server.getPort(). }
+false;public;0;7;;public void start() {     // Must have privileged access because underlying server will accept socket connections     AccessController.doPrivileged((PrivilegedAction<Void>) () -> {         server.start().         return null.     }). }
+false;public;0;4;;public void stop() {     server.stop().     listeners.clear(). }
+false;public;1;3;;public void addListener(Listener listener) {     listeners.add(listener). }
+false;public,static;1;5;;public static EmailServer localhost(final Logger logger) {     EmailServer server = new EmailServer("localhost", logger).     server.start().     return server. }
+false;;1;1;;void on(MimeMessage message) throws Exception.

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;7;;@Override protected ClientHttpRequestFactory createRequestFactory() {     SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory().     factory.setBufferRequestBody(false).     factory.setOutputStreaming(false).     return factory. }

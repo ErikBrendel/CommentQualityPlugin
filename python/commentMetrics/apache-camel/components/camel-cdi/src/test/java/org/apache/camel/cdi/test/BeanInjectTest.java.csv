@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private,static;0;10;;@Produces @ApplicationScoped @Named("properties") private static PropertiesComponent configuration() {     Properties properties = new Properties().     properties.put("property", "value").     PropertiesComponent component = new PropertiesComponent().     component.setInitialProperties(properties).     return component. }
+false;public,static;0;10;;@Deployment public static Archive<?> deployment() {     return ShrinkWrap.create(JavaArchive.class).addPackage(CdiCamelExtension.class.getPackage()).addClasses(BeanInjectBean.class, PropertyInjectBean.class, NamedCamelBean.class).addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml"). }
+false;public;0;5;;@Test public void beanInjectField() {     assertThat(bean.getInjectBeanField(), is(notNullValue())).     assertThat(bean.getInjectBeanField().getProperty(), is(equalTo("value"))). }
+false;public;0;5;;@Test public void beanInjectMethod() {     assertThat(bean.getInjectBeanMethod(), is(notNullValue())).     assertThat(bean.getInjectBeanMethod().getProperty(), is(equalTo("value"))). }
+false;public;0;4;;@Test public void beanInjectNamed() {     assertThat(bean.getInjectBeanNamed(), is(notNullValue())). }

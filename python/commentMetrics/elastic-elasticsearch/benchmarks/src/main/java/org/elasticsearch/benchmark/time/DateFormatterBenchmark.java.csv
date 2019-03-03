@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Benchmark public TemporalAccessor parseJavaDate() {     return javaFormatter.parse("1234567890"). }
+false;public;0;4;;@Benchmark public TemporalAccessor parseJodaDate() {     return jodaFormatter.parse("1234567890"). }

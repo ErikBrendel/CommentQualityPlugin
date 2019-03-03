@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,static;0;3;/**  * Returns an annotation instance that is not equal to any other annotation  * instances, for use in creating distinct {@link org.elasticsearch.common.inject.Key}s.  */ ;/**  * Returns an annotation instance that is not equal to any other annotation  * instances, for use in creating distinct {@link org.elasticsearch.common.inject.Key}s.  */ public static Annotation create() {     return create(nextUniqueValue.getAndIncrement()). }
+false;public;0;4;;@Override public int value() {     return value. }
+false;public;0;4;;@Override public Class<? extends Annotation> annotationType() {     return Internal.class. }
+false;public;0;4;;@Override public String toString() {     return "@" + Internal.class.getName() + "(value=" + value + ")". }
+false;public;1;5;;@Override public boolean equals(Object o) {     return o instanceof Internal && ((Internal) o).value() == value(). }
+false;public;0;4;;@Override public int hashCode() {     return (127 * "value".hashCode()) ^ value. }
+false;static;1;29;;static Annotation create(final int value) {     return new Internal() {          @Override         public int value() {             return value.         }          @Override         public Class<? extends Annotation> annotationType() {             return Internal.class.         }          @Override         public String toString() {             return "@" + Internal.class.getName() + "(value=" + value + ")".         }          @Override         public boolean equals(Object o) {             return o instanceof Internal && ((Internal) o).value() == value().         }          @Override         public int hashCode() {             return (127 * "value".hashCode()) ^ value.         }     }. }

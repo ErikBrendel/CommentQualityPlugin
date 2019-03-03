@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Tokenizer create() {     return new MockTokenizer(MockTokenizer.KEYWORD, false). }
+false;public;0;13;;@Override public Map<String, AnalysisModule.AnalysisProvider<TokenizerFactory>> getTokenizers() {     return singletonMap("keyword", (indexSettings, environment, name, settings) -> {         class Factory implements TokenizerFactory {              @Override             public Tokenizer create() {                 return new MockTokenizer(MockTokenizer.KEYWORD, false).             }         }         return new Factory().     }). }

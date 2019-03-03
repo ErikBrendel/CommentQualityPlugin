@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;default;2;8;;@Override default XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.startObject(getMetricName()).     innerToXContent(builder, params).     builder.endObject().     return builder.endObject(). }
+false;default;0;3;;default String getMetricName() {     return getWriteableName(). }
+true;;2;1;/**  * Implementations should write their own fields to the {@link XContentBuilder} passed in.  */ ;/**  * Implementations should write their own fields to the {@link XContentBuilder} passed in.  */ XContentBuilder innerToXContent(XContentBuilder builder, Params params) throws IOException.

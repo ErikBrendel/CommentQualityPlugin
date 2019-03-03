@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public String format(LogRecord record) {     return String.format("foo: %s -- %s\n", record.getLoggerName(), record.getMessage()). }

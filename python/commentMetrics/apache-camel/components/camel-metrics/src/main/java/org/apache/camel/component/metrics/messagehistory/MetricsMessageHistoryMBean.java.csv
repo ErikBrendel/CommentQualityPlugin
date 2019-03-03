@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;2;;@ManagedOperation(description = "Dumps the statistics as json") String dumpStatisticsAsJson().
+false;;0;2;;@ManagedOperation(description = "Dumps the statistics as json using seconds for time units") String dumpStatisticsAsJsonTimeUnitSeconds().
+false;;0;2;;@ManagedOperation(description = "Reset all counters") void reset().

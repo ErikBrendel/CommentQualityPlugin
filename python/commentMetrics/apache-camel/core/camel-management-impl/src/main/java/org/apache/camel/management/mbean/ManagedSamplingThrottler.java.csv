@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Long getSamplePeriod() {     return processor.getSamplePeriod(). }
+false;public;0;4;;@Override public Long getMessageFrequency() {     return processor.getMessageFrequency(). }
+false;public;0;8;;@Override public String getTimeUnit() {     if (processor.getUnits() != null) {         return processor.getUnits().toString().toLowerCase(Locale.ENGLISH).     } else {         return null.     } }

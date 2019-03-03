@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getName() {     return name. }
+false;public;0;3;;public boolean isEnabled() {     return enabled. }
+false;public;0;3;;public List<String> getRoles() {     return roles. }
+false;public;0;3;;public RoleMapperExpression getRules() {     return rules. }
+false;public;0;3;;public Map<String, Object> getMetadata() {     return metadata. }
+false;public;0;3;;public RefreshPolicy getRefreshPolicy() {     return refreshPolicy. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(name, enabled, refreshPolicy, roles, rules, metadata). }
+false;public;1;20;;@Override public boolean equals(Object obj) {     if (this == obj) {         return true.     }     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     final PutRoleMappingRequest other = (PutRoleMappingRequest) obj.     return (enabled == other.enabled) && (refreshPolicy == other.refreshPolicy) && Objects.equals(name, other.name) && Objects.equals(roles, other.roles) && Objects.equals(rules, other.rules) && Objects.equals(metadata, other.metadata). }
+false;public;2;9;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field("enabled", enabled).     builder.field("roles", roles).     builder.field("rules", rules).     builder.field("metadata", metadata).     return builder.endObject(). }

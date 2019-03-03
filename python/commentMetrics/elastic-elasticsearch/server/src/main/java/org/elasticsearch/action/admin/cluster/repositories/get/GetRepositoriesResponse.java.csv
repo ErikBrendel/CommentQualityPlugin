@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * List of repositories to return  *  * @return list or repositories  */ ;/**  * List of repositories to return  *  * @return list or repositories  */ public List<RepositoryMetaData> repositories() {     return repositories.repositories(). }
+false;public;1;4;;@Override public void readFrom(StreamInput in) throws IOException {     repositories = new RepositoriesMetaData(in). }
+false;public;1;4;;@Override public void writeTo(StreamOutput out) throws IOException {     repositories.writeTo(out). }
+false;public;2;7;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     repositories.toXContent(builder, params).     builder.endObject().     return builder. }
+false;public,static;1;4;;public static GetRepositoriesResponse fromXContent(XContentParser parser) throws IOException {     ensureExpectedToken(XContentParser.Token.START_OBJECT, parser.nextToken(), parser::getTokenLocation).     return new GetRepositoriesResponse(RepositoriesMetaData.fromXContent(parser)). }

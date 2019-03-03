@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@Test @SuppressWarnings({ "unchecked", "rawtypes" }) public void testName() {     TestBean testBean = mock(TestBean.class).     given(testBean.hello()).willReturn("amock").     given(this.testFactoryBean.getObjectType()).willReturn((Class) TestBean.class).     given(this.testFactoryBean.getObject()).willReturn(testBean).     TestBean bean = this.applicationContext.getBean(TestBean.class).     assertThat(bean.hello()).isEqualTo("amock"). }
+false;public;0;4;;@Bean public TestFactoryBean testFactoryBean() {     return new TestFactoryBean(). }
+false;public;0;4;;@Override public TestBean getObject() {     return () -> "normal". }
+false;public;0;4;;@Override public Class<?> getObjectType() {     return TestBean.class. }
+false;public;0;4;;@Override public boolean isSingleton() {     return false. }
+false;;0;1;;String hello().

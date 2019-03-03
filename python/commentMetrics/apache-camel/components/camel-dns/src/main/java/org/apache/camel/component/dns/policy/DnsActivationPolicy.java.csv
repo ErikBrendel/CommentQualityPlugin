@@ -1,0 +1,28 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;public void onInit(Route route) {     LOG.debug("onInit {}", route.getId()).     routes.put(route.getId(), route). }
+false;public;1;4;;public void onRemove(Route route) {     LOG.debug("onRemove {}", route.getId()). // noop }
+false;public;1;5;;@Override public void onStart(Route route) {     LOG.debug("onStart {}", route.getId()). // noop }
+false;public;1;5;;@Override public void onStop(Route route) {     LOG.debug("onStop {}", route.getId()). // noop }
+false;public;1;5;;@Override public void onSuspend(Route route) {     LOG.debug("onSuspend {}", route.getId()). // noop }
+false;public;1;5;;@Override public void onResume(Route route) {     LOG.debug("onResume {}", route.getId()). // noop }
+false;public;2;4;;public void onExchangeBegin(Route route, Exchange exchange) {     LOG.debug("onExchange start " + route.getId() + "/" + exchange.getExchangeId()). // noop }
+false;public;2;4;;public void onExchangeDone(Route route, Exchange exchange) {     LOG.debug("onExchange end " + route.getId() + "/" + exchange.getExchangeId()). // noop }
+false;protected;0;6;;@Override protected void doStart() throws Exception {     LOG.debug("doStart").     timer = new Timer().     timer.schedule(new DnsActivationTask(), 0, ttl). }
+false;protected;0;8;;@Override protected void doStop() throws Exception {     LOG.debug("doStop").     if (timer != null) {         timer.cancel().         timer = null.     } }
+false;public;0;6;;public ExceptionHandler getExceptionHandler() {     if (exceptionHandler == null) {         exceptionHandler = new LoggingExceptionHandler(null, getClass()).     }     return exceptionHandler. }
+false;public;1;3;;public void setExceptionHandler(ExceptionHandler exceptionHandler) {     this.exceptionHandler = exceptionHandler. }
+false;public;1;3;;public void setHostname(String hostname) {     dnsActivation.setHostname(hostname). }
+false;public;0;3;;public String getHostname() {     return dnsActivation.getHostname(). }
+false;public;1;3;;public void setResolvesTo(List<String> resolvesTo) {     dnsActivation.setResolvesTo(resolvesTo). }
+false;public;1;3;;public void setResolvesTo(String resolvesTo) {     dnsActivation.setResolvesTo(resolvesTo). }
+false;public;0;3;;public List<String> getResolvesTo() {     return dnsActivation.getResolvesTo(). }
+false;public;1;3;;public void setTtl(long ttl) throws Exception {     this.ttl = ttl. }
+false;public;1;3;;public void setTtl(String ttl) throws Exception {     this.ttl = Long.parseLong(ttl). }
+false;public;0;3;;public long getTtl() throws Exception {     return ttl. }
+false;public;1;3;;public void setStopRoutesOnException(String stopRoutesOnException) throws Exception {     this.stopRoutesOnException = Boolean.parseBoolean(stopRoutesOnException). }
+false;private;1;13;;private void startRouteImpl(Route route) throws Exception {     ServiceStatus routeStatus = route.getRouteContext().getCamelContext().getRouteController().getRouteStatus(route.getId()).     if (routeStatus == ServiceStatus.Stopped) {         LOG.info("Starting {}", route.getId()).         startRoute(route).     } else if (routeStatus == ServiceStatus.Suspended) {         LOG.info("Resuming {}", route.getId()).         startConsumer(route.getConsumer()).     } else {         LOG.debug("Nothing to do " + route.getId() + " is " + routeStatus).     } }
+false;private;0;10;;private void startRoutes() {     for (String routeId : routes.keySet()) {         try {             Route route = routes.get(routeId).             startRouteImpl(route).         } catch (Exception e) {             LOG.warn(routeId, e).         }     } }
+false;private;1;10;;private void stopRouteImpl(Route route) throws Exception {     ServiceStatus routeStatus = route.getRouteContext().getCamelContext().getRouteController().getRouteStatus(route.getId()).     if (routeStatus == ServiceStatus.Started) {         LOG.info("Stopping {}", route.getId()).         stopRoute(route).     } else {         LOG.debug("Nothing to do " + route.getId() + " is " + routeStatus).     } }
+false;private;0;10;;private void stopRoutes() {     for (String routeId : routes.keySet()) {         try {             Route route = routes.get(routeId).             stopRouteImpl(route).         } catch (Exception e) {             LOG.warn(routeId, e).         }     } }
+false;protected;0;3;;protected boolean isActive() throws Exception {     return dnsActivation.isActive(). }
+false;public;0;14;;public void run() {     try {         if (isActive()) {             startRoutes().         } else {             stopRoutes().         }     } catch (Exception e) {         LOG.warn("DnsActivation TimerTask failed", e).         if (stopRoutesOnException) {             stopRoutes().         }     } }

@@ -1,0 +1,29 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;3;;JobTask getJobTask() {     return jobTask. }
+false;;0;3;;AutodetectCommunicator getAutodetectCommunicator() {     return autodetectCommunicator. }
+false;private;1;3;;private void setAutodetectCommunicator(AutodetectCommunicator autodetectCommunicator) {     this.autodetectCommunicator = autodetectCommunicator. }
+false;;0;3;;ProcessStateName getState() {     return state.getName(). }
+false;private;1;3;;private void setState(ProcessState state) {     this.state = state. }
+false;;0;10;;void tryLock() {     try {         if (lock.tryLock(MachineLearningField.STATE_PERSIST_RESTORE_TIMEOUT.getSeconds(), TimeUnit.SECONDS) == false) {             LOGGER.error("Failed to acquire process lock for job [{}]", jobTask.getJobId()).             throw ExceptionsHelper.serverError("Failed to acquire process lock for job [" + jobTask.getJobId() + "]").         }     } catch (InterruptedException e) {         throw new ElasticsearchException(e).     } }
+false;;0;3;;void unlock() {     lock.unlock(). }
+false;;1;4;;void setRunning(AutodetectCommunicator autodetectCommunicator) {     assert lock.isHeldByCurrentThread().     state.setRunning(this, autodetectCommunicator). }
+false;;0;4;;boolean setDying() {     assert lock.isHeldByCurrentThread().     return state.setDying(this). }
+false;;0;3;;KillBuilder newKillBuilder() {     return new ProcessContext.KillBuilder(). }
+false;;1;4;;KillBuilder setAwaitCompletion(boolean awaitCompletion) {     this.awaitCompletion = awaitCompletion.     return this. }
+false;;1;4;;KillBuilder setFinish(boolean finish) {     this.finish = finish.     return this. }
+false;;1;4;;KillBuilder setSilent(boolean silent) {     this.silent = silent.     return this. }
+false;;1;4;;KillBuilder setReason(String reason) {     this.reason = reason.     return this. }
+false;;1;4;;KillBuilder setShouldFinalizeJob(boolean shouldFinalizeJob) {     this.shouldFinalizeJob = shouldFinalizeJob.     return this. }
+false;;0;20;;void kill() {     if (autodetectCommunicator == null) {         return.     }     String jobId = jobTask.getJobId().     if (silent == false) {         String extraInfo = (state.getName() == ProcessStateName.DYING) ? " while closing" : "".         if (reason == null) {             LOGGER.info("Killing job [{}]{}", jobId, extraInfo).         } else {             LOGGER.info("Killing job [{}]{}, because [{}]", jobId, extraInfo, reason).         }     }     try {         autodetectCommunicator.killProcess(awaitCompletion, finish, shouldFinalizeJob).     } catch (IOException e) {         LOGGER.error("[{}] Failed to kill autodetect process for job", jobId).     } }
+true;;2;1;/**  * @return was a state change made?  */ ;/**  * @return was a state change made?  */ boolean setRunning(ProcessContext processContext, AutodetectCommunicator autodetectCommunicator).
+true;;1;1;/**  * @return was a state change made?  */ ;/**  * @return was a state change made?  */ boolean setDying(ProcessContext processContext).
+false;;0;1;;ProcessStateName getName().
+false;public;2;6;;@Override public boolean setRunning(ProcessContext processContext, AutodetectCommunicator autodetectCommunicator) {     processContext.setAutodetectCommunicator(autodetectCommunicator).     processContext.setState(new ProcessRunningState()).     return true. }
+false;public;1;5;;@Override public boolean setDying(ProcessContext processContext) {     processContext.setState(new ProcessDyingState()).     return true. }
+false;public;0;4;;@Override public ProcessStateName getName() {     return ProcessStateName.NOT_RUNNING. }
+false;public;2;5;;@Override public boolean setRunning(ProcessContext processContext, AutodetectCommunicator autodetectCommunicator) {     LOGGER.debug("Process set to [running] while it was already in that state").     return false. }
+false;public;1;5;;@Override public boolean setDying(ProcessContext processContext) {     processContext.setState(new ProcessDyingState()).     return true. }
+false;public;0;4;;@Override public ProcessStateName getName() {     return ProcessStateName.RUNNING. }
+false;public;2;5;;@Override public boolean setRunning(ProcessContext processContext, AutodetectCommunicator autodetectCommunicator) {     LOGGER.debug("Process set to [running] while it was in [dying]").     return false. }
+false;public;1;5;;@Override public boolean setDying(ProcessContext processContext) {     LOGGER.debug("Process set to [dying] while it was already in that state").     return false. }
+false;public;0;4;;@Override public ProcessStateName getName() {     return ProcessStateName.DYING. }

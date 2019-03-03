@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public boolean isValidChange(OperationMode nextMode) {     return nextMode == RUNNING. }
+false;public;1;4;;@Override public boolean isValidChange(OperationMode nextMode) {     return nextMode == RUNNING || nextMode == STOPPED. }
+false;public;1;4;;@Override public boolean isValidChange(OperationMode nextMode) {     return nextMode == STOPPING. }
+false;public,abstract;1;1;;public abstract boolean isValidChange(OperationMode nextMode).

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;7;;@Bean public HazelcastCacheManager cacheManager(CacheManagerCustomizers customizers, HazelcastInstance existingHazelcastInstance) throws IOException {     HazelcastCacheManager cacheManager = new HazelcastCacheManager(existingHazelcastInstance).     return customizers.customize(cacheManager). }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;0;5;;@Produces @Named("httpServer") private NettySharedHttpServer server() {     return server. }
+false;public;0;7;;@Override public void configure() {     from("netty-http:http://localhost/cdi?matchOnUriPrefix=true&nettySharedHttpServer=#httpServer").id("http-route-cdi").transform().simple("Response from Camel CDI on route ${routeId} using thread: ${threadName}"). }

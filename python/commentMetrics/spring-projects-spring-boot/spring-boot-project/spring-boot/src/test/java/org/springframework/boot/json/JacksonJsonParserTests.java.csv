@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected JsonParser getParser() {     return new JacksonJsonParser(). }
+false;public;0;6;;@Test public void instanceWithSpecificObjectMapper() throws IOException {     ObjectMapper objectMapper = spy(new ObjectMapper()).     new JacksonJsonParser(objectMapper).parseMap("{}").     verify(objectMapper).readValue(eq("{}"), any(TypeReference.class)). }

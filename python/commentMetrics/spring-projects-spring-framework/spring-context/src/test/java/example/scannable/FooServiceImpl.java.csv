@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;0;7;;@PostConstruct private void init() {     if (this.initCalled) {         throw new IllegalStateException("Init already called").     }     this.initCalled = true. }
+false;public;1;4;;@Override public String foo(int id) {     return this.fooDao.findFoo(id). }
+false;public;1;3;;public String lookupFoo(int id) {     return fooDao().findFoo(id). }
+false;public;1;6;;@Override public Future<String> asyncFoo(int id) {     System.out.println(Thread.currentThread().getName()).     Assert.state(ServiceInvocationCounter.getThreadLocalCount() != null, "Thread-local counter not exposed").     return new AsyncResult<>(fooDao().findFoo(id)). }
+false;public;0;4;;@Override public boolean isInitCalled() {     return this.initCalled. }
+false;protected,abstract;0;2;;@Lookup protected abstract FooDao fooDao().

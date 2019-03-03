@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Before public void init() {     this.port = this.context.getWebServer().getPort(). }
+false;public;0;8;;@Test public void contextLoads() {     String source = "Hello {{arg}}!".     Template tmpl = Mustache.compiler().compile(source).     Map<String, String> context = new HashMap<>().     context.put("arg", "world").     assertThat(tmpl.execute(context)).isEqualTo("Hello world!"). }
+false;public;0;6;;@Test public void testHomePage() {     String body = new TestRestTemplate().getForObject("http://localhost:" + this.port, String.class).     assertThat(body.contains("Hello World")).isTrue(). }
+false;public;0;6;;@Test public void testPartialPage() {     String body = new TestRestTemplate().getForObject("http://localhost:" + this.port + "/partial", String.class).     assertThat(body.contains("Hello World")).isTrue(). }
+false;public;1;7;;@RequestMapping("/") public String home(Map<String, Object> model) {     model.put("time", new Date()).     model.put("message", "Hello World").     model.put("title", "Hello App").     return "home". }
+false;public;1;7;;@RequestMapping("/partial") public String layout(Map<String, Object> model) {     model.put("time", new Date()).     model.put("message", "Hello World").     model.put("title", "Hello App").     return "partial". }
+false;public;0;10;;@Bean public MustacheViewResolver viewResolver() {     Mustache.Compiler compiler = Mustache.compiler().withLoader(new MustacheResourceTemplateLoader("classpath:/mustache-templates/", ".html")).     MustacheViewResolver resolver = new MustacheViewResolver(compiler).     resolver.setPrefix("classpath:/mustache-templates/").     resolver.setSuffix(".html").     return resolver. }
+false;public,static;1;3;;public static void main(String[] args) {     SpringApplication.run(Application.class, args). }

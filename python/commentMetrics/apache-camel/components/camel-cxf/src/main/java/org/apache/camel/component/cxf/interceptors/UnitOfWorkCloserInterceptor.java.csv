@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;10;;@Override public void handleMessage(Message message) throws Fault {     if (handleOneWayMessage) {         if (isOneWay(message)) {             CxfUtils.closeCamelUnitOfWork(message).         }     } else {         // Just do the normal process         CxfUtils.closeCamelUnitOfWork(message).     } }
+false;private;1;8;;private boolean isOneWay(Message message) {     Exchange ex = message.getExchange().     BindingOperationInfo binding = ex.getBindingOperationInfo().     if (null != binding && null != binding.getOperationInfo() && binding.getOperationInfo().isOneWay()) {         return true.     }     return false. }

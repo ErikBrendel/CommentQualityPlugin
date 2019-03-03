@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;5;;@Override public DefaultRenderingBuilder modelAttribute(String name, Object value) {     initModel().addAttribute(name, value).     return this. }
+false;public;1;5;;@Override public DefaultRenderingBuilder modelAttribute(Object value) {     initModel().addAttribute(value).     return this. }
+false;public;1;5;;@Override public DefaultRenderingBuilder modelAttributes(Object... values) {     initModel().addAllAttributes(Arrays.asList(values)).     return this. }
+false;public;1;5;;@Override public DefaultRenderingBuilder model(Map<String, ?> map) {     initModel().addAllAttributes(map).     return this. }
+false;private;0;6;;private Model initModel() {     if (this.model == null) {         this.model = new ExtendedModelMap().     }     return this.model. }
+false;public;1;5;;@Override public DefaultRenderingBuilder status(HttpStatus status) {     this.status = status.     return this. }
+false;public;2;5;;@Override public DefaultRenderingBuilder header(String headerName, String... headerValues) {     initHeaders().put(headerName, Arrays.asList(headerValues)).     return this. }
+false;public;1;5;;@Override public DefaultRenderingBuilder headers(HttpHeaders headers) {     initHeaders().putAll(headers).     return this. }
+false;private;0;6;;private HttpHeaders initHeaders() {     if (this.headers == null) {         this.headers = new HttpHeaders().     }     return this.headers. }
+false;public;1;5;;@Override public Rendering.RedirectBuilder contextRelative(boolean contextRelative) {     getRedirectView().setContextRelative(contextRelative).     return this. }
+false;public;1;5;;@Override public Rendering.RedirectBuilder propagateQuery(boolean propagate) {     getRedirectView().setPropagateQuery(propagate).     return this. }
+false;private;0;4;;private RedirectView getRedirectView() {     Assert.isInstanceOf(RedirectView.class, this.view).     return (RedirectView) this.view. }
+false;public;0;4;;@Override public Rendering build() {     return new DefaultRendering(this.view, this.model, this.status, this.headers). }

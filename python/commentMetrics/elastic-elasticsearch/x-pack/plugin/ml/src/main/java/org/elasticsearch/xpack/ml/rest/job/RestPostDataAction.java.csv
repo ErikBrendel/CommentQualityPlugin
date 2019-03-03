@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getName() {     return "ml_post_data_action". }
+false;protected;2;9;;@Override protected RestChannelConsumer prepareRequest(RestRequest restRequest, NodeClient client) throws IOException {     PostDataAction.Request request = new PostDataAction.Request(restRequest.param(Job.ID.getPreferredName())).     request.setResetStart(restRequest.param(PostDataAction.Request.RESET_START.getPreferredName(), DEFAULT_RESET_START)).     request.setResetEnd(restRequest.param(PostDataAction.Request.RESET_END.getPreferredName(), DEFAULT_RESET_END)).     request.setContent(restRequest.content(), restRequest.getXContentType()).     return channel -> client.execute(PostDataAction.INSTANCE, request, new RestStatusToXContentListener<>(channel)). }
+false;public;0;4;;@Override public boolean supportsContentStream() {     return true. }

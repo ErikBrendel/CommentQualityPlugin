@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Override @Before public void setUp() throws Exception {     super.setUp().     applicationContext = new ClassPathXmlApplicationContext("org/apache/camel/spring/config/scan/componentScanWithPackages.xml").     context = applicationContext.getBean("camelContext", ModelCamelContext.class).     template = context.createProducerTemplate(). }
+false;public;0;8;;@Override @After public void tearDown() throws Exception {     // we're done so let's properly close the application context     IOHelper.close(applicationContext).     super.tearDown(). }
+false;public;0;7;;@Test public void testSpringComponentScanFeature() throws InterruptedException {     template.sendBody("direct:start", "request").     MockEndpoint mock = getMockEndpoint("mock:end").     mock.expectedMessageCount(1).     mock.assertIsSatisfied(). }

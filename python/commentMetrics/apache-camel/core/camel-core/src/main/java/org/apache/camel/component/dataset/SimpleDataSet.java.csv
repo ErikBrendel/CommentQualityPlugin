@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;// Properties // ------------------------------------------------------------------------- public Object getDefaultBody() {     return defaultBody. }
+false;public;1;3;;public void setDefaultBody(Object defaultBody) {     this.defaultBody = defaultBody. }
+true;protected;1;3;/**  * Creates the message body for a given message  */ ;// Implementation methods // ------------------------------------------------------------------------- /**  * Creates the message body for a given message  */ protected Object createMessageBody(long messageIndex) {     return getDefaultBody(). }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;5;;@BeforeClass public static void beforeClass() throws Exception {     AbstractResourceIntegrationTest.beforeClass().     searchResource = getResource(SearchResource.class). }
+false;public;0;6;;@Override public void run() {     final CompanySearch companySearch = searchResource.searchCompanies(DEFAULT_FIELDS, "linkedin", null, null, null, null, null, null).     assertNotNull(companySearch). }
+false;public;0;11;;@Test public void testSearchCompanies() {     execute(new Runnable() {          @Override         public void run() {             final CompanySearch companySearch = searchResource.searchCompanies(DEFAULT_FIELDS, "linkedin", null, null, null, null, null, null).             assertNotNull(companySearch).         }     }). }

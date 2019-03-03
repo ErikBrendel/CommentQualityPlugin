@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void contextLoads() {     assertThat(this.context.getBean("jerseyServletRegistration")).hasFieldOrPropertyWithValue("loadOnStartup", 5). }

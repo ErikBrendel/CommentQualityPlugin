@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public String generateDestinationFor(final Operation operation) {     return "direct:" + Optional.ofNullable(operation.getOperationId()).orElseGet(this::generateDirectName). }
+false;;0;3;;String generateDirectName() {     return "rest" + directRouteCount.incrementAndGet(). }

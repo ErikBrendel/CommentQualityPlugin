@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;2;;@ManagedAttribute(description = "Expression to use for re-ordering the messages, such as a header with a sequence number") String getExpression().
+false;;0;2;;@ManagedAttribute(description = "The size of the batch to be re-ordered. The default size is 100.") Integer getBatchSize().
+false;;0;2;;@ManagedAttribute(description = "Minimum time to wait for missing elements (messages).") Long getTimeout().
+false;;0;2;;@ManagedAttribute(description = "Whether to allow duplicates.") Boolean isAllowDuplicates().
+false;;0;2;;@ManagedAttribute(description = "Whether to reverse the ordering.") Boolean isReverse().
+false;;0;2;;@ManagedAttribute(description = "Whether to ignore invalid exchanges") Boolean isIgnoreInvalidExchanges().
+false;;0;2;;@ManagedAttribute(description = "The capacity of the resequencer's inbound queue") Integer getCapacity().
+false;;0;2;;@ManagedAttribute(description = "If true, throws an exception when messages older than the last delivered message are processed") Boolean isRejectOld().

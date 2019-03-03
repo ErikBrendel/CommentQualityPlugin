@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@WebMethod public String doOrder(Order order) {     LOG.info("Processing order").     return "Order processed " + order. }

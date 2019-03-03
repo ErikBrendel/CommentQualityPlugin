@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static RedisIdempotentRepository redisIdempotentRepository(String processorName) {     return new RedisIdempotentRepository(processorName). }
+false;public,static;2;4;;public static RedisIdempotentRepository redisIdempotentRepository(RedisTemplate<String, String> redisTemplate, String processorName) {     return new RedisIdempotentRepository(redisTemplate, processorName). }
+false;public;1;8;;@ManagedOperation(description = "Adds the key to the store") public boolean add(String key) {     if (!contains(key)) {         return setOperations.add(processorName, key) != null.     } else {         return false.     } }
+false;public;1;4;;@ManagedOperation(description = "Does the store contain the given key") public boolean contains(String key) {     return setOperations.isMember(processorName, key). }
+false;public;1;4;;@ManagedOperation(description = "Remove the key from the store") public boolean remove(String key) {     return setOperations.remove(processorName, key) != null. }
+false;public;0;4;;@ManagedOperation(description = "Clear the store") public void clear() {     redisTemplate.getConnectionFactory().getConnection().flushDb(). }
+false;public;0;4;;@ManagedAttribute(description = "The processor name") public String getProcessorName() {     return processorName. }
+false;public;1;3;;public boolean confirm(String key) {     return true. }
+false;protected;0;3;;protected void doStart() throws Exception { // noop }
+false;protected;0;3;;protected void doStop() throws Exception { // noop }
+false;protected;0;6;;protected void doShutdown() throws Exception {     super.doShutdown().     if (redisConfiguration != null) {         redisConfiguration.stop().     } }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Test public void graph() {     client.get().uri("/actuator/integrationgraph").accept(MediaType.APPLICATION_JSON).exchange().expectStatus().isOk().expectBody().jsonPath("contentDescriptor.providerVersion").isNotEmpty().jsonPath("contentDescriptor.providerFormatVersion").isEqualTo(1.0f).jsonPath("contentDescriptor.provider").isEqualTo("spring-integration"). }
+false;public;0;5;;@Test public void rebuild() {     client.post().uri("/actuator/integrationgraph").accept(MediaType.APPLICATION_JSON).exchange().expectStatus().isNoContent(). }
+false;public;1;5;;@Bean public IntegrationGraphEndpoint endpoint(IntegrationGraphServer integrationGraphServer) {     return new IntegrationGraphEndpoint(integrationGraphServer). }
+false;public;0;4;;@Bean public IntegrationGraphServer integrationGraphServer() {     return new IntegrationGraphServer(). }

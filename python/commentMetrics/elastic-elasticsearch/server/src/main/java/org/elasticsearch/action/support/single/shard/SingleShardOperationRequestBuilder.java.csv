@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,final;1;5;/**  * Sets the index.  */ ;/**  * Sets the index.  */ @SuppressWarnings("unchecked") public final RequestBuilder setIndex(String index) {     request.index(index).     return (RequestBuilder) this. }

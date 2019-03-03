@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected NodeInfo<Neg> info() {     return NodeInfo.create(this, Neg::new, field()). }
+false;protected;1;4;;@Override protected Neg replaceChild(Expression newChild) {     return new Neg(source(), newChild). }
+false;protected;0;4;;@Override protected TypeResolution resolveType() {     return isNumeric(field(), sourceText(), ParamOrdinal.DEFAULT). }
+false;public;0;4;;@Override public Object fold() {     return Arithmetics.negate((Number) field().fold()). }
+false;public;0;4;;@Override public DataType dataType() {     return field().dataType(). }
+false;public;1;4;;@Override public String processScript(String script) {     return Scripts.formatTemplate(Scripts.SQL_SCRIPTS + ".neg(" + script + ")"). }
+false;protected;0;4;;@Override protected Processor makeProcessor() {     return new UnaryArithmeticProcessor(UnaryArithmeticOperation.NEGATE). }

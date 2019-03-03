@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void setBeanFactory(BeanFactory beanFactory) {     this.beanFactory = beanFactory. }
+false;public;3;13;;@Override public Destination resolveDestinationName(@Nullable Session session, String destinationName, boolean pubSubDomain) throws JMSException {     Assert.state(this.beanFactory != null, "BeanFactory is required").     try {         return this.beanFactory.getBean(destinationName, Destination.class).     } catch (BeansException ex) {         throw new DestinationResolutionException("Failed to look up Destination bean with name '" + destinationName + "'", ex).     } }

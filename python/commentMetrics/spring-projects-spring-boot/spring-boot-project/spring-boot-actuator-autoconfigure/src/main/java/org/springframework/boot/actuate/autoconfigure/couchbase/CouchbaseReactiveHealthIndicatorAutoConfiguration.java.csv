@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Bean @ConditionalOnMissingBean(name = "couchbaseReactiveHealthIndicator") public ReactiveHealthIndicator couchbaseReactiveHealthIndicator(Map<String, Cluster> clusters) {     return createHealthIndicator(clusters). }
+false;protected;1;4;;@Override protected CouchbaseReactiveHealthIndicator createHealthIndicator(Cluster cluster) {     return new CouchbaseReactiveHealthIndicator(cluster). }

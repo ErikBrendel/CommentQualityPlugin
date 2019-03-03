@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public void initializeChannel(final SocketChannel channel, final MessageChannel messageChannel) {     channel.pipeline().addLast(new DiscardAckChannelHandler()). }
+false;public;0;3;;@Override public void dispose() { }
+false;public;2;3;;@Override public void initializeClient(final Client client, final MessageManager manager) { }
+false;public;2;3;;@Override public void initializeServer(final Server server, final MessageManager manager) { }

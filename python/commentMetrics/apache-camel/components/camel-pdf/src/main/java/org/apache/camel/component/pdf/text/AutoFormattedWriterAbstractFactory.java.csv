@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public WriteStrategy createWriteStrategy() {     return new DefaultWriteStrategy(pdfConfiguration). }
+false;public;0;4;;@Override public SplitStrategy createSplitStrategy() {     return new WordSplitStrategy(). }
+false;public;0;4;;@Override public LineBuilderStrategy createLineBuilderStrategy() {     return new DefaultLineBuilderStrategy(pdfConfiguration). }

@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getName() {     return name. }
+false;public;1;4;;@Override public void setName(String name) {     this.name = name. }
+false;public;0;4;;@Override public int getAge() {     return this.age. }
+false;public;1;4;;@Override public void setAge(int age) {     this.age = age. }
+false;public;0;4;;@Override public TestObject getSpouse() {     return this.spouse. }
+false;public;1;4;;@Override public void setSpouse(TestObject spouse) {     this.spouse = spouse. }
+false;public;0;3;;@Override public void absquatulate() { }
+false;public;1;9;;@Override public int compareTo(Object o) {     if (this.name != null && o instanceof TestObject) {         return this.name.compareTo(((TestObject) o).getName()).     } else {         return 1.     } }

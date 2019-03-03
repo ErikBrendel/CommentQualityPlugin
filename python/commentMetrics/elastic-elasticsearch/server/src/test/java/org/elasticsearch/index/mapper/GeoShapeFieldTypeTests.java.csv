@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected MappedFieldType createDefaultFieldType() {     return new GeoShapeFieldType(). }
+false;public;1;4;;@Override public void modify(MappedFieldType ft) {     ((GeoShapeFieldType) ft).setOrientation(ShapeBuilder.Orientation.LEFT). }
+false;public;0;9;;@Before public void setupProperties() {     addModifier(new FieldTypeTestCase.Modifier("orientation", true) {          @Override         public void modify(MappedFieldType ft) {             ((GeoShapeFieldType) ft).setOrientation(ShapeBuilder.Orientation.LEFT).         }     }). }

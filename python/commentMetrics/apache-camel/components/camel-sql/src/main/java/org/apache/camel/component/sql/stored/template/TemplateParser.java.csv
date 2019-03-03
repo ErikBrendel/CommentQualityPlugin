@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;9;;public Template parseTemplate(String template) {     try {         SSPTParser parser = new SSPTParser(new StringReader(template), classResolver).         return validate(parser.parse()).     } catch (ParseException parseException) {         throw new ParseRuntimeException(parseException).     } }
+false;private;1;3;;private Template validate(Template input) {     return input. }

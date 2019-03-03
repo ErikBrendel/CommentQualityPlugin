@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public ThroughputLogger getLogger() {     return logger. }
+false;public;0;5;;@Override public void reset() {     super.reset().     logger.reset(). }
+false;public;0;3;;public int getReceivedCounter() {     return logger.getReceivedCounter(). }
+false;public;0;3;;public double getAverage() {     return logger.getAverage(). }
+false;public;0;3;;public double getRate() {     return logger.getRate(). }
+false;public;0;3;;public String getLastLogMessage() {     return logger.getLastLogMessage(). }
+false;public;0;3;;public void resetThroughputLogger() {     logger.reset(). }

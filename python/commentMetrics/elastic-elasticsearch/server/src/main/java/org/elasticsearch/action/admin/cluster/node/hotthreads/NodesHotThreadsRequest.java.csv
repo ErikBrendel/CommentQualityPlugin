@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public int threads() {     return this.threads. }
+false;public;1;4;;public NodesHotThreadsRequest threads(int threads) {     this.threads = threads.     return this. }
+false;public;0;3;;public boolean ignoreIdleThreads() {     return this.ignoreIdleThreads. }
+false;public;1;4;;public NodesHotThreadsRequest ignoreIdleThreads(boolean ignoreIdleThreads) {     this.ignoreIdleThreads = ignoreIdleThreads.     return this. }
+false;public;1;4;;public NodesHotThreadsRequest type(String type) {     this.type = type.     return this. }
+false;public;0;3;;public String type() {     return this.type. }
+false;public;1;4;;public NodesHotThreadsRequest interval(TimeValue interval) {     this.interval = interval.     return this. }
+false;public;0;3;;public TimeValue interval() {     return this.interval. }
+false;public;0;3;;public int snapshots() {     return this.snapshots. }
+false;public;1;4;;public NodesHotThreadsRequest snapshots(int snapshots) {     this.snapshots = snapshots.     return this. }
+false;public;1;9;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     threads = in.readInt().     ignoreIdleThreads = in.readBoolean().     type = in.readString().     interval = in.readTimeValue().     snapshots = in.readInt(). }
+false;public;1;9;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeInt(threads).     out.writeBoolean(ignoreIdleThreads).     out.writeString(type).     out.writeTimeValue(interval).     out.writeInt(snapshots). }

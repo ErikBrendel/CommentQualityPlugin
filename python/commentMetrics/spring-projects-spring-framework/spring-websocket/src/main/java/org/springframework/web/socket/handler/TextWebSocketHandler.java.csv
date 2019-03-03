@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;2;9;;@Override protected void handleBinaryMessage(WebSocketSession session, BinaryMessage message) {     try {         session.close(CloseStatus.NOT_ACCEPTABLE.withReason("Binary messages not supported")).     } catch (IOException ex) {     // ignore     } }

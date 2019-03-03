@@ -1,0 +1,32 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getShortName() {     return "threadPoolProfile". }
+false;public;0;4;;@Override public String getLabel() {     return "ThreadPoolProfile " + getId(). }
+false;public;1;3;;public ThreadPoolProfileDefinition poolSize(int poolSize) {     return poolSize("" + poolSize). }
+false;public;1;4;;public ThreadPoolProfileDefinition poolSize(String poolSize) {     setPoolSize(poolSize).     return this. }
+false;public;1;3;;public ThreadPoolProfileDefinition maxPoolSize(int maxPoolSize) {     return maxPoolSize("" + maxQueueSize). }
+false;public;1;4;;public ThreadPoolProfileDefinition maxPoolSize(String maxPoolSize) {     setMaxPoolSize("" + maxPoolSize).     return this. }
+false;public;1;3;;public ThreadPoolProfileDefinition keepAliveTime(long keepAliveTime) {     return keepAliveTime("" + keepAliveTime). }
+false;public;1;4;;public ThreadPoolProfileDefinition keepAliveTime(String keepAliveTime) {     setKeepAliveTime("" + keepAliveTime).     return this. }
+false;public;1;4;;public ThreadPoolProfileDefinition timeUnit(TimeUnit timeUnit) {     setTimeUnit(timeUnit).     return this. }
+false;public;1;3;;public ThreadPoolProfileDefinition maxQueueSize(int maxQueueSize) {     return maxQueueSize("" + maxQueueSize). }
+false;public;1;4;;public ThreadPoolProfileDefinition maxQueueSize(String maxQueueSize) {     setMaxQueueSize("" + maxQueueSize).     return this. }
+false;public;1;4;;public ThreadPoolProfileDefinition rejectedPolicy(ThreadPoolRejectedPolicy rejectedPolicy) {     setRejectedPolicy(rejectedPolicy).     return this. }
+false;public;1;4;;public ThreadPoolProfileDefinition allowCoreThreadTimeOut(boolean allowCoreThreadTimeOut) {     setAllowCoreThreadTimeOut("" + allowCoreThreadTimeOut).     return this. }
+false;public;0;3;;public Boolean getDefaultProfile() {     return defaultProfile. }
+true;public;1;3;/**  * Whether this profile is the default thread pool profile  */ ;/**  * Whether this profile is the default thread pool profile  */ public void setDefaultProfile(Boolean defaultProfile) {     this.defaultProfile = defaultProfile. }
+false;public;0;3;;public Boolean isDefaultProfile() {     return defaultProfile != null && defaultProfile. }
+false;public;0;3;;public String getPoolSize() {     return poolSize. }
+true;public;1;3;/**  * Sets the core pool size  */ ;/**  * Sets the core pool size  */ public void setPoolSize(String poolSize) {     this.poolSize = poolSize. }
+false;public;0;3;;public String getMaxPoolSize() {     return maxPoolSize. }
+true;public;1;3;/**  * Sets the maximum pool size  */ ;/**  * Sets the maximum pool size  */ public void setMaxPoolSize(String maxPoolSize) {     this.maxPoolSize = maxPoolSize. }
+false;public;0;3;;public String getKeepAliveTime() {     return keepAliveTime. }
+true;public;1;3;/**  * Sets the keep alive time for idle threads in the pool  */ ;/**  * Sets the keep alive time for idle threads in the pool  */ public void setKeepAliveTime(String keepAliveTime) {     this.keepAliveTime = keepAliveTime. }
+false;public;0;3;;public String getMaxQueueSize() {     return maxQueueSize. }
+true;public;1;3;/**  * Sets the maximum number of tasks in the work queue.  * <p/>  * Use <tt>-1</tt> or <tt>Integer.MAX_VALUE</tt> for an unbounded queue  */ ;/**  * Sets the maximum number of tasks in the work queue.  * <p/>  * Use <tt>-1</tt> or <tt>Integer.MAX_VALUE</tt> for an unbounded queue  */ public void setMaxQueueSize(String maxQueueSize) {     this.maxQueueSize = maxQueueSize. }
+false;public;0;3;;public String getAllowCoreThreadTimeOut() {     return allowCoreThreadTimeOut. }
+true;public;1;3;/**  * Whether idle core threads is allowed to timeout and therefore can shrink the pool size below the core pool size  * <p/>  * Is by default <tt>false</tt>  */ ;/**  * Whether idle core threads is allowed to timeout and therefore can shrink the pool size below the core pool size  * <p/>  * Is by default <tt>false</tt>  */ public void setAllowCoreThreadTimeOut(String allowCoreThreadTimeOut) {     this.allowCoreThreadTimeOut = allowCoreThreadTimeOut. }
+false;public;0;3;;public TimeUnit getTimeUnit() {     return timeUnit. }
+true;public;1;3;/**  * Sets the time unit to use for keep alive time  * By default SECONDS is used.  */ ;/**  * Sets the time unit to use for keep alive time  * By default SECONDS is used.  */ public void setTimeUnit(TimeUnit timeUnit) {     this.timeUnit = timeUnit. }
+false;public;0;3;;public ThreadPoolRejectedPolicy getRejectedPolicy() {     return rejectedPolicy. }
+false;public;0;6;;public RejectedExecutionHandler getRejectedExecutionHandler() {     if (rejectedPolicy != null) {         return rejectedPolicy.asRejectedExecutionHandler().     }     return null. }
+true;public;1;3;/**  * Sets the handler for tasks which cannot be executed by the thread pool.  */ ;/**  * Sets the handler for tasks which cannot be executed by the thread pool.  */ public void setRejectedPolicy(ThreadPoolRejectedPolicy rejectedPolicy) {     this.rejectedPolicy = rejectedPolicy. }

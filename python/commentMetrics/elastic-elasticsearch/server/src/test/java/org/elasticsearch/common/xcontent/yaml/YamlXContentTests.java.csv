@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public XContentType xcontentType() {     return XContentType.YAML. }
+false;public;0;5;;public void testBigInteger() throws Exception {     ByteArrayOutputStream os = new ByteArrayOutputStream().     JsonGenerator generator = new YAMLFactory().createGenerator(os).     doTestBigInteger(generator, os). }

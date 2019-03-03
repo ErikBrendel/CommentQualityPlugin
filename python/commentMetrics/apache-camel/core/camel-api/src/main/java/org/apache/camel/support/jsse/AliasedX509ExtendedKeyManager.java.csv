@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;3;;public String chooseClientAlias(String[] keyType, Principal[] issuers, Socket socket) {     return keyAlias == null ? keyManager.chooseClientAlias(keyType, issuers, socket) : keyAlias. }
+false;public;3;3;;public String chooseServerAlias(String keyType, Principal[] issuers, Socket socket) {     return keyAlias == null ? keyManager.chooseServerAlias(keyType, issuers, socket) : keyAlias. }
+false;public;2;3;;public String[] getClientAliases(String keyType, Principal[] issuers) {     return keyManager.getClientAliases(keyType, issuers). }
+false;public;2;3;;public String[] getServerAliases(String keyType, Principal[] issuers) {     return keyManager.getServerAliases(keyType, issuers). }
+false;public;1;3;;public X509Certificate[] getCertificateChain(String alias) {     return keyManager.getCertificateChain(alias). }
+false;public;1;3;;public PrivateKey getPrivateKey(String alias) {     return keyManager.getPrivateKey(alias). }
+false;public;3;4;;@Override public String chooseEngineServerAlias(String keyType, Principal[] issuers, SSLEngine engine) {     return keyAlias == null ? super.chooseEngineServerAlias(keyType, issuers, engine) : keyAlias. }
+false;public;3;4;;@Override public String chooseEngineClientAlias(String[] keyType, Principal[] issuers, SSLEngine engine) {     return keyAlias == null ? super.chooseEngineClientAlias(keyType, issuers, engine) : keyAlias. }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void runShouldHaveEndpointBean() {     this.contextRunner.run((context) -> assertThat(context).hasSingleBean(LoggersEndpoint.class)). }
+false;public;0;6;;@Test public void runWhenEnabledPropertyIsFalseShouldNotHaveEndpointBean() {     this.contextRunner.withPropertyValues("management.endpoint.loggers.enabled:false").run((context) -> assertThat(context).doesNotHaveBean(LoggersEndpoint.class)). }
+false;public;0;8;;@Test public void runWithNoneLoggingSystemShouldNotHaveEndpointBean() {     this.contextRunner.withSystemProperties("org.springframework.boot.logging.LoggingSystem=none").run((context) -> assertThat(context).doesNotHaveBean(LoggersEndpoint.class)). }
+false;public;0;4;;@Bean public LoggingSystem loggingSystem() {     return mock(LoggingSystem.class). }

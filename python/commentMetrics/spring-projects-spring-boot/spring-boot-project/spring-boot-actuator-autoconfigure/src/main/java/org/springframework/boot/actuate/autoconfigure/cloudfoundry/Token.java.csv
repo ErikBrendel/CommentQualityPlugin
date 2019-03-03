@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;1;11;;private Map<String, Object> parseJson(String base64) {     try {         byte[] bytes = Base64Utils.decodeFromUrlSafeString(base64).         return JsonParserFactory.getJsonParser().parseMap(new String(bytes, StandardCharsets.UTF_8)).     } catch (RuntimeException ex) {         throw new CloudFoundryAuthorizationException(Reason.INVALID_TOKEN, "Token could not be parsed", ex).     } }
+false;public;0;3;;public byte[] getContent() {     return this.encoded.substring(0, this.encoded.lastIndexOf('.')).getBytes(). }
+false;public;0;3;;public byte[] getSignature() {     return Base64Utils.decodeFromUrlSafeString(this.signature). }
+false;public;0;3;;public String getSignatureAlgorithm() {     return getRequired(this.header, "alg", String.class). }
+false;public;0;3;;public String getIssuer() {     return getRequired(this.claims, "iss", String.class). }
+false;public;0;3;;public long getExpiry() {     return getRequired(this.claims, "exp", Integer.class).longValue(). }
+false;public;0;4;;@SuppressWarnings("unchecked") public List<String> getScope() {     return getRequired(this.claims, "scope", List.class). }
+false;public;0;3;;public String getKeyId() {     return getRequired(this.header, "kid", String.class). }
+false;private;3;13;;@SuppressWarnings("unchecked") private <T> T getRequired(Map<String, Object> map, String key, Class<T> type) {     Object value = map.get(key).     if (value == null) {         throw new CloudFoundryAuthorizationException(Reason.INVALID_TOKEN, "Unable to get value from key " + key).     }     if (!type.isInstance(value)) {         throw new CloudFoundryAuthorizationException(Reason.INVALID_TOKEN, "Unexpected value type from key " + key + " value " + value).     }     return (T) value. }
+false;public;0;4;;@Override public String toString() {     return this.encoded. }

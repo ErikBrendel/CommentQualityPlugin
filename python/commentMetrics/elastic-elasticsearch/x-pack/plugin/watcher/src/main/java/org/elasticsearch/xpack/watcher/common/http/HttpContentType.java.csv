@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public XContentType contentType() {     return XContentType.JSON. }
+false;public;0;4;;@Override public XContentType contentType() {     return XContentType.YAML. }
+false;public;0;4;;@Override public XContentType contentType() {     return null. }
+false;public,abstract;0;1;;public abstract XContentType contentType().
+false;public;0;4;;@Override public String toString() {     return id(). }
+false;public;0;3;;public String id() {     return name().toLowerCase(Locale.ROOT). }
+false;public,static;1;9;;public static HttpContentType resolve(String id) {     switch(id.toLowerCase(Locale.ROOT)) {         case "json":             return JSON.         case "yaml":             return YAML.         case "text":             return TEXT.         default:             throw illegalArgument("unknown http content type [{}]", id).     } }

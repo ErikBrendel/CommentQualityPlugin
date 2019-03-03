@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;0;3;;private String getFtpUrl() {     return "ftp://admin@localhost:" + getPort() + "/code/?password=admin&ftpClientConfig.serverLanguageCode=fr". }
+false;public;0;6;;@Override @Before public void setUp() throws Exception {     super.setUp().     prepareFtpServer(). }
+false;public;0;7;;@Test public void testLanguageCode() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedBodiesReceived("Hello World").     mock.assertIsSatisfied(). }
+false;private;0;11;;private void prepareFtpServer() throws Exception {     // prepares the FTP Server by creating a file on the server     Endpoint endpoint = context.getEndpoint(getFtpUrl()).     Exchange exchange = endpoint.createExchange().     exchange.getIn().setBody("Hello World").     exchange.getIn().setHeader(Exchange.FILE_NAME, "hello.txt").     Producer producer = endpoint.createProducer().     producer.start().     producer.process(exchange).     producer.stop(). }
+false;public;0;3;;public void configure() throws Exception {     from(getFtpUrl()).to("mock:result"). }
+false;protected;0;7;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from(getFtpUrl()).to("mock:result").         }     }. }

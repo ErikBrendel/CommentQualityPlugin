@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;1;4;;private Format<?> doGetFormat(FormattingOptions formattingOptions) {     return factoryRegistry.findForFormattingOptions(formattingOptions).build(formattingOptions). }
+true;public;1;7;/**  * Retrieves the format to use for the given type*  */ ;/**  * Retrieves the format to use for the given type*  */ public Format<?> getFormat(FormattingOptions formattingOptions) throws Exception {     if (formattingOptions.getBindyConverter() != null) {         return formattingOptions.getBindyConverter().value().newInstance().     }     return doGetFormat(formattingOptions). }
+false;public;1;3;;public void setFactoryRegistry(FactoryRegistry factoryRegistry) {     this.factoryRegistry = factoryRegistry. }
+false;public;0;3;;public FactoryRegistry getFactoryRegistry() {     return factoryRegistry. }

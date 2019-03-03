@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public UUID convert(String source) {     return (StringUtils.hasLength(source) ? UUID.fromString(source.trim()) : null). }

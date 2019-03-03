@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Return the parameters for this script.  */ ;/**  * Return the parameters for this script.  */ public Map<String, Object> getParams() {     return params. }
+false;public;1;4;;@Override public void setScorer(Scorable scorer) {     this.scorer = scorer. }
+true;public;0;7;/**  * Return the score of the current document.  */ ;/**  * Return the score of the current document.  */ public double get_score() {     try {         return scorer.score().     } catch (IOException e) {         throw new ElasticsearchException("couldn't lookup score", e).     } }
+true;public;0;3;/**  * The doc lookup for the Lucene segment this script was created for.  */ ;/**  * The doc lookup for the Lucene segment this script was created for.  */ public Map<String, ScriptDocValues<?>> getDoc() {     return leafLookup.doc(). }
+true;public;1;3;/**  * Set the current document to run the script on next.  */ ;/**  * Set the current document to run the script on next.  */ public void setDocument(int docid) {     leafLookup.setDocument(docid). }

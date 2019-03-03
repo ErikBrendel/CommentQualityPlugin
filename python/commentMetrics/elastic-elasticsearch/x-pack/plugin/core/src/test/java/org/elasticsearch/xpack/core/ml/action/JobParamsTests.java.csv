@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected OpenJobAction.JobParams doParseInstance(XContentParser parser) throws IOException {     return OpenJobAction.JobParams.parseRequest(null, parser). }
+false;public,static;0;10;;public static OpenJobAction.JobParams createJobParams() {     OpenJobAction.JobParams params = new OpenJobAction.JobParams(randomAlphaOfLengthBetween(1, 20)).     if (randomBoolean()) {         params.setTimeout(TimeValue.timeValueMillis(randomNonNegativeLong())).     }     if (randomBoolean()) {         params.setJob(JobTests.createRandomizedJob()).     }     return params. }
+false;protected;0;4;;@Override protected OpenJobAction.JobParams createTestInstance() {     return createJobParams(). }
+false;protected;0;4;;@Override protected Writeable.Reader<OpenJobAction.JobParams> instanceReader() {     return OpenJobAction.JobParams::new. }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }
+false;protected;0;7;;@Override protected Predicate<String> getRandomFieldsExcludeFilter() {     // fields inserted there will result in object inequality     return path -> path.startsWith(OpenJobAction.JobParams.JOB.getPreferredName()). }

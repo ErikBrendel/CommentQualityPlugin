@@ -1,0 +1,24 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;public void setProtocolOptions(final ProtocolOptions protocolOptions) {     Objects.requireNonNull(protocolOptions).     this.protocolOptions = new ProtocolOptions.Builder(protocolOptions). }
+false;public;0;3;;public ProtocolOptions getProtocolOptions() {     return this.protocolOptions.build(). }
+false;public,abstract;0;1;;public abstract T copy().
+false;public;0;3;;// wrapper methods - ProtocolOptions public int getTimeout1() {     return this.protocolOptions.getTimeout1(). }
+false;public;1;3;;public void setTimeout1(final int timeout1) {     this.protocolOptions.setTimeout1(timeout1). }
+false;public;0;3;;public int getTimeout2() {     return this.protocolOptions.getTimeout2(). }
+false;public;1;3;;public void setTimeout2(final int timeout2) {     this.protocolOptions.setTimeout2(timeout2). }
+false;public;0;3;;public int getTimeout3() {     return this.protocolOptions.getTimeout3(). }
+false;public;1;3;;public void setTimeout3(final int timeout3) {     this.protocolOptions.setTimeout3(timeout3). }
+false;public;0;3;;public short getAcknowledgeWindow() {     return this.protocolOptions.getAcknowledgeWindow(). }
+false;public;1;3;;public void setAcknowledgeWindow(final short acknowledgeWindow) {     this.protocolOptions.setAcknowledgeWindow(acknowledgeWindow). }
+false;public;0;3;;public short getMaxUnacknowledged() {     return this.protocolOptions.getMaxUnacknowledged(). }
+false;public;1;3;;public void setMaxUnacknowledged(final short maxUnacknowledged) {     this.protocolOptions.setMaxUnacknowledged(maxUnacknowledged). }
+false;public;0;3;;public ASDUAddressType getAdsuAddressType() {     return this.protocolOptions.getAdsuAddressType(). }
+false;public;1;3;;public void setAdsuAddressType(final ASDUAddressType adsuAddressType) {     this.protocolOptions.setAdsuAddressType(adsuAddressType). }
+false;public;0;3;;public InformationObjectAddressType getInformationObjectAddressType() {     return this.protocolOptions.getInformationObjectAddressType(). }
+false;public;1;3;;public void setInformationObjectAddressType(final InformationObjectAddressType informationObjectAddressType) {     this.protocolOptions.setInformationObjectAddressType(informationObjectAddressType). }
+false;public;0;3;;public CauseOfTransmissionType getCauseOfTransmissionType() {     return this.protocolOptions.getCauseOfTransmissionType(). }
+false;public;1;3;;public void setCauseOfTransmissionType(final CauseOfTransmissionType causeOfTransmissionType) {     this.protocolOptions.setCauseOfTransmissionType(causeOfTransmissionType). }
+false;public;0;3;;public TimeZone getTimeZone() {     return this.protocolOptions.getTimeZone(). }
+false;public;1;3;;public void setTimeZone(final TimeZone timeZone) {     this.protocolOptions.setTimeZone(timeZone). }
+false;public;1;3;;public void setIgnoreDaylightSavingTime(final boolean ignoreDaylightSavingTime) {     this.protocolOptions.setIgnoreDaylightSavingTime(ignoreDaylightSavingTime). }
+false;public;0;3;;public boolean isIgnoreDaylightSavingTime() {     return this.protocolOptions.isIgnoreDaylightSavingTime(). }

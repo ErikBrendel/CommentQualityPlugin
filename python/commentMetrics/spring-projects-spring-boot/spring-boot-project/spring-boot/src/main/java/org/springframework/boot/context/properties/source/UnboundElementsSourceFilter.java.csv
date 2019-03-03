@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;10;;@Override public Boolean apply(ConfigurationPropertySource configurationPropertySource) {     Object underlyingSource = configurationPropertySource.getUnderlyingSource().     if (underlyingSource instanceof PropertySource) {         String name = ((PropertySource<?>) underlyingSource).getName().         return !BENIGN_PROPERTY_SOURCE_NAMES.contains(name).     }     return true. }

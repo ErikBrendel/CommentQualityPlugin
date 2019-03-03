@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;8;;@Test void autowiringFromConfigClass() {     assertNotNull(employee, "The employee should have been autowired.").     assertEquals(employee.getName(), "John Smith").     assertNotNull(pet, "The pet should have been autowired.").     assertEquals(pet.getName(), "Fido"). }
+false;;0;4;;@Bean Employee employee() {     return new Employee("John Smith"). }
+false;;0;4;;@Bean Pet pet() {     return new Pet("Fido"). }

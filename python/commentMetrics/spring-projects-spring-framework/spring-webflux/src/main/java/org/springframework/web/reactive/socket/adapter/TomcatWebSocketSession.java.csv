@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected boolean canSuspendReceiving() {     return true. }
+false;protected;0;6;;@Override protected void suspendReceiving() {     if (SUSPENDED.compareAndSet(this, 0, 1)) {         ((WsSession) getDelegate()).suspend().     } }
+false;protected;0;6;;@Override protected void resumeReceiving() {     if (SUSPENDED.compareAndSet(this, 1, 0)) {         ((WsSession) getDelegate()).resume().     } }

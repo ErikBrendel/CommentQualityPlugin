@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean isDelete() {     return true. }
+false;public;0;4;;@Override public long ramBytesUsed() {     return BASE_RAM_BYTES_USED. }
+false;public;1;10;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     if (!super.equals(o))         return false.     DeleteVersionValue that = (DeleteVersionValue) o.     return time == that.time. }
+false;public;0;6;;@Override public int hashCode() {     int result = super.hashCode().     result = 31 * result + (int) (time ^ (time >>> 32)).     return result. }
+false;public;0;9;;@Override public String toString() {     return "DeleteVersionValue{" + "version=" + version + ", seqNo=" + seqNo + ", term=" + term + ",time=" + time + '}'. }

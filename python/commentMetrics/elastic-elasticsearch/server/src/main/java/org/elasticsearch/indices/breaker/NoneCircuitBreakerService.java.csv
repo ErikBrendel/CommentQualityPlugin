@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public CircuitBreaker getBreaker(String name) {     return breaker. }
+false;public;0;4;;@Override public AllCircuitBreakerStats stats() {     return new AllCircuitBreakerStats(new CircuitBreakerStats[] { stats(CircuitBreaker.FIELDDATA) }). }
+false;public;1;4;;@Override public CircuitBreakerStats stats(String name) {     return new CircuitBreakerStats(CircuitBreaker.FIELDDATA, -1, -1, 0, 0). }
+false;public;1;4;;@Override public void registerBreaker(BreakerSettings breakerSettings) { // ignore }

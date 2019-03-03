@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public void onDone(Exchange exchange) {     try {         closeable.close().     } catch (IOException e) {     // ignore     } }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;7;;@Test public void testBeanToBean() throws Exception {     getMockEndpoint("mock:notify").expectedMessageCount(1).     getMockEndpoint("mock:notify").message(0).body().isInstanceOf(NotificationType.class).     assertMockEndpointsSatisfied(). }
+false;public;0;7;;@Override public void configure() throws Exception {     from("timer:foo?delay=500&repeatCount=1").log("Timer triggered").bean(MyNotificationService.class, "createNotification").bean(MyNotificationService.class, "sendNotification"). }
+false;protected;0;12;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("timer:foo?delay=500&repeatCount=1").log("Timer triggered").bean(MyNotificationService.class, "createNotification").bean(MyNotificationService.class, "sendNotification").         }     }. }

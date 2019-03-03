@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;public GetSettingsRequestBuilder setIndices(String... indices) {     request.indices(indices).     return this. }
+false;public;1;4;;public GetSettingsRequestBuilder addIndices(String... indices) {     request.indices(ArrayUtils.concat(request.indices(), indices)).     return this. }
+true;public;1;4;/**  * Specifies what type of requested indices to ignore and wildcard indices expressions.  * <p>  * For example indices that don't exist.  */ ;/**  * Specifies what type of requested indices to ignore and wildcard indices expressions.  * <p>  * For example indices that don't exist.  */ public GetSettingsRequestBuilder setIndicesOptions(IndicesOptions options) {     request.indicesOptions(options).     return this. }
+false;public;1;4;;public GetSettingsRequestBuilder setNames(String... names) {     request.names(names).     return this. }

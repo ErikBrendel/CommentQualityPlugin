@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;2;8;;Map<Command, Processor> getProcessors(RedisClient redisClient, ExchangeConverter exchangeConverter) {     bind(Command.PUBLISH, exchange -> redisClient.publish(exchangeConverter.getChannel(exchange), exchangeConverter.getMessage(exchange))).     return result. }

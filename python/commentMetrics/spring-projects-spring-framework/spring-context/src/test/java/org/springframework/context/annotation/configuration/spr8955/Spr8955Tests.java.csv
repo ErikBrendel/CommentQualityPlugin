@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void repro() {     AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext().     ctx.scan("org.springframework.context.annotation.configuration.spr8955").     ctx.refresh(). }

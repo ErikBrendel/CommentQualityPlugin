@@ -1,0 +1,24 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Producer createProducer() throws Exception {     return new GitProducer(this). }
+false;public;1;12;;@Override public Consumer createConsumer(Processor processor) throws Exception {     if (type == GitType.COMMIT) {         return new GitCommitConsumer(this, processor).     } else if (type == GitType.TAG) {         return new GitTagConsumer(this, processor).     } else if (type == GitType.BRANCH) {         return new GitBranchConsumer(this, processor).     } else {         throw new IllegalArgumentException("Cannot create consumer with type " + type).     } }
+false;public;0;4;;@Override public boolean isSingleton() {     return true. }
+true;public;0;3;/**  * The remote repository path  */ ;/**  * The remote repository path  */ public String getRemotePath() {     return remotePath. }
+false;public;1;3;;public void setRemotePath(String remotePath) {     this.remotePath = remotePath. }
+true;public;0;3;/**  * The branch name to work on  */ ;/**  * The branch name to work on  */ public String getBranchName() {     return branchName. }
+false;public;1;3;;public void setBranchName(String branchName) {     this.branchName = branchName. }
+true;public;0;3;/**  * Remote repository username  */ ;/**  * Remote repository username  */ public String getUsername() {     return username. }
+false;public;1;3;;public void setUsername(String username) {     this.username = username. }
+true;public;0;3;/**  * Remote repository password  */ ;/**  * Remote repository password  */ public String getPassword() {     return password. }
+false;public;1;3;;public void setPassword(String password) {     this.password = password. }
+true;public;0;3;/**  * Local repository path  */ ;/**  * Local repository path  */ public String getLocalPath() {     return localPath. }
+false;public;1;3;;public void setLocalPath(String localPath) {     this.localPath = localPath. }
+true;public;0;3;/**  * The operation to do on the repository  */ ;/**  * The operation to do on the repository  */ public String getOperation() {     return operation. }
+false;public;1;3;;public void setOperation(String operation) {     this.operation = operation. }
+true;public;0;3;/**  * The consumer type  */ ;/**  * The consumer type  */ public GitType getType() {     return type. }
+false;public;1;3;;public void setType(GitType type) {     this.type = type. }
+true;public;0;3;/**  * The tag name to work on  */ ;/**  * The tag name to work on  */ public String getTagName() {     return tagName. }
+false;public;1;3;;public void setTagName(String tagName) {     this.tagName = tagName. }
+true;public;0;3;/**  * The remote repository name to use in particular operation like pull  */ ;/**  * The remote repository name to use in particular operation like pull  */ public String getRemoteName() {     return remoteName. }
+false;public;1;3;;public void setRemoteName(String remoteName) {     this.remoteName = remoteName. }
+true;public;0;3;/**  * The flag to manage empty git commits  */ ;/**  * The flag to manage empty git commits  */ public boolean isAllowEmpty() {     return allowEmpty. }
+false;public;1;3;;public void setAllowEmpty(boolean allowEmpty) {     this.allowEmpty = allowEmpty. }

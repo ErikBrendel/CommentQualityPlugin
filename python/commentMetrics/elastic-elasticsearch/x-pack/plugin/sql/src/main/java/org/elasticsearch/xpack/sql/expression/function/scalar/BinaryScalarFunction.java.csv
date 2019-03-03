@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,final;1;7;;@Override public final BinaryScalarFunction replaceChildren(List<Expression> newChildren) {     if (newChildren.size() != 2) {         throw new IllegalArgumentException("expected [2] children but received [" + newChildren.size() + "]").     }     return replaceChildren(newChildren.get(0), newChildren.get(1)). }
+false;protected,abstract;2;1;;protected abstract BinaryScalarFunction replaceChildren(Expression newLeft, Expression newRight).
+false;public;0;3;;public Expression left() {     return left. }
+false;public;0;3;;public Expression right() {     return right. }
+false;public;0;4;;@Override public boolean foldable() {     return left.foldable() && right.foldable(). }
+false;public;0;7;;@Override public ScriptTemplate asScript() {     ScriptTemplate leftScript = asScript(left()).     ScriptTemplate rightScript = asScript(right()).     return asScriptFrom(leftScript, rightScript). }
+false;protected;2;3;;protected ScriptTemplate asScriptFrom(ScriptTemplate leftScript, ScriptTemplate rightScript) {     return Scripts.binaryMethod(scriptMethodName(), leftScript, rightScript, dataType()). }
+false;protected;0;3;;protected String scriptMethodName() {     return getClass().getSimpleName().toLowerCase(Locale.ROOT). }

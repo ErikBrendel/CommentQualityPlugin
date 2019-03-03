@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public List<ServiceFilter> getDelegates() {     return this.delegates. }
+false;public;1;8;;@Override public List<ServiceDefinition> apply(List<ServiceDefinition> services) {     for (int i = 0. i < delegatesSize. i++) {         services = delegates.get(i).apply(services).     }     return services. }
+false;public,static;1;3;;// ********************** // Helpers // ********************** public static CombinedServiceFilter wrap(ServiceFilter... delegates) {     return new CombinedServiceFilter(Arrays.asList(delegates)). }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static void main(String[] args) {     SpringApplication.run(SampleSessionWebFluxApplication.class). }
+false;public;1;14;;@Bean public SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {     // @formatter:off     return http.authorizeExchange().anyExchange().authenticated().and().httpBasic().securityContextRepository(new WebSessionServerSecurityContextRepository()).and().formLogin().and().build(). // @formatter:on }

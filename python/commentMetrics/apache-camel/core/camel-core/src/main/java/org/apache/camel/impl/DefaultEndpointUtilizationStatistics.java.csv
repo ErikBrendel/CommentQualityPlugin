@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public int maxCapacity() {     return maxCapacity. }
+false;public;0;4;;@Override public int size() {     return map.size(). }
+false;public;1;10;;@Override public void onHit(String uri) {     map.compute(uri, (key, current) -> {         if (current == null) {             return 1L.         } else {             return ++current.         }     }). }
+false;public;1;4;;@Override public void remove(String uri) {     map.remove(uri). }
+false;public;0;4;;@Override public Map<String, Long> getStatistics() {     return Collections.unmodifiableMap(map). }
+false;public;0;4;;@Override public void clear() {     map.clear(). }

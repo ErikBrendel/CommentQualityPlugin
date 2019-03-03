@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected boolean useJmx() {     return true. }
+false;public;0;10;;@Test public void testBigRoute() throws Exception {     for (int i = 0. i < 1000. i++) {         getMockEndpoint("mock:" + i).expectedMessageCount(1).     }     template.sendBody("direct:start", "Hello World").     assertMockEndpointsSatisfied(). }
+false;public;0;8;;@Override public void configure() throws Exception {     RouteDefinition route = from("direct:start").     for (int i = 0. i < 1000. i++) {         route = route.to("mock:" + i).     } }
+false;protected;0;13;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             RouteDefinition route = from("direct:start").             for (int i = 0. i < 1000. i++) {                 route = route.to("mock:" + i).             }         }     }. }

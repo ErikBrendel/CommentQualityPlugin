@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected TypeQueryBuilder doCreateTestQueryBuilder() {     return new TypeQueryBuilder("_doc"). }
+false;protected;3;12;;@Override protected void doAssertLuceneQuery(TypeQueryBuilder queryBuilder, Query query, SearchContext context) throws IOException {     if (createShardContext().getMapperService().documentMapper(queryBuilder.type()) == null) {         assertEquals(new MatchNoDocsQuery(), query).     } else {         assertThat(query, anyOf(equalTo(new TypeFieldMapper.TypesQuery(new BytesRef(queryBuilder.type()))), equalTo(new MatchAllDocsQuery()))).     } }
+false;public;0;3;;public void testIllegalArgument() {     expectThrows(IllegalArgumentException.class, () -> new TypeQueryBuilder((String) null)). }
+false;public;0;14;;public void testFromJson() throws IOException {     String json = "{\n" + "  \"type\" : {\n" + "    \"value\" : \"my_type\",\n" + "    \"boost\" : 1.0\n" + "  }\n" + "}".     TypeQueryBuilder parsed = (TypeQueryBuilder) parseQuery(json).     checkGeneratedJson(json, parsed).     assertEquals(json, "my_type", parsed.type()). }
+false;public;0;5;;@Override public void testToQuery() throws IOException {     super.testToQuery().     assertWarnings(TypeQueryBuilder.TYPES_DEPRECATION_MESSAGE). }
+false;public;0;5;;@Override public void testMustRewrite() throws IOException {     super.testMustRewrite().     assertWarnings(TypeQueryBuilder.TYPES_DEPRECATION_MESSAGE). }

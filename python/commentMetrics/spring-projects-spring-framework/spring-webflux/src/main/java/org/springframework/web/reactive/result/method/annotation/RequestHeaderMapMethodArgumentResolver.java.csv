@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public boolean supportsParameter(MethodParameter param) {     return checkAnnotatedParamNoReactiveWrapper(param, RequestHeader.class, this::allParams). }
+false;private;2;3;;private boolean allParams(RequestHeader annotation, Class<?> type) {     return Map.class.isAssignableFrom(type). }
+false;public;3;8;;@Override public Object resolveArgumentValue(MethodParameter methodParameter, BindingContext context, ServerWebExchange exchange) {     boolean isMultiValueMap = MultiValueMap.class.isAssignableFrom(methodParameter.getParameterType()).     HttpHeaders headers = exchange.getRequest().getHeaders().     return (isMultiValueMap ? headers : headers.toSingleValueMap()). }

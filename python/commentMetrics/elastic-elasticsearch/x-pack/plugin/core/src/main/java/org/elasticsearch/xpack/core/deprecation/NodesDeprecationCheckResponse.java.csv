@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected List<NodesDeprecationCheckAction.NodeResponse> readNodesFrom(StreamInput in) throws IOException {     return in.readList(NodesDeprecationCheckAction.NodeResponse::readNodeResponse). }
+false;protected;2;4;;@Override protected void writeNodesTo(StreamOutput out, List<NodesDeprecationCheckAction.NodeResponse> nodes) throws IOException {     out.writeStreamableList(nodes). }
+false;public;1;9;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     NodesDeprecationCheckResponse that = (NodesDeprecationCheckResponse) o.     return Objects.equals(getClusterName(), that.getClusterName()) && Objects.equals(getNodes(), that.getNodes()) && Objects.equals(failures(), that.failures()). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(getClusterName(), getNodes(), failures()). }

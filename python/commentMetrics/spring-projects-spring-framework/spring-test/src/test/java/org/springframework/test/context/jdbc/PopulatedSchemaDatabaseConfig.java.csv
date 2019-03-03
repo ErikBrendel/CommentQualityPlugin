@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Bean public PlatformTransactionManager transactionManager() {     return new DataSourceTransactionManager(dataSource()). }
+false;public;0;7;;@Bean public DataSource dataSource() {     return //      new EmbeddedDatabaseBuilder().setName(//      "populated-sql-scripts-test-db").addScript(//      "classpath:/org/springframework/test/context/jdbc/schema.sql").build(). }
+false;public;1;4;;@Bean public JdbcTemplate jdbcTemplate(DataSource dataSource) {     return new JdbcTemplate(dataSource). }

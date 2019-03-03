@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public HttpMethod getMethod() {     return this.method. }
+false;public;0;4;;@Override public String getMethodValue() {     return this.method.name(). }
+false;public;0;4;;@Override public URI getURI() {     return this.uri. }
+false;protected;2;5;;@Override protected ClientHttpResponse executeInternal(HttpHeaders headers, byte[] content) throws IOException {     Request request = OkHttp3ClientHttpRequestFactory.buildRequest(headers, content, this.uri, this.method).     return new OkHttp3ClientHttpResponse(this.client.newCall(request).execute()). }

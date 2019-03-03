@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected ClusterGetSettingsResponse doParseInstance(XContentParser parser) throws IOException {     return ClusterGetSettingsResponse.fromXContent(parser). }
+false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }
+false;protected;0;8;;@Override protected ClusterGetSettingsResponse createTestInstance() {     Settings persistentSettings = ClusterUpdateSettingsResponseTests.randomClusterSettings(0, 2).     Settings transientSettings = ClusterUpdateSettingsResponseTests.randomClusterSettings(0, 2).     Settings defaultSettings = randomBoolean() ? ClusterUpdateSettingsResponseTests.randomClusterSettings(0, 2) : Settings.EMPTY.     return new ClusterGetSettingsResponse(persistentSettings, transientSettings, defaultSettings). }
+false;protected;0;7;;@Override protected Predicate<String> getRandomFieldsExcludeFilter() {     return p -> p.startsWith(ClusterGetSettingsResponse.TRANSIENT_FIELD) || p.startsWith(ClusterGetSettingsResponse.PERSISTENT_FIELD) || p.startsWith(ClusterGetSettingsResponse.DEFAULTS_FIELD). }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;public void apply() {     addPropertySources(applicationContext.getEnvironment(), applicationContext).     addPostProcessors(applicationContext). }
+false;public;1;10;;@Override public void initialize(ConfigurableApplicationContext applicationContext) {     new ConfigFileApplicationListener() {          public void apply() {             addPropertySources(applicationContext.getEnvironment(), applicationContext).             addPostProcessors(applicationContext).         }     }.apply(). }

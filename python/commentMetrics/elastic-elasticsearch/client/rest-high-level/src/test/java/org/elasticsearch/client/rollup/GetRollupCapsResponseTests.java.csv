@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected GetRollupCapsResponse createTestInstance() {     return new GetRollupCapsResponse(indices). }
+false;protected;2;8;;@Override protected void toXContent(GetRollupCapsResponse response, XContentBuilder builder) throws IOException {     builder.startObject().     for (Map.Entry<String, RollableIndexCaps> entry : response.getJobs().entrySet()) {         entry.getValue().toXContent(builder, null).     }     builder.endObject(). }
+false;protected;0;8;;@Override protected Predicate<String> randomFieldsExcludeFilter() {     return (field) -> "".equals(field) || // the field list expects to be a nested object of a certain type     field.contains("fields"). }
+false;protected;1;4;;@Override protected GetRollupCapsResponse fromXContent(XContentParser parser) throws IOException {     return GetRollupCapsResponse.fromXContent(parser). }

@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getDataFormatName() {     return "lzf". }
+false;public;3;11;;@Override public void marshal(final Exchange exchange, final Object graph, final OutputStream stream) throws Exception {     InputStream is = exchange.getContext().getTypeConverter().mandatoryConvertTo(InputStream.class, exchange, graph).     OutputStream compressedOutput = parallelCompression ? new PLZFOutputStream(stream) : new LZFOutputStream(stream).     try {         IOHelper.copy(is, compressedOutput).     } finally {         // must close all input streams         IOHelper.close(is, compressedOutput).     } }
+false;public;2;14;;@Override public Object unmarshal(final Exchange exchange, final InputStream inputStream) throws Exception {     InputStream compressedInput = null.     OutputStreamBuilder osb = OutputStreamBuilder.withExchange(exchange).     try {         compressedInput = new LZFInputStream(inputStream).         IOHelper.copy(compressedInput, osb).         return osb.build().     } finally {         // must close all input streams         IOHelper.close(osb, compressedInput, inputStream).     } }
+false;public;0;3;;public boolean isUsingParallelCompression() {     return parallelCompression. }
+false;public;1;3;;public void setUsingParallelCompression(boolean parallelCompression) {     this.parallelCompression = parallelCompression. }
+false;protected;0;4;;@Override protected void doStart() throws Exception { // noop }
+false;protected;0;4;;@Override protected void doStop() throws Exception { // noop }

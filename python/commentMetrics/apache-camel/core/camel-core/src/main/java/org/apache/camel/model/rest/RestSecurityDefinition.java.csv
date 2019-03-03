@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;4;/**  * Ends the configuration of this security  */ ;/**  * Ends the configuration of this security  */ public RestDefinition endSecurityDefinition() {     rest.getSecurityDefinitions().getSecurityDefinitions().add(this).     return rest. }
+false;public;0;3;;public String getKey() {     return key. }
+true;public;1;3;/**  * Key used to refer to this security definition  */ ;/**  * Key used to refer to this security definition  */ public void setKey(String key) {     this.key = key. }
+false;public;0;3;;public String getDescription() {     return description. }
+true;public;1;3;/**  * A short description for security scheme.  */ ;/**  * A short description for security scheme.  */ public void setDescription(String description) {     this.description = description. }
