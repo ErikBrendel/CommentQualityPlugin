@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;7;;@Override public void open(Configuration parameters) throws Exception {     int numberOfSubTasks = getRuntimeContext().getNumberOfParallelSubtasks().     int indexofThisSubTask = getRuntimeContext().getIndexOfThisSubtask().     iterator = fullIterator.split(numberOfSubTasks)[indexofThisSubTask].     isRunning = true. }
+false;public;1;6;;@Override public void run(SourceContext<T> ctx) throws Exception {     while (isRunning && iterator.hasNext()) {         ctx.collect(iterator.next()).     } }
+false;public;0;4;;@Override public void cancel() {     isRunning = false. }

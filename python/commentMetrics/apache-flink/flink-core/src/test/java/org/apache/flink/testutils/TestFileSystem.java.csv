@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;3;;public static int getNumtimeStreamOpened() {     return streamOpenCounter. }
+false;public,static;0;3;;public static void resetStreamOpenCounter() {     streamOpenCounter = 0. }
+false;public;2;5;;@Override public FSDataInputStream open(Path f, int bufferSize) throws IOException {     streamOpenCounter++.     return super.open(f, bufferSize). }
+false;public;1;5;;@Override public FSDataInputStream open(Path f) throws IOException {     streamOpenCounter++.     return super.open(f). }
+false;public;1;5;;@Override public FileStatus getFileStatus(Path f) throws IOException {     LocalFileStatus status = (LocalFileStatus) super.getFileStatus(f).     return new LocalFileStatus(status.getFile(), this). }
+false;public;1;9;;@Override public FileStatus[] listStatus(Path f) throws IOException {     FileStatus[] stati = super.listStatus(f).     LocalFileStatus[] newStati = new LocalFileStatus[stati.length].     for (int i = 0. i < stati.length. i++) {         newStati[i] = new LocalFileStatus(((LocalFileStatus) stati[i]).getFile(), this).     }     return newStati. }
+false;public;0;4;;@Override public URI getUri() {     return URI.create(SCHEME + ":///"). }
+false;public;0;4;;@Override public String getScheme() {     return SCHEME. }
+false;public;1;2;;@Override public void configure(Configuration config) { }
+false;public;1;4;;@Override public FileSystem create(URI fsUri) throws IOException {     return new TestFileSystem(). }

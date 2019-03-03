@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public int getPageSize() {     return pageSize. }
+false;public;0;4;;@Override public int getNumberOfInputChannels() {     return numberOfChannels. }
+false;public;0;4;;@Override public String getOwningTaskName() {     return owningTaskName. }
+false;public;0;4;;@Override public boolean isFinished() {     return bufferOrEvents.isEmpty(). }
+false;public;0;18;;@Override public Optional<BufferOrEvent> getNextBufferOrEvent() {     BufferOrEvent next = bufferOrEvents.poll().     if (next == null) {         return Optional.empty().     }     int channelIdx = next.getChannelIndex().     if (closed[channelIdx]) {         throw new RuntimeException("Inconsistent: Channel " + channelIdx + " has data even though it is already closed.").     }     if (next.isEvent() && next.getEvent() instanceof EndOfPartitionEvent) {         closed[channelIdx] = true.         closedChannels++.     }     return Optional.of(next). }
+false;public;0;4;;@Override public Optional<BufferOrEvent> pollNextBufferOrEvent() {     return getNextBufferOrEvent(). }
+false;public;0;3;;@Override public void requestPartitions() { }
+false;public;1;3;;@Override public void sendTaskEvent(TaskEvent event) { }
+false;public;1;3;;@Override public void registerListener(InputGateListener listener) { }

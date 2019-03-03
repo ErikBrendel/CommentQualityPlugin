@@ -1,4 +1,8 @@
-# id;timestamp;commentText;codeText;commentWords;codeWords
-RecordDeserializer -> void setReporter(AccumulatorRegistry.Reporter reporter)_;1436966346;Setter for the reporter, e.g. for the number of records emitted and the number of bytes read.;void setReporter(AccumulatorRegistry.Reporter reporter)_;setter,for,the,reporter,e,g,for,the,number,of,records,emitted,and,the,number,of,bytes,read;void,set,reporter,accumulator,registry,reporter,reporter
-RecordDeserializer -> void setReporter(AccumulatorRegistry.Reporter reporter)_;1463939897;Setter for the reporter, e.g. for the number of records emitted and the number of bytes read.;void setReporter(AccumulatorRegistry.Reporter reporter)_;setter,for,the,reporter,e,g,for,the,number,of,records,emitted,and,the,number,of,bytes,read;void,set,reporter,accumulator,registry,reporter,reporter
-RecordDeserializer -> void setReporter(AccumulatorRegistry.Reporter reporter)_;1466072697;Setter for the reporter, e.g. for the number of records emitted and the number of bytes read.;void setReporter(AccumulatorRegistry.Reporter reporter)_;setter,for,the,reporter,e,g,for,the,number,of,records,emitted,and,the,number,of,bytes,read;void,set,reporter,accumulator,registry,reporter,reporter
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public boolean isFullRecord() {     return this.isFullRecord. }
+false;public;0;3;;public boolean isBufferConsumed() {     return this.isBufferConsumed. }
+false;;1;1;;DeserializationResult getNextRecord(T target) throws IOException.
+false;;1;1;;void setNextBuffer(Buffer buffer) throws IOException.
+false;;0;1;;Buffer getCurrentBuffer().
+false;;0;1;;void clear().
+false;;0;1;;boolean hasUnfinishedData().

@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean isImmutableType() {     return false. }
+false;public;0;4;;@Override public ShortValue createInstance() {     return new ShortValue(). }
+false;public;1;4;;@Override public ShortValue copy(ShortValue from) {     return copy(from, new ShortValue()). }
+false;public;2;5;;@Override public ShortValue copy(ShortValue from, ShortValue reuse) {     reuse.setValue(from.getValue()).     return reuse. }
+false;public;0;4;;@Override public int getLength() {     return 2. }
+false;public;2;4;;@Override public void serialize(ShortValue record, DataOutputView target) throws IOException {     record.write(target). }
+false;public;1;4;;@Override public ShortValue deserialize(DataInputView source) throws IOException {     return deserialize(new ShortValue(), source). }
+false;public;2;5;;@Override public ShortValue deserialize(ShortValue reuse, DataInputView source) throws IOException {     reuse.read(source).     return reuse. }
+false;public;2;4;;@Override public void copy(DataInputView source, DataOutputView target) throws IOException {     target.writeShort(source.readShort()). }
+false;public;0;4;;@Override public TypeSerializerSnapshot<ShortValue> snapshotConfiguration() {     return new ShortValueSerializerSnapshot(). }

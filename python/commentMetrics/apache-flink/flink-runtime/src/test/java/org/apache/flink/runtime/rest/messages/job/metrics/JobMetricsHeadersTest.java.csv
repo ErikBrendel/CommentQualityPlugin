@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void testUrl() {     assertThat(jobMetricsHeaders.getTargetRestEndpointURL(), equalTo("/jobs/:" + JobIDPathParameter.KEY + "/metrics")). }
+false;public;0;5;;@Test public void testMessageParameters() {     assertThat(jobMetricsHeaders.getUnresolvedMessageParameters(), instanceOf(JobMetricsMessageParameters.class)). }

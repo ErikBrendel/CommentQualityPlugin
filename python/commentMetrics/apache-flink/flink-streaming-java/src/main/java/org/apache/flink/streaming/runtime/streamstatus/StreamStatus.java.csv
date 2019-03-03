@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public boolean isIdle() {     return this.status == IDLE_STATUS. }
+false;public;0;3;;public boolean isActive() {     return !isIdle(). }
+false;public;0;3;;public int getStatus() {     return status. }
+false;public;1;5;;@Override public boolean equals(Object o) {     return this == o || o != null && o.getClass() == StreamStatus.class && ((StreamStatus) o).status == this.status. }
+false;public;0;4;;@Override public int hashCode() {     return status. }
+false;public;0;5;;@Override public String toString() {     String statusStr = (status == ACTIVE_STATUS) ? "ACTIVE" : "IDLE".     return "StreamStatus(" + statusStr + ")". }

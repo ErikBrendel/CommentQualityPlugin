@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected JobVertexID convertFromString(String value) throws ConversionException {     return JobVertexID.fromHexString(value). }
+false;protected;1;4;;@Override protected String convertToString(JobVertexID value) {     return value.toString(). }
+false;public;0;4;;@Override public String getDescription() {     return "32-character hexadecimal string value that identifies a job vertex.". }

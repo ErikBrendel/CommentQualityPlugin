@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;4;;@BeforeClass public static void setup() {     ioManager = new IOManagerAsync(). }
+false;public,static;0;4;;@AfterClass public static void shutdownIOManager() {     ioManager.shutdown(). }
+false;public;0;11;;@After public void checkNoTempFilesRemain() {     // validate that all temp files have been removed     for (File dir : ioManager.getSpillingDirectories()) {         for (String file : dir.list()) {             if (file != null && !(file.equals(".") || file.equals(".."))) {                 fail("barrier buffer did not clean up temp files. remaining file: " + file).             }         }     } }
+false;public;1;4;;@Override public BarrierBuffer createBarrierHandler(InputGate gate) throws IOException {     return new BarrierBuffer(gate, new BufferSpiller(ioManager, PAGE_SIZE)). }
+false;public;2;11;;@Override public void validateAlignmentBuffered(long actualBytesBuffered, BufferOrEvent... sequence) {     long expectedBuffered = 0.     for (BufferOrEvent boe : sequence) {         if (boe.isBuffer()) {             expectedBuffered += BufferSpiller.HEADER_SIZE + boe.getBuffer().getSize().         }     }     assertEquals("Wrong alignment buffered bytes", actualBytesBuffered, expectedBuffered). }

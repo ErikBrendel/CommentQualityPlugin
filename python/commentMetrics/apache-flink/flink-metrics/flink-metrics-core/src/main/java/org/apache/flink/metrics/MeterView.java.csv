@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public void markEvent() {     this.counter.inc(). }
+false;public;1;4;;@Override public void markEvent(long n) {     this.counter.inc(n). }
+false;public;0;4;;@Override public long getCount() {     return counter.getCount(). }
+false;public;0;4;;@Override public double getRate() {     return currentRate. }
+false;public;0;6;;@Override public void update() {     time = (time + 1) % values.length.     values[time] = counter.getCount().     currentRate = ((double) (values[time] - values[(time + 1) % values.length]) / timeSpanInSeconds). }

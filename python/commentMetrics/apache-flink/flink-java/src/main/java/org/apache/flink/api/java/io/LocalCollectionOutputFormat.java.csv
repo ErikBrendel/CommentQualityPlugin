@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;0;7;;private int generateRandomId() {     int num = (int) (Math.random() * Integer.MAX_VALUE).     while (RESULT_HOLDER.containsKey(num)) {         num = (int) (Math.random() * Integer.MAX_VALUE).     }     return num. }
+false;public;1;2;;@Override public void configure(Configuration parameters) { }
+false;public;2;4;;@Override public void open(int taskNumber, int numTasks) throws IOException {     this.taskResult = new ArrayList<T>(). }
+false;public;1;6;;@Override public void writeRecord(T record) throws IOException {     T recordCopy = this.typeSerializer.createInstance().     recordCopy = this.typeSerializer.copy(record, recordCopy).     this.taskResult.add(recordCopy). }
+false;public;0;8;;@Override public void close() throws IOException {     synchronized (RESULT_HOLDER) {         @SuppressWarnings("unchecked")         Collection<T> result = (Collection<T>) RESULT_HOLDER.get(this.id).         result.addAll(this.taskResult).     } }
+false;public;2;5;;@Override @SuppressWarnings("unchecked") public void setInputType(TypeInformation<?> type, ExecutionConfig executionConfig) {     this.typeSerializer = (TypeSerializer<T>) type.createSerializer(executionConfig). }

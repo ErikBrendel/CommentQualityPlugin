@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public String deserialize(final byte[] bytes) throws IOException {     isExceptionThrown.trigger().     throw new RuntimeException(EXCEPTION_MESSAGE). }
+false;public;1;4;;@Override public boolean isEndOfStream(final String s) {     return false. }
+false;public;0;4;;@Override public TypeInformation<String> getProducedType() {     return BasicTypeInfo.STRING_TYPE_INFO. }
+false;private;1;4;;private void readObject(java.io.ObjectInputStream in) throws IOException, ClassNotFoundException {     in.defaultReadObject().     this.isExceptionThrown = new OneShotLatch(). }

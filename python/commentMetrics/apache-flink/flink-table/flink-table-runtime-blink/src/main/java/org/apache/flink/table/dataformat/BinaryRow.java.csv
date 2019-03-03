@@ -1,0 +1,38 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static int calculateBitSetWidthInBytes(int arity) {     return ((arity + 63 + HEADER_SIZE_IN_BITS) / 64) * 8. }
+false;private;1;3;;private int getFieldOffset(int pos) {     return offset + nullBitsSizeInBytes + pos * 8. }
+false;private;1;4;;private void assertIndexIsValid(int index) {     assert index >= 0 : "index (" + index + ") should >= 0".     assert index < arity : "index (" + index + ") should < " + arity. }
+false;public;0;3;;public int getFixedLengthPartSize() {     return nullBitsSizeInBytes + 8 * arity. }
+false;public;0;4;;@Override public int getArity() {     return arity. }
+false;public;0;5;;@Override public byte getHeader() {     // first nullBitsSizeInBytes byte is header.     return segments[0].get(offset). }
+false;public;1;4;;@Override public void setHeader(byte header) {     segments[0].put(offset, header). }
+false;public;3;5;;public void pointTo(MemorySegment segment, int offset, int sizeInBytes) {     this.segments = new MemorySegment[] { segment }.     this.offset = offset.     this.sizeInBytes = sizeInBytes. }
+false;public;3;5;;public void pointTo(MemorySegment[] segments, int offset, int sizeInBytes) {     this.segments = segments.     this.offset = offset.     this.sizeInBytes = sizeInBytes. }
+false;public;1;3;;public void setTotalSize(int sizeInBytes) {     this.sizeInBytes = sizeInBytes. }
+false;public;1;5;;@Override public boolean isNullAt(int pos) {     assertIndexIsValid(pos).     return SegmentsUtil.bitGet(segments[0], offset, pos + HEADER_SIZE_IN_BITS). }
+false;private;1;4;;private void setNotNullAt(int i) {     assertIndexIsValid(i).     SegmentsUtil.bitUnSet(segments[0], offset, i + HEADER_SIZE_IN_BITS). }
+false;public;1;9;;@Override public void setNullAt(int i) {     assertIndexIsValid(i).     SegmentsUtil.bitSet(segments[0], offset, i + HEADER_SIZE_IN_BITS).     // We must set the fixed length part zero.     // 1.Only int/long/boolean...(Fix length type) will invoke this setNullAt.     // 2.Set to zero in order to equals and hash operation bytes calculation.     segments[0].putLong(getFieldOffset(i), 0). }
+false;public;2;6;;@Override public void setInt(int pos, int value) {     assertIndexIsValid(pos).     setNotNullAt(pos).     segments[0].putInt(getFieldOffset(pos), value). }
+false;public;2;6;;@Override public void setLong(int pos, long value) {     assertIndexIsValid(pos).     setNotNullAt(pos).     segments[0].putLong(getFieldOffset(pos), value). }
+false;public;2;6;;@Override public void setDouble(int pos, double value) {     assertIndexIsValid(pos).     setNotNullAt(pos).     segments[0].putDouble(getFieldOffset(pos), value). }
+false;public;2;6;;@Override public void setChar(int pos, char value) {     assertIndexIsValid(pos).     setNotNullAt(pos).     segments[0].putChar(getFieldOffset(pos), value). }
+false;public;2;6;;@Override public void setBoolean(int pos, boolean value) {     assertIndexIsValid(pos).     setNotNullAt(pos).     segments[0].putBoolean(getFieldOffset(pos), value). }
+false;public;2;6;;@Override public void setShort(int pos, short value) {     assertIndexIsValid(pos).     setNotNullAt(pos).     segments[0].putShort(getFieldOffset(pos), value). }
+false;public;2;6;;@Override public void setByte(int pos, byte value) {     assertIndexIsValid(pos).     setNotNullAt(pos).     segments[0].put(getFieldOffset(pos), value). }
+false;public;2;6;;@Override public void setFloat(int pos, float value) {     assertIndexIsValid(pos).     setNotNullAt(pos).     segments[0].putFloat(getFieldOffset(pos), value). }
+false;public;1;5;;@Override public boolean getBoolean(int pos) {     assertIndexIsValid(pos).     return segments[0].getBoolean(getFieldOffset(pos)). }
+false;public;1;5;;@Override public byte getByte(int pos) {     assertIndexIsValid(pos).     return segments[0].get(getFieldOffset(pos)). }
+false;public;1;5;;@Override public short getShort(int pos) {     assertIndexIsValid(pos).     return segments[0].getShort(getFieldOffset(pos)). }
+false;public;1;5;;@Override public int getInt(int pos) {     assertIndexIsValid(pos).     return segments[0].getInt(getFieldOffset(pos)). }
+false;public;1;5;;@Override public long getLong(int pos) {     assertIndexIsValid(pos).     return segments[0].getLong(getFieldOffset(pos)). }
+false;public;1;5;;@Override public float getFloat(int pos) {     assertIndexIsValid(pos).     return segments[0].getFloat(getFieldOffset(pos)). }
+false;public;1;5;;@Override public double getDouble(int pos) {     assertIndexIsValid(pos).     return segments[0].getDouble(getFieldOffset(pos)). }
+false;public;1;5;;@Override public char getChar(int pos) {     assertIndexIsValid(pos).     return segments[0].getChar(getFieldOffset(pos)). }
+false;public;1;7;;@Override public BinaryString getString(int pos) {     assertIndexIsValid(pos).     int fieldOffset = getFieldOffset(pos).     final long offsetAndLen = segments[0].getLong(fieldOffset).     return BinaryString.readBinaryStringFieldFromSegments(segments, offset, fieldOffset, offsetAndLen). }
+false;public;1;5;;@Override public BinaryArray getArray(int pos) {     assertIndexIsValid(pos).     return BinaryArray.readBinaryArrayFieldFromSegments(segments, offset, getLong(pos)). }
+false;public;1;5;;@Override public BinaryMap getMap(int pos) {     assertIndexIsValid(pos).     return BinaryMap.readBinaryMapFieldFromSegments(segments, offset, getLong(pos)). }
+true;public;0;12;/**  * The bit is 1 when the field is null. Default is 0.  */ ;/**  * The bit is 1 when the field is null. Default is 0.  */ public boolean anyNull() {     // Skip the header.     if ((segments[0].getLong(0) & FIRST_BYTE_ZERO) != 0) {         return true.     }     for (int i = 8. i < nullBitsSizeInBytes. i += 8) {         if (segments[0].getLong(i) != 0) {             return true.         }     }     return false. }
+false;public;1;8;;public boolean anyNull(int[] fields) {     for (int field : fields) {         if (isNullAt(field)) {             return true.         }     }     return false. }
+false;public;0;3;;public BinaryRow copy() {     return copy(new BinaryRow(arity)). }
+false;public;1;3;;public BinaryRow copy(BaseRow reuse) {     return copyInternal((BinaryRow) reuse). }
+false;private;1;5;;private BinaryRow copyInternal(BinaryRow reuse) {     byte[] bytes = SegmentsUtil.copyToBytes(segments, offset, sizeInBytes).     reuse.pointTo(MemorySegmentFactory.wrap(bytes), 0, sizeInBytes).     return reuse. }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected boolean updateCondition() {     return System.currentTimeMillis() - lastTime >= millis. }
+false;protected;0;5;;@Override protected void resetParameters() {     tupleList.clear().     lastTime = System.currentTimeMillis(). }

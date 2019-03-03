@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public boolean filter(T value, Context<T> ctx) throws Exception {     return !getNestedConditions()[0].filter(value, ctx). }

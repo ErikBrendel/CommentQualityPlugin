@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void update(long value) {     this.descriptiveStatistics.addValue(value). }
+false;public;0;4;;@Override public long getCount() {     return this.descriptiveStatistics.getN(). }
+false;public;0;4;;@Override public HistogramStatistics getStatistics() {     return new DescriptiveStatisticsHistogramStatistics(this.descriptiveStatistics). }

@@ -1,0 +1,17 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public int size() {     return aMap.size(). }
+false;public;1;9;;public V getKeyA(A aKey) {     final Tuple2<B, V> value = aMap.get(aKey).     if (value != null) {         return value.f1.     } else {         return null.     } }
+false;public;1;9;;public V getKeyB(B bKey) {     final A aKey = bMap.get(bKey).     if (aKey != null) {         return aMap.get(aKey).f1.     } else {         return null.     } }
+false;public;3;10;;public V put(A aKey, B bKey, V value) {     Tuple2<B, V> aValue = aMap.put(aKey, Tuple2.of(bKey, value)).     bMap.put(bKey, aKey).     if (aValue != null) {         return aValue.f1.     } else {         return null.     } }
+false;public;1;3;;public boolean containsKeyA(A aKey) {     return aMap.containsKey(aKey). }
+false;public;1;3;;public boolean containsKeyB(B bKey) {     return bMap.containsKey(bKey). }
+false;public;1;10;;public V removeKeyA(A aKey) {     Tuple2<B, V> aValue = aMap.remove(aKey).     if (aValue != null) {         bMap.remove(aValue.f0).         return aValue.f1.     } else {         return null.     } }
+false;public;1;14;;public V removeKeyB(B bKey) {     A aKey = bMap.remove(bKey).     if (aKey != null) {         Tuple2<B, V> aValue = aMap.remove(aKey).         if (aValue != null) {             return aValue.f1.         } else {             return null.         }     } else {         return null.     } }
+false;public;0;10;;public Collection<V> values() {     Collection<V> vs = values.     if (vs == null) {         vs = new Values().         values = vs.     }     return vs. }
+false;public;0;3;;public Set<A> keySetA() {     return aMap.keySet(). }
+false;public;0;3;;public Set<B> keySetB() {     return bMap.keySet(). }
+false;public;0;4;;public void clear() {     aMap.clear().     bMap.clear(). }
+false;public;0;4;;@Override public Iterator<V> iterator() {     return new ValueIterator(). }
+false;public;0;4;;@Override public int size() {     return aMap.size(). }
+false;public;0;4;;@Override public boolean hasNext() {     return iterator.hasNext(). }
+false;public;0;6;;@Override public V next() {     Tuple2<B, V> value = iterator.next().     return value.f1. }

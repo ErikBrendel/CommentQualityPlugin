@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@Override public String[] getValidTestValues() {     return new String[] { "0", "0.0", "123.4", "0.124", ".623", "1234", "-12.34", String.valueOf(Double.MAX_VALUE), String.valueOf(Double.MIN_VALUE), String.valueOf(Double.NEGATIVE_INFINITY), String.valueOf(Double.POSITIVE_INFINITY), String.valueOf(Double.NaN), "1.234E2", "1.234e3", "1.234E-2", "1239" }. }
+false;public;0;11;;@Override public DoubleValue[] getValidTestResults() {     return new DoubleValue[] { new DoubleValue(0d), new DoubleValue(0.0d), new DoubleValue(123.4d), new DoubleValue(0.124d), new DoubleValue(.623d), new DoubleValue(1234d), new DoubleValue(-12.34d), new DoubleValue(Double.MAX_VALUE), new DoubleValue(Double.MIN_VALUE), new DoubleValue(Double.NEGATIVE_INFINITY), new DoubleValue(Double.POSITIVE_INFINITY), new DoubleValue(Double.NaN), new DoubleValue(1.234E2), new DoubleValue(1.234e3), new DoubleValue(1.234E-2), new DoubleValue(1239d) }. }
+false;public;0;6;;@Override public String[] getInvalidTestValues() {     return new String[] { "a", "123abc4", "-57-6", "7-877678", " 1", "2 ", " ", "\t" }. }
+false;public;0;4;;@Override public boolean allowsEmptyField() {     return false. }
+false;public;0;4;;@Override public FieldParser<DoubleValue> getParser() {     return new DoubleValueParser(). }
+false;public;0;4;;@Override public Class<DoubleValue> getTypeClass() {     return DoubleValue.class. }

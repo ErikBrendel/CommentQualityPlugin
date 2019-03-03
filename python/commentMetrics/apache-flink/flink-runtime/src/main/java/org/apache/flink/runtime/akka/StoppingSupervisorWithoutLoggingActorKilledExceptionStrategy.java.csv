@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;17;;@Override public SupervisorStrategy create() {     return new OneForOneStrategy(false, new PFBuilder<Throwable, SupervisorStrategy.Directive>().match(Exception.class, (Exception e) -> {         if (e instanceof ActorKilledException) {             LOG.debug("Actor was killed. Stopping it now.", e).         } else {             LOG.error("Actor failed with exception. Stopping it now.", e).         }         return SupervisorStrategy.Stop$.MODULE$.     }).build()). }

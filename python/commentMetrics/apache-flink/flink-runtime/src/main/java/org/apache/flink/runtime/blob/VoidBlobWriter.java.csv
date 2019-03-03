@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public PermanentBlobKey putPermanent(JobID jobId, byte[] value) throws IOException {     throw new IOException("The VoidBlobWriter cannot write data to the BLOB store."). }
+false;public;2;4;;@Override public PermanentBlobKey putPermanent(JobID jobId, InputStream inputStream) throws IOException {     throw new IOException("The VoidBlobWriter cannot write data to the BLOB store."). }
+false;public;0;4;;@Override public int getMinOffloadingSize() {     return Integer.MAX_VALUE. }
+false;public,static;0;3;;public static VoidBlobWriter getInstance() {     return INSTANCE. }

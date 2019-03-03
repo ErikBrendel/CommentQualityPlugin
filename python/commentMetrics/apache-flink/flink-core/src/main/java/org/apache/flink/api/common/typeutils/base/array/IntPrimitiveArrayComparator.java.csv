@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public int hash(int[] record) {     int result = 0.     for (int field : record) {         result += field.     }     return result. }
+false;public;2;11;;@Override public int compare(int[] first, int[] second) {     for (int x = 0. x < min(first.length, second.length). x++) {         int cmp = first[x] - second[x].         if (cmp != 0) {             return ascending ? cmp : -cmp.         }     }     int cmp = first.length - second.length.     return ascending ? cmp : -cmp. }
+false;public;0;6;;@Override public TypeComparator<int[]> duplicate() {     IntPrimitiveArrayComparator dupe = new IntPrimitiveArrayComparator(this.ascending).     dupe.setReference(this.reference).     return dupe. }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public Integer convertStringToValue(String value) {     return Integer.valueOf(value). }
+false;public;1;4;;@Override public String convertValueToString(Integer value) {     return value.toString(). }
+false;public;0;4;;@Override public String getDescription() {     return "Positive integer value that specifies the desired parallelism.". }

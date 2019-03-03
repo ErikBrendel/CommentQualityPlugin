@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public double getVolume() {     return volume. }
+false;public;1;6;;@Override public boolean equals(Object obj) {     return obj instanceof SubEvent && super.equals(obj) && ((SubEvent) obj).volume == volume. }
+false;public;0;4;;@Override public int hashCode() {     return super.hashCode() + (int) volume. }
+false;public;0;16;;@Override public String toString() {     StringBuilder builder = new StringBuilder().     builder.append("SubEvent(").append(getId()).append(", ").append(getName()).append(", ").append(getPrice()).append(", ").append(getVolume()).append(")").     return builder.toString(). }

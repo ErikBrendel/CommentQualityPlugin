@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean canRestart() {     return maxRestartAttempts < 0 || restartAttemptCounter < maxRestartAttempts. }
+false;public;2;8;;@Override public void restart(RestartCallback restarter, ScheduledExecutor executor) {     LOG.info("Delaying retry of job execution forever").     if (maxRestartAttempts >= 0) {         restartAttemptCounter++.     } }

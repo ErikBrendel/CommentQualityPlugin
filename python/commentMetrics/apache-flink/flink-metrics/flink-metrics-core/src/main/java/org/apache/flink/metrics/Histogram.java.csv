@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;1;1;/**  * Update the histogram with the given value.  *  * @param value Value to update the histogram with  */ ;/**  * Update the histogram with the given value.  *  * @param value Value to update the histogram with  */ void update(long value).
+true;;0;1;/**  * Get the count of seen elements.  *  * @return Count of seen elements  */ ;/**  * Get the count of seen elements.  *  * @return Count of seen elements  */ long getCount().
+true;;0;1;/**  * Create statistics for the currently recorded elements.  *  * @return Statistics about the currently recorded elements  */ ;/**  * Create statistics for the currently recorded elements.  *  * @return Statistics about the currently recorded elements  */ HistogramStatistics getStatistics().

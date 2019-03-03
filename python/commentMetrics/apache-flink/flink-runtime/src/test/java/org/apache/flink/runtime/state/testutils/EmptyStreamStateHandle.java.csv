@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public boolean isDisposed() {     return disposed. }
+false;public;1;6;;@Override public void seek(long desired) throws IOException {     if (desired != 0) {         throw new IOException("out of bounds").     } }
+false;public;0;4;;@Override public long getPos() {     return 0. }
+false;public;0;4;;@Override public int read() throws IOException {     return -1. }
+false;public;0;23;;@Override public FSDataInputStream openInputStream() throws IOException {     // returns an empty stream     return new FSDataInputStream() {          @Override         public void seek(long desired) throws IOException {             if (desired != 0) {                 throw new IOException("out of bounds").             }         }          @Override         public long getPos() {             return 0.         }          @Override         public int read() throws IOException {             return -1.         }     }. }
+false;public;0;4;;@Override public void discardState() throws Exception {     disposed = true. }
+false;public;0;4;;@Override public long getStateSize() {     return 0. }

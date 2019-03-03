@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected TypeSerializer<Either<String, Integer>> createSerializer() {     return new EitherSerializer<>(StringSerializer.INSTANCE, IntSerializer.INSTANCE). }
+false;protected;0;4;;@Override protected int getLength() {     return -1. }
+false;protected;0;5;;@SuppressWarnings("unchecked") @Override protected Class<Either<String, Integer>> getTypeClass() {     return (Class<Either<String, Integer>>) (Class<?>) Either.class. }
+false;protected;0;12;;@Override @SuppressWarnings("unchecked") protected Either<String, Integer>[] getTestData() {     return new Either[] { new Either.Left("hello friend"), new Either.Left("hello friend"), new Either.Right(37), new Either.Left("hello friend"), new Either.Right(1569653), new Either.Left("hello friend") }. }

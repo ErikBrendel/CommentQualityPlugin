@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public long getTrueCount() {     return trueCount. }
+false;public;0;3;;public long getFalseCount() {     return falseCount. }
+true;public;0;4;/**  * The number of non-null values in this column.  */ ;/**  * The number of non-null values in this column.  */ @Override public long getNonNullCount() {     return trueCount + falseCount. }
+false;public;0;3;;public long getNullCount() {     return nullCount. }
+false;public;0;9;;@Override public String toString() {     return "BooleanColumnSummary{" + "totalCount=" + getTotalCount() + ", trueCount=" + trueCount + ", falseCount=" + falseCount + ", nullCount=" + nullCount + '}'. }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;static;2;3;;static String getString(MetricConfig config, ConfigOption<String> key) {     return config.getString(key.key(), key.defaultValue()). }
+false;static;2;3;;static int getInteger(MetricConfig config, ConfigOption<Integer> key) {     return config.getInteger(key.key(), key.defaultValue()). }

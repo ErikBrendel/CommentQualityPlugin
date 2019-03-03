@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;1;1;/**  * Notification callback if the input gate moves from zero to non-zero  * available input channels with data.  *  * @param inputGate Input Gate that became available.  */ ;/**  * Notification callback if the input gate moves from zero to non-zero  * available input channels with data.  *  * @param inputGate Input Gate that became available.  */ void notifyInputGateNonEmpty(InputGate inputGate).

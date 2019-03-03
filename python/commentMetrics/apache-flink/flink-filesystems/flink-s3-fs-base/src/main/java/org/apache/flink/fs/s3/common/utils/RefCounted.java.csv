@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * Increases the reference counter.  */ ;/**  * Increases the reference counter.  */ void retain().
+true;;0;1;/**  * Decreases the reference counter.  *  * @return {@code true} if the reference  * counter reached 0, {@code false} otherwise.  */ ;/**  * Decreases the reference counter.  *  * @return {@code true} if the reference  * counter reached 0, {@code false} otherwise.  */ boolean release().

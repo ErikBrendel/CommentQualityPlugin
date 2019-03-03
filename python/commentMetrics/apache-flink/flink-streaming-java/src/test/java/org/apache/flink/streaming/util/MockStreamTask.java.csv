@@ -1,0 +1,18 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;2;;@Override public void init() { }
+false;protected;0;2;;@Override protected void run() { }
+false;protected;0;2;;@Override protected void cleanup() { }
+false;protected;0;2;;@Override protected void cancelTask() { }
+false;public;0;4;;@Override public String getName() {     return name. }
+false;public;0;4;;@Override public Object getCheckpointLock() {     return checkpointLock. }
+false;public;0;4;;@Override public StreamConfig getConfiguration() {     return config. }
+false;public;0;4;;@Override public Environment getEnvironment() {     return super.getEnvironment(). }
+false;public;0;4;;@Override public ExecutionConfig getExecutionConfig() {     return executionConfig. }
+false;public;0;4;;@Override public StreamTaskStateInitializer createStreamTaskStateInitializer() {     return streamTaskStateInitializer. }
+false;public;1;3;;public void setStreamTaskStateInitializer(StreamTaskStateInitializer streamTaskStateInitializer) {     this.streamTaskStateInitializer = streamTaskStateInitializer. }
+false;public;0;4;;@Override public CloseableRegistry getCancelables() {     return closableRegistry. }
+false;public;0;4;;@Override public StreamStatusMaintainer getStreamStatusMaintainer() {     return streamStatusMaintainer. }
+false;public;0;4;;@Override public CheckpointStorage getCheckpointStorage() {     return checkpointStorage. }
+false;public;0;4;;@Override public ProcessingTimeService getProcessingTimeService() {     return processingTimeService. }
+false;public;2;4;;@Override public void handleAsyncException(String message, Throwable exception) {     handleAsyncException.accept(message, exception). }
+false;public;0;4;;@Override public Map<String, Accumulator<?, ?>> getAccumulatorMap() {     return accumulatorMap. }

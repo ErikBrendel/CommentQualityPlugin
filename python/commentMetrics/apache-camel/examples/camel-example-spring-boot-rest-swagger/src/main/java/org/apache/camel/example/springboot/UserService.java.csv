@@ -1,7 +1,0 @@
-# id;timestamp;commentText;codeText;commentWords;codeWords
-UserService -> User findUser(Integer id)_;1488734694;Find a user by the given ID__@param id_the ID of the user_@return the user, or <code>null</code> if user not found.;User findUser(Integer id)_;find,a,user,by,the,given,id,param,id,the,id,of,the,user,return,the,user,or,code,null,code,if,user,not,found;user,find,user,integer,id
-UserService -> User findUser(Integer id)_;1540108161;Find a user by the given ID__@param id_the ID of the user_@return the user, or <code>null</code> if user not found.;User findUser(Integer id)_;find,a,user,by,the,given,id,param,id,the,id,of,the,user,return,the,user,or,code,null,code,if,user,not,found;user,find,user,integer,id
-UserService -> void updateUser(User user)_;1488734694;Update the given user__@param user_the user;void updateUser(User user)_;update,the,given,user,param,user,the,user;void,update,user,user,user
-UserService -> void updateUser(User user)_;1540108161;Update the given user__@param user_the user;void updateUser(User user)_;update,the,given,user,param,user,the,user;void,update,user,user,user
-UserService -> Collection<User> findUsers()_;1488734694;Find all users__@return a collection of all users;Collection<User> findUsers()_;find,all,users,return,a,collection,of,all,users;collection,user,find,users
-UserService -> Collection<User> findUsers()_;1540108161;Find all users__@return a collection of all users;Collection<User> findUsers()_;find,all,users,return,a,collection,of,all,users;collection,user,find,users

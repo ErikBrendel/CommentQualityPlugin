@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;17;;@Override public JobMaster createJobMasterService(JobGraph jobGraph, OnCompletionActions jobCompletionActions, ClassLoader userCodeClassloader) throws Exception {     return new JobMaster(rpcService, jobMasterConfiguration, ResourceID.generate(), jobGraph, haServices, slotPoolFactory, schedulerFactory, jobManagerSharedServices, heartbeatServices, jobManagerJobMetricGroupFactory, jobCompletionActions, fatalErrorHandler, userCodeClassloader). }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;8;;@Override JobMetricsHandler getMetricsHandler() {     return new JobMetricsHandler(leaderRetriever, TIMEOUT, TEST_HEADERS, mockMetricFetcher). }
+false;;0;4;;@Override QueryScopeInfo getQueryScopeInfo() {     return new QueryScopeInfo.JobQueryScopeInfo(TEST_JOB_ID). }
+false;;0;6;;@Override Map<String, String> getPathParameters() {     Map<String, String> pathParameters = new HashMap<>().     pathParameters.put(JobIDPathParameter.KEY, TEST_JOB_ID).     return pathParameters. }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;3;8;;@Override protected FlinkKafkaConsumerBase<Row> createKafkaConsumer(String topic, Properties properties, DeserializationSchema<Row> deserializationSchema) {     return new FlinkKafkaConsumer<Row>(topic, deserializationSchema, properties). }

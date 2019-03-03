@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Configuration getConfiguration() {     return configuration. }
+false;public;0;4;;@Override public String[] getTmpDirectories() {     return tmpDirectories. }
+false;public;0;5;;@Override public boolean shouldExitJvmOnOutOfMemoryError() {     // never kill the JVM in tests     return false. }

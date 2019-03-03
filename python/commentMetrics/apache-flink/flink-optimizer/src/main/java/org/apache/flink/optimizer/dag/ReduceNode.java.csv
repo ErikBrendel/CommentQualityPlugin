@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;// ------------------------------------------------------------------------ @Override public ReduceOperatorBase<?, ?> getOperator() {     return (ReduceOperatorBase<?, ?>) super.getOperator(). }
+false;public;0;4;;@Override public String getOperatorName() {     return "Reduce". }
+false;protected;0;4;;@Override protected List<OperatorDescriptorSingle> getPossibleProperties() {     return this.possibleProperties. }
+false;protected;1;4;;// -------------------------------------------------------------------------------------------- // Estimates // -------------------------------------------------------------------------------------------- @Override protected void computeOperatorSpecificDefaultEstimates(DataStatistics statistics) { // no real estimates possible for a reducer. }
+false;public;0;10;;public ReduceNode getCombinerUtilityNode() {     if (this.preReduceUtilityNode == null) {         this.preReduceUtilityNode = new ReduceNode(this).         // we conservatively assume the combiner returns the same data size as it consumes         this.preReduceUtilityNode.estimatedOutputSize = getPredecessorNode().getEstimatedOutputSize().         this.preReduceUtilityNode.estimatedNumRecords = getPredecessorNode().getEstimatedNumRecords().     }     return this.preReduceUtilityNode. }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;4;/**  * Gets the assembled {@link JobGraph} with a random {@link JobID}.  */ ;/**  * Gets the assembled {@link JobGraph} with a random {@link JobID}.  */ @SuppressWarnings("deprecation") public JobGraph getJobGraph() {     return getJobGraph(null). }
+true;public,abstract;1;1;/**  * Gets the assembled {@link JobGraph} with a specified {@link JobID}.  */ ;/**  * Gets the assembled {@link JobGraph} with a specified {@link JobID}.  */ public abstract JobGraph getJobGraph(@Nullable JobID jobID).
+false;public,abstract;0;1;;public abstract String getStreamingPlanAsJSON().
+false;public,abstract;1;1;;public abstract void dumpStreamingPlanAsJSON(File file) throws IOException.

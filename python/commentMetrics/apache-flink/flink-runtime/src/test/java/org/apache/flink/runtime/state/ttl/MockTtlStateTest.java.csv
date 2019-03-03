@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected StateBackend createStateBackend() {     return new MockStateBackend(). }
+false;protected;1;9;;@Override protected StateBackendTestContext createStateBackendTestContext(TtlTimeProvider timeProvider) {     return new StateBackendTestContext(timeProvider) {          @Override         protected StateBackend createStateBackend() {             return new MockStateBackend().         }     }. }

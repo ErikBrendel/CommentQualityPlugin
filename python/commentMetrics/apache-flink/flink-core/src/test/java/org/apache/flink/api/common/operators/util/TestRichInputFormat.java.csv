@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean reachedEnd() throws IOException {     return count >= NUM. }
+false;public;1;6;;@Override public String nextRecord(String reuse) throws IOException {     count++.     return NAMES[count - 1] + getRuntimeContext().getIndexOfThisSubtask() + "" + getRuntimeContext().getNumberOfParallelSubtasks(). }
+false;public;0;5;;public void reset() {     count = 0.     openCalled = false.     closeCalled = false. }
+false;public;0;4;;@Override public void openInputFormat() {     openCalled = true. }
+false;public;0;4;;@Override public void closeInputFormat() {     closeCalled = true. }
+false;public;0;3;;public boolean hasBeenOpened() {     return openCalled. }
+false;public;0;3;;public boolean hasBeenClosed() {     return closeCalled. }

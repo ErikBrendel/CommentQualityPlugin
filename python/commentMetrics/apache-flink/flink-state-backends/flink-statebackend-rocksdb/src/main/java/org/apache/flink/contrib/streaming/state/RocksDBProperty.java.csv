@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * @return property string that can be used to query {@link RocksDB#getLongProperty(ColumnFamilyHandle, String)}.  */ ;/**  * @return property string that can be used to query {@link RocksDB#getLongProperty(ColumnFamilyHandle, String)}.  */ public String getRocksDBProperty() {     return String.format(ROCKS_DB_PROPERTY_FORMAT, property). }
+true;public;0;3;/**  * @return key for enabling metric using {@link org.apache.flink.configuration.Configuration}.  */ ;/**  * @return key for enabling metric using {@link org.apache.flink.configuration.Configuration}.  */ public String getConfigKey() {     return String.format(CONFIG_KEY_FORMAT, property). }

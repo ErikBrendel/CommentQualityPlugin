@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected <T> TypeSerializer<T> createComponentSerializer(Class<T> type) {     return new AvroSerializer<T>(type). }

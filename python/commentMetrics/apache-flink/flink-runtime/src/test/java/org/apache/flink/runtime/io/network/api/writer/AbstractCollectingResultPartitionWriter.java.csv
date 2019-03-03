@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public BufferProvider getBufferProvider() {     return bufferProvider. }
+false;public;0;4;;@Override public ResultPartitionID getPartitionId() {     return new ResultPartitionID(). }
+false;public;0;4;;@Override public int getNumberOfSubpartitions() {     return 1. }
+false;public;0;4;;@Override public int getNumTargetKeyGroups() {     return 1. }
+false;public,synchronized;2;6;;@Override public synchronized void addBufferConsumer(BufferConsumer bufferConsumer, int targetChannel) throws IOException {     checkState(targetChannel < getNumberOfSubpartitions()).     bufferConsumers.add(bufferConsumer).     processBufferConsumers(). }
+false;private;0;16;;private void processBufferConsumers() throws IOException {     while (!bufferConsumers.isEmpty()) {         BufferConsumer bufferConsumer = bufferConsumers.peek().         Buffer buffer = bufferConsumer.build().         try {             deserializeBuffer(buffer).             if (!bufferConsumer.isFinished()) {                 break.             }             bufferConsumers.pop().close().         } finally {             buffer.recycleBuffer().         }     } }
+false;public,synchronized;0;8;;@Override public synchronized void flushAll() {     try {         processBufferConsumers().     } catch (IOException e) {         throw new RuntimeException(e).     } }
+false;public;1;4;;@Override public void flush(int subpartitionIndex) {     flushAll(). }
+false;protected,abstract;1;1;;protected abstract void deserializeBuffer(Buffer buffer) throws IOException.

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;4;;@Override public boolean put(File localFile, JobID jobId, BlobKey blobKey) {     return putFunction.apply(Tuple3.of(localFile, jobId, blobKey)). }
+false;public;2;4;;@Override public boolean delete(JobID jobId, BlobKey blobKey) {     return deleteFunction.apply(jobId, blobKey). }
+false;public;1;4;;@Override public boolean deleteAll(JobID jobId) {     return deleteAllFunction.apply(jobId). }
+false;public;3;4;;@Override public boolean get(JobID jobId, BlobKey blobKey, File localFile) {     return getFunction.apply(Tuple3.of(jobId, blobKey, localFile)). }

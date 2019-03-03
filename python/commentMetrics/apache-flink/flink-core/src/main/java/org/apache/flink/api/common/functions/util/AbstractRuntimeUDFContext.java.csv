@@ -1,0 +1,26 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public ExecutionConfig getExecutionConfig() {     return executionConfig. }
+false;public;0;4;;@Override public String getTaskName() {     return taskInfo.getTaskName(). }
+false;public;0;4;;@Override public int getNumberOfParallelSubtasks() {     return taskInfo.getNumberOfParallelSubtasks(). }
+false;public;0;4;;@Override public int getMaxNumberOfParallelSubtasks() {     return taskInfo.getMaxNumberOfParallelSubtasks(). }
+false;public;0;4;;@Override public int getIndexOfThisSubtask() {     return taskInfo.getIndexOfThisSubtask(). }
+false;public;0;4;;@Override public MetricGroup getMetricGroup() {     return metrics. }
+false;public;0;4;;@Override public int getAttemptNumber() {     return taskInfo.getAttemptNumber(). }
+false;public;0;4;;@Override public String getTaskNameWithSubtasks() {     return taskInfo.getTaskNameWithSubtasks(). }
+false;public;1;4;;@Override public IntCounter getIntCounter(String name) {     return (IntCounter) getAccumulator(name, IntCounter.class). }
+false;public;1;4;;@Override public LongCounter getLongCounter(String name) {     return (LongCounter) getAccumulator(name, LongCounter.class). }
+false;public;1;4;;@Override public Histogram getHistogram(String name) {     return (Histogram) getAccumulator(name, Histogram.class). }
+false;public;1;4;;@Override public DoubleCounter getDoubleCounter(String name) {     return (DoubleCounter) getAccumulator(name, DoubleCounter.class). }
+false;public;2;8;;@Override public <V, A extends Serializable> void addAccumulator(String name, Accumulator<V, A> accumulator) {     if (accumulators.containsKey(name)) {         throw new UnsupportedOperationException("The accumulator '" + name + "' already exists and cannot be added.").     }     accumulators.put(name, accumulator). }
+false;public;1;5;;@SuppressWarnings("unchecked") @Override public <V, A extends Serializable> Accumulator<V, A> getAccumulator(String name) {     return (Accumulator<V, A>) accumulators.get(name). }
+false;public;0;4;;@Override public Map<String, Accumulator<?, ?>> getAllAccumulators() {     return Collections.unmodifiableMap(this.accumulators). }
+false;public;0;4;;@Override public ClassLoader getUserCodeClassLoader() {     return this.userCodeClassLoader. }
+false;public;0;4;;@Override public DistributedCache getDistributedCache() {     return this.distributedCache. }
+false;private;2;20;;// -------------------------------------------------------------------------------------------- @SuppressWarnings("unchecked") private <V, A extends Serializable> Accumulator<V, A> getAccumulator(String name, Class<? extends Accumulator<V, A>> accumulatorClass) {     Accumulator<?, ?> accumulator = accumulators.get(name).     if (accumulator != null) {         AccumulatorHelper.compareAccumulatorTypes(name, accumulator.getClass(), accumulatorClass).     } else {         // Create new accumulator         try {             accumulator = accumulatorClass.newInstance().         } catch (Exception e) {             throw new RuntimeException("Cannot create accumulator " + accumulatorClass.getName()).         }         accumulators.put(name, accumulator).     }     return (Accumulator<V, A>) accumulator. }
+false;public;1;6;;@Override @PublicEvolving public <T> ValueState<T> getState(ValueStateDescriptor<T> stateProperties) {     throw new UnsupportedOperationException("This state is only accessible by functions executed on a KeyedStream"). }
+false;public;1;6;;@Override @PublicEvolving public <T> ListState<T> getListState(ListStateDescriptor<T> stateProperties) {     throw new UnsupportedOperationException("This state is only accessible by functions executed on a KeyedStream"). }
+false;public;1;6;;@Override @PublicEvolving public <T> ReducingState<T> getReducingState(ReducingStateDescriptor<T> stateProperties) {     throw new UnsupportedOperationException("This state is only accessible by functions executed on a KeyedStream"). }
+false;public;1;6;;@Override @PublicEvolving public <IN, ACC, OUT> AggregatingState<IN, OUT> getAggregatingState(AggregatingStateDescriptor<IN, ACC, OUT> stateProperties) {     throw new UnsupportedOperationException("This state is only accessible by functions executed on a KeyedStream"). }
+false;public;1;7;;@Override @PublicEvolving @Deprecated public <T, ACC> FoldingState<T, ACC> getFoldingState(FoldingStateDescriptor<T, ACC> stateProperties) {     throw new UnsupportedOperationException("This state is only accessible by functions executed on a KeyedStream"). }
+false;public;1;6;;@Override @PublicEvolving public <UK, UV> MapState<UK, UV> getMapState(MapStateDescriptor<UK, UV> stateProperties) {     throw new UnsupportedOperationException("This state is only accessible by functions executed on a KeyedStream"). }
+false;public;0;5;;@Internal @VisibleForTesting public String getAllocationIDAsString() {     return taskInfo.getAllocationIDAsString(). }

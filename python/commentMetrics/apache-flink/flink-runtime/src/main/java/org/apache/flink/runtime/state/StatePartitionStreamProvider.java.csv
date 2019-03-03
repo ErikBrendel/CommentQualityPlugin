@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;6;/**  * Returns a stream with the data of one state partition.  */ ;/**  * Returns a stream with the data of one state partition.  */ public InputStream getStream() throws IOException {     if (creationException != null) {         throw new IOException(creationException).     }     return stream. }

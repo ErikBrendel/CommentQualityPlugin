@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public long getLatestAckTimestamp() {     return latestAckTimestamp. }
+false;public;0;3;;public long getStateSize() {     return stateSize. }
+false;public;0;3;;public long getDuration() {     return duration. }
+false;public;0;3;;public long getAlignmentBuffered() {     return alignmentBuffered. }
+false;public;0;3;;public int getNumSubtasks() {     return numSubtasks. }
+false;public;0;3;;public int getNumAckSubtasks() {     return numAckSubtasks. }
+false;public;0;3;;public long getCheckpointId() {     return checkpointId. }
+false;public;0;3;;public CheckpointStatsStatus getCheckpointStatus() {     return checkpointStatus. }
+false;public;1;18;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     TaskCheckpointStatistics that = (TaskCheckpointStatistics) o.     return checkpointId == that.checkpointId && latestAckTimestamp == that.latestAckTimestamp && stateSize == that.stateSize && duration == that.duration && alignmentBuffered == that.alignmentBuffered && numSubtasks == that.numSubtasks && numAckSubtasks == that.numAckSubtasks && checkpointStatus == that.checkpointStatus. }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(checkpointId, checkpointStatus, latestAckTimestamp, stateSize, duration, alignmentBuffered, numSubtasks, numAckSubtasks). }

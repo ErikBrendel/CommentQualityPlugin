@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,abstract;2;1;;public abstract Object add(Object o1, Object o2).
+false;public,static;1;19;;public static SumFunction getForClass(Class<?> clazz) {     if (clazz == Integer.class) {         return new IntSum().     } else if (clazz == Long.class) {         return new LongSum().     } else if (clazz == Short.class) {         return new ShortSum().     } else if (clazz == Double.class) {         return new DoubleSum().     } else if (clazz == Float.class) {         return new FloatSum().     } else if (clazz == Byte.class) {         return new ByteSum().     } else {         throw new RuntimeException("DataStream cannot be summed because the class " + clazz.getSimpleName() + " does not support the + operator.").     } }
+false;public;2;4;;@Override public Object add(Object value1, Object value2) {     return (Integer) value1 + (Integer) value2. }
+false;public;2;4;;@Override public Object add(Object value1, Object value2) {     return (Long) value1 + (Long) value2. }
+false;public;2;4;;@Override public Object add(Object value1, Object value2) {     return (Double) value1 + (Double) value2. }
+false;public;2;4;;@Override public Object add(Object value1, Object value2) {     return (short) ((Short) value1 + (Short) value2). }
+false;public;2;4;;@Override public Object add(Object value1, Object value2) {     return (Float) value1 + (Float) value2. }
+false;public;2;4;;@Override public Object add(Object value1, Object value2) {     return (byte) ((Byte) value1 + (Byte) value2). }

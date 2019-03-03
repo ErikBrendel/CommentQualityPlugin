@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public int read() throws IOException {     return delegate.read(). }
+false;public;1;4;;@Override public int read(byte[] b) throws IOException {     return delegate.read(b). }
+false;public;3;4;;@Override public int read(byte[] b, int off, int len) throws IOException {     return delegate.read(b, off, len). }
+false;public;1;4;;@Override public long skip(long n) throws IOException {     return delegate.skip(n). }
+false;public;0;4;;@Override public int available() throws IOException {     return delegate.available(). }
+false;public;0;4;;@Override public void close() throws IOException {     delegate.close(). }
+false;public;1;4;;@Override public void mark(int readlimit) {     delegate.mark(readlimit). }
+false;public;0;4;;@Override public void reset() throws IOException {     delegate.reset(). }
+false;public;0;4;;@Override public boolean markSupported() {     return delegate.markSupported(). }

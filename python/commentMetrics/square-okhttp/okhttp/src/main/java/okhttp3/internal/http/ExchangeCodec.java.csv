@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * Returns the connection that carries this codec.  */ ;/**  * Returns the connection that carries this codec.  */ RealConnection connection().
+true;;2;1;/**  * Returns an output stream where the request body can be streamed.  */ ;/**  * Returns an output stream where the request body can be streamed.  */ Sink createRequestBody(Request request, long contentLength) throws IOException.
+true;;1;1;/**  * This should update the HTTP engine's sentRequestMillis field.  */ ;/**  * This should update the HTTP engine's sentRequestMillis field.  */ void writeRequestHeaders(Request request) throws IOException.
+true;;0;1;/**  * Flush the request to the underlying socket.  */ ;/**  * Flush the request to the underlying socket.  */ void flushRequest() throws IOException.
+true;;0;1;/**  * Flush the request to the underlying socket and signal no more bytes will be transmitted.  */ ;/**  * Flush the request to the underlying socket and signal no more bytes will be transmitted.  */ void finishRequest() throws IOException.
+true;;1;1;/**  * Parses bytes of a response header from an HTTP transport.  *  * @param expectContinue true to return null if this is an intermediate response with a "100"  *     response code. Otherwise this method never returns null.  */ ;/**  * Parses bytes of a response header from an HTTP transport.  *  * @param expectContinue true to return null if this is an intermediate response with a "100"  *     response code. Otherwise this method never returns null.  */ @Nullable Response.Builder readResponseHeaders(boolean expectContinue) throws IOException.
+false;;1;1;;long reportedContentLength(Response response) throws IOException.
+false;;1;1;;Source openResponseBodySource(Response response) throws IOException.
+true;;0;1;/**  * Returns the trailers after the HTTP response. May be empty.  */ ;/**  * Returns the trailers after the HTTP response. May be empty.  */ Headers trailers() throws IOException.
+true;;0;1;/**  * Cancel this stream. Resources held by this stream will be cleaned up, though not synchronously.  * That may happen later by the connection pool thread.  */ ;/**  * Cancel this stream. Resources held by this stream will be cleaned up, though not synchronously.  * That may happen later by the connection pool thread.  */ void cancel().

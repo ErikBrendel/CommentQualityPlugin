@@ -1,0 +1,16 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;7;/**  * First, reset.  */ ;/**  * First, reset.  */ @Override public void reset() {     this.cursor = fixedSize.     for (int i = 0. i < nullBitsSizeInBytes. i += 8) {         segment.putLong(i, 0L).     } }
+true;public;1;6;/**  * Default not null.  */ ;/**  * Default not null.  */ @Override public void setNullAt(int pos) {     // need add header 8 bit.     SegmentsUtil.bitSet(segment, 0, pos + 8).     segment.putLong(getFieldOffset(pos), 0L). }
+false;public;1;3;;public void writeHeader(byte header) {     segment.put(0, header). }
+false;public;2;4;;@Override public void writeBoolean(int pos, boolean value) {     segment.putBoolean(getFieldOffset(pos), value). }
+false;public;2;4;;@Override public void writeByte(int pos, byte value) {     segment.put(getFieldOffset(pos), value). }
+false;public;2;4;;@Override public void writeShort(int pos, short value) {     segment.putShort(getFieldOffset(pos), value). }
+false;public;2;4;;@Override public void writeInt(int pos, int value) {     segment.putInt(getFieldOffset(pos), value). }
+false;public;2;4;;@Override public void writeLong(int pos, long value) {     segment.putLong(getFieldOffset(pos), value). }
+false;public;2;4;;@Override public void writeFloat(int pos, float value) {     segment.putFloat(getFieldOffset(pos), value). }
+false;public;2;4;;@Override public void writeDouble(int pos, double value) {     segment.putDouble(getFieldOffset(pos), value). }
+false;public;2;4;;@Override public void writeChar(int pos, char value) {     segment.putChar(getFieldOffset(pos), value). }
+false;public;0;4;;@Override public void complete() {     row.setTotalSize(cursor). }
+false;public;1;4;;@Override public int getFieldOffset(int pos) {     return nullBitsSizeInBytes + 8 * pos. }
+false;public;3;5;;@Override public void setOffsetAndSize(int pos, int offset, long size) {     final long offsetAndSize = ((long) offset << 32) | size.     segment.putLong(getFieldOffset(pos), offsetAndSize). }
+false;public;0;4;;@Override public void afterGrow() {     row.pointTo(segment, 0, segment.size()). }

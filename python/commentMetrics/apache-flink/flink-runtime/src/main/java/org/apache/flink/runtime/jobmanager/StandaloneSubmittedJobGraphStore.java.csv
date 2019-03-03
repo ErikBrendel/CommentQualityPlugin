@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void start(SubmittedJobGraphListener jobGraphListener) throws Exception { // Nothing to do }
+false;public;0;4;;@Override public void stop() { // Nothing to do }
+false;public;1;4;;@Override public void putJobGraph(SubmittedJobGraph jobGraph) { // Nothing to do }
+false;public;1;4;;@Override public void removeJobGraph(JobID jobId) { // Nothing to do }
+false;public;1;4;;@Override public void releaseJobGraph(JobID jobId) { // nothing to do }
+false;public;0;4;;@Override public Collection<JobID> getJobIds() {     return Collections.emptyList(). }
+false;public;1;4;;@Override public SubmittedJobGraph recoverJobGraph(JobID jobId) {     return null. }

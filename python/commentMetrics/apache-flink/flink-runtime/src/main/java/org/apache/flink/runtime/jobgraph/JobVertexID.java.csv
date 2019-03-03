@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static JobVertexID fromHexString(String hexString) {     return new JobVertexID(StringUtils.hexStringToByte(hexString)). }

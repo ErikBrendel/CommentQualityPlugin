@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Before public void setup() {     super.setup().     parameter = new BooleanParameter(owner, "test"). }
+false;public;0;7;;@Test public void testTrue() {     Assert.assertEquals("[--test]", parameter.getUsage()).     parameter.configure(ParameterTool.fromArgs(new String[] { "--test" })).     Assert.assertEquals(true, parameter.getValue()). }
+false;public;0;7;;@Test public void testFalse() {     Assert.assertEquals("[--test]", parameter.getUsage()).     parameter.configure(ParameterTool.fromArgs(new String[] {})).     Assert.assertEquals(false, parameter.getValue()). }

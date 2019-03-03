@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Override public void add(BufferOrEvent boe) {     bytesBlocked += pageSize.     currentBuffers.add(boe). }
+true;public;0;4;/**  * It is never reusing resources and is defaulting to {@link #rollOverWithoutReusingResources()}.  */ ;/**  * It is never reusing resources and is defaulting to {@link #rollOverWithoutReusingResources()}.  */ @Override public BufferOrEventSequence rollOverReusingResources() {     return rollOverWithoutReusingResources(). }
+false;public;0;12;;@Override public BufferOrEventSequence rollOverWithoutReusingResources() {     if (bytesBlocked == 0) {         return null.     }     CachedBufferOrEventSequence currentSequence = new CachedBufferOrEventSequence(currentBuffers, bytesBlocked).     currentBuffers = new ArrayDeque<BufferOrEvent>().     bytesBlocked = 0L.     return currentSequence. }
+false;public;0;9;;@Override public void close() {     BufferOrEvent boe.     while ((boe = currentBuffers.poll()) != null) {         if (boe.isBuffer()) {             boe.getBuffer().recycleBuffer().         }     } }
+false;public;0;4;;@Override public long getBytesBlocked() {     return bytesBlocked. }
+false;public;0;2;;@Override public void open() { }
+false;public;0;5;;@Override @Nullable public BufferOrEvent getNext() {     return queuedBuffers.poll(). }
+false;public;0;9;;@Override public void cleanup() {     BufferOrEvent boe.     while ((boe = queuedBuffers.poll()) != null) {         if (boe.isBuffer()) {             boe.getBuffer().recycleBuffer().         }     } }
+false;public;0;4;;@Override public long size() {     return size. }

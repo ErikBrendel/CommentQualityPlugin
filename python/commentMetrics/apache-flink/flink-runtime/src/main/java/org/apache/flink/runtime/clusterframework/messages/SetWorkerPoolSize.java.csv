@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;// ------------------------------------------------------------------------ public int numberOfWorkers() {     return numberOfWorkers. }
+false;public;0;4;;// ------------------------------------------------------------------------ @Override public int hashCode() {     return numberOfWorkers. }
+false;public;1;5;;@Override public boolean equals(Object obj) {     return obj != null && obj.getClass() == SetWorkerPoolSize.class && this.numberOfWorkers == ((SetWorkerPoolSize) obj).numberOfWorkers. }
+false;public;0;4;;@Override public String toString() {     return "SetWorkerPoolSize (" + numberOfWorkers + ')'. }

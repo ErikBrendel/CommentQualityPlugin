@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;1;5;;@Override @Nonnull State createState(@Nonnull FunctionInitializationContext context) {     return context.getKeyedStateStore().getListState(stateDesc). }
+false;public;0;5;;@Override @Nonnull public TypeSerializer<String> getUpdateSerializer() {     return StringSerializer.INSTANCE. }
+false;public;0;5;;@Override @Nonnull public String generateRandomUpdate() {     return randomString(). }
+false;;1;6;;@Override @Nonnull List<String> getInternal(@Nonnull ListState<String> state) throws Exception {     return StreamSupport.stream(state.get().spliterator(), false).collect(Collectors.toList()). }
+false;;2;4;;@Override void updateInternal(@Nonnull ListState<String> state, String update) throws Exception {     state.add(update). }
+false;;2;8;;@Override @Nonnull List<String> expected(@Nonnull List<ValueWithTs<String>> updates, long currentTimestamp) {     return updates.stream().filter(u -> !expired(u.getTimestamp(), currentTimestamp)).map(ValueWithTs::getValue).collect(Collectors.toList()). }

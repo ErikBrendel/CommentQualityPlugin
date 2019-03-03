@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;21;;@Test public void testTypeExtraction() {     try {         InputFormat<MyAvroType, ?> format = new AvroInputFormat<MyAvroType>(new Path("file:///ignore/this/file"), MyAvroType.class).         TypeInformation<?> typeInfoDirect = TypeExtractor.getInputFormatTypes(format).         ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment().         DataSet<MyAvroType> input = env.createInput(format).         TypeInformation<?> typeInfoDataSet = input.getType().         Assert.assertTrue(typeInfoDirect instanceof PojoTypeInfo).         Assert.assertTrue(typeInfoDataSet instanceof PojoTypeInfo).         Assert.assertEquals(MyAvroType.class, typeInfoDirect.getTypeClass()).         Assert.assertEquals(MyAvroType.class, typeInfoDataSet.getTypeClass()).     } catch (Exception e) {         e.printStackTrace().         Assert.fail(e.getMessage()).     } }
+false;public;0;3;;public double getaDouble() {     return aDouble. }
+false;public;1;3;;public void setaDouble(double aDouble) {     this.aDouble = aDouble. }
+false;public;1;3;;public void setTheString(String theString) {     this.theString = theString. }
+false;public;0;3;;public String getTheString() {     return theString. }

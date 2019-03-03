@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;4;;@Parameterized.Parameters(name = "{0}") public static List<Boolean> whetherToPadNullValue() {     return Arrays.asList(true, false). }
+false;public;0;4;;@Before public void init() {     nullableSerializer = NullableSerializer.wrapIfNullIsNotSupported(originalSerializer, padNullValue). }
+false;protected;0;4;;@Override protected TypeSerializer<Integer> createSerializer() {     return NullableSerializer.wrapIfNullIsNotSupported(originalSerializer, padNullValue). }
+false;protected;0;4;;@Override protected int getLength() {     return padNullValue ? 5 : -1. }
+false;protected;0;4;;@Override protected Class<Integer> getTypeClass() {     return Integer.class. }
+false;protected;0;4;;@Override protected Integer[] getTestData() {     return new Integer[] { 5, -1, 0, null }. }
+false;public;0;4;;@Test public void testWrappingNotNeeded() {     assertEquals(NullableSerializer.wrapIfNullIsNotSupported(StringSerializer.INSTANCE, padNullValue), StringSerializer.INSTANCE). }
+false;public;0;5;;@Test public void testWrappingNeeded() {     assertTrue(nullableSerializer instanceof NullableSerializer).     assertEquals(NullableSerializer.wrapIfNullIsNotSupported(nullableSerializer, padNullValue), nullableSerializer). }

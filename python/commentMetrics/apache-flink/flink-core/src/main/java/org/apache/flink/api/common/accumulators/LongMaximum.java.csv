@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;4;/**  * Consider using {@link #add(long)} instead for primitive long values  */ ;// ------------------------------------------------------------------------ // Accumulator // ------------------------------------------------------------------------ /**  * Consider using {@link #add(long)} instead for primitive long values  */ @Override public void add(Long value) {     this.max = Math.max(this.max, value). }
+false;public;0;4;;@Override public Long getLocalValue() {     return this.max. }
+false;public;1;4;;@Override public void merge(Accumulator<Long, Long> other) {     this.max = Math.max(this.max, other.getLocalValue()). }
+false;public;0;4;;@Override public void resetLocal() {     this.max = Long.MIN_VALUE. }
+false;public;0;6;;@Override public LongMaximum clone() {     LongMaximum clone = new LongMaximum().     clone.max = this.max.     return clone. }
+false;public;1;3;;// ------------------------------------------------------------------------ // Primitive Specializations // ------------------------------------------------------------------------ public void add(long value) {     this.max = Math.max(this.max, value). }
+false;public;0;3;;public long getLocalValuePrimitive() {     return this.max. }
+false;public;0;4;;// ------------------------------------------------------------------------ // Utilities // ------------------------------------------------------------------------ @Override public String toString() {     return "LongMaximum " + this.max. }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected Class<JobPlanInfo> getTestResponseClass() {     return JobPlanInfo.class. }
+false;protected;0;5;;@Override protected JobPlanInfo getTestResponseInstance() {     JobGraph jg = new JobGraph("job_007").     return new JobPlanInfo(JsonPlanGenerator.generatePlan(jg)). }

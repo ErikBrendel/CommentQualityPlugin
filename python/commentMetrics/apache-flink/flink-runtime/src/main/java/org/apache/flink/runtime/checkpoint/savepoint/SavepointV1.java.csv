@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public int getVersion() {     return VERSION. }
+false;public;0;4;;@Override public long getCheckpointId() {     return checkpointId. }
+false;public;0;4;;@Override public Collection<TaskState> getTaskStates() {     return taskStates. }
+false;public;0;6;;@Override public Collection<MasterState> getMasterStates() {     // this method should never be called     throw new UnsupportedOperationException(). }
+false;public;0;4;;@Override public Collection<OperatorState> getOperatorStates() {     return null. }
+false;public;0;6;;@Override public void dispose() throws Exception {     // this method should never be called     throw new UnsupportedOperationException(). }
+false;public;0;4;;@Override public String toString() {     return "Savepoint(version=" + VERSION + ")". }

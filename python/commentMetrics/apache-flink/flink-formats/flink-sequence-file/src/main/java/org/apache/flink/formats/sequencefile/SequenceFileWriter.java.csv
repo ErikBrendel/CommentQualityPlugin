@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void addElement(Tuple2<K, V> element) throws IOException {     writer.append(element.f0, element.f1). }
+false;public;0;4;;@Override public void flush() throws IOException {     writer.hsync(). }
+false;public;0;4;;@Override public void finish() throws IOException {     writer.close(). }

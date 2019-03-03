@@ -1,0 +1,17 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public List<SharedBufferEdge> getEdges() {     return edges. }
+false;public;1;3;;public void addEdge(SharedBufferEdge edge) {     edges.add(edge). }
+false;public;0;6;;@Override public String toString() {     return "SharedBufferNode{" + "edges=" + edges + '}'. }
+false;public;0;4;;@Override public boolean isImmutableType() {     return false. }
+false;public;0;4;;@Override public SharedBufferNode createInstance() {     return new SharedBufferNode(new ArrayList<>()). }
+false;public;1;4;;@Override public SharedBufferNode copy(SharedBufferNode from) {     return new SharedBufferNode(edgesSerializer.copy(from.edges)). }
+false;public;2;4;;@Override public SharedBufferNode copy(SharedBufferNode from, SharedBufferNode reuse) {     return copy(from). }
+false;public;0;4;;@Override public int getLength() {     return -1. }
+false;public;2;4;;@Override public void serialize(SharedBufferNode record, DataOutputView target) throws IOException {     edgesSerializer.serialize(record.edges, target). }
+false;public;1;5;;@Override public SharedBufferNode deserialize(DataInputView source) throws IOException {     List<SharedBufferEdge> edges = edgesSerializer.deserialize(source).     return new SharedBufferNode(edges). }
+false;public;2;4;;@Override public SharedBufferNode deserialize(SharedBufferNode reuse, DataInputView source) throws IOException {     return deserialize(source). }
+false;public;2;4;;@Override public void copy(DataInputView source, DataOutputView target) throws IOException {     edgesSerializer.copy(source, target). }
+false;public;0;4;;// ----------------------------------------------------------------------------------- @Override public TypeSerializerSnapshot<SharedBufferNode> snapshotConfiguration() {     return new SharedBufferNodeSerializerSnapshot(this). }
+false;protected;0;4;;@Override protected int getCurrentOuterSnapshotVersion() {     return VERSION. }
+false;protected;1;5;;@Override @SuppressWarnings("unchecked") protected SharedBufferNodeSerializer createOuterSerializerWithNestedSerializers(TypeSerializer<?>[] nestedSerializers) {     return new SharedBufferNodeSerializer((ListSerializer<SharedBufferEdge>) nestedSerializers[0]). }
+false;protected;1;4;;@Override protected TypeSerializer<?>[] getNestedSerializers(SharedBufferNodeSerializer outerSerializer) {     return new TypeSerializer<?>[] { outerSerializer.edgesSerializer }. }

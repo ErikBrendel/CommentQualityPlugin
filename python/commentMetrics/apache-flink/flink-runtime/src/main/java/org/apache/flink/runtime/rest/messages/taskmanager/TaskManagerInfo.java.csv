@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public ResourceID getResourceId() {     return resourceId. }
+false;public;0;3;;public String getAddress() {     return address. }
+false;public;0;3;;public int getDataPort() {     return dataPort. }
+false;public;0;3;;public long getLastHeartbeat() {     return lastHeartbeat. }
+false;public;0;3;;public int getNumberSlots() {     return numberSlots. }
+false;public;0;3;;public int getNumberAvailableSlots() {     return numberAvailableSlots. }
+false;public;0;3;;public HardwareDescription getHardwareDescription() {     return hardwareDescription. }
+false;public;1;17;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     TaskManagerInfo that = (TaskManagerInfo) o.     return dataPort == that.dataPort && lastHeartbeat == that.lastHeartbeat && numberSlots == that.numberSlots && numberAvailableSlots == that.numberAvailableSlots && Objects.equals(resourceId, that.resourceId) && Objects.equals(address, that.address) && Objects.equals(hardwareDescription, that.hardwareDescription). }
+false;public;0;11;;@Override public int hashCode() {     return Objects.hash(resourceId, address, dataPort, lastHeartbeat, numberSlots, numberAvailableSlots, hardwareDescription). }

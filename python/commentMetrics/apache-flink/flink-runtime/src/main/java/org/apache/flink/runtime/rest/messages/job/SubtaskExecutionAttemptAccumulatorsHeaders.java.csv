@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public HttpMethodWrapper getHttpMethod() {     return HttpMethodWrapper.GET. }
+false;public;0;4;;@Override public String getTargetRestEndpointURL() {     return URL. }
+false;public;0;4;;@Override public Class<EmptyRequestBody> getRequestClass() {     return EmptyRequestBody.class. }
+false;public;0;4;;@Override public Class<SubtaskExecutionAttemptAccumulatorsInfo> getResponseClass() {     return SubtaskExecutionAttemptAccumulatorsInfo.class. }
+false;public;0;4;;@Override public HttpResponseStatus getResponseStatusCode() {     return HttpResponseStatus.OK. }
+false;public;0;4;;@Override public SubtaskAttemptMessageParameters getUnresolvedMessageParameters() {     return new SubtaskAttemptMessageParameters(). }
+false;public,static;0;3;;public static SubtaskExecutionAttemptAccumulatorsHeaders getInstance() {     return INSTANCE. }
+false;public;0;4;;@Override public String getDescription() {     return "Returns the accumulators of an execution attempt of a subtask. Multiple execution attempts happen in case of failure/recovery.". }

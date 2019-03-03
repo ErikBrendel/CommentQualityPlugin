@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected TypeComparator<WritableID> createComparator(boolean ascending) {     return new WritableComparator<>(ascending, WritableID.class). }
+false;protected;0;4;;@Override protected TypeSerializer<WritableID> createSerializer() {     return new WritableSerializer<>(WritableID.class). }
+false;protected;0;8;;@Override protected WritableID[] getSortedTestData() {     return new WritableID[] { new WritableID(new UUID(0, 0)), new WritableID(new UUID(1, 0)), new WritableID(new UUID(1, 1)) }. }

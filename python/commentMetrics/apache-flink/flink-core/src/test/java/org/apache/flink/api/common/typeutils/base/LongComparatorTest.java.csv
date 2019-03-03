@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected TypeComparator<Long> createComparator(boolean ascending) {     return new LongComparator(ascending). }
+false;protected;0;4;;@Override protected TypeSerializer<Long> createSerializer() {     return new LongSerializer(). }
+false;protected;0;23;;@Override protected Long[] getSortedTestData() {     Random rnd = new Random(874597969123412338L).     long rndLong = rnd.nextLong().     if (rndLong < 0) {         rndLong = -rndLong.     }     if (rndLong == Long.MAX_VALUE) {         rndLong -= 3.     }     if (rndLong <= 2) {         rndLong += 3.     }     return new Long[] { Long.valueOf(Long.MIN_VALUE), Long.valueOf(-rndLong), Long.valueOf(-1L), Long.valueOf(0L), Long.valueOf(1L), Long.valueOf(2L), Long.valueOf(rndLong), Long.valueOf(Long.MAX_VALUE) }. }

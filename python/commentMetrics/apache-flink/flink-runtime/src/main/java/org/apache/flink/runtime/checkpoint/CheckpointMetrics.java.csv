@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public long getBytesBufferedInAlignment() {     return bytesBufferedInAlignment. }
+false;public;1;4;;public CheckpointMetrics setBytesBufferedInAlignment(long bytesBufferedInAlignment) {     this.bytesBufferedInAlignment = bytesBufferedInAlignment.     return this. }
+false;public;0;3;;public long getAlignmentDurationNanos() {     return alignmentDurationNanos. }
+false;public;1;4;;public CheckpointMetrics setAlignmentDurationNanos(long alignmentDurationNanos) {     this.alignmentDurationNanos = alignmentDurationNanos.     return this. }
+false;public;0;3;;public long getSyncDurationMillis() {     return syncDurationMillis. }
+false;public;1;4;;public CheckpointMetrics setSyncDurationMillis(long syncDurationMillis) {     this.syncDurationMillis = syncDurationMillis.     return this. }
+false;public;0;3;;public long getAsyncDurationMillis() {     return asyncDurationMillis. }
+false;public;1;4;;public CheckpointMetrics setAsyncDurationMillis(long asyncDurationMillis) {     this.asyncDurationMillis = asyncDurationMillis.     return this. }
+false;public;1;17;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     CheckpointMetrics that = (CheckpointMetrics) o.     return bytesBufferedInAlignment == that.bytesBufferedInAlignment && alignmentDurationNanos == that.alignmentDurationNanos && syncDurationMillis == that.syncDurationMillis && asyncDurationMillis == that.asyncDurationMillis. }
+false;public;0;8;;@Override public int hashCode() {     int result = (int) (bytesBufferedInAlignment ^ (bytesBufferedInAlignment >>> 32)).     result = 31 * result + (int) (alignmentDurationNanos ^ (alignmentDurationNanos >>> 32)).     result = 31 * result + (int) (syncDurationMillis ^ (syncDurationMillis >>> 32)).     result = 31 * result + (int) (asyncDurationMillis ^ (asyncDurationMillis >>> 32)).     return result. }
+false;public;0;9;;@Override public String toString() {     return "CheckpointMetrics{" + "bytesBufferedInAlignment=" + bytesBufferedInAlignment + ", alignmentDurationNanos=" + alignmentDurationNanos + ", syncDurationMillis=" + syncDurationMillis + ", asyncDurationMillis=" + asyncDurationMillis + '}'. }

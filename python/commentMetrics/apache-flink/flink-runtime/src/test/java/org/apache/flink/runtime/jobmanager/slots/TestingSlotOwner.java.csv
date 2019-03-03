@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void setReturnAllocatedSlotConsumer(Consumer<LogicalSlot> returnAllocatedSlotConsumer) {     this.returnAllocatedSlotConsumer = returnAllocatedSlotConsumer. }
+false;public;1;8;;@Override public void returnLogicalSlot(LogicalSlot logicalSlot) {     final Consumer<LogicalSlot> currentReturnAllocatedSlotConsumer = returnAllocatedSlotConsumer.     if (currentReturnAllocatedSlotConsumer != null) {         currentReturnAllocatedSlotConsumer.accept(logicalSlot).     } }

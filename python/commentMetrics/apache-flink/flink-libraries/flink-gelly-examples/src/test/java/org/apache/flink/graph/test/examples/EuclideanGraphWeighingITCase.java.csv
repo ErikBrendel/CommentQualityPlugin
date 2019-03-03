@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;12;;@Before public void before() throws Exception {     resultPath = tempFolder.newFile().toURI().toString().     File verticesFile = tempFolder.newFile().     FileUtils.writeFileUtf8(verticesFile, EuclideanGraphData.VERTICES).     File edgesFile = tempFolder.newFile().     FileUtils.writeFileUtf8(edgesFile, EuclideanGraphData.EDGES).     verticesPath = verticesFile.toURI().toString().     edgesPath = edgesFile.toURI().toString(). }
+false;public;0;5;;@Test public void testGraphWeightingWeighing() throws Exception {     EuclideanGraphWeighing.main(new String[] { verticesPath, edgesPath, resultPath }).     expected = EuclideanGraphData.RESULTED_WEIGHTED_EDGES. }
+false;public;0;4;;@After public void after() throws Exception {     TestBaseUtils.compareResultsByLinesInMemory(expected, resultPath). }

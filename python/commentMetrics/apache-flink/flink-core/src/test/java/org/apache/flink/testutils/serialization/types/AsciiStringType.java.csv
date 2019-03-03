@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;12;;@Override public AsciiStringType getRandom(Random rnd) {     final StringBuilder bld = new StringBuilder().     final int len = rnd.nextInt(MAX_LEN + 1).     for (int i = 0. i < len. i++) {         // 1--127         bld.append((char) (rnd.nextInt(126) + 1)).     }     return new AsciiStringType(bld.toString()). }
+false;public;0;4;;@Override public int length() {     return value.getBytes(ConfigConstants.DEFAULT_CHARSET).length + 2. }
+false;public;1;4;;@Override public void write(DataOutputView out) throws IOException {     out.writeUTF(this.value). }
+false;public;1;4;;@Override public void read(DataInputView in) throws IOException {     this.value = in.readUTF(). }
+false;public;0;4;;@Override public int hashCode() {     return this.value.hashCode(). }
+false;public;1;9;;@Override public boolean equals(Object obj) {     if (obj instanceof AsciiStringType) {         AsciiStringType other = (AsciiStringType) obj.         return this.value.equals(other.value).     } else {         return false.     } }

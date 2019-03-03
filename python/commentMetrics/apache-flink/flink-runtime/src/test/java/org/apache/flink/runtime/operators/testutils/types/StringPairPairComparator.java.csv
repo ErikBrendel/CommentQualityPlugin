@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void setReference(StringPair reference) {     this.reference = reference.getKey(). }
+false;public;1;4;;@Override public boolean equalToReference(StringPair candidate) {     return reference.equals(candidate.getKey()). }
+false;public;1;4;;@Override public int compareToReference(StringPair candidate) {     return reference.compareTo(candidate.getKey()). }

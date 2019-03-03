@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;9;;@Override protected TypeComparator<PojoContainingTuple> createComparator(boolean ascending) {     Assert.assertTrue(type instanceof CompositeType).     CompositeType<PojoContainingTuple> cType = (CompositeType<PojoContainingTuple>) type.     ExpressionKeys<PojoContainingTuple> keys = new ExpressionKeys<PojoContainingTuple>(new String[] { "theTuple.*" }, cType).     boolean[] orders = new boolean[keys.getNumberOfKeyFields()].     Arrays.fill(orders, ascending).     return cType.createComparator(keys.computeLogicalKeyPositions(), orders, 0, new ExecutionConfig()). }
+false;protected;0;4;;@Override protected TypeSerializer<PojoContainingTuple> createSerializer() {     return type.createSerializer(new ExecutionConfig()). }
+false;protected;0;4;;@Override protected PojoContainingTuple[] getSortedTestData() {     return data. }

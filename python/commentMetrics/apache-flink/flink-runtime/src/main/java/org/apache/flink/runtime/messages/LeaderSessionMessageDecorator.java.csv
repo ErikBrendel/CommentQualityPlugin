@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public Object decorate(Object message) {     if (message instanceof RequiresLeaderSessionID) {         return new JobManagerMessages.LeaderSessionMessage(leaderSessionID, message).     } else {         return message.     } }

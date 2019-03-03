@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getScheme() {     return "s3". }
+false;static;0;5;;@VisibleForTesting static HadoopConfigLoader createHadoopConfigLoader() {     return new HadoopConfigLoader(FLINK_CONFIG_PREFIXES, MIRRORED_CONFIG_KEYS, "presto.s3.", PACKAGE_PREFIXES_TO_SHADE, CONFIG_KEYS_TO_SHADE, FLINK_SHADING_PREFIX). }
+false;protected;0;4;;@Override protected org.apache.hadoop.fs.FileSystem createHadoopFileSystem() {     return new PrestoS3FileSystem(). }
+false;protected;2;17;;@Override protected URI getInitURI(URI fsUri, org.apache.hadoop.conf.Configuration hadoopConfig) {     final String scheme = fsUri.getScheme().     final String authority = fsUri.getAuthority().     final URI initUri.     if (scheme == null && authority == null) {         initUri = createURI("s3://s3.amazonaws.com").     } else if (scheme != null && authority == null) {         initUri = createURI(scheme + "://s3.amazonaws.com").     } else {         initUri = fsUri.     }     return initUri. }
+false;protected;1;5;;@Nullable @Override protected S3AccessHelper getS3AccessHelper(FileSystem fs) {     return null. }
+false;private;1;7;;private URI createURI(String str) {     try {         return new URI(str).     } catch (URISyntaxException e) {         throw new FlinkRuntimeException("Error in s3 aws URI - " + str, e).     } }

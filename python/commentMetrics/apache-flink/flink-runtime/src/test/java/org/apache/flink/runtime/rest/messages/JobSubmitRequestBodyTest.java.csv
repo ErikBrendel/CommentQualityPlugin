@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected Class<JobSubmitRequestBody> getTestRequestClass() {     return JobSubmitRequestBody.class. }
+false;protected;0;9;;@Override protected JobSubmitRequestBody getTestRequestInstance() throws IOException {     return new JobSubmitRequestBody("jobgraph", Arrays.asList("jar1", "jar2"), Arrays.asList(new JobSubmitRequestBody.DistributedCacheFile("entry1", "artifact1"), new JobSubmitRequestBody.DistributedCacheFile("entry2", "artifact2"))). }

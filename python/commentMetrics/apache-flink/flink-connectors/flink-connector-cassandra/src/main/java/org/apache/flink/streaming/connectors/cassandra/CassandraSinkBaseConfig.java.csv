@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public int getMaxConcurrentRequests() {     return maxConcurrentRequests. }
+false;public;0;3;;public Duration getMaxConcurrentRequestsTimeout() {     return maxConcurrentRequestsTimeout. }
+false;public;0;7;;@Override public String toString() {     return "CassandraSinkBaseConfig{" + "maxConcurrentRequests=" + maxConcurrentRequests + ", maxConcurrentRequestsTimeout=" + maxConcurrentRequestsTimeout + '}'. }
+false;public,static;0;3;;public static Builder newBuilder() {     return new Builder(). }
+false;public;1;4;;public Builder setMaxConcurrentRequests(int maxConcurrentRequests) {     this.maxConcurrentRequests = maxConcurrentRequests.     return this. }
+false;public;1;4;;public Builder setMaxConcurrentRequestsTimeout(Duration timeout) {     this.maxConcurrentRequestsTimeout = timeout.     return this. }
+false;public;0;5;;public CassandraSinkBaseConfig build() {     return new CassandraSinkBaseConfig(maxConcurrentRequests, maxConcurrentRequestsTimeout). }

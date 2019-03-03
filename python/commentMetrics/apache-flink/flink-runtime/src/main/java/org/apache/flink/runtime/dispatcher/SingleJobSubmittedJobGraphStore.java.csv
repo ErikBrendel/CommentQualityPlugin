@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void start(SubmittedJobGraphListener jobGraphListener) throws Exception { // noop }
+false;public;0;4;;@Override public void stop() throws Exception { // noop }
+false;public;1;8;;@Override public SubmittedJobGraph recoverJobGraph(JobID jobId) throws Exception {     if (jobGraph.getJobID().equals(jobId)) {         return new SubmittedJobGraph(jobGraph).     } else {         throw new FlinkException("Could not recover job graph " + jobId + '.').     } }
+false;public;1;6;;@Override public void putJobGraph(SubmittedJobGraph jobGraph) throws Exception {     if (!jobGraph.getJobId().equals(jobGraph.getJobId())) {         throw new FlinkException("Cannot put additional jobs into this submitted job graph store.").     } }
+false;public;1;4;;@Override public void removeJobGraph(JobID jobId) { // ignore }
+false;public;1;4;;@Override public void releaseJobGraph(JobID jobId) { // ignore }
+false;public;0;4;;@Override public Collection<JobID> getJobIds() {     return Collections.singleton(jobGraph.getJobID()). }

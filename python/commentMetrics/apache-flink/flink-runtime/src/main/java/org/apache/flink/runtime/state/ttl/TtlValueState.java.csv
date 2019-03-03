@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Override public T value() throws IOException {     accessCallback.run().     return getWithTtlCheckAndUpdate(original::value, original::update). }
+false;public;1;5;;@Override public void update(T value) throws IOException {     accessCallback.run().     original.update(wrapWithTs(value)). }
+false;public;1;5;;@Nullable @Override public TtlValue<T> getUnexpiredOrNull(@Nonnull TtlValue<T> ttlValue) {     return expired(ttlValue) ? null : ttlValue. }

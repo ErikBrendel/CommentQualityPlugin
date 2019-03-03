@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public boolean isActive(CommandLine commandLine) {     return true. }
+false;public;0;4;;@Override public String getId() {     return DummyCustomCommandLine.class.getSimpleName(). }
+false;public;1;4;;@Override public void addRunOptions(Options baseOptions) { // nothing to add }
+false;public;1;4;;@Override public void addGeneralOptions(Options baseOptions) { // nothing to add }
+false;public;1;4;;@Override public ClusterDescriptor<T> createClusterDescriptor(CommandLine commandLine) {     return new DummyClusterDescriptor<>(clusterClient). }
+false;public;1;5;;@Override @Nullable public String getClusterId(CommandLine commandLine) {     return "dummy". }
+false;public;1;4;;@Override public ClusterSpecification getClusterSpecification(CommandLine commandLine) {     return new ClusterSpecification.ClusterSpecificationBuilder().createClusterSpecification(). }

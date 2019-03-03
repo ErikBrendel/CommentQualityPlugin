@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void testParamsFromGenericOptionsParser() throws IOException {     ParameterTool parameter = HadoopUtils.paramsFromGenericOptionsParser(new String[] { "-D", "input=myInput", "-DexpectedCount=15" }).     validate(parameter). }

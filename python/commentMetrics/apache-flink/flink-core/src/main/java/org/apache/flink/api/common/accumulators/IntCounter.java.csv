@@ -1,5 +1,9 @@
-# id;timestamp;commentText;codeText;commentWords;codeWords
-IntCounter -> @Override 	public void add(Integer value);1438097046;Consider using {@link #add(int)} instead for primitive int values;@Override_	public void add(Integer value) {_		localValue += value__	};consider,using,link,add,int,instead,for,primitive,int,values;override,public,void,add,integer,value,local,value,value
-IntCounter -> @Override 	public void add(Integer value);1452178883;Consider using {@link #add(int)} instead for primitive int values;@Override_	public void add(Integer value) {_		localValue += value__	};consider,using,link,add,int,instead,for,primitive,int,values;override,public,void,add,integer,value,local,value,value
-IntCounter -> @Override 	public void add(Integer value);1455479358;Consider using {@link #add(int)} instead for primitive int values;@Override_	public void add(Integer value) {_		localValue += value__	};consider,using,link,add,int,instead,for,primitive,int,values;override,public,void,add,integer,value,local,value,value
-IntCounter -> @Override 	public void add(Integer value);1461271066;Consider using {@link #add(int)} instead for primitive int values;@Override_	public void add(Integer value) {_		localValue += value__	};consider,using,link,add,int,instead,for,primitive,int,values;override,public,void,add,integer,value,local,value,value
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;4;/**  * Consider using {@link #add(int)} instead for primitive int values  */ ;// ------------------------------------------------------------------------ // Accumulator // ------------------------------------------------------------------------ /**  * Consider using {@link #add(int)} instead for primitive int values  */ @Override public void add(Integer value) {     localValue += value. }
+false;public;0;4;;@Override public Integer getLocalValue() {     return localValue. }
+false;public;1;4;;@Override public void merge(Accumulator<Integer, Integer> other) {     this.localValue += other.getLocalValue(). }
+false;public;0;4;;@Override public void resetLocal() {     this.localValue = 0. }
+false;public;0;6;;@Override public IntCounter clone() {     IntCounter result = new IntCounter().     result.localValue = localValue.     return result. }
+false;public;1;3;;// ------------------------------------------------------------------------ // Primitive Specializations // ------------------------------------------------------------------------ public void add(int value) {     localValue += value. }
+false;public;0;3;;public int getLocalValuePrimitive() {     return this.localValue. }
+false;public;0;4;;// ------------------------------------------------------------------------ // Utilities // ------------------------------------------------------------------------ @Override public String toString() {     return "IntCounter " + this.localValue. }

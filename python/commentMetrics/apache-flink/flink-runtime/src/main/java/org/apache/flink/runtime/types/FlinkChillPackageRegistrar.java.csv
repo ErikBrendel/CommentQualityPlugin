@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;15;;public static IKryoRegistrar all() {     return new IterableRegistrar(ArraysAsListSerializer.registrar(), BitSetSerializer.registrar(), PriorityQueueSerializer.registrar(), RegexSerializer.registrar(), SqlDateSerializer.registrar(), SqlTimeSerializer.registrar(), TimestampSerializer.registrar(), URISerializer.registrar(), InetSocketAddressSerializer.registrar(), UUIDSerializer.registrar(), LocaleSerializer.registrar(), SimpleDateFormatSerializer.registrar()). }

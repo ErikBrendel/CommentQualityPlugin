@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void testMethod() {     assertThat(instance.getHttpMethod(), is(HttpMethodWrapper.GET)). }
+false;public;0;4;;@Test public void testURL() {     assertThat(instance.getTargetRestEndpointURL(), endsWith("yarn-stop")). }

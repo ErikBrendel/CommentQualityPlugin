@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;// -------------------------------------------------------------------------------------------- @Override @PublicEvolving public boolean isBasicType() {     return false. }
+false;public;0;5;;@Override @PublicEvolving public boolean isTupleType() {     return false. }
+false;public;0;5;;@Override @PublicEvolving public int getArity() {     return 1. }
+false;public;0;5;;@Override @PublicEvolving public int getTotalFields() {     return 1. }
+false;public;0;5;;@Override @PublicEvolving public Class<T> getTypeClass() {     return this.arrayClass. }
+false;public;0;4;;@PublicEvolving public Class<C> getComponentTypeClass() {     return this.componentInfo.getTypeClass(). }
+false;public;0;4;;@PublicEvolving public TypeInformation<C> getComponentInfo() {     return componentInfo. }
+false;public;0;5;;@Override @PublicEvolving public boolean isKeyType() {     return false. }
+false;public;1;13;;@Override @SuppressWarnings("unchecked") @PublicEvolving public TypeSerializer<T> createSerializer(ExecutionConfig executionConfig) {     // special case the string array     if (componentInfo.getTypeClass().equals(String.class)) {         return (TypeSerializer<T>) StringArraySerializer.INSTANCE.     } else {         return (TypeSerializer<T>) new GenericArraySerializer<>(this.componentInfo.getTypeClass(), this.componentInfo.createSerializer(executionConfig)).     } }
+false;public;1;12;;@Override public boolean equals(Object obj) {     if (obj instanceof BasicArrayTypeInfo) {         BasicArrayTypeInfo<?, ?> other = (BasicArrayTypeInfo<?, ?>) obj.         return other.canEqual(this) && arrayClass == other.arrayClass && componentInfo.equals(other.componentInfo).     } else {         return false.     } }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(arrayClass, componentInfo). }
+false;public;1;4;;@Override public boolean canEqual(Object obj) {     return obj instanceof BasicArrayTypeInfo. }
+false;public;0;4;;@Override public String toString() {     return this.getClass().getSimpleName() + "<" + componentInfo + ">". }
+false;public,static;1;10;;// -------------------------------------------------------------------------------------------- @SuppressWarnings("unchecked") @PublicEvolving public static <X, C> BasicArrayTypeInfo<X, C> getInfoFor(Class<X> type) {     if (!type.isArray()) {         throw new InvalidTypesException("The given class is no array.").     }     // basic type arrays     return (BasicArrayTypeInfo<X, C>) TYPES.get(type). }

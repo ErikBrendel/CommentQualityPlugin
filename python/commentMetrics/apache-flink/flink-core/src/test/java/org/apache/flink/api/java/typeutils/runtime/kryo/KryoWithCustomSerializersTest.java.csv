@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Test public void testJodaTime() {     Collection<LocalDate> b = new HashSet<LocalDate>().     b.add(new LocalDate(1L)).     b.add(new LocalDate(2L)).     runTests(b). }
+false;protected;1;7;;@Override protected <T> TypeSerializer<T> createSerializer(Class<T> type) {     ExecutionConfig conf = new ExecutionConfig().     conf.registerTypeWithKryoSerializer(LocalDate.class, LocalDateSerializer.class).     TypeInformation<T> typeInfo = new GenericTypeInfo<T>(type).     return typeInfo.createSerializer(conf). }
+false;public;3;6;;@Override public void write(Kryo kryo, Output output, LocalDate object) {     output.writeInt(object.getYear()).     output.writeInt(object.getMonthOfYear()).     output.writeInt(object.getDayOfMonth()). }
+false;public;3;4;;@Override public LocalDate read(Kryo kryo, Input input, Class<LocalDate> type) {     return new LocalDate(input.readInt(), input.readInt(), input.readInt()). }

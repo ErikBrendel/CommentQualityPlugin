@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;2;4;;@Override protected JobPlanInfo handleRequest(HandlerRequest<EmptyRequestBody, JobMessageParameters> request, AccessExecutionGraph executionGraph) throws RestHandlerException {     return createJobPlanInfo(executionGraph). }
+false;public;1;7;;@Override public Collection<ArchivedJson> archiveJsonWithPath(AccessExecutionGraph graph) throws IOException {     ResponseBody json = createJobPlanInfo(graph).     String path = getMessageHeaders().getTargetRestEndpointURL().replace(':' + JobIDPathParameter.KEY, graph.getJobID().toString()).     return Collections.singleton(new ArchivedJson(path, json)). }
+false;private,static;1;3;;private static JobPlanInfo createJobPlanInfo(AccessExecutionGraph executionGraph) {     return new JobPlanInfo(executionGraph.getJsonPlan()). }

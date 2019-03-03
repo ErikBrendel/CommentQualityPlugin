@@ -1,13 +1,14 @@
-# id;timestamp;commentText;codeText;commentWords;codeWords
-NullValue -> public NullValue();1405024514;Creates a NullValue object.;public NullValue() {};creates,a,null,value,object;public,null,value
-NullValue -> public NullValue();1405090423;Creates a NullValue object.;public NullValue() {};creates,a,null,value,object;public,null,value
-NullValue -> public NullValue();1411473593;Creates a NullValue object.;public NullValue() {};creates,a,null,value,object;public,null,value
-NullValue -> public NullValue();1443521887;Creates a NullValue object.;public NullValue() {};creates,a,null,value,object;public,null,value
-NullValue -> public NullValue();1452178883;Creates a NullValue object.;public NullValue() {};creates,a,null,value,object;public,null,value
-NullValue -> public NullValue();1457441341;Creates a NullValue object.;public NullValue() {};creates,a,null,value,object;public,null,value
-NullValue -> public static NullValue getInstance();1405024514;Returns the NullValue singleton instance.__@return The NullValue singleton instance.;public static NullValue getInstance() {_		return INSTANCE__	};returns,the,null,value,singleton,instance,return,the,null,value,singleton,instance;public,static,null,value,get,instance,return,instance
-NullValue -> public static NullValue getInstance();1405090423;Returns the NullValue singleton instance.__@return The NullValue singleton instance.;public static NullValue getInstance() {_		return INSTANCE__	};returns,the,null,value,singleton,instance,return,the,null,value,singleton,instance;public,static,null,value,get,instance,return,instance
-NullValue -> public static NullValue getInstance();1411473593;Returns the NullValue singleton instance.__@return The NullValue singleton instance.;public static NullValue getInstance() {_		return INSTANCE__	};returns,the,null,value,singleton,instance,return,the,null,value,singleton,instance;public,static,null,value,get,instance,return,instance
-NullValue -> public static NullValue getInstance();1443521887;Returns the NullValue singleton instance.__@return The NullValue singleton instance.;public static NullValue getInstance() {_		return INSTANCE__	};returns,the,null,value,singleton,instance,return,the,null,value,singleton,instance;public,static,null,value,get,instance,return,instance
-NullValue -> public static NullValue getInstance();1452178883;Returns the NullValue singleton instance.__@return The NullValue singleton instance.;public static NullValue getInstance() {_		return INSTANCE__	};returns,the,null,value,singleton,instance,return,the,null,value,singleton,instance;public,static,null,value,get,instance,return,instance
-NullValue -> public static NullValue getInstance();1457441341;Returns the NullValue singleton instance.__@return The NullValue singleton instance.;public static NullValue getInstance() {_		return INSTANCE__	};returns,the,null,value,singleton,instance,return,the,null,value,singleton,instance;public,static,null,value,get,instance,return,instance
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,static;0;3;/**  * Returns the NullValue singleton instance.  *  * @return The NullValue singleton instance.  */ ;/**  * Returns the NullValue singleton instance.  *  * @return The NullValue singleton instance.  */ public static NullValue getInstance() {     return INSTANCE. }
+false;public;0;4;;// -------------------------------------------------------------------------------------------- @Override public String toString() {     return "(null)". }
+false;public;1;4;;// -------------------------------------------------------------------------------------------- @Override public void read(DataInputView in) throws IOException {     in.readBoolean(). }
+false;public;1;4;;@Override public void write(DataOutputView out) throws IOException {     out.writeBoolean(false). }
+false;public;1;4;;// -------------------------------------------------------------------------------------------- @Override public int compareTo(NullValue o) {     return 0. }
+false;public;1;4;;@Override public boolean equals(Object o) {     return (o != null && o.getClass() == NullValue.class). }
+false;public;0;4;;@Override public int hashCode() {     return 53. }
+false;public;0;4;;// -------------------------------------------------------------------------------------------- @Override public int getMaxNormalizedKeyLen() {     return 0. }
+false;public;3;6;;@Override public void copyNormalizedKey(MemorySegment target, int offset, int len) {     for (int i = offset. i < offset + len. i++) {         target.put(i, (byte) 0).     } }
+false;public;0;4;;// -------------------------------------------------------------------------------------------- @Override public int getBinaryLength() {     return 1. }
+false;public;1;3;;@Override public void copyTo(NullValue target) { }
+false;public;0;4;;@Override public NullValue copy() {     return NullValue.getInstance(). }
+false;public;2;5;;@Override public void copy(DataInputView source, DataOutputView target) throws IOException {     source.readBoolean().     target.writeBoolean(false). }

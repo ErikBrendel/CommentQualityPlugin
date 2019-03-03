@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;3;;public static GzipInflaterInputStreamFactory getInstance() {     return INSTANCE. }
+false;public;1;4;;@Override public GZIPInputStream create(InputStream in) throws IOException {     return new GZIPInputStream(in). }
+false;public;0;4;;@Override public Collection<String> getCommonFileExtensions() {     return Arrays.asList("gz", "gzip"). }

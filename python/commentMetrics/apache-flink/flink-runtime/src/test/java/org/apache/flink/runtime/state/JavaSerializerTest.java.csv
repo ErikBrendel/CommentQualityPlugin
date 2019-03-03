@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Before public void setupClassLoader() {     originalClassLoader = Thread.currentThread().getContextClassLoader().     Thread.currentThread().setContextClassLoader(CLASS_LOADER). }
+false;public;0;4;;@After public void restoreOriginalClassLoader() {     Thread.currentThread().setContextClassLoader(originalClassLoader). }
+false;public;0;10;;// ------------------------------------------------------------------------ @Test public void guardTest() {     // make sure that this test's assumptions hold     try {         Class.forName(OBJECT_OUT_OF_CLASSPATH.getClass().getName()).         fail("Test ineffective: The test class that should not be on the classpath is actually on the classpath.").     } catch (ClassNotFoundException e) {     // expected     } }
+false;protected;0;5;;// ------------------------------------------------------------------------ @Override protected TypeSerializer<Serializable> createSerializer() {     Thread.currentThread().setContextClassLoader(CLASS_LOADER).     return new JavaSerializer<>(). }
+false;protected;0;4;;@Override protected int getLength() {     return -1. }
+false;protected;0;4;;@Override protected Class<Serializable> getTypeClass() {     return Serializable.class. }
+false;protected;0;13;;@Override protected Serializable[] getTestData() {     return new Serializable[] { new Integer(42), new File("/some/path/that/I/made/up"), // an object that is not in the classpath     OBJECT_OUT_OF_CLASSPATH, // an object that is in the classpath with a nested object not in the classpath     new Tuple1<>(OBJECT_OUT_OF_CLASSPATH) }. }
+false;public;0;4;;// ------------------------------------------------------------------------ @Override public void testInstantiate() { // this serializer does not support instantiation }

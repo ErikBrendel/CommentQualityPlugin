@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public int getVersion() {     return 1. }
+false;public;1;10;;@Override public byte[] serialize(String value) {     final byte[] serialized = value.getBytes(StandardCharsets.UTF_8).     final byte[] targetBytes = new byte[Integer.BYTES + serialized.length].     final ByteBuffer bb = ByteBuffer.wrap(targetBytes).order(ByteOrder.LITTLE_ENDIAN).     bb.putInt(serialized.length).     bb.put(serialized).     return targetBytes. }
+false;public;2;9;;@Override public String deserialize(int version, byte[] serialized) throws IOException {     switch(version) {         case 1:             return deserializeV1(serialized).         default:             throw new IOException("Unrecognized version or corrupt state: " + version).     } }
+false;private,static;1;6;;private static String deserializeV1(byte[] serialized) {     final ByteBuffer bb = ByteBuffer.wrap(serialized).order(ByteOrder.LITTLE_ENDIAN).     final byte[] targetStringBytes = new byte[bb.getInt()].     bb.get(targetStringBytes).     return new String(targetStringBytes, CHARSET). }

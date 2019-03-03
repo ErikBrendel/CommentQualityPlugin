@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected TypeSerializer<Date> createSerializer() {     return new DateSerializer(). }
+false;protected;0;4;;@Override protected int getLength() {     return 8. }
+false;protected;0;4;;@Override protected Class<Date> getTypeClass() {     return Date.class. }
+false;protected;0;6;;@Override protected Date[] getTestData() {     Random rnd = new Random(874597969123412341L).     long rndLong = rnd.nextLong().     return new Date[] { new Date(0L), new Date(1L), new Date(Long.MAX_VALUE), new Date(rndLong) }. }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;1;1;/**  * Add a value to the current aggregation.  */ ;/**  * Add a value to the current aggregation.  */ void aggregate(T value).
+true;;1;1;/**  * Combine two aggregations of the same type.  *  * <p>(Implementations will need to do an unchecked cast).  */ ;/**  * Combine two aggregations of the same type.  *  * <p>(Implementations will need to do an unchecked cast).  */ void combine(Aggregator<T, R> otherSameType).
+true;;0;1;/**  * Provide the final result of the aggregation.  */ ;/**  * Provide the final result of the aggregation.  */ R result().

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public void setReadPosition(long position) {     final int bufferNum = (int) (position >>> this.segmentSizeBits).     final int offset = (int) (position & this.segmentSizeMask).     this.currentSegmentIndex = bufferNum.     seekInput(this.segments.get(bufferNum), offset, bufferNum < this.segments.size() - 1 ? this.segmentSize : this.limitInLastSegment). }
+false;public;0;3;;public long getReadPosition() {     return (((long) currentSegmentIndex) << segmentSizeBits) + getCurrentPositionInSegment(). }
+false;protected;1;8;;@Override protected MemorySegment nextSegment(MemorySegment current) throws EOFException {     if (++this.currentSegmentIndex < this.segments.size()) {         return this.segments.get(this.currentSegmentIndex).     } else {         throw new EOFException().     } }
+false;protected;1;4;;@Override protected int getLimitForSegment(MemorySegment segment) {     return this.currentSegmentIndex == this.segments.size() - 1 ? this.limitInLastSegment : this.segmentSize. }

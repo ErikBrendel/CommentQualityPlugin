@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;0;8;;private Set<SlotContext> createCandidates() {     Set<SlotContext> candidates = new HashSet<>(4).     candidates.add(ssc1).     candidates.add(ssc2).     candidates.add(ssc3).     candidates.add(ssc4).     return candidates. }
+false;protected;1;3;;protected Optional<SlotSelectionStrategy.SlotInfoAndLocality> runMatching(SlotProfile slotProfile) {     return selectionStrategy.selectBestSlotForProfile(candidates, slotProfile). }

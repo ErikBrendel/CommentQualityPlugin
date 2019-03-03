@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;2;8;;@Override protected MemorySegment nextSegment(MemorySegment current, int positionInCurrent) throws EOFException {     if (++this.currentSegmentIndex < this.segments.length) {         return this.segments[this.currentSegmentIndex].     } else {         throw new EOFException().     } }
+false;public;1;8;;@Override public void setWritePosition(long position) {     final int bufferNum = (int) (position >>> this.segmentSizeBits).     final int offset = (int) (position & this.segmentSizeMask).     this.currentSegmentIndex = bufferNum.     seekOutput(this.segments[bufferNum], offset). }

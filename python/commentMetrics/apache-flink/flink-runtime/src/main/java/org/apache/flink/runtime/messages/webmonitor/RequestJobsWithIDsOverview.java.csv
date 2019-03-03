@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;3;;public static RequestJobsWithIDsOverview getInstance() {     return INSTANCE. }
+false;public;0;4;;// ------------------------------------------------------------------------ @Override public int hashCode() {     return RequestJobsWithIDsOverview.class.hashCode(). }
+false;public;1;4;;@Override public boolean equals(Object obj) {     return obj != null && obj.getClass() == RequestJobsWithIDsOverview.class. }
+false;public;0;4;;@Override public String toString() {     return RequestJobsWithIDsOverview.class.getSimpleName(). }
+true;private;0;3;/**  * Preserve the singleton property by returning the singleton instance  */ ;/**  * Preserve the singleton property by returning the singleton instance  */ private Object readResolve() {     return INSTANCE. }

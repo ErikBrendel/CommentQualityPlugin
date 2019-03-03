@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public CompletableFuture<MetricQueryServiceGateway> retrieveService(String queryServicePath) {     return FutureUtils.completedExceptionally(new FlinkException("Cannot retrieve metric query service for " + queryServicePath + '.')). }

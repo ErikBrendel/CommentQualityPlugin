@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;17;;public static void main(String[] args) throws Exception {     final long numSamples = args.length > 0 ? Long.parseLong(args[0]) : 1000000.     final ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment().     // count how many of the samples would randomly fall into     // the unit circle     DataSet<Long> count = env.generateSequence(1, numSamples).map(new Sampler()).reduce(new SumReducer()).     long theCount = count.collect().get(0).     System.out.println("We estimate Pi to be: " + (theCount * 4.0 / numSamples)). }
+false;public;1;6;;@Override public Long map(Long value) {     double x = Math.random().     double y = Math.random().     return (x * x + y * y) < 1 ? 1L : 0L. }
+false;public;2;4;;@Override public Long reduce(Long value1, Long value2) {     return value1 + value2. }

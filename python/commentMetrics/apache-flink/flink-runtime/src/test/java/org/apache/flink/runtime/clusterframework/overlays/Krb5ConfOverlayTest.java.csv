@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;13;;@Test public void testConfigure() throws Exception {     File krb5conf = tempFolder.newFile().     Krb5ConfOverlay overlay = new Krb5ConfOverlay(krb5conf).     ContainerSpecification spec = new ContainerSpecification().     overlay.configure(spec).     assertEquals(TARGET_PATH.getPath(), spec.getSystemProperties().getString(JAVA_SECURITY_KRB5_CONF, null)).     checkArtifact(spec, TARGET_PATH). }
+false;public;0;7;;@Test public void testNoConf() throws Exception {     Krb5ConfOverlay overlay = new Krb5ConfOverlay((Path) null).     ContainerSpecification containerSpecification = new ContainerSpecification().     overlay.configure(containerSpecification). }

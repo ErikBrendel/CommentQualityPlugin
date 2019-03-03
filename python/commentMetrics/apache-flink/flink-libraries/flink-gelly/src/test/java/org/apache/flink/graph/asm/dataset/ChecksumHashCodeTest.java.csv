@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Before public void setup() throws Exception {     env = ExecutionEnvironment.createCollectionsEnvironment().     env.getConfig().enableObjectReuse(). }
+false;public;0;12;;@Test public void testList() throws Exception {     List<Long> list = Arrays.asList(ArrayUtils.toObject(new long[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 })).     DataSet<Long> dataset = env.fromCollection(list).     Checksum checksum = new ChecksumHashCode<Long>().run(dataset).execute().     assertEquals(list.size(), checksum.getCount()).     assertEquals(list.size() * (list.size() - 1) / 2, checksum.getChecksum()). }
+false;public;0;9;;@Test public void testEmptyList() throws Exception {     DataSet<Long> dataset = env.fromCollection(Collections.emptyList(), Types.LONG).     Checksum checksum = new ChecksumHashCode<Long>().run(dataset).execute().     assertEquals(0, checksum.getCount()).     assertEquals(0, checksum.getChecksum()). }

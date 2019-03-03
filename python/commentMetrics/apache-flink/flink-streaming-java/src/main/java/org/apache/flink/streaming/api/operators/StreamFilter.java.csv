@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Override public void processElement(StreamRecord<IN> element) throws Exception {     if (userFunction.filter(element.getValue())) {         output.collect(element).     } }

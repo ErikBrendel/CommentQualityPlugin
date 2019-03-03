@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public RocksDB getDb() {     return db. }
+false;public;0;3;;public long getLastCompletedCheckpointId() {     return lastCompletedCheckpointId. }
+false;public;0;3;;public UUID getBackendUID() {     return backendUID. }
+false;public;0;3;;public SortedMap<Long, Set<StateHandleID>> getRestoredSstFiles() {     return restoredSstFiles. }
+false;public;0;3;;public ColumnFamilyHandle getDefaultColumnFamilyHandle() {     return defaultColumnFamilyHandle. }
+false;public;0;3;;public RocksDBNativeMetricMonitor getNativeMetricMonitor() {     return nativeMetricMonitor. }

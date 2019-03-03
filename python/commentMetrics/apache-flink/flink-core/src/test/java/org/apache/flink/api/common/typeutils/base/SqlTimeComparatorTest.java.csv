@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;5;;@SuppressWarnings("unchecked") @Override protected TypeComparator<Time> createComparator(boolean ascending) {     return (TypeComparator) new DateComparator(ascending). }
+false;protected;0;4;;@Override protected TypeSerializer<Time> createSerializer() {     return new SqlTimeSerializer(). }
+false;protected;0;9;;@Override protected Time[] getSortedTestData() {     return new Time[] { Time.valueOf("00:00:00"), Time.valueOf("02:42:25"), Time.valueOf("14:15:59"), Time.valueOf("18:00:45") }. }

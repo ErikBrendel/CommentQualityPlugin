@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * Gets the collection of extension handlers to register at the {@link WebMonitorEndpoint}.  *  * @return Collection of handlers to register at the {@link WebMonitorEndpoint}.  */ ;/**  * Gets the collection of extension handlers to register at the {@link WebMonitorEndpoint}.  *  * @return Collection of handlers to register at the {@link WebMonitorEndpoint}.  */ Collection<Tuple2<RestHandlerSpecification, ChannelInboundHandler>> getHandlers().
+false;static;0;3;;static WebMonitorExtension empty() {     return EmptyWebMonitorExtension.INSTANCE. }
+false;public;0;4;;@Override public Collection<Tuple2<RestHandlerSpecification, ChannelInboundHandler>> getHandlers() {     return Collections.emptyList(). }
+false;public;0;4;;@Override public CompletableFuture<Void> closeAsync() {     return CompletableFuture.completedFuture(null). }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;9;;public String[] formatScope(JobManagerMetricGroup parent, JobID jid, String jobName) {     final String[] template = copyTemplate().     final String[] values = { parent.hostname(), valueOrNull(jid), valueOrNull(jobName) }.     return bindVariables(template, values). }

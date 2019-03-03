@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public void close() throws IOException {     this.inStream.close(). }
+false;public;1;14;;@Override public void seek(long desired) throws IOException {     if (desired < this.pos) {         throw new IllegalArgumentException("Wrapped InputStream: cannot search backwards.").     }     while (this.pos < desired) {         long numReadBytes = this.inStream.skip(desired - pos).         if (numReadBytes == -1) {             throw new EOFException("Unexpected EOF during forward seek.").         }         this.pos += numReadBytes.     } }
+false;public;0;4;;@Override public long getPos() throws IOException {     return this.pos. }
+false;public;0;8;;@Override public int read() throws IOException {     int read = inStream.read().     if (read != -1) {         this.pos++.     }     return read. }
+false;public;3;8;;@Override public int read(byte[] b, int off, int len) throws IOException {     int numReadBytes = inStream.read(b, off, len).     if (numReadBytes != -1) {         this.pos += numReadBytes.     }     return numReadBytes. }
+false;public;1;4;;@Override public int read(byte[] b) throws IOException {     return read(b, 0, b.length). }

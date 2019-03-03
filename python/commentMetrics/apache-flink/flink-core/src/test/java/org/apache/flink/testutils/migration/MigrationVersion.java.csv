@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String toString() {     return versionStr. }
+false;public;1;3;;public boolean isNewerVersionThan(MigrationVersion otherVersion) {     return Double.valueOf(versionStr) > Double.valueOf(otherVersion.versionStr). }

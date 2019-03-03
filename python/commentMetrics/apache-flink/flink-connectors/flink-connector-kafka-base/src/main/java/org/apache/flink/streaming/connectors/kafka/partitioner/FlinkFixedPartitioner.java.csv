@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;7;;@Override public void open(int parallelInstanceId, int parallelInstances) {     Preconditions.checkArgument(parallelInstanceId >= 0, "Id of this subtask cannot be negative.").     Preconditions.checkArgument(parallelInstances > 0, "Number of subtasks must be larger than 0.").     this.parallelInstanceId = parallelInstanceId. }
+false;public;5;8;;@Override public int partition(T record, byte[] key, byte[] value, String targetTopic, int[] partitions) {     Preconditions.checkArgument(partitions != null && partitions.length > 0, "Partitions of the target topic is empty.").     return partitions[parallelInstanceId % partitions.length]. }
+false;public;1;4;;@Override public boolean equals(Object o) {     return this == o || o instanceof FlinkFixedPartitioner. }
+false;public;0;4;;@Override public int hashCode() {     return FlinkFixedPartitioner.class.hashCode(). }

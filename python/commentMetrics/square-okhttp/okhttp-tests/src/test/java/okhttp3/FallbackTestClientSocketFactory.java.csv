@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;3;;@Override protected SSLSocket configureSocket(SSLSocket sslSocket) throws IOException {     return new TlsFallbackScsvDisabledSSLSocket(sslSocket). }
+false;public;1;10;;@Override public void setEnabledCipherSuites(String[] suites) {     List<String> enabledCipherSuites = new ArrayList<>(suites.length).     for (String suite : suites) {         if (!suite.equals(TLS_FALLBACK_SCSV)) {             enabledCipherSuites.add(suite).         }     }     delegate.setEnabledCipherSuites(enabledCipherSuites.toArray(new String[enabledCipherSuites.size()])). }

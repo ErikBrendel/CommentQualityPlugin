@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;11;;@Override protected EventId getPruningId(final Collection<Map<String, List<EventId>>> match) {     EventId pruningId = null.     for (Map<String, List<EventId>> resultMap : match) {         for (List<EventId> eventList : resultMap.values()) {             pruningId = max(pruningId, eventList.get(eventList.size() - 1)).         }     }     return pruningId. }
+false;public;0;4;;@Override public String toString() {     return "SkipPastLastStrategy{}". }

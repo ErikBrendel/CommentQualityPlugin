@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public IntermediateResultPartitionID getPartitionId() {     return partitionId. }
+false;public;0;3;;public ExecutionAttemptID getProducerId() {     return producerId. }
+false;public;1;10;;@Override public boolean equals(Object obj) {     if (obj != null && obj.getClass() == ResultPartitionID.class) {         ResultPartitionID o = (ResultPartitionID) obj.         return o.getPartitionId().equals(partitionId) && o.getProducerId().equals(producerId).     }     return false. }
+false;public;0;4;;@Override public int hashCode() {     return partitionId.hashCode() ^ producerId.hashCode(). }
+false;public;0;4;;@Override public String toString() {     return partitionId.toString() + "@" + producerId.toString(). }

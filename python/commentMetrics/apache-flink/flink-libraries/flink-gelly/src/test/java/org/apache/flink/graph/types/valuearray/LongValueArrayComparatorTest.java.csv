@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected TypeComparator<LongValueArray> createComparator(boolean ascending) {     return new LongValueArrayComparator(ascending). }
+false;protected;0;4;;@Override protected TypeSerializer<LongValueArray> createSerializer() {     return new LongValueArraySerializer(). }
+false;protected;0;13;;@Override protected LongValueArray[] getSortedTestData() {     LongValueArray lva0 = new LongValueArray().     LongValueArray lva1 = new LongValueArray().     lva1.add(new LongValue(5)).     LongValueArray lva2 = new LongValueArray().     lva2.add(new LongValue(5)).     lva2.add(new LongValue(10)).     return new LongValueArray[] { lva0, lva1, lva2 }. }

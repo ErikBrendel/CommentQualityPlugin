@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected TypeSerializer<Time> createSerializer() {     return new SqlTimeSerializer(). }
+false;protected;0;4;;@Override protected int getLength() {     return 8. }
+false;protected;0;4;;@Override protected Class<Time> getTypeClass() {     return Time.class. }
+false;protected;0;10;;@Override protected Time[] getTestData() {     return new Time[] { new Time(0L), Time.valueOf("00:00:00"), Time.valueOf("02:42:25"), Time.valueOf("14:15:59"), Time.valueOf("18:00:45") }. }

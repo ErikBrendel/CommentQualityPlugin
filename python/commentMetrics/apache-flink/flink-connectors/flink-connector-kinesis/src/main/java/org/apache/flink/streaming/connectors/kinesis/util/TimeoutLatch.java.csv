@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;public void await(long timeout) throws InterruptedException {     synchronized (lock) {         waiting = true.         lock.wait(timeout).     } }
+false;public;0;8;;public void trigger() {     if (waiting) {         synchronized (lock) {             waiting = false.             lock.notifyAll().         }     } }

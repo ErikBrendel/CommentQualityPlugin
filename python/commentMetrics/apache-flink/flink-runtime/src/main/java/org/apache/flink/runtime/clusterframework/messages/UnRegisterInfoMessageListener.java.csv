@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,static;0;3;/**  * Gets the singleton instance.  * @return The singleton instance.  */ ;/**  * Gets the singleton instance.  * @return The singleton instance.  */ public static UnRegisterInfoMessageListener get() {     return INSTANCE. }
+false;public;1;4;;// ------------------------------------------------------------------------ @Override public boolean equals(Object obj) {     return obj != null && obj.getClass() == UnRegisterInfoMessageListener.class. }
+false;public;0;4;;@Override public int hashCode() {     return 2018741654. }
+false;public;0;4;;@Override public String toString() {     return getClass().getSimpleName(). }
+true;private;0;3;/**  * Read resolve to preserve the singleton object property.  */ ;/**  * Read resolve to preserve the singleton object property.  */ private Object readResolve() throws java.io.ObjectStreamException {     return INSTANCE. }

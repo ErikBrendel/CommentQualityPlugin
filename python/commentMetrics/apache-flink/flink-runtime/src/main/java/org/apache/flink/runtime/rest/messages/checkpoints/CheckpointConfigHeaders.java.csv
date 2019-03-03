@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Class<EmptyRequestBody> getRequestClass() {     return EmptyRequestBody.class. }
+false;public;0;4;;@Override public Class<CheckpointConfigInfo> getResponseClass() {     return CheckpointConfigInfo.class. }
+false;public;0;4;;@Override public HttpResponseStatus getResponseStatusCode() {     return HttpResponseStatus.OK. }
+false;public;0;4;;@Override public JobMessageParameters getUnresolvedMessageParameters() {     return new JobMessageParameters(). }
+false;public;0;4;;@Override public HttpMethodWrapper getHttpMethod() {     return HttpMethodWrapper.GET. }
+false;public;0;4;;@Override public String getTargetRestEndpointURL() {     return URL. }
+false;public,static;0;3;;public static CheckpointConfigHeaders getInstance() {     return INSTANCE. }
+false;public;0;4;;@Override public String getDescription() {     return "Returns the checkpointing configuration.". }

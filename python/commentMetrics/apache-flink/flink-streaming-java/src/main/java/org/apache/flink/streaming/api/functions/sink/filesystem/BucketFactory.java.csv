@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;7;8;;Bucket<IN, BucketID> getNewBucket(final RecoverableWriter fsWriter, final int subtaskIndex, final BucketID bucketId, final Path bucketPath, final long initialPartCounter, final PartFileWriter.PartFileFactory<IN, BucketID> partFileWriterFactory, final RollingPolicy<IN, BucketID> rollingPolicy) throws IOException.
+false;;6;7;;Bucket<IN, BucketID> restoreBucket(final RecoverableWriter fsWriter, final int subtaskIndex, final long initialPartCounter, final PartFileWriter.PartFileFactory<IN, BucketID> partFileWriterFactory, final RollingPolicy<IN, BucketID> rollingPolicy, final BucketState<BucketID> bucketState) throws IOException.

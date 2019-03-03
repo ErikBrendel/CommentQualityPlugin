@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;22;;@Test public void testAccumulator() {     try {         final int numElements = 100.         ExecutionEnvironment env = ExecutionEnvironment.createCollectionsEnvironment().         env.generateSequence(1, numElements).map(new CountingMapper()).output(new DiscardingOutputFormat<Long>()).         JobExecutionResult result = env.execute().         assertTrue(result.getNetRuntime() >= 0).         assertEquals(numElements, (int) result.getAccumulatorResult(ACCUMULATOR_NAME)).     } catch (Exception e) {         e.printStackTrace().         fail(e.getMessage()).     } }
+false;public;1;4;;@Override public void open(Configuration parameters) {     accumulator = getRuntimeContext().getIntCounter(ACCUMULATOR_NAME). }
+false;public;1;5;;@Override public Long map(Long value) {     accumulator.add(1).     return value. }

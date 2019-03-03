@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public void writeSnapshot(DataOutputView out) throws IOException {     throw new UnsupportedOperationException("This is a dummy config snapshot used only for backwards compatibility."). }
+false;public;3;5;;@Override public void readSnapshot(int version, DataInputView in, ClassLoader userCodeClassLoader) throws IOException {     throw new UnsupportedOperationException("This is a dummy config snapshot used only for backwards compatibility."). }
+false;public;0;5;;@Override public int getCurrentVersion() {     throw new UnsupportedOperationException("This is a dummy config snapshot used only for backwards compatibility."). }
+false;public;0;4;;@Override public TypeSerializer<T> restoreSerializer() {     return serializerInstance. }
+false;public;1;6;;@Override public TypeSerializerSchemaCompatibility<T> resolveSchemaCompatibility(TypeSerializer<T> newSerializer) {     // then we can only assume that the new serializer is compatible as is     return TypeSerializerSchemaCompatibility.compatibleAsIs(). }
+false;public;0;4;;@Override public int hashCode() {     return serializerInstance.hashCode(). }
+false;public;1;14;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     BackwardsCompatibleSerializerSnapshot<?> that = (BackwardsCompatibleSerializerSnapshot<?>) o.     return that.serializerInstance.equals(serializerInstance). }

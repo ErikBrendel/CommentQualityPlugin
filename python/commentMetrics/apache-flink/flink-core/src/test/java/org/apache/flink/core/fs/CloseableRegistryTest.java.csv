@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected void registerCloseable(final Closeable closeable) throws IOException {     closeableRegistry.registerCloseable(closeable). }
+false;protected;0;5;;@Override protected AbstractCloseableRegistry<Closeable, Object> createRegistry() {     return new CloseableRegistry(). }
+false;protected;0;5;;@Override protected void createAndRegisterStream() throws IOException {     TestStream testStream = new TestStream(unclosedCounter).     registry.registerCloseable(testStream). }
+false;protected;3;14;;@Override protected ProducerThread<Closeable, Object> createProducerThread(AbstractCloseableRegistry<Closeable, Object> registry, AtomicInteger unclosedCounter, int maxStreams) {     return new ProducerThread<Closeable, Object>(registry, unclosedCounter, maxStreams) {          @Override         protected void createAndRegisterStream() throws IOException {             TestStream testStream = new TestStream(unclosedCounter).             registry.registerCloseable(testStream).         }     }. }

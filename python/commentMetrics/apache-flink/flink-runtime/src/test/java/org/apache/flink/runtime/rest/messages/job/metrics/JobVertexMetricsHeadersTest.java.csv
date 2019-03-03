@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void testUrl() {     assertThat(jobVertexMetricsHeaders.getTargetRestEndpointURL(), equalTo("/jobs/:" + JobIDPathParameter.KEY + "/vertices/:" + JobVertexIdPathParameter.KEY + "/metrics")). }
+false;public;0;5;;@Test public void testMessageParameters() {     assertThat(jobVertexMetricsHeaders.getUnresolvedMessageParameters(), instanceOf(JobVertexMetricsMessageParameters.class)). }

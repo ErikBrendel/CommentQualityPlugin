@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public com.codahale.metrics.Meter getDropwizardMeter() {     return meter. }
+false;public;0;4;;@Override public void markEvent() {     meter.mark(). }
+false;public;1;4;;@Override public void markEvent(long n) {     meter.mark(n). }
+false;public;0;4;;@Override public double getRate() {     return meter.getOneMinuteRate(). }
+false;public;0;4;;@Override public long getCount() {     return meter.getCount(). }

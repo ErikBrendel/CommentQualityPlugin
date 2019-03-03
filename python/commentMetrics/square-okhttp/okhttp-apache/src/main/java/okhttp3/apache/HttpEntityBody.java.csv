@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;@Override public long contentLength() {     return entity.getContentLength(). }
+false;public;0;3;;@Override public MediaType contentType() {     return mediaType. }
+false;public;1;3;;@Override public void writeTo(BufferedSink sink) throws IOException {     entity.writeTo(sink.outputStream()). }

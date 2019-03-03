@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;11;;@Override public void collect(T record) {     try {         solutionSet.insertOrReplaceRecord(record).         if (delegate != null) {             delegate.collect(record).         }     } catch (IOException e) {         throw new RuntimeException(e).     } }
+false;public;0;6;;@Override public void close() {     if (delegate != null) {         delegate.close().     } }

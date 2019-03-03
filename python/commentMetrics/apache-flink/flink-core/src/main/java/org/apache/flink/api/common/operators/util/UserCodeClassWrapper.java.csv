@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public T getUserCodeObject(Class<? super T> superClass, ClassLoader cl) {     return InstantiationUtil.instantiate(userCodeClass, superClass). }
+false;public;0;4;;@Override public T getUserCodeObject() {     return InstantiationUtil.instantiate(userCodeClass, Object.class). }
+false;public;1;4;;@Override public <A extends Annotation> A getUserCodeAnnotation(Class<A> annotationClass) {     return userCodeClass.getAnnotation(annotationClass). }
+false;public;0;4;;@Override public Class<? extends T> getUserCodeClass() {     return userCodeClass. }
+false;public;0;4;;@Override public boolean hasObject() {     return false. }

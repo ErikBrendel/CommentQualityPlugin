@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;4;/**  * Note: Broadcast mode could be handled directly for all the output channels  * in record writer, so it is no need to select channels via this method.  */ ;/**  * Note: Broadcast mode could be handled directly for all the output channels  * in record writer, so it is no need to select channels via this method.  */ @Override public int selectChannel(SerializationDelegate<StreamRecord<T>> record) {     throw new UnsupportedOperationException("Broadcast partitioner does not support select channels."). }
+false;public;0;4;;@Override public boolean isBroadcast() {     return true. }
+false;public;0;4;;@Override public StreamPartitioner<T> copy() {     return this. }
+false;public;0;4;;@Override public String toString() {     return "BROADCAST". }

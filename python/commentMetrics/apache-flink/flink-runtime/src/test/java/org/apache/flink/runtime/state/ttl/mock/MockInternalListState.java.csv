@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void update(List<T> elements) {     updateInternal(elements). }
+false;public;1;4;;@Override public void addAll(List<T> elements) {     getInternal().addAll(elements). }
+false;;2;6;;@Override List<T> mergeState(List<T> acc, List<T> nAcc) {     acc = new ArrayList<>(acc).     acc.addAll(nAcc).     return acc. }
+false;public;0;4;;@Override public Iterable<T> get() {     return getInternal(). }
+false;public;1;4;;@Override public void add(T element) {     getInternal().add(element). }
+false;public;0;4;;@Override public void clear() {     getInternal().clear(). }
+false;static;2;6;;@SuppressWarnings({ "unchecked", "unused" }) static <N, T, S extends State, IS extends S> IS createState(TypeSerializer<N> namespaceSerializer, StateDescriptor<S, T> stateDesc) {     return (IS) new MockInternalListState<>(). }

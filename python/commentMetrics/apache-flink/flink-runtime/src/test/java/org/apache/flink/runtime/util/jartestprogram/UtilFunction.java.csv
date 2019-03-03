@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;4;;@SuppressWarnings("Convert2MethodRef") public static FilterFunction<String> getWordFilter() {     return (v) -> WordFilter.filter(v). }

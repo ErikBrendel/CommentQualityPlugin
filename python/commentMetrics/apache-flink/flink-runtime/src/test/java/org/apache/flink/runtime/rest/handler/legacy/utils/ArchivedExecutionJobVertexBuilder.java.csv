@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;public ArchivedExecutionJobVertexBuilder setTaskVertices(ArchivedExecutionVertex[] taskVertices) {     this.taskVertices = taskVertices.     return this. }
+false;public;1;4;;public ArchivedExecutionJobVertexBuilder setId(JobVertexID id) {     this.id = id.     return this. }
+false;public;1;4;;public ArchivedExecutionJobVertexBuilder setName(String name) {     this.name = name.     return this. }
+false;public;1;4;;public ArchivedExecutionJobVertexBuilder setParallelism(int parallelism) {     this.parallelism = parallelism.     return this. }
+false;public;1;4;;public ArchivedExecutionJobVertexBuilder setMaxParallelism(int maxParallelism) {     this.maxParallelism = maxParallelism.     return this. }
+false;public;1;4;;public ArchivedExecutionJobVertexBuilder setArchivedUserAccumulators(StringifiedAccumulatorResult[] archivedUserAccumulators) {     this.archivedUserAccumulators = archivedUserAccumulators.     return this. }
+false;public;0;11;;public ArchivedExecutionJobVertex build() {     Preconditions.checkNotNull(taskVertices).     return new ArchivedExecutionJobVertex(taskVertices, id != null ? id : new JobVertexID(), name != null ? name : "task_" + RANDOM.nextInt(), parallelism, maxParallelism, archivedUserAccumulators != null ? archivedUserAccumulators : new StringifiedAccumulatorResult[0]). }

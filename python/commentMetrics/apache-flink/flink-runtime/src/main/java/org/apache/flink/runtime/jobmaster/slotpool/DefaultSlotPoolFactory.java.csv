@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;9;;@Override @Nonnull public SlotPool createSlotPool(@Nonnull JobID jobId) {     return new SlotPoolImpl(jobId, clock, rpcTimeout, slotIdleTimeout). }
+false;public,static;1;10;;public static DefaultSlotPoolFactory fromConfiguration(@Nonnull Configuration configuration) {     final Time rpcTimeout = AkkaUtils.getTimeoutAsTime(configuration).     final Time slotIdleTimeout = Time.milliseconds(configuration.getLong(JobManagerOptions.SLOT_IDLE_TIMEOUT)).     return new DefaultSlotPoolFactory(SystemClock.getInstance(), rpcTimeout, slotIdleTimeout). }

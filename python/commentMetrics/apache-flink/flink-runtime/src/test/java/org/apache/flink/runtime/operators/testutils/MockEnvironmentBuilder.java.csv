@@ -1,0 +1,17 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;public MockEnvironmentBuilder setTaskName(String taskName) {     this.taskName = taskName.     return this. }
+false;public;1;4;;public MockEnvironmentBuilder setMemorySize(long memorySize) {     this.memorySize = memorySize.     return this. }
+false;public;1;4;;public MockEnvironmentBuilder setInputSplitProvider(MockInputSplitProvider inputSplitProvider) {     this.inputSplitProvider = inputSplitProvider.     return this. }
+false;public;1;4;;public MockEnvironmentBuilder setBufferSize(int bufferSize) {     this.bufferSize = bufferSize.     return this. }
+false;public;1;4;;public MockEnvironmentBuilder setTaskStateManager(TaskStateManager taskStateManager) {     this.taskStateManager = taskStateManager.     return this. }
+false;public;1;4;;public MockEnvironmentBuilder setTaskConfiguration(Configuration taskConfiguration) {     this.taskConfiguration = taskConfiguration.     return this. }
+false;public;1;4;;public MockEnvironmentBuilder setExecutionConfig(ExecutionConfig executionConfig) {     this.executionConfig = executionConfig.     return this. }
+false;public;1;4;;public MockEnvironmentBuilder setTaskManagerRuntimeInfo(TaskManagerRuntimeInfo taskManagerRuntimeInfo) {     this.taskManagerRuntimeInfo = taskManagerRuntimeInfo.     return this. }
+false;public;1;4;;public MockEnvironmentBuilder setMaxParallelism(int maxParallelism) {     this.maxParallelism = maxParallelism.     return this. }
+false;public;1;4;;public MockEnvironmentBuilder setParallelism(int parallelism) {     this.parallelism = parallelism.     return this. }
+false;public;1;4;;public MockEnvironmentBuilder setSubtaskIndex(int subtaskIndex) {     this.subtaskIndex = subtaskIndex.     return this. }
+false;public;1;4;;public MockEnvironmentBuilder setUserCodeClassLoader(ClassLoader userCodeClassLoader) {     this.userCodeClassLoader = userCodeClassLoader.     return this. }
+false;public;1;4;;public MockEnvironmentBuilder setJobID(JobID jobID) {     this.jobID = jobID.     return this. }
+false;public;1;4;;public MockEnvironmentBuilder setJobVertexID(JobVertexID jobVertexID) {     this.jobVertexID = jobVertexID.     return this. }
+false;public;1;4;;public MockEnvironmentBuilder setMetricGroup(TaskMetricGroup taskMetricGroup) {     this.taskMetricGroup = taskMetricGroup.     return this. }
+false;public;0;19;;public MockEnvironment build() {     return new MockEnvironment(jobID, jobVertexID, taskName, memorySize, inputSplitProvider, bufferSize, taskConfiguration, executionConfig, taskStateManager, aggregateManager, maxParallelism, parallelism, subtaskIndex, userCodeClassLoader, taskMetricGroup, taskManagerRuntimeInfo). }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;1;1;/**  * Start the scheduler by initializing the main thread executor.  *  * @param mainThreadExecutor the main thread executor of the job master.  */ ;/**  * Start the scheduler by initializing the main thread executor.  *  * @param mainThreadExecutor the main thread executor of the job master.  */ void start(@Nonnull ComponentMainThreadExecutor mainThreadExecutor).
+true;;0;1;/**  * Returns true, iff the scheduling strategy of the scheduler requires to know about previous allocations.  */ ;/**  * Returns true, iff the scheduling strategy of the scheduler requires to know about previous allocations.  */ boolean requiresPreviousExecutionGraphAllocations().

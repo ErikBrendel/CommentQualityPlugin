@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;9;;@Override public int hash(double[] record) {     int result = 0.     for (double field : record) {         long bits = Double.doubleToLongBits(field).         result += (int) (bits ^ (bits >>> 32)).     }     return result. }
+false;public;2;11;;@Override public int compare(double[] first, double[] second) {     for (int x = 0. x < min(first.length, second.length). x++) {         int cmp = Double.compare(first[x], second[x]).         if (cmp != 0) {             return ascending ? cmp : -cmp.         }     }     int cmp = first.length - second.length.     return ascending ? cmp : -cmp. }
+false;public;0;6;;@Override public TypeComparator<double[]> duplicate() {     DoublePrimitiveArrayComparator dupe = new DoublePrimitiveArrayComparator(this.ascending).     dupe.setReference(this.reference).     return dupe. }

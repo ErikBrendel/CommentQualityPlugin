@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;5;;@Override protected void preSubmit() throws Exception {     dataPath = createTempFile("datapoints.txt", DATAPOINTS).     resultPath = getTempDirPath("union_iter_result"). }
+false;protected;0;4;;@Override protected void postSubmit() throws Exception {     compareResultsByLinesInMemory(DATAPOINTS + DATAPOINTS + DATAPOINTS + DATAPOINTS, resultPath). }
+false;protected;0;14;;@Override protected void testProgram() throws Exception {     ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment().     DataSet<Tuple2<Integer, CoordVector>> initialInput = env.readFile(new PointInFormat(), this.dataPath).setParallelism(1).     IterativeDataSet<Tuple2<Integer, CoordVector>> iteration = initialInput.iterate(2).     DataSet<Tuple2<Integer, CoordVector>> result = iteration.union(iteration).map(new IdentityMapper()).     iteration.closeWith(result).writeAsFormattedText(this.resultPath, new PointFormatter()).     env.execute(). }
+false;public;1;4;;@Override public Tuple2<Integer, CoordVector> map(Tuple2<Integer, CoordVector> rec) {     return rec. }
+false;public;2;6;;@Override public void reduce(Iterable<Tuple2<Integer, CoordVector>> it, Collector<Tuple2<Integer, CoordVector>> out) {     for (Tuple2<Integer, CoordVector> r : it) {         out.collect(r).     } }

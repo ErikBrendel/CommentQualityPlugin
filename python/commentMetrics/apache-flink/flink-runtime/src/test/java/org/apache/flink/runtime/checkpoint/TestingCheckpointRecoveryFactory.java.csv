@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;4;;@Override public CompletedCheckpointStore createCheckpointStore(JobID jobId, int maxNumberOfCheckpointsToRetain, ClassLoader userClassLoader) throws Exception {     return store. }
+false;public;1;4;;@Override public CheckpointIDCounter createCheckpointIDCounter(JobID jobId) throws Exception {     return counter. }

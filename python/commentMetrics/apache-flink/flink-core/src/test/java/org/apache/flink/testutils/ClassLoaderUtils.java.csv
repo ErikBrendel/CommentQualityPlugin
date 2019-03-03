@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;3;6;;public static URLClassLoader compileAndLoadJava(File root, String filename, String source) throws IOException {     return withRoot(root).addClass(filename.replaceAll("\\.java", ""), source).build(). }
+false;private,static;1;5;;private static URLClassLoader createClassLoader(File root) throws MalformedURLException {     return new URLClassLoader(new URL[] { root.toURI().toURL() }, Thread.currentThread().getContextClassLoader()). }
+false;private,static;3;5;;private static void writeAndCompile(File root, String filename, String source) throws IOException {     File file = writeSourceFile(root, filename, source).     compileClass(file). }
+false;private,static;3;9;;private static File writeSourceFile(File root, String filename, String source) throws IOException {     File file = new File(root, filename).     FileWriter fileWriter = new FileWriter(file).     fileWriter.write(source).     fileWriter.close().     return file. }
+false;public,static;1;3;;public static ClassLoaderBuilder withRoot(File root) {     return new ClassLoaderBuilder(root). }
+false;private,static;1;4;;private static int compileClass(File sourceFile) {     JavaCompiler compiler = ToolProvider.getSystemJavaCompiler().     return compiler.run(null, null, null, "-proc:none", sourceFile.getPath()). }
+false;public;2;9;;public ClassLoaderBuilder addClass(String className, String source) {     String oldValue = classes.putIfAbsent(className, source).     if (oldValue != null) {         throw new RuntimeException(String.format("Class with name %s already registered.", className)).     }     return this. }
+false;public;0;7;;public URLClassLoader build() throws IOException {     for (Map.Entry<String, String> classInfo : classes.entrySet()) {         writeAndCompile(root, createFileName(classInfo.getKey()), classInfo.getValue()).     }     return createClassLoader(root). }
+false;private;1;3;;private String createFileName(String className) {     return className + ".java". }

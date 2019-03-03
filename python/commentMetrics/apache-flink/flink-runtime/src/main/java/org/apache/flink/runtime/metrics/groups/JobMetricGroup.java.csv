@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public JobID jobId() {     return jobId. }
+false;public;0;4;;@Nullable public String jobName() {     return jobName. }
+false;protected;1;4;;@Override protected QueryScopeInfo.JobQueryScopeInfo createQueryServiceMetricInfo(CharacterFilter filter) {     return new QueryScopeInfo.JobQueryScopeInfo(this.jobId.toString()). }
+false;protected;1;5;;// ------------------------------------------------------------------------ // Component Metric Group Specifics // ------------------------------------------------------------------------ @Override protected void putVariables(Map<String, String> variables) {     variables.put(ScopeFormat.SCOPE_JOB_ID, jobId.toString()).     variables.put(ScopeFormat.SCOPE_JOB_NAME, jobName). }
+false;protected;1;4;;@Override protected String getGroupName(CharacterFilter filter) {     return "job". }

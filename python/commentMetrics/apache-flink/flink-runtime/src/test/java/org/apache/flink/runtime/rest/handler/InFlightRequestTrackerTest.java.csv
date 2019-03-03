@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Before public void setUp() {     inFlightRequestTracker = new InFlightRequestTracker(). }
+false;public;0;4;;@Test public void testShouldFinishAwaitAsyncImmediatelyIfNoRequests() {     assertTrue(inFlightRequestTracker.awaitAsync().isDone()). }
+false;public;0;10;;@Test public void testShouldFinishAwaitAsyncIffAllRequestsDeregistered() {     inFlightRequestTracker.registerRequest().     final CompletableFuture<Void> awaitFuture = inFlightRequestTracker.awaitAsync().     assertFalse(awaitFuture.isDone()).     inFlightRequestTracker.deregisterRequest().     assertTrue(awaitFuture.isDone()). }
+false;public;0;10;;@Test public void testAwaitAsyncIsIdempotent() {     final CompletableFuture<Void> awaitFuture = inFlightRequestTracker.awaitAsync().     assertTrue(awaitFuture.isDone()).     assertSame("The reference to the future must not change", awaitFuture, inFlightRequestTracker.awaitAsync()). }
+false;public;0;12;;@Test public void testShouldTolerateRegisterAfterAwaitAsync() {     final CompletableFuture<Void> awaitFuture = inFlightRequestTracker.awaitAsync().     assertTrue(awaitFuture.isDone()).     inFlightRequestTracker.registerRequest().     assertSame("The reference to the future must not change", awaitFuture, inFlightRequestTracker.awaitAsync()). }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public void setJobRunning(JobID jobID) {     checkNotNull(jobID).     synchronized (jobStatus) {         jobStatus.put(jobID, JobSchedulingStatus.RUNNING).     } }
+false;public;1;8;;@Override public void setJobFinished(JobID jobID) {     checkNotNull(jobID).     synchronized (jobStatus) {         jobStatus.put(jobID, JobSchedulingStatus.DONE).     } }
+false;public;1;9;;@Override public JobSchedulingStatus getJobSchedulingStatus(JobID jobID) {     checkNotNull(jobID).     synchronized (jobStatus) {         JobSchedulingStatus status = jobStatus.get(jobID).         return status == null ? JobSchedulingStatus.PENDING : status.     } }
+false;public;1;8;;@Override public void clearJob(JobID jobID) {     checkNotNull(jobID).     synchronized (jobStatus) {         jobStatus.remove(jobID).     } }

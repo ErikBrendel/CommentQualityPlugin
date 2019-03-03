@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;8;;@Override protected EitherTypeInfo<?, ?>[] getTestData() {     return new EitherTypeInfo<?, ?>[] { new EitherTypeInfo<>(BasicTypeInfo.INT_TYPE_INFO, BasicTypeInfo.STRING_TYPE_INFO), new EitherTypeInfo<>(BasicTypeInfo.INT_TYPE_INFO, new TupleTypeInfo<Tuple2<Double, Long>>(TypeExtractor.getForClass(Double.class), TypeExtractor.getForClass(String.class))) }. }

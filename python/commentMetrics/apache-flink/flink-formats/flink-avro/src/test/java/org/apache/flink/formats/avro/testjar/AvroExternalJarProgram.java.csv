@@ -1,0 +1,18 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getName() {     return name. }
+false;public;1;3;;public void setName(String name) {     this.name = name. }
+false;public;0;3;;public double getSaturation() {     return saturation. }
+false;public;1;3;;public void setSaturation(double saturation) {     this.saturation = saturation. }
+false;public;0;4;;@Override public String toString() {     return name + '(' + saturation + ')'. }
+false;public;0;3;;public String getName() {     return name. }
+false;public;0;3;;public List<Color> getColors() {     return colors. }
+false;public;1;3;;public void setName(String name) {     this.name = name. }
+false;public;1;3;;public void setColors(List<Color> colors) {     this.colors = colors. }
+false;public;0;4;;@Override public String toString() {     return name + " : " + colors. }
+false;public;1;5;;@Override public Tuple2<String, MyUser> map(MyUser u) {     String namePrefix = u.getName().substring(0, 1).     return new Tuple2<String, MyUser>(namePrefix, u). }
+false;public;2;4;;@Override public Tuple2<String, MyUser> reduce(Tuple2<String, MyUser> val1, Tuple2<String, MyUser> val2) {     return val1. }
+false;public;0;3;;public MyUser nextUser() {     return randomUser(). }
+false;private;0;10;;private MyUser randomUser() {     int numColors = rnd.nextInt(5).     ArrayList<Color> colors = new ArrayList<Color>(numColors).     for (int i = 0. i < numColors. i++) {         colors.add(new Color(randomString(), rnd.nextDouble())).     }     return new MyUser(randomString(), colors). }
+false;private;0;9;;private String randomString() {     char[] c = new char[this.rnd.nextInt(20) + 5].     for (int i = 0. i < c.length. i++) {         c[i] = (char) (this.rnd.nextInt(150) + 40).     }     return new String(c). }
+false;public,static;2;16;;public static void writeTestData(File testFile, int numRecords) throws IOException {     DatumWriter<MyUser> userDatumWriter = new ReflectDatumWriter<MyUser>(MyUser.class).     DataFileWriter<MyUser> dataFileWriter = new DataFileWriter<MyUser>(userDatumWriter).     dataFileWriter.create(ReflectData.get().getSchema(MyUser.class), testFile).     Generator generator = new Generator().     for (int i = 0. i < numRecords. i++) {         MyUser user = generator.nextUser().         dataFileWriter.append(user).     }     dataFileWriter.close(). }
+false;public,static;1;12;;// public static void main(String[] args) throws Exception { // String testDataFile = new File("src/test/resources/testdata.avro").getAbsolutePath(). // writeTestData(new File(testDataFile), 50). // } public static void main(String[] args) throws Exception {     String inputPath = args[0].     ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment().     DataSet<MyUser> input = env.createInput(new AvroInputFormat<MyUser>(new Path(inputPath), MyUser.class)).     DataSet<Tuple2<String, MyUser>> result = input.map(new NameExtractor()).groupBy(0).reduce(new NameGrouper()).     result.output(new DiscardingOutputFormat<Tuple2<String, MyUser>>()).     env.execute(). }

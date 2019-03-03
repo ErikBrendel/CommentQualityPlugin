@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Override @PublicEvolving public boolean isBasicType() {     return false. }
+false;public;0;5;;@Override @PublicEvolving public boolean isTupleType() {     return false. }
+false;public;0;5;;@Override @PublicEvolving public int getArity() {     return 1. }
+false;public;0;5;;@Override @PublicEvolving public int getTotalFields() {     return 1. }
+false;public;0;5;;@Override @PublicEvolving public Class<T> getTypeClass() {     return typeClass. }
+false;public;0;5;;@Override @PublicEvolving public boolean isKeyType() {     return Comparable.class.isAssignableFrom(typeClass). }
+false;public;1;11;;@Override @PublicEvolving public TypeSerializer<T> createSerializer(ExecutionConfig config) {     if (config.hasGenericTypesDisabled()) {         throw new UnsupportedOperationException("Generic types have been disabled in the ExecutionConfig and type " + this.typeClass.getName() + " is treated as a generic type.").     }     return new KryoSerializer<T>(this.typeClass, config). }
+false;public;2;12;;@SuppressWarnings("unchecked") @Override @PublicEvolving public TypeComparator<T> createComparator(boolean sortOrderAscending, ExecutionConfig executionConfig) {     if (isKeyType()) {         @SuppressWarnings("rawtypes")         GenericTypeComparator comparator = new GenericTypeComparator(sortOrderAscending, createSerializer(executionConfig), this.typeClass).         return (TypeComparator<T>) comparator.     }     throw new UnsupportedOperationException("Types that do not implement java.lang.Comparable cannot be used as keys."). }
+false;public;0;4;;// -------------------------------------------------------------------------------------------- @Override public int hashCode() {     return typeClass.hashCode(). }
+false;public;1;4;;@Override public boolean canEqual(Object obj) {     return obj instanceof GenericTypeInfo. }
+false;public;1;11;;@Override public boolean equals(Object obj) {     if (obj instanceof GenericTypeInfo) {         @SuppressWarnings("unchecked")         GenericTypeInfo<T> genericTypeInfo = (GenericTypeInfo<T>) obj.         return typeClass == genericTypeInfo.typeClass.     } else {         return false.     } }
+false;public;0;4;;@Override public String toString() {     return "GenericType<" + typeClass.getCanonicalName() + ">". }

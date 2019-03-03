@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * Initializes the sequence for reading.  */ ;/**  * Initializes the sequence for reading.  */ void open().
+true;;0;2;/**  * Gets the next BufferOrEvent from the sequence, or {@code null}, if the  * sequence is exhausted.  *  * @return The next BufferOrEvent from the buffered sequence, or {@code null} (end of sequence).  */ ;/**  * Gets the next BufferOrEvent from the sequence, or {@code null}, if the  * sequence is exhausted.  *  * @return The next BufferOrEvent from the buffered sequence, or {@code null} (end of sequence).  */ @Nullable BufferOrEvent getNext() throws IOException.
+true;;0;1;/**  * Cleans up all the resources held by the sequence.  */ ;/**  * Cleans up all the resources held by the sequence.  */ void cleanup() throws IOException.
+true;;0;1;/**  * Gets the size of the sequence.  */ ;/**  * Gets the size of the sequence.  */ long size().

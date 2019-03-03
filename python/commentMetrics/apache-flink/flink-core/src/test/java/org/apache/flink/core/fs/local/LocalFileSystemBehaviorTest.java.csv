@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public FileSystem getFileSystem() throws Exception {     return LocalFileSystem.getSharedInstance(). }
+false;public;0;4;;@Override public Path getBasePath() throws Exception {     return new Path(tmp.newFolder().toURI()). }
+false;public;0;4;;@Override public FileSystemKind getFileSystemKind() {     return FileSystemKind.FILE_SYSTEM. }

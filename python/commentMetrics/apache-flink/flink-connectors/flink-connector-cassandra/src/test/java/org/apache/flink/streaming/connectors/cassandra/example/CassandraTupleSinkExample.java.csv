@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected Cluster buildCluster(Builder builder) {     return builder.addContactPoint("127.0.0.1").build(). }
+false;public,static;1;17;;public static void main(String[] args) throws Exception {     StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment().     DataStreamSource<Tuple2<String, Integer>> source = env.fromCollection(collection).     CassandraSink.addSink(source).setQuery(INSERT).setClusterBuilder(new ClusterBuilder() {          @Override         protected Cluster buildCluster(Builder builder) {             return builder.addContactPoint("127.0.0.1").build().         }     }).build().     env.execute("WriteTupleIntoCassandra"). }

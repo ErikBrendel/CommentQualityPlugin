@@ -1,5 +1,0 @@
-# id;timestamp;commentText;codeText;commentWords;codeWords
-HBaseRow -> public HBaseRow(Set<HBaseCell> cells);1338219947;Constructor__@param cells;public HBaseRow(Set<HBaseCell> cells) {_        this.cells = cells__    };constructor,param,cells;public,hbase,row,set,hbase,cell,cells,this,cells,cells
-HBaseRow -> public HBaseRow(Set<HBaseCell> cells);1338838061;Constructor__@param cells;public HBaseRow(Set<HBaseCell> cells) {_        this.cells = cells__    };constructor,param,cells;public,hbase,row,set,hbase,cell,cells,this,cells,cells
-HBaseRow -> public HBaseRow();1338219947;Constructor;public HBaseRow() {_        cells = new LinkedHashSet<HBaseCell>()__    };constructor;public,hbase,row,cells,new,linked,hash,set,hbase,cell
-HBaseRow -> public HBaseRow();1338838061;Constructor;public HBaseRow() {_        cells = new LinkedHashSet<HBaseCell>()__    };constructor;public,hbase,row,cells,new,linked,hash,set,hbase,cell

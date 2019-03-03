@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,abstract;1;1;;public abstract Iterator<OUT> reduceGroup(Iterable<IN> values) throws Exception.
+false;public,final;2;6;;// ------------------------------------------------------------------------------------------- @Override public final void reduce(Iterable<IN> values, Collector<OUT> out) throws Exception {     for (Iterator<OUT> iter = reduceGroup(values). iter.hasNext(). ) {         out.collect(iter.next()).     } }

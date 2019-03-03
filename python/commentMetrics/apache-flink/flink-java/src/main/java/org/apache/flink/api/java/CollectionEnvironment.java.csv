@@ -1,4 +1,5 @@
-# id;timestamp;commentText;codeText;commentWords;codeWords
-CollectionEnvironment -> @Override 	@Deprecated 	public int getDegreeOfParallelism();1427097378;@deprecated Please use {@link #getParallelism};@Override_	@Deprecated_	public int getDegreeOfParallelism() {_		return getParallelism()__	};deprecated,please,use,link,get,parallelism;override,deprecated,public,int,get,degree,of,parallelism,return,get,parallelism
-CollectionEnvironment -> @Override 	@Deprecated 	public int getDegreeOfParallelism();1432206765;@deprecated Please use {@link #getParallelism};@Override_	@Deprecated_	public int getDegreeOfParallelism() {_		return getParallelism()__	};deprecated,please,use,link,get,parallelism;override,deprecated,public,int,get,degree,of,parallelism,return,get,parallelism
-CollectionEnvironment -> @Override 	@Deprecated 	public int getDegreeOfParallelism();1442944546;@deprecated Please use {@link #getParallelism};@Override_	@Deprecated_	public int getDegreeOfParallelism() {_		return getParallelism()__	};deprecated,please,use,link,get,parallelism;override,deprecated,public,int,get,degree,of,parallelism,return,get,parallelism
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;9;;@Override public JobExecutionResult execute(String jobName) throws Exception {     Plan p = createProgramPlan(jobName).     // We need to reverse here. Object-Reuse enabled, means safe mode is disabled.     CollectionExecutor exec = new CollectionExecutor(getConfig()).     this.lastJobExecutionResult = exec.execute(p).     return this.lastJobExecutionResult. }
+false;public;0;4;;@Override public int getParallelism() {     // always serial     return 1. }
+false;public;0;4;;@Override public String getExecutionPlan() throws Exception {     throw new UnsupportedOperationException("Execution plans are not used for collection-based execution."). }
+false;public;0;3;;@Override public void startNewSession() throws Exception { }

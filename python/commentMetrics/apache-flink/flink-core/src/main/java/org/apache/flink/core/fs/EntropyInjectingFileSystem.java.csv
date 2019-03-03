@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * Gets the marker string that represents the substring of a path to be replaced  * by the entropy characters.  */ ;/**  * Gets the marker string that represents the substring of a path to be replaced  * by the entropy characters.  */ String getEntropyInjectionKey().
+true;;0;1;/**  * Creates a string with random entropy to be injected into a path.  */ ;/**  * Creates a string with random entropy to be injected into a path.  */ String generateEntropy().

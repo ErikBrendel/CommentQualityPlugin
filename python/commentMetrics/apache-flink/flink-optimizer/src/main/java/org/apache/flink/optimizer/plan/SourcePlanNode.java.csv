@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;// -------------------------------------------------------------------------------------------- public DataSourceNode getDataSourceNode() {     return (DataSourceNode) this.template. }
+true;public;0;3;/**  * Gets the serializer from this PlanNode.  *  * @return The serializer.  */ ;/**  * Gets the serializer from this PlanNode.  *  * @return The serializer.  */ public TypeSerializerFactory<?> getSerializer() {     return serializer. }
+true;public;1;3;/**  * Sets the serializer for this PlanNode.  *  * @param serializer The serializer to set.  */ ;/**  * Sets the serializer for this PlanNode.  *  * @param serializer The serializer to set.  */ public void setSerializer(TypeSerializerFactory<?> serializer) {     this.serializer = serializer. }
+false;public;1;6;;// -------------------------------------------------------------------------------------------- @Override public void accept(Visitor<PlanNode> visitor) {     if (visitor.preVisit(this)) {         visitor.postVisit(this).     } }
+false;public;0;4;;@Override public Iterable<PlanNode> getPredecessors() {     return Collections.<PlanNode>emptyList(). }
+false;public;0;4;;@Override public Iterable<Channel> getInputs() {     return Collections.<Channel>emptyList(). }
+false;public;1;8;;@Override public SourceAndDamReport hasDamOnPathDownTo(PlanNode source) {     if (source == this) {         return FOUND_SOURCE.     } else {         return NOT_FOUND.     } }

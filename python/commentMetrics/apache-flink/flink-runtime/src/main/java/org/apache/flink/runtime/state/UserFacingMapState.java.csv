@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;// ------------------------------------------------------------------------ @Override public V get(K key) throws Exception {     return originalState.get(key). }
+false;public;2;4;;@Override public void put(K key, V value) throws Exception {     originalState.put(key, value). }
+false;public;1;4;;@Override public void putAll(Map<K, V> value) throws Exception {     originalState.putAll(value). }
+false;public;0;4;;@Override public void clear() {     originalState.clear(). }
+false;public;1;4;;@Override public void remove(K key) throws Exception {     originalState.remove(key). }
+false;public;1;4;;@Override public boolean contains(K key) throws Exception {     return originalState.contains(key). }
+false;public;0;5;;@Override public Iterable<Map.Entry<K, V>> entries() throws Exception {     Iterable<Map.Entry<K, V>> original = originalState.entries().     return original != null ? original : emptyState.entrySet(). }
+false;public;0;5;;@Override public Iterable<K> keys() throws Exception {     Iterable<K> original = originalState.keys().     return original != null ? original : emptyState.keySet(). }
+false;public;0;5;;@Override public Iterable<V> values() throws Exception {     Iterable<V> original = originalState.values().     return original != null ? original : emptyState.values(). }
+false;public;0;5;;@Override public Iterator<Map.Entry<K, V>> iterator() throws Exception {     Iterator<Map.Entry<K, V>> original = originalState.iterator().     return original != null ? original : emptyState.entrySet().iterator(). }

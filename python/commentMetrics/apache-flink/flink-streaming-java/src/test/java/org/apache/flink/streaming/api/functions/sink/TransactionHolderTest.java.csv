@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void testElapsedTime() {     final long elapsedTime = new TransactionHolder<>(new Object(), 0).elapsedTime(Clock.fixed(Instant.ofEpochMilli(1000), ZoneOffset.UTC)).     assertThat(elapsedTime, equalTo(1000L)). }

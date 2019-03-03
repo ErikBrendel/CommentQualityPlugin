@@ -1,0 +1,26 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;17;;public void run() throws Exception {     Request request = new Request.Builder().url("https://publicobject.com/helloworld.txt").build().     System.out.println("REQUEST 1 (new connection)").     try (Response response = client.newCall(request).execute()) {         // Consume and discard the response body.         response.body().source().readByteString().     }     System.out.println("REQUEST 2 (pooled connection)").     try (Response response = client.newCall(request).execute()) {         // Consume and discard the response body.         response.body().source().readByteString().     } }
+false;public,static;1;3;;public static void main(String... args) throws Exception {     new PrintEventsNonConcurrent().run(). }
+false;private;1;8;;private void printEvent(String name) {     long nowNanos = System.nanoTime().     if (name.equals("callStart")) {         callStartNanos = nowNanos.     }     long elapsedNanos = nowNanos - callStartNanos.     System.out.printf("%.3f %s%n", elapsedNanos / 1000000000d, name). }
+false;public;1;3;;@Override public void callStart(Call call) {     printEvent("callStart"). }
+false;public;2;3;;@Override public void dnsStart(Call call, String domainName) {     printEvent("dnsStart"). }
+false;public;3;3;;@Override public void dnsEnd(Call call, String domainName, List<InetAddress> inetAddressList) {     printEvent("dnsEnd"). }
+false;public;3;4;;@Override public void connectStart(Call call, InetSocketAddress inetSocketAddress, Proxy proxy) {     printEvent("connectStart"). }
+false;public;1;3;;@Override public void secureConnectStart(Call call) {     printEvent("secureConnectStart"). }
+false;public;2;3;;@Override public void secureConnectEnd(Call call, Handshake handshake) {     printEvent("secureConnectEnd"). }
+false;public;4;4;;@Override public void connectEnd(Call call, InetSocketAddress inetSocketAddress, Proxy proxy, Protocol protocol) {     printEvent("connectEnd"). }
+false;public;5;4;;@Override public void connectFailed(Call call, InetSocketAddress inetSocketAddress, Proxy proxy, Protocol protocol, IOException ioe) {     printEvent("connectFailed"). }
+false;public;2;3;;@Override public void connectionAcquired(Call call, Connection connection) {     printEvent("connectionAcquired"). }
+false;public;2;3;;@Override public void connectionReleased(Call call, Connection connection) {     printEvent("connectionReleased"). }
+false;public;1;3;;@Override public void requestHeadersStart(Call call) {     printEvent("requestHeadersStart"). }
+false;public;2;3;;@Override public void requestHeadersEnd(Call call, Request request) {     printEvent("requestHeadersEnd"). }
+false;public;1;3;;@Override public void requestBodyStart(Call call) {     printEvent("requestBodyStart"). }
+false;public;2;3;;@Override public void requestBodyEnd(Call call, long byteCount) {     printEvent("requestBodyEnd"). }
+false;public;2;3;;@Override public void requestFailed(Call call, IOException ioe) {     printEvent("requestFailed"). }
+false;public;1;3;;@Override public void responseHeadersStart(Call call) {     printEvent("responseHeadersStart"). }
+false;public;2;3;;@Override public void responseHeadersEnd(Call call, Response response) {     printEvent("responseHeadersEnd"). }
+false;public;1;3;;@Override public void responseBodyStart(Call call) {     printEvent("responseBodyStart"). }
+false;public;2;3;;@Override public void responseBodyEnd(Call call, long byteCount) {     printEvent("responseBodyEnd"). }
+false;public;2;3;;@Override public void responseFailed(Call call, IOException ioe) {     printEvent("responseFailed"). }
+false;public;1;3;;@Override public void callEnd(Call call) {     printEvent("callEnd"). }
+false;public;2;3;;@Override public void callFailed(Call call, IOException ioe) {     printEvent("callFailed"). }

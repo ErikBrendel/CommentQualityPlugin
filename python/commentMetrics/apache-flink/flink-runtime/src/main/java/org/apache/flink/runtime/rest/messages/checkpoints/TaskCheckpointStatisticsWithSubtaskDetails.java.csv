@@ -1,0 +1,19 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Summary getSummary() {     return summary. }
+false;public;0;3;;public List<SubtaskCheckpointStatistics> getSubtaskCheckpointStatistics() {     return subtaskCheckpointStatistics. }
+false;public;1;15;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     if (!super.equals(o)) {         return false.     }     TaskCheckpointStatisticsWithSubtaskDetails that = (TaskCheckpointStatisticsWithSubtaskDetails) o.     return Objects.equals(summary, that.summary) && Objects.equals(subtaskCheckpointStatistics, that.subtaskCheckpointStatistics). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(super.hashCode(), summary, subtaskCheckpointStatistics). }
+false;public;0;3;;public MinMaxAvgStatistics getStateSize() {     return stateSize. }
+false;public;0;3;;public MinMaxAvgStatistics getDuration() {     return duration. }
+false;public;0;3;;public CheckpointDuration getCheckpointDuration() {     return checkpointDuration. }
+false;public;0;3;;public CheckpointAlignment getCheckpointAlignment() {     return checkpointAlignment. }
+false;public;1;14;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     Summary summary = (Summary) o.     return Objects.equals(stateSize, summary.stateSize) && Objects.equals(duration, summary.duration) && Objects.equals(checkpointDuration, summary.checkpointDuration) && Objects.equals(checkpointAlignment, summary.checkpointAlignment). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(stateSize, duration, checkpointDuration, checkpointAlignment). }
+false;public;0;3;;public MinMaxAvgStatistics getSynchronousDuration() {     return synchronousDuration. }
+false;public;0;3;;public MinMaxAvgStatistics getAsynchronousDuration() {     return asynchronousDuration. }
+false;public;1;12;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     CheckpointDuration that = (CheckpointDuration) o.     return Objects.equals(synchronousDuration, that.synchronousDuration) && Objects.equals(asynchronousDuration, that.asynchronousDuration). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(synchronousDuration, asynchronousDuration). }
+false;public;0;3;;public MinMaxAvgStatistics getBufferedData() {     return bufferedData. }
+false;public;0;3;;public MinMaxAvgStatistics getDuration() {     return duration. }
+false;public;1;12;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     CheckpointAlignment alignment = (CheckpointAlignment) o.     return Objects.equals(bufferedData, alignment.bufferedData) && Objects.equals(duration, alignment.duration). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(bufferedData, duration). }

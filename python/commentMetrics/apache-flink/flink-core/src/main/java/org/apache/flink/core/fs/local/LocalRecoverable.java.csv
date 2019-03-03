@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public File targetFile() {     return targetFile. }
+false;public;0;3;;public File tempFile() {     return tempFile. }
+false;public;0;3;;public long offset() {     return offset. }
+false;public;0;4;;@Override public String toString() {     return "LocalRecoverable " + tempFile + " @ " + offset + " -> " + targetFile. }

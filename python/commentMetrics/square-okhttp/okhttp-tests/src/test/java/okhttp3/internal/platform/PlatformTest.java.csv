@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;@Test public void alwaysBuilds() {     new Platform(). }
+true;public;0;3;/**  * Guard against the default value changing by accident.  */ ;/**  * Guard against the default value changing by accident.  */ @Test public void defaultPrefix() {     assertEquals("OkHttp", new Platform().getPrefix()). }
+false;public,static;0;3;;public static String getPlatform() {     return System.getProperty("okhttp.platform", "platform"). }
+false;public,static;0;3;;public static String getJvmSpecVersion() {     return System.getProperty("java.specification.version", "unknown"). }
+false;public;0;4;;@Test public void testToStringIsClassname() {     assertEquals("Platform", new Platform().toString()). }

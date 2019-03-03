@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void setCollector(Collector<PyObject> collector) {     this.collector = collector. }
+false;public;1;5;;@Override public void collect(Object record) {     PyObject po = AdapterMap.adapt(record).     this.collector.collect(po). }
+false;public;0;4;;@Override public void close() {     this.collector.close(). }

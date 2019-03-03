@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;2;5;;<SE extends Throwable, CE extends Throwable, T> T getWithTtlCheckAndUpdate(SupplierWithException<TtlValue<T>, SE> getter, ThrowingConsumer<TtlValue<T>, CE> updater) throws SE, CE {     return getWithTtlCheckAndUpdate(getter, updater, original::clear). }
+false;public;0;4;;@Override public TypeSerializer<K> getKeySerializer() {     return original.getKeySerializer(). }
+false;public;0;4;;@Override public TypeSerializer<N> getNamespaceSerializer() {     return original.getNamespaceSerializer(). }
+false;public;0;4;;@Override public TypeSerializer<SV> getValueSerializer() {     return valueSerializer. }
+false;public;1;4;;@Override public void setCurrentNamespace(N namespace) {     original.setCurrentNamespace(namespace). }
+false;public;4;8;;@Override public byte[] getSerializedValue(byte[] serializedKeyAndNamespace, TypeSerializer<K> safeKeySerializer, TypeSerializer<N> safeNamespaceSerializer, TypeSerializer<SV> safeValueSerializer) {     throw new FlinkRuntimeException("Queryable state is not currently supported with TTL."). }
+false;public;0;5;;@Override public void clear() {     original.clear().     accessCallback.run(). }
+true;public,abstract;1;2;/**  * Check if state has expired or not and update it if it has partially expired.  *  * @return either non expired (possibly updated) state or null if the state has expired.  */ ;/**  * Check if state has expired or not and update it if it has partially expired.  *  * @return either non expired (possibly updated) state or null if the state has expired.  */ @Nullable public abstract TTLSV getUnexpiredOrNull(@Nonnull TTLSV ttlValue).
+false;public;1;4;;@Override public StateIncrementalVisitor<K, N, SV> getStateIncrementalVisitor(int recommendedMaxNumberOfReturnedRecords) {     throw new UnsupportedOperationException(). }

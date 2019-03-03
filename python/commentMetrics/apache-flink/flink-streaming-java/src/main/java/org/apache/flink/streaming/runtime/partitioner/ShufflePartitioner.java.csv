@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public int selectChannel(SerializationDelegate<StreamRecord<T>> record) {     return random.nextInt(numberOfChannels). }
+false;public;0;4;;@Override public StreamPartitioner<T> copy() {     return new ShufflePartitioner<T>(). }
+false;public;0;4;;@Override public String toString() {     return "SHUFFLE". }

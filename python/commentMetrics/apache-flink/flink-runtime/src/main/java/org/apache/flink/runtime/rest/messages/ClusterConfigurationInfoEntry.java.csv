@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getKey() {     return key. }
+false;public;0;3;;public String getValue() {     return value. }
+false;public;1;13;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     ClusterConfigurationInfoEntry that = (ClusterConfigurationInfoEntry) o.     return key.equals(that.key) && value.equals(that.value). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(key, value). }
+false;public;0;4;;@Override public String toString() {     return "(" + key + "," + value + ")". }

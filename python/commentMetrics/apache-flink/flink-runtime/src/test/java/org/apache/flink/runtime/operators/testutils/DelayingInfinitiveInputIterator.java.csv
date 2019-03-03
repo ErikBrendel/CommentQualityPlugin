@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public Record next(Record reuse) {     try {         Thread.sleep(delay).     } catch (InterruptedException e) {     }     return super.next(reuse). }
+false;public;0;8;;@Override public Record next() {     try {         Thread.sleep(delay).     } catch (InterruptedException e) {     }     return super.next(). }

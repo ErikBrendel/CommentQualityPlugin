@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void testS3Factory() {     testFactory("s3"). }
+false;public;0;4;;@Test public void testS3AFactory() {     testFactory("s3a"). }
+false;private,static;1;11;;private static void testFactory(String scheme) {     ServiceLoader<FileSystemFactory> serviceLoader = ServiceLoader.load(FileSystemFactory.class).     for (FileSystemFactory fs : serviceLoader) {         if (scheme.equals(fs.getScheme())) {             // found the matching scheme             return.         }     }     fail("No factory available for scheme " + scheme). }

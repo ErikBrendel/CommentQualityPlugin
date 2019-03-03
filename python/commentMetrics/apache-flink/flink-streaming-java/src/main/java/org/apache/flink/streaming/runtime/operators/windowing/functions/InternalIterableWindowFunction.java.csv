@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;5;4;;@Override public void process(KEY key, W window, InternalWindowContext context, Iterable<IN> input, Collector<OUT> out) throws Exception {     wrappedFunction.apply(key, window, input, out). }
+false;public;2;4;;@Override public void clear(W window, InternalWindowContext context) throws Exception { }
+false;public;0;4;;@Override public RuntimeContext getRuntimeContext() {     throw new RuntimeException("This should never be called."). }
+false;public;0;4;;@Override public IterationRuntimeContext getIterationRuntimeContext() {     throw new RuntimeException("This should never be called."). }

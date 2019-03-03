@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;2;3;;public static AsynchronousJobOperationKey of(final TriggerId triggerId, final JobID jobId) {     return new AsynchronousJobOperationKey(triggerId, jobId). }
+false;public;1;17;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     if (!super.equals(o)) {         return false.     }     AsynchronousJobOperationKey that = (AsynchronousJobOperationKey) o.     return Objects.equals(jobId, that.jobId). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(super.hashCode(), jobId). }

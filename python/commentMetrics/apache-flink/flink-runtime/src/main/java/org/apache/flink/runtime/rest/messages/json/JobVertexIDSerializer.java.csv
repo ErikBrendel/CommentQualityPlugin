@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;4;;@Override public void serialize(JobVertexID value, JsonGenerator gen, SerializerProvider provider) throws IOException {     gen.writeString(value.toString()). }

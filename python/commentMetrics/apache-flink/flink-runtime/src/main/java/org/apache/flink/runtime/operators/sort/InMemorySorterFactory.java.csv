@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;1;1;/**  * Create an {@link InMemorySorter} instance with the given memory segments.  *  * @param sortSegments to initialize the InMemorySorter with  * @return new InMemorySorter instance  */ ;/**  * Create an {@link InMemorySorter} instance with the given memory segments.  *  * @param sortSegments to initialize the InMemorySorter with  * @return new InMemorySorter instance  */ InMemorySorter<T> create(List<MemorySegment> sortSegments).

@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean isBasicType() {     return false. }
+false;public;0;4;;@Override public boolean isTupleType() {     return false. }
+false;public;0;4;;@Override public int getArity() {     return 0. }
+false;public;0;4;;@Override public int getTotalFields() {     return 1. }
+false;public;0;4;;@Override public Class<VoidNamespace> getTypeClass() {     return VoidNamespace.class. }
+false;public;0;4;;@Override public boolean isKeyType() {     return false. }
+false;public;1;4;;@Override public TypeSerializer<VoidNamespace> createSerializer(ExecutionConfig config) {     return VoidNamespaceSerializer.INSTANCE. }
+false;public;0;4;;@Override public String toString() {     return "VoidNamespaceTypeInfo". }
+false;public;1;4;;@Override public boolean equals(Object obj) {     return this == obj || obj instanceof VoidNamespaceTypeInfo. }
+false;public;0;4;;@Override public int hashCode() {     return 0. }
+false;public;1;4;;@Override public boolean canEqual(Object obj) {     return obj instanceof VoidNamespaceTypeInfo. }

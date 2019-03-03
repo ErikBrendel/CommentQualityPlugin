@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;6;;@Override protected ExecutorService createShardConsumersThreadPool(final String subtaskName) {     final ThreadFactory threadFactory = new ThreadFactoryBuilder().setNameFormat("KinesisShardConsumers-%d").build().     return Executors.newSingleThreadExecutor(threadFactory). }
+false;public;0;12;;@Override public void awaitTermination() throws InterruptedException {     try {         // Force this method to only exit by thread getting interrupted.         while (true) {             Thread.sleep(1000).         }     } catch (InterruptedException e) {         wasInterrupted = true.         throw e.     } }
+false;protected;0;4;;@Override protected KinesisDeserializationSchema<T> getClonedDeserializationSchema() {     return super.getClonedDeserializationSchema(). }

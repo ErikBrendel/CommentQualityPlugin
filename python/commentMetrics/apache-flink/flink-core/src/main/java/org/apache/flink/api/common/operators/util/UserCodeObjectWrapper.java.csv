@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public T getUserCodeObject(Class<? super T> superClass, ClassLoader cl) {     return userCodeObject. }
+false;public;0;5;;@Override public T getUserCodeObject() {     return userCodeObject. }
+false;public;1;4;;@Override public <A extends Annotation> A getUserCodeAnnotation(Class<A> annotationClass) {     return userCodeObject.getClass().getAnnotation(annotationClass). }
+false;public;0;5;;@SuppressWarnings("unchecked") @Override public Class<? extends T> getUserCodeClass() {     return (Class<? extends T>) userCodeObject.getClass(). }
+false;public;0;4;;@Override public boolean hasObject() {     return true. }

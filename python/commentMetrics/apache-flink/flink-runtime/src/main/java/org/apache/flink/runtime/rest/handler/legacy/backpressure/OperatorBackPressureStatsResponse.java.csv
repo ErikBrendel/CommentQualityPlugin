@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static OperatorBackPressureStatsResponse of(@Nullable final OperatorBackPressureStats operatorBackPressureStats) {     return new OperatorBackPressureStatsResponse(operatorBackPressureStats). }
+false;public;0;3;;public Optional<OperatorBackPressureStats> getOperatorBackPressureStats() {     return Optional.ofNullable(operatorBackPressureStats). }

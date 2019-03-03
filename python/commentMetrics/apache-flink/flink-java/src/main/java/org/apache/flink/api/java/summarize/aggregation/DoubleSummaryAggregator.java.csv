@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void aggregate(Double value) {     min = Math.min(min, value). }
+false;public;1;4;;@Override public void combine(Aggregator<Double, Double> other) {     min = Math.min(min, ((MinDoubleAggregator) other).min). }
+false;public;0;4;;@Override public Double result() {     return min. }
+false;public;1;4;;@Override public void aggregate(Double value) {     max = Math.max(max, value). }
+false;public;1;4;;@Override public void combine(Aggregator<Double, Double> other) {     max = Math.max(max, ((MaxDoubleAggregator) other).max). }
+false;public;0;4;;@Override public Double result() {     return max. }
+false;public;1;4;;@Override public void aggregate(Double value) {     sum = sum.add(value). }
+false;public;1;4;;@Override public void combine(Aggregator<Double, Double> other) {     sum = sum.add(((SumDoubleAggregator) other).sum). }
+false;public;0;4;;@Override public Double result() {     return sum.value(). }
+false;protected;0;4;;@Override protected Aggregator<Double, Double> initMin() {     return new MinDoubleAggregator(). }
+false;protected;0;4;;@Override protected Aggregator<Double, Double> initMax() {     return new MaxDoubleAggregator(). }
+false;protected;0;4;;@Override protected Aggregator<Double, Double> initSum() {     return new SumDoubleAggregator(). }
+false;protected;1;4;;@Override protected boolean isNan(Double number) {     return number.isNaN(). }
+false;protected;1;4;;@Override protected boolean isInfinite(Double number) {     return number.isInfinite(). }

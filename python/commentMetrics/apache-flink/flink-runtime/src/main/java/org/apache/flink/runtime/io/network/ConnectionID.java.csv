@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public InetSocketAddress getAddress() {     return address. }
+false;public;0;3;;public int getConnectionIndex() {     return connectionIndex. }
+false;public;0;4;;@Override public int hashCode() {     return address.hashCode() + (31 * connectionIndex). }
+false;public;1;13;;@Override public boolean equals(Object other) {     if (other.getClass() != ConnectionID.class) {         return false.     }     final ConnectionID ra = (ConnectionID) other.     if (!ra.getAddress().equals(address) || ra.getConnectionIndex() != connectionIndex) {         return false.     }     return true. }
+false;public;0;4;;@Override public String toString() {     return address + " [" + connectionIndex + "]". }

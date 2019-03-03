@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public void run(SourceContext<T> ctx) throws Exception {     // first round of sending the elements and waiting for the checkpoints     emitElementsAndWaitForCheckpoints(ctx, 2).     // second round of the same     emitElementsAndWaitForCheckpoints(ctx, 2). }
+false;private;2;17;;private void emitElementsAndWaitForCheckpoints(SourceContext<T> ctx, int checkpointsToWaitFor) throws InterruptedException {     final Object lock = ctx.getCheckpointLock().     final int checkpointToAwait.     synchronized (lock) {         checkpointToAwait = numCheckpointsComplete + checkpointsToWaitFor.         for (T t : elements) {             ctx.collect(t).         }     }     synchronized (lock) {         while (running && numCheckpointsComplete < checkpointToAwait) {             lock.wait(1).         }     } }
+false;public;0;4;;@Override public void cancel() {     running = false. }
+false;public;1;4;;@Override public void notifyCheckpointComplete(long checkpointId) throws Exception {     numCheckpointsComplete++. }

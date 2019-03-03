@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;public TestingResourceActionsBuilder setReleaseResourceConsumer(BiConsumer<InstanceID, Exception> releaseResourceConsumer) {     this.releaseResourceConsumer = releaseResourceConsumer.     return this. }
+false;public;1;4;;public TestingResourceActionsBuilder setAllocateResourceFunction(FunctionWithException<ResourceProfile, Collection<ResourceProfile>, ResourceManagerException> allocateResourceFunction) {     this.allocateResourceFunction = allocateResourceFunction.     return this. }
+false;public;1;7;;public TestingResourceActionsBuilder setAllocateResourceConsumer(Consumer<ResourceProfile> allocateResourceConsumer) {     this.allocateResourceFunction = (ResourceProfile resourceProfile) -> {         allocateResourceConsumer.accept(resourceProfile).         return Collections.singleton(ResourceProfile.UNKNOWN).     }.     return this. }
+false;public;1;4;;public TestingResourceActionsBuilder setNotifyAllocationFailureConsumer(Consumer<Tuple3<JobID, AllocationID, Exception>> notifyAllocationFailureConsumer) {     this.notifyAllocationFailureConsumer = notifyAllocationFailureConsumer.     return this. }
+false;public;0;3;;public TestingResourceActions build() {     return new TestingResourceActions(releaseResourceConsumer, allocateResourceFunction, notifyAllocationFailureConsumer). }

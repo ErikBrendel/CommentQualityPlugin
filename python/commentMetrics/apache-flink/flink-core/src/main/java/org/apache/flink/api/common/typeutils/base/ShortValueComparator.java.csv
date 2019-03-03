@@ -1,0 +1,18 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public int hash(ShortValue record) {     return record.hashCode(). }
+false;public;1;4;;@Override public void setReference(ShortValue toCompare) {     toCompare.copyTo(reference). }
+false;public;1;4;;@Override public boolean equalToReference(ShortValue candidate) {     return candidate.equals(this.reference). }
+false;public;1;6;;@Override public int compareToReference(TypeComparator<ShortValue> referencedComparator) {     ShortValue otherRef = ((ShortValueComparator) referencedComparator).reference.     int comp = otherRef.compareTo(reference).     return ascendingComparison ? comp : -comp. }
+false;public;2;5;;@Override public int compare(ShortValue first, ShortValue second) {     int comp = first.compareTo(second).     return ascendingComparison ? comp : -comp. }
+false;public;2;7;;@Override public int compareSerialized(DataInputView firstSource, DataInputView secondSource) throws IOException {     reference.read(firstSource).     tempReference.read(secondSource).     int comp = reference.compareTo(tempReference).     return ascendingComparison ? comp : -comp. }
+false;public;0;4;;@Override public boolean supportsNormalizedKey() {     return NormalizableKey.class.isAssignableFrom(ShortValue.class). }
+false;public;0;4;;@Override public int getNormalizeKeyLen() {     return reference.getMaxNormalizedKeyLen(). }
+false;public;1;4;;@Override public boolean isNormalizedKeyPrefixOnly(int keyBytes) {     return keyBytes < getNormalizeKeyLen(). }
+false;public;4;4;;@Override public void putNormalizedKey(ShortValue record, MemorySegment target, int offset, int numBytes) {     record.copyNormalizedKey(target, offset, numBytes). }
+false;public;0;4;;@Override public boolean invertNormalizedKey() {     return !ascendingComparison. }
+false;public;0;4;;@Override public TypeComparator<ShortValue> duplicate() {     return new ShortValueComparator(ascendingComparison). }
+false;public;3;5;;@Override public int extractKeys(Object record, Object[] target, int index) {     target[index] = record.     return 1. }
+false;public;0;4;;@Override public TypeComparator<?>[] getFlatComparators() {     return comparators. }
+false;public;0;4;;// -------------------------------------------------------------------------------------------- // unsupported normalization // -------------------------------------------------------------------------------------------- @Override public boolean supportsSerializationWithKeyNormalization() {     return false. }
+false;public;2;4;;@Override public void writeWithKeyNormalization(ShortValue record, DataOutputView target) throws IOException {     throw new UnsupportedOperationException(). }
+false;public;2;4;;@Override public ShortValue readWithKeyDenormalization(ShortValue reuse, DataInputView source) throws IOException {     throw new UnsupportedOperationException(). }

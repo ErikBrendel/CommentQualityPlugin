@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public IterativeCondition<T>[] getNestedConditions() {     return nestedConditions. }
+false;public;1;8;;@Override public void setRuntimeContext(RuntimeContext t) {     super.setRuntimeContext(t).     for (IterativeCondition<T> nestedCondition : nestedConditions) {         FunctionUtils.setFunctionRuntimeContext(nestedCondition, t).     } }
+false;public;1;7;;@Override public void open(Configuration parameters) throws Exception {     super.open(parameters).     for (IterativeCondition<T> nestedCondition : nestedConditions) {         FunctionUtils.openFunction(nestedCondition, parameters).     } }
+false;public;0;7;;@Override public void close() throws Exception {     super.close().     for (IterativeCondition<T> nestedCondition : nestedConditions) {         FunctionUtils.closeFunction(nestedCondition).     } }

@@ -1,0 +1,20 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public LeaderRetrievalService getResourceManagerLeaderRetriever() {     return resourceManagerLeaderService.createLeaderRetrievalService(). }
+false;public;0;4;;@Override public LeaderRetrievalService getDispatcherLeaderRetriever() {     return dispatcherLeaderService.createLeaderRetrievalService(). }
+false;public;1;6;;@Override public LeaderRetrievalService getJobManagerLeaderRetriever(JobID jobID) {     ManualLeaderService leaderService = getOrCreateJobManagerLeaderService(jobID).     return leaderService.createLeaderRetrievalService(). }
+false;public;2;4;;@Override public LeaderRetrievalService getJobManagerLeaderRetriever(JobID jobID, String defaultJobManagerAddress) {     return getJobManagerLeaderRetriever(jobID). }
+false;public;0;4;;@Override public LeaderRetrievalService getWebMonitorLeaderRetriever() {     return webMonitorEndpointLeaderService.createLeaderRetrievalService(). }
+false;public;0;4;;@Override public LeaderElectionService getResourceManagerLeaderElectionService() {     return resourceManagerLeaderService.createLeaderElectionService(). }
+false;public;0;4;;@Override public LeaderElectionService getDispatcherLeaderElectionService() {     return dispatcherLeaderService.createLeaderElectionService(). }
+false;public;1;6;;@Override public LeaderElectionService getJobManagerLeaderElectionService(JobID jobID) {     ManualLeaderService leaderService = getOrCreateJobManagerLeaderService(jobID).     return leaderService.createLeaderElectionService(). }
+false;public;0;4;;@Override public LeaderElectionService getWebMonitorLeaderElectionService() {     return webMonitorEndpointLeaderService.createLeaderElectionService(). }
+false;public;0;4;;@Override public CheckpointRecoveryFactory getCheckpointRecoveryFactory() {     return new StandaloneCheckpointRecoveryFactory(). }
+false;public;0;4;;@Override public SubmittedJobGraphStore getSubmittedJobGraphStore() throws Exception {     return new StandaloneSubmittedJobGraphStore(). }
+false;public;0;4;;@Override public RunningJobsRegistry getRunningJobsRegistry() throws Exception {     return new StandaloneRunningJobsRegistry(). }
+false;public;0;4;;@Override public BlobStore createBlobStore() throws IOException {     return new VoidBlobStore(). }
+false;public;0;4;;@Override public void close() throws Exception { // nothing to do }
+false;public;0;4;;@Override public void closeAndCleanupAllData() throws Exception { // nothing to do }
+false;public;3;10;;public void grantLeadership(JobID jobId, int index, UUID leaderId) {     ManualLeaderService manualLeaderService = jobManagerLeaderServices.get(jobId).     if (manualLeaderService != null) {         manualLeaderService.grantLeadership(index, leaderId).     } else {         throw new IllegalStateException("No manual leader service for job id " + jobId + " has been initialized.").     } }
+false;public;1;10;;public void revokeLeadership(JobID jobId) {     ManualLeaderService manualLeaderService = jobManagerLeaderServices.get(jobId).     if (manualLeaderService != null) {         manualLeaderService.revokeLeadership().     } else {         throw new IllegalStateException("No manual leader service for job id " + jobId + " has been initialized.").     } }
+false;public;3;10;;public void notifyRetrievers(JobID jobId, int index, UUID leaderId) {     ManualLeaderService manualLeaderService = jobManagerLeaderServices.get(jobId).     if (manualLeaderService != null) {         manualLeaderService.notifyRetrievers(index, leaderId).     } else {         throw new IllegalStateException("No manual leader service for job id " + jobId + " has been initialized.").     } }
+false;private;1;10;;private ManualLeaderService getOrCreateJobManagerLeaderService(JobID jobId) {     ManualLeaderService manualLeaderService = jobManagerLeaderServices.get(jobId).     if (manualLeaderService == null) {         manualLeaderService = new ManualLeaderService().         jobManagerLeaderServices.put(jobId, manualLeaderService).     }     return manualLeaderService. }

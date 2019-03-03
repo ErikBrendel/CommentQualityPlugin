@@ -1,5 +1,7 @@
-# id;timestamp;commentText;codeText;commentWords;codeWords
-MetricDump -> public abstract byte getCategory()_;1473959872;Returns the category for this MetricDump.__@return category;public abstract byte getCategory()_;returns,the,category,for,this,metric,dump,return,category;public,abstract,byte,get,category
-MetricDump -> public abstract byte getCategory()_;1496409235;Returns the category for this MetricDump.__@return category;public abstract byte getCategory()_;returns,the,category,for,this,metric,dump,return,category;public,abstract,byte,get,category
-MetricDump -> public abstract byte getCategory()_;1510063662;Returns the category for this MetricDump.__@return category;public abstract byte getCategory()_;returns,the,category,for,this,metric,dump,return,category;public,abstract,byte,get,category
-MetricDump -> public abstract byte getCategory()_;1528998426;Returns the category for this MetricDump.__@return category;public abstract byte getCategory()_;returns,the,category,for,this,metric,dump,return,category;public,abstract,byte,get,category
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,abstract;0;1;/**  * Returns the category for this MetricDump.  *  * @return category  */ ;/**  * Returns the category for this MetricDump.  *  * @return category  */ public abstract byte getCategory().
+false;public;0;8;;@Override public String toString() {     return "MetricDump{" + "scopeInfo=" + scopeInfo + ", name='" + name + '\'' + ", category='" + getCategory() + '\'' + '}'. }
+false;public;0;4;;@Override public byte getCategory() {     return METRIC_CATEGORY_COUNTER. }
+false;public;0;4;;@Override public byte getCategory() {     return METRIC_CATEGORY_GAUGE. }
+false;public;0;4;;@Override public byte getCategory() {     return METRIC_CATEGORY_HISTOGRAM. }
+false;public;0;4;;@Override public byte getCategory() {     return METRIC_CATEGORY_METER. }

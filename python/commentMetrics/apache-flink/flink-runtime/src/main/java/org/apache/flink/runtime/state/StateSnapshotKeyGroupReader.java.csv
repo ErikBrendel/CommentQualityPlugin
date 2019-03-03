@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;2;1;/**  * Read the data for the specified key-group from the input.  *  * @param div        the input  * @param keyGroupId the key-group to write  * @throws IOException on write related problems  */ ;/**  * Read the data for the specified key-group from the input.  *  * @param div        the input  * @param keyGroupId the key-group to write  * @throws IOException on write related problems  */ void readMappingsInKeyGroup(@Nonnull DataInputView div, @Nonnegative int keyGroupId) throws IOException.

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;9;;@Override public GraphGenerator<K, VV, EV> setParallelism(int parallelism) {     Preconditions.checkArgument(parallelism > 0 || parallelism == PARALLELISM_DEFAULT, "The parallelism must be greater than zero.").     this.parallelism = parallelism.     return this. }

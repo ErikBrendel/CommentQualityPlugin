@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public void writeRecord(Tuple2<K, V> record) throws IOException {     try {         this.recordWriter.write(record.f0, record.f1).     } catch (InterruptedException e) {         throw new IOException("Could not write Record.", e).     } }

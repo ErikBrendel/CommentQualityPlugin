@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;8;;@Override protected Object[] extractFields(OUT record) {     Object[] fields = new Object[record.getArity()].     for (int i = 0. i < fields.length. i++) {         fields[i] = record.getField(i).     }     return fields. }

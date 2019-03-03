@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public File allocationBaseDirectory(long checkpointId) {     return selectAllocationBaseDirectory((((int) checkpointId) & Integer.MAX_VALUE) % allocationBaseDirs.length). }
+false;public;1;4;;@Override public File subtaskBaseDirectory(long checkpointId) {     return new File(allocationBaseDirectory(checkpointId), subtaskDirString()). }
+false;public;1;4;;@Override public File subtaskSpecificCheckpointDirectory(long checkpointId) {     return new File(subtaskBaseDirectory(checkpointId), checkpointDirString(checkpointId)). }
+false;public;1;4;;@Override public File selectAllocationBaseDirectory(int idx) {     return allocationBaseDirs[idx]. }
+false;public;1;4;;@Override public File selectSubtaskBaseDirectory(int idx) {     return new File(selectAllocationBaseDirectory(idx), subtaskDirString()). }
+false;public;0;4;;@Override public int allocationBaseDirsCount() {     return allocationBaseDirs.length. }
+false;public;0;9;;@Override public String toString() {     return "LocalRecoveryDirectoryProvider{" + "rootDirectories=" + Arrays.toString(allocationBaseDirs) + ", jobID=" + jobID + ", jobVertexID=" + jobVertexID + ", subtaskIndex=" + subtaskIndex + '}'. }
+false;;0;4;;@VisibleForTesting String subtaskDirString() {     return Paths.get("jid_" + jobID, "vtx_" + jobVertexID + "_sti_" + subtaskIndex).toString(). }
+false;;1;4;;@VisibleForTesting String checkpointDirString(long checkpointId) {     return "chk_" + checkpointId. }

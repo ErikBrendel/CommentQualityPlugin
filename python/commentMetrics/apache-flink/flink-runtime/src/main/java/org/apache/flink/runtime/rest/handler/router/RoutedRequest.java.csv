@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public RouteResult<T> getRouteResult() {     return result. }
+false;public;0;3;;public HttpRequest getRequest() {     return request. }
+false;public;0;3;;public String getPath() {     return queryStringDecoder.path(). }
+false;public;0;7;;@Override public int refCnt() {     if (requestAsReferenceCounted.isPresent()) {         return requestAsReferenceCounted.get().refCnt().     }     return 0. }
+false;public;0;7;;@Override public boolean release() {     if (requestAsReferenceCounted.isPresent()) {         return requestAsReferenceCounted.get().release().     }     return true. }
+false;public;1;7;;@Override public boolean release(int arg0) {     if (requestAsReferenceCounted.isPresent()) {         return requestAsReferenceCounted.get().release(arg0).     }     return true. }
+false;public;0;7;;@Override public ReferenceCounted retain() {     if (requestAsReferenceCounted.isPresent()) {         requestAsReferenceCounted.get().retain().     }     return this. }
+false;public;1;7;;@Override public ReferenceCounted retain(int arg0) {     if (requestAsReferenceCounted.isPresent()) {         requestAsReferenceCounted.get().retain(arg0).     }     return this. }
+false;public;0;7;;@Override public ReferenceCounted touch() {     if (requestAsReferenceCounted.isPresent()) {         ReferenceCountUtil.touch(requestAsReferenceCounted.get()).     }     return this. }
+false;public;1;7;;@Override public ReferenceCounted touch(Object hint) {     if (requestAsReferenceCounted.isPresent()) {         ReferenceCountUtil.touch(requestAsReferenceCounted.get(), hint).     }     return this. }

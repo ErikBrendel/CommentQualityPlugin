@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;8;;@Override protected MapTypeInfo<?, ?>[] getTestData() {     return new MapTypeInfo<?, ?>[] { new MapTypeInfo<>(BasicTypeInfo.STRING_TYPE_INFO, BasicTypeInfo.INT_TYPE_INFO), new MapTypeInfo<>(BasicTypeInfo.INT_TYPE_INFO, BasicTypeInfo.STRING_TYPE_INFO), new MapTypeInfo<>(String.class, Boolean.class) }. }

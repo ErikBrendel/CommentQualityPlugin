@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Nonnull @Override public StateMetaInfoSnapshot snapshot() {     return computeSnapshot(). }
+false;public;0;4;;@Nonnull public TypeSerializer<T> getElementSerializer() {     return elementSerializerProvider.currentSchemaSerializer(). }
+false;public;1;4;;@Nonnull public TypeSerializerSchemaCompatibility<T> updateElementSerializer(TypeSerializer<T> newElementSerializer) {     return elementSerializerProvider.registerNewSerializerForRestoredState(newElementSerializer). }
+false;public;0;4;;@Nullable public TypeSerializer<T> getPreviousElementSerializer() {     return elementSerializerProvider.previousSchemaSerializer(). }
+false;private;0;18;;private StateMetaInfoSnapshot computeSnapshot() {     TypeSerializer<T> elementSerializer = getElementSerializer().     Map<String, TypeSerializer<?>> serializerMap = Collections.singletonMap(StateMetaInfoSnapshot.CommonSerializerKeys.VALUE_SERIALIZER.toString(), elementSerializer.duplicate()).     Map<String, TypeSerializerSnapshot<?>> serializerSnapshotMap = Collections.singletonMap(StateMetaInfoSnapshot.CommonSerializerKeys.VALUE_SERIALIZER.toString(), elementSerializer.snapshotConfiguration()).     return new StateMetaInfoSnapshot(name, StateMetaInfoSnapshot.BackendStateType.PRIORITY_QUEUE, Collections.emptyMap(), serializerSnapshotMap, serializerMap). }
+false;public;0;3;;public RegisteredPriorityQueueStateBackendMetaInfo deepCopy() {     return new RegisteredPriorityQueueStateBackendMetaInfo<>(name, getElementSerializer().duplicate()). }

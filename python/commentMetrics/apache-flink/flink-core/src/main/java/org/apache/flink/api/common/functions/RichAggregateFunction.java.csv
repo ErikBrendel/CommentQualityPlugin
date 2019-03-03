@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,abstract;0;2;;@Override public abstract ACC createAccumulator().
+false;public,abstract;2;2;;@Override public abstract ACC add(IN value, ACC accumulator).
+false;public,abstract;1;2;;@Override public abstract OUT getResult(ACC accumulator).
+false;public,abstract;2;2;;@Override public abstract ACC merge(ACC a, ACC b).

@@ -1,4 +1,11 @@
-# id;timestamp;commentText;codeText;commentWords;codeWords
-InternalTimersSnapshot -> public InternalTimersSnapshot();1517943539;Empty constructor used when restoring the timers.;public InternalTimersSnapshot() {};empty,constructor,used,when,restoring,the,timers;public,internal,timers,snapshot
-InternalTimersSnapshot -> public InternalTimersSnapshot();1530639128;Empty constructor used when restoring the timers.;public InternalTimersSnapshot() {};empty,constructor,used,when,restoring,the,timers;public,internal,timers,snapshot
-InternalTimersSnapshot -> public InternalTimersSnapshot();1539149114;Empty constructor used when restoring the timers.;public InternalTimersSnapshot() {};empty,constructor,used,when,restoring,the,timers;public,internal,timers,snapshot
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public TypeSerializerSnapshot<K> getKeySerializerSnapshot() {     return keySerializerSnapshot. }
+false;public;1;3;;public void setKeySerializerSnapshot(TypeSerializerSnapshot<K> keySerializerConfigSnapshot) {     this.keySerializerSnapshot = keySerializerConfigSnapshot. }
+false;public;0;3;;public TypeSerializerSnapshot<N> getNamespaceSerializerSnapshot() {     return namespaceSerializerSnapshot. }
+false;public;1;3;;public void setNamespaceSerializerSnapshot(TypeSerializerSnapshot<N> namespaceSerializerConfigSnapshot) {     this.namespaceSerializerSnapshot = namespaceSerializerConfigSnapshot. }
+false;public;0;3;;public Set<TimerHeapInternalTimer<K, N>> getEventTimeTimers() {     return eventTimeTimers. }
+false;public;1;3;;public void setEventTimeTimers(Set<TimerHeapInternalTimer<K, N>> eventTimeTimers) {     this.eventTimeTimers = eventTimeTimers. }
+false;public;0;3;;public Set<TimerHeapInternalTimer<K, N>> getProcessingTimeTimers() {     return processingTimeTimers. }
+false;public;1;3;;public void setProcessingTimeTimers(Set<TimerHeapInternalTimer<K, N>> processingTimeTimers) {     this.processingTimeTimers = processingTimeTimers. }
+false;public;1;4;;@Override public boolean equals(Object obj) {     return super.equals(obj). }
+false;public;0;4;;@Override public int hashCode() {     return super.hashCode(). }

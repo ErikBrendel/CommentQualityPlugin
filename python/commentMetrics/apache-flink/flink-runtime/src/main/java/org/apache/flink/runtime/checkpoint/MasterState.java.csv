@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;// ------------------------------------------------------------------------ public String name() {     return name. }
+false;public;0;3;;public byte[] bytes() {     return bytes. }
+false;public;0;3;;public int version() {     return version. }
+false;public;0;4;;// ------------------------------------------------------------------------ @Override public String toString() {     return "name: " + name + " . version: " + version + " . bytes: " + Arrays.toString(bytes). }

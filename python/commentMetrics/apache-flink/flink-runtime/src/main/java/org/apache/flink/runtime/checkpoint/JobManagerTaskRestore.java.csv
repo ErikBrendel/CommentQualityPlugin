@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public long getRestoreCheckpointId() {     return restoreCheckpointId. }
+false;public;0;4;;@Nonnull public TaskStateSnapshot getTaskStateSnapshot() {     return taskStateSnapshot. }
+false;public;0;7;;@Override public String toString() {     return "JobManagerTaskRestore{" + "restoreCheckpointId=" + restoreCheckpointId + ", taskStateSnapshot=" + taskStateSnapshot + '}'. }

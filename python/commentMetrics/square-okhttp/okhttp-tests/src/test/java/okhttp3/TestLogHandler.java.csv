@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;7;;@Override public void publish(LogRecord logRecord) {     if (getFormatter() == null) {         logs.add(logRecord.getLevel() + ": " + logRecord.getMessage()).     } else {         logs.add(getFormatter().format(logRecord)).     } }
+false;public;0;2;;@Override public void flush() { }
+false;public;0;2;;@Override public void close() { }
+false;public;0;5;;public List<String> takeAll() {     List<String> list = new ArrayList<>().     logs.drainTo(list).     return list. }
+false;public;0;7;;public String take() throws Exception {     String message = logs.poll(10, TimeUnit.SECONDS).     if (message == null) {         throw new AssertionError("Timed out waiting for log message.").     }     return message. }

@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void testIntermediateVertexGetId() {     assertEquals(Integer.valueOf(ID), projection.getIntermediateVertexId()). }
+false;public;0;4;;@Test public void testGetIntermediateVertexValue() {     assertEquals(VERTEX_VALUE, projection.getIntermediateVertexValue()). }
+false;public;0;4;;@Test public void testGetSourceEdgeValue() {     assertEquals(SOURCE_EDGE_VALUE, projection.getSourceEdgeValue()). }
+false;public;0;4;;@Test public void testGetTargetEdgeValue() {     assertEquals(TARGET_EDGE_VALUE, projection.getTargetEdgeValue()). }
+false;public;0;4;;@Test public void testGetSourceVertexValue() {     assertEquals(SOURCE_VERTEX_VALUE, projection.getsSourceVertexValue()). }
+false;public;0;4;;@Test public void testGetTargetVertexValue() {     assertEquals(TARGET_VERTEX_VALUE, projection.getTargetVertexValue()). }
+false;private;0;8;;private Projection<Integer, String, String, String> createProjection() {     return new Projection<>(new Vertex<>(ID, VERTEX_VALUE), SOURCE_VERTEX_VALUE, TARGET_VERTEX_VALUE, SOURCE_EDGE_VALUE, TARGET_EDGE_VALUE). }

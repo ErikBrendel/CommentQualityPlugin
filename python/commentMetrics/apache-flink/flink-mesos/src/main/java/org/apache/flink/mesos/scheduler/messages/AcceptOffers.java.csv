@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String hostname() {     return hostname. }
+false;public;0;3;;public Collection<Protos.OfferID> offerIds() {     return offerIds. }
+false;public;0;3;;public Collection<Protos.Offer.Operation> operations() {     return operations. }
+false;public;0;3;;public Protos.Filters filters() {     return filters. }
+false;public;0;9;;@Override public String toString() {     return "AcceptOffers{" + "hostname='" + hostname + '\'' + ", offerIds=" + offerIds + ", operations=" + operations + ", filters=" + filters + '}'. }

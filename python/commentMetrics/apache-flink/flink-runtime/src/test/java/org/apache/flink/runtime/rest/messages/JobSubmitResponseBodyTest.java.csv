@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected Class<JobSubmitResponseBody> getTestResponseClass() {     return JobSubmitResponseBody.class. }
+false;protected;0;4;;@Override protected JobSubmitResponseBody getTestResponseInstance() throws Exception {     return new JobSubmitResponseBody("/url"). }

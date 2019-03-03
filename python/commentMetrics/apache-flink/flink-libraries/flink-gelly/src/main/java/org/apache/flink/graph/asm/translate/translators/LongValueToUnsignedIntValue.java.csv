@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;16;;@Override public IntValue translate(LongValue value, IntValue reuse) throws Exception {     if (reuse == null) {         reuse = new IntValue().     }     long l = value.getValue().     if (l < 0 || l >= MAX_VERTEX_COUNT) {         throw new IllegalArgumentException("Cannot cast long value " + value + " to integer.").     }     reuse.setValue((int) (l & (MAX_VERTEX_COUNT - 1))).     return reuse. }

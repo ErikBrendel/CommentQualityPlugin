@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;14;;@Before public void setUp() throws Exception {     if (!foldingStateDesc.isSerializerInitialized()) {         foldingStateDesc.initializeSerializerUnlessSet(new ExecutionConfig()).     }     ByteArrayOutputStream out = new ByteArrayOutputStream().     StringSerializer.INSTANCE.serialize("42", new DataOutputViewStreamWrapper(out)).     foldingState = ImmutableFoldingState.createState(foldingStateDesc, out.toByteArray()). }
+false;public;0;7;;@Test(expected = UnsupportedOperationException.class) public void testUpdate() throws Exception {     String value = foldingState.get().     assertEquals("42", value).     foldingState.add(54L). }
+false;public;0;7;;@Test(expected = UnsupportedOperationException.class) public void testClear() throws Exception {     String value = foldingState.get().     assertEquals("42", value).     foldingState.clear(). }
+false;public;2;6;;@Override public String fold(String accumulator, Long value) throws Exception {     long acc = Long.valueOf(accumulator).     acc += value.     return Long.toString(acc). }

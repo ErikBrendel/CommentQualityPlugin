@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Gets the ID under which the resource is registered (for example container ID).  * @return The resource ID  */ ;// ------------------------------------------------------------------------ /**  * Gets the ID under which the resource is registered (for example container ID).  * @return The resource ID  */ public ResourceID resourceId() {     return resourceId. }
+false;public;0;6;;// ------------------------------------------------------------------------ @Override public String toString() {     return "RemoveResource{" + "resourceId=" + resourceId + '}'. }

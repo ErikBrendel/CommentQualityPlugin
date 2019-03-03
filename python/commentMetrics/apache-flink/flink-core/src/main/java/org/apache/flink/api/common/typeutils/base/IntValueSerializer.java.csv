@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean isImmutableType() {     return false. }
+false;public;0;4;;@Override public IntValue createInstance() {     return new IntValue(). }
+false;public;1;4;;@Override public IntValue copy(IntValue from) {     return copy(from, new IntValue()). }
+false;public;2;5;;@Override public IntValue copy(IntValue from, IntValue reuse) {     reuse.setValue(from.getValue()).     return reuse. }
+false;public;0;4;;@Override public int getLength() {     return 4. }
+false;public;2;4;;@Override public void serialize(IntValue record, DataOutputView target) throws IOException {     record.write(target). }
+false;public;1;4;;@Override public IntValue deserialize(DataInputView source) throws IOException {     return deserialize(new IntValue(), source). }
+false;public;2;5;;@Override public IntValue deserialize(IntValue reuse, DataInputView source) throws IOException {     reuse.read(source).     return reuse. }
+false;public;2;4;;@Override public void copy(DataInputView source, DataOutputView target) throws IOException {     target.writeInt(source.readInt()). }
+false;public;0;4;;@Override public TypeSerializerSnapshot<IntValue> snapshotConfiguration() {     return new IntValueSerializerSnapshot(). }

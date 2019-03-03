@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void testGetBucketPathWithSpecifiedTimezone() {     DateTimeBucketAssigner bucketAssigner = new DateTimeBucketAssigner(ZoneId.of("America/Los_Angeles")).     assertEquals("2018-08-03--23", bucketAssigner.getBucketId(null, mockedContext)). }
+false;public;0;6;;@Test public void testGetBucketPathWithSpecifiedFormatString() {     DateTimeBucketAssigner bucketAssigner = new DateTimeBucketAssigner("yyyy-MM-dd-HH", ZoneId.of("America/Los_Angeles")).     assertEquals("2018-08-03-23", bucketAssigner.getBucketId(null, mockedContext)). }
+false;public;0;4;;@Override public long currentProcessingTime() {     return TEST_TIME_IN_MILLIS. }
+false;public;0;4;;@Override public long currentWatermark() {     throw new UnsupportedOperationException(). }
+false;public;0;5;;@Nullable @Override public Long timestamp() {     return null. }

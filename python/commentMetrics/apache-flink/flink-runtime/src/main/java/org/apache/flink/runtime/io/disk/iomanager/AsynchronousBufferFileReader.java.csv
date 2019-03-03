@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void readInto(Buffer buffer) throws IOException {     addRequest(new BufferReadRequest(this, buffer, hasReachedEndOfFile)). }
+false;public;1;4;;@Override public void seekToPosition(long position) throws IOException {     requestQueue.add(new SeekRequest(this, position)). }
+false;public;0;4;;@Override public boolean hasReachedEndOfFile() {     return hasReachedEndOfFile.get(). }

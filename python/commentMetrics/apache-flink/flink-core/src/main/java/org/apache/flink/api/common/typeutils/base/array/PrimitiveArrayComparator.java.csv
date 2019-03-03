@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void setReference(T toCompare) {     this.reference = toCompare. }
+false;public;1;4;;@Override public boolean equalToReference(T candidate) {     return compare(this.reference, candidate) == 0. }
+false;public;1;4;;@Override public int compareToReference(TypeComparator<T> referencedComparator) {     return compare(((PrimitiveArrayComparator<T, C>) referencedComparator).reference, this.reference). }
+false;public;2;13;;@Override public int compareSerialized(DataInputView firstSource, DataInputView secondSource) throws IOException {     int firstCount = firstSource.readInt().     int secondCount = secondSource.readInt().     for (int x = 0. x < min(firstCount, secondCount). x++) {         int cmp = comparator.compareSerialized(firstSource, secondSource).         if (cmp != 0) {             return cmp.         }     }     int cmp = firstCount - secondCount.     return ascending ? cmp : -cmp. }
+false;public;3;5;;@Override public int extractKeys(Object record, Object[] target, int index) {     target[index] = record.     return 1. }
+false;public;0;4;;@Override public TypeComparator[] getFlatComparators() {     return comparators. }
+false;public;0;4;;@Override public boolean supportsNormalizedKey() {     return false. }
+false;public;0;4;;@Override public boolean supportsSerializationWithKeyNormalization() {     return false. }
+false;public;0;4;;@Override public int getNormalizeKeyLen() {     return 0. }
+false;public;1;4;;@Override public boolean isNormalizedKeyPrefixOnly(int keyBytes) {     throw new UnsupportedOperationException(). }
+false;public;4;4;;@Override public void putNormalizedKey(T record, MemorySegment target, int offset, int numBytes) {     throw new UnsupportedOperationException(). }
+false;public;2;4;;@Override public void writeWithKeyNormalization(T record, DataOutputView target) throws IOException {     throw new UnsupportedOperationException(). }
+false;public;2;4;;@Override public T readWithKeyDenormalization(T reuse, DataInputView source) throws IOException {     throw new UnsupportedOperationException(). }
+false;public;0;4;;@Override public boolean invertNormalizedKey() {     return !ascending. }

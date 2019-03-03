@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,synchronized;1;8;;@Override public synchronized void start(LeaderRetrievalListener listener) throws Exception {     this.listener = Preconditions.checkNotNull(listener).     if (leaderSessionID != null && leaderAddress != null) {         listener.notifyLeaderAddress(leaderAddress, leaderSessionID).     } }
+false;public;0;4;;@Override public void stop() throws Exception { }
+false;public,synchronized;2;10;;public synchronized void notifyListener(@Nullable String address, @Nullable UUID leaderSessionID) {     this.leaderAddress = address.     this.leaderSessionID = leaderSessionID.     if (listener != null) {         listener.notifyLeaderAddress(address, leaderSessionID).     } }

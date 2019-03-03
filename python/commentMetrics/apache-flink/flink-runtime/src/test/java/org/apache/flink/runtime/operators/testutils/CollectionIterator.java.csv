@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public T next(T reuse) throws IOException {     return next(). }
+false;public;0;8;;@Override public T next() throws IOException {     if (!iterator.hasNext()) {         return null.     } else {         return iterator.next().     } }
+false;public;0;4;;@Override public void reset() throws IOException {     iterator = collection.iterator(). }
+false;public,static;1;3;;public static <T> CollectionIterator<T> of(T... values) {     return new CollectionIterator<T>(Arrays.asList(values)). }

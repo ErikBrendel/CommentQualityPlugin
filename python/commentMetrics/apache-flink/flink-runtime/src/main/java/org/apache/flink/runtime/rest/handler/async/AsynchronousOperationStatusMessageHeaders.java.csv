@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;protected,abstract;0;1;/**  * Returns the class of the value wrapped in the {@link AsynchronousOperationResult}.  *  * @return value class  */ ;/**  * Returns the class of the value wrapped in the {@link AsynchronousOperationResult}.  *  * @return value class  */ protected abstract Class<V> getValueClass().
+false;public;0;4;;@Override public Class<AsynchronousOperationResult<V>> getResponseClass() {     return (Class<AsynchronousOperationResult<V>>) (Class<?>) AsynchronousOperationResult.class. }
+false;public;0;4;;@Override public Collection<Class<?>> getResponseTypeParameters() {     return Collections.singleton(getValueClass()). }

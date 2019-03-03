@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public MetricGroup addGroup(String key, String value) {     return addGroup(key).addGroup(value). }
+false;protected;2;9;;@Override protected GenericMetricGroup createChildGroup(String name, ChildType childType) {     switch(childType) {         case VALUE:             return new GenericValueMetricGroup(registry, this, name).         default:             return new GenericMetricGroup(registry, this, name).     } }

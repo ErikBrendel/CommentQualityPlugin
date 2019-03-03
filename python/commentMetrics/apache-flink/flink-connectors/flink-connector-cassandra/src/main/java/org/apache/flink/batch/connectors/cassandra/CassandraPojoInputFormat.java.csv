@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;15;;@Override public void open(InputSplit split) {     this.session = cluster.connect().     MappingManager manager = new MappingManager(session).     Mapper<OUT> mapper = manager.mapper(inputClass).     if (mapperOptions != null) {         Mapper.Option[] optionsArray = mapperOptions.getMapperOptions().         if (optionsArray != null) {             mapper.setDefaultGetOptions(optionsArray).         }     }     this.resultSet = mapper.map(session.execute(query)). }
+false;public;0;4;;@Override public boolean reachedEnd() {     return resultSet.isExhausted(). }
+false;public;1;4;;@Override public OUT nextRecord(OUT reuse) {     return resultSet.one(). }

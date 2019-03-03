@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;11;;@Override public IntValue translate(LongValue value, IntValue reuse) throws Exception {     if (reuse == null) {         reuse = new IntValue().     }     reuse.setValue(MathUtils.checkedDownCast(value.getValue())).     return reuse. }

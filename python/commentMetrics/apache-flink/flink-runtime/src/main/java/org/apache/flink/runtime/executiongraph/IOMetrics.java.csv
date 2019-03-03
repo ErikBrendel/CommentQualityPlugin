@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public long getNumRecordsIn() {     return numRecordsIn. }
+false;public;0;3;;public long getNumRecordsOut() {     return numRecordsOut. }
+false;public;0;3;;public long getNumBytesInLocal() {     return numBytesInLocal. }
+false;public;0;3;;public long getNumBytesInRemote() {     return numBytesInRemote. }
+false;public;0;3;;public long getNumBytesInTotal() {     return numBytesInLocal + numBytesInRemote. }
+false;public;0;3;;public long getNumBytesOut() {     return numBytesOut. }
+false;public;0;3;;public double getNumRecordsInPerSecond() {     return numRecordsInPerSecond. }
+false;public;0;3;;public double getNumRecordsOutPerSecond() {     return numRecordsOutPerSecond. }
+false;public;0;3;;public double getNumBytesInLocalPerSecond() {     return numBytesInLocalPerSecond. }
+false;public;0;3;;public double getNumBytesInRemotePerSecond() {     return numBytesInRemotePerSecond. }
+false;public;0;3;;public double getNumBytesOutPerSecond() {     return numBytesOutPerSecond. }

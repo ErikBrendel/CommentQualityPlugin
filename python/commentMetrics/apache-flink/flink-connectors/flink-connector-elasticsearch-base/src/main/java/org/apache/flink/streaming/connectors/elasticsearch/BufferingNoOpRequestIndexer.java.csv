@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void add(DeleteRequest... deleteRequests) {     Collections.addAll(bufferedRequests, deleteRequests). }
+false;public;1;4;;@Override public void add(IndexRequest... indexRequests) {     Collections.addAll(bufferedRequests, indexRequests). }
+false;public;1;4;;@Override public void add(UpdateRequest... updateRequests) {     Collections.addAll(bufferedRequests, updateRequests). }
+false;;1;13;;void processBufferedRequests(RequestIndexer actualIndexer) {     for (ActionRequest request : bufferedRequests) {         if (request instanceof IndexRequest) {             actualIndexer.add((IndexRequest) request).         } else if (request instanceof DeleteRequest) {             actualIndexer.add((DeleteRequest) request).         } else if (request instanceof UpdateRequest) {             actualIndexer.add((UpdateRequest) request).         }     }     bufferedRequests.clear(). }

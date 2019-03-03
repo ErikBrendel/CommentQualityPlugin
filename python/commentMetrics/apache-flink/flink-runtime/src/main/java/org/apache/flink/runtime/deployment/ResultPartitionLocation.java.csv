@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static ResultPartitionLocation createRemote(ConnectionID connectionId) {     return new ResultPartitionLocation(LocationType.REMOTE, checkNotNull(connectionId)). }
+false;public,static;0;3;;public static ResultPartitionLocation createLocal() {     return new ResultPartitionLocation(LocationType.LOCAL, null). }
+false;public,static;0;3;;public static ResultPartitionLocation createUnknown() {     return new ResultPartitionLocation(LocationType.UNKNOWN, null). }
+false;public;0;3;;// ------------------------------------------------------------------------ public boolean isLocal() {     return locationType == LocationType.LOCAL. }
+false;public;0;3;;public boolean isRemote() {     return locationType == LocationType.REMOTE. }
+false;public;0;3;;public boolean isUnknown() {     return locationType == LocationType.UNKNOWN. }
+false;public;0;3;;public ConnectionID getConnectionId() {     return connectionId. }
+false;public;0;4;;@Override public String toString() {     return "ResultPartitionLocation [" + locationType + (isRemote() ? " [" + connectionId + "]]" : "]"). }

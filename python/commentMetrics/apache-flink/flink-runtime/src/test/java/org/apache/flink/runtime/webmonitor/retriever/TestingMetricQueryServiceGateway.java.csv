@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public CompletableFuture<MetricDumpSerialization.MetricSerializationResult> queryMetrics(Time timeout) {     return queryMetricsSupplier.get(). }
+false;public;0;4;;@Override public String getAddress() {     return address. }
+false;public;1;4;;public Builder setQueryMetricsSupplier(Supplier<CompletableFuture<MetricDumpSerialization.MetricSerializationResult>> queryMetricsSupplier) {     this.queryMetricsSupplier = queryMetricsSupplier.     return this. }
+false;public;1;4;;public Builder setAddress(String address) {     this.address = address.     return this. }
+false;public;0;3;;public TestingMetricQueryServiceGateway build() {     return new TestingMetricQueryServiceGateway(queryMetricsSupplier, address). }

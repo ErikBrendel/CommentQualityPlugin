@@ -1,0 +1,18 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public int hash(FloatValueArray record) {     return record.hashCode(). }
+false;public;1;4;;@Override public void setReference(FloatValueArray toCompare) {     toCompare.copyTo(reference). }
+false;public;1;4;;@Override public boolean equalToReference(FloatValueArray candidate) {     return candidate.equals(this.reference). }
+false;public;1;5;;@Override public int compareToReference(TypeComparator<FloatValueArray> referencedComparator) {     int comp = ((FloatValueArrayComparator) referencedComparator).reference.compareTo(reference).     return ascendingComparison ? comp : -comp. }
+false;public;2;5;;@Override public int compare(FloatValueArray first, FloatValueArray second) {     int comp = first.compareTo(second).     return ascendingComparison ? comp : -comp. }
+false;public;2;19;;@Override public int compareSerialized(DataInputView firstSource, DataInputView secondSource) throws IOException {     int firstCount = firstSource.readInt().     int secondCount = secondSource.readInt().     int minCount = Math.min(firstCount, secondCount).     while (minCount-- > 0) {         float firstValue = firstSource.readFloat().         float secondValue = secondSource.readFloat().         int cmp = Float.compare(firstValue, secondValue).         if (cmp != 0) {             return ascendingComparison ? cmp : -cmp.         }     }     int cmp = Integer.compare(firstCount, secondCount).     return ascendingComparison ? cmp : -cmp. }
+false;public;0;4;;@Override public boolean supportsNormalizedKey() {     return NormalizableKey.class.isAssignableFrom(FloatValueArray.class). }
+false;public;0;4;;@Override public int getNormalizeKeyLen() {     return reference.getMaxNormalizedKeyLen(). }
+false;public;1;4;;@Override public boolean isNormalizedKeyPrefixOnly(int keyFloats) {     return keyFloats < getNormalizeKeyLen(). }
+false;public;4;4;;@Override public void putNormalizedKey(FloatValueArray record, MemorySegment target, int offset, int numFloats) {     record.copyNormalizedKey(target, offset, numFloats). }
+false;public;0;4;;@Override public boolean invertNormalizedKey() {     return !ascendingComparison. }
+false;public;0;4;;@Override public TypeComparator<FloatValueArray> duplicate() {     return new FloatValueArrayComparator(ascendingComparison). }
+false;public;3;5;;@Override public int extractKeys(Object record, Object[] target, int index) {     target[index] = record.     return 1. }
+false;public;0;4;;@Override public TypeComparator<?>[] getFlatComparators() {     return comparators. }
+false;public;0;4;;// -------------------------------------------------------------------------------------------- // unsupported normalization // -------------------------------------------------------------------------------------------- @Override public boolean supportsSerializationWithKeyNormalization() {     return false. }
+false;public;2;4;;@Override public void writeWithKeyNormalization(FloatValueArray record, DataOutputView target) throws IOException {     throw new UnsupportedOperationException(). }
+false;public;2;4;;@Override public FloatValueArray readWithKeyDenormalization(FloatValueArray reuse, DataInputView source) throws IOException {     throw new UnsupportedOperationException(). }

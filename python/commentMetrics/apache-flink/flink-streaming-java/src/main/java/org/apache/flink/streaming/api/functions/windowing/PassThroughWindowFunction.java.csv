@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;4;6;;@Override public void apply(K k, W window, Iterable<T> input, Collector<T> out) throws Exception {     for (T in : input) {         out.collect(in).     } }

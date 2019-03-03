@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;1;1;/**  * A method that can be used to create and configure a ratelimiter  * based on the runtimeContext.  * @param runtimeContext  */ ;/**  * A method that can be used to create and configure a ratelimiter  * based on the runtimeContext.  * @param runtimeContext  */ void open(RuntimeContext runtimeContext).
+true;;1;1;/**  * Sets the desired rate for the rate limiter.  * @param rate  */ ;/**  * Sets the desired rate for the rate limiter.  * @param rate  */ void setRate(long rate).
+true;;1;1;/**  * Acquires permits for the rate limiter.  */ ;/**  * Acquires permits for the rate limiter.  */ void acquire(int permits).
+false;;0;1;;long getRate().
+false;;0;1;;void close().

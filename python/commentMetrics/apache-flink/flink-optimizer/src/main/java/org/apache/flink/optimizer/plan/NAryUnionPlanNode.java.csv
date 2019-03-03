@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public void accept(Visitor<PlanNode> visitor) {     visitor.preVisit(this).     for (Channel c : this.inputs) {         c.getSource().accept(visitor).     }     visitor.postVisit(this). }
+false;public;0;3;;public List<Channel> getListOfInputs() {     return this.inputs. }
+false;public;0;4;;@Override public Iterable<Channel> getInputs() {     return Collections.unmodifiableList(this.inputs). }
+false;public;0;4;;@Override public boolean hasNext() {     return channels.hasNext(). }
+false;public;0;4;;@Override public PlanNode next() {     return channels.next().getSource(). }
+false;public;0;4;;@Override public void remove() {     throw new UnsupportedOperationException(). }
+false;public;0;4;;@Override public Iterator<PlanNode> iterator() {     return this. }
+false;public;0;26;;@Override public Iterable<PlanNode> getPredecessors() {     final Iterator<Channel> channels = this.inputs.iterator().     return new IterableIterator<PlanNode>() {          @Override         public boolean hasNext() {             return channels.hasNext().         }          @Override         public PlanNode next() {             return channels.next().getSource().         }          @Override         public void remove() {             throw new UnsupportedOperationException().         }          @Override         public Iterator<PlanNode> iterator() {             return this.         }     }. }
+false;public;1;5;;@Override public SourceAndDamReport hasDamOnPathDownTo(PlanNode source) {     // this node is used after the plan enumeration. consequently, this will never be invoked here     throw new UnsupportedOperationException(). }

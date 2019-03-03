@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;9;;@Override public void readInto(Buffer buffer) throws IOException {     if (fileChannel.size() - fileChannel.position() > 0) {         hasReachedEndOfFile = reader.readBufferFromFileChannel(buffer).     } else {         buffer.recycleBuffer().     } }
+false;public;1;4;;@Override public void seekToPosition(long position) throws IOException {     fileChannel.position(position). }
+false;public;0;4;;@Override public boolean hasReachedEndOfFile() {     return hasReachedEndOfFile. }

@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;10;;@BeforeClass public static void setup() throws IOException {     OSSTestCredentials.assumeCredentialsAvailable().     final Configuration conf = new Configuration().     conf.setString("fs.oss.endpoint", OSSTestCredentials.getOSSEndpoint()).     conf.setString("fs.oss.accessKeyId", OSSTestCredentials.getOSSAccessKey()).     conf.setString("fs.oss.accessKeySecret", OSSTestCredentials.getOSSSecretKey()).     FileSystem.initialize(conf). }
+false;public;0;4;;@Override public FileSystem getFileSystem() throws Exception {     return getBasePath().getFileSystem(). }
+false;public;0;4;;@Override public Path getBasePath() throws Exception {     return new Path(OSSTestCredentials.getTestBucketUri() + TEST_DATA_DIR). }
+false;public;0;4;;@Override public FileSystemKind getFileSystemKind() {     return FileSystemKind.OBJECT_STORE. }
+false;public,static;0;4;;@AfterClass public static void clearFsConfig() throws IOException {     FileSystem.initialize(new Configuration()). }

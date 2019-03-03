@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;2;;@Override public void invoke() { }
+false;public;0;4;;@Override public ClassLoader getUserCodeClassLoader() {     return getClass().getClassLoader(). }
+false;public;0;4;;@Override public int getCurrentNumberOfSubtasks() {     return 1. }
+false;public;0;4;;@Override public int getIndexInSubtaskGroup() {     return 0. }
+false;public,final;0;4;;@Override public final Configuration getTaskConfiguration() {     return new Configuration(). }
+false;public,final;0;4;;@Override public final Configuration getJobConfiguration() {     return new Configuration(). }
+false;public;0;4;;@Override public ExecutionConfig getExecutionConfig() {     return new ExecutionConfig(). }

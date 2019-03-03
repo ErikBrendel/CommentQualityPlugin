@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected Class<JarUploadResponseBody> getTestResponseClass() {     return JarUploadResponseBody.class. }
+false;protected;0;4;;@Override protected JarUploadResponseBody getTestResponseInstance() throws Exception {     return new JarUploadResponseBody("/tmp"). }
+false;protected;2;5;;@Override protected void assertOriginalEqualsToUnmarshalled(final JarUploadResponseBody expected, final JarUploadResponseBody actual) {     assertEquals(expected.getFilename(), actual.getFilename()).     assertEquals(expected.getStatus(), actual.getStatus()). }

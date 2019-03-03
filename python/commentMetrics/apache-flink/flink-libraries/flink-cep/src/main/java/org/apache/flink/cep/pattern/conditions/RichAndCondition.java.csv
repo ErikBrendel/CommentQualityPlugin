@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public boolean filter(T value, Context<T> ctx) throws Exception {     return getLeft().filter(value, ctx) && getRight().filter(value, ctx). }
+true;public;0;3;/**  * @return One of the {@link IterativeCondition conditions} combined in this condition.  */ ;/**  * @return One of the {@link IterativeCondition conditions} combined in this condition.  */ public IterativeCondition<T> getLeft() {     return getNestedConditions()[0]. }
+true;public;0;3;/**  * @return One of the {@link IterativeCondition conditions} combined in this condition.  */ ;/**  * @return One of the {@link IterativeCondition conditions} combined in this condition.  */ public IterativeCondition<T> getRight() {     return getNestedConditions()[1]. }

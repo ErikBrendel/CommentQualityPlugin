@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;3;;protected void write(ObjectOutputStream out) throws IOException {     this.credentials.write(out). }
+false;public;1;4;;public void read(ObjectInputStream in) throws IOException {     this.credentials = new Credentials().     credentials.readFields(in). }

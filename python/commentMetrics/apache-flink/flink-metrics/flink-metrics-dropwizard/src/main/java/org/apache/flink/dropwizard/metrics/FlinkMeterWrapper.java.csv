@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public void mark() {     meter.markEvent(). }
+false;public;1;4;;@Override public void mark(long n) {     meter.markEvent(n). }
+false;public;0;4;;@Override public long getCount() {     return meter.getCount(). }
+false;public;0;4;;@Override public double getOneMinuteRate() {     return meter.getRate(). }
+false;public;0;4;;@Override public double getFiveMinuteRate() {     return 0. }
+false;public;0;4;;@Override public double getFifteenMinuteRate() {     return 0. }
+false;public;0;4;;@Override public double getMeanRate() {     return 0. }

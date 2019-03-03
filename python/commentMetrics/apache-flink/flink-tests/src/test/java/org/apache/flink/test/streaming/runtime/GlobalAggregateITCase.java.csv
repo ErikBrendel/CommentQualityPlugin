@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@Test public void testSuccessfulUpdateToGlobalAggregate() throws Exception {     StreamExecutionEnvironment streamExecutionEnvironment = StreamExecutionEnvironment.getExecutionEnvironment().     streamExecutionEnvironment.addSource(new TestSourceFunction(new IntegerAggregateFunction(), false)).addSink(new NoOpSinkFunction()).     streamExecutionEnvironment.execute(). }
+false;public;0;10;;@Test public void testExceptionThrowingAggregateFunction() throws Exception {     StreamExecutionEnvironment streamExecutionEnvironment = StreamExecutionEnvironment.getExecutionEnvironment().     streamExecutionEnvironment.addSource(new TestSourceFunction(new ExceptionThrowingAggregateFunction(), true)).addSink(new NoOpSinkFunction()).     streamExecutionEnvironment.execute(). }
+false;public;1;6;;@Override public void open(Configuration parameters) throws Exception {     super.open(parameters).     StreamingRuntimeContext runtimeContext = (StreamingRuntimeContext) getRuntimeContext().     aggregateManager = runtimeContext.getGlobalAggregateManager(). }
+false;public;1;22;;@Override public void run(SourceContext<Integer> ctx) throws Exception {     Integer expectedAccumulator = 0.     int exceptionCount = 0.     for (int i = 0. i < 5. i++) {         Integer actualAccumlator = 0.         try {             actualAccumlator = aggregateManager.updateGlobalAggregate("testAgg", i, aggregateFunction).             expectedAccumulator += i.         } catch (IOException e) {             exceptionCount++.         }         if (expectFailures) {             assertEquals(i + 1, exceptionCount).         } else {             assertEquals(expectedAccumulator, actualAccumlator).         }     } }
+false;public;0;4;;@Override public void cancel() { }
+false;public;0;4;;@Override public Integer createAccumulator() {     return 0. }
+false;public;2;4;;@Override public Integer add(Integer value, Integer accumulator) {     return value + accumulator. }
+false;public;1;4;;@Override public Integer getResult(Integer accumulator) {     return accumulator. }
+false;public;2;4;;@Override public Integer merge(Integer accumulatorA, Integer accumulatorB) {     return add(accumulatorA, accumulatorB). }
+false;public;0;4;;@Override public Integer createAccumulator() {     return 0. }
+false;public;2;4;;@Override public Integer add(Integer value, Integer accumulator) {     throw new NullPointerException("test"). }
+false;public;1;4;;@Override public Integer getResult(Integer accumulator) {     return accumulator. }
+false;public;2;4;;@Override public Integer merge(Integer accumulatorA, Integer accumulatorB) {     return add(accumulatorA, accumulatorB). }
+false;public;2;4;;@Override public void invoke(Integer value, Context context) throws Exception { }

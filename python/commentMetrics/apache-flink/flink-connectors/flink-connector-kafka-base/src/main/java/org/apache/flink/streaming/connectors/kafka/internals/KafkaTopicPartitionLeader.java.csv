@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public KafkaTopicPartition getTopicPartition() {     return topicPartition. }
+false;public;0;7;;public Node getLeader() {     if (this.leaderId == -1) {         return null.     } else {         return new Node(leaderId, leaderHost, leaderPort).     } }
+false;public;1;16;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (!(o instanceof KafkaTopicPartitionLeader)) {         return false.     }     KafkaTopicPartitionLeader that = (KafkaTopicPartitionLeader) o.     if (!topicPartition.equals(that.topicPartition)) {         return false.     }     return leaderId == that.leaderId && leaderPort == that.leaderPort && leaderHost.equals(that.leaderHost). }
+false;public;0;4;;@Override public int hashCode() {     return cachedHash. }
+false;public;0;10;;@Override public String toString() {     return "KafkaTopicPartitionLeader{" + "leaderId=" + leaderId + ", leaderPort=" + leaderPort + ", leaderHost='" + leaderHost + '\'' + ", topic=" + topicPartition.getTopic() + ", partition=" + topicPartition.getPartition() + '}'. }

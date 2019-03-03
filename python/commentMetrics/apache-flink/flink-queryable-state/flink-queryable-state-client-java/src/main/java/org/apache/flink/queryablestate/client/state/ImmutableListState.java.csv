@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Iterable<V> get() {     return listState. }
+false;public;1;4;;@Override public void add(V value) {     throw MODIFICATION_ATTEMPT_ERROR. }
+false;public;0;4;;@Override public void clear() {     throw MODIFICATION_ATTEMPT_ERROR. }
+false;public;1;4;;@Override public void update(List<V> values) {     throw MODIFICATION_ATTEMPT_ERROR. }
+false;public;1;4;;@Override public void addAll(List<V> values) {     throw MODIFICATION_ATTEMPT_ERROR. }
+false;public,static;2;9;;@SuppressWarnings("unchecked") public static <V, T, S extends State> S createState(StateDescriptor<S, T> stateDescriptor, byte[] serializedState) throws IOException {     final List<V> state = KvStateSerializer.deserializeList(serializedState, ((ListStateDescriptor<V>) stateDescriptor).getElementSerializer()).     return (S) new ImmutableListState<>(state). }

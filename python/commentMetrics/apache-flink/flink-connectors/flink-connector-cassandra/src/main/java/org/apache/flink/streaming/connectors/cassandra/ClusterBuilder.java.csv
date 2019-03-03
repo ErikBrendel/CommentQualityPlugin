@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Cluster getCluster() {     return buildCluster(Cluster.builder()). }
+true;protected,abstract;1;1;/**  * Configures the connection to Cassandra.  * The configuration is done by calling methods on the builder object  * and finalizing the configuration with build().  *  * @param builder connection builder  * @return configured connection  */ ;/**  * Configures the connection to Cassandra.  * The configuration is done by calling methods on the builder object  * and finalizing the configuration with build().  *  * @param builder connection builder  * @return configured connection  */ protected abstract Cluster buildCluster(Cluster.Builder builder).

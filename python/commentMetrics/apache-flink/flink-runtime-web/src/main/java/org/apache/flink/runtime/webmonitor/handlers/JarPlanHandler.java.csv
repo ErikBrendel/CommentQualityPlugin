@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;2;11;;@Override protected CompletableFuture<JobPlanInfo> handleRequest(@Nonnull final HandlerRequest<JarPlanRequestBody, JarPlanMessageParameters> request, @Nonnull final RestfulGateway gateway) throws RestHandlerException {     final JarHandlerContext context = JarHandlerContext.fromRequest(request, jarDir, log).     return CompletableFuture.supplyAsync(() -> {         final JobGraph jobGraph = context.toJobGraph(configuration).         return planGenerator.apply(jobGraph).     }, executor). }

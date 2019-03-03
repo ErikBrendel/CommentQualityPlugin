@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Override public StreamPartitioner<Tuple> createPartitioner() {     StreamPartitioner<Tuple> partitioner = new RebalancePartitioner<>().     assertFalse(partitioner.isBroadcast()).     return partitioner. }
+false;public;0;13;;@Test public void testSelectChannelsInterval() {     final int numberOfChannels = 3.     streamPartitioner.setup(numberOfChannels).     int initialChannel = streamPartitioner.selectChannel(serializationDelegate).     assertTrue(0 <= initialChannel).     assertTrue(numberOfChannels > initialChannel).     for (int i = 1. i <= 3. i++) {         assertSelectedChannel((initialChannel + i) % numberOfChannels).     } }

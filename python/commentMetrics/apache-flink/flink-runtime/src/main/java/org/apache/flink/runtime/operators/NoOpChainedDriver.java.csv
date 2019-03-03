@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void setup(AbstractInvokable parent) { }
+false;public;0;4;;@Override public void openTask() throws Exception { }
+false;public;0;4;;@Override public void closeTask() throws Exception { }
+false;public;0;4;;@Override public void cancelTask() { }
+false;public;0;4;;@Override public Function getStub() {     return null. }
+false;public;0;4;;@Override public String getTaskName() {     return this.taskName. }
+false;public;1;9;;@Override public void collect(IT record) {     try {         this.numRecordsIn.inc().         this.outputCollector.collect(record).     } catch (Exception ex) {         throw new ExceptionInChainedStubException(this.taskName, ex).     } }
+false;public;0;4;;@Override public void close() {     this.outputCollector.close(). }

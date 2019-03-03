@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,synchronized;1;7;;public synchronized CompletableFuture<?> setExpectedRecord(long record) {     checkState(!expectedRecord.isDone()).     checkState(!recordsProcessed.isDone()).     expectedRecord.complete(record).     expectedRecordCounter = 0.     return recordsProcessed. }
+false;private,synchronized;0;3;;private synchronized CompletableFuture<Long> getExpectedRecord() {     return expectedRecord. }
+false;private,synchronized;0;8;;private synchronized void finishProcessingExpectedRecords() {     checkState(expectedRecord.isDone()).     checkState(!recordsProcessed.isDone()).     recordsProcessed.complete(null).     expectedRecord = new CompletableFuture<>().     recordsProcessed = new CompletableFuture<>(). }
+false;public;0;16;;@Override public void go() throws Exception {     try {         while (running) {             readRecords(getExpectedRecord().get()).             finishProcessingExpectedRecords().         }     } catch (InterruptedException e) {         if (running) {             throw e.         }     } catch (Exception e) {         e.printStackTrace().     } }
+false;protected,abstract;1;1;;protected abstract void readRecords(long lastExpectedRecord) throws Exception.
+false;public;0;5;;public void shutdown() {     running = false.     interrupt().     expectedRecord.complete(0L). }

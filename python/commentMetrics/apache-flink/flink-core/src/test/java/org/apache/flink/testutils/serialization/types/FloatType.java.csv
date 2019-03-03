@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public FloatType getRandom(Random rnd) {     return new FloatType(rnd.nextFloat()). }
+false;public;0;4;;@Override public int length() {     return 4. }
+false;public;1;4;;@Override public void write(DataOutputView out) throws IOException {     out.writeFloat(this.value). }
+false;public;1;4;;@Override public void read(DataInputView in) throws IOException {     this.value = in.readFloat(). }
+false;public;0;4;;@Override public int hashCode() {     return Float.floatToIntBits(this.value). }
+false;public;1;9;;@Override public boolean equals(Object obj) {     if (obj instanceof FloatType) {         FloatType other = (FloatType) obj.         return Float.floatToIntBits(this.value) == Float.floatToIntBits(other.value).     } else {         return false.     } }

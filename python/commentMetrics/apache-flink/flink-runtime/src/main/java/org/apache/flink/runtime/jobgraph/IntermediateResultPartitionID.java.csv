@@ -1,4 +1,3 @@
-# id;timestamp;commentText;codeText;commentWords;codeWords
-IntermediateResultPartitionID -> public IntermediateResultPartitionID();1421050512;Creates an new random intermediate result partition ID.;public IntermediateResultPartitionID() {_		super()__	};creates,an,new,random,intermediate,result,partition,id;public,intermediate,result,partition,id,super
-IntermediateResultPartitionID -> public IntermediateResultPartitionID();1425053375;Creates an new random intermediate result partition ID.;public IntermediateResultPartitionID() {_		super()__	};creates,an,new,random,intermediate,result,partition,id;public,intermediate,result,partition,id,super
-IntermediateResultPartitionID -> public IntermediateResultPartitionID();1502111816;Creates an new random intermediate result partition ID.;public IntermediateResultPartitionID() {_		super()__	};creates,an,new,random,intermediate,result,partition,id;public,intermediate,result,partition,id,super
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;public void writeTo(ByteBuf buf) {     buf.writeLong(this.lowerPart).     buf.writeLong(this.upperPart). }
+false;public,static;1;5;;public static IntermediateResultPartitionID fromByteBuf(ByteBuf buf) {     long lower = buf.readLong().     long upper = buf.readLong().     return new IntermediateResultPartitionID(lower, upper). }

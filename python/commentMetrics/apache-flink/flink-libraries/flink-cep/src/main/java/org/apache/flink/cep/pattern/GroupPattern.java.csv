@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public Pattern<T, F> where(IterativeCondition<F> condition) {     throw new UnsupportedOperationException("GroupPattern does not support where clause."). }
+false;public;1;4;;@Override public Pattern<T, F> or(IterativeCondition<F> condition) {     throw new UnsupportedOperationException("GroupPattern does not support or clause."). }
+false;public;1;4;;@Override public <S extends F> Pattern<T, S> subtype(final Class<S> subtypeClass) {     throw new UnsupportedOperationException("GroupPattern does not support subtype clause."). }
+false;public;0;3;;public Pattern<T, ? extends T> getRawPattern() {     return groupPattern. }

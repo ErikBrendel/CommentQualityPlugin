@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void setEmailId(EmailId emailId) {     this.emailId = emailId. }
+false;public;1;3;;public void setStuff(List<String> stuff) {     this.stuff = stuff. }
+false;public;1;3;;public void setAsdf(Long asdf) {     this.asdf = asdf. }
+false;public;0;3;;public EmailId getEmailId() {     return emailId. }
+false;public;0;3;;public List<String> getStuff() {     return stuff. }
+false;public;0;3;;public Long getAsdf() {     return asdf. }
+false;public;0;3;;public LabelSurrogate getLabel() {     return label. }
+false;public;1;3;;public void setLabel(LabelSurrogate label) {     this.label = label. }
+false;public;1;14;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     EmailInformation that = (EmailInformation) o.     return Objects.equals(emailId, that.emailId) && Objects.equals(stuff, that.stuff) && Objects.equals(asdf, that.asdf) && Objects.equals(label, that.label). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(emailId, stuff, asdf, label). }
+false;public;0;9;;@Override public String toString() {     return "EmailInformation{" + "emailId=" + emailId + ", stuff=" + stuff + ", asdf=" + asdf + ", label=" + label + '}'. }

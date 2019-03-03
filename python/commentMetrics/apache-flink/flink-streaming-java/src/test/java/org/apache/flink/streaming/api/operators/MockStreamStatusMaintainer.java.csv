@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Override public void toggleStreamStatus(StreamStatus streamStatus) {     if (!currentStreamStatus.equals(streamStatus)) {         currentStreamStatus = streamStatus.     } }
+false;public;0;4;;@Override public StreamStatus getStreamStatus() {     return currentStreamStatus. }

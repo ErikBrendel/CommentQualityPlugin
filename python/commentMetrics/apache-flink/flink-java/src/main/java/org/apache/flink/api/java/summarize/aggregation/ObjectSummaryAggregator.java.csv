@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;9;;@Override public void aggregate(Object value) {     if (value == null) {         nullCount++.     } else {         nonNullCount++.     } }
+false;public;1;6;;@Override public void combine(Aggregator<Object, ObjectColumnSummary> otherSameType) {     ObjectSummaryAggregator other = (ObjectSummaryAggregator) otherSameType.     nonNullCount += other.nonNullCount.     nullCount += other.nullCount. }
+false;public;0;4;;@Override public ObjectColumnSummary result() {     return new ObjectColumnSummary(nonNullCount, nullCount). }

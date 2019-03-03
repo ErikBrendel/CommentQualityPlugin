@@ -1,4 +1,3 @@
-# id;timestamp;commentText;codeText;commentWords;codeWords
-ScalaTrySerializerConfigSnapshot -> public ScalaTrySerializerConfigSnapshot();1497328008;This empty nullary constructor is required for deserializing the configuration.;public ScalaTrySerializerConfigSnapshot() {};this,empty,nullary,constructor,is,required,for,deserializing,the,configuration;public,scala,try,serializer,config,snapshot
-ScalaTrySerializerConfigSnapshot -> public ScalaTrySerializerConfigSnapshot();1539149027;This empty nullary constructor is required for deserializing the configuration.;public ScalaTrySerializerConfigSnapshot() {};this,empty,nullary,constructor,is,required,for,deserializing,the,configuration;public,scala,try,serializer,config,snapshot
-ScalaTrySerializerConfigSnapshot -> public ScalaTrySerializerConfigSnapshot();1550821415;This empty nullary constructor is required for deserializing the configuration.;public ScalaTrySerializerConfigSnapshot() {};this,empty,nullary,constructor,is,required,for,deserializing,the,configuration;public,scala,try,serializer,config,snapshot
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public int getVersion() {     return VERSION. }
+false;public;1;9;;@Override public TypeSerializerSchemaCompatibility<Try<E>> resolveSchemaCompatibility(TypeSerializer<Try<E>> newSerializer) {     return CompositeTypeSerializerUtil.delegateCompatibilityCheckToNewSnapshot(newSerializer, new ScalaTrySerializerSnapshot<>(), getNestedSerializersAndConfigs().get(0).f1, getNestedSerializersAndConfigs().get(1).f1). }

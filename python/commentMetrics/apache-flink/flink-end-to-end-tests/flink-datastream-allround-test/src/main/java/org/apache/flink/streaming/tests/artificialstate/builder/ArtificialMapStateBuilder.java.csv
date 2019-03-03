@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public void artificialStateForElement(IN event) throws Exception {     Iterator<Map.Entry<K, V>> update = stateValueGenerator.join(event, mapState.iterator()).     while (update.hasNext()) {         Map.Entry<K, V> updateEntry = update.next().         mapState.put(updateEntry.getKey(), updateEntry.getValue()).     } }
+false;public;1;6;;@Override public void initialize(FunctionInitializationContext initializationContext) {     MapStateDescriptor<K, V> mapStateDescriptor = new MapStateDescriptor<>(stateName, keySerializer, valueSerializer).     mapState = initializationContext.getKeyedStateStore().getMapState(mapStateDescriptor). }

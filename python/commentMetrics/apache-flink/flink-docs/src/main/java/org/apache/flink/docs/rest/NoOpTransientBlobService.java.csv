@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public File getFile(TransientBlobKey key) throws IOException {     throw new UnsupportedOperationException(). }
+false;public;2;4;;@Override public File getFile(JobID jobId, TransientBlobKey key) throws IOException {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public TransientBlobKey putTransient(byte[] value) throws IOException {     throw new UnsupportedOperationException(). }
+false;public;2;4;;@Override public TransientBlobKey putTransient(JobID jobId, byte[] value) throws IOException {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public TransientBlobKey putTransient(InputStream inputStream) throws IOException {     throw new UnsupportedOperationException(). }
+false;public;2;4;;@Override public TransientBlobKey putTransient(JobID jobId, InputStream inputStream) throws IOException {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public boolean deleteFromCache(TransientBlobKey key) {     throw new UnsupportedOperationException(). }
+false;public;2;4;;@Override public boolean deleteFromCache(JobID jobId, TransientBlobKey key) {     throw new UnsupportedOperationException(). }
+false;public;0;2;;@Override public void close() throws IOException { }

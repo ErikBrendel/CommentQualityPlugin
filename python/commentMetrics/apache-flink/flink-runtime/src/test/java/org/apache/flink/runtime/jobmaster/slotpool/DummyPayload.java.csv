@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void fail(Throwable cause) {     terminalStateFuture.complete(null). }
+false;public;0;4;;@Override public CompletableFuture<?> getTerminalStateFuture() {     return terminalStateFuture. }

@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Override public String getClusterDescription() {     String host = config.getString(JobManagerOptions.ADDRESS, "").     int port = config.getInteger(JobManagerOptions.PORT, -1).     return "Standalone cluster at " + host + ":" + port. }
+false;public;1;8;;@Override public RestClusterClient<StandaloneClusterId> retrieve(StandaloneClusterId standaloneClusterId) throws ClusterRetrieveException {     try {         return new RestClusterClient<>(config, standaloneClusterId).     } catch (Exception e) {         throw new ClusterRetrieveException("Couldn't retrieve standalone cluster", e).     } }
+false;public;1;4;;@Override public RestClusterClient<StandaloneClusterId> deploySessionCluster(ClusterSpecification clusterSpecification) {     throw new UnsupportedOperationException("Can't deploy a standalone cluster."). }
+false;public;3;7;;@Override public RestClusterClient<StandaloneClusterId> deployJobCluster(ClusterSpecification clusterSpecification, JobGraph jobGraph, boolean detached) {     throw new UnsupportedOperationException("Can't deploy a standalone per-job cluster."). }
+false;public;1;4;;@Override public void killCluster(StandaloneClusterId clusterId) throws FlinkException {     throw new UnsupportedOperationException("Cannot terminate a standalone cluster."). }
+false;public;0;4;;@Override public void close() throws Exception { // nothing to do }

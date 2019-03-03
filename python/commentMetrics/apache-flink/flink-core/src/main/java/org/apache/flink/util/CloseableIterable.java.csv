@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public void close() throws IOException { }
+false;public;0;5;;@Nonnull @Override public Iterator<T> iterator() {     return Collections.emptyIterator(). }
+true;static;0;3;/**  * Returns an empty iterator.  */ ;/**  * Returns an empty iterator.  */ static <T> CloseableIterable<T> empty() {     return new CloseableIterable.Empty<>(). }

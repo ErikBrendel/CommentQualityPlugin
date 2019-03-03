@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean isImmutableType() {     return false. }
+false;public;0;4;;@Override public T createInstance() {     return null. }
+false;public;1;8;;@Override public T copy(T from) {     try {         return InstantiationUtil.clone(from, Thread.currentThread().getContextClassLoader()).     } catch (IOException | ClassNotFoundException e) {         throw new FlinkRuntimeException("Could not copy element via serialization: " + from, e).     } }
+false;public;2;4;;@Override public T copy(T from, T reuse) {     return copy(from). }
+false;public;0;4;;@Override public int getLength() {     return -1. }
+false;public;2;6;;@Override public void serialize(T record, DataOutputView target) throws IOException {     try (final DataOutputViewStream outViewWrapper = new DataOutputViewStream(target)) {         InstantiationUtil.serializeObject(outViewWrapper, record).     } }
+false;public;1;10;;@Override public T deserialize(DataInputView source) throws IOException {     try (final DataInputViewStream inViewWrapper = new DataInputViewStream(source)) {         return InstantiationUtil.deserializeObject(inViewWrapper, Thread.currentThread().getContextClassLoader()).     } catch (ClassNotFoundException e) {         throw new IOException("Could not deserialize object.", e).     } }
+false;public;2;4;;@Override public T deserialize(T reuse, DataInputView source) throws IOException {     return deserialize(source). }
+false;public;2;5;;@Override public void copy(DataInputView source, DataOutputView target) throws IOException {     T tmp = deserialize(source).     serialize(tmp, target). }
+false;public;0;4;;// ------------------------------------------------------------------------ @Override public TypeSerializerSnapshot<T> snapshotConfiguration() {     return new JavaSerializerSnapshot<>(). }

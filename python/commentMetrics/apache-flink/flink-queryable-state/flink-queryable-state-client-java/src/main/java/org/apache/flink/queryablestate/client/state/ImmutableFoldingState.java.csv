@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public ACC get() {     return value. }
+false;public;1;4;;@Override public void add(Object newValue) {     throw MODIFICATION_ATTEMPT_ERROR. }
+false;public;0;4;;@Override public void clear() {     throw MODIFICATION_ATTEMPT_ERROR. }
+false;public,static;2;9;;@SuppressWarnings("unchecked") public static <ACC, S extends State> S createState(StateDescriptor<S, ACC> stateDescriptor, byte[] serializedState) throws IOException {     final ACC state = KvStateSerializer.deserializeValue(serializedState, stateDescriptor.getSerializer()).     return (S) new ImmutableFoldingState<>(state). }

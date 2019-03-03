@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected Class<TaskManagerInfo> getTestResponseClass() {     return TaskManagerInfo.class. }
+false;protected;0;4;;@Override protected TaskManagerInfo getTestResponseInstance() throws Exception {     return createRandomTaskManagerInfo(). }
+false;static;0;14;;static TaskManagerInfo createRandomTaskManagerInfo() {     return new TaskManagerInfo(ResourceID.generate(), UUID.randomUUID().toString(), random.nextInt(), random.nextLong(), random.nextInt(), random.nextInt(), new HardwareDescription(random.nextInt(), random.nextLong(), random.nextLong(), random.nextLong())). }

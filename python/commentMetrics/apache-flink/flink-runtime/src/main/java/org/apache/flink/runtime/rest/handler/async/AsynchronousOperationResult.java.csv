@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public QueueStatus queueStatus() {     return queueStatus. }
+false;public;0;5;;@Nullable @Override public V resource() {     return value. }
+false;public,static;0;3;;public static <V> AsynchronousOperationResult<V> inProgress() {     return new AsynchronousOperationResult<>(QueueStatus.inProgress(), null). }
+false;public,static;1;3;;public static <V> AsynchronousOperationResult<V> completed(V value) {     return new AsynchronousOperationResult<>(QueueStatus.completed(), value). }

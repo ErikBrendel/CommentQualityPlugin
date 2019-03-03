@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static String generateFromShardOrder(int order) {     return String.format("shardId-%012d", order). }

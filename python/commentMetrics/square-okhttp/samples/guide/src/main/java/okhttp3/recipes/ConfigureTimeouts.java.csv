@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;public void run() throws Exception {     Request request = new Request.Builder().url(// This URL is served with a 2 second delay.     "http://httpbin.org/delay/2").build().     try (Response response = client.newCall(request).execute()) {         System.out.println("Response completed: " + response).     } }
+false;public,static;1;3;;public static void main(String... args) throws Exception {     new ConfigureTimeouts().run(). }

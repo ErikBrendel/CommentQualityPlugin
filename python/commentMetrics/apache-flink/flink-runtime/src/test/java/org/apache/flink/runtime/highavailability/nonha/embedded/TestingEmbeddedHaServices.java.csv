@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;public CompletableFuture<Void> revokeDispatcherLeadership() {     final EmbeddedLeaderService dispatcherLeaderService = getDispatcherLeaderService().     return dispatcherLeaderService.revokeLeadership(). }
+false;public;0;4;;public CompletableFuture<Void> grantDispatcherLeadership() {     final EmbeddedLeaderService dispatcherLeaderService = getDispatcherLeaderService().     return dispatcherLeaderService.grantLeadership(). }
+false;public;1;4;;public CompletableFuture<Void> revokeJobMasterLeadership(JobID jobId) {     final EmbeddedLeaderService jobMasterLeaderService = getJobManagerLeaderService(jobId).     return jobMasterLeaderService.revokeLeadership(). }
+false;public;1;4;;public CompletableFuture<Void> grantJobMasterLeadership(JobID jobId) {     final EmbeddedLeaderService jobMasterLeaderService = getJobManagerLeaderService(jobId).     return jobMasterLeaderService.grantLeadership(). }
+false;public;0;4;;public CompletableFuture<Void> revokeResourceManagerLeadership() {     final EmbeddedLeaderService resourceManagerLeaderService = getResourceManagerLeaderService().     return resourceManagerLeaderService.revokeLeadership(). }
+false;public;0;4;;public CompletableFuture<Void> grantResourceManagerLeadership() {     final EmbeddedLeaderService resourceManagerLeaderService = getResourceManagerLeaderService().     return resourceManagerLeaderService.grantLeadership(). }

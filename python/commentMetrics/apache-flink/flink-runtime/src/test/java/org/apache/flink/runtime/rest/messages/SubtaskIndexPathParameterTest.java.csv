@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Before public void setUp() {     subtaskIndexPathParameter = new SubtaskIndexPathParameter(). }
+false;public;0;4;;@Test public void testConversionFromString() throws Exception {     assertThat(subtaskIndexPathParameter.convertFromString("2147483647"), equalTo(Integer.MAX_VALUE)). }
+false;public;0;10;;@Test public void testConversionFromStringNegativeNumber() throws Exception {     try {         subtaskIndexPathParameter.convertFromString("-2147483648").         fail("Expected exception not thrown").     } catch (final ConversionException e) {         assertThat(e.getMessage(), equalTo("subtaskindex must be positive, was: " + Integer.MIN_VALUE)).     } }
+false;public;0;4;;@Test public void testConvertToString() throws Exception {     assertThat(subtaskIndexPathParameter.convertToString(Integer.MAX_VALUE), equalTo("2147483647")). }
+false;public;0;4;;@Test public void testIsMandatoryParameter() {     assertTrue(subtaskIndexPathParameter.isMandatory()). }

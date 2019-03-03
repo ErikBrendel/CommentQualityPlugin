@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;7;;@Override public CompletableFuture<MetricDumpSerialization.MetricSerializationResult> queryMetrics(Time timeout) {     return FutureUtils.toJava(Patterns.ask(queryServiceActorRef, MetricQueryService.getCreateDump(), timeout.toMilliseconds()).mapTo(ClassTag$.MODULE$.apply(MetricDumpSerialization.MetricSerializationResult.class))). }
+false;public;0;4;;@Override public String getAddress() {     return queryServiceActorRef.path().toString(). }

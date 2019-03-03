@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;11;;public void put(@Nonnull ColumnFamilyHandle handle, @Nonnull byte[] key, @Nonnull byte[] value) throws RocksDBException {     batch.put(handle, key, value).     if (batch.count() == capacity) {         flush().     } }
+false;public;2;10;;public void remove(@Nonnull ColumnFamilyHandle handle, @Nonnull byte[] key) throws RocksDBException {     batch.remove(handle, key).     if (batch.count() == capacity) {         flush().     } }
+false;public;0;11;;public void flush() throws RocksDBException {     if (options != null) {         db.write(options, batch).     } else {         // use the default WriteOptions, if wasn't provided.         try (WriteOptions writeOptions = new WriteOptions()) {             db.write(writeOptions, batch).         }     }     batch.clear(). }
+false;public;0;3;;public WriteOptions getOptions() {     return options. }
+false;public;0;7;;@Override public void close() throws RocksDBException {     if (batch.count() != 0) {         flush().     }     IOUtils.closeQuietly(batch). }

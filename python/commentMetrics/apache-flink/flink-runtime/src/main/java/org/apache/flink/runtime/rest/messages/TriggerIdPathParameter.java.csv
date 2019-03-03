@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected TriggerId convertFromString(String value) throws ConversionException {     return TriggerId.fromHexString(value). }
+false;protected;1;4;;@Override protected String convertToString(TriggerId value) {     return value.toString(). }
+false;public;0;5;;@Override public String getDescription() {     return "32-character hexadecimal string that identifies an asynchronous operation trigger ID. " + "The ID was returned then the operation was triggered.". }

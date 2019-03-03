@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected TypeComparator<T> createComparator(boolean ascending) {     return info.createComparator(ascending, null).duplicate(). }
+false;protected;0;4;;@Override protected TypeSerializer<T> createSerializer() {     return info.createSerializer(null). }

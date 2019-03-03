@@ -1,0 +1,17 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,static;2;3;/**  * Like Math.min() except for shorts.  */ ;/**  * Like Math.min() except for shorts.  */ public static Short min(Short a, Short b) {     return a <= b ? a : b. }
+true;public,static;2;3;/**  * Like Math.max() except for shorts.  */ ;/**  * Like Math.max() except for shorts.  */ public static Short max(Short a, Short b) {     return a >= b ? a : b. }
+false;public;1;4;;@Override public void aggregate(Short value) {     min = min(min, value). }
+false;public;1;4;;@Override public void combine(Aggregator<Short, Short> other) {     min = min(min, ((MinShortAggregator) other).min). }
+false;public;0;4;;@Override public Short result() {     return min. }
+false;public;1;4;;@Override public void aggregate(Short value) {     max = max(max, value). }
+false;public;1;4;;@Override public void combine(Aggregator<Short, Short> other) {     max = max(max, ((MaxShortAggregator) other).max). }
+false;public;0;4;;@Override public Short result() {     return max. }
+false;public;1;4;;@Override public void aggregate(Short value) {     sum += value. }
+false;public;1;4;;@Override public void combine(Aggregator<Short, Short> other) {     sum += ((SumShortAggregator) other).sum. }
+false;public;0;4;;@Override public Short result() {     return sum. }
+false;protected;0;4;;@Override protected Aggregator<Short, Short> initMin() {     return new MinShortAggregator(). }
+false;protected;0;4;;@Override protected Aggregator<Short, Short> initMax() {     return new MaxShortAggregator(). }
+false;protected;0;4;;@Override protected Aggregator<Short, Short> initSum() {     return new SumShortAggregator(). }
+false;protected;1;5;;@Override protected boolean isNan(Short number) {     // NaN never applies here because only types like Float and Double have NaN     return false. }
+false;protected;1;5;;@Override protected boolean isInfinite(Short number) {     // Infinity never applies here because only types like Float and Double have Infinity     return false. }

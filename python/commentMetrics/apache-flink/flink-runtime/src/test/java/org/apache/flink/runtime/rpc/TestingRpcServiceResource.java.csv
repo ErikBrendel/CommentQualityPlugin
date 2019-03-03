@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;public TestingRpcService getTestingRpcService() {     checkInitialized().     return testingRpcService. }
+false;private;0;3;;private void checkInitialized() {     assert (testingRpcService != null). }
+false;protected;0;8;;@Override protected void before() {     if (testingRpcService != null) {         terminateRpcService().     }     testingRpcService = new TestingRpcService(). }
+false;protected;0;7;;@Override protected void after() {     if (testingRpcService != null) {         terminateRpcService().         testingRpcService = null.     } }
+false;private;0;4;;private void terminateRpcService() {     CompletableFuture<Void> terminationFuture = testingRpcService.stopService().     terminationFuture.join(). }

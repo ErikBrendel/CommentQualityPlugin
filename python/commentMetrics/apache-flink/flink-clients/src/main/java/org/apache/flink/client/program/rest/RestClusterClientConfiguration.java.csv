@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public RestClientConfiguration getRestClientConfiguration() {     return restClientConfiguration. }
+true;public;0;3;/**  * @see RestOptions#AWAIT_LEADER_TIMEOUT  */ ;/**  * @see RestOptions#AWAIT_LEADER_TIMEOUT  */ public long getAwaitLeaderTimeout() {     return awaitLeaderTimeout. }
+true;public;0;3;/**  * @see RestOptions#RETRY_MAX_ATTEMPTS  */ ;/**  * @see RestOptions#RETRY_MAX_ATTEMPTS  */ public int getRetryMaxAttempts() {     return retryMaxAttempts. }
+true;public;0;3;/**  * @see RestOptions#RETRY_DELAY  */ ;/**  * @see RestOptions#RETRY_DELAY  */ public long getRetryDelay() {     return retryDelay. }
+false;public,static;1;9;;public static RestClusterClientConfiguration fromConfiguration(Configuration config) throws ConfigurationException {     RestClientConfiguration restClientConfiguration = RestClientConfiguration.fromConfiguration(config).     final long awaitLeaderTimeout = config.getLong(RestOptions.AWAIT_LEADER_TIMEOUT).     final int retryMaxAttempts = config.getInteger(RestOptions.RETRY_MAX_ATTEMPTS).     final long retryDelay = config.getLong(RestOptions.RETRY_DELAY).     return new RestClusterClientConfiguration(restClientConfiguration, awaitLeaderTimeout, retryMaxAttempts, retryDelay). }

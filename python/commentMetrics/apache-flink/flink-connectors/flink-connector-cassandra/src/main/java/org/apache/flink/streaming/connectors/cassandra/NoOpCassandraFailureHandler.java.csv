@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public void onFailure(Throwable failure) throws IOException {     // simply fail the sink     throw new IOException("Error while sending value.", failure). }

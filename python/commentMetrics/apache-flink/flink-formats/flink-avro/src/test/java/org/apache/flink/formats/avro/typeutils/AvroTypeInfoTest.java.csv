@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;7;;@Override protected AvroTypeInfo<?>[] getTestData() {     return new AvroTypeInfo<?>[] { new AvroTypeInfo<>(Address.class), new AvroTypeInfo<>(User.class) }. }
+false;public;0;5;;@Test public void testAvroByDefault() {     final TypeSerializer<User> serializer = new AvroTypeInfo<>(User.class).createSerializer(new ExecutionConfig()).     assertTrue(serializer instanceof AvroSerializer). }

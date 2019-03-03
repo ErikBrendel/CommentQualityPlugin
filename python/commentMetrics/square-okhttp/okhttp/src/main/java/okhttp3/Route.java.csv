@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Address address() {     return address. }
+true;public;0;3;/**  * Returns the {@link Proxy} of this route.  *  * <strong>Warning:</strong> This may disagree with {@link Address#proxy} when it is null. When  * the address's proxy is null, the proxy selector is used.  */ ;/**  * Returns the {@link Proxy} of this route.  *  * <strong>Warning:</strong> This may disagree with {@link Address#proxy} when it is null. When  * the address's proxy is null, the proxy selector is used.  */ public Proxy proxy() {     return proxy. }
+false;public;0;3;;public InetSocketAddress socketAddress() {     return inetSocketAddress. }
+true;public;0;3;/**  * Returns true if this route tunnels HTTPS through an HTTP proxy. See <a  * href="http://www.ietf.org/rfc/rfc2817.txt">RFC 2817, Section 5.2</a>.  */ ;/**  * Returns true if this route tunnels HTTPS through an HTTP proxy. See <a  * href="http://www.ietf.org/rfc/rfc2817.txt">RFC 2817, Section 5.2</a>.  */ public boolean requiresTunnel() {     return address.sslSocketFactory != null && proxy.type() == Proxy.Type.HTTP. }
+false;public;1;6;;@Override public boolean equals(@Nullable Object other) {     return other instanceof Route && ((Route) other).address.equals(address) && ((Route) other).proxy.equals(proxy) && ((Route) other).inetSocketAddress.equals(inetSocketAddress). }
+false;public;0;7;;@Override public int hashCode() {     int result = 17.     result = 31 * result + address.hashCode().     result = 31 * result + proxy.hashCode().     result = 31 * result + inetSocketAddress.hashCode().     return result. }
+false;public;0;3;;@Override public String toString() {     return "Route{" + inetSocketAddress + "}". }

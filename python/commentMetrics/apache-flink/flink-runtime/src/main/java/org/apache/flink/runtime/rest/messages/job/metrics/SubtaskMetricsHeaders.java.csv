@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public SubtaskMetricsMessageParameters getUnresolvedMessageParameters() {     return new SubtaskMetricsMessageParameters(). }
+false;public;0;5;;@Override public String getTargetRestEndpointURL() {     return "/jobs/:" + JobIDPathParameter.KEY + "/vertices/:" + JobVertexIdPathParameter.KEY + "/subtasks/:" + SubtaskIndexPathParameter.KEY + "/metrics". }
+false;public,static;0;3;;public static SubtaskMetricsHeaders getInstance() {     return INSTANCE. }
+false;public;0;4;;@Override public String getDescription() {     return "Provides access to subtask metrics.". }

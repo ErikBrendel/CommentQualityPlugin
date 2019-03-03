@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;3;4;;@Override protected <T> KeyGroupedIterator<T> createKeyGroupedIterator(MutableObjectIterator<T> input, TypeSerializer<T> serializer, TypeComparator<T> comparator) {     return new ReusingKeyGroupedIterator<>(input, serializer, comparator). }
+false;protected;3;2;;@Override protected <T> T createCopy(TypeSerializer<T> serializer, T value, T reuse) {     return serializer.copy(value, reuse). }

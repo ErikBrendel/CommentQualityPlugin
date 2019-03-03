@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected TypeComparator<Double> createComparator(boolean ascending) {     return new DoubleComparator(ascending). }
+false;protected;0;4;;@Override protected TypeSerializer<Double> createSerializer() {     return new DoubleSerializer(). }
+false;protected;0;21;;@Override protected Double[] getSortedTestData() {     Random rnd = new Random(874597969123412338L).     double rndDouble = rnd.nextDouble().     if (rndDouble < 0) {         rndDouble = -rndDouble.     }     if (rndDouble == Double.MAX_VALUE) {         rndDouble -= 3.     }     if (rndDouble <= 2) {         rndDouble += 3.     }     return new Double[] { Double.valueOf(-rndDouble), Double.valueOf(-1.0D), Double.valueOf(0.0D), Double.valueOf(2.0D), Double.valueOf(rndDouble), Double.valueOf(Double.MAX_VALUE) }. }

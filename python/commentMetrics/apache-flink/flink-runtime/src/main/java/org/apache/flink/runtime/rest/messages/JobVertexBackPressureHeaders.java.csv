@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Class<EmptyRequestBody> getRequestClass() {     return EmptyRequestBody.class. }
+false;public;0;4;;@Override public Class<JobVertexBackPressureInfo> getResponseClass() {     return JobVertexBackPressureInfo.class. }
+false;public;0;4;;@Override public HttpResponseStatus getResponseStatusCode() {     return HttpResponseStatus.OK. }
+false;public;0;4;;@Override public JobVertexMessageParameters getUnresolvedMessageParameters() {     return new JobVertexMessageParameters(). }
+false;public;0;4;;@Override public HttpMethodWrapper getHttpMethod() {     return HttpMethodWrapper.GET. }
+false;public;0;4;;@Override public String getTargetRestEndpointURL() {     return URL. }
+false;public,static;0;3;;public static JobVertexBackPressureHeaders getInstance() {     return INSTANCE. }
+false;public;0;4;;@Override public String getDescription() {     return "Returns back-pressure information for a job, and may initiate back-pressure sampling if necessary.". }

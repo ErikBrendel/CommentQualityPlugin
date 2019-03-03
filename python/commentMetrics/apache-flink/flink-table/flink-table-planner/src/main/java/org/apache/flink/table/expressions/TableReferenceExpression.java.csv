@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getName() {     return name. }
+false;public;0;3;;public Table getTable() {     return table. }
+false;public;0;4;;@Override public List<CommonExpression> getChildren() {     return Collections.emptyList(). }
+false;public;1;4;;@Override public <R> R accept(ExpressionVisitor<R> visitor) {     return visitor.visit(this). }
+false;public;1;11;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     TableReferenceExpression that = (TableReferenceExpression) o.     return Objects.equals(name, that.name) && Objects.equals(table, that.table). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(name, table). }
+false;public;0;4;;@Override public String toString() {     return name. }

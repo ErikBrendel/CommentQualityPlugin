@@ -1,7 +1,26 @@
-# id;timestamp;commentText;codeText;commentWords;codeWords
-LongValueWithProperHashCode -> public LongValueWithProperHashCode();1501079480;Initializes the encapsulated long with 0.;public LongValueWithProperHashCode() {_		super()__	};initializes,the,encapsulated,long,with,0;public,long,value,with,proper,hash,code,super
-LongValueWithProperHashCode -> public LongValueWithProperHashCode();1548148563;Initializes the encapsulated long with 0.;public LongValueWithProperHashCode() {_		super()__	};initializes,the,encapsulated,long,with,0;public,long,value,with,proper,hash,code,super
-LongValueWithProperHashCode -> public LongValueWithProperHashCode();1550652777;Initializes the encapsulated long with 0.;public LongValueWithProperHashCode() {_		super()__	};initializes,the,encapsulated,long,with,0;public,long,value,with,proper,hash,code,super
-LongValueWithProperHashCode -> public LongValueWithProperHashCode(final long value);1501079480;Initializes the encapsulated long with the specified value.__@param value Initial value of the encapsulated long.;public LongValueWithProperHashCode(final long value) {_		super(value)__	};initializes,the,encapsulated,long,with,the,specified,value,param,value,initial,value,of,the,encapsulated,long;public,long,value,with,proper,hash,code,final,long,value,super,value
-LongValueWithProperHashCode -> public LongValueWithProperHashCode(final long value);1548148563;Initializes the encapsulated long with the specified value.__@param value Initial value of the encapsulated long.;public LongValueWithProperHashCode(final long value) {_		super(value)__	};initializes,the,encapsulated,long,with,the,specified,value,param,value,initial,value,of,the,encapsulated,long;public,long,value,with,proper,hash,code,final,long,value,super,value
-LongValueWithProperHashCode -> public LongValueWithProperHashCode(final long value);1550652777;Initializes the encapsulated long with the specified value.__@param value Initial value of the encapsulated long.;public LongValueWithProperHashCode(final long value) {_		super(value)__	};initializes,the,encapsulated,long,with,the,specified,value,param,value,initial,value,of,the,encapsulated,long;public,long,value,with,proper,hash,code,final,long,value,super,value
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public int hashCode() {     return (int) (this.getValue() ^ this.getValue() >>> 32). }
+false;public;2;7;;@Override public TypeInformation<LongValueWithProperHashCode> createTypeInfo(Type t, Map<String, TypeInformation<?>> genericParameters) {     @SuppressWarnings("unchecked")     TypeInformation<LongValueWithProperHashCode> typeInfo = new LongValueWithProperHashCodeTypeInfo().     return typeInfo. }
+false;public;0;4;;@Override public int getArity() {     return 1. }
+false;public;0;4;;@Override public int getTotalFields() {     return 1. }
+false;public;0;5;;@SuppressWarnings("unchecked") @Override public Class<LongValueWithProperHashCode> getTypeClass() {     return LongValueWithProperHashCode.class. }
+false;public;0;4;;@Override public boolean isBasicType() {     return false. }
+false;public;0;4;;@Override public boolean isTupleType() {     return false. }
+false;public;0;4;;@Override public boolean isKeyType() {     return Comparable.class.isAssignableFrom(LongValueWithProperHashCode.class). }
+false;public;1;5;;@Override @SuppressWarnings("unchecked") public TypeSerializer<LongValueWithProperHashCode> createSerializer(ExecutionConfig executionConfig) {     return new LongValueWithProperHashCodeSerializer(). }
+false;public;2;5;;@SuppressWarnings({ "unchecked", "rawtypes" }) @Override public TypeComparator<LongValueWithProperHashCode> createComparator(boolean sortOrderAscending, ExecutionConfig executionConfig) {     return (TypeComparator<LongValueWithProperHashCode>) (TypeComparator<?>) new LongValueComparator(sortOrderAscending). }
+false;public;0;4;;@Override public Map<String, TypeInformation<?>> getGenericParameters() {     return Collections.emptyMap(). }
+false;public;0;4;;// -------------------------------------------------------------------------------------------- @Override public int hashCode() {     return 0. }
+false;public;1;4;;@Override public boolean equals(Object obj) {     return obj instanceof LongValueWithProperHashCodeTypeInfo. }
+false;public;1;4;;@Override public boolean canEqual(Object obj) {     return obj instanceof LongValueWithProperHashCodeTypeInfo. }
+false;public;0;4;;@Override public String toString() {     return LongValueWithProperHashCodeTypeInfo.class.getSimpleName(). }
+false;public;0;4;;@Override public boolean isImmutableType() {     return false. }
+false;public;0;4;;@Override public LongValueWithProperHashCode createInstance() {     return new LongValueWithProperHashCode(). }
+false;public;1;4;;@Override public LongValueWithProperHashCode copy(LongValueWithProperHashCode from) {     return copy(from, new LongValueWithProperHashCode()). }
+false;public;2;5;;@Override public LongValueWithProperHashCode copy(LongValueWithProperHashCode from, LongValueWithProperHashCode reuse) {     reuse.setValue(from.getValue()).     return reuse. }
+false;public;0;4;;@Override public int getLength() {     return 8. }
+false;public;2;4;;@Override public void serialize(LongValueWithProperHashCode record, DataOutputView target) throws IOException {     record.write(target). }
+false;public;1;4;;@Override public LongValueWithProperHashCode deserialize(DataInputView source) throws IOException {     return deserialize(new LongValueWithProperHashCode(), source). }
+false;public;2;5;;@Override public LongValueWithProperHashCode deserialize(LongValueWithProperHashCode reuse, DataInputView source) throws IOException {     reuse.read(source).     return reuse. }
+false;public;2;4;;@Override public void copy(DataInputView source, DataOutputView target) throws IOException {     target.writeLong(source.readLong()). }
+false;public;0;4;;// ----------------------------------------------------------------------------------- @Override public TypeSerializerSnapshot<LongValueWithProperHashCode> snapshotConfiguration() {     return new LongValueWithProperHashCodeSerializerSnapshot(). }

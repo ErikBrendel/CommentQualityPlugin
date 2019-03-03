@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;11;;public static void main(String[] args) throws Exception {     ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment().     DataSet<String> input = env.fromElements("Please filter", "the words", "but not this").     FilterFunction<String> filter = WordFilter::filter.     DataSet<String> output = input.filter(filter).     output.print().     env.execute(). }

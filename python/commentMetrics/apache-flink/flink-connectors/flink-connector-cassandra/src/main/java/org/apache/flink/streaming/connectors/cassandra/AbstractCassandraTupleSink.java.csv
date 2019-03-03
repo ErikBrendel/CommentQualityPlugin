@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public void open(Configuration configuration) {     super.open(configuration).     this.ps = session.prepare(insertQuery). }
+false;public;1;5;;@Override public ListenableFuture<ResultSet> send(IN value) {     Object[] fields = extract(value).     return session.executeAsync(ps.bind(fields)). }
+false;protected,abstract;1;1;;protected abstract Object[] extract(IN record).

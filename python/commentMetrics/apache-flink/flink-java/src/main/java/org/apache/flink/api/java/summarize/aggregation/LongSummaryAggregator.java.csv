@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void aggregate(Long value) {     min = Math.min(min, value). }
+false;public;1;4;;@Override public void combine(Aggregator<Long, Long> other) {     min = Math.min(min, ((MinLongAggregator) other).min). }
+false;public;0;4;;@Override public Long result() {     return min. }
+false;public;1;4;;@Override public void aggregate(Long value) {     max = Math.max(max, value). }
+false;public;1;4;;@Override public void combine(Aggregator<Long, Long> other) {     max = Math.max(max, ((MaxLongAggregator) other).max). }
+false;public;0;4;;@Override public Long result() {     return max. }
+false;public;1;4;;@Override public void aggregate(Long value) {     sum += value. }
+false;public;1;4;;@Override public void combine(Aggregator<Long, Long> other) {     sum += ((SumLongAggregator) other).sum. }
+false;public;0;4;;@Override public Long result() {     return sum. }
+false;protected;0;4;;@Override protected Aggregator<Long, Long> initMin() {     return new MinLongAggregator(). }
+false;protected;0;4;;@Override protected Aggregator<Long, Long> initMax() {     return new MaxLongAggregator(). }
+false;protected;0;4;;@Override protected Aggregator<Long, Long> initSum() {     return new SumLongAggregator(). }
+false;protected;1;5;;@Override protected boolean isNan(Long number) {     // NaN never applies here because only types like Float and Double have NaN     return false. }
+false;protected;1;5;;@Override protected boolean isInfinite(Long number) {     // Infinity never applies here because only types like Float and Double have Infinity     return false. }

@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;10;;@Override public void start(ResultPartitionProvider partitionProvider, TaskEventDispatcher taskEventDispatcher) throws IOException {     NettyProtocol partitionRequestProtocol = new NettyProtocol(partitionProvider, taskEventDispatcher, client.getConfig().isCreditBasedEnabled()).     client.init(partitionRequestProtocol, bufferPool).     server.init(partitionRequestProtocol, bufferPool). }
+false;public;1;5;;@Override public PartitionRequestClient createPartitionRequestClient(ConnectionID connectionId) throws IOException, InterruptedException {     return partitionRequestClientFactory.createPartitionRequestClient(connectionId). }
+false;public;1;4;;@Override public void closeOpenChannelConnections(ConnectionID connectionId) {     partitionRequestClientFactory.closeOpenChannelConnections(connectionId). }
+false;public;0;4;;@Override public int getNumberOfActiveConnections() {     return partitionRequestClientFactory.getNumberOfActiveClients(). }
+false;public;0;8;;@Override public int getDataPort() {     if (server != null && server.getLocalAddress() != null) {         return server.getLocalAddress().getPort().     } else {         return -1.     } }
+false;public;0;5;;@Override public void shutdown() {     client.shutdown().     server.shutdown(). }
+false;;0;3;;NettyClient getClient() {     return client. }
+false;;0;3;;NettyServer getServer() {     return server. }
+false;;0;3;;NettyBufferPool getBufferPool() {     return bufferPool. }

@@ -1,5 +1,9 @@
-# id;timestamp;commentText;codeText;commentWords;codeWords
-LongCounter -> @Override 	public void add(Long value);1438097046;Consider using {@link #add(long)} instead for primitive long values;@Override_	public void add(Long value) {_		this.localValue += value__	};consider,using,link,add,long,instead,for,primitive,long,values;override,public,void,add,long,value,this,local,value,value
-LongCounter -> @Override 	public void add(Long value);1442492511;Consider using {@link #add(long)} instead for primitive long values;@Override_	public void add(Long value) {_		this.localValue += value__	};consider,using,link,add,long,instead,for,primitive,long,values;override,public,void,add,long,value,this,local,value,value
-LongCounter -> @Override 	public void add(Long value);1455479358;Consider using {@link #add(long)} instead for primitive long values;@Override_	public void add(Long value) {_		this.localValue += value__	};consider,using,link,add,long,instead,for,primitive,long,values;override,public,void,add,long,value,this,local,value,value
-LongCounter -> @Override 	public void add(Long value);1461271066;Consider using {@link #add(long)} instead for primitive long values;@Override_	public void add(Long value) {_		this.localValue += value__	};consider,using,link,add,long,instead,for,primitive,long,values;override,public,void,add,long,value,this,local,value,value
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;4;/**  * Consider using {@link #add(long)} instead for primitive long values  */ ;// ------------------------------------------------------------------------ // Accumulator // ------------------------------------------------------------------------ /**  * Consider using {@link #add(long)} instead for primitive long values  */ @Override public void add(Long value) {     this.localValue += value. }
+false;public;0;4;;@Override public Long getLocalValue() {     return this.localValue. }
+false;public;1;4;;@Override public void merge(Accumulator<Long, Long> other) {     this.localValue += other.getLocalValue(). }
+false;public;0;4;;@Override public void resetLocal() {     this.localValue = 0. }
+false;public;0;6;;@Override public LongCounter clone() {     LongCounter result = new LongCounter().     result.localValue = localValue.     return result. }
+false;public;1;3;;// ------------------------------------------------------------------------ // Primitive Specializations // ------------------------------------------------------------------------ public void add(long value) {     this.localValue += value. }
+false;public;0;3;;public long getLocalValuePrimitive() {     return this.localValue. }
+false;public;0;4;;// ------------------------------------------------------------------------ // Utilities // ------------------------------------------------------------------------ @Override public String toString() {     return "LongCounter " + this.localValue. }

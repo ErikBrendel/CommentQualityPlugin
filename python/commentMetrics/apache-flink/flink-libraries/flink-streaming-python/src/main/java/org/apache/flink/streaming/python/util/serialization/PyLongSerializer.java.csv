@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;6;;@Override public void write(Kryo kryo, Output output, PyLong object) {     byte[] data = object.getValue().toByteArray().     output.writeShort(data.length).     output.writeBytes(data). }
+false;public;3;5;;@Override public PyLong read(Kryo kryo, Input input, Class<PyLong> type) {     int length = input.readShort().     return new PyLong(new BigInteger(input.readBytes(length))). }

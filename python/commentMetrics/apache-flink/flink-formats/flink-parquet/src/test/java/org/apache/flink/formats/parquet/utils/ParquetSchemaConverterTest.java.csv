@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void testSimpleSchemaConversion() {     MessageType simpleType = new MessageType("simple", simpleStandardTypes).     RowTypeInfo rowTypeInfo = (RowTypeInfo) ParquetSchemaConverter.fromParquetType(simpleType).     assertEquals(simplyRowType, rowTypeInfo). }
+false;public;0;6;;@Test public void testNestedSchemaConversion() {     MessageType nestedTypes = new MessageType("nested", this.nestedTypes).     RowTypeInfo rowTypeInfo = (RowTypeInfo) ParquetSchemaConverter.fromParquetType(nestedTypes).     assertEquals(nestedRowType, rowTypeInfo). }
+false;public;0;5;;@Test public void testSimpleRowTypeConversion() {     MessageType simpleSchema = ParquetSchemaConverter.toParquetType(simplyRowType, true).     assertEquals(Arrays.asList(simpleStandardTypes), simpleSchema.getFields()). }
+false;public;0;5;;@Test public void testNestedRowTypeConversion() {     MessageType nestedSchema = ParquetSchemaConverter.toParquetType(nestedRowType, true).     assertEquals(Arrays.asList(nestedTypes), nestedSchema.getFields()). }

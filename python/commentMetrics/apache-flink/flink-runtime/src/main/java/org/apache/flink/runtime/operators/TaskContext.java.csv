@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;1;;TaskConfig getTaskConfig().
+false;;0;1;;TaskManagerRuntimeInfo getTaskManagerInfo().
+false;;0;1;;ClassLoader getUserCodeClassLoader().
+false;;0;1;;MemoryManager getMemoryManager().
+false;;0;1;;IOManager getIOManager().
+false;;1;1;;<X> MutableObjectIterator<X> getInput(int index).
+false;;1;1;;<X> TypeSerializerFactory<X> getInputSerializer(int index).
+false;;1;1;;<X> TypeComparator<X> getDriverComparator(int index).
+false;;0;1;;S getStub().
+false;;0;1;;ExecutionConfig getExecutionConfig().
+false;;0;1;;Collector<OT> getOutputCollector().
+false;;0;1;;AbstractInvokable getContainingTask().
+false;;1;1;;String formatLogString(String message).
+false;;0;1;;OperatorMetricGroup getMetricGroup().

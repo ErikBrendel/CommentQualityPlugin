@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public ClusterClient<?> getClusterClient() {     return clusterClient. }
+false;public;0;3;;public TestEnvironment getTestEnvironment() {     return executionEnvironment. }
+false;public;0;10;;@Override public void before() throws Exception {     super.before().     clusterClient = createMiniClusterClient().     executionEnvironment = new TestEnvironment(getMiniCluster(), getNumberSlots(), false).     executionEnvironment.setAsContext().     TestStreamEnvironment.setAsContext(getMiniCluster(), getNumberSlots()). }
+false;public;0;23;;@Override public void after() {     TestStreamEnvironment.unsetAsContext().     TestEnvironment.unsetAsContext().     Exception exception = null.     if (clusterClient != null) {         try {             clusterClient.shutdown().         } catch (Exception e) {             exception = e.         }     }     clusterClient = null.     super.after().     if (exception != null) {         log.warn("Could not properly shut down the MiniClusterWithClientResource.", exception).     } }
+false;private;0;3;;private MiniClusterClient createMiniClusterClient() {     return new MiniClusterClient(getClientConfiguration(), getMiniCluster()). }

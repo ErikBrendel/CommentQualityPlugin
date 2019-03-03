@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;2;8;;@Nullable @Override protected MetricStore.ComponentMetricStore getComponentMetricStore(final HandlerRequest<EmptyRequestBody, TaskManagerMetricsMessageParameters> request, final MetricStore metricStore) {     final ResourceID taskManagerId = request.getPathParameter(TaskManagerIdPathParameter.class).     return metricStore.getTaskManagerMetricStore(taskManagerId.toString()). }

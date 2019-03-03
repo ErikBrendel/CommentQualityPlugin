@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;2;3;;public static Generator generate(long numKeys, int recordsPerKey) {     return new Generator(numKeys, recordsPerKey, false). }
+false;public,static;1;3;;public static Generator generateInfinitely(long numKeys) {     return new Generator(numKeys, 0, true). }
+false;public;1;3;;@Override public void configure(Configuration parameters) { }
+false;public;1;4;;@Override public BaseStatistics getStatistics(BaseStatistics cachedStatistics) {     return null. }
+false;public;1;9;;@Override public GenericInputSplit[] createInputSplits(int minNumSplits) {     GenericInputSplit[] splits = new GenericInputSplit[minNumSplits].     for (int i = 0. i < minNumSplits. i++) {         splits[i] = new GenericInputSplit(i, minNumSplits).     }     return splits. }
+false;public;1;4;;@Override public InputSplitAssigner getInputSplitAssigner(GenericInputSplit[] inputSplits) {     return new DefaultInputSplitAssigner(inputSplits). }
+false;public;1;19;;@Override public void open(GenericInputSplit split) throws IOException {     this.partitionId = split.getSplitNumber().     // total number of partitions     int numPartitions = split.getTotalNumberOfSplits().     // ensure even distribution of records and keys     Preconditions.checkArgument(numRecords % numPartitions == 0, "Records cannot be evenly distributed among partitions").     Preconditions.checkArgument(numKeys % numPartitions == 0, "Keys cannot be evenly distributed among partitions").     this.recordsPerPartition = numRecords / numPartitions.     this.keysPerPartition = numKeys / numPartitions.     this.recordCnt = 0. }
+false;public;0;4;;@Override public boolean reachedEnd() {     return !infinite && this.recordCnt >= this.recordsPerPartition. }
+false;public;1;18;;@Override public Tuple2<String, Integer> nextRecord(Tuple2<String, Integer> reuse) throws IOException {     // build key from partition id and count per partition     String key = String.format("%d-%d", this.partitionId, this.recordCnt % this.keysPerPartition).     // 128 values to filter on     int filterVal = (int) this.recordCnt % 128.     this.recordCnt++.     reuse.f0 = key.     reuse.f1 = filterVal.     return reuse. }
+false;public;0;3;;@Override public void close() { }

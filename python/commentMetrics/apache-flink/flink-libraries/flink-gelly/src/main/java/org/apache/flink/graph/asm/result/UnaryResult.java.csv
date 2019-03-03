@@ -1,6 +1,3 @@
-# id;timestamp;commentText;codeText;commentWords;codeWords
-UnaryResult -> void setVertexId0(T value)_;1492103503;Set the first vertex ID.__@param value new vertex ID;void setVertexId0(T value)_;set,the,first,vertex,id,param,value,new,vertex,id;void,set,vertex,id0,t,value
-UnaryResult -> void setVertexId0(T value)_;1499282568;Set the first vertex ID.__@param value new vertex ID;void setVertexId0(T value)_;set,the,first,vertex,id,param,value,new,vertex,id;void,set,vertex,id0,t,value
-UnaryResult -> T getVertexId0()_;1489068942;Get the first vertex ID.__@return first vertex ID;T getVertexId0()_;get,the,first,vertex,id,return,first,vertex,id;t,get,vertex,id0
-UnaryResult -> T getVertexId0()_;1492103503;Get the first vertex ID.__@return first vertex ID;T getVertexId0()_;get,the,first,vertex,id,return,first,vertex,id;t,get,vertex,id0
-UnaryResult -> T getVertexId0()_;1499282568;Get the first vertex ID.__@return first vertex ID;T getVertexId0()_;get,the,first,vertex,id,return,first,vertex,id;t,get,vertex,id0
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * Get the first vertex ID.  *  * @return first vertex ID  */ ;/**  * Get the first vertex ID.  *  * @return first vertex ID  */ K getVertexId0().
+true;;1;1;/**  * Set the first vertex ID.  *  * @param vertexId0 new vertex ID  */ ;/**  * Set the first vertex ID.  *  * @param vertexId0 new vertex ID  */ void setVertexId0(K vertexId0).

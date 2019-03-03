@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;9;;@Parameterized.Parameters public static Collection<Object[]> data() {     return Arrays.asList(new Object[][] { { "topic1", null, Arrays.asList("topic1", "topic2", "topic3"), true }, { "topic1", null, Arrays.asList("topic2", "topic3"), false }, { "topic1", Pattern.compile("topic[0-9]"), null, true }, { "topicx", Pattern.compile("topic[0-9]"), null, false } }). }
+false;public;0;6;;@Test public void testIsMatchingTopic() {     KafkaTopicsDescriptor topicsDescriptor = new KafkaTopicsDescriptor(fixedTopics, topicPattern).     Assert.assertEquals(expected, topicsDescriptor.isMatchingTopic(topic)). }
