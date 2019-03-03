@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public File getFile(JobID jobId, PermanentBlobKey key) throws IOException {     throw new FileNotFoundException(String.format("Could not find file for blob key %s belonging to job %s.", key, jobId)). }
+false;public;0;2;;@Override public void close() { }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean reachedEnd() throws IOException {     return false. }
+false;public;1;11;;@Override public Integer nextRecord(Integer reuse) throws IOException {     if (delay) {         try {             Thread.sleep(DELAY).         } catch (InterruptedException iex) {         // do nothing         }     }     return 1. }

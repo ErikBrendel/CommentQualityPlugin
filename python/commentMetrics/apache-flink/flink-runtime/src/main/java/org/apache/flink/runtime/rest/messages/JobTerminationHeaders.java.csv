@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Class<EmptyRequestBody> getRequestClass() {     return EmptyRequestBody.class. }
+false;public;0;4;;@Override public Class<EmptyResponseBody> getResponseClass() {     return EmptyResponseBody.class. }
+false;public;0;4;;@Override public HttpResponseStatus getResponseStatusCode() {     return HttpResponseStatus.ACCEPTED. }
+false;public;0;4;;@Override public JobTerminationMessageParameters getUnresolvedMessageParameters() {     return new JobTerminationMessageParameters(). }
+false;public;0;4;;@Override public HttpMethodWrapper getHttpMethod() {     return HttpMethodWrapper.PATCH. }
+false;public;0;4;;@Override public String getTargetRestEndpointURL() {     return URL. }
+false;public,static;0;3;;public static JobTerminationHeaders getInstance() {     return INSTANCE. }
+false;public;0;4;;@Override public String getDescription() {     return "Terminates a job.". }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;9;;@Override public Record next(Record reuse) throws IOException {     if (this.source.hasNext()) {         return this.source.next().     } else {         return null.     } }
+false;public;0;12;;@Override public Record next() throws IOException {     // copy to be on the safe side     if (this.source.hasNext()) {         Record result = new Record().         this.source.next().copyTo(result).         return result.     } else {         return null.     } }

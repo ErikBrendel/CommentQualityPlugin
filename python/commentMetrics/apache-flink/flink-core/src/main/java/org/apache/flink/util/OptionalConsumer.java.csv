@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static <T> OptionalConsumer<T> of(Optional<T> optional) {     return new OptionalConsumer<>(optional). }
+false;public;1;4;;public OptionalConsumer<T> ifPresent(Consumer<T> c) {     optional.ifPresent(c).     return this. }
+false;public;1;7;;public OptionalConsumer<T> ifNotPresent(Runnable r) {     if (!optional.isPresent()) {         r.run().     }     return this. }

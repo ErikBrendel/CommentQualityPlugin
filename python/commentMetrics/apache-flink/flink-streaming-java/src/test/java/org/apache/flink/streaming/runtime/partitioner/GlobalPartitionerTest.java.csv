@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Override public StreamPartitioner<Tuple> createPartitioner() {     StreamPartitioner<Tuple> partitioner = new GlobalPartitioner<>().     assertFalse(partitioner.isBroadcast()).     return partitioner. }
+false;public;0;6;;@Test public void testSelectChannels() {     assertSelectedChannelWithSetup(0, 1).     assertSelectedChannelWithSetup(0, 2).     assertSelectedChannelWithSetup(0, 1024). }

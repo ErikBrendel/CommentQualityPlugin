@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public CheckpointMetadataOutputStream createMetadataOutputStream() throws IOException {     return new MetadataOutputStream(). }
+false;public;0;2;;@Override public void disposeOnFailure() { }
+false;public;0;4;;@Override public CheckpointStorageLocationReference getLocationReference() {     return CheckpointStorageLocationReference.getDefault(). }
+false;public;0;4;;@Override public String getExternalPointer() {     return EXTERNAL_POINTER. }
+false;public;0;4;;@Override public StreamStateHandle getMetadataHandle() {     return metaDataHandle. }
+false;public;0;2;;@Override public void disposeStorageLocation() { }
+false;public;1;4;;@Override public void write(int b) throws IOException {     os.write(b). }
+false;public;3;4;;@Override public void write(byte[] b, int off, int len) throws IOException {     os.write(b, off, len). }
+false;public;0;4;;@Override public void flush() throws IOException {     os.flush(). }
+false;public;0;4;;@Override public long getPos() throws IOException {     return os.getPosition(). }
+false;public;0;2;;@Override public void sync() throws IOException { }
+false;public;0;14;;@Override public CompletedCheckpointStorageLocation closeAndFinalizeCheckpoint() throws IOException {     synchronized (this) {         if (!closed) {             closed = true.             byte[] bytes = os.toByteArray().             ByteStreamStateHandle handle = new ByteStreamStateHandle(UUID.randomUUID().toString(), bytes).             return new NonPersistentCompletedCheckpointStorageLocation(handle).         } else {             throw new IOException("Already closed").         }     } }
+false;public;0;7;;@Override public void close() {     if (!closed) {         closed = true.         os.reset().     } }

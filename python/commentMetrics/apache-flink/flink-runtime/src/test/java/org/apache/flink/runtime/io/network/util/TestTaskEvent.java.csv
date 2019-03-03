@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public void write(DataOutputView out) throws IOException {     out.writeDouble(val0).     out.writeLong(val1). }
+false;public;1;5;;@Override public void read(DataInputView in) throws IOException {     val0 = in.readDouble().     val1 = in.readLong(). }
+false;public;1;10;;@Override public boolean equals(Object obj) {     if (obj instanceof TestTaskEvent) {         TestTaskEvent other = (TestTaskEvent) obj.         return val0 == other.val0 && val1 == other.val1.     }     return false. }

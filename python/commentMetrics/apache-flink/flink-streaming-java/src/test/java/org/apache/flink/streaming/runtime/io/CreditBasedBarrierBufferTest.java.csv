@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public BarrierBuffer createBarrierHandler(InputGate gate) throws IOException {     return new BarrierBuffer(gate, new CachedBufferBlocker(PAGE_SIZE)). }
+false;public;2;11;;@Override public void validateAlignmentBuffered(long actualBytesBuffered, BufferOrEvent... sequence) {     long expectedBuffered = 0.     for (BufferOrEvent boe : sequence) {         if (boe.isBuffer()) {             expectedBuffered += PAGE_SIZE.         }     }     assertEquals("Wrong alignment buffered bytes", actualBytesBuffered, expectedBuffered). }

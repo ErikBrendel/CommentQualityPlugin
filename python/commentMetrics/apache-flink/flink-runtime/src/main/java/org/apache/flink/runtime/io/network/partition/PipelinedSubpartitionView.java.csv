@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Nullable @Override public BufferAndBacklog getNextBuffer() {     return parent.pollBuffer(). }
+false;public;0;4;;@Override public void notifyDataAvailable() {     availabilityListener.notifyDataAvailable(). }
+false;public;0;4;;@Override public void notifySubpartitionConsumed() {     releaseAllResources(). }
+false;public;0;8;;@Override public void releaseAllResources() {     if (isReleased.compareAndSet(false, true)) {         // The view doesn't hold any resources and the parent cannot be restarted. Therefore,         // it's OK to notify about consumption as well.         parent.onConsumedSubpartition().     } }
+false;public;0;4;;@Override public boolean isReleased() {     return isReleased.get() || parent.isReleased(). }
+false;public;0;4;;@Override public boolean nextBufferIsEvent() {     return parent.nextBufferIsEvent(). }
+false;public;0;4;;@Override public boolean isAvailable() {     return parent.isAvailable(). }
+false;public;0;4;;@Override public Throwable getFailureCause() {     return parent.getFailureCause(). }
+false;public;0;6;;@Override public String toString() {     return String.format("PipelinedSubpartitionView(index: %d) of ResultPartition %s", parent.index, parent.parent.getPartitionId()). }

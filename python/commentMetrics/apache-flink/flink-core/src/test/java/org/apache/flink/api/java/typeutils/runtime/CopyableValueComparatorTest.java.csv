@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected TypeComparator<StringValue> createComparator(boolean ascending) {     return new CopyableValueComparator<StringValue>(ascending, StringValue.class). }
+false;protected;0;4;;@Override protected TypeSerializer<StringValue> createSerializer() {     return new CopyableValueSerializer<StringValue>(StringValue.class). }
+false;protected;0;4;;@Override protected StringValue[] getSortedTestData() {     return data. }

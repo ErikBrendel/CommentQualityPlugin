@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;// -------------------------------------------------------------------------------------------- @Override public void setup(AbstractInvokable parent) {     @SuppressWarnings("unchecked")     final MapFunction<IT, OT> mapper = BatchTask.instantiateUserCode(this.config, userCodeClassLoader, MapFunction.class).     this.mapper = mapper.     FunctionUtils.setFunctionRuntimeContext(mapper, getUdfRuntimeContext()). }
+false;public;0;5;;@Override public void openTask() throws Exception {     Configuration stubConfig = this.config.getStubParameters().     BatchTask.openUserCode(this.mapper, stubConfig). }
+false;public;0;4;;@Override public void closeTask() throws Exception {     BatchTask.closeUserCode(this.mapper). }
+false;public;0;7;;@Override public void cancelTask() {     try {         FunctionUtils.closeFunction(this.mapper).     } catch (Throwable t) {     } }
+false;public;0;3;;// -------------------------------------------------------------------------------------------- public Function getStub() {     return this.mapper. }
+false;public;0;3;;public String getTaskName() {     return this.taskName. }
+false;public;1;9;;// -------------------------------------------------------------------------------------------- @Override public void collect(IT record) {     try {         this.numRecordsIn.inc().         this.outputCollector.collect(this.mapper.map(record)).     } catch (Exception ex) {         throw new ExceptionInChainedStubException(this.taskName, ex).     } }
+false;public;0;4;;@Override public void close() {     this.outputCollector.close(). }

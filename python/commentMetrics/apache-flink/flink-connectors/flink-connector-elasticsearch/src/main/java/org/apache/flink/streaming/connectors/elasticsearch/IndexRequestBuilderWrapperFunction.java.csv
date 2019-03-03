@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;4;;@Override public void process(T element, RuntimeContext ctx, RequestIndexer indexer) {     indexer.add(indexRequestBuilder.createIndexRequest(element, ctx)). }

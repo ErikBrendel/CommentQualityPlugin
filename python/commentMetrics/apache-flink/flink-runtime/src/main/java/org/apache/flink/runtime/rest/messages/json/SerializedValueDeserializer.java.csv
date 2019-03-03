@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public SerializedValue<?> deserialize(final JsonParser p, final DeserializationContext ctxt) throws IOException {     return SerializedValue.fromBytes(p.getBinaryValue()). }

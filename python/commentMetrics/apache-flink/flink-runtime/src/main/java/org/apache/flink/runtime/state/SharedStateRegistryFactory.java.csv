@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;1;1;/**  * Factory method for {@link SharedStateRegistry}.  *  * @param deleteExecutor executor used to run (async) deletes.  * @return a SharedStateRegistry object  */ ;/**  * Factory method for {@link SharedStateRegistry}.  *  * @param deleteExecutor executor used to run (async) deletes.  * @return a SharedStateRegistry object  */ SharedStateRegistry create(Executor deleteExecutor).

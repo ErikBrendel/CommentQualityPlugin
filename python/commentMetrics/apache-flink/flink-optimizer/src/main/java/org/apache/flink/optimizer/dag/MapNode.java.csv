@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getOperatorName() {     return "Map". }
+false;protected;0;4;;@Override protected List<OperatorDescriptorSingle> getPossibleProperties() {     return this.possibleProperties. }
+true;protected;1;4;/**  * Computes the estimates for the Map operator.  * We assume that by default, Map takes one value and transforms it into another value.  * The cardinality consequently stays the same.  */ ;/**  * Computes the estimates for the Map operator.  * We assume that by default, Map takes one value and transforms it into another value.  * The cardinality consequently stays the same.  */ @Override protected void computeOperatorSpecificDefaultEstimates(DataStatistics statistics) {     this.estimatedNumRecords = getPredecessorNode().getEstimatedNumRecords(). }

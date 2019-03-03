@@ -1,0 +1,17 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;public ArchivedExecutionBuilder setAttemptId(ExecutionAttemptID attemptId) {     this.attemptId = attemptId.     return this. }
+false;public;1;5;;public ArchivedExecutionBuilder setStateTimestamps(long[] stateTimestamps) {     Preconditions.checkArgument(stateTimestamps.length == ExecutionState.values().length).     this.stateTimestamps = stateTimestamps.     return this. }
+false;public;1;4;;public ArchivedExecutionBuilder setAttemptNumber(int attemptNumber) {     this.attemptNumber = attemptNumber.     return this. }
+false;public;1;4;;public ArchivedExecutionBuilder setState(ExecutionState state) {     this.state = state.     return this. }
+false;public;1;4;;public ArchivedExecutionBuilder setFailureCause(String failureCause) {     this.failureCause = failureCause.     return this. }
+false;public;1;4;;public ArchivedExecutionBuilder setAssignedResourceLocation(TaskManagerLocation assignedResourceLocation) {     this.assignedResourceLocation = assignedResourceLocation.     return this. }
+false;public;1;4;;public ArchivedExecutionBuilder setAssignedAllocationID(AllocationID assignedAllocationID) {     this.assignedAllocationID = assignedAllocationID.     return this. }
+false;public;1;4;;public ArchivedExecutionBuilder setUserAccumulators(StringifiedAccumulatorResult[] userAccumulators) {     this.userAccumulators = userAccumulators.     return this. }
+false;public;1;4;;public ArchivedExecutionBuilder setParallelSubtaskIndex(int parallelSubtaskIndex) {     this.parallelSubtaskIndex = parallelSubtaskIndex.     return this. }
+false;public;1;4;;public ArchivedExecutionBuilder setIOMetrics(IOMetrics ioMetrics) {     this.ioMetrics = ioMetrics.     return this. }
+false;public;0;14;;public ArchivedExecution build() throws UnknownHostException {     return new ArchivedExecution(userAccumulators != null ? userAccumulators : new StringifiedAccumulatorResult[0], ioMetrics != null ? ioMetrics : new TestIOMetrics(), attemptId != null ? attemptId : new ExecutionAttemptID(), attemptNumber, state != null ? state : ExecutionState.FINISHED, failureCause != null ? failureCause : "(null)", assignedResourceLocation != null ? assignedResourceLocation : new TaskManagerLocation(new ResourceID("tm"), InetAddress.getLocalHost(), 1234), assignedAllocationID != null ? assignedAllocationID : new AllocationID(0L, 0L), parallelSubtaskIndex, stateTimestamps != null ? stateTimestamps : new long[] { 1, 2, 3, 4, 5, 5, 5, 5 }). }
+false;public;0;3;;@Override public void inc() { }
+false;public;1;3;;@Override public void inc(long n) { }
+false;public;0;3;;@Override public void dec() { }
+false;public;1;3;;@Override public void dec(long n) { }
+false;public;0;4;;@Override public long getCount() {     return count. }

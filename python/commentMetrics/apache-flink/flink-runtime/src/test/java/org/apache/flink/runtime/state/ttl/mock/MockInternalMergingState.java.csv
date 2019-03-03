@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;13;;@Override public void mergeNamespaces(N target, Collection<N> sources) throws Exception {     ACC acc = null.     for (N n : sources) {         setCurrentNamespace(n).         ACC nAcc = getInternal().         acc = nAcc == null ? acc : (acc == null ? nAcc : mergeState(acc, nAcc)).     }     if (acc != null) {         setCurrentNamespace(target).         updateInternal(acc).     } }
+false;abstract;2;1;;abstract ACC mergeState(ACC acc, ACC nAcc) throws Exception.

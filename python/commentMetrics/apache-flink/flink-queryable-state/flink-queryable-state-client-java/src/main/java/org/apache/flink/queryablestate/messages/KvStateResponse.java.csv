@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public byte[] getContent() {     return content. }
+false;public;0;8;;@Override public byte[] serialize() {     final int size = Integer.BYTES + content.length.     return ByteBuffer.allocate(size).putInt(content.length).put(content).array(). }
+false;public;1;11;;@Override public KvStateResponse deserializeMessage(ByteBuf buf) {     int length = buf.readInt().     Preconditions.checkArgument(length >= 0, "Negative length for state content. " + "This indicates a serialization error.").     byte[] content = new byte[length].     buf.readBytes(content).     return new KvStateResponse(content). }

@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;// ------------------------------------------------------------------------ // Serializer Snapshot Methods // ------------------------------------------------------------------------ @Override public int getCurrentVersion() {     return CURRENT_VERSION. }
+false;public;0;4;;@Override public TypeSerializer<T> restoreSerializer() {     return serializerSupplier.get(). }
+false;public;1;7;;@Override public TypeSerializerSchemaCompatibility<T> resolveSchemaCompatibility(TypeSerializer<T> newSerializer) {     return newSerializer.getClass() == serializerSupplier.get().getClass() ? TypeSerializerSchemaCompatibility.compatibleAsIs() : TypeSerializerSchemaCompatibility.incompatible(). }
+false;public;1;4;;@Override public void writeSnapshot(DataOutputView out) throws IOException { //  }
+false;public;3;16;;@Override public void readSnapshot(int readVersion, DataInputView in, ClassLoader classLoader) throws IOException {     switch(readVersion) {         case 3:             {                 break.             }         case 2:             {                 // we don't need the classname any more. read and drop to maintain compatibility                 in.readUTF().                 break.             }         default:             {                 throw new IOException("Unrecognized version: " + readVersion).             }     } }
+false;public,final;1;4;;// ------------------------------------------------------------------------ // standard utilities // ------------------------------------------------------------------------ @Override public final boolean equals(Object obj) {     return obj != null && obj.getClass() == getClass(). }
+false;public,final;0;4;;@Override public final int hashCode() {     return getClass().hashCode(). }
+false;public;0;4;;@Override public String toString() {     return getClass().getName(). }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;6;;@Override public void reduce(Iterable<T> values, Collector<T> out) {     for (T next : values) {         out.collect(next).     } }

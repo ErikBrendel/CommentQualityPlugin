@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * Returns the number of outstanding requests.  */ ;/**  * Returns the number of outstanding requests.  */ int getNumberOfOutstandingRequests().
+true;;1;1;/**  * Registers a listener, which is notified after all outstanding requests have been processed.  */ ;/**  * Registers a listener, which is notified after all outstanding requests have been processed.  */ boolean registerAllRequestsProcessedListener(NotificationListener listener) throws IOException.

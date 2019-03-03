@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;public ArchivedExecutionConfigBuilder setExecutionMode(String executionMode) {     this.executionMode = executionMode.     return this. }
+false;public;1;4;;public ArchivedExecutionConfigBuilder setRestartStrategyDescription(String restartStrategyDescription) {     this.restartStrategyDescription = restartStrategyDescription.     return this. }
+false;public;1;4;;public ArchivedExecutionConfigBuilder setParallelism(int parallelism) {     this.parallelism = parallelism.     return this. }
+false;public;1;4;;public ArchivedExecutionConfigBuilder setObjectReuseEnabled(boolean objectReuseEnabled) {     this.objectReuseEnabled = objectReuseEnabled.     return this. }
+false;public;1;4;;public ArchivedExecutionConfigBuilder setGlobalJobParameters(Map<String, String> globalJobParameters) {     this.globalJobParameters = globalJobParameters.     return this. }
+false;public;0;9;;public ArchivedExecutionConfig build() {     return new ArchivedExecutionConfig(executionMode != null ? executionMode : ExecutionMode.PIPELINED.name(), restartStrategyDescription != null ? restartStrategyDescription : "default", parallelism, objectReuseEnabled, globalJobParameters != null ? globalJobParameters : Collections.<String, String>emptyMap()). }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public ObjectNode deserialize(byte[] message) throws IOException {     return mapper.readValue(message, ObjectNode.class). }

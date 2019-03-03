@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;1;1;;String format(IN value).
+false;public;0;3;;public String getCharsetName() {     return charsetName. }
+false;public;1;11;;public void setCharsetName(String charsetName) throws IllegalCharsetNameException, UnsupportedCharsetException {     if (charsetName == null) {         throw new NullPointerException().     }     if (!Charset.isSupported(charsetName)) {         throw new UnsupportedCharsetException("The charset " + charsetName + " is not supported.").     }     this.charsetName = charsetName. }
+false;public;2;14;;// -------------------------------------------------------------------------------------------- @Override public void open(int taskNumber, int numTasks) throws IOException {     super.open(taskNumber, numTasks).     try {         this.charset = Charset.forName(charsetName).     } catch (IllegalCharsetNameException e) {         throw new IOException("The charset " + charsetName + " is not valid.", e).     } catch (UnsupportedCharsetException e) {         throw new IOException("The charset " + charsetName + " is not supported.", e).     } }
+false;public;1;6;;@Override public void writeRecord(T record) throws IOException {     byte[] bytes = record.toString().getBytes(charset).     this.stream.write(bytes).     this.stream.write(NEWLINE). }
+false;public;0;4;;// -------------------------------------------------------------------------------------------- @Override public String toString() {     return "TextOutputFormat (" + getOutputFilePath() + ") - " + this.charsetName. }

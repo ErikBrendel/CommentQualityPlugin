@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public char getDelimiter() {     return delimiter. }
+false;public;1;4;;@Override public char getDelimiter(int index) {     return delimiter. }
+false;public;0;4;;@Override public int getNumberReporters() {     return 0. }
+false;public;3;3;;@Override public void register(Metric metric, String metricName, AbstractMetricGroup group) { }
+false;public;3;3;;@Override public void unregister(Metric metric, String metricName, AbstractMetricGroup group) { }
+false;public;0;4;;@Override public ScopeFormats getScopeFormats() {     return scopeFormats. }
+false;public;0;5;;@Nullable @Override public String getMetricQueryServicePath() {     return null. }

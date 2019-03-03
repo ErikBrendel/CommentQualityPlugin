@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;5;;protected Configuration getConfiguration() {     final Configuration configuration = GlobalConfiguration.loadConfiguration(CliFrontendTestUtils.getConfigDir()).     return configuration. }
+false;static;1;3;;static AbstractCustomCommandLine<?> getCli(Configuration configuration) {     return new DefaultCLI(configuration). }

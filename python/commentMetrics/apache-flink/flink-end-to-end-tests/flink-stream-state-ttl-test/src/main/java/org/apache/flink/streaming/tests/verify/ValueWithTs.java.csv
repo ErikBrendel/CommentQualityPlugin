@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;3;;V getValue() {     return value. }
+false;;0;3;;long getTimestamp() {     return timestamp. }
+false;public;0;7;;@Override public String toString() {     return "ValueWithTs{" + "value=" + value + ", timestamp=" + timestamp + '}'. }
+false;public;1;4;;@Override public ValueWithTs<?> createInstance(@Nonnull Object... values) {     return new ValueWithTs<>(values[0], (Long) values[1]). }
+false;protected;3;4;;@Override protected void setField(@Nonnull ValueWithTs<?> value, int index, Object fieldValue) {     throw new UnsupportedOperationException(). }
+false;protected;2;11;;@Override protected Object getField(@Nonnull ValueWithTs<?> value, int index) {     switch(index) {         case 0:             return value.getValue().         case 1:             return value.getTimestamp().         default:             throw new FlinkRuntimeException("Unexpected field index for ValueWithTs").     } }
+false;protected;2;8;;@SuppressWarnings("unchecked") @Override protected CompositeSerializer<ValueWithTs<?>> createSerializerInstance(PrecomputedParameters precomputed, TypeSerializer<?>... originalSerializers) {     return new Serializer(precomputed, originalSerializers[0], originalSerializers[1]). }
+false;;0;3;;TypeSerializer<?> getValueSerializer() {     return fieldSerializers[0]. }
+false;;0;5;;@SuppressWarnings("unchecked") TypeSerializer<Long> getTimestampSerializer() {     TypeSerializer<?> fieldSerializer = fieldSerializers[1].     return (TypeSerializer<Long>) fieldSerializer. }
+false;public;0;4;;@Override public TypeSerializerSnapshot<ValueWithTs<?>> snapshotConfiguration() {     return new ValueWithTsSerializerSnapshot(this). }
+false;protected;0;4;;@Override protected int getCurrentOuterSnapshotVersion() {     return VERSION. }
+false;protected;1;4;;@Override protected TypeSerializer<?>[] getNestedSerializers(Serializer outerSerializer) {     return new TypeSerializer[] { outerSerializer.getValueSerializer(), outerSerializer.getTimestampSerializer() }. }
+false;protected;1;7;;@SuppressWarnings("unchecked") @Override protected Serializer createOuterSerializerWithNestedSerializers(TypeSerializer<?>[] nestedSerializers) {     TypeSerializer<?> valueSerializer = nestedSerializers[0].     TypeSerializer<Long> timestampSerializer = (TypeSerializer<Long>) nestedSerializers[1].     return new Serializer(valueSerializer, timestampSerializer). }

@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Before public void before() throws Exception {     resultPath = tempFolder.newFile().toURI().toString().     File edgesFile = tempFolder.newFile().     FileUtils.writeFileUtf8(edgesFile, SingleSourceShortestPathsData.EDGES).     edgesPath = edgesFile.toURI().toString(). }
+false;public;0;6;;@Test public void testSSSPExample() throws Exception {     SingleSourceShortestPaths.main(new String[] { SingleSourceShortestPathsData.SRC_VERTEX_ID + "", edgesPath, resultPath, 10 + "" }).     expected = SingleSourceShortestPathsData.RESULTED_SINGLE_SOURCE_SHORTEST_PATHS. }
+false;public;0;6;;@Test public void testGSASSSPExample() throws Exception {     GSASingleSourceShortestPaths.main(new String[] { SingleSourceShortestPathsData.SRC_VERTEX_ID + "", edgesPath, resultPath, 10 + "" }).     expected = SingleSourceShortestPathsData.RESULTED_SINGLE_SOURCE_SHORTEST_PATHS. }
+false;public;0;6;;@Test public void testPregelSSSPExample() throws Exception {     PregelSSSP.main(new String[] { SingleSourceShortestPathsData.SRC_VERTEX_ID + "", edgesPath, resultPath, 10 + "" }).     expected = SingleSourceShortestPathsData.RESULTED_SINGLE_SOURCE_SHORTEST_PATHS. }
+false;public;0;4;;@After public void after() throws Exception {     TestBaseUtils.compareResultsByLinesInMemory(expected, resultPath). }

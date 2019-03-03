@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;5;;@Override protected FsStateBackend getStateBackend() throws Exception {     File checkpointPath = tempFolder.newFolder().     return new FsStateBackend(checkpointPath.toURI(), useAsyncMode()). }
+false;protected;0;3;;protected boolean useAsyncMode() {     return false. }
+false;protected;0;4;;@Override protected boolean isSerializerPresenceRequiredOnRestore() {     return true. }
+true;public;0;3;// disable these because the verification does not work for this state backend ;// disable these because the verification does not work for this state backend @Override @Test public void testValueStateRestoreWithWrongSerializers() { }
+false;public;0;3;;@Override @Test public void testListStateRestoreWithWrongSerializers() { }
+false;public;0;3;;@Override @Test public void testReducingStateRestoreWithWrongSerializers() { }
+false;public;0;3;;@Override @Test public void testMapStateRestoreWithWrongSerializers() { }
+false;public;0;5;;@Ignore @Test public void testConcurrentMapIfQueryable() throws Exception {     super.testConcurrentMapIfQueryable(). }

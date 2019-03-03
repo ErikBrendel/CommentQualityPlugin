@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Field getField() {     return field. }
+false;public;0;3;;public TypeInformation<?> getTypeInformation() {     return type. }
+false;private;1;5;;private void writeObject(ObjectOutputStream out) throws IOException, ClassNotFoundException {     out.defaultWriteObject().     FieldSerializer.serializeField(field, out). }
+false;private;1;5;;private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {     in.defaultReadObject().     field = FieldSerializer.deserializeField(in). }
+false;public;0;4;;@Override public String toString() {     return "PojoField " + field.getDeclaringClass() + "." + field.getName() + " (" + type + ")". }
+false;public;1;11;;@Override public boolean equals(Object obj) {     if (obj instanceof PojoField) {         PojoField other = (PojoField) obj.         return type.equals(other.type) && Objects.equals(field, other.field).     } else {         return false.     } }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(field, type). }

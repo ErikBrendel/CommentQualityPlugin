@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;1;1;;void addInputChannel(RemoteInputChannel inputChannel) throws IOException.
+false;;1;1;;void removeInputChannel(RemoteInputChannel inputChannel).
+false;;1;1;;void cancelRequestFor(InputChannelID inputChannelId).
+true;;1;1;/**  * The credit begins to announce after receiving the sender's backlog from buffer response.  * Than means it should only happen after some interactions with the channel to make sure  * the context will not be null.  *  * @param inputChannel The input channel with unannounced credits.  */ ;/**  * The credit begins to announce after receiving the sender's backlog from buffer response.  * Than means it should only happen after some interactions with the channel to make sure  * the context will not be null.  *  * @param inputChannel The input channel with unannounced credits.  */ void notifyCreditAvailable(final RemoteInputChannel inputChannel).

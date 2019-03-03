@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;13;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     SubtasksAllAccumulatorsInfo that = (SubtasksAllAccumulatorsInfo) o.     return Objects.equals(jobVertexId, that.jobVertexId) && parallelism == that.parallelism && Objects.equals(subtaskAccumulatorsInfos, that.subtaskAccumulatorsInfos). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(jobVertexId, parallelism, subtaskAccumulatorsInfos). }
+false;public;1;14;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     SubtaskAccumulatorsInfo that = (SubtaskAccumulatorsInfo) o.     return subtaskIndex == that.subtaskIndex && attemptNum == that.attemptNum && Objects.equals(host, that.host) && Objects.equals(userAccumulators, that.userAccumulators). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(subtaskIndex, attemptNum, host, userAccumulators). }

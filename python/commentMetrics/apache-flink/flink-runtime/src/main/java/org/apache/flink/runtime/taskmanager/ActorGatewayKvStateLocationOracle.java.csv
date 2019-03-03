@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;9;;@Override public CompletableFuture<KvStateLocation> requestKvStateLocation(JobID jobId, String registrationName) {     final KvStateMessage.LookupKvStateLocation lookupKvStateLocation = new KvStateMessage.LookupKvStateLocation(jobId, registrationName).     return FutureUtils.toJava(jobManagerActorGateway.ask(lookupKvStateLocation, timeout).mapTo(ClassTag$.MODULE$.<KvStateLocation>apply(KvStateLocation.class))). }

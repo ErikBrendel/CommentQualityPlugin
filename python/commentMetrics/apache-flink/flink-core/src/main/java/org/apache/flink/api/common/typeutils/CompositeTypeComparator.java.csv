@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Override public TypeComparator[] getFlatComparators() {     List<TypeComparator> flatComparators = new LinkedList<TypeComparator>().     this.getFlatComparator(flatComparators).     return flatComparators.toArray(new TypeComparator[flatComparators.size()]). }
+false;public,abstract;1;1;;public abstract void getFlatComparator(List<TypeComparator> flatComparators).

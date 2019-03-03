@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean isEndOfInput() throws Exception {     return isClosed || isEndOfInput. }
+false;public;0;12;;@Override public void close() throws Exception {     if (!isClosed) {         // it here. Otherwise, it's the responsibility of the consumer.         if (!isEndOfInput) {             buf.release().         }         isClosed = true.     } }
+false;public;1;4;;@Override public ByteBuf readChunk(ChannelHandlerContext ctx) throws Exception {     return readChunk(). }
+false;public;1;4;;@Override public ByteBuf readChunk(ByteBufAllocator byteBufAllocator) throws Exception {     return readChunk(). }
+false;private;0;15;;private ByteBuf readChunk() {     if (isClosed) {         return null.     } else if (buf.readableBytes() <= chunkSize) {         isEndOfInput = true.         // Don't retain as the consumer is responsible to release it         return buf.slice().     } else {         // a reference here.         return buf.readSlice(chunkSize).retain().     } }
+false;public;0;4;;@Override public long length() {     return -1. }
+false;public;0;4;;@Override public long progress() {     return buf.readerIndex(). }
+false;public;0;9;;@Override public String toString() {     return "ChunkedByteBuf{" + "buf=" + buf + ", chunkSize=" + chunkSize + ", isClosed=" + isClosed + ", isEndOfInput=" + isEndOfInput + '}'. }

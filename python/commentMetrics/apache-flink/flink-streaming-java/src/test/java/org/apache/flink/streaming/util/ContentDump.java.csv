@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Set<String> listFiles() {     return new HashSet<>(filesContent.keySet()). }
+false;public;1;3;;public void setWritable(boolean writable) {     this.writable = writable. }
+true;public;1;5;/**  * Creates an empty file.  */ ;/**  * Creates an empty file.  */ public ContentWriter createWriter(String name) {     checkArgument(!filesContent.containsKey(name), "File [%s] already exists", name).     filesContent.put(name, new ArrayList<>()).     return new ContentWriter(name, this). }
+false;public,static;3;7;;public static void move(String name, ContentDump source, ContentDump target) {     Collection<String> content = source.read(name).     try (ContentWriter contentWriter = target.createWriter(name)) {         contentWriter.write(content).flush().     }     source.delete(name). }
+false;public;1;3;;public void delete(String name) {     filesContent.remove(name). }
+false;public;1;6;;public Collection<String> read(String name) {     List<String> content = filesContent.get(name).     checkState(content != null, "Unknown file [%s]", name).     List<String> result = new ArrayList<>(content).     return result. }
+false;private;2;8;;private void putContent(String name, List<String> values) {     List<String> content = filesContent.get(name).     checkState(content != null, "Unknown file [%s]", name).     if (!writable) {         throw new NotWritableException(name).     }     content.addAll(values). }
+false;public;0;3;;public String getName() {     return name. }
+false;public;1;5;;public ContentWriter write(String value) {     checkState(!closed).     buffer.add(value).     return this. }
+false;public;1;4;;public ContentWriter write(Collection<String> values) {     values.forEach(this::write).     return this. }
+false;public;0;4;;public ContentWriter flush() {     contentDump.putContent(name, buffer).     return this. }
+false;public;0;4;;public void close() {     buffer.clear().     closed = true. }

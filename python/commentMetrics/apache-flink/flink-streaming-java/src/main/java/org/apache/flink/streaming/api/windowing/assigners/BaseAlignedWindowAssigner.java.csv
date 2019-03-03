@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public long getSize() {     return size. }
+false;public;3;4;;@Override public Collection<TimeWindow> assignWindows(Object element, long timestamp, WindowAssignerContext context) {     throw new UnsupportedOperationException("This assigner should not be used with the WindowOperator."). }
+false;public;1;4;;@Override public Trigger<Object, TimeWindow> getDefaultTrigger(StreamExecutionEnvironment env) {     throw new UnsupportedOperationException("This assigner should not be used with the WindowOperator."). }
+false;public;1;4;;@Override public TypeSerializer<TimeWindow> getWindowSerializer(ExecutionConfig executionConfig) {     throw new UnsupportedOperationException("This assigner should not be used with the WindowOperator."). }
+false;public;0;4;;@Override public boolean isEventTime() {     throw new UnsupportedOperationException("This assigner should not be used with the WindowOperator."). }

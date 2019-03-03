@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;7;;public static EventSource.Factory createFactory(final OkHttpClient client) {     return (request, listener) -> {         RealEventSource eventSource = new RealEventSource(request, listener).         eventSource.connect(client).         return eventSource.     }. }
+false;public,static;2;4;;public static void processResponse(Response response, EventSourceListener listener) {     RealEventSource eventSource = new RealEventSource(response.request(), listener).     eventSource.processResponse(response). }

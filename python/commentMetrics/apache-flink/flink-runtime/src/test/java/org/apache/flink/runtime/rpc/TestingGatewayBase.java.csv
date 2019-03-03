@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;// ------------------------------------------------------------------------ // shutdown // ------------------------------------------------------------------------ public void stop() {     executor.shutdownNow(). }
+false;protected;0;5;;@Override protected void finalize() throws Throwable {     super.finalize().     executor.shutdownNow(). }
+false;public;0;4;;// ------------------------------------------------------------------------ // Base class methods // ------------------------------------------------------------------------ @Override public String getAddress() {     return address. }
+false;public;0;4;;@Override public String getHostname() {     return address. }
+false;public;1;5;;// ------------------------------------------------------------------------ // utilities // ------------------------------------------------------------------------ public <T> CompletableFuture<T> futureWithTimeout(long timeoutMillis) {     CompletableFuture<T> future = new CompletableFuture<>().     executor.schedule(new FutureTimeout(future), timeoutMillis, TimeUnit.MILLISECONDS).     return future. }
+false;public;0;9;;@Override public void run() {     try {         promise.completeExceptionally(new TimeoutException()).     } catch (Throwable t) {         System.err.println("CAUGHT AN ERROR IN THE TEST: " + t.getMessage()).         t.printStackTrace().     } }

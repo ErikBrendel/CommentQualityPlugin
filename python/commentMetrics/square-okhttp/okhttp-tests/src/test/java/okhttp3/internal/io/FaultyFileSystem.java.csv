@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;7;;public void setFaultyWrite(File file, boolean faulty) {     if (faulty) {         writeFaults.add(file).     } else {         writeFaults.remove(file).     } }
+false;public;2;7;;public void setFaultyDelete(File file, boolean faulty) {     if (faulty) {         deleteFaults.add(file).     } else {         deleteFaults.remove(file).     } }
+false;public;2;7;;public void setFaultyRename(File file, boolean faulty) {     if (faulty) {         renameFaults.add(file).     } else {         renameFaults.remove(file).     } }
+false;public;1;3;;@Override public Source source(File file) throws FileNotFoundException {     return delegate.source(file). }
+false;public;1;3;;@Override public Sink sink(File file) throws FileNotFoundException {     return new FaultySink(delegate.sink(file), file). }
+false;public;1;3;;@Override public Sink appendingSink(File file) throws FileNotFoundException {     return new FaultySink(delegate.appendingSink(file), file). }
+false;public;1;4;;@Override public void delete(File file) throws IOException {     if (deleteFaults.contains(file))         throw new IOException("boom!").     delegate.delete(file). }
+false;public;1;3;;@Override public boolean exists(File file) {     return delegate.exists(file). }
+false;public;1;3;;@Override public long size(File file) {     return delegate.size(file). }
+false;public;2;4;;@Override public void rename(File from, File to) throws IOException {     if (renameFaults.contains(from) || renameFaults.contains(to))         throw new IOException("boom!").     delegate.rename(from, to). }
+false;public;1;4;;@Override public void deleteContents(File directory) throws IOException {     if (deleteFaults.contains(directory))         throw new IOException("boom!").     delegate.deleteContents(directory). }
+false;public;2;4;;@Override public void write(Buffer source, long byteCount) throws IOException {     if (writeFaults.contains(file))         throw new IOException("boom!").     super.write(source, byteCount). }

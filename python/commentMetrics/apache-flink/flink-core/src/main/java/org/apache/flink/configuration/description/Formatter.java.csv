@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;6;/**  * Formats the description into a String using format specific tags.  *  * @param description description to be formatted  * @return string representation of the description  */ ;/**  * Formats the description into a String using format specific tags.  *  * @param description description to be formatted  * @return string representation of the description  */ public String format(Description description) {     for (BlockElement blockElement : description.getBlocks()) {         blockElement.format(this).     }     return finalizeFormatting(). }
+false;public;1;3;;public void format(LinkElement element) {     formatLink(state, element.getLink(), element.getText()). }
+false;public;1;9;;public void format(TextElement element) {     String[] inlineElements = element.getElements().stream().map(el -> {         Formatter formatter = newInstance().         el.format(formatter).         return formatter.finalizeFormatting().     }).toArray(String[]::new).     formatText(state, escapeFormatPlaceholder(element.getFormat()), inlineElements, element.getStyles()). }
+false;public;1;3;;public void format(LineBreakElement element) {     formatLineBreak(state). }
+false;public;1;9;;public void format(ListElement element) {     String[] inlineElements = element.getEntries().stream().map(el -> {         Formatter formatter = newInstance().         el.format(formatter).         return formatter.finalizeFormatting().     }).toArray(String[]::new).     formatList(state, inlineElements). }
+false;private;0;5;;private String finalizeFormatting() {     String result = state.toString().     state.setLength(0).     return result.replaceAll("%%", "%"). }
+false;protected,abstract;3;1;;protected abstract void formatLink(StringBuilder state, String link, String description).
+false;protected,abstract;1;1;;protected abstract void formatLineBreak(StringBuilder state).
+false;protected,abstract;4;5;;protected abstract void formatText(StringBuilder state, String format, String[] elements, EnumSet<TextElement.TextStyle> styles).
+false;protected,abstract;2;1;;protected abstract void formatList(StringBuilder state, String[] entries).
+false;protected,abstract;0;1;;protected abstract Formatter newInstance().
+false;private,static;1;6;;private static String escapeFormatPlaceholder(String value) {     return value.replaceAll("%s", TEMPORARY_PLACEHOLDER).replaceAll("%", "%%").replaceAll(TEMPORARY_PLACEHOLDER, "%s"). }

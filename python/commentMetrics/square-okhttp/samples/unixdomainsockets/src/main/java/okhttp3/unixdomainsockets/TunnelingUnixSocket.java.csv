@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void connect(SocketAddress endpoint) throws IOException {     this.inetSocketAddress = (InetSocketAddress) endpoint.     super.connect(new UnixSocketAddress(path), 0). }
+false;public;2;4;;@Override public void connect(SocketAddress endpoint, int timeout) throws IOException {     this.inetSocketAddress = (InetSocketAddress) endpoint.     super.connect(new UnixSocketAddress(path), timeout). }
+false;public;0;3;;@Override public InetAddress getInetAddress() {     return inetSocketAddress.getAddress(). }

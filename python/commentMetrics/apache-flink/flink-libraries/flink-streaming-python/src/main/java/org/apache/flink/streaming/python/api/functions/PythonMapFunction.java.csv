@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public PyObject map(PyObject value) throws Exception {     try {         return AdapterMap.adapt(fun.map(value)).     } catch (PyException pe) {         throw createAndLogException(pe).     } }

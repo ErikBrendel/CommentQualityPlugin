@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;10;;@Override public StringValue translate(LongValue value, StringValue reuse) throws Exception {     if (reuse == null) {         reuse = new StringValue().     }     reuse.setValue(Long.toString(value.getValue())).     return reuse. }

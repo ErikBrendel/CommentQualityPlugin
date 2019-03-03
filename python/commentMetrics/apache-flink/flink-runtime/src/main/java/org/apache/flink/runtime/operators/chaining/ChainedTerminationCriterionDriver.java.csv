@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;// -------------------------------------------------------------------------------------------- @Override public void setup(AbstractInvokable parent) {     agg = ((IterationRuntimeContext) getUdfRuntimeContext()).getIterationAggregator(BulkIterationBase.TERMINATION_CRITERION_AGGREGATOR_NAME). }
+false;public;0;2;;@Override public void openTask() { }
+false;public;0;2;;@Override public void closeTask() { }
+false;public;0;2;;@Override public void cancelTask() { }
+false;public;0;3;;// -------------------------------------------------------------------------------------------- public RichFunction getStub() {     return null. }
+false;public;0;3;;public String getTaskName() {     return "". }
+false;public;1;5;;// -------------------------------------------------------------------------------------------- @Override public void collect(IT record) {     numRecordsIn.inc().     agg.aggregate(1). }
+false;public;0;2;;@Override public void close() { }

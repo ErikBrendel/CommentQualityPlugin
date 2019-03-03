@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;4;;@Override public boolean put(File localFile, JobID jobId, BlobKey blobKey) throws IOException {     return false. }
+false;public;3;4;;@Override public boolean get(JobID jobId, BlobKey blobKey, File localFile) throws IOException {     return false. }
+false;public;2;4;;@Override public boolean delete(JobID jobId, BlobKey blobKey) {     return true. }
+false;public;1;4;;@Override public boolean deleteAll(JobID jobId) {     return true. }
+false;public;0;2;;@Override public void closeAndCleanupAllData() { }
+false;public;0;2;;@Override public void close() throws IOException { }

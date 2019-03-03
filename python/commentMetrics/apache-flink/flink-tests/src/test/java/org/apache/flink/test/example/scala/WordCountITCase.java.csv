@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;5;;@Override protected void preSubmit() throws Exception {     textPath = createTempFile("text.txt", WordCountData.TEXT).     resultPath = getTempDirPath("result"). }
+false;protected;0;4;;@Override protected void postSubmit() throws Exception {     compareResultsByLinesInMemory(WordCountData.COUNTS, resultPath). }
+false;protected;0;6;;@Override protected void testProgram() throws Exception {     WordCount.main(new String[] { "--input", textPath, "--output", resultPath }). }

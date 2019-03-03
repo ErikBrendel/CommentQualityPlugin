@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;3;;// ------------------------------------------------------------------------ public long getTimestampForRecord(T record, long kafkaEventTimestamp) {     return timestampsAndWatermarks.extractTimestamp(record, kafkaEventTimestamp). }
+false;public;2;11;;@Nullable public Watermark checkAndGetNewWatermark(T record, long timestamp) {     Watermark mark = timestampsAndWatermarks.checkAndGetNextWatermark(record, timestamp).     if (mark != null && mark.getTimestamp() > partitionWatermark) {         partitionWatermark = mark.getTimestamp().         return mark.     } else {         return null.     } }
+false;public;0;3;;public long getCurrentPartitionWatermark() {     return partitionWatermark. }
+false;public;0;5;;// ------------------------------------------------------------------------ @Override public String toString() {     return "KafkaTopicPartitionStateWithPunctuatedWatermarks: partition=" + getKafkaTopicPartition() + ", offset=" + getOffset() + ", watermark=" + partitionWatermark. }

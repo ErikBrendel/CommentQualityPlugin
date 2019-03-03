@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void setReleaseSlotConsumer(@Nullable Consumer<Tuple2<SlotRequestId, Throwable>> releaseSlotConsumer) {     this.releaseSlotConsumer = releaseSlotConsumer. }
+false;public;2;8;;@Override public void releaseSlot(@Nonnull SlotRequestId slotRequestId, @Nullable Throwable cause) {     Consumer<Tuple2<SlotRequestId, Throwable>> currentReleaseSlotConsumer = this.releaseSlotConsumer.     if (currentReleaseSlotConsumer != null) {         currentReleaseSlotConsumer.accept(Tuple2.of(slotRequestId, cause)).     } }

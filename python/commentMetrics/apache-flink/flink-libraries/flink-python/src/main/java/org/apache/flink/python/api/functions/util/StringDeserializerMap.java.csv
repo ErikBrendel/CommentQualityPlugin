@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public String map(byte[] value) throws Exception {     // discard type byte and size     return new String(value, 5, value.length - 5, ConfigConstants.DEFAULT_CHARSET). }

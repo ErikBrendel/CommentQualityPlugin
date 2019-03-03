@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public SV getInternal() {     return stateTable.get(currentNamespace). }
+false;public;1;4;;@Override public void updateInternal(SV valueToStore) {     stateTable.put(currentNamespace, valueToStore). }

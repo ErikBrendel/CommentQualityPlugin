@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;@Override public InetAddress getInetAddress() {     return remoteAddress. }
+false;public;0;3;;@Override public InetAddress getLocalAddress() {     return localAddress. }
+false;public;0;3;;@Override public int getLocalPort() {     return localPort. }
+false;public;0;3;;@Override public int getPort() {     return remotePort. }
+false;public;0;9;;@Test public void testIPv4() throws UnknownHostException {     Socket socket = new FakeSocket(InetAddress.getByAddress("127.0.0.1", new byte[] { 127, 0, 0, 1 }), 80).     RecordedRequest request = new RecordedRequest("GET / HTTP/1.1", headers, Collections.emptyList(), 0, new Buffer(), 0, socket).     assertEquals("http://127.0.0.1/", request.getRequestUrl().toString()). }
+false;public;0;9;;@Test public void testIpv6() throws UnknownHostException {     Socket socket = new FakeSocket(InetAddress.getByAddress("::1", new byte[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 }), 80).     RecordedRequest request = new RecordedRequest("GET / HTTP/1.1", headers, Collections.emptyList(), 0, new Buffer(), 0, socket).     assertEquals("http://[::1]/", request.getRequestUrl().toString()). }
+false;public;0;9;;@Test public void testUsesLocal() throws UnknownHostException {     Socket socket = new FakeSocket(InetAddress.getByAddress("127.0.0.1", new byte[] { 127, 0, 0, 1 }), 80).     RecordedRequest request = new RecordedRequest("GET / HTTP/1.1", headers, Collections.emptyList(), 0, new Buffer(), 0, socket).     assertEquals("http://127.0.0.1/", request.getRequestUrl().toString()). }

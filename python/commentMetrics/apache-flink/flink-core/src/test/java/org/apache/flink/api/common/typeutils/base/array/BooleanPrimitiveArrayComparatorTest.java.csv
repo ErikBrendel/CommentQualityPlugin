@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;3;7;;@Override protected void deepEquals(String message, boolean[] should, boolean[] is) {     Assert.assertTrue(should.length == is.length).     for (int x = 0. x < should.length. x++) {         Assert.assertEquals(should[x], is[x]).     } }
+false;protected;0;9;;@Override protected boolean[][] getSortedTestData() {     return new boolean[][] { new boolean[] { false, false }, new boolean[] { false, true }, new boolean[] { false, true, true }, new boolean[] { true } }. }

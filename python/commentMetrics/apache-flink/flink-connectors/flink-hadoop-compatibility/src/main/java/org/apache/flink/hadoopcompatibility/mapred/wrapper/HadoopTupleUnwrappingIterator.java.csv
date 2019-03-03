@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;12;/**  * Set the Flink iterator to wrap.  *  * @param iterator The Flink iterator to wrap.  */ ;/**  * Set the Flink iterator to wrap.  *  * @param iterator The Flink iterator to wrap.  */ @Override public void set(final Iterator<Tuple2<KEY, VALUE>> iterator) {     this.iterator = iterator.     if (this.hasNext()) {         final Tuple2<KEY, VALUE> tuple = iterator.next().         this.curKey = keySerializer.copy(tuple.f0).         this.firstValue = tuple.f1.         this.atFirst = true.     } else {         this.atFirst = false.     } }
+false;public;0;7;;@Override public boolean hasNext() {     if (this.atFirst) {         return true.     }     return iterator.hasNext(). }
+false;public;0;10;;@Override public VALUE next() {     if (this.atFirst) {         this.atFirst = false.         return firstValue.     }     final Tuple2<KEY, VALUE> tuple = iterator.next().     return tuple.f1. }
+false;public;0;3;;public KEY getCurrentKey() {     return this.curKey. }
+false;public;0;4;;@Override public void remove() {     throw new UnsupportedOperationException(). }

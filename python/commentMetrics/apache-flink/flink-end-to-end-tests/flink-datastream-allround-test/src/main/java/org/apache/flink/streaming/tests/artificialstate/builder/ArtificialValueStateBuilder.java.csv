@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void artificialStateForElement(IN event) throws Exception {     valueState.update(stateValueGenerator.join(event, valueState.value())). }
+false;public;1;4;;@Override public void initialize(FunctionInitializationContext initializationContext) {     valueState = initializationContext.getKeyedStateStore().getState(valueStateDescriptor). }

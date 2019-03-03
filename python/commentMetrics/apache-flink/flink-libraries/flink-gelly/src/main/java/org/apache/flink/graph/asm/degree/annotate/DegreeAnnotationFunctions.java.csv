@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public Vertex<K, LongValue> map(Edge<K, EV> value) throws Exception {     output.f0 = value.f0.     return output. }
+false;public;1;5;;@Override public Vertex<K, LongValue> map(Edge<K, EV> value) throws Exception {     output.f0 = value.f1.     return output. }
+false;public;2;7;;@Override public Vertex<K, LongValue> reduce(Vertex<K, LongValue> left, Vertex<K, LongValue> right) throws Exception {     LongValue count = left.f1.     count.setValue(count.getValue() + right.f1.getValue()).     return left. }
+false;public;2;8;;@Override public Vertex<K, LongValue> join(Vertex<K, VV> vertex, Vertex<K, LongValue> vertexDegree) throws Exception {     output.f0 = vertex.f0.     output.f1 = (vertexDegree == null) ? zero : vertexDegree.f1.     return output. }
+false;public;2;9;;@Override public Edge<K, Tuple2<EV, D>> join(Edge<K, EV> edge, Vertex<K, D> vertex) throws Exception {     output.f0 = edge.f0.     output.f1 = edge.f1.     valueAndDegree.f0 = edge.f2.     valueAndDegree.f1 = vertex.f1.     return output. }
+false;public;2;13;;@Override public Edge<K, Tuple3<EV, D, D>> join(Edge<K, Tuple2<EV, D>> edge, Vertex<K, D> vertex) throws Exception {     Tuple2<EV, D> valueAndDegree = edge.f2.     output.f0 = edge.f0.     output.f1 = edge.f1.     valueAndDegrees.f0 = valueAndDegree.f0.     valueAndDegrees.f1 = valueAndDegree.f1.     valueAndDegrees.f2 = vertex.f1.     return output. }

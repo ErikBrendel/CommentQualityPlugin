@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public boolean isLocalRecoveryEnabled() {     return localRecoveryEnabled. }
+false;public;0;4;;@Nonnull public LocalRecoveryDirectoryProvider getLocalStateDirectoryProvider() {     return localStateDirectories. }
+false;public;0;7;;@Override public String toString() {     return "LocalRecoveryConfig{" + "localRecoveryMode=" + localRecoveryEnabled + ", localStateDirectories=" + localStateDirectories + '}'. }

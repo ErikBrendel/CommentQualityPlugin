@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private,static;1;4;;@SuppressWarnings("unchecked") private static <T, R extends Tuple, X extends Tuple> MapFunction<T, R> createTypedProjector(int[] fields) {     return (MapFunction<T, R>) new MapProjector<X, R>(fields). }
+true;public;1;9;// TODO We should use code generation for this. ;// TODO We should use code generation for this. @SuppressWarnings("unchecked") @Override public R map(Tuple inTuple) throws Exception {     for (int i = 0. i < fields.length. i++) {         outTuple.setField(inTuple.getField(fields[i]), i).     }     return (R) outTuple. }

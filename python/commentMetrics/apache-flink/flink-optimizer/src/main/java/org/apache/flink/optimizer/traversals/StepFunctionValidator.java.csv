@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public boolean preVisit(Operator<?> visitable) {     if (visitable instanceof DeltaIterationBase.WorksetPlaceHolder) {         foundWorkset = true.     }     return (!foundWorkset) && seenBefore.add(visitable). }
+false;public;1;2;;@Override public void postVisit(Operator<?> visitable) { }
+false;public;0;3;;public boolean hasFoundWorkset() {     return foundWorkset. }

@@ -1,0 +1,32 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void setKvStateRegistry(KvStateRegistry kvStateRegistry) {     this.kvStateRegistry = kvStateRegistry. }
+false;public;0;3;;public KvStateRegistry getKvStateRegistry() {     return kvStateRegistry. }
+false;public;0;4;;@Override public ExecutionConfig getExecutionConfig() {     return executionConfig. }
+false;public;0;4;;@Override public JobID getJobID() {     return jobId. }
+false;public;0;4;;@Override public JobVertexID getJobVertexId() {     return jobVertexId. }
+false;public;0;4;;@Override public ExecutionAttemptID getExecutionId() {     return executionId. }
+false;public;0;4;;@Override public Configuration getTaskConfiguration() {     return new Configuration(). }
+false;public;0;4;;@Override public TaskManagerRuntimeInfo getTaskManagerInfo() {     return new TestingTaskManagerRuntimeInfo(). }
+false;public;0;4;;@Override public TaskMetricGroup getMetricGroup() {     return UnregisteredMetricGroups.createUnregisteredTaskMetricGroup(). }
+false;public;0;4;;@Override public Configuration getJobConfiguration() {     return new Configuration(). }
+false;public;0;4;;@Override public TaskInfo getTaskInfo() {     return taskInfo. }
+false;public;0;4;;@Override public InputSplitProvider getInputSplitProvider() {     return null. }
+false;public;0;4;;@Override public IOManager getIOManager() {     return null. }
+false;public;0;4;;@Override public MemoryManager getMemoryManager() {     return null. }
+false;public;0;8;;@Override public ClassLoader getUserClassLoader() {     if (userClassLoader == null) {         return getClass().getClassLoader().     } else {         return userClassLoader.     } }
+false;public;0;4;;@Override public Map<String, Future<Path>> getDistributedCacheEntries() {     return Collections.emptyMap(). }
+false;public;0;4;;@Override public BroadcastVariableManager getBroadcastVariableManager() {     return null. }
+false;public;0;4;;@Override public TaskStateManager getTaskStateManager() {     return taskStateManager. }
+false;public;0;4;;@Override public GlobalAggregateManager getGlobalAggregateManager() {     return aggregateManager. }
+false;public;0;4;;@Override public AccumulatorRegistry getAccumulatorRegistry() {     return accumulatorRegistry. }
+false;public;0;4;;@Override public TaskKvStateRegistry getTaskKvStateRegistry() {     return kvStateRegistry.createTaskRegistry(jobId, jobVertexId). }
+false;public;2;3;;@Override public void acknowledgeCheckpoint(long checkpointId, CheckpointMetrics checkpointMetrics) { }
+false;public;3;3;;@Override public void acknowledgeCheckpoint(long checkpointId, CheckpointMetrics checkpointMetrics, TaskStateSnapshot subtaskState) { }
+false;public;2;4;;@Override public void declineCheckpoint(long checkpointId, Throwable cause) {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public void failExternally(Throwable cause) {     throw new UnsupportedOperationException("DummyEnvironment does not support external task failure."). }
+false;public;1;4;;@Override public ResultPartitionWriter getWriter(int index) {     return null. }
+false;public;0;4;;@Override public ResultPartitionWriter[] getAllWriters() {     return null. }
+false;public;1;4;;@Override public InputGate getInputGate(int index) {     return null. }
+false;public;0;4;;@Override public InputGate[] getAllInputGates() {     return null. }
+false;public;0;4;;@Override public TaskEventDispatcher getTaskEventDispatcher() {     throw new UnsupportedOperationException(). }
+false;public;1;3;;public void setTaskStateManager(TaskStateManager taskStateManager) {     this.taskStateManager = taskStateManager. }

@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public long getCheckpointInterval() {     return checkpointInterval. }
+false;public;0;3;;public long getCheckpointTimeout() {     return checkpointTimeout. }
+false;public;0;3;;public long getMinPauseBetweenCheckpoints() {     return minPauseBetweenCheckpoints. }
+false;public;0;3;;public int getMaxConcurrentCheckpoints() {     return maxConcurrentCheckpoints. }
+false;public;0;3;;public CheckpointRetentionPolicy getCheckpointRetentionPolicy() {     return checkpointRetentionPolicy. }
+false;public;0;3;;public boolean isExactlyOnce() {     return isExactlyOnce. }
+false;public;1;16;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     CheckpointCoordinatorConfiguration that = (CheckpointCoordinatorConfiguration) o.     return checkpointInterval == that.checkpointInterval && checkpointTimeout == that.checkpointTimeout && minPauseBetweenCheckpoints == that.minPauseBetweenCheckpoints && maxConcurrentCheckpoints == that.maxConcurrentCheckpoints && isExactlyOnce == that.isExactlyOnce && checkpointRetentionPolicy == that.checkpointRetentionPolicy. }
+false;public;0;10;;@Override public int hashCode() {     return Objects.hash(checkpointInterval, checkpointTimeout, minPauseBetweenCheckpoints, maxConcurrentCheckpoints, checkpointRetentionPolicy, isExactlyOnce). }
+false;public;0;10;;@Override public String toString() {     return "JobCheckpointingConfiguration{" + "checkpointInterval=" + checkpointInterval + ", checkpointTimeout=" + checkpointTimeout + ", minPauseBetweenCheckpoints=" + minPauseBetweenCheckpoints + ", maxConcurrentCheckpoints=" + maxConcurrentCheckpoints + ", checkpointRetentionPolicy=" + checkpointRetentionPolicy + '}'. }

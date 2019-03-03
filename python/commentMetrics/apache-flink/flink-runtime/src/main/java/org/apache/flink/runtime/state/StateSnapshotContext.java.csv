@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * Returns an output stream for keyed state  */ ;/**  * Returns an output stream for keyed state  */ KeyedStateCheckpointOutputStream getRawKeyedOperatorStateOutput() throws Exception.
+true;;0;1;/**  * Returns an output stream for operator state  */ ;/**  * Returns an output stream for operator state  */ OperatorStateCheckpointOutputStream getRawOperatorStateOutput() throws Exception.

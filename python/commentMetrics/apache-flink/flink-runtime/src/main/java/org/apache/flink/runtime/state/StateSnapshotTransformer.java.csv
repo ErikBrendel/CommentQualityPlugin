@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;1;2;/**  * Transform or filter out state values which are included or skipped in the snapshot.  *  * @param value non-serialized form of value  * @return value to snapshot or null which means the entry is not included  */ ;/**  * Transform or filter out state values which are included or skipped in the snapshot.  *  * @param value non-serialized form of value  * @return value to snapshot or null which means the entry is not included  */ @Nullable T filterOrTransform(@Nullable T value).
+false;default;0;3;;default TransformStrategy getFilterStrategy() {     return TransformStrategy.TRANSFORM_ALL. }
+false;static;0;4;;@SuppressWarnings("unchecked") static <T> StateSnapshotTransformFactory<T> noTransform() {     return (StateSnapshotTransformFactory<T>) NO_TRANSFORM. }
+false;public;0;4;;@Override public Optional<StateSnapshotTransformer<T>> createForDeserializedState() {     return Optional.empty(). }
+false;public;0;4;;@Override public Optional<StateSnapshotTransformer<byte[]>> createForSerializedState() {     return Optional.empty(). }
+false;static;0;13;;static <T> StateSnapshotTransformFactory<T> createNoTransform() {     return new StateSnapshotTransformFactory<T>() {          @Override         public Optional<StateSnapshotTransformer<T>> createForDeserializedState() {             return Optional.empty().         }          @Override         public Optional<StateSnapshotTransformer<byte[]>> createForSerializedState() {             return Optional.empty().         }     }. }
+false;;0;1;;Optional<StateSnapshotTransformer<T>> createForDeserializedState().
+false;;0;1;;Optional<StateSnapshotTransformer<byte[]>> createForSerializedState().

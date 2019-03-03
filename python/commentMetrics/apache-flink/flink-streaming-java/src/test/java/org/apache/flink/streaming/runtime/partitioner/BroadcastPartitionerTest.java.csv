@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Override public StreamPartitioner<Tuple> createPartitioner() {     StreamPartitioner<Tuple> partitioner = new BroadcastPartitioner<>().     assertTrue(partitioner.isBroadcast()).     return partitioner. }
+false;public;0;10;;@Test public void testSelectChannels() {     try {         streamPartitioner.selectChannel(serializationDelegate).     } catch (UnsupportedOperationException ex) {         return.     }     fail("Broadcast selector does not support select channels."). }

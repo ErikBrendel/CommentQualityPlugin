@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public PermanentBlobCache getPermanentBlobService() {     return permanentBlobCache. }
+false;public;0;4;;@Override public TransientBlobCache getTransientBlobService() {     return transientBlobCache. }
+true;public;1;4;/**  * Sets the address of the {@link BlobServer}.  *  * @param blobServerAddress address of the {@link BlobServer}.  */ ;/**  * Sets the address of the {@link BlobServer}.  *  * @param blobServerAddress address of the {@link BlobServer}.  */ public void setBlobServerAddress(InetSocketAddress blobServerAddress) {     permanentBlobCache.setBlobServerAddress(blobServerAddress).     transientBlobCache.setBlobServerAddress(blobServerAddress). }
+false;public;0;5;;@Override public void close() throws IOException {     permanentBlobCache.close().     transientBlobCache.close(). }
+false;public;0;5;;@Override public int getPort() {     // NOTE: both blob stores connect to the same server!     return permanentBlobCache.getPort(). }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test(expected = ConversionException.class) public void testJarIdWithParentDir() throws Exception {     jarIdPathParameter.convertFromString("../../test.jar"). }
+false;public;0;6;;@Test public void testConvertFromString() throws Exception {     final String expectedJarId = "test.jar".     final String jarId = jarIdPathParameter.convertFromString(expectedJarId).     assertEquals(expectedJarId, jarId). }
+false;public;0;6;;@Test public void testConvertToString() throws Exception {     final String expected = "test.jar".     final String toString = jarIdPathParameter.convertToString(expected).     assertEquals(expected, toString). }

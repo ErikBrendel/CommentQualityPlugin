@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void configure(Configuration parameters) {     this.cluster = builder.getCluster(). }
+false;public;1;4;;@Override public BaseStatistics getStatistics(BaseStatistics cachedStatistics) {     return cachedStatistics. }
+false;public;1;4;;@Override public InputSplit[] createInputSplits(int minNumSplits) {     return new GenericInputSplit[] { new GenericInputSplit(0, 1) }. }
+false;public;1;4;;@Override public InputSplitAssigner getInputSplitAssigner(InputSplit[] inputSplits) {     return new DefaultInputSplitAssigner(inputSplits). }
+true;public;0;18;/**  * Closes all resources used.  */ ;/**  * Closes all resources used.  */ @Override public void close() {     try {         if (session != null) {             session.close().         }     } catch (Exception e) {         logger.error("Error while closing session.", e).     }     try {         if (cluster != null) {             cluster.close().         }     } catch (Exception e) {         logger.error("Error while closing cluster.", e).     } }

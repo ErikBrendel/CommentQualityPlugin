@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean hasNext() {     return true. }
+false;public;0;4;;@Override public Tuple2<String, Integer> next() {     return new Tuple2<>(NAMES[rnd.nextInt(NAMES.length)], rnd.nextInt(GRADE_COUNT) + 1). }
+false;public;0;4;;@Override public void remove() {     throw new UnsupportedOperationException(). }
+false;public,static;2;4;;public static DataStream<Tuple2<String, Integer>> getSource(StreamExecutionEnvironment env, long rate) {     return env.fromCollection(new ThrottledIterator<>(new GradeSource(), rate), TypeInformation.of(new TypeHint<Tuple2<String, Integer>>() {     })). }
+false;public;0;4;;@Override public boolean hasNext() {     return true. }
+false;public;0;4;;@Override public Tuple2<String, Integer> next() {     return new Tuple2<>(NAMES[rnd.nextInt(NAMES.length)], rnd.nextInt(SALARY_MAX) + 1). }
+false;public;0;4;;@Override public void remove() {     throw new UnsupportedOperationException(). }
+false;public,static;2;4;;public static DataStream<Tuple2<String, Integer>> getSource(StreamExecutionEnvironment env, long rate) {     return env.fromCollection(new ThrottledIterator<>(new SalarySource(), rate), TypeInformation.of(new TypeHint<Tuple2<String, Integer>>() {     })). }

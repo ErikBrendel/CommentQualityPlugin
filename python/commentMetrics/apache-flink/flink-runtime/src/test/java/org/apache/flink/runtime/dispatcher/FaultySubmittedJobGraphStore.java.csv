@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;1;3;;void setRecoveryFailure(@Nullable Exception recoveryFailure) {     this.recoveryFailure = recoveryFailure. }
+false;;1;3;;void setRemovalFailure(@Nullable Exception removalFailure) {     this.removalFailure = removalFailure. }
+false;public,synchronized;1;8;;@Override public synchronized SubmittedJobGraph recoverJobGraph(JobID jobId) throws Exception {     if (recoveryFailure != null) {         throw recoveryFailure.     } else {         return super.recoverJobGraph(jobId).     } }
+false;public,synchronized;1;8;;@Override public synchronized void removeJobGraph(JobID jobId) throws Exception {     if (removalFailure != null) {         throw removalFailure.     } else {         super.removeJobGraph(jobId).     } }

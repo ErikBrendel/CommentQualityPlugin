@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public double getQuantile(double quantile) {     return descriptiveStatistics.getPercentile(quantile * 100). }
+false;public;0;4;;@Override public long[] getValues() {     return Arrays.stream(descriptiveStatistics.getValues()).mapToLong(i -> (long) i).toArray(). }
+false;public;0;4;;@Override public int size() {     return (int) descriptiveStatistics.getN(). }
+false;public;0;4;;@Override public double getMean() {     return descriptiveStatistics.getMean(). }
+false;public;0;4;;@Override public double getStdDev() {     return descriptiveStatistics.getStandardDeviation(). }
+false;public;0;4;;@Override public long getMax() {     return (long) descriptiveStatistics.getMax(). }
+false;public;0;4;;@Override public long getMin() {     return (long) descriptiveStatistics.getMin(). }

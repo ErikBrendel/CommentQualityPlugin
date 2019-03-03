@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public List<CommonExpression> getChildren() {     return this.args. }
+false;public;0;3;;public FunctionDefinition getFunctionDefinition() {     return functionDefinition. }
+false;public;1;4;;@Override public <R> R accept(ExpressionVisitor<R> visitor) {     return visitor.visitCall(this). }
+false;public;1;12;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     CallExpression that = (CallExpression) o.     return Objects.equals(functionDefinition, that.functionDefinition) && Objects.equals(args, that.args). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(functionDefinition, args). }
+false;public;0;5;;@Override public String toString() {     final List<String> argList = args.stream().map(Object::toString).collect(Collectors.toList()).     return functionDefinition.getName() + "(" + String.join(", ", argList) + ")". }

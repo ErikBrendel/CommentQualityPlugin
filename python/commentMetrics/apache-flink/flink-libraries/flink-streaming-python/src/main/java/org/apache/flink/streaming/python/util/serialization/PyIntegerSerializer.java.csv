@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;4;;@Override public void write(Kryo kryo, Output output, PyInteger object) {     output.writeInt(object.getValue()). }
+false;public;3;4;;@Override public PyInteger read(Kryo kryo, Input input, Class<PyInteger> type) {     return new PyInteger(input.readInt()). }

@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Before public void setup() {     info = createInputFormat().createBlockInfo(). }
+false;protected;0;11;;@Override protected BinaryInputFormat<Record> createInputFormat() {     Configuration configuration = new Configuration().     final SerializedInputFormat<Record> inputFormat = new SerializedInputFormat<Record>().     inputFormat.setFilePath(this.tempFile.toURI().toString()).     inputFormat.setBlockSize(this.blockSize).     inputFormat.configure(configuration).     return inputFormat. }
+false;protected;2;12;;@Override protected BinaryOutputFormat<Record> createOutputFormat(String path, Configuration configuration) throws IOException {     final SerializedOutputFormat<Record> outputFormat = new SerializedOutputFormat<Record>().     outputFormat.setOutputFilePath(new Path(path)).     outputFormat.setWriteMode(FileSystem.WriteMode.OVERWRITE).     configuration = configuration == null ? new Configuration() : configuration.     outputFormat.configure(configuration).     outputFormat.open(0, 1).     return outputFormat. }
+false;protected;0;4;;@Override protected int getInfoSize() {     return info.getInfoSize(). }
+false;protected;1;4;;@Override protected Record getRecord(int index) {     return new Record(new IntValue(index), new StringValue(String.valueOf(index))). }
+false;protected;0;4;;@Override protected Record createInstance() {     return new Record(). }
+false;protected;2;4;;@Override protected void writeRecord(Record record, DataOutputView outputView) throws IOException {     record.write(outputView). }
+false;protected;2;6;;@Override protected void checkEquals(Record expected, Record actual) {     Assert.assertEquals(expected.getNumFields(), actual.getNumFields()).     Assert.assertEquals(expected.getField(0, IntValue.class), actual.getField(0, IntValue.class)).     Assert.assertEquals(expected.getField(1, StringValue.class), actual.getField(1, StringValue.class)). }

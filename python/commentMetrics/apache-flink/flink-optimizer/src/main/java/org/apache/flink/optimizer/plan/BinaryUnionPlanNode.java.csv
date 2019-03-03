@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public BinaryUnionNode getOptimizerNode() {     return (BinaryUnionNode) this.template. }
+false;public;0;3;;public boolean unionsStaticAndDynamicPath() {     return getInput1().isOnDynamicPath() != getInput2().isOnDynamicPath(). }
+false;public;0;4;;@Override public int getMemoryConsumerWeight() {     return 0. }

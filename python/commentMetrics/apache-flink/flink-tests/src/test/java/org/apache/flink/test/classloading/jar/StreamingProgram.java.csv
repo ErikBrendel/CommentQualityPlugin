@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;13;;public static void main(String[] args) throws Exception {     StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment().     env.getConfig().disableSysoutLogging().     DataStream<String> text = env.fromElements(WordCountData.TEXT).rebalance().     DataStream<Word> counts = text.flatMap(new Tokenizer()).keyBy("word").sum("frequency").     counts.addSink(new NoOpSink()).     env.execute(). }
+false;public;0;3;;public String getWord() {     return word. }
+false;public;1;3;;public void setWord(String word) {     this.word = word. }
+false;public;0;3;;public Integer getFrequency() {     return frequency. }
+false;public;1;3;;public void setFrequency(Integer frequency) {     this.frequency = frequency. }
+false;public;0;4;;@Override public String toString() {     return "(" + word + ", " + frequency + ")". }
+false;public;2;7;;@Override public void flatMap(String value, Collector<Word> out) throws Exception {     StringTokenizer tokenizer = new StringTokenizer(value).     while (tokenizer.hasMoreTokens()) {         out.collect(new Word(tokenizer.nextToken(), 1)).     } }
+false;public;1;3;;@Override public void invoke(Word value) throws Exception { }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public Boolean convertStringToValue(final String value) {     return Boolean.valueOf(value). }
+false;public;1;4;;@Override public String convertValueToString(final Boolean value) {     return value.toString(). }
+false;public;0;5;;@Override public String getDescription() {     return "Boolean value that specifies whether the job submission should be rejected " + "if the savepoint contains state that cannot be mapped back to the job.". }

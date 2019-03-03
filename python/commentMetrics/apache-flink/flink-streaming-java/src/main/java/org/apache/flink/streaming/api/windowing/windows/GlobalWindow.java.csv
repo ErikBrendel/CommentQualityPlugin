@@ -1,0 +1,16 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;3;;public static GlobalWindow get() {     return INSTANCE. }
+false;public;0;4;;@Override public long maxTimestamp() {     return Long.MAX_VALUE. }
+false;public;1;4;;@Override public boolean equals(Object o) {     return this == o || !(o == null || getClass() != o.getClass()). }
+false;public;0;4;;@Override public int hashCode() {     return 0. }
+false;public;0;4;;@Override public String toString() {     return "GlobalWindow". }
+false;public;0;4;;@Override public boolean isImmutableType() {     return true. }
+false;public;0;4;;@Override public GlobalWindow createInstance() {     return GlobalWindow.INSTANCE. }
+false;public;1;4;;@Override public GlobalWindow copy(GlobalWindow from) {     return from. }
+false;public;2;4;;@Override public GlobalWindow copy(GlobalWindow from, GlobalWindow reuse) {     return from. }
+false;public;0;4;;@Override public int getLength() {     return 0. }
+false;public;2;4;;@Override public void serialize(GlobalWindow record, DataOutputView target) throws IOException {     target.writeByte(0). }
+false;public;1;5;;@Override public GlobalWindow deserialize(DataInputView source) throws IOException {     source.readByte().     return GlobalWindow.INSTANCE. }
+false;public;2;6;;@Override public GlobalWindow deserialize(GlobalWindow reuse, DataInputView source) throws IOException {     source.readByte().     return GlobalWindow.INSTANCE. }
+false;public;2;5;;@Override public void copy(DataInputView source, DataOutputView target) throws IOException {     source.readByte().     target.writeByte(0). }
+false;public;0;4;;// ------------------------------------------------------------------------ @Override public TypeSerializerSnapshot<GlobalWindow> snapshotConfiguration() {     return new GlobalWindowSerializerSnapshot(). }

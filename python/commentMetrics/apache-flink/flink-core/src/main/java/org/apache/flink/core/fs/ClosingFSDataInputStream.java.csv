@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public boolean isClosed() {     return closed. }
+false;public;0;8;;@Override public void close() throws IOException {     if (!closed) {         closed = true.         registry.unregisterCloseable(this).         inputStream.close().     } }
+false;public;0;4;;@Override public int hashCode() {     return inputStream.hashCode(). }
+false;public;1;13;;@Override public boolean equals(Object obj) {     if (this == obj) {         return true.     }     if (obj instanceof ClosingFSDataInputStream) {         return inputStream.equals(((ClosingFSDataInputStream) obj).inputStream).     }     return false. }
+false;public;0;4;;@Override public String toString() {     return "ClosingFSDataInputStream(" + inputStream.toString() + ") : " + debugInfo. }
+false;public,static;2;4;;public static ClosingFSDataInputStream wrapSafe(FSDataInputStream delegate, SafetyNetCloseableRegistry registry) throws IOException {     return wrapSafe(delegate, registry, ""). }
+false;public,static;3;7;;public static ClosingFSDataInputStream wrapSafe(FSDataInputStream delegate, SafetyNetCloseableRegistry registry, String debugInfo) throws IOException {     ClosingFSDataInputStream inputStream = new ClosingFSDataInputStream(delegate, registry, debugInfo).     registry.registerCloseable(inputStream).     return inputStream. }

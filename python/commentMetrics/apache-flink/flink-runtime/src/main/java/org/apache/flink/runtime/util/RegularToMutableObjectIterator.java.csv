@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;11;;@Override public T next(T reuse) {     // -----------------------------------------------------------------------------------------     if (this.iterator.hasNext()) {         return this.serializer.copy(this.iterator.next(), reuse).     } else {         return null.     } }
+false;public;0;8;;@Override public T next() {     if (this.iterator.hasNext()) {         return this.iterator.next().     } else {         return null.     } }

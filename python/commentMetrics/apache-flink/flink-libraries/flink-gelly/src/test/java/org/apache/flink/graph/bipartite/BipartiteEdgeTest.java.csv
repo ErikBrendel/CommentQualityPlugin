@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void testGetBottomId() {     assertEquals(BOTTOM_ID, (long) edge.getBottomId()). }
+false;public;0;4;;@Test public void testGetTopId() {     assertEquals(TOP_ID, (long) edge.getTopId()). }
+false;public;0;4;;@Test public void testGetValue() {     assertEquals(VALUE, edge.getValue()). }
+false;public;0;5;;@Test public void testSetBottomId() {     edge.setBottomId(100).     assertEquals(100, (long) edge.getBottomId()). }
+false;public;0;5;;@Test public void testSetTopId() {     edge.setTopId(100).     assertEquals(100, (long) edge.getTopId()). }
+false;public;0;5;;@Test public void testSetValue() {     edge.setValue("newVal").     assertEquals("newVal", edge.getValue()). }
+false;private;0;3;;private BipartiteEdge<Integer, Integer, String> createEdge() {     return new BipartiteEdge<>(TOP_ID, BOTTOM_ID, VALUE). }

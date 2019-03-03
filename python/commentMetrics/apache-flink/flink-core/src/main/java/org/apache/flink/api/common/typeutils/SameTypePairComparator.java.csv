@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void setReference(T reference) {     comp.setReference(reference). }
+false;public;1;4;;@Override public boolean equalToReference(T candidate) {     return comp.equalToReference(candidate). }
+false;public;1;5;;@Override public int compareToReference(T candidate) {     comp2.setReference(candidate).     return comp.compareToReference(comp2). }

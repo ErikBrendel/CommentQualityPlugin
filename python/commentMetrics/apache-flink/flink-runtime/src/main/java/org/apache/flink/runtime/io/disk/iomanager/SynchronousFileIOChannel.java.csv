@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;// -------------------------------------------------------------------------------------------- @Override public boolean isClosed() {     return !this.fileChannel.isOpen(). }
+false;public;0;6;;@Override public void close() throws IOException {     if (this.fileChannel.isOpen()) {         this.fileChannel.close().     } }

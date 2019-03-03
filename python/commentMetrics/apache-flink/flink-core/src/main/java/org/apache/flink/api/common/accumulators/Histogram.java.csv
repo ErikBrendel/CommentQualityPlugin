@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Override public void add(Integer value) {     Integer current = treeMap.get(value).     Integer newValue = (current != null ? current : 0) + 1.     this.treeMap.put(value, newValue). }
+false;public;0;4;;@Override public TreeMap<Integer, Integer> getLocalValue() {     return this.treeMap. }
+false;public;1;12;;@Override public void merge(Accumulator<Integer, TreeMap<Integer, Integer>> other) {     // Merge the values into this map     for (Map.Entry<Integer, Integer> entryFromOther : other.getLocalValue().entrySet()) {         Integer ownValue = this.treeMap.get(entryFromOther.getKey()).         if (ownValue == null) {             this.treeMap.put(entryFromOther.getKey(), entryFromOther.getValue()).         } else {             this.treeMap.put(entryFromOther.getKey(), entryFromOther.getValue() + ownValue).         }     } }
+false;public;0;4;;@Override public void resetLocal() {     this.treeMap.clear(). }
+false;public;0;4;;@Override public String toString() {     return this.treeMap.toString(). }
+false;public;0;6;;@Override public Accumulator<Integer, TreeMap<Integer, Integer>> clone() {     Histogram result = new Histogram().     result.treeMap = new TreeMap<Integer, Integer>(treeMap).     return result. }

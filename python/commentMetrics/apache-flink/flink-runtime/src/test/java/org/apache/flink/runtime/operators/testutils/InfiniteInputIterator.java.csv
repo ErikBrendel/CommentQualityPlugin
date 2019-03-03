@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Override public Record next(Record reuse) {     reuse.setField(0, val1).     reuse.setField(1, val2).     return reuse. }
+false;public;0;7;;@Override public Record next() {     Record result = new Record(2).     result.setField(0, val1).     result.setField(1, val2).     return result. }

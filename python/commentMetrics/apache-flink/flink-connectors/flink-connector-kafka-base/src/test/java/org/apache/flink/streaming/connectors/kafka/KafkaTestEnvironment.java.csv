@@ -1,6 +1,39 @@
-# id;timestamp;commentText;codeText;commentWords;codeWords
-KafkaTestEnvironment -> Config -> private Config();1502179982;Please use {@link KafkaTestEnvironment#createConfig()} method.;private Config() {_		};please,use,link,kafka,test,environment,create,config,method;private,config
-KafkaTestEnvironment -> Config -> private Config();1502179982;Please use {@link KafkaTestEnvironment#createConfig()} method.;private Config() {_		};please,use,link,kafka,test,environment,create,config,method;private,config
-KafkaTestEnvironment -> Config -> private Config();1509723634;Please use {@link KafkaTestEnvironment#createConfig()} method.;private Config() {_		};please,use,link,kafka,test,environment,create,config,method;private,config
-KafkaTestEnvironment -> Config -> private Config();1511347989;Please use {@link KafkaTestEnvironment#createConfig()} method.;private Config() {_		};please,use,link,kafka,test,environment,create,config,method;private,config
-KafkaTestEnvironment -> Config -> private Config();1550834396;Please use {@link KafkaTestEnvironment#createConfig()} method.;private Config() {_		};please,use,link,kafka,test,environment,create,config,method;private,config
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public int getKafkaServersNumber() {     return kafkaServersNumber. }
+false;public;1;4;;public Config setKafkaServersNumber(int kafkaServersNumber) {     this.kafkaServersNumber = kafkaServersNumber.     return this. }
+false;public;0;3;;public Properties getKafkaServerProperties() {     return kafkaServerProperties. }
+false;public;1;4;;public Config setKafkaServerProperties(Properties kafkaServerProperties) {     this.kafkaServerProperties = kafkaServerProperties.     return this. }
+false;public;0;3;;public boolean isSecureMode() {     return secureMode. }
+false;public;1;4;;public Config setSecureMode(boolean secureMode) {     this.secureMode = secureMode.     return this. }
+false;public;0;3;;public boolean isHideKafkaBehindProxy() {     return hideKafkaBehindProxy. }
+false;public;1;4;;public Config setHideKafkaBehindProxy(boolean hideKafkaBehindProxy) {     this.hideKafkaBehindProxy = hideKafkaBehindProxy.     return this. }
+false;public,static;0;3;;public static Config createConfig() {     return new Config(). }
+false;public,abstract;1;1;;public abstract void prepare(Config config).
+false;public;0;5;;public void shutdown() throws Exception {     for (NetworkFailuresProxy proxy : networkFailuresProxies) {         proxy.close().     } }
+false;public,abstract;1;1;;public abstract void deleteTestTopic(String topic).
+false;public,abstract;4;1;;public abstract void createTestTopic(String topic, int numberOfPartitions, int replicationFactor, Properties properties).
+false;public;3;3;;public void createTestTopic(String topic, int numberOfPartitions, int replicationFactor) {     this.createTestTopic(topic, numberOfPartitions, replicationFactor, new Properties()). }
+false;public,abstract;0;1;;public abstract Properties getStandardProperties().
+false;public,abstract;0;1;;public abstract Properties getSecureProperties().
+false;public,abstract;0;1;;public abstract String getBrokerConnectionString().
+false;public,abstract;0;1;;public abstract String getVersion().
+false;public,abstract;0;1;;public abstract List<KafkaServer> getBrokers().
+true;public;3;3;// -- consumer / producer instances: ;// -- consumer / producer instances: public <T> FlinkKafkaConsumerBase<T> getConsumer(List<String> topics, DeserializationSchema<T> deserializationSchema, Properties props) {     return getConsumer(topics, new KafkaDeserializationSchemaWrapper<T>(deserializationSchema), props). }
+false;public;3;3;;public <T> FlinkKafkaConsumerBase<T> getConsumer(String topic, KafkaDeserializationSchema<T> readSchema, Properties props) {     return getConsumer(Collections.singletonList(topic), readSchema, props). }
+false;public;3;3;;public <T> FlinkKafkaConsumerBase<T> getConsumer(String topic, DeserializationSchema<T> deserializationSchema, Properties props) {     return getConsumer(Collections.singletonList(topic), deserializationSchema, props). }
+false;public,abstract;3;1;;public abstract <T> FlinkKafkaConsumerBase<T> getConsumer(List<String> topics, KafkaDeserializationSchema<T> readSchema, Properties props).
+false;public,abstract;4;5;;public abstract <K, V> Collection<ConsumerRecord<K, V>> getAllRecordsFromTopic(Properties properties, String topic, int partition, long timeout).
+false;public,abstract;4;3;;public abstract <T> StreamSink<T> getProducerSink(String topic, KeyedSerializationSchema<T> serSchema, Properties props, FlinkKafkaPartitioner<T> partitioner).
+false;public,abstract;5;3;;public abstract <T> DataStreamSink<T> produceIntoKafka(DataStream<T> stream, String topic, KeyedSerializationSchema<T> serSchema, Properties props, FlinkKafkaPartitioner<T> partitioner).
+false;public,abstract;4;5;;public abstract <T> DataStreamSink<T> writeToKafkaWithTimestamps(DataStream<T> stream, String topic, KeyedSerializationSchema<T> serSchema, Properties props).
+false;;2;1;;Long getCommittedOffset(String topicName, int partition).
+false;;3;1;;void setCommittedOffset(String topicName, int partition, long offset).
+false;;0;1;;void close().
+false;public,abstract;0;1;;public abstract KafkaOffsetHandler createOffsetHandler().
+false;public,abstract;1;1;;// -- leader failure simulation public abstract void restartBroker(int leaderId) throws Exception.
+false;public,abstract;1;1;;public abstract int getLeaderToShutDown(String topic) throws Exception.
+false;public,abstract;1;1;;public abstract int getBrokerId(KafkaServer server).
+false;public,abstract;0;1;;public abstract boolean isSecureRunSupported().
+false;public;0;5;;public void blockProxyTraffic() {     for (NetworkFailuresProxy proxy : networkFailuresProxies) {         proxy.blockTraffic().     } }
+false;public;0;5;;public void unblockProxyTraffic() {     for (NetworkFailuresProxy proxy : networkFailuresProxies) {         proxy.unblockTraffic().     } }
+false;protected;2;5;;protected NetworkFailuresProxy createProxy(String remoteHost, int remotePort) {     NetworkFailuresProxy proxy = new NetworkFailuresProxy(0, remoteHost, remotePort).     networkFailuresProxies.add(proxy).     return proxy. }

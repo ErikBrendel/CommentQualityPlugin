@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean isBasicType() {     return originalTypeInformation.isBasicType(). }
+false;public;0;4;;@Override public boolean isTupleType() {     return originalTypeInformation.isTupleType(). }
+false;public;0;4;;@Override public int getArity() {     return originalTypeInformation.getArity(). }
+false;public;0;4;;@Override public int getTotalFields() {     return originalTypeInformation.getTotalFields(). }
+false;public;0;4;;@Override public Class<T> getTypeClass() {     return originalTypeInformation.getTypeClass(). }
+false;public;0;4;;@Override public boolean isKeyType() {     return originalTypeInformation.isKeyType(). }
+false;public;1;4;;@Override public TypeSerializer<T> createSerializer(ExecutionConfig config) {     return new SingleThreadAccessCheckingTypeSerializer<>(originalTypeInformation.createSerializer(config)). }
+false;public;0;4;;@Override public String toString() {     return originalTypeInformation.toString(). }
+false;public;1;11;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     SingleThreadAccessCheckingTypeInfo that = (SingleThreadAccessCheckingTypeInfo) o.     return Objects.equals(originalTypeInformation, that.originalTypeInformation). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(originalTypeInformation). }
+false;public;1;4;;@Override public boolean canEqual(Object obj) {     return obj instanceof SingleThreadAccessCheckingTypeInfo. }

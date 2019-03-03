@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;// -------------------------------------------------------------------------------------------- @Override public void configure(Configuration parameters) { // nothing by default }
+false;public;1;5;;@Override public BaseStatistics getStatistics(BaseStatistics cachedStatistics) throws IOException {     // no statistics available, by default.     return cachedStatistics. }
+false;public;1;13;;@Override public GenericInputSplit[] createInputSplits(int numSplits) throws IOException {     if (numSplits < 1) {         throw new IllegalArgumentException("Number of input splits has to be at least 1.").     }     numSplits = (this instanceof NonParallelInput) ? 1 : numSplits.     GenericInputSplit[] splits = new GenericInputSplit[numSplits].     for (int i = 0. i < splits.length. i++) {         splits[i] = new GenericInputSplit(i, numSplits).     }     return splits. }
+false;public;1;4;;@Override public DefaultInputSplitAssigner getInputSplitAssigner(GenericInputSplit[] splits) {     return new DefaultInputSplitAssigner(splits). }
+false;public;1;4;;// -------------------------------------------------------------------------------------------- @Override public void open(GenericInputSplit split) throws IOException {     this.partitionNumber = split.getSplitNumber(). }
+false;public;0;2;;@Override public void close() throws IOException { }

@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Test public void succeededStatusMapsToSuccessExitCode() {     int exitCode = ApplicationStatus.SUCCEEDED.processExitCode().     assertThat(exitCode, is(equalTo(SUCCESS_EXIT_CODE))). }
+false;public;0;5;;@Test public void cancelledStatusMapsToSuccessExitCode() {     int exitCode = ApplicationStatus.CANCELED.processExitCode().     assertThat(exitCode, is(equalTo(SUCCESS_EXIT_CODE))). }
+false;public;0;5;;@Test public void notSucceededNorCancelledStatusMapsToNonSuccessExitCode() {     Iterable<Integer> exitCodes = exitCodes(notSucceededNorCancelledStatus()).     assertThat(exitCodes, not(contains(SUCCESS_EXIT_CODE))). }
+false;private,static;1;5;;private static Iterable<Integer> exitCodes(Iterable<ApplicationStatus> statuses) {     return StreamSupport.stream(statuses.spliterator(), false).map(ApplicationStatus::processExitCode).collect(Collectors.toList()). }
+false;private,static;0;5;;private static Iterable<ApplicationStatus> notSucceededNorCancelledStatus() {     return Arrays.stream(ApplicationStatus.values()).filter(ApplicationStatusTest::isNotSucceededNorCancelled).collect(Collectors.toList()). }
+false;private,static;1;3;;private static boolean isNotSucceededNorCancelled(ApplicationStatus status) {     return status != ApplicationStatus.SUCCEEDED && status != ApplicationStatus.CANCELED. }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,abstract;2;2;;public abstract List<Certificate> clean(List<Certificate> chain, String hostname) throws SSLPeerUnverifiedException.
+false;public,static;1;3;;public static CertificateChainCleaner get(X509TrustManager trustManager) {     return Platform.get().buildCertificateChainCleaner(trustManager). }
+false;public,static;1;3;;public static CertificateChainCleaner get(X509Certificate... caCerts) {     return new BasicCertificateChainCleaner(new BasicTrustRootIndex(caCerts)). }

@@ -1,4 +1,6 @@
-# id;timestamp;commentText;codeText;commentWords;codeWords
-SlotID -> public static SlotID generate();1482522858;Generate a random slot id.__@return A random slot id.;public static SlotID generate() {_		return new SlotID(ResourceID.generate(), 0)__	};generate,a,random,slot,id,return,a,random,slot,id;public,static,slot,id,generate,return,new,slot,id,resource,id,generate,0
-SlotID -> public static SlotID generate();1482522862;Generate a random slot id.__@return A random slot id.;public static SlotID generate() {_		return new SlotID(ResourceID.generate(), 0)__	};generate,a,random,slot,id,return,a,random,slot,id;public,static,slot,id,generate,return,new,slot,id,resource,id,generate,0
-SlotID -> public static SlotID generate();1482522862;Generate a random slot id.__@return A random slot id.;public static SlotID generate() {_		return new SlotID(ResourceID.generate(), 0)__	};generate,a,random,slot,id,return,a,random,slot,id;public,static,slot,id,generate,return,new,slot,id,resource,id,generate,0
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;// ------------------------------------------------------------------------ @Override public ResourceID getResourceID() {     return resourceId. }
+false;public;0;3;;public int getSlotNumber() {     return slotNumber. }
+false;public;1;13;;// ------------------------------------------------------------------------ @Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     SlotID slotID = (SlotID) o.     return slotNumber == slotID.slotNumber && resourceId.equals(slotID.resourceId). }
+false;public;0;6;;@Override public int hashCode() {     int result = resourceId.hashCode().     result = 31 * result + slotNumber.     return result. }
+false;public;0;4;;@Override public String toString() {     return resourceId + "_" + slotNumber. }

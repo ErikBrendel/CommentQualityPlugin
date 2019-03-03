@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public T getValue() {     return this.gauge.getValue(). }
+false;public,static;1;5;;public static <T> FlinkGaugeWrapper<T> fromGauge(Gauge<?> gauge) {     @SuppressWarnings("unchecked")     Gauge<T> typedGauge = (Gauge<T>) gauge.     return new FlinkGaugeWrapper<>(typedGauge). }

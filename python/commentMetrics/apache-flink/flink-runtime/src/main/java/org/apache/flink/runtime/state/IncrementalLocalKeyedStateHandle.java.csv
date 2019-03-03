@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Nonnull public StreamStateHandle getMetaDataState() {     return metaDataState. }
+false;public;0;4;;@Override public long getCheckpointId() {     return checkpointId. }
+false;public;0;5;;@Override @Nonnull public UUID getBackendIdentifier() {     return backendIdentifier. }
+false;public;0;5;;@Override @Nonnull public Set<StateHandleID> getSharedStateHandleIDs() {     return sharedStateHandleIDs. }
+false;public;1;16;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     if (!super.equals(o)) {         return false.     }     IncrementalLocalKeyedStateHandle that = (IncrementalLocalKeyedStateHandle) o.     return getMetaDataState().equals(that.getMetaDataState()). }
+false;public;0;21;;@Override public void discardState() throws Exception {     Exception collectedEx = null.     try {         super.discardState().     } catch (Exception e) {         collectedEx = e.     }     try {         metaDataState.discardState().     } catch (Exception e) {         collectedEx = ExceptionUtils.firstOrSuppressed(e, collectedEx).     }     if (collectedEx != null) {         throw collectedEx.     } }
+false;public;0;4;;@Override public long getStateSize() {     return super.getStateSize() + metaDataState.getStateSize(). }
+false;public;0;6;;@Override public int hashCode() {     int result = super.hashCode().     result = 31 * result + getMetaDataState().hashCode().     return result. }
+false;public;0;6;;@Override public String toString() {     return "IncrementalLocalKeyedStateHandle{" + "metaDataState=" + metaDataState + "} " + super.toString(). }

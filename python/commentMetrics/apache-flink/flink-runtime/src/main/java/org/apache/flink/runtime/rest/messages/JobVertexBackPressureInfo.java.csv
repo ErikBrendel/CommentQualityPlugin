@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;3;;public static JobVertexBackPressureInfo deprecated() {     return DEPRECATED_JOB_VERTEX_BACK_PRESSURE_INFO. }
+false;public;1;14;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     JobVertexBackPressureInfo that = (JobVertexBackPressureInfo) o.     return Objects.equals(status, that.status) && Objects.equals(backpressureLevel, that.backpressureLevel) && Objects.equals(endTimestamp, that.endTimestamp) && Objects.equals(subtasks, that.subtasks). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(status, backpressureLevel, endTimestamp, subtasks). }
+false;public;0;3;;public VertexBackPressureStatus getStatus() {     return status. }
+false;public;0;4;;@Nullable public VertexBackPressureLevel getBackpressureLevel() {     return backpressureLevel. }
+false;public;0;4;;@Nullable public Long getEndTimestamp() {     return endTimestamp. }
+false;public;0;4;;@Nullable public List<SubtaskBackPressureInfo> getSubtasks() {     return subtasks == null ? null : Collections.unmodifiableList(subtasks). }
+false;public;1;13;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     SubtaskBackPressureInfo that = (SubtaskBackPressureInfo) o.     return subtask == that.subtask && ratio == that.ratio && Objects.equals(backpressureLevel, that.backpressureLevel). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(subtask, backpressureLevel, ratio). }
+false;public;0;3;;public int getSubtask() {     return subtask. }
+false;public;0;3;;public VertexBackPressureLevel getBackpressureLevel() {     return backpressureLevel. }
+false;public;0;3;;public double getRatio() {     return ratio. }
+false;public;0;5;;@JsonValue @Override public String toString() {     return status. }
+false;public;0;5;;@JsonValue @Override public String toString() {     return level. }

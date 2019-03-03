@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public void clear() {     getInternal().clear(). }
+false;public;1;4;;@Override public UV get(UK key) {     return getInternal().get(key). }
+false;public;2;4;;@Override public void put(UK key, UV value) {     this.getInternal().put(key, value). }
+false;public;1;4;;@Override public void putAll(Map<UK, UV> map) {     getInternal().putAll(map). }
+false;public;1;4;;@Override public void remove(UK key) {     getInternal().remove(key). }
+false;public;1;4;;@Override public boolean contains(UK key) {     return getInternal().containsKey(key). }
+false;public;0;4;;@Override public Iterable<Map.Entry<UK, UV>> entries() {     return getInternal().entrySet(). }
+false;public;0;4;;@Override public Iterable<UK> keys() {     return getInternal().keySet(). }
+false;public;0;4;;@Override public Iterable<UV> values() {     return getInternal().values(). }
+false;public;0;4;;@Override public Iterator<Map.Entry<UK, UV>> iterator() {     return entries().iterator(). }
+false;static;2;6;;@SuppressWarnings({ "unchecked", "unused" }) static <N, T, S extends State, IS extends S> IS createState(TypeSerializer<N> namespaceSerializer, StateDescriptor<S, T> stateDesc) {     return (IS) new MockInternalMapState<>(). }

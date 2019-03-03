@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public boolean shouldRollOnCheckpoint(PartFileInfo<BucketID> partFileState) {     return true. }
+false;public;2;4;;@Override public boolean shouldRollOnEvent(PartFileInfo<BucketID> partFileState, IN element) {     return false. }
+false;public;2;4;;@Override public boolean shouldRollOnProcessingTime(PartFileInfo<BucketID> partFileState, long currentTime) {     return false. }
+false;public,static;0;3;;public static <IN, BucketID> OnCheckpointRollingPolicy<IN, BucketID> build() {     return new OnCheckpointRollingPolicy<>(). }

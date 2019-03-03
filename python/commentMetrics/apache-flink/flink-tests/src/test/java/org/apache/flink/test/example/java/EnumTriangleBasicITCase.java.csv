@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;5;;@Override protected void preSubmit() throws Exception {     edgePath = createTempFile("edges", EnumTriangleData.EDGES).     resultPath = getTempDirPath("triangles"). }
+false;protected;0;4;;@Override protected void postSubmit() throws Exception {     compareResultsByLinesInMemory(EnumTriangleData.TRIANGLES_BY_ID, resultPath). }
+false;protected;0;6;;@Override protected void testProgram() throws Exception {     EnumTriangles.main(new String[] { "--edges", edgePath, "--output", resultPath }). }

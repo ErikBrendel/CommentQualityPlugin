@@ -1,5 +1,2 @@
-# id;timestamp;commentText;codeText;commentWords;codeWords
-IterationAggregatorBroker -> public static IterationAggregatorBroker instance();1405024514;retrieve singleton instance;public static IterationAggregatorBroker instance() {_		return INSTANCE__	};retrieve,singleton,instance;public,static,iteration,aggregator,broker,instance,return,instance
-IterationAggregatorBroker -> public static IterationAggregatorBroker instance();1405090423;retrieve singleton instance;public static IterationAggregatorBroker instance() {_		return INSTANCE__	};retrieve,singleton,instance;public,static,iteration,aggregator,broker,instance,return,instance
-IterationAggregatorBroker -> public static IterationAggregatorBroker instance();1411473593;retrieve singleton instance;public static IterationAggregatorBroker instance() {_		return INSTANCE__	};retrieve,singleton,instance;public,static,iteration,aggregator,broker,instance,return,instance
-IterationAggregatorBroker -> public static IterationAggregatorBroker instance();1499161032;Retrieve singleton instance.;public static IterationAggregatorBroker instance() {_		return INSTANCE__	};retrieve,singleton,instance;public,static,iteration,aggregator,broker,instance,return,instance
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,static;0;3;/**  * Retrieve singleton instance.  */ ;/**  * Retrieve singleton instance.  */ public static IterationAggregatorBroker instance() {     return INSTANCE. }

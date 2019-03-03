@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;4;13;;@Override public void apply(K k, W window, Iterable<T> input, Collector<R> out) throws Exception {     T curr = null.     for (T val : input) {         if (curr == null) {             curr = val.         } else {             curr = reduceFunction.reduce(curr, val).         }     }     wrappedFunction.apply(k, window, Collections.singletonList(curr), out). }

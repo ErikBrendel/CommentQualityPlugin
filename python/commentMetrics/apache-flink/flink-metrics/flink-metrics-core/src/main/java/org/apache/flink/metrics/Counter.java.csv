@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * Increment the current count by 1.  */ ;/**  * Increment the current count by 1.  */ void inc().
+true;;1;1;/**  * Increment the current count by the given value.  *  * @param n value to increment the current count by  */ ;/**  * Increment the current count by the given value.  *  * @param n value to increment the current count by  */ void inc(long n).
+true;;0;1;/**  * Decrement the current count by 1.  */ ;/**  * Decrement the current count by 1.  */ void dec().
+true;;1;1;/**  * Decrement the current count by the given value.  *  * @param n value to decrement the current count by  */ ;/**  * Decrement the current count by the given value.  *  * @param n value to decrement the current count by  */ void dec(long n).
+true;;0;1;/**  * Returns the current count.  *  * @return current count  */ ;/**  * Returns the current count.  *  * @return current count  */ long getCount().

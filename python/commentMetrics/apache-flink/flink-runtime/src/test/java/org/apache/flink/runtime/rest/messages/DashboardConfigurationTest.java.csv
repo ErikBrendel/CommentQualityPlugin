@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected Class<DashboardConfiguration> getTestResponseClass() {     return DashboardConfiguration.class. }
+false;protected;0;9;;@Override protected DashboardConfiguration getTestResponseInstance() {     return new DashboardConfiguration(1L, "foobar", 42, "version", "revision"). }

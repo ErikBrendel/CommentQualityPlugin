@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public int getKey() {     return key. }
+false;public;0;3;;public StringValue getValue() {     return value. }
+false;public;1;5;;@Override public void write(DataOutputView out) throws IOException {     out.writeInt(key).     value.write(out). }
+false;public;1;5;;@Override public void read(DataInputView in) throws IOException {     key = in.readInt().     value.read(in). }
+false;public;0;4;;@Override public int hashCode() {     return 31 * key + value.hashCode(). }
+false;public;1;9;;@Override public boolean equals(Object obj) {     if (obj instanceof Pair) {         Pair other = (Pair) obj.         return other.key == this.key && other.value.equals(this.value).     } else {         return false.     } }
+false;public;0;4;;@Override public String toString() {     return String.format("(%d, %s)", key, value). }
+false;public;1;9;;public void next(Pair target) {     target.key = (keyMode == KeyMode.SORTED ? ++counter : Math.abs(random.nextInt() % keyMax) + 1).     if (valueMode == ValueMode.CONSTANT) {         target.value = valueConstant.     } else {         randomString(target.value).     } }
+false;public;0;4;;public void reset() {     this.random = new Random(seed).     this.counter = 0. }
+false;private;1;11;;private void randomString(StringValue target) {     int length = valueMode == ValueMode.FIX_LENGTH ? valueLength : valueLength - random.nextInt(valueLength / 3).     target.setLength(0).     for (int i = 0. i < length. i++) {         target.append(alpha[random.nextInt(alpha.length)]).     } }

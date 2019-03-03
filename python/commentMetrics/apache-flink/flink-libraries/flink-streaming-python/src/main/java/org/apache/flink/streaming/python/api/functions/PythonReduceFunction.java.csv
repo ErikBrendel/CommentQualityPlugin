@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;11;;@Override public PyObject reduce(PyObject value1, PyObject value2) throws Exception {     if (fun == null) {         fun = SerializationUtils.deserializeObject(serFun).     }     try {         return AdapterMap.adapt(this.fun.reduce(value1, value2)).     } catch (PyException pe) {         throw AbstractPythonUDF.createAndLogException(pe, LOG).     } }

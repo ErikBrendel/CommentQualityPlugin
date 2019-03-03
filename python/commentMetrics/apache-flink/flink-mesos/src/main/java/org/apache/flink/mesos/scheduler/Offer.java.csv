@@ -1,0 +1,19 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public Double remove(Object key) {     if (super.containsKey(key)) {         return super.remove(key).     } else {         return 0.0.     } }
+false;public;0;3;;public List<Protos.Resource> getResources() {     return resources. }
+false;public;0;4;;@Override public String hostname() {     return hostname. }
+false;public;0;4;;@Override public String getVMID() {     return vmID. }
+false;public;0;4;;@Override public double cpuCores() {     return cpuCores. }
+false;public;0;3;;public double gpus() {     return getScalarValue("gpus"). }
+false;public;0;4;;@Override public double memoryMB() {     return memoryMB. }
+false;public;0;4;;@Override public double networkMbps() {     return networkMbps. }
+false;public;0;4;;@Override public double diskMB() {     return diskMB. }
+false;public;0;3;;public Protos.Offer getOffer() {     return offer. }
+false;public;0;4;;@Override public String getId() {     return offer.getId().getValue(). }
+false;public;0;4;;@Override public long getOfferedTime() {     return offeredTime. }
+false;public;0;4;;@Override public List<Range> portRanges() {     return portRanges. }
+false;public;0;4;;@Override public Map<String, Protos.Attribute> getAttributeMap() {     return attributeMap. }
+false;public;1;4;;@Override public Double getScalarValue(String name) {     return aggregatedScalarResourceMap.getOrDefault(name, 0.0). }
+false;public;0;4;;@Override public Map<String, Double> getScalarValues() {     return aggregatedScalarResourceMap. }
+false;public;0;11;;@Override public String toString() {     return "Offer{" + "offer=" + offer + ", resources='" + Utils.toString(resources) + '\'' + ", hostname='" + hostname + '\'' + ", vmID='" + vmID + '\'' + ", attributeMap=" + attributeMap + ", offeredTime=" + offeredTime + '}'. }
+false;private,static;2;9;;private static List<Range> aggregateRangesResource(Map<String, List<Protos.Resource>> resourceMap, String resourceName) {     if (resourceMap.get(resourceName) == null) {         return Collections.emptyList().     }     return resourceMap.get(resourceName).stream().flatMap(r -> r.getRanges().getRangeList().stream()).map(r -> new Range((int) r.getBegin(), (int) r.getEnd())).collect(Collectors.toList()). }

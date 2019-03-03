@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public void open(final Configuration parameters) throws Exception {     FunctionUtils.setFunctionRuntimeContext(flatSelectFunction, getRuntimeContext()).     FunctionUtils.openFunction(flatSelectFunction, parameters). }
+false;public;0;4;;@Override public void close() throws Exception {     FunctionUtils.closeFunction(flatSelectFunction). }
+false;public;3;7;;@Override public void processMatch(final Map<String, List<IN>> match, final Context ctx, final Collector<OUT> out) throws Exception {     flatSelectFunction.flatSelect(match, out). }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public void open(Configuration parameters) throws Exception {     super.open(parameters).     this.client = new SiteToSiteClient.Builder().fromConfig(clientConfig).build(). }
+false;public;1;13;;@Override public void invoke(T value) throws Exception {     final NiFiDataPacket niFiDataPacket = builder.createNiFiDataPacket(value, getRuntimeContext()).     final Transaction transaction = client.createTransaction(TransferDirection.SEND).     if (transaction == null) {         throw new IllegalStateException("Unable to create a NiFi Transaction to send data").     }     transaction.send(niFiDataPacket.getContent(), niFiDataPacket.getAttributes()).     transaction.confirm().     transaction.complete(). }
+false;public;0;5;;@Override public void close() throws Exception {     super.close().     client.close(). }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected TypeComparator<StringArrayWritable> createComparator(boolean ascending) {     return new WritableComparator<StringArrayWritable>(ascending, StringArrayWritable.class). }
+false;protected;0;4;;@Override protected TypeSerializer<StringArrayWritable> createSerializer() {     return new WritableSerializer<StringArrayWritable>(StringArrayWritable.class). }
+false;protected;0;4;;@Override protected StringArrayWritable[] getSortedTestData() {     return data. }

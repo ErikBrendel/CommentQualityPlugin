@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;static;3;3;;static <V> boolean expired(@Nullable TtlValue<V> ttlValue, long ttl, TtlTimeProvider timeProvider) {     return expired(ttlValue, ttl, timeProvider.currentTimestamp()). }
+false;static;3;3;;static <V> boolean expired(@Nullable TtlValue<V> ttlValue, long ttl, long currentTimestamp) {     return ttlValue != null && expired(ttlValue.getLastAccessTimestamp(), ttl, currentTimestamp). }
+false;static;3;3;;static boolean expired(long ts, long ttl, TtlTimeProvider timeProvider) {     return expired(ts, ttl, timeProvider.currentTimestamp()). }
+false;public,static;3;3;;public static boolean expired(long ts, long ttl, long currentTimestamp) {     return getExpirationTimestamp(ts, ttl) <= currentTimestamp. }
+false;private,static;2;4;;private static long getExpirationTimestamp(long ts, long ttl) {     long ttlWithoutOverflow = ts > 0 ? Math.min(Long.MAX_VALUE - ts, ttl) : ttl.     return ts + ttlWithoutOverflow. }
+false;static;2;3;;static <V> TtlValue<V> wrapWithTs(V value, long ts) {     return new TtlValue<>(value, ts). }

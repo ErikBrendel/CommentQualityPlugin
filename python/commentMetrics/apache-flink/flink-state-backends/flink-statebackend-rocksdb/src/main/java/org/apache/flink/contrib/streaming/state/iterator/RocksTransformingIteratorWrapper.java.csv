@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Override public void seekToFirst() {     super.seekToFirst().     filterOrTransform(super::next). }
+false;public;0;5;;@Override public void seekToLast() {     super.seekToLast().     filterOrTransform(super::prev). }
+false;public;0;5;;@Override public void next() {     super.next().     filterOrTransform(super::next). }
+false;public;0;5;;@Override public void prev() {     super.prev().     filterOrTransform(super::prev). }
+false;private;1;5;;private void filterOrTransform(@Nonnull Runnable advance) {     while (isValid() && (current = stateSnapshotTransformer.filterOrTransform(super.value())) == null) {         advance.run().     } }
+false;public;0;7;;@Override public byte[] value() {     if (!isValid()) {         throw new IllegalStateException("value() method cannot be called if isValid() is false").     }     return current. }

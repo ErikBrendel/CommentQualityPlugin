@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected TypeSerializer<Timestamp> createSerializer() {     return new SqlTimestampSerializer(). }
+false;protected;0;4;;@Override protected int getLength() {     return 12. }
+false;protected;0;4;;@Override protected Class<Timestamp> getTypeClass() {     return Timestamp.class. }
+false;protected;0;13;;@Override protected Timestamp[] getTestData() {     return new Timestamp[] { new Timestamp(0L), Timestamp.valueOf("1970-01-01 00:00:00.000"), Timestamp.valueOf("1990-10-14 02:42:25.123"), Timestamp.valueOf("1990-10-14 02:42:25.123000001"), Timestamp.valueOf("1990-10-14 02:42:25.123000002"), Timestamp.valueOf("2013-08-12 14:15:59.478"), Timestamp.valueOf("2013-08-12 14:15:59.479"), Timestamp.valueOf("2040-05-12 18:00:45.999") }. }

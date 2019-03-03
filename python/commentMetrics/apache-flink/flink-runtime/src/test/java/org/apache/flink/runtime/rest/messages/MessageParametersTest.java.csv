@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;13;;@Test public void testResolveUrl() {     String genericUrl = "/jobs/:jobid/state".     TestMessageParameters parameters = new TestMessageParameters().     JobID pathJobID = new JobID().     JobID queryJobID = new JobID().     parameters.pathParameter.resolve(pathJobID).     parameters.queryParameter.resolve(Collections.singletonList(queryJobID)).     String resolvedUrl = MessageParameters.resolveUrl(genericUrl, parameters).     Assert.assertEquals("/jobs/" + pathJobID + "/state?jobid=" + queryJobID, resolvedUrl). }
+false;public;0;16;;@Test public void testUnresolvedParameters() {     String genericUrl = "/jobs/:jobid/state".     TestMessageParameters parameters = new TestMessageParameters().     try {         MessageParameters.resolveUrl(genericUrl, parameters).         Assert.fail().     } catch (IllegalStateException expected) {     // the mandatory jobid path parameter was not resolved     }     JobID jobID = new JobID().     parameters.pathParameter.resolve(jobID).     String resolvedUrl = MessageParameters.resolveUrl(genericUrl, parameters).     Assert.assertEquals("/jobs/" + jobID + "/state", resolvedUrl). }
+false;public;0;4;;@Override public Collection<MessagePathParameter<?>> getPathParameters() {     return Collections.singleton(pathParameter). }
+false;public;0;4;;@Override public Collection<MessageQueryParameter<?>> getQueryParameters() {     return Collections.singleton(queryParameter). }
+false;public;1;4;;@Override public JobID convertFromString(String value) {     return JobID.fromHexString(value). }
+false;protected;1;4;;@Override protected String convertToString(JobID value) {     return value.toString(). }
+false;public;0;4;;@Override public String getDescription() {     return "path parameter". }
+false;public;1;4;;@Override public JobID convertStringToValue(String value) {     return JobID.fromHexString(value). }
+false;public;1;4;;@Override public String convertValueToString(JobID value) {     return value.toString(). }
+false;public;0;4;;@Override public String getDescription() {     return "query parameter". }

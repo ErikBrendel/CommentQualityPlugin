@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public void start() throws Exception {     sharedValue.start(). }
+false;public;0;3;;public void close() throws IOException {     sharedValue.close(). }
+false;public;1;3;;public void setValue(byte[] newValue) throws Exception {     sharedValue.setValue(newValue). }
+false;public;0;3;;public byte[] getValue() {     return sharedValue.getValue(). }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;19;;@Override public boolean hasNext() {     while (true) {         if (currVertices != null) {             if (currPos < currVertices.length) {                 return true.             } else {                 currVertices = null.             }         } else if (jobVertices.hasNext()) {             currVertices = jobVertices.next().getTaskVertices().             currPos = 0.         } else {             return false.         }     } }
+false;public;0;8;;@Override public ExecutionVertex next() {     if (hasNext()) {         return currVertices[currPos++].     } else {         throw new NoSuchElementException().     } }
+false;public;0;4;;@Override public void remove() {     throw new UnsupportedOperationException(). }

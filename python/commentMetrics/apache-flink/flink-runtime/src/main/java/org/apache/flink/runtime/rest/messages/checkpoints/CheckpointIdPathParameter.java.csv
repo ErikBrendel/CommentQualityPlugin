@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;8;;@Override protected Long convertFromString(String value) throws ConversionException {     try {         return Long.parseLong(value).     } catch (NumberFormatException nfe) {         throw new ConversionException("Could not parse long from " + value + '.', nfe).     } }
+false;protected;1;4;;@Override protected String convertToString(Long value) {     return value.toString(). }
+false;public;0;4;;@Override public String getDescription() {     return "Long value that identifies a checkpoint.". }

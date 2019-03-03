@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;3;;public static LocalRecoveryConfig disabled() {     return new LocalRecoveryConfig(false, INSTANCE). }
+false;public;1;4;;@Override public File allocationBaseDirectory(long checkpointId) {     throw new UnsupportedOperationException("Test dummy"). }
+false;public;1;4;;@Override public File subtaskBaseDirectory(long checkpointId) {     throw new UnsupportedOperationException("Test dummy"). }
+false;public;1;4;;@Override public File subtaskSpecificCheckpointDirectory(long checkpointId) {     throw new UnsupportedOperationException("Test dummy"). }
+false;public;1;4;;@Override public File selectAllocationBaseDirectory(int idx) {     throw new UnsupportedOperationException("Test dummy"). }
+false;public;1;4;;@Override public File selectSubtaskBaseDirectory(int idx) {     throw new UnsupportedOperationException("Test dummy"). }
+false;public;0;4;;@Override public int allocationBaseDirsCount() {     throw new UnsupportedOperationException("Test dummy"). }

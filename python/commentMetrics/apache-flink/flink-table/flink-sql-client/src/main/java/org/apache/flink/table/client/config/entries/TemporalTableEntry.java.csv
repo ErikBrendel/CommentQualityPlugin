@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getHistoryTable() {     return historyTable. }
+false;public;0;3;;public List<String> getPrimaryKeyFields() {     return primaryKeyFields. }
+false;public;0;3;;public String getTimeAttribute() {     return timeAttribute. }
+false;protected;1;10;;@Override protected void validate(DescriptorProperties properties) {     properties.validateString(TABLES_HISTORY_TABLE, false, 1).     properties.validateArray(TABLES_PRIMARY_KEY, (key) -> properties.validateString(key, false, 1), 1, // currently, composite primary keys are not supported     1).     properties.validateString(TABLES_TIME_ATTRIBUTE, false, 1). }

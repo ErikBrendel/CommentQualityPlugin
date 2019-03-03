@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Before public void setUp() throws Exception {     final Configuration config = new Configuration().     config.setLong(RestOptions.AWAIT_LEADER_TIMEOUT, 1).     config.setInteger(RestOptions.RETRY_MAX_ATTEMPTS, 2).     config.setLong(RestOptions.RETRY_DELAY, 3).     restClusterClientConfiguration = RestClusterClientConfiguration.fromConfiguration(config). }
+false;public;0;6;;@Test public void testConfiguration() {     assertEquals(1, restClusterClientConfiguration.getAwaitLeaderTimeout()).     assertEquals(2, restClusterClientConfiguration.getRetryMaxAttempts()).     assertEquals(3, restClusterClientConfiguration.getRetryDelay()). }

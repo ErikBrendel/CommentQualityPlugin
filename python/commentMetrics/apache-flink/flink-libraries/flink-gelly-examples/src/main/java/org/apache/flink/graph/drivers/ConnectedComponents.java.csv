@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getShortDescription() {     return "ConnectedComponents". }
+false;public;0;4;;@Override public String getLongDescription() {     return "ConnectedComponents". }
+false;public;1;6;;@Override public DataSet plan(Graph<K, VV, EV> graph) throws Exception {     return graph.mapVertices(new MapVertices<>()).run(new GSAConnectedComponents<>(Integer.MAX_VALUE)). }
+false;public;1;4;;@Override public T map(Vertex<T, VT> value) throws Exception {     return value.f0. }

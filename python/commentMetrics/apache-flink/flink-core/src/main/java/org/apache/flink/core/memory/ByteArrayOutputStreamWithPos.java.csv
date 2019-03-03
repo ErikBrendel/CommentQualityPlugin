@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;private;1;5;;private void ensureCapacity(int requiredCapacity) {     if (requiredCapacity - buffer.length > 0) {         increaseCapacity(requiredCapacity).     } }
+false;private;1;14;;private void increaseCapacity(int requiredCapacity) {     int oldCapacity = buffer.length.     int newCapacity = oldCapacity << 1.     if (newCapacity - requiredCapacity < 0) {         newCapacity = requiredCapacity.     }     if (newCapacity < 0) {         if (requiredCapacity < 0) {             throw new OutOfMemoryError().         }         newCapacity = Integer.MAX_VALUE.     }     buffer = Arrays.copyOf(buffer, newCapacity). }
+false;public;1;6;;@Override public void write(int b) {     ensureCapacity(count + 1).     buffer[count] = (byte) b.     ++count. }
+false;public;3;12;;@Override public void write(byte[] b, int off, int len) {     if ((off < 0) || (len < 0) || (off > b.length) || ((off + len) - b.length > 0)) {         throw new IndexOutOfBoundsException().     }     ensureCapacity(count + len).     System.arraycopy(b, off, buffer, count, len).     count += len. }
+false;public;0;3;;public void reset() {     count = 0. }
+false;public;0;3;;public byte[] toByteArray() {     return Arrays.copyOf(buffer, count). }
+false;public;0;3;;public int size() {     return count. }
+false;public;0;3;;public String toString() {     return new String(buffer, 0, count, ConfigConstants.DEFAULT_CHARSET). }
+false;public;0;3;;public int getPosition() {     return count. }
+false;public;1;5;;public void setPosition(int position) {     Preconditions.checkArgument(position >= 0, "Position out of bounds.").     ensureCapacity(position + 1).     count = position. }
+false;public;0;3;;@Override public void close() { }
+false;public;0;3;;public byte[] getBuf() {     return buffer. }

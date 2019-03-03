@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public int size() {     return size. }
+false;public;1;5;;public boolean add(final int number) {     grow(size + 1).     array[size++] = number.     return true. }
+false;public;0;7;;public int removeLast() {     if (size == 0) {         throw new NoSuchElementException().     }     --size.     return array[size]. }
+false;public;0;3;;public void clear() {     size = 0. }
+false;public;0;3;;public boolean isEmpty() {     return size == 0. }
+false;private;1;8;;private void grow(final int length) {     if (length > array.length) {         final int newLength = (int) Math.max(Math.min(2L * array.length, Integer.MAX_VALUE - 8), length).         final int[] t = new int[newLength].         System.arraycopy(array, 0, t, 0, size).         array = t.     } }
+false;public;0;3;;public int[] toArray() {     return Arrays.copyOf(array, size). }
+false;public;1;4;;@Override public boolean add(int number) {     throw new UnsupportedOperationException(). }
+false;public;0;4;;@Override public int removeLast() {     throw new UnsupportedOperationException(). }

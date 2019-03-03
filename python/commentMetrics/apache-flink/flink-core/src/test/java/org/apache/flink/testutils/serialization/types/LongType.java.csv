@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public LongType getRandom(Random rnd) {     return new LongType(rnd.nextLong()). }
+false;public;0;4;;@Override public int length() {     return 8. }
+false;public;1;4;;@Override public void write(DataOutputView out) throws IOException {     out.writeLong(this.value). }
+false;public;1;4;;@Override public void read(DataInputView in) throws IOException {     this.value = in.readLong(). }
+false;public;0;4;;@Override public int hashCode() {     return (int) (this.value ^ this.value >>> 32). }
+false;public;1;9;;@Override public boolean equals(Object obj) {     if (obj instanceof LongType) {         LongType other = (LongType) obj.         return this.value == other.value.     } else {         return false.     } }

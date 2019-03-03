@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;4;;@Override public ScheduledFuture<?> schedule(Runnable command, long delay, TimeUnit unit) {     return scheduledExecutorService.schedule(command, delay, unit). }
+false;public;3;4;;@Override public <V> ScheduledFuture<V> schedule(Callable<V> callable, long delay, TimeUnit unit) {     return scheduledExecutorService.schedule(callable, delay, unit). }
+false;public;4;4;;@Override public ScheduledFuture<?> scheduleAtFixedRate(Runnable command, long initialDelay, long period, TimeUnit unit) {     return scheduledExecutorService.scheduleAtFixedRate(command, initialDelay, period, unit). }
+false;public;4;4;;@Override public ScheduledFuture<?> scheduleWithFixedDelay(Runnable command, long initialDelay, long delay, TimeUnit unit) {     return scheduledExecutorService.scheduleWithFixedDelay(command, initialDelay, delay, unit). }
+false;public;1;4;;@Override public void execute(Runnable command) {     scheduledExecutorService.execute(command). }

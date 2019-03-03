@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;4;12;;@Override protected SinkFunction<Row> createKafkaProducer(String topic, Properties properties, SerializationSchema<Row> serializationSchema, Optional<FlinkKafkaPartitioner<Row>> partitioner) {     return new FlinkKafkaProducer011<>(topic, new KeyedSerializationSchemaWrapper<>(serializationSchema), properties, partitioner). }

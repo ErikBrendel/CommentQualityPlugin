@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;5;;@Override public void combine(Iterable<Tuple2<K, IN>> values, Collector<OUT> out) throws Exception {     iter.set(values.iterator()).     this.wrappedFunction.combine(iter, out). }
+false;public;0;4;;@Override public String toString() {     return this.wrappedFunction.toString(). }

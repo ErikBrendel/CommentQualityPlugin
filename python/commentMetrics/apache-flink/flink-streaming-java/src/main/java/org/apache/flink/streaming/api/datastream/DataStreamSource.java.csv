@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;9;;@Override public DataStreamSource<T> setParallelism(int parallelism) {     if (parallelism != 1 && !isParallel) {         throw new IllegalArgumentException("Source: " + transformation.getId() + " is not a parallel source").     } else {         super.setParallelism(parallelism).         return this.     } }

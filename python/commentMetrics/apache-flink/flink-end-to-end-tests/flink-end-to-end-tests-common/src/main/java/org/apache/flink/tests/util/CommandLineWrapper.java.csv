@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static WGetBuilder wget(String url) {     return new WGetBuilder(url). }
+false;public;1;4;;public WGetBuilder targetDir(Path dir) {     this.targetDir = dir.     return this. }
+false;public;0;12;;public String[] build() {     final List<String> commandsList = new ArrayList<>(5).     commandsList.add("wget").     // silent     commandsList.add("-q").     // commandsList.add("--show-progress"). // enable progress bar     if (targetDir != null) {         commandsList.add("-P").         commandsList.add(targetDir.toAbsolutePath().toString()).     }     commandsList.add(url).     return commandsList.toArray(new String[commandsList.size()]). }
+false;public,static;2;3;;public static SedBuilder sed(final String command, final Path file) {     return new SedBuilder(command, file). }
+false;public;0;4;;public SedBuilder inPlace() {     inPlace = true.     return this. }
+false;public;0;11;;public String[] build() {     final List<String> commandsList = new ArrayList<>(5).     commandsList.add("sed").     if (inPlace) {         commandsList.add("-i").     }     commandsList.add("-e").     commandsList.add(command).     commandsList.add(file.toAbsolutePath().toString()).     return commandsList.toArray(new String[commandsList.size()]). }
+false;public,static;1;3;;public static TarBuilder tar(final Path file) {     return new TarBuilder(file). }
+false;public;0;4;;public TarBuilder zipped() {     zipped = true.     return this. }
+false;public;0;4;;public TarBuilder extract() {     extract = true.     return this. }
+false;public;1;4;;public TarBuilder targetDir(final Path dir) {     targetDir = dir.     return this. }
+false;public;0;17;;public String[] build() {     final List<String> commandsList = new ArrayList<>(4).     commandsList.add("tar").     if (zipped) {         commandsList.add("-z").     }     if (extract) {         commandsList.add("-x").     }     if (targetDir != null) {         commandsList.add("--directory").         commandsList.add(targetDir.toAbsolutePath().toString()).     }     commandsList.add("-f").     commandsList.add(file.toAbsolutePath().toString()).     return commandsList.toArray(new String[commandsList.size()]). }

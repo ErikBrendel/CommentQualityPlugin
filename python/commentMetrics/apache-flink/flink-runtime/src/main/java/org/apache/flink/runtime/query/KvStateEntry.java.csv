@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public InternalKvState<K, N, V> getState() {     return state. }
+false;public;0;5;;public KvStateInfo<K, N, V> getInfoForCurrentThread() {     return areSerializersStateless ? stateInfo : serializerCache.computeIfAbsent(Thread.currentThread(), t -> stateInfo.duplicate()). }
+false;public;0;3;;public void clear() {     serializerCache.clear(). }
+false;public;0;4;;@VisibleForTesting public int getCacheSize() {     return serializerCache.size(). }

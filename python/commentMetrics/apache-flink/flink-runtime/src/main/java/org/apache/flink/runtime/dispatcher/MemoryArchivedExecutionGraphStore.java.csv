@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public int size() {     return serializableExecutionGraphs.size(). }
+false;public;1;5;;@Nullable @Override public ArchivedExecutionGraph get(JobID jobId) {     return serializableExecutionGraphs.get(jobId). }
+false;public;1;4;;@Override public void put(ArchivedExecutionGraph serializableExecutionGraph) throws IOException {     serializableExecutionGraphs.put(serializableExecutionGraph.getJobID(), serializableExecutionGraph). }
+false;public;0;8;;@Override public JobsOverview getStoredJobsOverview() {     Collection<JobStatus> allJobStatus = serializableExecutionGraphs.values().stream().map(ArchivedExecutionGraph::getState).collect(Collectors.toList()).     return JobsOverview.create(allJobStatus). }
+false;public;0;6;;@Override public Collection<JobDetails> getAvailableJobDetails() {     return serializableExecutionGraphs.values().stream().map(WebMonitorUtils::createDetailsForJob).collect(Collectors.toList()). }
+false;public;1;11;;@Nullable @Override public JobDetails getAvailableJobDetails(JobID jobId) {     final ArchivedExecutionGraph archivedExecutionGraph = serializableExecutionGraphs.get(jobId).     if (archivedExecutionGraph != null) {         return WebMonitorUtils.createDetailsForJob(archivedExecutionGraph).     } else {         return null.     } }
+false;public;0;4;;@Override public void close() throws IOException {     serializableExecutionGraphs.clear(). }

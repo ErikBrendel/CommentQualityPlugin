@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;1;2;/**  * Creates a new scheduler instance that uses the given {@link SlotPool} to allocate slots.  */ ;/**  * Creates a new scheduler instance that uses the given {@link SlotPool} to allocate slots.  */ @Nonnull Scheduler createScheduler(@Nonnull SlotPool slotPool).

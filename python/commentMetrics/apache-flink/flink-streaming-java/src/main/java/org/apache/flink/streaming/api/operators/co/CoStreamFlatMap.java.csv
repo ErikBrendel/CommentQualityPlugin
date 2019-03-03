@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Override public void open() throws Exception {     super.open().     collector = new TimestampedCollector<OUT>(output). }
+false;public;1;6;;@Override public void processElement1(StreamRecord<IN1> element) throws Exception {     collector.setTimestamp(element).     userFunction.flatMap1(element.getValue(), collector). }
+false;public;1;5;;@Override public void processElement2(StreamRecord<IN2> element) throws Exception {     collector.setTimestamp(element).     userFunction.flatMap2(element.getValue(), collector). }
+false;protected;0;3;;protected TimestampedCollector<OUT> getCollector() {     return collector. }

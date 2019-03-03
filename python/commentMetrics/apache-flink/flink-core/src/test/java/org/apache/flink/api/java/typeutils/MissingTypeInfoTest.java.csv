@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;7;;@Override protected MissingTypeInfo[] getTestData() {     return new MissingTypeInfo[] { new MissingTypeInfo(functionName, testException), new MissingTypeInfo("alt" + functionName, testException) }. }
+false;public;0;4;;@Override public void testSerialization() { // this class is not intended to be serialized }
+false;public;0;4;;@Override public void testGetTotalFields() { // getTotalFields is not meant to be called }

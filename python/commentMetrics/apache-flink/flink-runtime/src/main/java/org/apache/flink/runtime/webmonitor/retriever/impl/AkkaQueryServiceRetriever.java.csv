@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Override public CompletableFuture<MetricQueryServiceGateway> retrieveService(String queryServicePath) {     ActorSelection selection = actorSystem.actorSelection(queryServicePath).     return FutureUtils.toJava(selection.resolveOne(FutureUtils.toFiniteDuration(lookupTimeout))).thenApply(AkkaQueryServiceGateway::new). }

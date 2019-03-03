@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;// ------------------------------------------------------------------------ public String leaderAddress() {     return leaderAddress. }
+false;public;0;3;;public UUID leaderId() {     return leaderId. }
+false;public;0;4;;// ------------------------------------------------------------------------ @Override public int hashCode() {     return 31 * leaderAddress.hashCode() + leaderId.hashCode(). }
+false;public;1;13;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     } else if (o != null && o.getClass() == LeaderAddressAndId.class) {         final LeaderAddressAndId that = (LeaderAddressAndId) o.         return this.leaderAddress.equals(that.leaderAddress) && this.leaderId.equals(that.leaderId).     } else {         return false.     } }
+false;public;0;4;;@Override public String toString() {     return "LeaderAddressAndId (" + leaderAddress + " / " + leaderId + ')'. }

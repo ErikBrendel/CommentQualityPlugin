@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean isImmutableType() {     return true. }
+false;public;0;4;;@Override public Short createInstance() {     return ZERO. }
+false;public;1;4;;@Override public Short copy(Short from) {     return from. }
+false;public;2;4;;@Override public Short copy(Short from, Short reuse) {     return from. }
+false;public;0;4;;@Override public int getLength() {     return 2. }
+false;public;2;4;;@Override public void serialize(Short record, DataOutputView target) throws IOException {     target.writeShort(record). }
+false;public;1;4;;@Override public Short deserialize(DataInputView source) throws IOException {     return source.readShort(). }
+false;public;2;4;;@Override public Short deserialize(Short reuse, DataInputView source) throws IOException {     return deserialize(source). }
+false;public;2;4;;@Override public void copy(DataInputView source, DataOutputView target) throws IOException {     target.writeShort(source.readShort()). }
+false;public;0;4;;@Override public TypeSerializerSnapshot<Short> snapshotConfiguration() {     return new ShortSerializerSnapshot(). }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected TypeSerializer<BigDecimal> createSerializer() {     return new BigDecSerializer(). }
+false;protected;0;4;;@Override protected int getLength() {     return -1. }
+false;protected;0;4;;@Override protected Class<BigDecimal> getTypeClass() {     return BigDecimal.class. }
+false;protected;0;9;;@Override protected BigDecimal[] getTestData() {     Random rnd = new Random(874597969123412341L).     return new BigDecimal[] { BigDecimal.ZERO, BigDecimal.ONE, BigDecimal.TEN, new BigDecimal(rnd.nextDouble()), new BigDecimal("874597969.1234123413478523984729447"), BigDecimal.valueOf(-1.444), BigDecimal.valueOf(-10000.888) }. }

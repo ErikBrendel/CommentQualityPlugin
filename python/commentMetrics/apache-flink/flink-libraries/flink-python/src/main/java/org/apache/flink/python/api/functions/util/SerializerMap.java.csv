@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override @SuppressWarnings("unchecked") public byte[] map(IN value) throws Exception {     if (serializer == null) {         serializer = SerializationUtils.getSerializer(value).     }     return serializer.serialize(value). }

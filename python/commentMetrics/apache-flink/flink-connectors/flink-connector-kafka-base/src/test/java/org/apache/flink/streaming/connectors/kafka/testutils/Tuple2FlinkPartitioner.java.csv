@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;5;8;;@Override public int partition(Tuple2<Integer, Integer> next, byte[] key, byte[] value, String targetTopic, int[] partitions) {     if (partitions.length != expectedPartitions) {         throw new IllegalArgumentException("Expected " + expectedPartitions + " partitions").     }     return next.f0. }

@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,final;0;9;;@Override public final void run() {     String oldName = Thread.currentThread().getName().     Thread.currentThread().setName(name).     try {         execute().     } finally {         Thread.currentThread().setName(oldName).     } }
+false;protected,abstract;0;1;;protected abstract void execute().

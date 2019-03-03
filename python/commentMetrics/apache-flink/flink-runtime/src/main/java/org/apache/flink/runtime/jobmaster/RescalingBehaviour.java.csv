@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;10;;@Override public void accept(JobVertex jobVertex, Integer newParallelism) throws FlinkException {     if (jobVertex.getMaxParallelism() < newParallelism) {         throw new FlinkException("Cannot rescale vertex " + jobVertex.getName() + " because its maximum parallelism " + jobVertex.getMaxParallelism() + " is smaller than the new parallelism " + newParallelism + '.').     } else {         jobVertex.setParallelism(newParallelism).     } }
+false;public;2;4;;@Override public void accept(JobVertex jobVertex, Integer newParallelism) {     jobVertex.setParallelism(Math.min(jobVertex.getMaxParallelism(), newParallelism)). }

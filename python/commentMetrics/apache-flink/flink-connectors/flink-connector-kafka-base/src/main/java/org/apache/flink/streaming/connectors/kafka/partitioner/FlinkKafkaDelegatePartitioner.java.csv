@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public void setPartitions(int[] partitions) {     this.partitions = partitions. }
+false;public;2;4;;@Override public void open(int parallelInstanceId, int parallelInstances) {     this.kafkaPartitioner.open(parallelInstanceId, parallelInstances, partitions). }
+false;public;5;4;;@Override public int partition(T next, byte[] serializedKey, byte[] serializedValue, String targetTopic, int[] partitions) {     return this.kafkaPartitioner.partition(next, serializedKey, serializedValue, this.partitions.length). }

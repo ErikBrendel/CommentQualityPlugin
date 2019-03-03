@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public TypeInformation<Row> getOutputType() {     return outputType. }
+false;public;1;9;;@Override public void startRetrieval(ProgramDeployer<C> deployer) {     // start listener thread     retrievalThread.start().     // start deployer     this.deployer = deployer.     monitoringThread.start(). }
+false;public;0;4;;@Override public TableSink<?> getTableSink() {     return collectTableSink. }
+false;public;0;7;;@Override public void close() {     retrievalThread.isRunning = false.     retrievalThread.interrupt().     monitoringThread.interrupt().     iterator.close(). }
+false;protected;0;15;;// -------------------------------------------------------------------------------------------- protected <T> TypedResult<T> handleMissingResult() {     // we need to wait until we know what is going on     if (monitoringThread.isAlive()) {         return TypedResult.empty().     } else // the job finished with an exception     if (executionException != null) {         throw executionException.     } else // we assume that a bounded job finished     {         return TypedResult.endOfStream().     } }
+false;protected;0;3;;protected boolean isRetrieving() {     return retrievalThread.isRunning. }
+false;protected,abstract;1;1;;protected abstract void processRecord(Tuple2<Boolean, Row> change).
+false;public;0;8;;@Override public void run() {     try {         deployer.run().     } catch (SqlExecutionException e) {         executionException = e.     } }
+false;public;0;15;;@Override public void run() {     try {         while (isRunning && iterator.hasNext()) {             final Tuple2<Boolean, Row> change = iterator.next().             processRecord(change).         }     } catch (RuntimeException e) {     // ignore socket exceptions     }     // no result anymore     // either the job is done or an error occurred     isRunning = false. }

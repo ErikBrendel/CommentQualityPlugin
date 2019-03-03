@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Override public DataSetAnalyticBase<T, R> run(DataSet<T> input) throws Exception {     env = input.getExecutionEnvironment().     return this. }
+false;public;0;6;;@Override public R execute() throws Exception {     env.execute().     return getResult(). }
+false;public;1;8;;@Override public R execute(String jobName) throws Exception {     Preconditions.checkNotNull(jobName).     env.execute(jobName).     return getResult(). }

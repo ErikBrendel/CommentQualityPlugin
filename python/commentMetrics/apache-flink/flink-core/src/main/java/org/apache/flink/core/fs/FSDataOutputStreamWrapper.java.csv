@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public long getPos() throws IOException {     return outputStream.getPos(). }
+false;public;0;4;;@Override public void flush() throws IOException {     outputStream.flush(). }
+false;public;0;4;;@Override public void sync() throws IOException {     outputStream.sync(). }
+false;public;1;4;;@Override public void write(int b) throws IOException {     outputStream.write(b). }
+false;public;1;4;;@Override public void write(byte[] b) throws IOException {     outputStream.write(b). }
+false;public;3;4;;@Override public void write(byte[] b, int off, int len) throws IOException {     outputStream.write(b, off, len). }
+false;public;0;4;;@Override public void close() throws IOException {     outputStream.close(). }
+false;public;0;4;;@Override public FSDataOutputStream getWrappedDelegate() {     return outputStream. }

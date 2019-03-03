@@ -1,0 +1,10 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void collect(T element) {     this.latestElement = new StreamRecord<>(element). }
+false;public;2;4;;@Override public void collectWithTimestamp(T element, long timestamp) {     this.latestElement = new StreamRecord<>(element, timestamp). }
+false;public;1;7;;@Override public void emitWatermark(Watermark mark) {     synchronized (watermarkLock) {         currentWatermark = mark.         watermarkLock.notifyAll().     } }
+false;public;0;4;;@Override public void markAsTemporarilyIdle() { // do nothing }
+false;public;0;4;;@Override public Object getCheckpointLock() {     return checkpointLock. }
+false;public;0;4;;@Override public void close() { // do nothing }
+false;public;0;3;;public StreamRecord<T> getLatestElement() {     return latestElement. }
+false;public;0;3;;public boolean hasWatermark() {     return currentWatermark != null. }
+false;public;0;10;;public Watermark getLatestWatermark() throws InterruptedException {     synchronized (watermarkLock) {         while (currentWatermark == null) {             watermarkLock.wait().         }         Watermark wm = currentWatermark.         currentWatermark = null.         return wm.     } }

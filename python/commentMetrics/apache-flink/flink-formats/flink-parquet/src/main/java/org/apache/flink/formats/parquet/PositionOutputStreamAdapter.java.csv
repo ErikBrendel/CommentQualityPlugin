@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public long getPos() throws IOException {     return out.getPos(). }
+false;public;1;4;;@Override public void write(int b) throws IOException {     out.write(b). }
+false;public;3;4;;@Override public void write(byte[] buffer, int off, int len) throws IOException {     out.write(buffer, off, len). }
+false;public;0;4;;@Override public void flush() throws IOException {     out.flush(). }
+false;public;0;5;;@Override public void close() { // we do not actually close the internal stream here, to prevent that the finishing // of the Parquet Writer closes the target output stream }

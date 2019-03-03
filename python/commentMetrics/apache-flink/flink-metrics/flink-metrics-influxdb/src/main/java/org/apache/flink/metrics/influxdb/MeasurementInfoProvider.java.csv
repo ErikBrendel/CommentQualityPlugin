@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public String filterCharacters(String input) {     return notAllowedCharacters.matcher(input).replaceAll("_"). }
+false;public;2;4;;@Override public MeasurementInfo getMetricInfo(String metricName, MetricGroup group) {     return new MeasurementInfo(getScopedName(metricName, group), getTags(group)). }
+false;private,static;1;9;;private static Map<String, String> getTags(MetricGroup group) {     // Keys are surrounded by brackets: remove them, transforming "<name>" to "name".     Map<String, String> tags = new HashMap<>().     for (Map.Entry<String, String> variable : group.getAllVariables().entrySet()) {         String name = variable.getKey().         tags.put(name.substring(1, name.length() - 1), variable.getValue()).     }     return tags. }
+false;private,static;2;3;;private static String getScopedName(String metricName, MetricGroup group) {     return getLogicalScope(group) + SCOPE_SEPARATOR + metricName. }
+false;private,static;1;3;;private static String getLogicalScope(MetricGroup group) {     return ((FrontMetricGroup<AbstractMetricGroup<?>>) group).getLogicalScope(CHARACTER_FILTER, SCOPE_SEPARATOR). }

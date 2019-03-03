@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;11;;@Override @SuppressWarnings("unchecked") public T reduce(T value1, T value2) throws Exception {     if (isTuple) {         Tuple result = ((Tuple) value1).copy().         return fieldAccessor.set((T) result, adder.add(fieldAccessor.get(value1), fieldAccessor.get(value2))).     } else {         T result = serializer.copy(value1).         return fieldAccessor.set(result, adder.add(fieldAccessor.get(value1), fieldAccessor.get(value2))).     } }

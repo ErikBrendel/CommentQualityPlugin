@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;3;;public static SystemClock getInstance() {     return INSTANCE. }
+false;public;0;4;;// ------------------------------------------------------------------------ @Override public long absoluteTimeMillis() {     return System.currentTimeMillis(). }
+false;public;0;4;;@Override public long relativeTimeMillis() {     return System.nanoTime() / 1_000_000. }
+false;public;0;4;;@Override public long relativeTimeNanos() {     return System.nanoTime(). }

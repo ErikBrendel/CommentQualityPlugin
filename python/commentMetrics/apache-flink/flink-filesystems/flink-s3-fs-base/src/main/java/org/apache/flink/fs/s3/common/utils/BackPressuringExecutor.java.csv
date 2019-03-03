@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;22;;@Override public void execute(Runnable command) {     // Executor interface for transparent drop-in.     try {         permits.acquire().     } catch (InterruptedException e) {         Thread.currentThread().interrupt().         throw new FlinkRuntimeException("interrupted:", e).     }     final SemaphoreReleasingRunnable runnable = new SemaphoreReleasingRunnable(command, permits).     try {         delegate.execute(runnable).     } catch (Throwable e) {         runnable.release().         ExceptionUtils.rethrow(e, e.getMessage()).     } }
+false;public;0;9;;@Override public void run() {     try {         delegate.run().     } finally {         release().     } }
+false;;0;5;;void release() {     if (released.compareAndSet(false, true)) {         toRelease.release().     } }

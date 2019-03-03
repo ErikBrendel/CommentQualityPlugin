@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;6;;public static ErrorCode fromHttp2(int code) {     for (ErrorCode errorCode : ErrorCode.values()) {         if (errorCode.httpCode == code)             return errorCode.     }     return null. }

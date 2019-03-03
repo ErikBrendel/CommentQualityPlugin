@@ -1,4 +1,7 @@
-# id;timestamp;commentText;codeText;commentWords;codeWords
-IntList -> public int getSerializedSize();1405024514;returns record size when serialized in bytes__@return size in bytes;public int getSerializedSize() {_		return (2 + this.value.length) * 4__	};returns,record,size,when,serialized,in,bytes,return,size,in,bytes;public,int,get,serialized,size,return,2,this,value,length,4
-IntList -> public int getSerializedSize();1405090423;returns record size when serialized in bytes__@return size in bytes;public int getSerializedSize() {_		return (2 + this.value.length) * 4__	};returns,record,size,when,serialized,in,bytes,return,size,in,bytes;public,int,get,serialized,size,return,2,this,value,length,4
-IntList -> public int getSerializedSize();1411473593;returns record size when serialized in bytes__@return size in bytes;public int getSerializedSize() {_		return (2 + this.value.length) * 4__	};returns,record,size,when,serialized,in,bytes,return,size,in,bytes;public,int,get,serialized,size,return,2,this,value,length,4
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public int getKey() {     return key. }
+false;public;1;3;;public void setKey(int key) {     this.key = key. }
+false;public;0;3;;public int[] getValue() {     return value. }
+false;public;1;3;;public void setValue(int[] value) {     this.value = value. }
+true;public;0;3;/**  * returns record size when serialized in bytes  *  * @return size in bytes  */ ;/**  * returns record size when serialized in bytes  *  * @return size in bytes  */ public int getSerializedSize() {     return (2 + this.value.length) * 4. }
+false;public;0;8;;@Override public String toString() {     String result = "( " + this.key + " / ".     for (int i = 0. i < value.length. i++) {         result = result + value[i] + " ".     }     return result + ")". }

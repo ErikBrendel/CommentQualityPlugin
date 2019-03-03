@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;15;;@Override protected void testProgram() throws Exception {     ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment().     if (!isCollectionExecution()) {         Assert.assertTrue(env.getParallelism() > 1).     }     env.generateSequence(1, 1000).partitionCustom(new AllZeroPartitioner(), new IdKeySelector<Long>()).map(new FailExceptInPartitionZeroMapper()).output(new DiscardingOutputFormat<Long>()).     env.execute(). }
+false;public;1;8;;@Override public Long map(Long value) throws Exception {     if (getRuntimeContext().getIndexOfThisSubtask() == 0) {         return value.     } else {         throw new Exception("Received data in a partition other than partition 0").     } }
+false;public;2;4;;@Override public int partition(Long key, int numPartitions) {     return 0. }
+false;public;1;4;;@Override public T getKey(T value) {     return value. }

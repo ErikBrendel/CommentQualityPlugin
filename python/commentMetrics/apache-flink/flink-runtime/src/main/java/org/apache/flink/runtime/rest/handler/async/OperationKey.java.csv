@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Get the trigger id for the given operation key.  *  * @return trigger id  */ ;/**  * Get the trigger id for the given operation key.  *  * @return trigger id  */ public TriggerId getTriggerId() {     return triggerId. }
+false;public;1;11;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     OperationKey that = (OperationKey) o.     return Objects.equals(triggerId, that.triggerId). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(triggerId). }

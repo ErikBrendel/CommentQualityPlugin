@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void setStateMetaInfo(RegisteredBroadcastStateBackendMetaInfo<K, V> stateMetaInfo) {     this.stateMetaInfo = stateMetaInfo. }
+false;public;0;4;;@Override public RegisteredBroadcastStateBackendMetaInfo<K, V> getStateMetaInfo() {     return stateMetaInfo. }
+false;public;0;4;;@Override public HeapBroadcastState<K, V> deepCopy() {     return new HeapBroadcastState<>(this). }
+false;public;0;4;;@Override public void clear() {     backingMap.clear(). }
+false;public;0;8;;@Override public String toString() {     return "HeapBroadcastState{" + "stateMetaInfo=" + stateMetaInfo + ", backingMap=" + backingMap + ", internalMapCopySerializer=" + internalMapCopySerializer + '}'. }
+false;public;1;13;;@Override public long write(FSDataOutputStream out) throws IOException {     long partitionOffset = out.getPos().     DataOutputView dov = new DataOutputViewStreamWrapper(out).     dov.writeInt(backingMap.size()).     for (Map.Entry<K, V> entry : backingMap.entrySet()) {         getStateMetaInfo().getKeySerializer().serialize(entry.getKey(), dov).         getStateMetaInfo().getValueSerializer().serialize(entry.getValue(), dov).     }     return partitionOffset. }
+false;public;1;4;;@Override public V get(K key) {     return backingMap.get(key). }
+false;public;2;4;;@Override public void put(K key, V value) {     backingMap.put(key, value). }
+false;public;1;4;;@Override public void putAll(Map<K, V> map) {     backingMap.putAll(map). }
+false;public;1;4;;@Override public void remove(K key) {     backingMap.remove(key). }
+false;public;1;4;;@Override public boolean contains(K key) {     return backingMap.containsKey(key). }
+false;public;0;4;;@Override public Iterator<Map.Entry<K, V>> iterator() {     return backingMap.entrySet().iterator(). }
+false;public;0;4;;@Override public Iterable<Map.Entry<K, V>> entries() {     return backingMap.entrySet(). }
+false;public;0;4;;@Override public Iterable<Map.Entry<K, V>> immutableEntries() {     return Collections.unmodifiableSet(backingMap.entrySet()). }

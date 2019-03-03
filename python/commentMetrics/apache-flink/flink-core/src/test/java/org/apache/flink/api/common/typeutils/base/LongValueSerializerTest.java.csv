@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected TypeSerializer<LongValue> createSerializer() {     return new LongValueSerializer(). }
+false;protected;0;4;;@Override protected int getLength() {     return 8. }
+false;protected;0;4;;@Override protected Class<LongValue> getTypeClass() {     return LongValue.class. }
+false;protected;0;9;;@Override protected LongValue[] getTestData() {     Random rnd = new Random(874597969123412341L).     long rndLong = rnd.nextLong().     return new LongValue[] { new LongValue(0L), new LongValue(1L), new LongValue(-1L), new LongValue(Long.MAX_VALUE), new LongValue(Long.MIN_VALUE), new LongValue(rndLong), new LongValue(-rndLong) }. }

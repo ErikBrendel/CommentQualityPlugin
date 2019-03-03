@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Override public UnaryOperatorInformation<OUT, OUT> getOperatorInfo() {     TypeInformation<OUT> previousOut = input.getOperatorInfo().getOutputType().     return new UnaryOperatorInformation<OUT, OUT>(previousOut, previousOut). }
+false;protected;3;4;;@Override protected List<OUT> executeOnCollections(List<OUT> inputData, RuntimeContext runtimeContext, ExecutionConfig executionConfig) {     return inputData. }

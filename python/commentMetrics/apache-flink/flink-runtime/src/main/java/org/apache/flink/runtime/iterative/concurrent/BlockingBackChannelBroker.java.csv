@@ -1,5 +1,2 @@
-# id;timestamp;commentText;codeText;commentWords;codeWords
-BlockingBackChannelBroker -> public static Broker<BlockingBackChannel> instance();1405024514;retrieve singleton instance;public static Broker<BlockingBackChannel> instance() {_		return INSTANCE__	};retrieve,singleton,instance;public,static,broker,blocking,back,channel,instance,return,instance
-BlockingBackChannelBroker -> public static Broker<BlockingBackChannel> instance();1405090423;retrieve singleton instance;public static Broker<BlockingBackChannel> instance() {_		return INSTANCE__	};retrieve,singleton,instance;public,static,broker,blocking,back,channel,instance,return,instance
-BlockingBackChannelBroker -> public static Broker<BlockingBackChannel> instance();1411473593;retrieve singleton instance;public static Broker<BlockingBackChannel> instance() {_		return INSTANCE__	};retrieve,singleton,instance;public,static,broker,blocking,back,channel,instance,return,instance
-BlockingBackChannelBroker -> public static Broker<BlockingBackChannel> instance();1499161032;Retrieve singleton instance.;public static Broker<BlockingBackChannel> instance() {_		return INSTANCE__	};retrieve,singleton,instance;public,static,broker,blocking,back,channel,instance,return,instance
+commented;modifiers;parameterAmount;loc;comment;code
+true;public,static;0;3;/**  * Retrieve singleton instance.  */ ;/**  * Retrieve singleton instance.  */ public static Broker<BlockingBackChannel> instance() {     return INSTANCE. }

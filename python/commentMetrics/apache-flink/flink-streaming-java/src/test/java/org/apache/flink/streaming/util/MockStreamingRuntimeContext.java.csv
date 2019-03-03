@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public MetricGroup getMetricGroup() {     return new UnregisteredMetricsGroup(). }
+false;public;0;4;;@Override public boolean isCheckpointingEnabled() {     return isCheckpointingEnabled. }
+false;public;0;4;;@Override public int getIndexOfThisSubtask() {     return subtaskIndex. }
+false;public;0;4;;@Override public int getNumberOfParallelSubtasks() {     return numParallelSubtasks. }
+false;public;0;4;;@Override public ExecutionConfig getExecutionConfig() {     return new ExecutionConfig(). }
+false;public;0;4;;@Override public OperatorID getOperatorID() {     return new OperatorID(). }
+false;protected;0;7;;@Override protected ProcessingTimeService getProcessingTimeService() {     if (testProcessingTimeService == null) {         testProcessingTimeService = new TestProcessingTimeService().     }     return testProcessingTimeService. }

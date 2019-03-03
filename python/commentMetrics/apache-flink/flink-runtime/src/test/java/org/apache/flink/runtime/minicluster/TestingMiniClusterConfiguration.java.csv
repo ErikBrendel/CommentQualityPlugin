@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public int getNumberDispatcherResourceManagerComponents() {     return numberDispatcherResourceManagerComponents. }
+false;public;0;3;;public boolean isLocalCommunication() {     return localCommunication. }
+false;public;1;4;;public Builder setConfiguration(Configuration configuration1) {     this.configuration = Preconditions.checkNotNull(configuration1).     return this. }
+false;public;1;4;;public Builder setNumTaskManagers(int numTaskManagers) {     this.numTaskManagers = numTaskManagers.     return this. }
+false;public;1;4;;public Builder setNumSlotsPerTaskManager(int numSlotsPerTaskManager) {     this.numSlotsPerTaskManager = numSlotsPerTaskManager.     return this. }
+false;public;1;4;;public Builder setRpcServiceSharing(RpcServiceSharing rpcServiceSharing) {     this.rpcServiceSharing = Preconditions.checkNotNull(rpcServiceSharing).     return this. }
+false;public;1;4;;public Builder setCommonBindAddress(String commonBindAddress) {     this.commonBindAddress = commonBindAddress.     return this. }
+false;public;1;4;;public Builder setNumberDispatcherResourceManagerComponents(int numberDispatcherResourceManagerComponents) {     this.numberDispatcherResourceManagerComponents = numberDispatcherResourceManagerComponents.     return this. }
+false;public;1;4;;public Builder setLocalCommunication(boolean localCommunication) {     this.localCommunication = localCommunication.     return this. }
+false;public;0;18;;public TestingMiniClusterConfiguration build() {     final Configuration modifiedConfiguration = new Configuration(configuration).     modifiedConfiguration.setInteger(TaskManagerOptions.NUM_TASK_SLOTS, numSlotsPerTaskManager).     modifiedConfiguration.setString(RestOptions.ADDRESS, modifiedConfiguration.getString(RestOptions.ADDRESS, "localhost")).     modifiedConfiguration.setInteger(RestOptions.PORT, modifiedConfiguration.getInteger(RestOptions.PORT, 0)).     return new TestingMiniClusterConfiguration(modifiedConfiguration, numTaskManagers, rpcServiceSharing, commonBindAddress, numberDispatcherResourceManagerComponents, localCommunication). }

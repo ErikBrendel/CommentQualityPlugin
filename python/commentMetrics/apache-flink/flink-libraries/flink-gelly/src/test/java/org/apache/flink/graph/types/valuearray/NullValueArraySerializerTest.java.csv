@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected TypeSerializer<NullValueArray> createSerializer() {     return new NullValueArraySerializer(). }
+false;protected;0;4;;@Override protected int getLength() {     return 4. }
+false;protected;0;4;;@Override protected Class<NullValueArray> getTypeClass() {     return NullValueArray.class. }
+false;protected;0;23;;@Override protected NullValueArray[] getTestData() {     NullValue nv = NullValue.getInstance().     NullValueArray nva0 = new NullValueArray().     NullValueArray nva1 = new NullValueArray().     nva1.addAll(nva0).     nva1.add(nv).     NullValueArray nva2 = new NullValueArray().     nva2.addAll(nva1).     nva2.add(nv).     NullValueArray nva3 = new NullValueArray().     nva3.addAll(nva2).     for (int i = 0. i < 100. i++) {         nva3.add(nv).     }     nva3.addAll(nva3).     return new NullValueArray[] { nva0, nva1, nva2, nva3 }. }

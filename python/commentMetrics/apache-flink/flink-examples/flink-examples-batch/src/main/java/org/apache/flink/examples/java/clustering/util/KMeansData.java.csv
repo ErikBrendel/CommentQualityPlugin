@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;8;;public static DataSet<Centroid> getDefaultCentroidDataSet(ExecutionEnvironment env) {     List<Centroid> centroidList = new LinkedList<Centroid>().     for (Object[] centroid : CENTROIDS) {         centroidList.add(new Centroid((Integer) centroid[0], (Double) centroid[1], (Double) centroid[2])).     }     return env.fromCollection(centroidList). }
+false;public,static;1;7;;public static DataSet<Point> getDefaultPointDataSet(ExecutionEnvironment env) {     List<Point> pointList = new LinkedList<Point>().     for (Object[] point : POINTS) {         pointList.add(new Point((Double) point[0], (Double) point[1])).     }     return env.fromCollection(pointList). }

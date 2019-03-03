@@ -1,0 +1,29 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public CompletableFuture<Acknowledge> cancelJob(JobID jobId, Time timeout) {     return cancelJobFunction.apply(jobId). }
+false;public;2;4;;@Override public CompletableFuture<Acknowledge> stopJob(JobID jobId, Time timeout) {     return stopJobFunction.apply(jobId). }
+false;public;2;4;;@Override public CompletableFuture<ArchivedExecutionGraph> requestJob(JobID jobId, Time timeout) {     return requestJobFunction.apply(jobId). }
+false;public;2;4;;@Override public CompletableFuture<JobResult> requestJobResult(JobID jobId, Time timeout) {     return requestJobResultFunction.apply(jobId). }
+false;public;2;4;;@Override public CompletableFuture<JobStatus> requestJobStatus(JobID jobId, Time timeout) {     return requestJobStatusFunction.apply(jobId). }
+false;public;1;4;;@Override public CompletableFuture<MultipleJobsDetails> requestMultipleJobDetails(Time timeout) {     return requestMultipleJobDetailsSupplier.get(). }
+false;public;1;4;;@Override public CompletableFuture<ClusterOverview> requestClusterOverview(Time timeout) {     return requestClusterOverviewSupplier.get(). }
+false;public;1;4;;@Override public CompletableFuture<Collection<String>> requestMetricQueryServicePaths(Time timeout) {     return requestMetricQueryServicePathsSupplier.get(). }
+false;public;1;4;;@Override public CompletableFuture<Collection<Tuple2<ResourceID, String>>> requestTaskManagerMetricQueryServicePaths(Time timeout) {     return requestTaskManagerMetricQueryServicePathsSupplier.get(). }
+false;public;2;4;;@Override public CompletableFuture<OperatorBackPressureStatsResponse> requestOperatorBackPressureStats(final JobID jobId, final JobVertexID jobVertexId) {     return requestOperatorBackPressureStatsFunction.apply(jobId, jobVertexId). }
+false;public;4;4;;@Override public CompletableFuture<String> triggerSavepoint(JobID jobId, String targetDirectory, boolean cancelJob, Time timeout) {     return triggerSavepointFunction.apply(jobId, targetDirectory). }
+false;public;0;4;;@Override public String getAddress() {     return address. }
+false;public;0;4;;@Override public String getHostname() {     return hostname. }
+false;public,static;0;3;;public static Builder newBuilder() {     return new Builder(). }
+false;public;1;4;;public Builder setAddress(String address) {     this.address = address.     return this. }
+false;public;1;4;;public Builder setHostname(String hostname) {     this.hostname = hostname.     return this. }
+false;public;1;4;;public Builder setRequestJobFunction(Function<JobID, CompletableFuture<ArchivedExecutionGraph>> requestJobFunction) {     this.requestJobFunction = requestJobFunction.     return this. }
+false;public;1;4;;public Builder setRequestJobResultFunction(Function<JobID, CompletableFuture<JobResult>> requestJobResultFunction) {     this.requestJobResultFunction = requestJobResultFunction.     return this. }
+false;public;1;4;;public Builder setRequestJobStatusFunction(Function<JobID, CompletableFuture<JobStatus>> requestJobStatusFunction) {     this.requestJobStatusFunction = requestJobStatusFunction.     return this. }
+false;public;1;4;;public Builder setRequestMultipleJobDetailsSupplier(Supplier<CompletableFuture<MultipleJobsDetails>> requestMultipleJobDetailsSupplier) {     this.requestMultipleJobDetailsSupplier = requestMultipleJobDetailsSupplier.     return this. }
+false;public;1;4;;public Builder setRequestClusterOverviewSupplier(Supplier<CompletableFuture<ClusterOverview>> requestClusterOverviewSupplier) {     this.requestClusterOverviewSupplier = requestClusterOverviewSupplier.     return this. }
+false;public;1;4;;public Builder setRequestMetricQueryServicePathsSupplier(Supplier<CompletableFuture<Collection<String>>> requestMetricQueryServicePathsSupplier) {     this.requestMetricQueryServicePathsSupplier = requestMetricQueryServicePathsSupplier.     return this. }
+false;public;1;4;;public Builder setRequestTaskManagerMetricQueryServicePathsSupplier(Supplier<CompletableFuture<Collection<Tuple2<ResourceID, String>>>> requestTaskManagerMetricQueryServicePathsSupplier) {     this.requestTaskManagerMetricQueryServicePathsSupplier = requestTaskManagerMetricQueryServicePathsSupplier.     return this. }
+false;public;1;4;;public Builder setRequestOperatorBackPressureStatsFunction(BiFunction<JobID, JobVertexID, CompletableFuture<OperatorBackPressureStatsResponse>> requestOeratorBackPressureStatsFunction) {     this.requestOperatorBackPressureStatsFunction = requestOeratorBackPressureStatsFunction.     return this. }
+false;public;1;4;;public Builder setCancelJobFunction(Function<JobID, CompletableFuture<Acknowledge>> cancelJobFunction) {     this.cancelJobFunction = cancelJobFunction.     return this. }
+false;public;1;4;;public Builder setStopJobFunction(Function<JobID, CompletableFuture<Acknowledge>> stopJobFunction) {     this.stopJobFunction = stopJobFunction.     return this. }
+false;public;1;4;;public Builder setTriggerSavepointFunction(BiFunction<JobID, String, CompletableFuture<String>> triggerSavepointFunction) {     this.triggerSavepointFunction = triggerSavepointFunction.     return this. }
+false;public;0;16;;public TestingRestfulGateway build() {     return new TestingRestfulGateway(address, hostname, cancelJobFunction, stopJobFunction, requestJobFunction, requestJobResultFunction, requestJobStatusFunction, requestMultipleJobDetailsSupplier, requestClusterOverviewSupplier, requestMetricQueryServicePathsSupplier, requestTaskManagerMetricQueryServicePathsSupplier, requestOperatorBackPressureStatsFunction, triggerSavepointFunction). }

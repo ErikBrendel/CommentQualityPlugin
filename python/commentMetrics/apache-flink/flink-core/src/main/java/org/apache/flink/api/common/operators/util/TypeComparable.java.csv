@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public int hashCode() {     return hashCode. }
+false;public;1;9;;@Override public boolean equals(Object o) {     if (!(o instanceof TypeComparable)) {         return false.     }     @SuppressWarnings("unchecked")     TypeComparable<T> other = (TypeComparable<T>) o.     return comparator.compare(elem, other.elem) == 0. }

@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Test public void testExpressionString() {     assertEquals(TREE_WITH_NULL_STRING, TREE_WITH_NULL.toString()). }
+false;public;0;4;;@Test public void testExpressionEquality() {     assertEquals(TREE_WITH_VALUE, TREE_WITH_SAME_VALUE). }
+false;public;0;4;;@Test public void testExpressionInequality() {     assertNotEquals(TREE_WITH_NULL, TREE_WITH_VALUE). }
+false;private,static;1;18;;private static CommonExpression createExpressionTree(Integer nestedValue) {     return new CallExpression(AND, asList(new ValueLiteralExpression(true), new CallExpression(EQUALS, asList(new FieldReferenceExpression("field"), new CallExpression(new ScalarFunctionDefinition(DUMMY_FUNCTION), singletonList(new ValueLiteralExpression(nestedValue, Types.INT))))))). }

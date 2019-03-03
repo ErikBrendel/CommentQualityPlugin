@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected TypeComparator<StringValue> createComparator(boolean ascending) {     return new StringValueComparator(ascending). }
+false;protected;0;4;;@Override protected TypeSerializer<StringValue> createSerializer() {     return new StringValueSerializer(). }
+false;protected;0;13;;@Override protected StringValue[] getSortedTestData() {     return new StringValue[] { new StringValue(""), new StringValue("Lorem Ipsum Dolor Omit Longer"), new StringValue("aaaa"), new StringValue("abcd"), new StringValue("abce"), new StringValue("abdd"), new StringValue("accd"), new StringValue("bbcd") }. }

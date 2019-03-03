@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;20;;public void run() throws Exception {     String postBody = "" + "Releases\n" + "--------\n" + "\n" + " * _1.0_ May 6, 2013\n" + " * _1.1_ June 15, 2013\n" + " * _1.2_ August 11, 2013\n".     Request request = new Request.Builder().url("https://api.github.com/markdown/raw").post(RequestBody.create(MEDIA_TYPE_MARKDOWN, postBody)).build().     try (Response response = client.newCall(request).execute()) {         if (!response.isSuccessful())             throw new IOException("Unexpected code " + response).         System.out.println(response.body().string()).     } }
+false;public,static;1;3;;public static void main(String... args) throws Exception {     new PostString().run(). }

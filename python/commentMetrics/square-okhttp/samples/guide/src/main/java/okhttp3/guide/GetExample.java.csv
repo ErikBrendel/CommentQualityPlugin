@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;1;9;;String run(String url) throws IOException {     Request request = new Request.Builder().url(url).build().     try (Response response = client.newCall(request).execute()) {         return response.body().string().     } }
+false;public,static;1;5;;public static void main(String[] args) throws IOException {     GetExample example = new GetExample().     String response = example.run("https://raw.github.com/square/okhttp/master/README.md").     System.out.println(response). }

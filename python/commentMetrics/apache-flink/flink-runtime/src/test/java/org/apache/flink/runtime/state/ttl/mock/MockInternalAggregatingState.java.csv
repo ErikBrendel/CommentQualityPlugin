@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public OUT get() {     return aggregateFunction.getResult(getInternal()). }
+false;public;1;4;;@Override public void add(IN value) {     updateInternal(aggregateFunction.add(value, getInternal())). }
+false;;2;4;;@Override ACC mergeState(ACC acc, ACC nAcc) {     return aggregateFunction.merge(acc, nAcc). }
+false;static;2;8;;@SuppressWarnings({ "unchecked", "unused" }) static <IN, OUT, N, ACC, S extends State, IS extends S> IS createState(TypeSerializer<N> namespaceSerializer, StateDescriptor<S, ACC> stateDesc) {     AggregatingStateDescriptor<IN, ACC, OUT> aggregatingStateDesc = (AggregatingStateDescriptor<IN, ACC, OUT>) stateDesc.     return (IS) new MockInternalAggregatingState<>(aggregatingStateDesc.getAggregateFunction()). }

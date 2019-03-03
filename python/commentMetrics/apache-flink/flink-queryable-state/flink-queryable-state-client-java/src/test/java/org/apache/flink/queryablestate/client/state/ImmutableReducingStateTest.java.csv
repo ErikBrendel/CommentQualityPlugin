@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;11;;@Before public void setUp() throws Exception {     if (!reducingStateDesc.isSerializerInitialized()) {         reducingStateDesc.initializeSerializerUnlessSet(new ExecutionConfig()).     }     reduceState = ImmutableReducingState.createState(reducingStateDesc, ByteBuffer.allocate(Long.BYTES).putLong(42L).array()). }
+false;public;0;7;;@Test(expected = UnsupportedOperationException.class) public void testUpdate() throws Exception {     long value = reduceState.get().     assertEquals(42L, value).     reduceState.add(54L). }
+false;public;0;7;;@Test(expected = UnsupportedOperationException.class) public void testClear() throws Exception {     long value = reduceState.get().     assertEquals(42L, value).     reduceState.clear(). }
+false;public;2;4;;@Override public Long reduce(Long value1, Long value2) throws Exception {     return value1 + value2. }

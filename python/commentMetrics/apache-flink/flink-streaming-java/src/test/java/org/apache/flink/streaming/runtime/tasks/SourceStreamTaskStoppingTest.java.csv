@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;11;;@Test public void testStop() {     final StoppableSourceStreamTask<Object, StoppableSource> sourceTask = new StoppableSourceStreamTask<>(new DummyEnvironment("test", 1, 0)).     sourceTask.headOperator = new StoppableStreamSource<>(new StoppableSource()).     sourceTask.stop().     assertTrue(stopped). }
+false;public;0;10;;@Test public void testStopBeforeInitialization() throws Exception {     final StoppableSourceStreamTask<Object, StoppableFailingSource> sourceTask = new StoppableSourceStreamTask<>(new DummyEnvironment("test", 1, 0)).     sourceTask.stop().     sourceTask.headOperator = new StoppableStreamSource<>(new StoppableFailingSource()).     sourceTask.run(). }
+false;public;1;4;;@Override public void run(org.apache.flink.streaming.api.functions.source.SourceFunction.SourceContext<Object> ctx) throws Exception { }
+false;public;0;2;;@Override public void cancel() { }
+false;public;0;4;;@Override public void stop() {     stopped = true. }
+false;public;1;4;;@Override public void run(SourceContext<Object> ctx) throws Exception {     fail("should not be called"). }
+false;public;0;2;;@Override public void cancel() { }
+false;public;0;2;;@Override public void stop() { }

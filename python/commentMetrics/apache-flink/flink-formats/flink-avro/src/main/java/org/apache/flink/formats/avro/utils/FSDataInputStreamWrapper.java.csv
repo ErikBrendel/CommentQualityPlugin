@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public long length() throws IOException {     return this.len. }
+false;public;3;4;;@Override public int read(byte[] b, int off, int len) throws IOException {     return stream.read(b, off, len). }
+false;public;1;4;;@Override public void seek(long p) throws IOException {     stream.seek(p). }
+false;public;0;4;;@Override public long tell() throws IOException {     return stream.getPos(). }
+false;public;0;4;;@Override public void close() throws IOException {     stream.close(). }

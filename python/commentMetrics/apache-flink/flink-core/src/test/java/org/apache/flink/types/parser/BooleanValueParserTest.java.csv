@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Override public String[] getValidTestValues() {     return new String[] { "true", "false", "0", "1", "TRUE", "FALSE", "True", "False" }. }
+false;public;0;7;;@Override public BooleanValue[] getValidTestResults() {     return new BooleanValue[] { new BooleanValue(true), new BooleanValue(false), new BooleanValue(false), new BooleanValue(true), new BooleanValue(true), new BooleanValue(false), new BooleanValue(true), new BooleanValue(false) }. }
+false;public;0;6;;@Override public String[] getInvalidTestValues() {     return new String[] { "yes", "no", "2", "-1", "wahr", "falsch", "", "asdf" }. }
+false;public;0;4;;@Override public boolean allowsEmptyField() {     return false. }
+false;public;0;4;;@Override public FieldParser<BooleanValue> getParser() {     return new BooleanValueParser(). }
+false;public;0;4;;@Override public Class<BooleanValue> getTypeClass() {     return BooleanValue.class. }

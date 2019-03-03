@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;2;7;;@Nullable @Override protected MetricStore.ComponentMetricStore getComponentMetricStore(final HandlerRequest<EmptyRequestBody, JobMetricsMessageParameters> request, final MetricStore metricStore) {     return metricStore.getJobMetricStore(request.getPathParameter(JobIDPathParameter.class).toString()). }

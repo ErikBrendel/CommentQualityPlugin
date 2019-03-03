@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean isBasicType() {     return false. }
+false;public;0;4;;@Override public boolean isTupleType() {     return false. }
+false;public;0;4;;@Override public int getArity() {     return 1. }
+false;public;0;4;;@Override public int getTotalFields() {     return 1. }
+false;public;0;4;;@Override public Class<GenericRecord> getTypeClass() {     return GenericRecord.class. }
+false;public;0;4;;@Override public boolean isKeyType() {     return false. }
+false;public;1;4;;@Override public TypeSerializer<GenericRecord> createSerializer(ExecutionConfig config) {     return new AvroSerializer<>(GenericRecord.class, schema). }
+false;public;0;4;;@Override public String toString() {     return String.format("GenericRecord(\"%s\")", schema.toString()). }
+false;public;1;9;;@Override public boolean equals(Object obj) {     if (obj instanceof GenericRecordAvroTypeInfo) {         GenericRecordAvroTypeInfo avroTypeInfo = (GenericRecordAvroTypeInfo) obj.         return Objects.equals(avroTypeInfo.schema, schema).     } else {         return false.     } }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hashCode(schema). }
+false;public;1;4;;@Override public boolean canEqual(Object obj) {     return obj instanceof GenericRecordAvroTypeInfo. }
+false;private;1;3;;private void writeObject(ObjectOutputStream oos) throws IOException {     oos.writeUTF(schema.toString()). }
+false;private;1;3;;private void readObject(ObjectInputStream ois) throws ClassNotFoundException, IOException {     this.schema = new Schema.Parser().parse(ois.readUTF()). }

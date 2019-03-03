@@ -1,0 +1,13 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getName() {     return name. }
+false;public;0;3;;public String getName() {     return name. }
+false;public;0;3;;public int getAge() {     return age. }
+false;public;0;3;;public String getAccent() {     return accent. }
+false;public;0;3;;public Dog getDog() {     return dog. }
+false;public;0;3;;public Cat getCat() {     return cat. }
+false;public;3;4;;@Override public void write(Kryo kryo, Output output, Parrot object) {     output.writeString(object.getAccent()). }
+false;public;3;4;;@Override public Parrot read(Kryo kryo, Input input, Class<Parrot> type) {     return new Parrot(input.readString()). }
+false;public;3;4;;@Override public void write(Kryo kryo, Output output, Dog object) {     output.writeString(object.getName()). }
+false;public;3;4;;@Override public Dog read(Kryo kryo, Input input, Class<Dog> type) {     return new Dog(input.readString()). }
+false;public;3;4;;@Override public void write(Kryo kryo, Output output, Dog object) {     output.writeString(object.getName()). }
+false;public;3;4;;@Override public Dog read(Kryo kryo, Input input, Class<Dog> type) {     return new Dog(input.readString()). }

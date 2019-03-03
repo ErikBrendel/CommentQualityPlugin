@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Gets the ID under which the resource is registered (for example container ID).  * @return The resource ID  */ ;// ------------------------------------------------------------------------ /**  * Gets the ID under which the resource is registered (for example container ID).  * @return The resource ID  */ public ResourceID resourceId() {     return resourceId. }
+true;public;0;3;/**  * Gets the optional message with details, for logging and debugging.  * @return Optional message, may be null  */ ;/**  * Gets the optional message with details, for logging and debugging.  * @return Optional message, may be null  */ public String message() {     return message. }
+false;public;0;7;;// ------------------------------------------------------------------------ @Override public String toString() {     return "ResourceRemoved{" + "resourceId=" + resourceId + ", message='" + message + '\'' + '}'. }

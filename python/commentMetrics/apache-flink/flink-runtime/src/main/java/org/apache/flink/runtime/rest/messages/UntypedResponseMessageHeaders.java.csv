@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * Returns the class of the request message.  *  * @return class of the request message  */ ;/**  * Returns the class of the request message.  *  * @return class of the request message  */ Class<R> getRequestClass().
+true;;0;1;/**  * Returns a new {@link MessageParameters} object.  *  * @return new message parameters object  */ ;/**  * Returns a new {@link MessageParameters} object.  *  * @return new message parameters object  */ M getUnresolvedMessageParameters().
+true;default;0;3;/**  * Returns whether this header allows file uploads.  *  * @return whether this header allows file uploads  */ ;/**  * Returns whether this header allows file uploads.  *  * @return whether this header allows file uploads  */ default boolean acceptsFileUploads() {     return false. }

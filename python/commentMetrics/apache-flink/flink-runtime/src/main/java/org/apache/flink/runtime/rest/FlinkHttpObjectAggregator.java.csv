@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;3;19;;@Override protected void decode(final ChannelHandlerContext ctx, final HttpObject msg, final List<Object> out) throws Exception {     try {         super.decode(ctx, msg, out).     } catch (final TooLongFrameException e) {         HandlerUtils.sendErrorResponse(ctx, false, new ErrorResponseBody(String.format(e.getMessage() + " Try to raise [%s]", RestOptions.SERVER_MAX_CONTENT_LENGTH.key())), HttpResponseStatus.REQUEST_ENTITY_TOO_LARGE, responseHeaders).     } }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;6;;@Override public Tuple2<T, DoubleValue> reduce(Tuple2<T, DoubleValue> left, Tuple2<T, DoubleValue> right) throws Exception {     left.f1.setValue(left.f1.getValue() + right.f1.getValue()).     return left. }

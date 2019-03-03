@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;7;;@Override public void serialize(final SerializedValue<?> value, final JsonGenerator gen, final SerializerProvider provider) throws IOException {     gen.writeBinary(value.getByteArray()). }

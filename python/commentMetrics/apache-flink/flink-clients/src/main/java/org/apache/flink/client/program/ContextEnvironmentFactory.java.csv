@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;14;;@Override public ExecutionEnvironment createExecutionEnvironment() {     if (isDetached && lastEnvCreated != null) {         throw new InvalidProgramException("Multiple environments cannot be created in detached mode").     }     lastEnvCreated = isDetached ? new DetachedEnvironment(client, jarFilesToAttach, classpathsToAttach, userCodeClassLoader, savepointSettings) : new ContextEnvironment(client, jarFilesToAttach, classpathsToAttach, userCodeClassLoader, savepointSettings).     if (defaultParallelism > 0) {         lastEnvCreated.setParallelism(defaultParallelism).     }     return lastEnvCreated. }
+false;public;0;3;;public ExecutionEnvironment getLastEnvCreated() {     return lastEnvCreated. }

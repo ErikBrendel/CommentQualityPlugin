@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;21;;@Override public void requestSubpartitionView(ResultPartitionProvider partitionProvider, ResultPartitionID resultPartitionId, int subPartitionIndex) throws IOException {     synchronized (requestLock) {         if (subpartitionView == null) {             // This this call can trigger a notification we have to             // schedule a separate task at the event loop that will             // start consuming this. Otherwise the reference to the             // view cannot be available in getNextBuffer().             this.subpartitionView = partitionProvider.createSubpartitionView(resultPartitionId, subPartitionIndex, this).         } else {             throw new IllegalStateException("Subpartition already requested").         }     } }
+false;public;1;3;;@Override public void addCredit(int creditDeltas) { }
+false;public;1;4;;@Override public void setRegisteredAsAvailable(boolean isRegisteredAvailable) {     this.isRegisteredAvailable = isRegisteredAvailable. }
+false;public;0;4;;@Override public boolean isRegisteredAsAvailable() {     return isRegisteredAvailable. }
+false;public;0;4;;@Override public boolean isAvailable() {     return subpartitionView.isAvailable(). }
+false;public;0;4;;@Override public InputChannelID getReceiverId() {     return receiverId. }
+false;public;0;4;;@Override public int getSequenceNumber() {     return sequenceNumber. }
+false;public;0;10;;@Override public BufferAndAvailability getNextBuffer() throws IOException, InterruptedException {     BufferAndBacklog next = subpartitionView.getNextBuffer().     if (next != null) {         sequenceNumber++.         return new BufferAndAvailability(next.buffer(), next.isMoreAvailable(), next.buffersInBacklog()).     } else {         return null.     } }
+false;public;0;4;;@Override public void notifySubpartitionConsumed() throws IOException {     subpartitionView.notifySubpartitionConsumed(). }
+false;public;0;4;;@Override public boolean isReleased() {     return subpartitionView.isReleased(). }
+false;public;0;4;;@Override public Throwable getFailureCause() {     return subpartitionView.getFailureCause(). }
+false;public;0;4;;@Override public void releaseAllResources() throws IOException {     subpartitionView.releaseAllResources(). }
+false;public;0;4;;@Override public void notifyDataAvailable() {     requestQueue.notifyReaderNonEmpty(this). }
+false;public;0;9;;@Override public String toString() {     return "SequenceNumberingViewReader{" + "requestLock=" + requestLock + ", receiverId=" + receiverId + ", sequenceNumber=" + sequenceNumber + ", isRegisteredAsAvailable=" + isRegisteredAvailable + '}'. }

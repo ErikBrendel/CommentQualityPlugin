@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;14;;@Override public T deserialize(byte[] message) throws IOException {     checkAvroInitialized().     getInputStream().setBuffer(message).     Schema writerSchema = schemaCoder.readSchema(getInputStream()).     Schema readerSchema = getReaderSchema().     GenericDatumReader<T> datumReader = getDatumReader().     datumReader.setSchema(writerSchema).     datumReader.setExpected(readerSchema).     return datumReader.read(null, getDecoder()). }
+false;;0;7;;@Override void checkAvroInitialized() {     super.checkAvroInitialized().     if (schemaCoder == null) {         this.schemaCoder = schemaCoderProvider.get().     } }

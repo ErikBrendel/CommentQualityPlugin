@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public StringParameter setDefaultValue(String defaultValue) {     super.setDefaultValue(defaultValue).     return this. }
+false;public;1;4;;@Override public void configure(ParameterTool parameterTool) {     value = hasDefaultValue ? parameterTool.get(name, defaultValue) : parameterTool.getRequired(name). }
+false;public;0;4;;@Override public String toString() {     return value. }

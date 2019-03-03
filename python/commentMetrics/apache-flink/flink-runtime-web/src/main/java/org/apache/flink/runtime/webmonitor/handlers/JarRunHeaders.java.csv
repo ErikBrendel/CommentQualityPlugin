@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Class<JarRunResponseBody> getResponseClass() {     return JarRunResponseBody.class. }
+false;public;0;4;;@Override public HttpResponseStatus getResponseStatusCode() {     return HttpResponseStatus.OK. }
+false;public;0;4;;@Override public Class<JarRunRequestBody> getRequestClass() {     return JarRunRequestBody.class. }
+false;public;0;4;;@Override public JarRunMessageParameters getUnresolvedMessageParameters() {     return new JarRunMessageParameters(). }
+false;public;0;4;;@Override public HttpMethodWrapper getHttpMethod() {     return HttpMethodWrapper.POST. }
+false;public;0;4;;@Override public String getTargetRestEndpointURL() {     return "/jars/:" + JarIdPathParameter.KEY + "/run". }
+false;public,static;0;3;;public static JarRunHeaders getInstance() {     return INSTANCE. }
+false;public;0;5;;@Override public String getDescription() {     return "Submits a job by running a jar previously uploaded via '" + JarUploadHeaders.URL + "'. " + "Program arguments can be passed both via the JSON request (recommended) or query parameters.". }

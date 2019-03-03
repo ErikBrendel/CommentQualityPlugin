@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;// ------------------------------------------------------------------------ public int size() {     return count. }
+false;public;0;3;;public boolean isEmpty() {     return 0 == count. }
+false;public;1;7;;public boolean add(T t) {     elements[idx] = t.     idx = (idx + 1) % elements.length.     ++count.     ++modCount.     return true. }
+false;public;0;10;;public void clear() {     if (!isEmpty()) {         for (int i = 0. i < elements.length. ++i) {             elements[i] = null.         }         count = 0.         idx = 0.         ++modCount.     } }
+false;public;1;7;;public T get(int index) {     if (index >= 0 && index < count) {         return isDroppedIndex(index) ? getDefaultElement() : accessInternal(index % elements.length).     } else {         throw new IndexOutOfBoundsException(String.valueOf(index)).     } }
+false;public;0;3;;public int getSizeLimit() {     return elements.length. }
+false;public;2;12;;public T set(int index, T element) {     Preconditions.checkArgument(index >= 0 && index < count).     ++modCount.     if (isDroppedIndex(index)) {         return getDefaultElement().     } else {         int idx = index % elements.length.         T old = accessInternal(idx).         elements[idx] = element.         return old.     } }
+false;public;0;3;;public T getDefaultElement() {     return defaultElement. }
+false;private;1;3;;private boolean isDroppedIndex(int idx) {     return idx < count - elements.length. }
+false;private;1;4;;@SuppressWarnings("unchecked") private T accessInternal(int arrayIndex) {     return (T) elements[arrayIndex]. }
+false;public;0;4;;@Override public boolean hasNext() {     return pos < count. }
+false;public;0;11;;@Override public T next() {     if (oldModCount != modCount) {         throw new ConcurrentModificationException().     }     if (pos < count) {         return get(pos++).     } else {         throw new NoSuchElementException("Iterator exhausted.").     } }
+false;public;0;4;;@Override public void remove() {     throw new UnsupportedOperationException("Read-only iterator"). }
+false;public;0;31;;@Nonnull @Override public Iterator<T> iterator() {     return new Iterator<T>() {          int pos = 0.          final long oldModCount = modCount.          @Override         public boolean hasNext() {             return pos < count.         }          @Override         public T next() {             if (oldModCount != modCount) {                 throw new ConcurrentModificationException().             }             if (pos < count) {                 return get(pos++).             } else {                 throw new NoSuchElementException("Iterator exhausted.").             }         }          @Override         public void remove() {             throw new UnsupportedOperationException("Read-only iterator").         }     }. }

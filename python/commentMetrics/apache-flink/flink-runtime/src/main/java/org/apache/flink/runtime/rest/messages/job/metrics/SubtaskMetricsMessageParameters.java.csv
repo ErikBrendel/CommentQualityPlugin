@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;8;;@Override public Collection<MessagePathParameter<?>> getPathParameters() {     return Collections.unmodifiableCollection(Arrays.asList(jobPathParameter, jobVertexIdPathParameter, subtaskIndexPathParameter)). }
+false;public;0;4;;@Override public Collection<MessageQueryParameter<?>> getQueryParameters() {     return Collections.singletonList(metricsFilterParameter). }

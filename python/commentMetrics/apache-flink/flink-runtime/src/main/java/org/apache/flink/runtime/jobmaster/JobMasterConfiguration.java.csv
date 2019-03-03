@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public Time getRpcTimeout() {     return rpcTimeout. }
+false;public;0;3;;public Time getSlotRequestTimeout() {     return slotRequestTimeout. }
+false;public;0;3;;public String getTmpDirectory() {     return tmpDirectory. }
+false;public;0;3;;public RetryingRegistrationConfiguration getRetryingRegistrationConfiguration() {     return retryingRegistrationConfiguration. }
+false;public;0;3;;public Configuration getConfiguration() {     return configuration. }
+false;public,static;1;17;;public static JobMasterConfiguration fromConfiguration(Configuration configuration) {     final Time rpcTimeout = AkkaUtils.getTimeoutAsTime(configuration).     final Time slotRequestTimeout = Time.milliseconds(configuration.getLong(JobManagerOptions.SLOT_REQUEST_TIMEOUT)).     final String tmpDirectory = ConfigurationUtils.parseTempDirectories(configuration)[0].     final RetryingRegistrationConfiguration retryingRegistrationConfiguration = RetryingRegistrationConfiguration.fromConfiguration(configuration).     return new JobMasterConfiguration(rpcTimeout, slotRequestTimeout, tmpDirectory, retryingRegistrationConfiguration, configuration). }

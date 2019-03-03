@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Override public void invoke() throws Exception {     while (blocking) {         synchronized (lock) {             lock.wait().         }     }     throw new RuntimeException("This exception is expected."). }
+false;public,static;0;7;;public static void unblock() {     blocking = false.     synchronized (lock) {         lock.notifyAll().     } }

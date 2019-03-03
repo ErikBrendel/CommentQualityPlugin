@@ -1,0 +1,24 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;8;/**  * First, reset.  */ ;/**  * First, reset.  */ @Override public void reset() {     this.cursor = fixedSize.     for (int i = 0. i < nullBitsSizeInBytes. i += 8) {         segment.putLong(i, 0L).     }     this.segment.putInt(0, numElements). }
+false;private;1;3;;private void setNullBit(int ordinal) {     SegmentsUtil.bitSet(segment, 4, ordinal). }
+false;public;1;5;;public void setNullBoolean(int ordinal) {     setNullBit(ordinal).     // put zero into the corresponding field when set null     segment.putBoolean(getElementOffset(ordinal, 1), false). }
+false;public;1;5;;public void setNullByte(int ordinal) {     setNullBit(ordinal).     // put zero into the corresponding field when set null     segment.put(getElementOffset(ordinal, 1), (byte) 0). }
+false;public;1;5;;public void setNullShort(int ordinal) {     setNullBit(ordinal).     // put zero into the corresponding field when set null     segment.putShort(getElementOffset(ordinal, 2), (short) 0). }
+false;public;1;5;;public void setNullInt(int ordinal) {     setNullBit(ordinal).     // put zero into the corresponding field when set null     segment.putInt(getElementOffset(ordinal, 4), 0). }
+false;public;1;5;;public void setNullLong(int ordinal) {     setNullBit(ordinal).     // put zero into the corresponding field when set null     segment.putLong(getElementOffset(ordinal, 8), (long) 0). }
+false;public;1;5;;public void setNullFloat(int ordinal) {     setNullBit(ordinal).     // put zero into the corresponding field when set null     segment.putFloat(getElementOffset(ordinal, 4), (float) 0). }
+false;public;1;5;;public void setNullDouble(int ordinal) {     setNullBit(ordinal).     // put zero into the corresponding field when set null     segment.putDouble(getElementOffset(ordinal, 8), (double) 0). }
+false;public;1;4;;@Override public void setNullAt(int ordinal) {     setNullLong(ordinal). }
+false;private;2;3;;private int getElementOffset(int pos, int elementSize) {     return nullBitsSizeInBytes + elementSize * pos. }
+false;public;1;4;;@Override public int getFieldOffset(int pos) {     return getElementOffset(pos, 8). }
+false;public;3;5;;@Override public void setOffsetAndSize(int pos, int offset, long size) {     final long offsetAndSize = ((long) offset << 32) | size.     segment.putLong(getElementOffset(pos, 8), offsetAndSize). }
+false;public;2;4;;@Override public void writeBoolean(int pos, boolean value) {     segment.putBoolean(getElementOffset(pos, 1), value). }
+false;public;2;4;;@Override public void writeByte(int pos, byte value) {     segment.put(getElementOffset(pos, 1), value). }
+false;public;2;4;;@Override public void writeShort(int pos, short value) {     segment.putShort(getElementOffset(pos, 2), value). }
+false;public;2;4;;@Override public void writeInt(int pos, int value) {     segment.putInt(getElementOffset(pos, 4), value). }
+false;public;2;4;;@Override public void writeLong(int pos, long value) {     segment.putLong(getElementOffset(pos, 8), value). }
+false;public;2;7;;@Override public void writeFloat(int pos, float value) {     if (Float.isNaN(value)) {         value = Float.NaN.     }     segment.putFloat(getElementOffset(pos, 4), value). }
+false;public;2;7;;@Override public void writeDouble(int pos, double value) {     if (Double.isNaN(value)) {         value = Double.NaN.     }     segment.putDouble(getElementOffset(pos, 8), value). }
+false;public;2;4;;@Override public void writeChar(int pos, char value) {     segment.putChar(getElementOffset(pos, 2), value). }
+false;public;0;4;;@Override public void afterGrow() {     array.pointTo(segment, 0, segment.size()). }
+true;public;0;4;/**  * Finally, complete write to set real size to row.  */ ;/**  * Finally, complete write to set real size to row.  */ @Override public void complete() {     array.pointTo(segment, 0, cursor). }

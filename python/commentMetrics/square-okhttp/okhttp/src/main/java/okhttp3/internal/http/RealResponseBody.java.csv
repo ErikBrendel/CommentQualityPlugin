@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;@Override public MediaType contentType() {     return contentTypeString != null ? MediaType.parse(contentTypeString) : null. }
+false;public;0;3;;@Override public long contentLength() {     return contentLength. }
+false;public;0;3;;@Override public BufferedSource source() {     return source. }

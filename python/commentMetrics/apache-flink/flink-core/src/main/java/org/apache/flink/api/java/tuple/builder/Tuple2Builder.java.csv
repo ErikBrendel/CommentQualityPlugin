@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;public Tuple2Builder<T0, T1> add(T0 value0, T1 value1) {     tuples.add(new Tuple2<>(value0, value1)).     return this. }
+false;public;0;4;;@SuppressWarnings("unchecked") public Tuple2<T0, T1>[] build() {     return tuples.toArray(new Tuple2[tuples.size()]). }

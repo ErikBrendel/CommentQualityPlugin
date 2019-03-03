@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public CheckpointStatsStatus getStatus() {     return CheckpointStatsStatus.FAILED. }
+false;public;0;4;;@Override public int getNumberOfAcknowledgedSubtasks() {     return numAcknowledgedSubtasks. }
+false;public;0;4;;@Override public long getStateSize() {     return stateSize. }
+false;public;0;4;;@Override public long getAlignmentBuffered() {     return alignmentBuffered. }
+false;public;0;5;;@Override @Nullable public SubtaskStateStats getLatestAcknowledgedSubtaskStats() {     return latestAcknowledgedSubtask. }
+true;public;0;4;/**  * Returns the end to end duration until the checkpoint failure.  */ ;/**  * Returns the end to end duration until the checkpoint failure.  */ @Override public long getEndToEndDuration() {     return Math.max(0, failureTimestamp - triggerTimestamp). }
+true;public;0;3;/**  * Returns the timestamp when this checkpoint failed.  *  * @return Timestamp when the checkpoint failed.  */ ;// ------------------------------------------------------------------------ // Failed checkpoint specific methods // ------------------------------------------------------------------------ /**  * Returns the timestamp when this checkpoint failed.  *  * @return Timestamp when the checkpoint failed.  */ public long getFailureTimestamp() {     return failureTimestamp. }
+true;public;0;4;/**  * Returns the failure message or <code>null</code> if no cause was provided.  *  * @return Failure message of the checkpoint failure or <code>null</code>.  */ ;/**  * Returns the failure message or <code>null</code> if no cause was provided.  *  * @return Failure message of the checkpoint failure or <code>null</code>.  */ @Nullable public String getFailureMessage() {     return failureMsg. }

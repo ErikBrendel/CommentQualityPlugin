@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;14;;@Override public void collect(T record) {     try {         this.serializer.serialize(record, this.outputView).         if (delegate != null) {             delegate.collect(record).         }         this.elementsCollected++.     } catch (IOException e) {         throw new RuntimeException("Unable to serialize the record", e).     } }
+false;public;0;5;;public long getElementsCollectedAndReset() {     long elementsCollectedToReturn = elementsCollected.     elementsCollected = 0.     return elementsCollectedToReturn. }
+false;public;0;6;;@Override public void close() {     if (delegate != null) {         delegate.close().     } }

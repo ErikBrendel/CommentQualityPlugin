@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;10;;@Override public IntPair next(IntPair reuse) {     if (this.count++ < this.numRecords) {         reuse.setKey(this.rnd.nextInt()).         reuse.setValue(this.rnd.nextInt()).         return reuse.     } else {         return null.     } }
+false;public;0;8;;@Override public IntPair next() {     if (this.count++ < this.numRecords) {         return new IntPair(this.rnd.nextInt(), this.rnd.nextInt()).     } else {         return null.     } }
+false;public;0;4;;public void reset() {     this.rnd = new Random(this.seed).     this.count = 0. }

@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;5;;@Override public void reduce(Iterable<Tuple3<K1, K2, IN>> values, Collector<OUT> out) throws Exception {     iter.set(values.iterator()).     this.wrappedFunction.reduce(iter, out). }
+false;public;2;7;;@SuppressWarnings("unchecked") @Override public void combine(Iterable<Tuple3<K1, K2, IN>> values, Collector<Tuple3<K1, K2, IN>> out) throws Exception {     iter.set(values.iterator()).     coll.set(out).     ((GroupCombineFunction<IN, IN>) this.wrappedFunction).combine(iter, coll). }
+false;public;0;4;;@Override public String toString() {     return this.wrappedFunction.toString(). }
+false;public;2;5;;@Override public void reduce(Iterable<Tuple3<K1, K2, IN>> values, Collector<OUT> out) throws Exception {     iter.set(values.iterator()).     this.wrappedFunction.reduce(iter, out). }
+false;public;0;4;;@Override public String toString() {     return this.wrappedFunction.toString(). }

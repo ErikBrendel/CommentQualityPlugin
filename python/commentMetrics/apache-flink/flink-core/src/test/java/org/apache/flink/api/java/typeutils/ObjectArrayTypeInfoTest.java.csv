@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;7;;@Override protected ObjectArrayTypeInfo<?, ?>[] getTestData() {     return new ObjectArrayTypeInfo<?, ?>[] { ObjectArrayTypeInfo.getInfoFor(TestClass[].class, new GenericTypeInfo<>(TestClass.class)), ObjectArrayTypeInfo.getInfoFor(TestClass[].class, new PojoTypeInfo<>(TestClass.class, new ArrayList<PojoField>())) }. }

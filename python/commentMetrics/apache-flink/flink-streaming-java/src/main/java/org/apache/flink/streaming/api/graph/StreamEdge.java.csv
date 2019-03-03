@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public int getSourceId() {     return sourceId. }
+false;public;0;3;;public int getTargetId() {     return targetId. }
+false;public;0;3;;public int getTypeNumber() {     return typeNumber. }
+false;public;0;3;;public List<String> getSelectedNames() {     return selectedNames. }
+false;public;0;3;;public OutputTag getOutputTag() {     return this.outputTag. }
+false;public;0;3;;public StreamPartitioner<?> getPartitioner() {     return outputPartitioner. }
+false;public;1;3;;public void setPartitioner(StreamPartitioner<?> partitioner) {     this.outputPartitioner = partitioner. }
+false;public;0;4;;@Override public int hashCode() {     return edgeId.hashCode(). }
+false;public;1;13;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     StreamEdge that = (StreamEdge) o.     return edgeId.equals(that.edgeId). }
+false;public;0;6;;@Override public String toString() {     return "(" + (sourceOperatorName + "-" + sourceId) + " -> " + (targetOperatorName + "-" + targetId) + ", typeNumber=" + typeNumber + ", selectedNames=" + selectedNames + ", outputPartitioner=" + outputPartitioner + ", outputTag=" + outputTag + ')'. }

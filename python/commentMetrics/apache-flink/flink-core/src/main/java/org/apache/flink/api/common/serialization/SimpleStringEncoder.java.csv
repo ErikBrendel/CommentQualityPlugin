@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;9;;@Override public void encode(IN element, OutputStream stream) throws IOException {     if (charset == null) {         charset = Charset.forName(charsetName).     }     stream.write(element.toString().getBytes(charset)).     stream.write('\n'). }

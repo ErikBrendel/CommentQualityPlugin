@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;5;;@Override public CompletableFuture<Acknowledge> start(JobMasterId jobMasterId) {     jobMasterGateway = new TestingJobMasterGatewayBuilder().build().     return startFunction.apply(jobMasterId). }
+false;public;1;5;;@Override public CompletableFuture<Acknowledge> suspend(Exception cause) {     jobMasterGateway = null.     return suspendFunction.apply(cause). }
+false;public;0;5;;@Override public JobMasterGateway getGateway() {     Preconditions.checkNotNull(jobMasterGateway, "TestingJobMasterService has not been started yet.").     return jobMasterGateway. }
+false;public;0;4;;@Override public String getAddress() {     return address. }
+false;public;0;5;;@Override public CompletableFuture<Void> closeAsync() {     jobMasterGateway = null.     return CompletableFuture.completedFuture(null). }

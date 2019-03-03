@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * Returns whether this result is materialized such that snapshots can be taken or results  * must be retrieved record-wise.  */ ;/**  * Returns whether this result is materialized such that snapshots can be taken or results  * must be retrieved record-wise.  */ boolean isMaterialized().
+true;;0;1;/**  * Returns the output type as defined by the query.  */ ;/**  * Returns the output type as defined by the query.  */ TypeInformation<Row> getOutputType().
+true;;1;1;/**  * Starts the table program using the given deployer and monitors it's execution.  */ ;/**  * Starts the table program using the given deployer and monitors it's execution.  */ void startRetrieval(ProgramDeployer<C> deployer).
+true;;0;1;/**  * Returns the table sink required by this result type.  */ ;/**  * Returns the table sink required by this result type.  */ TableSink<?> getTableSink().
+true;;0;1;/**  * Closes the retrieval and all involved threads.  */ ;/**  * Closes the retrieval and all involved threads.  */ void close().

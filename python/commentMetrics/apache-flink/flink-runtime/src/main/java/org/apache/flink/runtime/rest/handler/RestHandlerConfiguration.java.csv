@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public long getRefreshInterval() {     return refreshInterval. }
+false;public;0;3;;public int getMaxCheckpointStatisticCacheEntries() {     return maxCheckpointStatisticCacheEntries. }
+false;public;0;3;;public Time getTimeout() {     return timeout. }
+false;public;0;3;;public File getWebUiDir() {     return webUiDir. }
+false;public,static;1;16;;public static RestHandlerConfiguration fromConfiguration(Configuration configuration) {     final long refreshInterval = configuration.getLong(WebOptions.REFRESH_INTERVAL).     final int maxCheckpointStatisticCacheEntries = configuration.getInteger(WebOptions.CHECKPOINTS_HISTORY_SIZE).     final Time timeout = Time.milliseconds(configuration.getLong(WebOptions.TIMEOUT)).     final String rootDir = "flink-web-ui".     final File webUiDir = new File(configuration.getString(WebOptions.TMP_DIR), rootDir).     return new RestHandlerConfiguration(refreshInterval, maxCheckpointStatisticCacheEntries, timeout, webUiDir). }

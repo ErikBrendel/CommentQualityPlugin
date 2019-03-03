@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;2;11;;@Override protected Class<?> loadClass(String name, boolean resolve) throws ClassNotFoundException {     synchronized (this) {         if (filteredClassNames.contains(name)) {             throw new ClassNotFoundException(name).         } else {             return super.loadClass(name, resolve).         }     } }

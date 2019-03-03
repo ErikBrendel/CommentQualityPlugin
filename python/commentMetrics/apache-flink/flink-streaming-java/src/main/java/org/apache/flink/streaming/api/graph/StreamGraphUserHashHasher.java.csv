@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;14;;@Override public Map<Integer, byte[]> traverseStreamGraphAndGenerateHashes(StreamGraph streamGraph) {     HashMap<Integer, byte[]> hashResult = new HashMap<>().     for (StreamNode streamNode : streamGraph.getStreamNodes()) {         String userHash = streamNode.getUserHash().         if (null != userHash) {             hashResult.put(streamNode.getId(), StringUtils.hexStringToByte(userHash)).         }     }     return hashResult. }

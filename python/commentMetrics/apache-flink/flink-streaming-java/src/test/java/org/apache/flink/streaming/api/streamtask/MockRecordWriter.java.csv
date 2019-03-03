@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;public boolean initList() {     emittedRecords = new ArrayList<Integer>().     return true. }
+false;public;1;4;;@Override public void emit(SerializationDelegate<StreamRecord<Tuple1<Integer>>> record) {     emittedRecords.add(record.getInstance().getValue().f0). }

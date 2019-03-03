@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;abstract;0;1;;abstract StreamPartitioner<Tuple> createPartitioner().
+false;public;0;4;;@Before public void setup() {     serializationDelegate.setInstance(streamRecord). }
+false;protected;1;4;;protected void assertSelectedChannel(int expectedChannel) {     int actualResult = streamPartitioner.selectChannel(serializationDelegate).     assertEquals(expectedChannel, actualResult). }
+false;protected;2;4;;protected void assertSelectedChannelWithSetup(int expectedChannel, int numberOfChannels) {     streamPartitioner.setup(numberOfChannels).     assertSelectedChannel(expectedChannel). }

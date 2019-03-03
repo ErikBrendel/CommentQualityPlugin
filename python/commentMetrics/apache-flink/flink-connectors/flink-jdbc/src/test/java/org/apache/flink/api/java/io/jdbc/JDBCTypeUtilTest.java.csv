@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void testTypeConversions() {     assertEquals(Types.INTEGER, typeInformationToSqlType(BasicTypeInfo.INT_TYPE_INFO)).     testUnsupportedType(BasicTypeInfo.VOID_TYPE_INFO).     testUnsupportedType(new MapTypeInfo<>(BasicTypeInfo.STRING_TYPE_INFO, BasicTypeInfo.STRING_TYPE_INFO)). }
+false;private,static;1;7;;private static void testUnsupportedType(TypeInformation<?> type) {     try {         typeInformationToSqlType(type).         fail().     } catch (IllegalArgumentException ignored) {     } }

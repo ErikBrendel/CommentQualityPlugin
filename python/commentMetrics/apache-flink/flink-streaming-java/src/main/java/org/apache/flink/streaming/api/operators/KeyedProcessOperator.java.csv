@@ -1,0 +1,15 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;13;;@Override public void open() throws Exception {     super.open().     collector = new TimestampedCollector<>(output).     InternalTimerService<VoidNamespace> internalTimerService = getInternalTimerService("user-timers", VoidNamespaceSerializer.INSTANCE, this).     TimerService timerService = new SimpleTimerService(internalTimerService).     context = new ContextImpl(userFunction, timerService).     onTimerContext = new OnTimerContextImpl(userFunction, timerService). }
+false;public;1;5;;@Override public void onEventTime(InternalTimer<K, VoidNamespace> timer) throws Exception {     collector.setAbsoluteTimestamp(timer.getTimestamp()).     invokeUserFunction(TimeDomain.EVENT_TIME, timer). }
+false;public;1;5;;@Override public void onProcessingTime(InternalTimer<K, VoidNamespace> timer) throws Exception {     collector.eraseTimestamp().     invokeUserFunction(TimeDomain.PROCESSING_TIME, timer). }
+false;public;1;7;;@Override public void processElement(StreamRecord<IN> element) throws Exception {     collector.setTimestamp(element).     context.element = element.     userFunction.processElement(element.getValue(), context, collector).     context.element = null. }
+false;private;2;9;;private void invokeUserFunction(TimeDomain timeDomain, InternalTimer<K, VoidNamespace> timer) throws Exception {     onTimerContext.timeDomain = timeDomain.     onTimerContext.timer = timer.     userFunction.onTimer(timer.getTimestamp(), onTimerContext, collector).     onTimerContext.timeDomain = null.     onTimerContext.timer = null. }
+false;public;0;10;;@Override public Long timestamp() {     checkState(element != null).     if (element.hasTimestamp()) {         return element.getTimestamp().     } else {         return null.     } }
+false;public;0;4;;@Override public TimerService timerService() {     return timerService. }
+false;public;2;8;;@Override public <X> void output(OutputTag<X> outputTag, X value) {     if (outputTag == null) {         throw new IllegalArgumentException("OutputTag must not be null.").     }     output.collect(outputTag, new StreamRecord<>(value, element.getTimestamp())). }
+false;public;0;5;;@Override @SuppressWarnings("unchecked") public K getCurrentKey() {     return (K) KeyedProcessOperator.this.getCurrentKey(). }
+false;public;0;5;;@Override public Long timestamp() {     checkState(timer != null).     return timer.getTimestamp(). }
+false;public;0;4;;@Override public TimerService timerService() {     return timerService. }
+false;public;2;8;;@Override public <X> void output(OutputTag<X> outputTag, X value) {     if (outputTag == null) {         throw new IllegalArgumentException("OutputTag must not be null.").     }     output.collect(outputTag, new StreamRecord<>(value, timer.getTimestamp())). }
+false;public;0;5;;@Override public TimeDomain timeDomain() {     checkState(timeDomain != null).     return timeDomain. }
+false;public;0;4;;@Override public K getCurrentKey() {     return timer.getKey(). }

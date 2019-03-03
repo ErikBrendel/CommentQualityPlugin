@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public boolean isCached() {     return cached. }
+false;public;0;3;;public boolean breaksPipeline() {     return breaksPipeline. }
+false;public;0;9;;public TempMode makePipelineBreaker() {     if (this == NONE) {         return PIPELINE_BREAKER.     } else if (this == CACHED) {         return CACHING_PIPELINE_BREAKER.     } else {         return this.     } }
+false;public;0;9;;public TempMode makeCached() {     if (this == NONE) {         return CACHED.     } else if (this == PIPELINE_BREAKER) {         return CACHING_PIPELINE_BREAKER.     } else {         return this.     } }
+false;public;0;9;;public TempMode makeNonCached() {     if (this == CACHED) {         return NONE.     } else if (this == CACHING_PIPELINE_BREAKER) {         return PIPELINE_BREAKER.     } else {         return this.     } }

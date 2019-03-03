@@ -1,0 +1,11 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;3;;public static JobManagerMetricGroup createUnregisteredJobManagerMetricGroup() {     return new UnregisteredJobManagerMetricGroup(). }
+false;public,static;0;3;;public static JobManagerJobMetricGroup createUnregisteredJobManagerJobMetricGroup() {     return new UnregisteredJobManagerJobMetricGroup(). }
+false;public,static;0;3;;public static TaskManagerMetricGroup createUnregisteredTaskManagerMetricGroup() {     return new UnregisteredTaskManagerMetricGroup(). }
+false;public,static;0;3;;public static TaskManagerJobMetricGroup createUnregisteredTaskManagerJobMetricGroup() {     return new UnregisteredTaskManagerJobMetricGroup(). }
+false;public,static;0;3;;public static TaskMetricGroup createUnregisteredTaskMetricGroup() {     return new UnregisteredTaskMetricGroup(). }
+false;public,static;0;3;;public static OperatorMetricGroup createUnregisteredOperatorMetricGroup() {     return new UnregisteredOperatorMetricGroup(). }
+false;public;1;4;;@Override public JobManagerJobMetricGroup addJob(JobGraph job) {     return createUnregisteredJobManagerJobMetricGroup(). }
+false;public;7;11;;@Override public TaskMetricGroup addTaskForJob(final JobID jobId, final String jobName, final JobVertexID jobVertexId, final ExecutionAttemptID executionAttemptId, final String taskName, final int subtaskIndex, final int attemptNumber) {     return createUnregisteredTaskMetricGroup(). }
+false;public;5;9;;@Override public TaskMetricGroup addTask(final JobVertexID jobVertexId, final ExecutionAttemptID executionAttemptID, final String taskName, final int subtaskIndex, final int attemptNumber) {     return createUnregisteredTaskMetricGroup(). }
+false;public;2;4;;@Override public OperatorMetricGroup getOrAddOperator(OperatorID operatorID, String name) {     return createUnregisteredOperatorMetricGroup(). }

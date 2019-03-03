@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;7;27;;public void setup(TaskConfig config, String taskName, Collector<OT> outputCollector, AbstractInvokable parent, ClassLoader userCodeClassLoader, ExecutionConfig executionConfig, Map<String, Accumulator<?, ?>> accumulatorMap) {     this.config = config.     this.taskName = taskName.     this.userCodeClassLoader = userCodeClassLoader.     this.metrics = parent.getEnvironment().getMetricGroup().getOrAddOperator(taskName).     this.numRecordsIn = this.metrics.getIOMetricGroup().getNumRecordsInCounter().     this.numRecordsOut = this.metrics.getIOMetricGroup().getNumRecordsOutCounter().     this.outputCollector = new CountingCollector<>(outputCollector, numRecordsOut).     Environment env = parent.getEnvironment().     if (parent instanceof BatchTask) {         this.udfContext = ((BatchTask<?, ?>) parent).createRuntimeContext(metrics).     } else {         this.udfContext = new DistributedRuntimeUDFContext(env.getTaskInfo(), userCodeClassLoader, parent.getExecutionConfig(), env.getDistributedCacheEntries(), accumulatorMap, metrics).     }     this.executionConfig = executionConfig.     this.objectReuseEnabled = executionConfig.isObjectReuseEnabled().     setup(parent). }
+false;public,abstract;1;1;;public abstract void setup(AbstractInvokable parent).
+false;public,abstract;0;1;;public abstract void openTask() throws Exception.
+false;public,abstract;0;1;;public abstract void closeTask() throws Exception.
+false;public,abstract;0;1;;public abstract void cancelTask().
+false;public,abstract;0;1;;public abstract Function getStub().
+false;public,abstract;0;1;;public abstract String getTaskName().
+false;public,abstract;1;2;;@Override public abstract void collect(IT record).
+false;public;0;3;;public OperatorIOMetricGroup getIOMetrics() {     return this.metrics.getIOMetricGroup(). }
+false;protected;0;3;;protected RuntimeContext getUdfRuntimeContext() {     return this.udfContext. }
+false;public;1;4;;@SuppressWarnings("unchecked") public void setOutputCollector(Collector<?> outputCollector) {     this.outputCollector = new CountingCollector<>((Collector<OT>) outputCollector, numRecordsOut). }
+false;public;0;3;;public Collector<OT> getOutputCollector() {     return outputCollector. }
+false;public;0;3;;public TaskConfig getTaskConfig() {     return this.config. }

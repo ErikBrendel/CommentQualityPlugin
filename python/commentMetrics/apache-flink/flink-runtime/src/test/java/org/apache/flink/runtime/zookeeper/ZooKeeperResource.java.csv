@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;public String getConnectString() {     verifyIsRunning().     return zooKeeperServer.getConnectString(). }
+false;private;0;3;;private void verifyIsRunning() {     Preconditions.checkState(zooKeeperServer != null). }
+false;protected;0;5;;@Override protected void before() throws Throwable {     terminateZooKeeperServer().     zooKeeperServer = new TestingServer(true). }
+false;private;0;6;;private void terminateZooKeeperServer() throws IOException {     if (zooKeeperServer != null) {         zooKeeperServer.stop().         zooKeeperServer = null.     } }
+false;protected;0;8;;@Override protected void after() {     try {         terminateZooKeeperServer().     } catch (IOException e) {         LOG.warn("Could not properly terminate the {}.", getClass().getSimpleName(), e).     } }

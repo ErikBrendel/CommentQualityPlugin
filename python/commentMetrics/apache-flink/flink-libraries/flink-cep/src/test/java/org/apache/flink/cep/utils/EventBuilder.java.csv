@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;3;;public static EventBuilder event() {     return new EventBuilder(0, 0.0, "", null). }
+false;public;1;3;;public EventBuilder withId(int id) {     return new EventBuilder(id, price, name, timestamp). }
+false;public;1;3;;public EventBuilder withPrice(double price) {     return new EventBuilder(id, price, name, timestamp). }
+false;public;1;3;;public EventBuilder withName(String name) {     return new EventBuilder(id, price, name, timestamp). }
+false;public;1;3;;public EventBuilder withTimestamp(long timestamp) {     return new EventBuilder(id, price, name, timestamp). }
+false;public;0;7;;public StreamRecord<Event> asStreamRecord() {     if (timestamp != null) {         return new StreamRecord<>(build(), timestamp).     } else {         return new StreamRecord<>(build()).     } }
+false;public;0;3;;public Event build() {     return new Event(id, name, price). }

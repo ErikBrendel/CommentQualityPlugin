@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;0;3;/**  * Gets the charset used by this schema for serialization.  * @return The charset used by this schema for serialization.  */ ;/**  * Gets the charset used by this schema for serialization.  * @return The charset used by this schema for serialization.  */ public Charset getCharset() {     return charset. }
+false;public;1;4;;// ------------------------------------------------------------------------ // Kafka Serialization // ------------------------------------------------------------------------ @Override public String deserialize(byte[] message) {     return new String(message, charset). }
+false;public;1;4;;@Override public boolean isEndOfStream(String nextElement) {     return false. }
+false;public;1;4;;@Override public byte[] serialize(String element) {     return element.getBytes(charset). }
+false;public;0;4;;@Override public TypeInformation<String> getProducedType() {     return BasicTypeInfo.STRING_TYPE_INFO. }
+false;private;1;4;;// ------------------------------------------------------------------------ // Java Serialization // ------------------------------------------------------------------------ private void writeObject(ObjectOutputStream out) throws IOException {     out.defaultWriteObject().     out.writeUTF(charset.name()). }
+false;private;1;5;;private void readObject(java.io.ObjectInputStream in) throws IOException, ClassNotFoundException {     in.defaultReadObject().     String charsetName = in.readUTF().     this.charset = Charset.forName(charsetName). }

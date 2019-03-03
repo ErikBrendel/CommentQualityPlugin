@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public boolean preVisit(OptimizerNode node) {     return node.getOpenBranches() == null. }
+false;public;1;8;;@Override public void postVisit(OptimizerNode node) {     if (node instanceof IterationNode) {         ((IterationNode) node).acceptForStepFunction(this).     }     node.computeUnclosedBranchStack(). }

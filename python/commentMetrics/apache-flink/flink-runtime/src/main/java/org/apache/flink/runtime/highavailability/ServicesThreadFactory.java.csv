@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;11;;@Override public Thread newThread(@Nonnull Runnable r) {     Thread thread = new Thread(r, "Flink HA Services Thread #" + enumerator.incrementAndGet()).     // HA threads should have a very high priority, but not     // keep the JVM running by themselves     thread.setPriority(Thread.MAX_PRIORITY).     thread.setDaemon(true).     return thread. }

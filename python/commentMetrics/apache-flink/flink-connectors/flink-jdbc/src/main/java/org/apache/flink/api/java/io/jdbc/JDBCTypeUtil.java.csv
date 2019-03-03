@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;static;1;10;;static int typeInformationToSqlType(TypeInformation<?> type) {     if (TYPE_MAPPING.containsKey(type)) {         return TYPE_MAPPING.get(type).     } else if (type instanceof ObjectArrayTypeInfo || type instanceof PrimitiveArrayTypeInfo) {         return Types.ARRAY.     } else {         throw new IllegalArgumentException("Unsupported type: " + type).     } }
+false;static;1;3;;static String getTypeName(int type) {     return SQL_TYPE_NAMES.get(type). }
+false;static;1;3;;static String getTypeName(TypeInformation<?> type) {     return SQL_TYPE_NAMES.get(typeInformationToSqlType(type)). }

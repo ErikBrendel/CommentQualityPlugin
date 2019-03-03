@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Test public void testTokenizeNonQuoted() {     final List<String> arguments = JarHandlerUtils.tokenizeArguments("--foo bar").     assertThat(arguments.get(0), equalTo("--foo")).     assertThat(arguments.get(1), equalTo("bar")). }
+false;public;0;6;;@Test public void testTokenizeSingleQuoted() {     final List<String> arguments = JarHandlerUtils.tokenizeArguments("--foo 'bar baz '").     assertThat(arguments.get(0), equalTo("--foo")).     assertThat(arguments.get(1), equalTo("bar baz ")). }
+false;public;0;6;;@Test public void testTokenizeDoubleQuoted() {     final List<String> arguments = JarHandlerUtils.tokenizeArguments("--name \"K. Bote \"").     assertThat(arguments.get(0), equalTo("--name")).     assertThat(arguments.get(1), equalTo("K. Bote ")). }

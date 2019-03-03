@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public ACC get() {     return getInternal(). }
+false;public;1;4;;@Override public void add(T value) throws Exception {     updateInternal(foldFunction.fold(get(), value)). }
+false;static;2;7;;@SuppressWarnings({ "unchecked", "unused" }) static <T, N, ACC, S extends State, IS extends S> IS createState(TypeSerializer<N> namespaceSerializer, StateDescriptor<S, ACC> stateDesc) {     FoldingStateDescriptor<T, ACC> foldingStateDesc = (FoldingStateDescriptor<T, ACC>) stateDesc.     return (IS) new MockInternalFoldingState<>(foldingStateDesc.getFoldFunction()). }

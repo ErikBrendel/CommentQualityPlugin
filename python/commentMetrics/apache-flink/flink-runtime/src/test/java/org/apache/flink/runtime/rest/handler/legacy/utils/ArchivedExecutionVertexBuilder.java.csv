@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;public ArchivedExecutionVertexBuilder setSubtaskIndex(int subtaskIndex) {     this.subtaskIndex = subtaskIndex.     return this. }
+false;public;1;7;;public ArchivedExecutionVertexBuilder setPriorExecutions(List<ArchivedExecution> priorExecutions) {     this.priorExecutions = new EvictingBoundedList<>(priorExecutions.size()).     for (ArchivedExecution execution : priorExecutions) {         this.priorExecutions.add(execution).     }     return this. }
+false;public;1;4;;public ArchivedExecutionVertexBuilder setTaskNameWithSubtask(String taskNameWithSubtask) {     this.taskNameWithSubtask = taskNameWithSubtask.     return this. }
+false;public;1;4;;public ArchivedExecutionVertexBuilder setCurrentExecution(ArchivedExecution currentExecution) {     this.currentExecution = currentExecution.     return this. }
+false;public;0;9;;public ArchivedExecutionVertex build() {     Preconditions.checkNotNull(currentExecution).     return new ArchivedExecutionVertex(subtaskIndex, taskNameWithSubtask != null ? taskNameWithSubtask : "task_" + RANDOM.nextInt() + "_" + subtaskIndex, currentExecution, priorExecutions != null ? priorExecutions : new EvictingBoundedList<ArchivedExecution>(0)). }

@@ -1,0 +1,29 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;// ------------------------------------------------------------------------ @Override public ExecutionConfig getExecutionConfig() {     return this.executionConfig. }
+false;public;0;4;;@Override public JobID getJobID() {     return jobId. }
+false;public;0;4;;@Override public JobVertexID getJobVertexId() {     return jobVertexId. }
+false;public;0;4;;@Override public ExecutionAttemptID getExecutionId() {     return executionId. }
+false;public;0;4;;@Override public TaskInfo getTaskInfo() {     return this.taskInfo. }
+false;public;0;4;;@Override public Configuration getJobConfiguration() {     return jobConfiguration. }
+false;public;0;4;;@Override public Configuration getTaskConfiguration() {     return taskConfiguration. }
+false;public;0;4;;@Override public TaskManagerRuntimeInfo getTaskManagerInfo() {     return taskManagerInfo. }
+false;public;0;4;;@Override public TaskMetricGroup getMetricGroup() {     return metrics. }
+false;public;0;4;;@Override public ClassLoader getUserClassLoader() {     return userCodeClassLoader. }
+false;public;0;4;;@Override public MemoryManager getMemoryManager() {     return memManager. }
+false;public;0;4;;@Override public IOManager getIOManager() {     return ioManager. }
+false;public;0;4;;@Override public BroadcastVariableManager getBroadcastVariableManager() {     return bcVarManager. }
+false;public;0;4;;@Override public TaskStateManager getTaskStateManager() {     return taskStateManager. }
+false;public;0;4;;@Override public GlobalAggregateManager getGlobalAggregateManager() {     return aggregateManager. }
+false;public;0;4;;@Override public AccumulatorRegistry getAccumulatorRegistry() {     return accumulatorRegistry. }
+false;public;0;4;;@Override public TaskKvStateRegistry getTaskKvStateRegistry() {     return kvStateRegistry. }
+false;public;0;4;;@Override public InputSplitProvider getInputSplitProvider() {     return splitProvider. }
+false;public;0;4;;@Override public Map<String, Future<Path>> getDistributedCacheEntries() {     return distCacheEntries. }
+false;public;1;4;;@Override public ResultPartitionWriter getWriter(int index) {     return writers[index]. }
+false;public;0;4;;@Override public ResultPartitionWriter[] getAllWriters() {     return writers. }
+false;public;1;4;;@Override public InputGate getInputGate(int index) {     return inputGates[index]. }
+false;public;0;4;;@Override public InputGate[] getAllInputGates() {     return inputGates. }
+false;public;0;4;;@Override public TaskEventDispatcher getTaskEventDispatcher() {     return taskEventDispatcher. }
+false;public;2;4;;@Override public void acknowledgeCheckpoint(long checkpointId, CheckpointMetrics checkpointMetrics) {     acknowledgeCheckpoint(checkpointId, checkpointMetrics, null). }
+false;public;3;10;;@Override public void acknowledgeCheckpoint(long checkpointId, CheckpointMetrics checkpointMetrics, TaskStateSnapshot checkpointStateHandles) {     checkpointResponder.acknowledgeCheckpoint(jobId, executionId, checkpointId, checkpointMetrics, checkpointStateHandles). }
+false;public;2;4;;@Override public void declineCheckpoint(long checkpointId, Throwable cause) {     checkpointResponder.declineCheckpoint(jobId, executionId, checkpointId, cause). }
+false;public;1;4;;@Override public void failExternally(Throwable cause) {     this.containingTask.failExternally(cause). }

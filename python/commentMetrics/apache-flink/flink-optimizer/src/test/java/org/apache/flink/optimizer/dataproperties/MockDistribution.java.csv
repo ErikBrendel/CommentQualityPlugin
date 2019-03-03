@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public Object[] getBucketBoundary(int bucketNum, int totalNumBuckets) {     return new Object[0]. }
+false;public;0;4;;@Override public int getNumberOfFields() {     return 0. }
+false;public;0;4;;@Override public TypeInformation[] getKeyTypes() {     return new TypeInformation[] { BasicTypeInfo.INT_TYPE_INFO }. }
+false;public;1;4;;@Override public void write(DataOutputView out) throws IOException { }
+false;public;1;4;;@Override public void read(DataInputView in) throws IOException { }

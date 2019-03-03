@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;28;;@SuppressWarnings("unchecked") @Nonnull @Override public StateKeyGroupWriter getKeyGroupWriter() {     if (stateKeyGroupWriter == null) {         T[] partitioningOutput = (T[]) Array.newInstance(heapArrayCopy.getClass().getComponentType(), heapArrayCopy.length).         final TypeSerializer<T> elementSerializer = metaInfo.getElementSerializer().         KeyGroupPartitioner<T> keyGroupPartitioner = new KeyGroupPartitioner<>(heapArrayCopy, heapArrayCopy.length, partitioningOutput, keyGroupRange, totalKeyGroups, keyExtractor, elementSerializer::serialize).         stateKeyGroupWriter = keyGroupPartitioner.partitionByKeyGroup().     }     return stateKeyGroupWriter. }
+false;public;0;5;;@Nonnull @Override public StateMetaInfoSnapshot getMetaInfoSnapshot() {     return metaInfo.snapshot(). }
+false;public;0;3;;@Override public void release() { }

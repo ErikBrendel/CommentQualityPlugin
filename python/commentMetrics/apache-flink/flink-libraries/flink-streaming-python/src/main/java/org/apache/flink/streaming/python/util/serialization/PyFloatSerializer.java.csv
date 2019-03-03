@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;4;;@Override public void write(Kryo kryo, Output output, PyFloat object) {     output.writeDouble(object.getValue()). }
+false;public;3;4;;@Override public PyFloat read(Kryo kryo, Input input, Class<PyFloat> type) {     return new PyFloat(input.readDouble()). }

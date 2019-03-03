@@ -1,0 +1,24 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public int compare(Tuple2<Long, CallbackTask> o1, Tuple2<Long, CallbackTask> o2) {     return Long.compare(o1.f0, o2.f0). }
+false;public;1;19;;public void setCurrentTime(long timestamp) throws Exception {     this.currentTime = timestamp.     if (!isQuiesced) {         while (!priorityQueue.isEmpty() && currentTime >= priorityQueue.peek().f0) {             Tuple2<Long, CallbackTask> entry = priorityQueue.poll().             CallbackTask callbackTask = entry.f1.             if (!callbackTask.isDone()) {                 callbackTask.onProcessingTime(entry.f0).                 if (callbackTask instanceof PeriodicCallbackTask) {                     priorityQueue.offer(Tuple2.of(((PeriodicCallbackTask) callbackTask).nextTimestamp(entry.f0), callbackTask)).                 }             }         }     } }
+false;public;0;4;;@Override public long getCurrentProcessingTime() {     return currentTime. }
+false;public;2;15;;@Override public ScheduledFuture<?> registerTimer(long timestamp, ProcessingTimeCallback target) {     if (isTerminated) {         throw new IllegalStateException("terminated").     }     if (isQuiesced) {         return new CallbackTask(null).     }     CallbackTask callbackTask = new CallbackTask(target).     priorityQueue.offer(Tuple2.of(timestamp, callbackTask)).     return callbackTask. }
+false;public;3;15;;@Override public ScheduledFuture<?> scheduleAtFixedRate(ProcessingTimeCallback callback, long initialDelay, long period) {     if (isTerminated) {         throw new IllegalStateException("terminated").     }     if (isQuiesced) {         return new CallbackTask(null).     }     PeriodicCallbackTask periodicCallbackTask = new PeriodicCallbackTask(callback, period).     priorityQueue.offer(Tuple2.<Long, CallbackTask>of(currentTime + initialDelay, periodicCallbackTask)).     return periodicCallbackTask. }
+false;public;0;4;;@Override public boolean isTerminated() {     return isTerminated. }
+false;public;0;7;;@Override public void quiesce() {     if (!isTerminated) {         isQuiesced = true.         priorityQueue.clear().     } }
+false;public;0;4;;@Override public void awaitPendingAfterQuiesce() throws InterruptedException { // do nothing. }
+false;public;0;4;;@Override public void shutdownService() {     this.isTerminated = true. }
+false;public;1;5;;@Override public boolean shutdownServiceUninterruptible(long timeoutMs) {     shutdownService().     return true. }
+false;public;2;5;;@Override public boolean shutdownAndAwaitPending(long time, TimeUnit timeUnit) throws InterruptedException {     shutdownService().     return true. }
+false;public;0;11;;public int getNumActiveTimers() {     int count = 0.     for (Tuple2<Long, CallbackTask> entry : priorityQueue) {         if (!entry.f1.isDone()) {             count++.         }     }     return count. }
+false;public;0;11;;public Set<Long> getActiveTimerTimestamps() {     Set<Long> actualTimestamps = new HashSet<>().     for (Tuple2<Long, CallbackTask> entry : priorityQueue) {         if (!entry.f1.isDone()) {             actualTimestamps.add(entry.f0).         }     }     return actualTimestamps. }
+false;public;1;5;;public void onProcessingTime(long timestamp) throws Exception {     processingTimeCallback.onProcessingTime(timestamp).     state.compareAndSet(CallbackTaskState.CREATED, CallbackTaskState.DONE). }
+false;public;1;4;;@Override public long getDelay(TimeUnit unit) {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public int compareTo(Delayed o) {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public boolean cancel(boolean mayInterruptIfRunning) {     return state.compareAndSet(CallbackTaskState.CREATED, CallbackTaskState.CANCELLED). }
+false;public;0;4;;@Override public boolean isCancelled() {     return state.get() == CallbackTaskState.CANCELLED. }
+false;public;0;4;;@Override public boolean isDone() {     return state.get() != CallbackTaskState.CREATED. }
+false;public;0;4;;@Override public Object get() throws InterruptedException, ExecutionException {     throw new UnsupportedOperationException(). }
+false;public;2;4;;@Override public Object get(long timeout, TimeUnit unit) throws InterruptedException, ExecutionException, TimeoutException {     throw new UnsupportedOperationException(). }
+false;public;1;4;;@Override public void onProcessingTime(long timestamp) throws Exception {     processingTimeCallback.onProcessingTime(timestamp). }
+false;public;1;3;;public long nextTimestamp(long currentTimestamp) {     return currentTimestamp + period. }

@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public String eval(Integer i) {     return String.valueOf(i + offset). }
+false;public;0;4;;@Override public Long createAccumulator() {     return 0L. }
+false;public;1;4;;@Override public Long getValue(Long accumulator) {     return 100L. }
+false;public;2;3;;public void accumulate(Long acc, Long value) { // do nothing }
+false;public;0;4;;@Override public TypeInformation<Long> getResultType() {     return BasicTypeInfo.LONG_TYPE_INFO. }
+false;public;1;8;;public void eval(String str) {     for (String s : str.split(" ")) {         Row r = new Row(2).         r.setField(0, s).         r.setField(1, s.length() + extra).         collect(r).     } }
+false;public;0;4;;@Override public TypeInformation<Row> getResultType() {     return Types.ROW(Types.STRING(), Types.LONG()). }

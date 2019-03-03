@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;public TestingJobManagerSharedServicesBuilder setScheduledExecutorService(ScheduledExecutorService scheduledExecutorService) {     this.scheduledExecutorService = scheduledExecutorService.     return this. }
+false;public;1;5;;public TestingJobManagerSharedServicesBuilder setLibraryCacheManager(LibraryCacheManager libraryCacheManager) {     this.libraryCacheManager = libraryCacheManager.     return this. }
+false;public;1;4;;public TestingJobManagerSharedServicesBuilder setRestartStrategyFactory(RestartStrategyFactory restartStrategyFactory) {     this.restartStrategyFactory = restartStrategyFactory.     return this. }
+false;public;1;4;;public TestingJobManagerSharedServicesBuilder setStackTraceSampleCoordinator(StackTraceSampleCoordinator stackTraceSampleCoordinator) {     this.stackTraceSampleCoordinator = stackTraceSampleCoordinator.     return this. }
+false;public;1;5;;public TestingJobManagerSharedServicesBuilder setBackPressureStatsTracker(BackPressureStatsTracker backPressureStatsTracker) {     this.backPressureStatsTracker = backPressureStatsTracker.     return this. }
+false;public;1;3;;public void setBlobWriter(BlobWriter blobWriter) {     this.blobWriter = blobWriter. }
+false;public;0;9;;public JobManagerSharedServices build() {     return new JobManagerSharedServices(scheduledExecutorService, libraryCacheManager, restartStrategyFactory, stackTraceSampleCoordinator, backPressureStatsTracker, blobWriter). }

@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public long getInitialRegistrationTimeoutMillis() {     return initialRegistrationTimeoutMillis. }
+false;public;0;3;;public long getMaxRegistrationTimeoutMillis() {     return maxRegistrationTimeoutMillis. }
+false;public;0;3;;public long getErrorDelayMillis() {     return errorDelayMillis. }
+false;public;0;3;;public long getRefusedDelayMillis() {     return refusedDelayMillis. }
+false;public,static;1;12;;public static RetryingRegistrationConfiguration fromConfiguration(final Configuration configuration) {     long initialRegistrationTimeoutMillis = configuration.getLong(ClusterOptions.INITIAL_REGISTRATION_TIMEOUT).     long maxRegistrationTimeoutMillis = configuration.getLong(ClusterOptions.MAX_REGISTRATION_TIMEOUT).     long errorDelayMillis = configuration.getLong(ClusterOptions.ERROR_REGISTRATION_DELAY).     long refusedDelayMillis = configuration.getLong(ClusterOptions.REFUSED_REGISTRATION_DELAY).     return new RetryingRegistrationConfiguration(initialRegistrationTimeoutMillis, maxRegistrationTimeoutMillis, errorDelayMillis, refusedDelayMillis). }
+false;public,static;0;3;;public static RetryingRegistrationConfiguration defaultConfiguration() {     return fromConfiguration(new Configuration()). }

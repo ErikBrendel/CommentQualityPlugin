@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean hasNext() {     return this.iterator.hasNext(). }
+false;public;0;5;;@Override public IN next() {     numRecordsIn.inc().     return this.iterator.next(). }
+false;public;0;4;;@Override public void remove() {     this.iterator.remove(). }

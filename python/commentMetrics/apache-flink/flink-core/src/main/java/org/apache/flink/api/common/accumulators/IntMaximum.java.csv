@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;4;/**  * Consider using {@link #add(int)} instead for primitive integer values  */ ;// ------------------------------------------------------------------------ // Accumulator // ------------------------------------------------------------------------ /**  * Consider using {@link #add(int)} instead for primitive integer values  */ @Override public void add(Integer value) {     this.max = Math.max(this.max, value). }
+false;public;0;4;;@Override public Integer getLocalValue() {     return this.max. }
+false;public;1;4;;@Override public void merge(Accumulator<Integer, Integer> other) {     this.max = Math.max(this.max, other.getLocalValue()). }
+false;public;0;4;;@Override public void resetLocal() {     this.max = Integer.MIN_VALUE. }
+false;public;0;6;;@Override public IntMaximum clone() {     IntMaximum clone = new IntMaximum().     clone.max = this.max.     return clone. }
+false;public;1;3;;// ------------------------------------------------------------------------ // Primitive Specializations // ------------------------------------------------------------------------ public void add(int value) {     this.max = Math.max(this.max, value). }
+false;public;0;3;;public int getLocalValuePrimitive() {     return this.max. }
+false;public;0;4;;// ------------------------------------------------------------------------ // Utilities // ------------------------------------------------------------------------ @Override public String toString() {     return "IntMaximum " + this.max. }

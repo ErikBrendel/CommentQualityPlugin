@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;5;18;;@Override public void notifyKvStateRegistered(JobID jobId, JobVertexID jobVertexId, KeyGroupRange keyGroupRange, String registrationName, KvStateID kvStateId) {     Object msg = new KvStateMessage.NotifyKvStateRegistered(jobId, jobVertexId, keyGroupRange, registrationName, kvStateId, kvStateServerAddress).     jobManager.tell(msg). }
+false;public;4;15;;@Override public void notifyKvStateUnregistered(JobID jobId, JobVertexID jobVertexId, KeyGroupRange keyGroupRange, String registrationName) {     Object msg = new KvStateMessage.NotifyKvStateUnregistered(jobId, jobVertexId, keyGroupRange, registrationName).     jobManager.tell(msg). }

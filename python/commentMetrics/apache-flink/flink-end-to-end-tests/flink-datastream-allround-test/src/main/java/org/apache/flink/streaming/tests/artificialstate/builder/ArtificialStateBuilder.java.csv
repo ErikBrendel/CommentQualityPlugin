@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public String getStateName() {     return stateName. }
+true;public,abstract;1;1;/**  * Manipulate the state for an input element.  *  * @param element the current input element.  */ ;/**  * Manipulate the state for an input element.  *  * @param element the current input element.  */ public abstract void artificialStateForElement(T element) throws Exception.
+true;public,abstract;1;1;/**  * Registers the state.  *  * @param initializationContext the state initialization context, provided by the user function.  */ ;/**  * Registers the state.  *  * @param initializationContext the state initialization context, provided by the user function.  */ public abstract void initialize(FunctionInitializationContext initializationContext) throws Exception.

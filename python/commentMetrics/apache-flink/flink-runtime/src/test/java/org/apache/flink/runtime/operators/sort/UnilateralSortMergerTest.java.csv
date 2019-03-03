@@ -1,0 +1,24 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;43;;@Test public void testInMemorySorterDisposal() throws Exception {     final TestingInMemorySorterFactory<Tuple2<Integer, Integer>> inMemorySorterFactory = new TestingInMemorySorterFactory<>().     final int numPages = 32.     final MemoryManager memoryManager = new MemoryManager(MemoryManager.DEFAULT_PAGE_SIZE * numPages, 1).     final IOManagerAsync ioManager = new IOManagerAsync().     final DummyInvokable parentTask = new DummyInvokable().     try {         final List<MemorySegment> memory = memoryManager.allocatePages(parentTask, numPages).         final UnilateralSortMerger<Tuple2<Integer, Integer>> unilateralSortMerger = new UnilateralSortMerger<>(memoryManager, memory, ioManager, EmptyMutableObjectIterator.get(), parentTask, TestData.getIntIntTupleSerializerFactory(), TestData.getIntIntTupleComparator(), 10, 2, 1.0f, true, false, false, inMemorySorterFactory).         final Collection<TestingInMemorySorter<?>> inMemorySorters = inMemorySorterFactory.getInMemorySorters().         assertThat(inMemorySorters, is(not(empty()))).         unilateralSortMerger.close().         assertThat(unilateralSortMerger.closed, is(true)).         for (TestingInMemorySorter<?> inMemorySorter : inMemorySorters) {             assertThat(inMemorySorter.isDisposed(), is(true)).         }     } finally {         ioManager.shutdown().         memoryManager.shutdown().     } }
+false;;0;3;;Collection<TestingInMemorySorter<?>> getInMemorySorters() {     return inMemorySorters. }
+false;public;1;6;;@Override public InMemorySorter<T> create(List<MemorySegment> sortSegments) {     final TestingInMemorySorter<T> testingInMemorySorter = new TestingInMemorySorter<>().     inMemorySorters.add(testingInMemorySorter).     return testingInMemorySorter. }
+false;public;0;3;;public boolean isDisposed() {     return isDisposed. }
+false;public;0;4;;@Override public void reset() { }
+false;public;0;4;;@Override public boolean isEmpty() {     return true. }
+false;public;0;4;;@Override public void dispose() {     isDisposed = true. }
+false;public;0;4;;@Override public long getCapacity() {     return 0. }
+false;public;0;4;;@Override public long getOccupancy() {     return 0. }
+false;public;1;4;;@Override public T getRecord(int logicalPosition) throws IOException {     return null. }
+false;public;2;4;;@Override public T getRecord(T reuse, int logicalPosition) throws IOException {     return null. }
+false;public;1;4;;@Override public boolean write(T record) throws IOException {     return false. }
+false;public;0;4;;@Override public MutableObjectIterator<T> getIterator() {     return null. }
+false;public;1;4;;@Override public void writeToOutput(ChannelWriterOutputView output) throws IOException { }
+false;public;2;4;;@Override public void writeToOutput(ChannelWriterOutputView output, LargeRecordHandler<T> largeRecordsOutput) throws IOException { }
+false;public;3;4;;@Override public void writeToOutput(ChannelWriterOutputView output, int start, int num) throws IOException { }
+false;public;2;4;;@Override public int compare(int i, int j) {     return 0. }
+false;public;4;4;;@Override public int compare(int segmentNumberI, int segmentOffsetI, int segmentNumberJ, int segmentOffsetJ) {     return 0. }
+false;public;2;4;;@Override public void swap(int i, int j) { }
+false;public;4;4;;@Override public void swap(int segmentNumberI, int segmentOffsetI, int segmentNumberJ, int segmentOffsetJ) { }
+false;public;0;4;;@Override public int size() {     return 0. }
+false;public;0;4;;@Override public int recordSize() {     return 0. }
+false;public;0;4;;@Override public int recordsPerSegment() {     return 0. }

@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;3;10;;@Override public void apply(W window, Iterable<T> values, Collector<R> out) throws Exception {     ACC acc = aggFunction.createAccumulator().     for (T value : values) {         acc = aggFunction.add(value, acc).     }     wrappedFunction.apply(window, Collections.singletonList(aggFunction.getResult(acc)), out). }

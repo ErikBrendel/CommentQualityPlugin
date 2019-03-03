@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;public;1;4;/**  * A thin wrapper layer over {@link SingleOutputStreamOperator#name(String)} .  *  * @param name operator name  * @return The named operator.  */ ;/**  * A thin wrapper layer over {@link SingleOutputStreamOperator#name(String)} .  *  * @param name operator name  * @return The named operator.  */ public PythonSingleOutputStreamOperator name(String name) {     this.stream.name(name).     return this. }

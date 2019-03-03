@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String toString() {     return name().toLowerCase(). }
+false;public,static;1;7;;public static HostBindPolicy fromString(String configValue) {     try {         return HostBindPolicy.valueOf(configValue.toUpperCase()).     } catch (IllegalArgumentException ex) {         throw new IllegalArgumentException("Unknown host bind policy: " + configValue).     } }

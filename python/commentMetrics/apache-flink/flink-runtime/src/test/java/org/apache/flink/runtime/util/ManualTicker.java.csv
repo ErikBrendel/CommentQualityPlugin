@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public long read() {     return currentTime. }
+false;public;2;3;;public void advanceTime(final long duration, final TimeUnit timeUnit) {     currentTime += timeUnit.toNanos(duration). }

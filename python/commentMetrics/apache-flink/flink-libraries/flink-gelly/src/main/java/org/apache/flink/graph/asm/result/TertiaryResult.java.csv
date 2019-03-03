@@ -1,16 +1,7 @@
-# id;timestamp;commentText;codeText;commentWords;codeWords
-TertiaryResult -> void setVertexId1(T value)_;1492103503;Set the second vertex ID.__@param value new vertex ID;void setVertexId1(T value)_;set,the,second,vertex,id,param,value,new,vertex,id;void,set,vertex,id1,t,value
-TertiaryResult -> void setVertexId1(T value)_;1499282568;Set the second vertex ID.__@param value new vertex ID;void setVertexId1(T value)_;set,the,second,vertex,id,param,value,new,vertex,id;void,set,vertex,id1,t,value
-TertiaryResult -> void setVertexId0(T value)_;1492103503;Set the first vertex ID.__@param value new vertex ID;void setVertexId0(T value)_;set,the,first,vertex,id,param,value,new,vertex,id;void,set,vertex,id0,t,value
-TertiaryResult -> void setVertexId0(T value)_;1499282568;Set the first vertex ID.__@param value new vertex ID;void setVertexId0(T value)_;set,the,first,vertex,id,param,value,new,vertex,id;void,set,vertex,id0,t,value
-TertiaryResult -> T getVertexId1()_;1489068942;Get the second vertex ID.__@return second vertex ID;T getVertexId1()_;get,the,second,vertex,id,return,second,vertex,id;t,get,vertex,id1
-TertiaryResult -> T getVertexId1()_;1492103503;Get the second vertex ID.__@return second vertex ID;T getVertexId1()_;get,the,second,vertex,id,return,second,vertex,id;t,get,vertex,id1
-TertiaryResult -> T getVertexId1()_;1499282568;Get the second vertex ID.__@return second vertex ID;T getVertexId1()_;get,the,second,vertex,id,return,second,vertex,id;t,get,vertex,id1
-TertiaryResult -> T getVertexId0()_;1489068942;Get the first vertex ID.__@return first vertex ID;T getVertexId0()_;get,the,first,vertex,id,return,first,vertex,id;t,get,vertex,id0
-TertiaryResult -> T getVertexId0()_;1492103503;Get the first vertex ID.__@return first vertex ID;T getVertexId0()_;get,the,first,vertex,id,return,first,vertex,id;t,get,vertex,id0
-TertiaryResult -> T getVertexId0()_;1499282568;Get the first vertex ID.__@return first vertex ID;T getVertexId0()_;get,the,first,vertex,id,return,first,vertex,id;t,get,vertex,id0
-TertiaryResult -> void setVertexId2(T value)_;1492103503;Set the third vertex ID.__@param value new vertex ID;void setVertexId2(T value)_;set,the,third,vertex,id,param,value,new,vertex,id;void,set,vertex,id2,t,value
-TertiaryResult -> void setVertexId2(T value)_;1499282568;Set the third vertex ID.__@param value new vertex ID;void setVertexId2(T value)_;set,the,third,vertex,id,param,value,new,vertex,id;void,set,vertex,id2,t,value
-TertiaryResult -> T getVertexId2()_;1489068942;Get the third vertex ID.__@return third vertex ID;T getVertexId2()_;get,the,third,vertex,id,return,third,vertex,id;t,get,vertex,id2
-TertiaryResult -> T getVertexId2()_;1492103503;Get the third vertex ID.__@return third vertex ID;T getVertexId2()_;get,the,third,vertex,id,return,third,vertex,id;t,get,vertex,id2
-TertiaryResult -> T getVertexId2()_;1499282568;Get the third vertex ID.__@return third vertex ID;T getVertexId2()_;get,the,third,vertex,id,return,third,vertex,id;t,get,vertex,id2
+commented;modifiers;parameterAmount;loc;comment;code
+true;;0;1;/**  * Get the first vertex ID.  *  * @return first vertex ID  */ ;/**  * Get the first vertex ID.  *  * @return first vertex ID  */ K getVertexId0().
+true;;1;1;/**  * Set the first vertex ID.  *  * @param vertexId0 new vertex ID  */ ;/**  * Set the first vertex ID.  *  * @param vertexId0 new vertex ID  */ void setVertexId0(K vertexId0).
+true;;0;1;/**  * Get the second vertex ID.  *  * @return second vertex ID  */ ;/**  * Get the second vertex ID.  *  * @return second vertex ID  */ K getVertexId1().
+true;;1;1;/**  * Set the second vertex ID.  *  * @param vertexId1 new vertex ID  */ ;/**  * Set the second vertex ID.  *  * @param vertexId1 new vertex ID  */ void setVertexId1(K vertexId1).
+true;;0;1;/**  * Get the third vertex ID.  *  * @return third vertex ID  */ ;/**  * Get the third vertex ID.  *  * @return third vertex ID  */ K getVertexId2().
+true;;1;1;/**  * Set the third vertex ID.  *  * @param vertexId2 new vertex ID  */ ;/**  * Set the third vertex ID.  *  * @param vertexId2 new vertex ID  */ void setVertexId2(K vertexId2).

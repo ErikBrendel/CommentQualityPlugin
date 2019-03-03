@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public List<InetAddress> lookup(String hostname) throws UnknownHostException {     if (!this.dnsHostname.equals(hostname)) {         throw new UnknownHostException("BootstrapDns called for " + hostname + " instead of " + dnsHostname).     }     return dnsServers. }

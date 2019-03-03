@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;10;;@Test public void testSetBothLocationAndFailureCause() {     try {         new SavepointInfo("/tmp", new SerializedThrowable(new RuntimeException())).         fail("Expected exception not thrown").     } catch (IllegalArgumentException e) {     } }

@@ -1,0 +1,14 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean isImmutableType() {     return false. }
+false;public;0;4;;@Override public TypeSerializer<ComplexPayload> duplicate() {     return new StatefulComplexPayloadSerializer(). }
+false;public;0;4;;@Override public ComplexPayload createInstance() {     throw new UnsupportedOperationException(). }
+false;public;1;16;;@Override public ComplexPayload copy(ComplexPayload from) {     try {         Thread currentThread = Thread.currentThread().         if (currentOwnerThread.compareAndSet(null, currentThread)) {             return InstantiationUtil.deserializeObject(InstantiationUtil.serializeObject(from), currentThread.getContextClassLoader()).         } else {             throw new IllegalStateException("Concurrent access to type serializer detected!").         }     } catch (Exception e) {         throw new RuntimeException(e).     } finally {         currentOwnerThread.set(null).     } }
+false;public;2;4;;@Override public ComplexPayload copy(ComplexPayload from, ComplexPayload reuse) {     return copy(from). }
+false;public;0;4;;@Override public int getLength() {     return -1. }
+false;public;2;12;;@Override public void serialize(ComplexPayload record, DataOutputView target) throws IOException {     try {         if (currentOwnerThread.compareAndSet(null, Thread.currentThread())) {             target.write(InstantiationUtil.serializeObject(record)).         } else {             throw new IllegalStateException("Concurrent access to type serializer detected!").         }     } finally {         currentOwnerThread.set(null).     } }
+false;public;1;17;;@Override public ComplexPayload deserialize(DataInputView source) throws IOException {     try (final DataInputViewStream inViewWrapper = new DataInputViewStream(source)) {         Thread currentThread = Thread.currentThread().         if (currentOwnerThread.compareAndSet(null, currentThread)) {             return InstantiationUtil.deserializeObject(inViewWrapper, currentThread.getContextClassLoader()).         } else {             throw new IllegalStateException("Concurrent access to type serializer detected!").         }     } catch (ClassNotFoundException e) {         throw new IOException("Could not deserialize object.", e).     } finally {         currentOwnerThread.set(null).     } }
+false;public;2;4;;@Override public ComplexPayload deserialize(ComplexPayload reuse, DataInputView source) throws IOException {     return deserialize(source). }
+false;public;2;4;;@Override public void copy(DataInputView source, DataOutputView target) throws IOException {     serialize(deserialize(source), target). }
+false;public;1;4;;@Override public boolean equals(Object obj) {     return obj == this. }
+false;public;0;4;;@Override public int hashCode() {     return 42. }
+false;public;0;4;;@Override public Snapshot snapshotConfiguration() {     return new Snapshot(). }

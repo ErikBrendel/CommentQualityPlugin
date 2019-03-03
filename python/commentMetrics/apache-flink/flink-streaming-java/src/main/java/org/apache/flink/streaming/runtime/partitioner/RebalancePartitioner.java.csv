@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Override public void setup(int numberOfChannels) {     super.setup(numberOfChannels).     nextChannelToSendTo = ThreadLocalRandom.current().nextInt(numberOfChannels). }
+false;public;1;5;;@Override public int selectChannel(SerializationDelegate<StreamRecord<T>> record) {     nextChannelToSendTo = (nextChannelToSendTo + 1) % numberOfChannels.     return nextChannelToSendTo. }
+false;public;0;3;;public StreamPartitioner<T> copy() {     return this. }
+false;public;0;4;;@Override public String toString() {     return "REBALANCE". }

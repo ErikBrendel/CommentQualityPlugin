@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;6;;public void addRetrievedShardToStream(String stream, StreamShardHandle retrievedShard) {     if (!streamsToRetrievedShardList.containsKey(stream)) {         streamsToRetrievedShardList.put(stream, new LinkedList<StreamShardHandle>()).     }     streamsToRetrievedShardList.get(stream).add(retrievedShard). }
+false;public;2;8;;public void addRetrievedShardsToStream(String stream, List<StreamShardHandle> retrievedShards) {     if (retrievedShards.size() != 0) {         if (!streamsToRetrievedShardList.containsKey(stream)) {             streamsToRetrievedShardList.put(stream, new LinkedList<StreamShardHandle>()).         }         streamsToRetrievedShardList.get(stream).addAll(retrievedShards).     } }
+false;public;1;7;;public List<StreamShardHandle> getRetrievedShardListOfStream(String stream) {     if (!streamsToRetrievedShardList.containsKey(stream)) {         return null.     } else {         return streamsToRetrievedShardList.get(stream).     } }
+false;public;1;7;;public StreamShardHandle getLastSeenShardOfStream(String stream) {     if (!streamsToRetrievedShardList.containsKey(stream)) {         return null.     } else {         return streamsToRetrievedShardList.get(stream).getLast().     } }
+false;public;0;3;;public boolean hasRetrievedShards() {     return !streamsToRetrievedShardList.isEmpty(). }
+false;public;0;3;;public Set<String> getStreamsWithRetrievedShards() {     return streamsToRetrievedShardList.keySet(). }

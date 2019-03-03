@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;@Override public void waitForClusterToBeReady() { }
+false;public;0;4;;@Override public String getWebInterfaceURL() {     return "". }
+false;public;0;4;;@Override public GetClusterStatusResponse getClusterStatus() {     throw new UnsupportedOperationException("Not needed in test."). }
+false;public;0;4;;@Override public List<String> getNewMessages() {     throw new UnsupportedOperationException("Not needed in test."). }
+false;public;0;4;;@Override public ApplicationId getClusterId() {     throw new UnsupportedOperationException("Not needed in test."). }
+false;public;0;4;;@Override public int getMaxSlots() {     return 10. }
+false;public;1;4;;@Override public boolean hasUserJarsInClassPath(List<URL> userJarFiles) {     return false. }
+false;public;2;4;;@Override public JobSubmissionResult submitJob(JobGraph jobGraph, ClassLoader classLoader) {     throw new UnsupportedOperationException("Not needed in test."). }

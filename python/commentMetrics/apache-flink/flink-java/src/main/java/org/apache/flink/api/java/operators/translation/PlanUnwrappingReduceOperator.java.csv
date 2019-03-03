@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;5;;@Override public Tuple2<K, T> reduce(Tuple2<K, T> value1, Tuple2<K, T> value2) throws Exception {     value1.f1 = this.wrappedFunction.reduce(value1.f1, value2.f1).     return value1. }

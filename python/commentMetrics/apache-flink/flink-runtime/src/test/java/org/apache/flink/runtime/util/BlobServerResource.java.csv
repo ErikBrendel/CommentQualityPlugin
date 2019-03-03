@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;9;;protected void before() throws Throwable {     temporaryFolder.create().     Configuration config = new Configuration().     config.setString(BlobServerOptions.STORAGE_DIRECTORY, temporaryFolder.newFolder().getAbsolutePath()).     blobServer = new BlobServer(config, new VoidBlobStore()).     blobServer.start(). }
+false;protected;0;9;;protected void after() {     temporaryFolder.delete().     try {         blobServer.close().     } catch (IOException e) {         LOG.error("Exception while shutting down blob server.", e).     } }
+false;public;0;3;;public int getBlobServerPort() {     return blobServer.getPort(). }
+false;public;0;3;;public BlobServer getBlobServer() {     return blobServer. }

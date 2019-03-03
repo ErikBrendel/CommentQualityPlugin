@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Class<SavepointTriggerRequestBody> getRequestClass() {     return SavepointTriggerRequestBody.class. }
+false;public;0;4;;@Override public HttpResponseStatus getResponseStatusCode() {     return HttpResponseStatus.ACCEPTED. }
+false;public;0;4;;@Override public SavepointTriggerMessageParameters getUnresolvedMessageParameters() {     return new SavepointTriggerMessageParameters(). }
+false;public;0;4;;@Override public HttpMethodWrapper getHttpMethod() {     return HttpMethodWrapper.POST. }
+false;public;0;13;;@Override public String getTargetRestEndpointURL() {     return URL. }
+false;public,static;0;3;;public static SavepointTriggerHeaders getInstance() {     return INSTANCE. }
+false;public;0;4;;@Override public String getDescription() {     return "Triggers a savepoint, and optionally cancels the job afterwards.". }

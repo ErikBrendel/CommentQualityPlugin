@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public int getKey() {     return key. }
+false;public;0;3;;public long getEventTime() {     return eventTime. }
+false;public;0;3;;public long getSequenceNumber() {     return sequenceNumber. }
+false;public;0;3;;public String getPayload() {     return payload. }
+false;public;1;14;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     Event event = (Event) o.     return key == event.key && eventTime == event.eventTime && sequenceNumber == event.sequenceNumber && Objects.equals(payload, event.payload). }
+false;public;0;4;;@Override public int hashCode() {     return Objects.hash(key, eventTime, sequenceNumber, payload). }
+false;public;0;9;;@Override public String toString() {     return "Event{" + "key=" + key + ", eventTime=" + eventTime + ", sequenceNumber=" + sequenceNumber + ", payload='" + payload + '\'' + '}'. }

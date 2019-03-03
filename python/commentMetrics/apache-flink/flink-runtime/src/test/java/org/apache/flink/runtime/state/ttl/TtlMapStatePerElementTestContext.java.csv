@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;10;;@Override void initTestValues() {     updateEmpty = TEST_VAL1.     updateUnexpired = TEST_VAL2.     updateExpired = TEST_VAL3.     getUpdateEmpty = TEST_VAL1.     getUnexpired = TEST_VAL2.     getUpdateExpired = TEST_VAL3. }
+false;public;1;4;;@Override public void update(String value) throws Exception {     ttlState.put(TEST_KEY, value). }
+false;public;0;7;;@Override public String get() throws Exception {     String value = ttlState.get(TEST_KEY).     assert (getOriginal() == null && !ttlState.contains(TEST_KEY)) || (getOriginal() != null && ttlState.contains(TEST_KEY)).     return value. }
+false;public;0;4;;@Override public Object getOriginal() throws Exception {     return ttlState.original.get(TEST_KEY). }

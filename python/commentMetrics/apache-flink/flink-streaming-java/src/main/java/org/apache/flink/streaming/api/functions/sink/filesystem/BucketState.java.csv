@@ -1,0 +1,8 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;0;3;;BucketID getBucketId() {     return bucketId. }
+false;;0;3;;Path getBucketPath() {     return bucketPath. }
+false;;0;3;;long getInProgressFileCreationTime() {     return inProgressFileCreationTime. }
+false;;0;3;;boolean hasInProgressResumableFile() {     return inProgressResumableFile != null. }
+false;;0;4;;@Nullable RecoverableWriter.ResumeRecoverable getInProgressResumableFile() {     return inProgressResumableFile. }
+false;;0;3;;Map<Long, List<RecoverableWriter.CommitRecoverable>> getCommittableFilesPerCheckpoint() {     return committableFilesPerCheckpoint. }
+false;public;0;21;;@Override public String toString() {     final StringBuilder strBuilder = new StringBuilder().     strBuilder.append("BucketState for bucketId=").append(bucketId).append(" and bucketPath=").append(bucketPath).     if (hasInProgressResumableFile()) {         strBuilder.append(", has open part file created @ ").append(inProgressFileCreationTime).     }     if (!committableFilesPerCheckpoint.isEmpty()) {         strBuilder.append(", has pending files for checkpoints: {").         for (long checkpointId : committableFilesPerCheckpoint.keySet()) {             strBuilder.append(checkpointId).append(' ').         }         strBuilder.append('}').     }     return strBuilder.toString(). }

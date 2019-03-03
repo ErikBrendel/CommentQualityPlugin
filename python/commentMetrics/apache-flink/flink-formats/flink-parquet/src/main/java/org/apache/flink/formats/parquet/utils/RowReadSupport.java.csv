@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;6;;@Override public ReadContext init(InitContext initContext) {     checkNotNull(initContext, "initContext").     returnTypeInfo = ParquetSchemaConverter.fromParquetType(initContext.getFileSchema()).     return new ReadContext(initContext.getFileSchema()). }
+false;public;4;6;;@Override public RecordMaterializer<Row> prepareForRead(Configuration configuration, Map<String, String> keyValueMetaData, MessageType fileSchema, ReadContext readContext) {     return new RowMaterializer(readContext.getRequestedSchema(), returnTypeInfo). }

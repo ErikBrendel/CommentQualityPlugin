@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;8;;@Override public int hash(boolean[] record) {     int result = 0.     for (boolean field : record) {         result += field ? 1231 : 1237.     }     return result. }
+false;public;2;11;;@Override public int compare(boolean[] first, boolean[] second) {     for (int x = 0. x < min(first.length, second.length). x++) {         int cmp = (second[x] == first[x] ? 0 : (first[x] ? 1 : -1)).         if (cmp != 0) {             return ascending ? cmp : -cmp.         }     }     int cmp = first.length - second.length.     return ascending ? cmp : -cmp. }
+false;public;0;6;;@Override public TypeComparator<boolean[]> duplicate() {     BooleanPrimitiveArrayComparator dupe = new BooleanPrimitiveArrayComparator(this.ascending).     dupe.setReference(this.reference).     return dupe. }

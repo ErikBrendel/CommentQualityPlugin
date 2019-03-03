@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;3;4;;@Override protected void deepEquals(String message, long[] should, long[] is) {     Assert.assertArrayEquals(message, should, is). }
+false;protected;0;11;;@Override protected long[][] getSortedTestData() {     return new long[][] { new long[] { -1, 0 }, new long[] { 0, -1 }, new long[] { 0, 0 }, new long[] { 0, 1 }, new long[] { 0, 1, 2 }, new long[] { 2 } }. }

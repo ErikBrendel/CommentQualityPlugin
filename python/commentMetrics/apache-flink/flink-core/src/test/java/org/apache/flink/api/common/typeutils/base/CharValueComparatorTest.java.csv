@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected TypeComparator<CharValue> createComparator(boolean ascending) {     return new CharValueComparator(ascending). }
+false;protected;0;4;;@Override protected TypeSerializer<CharValue> createSerializer() {     return new CharValueSerializer(). }
+false;protected;0;20;;@Override protected CharValue[] getSortedTestData() {     Random rnd = new Random(874597969123412338L).     int rndChar = rnd.nextInt(Character.MAX_VALUE).     if (rndChar < 0) {         rndChar = -rndChar.     }     if (rndChar == (int) Character.MIN_VALUE) {         rndChar += 2.     }     if (rndChar == (int) Character.MAX_VALUE) {         rndChar -= 2.     }     return new CharValue[] { new CharValue(Character.MIN_VALUE), new CharValue((char) rndChar), new CharValue((char) (rndChar + 1)), new CharValue(Character.MAX_VALUE) }. }

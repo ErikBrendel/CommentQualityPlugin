@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+true;;1;1;/**  * Retrieve the {@link JobGraph}.  *  * @param configuration cluster configuration  * @return the retrieved {@link JobGraph}.  * @throws FlinkException if the {@link JobGraph} could not be retrieved  */ ;/**  * Retrieve the {@link JobGraph}.  *  * @param configuration cluster configuration  * @return the retrieved {@link JobGraph}.  * @throws FlinkException if the {@link JobGraph} could not be retrieved  */ JobGraph retrieveJobGraph(Configuration configuration) throws FlinkException.

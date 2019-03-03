@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;2;4;;@Override public void reduce(Iterable<T> values, Collector<T> out) {     out.collect(values.iterator().next()). }
+false;public;2;4;;@Override public void combine(Iterable<T> values, Collector<T> out) {     out.collect(values.iterator().next()). }

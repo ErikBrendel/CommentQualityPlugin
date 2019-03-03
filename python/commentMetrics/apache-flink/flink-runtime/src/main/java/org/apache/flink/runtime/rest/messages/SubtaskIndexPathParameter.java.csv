@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;9;;@Override protected Integer convertFromString(final String value) throws ConversionException {     final int subtaskIndex = Integer.parseInt(value).     if (subtaskIndex >= 0) {         return subtaskIndex.     } else {         throw new ConversionException("subtaskindex must be positive, was: " + subtaskIndex).     } }
+false;protected;1;4;;@Override protected String convertToString(final Integer value) {     return value.toString(). }
+false;public;0;4;;@Override public String getDescription() {     return "Positive integer value that identifies a subtask.". }

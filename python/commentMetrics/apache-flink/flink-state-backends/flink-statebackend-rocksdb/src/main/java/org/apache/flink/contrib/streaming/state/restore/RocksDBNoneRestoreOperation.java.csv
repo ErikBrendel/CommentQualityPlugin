@@ -1,0 +1,2 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Override public RocksDBRestoreResult restore() throws Exception {     openDB().     return new RocksDBRestoreResult(this.db, defaultColumnFamilyHandle, nativeMetricMonitor, -1, null, null). }

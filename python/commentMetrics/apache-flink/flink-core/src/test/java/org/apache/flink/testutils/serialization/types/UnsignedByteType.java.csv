@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public UnsignedByteType getRandom(Random rnd) {     return new UnsignedByteType(rnd.nextInt(128) + 128). }
+false;public;0;4;;@Override public int length() {     return 1. }
+false;public;1;4;;@Override public void write(DataOutputView out) throws IOException {     out.writeByte(this.value). }
+false;public;1;4;;@Override public void read(DataInputView in) throws IOException {     this.value = in.readUnsignedByte(). }
+false;public;0;4;;@Override public int hashCode() {     return this.value. }
+false;public;1;9;;@Override public boolean equals(Object obj) {     if (obj instanceof UnsignedByteType) {         UnsignedByteType other = (UnsignedByteType) obj.         return this.value == other.value.     } else {         return false.     } }

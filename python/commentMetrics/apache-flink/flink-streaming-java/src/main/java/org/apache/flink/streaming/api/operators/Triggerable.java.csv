@@ -1,6 +1,3 @@
-# id;timestamp;commentText;codeText;commentWords;codeWords
-Triggerable -> void onProcessingTime(InternalTimer<K, N> timer) throws Exception_;1493195810;Invoked when a processing-time timer fires.;void onProcessingTime(InternalTimer<K, N> timer) throws Exception_;invoked,when,a,processing,time,timer,fires;void,on,processing,time,internal,timer,k,n,timer,throws,exception
-Triggerable -> void onProcessingTime(InternalTimer<K, N> timer) throws Exception_;1495484544;Invoked when a processing-time timer fires.;void onProcessingTime(InternalTimer<K, N> timer) throws Exception_;invoked,when,a,processing,time,timer,fires;void,on,processing,time,internal,timer,k,n,timer,throws,exception
-Triggerable -> void onEventTime(InternalTimer<K, N> timer) throws Exception_;1477069385;Invoked when an event-time timer fires.;void onEventTime(InternalTimer<K, N> timer) throws Exception_;invoked,when,an,event,time,timer,fires;void,on,event,time,internal,timer,k,n,timer,throws,exception
-Triggerable -> void onEventTime(InternalTimer<K, N> timer) throws Exception_;1493195810;Invoked when an event-time timer fires.;void onEventTime(InternalTimer<K, N> timer) throws Exception_;invoked,when,an,event,time,timer,fires;void,on,event,time,internal,timer,k,n,timer,throws,exception
-Triggerable -> void onEventTime(InternalTimer<K, N> timer) throws Exception_;1495484544;Invoked when an event-time timer fires.;void onEventTime(InternalTimer<K, N> timer) throws Exception_;invoked,when,an,event,time,timer,fires;void,on,event,time,internal,timer,k,n,timer,throws,exception
+commented;modifiers;parameterAmount;loc;comment;code
+true;;1;1;/**  * Invoked when an event-time timer fires.  */ ;/**  * Invoked when an event-time timer fires.  */ void onEventTime(InternalTimer<K, N> timer) throws Exception.
+true;;1;1;/**  * Invoked when a processing-time timer fires.  */ ;/**  * Invoked when a processing-time timer fires.  */ void onProcessingTime(InternalTimer<K, N> timer) throws Exception.

@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,abstract;2;1;;public abstract <R> int isExtremal(Comparable<R> o1, R o2).
+false;public,static;1;14;;public static Comparator getForAggregation(AggregationType type) {     switch(type) {         case MAX:             return new MaxComparator().         case MIN:             return new MinComparator().         case MINBY:             return new MinByComparator().         case MAXBY:             return new MaxByComparator().         default:             throw new IllegalArgumentException("Unsupported aggregation type.").     } }
+false;public;2;4;;@Override public <R> int isExtremal(Comparable<R> o1, R o2) {     return o1.compareTo(o2) > 0 ? 1 : 0. }
+false;public;2;12;;@Override public <R> int isExtremal(Comparable<R> o1, R o2) {     int c = o1.compareTo(o2).     if (c > 0) {         return 1.     }     if (c == 0) {         return 0.     } else {         return -1.     } }
+false;public;2;12;;@Override public <R> int isExtremal(Comparable<R> o1, R o2) {     int c = o1.compareTo(o2).     if (c < 0) {         return 1.     }     if (c == 0) {         return 0.     } else {         return -1.     } }
+false;public;2;4;;@Override public <R> int isExtremal(Comparable<R> o1, R o2) {     return o1.compareTo(o2) < 0 ? 1 : 0. }

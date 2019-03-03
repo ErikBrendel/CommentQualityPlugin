@@ -1,0 +1,16 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public boolean isImmutableType() {     return false. }
+false;public;0;4;;@Override public IntListSerializer duplicate() {     return this. }
+false;public;0;4;;@Override public IntList createInstance() {     return new IntList(). }
+false;public;1;4;;@Override public IntList copy(IntList from) {     return new IntList(from.getKey(), Arrays.copyOf(from.getValue(), from.getValue().length)). }
+false;public;2;6;;@Override public IntList copy(IntList from, IntList reuse) {     reuse.setKey(from.getKey()).     reuse.setValue(Arrays.copyOf(from.getValue(), from.getValue().length)).     return reuse. }
+false;public;1;3;;public IntList createCopy(IntList from) {     return new IntList(from.getKey(), from.getValue()). }
+false;public;2;4;;public void copyTo(IntList from, IntList to) {     to.setKey(from.getKey()).     to.setValue(from.getValue()). }
+false;public;0;4;;@Override public int getLength() {     return -1. }
+false;public;2;8;;@Override public void serialize(IntList record, DataOutputView target) throws IOException {     target.writeInt(record.getKey()).     target.writeInt(record.getValue().length).     for (int i = 0. i < record.getValue().length. i++) {         target.writeInt(record.getValue()[i]).     } }
+false;public;1;4;;@Override public IntList deserialize(DataInputView source) throws IOException {     return deserialize(new IntList(), source). }
+false;public;2;12;;@Override public IntList deserialize(IntList record, DataInputView source) throws IOException {     int key = source.readInt().     record.setKey(key).     int size = source.readInt().     int[] value = new int[size].     for (int i = 0. i < value.length. i++) {         value[i] = source.readInt().     }     record.setValue(value).     return record. }
+false;public;2;9;;@Override public void copy(DataInputView source, DataOutputView target) throws IOException {     target.writeInt(source.readInt()).     int len = source.readInt().     target.writeInt(len).     for (int i = 0. i < len. i++) {         target.writeInt(source.readInt()).     } }
+false;public;1;4;;@Override public boolean equals(Object obj) {     return obj instanceof IntListSerializer. }
+false;public;0;4;;@Override public int hashCode() {     return IntListSerializer.class.hashCode(). }
+false;public;0;4;;@Override public TypeSerializerConfigSnapshot<IntList> snapshotConfiguration() {     throw new UnsupportedOperationException(). }

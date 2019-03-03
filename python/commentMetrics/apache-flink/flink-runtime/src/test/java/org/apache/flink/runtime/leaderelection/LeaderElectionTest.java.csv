@@ -1,0 +1,23 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;0;4;;@Parameterized.Parameters(name = "Leader election: {0}") public static Collection<LeaderElectionType> parameters() {     return Arrays.asList(LeaderElectionType.values()). }
+false;public;0;4;;@Before public void setup() throws Exception {     serviceClass.setup(). }
+false;public;0;4;;@After public void teardown() throws Exception {     serviceClass.teardown(). }
+false;public;0;26;;@Test public void testHasLeadership() throws Exception {     final LeaderElectionService leaderElectionService = serviceClass.createLeaderElectionService().     final ManualLeaderContender manualLeaderContender = new ManualLeaderContender().     try {         assertThat(leaderElectionService.hasLeadership(UUID.randomUUID()), is(false)).         leaderElectionService.start(manualLeaderContender).         final UUID leaderSessionId = manualLeaderContender.waitForLeaderSessionId().         assertThat(leaderElectionService.hasLeadership(leaderSessionId), is(true)).         assertThat(leaderElectionService.hasLeadership(UUID.randomUUID()), is(false)).         leaderElectionService.confirmLeaderSessionID(leaderSessionId).         assertThat(leaderElectionService.hasLeadership(leaderSessionId), is(true)).         leaderElectionService.stop().         assertThat(leaderElectionService.hasLeadership(leaderSessionId), is(false)).     } finally {         manualLeaderContender.rethrowError().     } }
+false;public;1;4;;@Override public void grantLeadership(UUID leaderSessionID) {     leaderSessionIds.offer(leaderSessionID). }
+false;public;0;4;;@Override public void revokeLeadership() {     leaderSessionIds.offer(NULL_LEADER_SESSION_ID). }
+false;public;0;4;;@Override public String getAddress() {     return "foobar". }
+false;public;1;4;;@Override public void handleError(Exception exception) {     this.exception = exception. }
+false;;0;5;;void rethrowError() throws Exception {     if (exception != null) {         throw exception.     } }
+false;;0;3;;UUID waitForLeaderSessionId() throws InterruptedException {     return leaderSessionIds.take(). }
+false;;0;1;;void setup() throws Exception.
+false;;0;1;;void teardown() throws Exception.
+false;;0;1;;LeaderElectionService createLeaderElectionService() throws Exception.
+false;public;0;15;;@Override public void setup() throws Exception {     try {         testingServer = new TestingServer().     } catch (Exception e) {         throw new RuntimeException("Could not start ZooKeeper testing cluster.", e).     }     configuration = new Configuration().     configuration.setString(HighAvailabilityOptions.HA_ZOOKEEPER_QUORUM, testingServer.getConnectString()).     configuration.setString(HighAvailabilityOptions.HA_MODE, "zookeeper").     client = ZooKeeperUtils.startCuratorFramework(configuration). }
+false;public;0;12;;@Override public void teardown() throws Exception {     if (client != null) {         client.close().         client = null.     }     if (testingServer != null) {         testingServer.stop().         testingServer = null.     } }
+false;public;0;4;;@Override public LeaderElectionService createLeaderElectionService() throws Exception {     return ZooKeeperUtils.createLeaderElectionService(client, configuration). }
+false;public;0;4;;@Override public void setup() {     embeddedLeaderService = new EmbeddedLeaderService(TestingUtils.defaultExecutionContext()). }
+false;public;0;7;;@Override public void teardown() {     if (embeddedLeaderService != null) {         embeddedLeaderService.shutdown().         embeddedLeaderService = null.     } }
+false;public;0;4;;@Override public LeaderElectionService createLeaderElectionService() throws Exception {     return embeddedLeaderService.createLeaderElectionService(). }
+false;public;0;4;;@Override public void setup() throws Exception { // noop }
+false;public;0;4;;@Override public void teardown() throws Exception { // noop }
+false;public;0;4;;@Override public LeaderElectionService createLeaderElectionService() throws Exception {     return new StandaloneLeaderElectionService(). }

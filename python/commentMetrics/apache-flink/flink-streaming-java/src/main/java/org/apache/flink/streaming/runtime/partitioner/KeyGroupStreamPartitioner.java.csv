@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public int getMaxParallelism() {     return maxParallelism. }
+false;public;1;10;;@Override public int selectChannel(SerializationDelegate<StreamRecord<T>> record) {     K key.     try {         key = keySelector.getKey(record.getInstance().getValue()).     } catch (Exception e) {         throw new RuntimeException("Could not extract key from " + record.getInstance().getValue(), e).     }     return KeyGroupRangeAssignment.assignKeyToParallelOperator(key, maxParallelism, numberOfChannels). }
+false;public;0;4;;@Override public StreamPartitioner<T> copy() {     return this. }
+false;public;0;4;;@Override public String toString() {     return "HASH". }
+false;public;1;5;;@Override public void configure(int maxParallelism) {     KeyGroupRangeAssignment.checkParallelismPreconditions(maxParallelism).     this.maxParallelism = maxParallelism. }

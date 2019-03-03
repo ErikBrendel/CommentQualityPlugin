@@ -1,0 +1,12 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;;1;1;;Response intercept(Chain chain) throws IOException.
+false;;0;1;;Request request().
+false;;1;1;;Response proceed(Request request) throws IOException.
+true;;0;1;/**  * Returns the connection the request will be executed on. This is only available in the chains  * of network interceptors. for application interceptors this is always null.  */ ;/**  * Returns the connection the request will be executed on. This is only available in the chains  * of network interceptors. for application interceptors this is always null.  */ @Nullable Connection connection().
+false;;0;1;;Call call().
+false;;0;1;;int connectTimeoutMillis().
+false;;2;1;;Chain withConnectTimeout(int timeout, TimeUnit unit).
+false;;0;1;;int readTimeoutMillis().
+false;;2;1;;Chain withReadTimeout(int timeout, TimeUnit unit).
+false;;0;1;;int writeTimeoutMillis().
+false;;2;1;;Chain withWriteTimeout(int timeout, TimeUnit unit).

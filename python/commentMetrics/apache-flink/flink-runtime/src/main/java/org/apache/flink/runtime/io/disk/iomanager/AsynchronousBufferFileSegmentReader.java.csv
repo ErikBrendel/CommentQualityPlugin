@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public void read() throws IOException {     addRequest(new FileSegmentReadRequest(this, hasReachedEndOfFile)). }
+false;public;1;4;;@Override public void seekTo(long position) throws IOException {     requestQueue.add(new SeekRequest(this, position)). }
+false;public;0;4;;@Override public boolean hasReachedEndOfFile() {     return hasReachedEndOfFile.get(). }

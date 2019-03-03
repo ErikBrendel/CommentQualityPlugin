@@ -1,4 +1,3 @@
-# id;timestamp;commentText;codeText;commentWords;codeWords
-InputGateUtil -> private InputGateUtil();1445418103;Private constructor to prevent instantiation.;private InputGateUtil() {_		throw new RuntimeException()__	};private,constructor,to,prevent,instantiation;private,input,gate,util,throw,new,runtime,exception
-InputGateUtil -> private InputGateUtil();1455486690;Private constructor to prevent instantiation.;private InputGateUtil() {_		throw new RuntimeException()__	};private,constructor,to,prevent,instantiation;private,input,gate,util,throw,new,runtime,exception
-InputGateUtil -> private InputGateUtil();1495484544;Private constructor to prevent instantiation.;private InputGateUtil() {_		throw new RuntimeException()__	};private,constructor,to,prevent,instantiation;private,input,gate,util,throw,new,runtime,exception
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;2;6;;public static InputGate createInputGate(Collection<InputGate> inputGates1, Collection<InputGate> inputGates2) {     List<InputGate> gates = new ArrayList<InputGate>(inputGates1.size() + inputGates2.size()).     gates.addAll(inputGates1).     gates.addAll(inputGates2).     return createInputGate(gates.toArray(new InputGate[gates.size()])). }
+false;public,static;1;11;;public static InputGate createInputGate(InputGate[] inputGates) {     if (inputGates.length <= 0) {         throw new RuntimeException("No such input gate.").     }     if (inputGates.length < 2) {         return inputGates[0].     } else {         return new UnionInputGate(inputGates).     } }

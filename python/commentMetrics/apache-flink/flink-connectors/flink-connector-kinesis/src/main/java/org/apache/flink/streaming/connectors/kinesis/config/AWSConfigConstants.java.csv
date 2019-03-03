@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public,static;1;3;;public static String accessKeyId(String prefix) {     return prefix + ".basic.accesskeyid". }
+false;public,static;1;3;;public static String secretKey(String prefix) {     return prefix + ".basic.secretkey". }
+false;public,static;1;3;;public static String profilePath(String prefix) {     return prefix + ".profile.path". }
+false;public,static;1;3;;public static String profileName(String prefix) {     return prefix + ".profile.name". }
+false;public,static;1;3;;public static String roleArn(String prefix) {     return prefix + ".role.arn". }
+false;public,static;1;3;;public static String roleSessionName(String prefix) {     return prefix + ".role.sessionName". }
+false;public,static;1;3;;public static String externalId(String prefix) {     return prefix + ".role.externalId". }
+false;public,static;1;3;;public static String roleCredentialsProvider(String prefix) {     return prefix + ".role.provider". }

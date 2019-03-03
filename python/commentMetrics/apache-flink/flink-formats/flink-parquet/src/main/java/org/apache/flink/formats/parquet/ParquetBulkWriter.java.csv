@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void addElement(T datum) throws IOException {     parquetWriter.write(datum). }
+false;public;0;4;;@Override public void flush() { // nothing we can do here }
+false;public;0;4;;@Override public void finish() throws IOException {     parquetWriter.close(). }

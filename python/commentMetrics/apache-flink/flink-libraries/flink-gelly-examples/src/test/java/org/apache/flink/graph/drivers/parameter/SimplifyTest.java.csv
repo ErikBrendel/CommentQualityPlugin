@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;6;;@Before public void setup() {     super.setup().     parameter = new Simplify(owner). }
+false;public;0;5;;@Test public void testWithDirected() {     parameter.configure(ParameterTool.fromArgs(new String[] { "--simplify", "directed" })).     Assert.assertEquals(Ordering.DIRECTED, parameter.getValue()). }
+false;public;0;5;;@Test public void testWithUndirected() {     parameter.configure(ParameterTool.fromArgs(new String[] { "--simplify", "undirected" })).     Assert.assertEquals(Ordering.UNDIRECTED, parameter.getValue()). }
+false;public;0;5;;@Test public void testWithNoParameter() {     parameter.configure(ParameterTool.fromArgs(new String[] {})).     Assert.assertEquals(Ordering.NONE, parameter.getValue()). }

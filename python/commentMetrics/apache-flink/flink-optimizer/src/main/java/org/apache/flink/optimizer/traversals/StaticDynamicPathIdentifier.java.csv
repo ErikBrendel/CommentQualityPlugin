@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public boolean preVisit(OptimizerNode visitable) {     return this.seenBefore.add(visitable). }
+false;public;1;9;;@Override public void postVisit(OptimizerNode visitable) {     visitable.identifyDynamicPath(this.costWeight).     // check that there is no nested iteration on the dynamic path     if (visitable.isOnDynamicPath() && visitable instanceof IterationNode) {         throw new CompilerException("Nested iterations are currently not supported.").     } }

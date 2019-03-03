@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public boolean isFixedTopics() {     return fixedTopics != null. }
+false;public;0;3;;public boolean isTopicPattern() {     return topicPattern != null. }
+true;public;1;7;/**  * Check if the input topic matches the topics described by this KafkaTopicDescriptor.  *  * @return true if found a match.  */ ;/**  * Check if the input topic matches the topics described by this KafkaTopicDescriptor.  *  * @return true if found a match.  */ public boolean isMatchingTopic(String topic) {     if (isFixedTopics()) {         return getFixedTopics().contains(topic).     } else {         return topicPattern.matcher(topic).matches().     } }
+false;public;0;3;;public List<String> getFixedTopics() {     return fixedTopics. }
+false;public;0;6;;@Override public String toString() {     return (fixedTopics == null) ? "Topic Regex Pattern (" + topicPattern.pattern() + ")" : "Fixed Topics (" + fixedTopics + ")". }

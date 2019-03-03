@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;5;;@Before public void checkOperatingSystem() {     // FLINK-5164 - see https://wiki.apache.org/hadoop/WindowsProblems     Assume.assumeTrue("This test can't run successfully on Windows.", !OperatingSystem.isWindows()). }
+false;protected;0;5;;@Override protected void preSubmit() throws Exception {     textPath = createTempFile("text.txt", WordCountData.TEXT).     resultPath = getTempDirPath("result"). }
+false;protected;0;4;;@Override protected void postSubmit() throws Exception {     compareResultsByLinesInMemory(WordCountData.COUNTS, resultPath, new String[] { ".", "_" }). }
+false;protected;0;4;;@Override protected void testProgram() throws Exception {     WordCount.main(new String[] { textPath, resultPath }). }

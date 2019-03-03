@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public String getScheme() {     return LocalFileSystem.getLocalFsURI().getScheme(). }
+false;public;1;4;;@Override public void configure(Configuration config) { // the local file system takes no configuration, so nothing to do here }
+false;public;1;4;;@Override public FileSystem create(URI fsUri) {     return LocalFileSystem.getSharedInstance(). }

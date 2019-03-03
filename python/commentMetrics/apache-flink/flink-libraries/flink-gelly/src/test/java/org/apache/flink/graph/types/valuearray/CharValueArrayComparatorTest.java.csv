@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;4;;@Override protected TypeComparator<CharValueArray> createComparator(boolean ascending) {     return new CharValueArrayComparator(ascending). }
+false;protected;0;4;;@Override protected TypeSerializer<CharValueArray> createSerializer() {     return new CharValueArraySerializer(). }
+false;protected;0;13;;@Override protected CharValueArray[] getSortedTestData() {     CharValueArray lva0 = new CharValueArray().     CharValueArray lva1 = new CharValueArray().     lva1.add(new CharValue((char) 5)).     CharValueArray lva2 = new CharValueArray().     lva2.add(new CharValue((char) 5)).     lva2.add(new CharValue((char) 10)).     return new CharValueArray[] { lva0, lva1 }. }

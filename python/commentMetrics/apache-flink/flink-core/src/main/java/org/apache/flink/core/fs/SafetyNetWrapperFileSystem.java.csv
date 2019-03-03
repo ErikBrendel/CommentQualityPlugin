@@ -1,0 +1,22 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public Path getWorkingDirectory() {     return unsafeFileSystem.getWorkingDirectory(). }
+false;public;0;4;;@Override public Path getHomeDirectory() {     return unsafeFileSystem.getHomeDirectory(). }
+false;public;0;4;;@Override public URI getUri() {     return unsafeFileSystem.getUri(). }
+false;public;1;4;;@Override public FileStatus getFileStatus(Path f) throws IOException {     return unsafeFileSystem.getFileStatus(f). }
+false;public;0;4;;@Override public RecoverableWriter createRecoverableWriter() throws IOException {     return unsafeFileSystem.createRecoverableWriter(). }
+false;public;3;4;;@Override public BlockLocation[] getFileBlockLocations(FileStatus file, long start, long len) throws IOException {     return unsafeFileSystem.getFileBlockLocations(file, start, len). }
+false;public;2;5;;@Override public FSDataInputStream open(Path f, int bufferSize) throws IOException {     FSDataInputStream innerStream = unsafeFileSystem.open(f, bufferSize).     return ClosingFSDataInputStream.wrapSafe(innerStream, registry, String.valueOf(f)). }
+false;public;1;5;;@Override public FSDataInputStream open(Path f) throws IOException {     FSDataInputStream innerStream = unsafeFileSystem.open(f).     return ClosingFSDataInputStream.wrapSafe(innerStream, registry, String.valueOf(f)). }
+false;public;0;5;;@Override @SuppressWarnings("deprecation") public long getDefaultBlockSize() {     return unsafeFileSystem.getDefaultBlockSize(). }
+false;public;1;4;;@Override public FileStatus[] listStatus(Path f) throws IOException {     return unsafeFileSystem.listStatus(f). }
+false;public;1;4;;@Override public boolean exists(Path f) throws IOException {     return unsafeFileSystem.exists(f). }
+false;public;2;4;;@Override public boolean delete(Path f, boolean recursive) throws IOException {     return unsafeFileSystem.delete(f, recursive). }
+false;public;1;4;;@Override public boolean mkdirs(Path f) throws IOException {     return unsafeFileSystem.mkdirs(f). }
+false;public;5;8;;@Override @SuppressWarnings("deprecation") public FSDataOutputStream create(Path f, boolean overwrite, int bufferSize, short replication, long blockSize) throws IOException {     FSDataOutputStream innerStream = unsafeFileSystem.create(f, overwrite, bufferSize, replication, blockSize).     return ClosingFSDataOutputStream.wrapSafe(innerStream, registry, String.valueOf(f)). }
+false;public;2;5;;@Override public FSDataOutputStream create(Path f, WriteMode overwrite) throws IOException {     FSDataOutputStream innerStream = unsafeFileSystem.create(f, overwrite).     return ClosingFSDataOutputStream.wrapSafe(innerStream, registry, String.valueOf(f)). }
+false;public;2;4;;@Override public boolean rename(Path src, Path dst) throws IOException {     return unsafeFileSystem.rename(src, dst). }
+false;public;3;4;;@Override public boolean initOutPathLocalFS(Path outPath, WriteMode writeMode, boolean createDirectory) throws IOException {     return unsafeFileSystem.initOutPathLocalFS(outPath, writeMode, createDirectory). }
+false;public;3;4;;@Override public boolean initOutPathDistFS(Path outPath, WriteMode writeMode, boolean createDirectory) throws IOException {     return unsafeFileSystem.initOutPathDistFS(outPath, writeMode, createDirectory). }
+false;public;0;4;;@Override public boolean isDistributedFS() {     return unsafeFileSystem.isDistributedFS(). }
+false;public;0;4;;@Override public FileSystemKind getKind() {     return unsafeFileSystem.getKind(). }
+false;public;0;4;;@Override public FileSystem getWrappedDelegate() {     return unsafeFileSystem. }

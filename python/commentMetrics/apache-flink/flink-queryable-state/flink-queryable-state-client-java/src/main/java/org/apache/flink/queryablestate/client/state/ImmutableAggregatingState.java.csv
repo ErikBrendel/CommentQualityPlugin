@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public OUT get() {     return value. }
+false;public;1;4;;@Override public void add(Object newValue) {     throw MODIFICATION_ATTEMPT_ERROR. }
+false;public;0;4;;@Override public void clear() {     throw MODIFICATION_ATTEMPT_ERROR. }
+false;public,static;2;11;;@SuppressWarnings("unchecked") public static <OUT, ACC, S extends State> S createState(StateDescriptor<S, ACC> stateDescriptor, byte[] serializedState) throws IOException {     final ACC accumulator = KvStateSerializer.deserializeValue(serializedState, stateDescriptor.getSerializer()).     final OUT state = ((AggregatingStateDescriptor<?, ACC, OUT>) stateDescriptor).getAggregateFunction().getResult(accumulator).     return (S) new ImmutableAggregatingState<>(state). }

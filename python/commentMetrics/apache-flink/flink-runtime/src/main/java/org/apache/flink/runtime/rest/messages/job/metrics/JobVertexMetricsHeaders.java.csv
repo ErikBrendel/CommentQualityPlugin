@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;4;;@Override public JobVertexMetricsMessageParameters getUnresolvedMessageParameters() {     return new JobVertexMetricsMessageParameters(). }
+false;public;0;4;;@Override public String getTargetRestEndpointURL() {     return "/jobs/:" + JobIDPathParameter.KEY + "/vertices/:" + JobVertexIdPathParameter.KEY + "/metrics". }
+false;public,static;0;3;;public static JobVertexMetricsHeaders getInstance() {     return INSTANCE. }
+false;public;0;4;;@Override public String getDescription() {     return "Provides access to task metrics.". }

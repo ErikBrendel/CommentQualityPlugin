@@ -1,0 +1,9 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;9;;@Override public void run() {     try {         Thread.sleep(1000L).     } catch (InterruptedException e) {         e.printStackTrace().     }     fileMonitoringFunction.cancel(). }
+false;public;1;2;;@Override public void collect(Tuple3<String, Long, Long> element) { }
+false;public;2;2;;@Override public void collectWithTimestamp(Tuple3<String, Long, Long> element, long timestamp) { }
+false;public;1;2;;@Override public void emitWatermark(Watermark mark) { }
+false;public;0;2;;@Override public void markAsTemporarilyIdle() { }
+false;public;0;4;;@Override public Object getCheckpointLock() {     return null. }
+false;public;0;2;;@Override public void close() { }
+false;public;0;41;;@Test public void testForEmptyLocation() throws Exception {     final FileMonitoringFunction fileMonitoringFunction = new FileMonitoringFunction("?non-existing-path", 1L, FileMonitoringFunction.WatchType.ONLY_NEW_FILES).     new Thread() {          @Override         public void run() {             try {                 Thread.sleep(1000L).             } catch (InterruptedException e) {                 e.printStackTrace().             }             fileMonitoringFunction.cancel().         }     }.start().     fileMonitoringFunction.run(new SourceFunction.SourceContext<Tuple3<String, Long, Long>>() {          @Override         public void collect(Tuple3<String, Long, Long> element) {         }          @Override         public void collectWithTimestamp(Tuple3<String, Long, Long> element, long timestamp) {         }          @Override         public void emitWatermark(Watermark mark) {         }          @Override         public void markAsTemporarilyIdle() {         }          @Override         public Object getCheckpointLock() {             return null.         }          @Override         public void close() {         }     }). }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;// ------------------------------------------------------------------------ public ActorRef jobManager() {     return jobManager. }
+false;public;0;3;;public Collection<ResourceID> currentlyRegisteredTaskManagers() {     return currentlyRegisteredTaskManagers. }
+false;public;0;7;;// ------------------------------------------------------------------------ @Override public String toString() {     return "RegisterResourceManagerSuccessful{" + "jobManager=" + jobManager + ", currentlyRegisteredTaskManagers=" + currentlyRegisteredTaskManagers + '}'. }

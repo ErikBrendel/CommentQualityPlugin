@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;11;;@Override public T next(T reuse) throws IOException {     try {         Thread.sleep(delay).     } catch (InterruptedException e) {         // ignore, but restore interrupted state         Thread.currentThread().interrupt().     }     return iterator.next(reuse). }
+false;public;0;11;;@Override public T next() throws IOException {     try {         Thread.sleep(delay).     } catch (InterruptedException e) {         // ignore, but restore interrupted state         Thread.currentThread().interrupt().     }     return iterator.next(). }

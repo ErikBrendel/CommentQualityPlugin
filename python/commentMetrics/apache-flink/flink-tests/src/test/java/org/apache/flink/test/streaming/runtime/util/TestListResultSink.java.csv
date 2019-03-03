@@ -1,0 +1,7 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void open(Configuration parameters) throws Exception {     super.open(parameters). }
+false;public;1;6;;@Override public void invoke(T value) throws Exception {     synchronized (resultList()) {         resultList().add(value).     } }
+false;public;0;4;;@Override public void close() throws Exception {     super.close(). }
+false;private;0;6;;@SuppressWarnings("unchecked") private List<T> resultList() {     synchronized (TestListWrapper.getInstance()) {         return (List<T>) TestListWrapper.getInstance().getList(resultListId).     } }
+false;public;0;6;;public List<T> getResult() {     synchronized (resultList()) {         ArrayList<T> copiedList = new ArrayList<T>(resultList()).         return copiedList.     } }
+false;public;0;7;;public List<T> getSortedResult() {     synchronized (resultList()) {         ArrayList<T> sortedList = new ArrayList<T>(resultList()).         Collections.sort((List) sortedList).         return sortedList.     } }

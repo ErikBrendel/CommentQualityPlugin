@@ -1,0 +1,6 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;0;4;;@Override protected void initialize() throws ResourceManagerException { // nothing to initialize }
+false;protected;2;3;;@Override protected void internalDeregisterApplication(ApplicationStatus finalStatus, @Nullable String diagnostics) { }
+false;public;1;4;;@Override public Collection<ResourceProfile> startNewWorker(ResourceProfile resourceProfile) {     return Collections.emptyList(). }
+false;public;1;5;;@Override public boolean stopWorker(ResourceID resourceID) {     // standalone resource manager cannot stop workers     return false. }
+false;protected;1;4;;@Override protected ResourceID workerStarted(ResourceID resourceID) {     return resourceID. }

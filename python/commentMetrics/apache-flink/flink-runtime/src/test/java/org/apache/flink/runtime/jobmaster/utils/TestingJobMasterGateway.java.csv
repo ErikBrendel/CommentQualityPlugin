@@ -1,0 +1,31 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public CompletableFuture<Acknowledge> cancel(Time timeout) {     return cancelFunction.get(). }
+false;public;1;4;;@Override public CompletableFuture<Acknowledge> stop(Time timeout) {     return stopFunction.get(). }
+false;public;3;4;;@Override public CompletableFuture<Acknowledge> rescaleJob(int newParallelism, RescalingBehaviour rescalingBehaviour, Time timeout) {     return rescalingJobFunction.apply(newParallelism, rescalingBehaviour). }
+false;public;4;4;;@Override public CompletableFuture<Acknowledge> rescaleOperators(Collection<JobVertexID> operators, int newParallelism, RescalingBehaviour rescalingBehaviour, Time timeout) {     return rescalingOperatorsFunction.apply(operators, newParallelism, rescalingBehaviour). }
+false;public;1;4;;@Override public CompletableFuture<Acknowledge> updateTaskExecutionState(TaskExecutionState taskExecutionState) {     return updateTaskExecutionStateFunction.apply(taskExecutionState). }
+false;public;2;4;;@Override public CompletableFuture<SerializedInputSplit> requestNextInputSplit(JobVertexID vertexID, ExecutionAttemptID executionAttempt) {     return requestNextInputSplitFunction.apply(vertexID, executionAttempt). }
+false;public;2;4;;@Override public CompletableFuture<ExecutionState> requestPartitionState(IntermediateDataSetID intermediateResultId, ResultPartitionID partitionId) {     return requestPartitionStateFunction.apply(intermediateResultId, partitionId). }
+false;public;2;4;;@Override public CompletableFuture<Acknowledge> scheduleOrUpdateConsumers(ResultPartitionID partitionID, Time timeout) {     return scheduleOrUpdateConsumersFunction.apply(partitionID). }
+false;public;2;4;;@Override public CompletableFuture<Acknowledge> disconnectTaskManager(ResourceID resourceID, Exception cause) {     return disconnectTaskManagerFunction.apply(resourceID). }
+false;public;2;4;;@Override public void disconnectResourceManager(ResourceManagerId resourceManagerId, Exception cause) {     disconnectResourceManagerConsumer.accept(resourceManagerId). }
+false;public;3;4;;@Override public CompletableFuture<Collection<SlotOffer>> offerSlots(ResourceID taskManagerId, Collection<SlotOffer> slots, Time timeout) {     return offerSlotsFunction.apply(taskManagerId, slots). }
+false;public;3;4;;@Override public void failSlot(ResourceID taskManagerId, AllocationID allocationId, Exception cause) {     failSlotConsumer.accept(taskManagerId, allocationId, cause). }
+false;public;3;4;;@Override public CompletableFuture<RegistrationResponse> registerTaskManager(String taskManagerRpcAddress, TaskManagerLocation taskManagerLocation, Time timeout) {     return registerTaskManagerFunction.apply(taskManagerRpcAddress, taskManagerLocation). }
+false;public;2;4;;@Override public void heartbeatFromTaskManager(ResourceID resourceID, AccumulatorReport accumulatorReport) {     taskManagerHeartbeatConsumer.accept(resourceID, accumulatorReport). }
+false;public;1;4;;@Override public void heartbeatFromResourceManager(ResourceID resourceID) {     resourceManagerHeartbeatConsumer.accept(resourceID). }
+false;public;1;4;;@Override public CompletableFuture<JobDetails> requestJobDetails(Time timeout) {     return requestJobDetailsSupplier.get(). }
+false;public;1;4;;@Override public CompletableFuture<JobStatus> requestJobStatus(Time timeout) {     return requestJobDetailsSupplier.get().thenApply(JobDetails::getStatus). }
+false;public;1;4;;@Override public CompletableFuture<ArchivedExecutionGraph> requestJob(Time timeout) {     return requestJobSupplier.get(). }
+false;public;3;4;;@Override public CompletableFuture<String> triggerSavepoint(@Nullable final String targetDirectory, final boolean cancelJob, final Time timeout) {     return triggerSavepointFunction.apply(targetDirectory, cancelJob). }
+false;public;1;4;;@Override public CompletableFuture<OperatorBackPressureStatsResponse> requestOperatorBackPressureStats(JobVertexID jobVertexId) {     return requestOperatorBackPressureStatsFunction.apply(jobVertexId). }
+false;public;2;4;;@Override public void notifyAllocationFailure(AllocationID allocationID, Exception cause) {     notifyAllocationFailureConsumer.accept(allocationID, cause). }
+false;public;5;4;;@Override public void acknowledgeCheckpoint(JobID jobID, ExecutionAttemptID executionAttemptID, long checkpointId, CheckpointMetrics checkpointMetrics, TaskStateSnapshot subtaskState) {     acknowledgeCheckpointConsumer.accept(Tuple5.of(jobID, executionAttemptID, checkpointId, checkpointMetrics, subtaskState)). }
+false;public;1;4;;@Override public void declineCheckpoint(DeclineCheckpoint declineCheckpoint) {     declineCheckpointConsumer.accept(declineCheckpoint). }
+false;public;0;4;;@Override public JobMasterId getFencingToken() {     return fencingTokenSupplier.get(). }
+false;public;2;4;;@Override public CompletableFuture<KvStateLocation> requestKvStateLocation(JobID jobId, String registrationName) {     return requestKvStateLocationFunction.apply(jobId, registrationName). }
+false;public;6;4;;@Override public CompletableFuture<Acknowledge> notifyKvStateRegistered(JobID jobId, JobVertexID jobVertexId, KeyGroupRange keyGroupRange, String registrationName, KvStateID kvStateId, InetSocketAddress kvStateServerAddress) {     return notifyKvStateRegisteredFunction.apply(Tuple6.of(jobId, jobVertexId, keyGroupRange, registrationName, kvStateId, kvStateServerAddress)). }
+false;public;4;4;;@Override public CompletableFuture<Acknowledge> notifyKvStateUnregistered(JobID jobId, JobVertexID jobVertexId, KeyGroupRange keyGroupRange, String registrationName) {     return notifyKvStateUnregisteredFunction.apply(Tuple4.of(jobId, jobVertexId, keyGroupRange, registrationName)). }
+false;public;0;4;;@Override public String getAddress() {     return address. }
+false;public;0;4;;@Override public String getHostname() {     return hostname. }
+false;public;3;4;;@Override public CompletableFuture<Object> updateGlobalAggregate(String aggregateName, Object aggregand, byte[] serializedAggregateFunction) {     return updateAggregateFunction.apply(aggregateName, aggregand, serializedAggregateFunction). }

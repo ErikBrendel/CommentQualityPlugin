@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;0;3;;public void start() throws Exception {     sharedCount.start(). }
+false;public;0;3;;public void close() throws IOException {     sharedCount.close(). }
+false;public;0;3;;public ZooKeeperVersionedValue<Integer> getVersionedValue() {     return new ZooKeeperVersionedValue<>(sharedCount.getVersionedValue()). }
+false;public;2;3;;public boolean trySetCount(ZooKeeperVersionedValue<Integer> previous, int newCount) throws Exception {     return sharedCount.trySetCount(previous.getVersionedValue(), newCount). }

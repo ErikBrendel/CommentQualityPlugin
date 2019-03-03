@@ -1,0 +1,3 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;18;;@Override public Tuple2<K, V> nextRecord(Tuple2<K, V> record) throws IOException {     if (!this.fetched) {         fetchNext().     }     if (!this.hasNext) {         return null.     }     try {         record.f0 = recordReader.getCurrentKey().         record.f1 = recordReader.getCurrentValue().     } catch (InterruptedException e) {         throw new IOException("Could not get KeyValue pair.", e).     }     this.fetched = false.     return record. }
+false;public;0;4;;@Override public TypeInformation<Tuple2<K, V>> getProducedType() {     return new TupleTypeInfo<Tuple2<K, V>>(TypeExtractor.createTypeInfo(keyClass), TypeExtractor.createTypeInfo(valueClass)). }

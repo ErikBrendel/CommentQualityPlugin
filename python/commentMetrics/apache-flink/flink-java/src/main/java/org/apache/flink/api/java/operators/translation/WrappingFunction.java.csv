@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;4;;@Override public void open(Configuration parameters) throws Exception {     FunctionUtils.openFunction(this.wrappedFunction, parameters). }
+false;public;0;4;;@Override public void close() throws Exception {     FunctionUtils.closeFunction(this.wrappedFunction). }
+false;public;1;6;;@Override public void setRuntimeContext(RuntimeContext t) {     super.setRuntimeContext(t).     FunctionUtils.setFunctionRuntimeContext(this.wrappedFunction, t). }
+false;public;0;3;;public T getWrappedFunction() {     return this.wrappedFunction. }

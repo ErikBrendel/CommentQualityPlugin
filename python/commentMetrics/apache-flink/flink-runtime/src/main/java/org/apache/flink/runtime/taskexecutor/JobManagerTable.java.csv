@@ -1,0 +1,5 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;public;1;3;;public boolean contains(JobID jobId) {     return jobManagerConnections.containsKey(jobId). }
+false;public;2;11;;public boolean put(JobID jobId, JobManagerConnection jobManagerConnection) {     JobManagerConnection previousJMC = jobManagerConnections.put(jobId, jobManagerConnection).     if (previousJMC != null) {         jobManagerConnections.put(jobId, previousJMC).         return false.     } else {         return true.     } }
+false;public;1;3;;public JobManagerConnection remove(JobID jobId) {     return jobManagerConnections.remove(jobId). }
+false;public;1;3;;public JobManagerConnection get(JobID jobId) {     return jobManagerConnections.get(jobId). }

@@ -1,0 +1,4 @@
+commented;modifiers;parameterAmount;loc;comment;code
+false;protected;1;7;;@Override protected TupleComparator<Tuple3<Integer, String, Double>> createComparator(boolean ascending) {     return new TupleComparator<Tuple3<Integer, String, Double>>(new int[] { 0 }, new TypeComparator[] { new IntComparator(ascending) }, new TypeSerializer[] { IntSerializer.INSTANCE }). }
+false;protected;0;10;;@SuppressWarnings("unchecked") @Override protected TupleSerializer<Tuple3<Integer, String, Double>> createSerializer() {     return new TupleSerializer<Tuple3<Integer, String, Double>>((Class<Tuple3<Integer, String, Double>>) (Class<?>) Tuple3.class, new TypeSerializer[] { new IntSerializer(), new StringSerializer(), new DoubleSerializer() }). }
+false;protected;0;4;;@Override protected Tuple3<Integer, String, Double>[] getSortedTestData() {     return dataISD. }
