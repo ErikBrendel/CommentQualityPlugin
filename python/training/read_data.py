@@ -14,6 +14,7 @@ def read_and_cache_csv(number_of_items=INFINITY, *, repo_root, read_cache) -> Da
     metrics_files = os.path.join(repo_root, "**", "*.csv")
     if os.path.isfile('frame_cache') and read_cache:
         df = pd.read_pickle('frame_cache')
+        print('Cache: read date from cache')
         return df
     df_list = []
     for filename in glob.iglob(metrics_files, recursive=True):
