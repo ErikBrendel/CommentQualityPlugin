@@ -1,6 +1,8 @@
 import lizard
 from pandas import DataFrame
 
+from training.cluster import cluster
+
 
 def add_metrics_to(frame: DataFrame) -> DataFrame:
     """modifies dataframe in place"""
@@ -23,5 +25,6 @@ if __name__ == '__main__':
     frame = DataFrame({'code': ['public void do(){}', 'private int done(int i){return 4}',
                                 'private int indent(int i){\nif(i>10)\n\treturn '
                                 '4\nelse\n\treturn3}']})
-    frame2 = add_metrics_to(frame)
+    frame = add_metrics_to(frame)
+    cluster(frame)
     print(frame2)

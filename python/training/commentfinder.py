@@ -14,6 +14,9 @@ REPOS = [  # their clone url is REPO_URL_START + this string + REPO_URL_END
     "spring-projects/spring-framework",
     "square/okhttp",  # that's a small one
 ]
+# Todo: remove before push
+REPOS = [REPOS[-1]]
+print("WARNING: using only one repo")
 
 
 # find more at:

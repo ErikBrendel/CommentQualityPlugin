@@ -40,6 +40,7 @@ class GitRepo:
 
     def find_files(self) -> List[str]:
         found_files = self.localProgram.run_args(["find", ".", "-name", "*.java"])
+        found_files = [file for file in found_files if 'test' not in file]
         return [pretty_filename(file) for file in found_files if is_filename(file)]
 
     def is_cloned(self):

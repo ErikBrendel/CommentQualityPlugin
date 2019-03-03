@@ -8,7 +8,7 @@ from sklearn.datasets import make_blobs
 
 def cluster(frame: DataFrame):
     plt.figure(figsize=(12, 12))
-
+    X_Data = frame[['cc', 'tc', ]]
     n_samples = 1500
     random_state = 170
     X, y = make_blobs(n_samples=n_samples, centers=2, random_state=random_state, n_features=10)
@@ -21,3 +21,6 @@ def cluster(frame: DataFrame):
     plt.title("Incorrect Number of Blobs")
 
     plt.show()
+
+if __name__ == '__main__':
+    cluster()
