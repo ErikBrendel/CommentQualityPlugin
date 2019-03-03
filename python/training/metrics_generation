@@ -4,10 +4,15 @@ from pandas import DataFrame
 
 def add_metrics_to(frame: DataFrame) -> DataFrame:
     """modifies dataframe in place"""
-    frame['metrics'] = frame.apply(
+    frame['cc'] = frame.apply(
         lambda row: lizard.analyze_file.analyze_source_code(
             "placeholder.java",
-            row['code']),
+            row['code']).CCN,
+        axis=1)
+    frame['tc'] = frame.apply(
+        lambda row: lizard.analyze_file.analyze_source_code(
+            "placeholder.java",
+            row['code']).token_count,
         axis=1)
     return frame
 
