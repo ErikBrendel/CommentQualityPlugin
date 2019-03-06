@@ -21,6 +21,9 @@ def balance(frame: DataFrame)-> DataFrame:
     print(frame.commented.value_counts())
     return frame
 
+def encode_labels(frame:DataFrame):
+    pass
+
 def get_preprocessor(x_train: DataFrame):
 
     scaled = preprocessing.StandardScaler().fit(x_train)

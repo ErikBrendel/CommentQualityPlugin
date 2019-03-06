@@ -19,7 +19,7 @@ def classify_by_dTree(x_train: DataFrame, y_train: DataFrame, x_test: DataFrame,
 
 def classify_by_SGD(x_train: DataFrame, y_train: DataFrame, x_test: DataFrame) -> DataFrame:
     print('Training SGD')
-    clf = SGDClassifier(class_weight='balanced')
+    clf = SGDClassifier(max_iter=1000)
     clf.fit(x_train, y_train.values.ravel())
     predicted = clf.predict(x_test)
     return predicted
