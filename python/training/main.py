@@ -3,10 +3,11 @@ import os
 from pandas import DataFrame
 from sklearn.model_selection import train_test_split
 
-from training.classifier import classify_by_dTree
+from training.classifier import classify_by_dTree, classify_by_SGD, classify_by_randomF
 from training.cluster import cluster
 from training.evaluation import performance_report
 from training.metrics_generation import add_metrics_to
+from training.preprocessing import get_preprocessor, balance
 from training.read_data import read_and_cache_csv
 
 if __name__ == '__main__':
