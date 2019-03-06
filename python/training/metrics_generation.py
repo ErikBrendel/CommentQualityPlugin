@@ -30,10 +30,16 @@ def add_metrics_to(frame: DataFrame, *, read_cache) -> DataFrame:
 
 if __name__ == '__main__':
     l = lizard.analyze_file.analyze_source_code("placeholder.java",
-                                                'private int done(int i){\nreturn 4\n}')
+                                                'private int doneAreYou(int i){\nreturn 4\n}')
+    l2 = lizard.analyze_file.analyze_source_code("placeholder.java",
+                                                '/**\n*This is a a comment\n*@param int '
+                                                'done mach dings\n*/\nprivate int '
+                                                'doneAreYou(int '
+                                                'i){'
+                                                '\n\treturn 4\n}')
+
     frame = DataFrame({'code': ['public void do(){}', 'private int done(int i){return 4}',
                                 'private int indent(int i){\nif(i>10)\n\treturn '
                                 '4\nelse\n\treturn3}']})
-    frame = add_metrics_to(frame)
-    show_plot(frame)
-    print(frame2)
+
+
