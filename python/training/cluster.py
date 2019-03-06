@@ -18,38 +18,26 @@ def normalize(df):
     return result
 
 
-def cluster(frame: DataFrame):
+def show_plot(frame: DataFrame, y_axis: str, x_axis='loc', log_scale_y=False):
     plt.figure(figsize=(20, 20))
-    n_samples = 1500
-    random_state = 170
-    # X, y = make_blobs(n_samples=n_samples, centers=2, random_state=random_state, n_features=10)
-
-    # Incorrect number of clusters
-    # y_pred = KMeans(n_clusters=2, random_state=random_state).fit_predict(frame)
 
     alpha = 0.2
     frame['color'] = [[0, 0.8, 0, alpha] if c else [1, 0, 0, alpha] for c in frame['commented']]
-    frame['parameterAmount_rnd'] = [1 + x + random.uniform(-0.4, 0.4) for x in frame['parameterAmount']]
-    frame['loc_rnd'] = [1 + x + random.uniform(-0.4, 0.4) for x in frame['loc']]
-    frame['cc_rnd'] = [1 + x + random.uniform(-0.4, 0.4) for x in frame['cc']]
+    frame['x_rnd'] = [1 + x + random.uniform(-0.4, 0.4) for x in frame[x_axis]]
+    frame['y_rnd'] = [1 + x + random.uniform(-0.4, 0.4) for x in frame[y_axis]]
 
 
-    frame = frame.sample(frac=1).reset_index(drop=True)
-
+    #frame = frame.sample(frac=1).reset_index(drop=True)
     plt.xscale('log')
-    #plt.yscale('log')
+    if log_scale_y:
+        plt.yscale('log')
 
-    """plt.subplot(221)
-    plt.scatter(frame['loc_rnd'], frame['parameterAmount_rnd'], c=frame['color'], marker=".")
-    plt.title("loc_rnd, parameterAmount_rnd")"""
-
-    #plt.subplot(222)
-    plt.scatter(frame['loc_rnd'], frame['cc_rnd'], c=frame['color'], marker=".")
-    plt.title("loc_rnd, cc")
+    plt.scatter(frame['x_rnd'], frame['y_rnd'], c=frame['color'], marker=".")
+    plt.title(x_axis + ' ' + y_axis)
 
 
     plt.show()
 
 
 if __name__ == '__main__':
-    cluster(None)
+    show_plot(None)

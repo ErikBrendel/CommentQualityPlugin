@@ -4,7 +4,7 @@ import pandas as pd
 import lizard
 from pandas import DataFrame
 
-from training.cluster import cluster
+from training.cluster import show_plot
 
 
 def add_metrics_to(frame: DataFrame, *, read_cache) -> DataFrame:
@@ -35,5 +35,5 @@ if __name__ == '__main__':
                                 'private int indent(int i){\nif(i>10)\n\treturn '
                                 '4\nelse\n\treturn3}']})
     frame = add_metrics_to(frame)
-    cluster(frame)
+    show_plot(frame)
     print(frame2)
