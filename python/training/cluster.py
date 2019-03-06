@@ -18,23 +18,23 @@ def normalize(df):
     return result
 
 
-def show_plot(frame: DataFrame, y_axis: str, x_axis='loc', log_scale_y=False):
+def show_plot(frame: DataFrame, y_axis: str, x_axis='loc', log_scale_y=False, log_scale_x=True):
     plt.figure(figsize=(20, 20))
 
     alpha = 0.2
     frame['color'] = [[0, 0.8, 0, alpha] if c else [1, 0, 0, alpha] for c in frame['commented']]
     frame['x_rnd'] = [1 + x + random.uniform(-0.4, 0.4) for x in frame[x_axis]]
-    frame['y_rnd'] = [1 + x + random.uniform(-0.4, 0.4) for x in frame[y_axis]]
-
-
-    #frame = frame.sample(frac=1).reset_index(drop=True)
-    plt.xscale('log')
+    if y_axis is not 'modifiers':
+        frame['y_rnd'] = [1 + x + random.uniform(-0.4, 0.4) for x in frame[y_axis]]
+    else:
+        frame['y_rnd'] = frame[y_axis]
+    if log_scale_x:
+        plt.xscale('log')
     if log_scale_y:
         plt.yscale('log')
 
-    plt.scatter(frame['x_rnd'], frame['y_rnd'], c=frame['color'], marker=".")
+    plt.scatter(frame['x_rnd'], frame[y_axis], c=frame['color'], marker=".")
     plt.title(x_axis + ' ' + y_axis)
-
 
     plt.show()
 
