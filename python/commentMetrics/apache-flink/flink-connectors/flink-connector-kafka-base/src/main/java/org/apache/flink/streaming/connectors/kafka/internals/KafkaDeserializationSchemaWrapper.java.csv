@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public T deserialize(ConsumerRecord<byte[], byte[]> record) throws Exception {     return deserializationSchema.deserialize(record.value()). }
-false;public;1;4;;@Override public boolean isEndOfStream(T nextElement) {     return deserializationSchema.isEndOfStream(nextElement). }
-false;public;0;4;;@Override public TypeInformation<T> getProducedType() {     return deserializationSchema.getProducedType(). }

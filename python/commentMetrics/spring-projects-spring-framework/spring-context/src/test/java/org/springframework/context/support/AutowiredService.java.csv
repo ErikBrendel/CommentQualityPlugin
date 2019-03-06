@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;public void setMessageSource(MessageSource messageSource) {     if (this.messageSource != null) {         throw new IllegalArgumentException("MessageSource should not be set twice").     }     this.messageSource = messageSource. }
-false;public;0;3;;public MessageSource getMessageSource() {     return messageSource. }

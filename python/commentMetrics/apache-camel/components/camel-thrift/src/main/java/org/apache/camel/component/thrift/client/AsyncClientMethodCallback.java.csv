@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;10;;@Override public void onComplete(Object response) {     exchange.getOut().setHeaders(exchange.getIn().getHeaders()).     if (response == null) {         exchange.getOut().setBody(response).     } else {         exchange.getOut().setBody(response, response.getClass()).     }     callback.done(false). }
-false;public;1;5;;@Override public void onError(Exception exception) {     exchange.setException(exception).     callback.done(false). }

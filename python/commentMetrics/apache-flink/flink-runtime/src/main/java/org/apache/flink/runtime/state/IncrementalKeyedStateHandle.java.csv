@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * Returns the ID of the checkpoint for which the handle was created.  */ ;/**  * Returns the ID of the checkpoint for which the handle was created.  */ long getCheckpointId().
-true;;0;2;/**  * Returns the identifier of the state backend from which this handle was created.  */ ;/**  * Returns the identifier of the state backend from which this handle was created.  */ @Nonnull UUID getBackendIdentifier().
-true;;0;2;/**  * Returns a set of ids of all registered shared states in the backend at the time this was created.  */ ;/**  * Returns a set of ids of all registered shared states in the backend at the time this was created.  */ @Nonnull Set<StateHandleID> getSharedStateHandleIDs().

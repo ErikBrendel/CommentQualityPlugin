@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;1;2;/**  * Return a {@link CorsConfiguration} based on the incoming request.  * @return the associated {@link CorsConfiguration}, or {@code null} if none  */ ;/**  * Return a {@link CorsConfiguration} based on the incoming request.  * @return the associated {@link CorsConfiguration}, or {@code null} if none  */ @Nullable CorsConfiguration getCorsConfiguration(ServerWebExchange exchange).

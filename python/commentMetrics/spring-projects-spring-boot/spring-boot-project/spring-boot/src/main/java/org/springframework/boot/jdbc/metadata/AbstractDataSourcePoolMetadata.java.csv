@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;15;;@Override public Float getUsage() {     Integer maxSize = getMax().     Integer currentSize = getActive().     if (maxSize == null || currentSize == null) {         return null.     }     if (maxSize < 0) {         return -1F.     }     if (currentSize == 0) {         return 0F.     }     return (float) currentSize / (float) maxSize. }
-false;protected,final;0;3;;protected final T getDataSource() {     return this.dataSource. }

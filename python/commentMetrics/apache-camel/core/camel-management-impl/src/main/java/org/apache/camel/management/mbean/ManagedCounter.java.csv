@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;public void init(ManagementStrategy strategy) {     this.exchangesTotal = new StatisticCounter().     Date now = new Date().     startTimestamp = now.     resetTimestamp = now. }
-false;public;0;4;;public void reset() {     exchangesTotal.reset().     resetTimestamp = new Date(). }
-false;public;0;3;;public Date getStartTimestamp() {     return startTimestamp. }
-false;public;0;3;;public Date getResetTimestamp() {     return resetTimestamp. }
-false;public;0;3;;public long getExchangesTotal() throws Exception {     return exchangesTotal.getValue(). }
-false;public;0;3;;public void increment() {     exchangesTotal.increment(). }

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void outcomeWhenCloudfoundryPlatformNotPresentShouldNotMatch() {     this.contextRunner.withUserConfiguration(CloudFoundryPlatformConfig.class).run((context) -> assertThat(context).doesNotHaveBean("foo")). }
-false;public;0;6;;@Test public void outcomeWhenCloudfoundryPlatformPresentShouldMatch() {     this.contextRunner.withUserConfiguration(CloudFoundryPlatformConfig.class).withPropertyValues("VCAP_APPLICATION:---").run((context) -> assertThat(context).hasBean("foo")). }
-false;public;0;6;;@Test public void outcomeWhenCloudfoundryPlatformPresentAndMethodTargetShouldMatch() {     this.contextRunner.withUserConfiguration(CloudFoundryPlatformOnMethodConfig.class).withPropertyValues("VCAP_APPLICATION:---").run((context) -> assertThat(context).hasBean("foo")). }
-false;public;0;4;;@Bean public String foo() {     return "foo". }
-false;public;0;5;;@Bean @ConditionalOnCloudPlatform(CloudPlatform.CLOUD_FOUNDRY) public String foo() {     return "foo". }

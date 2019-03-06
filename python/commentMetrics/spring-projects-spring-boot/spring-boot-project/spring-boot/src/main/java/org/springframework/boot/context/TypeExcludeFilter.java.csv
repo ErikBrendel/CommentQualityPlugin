@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public void setBeanFactory(BeanFactory beanFactory) throws BeansException {     this.beanFactory = beanFactory. }
-false;public;2;15;;@Override public boolean match(MetadataReader metadataReader, MetadataReaderFactory metadataReaderFactory) throws IOException {     if (this.beanFactory instanceof ListableBeanFactory && getClass() == TypeExcludeFilter.class) {         Collection<TypeExcludeFilter> delegates = ((ListableBeanFactory) this.beanFactory).getBeansOfType(TypeExcludeFilter.class).values().         for (TypeExcludeFilter delegate : delegates) {             if (delegate.match(metadataReader, metadataReaderFactory)) {                 return true.             }         }     }     return false. }
-false;public;1;5;;@Override public boolean equals(Object obj) {     throw new IllegalStateException("TypeExcludeFilter " + getClass() + " has not implemented equals"). }
-false;public;0;5;;@Override public int hashCode() {     throw new IllegalStateException("TypeExcludeFilter " + getClass() + " has not implemented hashCode"). }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;static;0;3;;static long getPid() {     return PID. }
-false;private,static;0;9;;private static long initializePid() {     final String name = ManagementFactory.getRuntimeMXBean().getName().     try {         return Long.parseLong(name.split("@")[0]).     } catch (final NumberFormatException e) {         LogManager.getLogger(JvmPid.class).debug(new ParameterizedMessage("failed parsing PID from [{}]", name), e).         return -1.     } }

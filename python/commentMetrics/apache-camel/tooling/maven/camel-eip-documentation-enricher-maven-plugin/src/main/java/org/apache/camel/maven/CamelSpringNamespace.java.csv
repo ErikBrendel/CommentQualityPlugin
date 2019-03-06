@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;10;;@Override public String getNamespaceURI(String prefix) {     if (prefix == null) {         throw new IllegalArgumentException("The prefix cannot be null.").     }     if (Constants.XML_SCHEMA_NAMESPACE_PREFIX.equals(prefix)) {         return Constants.XML_SCHEMA_NAMESPACE_URI.     }     return null. }
-false;public;1;4;;@Override public String getPrefix(String namespaceURI) {     throw new UnsupportedOperationException("Operation not supported"). }
-false;public;1;4;;@Override public Iterator getPrefixes(String namespaceURI) {     throw new UnsupportedOperationException("Operation not supported"). }

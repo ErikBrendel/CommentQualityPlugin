@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;20;;@Override public boolean matches(File pom) {     try {         String contents = FileCopyUtils.copyToString(new FileReader(pom)).         for (String expected : this.expectedContents) {             if (!contents.contains(expected)) {                 return false.             }         }         for (String notExpected : this.notExpectedContents) {             if (contents.contains(notExpected)) {                 return false.             }         }     } catch (IOException ex) {         throw new RuntimeException(ex).     }     return true. }
-false;public;0;5;;@Override public Description description() {     return new TextDescription("Pom file containing %s and not containing %s", this.expectedContents, this.notExpectedContents). }
-false;;1;4;;PomCondition groupId(String groupId) {     this.expectedContents.add(String.format("<groupId>%s</groupId>", groupId)).     return this. }
-false;;1;5;;PomCondition artifactId(String artifactId) {     this.expectedContents.add(String.format("<artifactId>%s</artifactId>", artifactId)).     return this. }
-false;;1;4;;PomCondition version(String version) {     this.expectedContents.add(String.format("<version>%s</version>", version)).     return this. }
-false;;1;4;;PomCondition packaging(String packaging) {     this.expectedContents.add(String.format("<packaging>%s</packaging>", packaging)).     return this. }
-false;;0;4;;PomCondition noDependencies() {     this.notExpectedContents.add("<dependencies>").     return this. }
-false;;0;4;;PomCondition noPackaging() {     this.notExpectedContents.add("<packaging>").     return this. }

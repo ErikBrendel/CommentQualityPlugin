@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;14;;@Override public void open(FileSystem fs, Path path) throws IOException {     super.open(fs, path).     try {         this.charset = Charset.forName(charsetName).     } catch (IllegalCharsetNameException e) {         throw new IOException("The charset " + charsetName + " is not valid.", e).     } catch (UnsupportedCharsetException e) {         throw new IOException("The charset " + charsetName + " is not supported.", e).     } }
-false;public;1;6;;@Override public void write(T element) throws IOException {     FSDataOutputStream outputStream = getStream().     outputStream.write(element.toString().getBytes(charset)).     outputStream.write('\n'). }
-false;public;0;4;;@Override public StringWriter<T> duplicate() {     return new StringWriter<>(this). }
-false;;0;3;;String getCharsetName() {     return charsetName. }

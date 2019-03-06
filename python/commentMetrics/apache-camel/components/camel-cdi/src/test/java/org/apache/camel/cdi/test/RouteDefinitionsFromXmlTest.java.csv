@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;private;1;6;;@Produces private RoutesDefinition routes(CamelContext context) throws Exception {     try (InputStream routes = getClass().getResourceAsStream("/camel-context-routes.xml")) {         return ModelHelper.createModelFromXml(context, routes, RoutesDefinition.class).     } }
-false;public,static;0;8;;@Deployment public static Archive<?> deployment() {     return ShrinkWrap.create(JavaArchive.class).addPackage(CdiCamelExtension.class.getPackage()).addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml"). }
-false;public;0;9;;@Test public void sendMessageToInbound() throws InterruptedException {     outbound.expectedMessageCount(1).     outbound.expectedBodiesReceived("test").     inbound.sendBody("test").     assertIsSatisfied(2L, TimeUnit.SECONDS, outbound). }

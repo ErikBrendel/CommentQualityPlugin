@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;6;;@Override protected List<Status> doPoll() throws TwitterException {     Paging paging = getLastIdPaging().     log.trace("doPoll.getMentionsTimeline(sinceId={})", paging.getSinceId()).     return getTwitter().getMentionsTimeline(paging). }
-false;protected;0;5;;@Override protected List<Status> doDirect() throws TwitterException {     log.trace("doDirect.getMentionsTimeline()").     return getTwitter().getMentionsTimeline(). }

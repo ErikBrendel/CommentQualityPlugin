@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Test public void cookieProcessorIsCustomized() {     ServletWebServerApplicationContext applicationContext = (ServletWebServerApplicationContext) new SpringApplication(TestConfiguration.class, LegacyCookieProcessorConfiguration.class).run().     Context context = (Context) ((TomcatWebServer) applicationContext.getWebServer()).getTomcat().getHost().findChildren()[0].     assertThat(context.getCookieProcessor()).isInstanceOf(LegacyCookieProcessor.class). }
-false;public;0;4;;@Bean public TomcatServletWebServerFactory tomcatFactory() {     return new TomcatServletWebServerFactory(0). }
-false;public;0;4;;@Bean public WebServerFactoryCustomizerBeanPostProcessor postProcessor() {     return new WebServerFactoryCustomizerBeanPostProcessor(). }

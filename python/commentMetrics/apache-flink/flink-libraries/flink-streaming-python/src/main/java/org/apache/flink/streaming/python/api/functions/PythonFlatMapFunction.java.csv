@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;@Override public void open(Configuration config) throws Exception {     super.open(config).     this.collector = new PythonCollector(). }
-false;public;2;9;;@Override public void flatMap(PyObject value, Collector<PyObject> out) throws Exception {     this.collector.setCollector(out).     try {         this.fun.flatMap(value, this.collector).     } catch (PyException pe) {         throw createAndLogException(pe).     } }

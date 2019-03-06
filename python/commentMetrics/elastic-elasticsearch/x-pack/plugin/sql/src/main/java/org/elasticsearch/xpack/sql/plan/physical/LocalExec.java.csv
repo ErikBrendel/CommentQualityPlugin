@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected NodeInfo<LocalExec> info() {     return NodeInfo.create(this, LocalExec::new, executable). }
-false;public;0;3;;public Executable executable() {     return executable. }
-false;public;0;4;;@Override public List<Attribute> output() {     return executable.output(). }
-false;public;0;3;;public boolean isEmpty() {     return executable instanceof EmptyExecutable. }
-false;public;2;4;;@Override public void execute(SqlSession session, ActionListener<SchemaRowSet> listener) {     executable.execute(session, listener). }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(executable). }
-false;public;1;13;;@Override public boolean equals(Object obj) {     if (this == obj) {         return true.     }     if (obj == null || getClass() != obj.getClass()) {         return false.     }     LocalExec other = (LocalExec) obj.     return Objects.equals(executable, other.executable). }

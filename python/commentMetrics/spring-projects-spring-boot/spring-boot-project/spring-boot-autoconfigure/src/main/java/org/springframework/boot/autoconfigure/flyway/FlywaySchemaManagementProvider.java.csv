@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;8;;@Override public SchemaManagement getSchemaManagement(DataSource dataSource) {     return StreamSupport.stream(this.flywayInstances.spliterator(), false).map((flyway) -> flyway.getConfiguration().getDataSource()).filter(dataSource::equals).findFirst().map((managedDataSource) -> SchemaManagement.MANAGED).orElse(SchemaManagement.UNMANAGED). }

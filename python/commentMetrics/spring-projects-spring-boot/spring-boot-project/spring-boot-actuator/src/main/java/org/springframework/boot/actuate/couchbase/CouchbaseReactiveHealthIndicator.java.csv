@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;6;;@Override protected Mono<Health> doHealthCheck(Health.Builder builder) {     DiagnosticsReport diagnostics = this.cluster.diagnostics().     new CouchbaseHealth(diagnostics).applyTo(builder).     return Mono.just(builder.build()). }

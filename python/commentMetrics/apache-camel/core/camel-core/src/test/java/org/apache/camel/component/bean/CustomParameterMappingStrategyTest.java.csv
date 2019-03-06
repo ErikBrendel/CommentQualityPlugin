@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;7;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry jndi = super.createRegistry().     jndi.bind("foo", new MyFooBean()).     jndi.bind(BeanConstants.BEAN_PARAMETER_MAPPING_STRATEGY, new MyCustomStrategy()).     return jndi. }
-false;public;0;6;;@Test public void testExchange() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("You said: Hello Claus").     template.sendBody("direct:a", "Claus").     assertMockEndpointsSatisfied(). }
-false;public;0;4;;@Override public void configure() throws Exception {     from("direct:a").bean("foo").to("mock:result"). }
-false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:a").bean("foo").to("mock:result").         }     }. }
-false;public;1;3;;public String cheese(String body) {     return "You said: " + body. }
-false;public;1;4;;@Override public Object evaluate(Exchange exchange) {     return "Hello " + exchange.getIn().getBody(String.class). }
-false;public;1;11;;public Expression getDefaultParameterTypeExpression(Class<?> parameterType) {     if (String.class.isAssignableFrom(parameterType)) {         return new ExpressionAdapter() {              @Override             public Object evaluate(Exchange exchange) {                 return "Hello " + exchange.getIn().getBody(String.class).             }         }.     }     return null. }

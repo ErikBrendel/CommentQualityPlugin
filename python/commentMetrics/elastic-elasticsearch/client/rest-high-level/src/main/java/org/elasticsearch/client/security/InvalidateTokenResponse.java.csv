@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public int getInvalidatedTokens() {     return invalidatedTokens. }
-false;public;0;3;;public int getPreviouslyInvalidatedTokens() {     return previouslyInvalidatedTokens. }
-false;public;0;3;;public List<ElasticsearchException> getErrors() {     return errors. }
-false;public;0;3;;public int getErrorsCount() {     return errors == null ? 0 : errors.size(). }
-false;public;1;9;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     InvalidateTokenResponse that = (InvalidateTokenResponse) o.     return invalidatedTokens == that.invalidatedTokens && previouslyInvalidatedTokens == that.previouslyInvalidatedTokens && Objects.equals(errors, that.errors). }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(invalidatedTokens, previouslyInvalidatedTokens, errors). }
-false;public,static;1;7;;public static InvalidateTokenResponse fromXContent(XContentParser parser) throws IOException {     if (parser.currentToken() == null) {         parser.nextToken().     }     XContentParserUtils.ensureExpectedToken(XContentParser.Token.START_OBJECT, parser.currentToken(), parser::getTokenLocation).     return PARSER.parse(parser, null). }

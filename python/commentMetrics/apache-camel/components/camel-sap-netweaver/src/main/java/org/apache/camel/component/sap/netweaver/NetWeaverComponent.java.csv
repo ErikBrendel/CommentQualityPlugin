@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;3;7;;@Override protected Endpoint createEndpoint(String uri, String remaining, Map<String, Object> parameters) throws Exception {     NetWeaverEndpoint endpoint = new NetWeaverEndpoint(uri, this).     endpoint.setUrl(remaining).     setProperties(endpoint, parameters).     return endpoint. }

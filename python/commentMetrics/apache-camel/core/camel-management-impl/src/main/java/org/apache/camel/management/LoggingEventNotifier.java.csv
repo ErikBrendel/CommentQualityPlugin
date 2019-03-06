@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;3;;public void notify(CamelEvent event) throws Exception {     log.info("Event: {}", event). }
-false;public;0;4;;@Override public boolean isDisabled() {     return !log.isInfoEnabled(). }
-false;public;1;3;;public boolean isEnabled(CamelEvent event) {     return log.isInfoEnabled(). }
-false;public;0;3;;public String getLogName() {     return logName. }
-true;public;1;3;/**  * Sets the log name to use.  *  * @param logName a custom log name to use  */ ;/**  * Sets the log name to use.  *  * @param logName a custom log name to use  */ public void setLogName(String logName) {     this.logName = logName. }
-false;protected;0;5;;protected void doStart() throws Exception {     if (logName != null) {         log = LoggerFactory.getLogger(logName).     } }

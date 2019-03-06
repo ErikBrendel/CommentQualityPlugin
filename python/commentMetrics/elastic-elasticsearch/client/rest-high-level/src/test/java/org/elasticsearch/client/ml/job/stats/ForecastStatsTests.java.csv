@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Override public ForecastStats createTestInstance() {     if (randomBoolean()) {         return createRandom(1, 22).     }     return new ForecastStats(0, null, null, null, null). }
-false;protected;1;4;;@Override protected ForecastStats doParseInstance(XContentParser parser) throws IOException {     return ForecastStats.PARSER.parse(parser, null). }
-false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }
-false;protected;0;4;;@Override protected Predicate<String> getRandomFieldsExcludeFilter() {     return field -> !field.isEmpty(). }
-false;public,static;2;8;;public static ForecastStats createRandom(long minTotal, long maxTotal) {     return new ForecastStats(randomLongBetween(minTotal, maxTotal), SimpleStatsTests.createRandom(), SimpleStatsTests.createRandom(), SimpleStatsTests.createRandom(), createCountStats()). }
-false;private,static;0;7;;private static Map<String, Long> createCountStats() {     Map<String, Long> countStats = new HashMap<>().     for (int i = 0. i < randomInt(10). ++i) {         countStats.put(randomAlphaOfLengthBetween(1, 20), randomLongBetween(1L, 100L)).     }     return countStats. }

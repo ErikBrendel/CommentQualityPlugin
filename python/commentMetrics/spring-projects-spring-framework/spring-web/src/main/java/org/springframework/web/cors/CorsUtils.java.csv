@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,static;1;3;/**  * Returns {@code true} if the request is a valid CORS one.  */ ;/**  * Returns {@code true} if the request is a valid CORS one.  */ public static boolean isCorsRequest(HttpServletRequest request) {     return (request.getHeader(HttpHeaders.ORIGIN) != null). }
-true;public,static;1;4;/**  * Returns {@code true} if the request is a valid CORS pre-flight one.  */ ;/**  * Returns {@code true} if the request is a valid CORS pre-flight one.  */ public static boolean isPreFlightRequest(HttpServletRequest request) {     return (isCorsRequest(request) && HttpMethod.OPTIONS.matches(request.getMethod()) && request.getHeader(HttpHeaders.ACCESS_CONTROL_REQUEST_METHOD) != null). }

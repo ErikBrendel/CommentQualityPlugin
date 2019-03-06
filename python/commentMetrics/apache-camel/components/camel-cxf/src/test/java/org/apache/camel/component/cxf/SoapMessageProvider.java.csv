@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;public SOAPMessage invoke(SOAPMessage request) {     // request should not come here as camel route would intercept the call before this is invoked.     throw new UnsupportedOperationException("Placeholder method"). }

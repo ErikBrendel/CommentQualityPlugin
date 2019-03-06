@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;5;1;/**  * Evaluates the window and outputs none or several elements.  *  * @param context The context in which the window is being evaluated.  * @param input The elements in the window being evaluated.  * @param out A collector for emitting elements.  *  * @throws Exception The function may throw exceptions to fail the program and trigger recovery.  */ ;/**  * Evaluates the window and outputs none or several elements.  *  * @param context The context in which the window is being evaluated.  * @param input The elements in the window being evaluated.  * @param out A collector for emitting elements.  *  * @throws Exception The function may throw exceptions to fail the program and trigger recovery.  */ void process(KEY key, W window, InternalWindowContext context, IN input, Collector<OUT> out) throws Exception.
-true;;2;1;/**  * Deletes any state in the {@code Context} when the Window is purged.  *  * @param context The context to which the window is being evaluated  * @throws Exception The function may throw exceptions to fail the program and trigger recovery.  */ ;/**  * Deletes any state in the {@code Context} when the Window is purged.  *  * @param context The context to which the window is being evaluated  * @throws Exception The function may throw exceptions to fail the program and trigger recovery.  */ void clear(W window, InternalWindowContext context) throws Exception.
-false;;0;1;;long currentProcessingTime().
-false;;0;1;;long currentWatermark().
-false;;0;1;;KeyedStateStore windowState().
-false;;0;1;;KeyedStateStore globalState().
-false;;2;1;;<X> void output(OutputTag<X> outputTag, X value).

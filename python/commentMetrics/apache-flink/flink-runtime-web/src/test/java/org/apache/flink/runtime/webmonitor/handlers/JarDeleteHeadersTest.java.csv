@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void testUrl() {     assertThat(JarDeleteHeaders.getInstance().getTargetRestEndpointURL(), equalTo("/jars/:" + JarIdPathParameter.KEY)). }
-false;public;0;4;;@Test public void testHttpMethod() {     assertThat(JarDeleteHeaders.getInstance().getHttpMethod(), equalTo(HttpMethodWrapper.DELETE)). }

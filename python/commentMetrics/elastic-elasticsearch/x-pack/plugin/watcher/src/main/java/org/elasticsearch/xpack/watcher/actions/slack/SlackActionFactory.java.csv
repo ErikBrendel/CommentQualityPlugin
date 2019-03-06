@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;3;6;;@Override public ExecutableSlackAction parseExecutable(String watchId, String actionId, XContentParser parser) throws IOException {     SlackAction action = SlackAction.parse(watchId, actionId, parser).     // for validation -- throws exception if account not present     slackService.getAccount(action.account).     return new ExecutableSlackAction(action, actionLogger, slackService, templateEngine). }

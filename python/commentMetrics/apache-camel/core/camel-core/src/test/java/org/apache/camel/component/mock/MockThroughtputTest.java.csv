@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;11;;@Test public void testMockThroughtputTest() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:foo?reportGroup=5").     mock.expectedMessageCount(10).     for (int i = 0. i < 10. i++) {         template.sendBody("direct:start", "Hello " + i).     }     assertMockEndpointsSatisfied(). }
-false;public;0;4;;@Override public void configure() throws Exception {     from("direct:start").to("mock:foo?reportGroup=5"). }
-false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").to("mock:foo?reportGroup=5").         }     }. }

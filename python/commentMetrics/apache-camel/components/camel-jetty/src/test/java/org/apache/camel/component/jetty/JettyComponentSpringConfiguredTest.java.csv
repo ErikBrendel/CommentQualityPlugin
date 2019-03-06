@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected boolean useJmx() {     return true. }
-false;protected;0;4;;@Override protected AbstractApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/component/jetty/JettyComponentSpringConfiguredTest.xml"). }
-false;public;0;8;;@Test @Ignore("run manual test") public void testJetty2() throws Exception {     assertNotNull("Should have jetty2 component", context.hasComponent("jetty2")).     String reply = template.requestBody("jetty2:http://localhost:9090/myapp", "Camel", String.class).     assertEquals("Hello Camel", reply). }

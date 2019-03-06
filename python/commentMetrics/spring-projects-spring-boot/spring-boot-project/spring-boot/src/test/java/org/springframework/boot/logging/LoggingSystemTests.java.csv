@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@After public void clearSystemProperty() {     System.clearProperty(LoggingSystem.SYSTEM_PROPERTY). }
-false;public;0;6;;@Test public void loggingSystemCanBeDisabled() {     System.setProperty(LoggingSystem.SYSTEM_PROPERTY, LoggingSystem.NONE).     LoggingSystem loggingSystem = LoggingSystem.get(getClass().getClassLoader()).     assertThat(loggingSystem).isInstanceOf(NoOpLoggingSystem.class). }
-false;public;0;4;;@Test(expected = UnsupportedOperationException.class) public void getLoggerConfigurationIsUnsupported() {     new StubLoggingSystem().getLoggerConfiguration("test-logger-name"). }
-false;public;0;4;;@Test(expected = UnsupportedOperationException.class) public void listLoggerConfigurationsIsUnsupported() {     new StubLoggingSystem().getLoggerConfigurations(). }
-false;public;0;4;;@Override public void beforeInitialize() { // Stub implementation }
-false;public;2;4;;@Override public void setLogLevel(String loggerName, LogLevel level) { // Stub implementation }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;12;;public void testResolveAttributes() {     FieldExtraction column = mock(FieldExtraction.class).     Expression expression = mock(Expression.class).     Attribute attribute = mock(Attribute.class).     ReferenceInput expected = new ReferenceInput(expression.source(), expression, column).     assertEquals(expected, new AttributeInput(expression.source(), expression, attribute).resolveAttributes(a -> {         assertSame(attribute, a).         return column.     })). }

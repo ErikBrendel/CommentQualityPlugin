@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;7;;@Override public int compareSerialized(DataInputView firstSource, DataInputView secondSource) throws IOException {     char c1 = firstSource.readChar().     char c2 = secondSource.readChar().     int comp = (c1 < c2 ? -1 : (c1 == c2 ? 0 : 1)).     return ascendingComparison ? comp : -comp. }
-false;public;0;4;;@Override public boolean supportsNormalizedKey() {     return true. }
-false;public;0;4;;@Override public int getNormalizeKeyLen() {     return 2. }
-false;public;1;4;;@Override public boolean isNormalizedKeyPrefixOnly(int keyBytes) {     return keyBytes < 2. }
-false;public;4;23;;@Override public void putNormalizedKey(Character value, MemorySegment target, int offset, int numBytes) {     // that is equivalent to unsigned, when compared byte by byte     if (numBytes == 2) {         // default case, full normalized key         target.put(offset, (byte) ((value >>> 8) & 0xff)).         target.put(offset + 1, (byte) ((value) & 0xff)).     } else if (numBytes <= 0) {     } else if (numBytes == 1) {         target.put(offset, (byte) ((value >>> 8) & 0xff)).     } else {         target.put(offset, (byte) ((value >>> 8) & 0xff)).         target.put(offset + 1, (byte) ((value) & 0xff)).         for (int i = 2. i < numBytes. i++) {             target.put(offset + i, (byte) 0).         }     } }
-false;public;0;4;;@Override public CharComparator duplicate() {     return new CharComparator(ascendingComparison). }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;8;;public void process(Exchange exchange) {     Order order = exchange.getIn().getBody(Order.class).     OrderResponse answer = new OrderResponse().setAccepted(true).setOrderId(order.getOrderId()).setDescription(String.format("Order accepted:[item='%s' quantity='%s']", order.getItemId(), order.getQuantity())).     exchange.getOut().setBody(answer). }

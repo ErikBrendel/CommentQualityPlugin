@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;3;;public static void setMetaDataFollowsFlagInKey(byte[] key) {     key[0] |= FIRST_BIT_IN_BYTE_MASK. }
-false;public,static;1;3;;public static void clearMetaDataFollowsFlag(byte[] key) {     key[0] &= (~FIRST_BIT_IN_BYTE_MASK). }
-false;public,static;1;3;;public static boolean hasMetaDataFollowsFlag(byte[] key) {     return 0 != (key[0] & FIRST_BIT_IN_BYTE_MASK). }

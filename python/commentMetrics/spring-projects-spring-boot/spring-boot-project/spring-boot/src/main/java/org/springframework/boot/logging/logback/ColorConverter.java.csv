@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;2;10;;@Override protected String transform(ILoggingEvent event, String in) {     AnsiElement element = ELEMENTS.get(getFirstOption()).     if (element == null) {         // Assume highlighting         element = LEVELS.get(event.getLevel().toInteger()).         element = (element != null) ? element : AnsiColor.GREEN.     }     return toAnsiString(in, element). }
-false;protected;2;3;;protected String toAnsiString(String in, AnsiElement element) {     return AnsiOutput.toString(element, in). }

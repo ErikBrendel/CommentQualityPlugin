@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;3;;public static DeleteExpiredDataResponse fromXContent(XContentParser parser) throws IOException {     return PARSER.parse(parser, null). }
-false;public;0;3;;public Boolean getDeleted() {     return deleted. }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(deleted). }
-false;public;2;9;;@Override public XContentBuilder toXContent(XContentBuilder builder, ToXContent.Params params) throws IOException {     builder.startObject().     if (deleted != null) {         builder.field(DELETED.getPreferredName(), deleted).     }     builder.endObject().     return builder. }
-false;public;1;11;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     DeleteExpiredDataResponse response = (DeleteExpiredDataResponse) obj.     return Objects.equals(deleted, response.deleted). }

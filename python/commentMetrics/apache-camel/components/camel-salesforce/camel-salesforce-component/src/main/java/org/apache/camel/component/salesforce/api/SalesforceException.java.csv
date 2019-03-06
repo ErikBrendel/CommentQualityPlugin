@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public List<RestError> getErrors() {     return errors == null ? Collections.emptyList() : Collections.unmodifiableList(errors). }
-false;public;0;3;;public int getStatusCode() {     return statusCode. }
-false;private,static;2;15;;private static String toErrorMessage(List<RestError> errors, int statusCode) {     StringBuilder builder = new StringBuilder("{").     if (errors != null) {         builder.append("errors:[").         for (RestError error : errors) {             builder.append(error.toString()).         }         builder.append("],").     }     builder.append("statusCode:").     builder.append(statusCode).     builder.append("}").     return builder.toString(). }

@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;12;;@Override public Statement apply(Statement base, Description description) {     try {         DockerClientFactory.instance().client().     } catch (Throwable ex) {         return new SkipStatement().     }     this.container = this.containerFactory.get().     return ((FailureDetectingExternalResource) this.container).apply(base, description). }
-false;public;0;3;;public int getMappedPort() {     return this.container.getMappedPort(this.port). }
-false;protected;0;3;;protected GenericContainer<?> getContainer() {     return this.container. }
-false;public;0;5;;@Override public void evaluate() {     throw new AssumptionViolatedException("Could not find a valid Docker environment."). }

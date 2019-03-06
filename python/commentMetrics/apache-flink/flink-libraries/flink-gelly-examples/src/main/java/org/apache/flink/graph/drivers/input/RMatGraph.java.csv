@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getIdentity() {     return getName() + " (s" + scale + "e" + edgeFactor + getSimplifyShortString() + ")". }
-false;protected;0;4;;@Override protected long vertexCount() {     return 1L << scale.getValue(). }
-false;public;1;14;;@Override public Graph<LongValue, NullValue, NullValue> generate(ExecutionEnvironment env) throws Exception {     RandomGenerableFactory<JDKRandomGenerator> rnd = new JDKRandomGeneratorFactory(seed.getValue()).     long vertexCount = 1L << scale.getValue().     long edgeCount = vertexCount * edgeFactor.getValue().     return new org.apache.flink.graph.generator.RMatGraph<>(env, rnd, vertexCount, edgeCount).setConstants(a.getValue().floatValue(), b.getValue().floatValue(), c.getValue().floatValue()).setNoise(noiseEnabled.getValue(), noise.getValue().floatValue()).setParallelism(parallelism.getValue().intValue()).generate(). }

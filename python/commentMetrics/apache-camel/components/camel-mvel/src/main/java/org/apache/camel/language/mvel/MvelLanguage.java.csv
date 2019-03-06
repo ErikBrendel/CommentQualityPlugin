@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;public Predicate createPredicate(String expression) {     expression = loadResource(expression).     return new MvelExpression(this, expression, Boolean.class). }
-false;public;1;4;;public Expression createExpression(String expression) {     expression = loadResource(expression).     return new MvelExpression(this, expression, Object.class). }

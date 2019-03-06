@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,static;0;3;/**  * Clear static state.  */ ;/**  * Clear static state.  */ public static void reset() {     factoryBeanInstanceCount = 0. }
-false;public,static;0;3;;public static int getFactoryBeanInstanceCount() {     return factoryBeanInstanceCount. }
-false;public;1;5;;public void setTestBean(TestBean tb) {     if (tb.getSpouse() == null) {         throw new IllegalStateException("TestBean needs to have spouse").     } }
-false;public;0;4;;@Override public Object getObject() {     return "myString". }
-false;public;0;4;;@Override public Class getObjectType() {     return String.class. }
-false;public;0;4;;@Override public boolean isSingleton() {     return true. }

@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public LoadBalanceDefinition getDefinition() {     return (LoadBalanceDefinition) super.getDefinition(). }
-false;public;0;5;;@Override public String getRef() {     CustomLoadBalancerDefinition def = (CustomLoadBalancerDefinition) getDefinition().getLoadBalancerType().     return def.getRef(). }
-false;public;0;4;;@Override public String getLoadBalancerClassName() {     return ObjectHelper.className(processor). }
-false;public;0;4;;@Override public Integer getSize() {     return processor.getProcessors().size(). }

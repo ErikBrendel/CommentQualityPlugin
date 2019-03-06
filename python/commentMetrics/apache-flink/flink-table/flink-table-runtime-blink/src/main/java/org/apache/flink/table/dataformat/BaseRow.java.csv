@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * Get the number of fields in the BaseRow.  *  * @return The number of fields in the BaseRow.  */ ;/**  * Get the number of fields in the BaseRow.  *  * @return The number of fields in the BaseRow.  */ int getArity().
-true;;0;1;/**  * The header represents the type of this Row. Now just used in streaming.  * Now there are two message: ACCUMULATE_MSG and RETRACT_MSG.  */ ;/**  * The header represents the type of this Row. Now just used in streaming.  * Now there are two message: ACCUMULATE_MSG and RETRACT_MSG.  */ byte getHeader().
-true;;1;1;/**  * Set the byte header.  */ ;/**  * Set the byte header.  */ void setHeader(byte header).

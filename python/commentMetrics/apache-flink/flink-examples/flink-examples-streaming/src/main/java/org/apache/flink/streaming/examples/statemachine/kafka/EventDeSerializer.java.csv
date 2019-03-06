@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;7;;@Override public byte[] serialize(Event evt) {     ByteBuffer byteBuffer = ByteBuffer.allocate(8).order(ByteOrder.LITTLE_ENDIAN).     byteBuffer.putInt(0, evt.sourceAddress()).     byteBuffer.putInt(4, evt.type().ordinal()).     return byteBuffer.array(). }
-false;public;1;7;;@Override public Event deserialize(byte[] message) throws IOException {     ByteBuffer buffer = ByteBuffer.wrap(message).order(ByteOrder.LITTLE_ENDIAN).     int address = buffer.getInt(0).     int typeOrdinal = buffer.getInt(4).     return new Event(EventType.values()[typeOrdinal], address). }
-false;public;1;4;;@Override public boolean isEndOfStream(Event nextElement) {     return false. }
-false;public;0;4;;@Override public TypeInformation<Event> getProducedType() {     return TypeInformation.of(Event.class). }

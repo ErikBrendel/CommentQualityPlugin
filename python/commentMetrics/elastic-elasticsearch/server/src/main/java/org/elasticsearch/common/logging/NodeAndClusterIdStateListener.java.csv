@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,static;2;6;/**  * Subscribes for the first cluster state update where nodeId and clusterId is present  * and sets these values in {@link NodeAndClusterIdConverter}.  */ ;/**  * Subscribes for the first cluster state update where nodeId and clusterId is present  * and sets these values in {@link NodeAndClusterIdConverter}.  */ public static void getAndSetNodeIdAndClusterId(ClusterService clusterService, ThreadContext threadContext) {     ClusterState clusterState = clusterService.state().     ClusterStateObserver observer = new ClusterStateObserver(clusterState, clusterService, null, logger, threadContext).     observer.waitForNextChange(new NodeAndClusterIdStateListener(), NodeAndClusterIdStateListener::isNodeAndClusterIdPresent). }
-false;private,static;1;3;;private static boolean isNodeAndClusterIdPresent(ClusterState clusterState) {     return getNodeId(clusterState) != null && getClusterUUID(clusterState) != null. }
-false;private,static;1;3;;private static String getClusterUUID(ClusterState state) {     return state.getMetaData().clusterUUID(). }
-false;private,static;1;3;;private static String getNodeId(ClusterState state) {     return state.getNodes().getLocalNodeId(). }
-false;public;1;8;;@Override public void onNewClusterState(ClusterState state) {     String nodeId = getNodeId(state).     String clusterUUID = getClusterUUID(state).     logger.debug("Received cluster state update. Setting nodeId=[{}] and clusterUuid=[{}]", nodeId, clusterUUID).     NodeAndClusterIdConverter.setNodeIdAndClusterId(nodeId, clusterUUID). }
-false;public;0;2;;@Override public void onClusterServiceClose() { }
-false;public;1;2;;@Override public void onTimeout(TimeValue timeout) { }

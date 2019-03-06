@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;3;3;;public String prepareQuery(String query, boolean allowNamedParameters, Exchange exchange) throws SQLException {     return query. }
-false;public;5;3;;public Iterator<?> createPopulateIterator(String query, String preparedQuery, int expectedParams, Exchange exchange, Object value) throws SQLException {     return null. }
-false;public;3;3;;public void populateStatement(PreparedStatement ps, Iterator<?> iterator, int expectedParams) throws SQLException { // noop }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@After public void cleanUp() {     if (this.context != null) {         this.context.close().     } }
-false;public;0;6;;@Test public void detectWebApplicationTypeToNone() {     SpringApplication application = new SpringApplication(ExampleConfig.class).     assertThat(application.getWebApplicationType()).isEqualTo(WebApplicationType.NONE). }
-false;public;0;7;;@Test public void specificApplicationContextClass() {     SpringApplication application = new SpringApplication(ExampleConfig.class).     application.setApplicationContextClass(StaticApplicationContext.class).     this.context = application.run().     assertThat(this.context).isInstanceOf(StaticApplicationContext.class). }

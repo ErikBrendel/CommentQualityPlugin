@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;5;;@Override protected boolean useJmx() {     // the bug was in the JMX so it must be enabled     return true. }
-false;public;0;8;;public void testFromWithNoOutputs() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMinimumMessageCount(2).     assertMockEndpointsSatisfied().     assertTrue("Counter should be 2 or higher", counter >= 2). }
-false;public;0;5;;public void configure() throws Exception {     context.addInterceptStrategy(new MyTracer()).     from("timer://kickoff_1?period=250").from("timer://kickoff_2?period=250&delay=10").to("mock:result"). }
-false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             context.addInterceptStrategy(new MyTracer()).             from("timer://kickoff_1?period=250").from("timer://kickoff_2?period=250&delay=10").to("mock:result").         }     }. }
-false;public;4;6;;public Processor wrapProcessorInInterceptors(CamelContext context, NamedNode definition, Processor target, Processor nextTarget) throws Exception {     assertNotNull(target).     counter++.     return target. }

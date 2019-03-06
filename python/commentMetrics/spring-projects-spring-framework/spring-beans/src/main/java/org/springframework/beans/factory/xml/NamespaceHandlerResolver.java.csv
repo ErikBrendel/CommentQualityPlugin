@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;1;2;/**  * Resolve the namespace URI and return the located {@link NamespaceHandler}  * implementation.  * @param namespaceUri the relevant namespace URI  * @return the located {@link NamespaceHandler} (may be {@code null})  */ ;/**  * Resolve the namespace URI and return the located {@link NamespaceHandler}  * implementation.  * @param namespaceUri the relevant namespace URI  * @return the located {@link NamespaceHandler} (may be {@code null})  */ @Nullable NamespaceHandler resolve(String namespaceUri).

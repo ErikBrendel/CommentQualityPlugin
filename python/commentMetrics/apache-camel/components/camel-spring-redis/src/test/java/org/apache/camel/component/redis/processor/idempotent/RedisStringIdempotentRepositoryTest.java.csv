@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Before public void setUp() throws Exception {     when(redisTemplate.opsForValue()).thenReturn(valueOperations).     when(valueOperations.getOperations()).thenReturn(redisOperations).     idempotentRepository = new RedisStringIdempotentRepository(redisTemplate, REPOSITORY).     idempotentRepository.setExpiry(1000L). }
-false;public;0;7;;@Test public void shouldAddKey() {     idempotentRepository.add(KEY).     verify(valueOperations).setIfAbsent(idempotentRepository.createRedisKey(KEY), KEY).     verify(redisOperations).expire(idempotentRepository.createRedisKey(KEY), 1000L, TimeUnit.SECONDS). }
-false;public;0;5;;@Test public void shoulCheckForMembers() {     idempotentRepository.contains(KEY).     verify(valueOperations).get(idempotentRepository.createRedisKey(KEY)). }
-false;public;0;5;;@Test public void shouldReturnProcessorName() {     String processorName = idempotentRepository.getProcessorName().     assertEquals(REPOSITORY, processorName). }

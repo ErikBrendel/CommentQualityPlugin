@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;16;;@Before public void setUp() throws Exception {     if (!aggrStateDesc.isSerializerInitialized()) {         aggrStateDesc.initializeSerializerUnlessSet(new ExecutionConfig()).     }     final String initValue = "42".     ByteArrayOutputStream out = new ByteArrayOutputStream().     aggrStateDesc.getSerializer().serialize(initValue, new DataOutputViewStreamWrapper(out)).     aggrState = ImmutableAggregatingState.createState(aggrStateDesc, out.toByteArray()). }
-false;public;0;7;;@Test(expected = UnsupportedOperationException.class) public void testUpdate() throws Exception {     String value = aggrState.get().     assertEquals("42", value).     aggrState.add(54L). }
-false;public;0;7;;@Test(expected = UnsupportedOperationException.class) public void testClear() throws Exception {     String value = aggrState.get().     assertEquals("42", value).     aggrState.clear(). }
-false;public;0;4;;@Override public String createAccumulator() {     return "". }
-false;public;2;5;;@Override public String add(Long value, String accumulator) {     accumulator += ", " + value.     return accumulator. }
-false;public;1;4;;@Override public String getResult(String accumulator) {     return accumulator. }
-false;public;2;4;;@Override public String merge(String a, String b) {     return a + ", " + b. }

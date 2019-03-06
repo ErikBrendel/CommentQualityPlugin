@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;3;;protected CamelContext createCamelContext() throws Exception {     return createSpringCamelContext(this, "org/apache/camel/spring/impl/transformer/SpringTransformerRouteTest.xml"). }
-false;public;1;11;;public void process(Exchange exchange) {     Object input = exchange.getIn().getBody().     if (input instanceof XOrderResponse) {         LOG.info("Endpoint: XOrderResponse -> XML").         exchange.getIn().setBody("<XOrderResponse/>").     } else {         assertEquals("<XOrder/>", input).         LOG.info("Endpoint: XML -> XOrder").         exchange.getIn().setBody(new XOrder()).     } }

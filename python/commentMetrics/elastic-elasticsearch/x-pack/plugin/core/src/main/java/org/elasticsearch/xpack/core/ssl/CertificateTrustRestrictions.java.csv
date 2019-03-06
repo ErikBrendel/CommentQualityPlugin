@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;3;/**  * @return The names (X509 certificate subjectAlternateNames) of the nodes that are  * allowed to connect to this cluster (for the targeted interface) .  */ ;/**  * @return The names (X509 certificate subjectAlternateNames) of the nodes that are  * allowed to connect to this cluster (for the targeted interface) .  */ Set<Predicate<String>> getTrustedNames() {     return Collections.unmodifiableSet(trustedNames). }
-false;public;0;4;;@Override public String toString() {     return "{trustedNames=" + trustedNames + '}'. }

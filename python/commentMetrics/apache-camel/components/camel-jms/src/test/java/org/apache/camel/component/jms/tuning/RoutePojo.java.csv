@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;8;;@Consume(uri = "activemq:queue:inbox?concurrentConsumers=10") @RecipientList public String listen(Exchange exchange) {     topic.send(exchange).     String type = exchange.getIn().getHeader("type", String.class).     return "direct:" + type. }

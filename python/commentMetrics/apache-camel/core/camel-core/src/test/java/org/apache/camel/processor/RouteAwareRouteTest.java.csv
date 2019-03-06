@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void testRouteAware() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("foo").     template.sendBody("direct:start", "Hello World").     assertMockEndpointsSatisfied(). }
-false;public;0;6;;@Override public void configure() throws Exception {     from("direct:start").routeId("foo").process(new MyProcessor()).to("mock:result"). }
-false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").routeId("foo").process(new MyProcessor()).to("mock:result").         }     }. }
-false;public;1;4;;@Override public void process(Exchange exchange) throws Exception {     exchange.getIn().setBody(route.getId()). }
-false;public;1;4;;@Override public void setRoute(Route route) {     this.route = route. }
-false;public;0;4;;@Override public Route getRoute() {     return route. }
-false;protected;0;4;;@Override protected void doStart() throws Exception { // noop }
-false;protected;0;4;;@Override protected void doStop() throws Exception { // noop }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,synchronized;1;3;/**  * Records a failure connecting to {@code failedRoute}.  */ ;/**  * Records a failure connecting to {@code failedRoute}.  */ public synchronized void failed(Route failedRoute) {     failedRoutes.add(failedRoute). }
-true;public,synchronized;1;3;/**  * Records success connecting to {@code route}.  */ ;/**  * Records success connecting to {@code route}.  */ public synchronized void connected(Route route) {     failedRoutes.remove(route). }
-true;public,synchronized;1;3;/**  * Returns true if {@code route} has failed recently and should be avoided.  */ ;/**  * Returns true if {@code route} has failed recently and should be avoided.  */ public synchronized boolean shouldPostpone(Route route) {     return failedRoutes.contains(route). }

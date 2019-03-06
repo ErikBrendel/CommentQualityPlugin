@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;public void afterPropertiesSet() throws Exception {     // lets add some expectations     matched.expectedMessageCount(1).     notMatched.expectedMessageCount(0). }
-false;public;0;6;;public void assertEndpointsValid() throws Exception {     // now lets perform some assertions that the test worked as we expect     Assert.assertNotNull("Should have a matched endpoint", matched).     Assert.assertNotNull("Should have a notMatched endpoint", notMatched).     MockEndpoint.assertIsSatisfied(matched, notMatched). }

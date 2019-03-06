@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;17;;@Override public void configure() throws Exception {     from("timer:foo").choice().when(header("foo")).to("log:foo").endChoice().when(header("bar")).to("log:bar").to("mock:bar").endChoice().otherwise().to("log:other").to("mock:other").end().to("log:end"). }

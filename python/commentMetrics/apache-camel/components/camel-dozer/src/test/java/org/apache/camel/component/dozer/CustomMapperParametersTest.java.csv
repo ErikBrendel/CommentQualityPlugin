@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Before public void setup() {     customMapper = new CustomMapper(new DefaultClassResolver()). }
-false;public;0;6;;@Test public void shouldExecuteCustomFunctionWithArguments() throws Exception {     customMapper.setParameter(MapperWithMultiParmMethod.class.getName() + ",test,java.lang.Integer=12,java.lang.Integer=20").     Object result = customMapper.mapCustom("JeremiahWasABullfrog", String.class).     Assert.assertEquals("Bullfrog", result). }
-false;public;0;6;;@Test public void shouldExecuteCustomFunctionWithVariableArguments() throws Exception {     customMapper.setParameter(MapperWithMultiParmMethod.class.getName() + ",add,java.lang.Integer=12,java.lang.Integer=20").     Object result = customMapper.mapCustom("JeremiahWasABullfrog", String.class).     Assert.assertEquals(32L, result). }
-false;public;2;7;;public Object add(String source, Integer... operands) {     long sum = 0L.     for (Integer operand : operands) {         sum += operand.     }     return sum. }
-false;public;3;3;;public Object test(String source, Integer beginindex, Integer endindex) {     return source.substring(beginindex.intValue(), endindex.intValue()). }

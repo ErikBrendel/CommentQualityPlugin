@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;1;6;/**  * Object payload contained in Exchange  * Exchange Header and Body contains the moved path  * @param exchange  */ ;/**  * Object payload contained in Exchange  * Exchange Header and Body contains the moved path  * @param exchange  */ @Override public void populateExchange(Exchange exchange) {     String movedPath = (String) resultEntries.     exchange.getIn().setHeader(AtmosResultHeader.MOVED_PATH.name(), movedPath).     exchange.getIn().setBody(movedPath). }

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;10;;@Override protected void populateList(Object feed) throws Exception {     if (list == null) {         list = ((SyndFeed) feed).getEntries().         if (endpoint.isSortEntries()) {             sortEntries().         }         entryIndex = list.size() - 1.     } }
-false;protected;0;4;;@SuppressWarnings("unchecked") protected void sortEntries() {     Collections.sort(list, new RssDateComparator()). }
-false;protected;0;8;;@Override protected Object createFeed() throws Exception {     if (ObjectHelper.isEmpty(endpoint.getUsername()) || ObjectHelper.isEmpty(endpoint.getPassword())) {         return RssUtils.createFeed(endpoint.getFeedUri(), RssEntryPollingConsumer.class.getClassLoader()).     } else {         return RssUtils.createFeed(endpoint.getFeedUri(), endpoint.getUsername(), endpoint.getPassword(), RssEntryPollingConsumer.class.getClassLoader()).     } }
-false;protected;0;4;;@Override protected void resetList() {     list = null. }
-false;protected;1;3;;protected EntryFilter createEntryFilter(Date lastUpdate) {     return new UpdatedDateFilter(lastUpdate). }

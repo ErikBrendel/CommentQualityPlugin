@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Override @Before public void setUp() throws Exception {     deleteDirectory(dir).     super.setUp(). }
-false;public;0;8;;@Test public void testPathWithDollar() throws Exception {     getMockEndpoint("mock:result").expectedMessageCount(1).     template.sendBodyAndHeader("file:" + dir, "Hello World", Exchange.FILE_NAME, "hello.txt").     assertMockEndpointsSatisfied(). }
-false;public;0;4;;@Override public void configure() throws Exception {     from("file:" + dir + "?initialDelay=0&delay=10").to("mock:result"). }
-false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("file:" + dir + "?initialDelay=0&delay=10").to("mock:result").         }     }. }

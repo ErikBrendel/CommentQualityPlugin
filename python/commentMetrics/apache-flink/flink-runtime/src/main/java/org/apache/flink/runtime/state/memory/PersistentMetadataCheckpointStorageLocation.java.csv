@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;// ------------------------------------------------------------------------ @Override public CheckpointMetadataOutputStream createMetadataOutputStream() throws IOException {     return new FsCheckpointMetadataOutputStream(fileSystem, metadataFilePath, checkpointDirectory). }
-false;public;0;6;;@Override public void disposeOnFailure() throws IOException {     // on a failure, no chunk in the checkpoint directory needs to be saved, so     // we can drop it as a whole     fileSystem.delete(checkpointDirectory, true). }
-false;public;0;4;;@Override public CheckpointStorageLocationReference getLocationReference() {     return CheckpointStorageLocationReference.getDefault(). }

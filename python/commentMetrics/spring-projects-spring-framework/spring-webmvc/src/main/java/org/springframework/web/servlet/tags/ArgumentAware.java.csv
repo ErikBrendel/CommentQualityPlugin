@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;1;1;/**  * Callback hook for nested spring:argument tags to pass their value  * to the parent tag.  * @param argument the result of the nested {@code spring:argument} tag  */ ;/**  * Callback hook for nested spring:argument tags to pass their value  * to the parent tag.  * @param argument the result of the nested {@code spring:argument} tag  */ void addArgument(@Nullable Object argument) throws JspTagException.

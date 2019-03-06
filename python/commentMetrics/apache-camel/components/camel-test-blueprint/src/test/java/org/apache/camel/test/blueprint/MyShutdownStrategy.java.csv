@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;8;;@Override public void setTimeout(long timeout) {     // and we want to unit test that we can change that to 5 seconds     if (timeout == 5) {         super.setTimeout(timeout).     } }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;9;;@Override protected SSLContextClientParameters createInstance() {     SSLContextClientParameters newInstance = new SSLContextClientParameters().     newInstance.setCamelContext(getCamelContext()).     if (sniHostNamesDefinition != null) {         newInstance.addAllSniHostNames(sniHostNamesDefinition.getSniHostName()).     }     return newInstance. }
-false;public;0;4;;@Override public Class<SSLContextClientParameters> getObjectType() {     return SSLContextClientParameters.class. }
-false;public;0;3;;public SNIHostNamesDefinition getSniHostNamesDefinition() {     return sniHostNamesDefinition. }

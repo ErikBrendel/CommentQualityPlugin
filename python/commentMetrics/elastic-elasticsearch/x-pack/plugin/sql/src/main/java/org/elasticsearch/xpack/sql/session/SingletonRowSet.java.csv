@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected boolean doHasCurrent() {     return true. }
-false;protected;0;4;;@Override protected boolean doNext() {     return false. }
-false;protected;1;4;;@Override protected Object getColumn(int index) {     return values[index]. }
-false;protected;0;4;;@Override protected void doReset() { // no-op }
-false;public;0;4;;@Override public int size() {     return 1. }
-false;public;0;4;;@Override public Cursor nextPageCursor() {     return Cursor.EMPTY. }
-false;public;0;4;;@Override public Schema schema() {     return schema. }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;7;;public void process(SearchHit hit) throws IOException {     jsonBuilder.startObject().     for (ExtractedField field : fields.getAllFields()) {         writeKeyValue(field.getAlias(), field.value(hit)).     }     jsonBuilder.endObject(). }
-false;private;2;10;;private void writeKeyValue(String key, Object... values) throws IOException {     if (values.length == 0) {         return.     }     if (values.length == 1) {         jsonBuilder.field(key, values[0]).     } else {         jsonBuilder.array(key, values).     } }
-false;public;0;4;;@Override public void close() {     jsonBuilder.close(). }

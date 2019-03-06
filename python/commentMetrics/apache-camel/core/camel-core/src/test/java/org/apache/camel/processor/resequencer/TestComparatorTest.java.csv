@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Before public void setUp() {     c = new TestComparator().     e1 = new TestObject(3).     e2 = new TestObject(4).     e3 = new TestObject(7). }
-false;public;0;3;;@After public void tearDown() throws Exception { }
-false;public;0;8;;@Test public void testPredecessor() {     assertTrue(c.predecessor(e1, e2)).     assertFalse(c.predecessor(e2, e1)).     assertFalse(c.predecessor(e1, e3)).     assertFalse(c.predecessor(e3, e1)).     assertFalse(c.predecessor(e3, e3)). }
-false;public;0;8;;@Test public void testSuccessor() {     assertTrue(c.successor(e2, e1)).     assertFalse(c.successor(e1, e2)).     assertFalse(c.successor(e3, e1)).     assertFalse(c.successor(e1, e3)).     assertFalse(c.successor(e3, e3)). }
-false;public;0;8;;@Test public void testCompare() {     assertTrue(c.compare(e1, e2) < 0).     assertTrue(c.compare(e2, e1) > 0).     assertTrue(c.compare(e1, e3) < 0).     assertTrue(c.compare(e3, e1) > 0).     assertTrue(c.compare(e3, e3) == 0). }

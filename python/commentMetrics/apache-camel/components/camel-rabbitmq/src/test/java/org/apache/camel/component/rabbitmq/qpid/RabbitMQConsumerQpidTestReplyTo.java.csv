@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;4;;@BeforeClass public static void startBroker() throws Exception {     systemLauncher.startup(createQpidSystemConfig()). }
-false;public,static;0;4;;@AfterClass public static void stopBroker() {     systemLauncher.shutdown(). }
-false;public;0;7;;@Override @Before public void setUpRabbitMQ() throws Exception {     super.setUpRabbitMQ().     channel.queueDeclare(QUEUE, false, false, true, null). }

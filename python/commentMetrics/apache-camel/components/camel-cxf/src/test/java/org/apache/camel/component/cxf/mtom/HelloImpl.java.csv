@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;18;;public void detail(Holder<byte[]> photo, Holder<Image> image) {     MtomTestHelper.assertEquals(MtomTestHelper.REQ_PHOTO_DATA, photo.value).     Assert.assertNotNull(image.value).     if (image.value instanceof BufferedImage) {         Assert.assertEquals(41, ((BufferedImage) image.value).getWidth()).         Assert.assertEquals(39, ((BufferedImage) image.value).getHeight()).     }     try {         image.value = ImageIO.read(getClass().getResource("/Splash.jpg")).     } catch (IOException e) {         throw new RuntimeException(e).     }     photo.value = MtomTestHelper.RESP_PHOTO_DATA. }
-false;public;1;3;;public void echoData(Holder<byte[]> data) {     throw new UnsupportedOperationException(). }

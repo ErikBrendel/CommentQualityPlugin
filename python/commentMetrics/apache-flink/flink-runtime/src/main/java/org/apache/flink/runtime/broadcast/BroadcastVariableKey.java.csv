@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;// --------------------------------------------------------------------------------------------- public JobVertexID getVertexId() {     return vertexId. }
-false;public;0;3;;public String getName() {     return name. }
-false;public;0;3;;public int getSuperstep() {     return superstep. }
-false;public;0;6;;// --------------------------------------------------------------------------------------------- @Override public int hashCode() {     return 31 * superstep + 47 * name.hashCode() + 83 * vertexId.hashCode(). }
-false;public;1;12;;@Override public boolean equals(Object obj) {     if (obj != null && obj.getClass() == BroadcastVariableKey.class) {         BroadcastVariableKey other = (BroadcastVariableKey) obj.         return this.superstep == other.superstep && this.name.equals(other.name) && this.vertexId.equals(other.vertexId).     } else {         return false.     } }
-false;public;0;4;;@Override public String toString() {     return vertexId + " \"" + name + "\" (" + superstep + ')'. }

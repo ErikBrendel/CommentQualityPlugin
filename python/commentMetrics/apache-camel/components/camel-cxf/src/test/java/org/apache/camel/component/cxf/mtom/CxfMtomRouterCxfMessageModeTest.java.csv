@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;13;;@Override protected Hello getPort() {     URL wsdl = getClass().getResource("/mtom.wsdl").     assertNotNull("WSDL is null", wsdl).     HelloService service = new HelloService(wsdl, HelloService.SERVICE).     assertNotNull("Service is null ", service).     Hello port = service.getHelloPort().     ((BindingProvider) port).getRequestContext().put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY, "http://localhost:" + port1 + "/CxfMtomRouterCxfMessageModeTest/jaxws-mtom/hello").     return port. }

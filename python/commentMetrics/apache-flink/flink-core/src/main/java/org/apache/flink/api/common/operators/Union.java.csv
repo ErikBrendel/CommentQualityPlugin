@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;4;7;;@Override protected List<T> executeOnCollections(List<T> inputData1, List<T> inputData2, RuntimeContext runtimeContext, ExecutionConfig executionConfig) {     ArrayList<T> result = new ArrayList<T>(inputData1.size() + inputData2.size()).     result.addAll(inputData1).     result.addAll(inputData2).     return result. }

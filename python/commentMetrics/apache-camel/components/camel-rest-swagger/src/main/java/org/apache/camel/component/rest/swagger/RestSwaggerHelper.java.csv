@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;2;3;;public static String isMediaRange(final String given, final String name) {     return notEmpty(given, name). }
-false;static;1;12;;static String isHostParam(final String given) {     final String hostUri = StringHelper.notEmpty(given, "host").     final Matcher matcher = HOST_PATTERN.matcher(given).     if (!matcher.matches()) {         throw new IllegalArgumentException("host must be an absolute URI (e.g. http://api.example.com), given: `" + hostUri + "`").     }     return hostUri. }

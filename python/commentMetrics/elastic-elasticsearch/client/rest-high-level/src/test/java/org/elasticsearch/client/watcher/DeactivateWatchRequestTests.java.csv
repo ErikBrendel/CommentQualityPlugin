@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;public void testNullId() {     NullPointerException actual = expectThrows(NullPointerException.class, () -> new DeactivateWatchRequest(null)).     assertNotNull(actual).     assertThat(actual.getMessage(), is("watch id is missing")). }
-false;public;0;6;;public void testInvalidId() {     IllegalArgumentException actual = expectThrows(IllegalArgumentException.class, () -> new DeactivateWatchRequest("Watch id has spaces")).     assertNotNull(actual).     assertThat(actual.getMessage(), is("watch id contains whitespace")). }

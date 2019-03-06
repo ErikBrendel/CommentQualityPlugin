@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;14;;@Test public void createConcurrentConsumers() throws Exception {     int bodyCount = 5.     mock.expectedBodiesReceived("test").     mock.expectedMessageCount(bodyCount).     for (int i = 0. i < bodyCount. i++) {         template.sendBody("hazelcast-seda:foo?concurrentConsumers=4", "test").     }     assertMockEndpointsSatisfied().     mock.reset(). }
-false;public;0;4;;@Override public void configure() throws Exception {     from("hazelcast-seda:foo?concurrentConsumers=4").threads(6).to("mock:result"). }
-false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("hazelcast-seda:foo?concurrentConsumers=4").threads(6).to("mock:result").         }     }. }

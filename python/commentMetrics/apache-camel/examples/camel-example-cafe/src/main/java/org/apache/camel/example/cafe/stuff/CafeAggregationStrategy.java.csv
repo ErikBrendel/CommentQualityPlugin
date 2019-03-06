@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;12;;@SuppressWarnings("unchecked") public Exchange aggregate(Exchange oldExchange, Exchange newExchange) {     List<Drink> drinks.     if (oldExchange == null) {         drinks = new ArrayList<>().     } else {         drinks = (List<Drink>) oldExchange.getIn().getBody().     }     drinks.add(newExchange.getIn().getBody(Drink.class)).     newExchange.getIn().setBody(drinks).     return newExchange. }

@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public long getAllowedLateness() {     return allowedLateness. }
-false;public;0;3;;public int getLateEventsWithinLateness() {     return lateEventsWithinLateness. }
-false;public;0;3;;public int getLateEventsAfterLateness() {     return lateEventsAfterLateness. }
-false;public;0;3;;public long getMaxAdditionalSessionGap() {     return maxAdditionalSessionGap. }
-false;public,static;4;11;;public static GeneratorConfiguration of(long allowedLateness, int lateEventsPerSessionWithinLateness, int lateEventsPerSessionOutsideLateness, long maxAdditionalSessionGap) {     return new GeneratorConfiguration(allowedLateness, lateEventsPerSessionWithinLateness, lateEventsPerSessionOutsideLateness, maxAdditionalSessionGap). }
-false;public;0;9;;@Override public String toString() {     return "GeneratorConfiguration{" + "allowedLateness=" + allowedLateness + ", lateEventsWithinLateness=" + lateEventsWithinLateness + ", lateEventsAfterLateness=" + lateEventsAfterLateness + ", maxAdditionalSessionGap=" + maxAdditionalSessionGap + '}'. }

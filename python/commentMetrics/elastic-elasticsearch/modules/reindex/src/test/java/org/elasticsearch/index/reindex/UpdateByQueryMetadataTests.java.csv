@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;public void testRoutingIsCopied() {     IndexRequest index = new IndexRequest().     action().copyMetadata(AbstractAsyncBulkByScrollAction.wrap(index), doc().setRouting("foo")).     assertEquals("foo", index.routing()). }
-false;protected;0;4;;@Override protected TestAction action() {     return new TestAction(). }
-false;protected;0;4;;@Override protected UpdateByQueryRequest request() {     return new UpdateByQueryRequest(). }
-false;public;2;5;;@Override public AbstractAsyncBulkByScrollAction.RequestWrapper<?> copyMetadata(AbstractAsyncBulkByScrollAction.RequestWrapper<?> request, Hit doc) {     return super.copyMetadata(request, doc). }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;11;;@Bean @ConditionalOnMissingBean public ConfigurationPropertiesReportEndpoint configurationPropertiesReportEndpoint(ConfigurationPropertiesReportEndpointProperties properties) {     ConfigurationPropertiesReportEndpoint endpoint = new ConfigurationPropertiesReportEndpoint().     String[] keysToSanitize = properties.getKeysToSanitize().     if (keysToSanitize != null) {         endpoint.setKeysToSanitize(keysToSanitize).     }     return endpoint. }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;10;;@Override public Status needsField(FieldInfo fieldInfo) throws IOException {     if (super.needsField(fieldInfo) == Status.YES) {         return Status.YES.     }     if (fields.contains(fieldInfo.name)) {         return Status.YES.     }     return Status.NO. }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;2;10;;@Override protected void channelRead0(ChannelHandlerContext ctx, RoutedRequest routed) throws Exception {     HttpResponse response = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, HttpResponseStatus.OK, Unpooled.wrappedBuffer(encodedText)).     response.headers().set(HttpHeaders.Names.CONTENT_LENGTH, encodedText.length).     response.headers().set(HttpHeaders.Names.CONTENT_TYPE, "text/plain").     KeepAliveWrite.flush(ctx, routed.getRequest(), response). }

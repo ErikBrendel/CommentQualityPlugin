@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;4;;@Override public PropertySource<?> createPropertySource(@Nullable String name, EncodedResource resource) throws IOException {     return (name != null ? new ResourcePropertySource(name, resource) : new ResourcePropertySource(resource)). }

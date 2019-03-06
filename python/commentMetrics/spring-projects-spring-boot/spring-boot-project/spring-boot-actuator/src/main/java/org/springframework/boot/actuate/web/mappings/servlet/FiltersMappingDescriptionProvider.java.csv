@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;11;;@Override public List<FilterRegistrationMappingDescription> describeMappings(ApplicationContext context) {     if (!(context instanceof WebApplicationContext)) {         return Collections.emptyList().     }     return ((WebApplicationContext) context).getServletContext().getFilterRegistrations().values().stream().map(FilterRegistrationMappingDescription::new).collect(Collectors.toList()). }
-false;public;0;4;;@Override public String getMappingName() {     return "servletFilters". }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;public void suspend() throws Exception {     if (!context.getStatus().isStarted()) {         throw new IllegalArgumentException("CamelContext is not started").     }     context.getRouteController().suspendRoute(getRouteId()). }
-false;public;1;6;;public void suspend(long timeout) throws Exception {     if (!context.getStatus().isStarted()) {         throw new IllegalArgumentException("CamelContext is not started").     }     context.getRouteController().suspendRoute(getRouteId(), timeout, TimeUnit.SECONDS). }
-false;public;0;6;;public void resume() throws Exception {     if (!context.getStatus().isStarted()) {         throw new IllegalArgumentException("CamelContext is not started").     }     context.getRouteController().resumeRoute(getRouteId()). }

@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test(expected = IllegalArgumentException.class) public void testCtorWhereDtdEntityResolverIsNull() throws Exception {     new DelegatingEntityResolver(null, new NoOpEntityResolver()). }
-false;public;0;4;;@Test(expected = IllegalArgumentException.class) public void testCtorWhereSchemaEntityResolverIsNull() throws Exception {     new DelegatingEntityResolver(new NoOpEntityResolver(), null). }
-false;public;0;4;;@Test(expected = IllegalArgumentException.class) public void testCtorWhereEntityResolversAreBothNull() throws Exception {     new DelegatingEntityResolver(null, null). }
-false;public;2;4;;@Override public InputSource resolveEntity(String publicId, String systemId) {     return null. }

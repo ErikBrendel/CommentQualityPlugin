@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * Return the underlying native WebSocketSession.  */ ;/**  * Return the underlying native WebSocketSession.  */ Object getNativeSession().
-true;;1;2;/**  * Return the underlying native WebSocketSession, if available.  * @param requiredType the required type of the session  * @return the native session of the required type,  * or {@code null} if not available  */ ;/**  * Return the underlying native WebSocketSession, if available.  * @param requiredType the required type of the session  * @return the native session of the required type,  * or {@code null} if not available  */ @Nullable <T> T getNativeSession(@Nullable Class<T> requiredType).

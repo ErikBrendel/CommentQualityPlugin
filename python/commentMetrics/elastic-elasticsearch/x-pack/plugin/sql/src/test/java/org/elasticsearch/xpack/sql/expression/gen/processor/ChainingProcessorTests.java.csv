@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;3;;public static ChainingProcessor randomComposeProcessor() {     return new ChainingProcessor(randomProcessor(), randomProcessor()). }
-false;protected;0;4;;@Override protected NamedWriteableRegistry getNamedWriteableRegistry() {     return new NamedWriteableRegistry(Processors.getNamedWriteables()). }
-false;protected;0;4;;@Override protected ChainingProcessor createTestInstance() {     return randomComposeProcessor(). }
-false;protected;0;4;;@Override protected Reader<ChainingProcessor> instanceReader() {     return ChainingProcessor::new. }
-false;protected;1;10;;@Override protected ChainingProcessor mutateInstance(ChainingProcessor instance) throws IOException {     @SuppressWarnings("unchecked")     Supplier<ChainingProcessor> supplier = randomFrom(() -> new ChainingProcessor(instance.first(), randomValueOtherThan(instance.second(), () -> randomProcessor())), () -> new ChainingProcessor(randomValueOtherThan(instance.first(), () -> randomProcessor()), instance.second())).     return supplier.get(). }

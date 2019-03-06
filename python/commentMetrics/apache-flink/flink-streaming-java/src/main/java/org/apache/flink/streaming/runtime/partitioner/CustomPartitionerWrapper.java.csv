@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;11;;@Override public int selectChannel(SerializationDelegate<StreamRecord<T>> record) {     K key.     try {         key = keySelector.getKey(record.getInstance().getValue()).     } catch (Exception e) {         throw new RuntimeException("Could not extract key from " + record.getInstance(), e).     }     return partitioner.partition(key, numberOfChannels). }
-false;public;0;4;;@Override public StreamPartitioner<T> copy() {     return this. }
-false;public;0;4;;@Override public String toString() {     return "CUSTOM". }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;6;;@BeforeClass public static void setup() {     // clear the default permissions system property     // see AbstractXStreamWrapper.PERMISSIONS_PROPERTY_DEFAULT     XStreamTestUtils.setPermissionSystemProperty("*"). }
-false;public,static;0;4;;@AfterClass public static void cleanup() {     XStreamTestUtils.revertPermissionSystemProperty(). }
-false;public;0;9;;@Test @Override public void testNone() {     XStreamDataFormat xStreamDataFormat = new XStreamDataFormat().     XStream xStream = xStreamDataFormat.createXStream(context.getClassResolver(), context.getApplicationContextClassLoader()).     Object po = xStream.fromXML(XML_PURCHASE_ORDER).     assertNotNull(po). }

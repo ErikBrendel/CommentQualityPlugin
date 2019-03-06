@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * Reports an active connection.  */ ;/**  * Reports an active connection.  */ void reportActiveConnection().
-true;;0;1;/**  * Reports an inactive connection.  */ ;/**  * Reports an inactive connection.  */ void reportInactiveConnection().
-true;;0;1;/**  * Reports an incoming request.  */ ;/**  * Reports an incoming request.  */ void reportRequest().
-true;;1;1;/**  * Reports a successfully handled request.  *  * @param durationTotalMillis Duration of the request (in milliseconds).  */ ;/**  * Reports a successfully handled request.  *  * @param durationTotalMillis Duration of the request (in milliseconds).  */ void reportSuccessfulRequest(long durationTotalMillis).
-true;;0;1;/**  * Reports a failure during a request.  */ ;/**  * Reports a failure during a request.  */ void reportFailedRequest().

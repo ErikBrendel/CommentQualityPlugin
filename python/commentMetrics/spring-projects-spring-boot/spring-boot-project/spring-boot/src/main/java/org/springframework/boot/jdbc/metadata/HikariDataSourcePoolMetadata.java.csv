@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Override public Integer getActive() {     try {         return getHikariPool().getActiveConnections().     } catch (Exception ex) {         return null.     } }
-false;private;0;4;;private HikariPool getHikariPool() {     return (HikariPool) new DirectFieldAccessor(getDataSource()).getPropertyValue("pool"). }
-false;public;0;4;;@Override public Integer getMax() {     return getDataSource().getMaximumPoolSize(). }
-false;public;0;4;;@Override public Integer getMin() {     return getDataSource().getMinimumIdle(). }
-false;public;0;4;;@Override public String getValidationQuery() {     return getDataSource().getConnectionTestQuery(). }
-false;public;0;4;;@Override public Boolean getDefaultAutoCommit() {     return getDataSource().isAutoCommit(). }

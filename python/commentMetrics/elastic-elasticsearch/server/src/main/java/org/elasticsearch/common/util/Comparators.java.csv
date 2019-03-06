@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,static;3;9;/**  * Compare <code>d1</code> against <code>d2</code>, pushing {@value Double#NaN} at the bottom.  */ ;/**  * Compare <code>d1</code> against <code>d2</code>, pushing {@value Double#NaN} at the bottom.  */ public static int compareDiscardNaN(double d1, double d2, boolean asc) {     if (Double.isNaN(d1)) {         return Double.isNaN(d2) ? 0 : 1.     } else if (Double.isNaN(d2)) {         return -1.     } else {         return asc ? Double.compare(d1, d2) : Double.compare(d2, d1).     } }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected NodeInfo<ExtendedStats> info() {     return NodeInfo.create(this, ExtendedStats::new, field()). }
-false;public;1;7;;@Override public ExtendedStats replaceChildren(List<Expression> newChildren) {     if (newChildren.size() != 1) {         throw new IllegalArgumentException("expected [1] child but received [" + newChildren.size() + "]").     }     return new ExtendedStats(source(), newChildren.get(0)). }

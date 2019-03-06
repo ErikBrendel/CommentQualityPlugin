@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;3;;public void register(Class<?> clazz, TransactionAttribute txAttr) {     this.attributeMap.put(clazz, txAttr). }
-false;public;2;3;;public void register(Method method, TransactionAttribute txAttr) {     this.attributeMap.put(method, txAttr). }
-false;protected;1;4;;@Override protected TransactionAttribute findTransactionAttribute(Class<?> clazz) {     return this.attributeMap.get(clazz). }
-false;protected;1;4;;@Override protected TransactionAttribute findTransactionAttribute(Method method) {     return this.attributeMap.get(method). }

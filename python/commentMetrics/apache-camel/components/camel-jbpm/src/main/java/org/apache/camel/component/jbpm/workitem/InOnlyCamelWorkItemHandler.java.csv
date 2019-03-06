@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;3;4;;@Override protected void handleResponse(Exchange responseExchange, WorkItem workItem, WorkItemManager manager) { // no-op. There is no response for InOnly, so need to handle anything }
-false;protected;2;9;;@Override protected Exchange buildExchange(ProducerTemplate template, WorkItem workItem) {     return ExchangeBuilder.anExchange(template.getCamelContext()).withPattern(ExchangePattern.InOnly).withHeader("deploymentId", ((WorkItemImpl) workItem).getDeploymentId()).withHeader("processInstanceId", workItem.getProcessInstanceId()).withHeader("workItemId", workItem.getId()).withBody(workItem).build(). }

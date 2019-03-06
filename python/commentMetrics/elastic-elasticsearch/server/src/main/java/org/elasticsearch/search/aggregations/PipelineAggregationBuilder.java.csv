@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Return this aggregation's name.  */ ;/**  * Return this aggregation's name.  */ public String getName() {     return name. }
-true;public,final;0;3;/**  * Return the consumed buckets paths.  */ ;/**  * Return the consumed buckets paths.  */ public final String[] getBucketsPaths() {     return bucketsPaths. }
-true;protected,abstract;3;2;/**  * Internal: Validates the state of this factory (makes sure the factory is properly  * configured)  */ ;/**  * Internal: Validates the state of this factory (makes sure the factory is properly  * configured)  */ protected abstract void validate(AggregatorFactory<?> parent, Collection<AggregationBuilder> aggregationBuilders, Collection<PipelineAggregationBuilder> pipelineAggregatorBuilders).
-true;protected,abstract;0;1;/**  * Creates the pipeline aggregator  *  * @return The created aggregator  */ ;/**  * Creates the pipeline aggregator  *  * @return The created aggregator  */ protected abstract PipelineAggregator create() throws IOException.
-true;public,abstract;1;2;/**  * Associate metadata with this {@link PipelineAggregationBuilder}.  */ ;/**  * Associate metadata with this {@link PipelineAggregationBuilder}.  */ @Override public abstract PipelineAggregationBuilder setMetaData(Map<String, Object> metaData).
-false;public;1;4;;@Override public PipelineAggregationBuilder subAggregations(Builder subFactories) {     throw new IllegalArgumentException("Aggregation [" + name + "] cannot define sub-aggregations"). }
-false;public;0;4;;@Override public String toString() {     return Strings.toString(this, true, true). }

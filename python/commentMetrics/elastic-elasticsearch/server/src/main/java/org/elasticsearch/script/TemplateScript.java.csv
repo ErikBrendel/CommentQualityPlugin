@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Return the parameters for this script.  */ ;/**  * Return the parameters for this script.  */ public Map<String, Object> getParams() {     return params. }
-true;public,abstract;0;1;/**  * Run a template and return the resulting string, encoded in utf8 bytes.  */ ;/**  * Run a template and return the resulting string, encoded in utf8 bytes.  */ public abstract String execute().
-false;;1;1;;TemplateScript newInstance(Map<String, Object> params).

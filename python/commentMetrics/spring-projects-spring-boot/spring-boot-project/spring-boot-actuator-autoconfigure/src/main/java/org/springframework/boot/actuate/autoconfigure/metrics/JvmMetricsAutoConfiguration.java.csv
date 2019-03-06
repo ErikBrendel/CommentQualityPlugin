@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Bean @ConditionalOnMissingBean public JvmGcMetrics jvmGcMetrics() {     return new JvmGcMetrics(). }
-false;public;0;5;;@Bean @ConditionalOnMissingBean public JvmMemoryMetrics jvmMemoryMetrics() {     return new JvmMemoryMetrics(). }
-false;public;0;5;;@Bean @ConditionalOnMissingBean public JvmThreadMetrics jvmThreadMetrics() {     return new JvmThreadMetrics(). }
-false;public;0;5;;@Bean @ConditionalOnMissingBean public ClassLoaderMetrics classLoaderMetrics() {     return new ClassLoaderMetrics(). }

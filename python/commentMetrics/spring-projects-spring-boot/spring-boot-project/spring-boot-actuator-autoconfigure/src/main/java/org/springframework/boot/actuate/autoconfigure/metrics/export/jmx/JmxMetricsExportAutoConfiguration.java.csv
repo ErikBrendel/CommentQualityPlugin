@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;@Bean @ConditionalOnMissingBean public JmxConfig jmxConfig(JmxProperties jmxProperties) {     return new JmxPropertiesConfigAdapter(jmxProperties). }
-false;public;2;5;;@Bean @ConditionalOnMissingBean public JmxMeterRegistry jmxMeterRegistry(JmxConfig jmxConfig, Clock clock) {     return new JmxMeterRegistry(jmxConfig, clock). }

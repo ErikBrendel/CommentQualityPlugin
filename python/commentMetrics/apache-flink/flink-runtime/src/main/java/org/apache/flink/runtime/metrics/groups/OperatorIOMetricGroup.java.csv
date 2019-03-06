@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public Counter getNumRecordsInCounter() {     return numRecordsIn. }
-false;public;0;3;;public Counter getNumRecordsOutCounter() {     return numRecordsOut. }
-false;public;0;3;;public Meter getNumRecordsInRateMeter() {     return numRecordsInRate. }
-false;public;0;3;;public Meter getNumRecordsOutRate() {     return numRecordsOutRate. }
-true;public;0;5;/**  * Causes the containing task to use this operators input record counter.  */ ;/**  * Causes the containing task to use this operators input record counter.  */ public void reuseInputMetricsForTask() {     TaskIOMetricGroup taskIO = parentMetricGroup.parent().getIOMetricGroup().     taskIO.reuseRecordsInputCounter(this.numRecordsIn). }
-true;public;0;4;/**  * Causes the containing task to use this operators output record counter.  */ ;/**  * Causes the containing task to use this operators output record counter.  */ public void reuseOutputMetricsForTask() {     TaskIOMetricGroup taskIO = parentMetricGroup.parent().getIOMetricGroup().     taskIO.reuseRecordsOutputCounter(this.numRecordsOut). }

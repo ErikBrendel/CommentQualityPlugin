@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public void processElement1(StreamRecord<IN1> element) throws Exception {     output.collect(element.replace(userFunction.map1(element.getValue()))). }
-false;public;1;4;;@Override public void processElement2(StreamRecord<IN2> element) throws Exception {     output.collect(element.replace(userFunction.map2(element.getValue()))). }

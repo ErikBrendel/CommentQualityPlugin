@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Test public void testReuseConnection() throws Exception {     for (int i = 0. i < 20. i++) {         String out = template.requestBody(uri, "" + i, String.class).         assertEquals("Reply " + i, out).     } }
-false;public;0;4;;@Override public void configure() throws Exception {     from(uri).transform().simple("Reply ${body}"). }
-false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from(uri).transform().simple("Reply ${body}").         }     }. }

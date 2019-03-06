@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@PostConstruct public void logSomething() {     logger.debug("Sample Debug Message").     logger.trace("Sample Trace Message"). }
-false;public,static;1;3;;public static void main(String[] args) {     SpringApplication.run(SampleLogbackApplication.class, args).close(). }

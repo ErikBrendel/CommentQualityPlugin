@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;12;;@Deployment public static Archive<?> deployment() {     return ShrinkWrap.create(JavaArchive.class).addPackage(CdiCamelExtension.class.getPackage()).addAsResource(Paths.get("src/test/resources/camel-context-export.xml").toFile(), "imported-context.xml").addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml"). }
-false;public;1;6;;@Test public void sendMessageToService(ProducerTemplate service) {     String response = service.requestBody("direct:service", "request", String.class).     assertThat("Response is incorrect!", response, is(equalTo("test response to [request]"))). }
-false;public;1;6;;@Test public void invokeService(@Named("service") Service service) {     String response = service.service("request").     assertThat("Response is incorrect!", response, is(equalTo("test response to [request]"))). }
-false;public;1;4;;@Override public String service(String request) {     return "test response to [" + request + "]". }

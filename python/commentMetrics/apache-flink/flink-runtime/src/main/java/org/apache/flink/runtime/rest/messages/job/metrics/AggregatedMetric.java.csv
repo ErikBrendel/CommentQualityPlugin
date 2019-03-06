@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@JsonIgnore public String getId() {     return id. }
-false;public;0;4;;@JsonIgnore public Double getMin() {     return min. }
-false;public;0;4;;@JsonIgnore public Double getMax() {     return max. }
-false;public;0;4;;@JsonIgnore public Double getSum() {     return sum. }
-false;public;0;4;;@JsonIgnore public Double getAvg() {     return avg. }
-false;public;0;10;;@Override public String toString() {     return "AggregatedMetric{" + "id='" + id + '\'' + ", mim='" + min + '\'' + ", max='" + max + '\'' + ", avg='" + avg + '\'' + ", sum='" + sum + '\'' + '}'. }

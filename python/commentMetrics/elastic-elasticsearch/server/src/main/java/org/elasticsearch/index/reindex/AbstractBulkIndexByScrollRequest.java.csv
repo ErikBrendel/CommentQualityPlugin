@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Script to modify the documents before they are processed.  */ ;/**  * Script to modify the documents before they are processed.  */ public Script getScript() {     return script. }
-true;public;1;4;/**  * Script to modify the documents before they are processed.  */ ;/**  * Script to modify the documents before they are processed.  */ public Self setScript(@Nullable Script script) {     this.script = script.     return self(). }
-false;protected;3;4;;@Override protected Self doForSlice(Self request, TaskId slicingTask, int totalSlices) {     return super.doForSlice(request, slicingTask, totalSlices).setScript(script). }
-false;public;1;7;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     if (in.readBoolean()) {         script = new Script(in).     } }
-false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeOptionalWriteable(script). }
-false;protected;1;7;;@Override protected void searchToString(StringBuilder b) {     super.searchToString(b).     if (script != null) {         b.append(" updated with ").append(script).     } }

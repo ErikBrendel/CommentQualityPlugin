@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void contextLoads() {     ResponseEntity<String> entity = this.restTemplate.getForEntity("/test/hello", String.class).     assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.OK). }
-false;public;0;4;;@GET public String message() {     return "Hello World". }
-false;public;0;4;;@Bean public TestApplication testApplication() {     return new TestApplication(). }
-false;public;1;6;;@Bean public ResourceConfig conf(TestApplication app) {     ResourceConfig config = ResourceConfig.forApplication(app).     config.register(TestController.class).     return config. }

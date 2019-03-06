@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,abstract;1;1;;public abstract Result evaluate(Stats stats).
-true;;1;3;/**  * Checks if this condition is available in a specific version.  * This makes sure BWC when introducing a new condition which is not recognized by older versions.  */ ;/**  * Checks if this condition is available in a specific version.  * This makes sure BWC when introducing a new condition which is not recognized by older versions.  */ boolean includedInVersion(Version version) {     return true. }
-false;public;1;12;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     Condition<?> condition = (Condition<?>) o.     return Objects.equals(value, condition.value) && Objects.equals(name, condition.name). }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(value, name). }
-false;public,final;0;4;;@Override public final String toString() {     return "[" + name + ": " + value + "]". }
-false;public;0;3;;public T value() {     return value. }
-false;public;0;3;;public String name() {     return name. }

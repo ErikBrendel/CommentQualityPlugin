@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Before public void init() {     this.authentication = new UsernamePasswordAuthenticationToken("user", "password"). }
-false;public;0;4;;@After public void close() {     SecurityContextHolder.clearContext(). }
-false;public;0;5;;@Test public void secure() {     assertThatExceptionOfType(AuthenticationException.class).isThrownBy(() -> SampleSecureApplicationTests.this.service.secure()). }
-false;public;0;5;;@Test public void authenticated() {     SecurityContextHolder.getContext().setAuthentication(this.authentication).     assertThat("Hello Security").isEqualTo(this.service.secure()). }
-false;public;0;5;;@Test public void preauth() {     SecurityContextHolder.getContext().setAuthentication(this.authentication).     assertThat("Hello World").isEqualTo(this.service.authorized()). }
-false;public;0;6;;@Test public void denied() {     SecurityContextHolder.getContext().setAuthentication(this.authentication).     assertThatExceptionOfType(AccessDeniedException.class).isThrownBy(() -> SampleSecureApplicationTests.this.service.denied()). }

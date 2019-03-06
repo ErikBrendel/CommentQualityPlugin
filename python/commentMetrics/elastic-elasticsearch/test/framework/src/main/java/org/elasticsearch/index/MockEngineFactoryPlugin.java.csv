@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public List<Setting<?>> getSettings() {     return Arrays.asList(MockEngineSupport.DISABLE_FLUSH_ON_CLOSE, MockEngineSupport.WRAP_READER_RATIO). }
-false;public;1;4;;@Override public Optional<EngineFactory> getEngineFactory(final IndexSettings indexSettings) {     return Optional.of(new MockEngineFactory(getReaderWrapperClass())). }
-false;protected;0;3;;protected Class<? extends FilterDirectoryReader> getReaderWrapperClass() {     return AssertingDirectoryReader.class. }

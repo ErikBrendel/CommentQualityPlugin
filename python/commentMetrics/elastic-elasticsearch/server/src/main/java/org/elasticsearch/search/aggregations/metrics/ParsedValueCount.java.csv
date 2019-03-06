@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public double value() {     return getValue(). }
-false;public;0;4;;@Override public long getValue() {     return valueCount. }
-false;public;0;6;;@Override public String getValueAsString() {     // getValueAsString() using the raw formatter and converting the value to double     return Double.toString(valueCount). }
-false;public;0;4;;@Override public String getType() {     return ValueCountAggregationBuilder.NAME. }
-false;protected;2;5;;@Override protected XContentBuilder doXContentBody(XContentBuilder builder, Params params) throws IOException {     builder.field(CommonFields.VALUE.getPreferredName(), valueCount).     return builder. }
-false;public,static;2;5;;public static ParsedValueCount fromXContent(XContentParser parser, final String name) {     ParsedValueCount sum = PARSER.apply(parser, null).     sum.setName(name).     return sum. }

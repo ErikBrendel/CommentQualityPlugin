@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Override @Before public void setUp() throws Exception {     deleteDirectory("target/data/toformat").     super.setUp(). }
-false;public;0;9;;@Test public void testFormattedUri() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:" + result).     mock.expectedMessageCount(1).     template.sendBody("direct:start", "Hello World").     assertMockEndpointsSatisfied(). }
-false;public;0;8;;@Override public void configure() throws Exception {     // START SNIPPET: e1     from("direct:start").toF("file://%s?fileName=%s", path, name).     fromF("file://%s?include=%s", path, pattern).toF("mock:%s", result). // END SNIPPET: e1 }
-false;protected;0;13;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             // START SNIPPET: e1             from("direct:start").toF("file://%s?fileName=%s", path, name).             fromF("file://%s?include=%s", path, pattern).toF("mock:%s", result).         // END SNIPPET: e1         }     }. }

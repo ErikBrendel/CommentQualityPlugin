@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected Collection<Class<? extends Plugin>> nodePlugins() {     return Collections.singletonList(XPackPlugin.class). }
-false;protected;1;7;;@Override protected Settings nodeSettings(int nodeOrdinal) {     return Settings.builder().put(super.nodeSettings(nodeOrdinal)).put(XPackSettings.SQL_ENABLED.getKey(), false).build(). }
-false;protected;0;7;;@Override protected Settings transportClientSettings() {     return Settings.builder().put(super.transportClientSettings()).put(XPackSettings.SQL_ENABLED.getKey(), randomBoolean()).build(). }
-false;public;0;8;;public void testSqlAction() {     Throwable throwable = expectThrows(Throwable.class, () -> new SqlQueryRequestBuilder(client(), SqlQueryAction.INSTANCE).query("SHOW tables").get()).     assertThat(throwable.getMessage(), // disabled on client     either(startsWith("no proxy found for action")).or(// disabled on proxy client     startsWith("failed to find action")).or(// disabled on server     startsWith("No handler for action [indices:data/read/sql]"))). }

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;0;3;;XContentType getXContentType() {     return xContentType. }
-false;;0;3;;BytesReference getSource() {     return source. }
-false;protected;2;10;;@Override protected void innerToXContent(final XContentBuilder builder, final Params params) throws IOException {     if (source.length() > 0) {         try (InputStream stream = source.streamInput()) {             builder.rawField(getType(), stream, xContentType).         }     } else {         builder.nullField(getType()).     } }
-false;public;1;14;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     if (!super.equals(o)) {         return false.     }     BytesReferenceMonitoringDoc that = (BytesReferenceMonitoringDoc) o.     return xContentType == that.xContentType && Objects.equals(source, that.source). }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(super.hashCode(), xContentType, source). }

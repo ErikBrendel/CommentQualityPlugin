@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;7;;public static boolean invalidatesCache(String method) {     return method.equals("POST") || method.equals("PATCH") || method.equals("PUT") || method.equals("DELETE") || // WebDAV     method.equals("MOVE"). }
-false;public,static;1;7;;public static boolean requiresRequestBody(String method) {     return method.equals("POST") || method.equals("PUT") || method.equals("PATCH") || // WebDAV     method.equals("PROPPATCH") || // CalDAV/CardDAV (defined in WebDAV Versioning)     method.equals("REPORT"). }
-false;public,static;1;3;;public static boolean permitsRequestBody(String method) {     return !(method.equals("GET") || method.equals("HEAD")). }
-false;public,static;1;3;;public static boolean redirectsWithBody(String method) {     // (WebDAV) redirects should also maintain the request body     return method.equals("PROPFIND"). }
-false;public,static;1;4;;public static boolean redirectsToGet(String method) {     // All requests but PROPFIND should redirect to a GET request.     return !method.equals("PROPFIND"). }

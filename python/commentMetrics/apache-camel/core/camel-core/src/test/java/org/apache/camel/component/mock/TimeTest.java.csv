@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;11;;@Test public void testTimeSeconds() {     Time time = new Time(5, TimeUnit.SECONDS).     assertNotNull(time).     assertEquals(5, time.getNumber()).     assertEquals(TimeUnit.SECONDS, time.getTimeUnit()).     assertTrue(time.toMillis() > 0).     assertNotNull(time.toString()). }
-false;public;0;8;;@Test public void testTimeMinutes() {     Time time = new Time(3, TimeUnit.MINUTES).     assertNotNull(time).     assertTrue(time.toMillis() > 0).     assertNotNull(time.toString()). }
-false;public;0;8;;@Test public void testTimeHours() {     Time time = new Time(4, TimeUnit.HOURS).     assertNotNull(time).     assertTrue(time.toMillis() > 0).     assertNotNull(time.toString()). }
-false;public;0;8;;@Test public void testTimeDays() {     Time time = new Time(2, TimeUnit.DAYS).     assertNotNull(time).     assertTrue(time.toMillis() > 0).     assertNotNull(time.toString()). }

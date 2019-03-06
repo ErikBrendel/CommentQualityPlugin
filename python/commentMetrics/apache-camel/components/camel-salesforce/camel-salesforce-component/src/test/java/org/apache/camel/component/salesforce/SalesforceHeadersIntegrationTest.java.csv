@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Test public void shouldSendCustomHeaders() {     final Exchange exchange = template().request("salesforce:getGlobalObjects", (Processor) exchange1 -> {         exchange1.getIn().setHeader("Sforce-Limit-Info", Collections.singletonList("api-usage")).     }).     Assertions.assertThat(exchange.getOut().getBody(GlobalObjects.class)).isNotNull().     Assertions.assertThat(exchange.getOut().getHeader("Sforce-Limit-Info", String.class)).contains("api-usage="). }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void test() {     assertNotNull(context.hasService(CamelClusterService.class)).     assertTrue(context.getRoutePolicyFactories().stream().anyMatch(ClusteredRoutePolicyFactory.class::isInstance)). }
-false;protected;0;4;;// *********************** // Routes // *********************** @Override protected AbstractApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/component/zookeeper/cluster/SpringZooKeeperClusteredRouteConfigurationTest.xml"). }

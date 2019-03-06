@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getName() {     return "ccr_stats". }
-false;protected;2;5;;@Override protected RestChannelConsumer prepareRequest(final RestRequest restRequest, final NodeClient client) throws IOException {     final CcrStatsAction.Request request = new CcrStatsAction.Request().     return channel -> client.execute(CcrStatsAction.INSTANCE, request, new RestToXContentListener<>(channel)). }

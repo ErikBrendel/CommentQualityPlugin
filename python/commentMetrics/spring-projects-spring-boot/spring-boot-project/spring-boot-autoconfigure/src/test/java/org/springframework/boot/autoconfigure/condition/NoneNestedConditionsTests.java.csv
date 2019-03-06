@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void neither() {     AnnotationConfigApplicationContext context = load(Config.class).     assertThat(context.containsBean("myBean")).isTrue().     context.close(). }
-false;public;0;6;;@Test public void propertyA() {     AnnotationConfigApplicationContext context = load(Config.class, "a:a").     assertThat(context.containsBean("myBean")).isFalse().     context.close(). }
-false;public;0;6;;@Test public void propertyB() {     AnnotationConfigApplicationContext context = load(Config.class, "b:b").     assertThat(context.containsBean("myBean")).isFalse().     context.close(). }
-false;public;0;6;;@Test public void both() {     AnnotationConfigApplicationContext context = load(Config.class, "a:a", "b:b").     assertThat(context.containsBean("myBean")).isFalse().     context.close(). }
-false;private;2;7;;private AnnotationConfigApplicationContext load(Class<?> config, String... env) {     AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext().     TestPropertyValues.of(env).applyTo(context).     context.register(config).     context.refresh().     return context. }
-false;public;0;4;;@Bean public String myBean() {     return "myBean". }
-false;public;2;4;;@Override public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {     return false. }

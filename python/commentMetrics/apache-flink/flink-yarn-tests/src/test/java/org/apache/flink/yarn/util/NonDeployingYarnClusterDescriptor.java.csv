@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Override public String getClusterDescription() {     // return parent.getClusterDescription().     return "NonDeployingYarnClusterDescriptor". }
-false;protected;6;10;;@Override protected ClusterClient<ApplicationId> createYarnClusterClient(AbstractYarnClusterDescriptor descriptor, int numberTaskManagers, int slotsPerTaskManager, ApplicationReport report, Configuration flinkConfiguration, boolean perJobCluster) {     return clusterClient. }
-false;public;1;4;;@Override public ClusterClient<ApplicationId> retrieve(ApplicationId clusterId) {     return clusterClient. }
-false;public;1;4;;@Override public ClusterClient<ApplicationId> deploySessionCluster(ClusterSpecification clusterSpecification) {     return clusterClient. }
-false;public;3;5;;@Override public ClusterClient<ApplicationId> deployJobCluster(ClusterSpecification clusterSpecification, JobGraph jobGraph, boolean detached) {     return clusterClient. }
-false;public;1;3;;@Override public void killCluster(ApplicationId clusterId) { }
-false;protected;0;4;;@Override protected String getYarnSessionClusterEntrypoint() {     throw new UnsupportedOperationException("Not needed in test."). }
-false;protected;0;4;;@Override protected String getYarnJobClusterEntrypoint() {     throw new UnsupportedOperationException("Not needed in test."). }

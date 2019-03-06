@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;12;;@Deployment public static Archive<?> deployment() {     return ShrinkWrap.create(JavaArchive.class).addPackage(CdiCamelExtension.class.getPackage()).addAsResource(Paths.get("src/test/resources/camel-context-consumer.xml").toFile(), "imported-context.xml").addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml"). }
-false;public;0;10;;@Test public void verifyConsumerTemplate() {     assertThat("Consumer template Camel context is incorrect!", consumer.getCamelContext().getName(), is(equalTo("test"))).     assertThat("Consumer template cache size is incorrect!", consumer.getMaximumCacheSize(), is(equalTo(100))). }
-false;public;0;8;;@Test public void sendMessageToInbound() {     inbound.sendBody("seda:foo", "message").     String body = consumer.receiveBody("seda:foo", TimeUnit.SECONDS.toMillis(1L), String.class).     assertThat("Body is incorrect!", body, is(equalTo("message"))). }

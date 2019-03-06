@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public int getOrder() {     return Ordered.LOWEST_PRECEDENCE - 100. }
-false;public;1;10;;@Override public void afterTestMethod(TestContext testContext) throws Exception {     WebDriverScope scope = WebDriverScope.getFrom(testContext.getApplicationContext()).     if (scope != null && scope.reset()) {         testContext.setAttribute(DependencyInjectionTestExecutionListener.REINJECT_DEPENDENCIES_ATTRIBUTE, Boolean.TRUE).     } }

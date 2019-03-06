@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void testHome() {     assertOkResponse("/", "Hello World"). }
-false;public;0;4;;@Test public void testAsync() {     assertOkResponse("/async", "async: Hello World"). }
-false;public;0;15;;@Test public void testCompression() throws Exception {     HttpHeaders requestHeaders = new HttpHeaders().     requestHeaders.set("Accept-Encoding", "gzip").     HttpEntity<?> requestEntity = new HttpEntity<>(requestHeaders).     ResponseEntity<byte[]> entity = this.restTemplate.exchange("/", HttpMethod.GET, requestEntity, byte[].class).     assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.OK).     try (GZIPInputStream inflater = new GZIPInputStream(new ByteArrayInputStream(entity.getBody()))) {         assertThat(StreamUtils.copyToString(inflater, StandardCharsets.UTF_8)).isEqualTo("Hello World").     } }
-false;private;2;6;;private void assertOkResponse(String path, String body) {     ResponseEntity<String> entity = this.restTemplate.getForEntity(path, String.class).     assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.OK).     assertThat(entity.getBody()).isEqualTo(body). }

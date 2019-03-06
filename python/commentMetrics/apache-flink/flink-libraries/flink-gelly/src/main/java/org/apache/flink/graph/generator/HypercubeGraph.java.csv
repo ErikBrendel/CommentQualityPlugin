@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;14;;@Override public Graph<LongValue, NullValue, NullValue> generate() {     Preconditions.checkState(dimensions > 0).     GridGraph graph = new GridGraph(env).     for (int i = 0. i < dimensions. i++) {         graph.addDimension(2, false).     }     return graph.setParallelism(parallelism).generate(). }

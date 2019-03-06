@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected Class<JobIdsWithStatusOverview> getTestResponseClass() {     return JobIdsWithStatusOverview.class. }
-false;protected;0;9;;@Override protected JobIdsWithStatusOverview getTestResponseInstance() {     return new JobIdsWithStatusOverview(Arrays.asList(new JobIdsWithStatusOverview.JobIdWithStatus(JobID.generate(), JobStatus.RUNNING), new JobIdsWithStatusOverview.JobIdWithStatus(JobID.generate(), JobStatus.CANCELED), new JobIdsWithStatusOverview.JobIdWithStatus(JobID.generate(), JobStatus.CREATED), new JobIdsWithStatusOverview.JobIdWithStatus(JobID.generate(), JobStatus.FAILED), new JobIdsWithStatusOverview.JobIdWithStatus(JobID.generate(), JobStatus.RESTARTING))). }

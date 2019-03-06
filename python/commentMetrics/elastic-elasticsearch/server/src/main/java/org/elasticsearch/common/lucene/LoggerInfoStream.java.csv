@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;4;;@Override public void message(String component, String message) {     getLogger(component).trace("{} {}: {}", Thread.currentThread().getName(), component, message). }
-false;public;1;6;;@Override public boolean isEnabled(String component) {     // to log it:     return getLogger(component).isTraceEnabled() && component.equals("TP") == false. }
-false;private;1;3;;private Logger getLogger(String component) {     return loggers.computeIfAbsent(component, c -> Loggers.getLogger(parentLogger, "." + c)). }
-false;public;0;4;;@Override public void close() { }

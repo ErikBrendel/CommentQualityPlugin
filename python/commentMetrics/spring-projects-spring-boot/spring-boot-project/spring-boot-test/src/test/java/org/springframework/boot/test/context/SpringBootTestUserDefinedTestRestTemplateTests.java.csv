@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void restTemplateIsUserDefined() {     assertThat(getContext().getBean("testRestTemplate")).isInstanceOf(RestTemplate.class). }
-false;public;0;4;;@Bean public RestTemplate testRestTemplate() {     return new RestTemplate(). }

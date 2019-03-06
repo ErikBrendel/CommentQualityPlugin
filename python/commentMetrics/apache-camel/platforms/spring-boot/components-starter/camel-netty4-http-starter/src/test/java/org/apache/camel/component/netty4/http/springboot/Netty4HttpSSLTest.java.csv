@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void testEndpoint() throws Exception {     String result = producerTemplate.requestBody("https4://localhost:" + getPort(), null, String.class).     Assert.assertEquals("Hello", result). }
-false;public;0;5;;@Override public void configure() throws Exception {     from("netty4-http:https://localhost:" + getPort() + "?ssl=true").transform().constant("Hello"). }

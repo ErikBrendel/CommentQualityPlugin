@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;6;;@Override @Nullable protected Object getRawAttributeValue(Method attributeMethod) {     ReflectionUtils.makeAccessible(attributeMethod).     return ReflectionUtils.invokeMethod(attributeMethod, getSource()). }
-false;protected;1;6;;@Override @Nullable protected Object getRawAttributeValue(String attributeName) {     Method attributeMethod = ReflectionUtils.findMethod(getAnnotationType(), attributeName).     return (attributeMethod != null ? getRawAttributeValue(attributeMethod) : null). }

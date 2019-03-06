@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;6;;@Override protected void writeTagDetails(TagWriter tagWriter) throws JspException {     tagWriter.writeAttribute("type", getInputType()).     Object resolvedValue = evaluate("value", getValue()).     renderFromValue(resolvedValue, tagWriter). }
-false;protected;0;4;;@Override protected String getInputType() {     return "radio". }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;default;1;3;;default FileChannel open(Path path) throws IOException {     return open(path, StandardOpenOption.WRITE, StandardOpenOption.READ, StandardOpenOption.CREATE_NEW). }
-false;;2;1;;FileChannel open(Path path, OpenOption... options) throws IOException.

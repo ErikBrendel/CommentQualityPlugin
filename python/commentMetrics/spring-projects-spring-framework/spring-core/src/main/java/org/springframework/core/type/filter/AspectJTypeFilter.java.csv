@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;8;;@Override public boolean match(MetadataReader metadataReader, MetadataReaderFactory metadataReaderFactory) throws IOException {     String className = metadataReader.getClassMetadata().getClassName().     ResolvedType resolvedType = this.world.resolve(className).     return this.typePattern.matchesStatically(resolvedType). }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected int getPort() {     return 20009. }
-false;protected;0;4;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/spring/jmxConfigUsingProperties.xml"). }
-false;public;0;7;;@Test public void testEnableUseHostIPAddress() throws Exception {     CamelContext ctx = createCamelContext().     ManagementAgent agent = ctx.getManagementStrategy().getManagementAgent().     agent.start().     assertTrue(agent.getUseHostIPAddress()). }

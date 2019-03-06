@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;10;;@Override protected Info createTestInstance() {     int numInfos = randomIntBetween(0, 32).     List<ShardFollowTaskInfo> shardFollowTaskInfos = new ArrayList<>(numInfos).     for (int i = 0. i < numInfos. i++) {         shardFollowTaskInfos.add(new ShardFollowTaskInfo(randomAlphaOfLength(3), randomIntBetween(0, 10), randomNonNegativeLong(), randomNonNegativeLong())).     }     return new Info(shardFollowTaskInfos). }
-false;protected;1;4;;@Override protected Info doParseInstance(XContentParser parser) throws IOException {     return INFO_PARSER.apply(parser, null). }
-false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return false. }

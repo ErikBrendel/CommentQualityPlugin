@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Return the number of rows that should have been affected.  */ ;/**  * Return the number of rows that should have been affected.  */ public int getExpectedRowsAffected() {     return this.expected. }
-true;public;0;3;/**  * Return the number of rows that have actually been affected.  */ ;/**  * Return the number of rows that have actually been affected.  */ public int getActualRowsAffected() {     return this.actual. }
-false;public;0;4;;@Override public boolean wasDataUpdated() {     return (getActualRowsAffected() > 0). }

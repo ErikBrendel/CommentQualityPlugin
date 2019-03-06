@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Override public void reset() {     try {         super.reset().     } catch (IOException e) {     // ignore     } }
-false;public;1;3;;public void writeTo(OutputStream os) throws IOException {     IOHelper.copyAndCloseInput(in, os). }
-false;public;1;11;;public StreamCache copy(Exchange exchange) throws IOException {     if (byteArrayForCopy == null) {         ByteArrayOutputStream baos = new ByteArrayOutputStream(in.available()).         IOHelper.copy(in, baos).         // reset so that the stream can be reused         reset().         // cache the byte array, in order not to copy the byte array in the next call again         byteArrayForCopy = baos.toByteArray().     }     return new InputStreamCache(byteArrayForCopy). }
-false;public;0;3;;public boolean inMemory() {     return true. }
-false;public;0;4;;@Override public long length() {     return length. }

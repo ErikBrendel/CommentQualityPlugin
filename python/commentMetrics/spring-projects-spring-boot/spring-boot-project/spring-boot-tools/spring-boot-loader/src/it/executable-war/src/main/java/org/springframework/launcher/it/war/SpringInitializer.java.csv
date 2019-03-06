@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;7;;@Override public void onStartup(ServletContext servletContext) throws ServletException {     AnnotationConfigWebApplicationContext webApplicationContext = new AnnotationConfigWebApplicationContext().     webApplicationContext.register(SpringConfiguration.class).     servletContext.addServlet("dispatcherServlet", new DispatcherServlet(webApplicationContext)).addMapping("/*"). }

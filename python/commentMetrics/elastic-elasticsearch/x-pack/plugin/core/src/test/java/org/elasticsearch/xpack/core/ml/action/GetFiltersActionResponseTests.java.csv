@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;7;;@Override protected Response createTestInstance() {     final QueryPage<MlFilter> result.     MlFilter doc = MlFilterTests.createRandom().     result = new QueryPage<>(Collections.singletonList(doc), 1, MlFilter.RESULTS_FIELD).     return new Response(result). }
-false;protected;0;4;;@Override protected Response createBlankInstance() {     return new Response(). }

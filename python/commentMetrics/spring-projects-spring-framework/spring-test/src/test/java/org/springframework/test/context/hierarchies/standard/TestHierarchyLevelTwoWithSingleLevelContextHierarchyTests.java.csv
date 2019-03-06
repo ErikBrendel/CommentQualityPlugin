@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Bean public String foo() {     return "foo-level-2". }
-false;public;0;4;;@Bean public String baz() {     return "baz". }
-false;public;0;9;;@Test @Override public void loadContextHierarchy() {     assertNotNull("child ApplicationContext", context).     assertNotNull("parent ApplicationContext", context.getParent()).     assertEquals("foo-level-2", foo).     assertEquals("bar", bar).     assertEquals("baz", baz). }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;private,static;1;10;;private static ClusterBlock parseNoMasterBlock(String value) {     switch(value) {         case "all":             return NO_MASTER_BLOCK_ALL.         case "write":             return NO_MASTER_BLOCK_WRITES.         default:             throw new IllegalArgumentException("invalid no-master block [" + value + "], must be one of [all, write]").     } }
-false;public;0;3;;public ClusterBlock getNoMasterBlock() {     return noMasterBlock. }
-false;private;1;3;;private void setNoMasterBlock(ClusterBlock noMasterBlock) {     this.noMasterBlock = noMasterBlock. }

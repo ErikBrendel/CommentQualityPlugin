@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public int getRawStatusCode() throws IOException {     return this.httpResponse.getStatusLine().getStatusCode(). }
-false;public;0;4;;@Override public String getStatusText() throws IOException {     return this.httpResponse.getStatusLine().getReasonPhrase(). }
-false;public;0;10;;@Override public HttpHeaders getHeaders() {     if (this.headers == null) {         this.headers = new HttpHeaders().         for (Header header : this.httpResponse.getAllHeaders()) {             this.headers.add(header.getName(), header.getValue()).         }     }     return this.headers. }
-false;public;0;5;;@Override public InputStream getBody() throws IOException {     HttpEntity entity = this.httpResponse.getEntity().     return (entity != null ? entity.getContent() : StreamUtils.emptyInput()). }
-false;public;0;5;;@Override public void close() { // HTTP responses returned by async HTTP client are not bound to an // active connection and do not have to deallocate any resources... }

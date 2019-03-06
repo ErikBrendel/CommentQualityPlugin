@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String toString() {     return "RouteContextRef[" + getRef() + "]". }
-false;public;0;3;;public String getRef() {     return ref. }
-true;public;1;3;/**  * Reference to the routes in the xml dsl  */ ;/**  * Reference to the routes in the xml dsl  */ public void setRef(String ref) {     this.ref = ref. }
-false;public;1;3;;public List<RouteDefinition> lookupRoutes(ModelCamelContext camelContext) {     return RouteContextRefDefinitionHelper.lookupRoutes(camelContext, ref). }

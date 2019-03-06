@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;7;;@Override public void afterConnectionEstablished(WebSocketSession session) throws Exception {     if (logger.isDebugEnabled()) {         logger.debug("New " + session).     }     super.afterConnectionEstablished(session). }
-false;public;2;7;;@Override public void handleMessage(WebSocketSession session, WebSocketMessage<?> message) throws Exception {     if (logger.isTraceEnabled()) {         logger.trace("Handling " + message + " in " + session).     }     super.handleMessage(session, message). }
-false;public;2;7;;@Override public void handleTransportError(WebSocketSession session, Throwable exception) throws Exception {     if (logger.isDebugEnabled()) {         logger.debug("Transport error in " + session, exception).     }     super.handleTransportError(session, exception). }
-false;public;2;7;;@Override public void afterConnectionClosed(WebSocketSession session, CloseStatus closeStatus) throws Exception {     if (logger.isDebugEnabled()) {         logger.debug(session + " closed with " + closeStatus).     }     super.afterConnectionClosed(session, closeStatus). }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public void update(long value) {     histogram.update(value). }
-false;public;0;4;;@Override public long getCount() {     return histogram.getCount(). }
-false;public;0;4;;@Override public Snapshot getSnapshot() {     return new HistogramStatisticsWrapper(histogram.getStatistics()). }

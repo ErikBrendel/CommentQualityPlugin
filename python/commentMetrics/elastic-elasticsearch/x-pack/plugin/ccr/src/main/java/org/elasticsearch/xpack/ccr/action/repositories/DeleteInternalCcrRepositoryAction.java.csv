@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public DeleteInternalCcrRepositoryResponse newResponse() {     throw new UnsupportedOperationException(). }
-false;public;0;4;;@Override public Writeable.Reader<DeleteInternalCcrRepositoryResponse> getResponseReader() {     return DeleteInternalCcrRepositoryResponse::new. }
-false;protected;3;6;;@Override protected void doExecute(Task task, DeleteInternalCcrRepositoryRequest request, ActionListener<DeleteInternalCcrRepositoryResponse> listener) {     repositoriesService.unregisterInternalRepository(request.getName()).     listener.onResponse(new DeleteInternalCcrRepositoryResponse()). }

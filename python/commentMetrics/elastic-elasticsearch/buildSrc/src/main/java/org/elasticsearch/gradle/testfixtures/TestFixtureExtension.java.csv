@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;12;;public void useFixture(String path) {     Project fixtureProject = this.project.findProject(path).     if (fixtureProject == null) {         throw new IllegalArgumentException("Could not find test fixture " + fixtureProject).     }     if (fixtureProject.file(TestFixturesPlugin.DOCKER_COMPOSE_YML).exists() == false) {         throw new IllegalArgumentException("Project " + path + " is not a valid test fixture: missing " + TestFixturesPlugin.DOCKER_COMPOSE_YML).     }     fixtures.add(fixtureProject). }

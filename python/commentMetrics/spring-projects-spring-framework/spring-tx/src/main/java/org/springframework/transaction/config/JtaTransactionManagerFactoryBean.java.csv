@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Override @Nullable public JtaTransactionManager getObject() {     return this.transactionManager. }
-false;public;0;4;;@Override public Class<?> getObjectType() {     return (this.transactionManager != null ? this.transactionManager.getClass() : JtaTransactionManager.class). }
-false;public;0;4;;@Override public boolean isSingleton() {     return true. }
-false;static;0;11;;static String resolveJtaTransactionManagerClassName() {     if (weblogicPresent) {         return WEBLOGIC_JTA_TRANSACTION_MANAGER_CLASS_NAME.     } else if (webspherePresent) {         return WEBSPHERE_TRANSACTION_MANAGER_CLASS_NAME.     } else {         return JTA_TRANSACTION_MANAGER_CLASS_NAME.     } }

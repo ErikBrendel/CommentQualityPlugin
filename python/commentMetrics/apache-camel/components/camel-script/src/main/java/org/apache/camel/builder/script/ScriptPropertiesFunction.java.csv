@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;17;;@Override public String resolve(String key) throws Exception {     if (key == null) {         return null.     }     String token = context.getPropertyPrefixToken().     if (token == null) {         return key.     }     if (!key.contains(token)) {         // enclose key with tokens so placeholder can lookup and resolve it         key = context.getPropertyPrefixToken() + key + context.getPropertySuffixToken().     }     return context.resolvePropertyPlaceholders(key). }

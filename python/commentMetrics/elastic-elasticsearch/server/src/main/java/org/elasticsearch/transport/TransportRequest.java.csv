@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;1;4;/**  * Set a reference to task that created this request.  */ ;/**  * Set a reference to task that created this request.  */ @Override public void setParentTask(TaskId taskId) {     this.parentTaskId = taskId. }
-true;public;0;4;/**  * Get a reference to the task that created this request. Defaults to {@link TaskId#EMPTY_TASK_ID}, meaning "there is no parent".  */ ;/**  * Get a reference to the task that created this request. Defaults to {@link TaskId#EMPTY_TASK_ID}, meaning "there is no parent".  */ @Override public TaskId getParentTask() {     return parentTaskId. }
-false;public;1;5;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     parentTaskId = TaskId.readFromStream(in). }
-false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     parentTaskId.writeTo(out). }

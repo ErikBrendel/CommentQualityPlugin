@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;7;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry registry = super.createRegistry().     registry.bind("my-twitter", new TwitterSearchComponent()).     return registry. }
-false;protected;0;4;;@Override protected String getUri() {     return "my-twitter://java?type=direct&". }
-false;protected;0;4;;@Override protected Logger getLogger() {     return LoggerFactory.getLogger(SearchDirectCustomComponentTest.class). }

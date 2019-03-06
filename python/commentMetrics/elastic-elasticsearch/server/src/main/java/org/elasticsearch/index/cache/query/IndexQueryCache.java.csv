@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public void close() throws ElasticsearchException {     clear("close"). }
-false;public;1;5;;@Override public void clear(String reason) {     logger.debug("full cache clear, reason [{}]", reason).     indicesQueryCache.clearIndex(index().getName()). }
-false;public;2;4;;@Override public Weight doCache(Weight weight, QueryCachingPolicy policy) {     return indicesQueryCache.doCache(weight, policy). }

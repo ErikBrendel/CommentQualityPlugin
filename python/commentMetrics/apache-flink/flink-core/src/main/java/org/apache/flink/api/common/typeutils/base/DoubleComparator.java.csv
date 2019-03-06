@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;7;;@Override public int compareSerialized(DataInputView firstSource, DataInputView secondSource) throws IOException {     double l1 = firstSource.readDouble().     double l2 = secondSource.readDouble().     int comp = (l1 < l2 ? -1 : (l1 > l2 ? 1 : 0)).     return ascendingComparison ? comp : -comp. }
-false;public;0;4;;@Override public boolean supportsNormalizedKey() {     return false. }
-false;public;0;4;;@Override public int getNormalizeKeyLen() {     return 0. }
-false;public;1;4;;@Override public boolean isNormalizedKeyPrefixOnly(int keyBytes) {     return true. }
-false;public;4;4;;@Override public void putNormalizedKey(Double value, MemorySegment target, int offset, int numBytes) {     throw new UnsupportedOperationException(). }
-false;public;0;4;;@Override public DoubleComparator duplicate() {     return new DoubleComparator(ascendingComparison). }

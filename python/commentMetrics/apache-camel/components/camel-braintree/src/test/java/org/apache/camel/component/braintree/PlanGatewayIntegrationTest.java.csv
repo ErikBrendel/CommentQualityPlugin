@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Ignore @Test public void testAll() throws Exception {     final List<Plan> result = requestBody("direct://ALL", null, List.class).     assertNotNull("all result", result).     LOG.debug("all: " + result). }
-false;public;0;5;;public void configure() {     // test route for all     from("direct://ALL").to("braintree://" + PATH_PREFIX + "/all"). }
-false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() {             // test route for all             from("direct://ALL").to("braintree://" + PATH_PREFIX + "/all").         }     }. }

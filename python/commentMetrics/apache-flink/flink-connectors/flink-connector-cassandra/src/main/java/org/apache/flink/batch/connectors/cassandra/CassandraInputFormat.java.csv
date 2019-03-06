@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;1;5;/**  * Opens a Session and executes the query.  *  * @param ignored because parameter is not parallelizable.  * @throws IOException  */ ;/**  * Opens a Session and executes the query.  *  * @param ignored because parameter is not parallelizable.  * @throws IOException  */ @Override public void open(InputSplit ignored) throws IOException {     this.session = cluster.connect().     this.resultSet = session.execute(query). }
-false;public;0;4;;@Override public boolean reachedEnd() throws IOException {     return resultSet.isExhausted(). }
-false;public;1;8;;@Override public OUT nextRecord(OUT reuse) throws IOException {     final Row item = resultSet.one().     for (int i = 0. i < reuse.getArity(). i++) {         reuse.setField(item.getObject(i), i).     }     return reuse. }

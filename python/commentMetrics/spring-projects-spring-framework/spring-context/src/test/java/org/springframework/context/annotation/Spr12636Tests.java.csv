@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@After public void closeContext() {     if (this.context != null) {         this.context.close().     } }
-false;public;0;9;;@Test public void orderOnImplementation() {     this.context = new AnnotationConfigApplicationContext(UserServiceTwo.class, UserServiceOne.class, UserServiceCollector.class).     UserServiceCollector bean = this.context.getBean(UserServiceCollector.class).     assertSame(context.getBean("serviceOne", UserService.class), bean.userServices.get(0)).     assertSame(context.getBean("serviceTwo", UserService.class), bean.userServices.get(1)). }
-false;public;0;15;;@Test public void orderOnImplementationWithProxy() {     this.context = new AnnotationConfigApplicationContext(UserServiceTwo.class, UserServiceOne.class, UserServiceCollector.class, AsyncConfig.class).     // Validate those beans are indeed wrapped by a proxy     UserService serviceOne = this.context.getBean("serviceOne", UserService.class).     UserService serviceTwo = this.context.getBean("serviceTwo", UserService.class).     assertTrue(AopUtils.isAopProxy(serviceOne)).     assertTrue(AopUtils.isAopProxy(serviceTwo)).     UserServiceCollector bean = this.context.getBean(UserServiceCollector.class).     assertSame(serviceOne, bean.userServices.get(0)).     assertSame(serviceTwo, bean.userServices.get(1)). }
-false;;0;1;;void doIt().
-false;public;0;5;;@Async @Override public void doIt() { }
-false;public;0;5;;@Async @Override public void doIt() { }

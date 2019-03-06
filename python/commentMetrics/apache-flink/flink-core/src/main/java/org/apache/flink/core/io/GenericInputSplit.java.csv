@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;// -------------------------------------------------------------------------------------------- @Override public int getSplitNumber() {     return this.partitionNumber. }
-false;public;0;3;;public int getTotalNumberOfSplits() {     return this.totalNumberOfPartitions. }
-false;public;0;4;;// -------------------------------------------------------------------------------------------- @Override public int hashCode() {     return this.partitionNumber ^ this.totalNumberOfPartitions. }
-false;public;1;10;;@Override public boolean equals(Object obj) {     if (obj instanceof GenericInputSplit) {         GenericInputSplit other = (GenericInputSplit) obj.         return this.partitionNumber == other.partitionNumber && this.totalNumberOfPartitions == other.totalNumberOfPartitions.     } else {         return false.     } }
-false;public;0;3;;public String toString() {     return "GenericSplit (" + this.partitionNumber + '/' + this.totalNumberOfPartitions + ')'. }

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected RollupIndexerJobStats createTestInstance() {     return randomStats(). }
-false;protected;0;4;;@Override protected Writeable.Reader<RollupIndexerJobStats> instanceReader() {     return RollupIndexerJobStats::new. }
-false;protected;1;4;;@Override protected RollupIndexerJobStats doParseInstance(XContentParser parser) {     return RollupIndexerJobStats.fromXContent(parser). }
-false;public,static;0;5;;public static RollupIndexerJobStats randomStats() {     return new RollupIndexerJobStats(randomNonNegativeLong(), randomNonNegativeLong(), randomNonNegativeLong(), randomNonNegativeLong(), randomNonNegativeLong(), randomNonNegativeLong(), randomNonNegativeLong(), randomNonNegativeLong(), randomNonNegativeLong(), randomNonNegativeLong()). }
-false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return false. }

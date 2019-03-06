@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;3;13;;@Override public RoutePolicy createRoutePolicy(CamelContext camelContext, String routeId, NamedNode route) {     DurationRoutePolicy policy = null.     if (fromRouteId == null || PatternHelper.matchPattern(routeId, fromRouteId)) {         policy = new DurationRoutePolicy(camelContext, routeId).         policy.setMaxMessages(maxMessages).         policy.setMaxSeconds(maxSeconds).         policy.setAction(action).     }     return policy. }
-false;public;0;3;;public String getFromRouteId() {     return fromRouteId. }
-true;public;1;3;/**  * Limit the route policy to the route which matches this pattern  *  * @see PatternHelper#matchPattern(String, String)  */ ;/**  * Limit the route policy to the route which matches this pattern  *  * @see PatternHelper#matchPattern(String, String)  */ public void setFromRouteId(String fromRouteId) {     this.fromRouteId = fromRouteId. }
-true;public;1;3;/**  * Maximum number of messages to process before the action is triggered  */ ;/**  * Maximum number of messages to process before the action is triggered  */ public void setMaxMessages(int maxMessages) {     this.maxMessages = maxMessages. }
-false;public;0;3;;public int getMaxSeconds() {     return maxSeconds. }
-true;public;1;3;/**  * Maximum seconds Camel is running before the action is triggered  */ ;/**  * Maximum seconds Camel is running before the action is triggered  */ public void setMaxSeconds(int maxSeconds) {     this.maxSeconds = maxSeconds. }
-false;public;0;3;;public DurationRoutePolicy.Action getAction() {     return action. }
-true;public;1;3;/**  * What action to perform when maximum is triggered.  */ ;/**  * What action to perform when maximum is triggered.  */ public void setAction(DurationRoutePolicy.Action action) {     this.action = action. }

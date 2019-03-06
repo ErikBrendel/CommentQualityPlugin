@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;7;;@Override protected void doStart() {     super.doStart().     if (authenticator != null) {         authenticator.setBoundTransportAddress(boundAddress(), profileBoundAddresses()).     } }
-false;protected;1;4;;@Override protected ChannelHandler getNoSslChannelInitializer(final String name) {     return new IPFilterServerChannelInitializer(name). }
-false;protected;2;4;;@Override protected ServerChannelInitializer getSslChannelInitializer(final String name, final SSLConfiguration configuration) {     return new SecurityServerChannelInitializer(name, configuration). }
-false;protected;1;5;;@Override protected void initChannel(final Channel ch) throws Exception {     super.initChannel(ch).     maybeAddIPFilter(ch, name). }
-false;protected;1;5;;@Override protected void initChannel(final Channel ch) throws Exception {     super.initChannel(ch).     maybeAddIPFilter(ch, name). }
-false;private;2;5;;private void maybeAddIPFilter(final Channel ch, final String name) {     if (authenticator != null) {         ch.pipeline().addFirst("ipfilter", new IpFilterRemoteAddressFilter(authenticator, name)).     } }

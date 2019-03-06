@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;3;;protected void doAppend(org.apache.logging.log4j.core.LogEvent event) {     messages.add(event.getMessage().getFormattedMessage()). }
-false;public;0;3;;public List<String> getMessages() {     return Collections.unmodifiableList(messages). }
-false;public;0;8;;@Override public void evaluate() throws Throwable {     try {         base.evaluate().         verify().     } finally {     } }
-false;public;2;13;;@Override public Statement apply(final Statement base, Description description) {     return new Statement() {          @Override         public void evaluate() throws Throwable {             try {                 base.evaluate().                 verify().             } finally {             }         }     }. }
-false;public;1;4;;@Override public void append(org.apache.logging.log4j.core.LogEvent event) {     doAppend(event). }
-false;private;0;15;;private Appender newAppender() {     final LoggerContext ctx = (LoggerContext) LogManager.getContext(false).     final Configuration config = ctx.getConfiguration().     LogAppender appender = new LogAppender("cdi-rule").     appender.start().     config.addAppender(appender).     config.getRootLogger().removeAppender("cdi-rule").     config.getRootLogger().addAppender(appender, Level.TRACE, null).     ctx.updateLoggers().     return appender. }

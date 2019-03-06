@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,abstract;0;1;/**  * Return the SOAP fault code.  */ ;/**  * Return the SOAP fault code.  */ public abstract String getFaultCode().
-true;public,abstract;0;1;/**  * Return the SOAP fault code as a {@code QName} object.  */ ;/**  * Return the SOAP fault code as a {@code QName} object.  */ public abstract QName getFaultCodeAsQName().
-true;public,abstract;0;1;/**  * Return the descriptive SOAP fault string.  */ ;/**  * Return the descriptive SOAP fault string.  */ public abstract String getFaultString().
-true;public,abstract;0;1;/**  * Return the actor that caused this fault.  */ ;/**  * Return the actor that caused this fault.  */ public abstract String getFaultActor().

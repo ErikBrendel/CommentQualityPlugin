@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;5;;@Override protected void doWriteTo(StreamOutput out) throws IOException {     out.writeNamedWriteable(format).     out.writeDouble(min). }
-false;public;0;4;;@Override public String getWriteableName() {     return MinAggregationBuilder.NAME. }
-false;public;0;4;;@Override public double value() {     return min. }
-false;public;0;4;;@Override public double getValue() {     return min. }
-false;public;2;8;;@Override public InternalMin doReduce(List<InternalAggregation> aggregations, ReduceContext reduceContext) {     double min = Double.POSITIVE_INFINITY.     for (InternalAggregation aggregation : aggregations) {         min = Math.min(min, ((InternalMin) aggregation).min).     }     return new InternalMin(getName(), min, this.format, pipelineAggregators(), getMetaData()). }
-false;public;2;9;;@Override public XContentBuilder doXContentBody(XContentBuilder builder, Params params) throws IOException {     boolean hasValue = !Double.isInfinite(min).     builder.field(CommonFields.VALUE.getPreferredName(), hasValue ? min : null).     if (hasValue && format != DocValueFormat.RAW) {         builder.field(CommonFields.VALUE_AS_STRING.getPreferredName(), format.format(min).toString()).     }     return builder. }
-false;protected;0;4;;@Override protected int doHashCode() {     return Objects.hash(min). }
-false;protected;1;5;;@Override protected boolean doEquals(Object obj) {     InternalMin other = (InternalMin) obj.     return Objects.equals(min, other.min). }

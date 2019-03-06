@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;default;2;3;;default Object wrap(Object l, Object r) {     return apply((Number) l, (Number) r). }
-false;public;0;4;;@Override public String symbol() {     return symbol. }
-false;public,final;2;4;;@Override public final Object doApply(Object left, Object right) {     return process.apply(left, right). }
-false;public;0;4;;@Override public String toString() {     return symbol. }
-false;private,static;1;3;;private static Object unwrapJodaTime(Object o) {     return o instanceof JodaCompatibleZonedDateTime ? ((JodaCompatibleZonedDateTime) o).getZonedDateTime() : o. }
-false;public;0;4;;@Override public String getWriteableName() {     return NAME. }
-false;protected;2;27;;@Override protected Object doProcess(Object left, Object right) {     BinaryArithmeticOperation f = function().     if (left == null || right == null) {         return null.     }     if (f == BinaryArithmeticOperation.MUL || f == BinaryArithmeticOperation.DIV || f == BinaryArithmeticOperation.MOD) {         if (!(left instanceof Number)) {             throw new SqlIllegalArgumentException("A number is required. received {}", left).         }         if (!(right instanceof Number)) {             throw new SqlIllegalArgumentException("A number is required. received {}", right).         }         return f.apply(left, right).     }     if (f == BinaryArithmeticOperation.ADD || f == BinaryArithmeticOperation.SUB) {         return f.apply(left, right).     }     // this should not occur     throw new SqlIllegalArgumentException("Cannot perform arithmetic operation due to arguments"). }

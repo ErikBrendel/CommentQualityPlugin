@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;11;;@Test public void testConsumeTemplate() throws Exception {     // must start CamelContext because use route builder is false     context.start().     String url = "activemq:queue:foo".     template.sendBody(url, "Hello World").     Object out = consumer.receiveBody(url, 5000).     assertEquals("Hello World", out). }
-false;protected;0;10;;protected CamelContext createCamelContext() throws Exception {     CamelContext camelContext = super.createCamelContext().     // must be persistent so the consumer can receive the message as we receive AFTER the message     // has been published     ConnectionFactory connectionFactory = CamelJmsTestHelper.createPersistentConnectionFactory().     camelContext.addComponent("activemq", jmsComponentAutoAcknowledge(connectionFactory)).     return camelContext. }
-false;public;0;4;;@Override public boolean isUseRouteBuilder() {     return false. }

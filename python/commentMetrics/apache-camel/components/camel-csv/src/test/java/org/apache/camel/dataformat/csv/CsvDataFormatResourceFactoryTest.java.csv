@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;16;;@Test public void marshalTest() throws InterruptedException {     MockEndpoint mock = getMockEndpoint("mock:marshaled").     mock.expectedMessageCount(1).     template.sendBody("direct:marshal", getData()).     mock.assertIsSatisfied().     String body = mock.getReceivedExchanges().get(0).getIn().getBody(String.class).     String[] lines = body.split("\r\n").     Assert.assertEquals(2, lines.length).     Assert.assertEquals("A1,B1,C1", lines[0].trim()).     Assert.assertEquals("A2,B2,C2", lines[1].trim()). }
-false;private;0;6;;private List<List<String>> getData() {     return Arrays.asList(Arrays.asList("A1", "B1", "C1"), Arrays.asList("A2", "B2", "C2")). }
-false;protected;0;4;;@Override protected ClassPathXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/dataformat/csv/CsvDataFormatResourceFactoryTest-context.xml"). }

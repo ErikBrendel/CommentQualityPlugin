@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;0;3;;boolean isEnabled() {     return enabled. }
-false;;0;3;;boolean isTransportClient() {     return transportClientMode. }
-false;public;0;7;;public Collection<Module> createGuiceModules() {     List<Module> modules = new ArrayList<>().     modules.add(b -> {         XPackPlugin.bindFeatureSet(b, LogstashFeatureSet.class).     }).     return modules. }
-false;public;0;8;;public UnaryOperator<Map<String, IndexTemplateMetaData>> getIndexTemplateMetaDataUpgrader() {     return templates -> {         templates.keySet().removeIf(OLD_LOGSTASH_INDEX_NAME::equals).         TemplateUtils.loadTemplateIntoMap("/" + LOGSTASH_TEMPLATE_FILE_NAME + ".json", templates, LOGSTASH_INDEX_TEMPLATE_NAME, Version.CURRENT.toString(), TEMPLATE_VERSION_PATTERN, LogManager.getLogger(Logstash.class)).         return templates.     }. }

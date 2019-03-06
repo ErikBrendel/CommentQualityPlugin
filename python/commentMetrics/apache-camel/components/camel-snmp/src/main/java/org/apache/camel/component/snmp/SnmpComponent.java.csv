@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;3;6;;@Override protected Endpoint createEndpoint(String uri, String remaining, Map<String, Object> parameters) throws Exception {     SnmpEndpoint endpoint = new SnmpEndpoint(uri, this).     setProperties(endpoint, parameters).     return endpoint. }

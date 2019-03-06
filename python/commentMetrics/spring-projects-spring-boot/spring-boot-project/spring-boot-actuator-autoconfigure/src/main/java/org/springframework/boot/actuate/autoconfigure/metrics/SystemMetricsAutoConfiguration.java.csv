@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Bean @ConditionalOnMissingBean public UptimeMetrics uptimeMetrics() {     return new UptimeMetrics(). }
-false;public;0;5;;@Bean @ConditionalOnMissingBean public ProcessorMetrics processorMetrics() {     return new ProcessorMetrics(). }
-false;public;0;5;;@Bean @ConditionalOnMissingBean public FileDescriptorMetrics fileDescriptorMetrics() {     return new FileDescriptorMetrics(). }

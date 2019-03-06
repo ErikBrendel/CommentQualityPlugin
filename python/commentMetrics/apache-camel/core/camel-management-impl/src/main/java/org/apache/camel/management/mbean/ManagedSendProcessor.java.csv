@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;9;;public void init(ManagementStrategy strategy) {     super.init(strategy).     boolean sanitize = strategy.getManagementAgent().getMask() != null ? strategy.getManagementAgent().getMask() : false.     if (sanitize) {         destination = URISupport.sanitizeUri(processor.getDestination().getEndpointUri()).     } else {         destination = processor.getDestination().getEndpointUri().     } }
-false;public;0;4;;@Override public Boolean getSupportExtendedInformation() {     return true. }
-false;public;0;5;;@Override public void reset() {     super.reset().     processor.reset(). }
-false;public;0;3;;public SendProcessor getProcessor() {     return processor. }
-false;public;0;3;;public String getDestination() {     return destination. }
-false;public;0;7;;public String getMessageExchangePattern() {     if (processor.getPattern() != null) {         return processor.getPattern().name().     } else {         return null.     } }
-false;public;0;17;;@Override public TabularData extendedInformation() {     try {         TabularData answer = new TabularDataSupport(CamelOpenMBeanTypes.endpointsUtilizationTabularType()).         // we only have 1 endpoint         CompositeType ct = CamelOpenMBeanTypes.endpointsUtilizationCompositeType().         String url = getDestination().         Long hits = processor.getCounter().         CompositeData data = new CompositeDataSupport(ct, new String[] { "url", "hits" }, new Object[] { url, hits }).         answer.put(data).         return answer.     } catch (Exception e) {         throw RuntimeCamelException.wrapRuntimeCamelException(e).     } }

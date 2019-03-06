@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;1;3;/**  * Set the name of the ServletContext init parameter to expose.  */ ;/**  * Set the name of the ServletContext init parameter to expose.  */ public void setInitParamName(String initParamName) {     this.initParamName = initParamName. }
-false;public;1;10;;@Override public void setServletContext(ServletContext servletContext) {     if (this.initParamName == null) {         throw new IllegalArgumentException("initParamName is required").     }     this.paramValue = servletContext.getInitParameter(this.initParamName).     if (this.paramValue == null) {         throw new IllegalStateException("No ServletContext init parameter '" + this.initParamName + "' found").     } }
-false;public;0;5;;@Override @Nullable public String getObject() {     return this.paramValue. }
-false;public;0;4;;@Override public Class<String> getObjectType() {     return String.class. }
-false;public;0;4;;@Override public boolean isSingleton() {     return true. }

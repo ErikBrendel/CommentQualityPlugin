@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test @SuppressWarnings("resource") public void springConfiguredAndAutoProxyUsedTogether() {     // instantiation is sufficient to trigger failure if this is going to fail...     new ClassPathXmlApplicationContext("org/springframework/beans/factory/aspectj/springConfigured.xml"). }

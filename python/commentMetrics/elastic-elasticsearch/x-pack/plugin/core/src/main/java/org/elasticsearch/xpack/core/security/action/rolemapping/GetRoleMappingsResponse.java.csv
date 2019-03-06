@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public ExpressionRoleMapping[] mappings() {     return mappings. }
-false;public;0;3;;public boolean hasMappings() {     return mappings.length > 0. }
-false;public;1;9;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     int size = in.readVInt().     mappings = new ExpressionRoleMapping[size].     for (int i = 0. i < size. i++) {         mappings[i] = new ExpressionRoleMapping(in).     } }
-false;public;1;8;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeVInt(mappings.length).     for (ExpressionRoleMapping mapping : mappings) {         mapping.writeTo(out).     } }

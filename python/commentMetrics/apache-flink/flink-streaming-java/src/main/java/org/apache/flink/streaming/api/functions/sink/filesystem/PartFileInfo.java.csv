@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * @return The bucket identifier of the current buffer, as returned by the  * {@link BucketAssigner#getBucketId(Object, BucketAssigner.Context)}.  */ ;/**  * @return The bucket identifier of the current buffer, as returned by the  * {@link BucketAssigner#getBucketId(Object, BucketAssigner.Context)}.  */ BucketID getBucketId().
-true;;0;1;/**  * @return The creation time (in ms) of the currently open part file.  */ ;/**  * @return The creation time (in ms) of the currently open part file.  */ long getCreationTime().
-true;;0;1;/**  * @return The size of the currently open part file.  */ ;/**  * @return The size of the currently open part file.  */ long getSize() throws IOException.
-true;;0;1;/**  * @return The last time (in ms) the currently open part file was written to.  */ ;/**  * @return The last time (in ms) the currently open part file was written to.  */ long getLastUpdateTime().

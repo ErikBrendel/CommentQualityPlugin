@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;7;;public static ValidatorReifier<? extends ValidatorDefinition> reifier(ValidatorDefinition definition) {     Function<ValidatorDefinition, ValidatorReifier<? extends ValidatorDefinition>> reifier = VALIDATORS.get(definition.getClass()).     if (reifier != null) {         return reifier.apply(definition).     }     throw new IllegalStateException("Unsupported definition: " + definition). }
-false;public;1;3;;public Validator createValidator(CamelContext context) throws Exception {     return doCreateValidator(context). }
-false;protected,abstract;1;1;;protected abstract Validator doCreateValidator(CamelContext context) throws Exception.

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;5;;public static void main(String[] args) throws Exception {     Main main = new Main().     main.addRouteBuilder(new GeoLocationRoute()).     main.run(). }
-false;public;0;9;;@Override public void configure() throws Exception {     from("timer:geotimer").process(exchange -> exchange.getIn().setBody(new Foo("bar", "TEXT"))).to("pubnub:eon-maps-geolocation-input?operation=fire&publishKey=" + PUBNUB_PUBLISH_KEY + "&subscribeKey=" + PUBNUB_SUBSCRIBE_KEY).     from("pubnub:eon-map-geolocation-output?subscribeKey=" + PUBNUB_SUBSCRIBE_KEY).log("${body}"). }

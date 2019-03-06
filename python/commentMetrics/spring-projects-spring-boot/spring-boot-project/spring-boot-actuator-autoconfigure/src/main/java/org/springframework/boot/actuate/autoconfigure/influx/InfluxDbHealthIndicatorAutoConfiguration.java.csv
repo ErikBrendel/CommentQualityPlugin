@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;@Bean @ConditionalOnMissingBean(name = "influxDbHealthIndicator") public HealthIndicator influxDbHealthIndicator(Map<String, InfluxDB> influxDbs) {     return createHealthIndicator(influxDbs). }

@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public SedaEndpoint getEndpoint() {     return (SedaEndpoint) super.getEndpoint(). }
-false;public;0;4;;@Override public Processor getProcessor() {     return null. }
-false;public;0;9;;@Override public Exchange receive() {     try {         return getEndpoint().getQueue().take().     } catch (InterruptedException e) {         Thread.currentThread().interrupt().         throw RuntimeCamelException.wrapRuntimeCamelException(e).     } }
-false;public;0;4;;@Override public Exchange receiveNoWait() {     return getEndpoint().getQueue().poll(). }
-false;public;1;9;;@Override public Exchange receive(long timeout) {     try {         return getEndpoint().getQueue().poll(timeout, TimeUnit.MILLISECONDS).     } catch (InterruptedException e) {         Thread.currentThread().interrupt().         throw RuntimeCamelException.wrapRuntimeCamelException(e).     } }
-false;protected;0;4;;@Override protected void doStart() throws Exception { // noop }
-false;protected;0;4;;@Override protected void doStop() throws Exception { // noop }
-false;public;0;4;;@Override public boolean isSingleton() {     return true. }

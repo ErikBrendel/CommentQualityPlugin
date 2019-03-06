@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;0;3;;Index getIndex() {     return index. }
-false;;0;3;;String getPolicy() {     return policy. }
-false;;0;3;;Step.StepKey getCurrentStepKey() {     return currentStepKey. }
-false;;0;3;;Step.StepKey getNextStepKey() {     return nextStepKey. }
-false;public;1;20;;@Override public ClusterState execute(ClusterState currentState) {     IndexMetaData indexMetaData = currentState.getMetaData().index(index).     if (indexMetaData == null) {         // Index must have been since deleted, ignore it         return currentState.     }     Settings indexSettings = indexMetaData.getSettings().     LifecycleExecutionState indexILMData = LifecycleExecutionState.fromIndexMetadata(currentState.getMetaData().index(index)).     if (policy.equals(LifecycleSettings.LIFECYCLE_NAME_SETTING.get(indexSettings)) && currentStepKey.equals(IndexLifecycleRunner.getCurrentStepKey(indexILMData))) {         logger.trace("moving [{}] to next step ({})", index.getName(), nextStepKey).         return IndexLifecycleRunner.moveClusterStateToNextStep(index, currentState, currentStepKey, nextStepKey, nowSupplier, false).     } else {         // either case we don't want to do anything now         return currentState.     } }
-false;public;3;6;;@Override public void clusterStateProcessed(String source, ClusterState oldState, ClusterState newState) {     if (oldState.equals(newState) == false) {         stateChangeConsumer.accept(newState).     } }
-false;public;2;5;;@Override public void onFailure(String source, Exception e) {     throw new ElasticsearchException("policy [" + policy + "] for index [" + index.getName() + "] failed trying to move from step [" + currentStepKey + "] to step [" + nextStepKey + "].", e). }

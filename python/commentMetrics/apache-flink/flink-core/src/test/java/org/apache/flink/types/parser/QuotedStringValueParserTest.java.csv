@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Override public String[] getValidTestValues() {     return new String[] { "\\\"Hello \\\"World\\\"", "\"abcdefgh\"", "\"i\"", "\"jklmno\"", "\"abc|de|fgh\"", "\"abc&&&&def&&&&ghij\"", "\"i\"", "\"Hello9\"", "abcdefgh", "i", "jklmno", "Hello9" }. }
-false;public;0;9;;@Override public StringValue[] getValidTestResults() {     return new StringValue[] { new StringValue("\\\"Hello \\\"World\\\""), new StringValue("abcdefgh"), new StringValue("i"), new StringValue("jklmno"), new StringValue("abc|de|fgh"), new StringValue("abc&&&&def&&&&ghij"), new StringValue("i"), new StringValue("Hello9"), new StringValue("abcdefgh"), new StringValue("i"), new StringValue("jklmno"), new StringValue("Hello9") }. }
-false;public;0;6;;@Override public String[] getInvalidTestValues() {     return new String[] { "\"abcd\"ef", "\"abcdef" }. }
-false;public;0;4;;@Override public boolean allowsEmptyField() {     return true. }
-false;public;0;6;;@Override public FieldParser<StringValue> getParser() {     StringValueParser p = new StringValueParser().     p.enableQuotedStringParsing((byte) '"').     return p. }
-false;public;0;4;;@Override public Class<StringValue> getTypeClass() {     return StringValue.class. }

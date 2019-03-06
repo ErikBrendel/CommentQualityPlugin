@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;@Test public void testSendMatchingMessage() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedBodiesReceived(7, 9).     sendBody("direct:start", 3).     sendBody("direct:start", 4).     assertMockEndpointsSatisfied(). }
-false;public;0;5;;public void configure() throws Exception {     from("direct:start").to("language:javascript:classpath:myJavascript.js").to("mock:result"). }
-false;protected;0;9;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from("direct:start").to("language:javascript:classpath:myJavascript.js").to("mock:result").         }     }. }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * Returns an iterable to obtain input streams for previously stored operator state partitions that are assigned to  * this operator.  */ ;/**  * Returns an iterable to obtain input streams for previously stored operator state partitions that are assigned to  * this operator.  */ Iterable<StatePartitionStreamProvider> getRawOperatorStateInputs().
-true;;0;1;/**  * Returns an iterable to obtain input streams for previously stored keyed state partitions that are assigned to  * this operator.  */ ;/**  * Returns an iterable to obtain input streams for previously stored keyed state partitions that are assigned to  * this operator.  */ Iterable<KeyGroupStatePartitionStreamProvider> getRawKeyedStateInputs().

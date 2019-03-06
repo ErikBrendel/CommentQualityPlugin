@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Override public boolean execute() {     Map<String, Object> vars = new HashMap<>().     vars.put("params", getParams()).     vars.put("ctx", getCtx()).     return (boolean) script.apply(vars). }
-false;public;0;7;;@Override public Object execute() {     Map<String, Object> vars = new HashMap<>().     vars.put("params", getParams()).     vars.put("ctx", getCtx()).     return script.apply(vars). }
-false;protected;0;4;;@Override protected Map<ScriptContext<?>, MockScriptEngine.ContextCompiler> pluginContextCompilers() {     return CONTEXT_COMPILERS. }
-false;public,static;1;7;;public static ScriptService newMockScriptService(Map<String, Function<Map<String, Object>, Object>> scripts) {     Map<String, ScriptEngine> engines = new HashMap<>().     engines.put(MockScriptEngine.NAME, new MockScriptEngine(MockScriptEngine.NAME, scripts, CONTEXT_COMPILERS)).     Map<String, ScriptContext<?>> contexts = CONTEXTS.stream().collect(Collectors.toMap(o -> o.name, Function.identity())).     return new ScriptService(Settings.EMPTY, engines, contexts). }

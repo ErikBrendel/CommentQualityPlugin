@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Before public void setUp() {     this.mvc = MockMvcBuilders.webAppContextSetup(this.context).build(). }
-false;public;0;5;;@Test public void testMockHttpEndpoint() throws Exception {     this.mvc.perform(get("/")).andExpect(status().isOk()).andExpect(content().string("Hello World")). }
-false;public;0;5;;@Test public void validateWebApplicationContextIsSet() {     assertThat(this.context).isSameAs(WebApplicationContextUtils.getWebApplicationContext(this.servletContext)). }
-false;public;0;4;;@RequestMapping("/") public String home() {     return "Hello World". }

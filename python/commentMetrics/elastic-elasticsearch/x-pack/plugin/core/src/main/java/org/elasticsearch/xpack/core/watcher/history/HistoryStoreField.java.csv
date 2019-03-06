@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,static;1;3;/**  * Calculates the correct history index name for a given time  */ ;/**  * Calculates the correct history index name for a given time  */ public static String getHistoryIndexNameForTime(ZonedDateTime time) {     return INDEX_PREFIX_WITH_TEMPLATE + indexTimeFormat.format(time). }

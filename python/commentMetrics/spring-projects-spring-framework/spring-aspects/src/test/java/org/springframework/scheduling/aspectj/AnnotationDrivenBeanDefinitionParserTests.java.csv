@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Before public void setup() {     this.context = new ClassPathXmlApplicationContext("annotationDrivenContext.xml", AnnotationDrivenBeanDefinitionParserTests.class). }
-false;public;0;6;;@After public void after() {     if (this.context != null) {         this.context.close().     } }
-false;public;0;4;;@Test public void asyncAspectRegistered() {     assertTrue(context.containsBean(TaskManagementConfigUtils.ASYNC_EXECUTION_ASPECT_BEAN_NAME)). }
-false;public;0;7;;@Test @SuppressWarnings("rawtypes") public void asyncPostProcessorExecutorReference() {     Object executor = context.getBean("testExecutor").     Object aspect = context.getBean(TaskManagementConfigUtils.ASYNC_EXECUTION_ASPECT_BEAN_NAME).     assertSame(executor, ((Supplier) new DirectFieldAccessor(aspect).getPropertyValue("defaultExecutor")).get()). }
-false;public;0;7;;@Test @SuppressWarnings("rawtypes") public void asyncPostProcessorExceptionHandlerReference() {     Object exceptionHandler = context.getBean("testExceptionHandler").     Object aspect = context.getBean(TaskManagementConfigUtils.ASYNC_EXECUTION_ASPECT_BEAN_NAME).     assertSame(exceptionHandler, ((Supplier) new DirectFieldAccessor(aspect).getPropertyValue("exceptionHandler")).get()). }

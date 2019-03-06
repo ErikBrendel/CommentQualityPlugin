@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;5;;@Override protected ServletContext getServletContext() {     ServletContext servletContext = this.webApplicationContext.getServletContext().     return (servletContext != null) ? servletContext : super.getServletContext(). }
-false;protected;0;5;;@Override protected ServletConfig getServletConfig() {     ServletConfig servletConfig = this.webApplicationContext.getServletConfig().     return (servletConfig != null) ? servletConfig : super.getServletConfig(). }

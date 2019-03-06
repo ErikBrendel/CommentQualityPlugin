@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;9;;@Override protected Validator doCreateValidator(CamelContext context) throws Exception {     Endpoint endpoint = definition.getUri() != null ? context.getEndpoint(definition.getUri()) : context.getRegistry().lookupByNameAndType(definition.getRef(), Endpoint.class).     SendProcessor processor = new SendProcessor(endpoint, ExchangePattern.InOut).     return new ProcessorValidator(context).setProcessor(processor).setType(definition.getType()). }

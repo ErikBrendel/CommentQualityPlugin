@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;13;;@Override public boolean process(Exchange exchange, AsyncCallback callback) {     getCurrentSagaCoordinator(exchange).whenComplete((coordinator, ex) -> ifNotException(ex, exchange, callback, () -> {         setCurrentSagaCoordinator(exchange, null).         super.process(exchange, doneSync -> {             // Restore existing coordinator             setCurrentSagaCoordinator(exchange, coordinator).             callback.done(false).         }).     })).     return false. }

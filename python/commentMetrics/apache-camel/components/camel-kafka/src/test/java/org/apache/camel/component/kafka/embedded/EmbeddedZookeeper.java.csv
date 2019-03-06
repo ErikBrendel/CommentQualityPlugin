@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;14;;@Override public void before() throws IOException {     this.snapshotDir = constructTempDir(perTest("zk-snapshot")).     this.logDir = constructTempDir(perTest("zk-log")).     try {         zooKeeperServer = new ZooKeeperServer(snapshotDir, logDir, tickTime).         cnxnFactory = new NIOServerCnxnFactory().         cnxnFactory.configure(new InetSocketAddress("localhost", port), 1024).         cnxnFactory.startup(zooKeeperServer).     } catch (InterruptedException e) {         throw new IOException(e).     } }
-false;public;0;16;;@Override public void after() {     cnxnFactory.shutdown().     zooKeeperServer.shutdown().     try {         TestUtils.deleteFile(snapshotDir).     } catch (FileNotFoundException e) {     // ignore     }     try {         TestUtils.deleteFile(logDir).     } catch (FileNotFoundException e) {     // ignore     } }
-false;public;0;3;;public String getConnection() {     return "localhost:" + port. }
-false;public;0;3;;public int getPort() {     return port. }
-false;public;0;7;;@Override public String toString() {     final StringBuilder sb = new StringBuilder("EmbeddedZookeeper{").     sb.append("connection=").append(getConnection()).     sb.append('}').     return sb.toString(). }

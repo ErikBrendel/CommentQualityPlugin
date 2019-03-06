@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;11;;@Test public void testDoneFromRoute() throws Exception {     // notify when exchange is done     NotifyBuilder builder = new NotifyBuilder(context).fromRoute("foo").whenDone(1).     builder.create().     template.sendBody("seda:foo", "Hello world!").     assertTrue(builder.matchesMockWaitTime()). }
-false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     final JndiRegistry registry = super.createRegistry().     registry.bind("proxy", new ProxyComponent()).     return registry. }
-false;public;0;6;;@Override public void configure() throws Exception {     from("proxy:seda:foo").routeId("foo").to("mock:foo"). }
-false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("proxy:seda:foo").routeId("foo").to("mock:foo").         }     }. }
-false;protected;3;4;;@Override protected Endpoint createEndpoint(String uri, String remaining, Map<String, Object> parameters) throws Exception {     return new ProxyEndpoint(this, uri, remaining). }
-false;public;0;4;;@Override public Producer createProducer() throws Exception {     return target.createProducer(). }
-false;public;1;4;;@Override public Consumer createConsumer(Processor processor) throws Exception {     return target.createConsumer(processor). }
-false;public;0;4;;@Override public boolean isSingleton() {     return target.isSingleton(). }

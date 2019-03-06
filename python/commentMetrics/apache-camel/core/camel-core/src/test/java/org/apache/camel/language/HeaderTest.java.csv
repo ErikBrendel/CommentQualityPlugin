@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void testHeaderExpressions() throws Exception {     assertExpression("foo", "abc"). }
-false;public;0;4;;@Test public void testPredicates() throws Exception {     assertPredicate("foo"). }
-false;public;0;5;;@Test public void testSingleton() {     HeaderLanguage prop = new HeaderLanguage().     assertTrue(prop.isSingleton()). }
-false;protected;0;3;;protected String getLanguageName() {     return "header". }

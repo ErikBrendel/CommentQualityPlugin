@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Before @Override public void setUp() throws Exception {     super.setUp().     setProtocolString("newHttp://"). }
-false;public;0;6;;public CamelContext createCamelContext() throws Exception {     CamelContext answer = super.createCamelContext().     // register the a new HttpComponent with different protocol name     answer.addComponent("newHttp", new HttpComponent()).     return answer. }

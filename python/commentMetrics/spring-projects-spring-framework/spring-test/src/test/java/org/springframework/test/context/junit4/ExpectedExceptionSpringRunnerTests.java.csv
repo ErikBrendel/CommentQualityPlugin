@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void expectedExceptions() throws Exception {     runTestsAndAssertCounters(SpringRunner.class, ExpectedExceptionSpringRunnerTestCase.class, 1, 0, 1, 0, 0). }
-true;public;0;4;// Should Pass. ;// Should Pass. @Test(expected = IndexOutOfBoundsException.class) public void verifyJUnitExpectedException() {     new ArrayList<>().get(1). }

@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;3;4;;@Override public void storeCookies(Exchange exchange, URI uri, Map<String, List<String>> headerMap) throws IOException {     getCookieManager(exchange).put(uri, headerMap). }
-false;public;2;6;;@Override public Map<String, List<String>> loadCookies(Exchange exchange, URI uri) throws IOException {     // exchange     return getCookieManager(exchange).get(uri, Collections.emptyMap()). }
-false;public;1;4;;@Override public CookieStore getCookieStore(Exchange exchange) {     return getCookieManager(exchange).getCookieStore(). }
-false;protected,abstract;1;1;;protected abstract CookieManager getCookieManager(Exchange exchange).

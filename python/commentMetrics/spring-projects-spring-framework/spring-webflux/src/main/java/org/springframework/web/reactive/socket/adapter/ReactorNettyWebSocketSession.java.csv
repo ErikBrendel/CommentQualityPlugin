@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;12;;@Override public Flux<WebSocketMessage> receive() {     return getDelegate().getInbound().aggregateFrames(this.maxFramePayloadLength).receiveFrames().map(super::toMessage).doOnNext(message -> {         if (logger.isTraceEnabled()) {             logger.trace(getLogPrefix() + "Received " + message).         }     }). }
-false;public;1;14;;@Override public Mono<Void> send(Publisher<WebSocketMessage> messages) {     Flux<WebSocketFrame> frames = Flux.from(messages).doOnNext(message -> {         if (logger.isTraceEnabled()) {             logger.trace(getLogPrefix() + "Sending " + message).         }     }).map(this::toFrame).     return getDelegate().getOutbound().options(NettyPipeline.SendOptions::flushOnEach).sendObject(frames).then(). }
-false;public;1;4;;@Override public Mono<Void> close(CloseStatus status) {     return getDelegate().getOutbound().sendClose(status.getCode(), status.getReason()). }
-false;public;0;3;;public WebsocketInbound getInbound() {     return this.inbound. }
-false;public;0;3;;public WebsocketOutbound getOutbound() {     return this.outbound. }

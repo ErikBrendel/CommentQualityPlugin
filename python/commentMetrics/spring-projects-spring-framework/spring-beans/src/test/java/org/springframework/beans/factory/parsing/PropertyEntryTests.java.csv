@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test(expected = IllegalArgumentException.class) public void testCtorBailsOnNullPropertyNameArgument() throws Exception {     new PropertyEntry(null). }
-false;public;0;4;;@Test(expected = IllegalArgumentException.class) public void testCtorBailsOnEmptyPropertyNameArgument() throws Exception {     new PropertyEntry(""). }
-false;public;0;4;;@Test(expected = IllegalArgumentException.class) public void testCtorBailsOnWhitespacedPropertyNameArgument() throws Exception {     new PropertyEntry("\t   "). }

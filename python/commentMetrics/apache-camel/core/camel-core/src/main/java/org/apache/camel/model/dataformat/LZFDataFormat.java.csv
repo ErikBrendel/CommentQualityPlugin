@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;2;6;;@Override protected void configureDataFormat(DataFormat dataFormat, CamelContext camelContext) {     if (usingParallelCompression != null) {         setProperty(camelContext, dataFormat, "usingParallelCompression", usingParallelCompression).     } }
-false;public;0;3;;public Boolean getUsingParallelCompression() {     return usingParallelCompression. }
-true;public;1;3;/**  * Enable encoding (compress) using multiple processing cores.  */ ;/**  * Enable encoding (compress) using multiple processing cores.  */ public void setUsingParallelCompression(Boolean usingParallelCompression) {     this.usingParallelCompression = usingParallelCompression. }

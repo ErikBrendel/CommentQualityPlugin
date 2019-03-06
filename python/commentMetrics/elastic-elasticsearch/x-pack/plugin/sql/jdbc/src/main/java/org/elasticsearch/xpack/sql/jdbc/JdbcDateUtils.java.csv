@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;static;1;3;;static long asMillisSinceEpoch(String date) {     return ISO_WITH_MILLIS.parse(date, ZonedDateTime::from).toInstant().toEpochMilli(). }
-false;static;1;3;;static Date asDate(String date) {     return new Date(utcMillisRemoveTime(asMillisSinceEpoch(date))). }
-false;static;1;3;;static Time asTime(String date) {     return new Time(utcMillisRemoveDate(asMillisSinceEpoch(date))). }
-false;static;1;3;;static Timestamp asTimestamp(String date) {     return new Timestamp(asMillisSinceEpoch(date)). }
-true;static;3;7;/*      * Handles the value received as parameter, as either String (a ZonedDateTime formatted in ISO 8601 standard with millis) -       * date fields being returned formatted like this. Or a Long value, in case of Histograms.      */ ;/*      * Handles the value received as parameter, as either String (a ZonedDateTime formatted in ISO 8601 standard with millis) -       * date fields being returned formatted like this. Or a Long value, in case of Histograms.      */ static <R> R asDateTimeField(Object value, Function<String, R> asDateTimeMethod, Function<Long, R> ctor) {     if (value instanceof String) {         return asDateTimeMethod.apply((String) value).     } else {         return ctor.apply(((Number) value).longValue()).     } }
-false;static;1;3;;static long utcMillisRemoveTime(long l) {     return l - (l % DAY_IN_MILLIS). }
-false;private,static;1;3;;private static long utcMillisRemoveDate(long l) {     return l % DAY_IN_MILLIS. }

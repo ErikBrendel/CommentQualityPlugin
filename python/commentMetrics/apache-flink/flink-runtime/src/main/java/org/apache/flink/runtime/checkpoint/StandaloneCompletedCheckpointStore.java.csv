@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public void recover() throws Exception { // Nothing to do }
-false;public;1;14;;@Override public void addCheckpoint(CompletedCheckpoint checkpoint) throws Exception {     checkpoints.addLast(checkpoint).     if (checkpoints.size() > maxNumberOfCheckpointsToRetain) {         try {             CompletedCheckpoint checkpointToSubsume = checkpoints.removeFirst().             checkpointToSubsume.discardOnSubsume().         } catch (Exception e) {             LOG.warn("Fail to subsume the old checkpoint.", e).         }     } }
-false;public;0;4;;@Override public CompletedCheckpoint getLatestCheckpoint() {     return checkpoints.isEmpty() ? null : checkpoints.getLast(). }
-false;public;0;4;;@Override public List<CompletedCheckpoint> getAllCheckpoints() {     return new ArrayList<>(checkpoints). }
-false;public;0;4;;@Override public int getNumberOfRetainedCheckpoints() {     return checkpoints.size(). }
-false;public;0;4;;@Override public int getMaxNumberOfRetainedCheckpoints() {     return maxNumberOfCheckpointsToRetain. }
-false;public;1;12;;@Override public void shutdown(JobStatus jobStatus) throws Exception {     try {         LOG.info("Shutting down").         for (CompletedCheckpoint checkpoint : checkpoints) {             checkpoint.discardOnShutdown(jobStatus).         }     } finally {         checkpoints.clear().     } }
-false;public;0;4;;@Override public boolean requiresExternalizedCheckpoints() {     return false. }

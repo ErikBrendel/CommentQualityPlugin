@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Test public void testMocksAreValid() throws Exception {     result.expectedBodiesReceived(expectedBody).     result.expectedHeaderReceived("foo", "\"hello.txt\" abc").     template.sendBodyAndHeader("file:target/foo", expectedBody, Exchange.FILE_NAME, "hello.txt").     result.assertIsSatisfied(). }
-false;public;0;5;;@Before public void setUp() throws Exception {     deleteDirectory("target/foo").     super.setUp(). }

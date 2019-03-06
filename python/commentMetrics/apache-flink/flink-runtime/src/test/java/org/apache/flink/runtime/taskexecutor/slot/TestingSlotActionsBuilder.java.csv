@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;public TestingSlotActionsBuilder setFreeSlotConsumer(Consumer<AllocationID> freeSlotConsumer) {     this.freeSlotConsumer = freeSlotConsumer.     return this. }
-false;public;1;4;;public TestingSlotActionsBuilder setTimeoutSlotConsumer(BiConsumer<AllocationID, UUID> timeoutSlotConsumer) {     this.timeoutSlotConsumer = timeoutSlotConsumer.     return this. }
-false;public;0;3;;public TestingSlotActions build() {     return new TestingSlotActions(freeSlotConsumer, timeoutSlotConsumer). }

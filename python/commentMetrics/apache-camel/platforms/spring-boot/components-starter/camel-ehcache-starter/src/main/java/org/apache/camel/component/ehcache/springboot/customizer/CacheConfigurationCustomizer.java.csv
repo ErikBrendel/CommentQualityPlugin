@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;9;;@Override public void customize(EhcacheComponent component) {     if (configurations != null && configuration.getMode() == CacheConfigurationCustomizerConfiguration.Mode.APPEND) {         component.addCachesConfigurations(configurations).     }     if (configurations != null && configuration.getMode() == CacheConfigurationCustomizerConfiguration.Mode.REPLACE) {         component.setCachesConfigurations(configurations).     } }
-false;public;0;4;;@Override public String getId() {     return "camel.component.ehcache.customizer.cache-configuration". }

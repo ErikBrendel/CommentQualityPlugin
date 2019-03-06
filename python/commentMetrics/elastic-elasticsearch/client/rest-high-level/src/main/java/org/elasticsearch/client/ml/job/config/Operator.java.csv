@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;4;;@Override public boolean test(double lhs, double rhs) {     return Double.compare(lhs, rhs) > 0. }
-false;public;2;4;;@Override public boolean test(double lhs, double rhs) {     return Double.compare(lhs, rhs) >= 0. }
-false;public;2;4;;@Override public boolean test(double lhs, double rhs) {     return Double.compare(lhs, rhs) < 0. }
-false;public;2;4;;@Override public boolean test(double lhs, double rhs) {     return Double.compare(lhs, rhs) <= 0. }
-false;public;2;3;;public boolean test(double lhs, double rhs) {     return false. }
-false;public,static;1;3;;public static Operator fromString(String name) {     return valueOf(name.trim().toUpperCase(Locale.ROOT)). }
-false;public;0;4;;@Override public String toString() {     return name().toLowerCase(Locale.ROOT). }

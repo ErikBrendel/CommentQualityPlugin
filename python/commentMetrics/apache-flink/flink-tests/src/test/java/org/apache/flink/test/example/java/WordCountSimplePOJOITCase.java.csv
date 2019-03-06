@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;5;;@Override protected void preSubmit() throws Exception {     textPath = createTempFile("text.txt", WordCountData.TEXT).     resultPath = getTempDirPath("result"). }
-false;protected;0;4;;@Override protected void postSubmit() throws Exception {     compareResultsByLinesInMemory(WordCountData.COUNTS, resultPath). }
-false;public;2;3;;public WC reduce(WC value1, WC value2) {     return new WC(value1.word, value1.count + value2.count). }
-false;protected;0;21;;@Override protected void testProgram() throws Exception {     final ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment().     DataSet<String> text = env.readTextFile(textPath).     DataSet<WC> counts = text.flatMap(new Tokenizer()).groupBy("word").reduce(new ReduceFunction<WC>() {          private static final long serialVersionUID = 1L.          public WC reduce(WC value1, WC value2) {             return new WC(value1.word, value1.count + value2.count).         }     }).     counts.writeAsText(resultPath).     env.execute("WordCount with custom data types example"). }
-false;public;2;12;;@Override public void flatMap(String value, Collector<WC> out) {     // normalize and split the line     String[] tokens = value.toLowerCase().split("\\W+").     // emit the pairs     for (String token : tokens) {         if (token.length() > 0) {             out.collect(new WC(token, 1)).         }     } }
-false;public;0;4;;@Override public String toString() {     return word + " " + count. }

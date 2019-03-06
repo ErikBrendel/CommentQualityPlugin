@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;4;/**  * @return  *     The itemId  */ ;/**  * @return  *     The itemId  */ @JsonProperty("itemId") public String getItemId() {     return itemId. }
-true;public;1;4;/**  * @param itemId  *     The itemId  */ ;/**  * @param itemId  *     The itemId  */ @JsonProperty("itemId") public void setItemId(String itemId) {     this.itemId = itemId. }
-true;public;0;4;/**  * @return  *     The amount  */ ;/**  * @return  *     The amount  */ @JsonProperty("amount") public int getAmount() {     return amount. }
-true;public;1;4;/**  * @param amount  *     The amount  */ ;/**  * @param amount  *     The amount  */ @JsonProperty("amount") public void setAmount(int amount) {     this.amount = amount. }
-true;public;0;4;/**  * @return  *     The cost  */ ;/**  * @return  *     The cost  */ @JsonProperty("cost") public double getCost() {     return cost. }
-true;public;1;4;/**  * @param cost  *     The cost  */ ;/**  * @param cost  *     The cost  */ @JsonProperty("cost") public void setCost(double cost) {     this.cost = cost. }

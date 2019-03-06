@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void noneAttachesReset() {     ExampleService mock = mock(ExampleService.class).     assertThat(MockReset.get(mock)).isEqualTo(MockReset.NONE). }
-false;public;0;6;;@Test public void withSettingsOfNoneAttachesReset() {     ExampleService mock = mock(ExampleService.class, MockReset.withSettings(MockReset.NONE)).     assertThat(MockReset.get(mock)).isEqualTo(MockReset.NONE). }
-false;public;0;5;;@Test public void beforeAttachesReset() {     ExampleService mock = mock(ExampleService.class, MockReset.before()).     assertThat(MockReset.get(mock)).isEqualTo(MockReset.BEFORE). }
-false;public;0;5;;@Test public void afterAttachesReset() {     ExampleService mock = mock(ExampleService.class, MockReset.after()).     assertThat(MockReset.get(mock)).isEqualTo(MockReset.AFTER). }
-false;public;0;6;;@Test public void withSettingsAttachesReset() {     ExampleService mock = mock(ExampleService.class, MockReset.withSettings(MockReset.BEFORE)).     assertThat(MockReset.get(mock)).isEqualTo(MockReset.BEFORE). }
-false;public;0;6;;@Test public void apply() {     ExampleService mock = mock(ExampleService.class, MockReset.apply(MockReset.AFTER, withSettings())).     assertThat(MockReset.get(mock)).isEqualTo(MockReset.AFTER). }

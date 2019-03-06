@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;1;1;/**  * Should the pointcut apply to the given interface or target class?  * @param clazz the candidate target class  * @return whether the advice should apply to the given target class  */ ;/**  * Should the pointcut apply to the given interface or target class?  * @param clazz the candidate target class  * @return whether the advice should apply to the given target class  */ boolean matches(Class<?> clazz).

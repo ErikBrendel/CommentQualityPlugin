@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;@Test public void testOptions() throws Exception {     YammerEndpoint endpoint = context.getEndpoint(YAMMER_MESSAGES_CONSUMER, YammerEndpoint.class).     // now check if options got applied     assertEquals(1, endpoint.getConfig().getLimit()).     assertEquals("true", endpoint.getConfig().getThreaded()).     assertEquals(130, endpoint.getConfig().getOlderThan()).     assertEquals(127, endpoint.getConfig().getNewerThan()). }
-false;public;0;3;;public void configure() {     from(YAMMER_MESSAGES_CONSUMER).to("mock:result"). }
-false;protected;0;8;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() {             from(YAMMER_MESSAGES_CONSUMER).to("mock:result").         }     }. }

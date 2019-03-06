@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getMessage() {     return processor.getExpression().toString(). }
-false;public;0;5;;@Override public String getLoggingLevel() {     LoggingLevel level = processor.getLogger().getLevel().     return level != null ? level.name() : null. }
-false;public;0;4;;@Override public String getLogName() {     return processor.getLogger().getLog().getName(). }
-false;public;0;5;;@Override public String getMarker() {     Marker marker = processor.getLogger().getMarker().     return marker != null ? marker.getName() : null. }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void allSentinelNumbersAreRecognized() {     for (SentinelSequenceNumber sentinel : SentinelSequenceNumber.values()) {         assertTrue(SentinelSequenceNumber.isSentinelSequenceNumber(sentinel.get())).     } }

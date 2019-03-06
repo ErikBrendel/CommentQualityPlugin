@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,final;1;4;/**  * Set the TaskId to look up. Required.  */ ;/**  * Set the TaskId to look up. Required.  */ public final GetTaskRequestBuilder setTaskId(TaskId taskId) {     request.setTaskId(taskId).     return this. }
-true;public,final;1;4;/**  * Should this request wait for all found tasks to complete?  */ ;/**  * Should this request wait for all found tasks to complete?  */ public final GetTaskRequestBuilder setWaitForCompletion(boolean waitForCompletion) {     request.setWaitForCompletion(waitForCompletion).     return this. }
-true;public,final;1;4;/**  * Timeout to wait for any async actions this request must take. It must take anywhere from 0 to 2.  */ ;/**  * Timeout to wait for any async actions this request must take. It must take anywhere from 0 to 2.  */ public final GetTaskRequestBuilder setTimeout(TimeValue timeout) {     request.setTimeout(timeout).     return this. }

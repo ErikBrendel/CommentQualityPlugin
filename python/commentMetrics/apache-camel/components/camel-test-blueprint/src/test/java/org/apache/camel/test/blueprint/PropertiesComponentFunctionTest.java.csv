@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getName() {     return "beer". }
-false;public;1;4;;@Override public String apply(String remainder) {     return "mock:" + remainder.toLowerCase(). }
-false;protected;0;4;;@Override protected String getBlueprintDescriptor() {     return "org/apache/camel/test/blueprint/PropertiesComponentFunctionTest.xml". }
-false;public;0;9;;@Test public void testFunction() throws Exception {     getMockEndpoint("mock:foo").expectedMessageCount(1).     getMockEndpoint("mock:bar").expectedMessageCount(1).     template.sendBody("direct:start", "Hello World").     assertMockEndpointsSatisfied(). }

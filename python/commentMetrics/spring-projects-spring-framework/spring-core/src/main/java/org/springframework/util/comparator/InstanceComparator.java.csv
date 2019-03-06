@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;6;;@Override public int compare(T o1, T o2) {     int i1 = getOrder(o1).     int i2 = getOrder(o2).     return (i1 < i2 ? -1 : (i1 == i2 ? 0 : 1)). }
-false;private;1;10;;private int getOrder(@Nullable T object) {     if (object != null) {         for (int i = 0. i < this.instanceOrder.length. i++) {             if (this.instanceOrder[i].isInstance(object)) {                 return i.             }         }     }     return this.instanceOrder.length. }

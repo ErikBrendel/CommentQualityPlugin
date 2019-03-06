@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public HttpStatus getStatusCode() throws IOException {     return this.response.getStatusCode(). }
-false;public;0;4;;@Override public int getRawStatusCode() throws IOException {     return this.response.getRawStatusCode(). }
-false;public;0;4;;@Override public String getStatusText() throws IOException {     return this.response.getStatusText(). }
-false;public;0;4;;@Override public HttpHeaders getHeaders() {     return this.response.getHeaders(). }
-false;public;0;7;;@Override public InputStream getBody() throws IOException {     if (this.body == null) {         this.body = StreamUtils.copyToByteArray(this.response.getBody()).     }     return new ByteArrayInputStream(this.body). }
-false;public;0;4;;@Override public void close() {     this.response.close(). }

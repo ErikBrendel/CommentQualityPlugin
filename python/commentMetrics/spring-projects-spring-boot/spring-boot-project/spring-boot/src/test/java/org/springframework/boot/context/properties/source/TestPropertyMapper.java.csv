@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;6;;public void addFromPropertySource(String from, String... to) {     for (String configurationPropertyName : to) {         this.fromSource.add(from, new PropertyMapping(from, ConfigurationPropertyName.of(configurationPropertyName))).     } }
-false;public;2;6;;public void addFromConfigurationProperty(ConfigurationPropertyName from, String... to) {     for (String propertySourceName : to) {         this.fromConfig.add(from, new PropertyMapping(propertySourceName, from)).     } }
-false;public;1;5;;@Override public PropertyMapping[] map(String propertySourceName) {     return this.fromSource.getOrDefault(propertySourceName, Collections.emptyList()).toArray(new PropertyMapping[0]). }
-false;public;1;6;;@Override public PropertyMapping[] map(ConfigurationPropertyName configurationPropertyName) {     return this.fromConfig.getOrDefault(configurationPropertyName, Collections.emptyList()).toArray(new PropertyMapping[0]). }

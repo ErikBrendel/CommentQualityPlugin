@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void testThreadsDefault() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("Hello World").     template.sendBody("direct:start", "Hello World").     assertMockEndpointsSatisfied(). }
-false;public;0;8;;@Override public void configure() throws Exception {     from("direct:start").threads().to("log:foo").to("mock:result"). }
-false;protected;0;13;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").threads().to("log:foo").to("mock:result").         }     }. }

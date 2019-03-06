@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;7;;public static CxfRsEndpointConfigurer create(HostnameVerifier hostnameVerifier) {     if (hostnameVerifier == null) {         return new ChainedCxfRsEndpointConfigurer.NullCxfRsEndpointConfigurer().     } else {         return new HostnameVerifierCxfRsEndpointConfigurer(hostnameVerifier).     } }
-false;public;1;3;;@Override public void configure(AbstractJAXRSFactoryBean factoryBean) { }
-false;public;1;5;;@Override public void configureClient(Client client) {     HTTPConduit httpConduit = (HTTPConduit) WebClient.getConfig(client).getConduit().     setupHttpConduit(httpConduit). }
-false;public;1;3;;@Override public void configureServer(Server server) { }

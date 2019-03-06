@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Test public void testUriIsSanitized() {     HttpOperationFailedException httpOperationFailedException = new HttpOperationFailedException("http://user:password@host", 500, "", "", null, "").     assertThat(httpOperationFailedException.getMessage(), not(containsString("password"))).     assertThat(httpOperationFailedException.getUri(), not(containsString("password"))). }

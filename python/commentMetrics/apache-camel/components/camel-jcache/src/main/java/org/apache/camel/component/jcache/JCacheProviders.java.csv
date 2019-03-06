@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String shortName() {     return shortName. }
-false;public;0;4;;@Override public String className() {     return className. }
-false;public;0;4;;@Override public String shortName() {     return providerName. }
-false;public;0;4;;@Override public String className() {     return providerName. }
-false;public,static;1;21;;public static JCacheProvider lookup(String providerName) {     if (providerName != null) {         for (JCacheProvider provider : values()) {             if (provider.shortName().equals(providerName) || provider.className().equals(providerName)) {                 return provider.             }         }     }     return new JCacheProvider() {          @Override         public String shortName() {             return providerName.         }          @Override         public String className() {             return providerName.         }     }. }

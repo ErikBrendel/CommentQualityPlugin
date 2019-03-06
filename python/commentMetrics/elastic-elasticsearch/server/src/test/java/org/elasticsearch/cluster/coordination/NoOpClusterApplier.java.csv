@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public void setInitialState(ClusterState initialState) { }
-false;public;3;4;;@Override public void onNewClusterState(String source, Supplier<ClusterState> clusterStateSupplier, ClusterApplyListener listener) {     listener.onSuccess(source). }

@@ -31,15 +31,22 @@ def cluster(frame: DataFrame):
     frame['color'] = [[0, 0.8, 0, alpha] if c else [1, 0, 0, alpha] for c in frame['commented']]
     frame['parameterAmount_rnd'] = [1 + x + random.uniform(-0.4, 0.4) for x in frame['parameterAmount']]
     frame['loc_rnd'] = [1 + x + random.uniform(-0.4, 0.4) for x in frame['loc']]
+    frame['cc_rnd'] = [1 + x + random.uniform(-0.4, 0.4) for x in frame['cc']]
+
 
     frame = frame.sample(frac=1).reset_index(drop=True)
 
     plt.xscale('log')
-    plt.yscale('log')
-    plt.scatter(frame['loc_rnd'], frame['parameterAmount_rnd'], c=frame['color'], marker=".")
-    # plt.scatter(X_Data.loc[:, 0], X_Data[:, 1], c=y_pred, marker="+")
+    #plt.yscale('log')
 
-    plt.title("trololol")
+    """plt.subplot(221)
+    plt.scatter(frame['loc_rnd'], frame['parameterAmount_rnd'], c=frame['color'], marker=".")
+    plt.title("loc_rnd, parameterAmount_rnd")"""
+
+    #plt.subplot(222)
+    plt.scatter(frame['loc_rnd'], frame['cc_rnd'], c=frame['color'], marker=".")
+    plt.title("loc_rnd, cc")
+
 
     plt.show()
 

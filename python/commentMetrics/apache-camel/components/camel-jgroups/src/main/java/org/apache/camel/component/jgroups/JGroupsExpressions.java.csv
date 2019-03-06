@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public Object evaluate(Exchange exchange) {     return exchange.getContext().getStatus().isStarted() ? 0 : delay. }
-false;public,static;1;8;;public static Expression delayIfContextNotStarted(final long delay) {     return new ExpressionAdapter() {          @Override         public Object evaluate(Exchange exchange) {             return exchange.getContext().getStatus().isStarted() ? 0 : delay.         }     }. }

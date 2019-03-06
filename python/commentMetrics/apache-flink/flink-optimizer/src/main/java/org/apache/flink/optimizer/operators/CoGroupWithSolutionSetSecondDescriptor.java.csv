@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;6;;@Override protected List<LocalPropertiesPair> createPossibleLocalProperties() {     RequestedLocalProperties sort = new RequestedLocalProperties(Utils.createOrdering(this.keys1)).     RequestedLocalProperties none = new RequestedLocalProperties().     return Collections.singletonList(new LocalPropertiesPair(sort, none)). }
-false;public;4;6;;@Override public boolean areCoFulfilled(RequestedLocalProperties requested1, RequestedLocalProperties requested2, LocalProperties produced1, LocalProperties produced2) {     return true. }
-false;public;2;4;;@Override public LocalProperties computeLocalProperties(LocalProperties in1, LocalProperties in2) {     return in1. }

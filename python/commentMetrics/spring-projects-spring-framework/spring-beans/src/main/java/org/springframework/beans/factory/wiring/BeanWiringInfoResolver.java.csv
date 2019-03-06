@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;1;2;/**  * Resolve the BeanWiringInfo for the given bean instance.  * @param beanInstance the bean instance to resolve info for  * @return the BeanWiringInfo, or {@code null} if not found  */ ;/**  * Resolve the BeanWiringInfo for the given bean instance.  * @param beanInstance the bean instance to resolve info for  * @return the BeanWiringInfo, or {@code null} if not found  */ @Nullable BeanWiringInfo resolveWiringInfo(Object beanInstance).

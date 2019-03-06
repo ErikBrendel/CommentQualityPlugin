@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void shouldNotPrint() throws Exception {     this.mvc.perform(get("/one")).andExpect(content().string("one")).andExpect(status().isOk()). }
-false;public;0;5;;@Test public void shouldPrint() throws Exception {     this.mvc.perform(get("/one")).andExpect(content().string("none")).andExpect(status().isOk()). }

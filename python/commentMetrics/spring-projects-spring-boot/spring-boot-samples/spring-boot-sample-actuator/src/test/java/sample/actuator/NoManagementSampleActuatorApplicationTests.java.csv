@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;@Test public void testHome() {     @SuppressWarnings("rawtypes")     ResponseEntity<Map> entity = this.restTemplate.withBasicAuth("user", getPassword()).getForEntity("/", Map.class).     assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.OK).     @SuppressWarnings("unchecked")     Map<String, Object> body = entity.getBody().     assertThat(body.get("message")).isEqualTo("Hello Phil"). }
-false;public;0;8;;@Test public void testMetricsNotAvailable() {     // makes sure some requests have been made     testHome().     @SuppressWarnings("rawtypes")     ResponseEntity<Map> entity = this.restTemplate.withBasicAuth("user", getPassword()).getForEntity("/metrics", Map.class).     assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND). }
-false;private;0;3;;private String getPassword() {     return "password". }

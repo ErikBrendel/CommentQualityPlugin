@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;13;;public void testEmptyValue() throws IOException {     BytesReference ref = BytesReference.bytes(XContentFactory.cborBuilder().startObject().field("field", "").endObject()).     for (int i = 0. i < 2. i++) {         // See https://github.com/elastic/elasticsearch/issues/8629         try (XContentParser parser = createParser(CborXContent.cborXContent, ref)) {             while (parser.nextToken() != null) {                 parser.charBuffer().             }         }     } }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected UpdateJobRequest createTestInstance() {     return new UpdateJobRequest(JobUpdateTests.createRandom(JobTests.randomValidJobId())). }
-false;protected;1;4;;@Override protected UpdateJobRequest doParseInstance(XContentParser parser) {     return new UpdateJobRequest(JobUpdate.PARSER.apply(parser, null).build()). }
-false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return false. }

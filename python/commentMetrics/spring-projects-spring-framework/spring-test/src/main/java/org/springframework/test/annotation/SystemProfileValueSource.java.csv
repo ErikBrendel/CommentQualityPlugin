@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,static,final;0;3;/**  * Obtain the canonical instance of this ProfileValueSource.  */ ;/**  * Obtain the canonical instance of this ProfileValueSource.  */ public static final SystemProfileValueSource getInstance() {     return INSTANCE. }
-true;public;1;5;/**  * Get the <em>profile value</em> indicated by the specified key from the  * system properties.  * @see System#getProperty(String)  */ ;/**  * Get the <em>profile value</em> indicated by the specified key from the  * system properties.  * @see System#getProperty(String)  */ @Override public String get(String key) {     Assert.hasText(key, "'key' must not be empty").     return System.getProperty(key). }

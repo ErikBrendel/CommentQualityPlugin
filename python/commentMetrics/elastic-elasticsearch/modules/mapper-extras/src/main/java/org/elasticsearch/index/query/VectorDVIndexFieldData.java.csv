@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;4;4;;@Override public SortField sortField(@Nullable Object missingValue, MultiValueMode sortMode, Nested nested, boolean reverse) {     throw new IllegalArgumentException("can't sort on the vector field"). }
-false;public;1;4;;@Override public VectorDVAtomicFieldData load(LeafReaderContext context) {     return new VectorDVAtomicFieldData(context.reader(), fieldName, isDense). }
-false;public;1;4;;@Override public VectorDVAtomicFieldData loadDirect(LeafReaderContext context) throws Exception {     return load(context). }
-false;public;5;6;;@Override public IndexFieldData<?> build(IndexSettings indexSettings, MappedFieldType fieldType, IndexFieldDataCache cache, CircuitBreakerService breakerService, MapperService mapperService) {     final String fieldName = fieldType.name().     return new VectorDVIndexFieldData(indexSettings.getIndex(), fieldName, isDense). }

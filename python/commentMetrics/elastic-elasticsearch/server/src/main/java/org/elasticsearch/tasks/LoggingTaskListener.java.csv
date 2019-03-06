@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,static;0;4;/**  * Get the instance of NoopActionListener cast appropriately.  */ ;/**  * Get the instance of NoopActionListener cast appropriately.  */ // Safe because we only toString the response @SuppressWarnings("unchecked") public static <Response> TaskListener<Response> instance() {     return (TaskListener<Response>) INSTANCE. }
-false;public;2;4;;@Override public void onResponse(Task task, Response response) {     logger.info("{} finished with response {}", task.getId(), response). }
-false;public;2;4;;@Override public void onFailure(Task task, Throwable e) {     logger.warn(() -> new ParameterizedMessage("{} failed with exception", task.getId()), e). }

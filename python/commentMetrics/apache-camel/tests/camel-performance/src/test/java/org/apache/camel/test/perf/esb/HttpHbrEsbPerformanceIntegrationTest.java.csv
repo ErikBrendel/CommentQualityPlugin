@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;@Test public void testHttpHbr() throws Exception {     // warm up with 1.000 messages so that the JIT compiler kicks in     send("http://127.0.0.1:8192/service/CBRTransportHeaderProxy", 1000).     StopWatch watch = new StopWatch().     send("http://127.0.0.1:8192/service/CBRTransportHeaderProxy", count).     log.warn("Ran {} tests in {}ms", count, watch.taken()). }
-false;protected;0;4;;@Override protected String getBlueprintDescriptor() {     return "OSGI-INF/blueprint/http-hbr-bundle-context.xml". }

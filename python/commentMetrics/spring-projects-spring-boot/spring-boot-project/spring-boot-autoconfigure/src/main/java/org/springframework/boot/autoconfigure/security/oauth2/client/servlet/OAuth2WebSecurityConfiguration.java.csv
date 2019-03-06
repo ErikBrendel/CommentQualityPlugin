@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;@Bean @ConditionalOnMissingBean public OAuth2AuthorizedClientService authorizedClientService(ClientRegistrationRepository clientRegistrationRepository) {     return new InMemoryOAuth2AuthorizedClientService(clientRegistrationRepository). }
-false;public;1;7;;@Bean @ConditionalOnMissingBean public OAuth2AuthorizedClientRepository authorizedClientRepository(OAuth2AuthorizedClientService authorizedClientService) {     return new AuthenticatedPrincipalOAuth2AuthorizedClientRepository(authorizedClientService). }
-false;protected;1;5;;@Override protected void configure(HttpSecurity http) throws Exception {     http.authorizeRequests().anyRequest().authenticated().and().oauth2Login().and().oauth2Client(). }

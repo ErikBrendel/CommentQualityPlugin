@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;9;;@Bean @ConditionalOnMissingBean public SolrClient solrClient(SolrProperties properties) {     if (StringUtils.hasText(properties.getZkHost())) {         return new CloudSolrClient.Builder(Arrays.asList(properties.getZkHost()), Optional.empty()).build().     }     return new HttpSolrClient.Builder(properties.getHost()).build(). }

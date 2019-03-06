@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Override public String[] getValidTestValues() {     return new String[] { "0", "1", "576", "-877678", String.valueOf(Integer.MAX_VALUE), String.valueOf(Integer.MIN_VALUE), String.valueOf(Long.MAX_VALUE), String.valueOf(Long.MIN_VALUE), "7656", "1239" }. }
-false;public;0;7;;@Override public Long[] getValidTestResults() {     return new Long[] { 0L, 1L, 576L, -877678L, (long) Integer.MAX_VALUE, (long) Integer.MIN_VALUE, Long.MAX_VALUE, Long.MIN_VALUE, 7656L, 1239L }. }
-false;public;0;7;;@Override public String[] getInvalidTestValues() {     return new String[] { "a", "1569a86", "-57-6", "7-877678", String.valueOf(Long.MAX_VALUE) + "0", String.valueOf(Long.MIN_VALUE) + "0", "9223372036854775808", "-9223372036854775809", " 1", "2 ", " ", "\t" }. }
-false;public;0;4;;@Override public boolean allowsEmptyField() {     return false. }
-false;public;0;4;;@Override public FieldParser<Long> getParser() {     return new LongParser(). }
-false;public;0;4;;@Override public Class<Long> getTypeClass() {     return Long.class. }

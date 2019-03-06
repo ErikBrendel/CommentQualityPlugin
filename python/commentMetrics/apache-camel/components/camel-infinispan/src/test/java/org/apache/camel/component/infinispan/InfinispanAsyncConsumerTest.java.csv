@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;@Test public void consumerReceivedPreAndPostEntryCreatedEventNotifications() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMessageCount(2).     mock.setResultMinimumWaitTime(900).     currentCache().put(KEY_ONE, VALUE_ONE).     mock.assertIsSatisfied(). }
-false;public;0;6;;@Override public void configure() {     from("infinispan?cacheContainer=#cacheContainer&sync=false&eventTypes=CACHE_ENTRY_CREATED").delayer(500).to("mock:result"). }
-false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() {             from("infinispan?cacheContainer=#cacheContainer&sync=false&eventTypes=CACHE_ENTRY_CREATED").delayer(500).to("mock:result").         }     }. }

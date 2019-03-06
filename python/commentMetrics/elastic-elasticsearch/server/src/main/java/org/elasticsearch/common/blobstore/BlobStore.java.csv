@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;1;1;/**  * Get a blob container instance for storing blobs at the given {@link BlobPath}.  */ ;/**  * Get a blob container instance for storing blobs at the given {@link BlobPath}.  */ BlobContainer blobContainer(BlobPath path).
-true;;1;1;/**  * Delete the blob store at the given {@link BlobPath}.  */ ;/**  * Delete the blob store at the given {@link BlobPath}.  */ void delete(BlobPath path) throws IOException.

@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public String getActionMode() {     return actionMode. }
-false;public;0;3;;public String getSendingMode() {     return sendingMode. }
-false;public;0;4;;@Override public String toString() {     return actionMode + "/" + sendingMode. }
-false;public,static;1;14;;public static DispositionMode parseDispositionMode(String dispositionModeString) {     switch(dispositionModeString) {         case "manual-action/MDN-sent-manually":             return MANUAL_ACTION_MDN_SENT_MANUALLY.         case "manual-actionMDN-sent-automatically":             return MANUAL_ACTION_MDN_SENT_AUTOMATICALLY.         case "automatic-action/MDN-sent-manually":             return AUTOMATIC_ACTION_MDN_SENT_MANUALLY.         case "automatic-action/MDN-sent-automatically":             return AUTOMATIC_ACTION_MDN_SENT_AUTOMATICALLY.         default:             return null.     } }

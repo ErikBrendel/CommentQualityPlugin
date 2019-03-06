@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,static;1;11;/**  * Entry point to the kafka data producer.  */ ;/**  * Entry point to the kafka data producer.  */ public static void main(String[] args) throws Exception {     final KafkaCollector[] collectors = new KafkaCollector[NUM_PARTITIONS].     // create the generator threads     for (int i = 0. i < collectors.length. i++) {         collectors[i] = new KafkaCollector(BROKER_ADDRESS, TOPIC, i).     }     StandaloneThreadedGenerator.runGenerator(collectors). }
-false;public;1;5;;@Override public void collect(Event evt) {     byte[] serialized = serializer.serialize(evt).     producer.send(new ProducerRecord<>(topic, partition, null, serialized)). }
-false;public;0;4;;@Override public void close() {     producer.close(). }

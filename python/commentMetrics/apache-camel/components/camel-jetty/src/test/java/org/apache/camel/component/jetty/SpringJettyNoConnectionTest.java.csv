@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/component/jetty/jetty-noconnection.xml"). }
-false;public;0;5;;@Test public void testConnectionOk() throws Exception {     String reply = template.requestBody("direct:start", "World", String.class).     assertEquals("Bye World", reply). }
-false;public;0;12;;@Test public void testConnectionNotOk() throws Exception {     // stop Jetty route so there should not be a connection     context.getRouteController().stopRoute("jetty").     try {         template.requestBody("direct:start", "Moon", String.class).         fail("Should have thrown an exception").     } catch (CamelExecutionException e) {         assertIsInstanceOf(ConnectException.class, e.getCause()).     } }

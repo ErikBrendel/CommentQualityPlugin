@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;@Test public void testSecureProxy() throws Exception {     // warm up with 1.000 messages so that the JIT compiler kicks in     send("http://127.0.0.1:8192/service/SecureProxy", 1000).     StopWatch watch = new StopWatch().     send("http://127.0.0.1:8192/service/SecureProxy", count).     log.warn("Ran {} tests in {}ms", count, watch.taken()). }
-false;protected;0;4;;@Override protected String readPayload() throws IOException {     return IOUtils.toString(getClass().getResourceAsStream("/1K_buyStocks_secure.xml")). }
-false;protected;0;4;;@Override protected String getBlueprintDescriptor() {     return "OSGI-INF/blueprint/secure-proxy-bundle-context.xml". }

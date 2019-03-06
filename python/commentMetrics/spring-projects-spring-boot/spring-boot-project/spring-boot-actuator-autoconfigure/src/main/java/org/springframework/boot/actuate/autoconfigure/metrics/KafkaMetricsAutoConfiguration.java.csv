@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;@Bean @ConditionalOnMissingBean @ConditionalOnBean(MBeanServer.class) public KafkaConsumerMetrics kafkaConsumerMetrics(MBeanServer mbeanServer) {     return new KafkaConsumerMetrics(mbeanServer, Collections.emptyList()). }

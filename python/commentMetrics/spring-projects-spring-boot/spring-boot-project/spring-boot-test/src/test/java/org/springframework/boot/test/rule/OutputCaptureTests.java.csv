@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void toStringShouldReturnAllCapturedOutput() {     System.out.println("Hello World").     assertThat(this.outputCapture.toString()).contains("Hello World"). }
-false;public;0;8;;@Test public void reset() {     System.out.println("Hello").     this.outputCapture.reset().     System.out.println("World").     assertThat(this.outputCapture.toString()).doesNotContain("Hello").contains("World"). }

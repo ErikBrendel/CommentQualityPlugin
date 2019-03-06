@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * Return the name of the method.  */ ;/**  * Return the name of the method.  */ String getMethodName().
-true;;0;1;/**  * Return the fully-qualified name of the class that declares this method.  */ ;/**  * Return the fully-qualified name of the class that declares this method.  */ String getDeclaringClassName().
-true;;0;1;/**  * Return the fully-qualified name of this method's declared return type.  * @since 4.2  */ ;/**  * Return the fully-qualified name of this method's declared return type.  * @since 4.2  */ String getReturnTypeName().
-true;;0;1;/**  * Return whether the underlying method is effectively abstract:  * i.e. marked as abstract on a class or declared as a regular,  * non-default method in an interface.  * @since 4.2  */ ;/**  * Return whether the underlying method is effectively abstract:  * i.e. marked as abstract on a class or declared as a regular,  * non-default method in an interface.  * @since 4.2  */ boolean isAbstract().
-true;;0;1;/**  * Return whether the underlying method is declared as 'static'.  */ ;/**  * Return whether the underlying method is declared as 'static'.  */ boolean isStatic().
-true;;0;1;/**  * Return whether the underlying method is marked as 'final'.  */ ;/**  * Return whether the underlying method is marked as 'final'.  */ boolean isFinal().
-true;;0;1;/**  * Return whether the underlying method is overridable,  * i.e. not marked as static, final or private.  */ ;/**  * Return whether the underlying method is overridable,  * i.e. not marked as static, final or private.  */ boolean isOverridable().

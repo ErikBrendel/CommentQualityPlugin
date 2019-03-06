@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Gets the future that is completed with the leader address and ID.  * @return The future.  */ ;/**  * Gets the future that is completed with the leader address and ID.  * @return The future.  */ public CompletableFuture<LeaderAddressAndId> future() {     return future. }
-false;public;2;4;;// ------------------------------------------------------------------------ @Override public void notifyLeaderAddress(String leaderAddress, UUID leaderSessionID) {     future.complete(new LeaderAddressAndId(leaderAddress, leaderSessionID)). }
-false;public;1;4;;@Override public void handleError(Exception exception) {     future.completeExceptionally(exception). }

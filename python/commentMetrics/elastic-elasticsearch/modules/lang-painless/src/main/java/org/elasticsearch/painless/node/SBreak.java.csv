@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;1;4;;@Override void extractVariables(Set<String> variables) { // Do nothing. }
-false;;1;11;;@Override void analyze(Locals locals) {     if (!inLoop) {         throw createError(new IllegalArgumentException("Break statement outside of a loop.")).     }     loopEscape = true.     allEscape = true.     anyBreak = true.     statementCount = 1. }
-false;;2;4;;@Override void write(MethodWriter writer, Globals globals) {     writer.goTo(brake). }
-false;public;0;4;;@Override public String toString() {     return singleLineToString(). }

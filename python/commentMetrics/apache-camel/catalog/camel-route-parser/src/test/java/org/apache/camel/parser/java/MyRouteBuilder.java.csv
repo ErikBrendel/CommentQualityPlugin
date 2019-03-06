@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Override public void configure() throws Exception {     from("timer:foo").log("I was here").toD("log:a").wireTap("mock:tap").to("log:b"). }

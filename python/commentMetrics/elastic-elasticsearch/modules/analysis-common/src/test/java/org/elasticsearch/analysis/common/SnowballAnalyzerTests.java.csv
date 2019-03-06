@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;public void testEnglish() throws Exception {     Analyzer a = new SnowballAnalyzer("English").     assertAnalyzesTo(a, "he abhorred accents", new String[] { "he", "abhor", "accent" }). }
-false;public;0;6;;public void testStopwords() throws Exception {     Analyzer a = new SnowballAnalyzer("English", EnglishAnalyzer.ENGLISH_STOP_WORDS_SET).     assertAnalyzesTo(a, "the quick brown fox jumped", new String[] { "quick", "brown", "fox", "jump" }). }
-true;public;0;6;/**  * Test turkish lowercasing  */ ;/**  * Test turkish lowercasing  */ public void testTurkish() throws Exception {     Analyzer a = new SnowballAnalyzer("Turkish").     assertAnalyzesTo(a, "ağacı", new String[] { "ağaç" }).     assertAnalyzesTo(a, "AĞACI", new String[] { "ağaç" }). }
-false;public;0;7;;public void testReusableTokenStream() throws Exception {     Analyzer a = new SnowballAnalyzer("English").     assertAnalyzesTo(a, "he abhorred accents", new String[] { "he", "abhor", "accent" }).     assertAnalyzesTo(a, "she abhorred him", new String[] { "she", "abhor", "him" }). }

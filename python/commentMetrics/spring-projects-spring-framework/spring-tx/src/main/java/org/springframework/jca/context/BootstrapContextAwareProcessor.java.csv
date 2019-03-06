@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;7;;@Override public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {     if (this.bootstrapContext != null && bean instanceof BootstrapContextAware) {         ((BootstrapContextAware) bean).setBootstrapContext(this.bootstrapContext).     }     return bean. }
-false;public;2;4;;@Override public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {     return bean. }

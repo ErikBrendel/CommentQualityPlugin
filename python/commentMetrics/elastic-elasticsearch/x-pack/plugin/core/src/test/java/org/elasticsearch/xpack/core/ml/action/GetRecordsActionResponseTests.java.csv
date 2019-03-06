@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;12;;@Override protected Response createTestInstance() {     int listSize = randomInt(10).     List<AnomalyRecord> hits = new ArrayList<>(listSize).     String jobId = randomAlphaOfLengthBetween(1, 20).     for (int j = 0. j < listSize. j++) {         AnomalyRecord record = new AnomalyRecord(jobId, new Date(), 600).         hits.add(record).     }     QueryPage<AnomalyRecord> snapshots = new QueryPage<>(hits, listSize, AnomalyRecord.RESULTS_FIELD).     return new Response(snapshots). }
-false;protected;0;4;;@Override protected Response createBlankInstance() {     return new Response(). }

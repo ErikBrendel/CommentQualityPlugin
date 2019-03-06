@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;4;5;;@Override protected HazelcastDefaultEndpoint doCreateEndpoint(String uri, String remaining, Map<String, Object> parameters, HazelcastInstance hzInstance) throws Exception {     HazelcastSetEndpoint answer = new HazelcastSetEndpoint(hzInstance, uri, this, remaining).     return answer. }

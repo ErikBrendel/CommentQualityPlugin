@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;public void acceptChannels(Supplier<NioSelector> selectorSupplier) throws IOException {     NioSocketChannel acceptedChannel.     while ((acceptedChannel = channelFactory.acceptNioChannel(this, selectorSupplier)) != null) {         acceptor.accept(acceptedChannel).     } }
-false;public;0;6;;@Override public void closeChannel() {     if (isClosing.compareAndSet(false, true)) {         getSelector().queueChannelClose(channel).     } }
-false;public;0;4;;@Override public NioSelector getSelector() {     return selector. }
-false;public;0;4;;@Override public NioServerSocketChannel getChannel() {     return channel. }

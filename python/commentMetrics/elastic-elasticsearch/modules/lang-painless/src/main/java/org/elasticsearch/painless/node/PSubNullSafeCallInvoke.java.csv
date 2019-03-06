@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;1;4;;@Override void extractVariables(Set<String> variables) {     guarded.extractVariables(variables). }
-false;;1;8;;@Override void analyze(Locals locals) {     guarded.analyze(locals).     actual = guarded.actual.     if (actual.isPrimitive()) {         throw new IllegalArgumentException("Result of null safe operator must be nullable").     } }
-false;;2;10;;@Override void write(MethodWriter writer, Globals globals) {     writer.writeDebugInfo(location).     Label end = new Label().     writer.dup().     writer.ifNull(end).     guarded.write(writer, globals).     writer.mark(end). }
-false;public;0;4;;@Override public String toString() {     return singleLineToString(guarded). }

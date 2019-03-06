@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;13;;@Override @After public void tearDown() throws Exception {     super.tearDown().     // test may be skipped so we did not create a parser instance     if (parser != null) {         // next token can be null even in the middle of the document (e.g. with "---"), but not too many consecutive times         assertThat(parser.currentToken(), nullValue()).         assertThat(parser.nextToken(), nullValue()).         assertThat(parser.nextToken(), nullValue()).         parser.close().     } }
-false;protected;0;4;;@Override protected NamedXContentRegistry xContentRegistry() {     return ExecutableSection.XCONTENT_REGISTRY. }

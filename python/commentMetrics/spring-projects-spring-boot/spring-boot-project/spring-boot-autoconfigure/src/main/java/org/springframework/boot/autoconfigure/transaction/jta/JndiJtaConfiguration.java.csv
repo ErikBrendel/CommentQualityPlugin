@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;9;;@Bean public JtaTransactionManager transactionManager(ObjectProvider<TransactionManagerCustomizers> transactionManagerCustomizers) {     JtaTransactionManager jtaTransactionManager = new JtaTransactionManagerFactoryBean().getObject().     transactionManagerCustomizers.ifAvailable((customizers) -> customizers.customize(jtaTransactionManager)).     return jtaTransactionManager. }

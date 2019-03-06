@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,final;2;5;;@Override public final boolean containsNestedField(String path, String field) {     // No leaf queries are nested     return false. }
-false;public;4;5;;@Override public Query addNestedField(String path, String field, String format, boolean hasDocValues) {     // No leaf queries are nested     return this. }
-false;public;1;4;;@Override public void enrichNestedSort(NestedSortBuilder sort) { // No leaf queries are nested }

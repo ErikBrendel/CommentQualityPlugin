@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;4;;public static IndicesOptions addIgnoreUnavailable(IndicesOptions indicesOptions) {     return IndicesOptions.fromOptions(true, indicesOptions.allowNoIndices(), indicesOptions.expandWildcardsOpen(), indicesOptions.expandWildcardsClosed(), indicesOptions). }

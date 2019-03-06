@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public Long getUpdateId() {     return updateId. }
-false;public;1;3;;public void setUpdateId(Long updateId) {     this.updateId = updateId. }
-false;public;0;3;;public IncomingMessage getMessage() {     return message. }
-false;public;1;3;;public void setMessage(IncomingMessage message) {     this.message = message. }
-false;public;0;3;;public IncomingMessage getChannelPost() {     return channelpost. }
-false;public;1;3;;public void setChannelpost(IncomingMessage channelpost) {     this.channelpost = channelpost. }
-false;public;0;9;;@Override public String toString() {     final StringBuilder sb = new StringBuilder("Update{").     sb.append("updateId=").append(updateId).     sb.append(", message=").append(message).     sb.append(", channel_post=").append(channelpost).     sb.append('}').     return sb.toString(). }

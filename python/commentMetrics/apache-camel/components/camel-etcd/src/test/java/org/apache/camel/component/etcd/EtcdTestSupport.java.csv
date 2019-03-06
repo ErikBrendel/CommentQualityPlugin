@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;7;;@Override public void process(Exchange exchange) throws Exception {     EtcdKeysResponse response = exchange.getIn().getBody(EtcdKeysResponse.class).     if (response != null) {         exchange.getIn().setBody(response.node.key + "=" + response.node.value).     } }
-false;public;0;3;;public boolean isCreateCamelContextPerClass() {     return false. }
-false;protected;0;3;;protected EtcdClient getClient() {     return new EtcdClient(URI.create("http://localhost:2379")). }

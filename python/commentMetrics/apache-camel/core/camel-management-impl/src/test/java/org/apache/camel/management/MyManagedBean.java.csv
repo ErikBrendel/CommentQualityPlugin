@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;7;;public String doSomething(String body) {     if (body.contains("Camel")) {         camelsSeenCount++.     }     return "Managed " + body. }
-false;public;0;4;;@ManagedAttribute(description = "How many Camels Have been Seen") public int getCamelsSeenCount() {     return camelsSeenCount. }
-false;public;0;4;;@ManagedOperation(description = "Set Camels Seen Count to Zero") public void resetCamelsSeenCount() {     camelsSeenCount = 0. }

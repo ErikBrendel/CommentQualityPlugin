@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected void preSubmit() throws Exception {     resultPath = getTempDirPath("result"). }
-false;protected;0;10;;@Override protected void testProgram() throws Exception {     ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment().     DataSet<Tuple3<Integer, Integer, String>> ds = env.createInput(new LargeJoinDataGeneratorInputFormat(1000000)).     ds.join(ds).where(0).equalTo(1).with(new Joiner()).writeAsText(resultPath).     env.execute("Local Selfjoin Test Job"). }
-false;public;3;4;;@Override public void join(Tuple3<Integer, Integer, String> in1, Tuple3<Integer, Integer, String> in2, Collector<Tuple5<Integer, Integer, Integer, String, String>> out) throws Exception {     out.collect(new Tuple5<Integer, Integer, Integer, String, String>(in1.f0, in1.f1, in2.f1, in1.f2, in2.f2)). }
-false;public;0;4;;@Override public boolean reachedEnd() throws IOException {     return produced >= toProduce. }
-false;public;1;6;;@Override public Tuple3<Integer, Integer, String> nextRecord(Tuple3<Integer, Integer, String> reuse) throws IOException {     produced++.     return new Tuple3<Integer, Integer, String>(rand.nextInt(toProduce), rand.nextInt(toProduce), "aaa"). }

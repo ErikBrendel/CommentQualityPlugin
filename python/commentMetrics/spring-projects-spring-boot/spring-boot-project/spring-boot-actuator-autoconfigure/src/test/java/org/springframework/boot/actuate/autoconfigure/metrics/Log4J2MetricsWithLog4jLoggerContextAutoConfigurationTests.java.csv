@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Test public void autoConfiguresLog4J2Metrics() {     assertThat(LogManager.getContext().getClass().getName()).isEqualTo("org.apache.logging.log4j.core.LoggerContext").     this.contextRunner.run((context) -> assertThat(context).hasSingleBean(Log4j2Metrics.class)). }
-false;public;0;8;;@Test public void allowsCustomLog4J2MetricsToBeUsed() {     assertThat(LogManager.getContext().getClass().getName()).isEqualTo("org.apache.logging.log4j.core.LoggerContext").     this.contextRunner.withUserConfiguration(CustomLog4J2MetricsConfiguration.class).run((context) -> assertThat(context).hasSingleBean(Log4j2Metrics.class).hasBean("customLog4J2Metrics")). }
-false;public;0;4;;@Bean public Log4j2Metrics customLog4J2Metrics() {     return new Log4j2Metrics(). }

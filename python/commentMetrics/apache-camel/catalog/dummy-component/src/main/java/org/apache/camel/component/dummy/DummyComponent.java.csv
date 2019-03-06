@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;3;10;;@Override protected Endpoint createEndpoint(String uri, String remaining, Map<String, Object> parameters) throws Exception {     DummyEndpoint answer = new DummyEndpoint(uri, this).     Drinks drink = getCamelContext().getTypeConverter().mandatoryConvertTo(Drinks.class, remaining).     answer.setDrink(drink).     setProperties(answer, parameters).     return answer. }

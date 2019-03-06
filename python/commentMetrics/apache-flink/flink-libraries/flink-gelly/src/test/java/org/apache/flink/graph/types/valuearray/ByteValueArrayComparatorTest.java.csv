@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;4;;@Override protected TypeComparator<ByteValueArray> createComparator(boolean ascending) {     return new ByteValueArrayComparator(ascending). }
-false;protected;0;4;;@Override protected TypeSerializer<ByteValueArray> createSerializer() {     return new ByteValueArraySerializer(). }
-false;protected;0;13;;@Override protected ByteValueArray[] getSortedTestData() {     ByteValueArray lva0 = new ByteValueArray().     ByteValueArray lva1 = new ByteValueArray().     lva1.add(new ByteValue((byte) 5)).     ByteValueArray lva2 = new ByteValueArray().     lva2.add(new ByteValue((byte) 5)).     lva2.add(new ByteValue((byte) 10)).     return new ByteValueArray[] { lva0, lva1 }. }

@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;4;/**  * @return  *     The custId  */ ;/**  * @return  *     The custId  */ @JsonProperty("custId") public String getCustId() {     return custId. }
-true;public;1;4;/**  * @param custId  *     The custId  */ ;/**  * @param custId  *     The custId  */ @JsonProperty("custId") public void setCustId(String custId) {     this.custId = custId. }
-true;public;0;4;/**  * @return  *     The priority  */ ;/**  * @return  *     The priority  */ @JsonProperty("priority") public String getPriority() {     return priority. }
-true;public;1;4;/**  * @param priority  *     The priority  */ ;/**  * @param priority  *     The priority  */ @JsonProperty("priority") public void setPriority(String priority) {     this.priority = priority. }
-true;public;0;4;/**  * @return  *     The orderId  */ ;/**  * @return  *     The orderId  */ @JsonProperty("orderId") public String getOrderId() {     return orderId. }
-true;public;1;4;/**  * @param orderId  *     The orderId  */ ;/**  * @param orderId  *     The orderId  */ @JsonProperty("orderId") public void setOrderId(String orderId) {     this.orderId = orderId. }
-true;public;0;4;/**  * @return  *     The lineItems  */ ;/**  * @return  *     The lineItems  */ @JsonProperty("lineItems") public List<LineItem> getLineItems() {     return lineItems. }
-true;public;1;4;/**  * @param lineItems  *     The lineItems  */ ;/**  * @param lineItems  *     The lineItems  */ @JsonProperty("lineItems") public void setLineItems(List<LineItem> lineItems) {     this.lineItems = lineItems. }

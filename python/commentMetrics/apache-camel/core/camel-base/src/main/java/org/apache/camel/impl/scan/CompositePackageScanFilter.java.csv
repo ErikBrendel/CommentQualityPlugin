@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;3;;public void addFilter(PackageScanFilter filter) {     filters.add(filter). }
-false;public;1;8;;public boolean matches(Class<?> type) {     for (PackageScanFilter filter : filters) {         if (!filter.matches(type)) {             return false.         }     }     return true. }

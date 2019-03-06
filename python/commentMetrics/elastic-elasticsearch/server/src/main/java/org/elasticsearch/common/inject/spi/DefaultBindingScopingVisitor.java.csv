@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;protected;0;3;/**  * Default visit implementation. Returns {@code null}.  */ ;/**  * Default visit implementation. Returns {@code null}.  */ protected V visitOther() {     return null. }
-false;public;0;4;;@Override public V visitEagerSingleton() {     return visitOther(). }
-false;public;1;4;;@Override public V visitScope(Scope scope) {     return visitOther(). }
-false;public;1;4;;@Override public V visitScopeAnnotation(Class<? extends Annotation> scopeAnnotation) {     return visitOther(). }
-false;public;0;4;;@Override public V visitNoScoping() {     return visitOther(). }

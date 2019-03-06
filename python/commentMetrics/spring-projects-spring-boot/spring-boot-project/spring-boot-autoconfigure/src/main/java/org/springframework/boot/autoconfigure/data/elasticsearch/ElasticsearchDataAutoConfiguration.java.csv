@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;12;;@Bean @ConditionalOnMissingBean @ConditionalOnBean(Client.class) public ElasticsearchTemplate elasticsearchTemplate(Client client, ElasticsearchConverter converter) {     try {         return new ElasticsearchTemplate(client, converter).     } catch (Exception ex) {         throw new IllegalStateException(ex).     } }
-false;public;1;6;;@Bean @ConditionalOnMissingBean public ElasticsearchConverter elasticsearchConverter(SimpleElasticsearchMappingContext mappingContext) {     return new MappingElasticsearchConverter(mappingContext). }
-false;public;0;5;;@Bean @ConditionalOnMissingBean public SimpleElasticsearchMappingContext mappingContext() {     return new SimpleElasticsearchMappingContext(). }

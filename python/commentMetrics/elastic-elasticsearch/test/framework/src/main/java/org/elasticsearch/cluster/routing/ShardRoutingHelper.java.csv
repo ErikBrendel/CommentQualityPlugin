@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;2;3;;public static ShardRouting relocate(ShardRouting routing, String nodeId) {     return relocate(routing, nodeId, ShardRouting.UNAVAILABLE_EXPECTED_SHARD_SIZE). }
-false;public,static;3;3;;public static ShardRouting relocate(ShardRouting routing, String nodeId, long expectedByteSize) {     return routing.relocate(nodeId, expectedByteSize). }
-false;public,static;1;3;;public static ShardRouting moveToStarted(ShardRouting routing) {     return routing.moveToStarted(). }
-false;public,static;2;3;;public static ShardRouting initialize(ShardRouting routing, String nodeId) {     return initialize(routing, nodeId, ShardRouting.UNAVAILABLE_EXPECTED_SHARD_SIZE). }
-false;public,static;3;3;;public static ShardRouting initialize(ShardRouting routing, String nodeId, long expectedSize) {     return routing.initialize(nodeId, null, expectedSize). }
-false;public,static;2;5;;public static ShardRouting initWithSameId(ShardRouting copy, RecoverySource recoverySource) {     return new ShardRouting(copy.shardId(), copy.currentNodeId(), copy.relocatingNodeId(), copy.primary(), ShardRoutingState.INITIALIZING, recoverySource, new UnassignedInfo(UnassignedInfo.Reason.REINITIALIZED, null), copy.allocationId(), copy.getExpectedShardSize()). }
-false;public,static;2;3;;public static ShardRouting moveToUnassigned(ShardRouting routing, UnassignedInfo info) {     return routing.moveToUnassigned(info). }
-false;public,static;2;4;;public static ShardRouting newWithRestoreSource(ShardRouting routing, SnapshotRecoverySource recoverySource) {     return new ShardRouting(routing.shardId(), routing.currentNodeId(), routing.relocatingNodeId(), routing.primary(), routing.state(), recoverySource, routing.unassignedInfo(), routing.allocationId(), routing.getExpectedShardSize()). }

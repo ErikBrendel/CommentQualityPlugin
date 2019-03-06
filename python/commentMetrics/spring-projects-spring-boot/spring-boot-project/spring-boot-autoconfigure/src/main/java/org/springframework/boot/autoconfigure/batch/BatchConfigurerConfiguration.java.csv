@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;3;7;;@Bean public BasicBatchConfigurer batchConfigurer(BatchProperties properties, DataSource dataSource, ObjectProvider<TransactionManagerCustomizers> transactionManagerCustomizers) {     return new BasicBatchConfigurer(properties, dataSource, transactionManagerCustomizers.getIfAvailable()). }
-false;public;4;8;;@Bean public JpaBatchConfigurer batchConfigurer(BatchProperties properties, DataSource dataSource, ObjectProvider<TransactionManagerCustomizers> transactionManagerCustomizers, EntityManagerFactory entityManagerFactory) {     return new JpaBatchConfigurer(properties, dataSource, transactionManagerCustomizers.getIfAvailable(), entityManagerFactory). }

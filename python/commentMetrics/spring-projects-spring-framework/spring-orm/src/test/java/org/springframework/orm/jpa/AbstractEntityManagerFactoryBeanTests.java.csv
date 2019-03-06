@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Before public void setUp() throws Exception {     mockEmf = mock(EntityManagerFactory.class). }
-false;public;0;7;;@After public void tearDown() throws Exception {     assertTrue(TransactionSynchronizationManager.getResourceMap().isEmpty()).     assertFalse(TransactionSynchronizationManager.isSynchronizationActive()).     assertFalse(TransactionSynchronizationManager.isCurrentTransactionReadOnly()).     assertFalse(TransactionSynchronizationManager.isActualTransactionActive()). }
-false;protected;1;10;;protected void checkInvariants(AbstractEntityManagerFactoryBean demf) {     assertTrue(EntityManagerFactory.class.isAssignableFrom(demf.getObjectType())).     Object gotObject = demf.getObject().     assertTrue("Object created by factory implements EntityManagerFactoryInfo", gotObject instanceof EntityManagerFactoryInfo).     EntityManagerFactoryInfo emfi = (EntityManagerFactoryInfo) demf.getObject().     assertSame("Successive invocations of getObject() return same object", emfi, demf.getObject()).     assertSame(emfi, demf.getObject()).     assertSame(emfi.getNativeEntityManagerFactory(), mockEmf). }
-false;protected;0;4;;@Override protected EntityManagerFactory createNativeEntityManagerFactory() throws PersistenceException {     return emf. }
-false;public;0;4;;@Override public PersistenceUnitInfo getPersistenceUnitInfo() {     throw new UnsupportedOperationException(). }
-false;public;0;4;;@Override public String getPersistenceUnitName() {     return "test". }

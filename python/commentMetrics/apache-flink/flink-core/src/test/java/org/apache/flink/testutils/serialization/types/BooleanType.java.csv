@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public BooleanType getRandom(Random rnd) {     return new BooleanType(rnd.nextBoolean()). }
-false;public;0;4;;@Override public int length() {     return 1. }
-false;public;1;4;;@Override public void write(DataOutputView out) throws IOException {     out.writeBoolean(this.value). }
-false;public;1;4;;@Override public void read(DataInputView in) throws IOException {     this.value = in.readBoolean(). }
-false;public;0;4;;@Override public int hashCode() {     return this.value ? 1 : 0. }
-false;public;1;9;;@Override public boolean equals(Object obj) {     if (obj instanceof BooleanType) {         BooleanType other = (BooleanType) obj.         return this.value == other.value.     } else {         return false.     } }

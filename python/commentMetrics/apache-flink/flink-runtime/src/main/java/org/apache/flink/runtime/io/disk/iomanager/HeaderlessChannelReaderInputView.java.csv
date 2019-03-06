@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;18;;@Override protected MemorySegment nextSegment(MemorySegment current) throws IOException {     // check for end-of-stream     if (this.numBlocksRemaining <= 0) {         this.reader.close().         throw new EOFException().     }     // the next lines     if (current != null) {         sendReadRequest(current).     }     // get the next segment     this.numBlocksRemaining--.     return this.reader.getNextReturnedBlock(). }
-false;protected;1;4;;@Override protected int getLimitForSegment(MemorySegment segment) {     return this.numBlocksRemaining > 0 ? segment.size() : this.lastBlockBytes. }

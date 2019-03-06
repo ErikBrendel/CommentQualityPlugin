@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;7;;@Consume(uri = "direct:start", context = "camel-2") public void doSomething(String body) {     ObjectHelper.notNull(destination, "destination").     LOG.info("Received body: " + body).     destination.sendBody(body). }
-false;public;0;3;;public ProducerTemplate getDestination() {     return destination. }
-false;public;1;3;;public void setDestination(ProducerTemplate destination) {     this.destination = destination. }

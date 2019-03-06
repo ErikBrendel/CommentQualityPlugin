@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;@PostLoad public void postLoad(City city) {     if (this.beanFactory != null) {         this.beanFactory.registerSingleton(City.class.getName(), city).     } }

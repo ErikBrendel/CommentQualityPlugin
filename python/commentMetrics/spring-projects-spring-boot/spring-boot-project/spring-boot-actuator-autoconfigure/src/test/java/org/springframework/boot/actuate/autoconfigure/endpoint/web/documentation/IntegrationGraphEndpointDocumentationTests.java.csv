@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void graph() throws Exception {     this.mockMvc.perform(get("/actuator/integrationgraph")).andExpect(status().isOk()).andDo(MockMvcRestDocumentation.document("integrationgraph/graph")). }
-false;public;0;6;;@Test public void rebuild() throws Exception {     this.mockMvc.perform(post("/actuator/integrationgraph")).andExpect(status().isNoContent()).andDo(MockMvcRestDocumentation.document("integrationgraph/rebuild")). }
-false;public;0;4;;@Bean public IntegrationGraphServer integrationGraphServer() {     return new IntegrationGraphServer(). }
-false;public;0;4;;@Bean public IntegrationGraphEndpoint endpoint() {     return new IntegrationGraphEndpoint(integrationGraphServer()). }

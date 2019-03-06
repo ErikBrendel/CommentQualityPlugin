@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public ShardId getShardId() {     return shardId. }
-false;public;0;3;;public org.apache.lucene.util.Version oldestLuceneSegment() {     return this.oldestLuceneSegment. }
-false;public;0;3;;public Version upgradeVersion() {     return this.upgradeVersion. }
-false;public;0;3;;public boolean primary() {     return primary. }
-false;public;1;12;;@Override public void readFrom(StreamInput in) throws IOException {     shardId = ShardId.readShardId(in).     primary = in.readBoolean().     upgradeVersion = Version.readVersion(in).     try {         oldestLuceneSegment = org.apache.lucene.util.Version.parse(in.readString()).     } catch (ParseException ex) {         throw new IOException("failed to parse lucene version [" + oldestLuceneSegment + "]", ex).     } }
-false;public;1;7;;@Override public void writeTo(StreamOutput out) throws IOException {     shardId.writeTo(out).     out.writeBoolean(primary).     Version.writeVersion(upgradeVersion, out).     out.writeString(oldestLuceneSegment.toString()). }

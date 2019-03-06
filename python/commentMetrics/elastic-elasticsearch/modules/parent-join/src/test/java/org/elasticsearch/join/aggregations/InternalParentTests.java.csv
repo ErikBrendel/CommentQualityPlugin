@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;7;;@Override protected List<Entry> getNamedXContents() {     List<Entry> extendedNamedXContents = new ArrayList<>(super.getNamedXContents()).     extendedNamedXContents.add(new Entry(Aggregation.class, new ParseField(ParentAggregationBuilder.NAME), (p, c) -> ParsedParent.fromXContent(p, (String) c))).     return extendedNamedXContents. }
-false;protected;5;5;;@Override protected InternalParent createTestInstance(String name, long docCount, InternalAggregations aggregations, List<PipelineAggregator> pipelineAggregators, Map<String, Object> metaData) {     return new InternalParent(name, docCount, aggregations, pipelineAggregators, metaData). }
-false;protected;2;4;;@Override protected void extraAssertReduced(InternalParent reduced, List<InternalParent> inputs) { // Nothing extra to assert }
-false;protected;0;4;;@Override protected Reader<InternalParent> instanceReader() {     return InternalParent::new. }
-false;protected;0;4;;@Override protected Class<? extends ParsedSingleBucketAggregation> implementationClass() {     return ParsedParent.class. }

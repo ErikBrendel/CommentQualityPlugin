@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Return the wrapped SQLException.  */ ;/**  * Return the wrapped SQLException.  */ public SQLException getSQLException() {     return (SQLException) getCause(). }
-true;public;0;4;/**  * Return the SQL that caused the problem.  * @return the offending SQL, if known  */ ;/**  * Return the SQL that caused the problem.  * @return the offending SQL, if known  */ @Nullable public String getSql() {     return this.sql. }

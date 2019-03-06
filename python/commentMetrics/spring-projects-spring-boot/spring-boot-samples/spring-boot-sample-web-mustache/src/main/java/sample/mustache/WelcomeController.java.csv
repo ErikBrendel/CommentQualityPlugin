@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;@GetMapping("/") public String welcome(Map<String, Object> model) {     model.put("time", new Date()).     model.put("message", this.message).     return "welcome". }
-false;public;0;4;;@RequestMapping("/serviceUnavailable") public String ServiceUnavailable() {     throw new ServiceUnavailableException(). }
-false;public;0;4;;@RequestMapping("/bang") public String bang() {     throw new RuntimeException("Boom"). }
-false;public;0;4;;@RequestMapping("/insufficientStorage") public String insufficientStorage() {     throw new InsufficientStorageException(). }

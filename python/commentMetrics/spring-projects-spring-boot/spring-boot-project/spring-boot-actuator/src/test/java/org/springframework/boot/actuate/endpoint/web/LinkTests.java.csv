@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void createWhenHrefIsNullShouldThrowException() {     assertThatIllegalArgumentException().isThrownBy(() -> new Link(null)).withMessageContaining("HREF must not be null"). }
-false;public;0;6;;@Test public void getHrefShouldReturnHref() {     String href = "http://example.com".     Link link = new Link(href).     assertThat(link.getHref()).isEqualTo(href). }
-false;public;0;6;;@Test public void isTemplatedWhenContainsPlaceholderShouldReturnTrue() {     String href = "http://example.com/{path}".     Link link = new Link(href).     assertThat(link.isTemplated()).isTrue(). }
-false;public;0;6;;@Test public void isTemplatedWhenContainsNoPlaceholderShouldReturnFalse() {     String href = "http://example.com/path".     Link link = new Link(href).     assertThat(link.isTemplated()).isFalse(). }

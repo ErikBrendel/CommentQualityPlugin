@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Before public void setUp() throws Exception {     db = new EmbeddedDatabaseBuilder().setType(EmbeddedDatabaseType.DERBY).addScript("sql/createAndPopulateDatabase5.sql").build().     super.setUp(). }
-false;public;0;6;;@After public void tearDown() throws Exception {     super.tearDown().     db.shutdown(). }
-false;public;0;7;;@Test public void testSqlEndpoint() throws Exception {     String expectedBody = "body".     result.expectedBodiesReceived(expectedBody).     template.sendBody("direct:start", expectedBody).     result.assertIsSatisfied(). }
-false;public;0;7;;public void configure() {     getContext().getComponent("sql", SqlComponent.class).setDataSource(db).     from("direct:start").to("sql:select id from mytable where 1 = 2?outputHeader=myHeader&outputType=SelectOne").log("${body}").to("mock:result"). }
-false;protected;0;12;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() {             getContext().getComponent("sql", SqlComponent.class).setDataSource(db).             from("direct:start").to("sql:select id from mytable where 1 = 2?outputHeader=myHeader&outputType=SelectOne").log("${body}").to("mock:result").         }     }. }

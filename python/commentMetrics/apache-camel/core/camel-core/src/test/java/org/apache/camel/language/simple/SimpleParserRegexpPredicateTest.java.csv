@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;12;;@Test public void testSimpleRegexp() throws Exception {     exchange.getIn().setBody("12.34.5678").     SimplePredicateParser parser = new SimplePredicateParser("${body} regex '^\\d{2}\\.\\d{2}\\.\\d{4}$'", true, null).     Predicate pre = parser.parsePredicate().     assertTrue(pre.matches(exchange)).     exchange.getIn().setBody("12.2a.22ab").     assertFalse(pre.matches(exchange)). }

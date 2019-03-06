@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@JsonValue public String value() {     return this.value. }
-false;public,static;1;9;;@JsonCreator public static Account_IndustryEnum fromValue(String value) {     for (Account_IndustryEnum e : Account_IndustryEnum.values()) {         if (e.value.equals(value)) {             return e.         }     }     throw new IllegalArgumentException(value). }

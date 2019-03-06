@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getComponent() {     return null. }
-false;public;0;15;;@Test public void testGetOperationName() {     Exchange exchange = Mockito.mock(Exchange.class).     Mockito.when(exchange.getProperty(Exchange.TIMER_NAME)).thenReturn(TEST_NAME).     SpanDecorator decorator = new TimerSpanDecorator() {          @Override         public String getComponent() {             return null.         }     }.     assertEquals(TEST_NAME, decorator.getOperationName(exchange, null)). }

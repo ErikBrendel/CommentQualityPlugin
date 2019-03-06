@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void grabAntBuilder() throws Exception {     this.cli.run("grab-ant-builder.groovy").     assertThat(this.cli.getHttpOutput()).contains("{\"message\":\"Hello World\"}"). }
-true;public;0;4;// this will fail ;// Security depends on old versions of Spring so if the dependencies aren't pinned // this will fail @Test public void securityDependencies() throws Exception {     assertThat(this.cli.run("secure.groovy")).contains("Hello World"). }
-false;public;0;4;;@Test public void dataJpaDependencies() throws Exception {     assertThat(this.cli.run("data-jpa.groovy")).contains("Hello World"). }
-false;public;0;6;;@Test public void jarFileExtensionNeeded() throws Exception {     assertThatExceptionOfType(ExecutionException.class).isThrownBy(() -> this.cli.jar("secure.groovy", "data-jpa.groovy")).withMessageContaining("is not a JAR file"). }

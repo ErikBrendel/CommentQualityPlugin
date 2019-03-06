@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;4;;@Override protected TypeComparator<BooleanValue> createComparator(boolean ascending) {     return new BooleanValueComparator(ascending). }
-false;protected;0;4;;@Override protected TypeSerializer<BooleanValue> createSerializer() {     return new BooleanValueSerializer(). }
-false;protected;0;4;;@Override protected BooleanValue[] getSortedTestData() {     return new BooleanValue[] { BooleanValue.FALSE, BooleanValue.TRUE }. }

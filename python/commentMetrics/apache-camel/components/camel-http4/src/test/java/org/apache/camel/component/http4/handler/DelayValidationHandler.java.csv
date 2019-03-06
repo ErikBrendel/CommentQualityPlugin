@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;3;10;;public void handle(final HttpRequest request, final HttpResponse response, final HttpContext context) throws HttpException, IOException {     try {         Thread.sleep(delay).     } catch (InterruptedException e) {         Thread.currentThread().interrupt().     }     super.handle(request, response, context). }

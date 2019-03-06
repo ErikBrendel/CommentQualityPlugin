@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;12;;public static void install(GrapeEngine engine) {     synchronized (Grape.class) {         try {             Field field = Grape.class.getDeclaredField("instance").             field.setAccessible(true).             field.set(null, engine).         } catch (Exception ex) {             throw new IllegalStateException("Failed to install GrapeEngine", ex).         }     } }

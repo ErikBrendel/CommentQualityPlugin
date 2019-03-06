@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String principal() {     return "<unauthenticated-saml-user>". }
-false;public;0;4;;@Override public Object credentials() {     return content. }
-false;public;0;4;;@Override public void clearCredentials() {     content = null. }
-false;public;0;3;;public byte[] getContent() {     return content. }
-false;public;0;3;;public List<String> getAllowedSamlRequestIds() {     return allowedSamlRequestIds. }
-false;public;0;4;;@Override public String toString() {     return getClass().getSimpleName() + "{" + Strings.cleanTruncate(Hex.encodeHexString(content), 128) + "...}". }

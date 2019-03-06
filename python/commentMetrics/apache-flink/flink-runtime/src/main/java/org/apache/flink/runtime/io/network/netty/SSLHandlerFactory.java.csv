@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public SslHandler createNettySSLHandler() {     return createNettySSLHandler(createSSLEngine()). }
-false;public;2;3;;public SslHandler createNettySSLHandler(String hostname, int port) {     return createNettySSLHandler(createSSLEngine(hostname, port)). }
-false;private;1;11;;private SslHandler createNettySSLHandler(SSLEngine sslEngine) {     SslHandler sslHandler = new SslHandler(sslEngine).     if (handshakeTimeoutMs >= 0) {         sslHandler.setHandshakeTimeoutMillis(handshakeTimeoutMs).     }     if (closeNotifyFlushTimeoutMs >= 0) {         sslHandler.setCloseNotifyFlushTimeoutMillis(closeNotifyFlushTimeoutMs).     }     return sslHandler. }
-false;private;0;5;;private SSLEngine createSSLEngine() {     final SSLEngine sslEngine = sslContext.createSSLEngine().     configureSSLEngine(sslEngine).     return sslEngine. }
-false;private;2;5;;private SSLEngine createSSLEngine(String hostname, int port) {     final SSLEngine sslEngine = sslContext.createSSLEngine(hostname, port).     configureSSLEngine(sslEngine).     return sslEngine. }
-false;private;1;8;;private void configureSSLEngine(SSLEngine sslEngine) {     sslEngine.setEnabledProtocols(enabledProtocols).     sslEngine.setEnabledCipherSuites(enabledCipherSuites).     sslEngine.setUseClientMode(clientMode).     if (!clientMode) {         sslEngine.setNeedClientAuth(clientAuthentication).     } }

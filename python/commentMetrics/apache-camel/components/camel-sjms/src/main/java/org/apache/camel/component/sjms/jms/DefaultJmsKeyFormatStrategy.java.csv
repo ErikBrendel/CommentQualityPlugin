@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;public String encodeKey(String key) {     String answer = key.replace(".", "_DOT_").     answer = answer.replaceAll("-", "_HYPHEN_").     return answer. }
-false;public;1;5;;public String decodeKey(String key) {     String answer = key.replaceAll("_HYPHEN_", "-").     answer = answer.replace("_DOT_", ".").     return answer. }

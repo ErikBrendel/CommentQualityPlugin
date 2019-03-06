@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Before public void setUp() throws Exception {     super.setUp().     for (String message : inputMessages) {         template.sendBody("seda:inputQueue", message).     } }
-false;public;0;8;;@Test public void shouldEchoInBatch() throws InterruptedException {     outputEndpoint.expectedBodiesReceived("Echo foo", "Echo bar", "Echo baz").     template.sendBody("direct:start", "Start batch!").     outputEndpoint.assertIsSatisfied(). }
-false;public;0;8;;@Test public void shouldGenerateBatchExecutionEvents() throws InterruptedException {     jobExecutionEventsQueueEndpoint.setExpectedMessageCount(2).     template.sendBody("direct:start", "Start batch!").     jobExecutionEventsQueueEndpoint.assertIsSatisfied(). }
-false;public;0;8;;@Test public void testMessageHeader() throws Exception {     headerEndpoint.expectedHeaderReceived("header", 1).     template.sendBodyAndHeader(null, "header", "1").     headerEndpoint.assertIsSatisfied(). }
-false;protected;0;4;;@Override protected AbstractApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/component/spring/batch/springBatchtestContext.xml"). }

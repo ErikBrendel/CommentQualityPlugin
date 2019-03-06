@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public T value() {     return getInternal(). }
-false;public;1;4;;@Override public void update(T value) {     updateInternal(value). }
-false;static;2;6;;@SuppressWarnings({ "unchecked", "unused" }) static <N, T, S extends State, IS extends S> IS createState(TypeSerializer<N> namespaceSerializer, StateDescriptor<S, T> stateDesc) {     return (IS) new MockInternalValueState<>(). }

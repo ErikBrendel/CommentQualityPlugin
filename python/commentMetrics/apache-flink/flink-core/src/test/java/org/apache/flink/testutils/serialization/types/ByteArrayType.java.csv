@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;7;;@Override public ByteArrayType getRandom(Random rnd) {     final int len = rnd.nextInt(MAX_LEN) + 1.     final byte[] data = new byte[len].     rnd.nextBytes(data).     return new ByteArrayType(data). }
-false;public;0;4;;@Override public int length() {     return data.length + 4. }
-false;public;1;5;;@Override public void write(DataOutputView out) throws IOException {     out.writeInt(this.data.length).     out.write(this.data). }
-false;public;1;6;;@Override public void read(DataInputView in) throws IOException {     final int len = in.readInt().     this.data = new byte[len].     in.readFully(this.data). }
-false;public;0;4;;@Override public int hashCode() {     return Arrays.hashCode(this.data). }
-false;public;1;9;;@Override public boolean equals(Object obj) {     if (obj instanceof ByteArrayType) {         ByteArrayType other = (ByteArrayType) obj.         return Arrays.equals(this.data, other.data).     } else {         return false.     } }

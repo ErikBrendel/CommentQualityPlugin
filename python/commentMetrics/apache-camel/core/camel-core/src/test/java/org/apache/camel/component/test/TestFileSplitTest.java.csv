@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public boolean isUseRouteBuilder() {     return false. }
-false;public;0;6;;@Override @Before public void setUp() throws Exception {     deleteDirectory("target/data/testme").     super.setUp(). }
-false;public;0;5;;@Override public void configure() throws Exception {     from("direct:start").to("test:file:target/data/testme?noop=true&split=true&timeout=1000"). }
-false;public;0;20;;@Ignore @Test public void testFile() throws Exception {     template.sendBody("file:target/data/testme", "Hello World\nBye World\nHi World").     context.addRoutes(new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").to("test:file:target/data/testme?noop=true&split=true&timeout=1000").         }     }).     context.start().     template.sendBody("direct:start", "Hello World").     template.sendBody("direct:start", "Bye World").     template.sendBody("direct:start", "Hi World").     assertMockEndpointsSatisfied(). }

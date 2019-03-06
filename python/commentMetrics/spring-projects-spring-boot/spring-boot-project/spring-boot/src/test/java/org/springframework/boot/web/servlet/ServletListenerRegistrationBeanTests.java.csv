@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Before public void setupMocks() {     MockitoAnnotations.initMocks(this). }
-false;public;0;7;;@Test public void startupWithDefaults() throws Exception {     ServletListenerRegistrationBean<ServletContextListener> bean = new ServletListenerRegistrationBean<>(this.listener).     bean.onStartup(this.servletContext).     verify(this.servletContext).addListener(this.listener). }
-false;public;0;9;;@Test public void disable() throws Exception {     ServletListenerRegistrationBean<ServletContextListener> bean = new ServletListenerRegistrationBean<>(this.listener).     bean.setEnabled(false).     bean.onStartup(this.servletContext).     verify(this.servletContext, never()).addListener(any(ServletContextListener.class)). }
-false;public;0;7;;@Test public void cannotRegisterUnsupportedType() {     assertThatIllegalArgumentException().isThrownBy(() -> new ServletListenerRegistrationBean<>(new EventListener() {     })).withMessageContaining("Listener is not of a supported type"). }

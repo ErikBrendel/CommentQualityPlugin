@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;@Test public void testBeanLanguageExp() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("Camel").     template.sendBody("direct:start", "Hello World").     template.sendBody("direct:start", "Camel").     template.sendBody("direct:start", "Bye World").     assertMockEndpointsSatisfied(). }
-false;public;0;8;;@Override public void configure() throws Exception {     MyBean myBean = new MyBean().     from("direct:start").filter().expression(BeanLanguage.bean(myBean, "isGoldCustomer")).to("mock:result"). }
-false;protected;0;13;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             MyBean myBean = new MyBean().             from("direct:start").filter().expression(BeanLanguage.bean(myBean, "isGoldCustomer")).to("mock:result").         }     }. }
-false;public;1;3;;public boolean isGoldCustomer(String name) {     return "Camel".equals(name). }

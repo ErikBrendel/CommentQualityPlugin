@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;7;;@InvokeOnHeader(ConsulCoordinatesActions.DATACENTERS) protected void datacenters(Message message) throws Exception {     setBodyAndResult(message, getClient().getDatacenters()). }
-false;protected;1;9;;@InvokeOnHeader(ConsulCoordinatesActions.NODES) protected void nodes(Message message) throws Exception {     setBodyAndResult(message, getClient().getNodes(message.getHeader(ConsulConstants.CONSUL_DATACENTER, getConfiguration().getDatacenter(), String.class))). }

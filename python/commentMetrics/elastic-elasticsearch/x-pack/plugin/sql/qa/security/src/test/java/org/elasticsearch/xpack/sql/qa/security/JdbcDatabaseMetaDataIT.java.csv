@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected Settings restClientSettings() {     return RestSqlIT.securitySettings(). }
-false;protected;0;4;;@Override protected String getProtocol() {     return RestSqlIT.SSL_ENABLED ? "https" : "http". }
-false;protected;0;6;;@Override protected Properties connectionProperties() {     Properties properties = super.connectionProperties().     properties.putAll(JdbcSecurityIT.adminProperties()).     return properties. }

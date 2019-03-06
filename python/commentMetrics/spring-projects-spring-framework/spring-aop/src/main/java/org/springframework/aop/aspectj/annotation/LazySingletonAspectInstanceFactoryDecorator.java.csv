@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;21;;@Override public Object getAspectInstance() {     Object aspectInstance = this.materialized.     if (aspectInstance == null) {         Object mutex = this.maaif.getAspectCreationMutex().         if (mutex == null) {             aspectInstance = this.maaif.getAspectInstance().             this.materialized = aspectInstance.         } else {             synchronized (mutex) {                 aspectInstance = this.materialized.                 if (aspectInstance == null) {                     aspectInstance = this.maaif.getAspectInstance().                     this.materialized = aspectInstance.                 }             }         }     }     return aspectInstance. }
-false;public;0;3;;public boolean isMaterialized() {     return (this.materialized != null). }
-false;public;0;5;;@Override @Nullable public ClassLoader getAspectClassLoader() {     return this.maaif.getAspectClassLoader(). }
-false;public;0;4;;@Override public AspectMetadata getAspectMetadata() {     return this.maaif.getAspectMetadata(). }
-false;public;0;5;;@Override @Nullable public Object getAspectCreationMutex() {     return this.maaif.getAspectCreationMutex(). }
-false;public;0;4;;@Override public int getOrder() {     return this.maaif.getOrder(). }
-false;public;0;4;;@Override public String toString() {     return "LazySingletonAspectInstanceFactoryDecorator: decorating " + this.maaif. }

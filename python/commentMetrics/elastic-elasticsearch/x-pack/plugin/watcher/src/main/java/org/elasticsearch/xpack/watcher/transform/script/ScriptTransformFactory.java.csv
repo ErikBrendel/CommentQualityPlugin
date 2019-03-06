@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String type() {     return ScriptTransform.TYPE. }
-false;public;2;4;;@Override public ScriptTransform parseTransform(String watchId, XContentParser parser) throws IOException {     return ScriptTransform.parse(watchId, parser). }
-false;public;1;4;;@Override public ExecutableScriptTransform createExecutable(ScriptTransform transform) {     return new ExecutableScriptTransform(transform, transformLogger, scriptService). }

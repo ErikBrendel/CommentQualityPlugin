@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public void setReference(IntList reference) {     this.key = reference.getKey(). }
-false;public;1;4;;@Override public boolean equalToReference(IntList candidate) {     return this.key == candidate.getKey(). }
-false;public;1;4;;@Override public int compareToReference(IntList candidate) {     return candidate.getKey() - this.key. }

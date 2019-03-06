@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;7;;@Override public void run(final Runnable runnable) throws Exception {     if (hasActiveTransaction()) {         throw new IllegalStateException("Policy 'PROPAGATION_NEVER' is configured but an active transaction was found!").     } }

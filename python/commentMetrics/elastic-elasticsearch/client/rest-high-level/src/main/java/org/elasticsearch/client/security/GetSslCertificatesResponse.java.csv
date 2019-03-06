@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;7;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     final GetSslCertificatesResponse that = (GetSslCertificatesResponse) o.     return Objects.equals(this.certificates, that.certificates). }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(certificates). }
-false;public,static;1;8;;public static GetSslCertificatesResponse fromXContent(XContentParser parser) throws IOException {     List<CertificateInfo> certificates = new ArrayList<>().     XContentParserUtils.ensureExpectedToken(XContentParser.Token.START_ARRAY, parser.nextToken(), parser::getTokenLocation).     while (parser.nextToken() != XContentParser.Token.END_ARRAY) {         certificates.add(CertificateInfo.PARSER.parse(parser, null)).     }     return new GetSslCertificatesResponse(certificates). }
-false;public;0;3;;public List<CertificateInfo> getCertificates() {     return certificates. }

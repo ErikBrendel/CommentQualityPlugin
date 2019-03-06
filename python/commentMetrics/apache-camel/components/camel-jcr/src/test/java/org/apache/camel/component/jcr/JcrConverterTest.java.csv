@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public <T> T newInstance(Class<T> type) {     return ObjectHelper.newInstance(type). }
-false;public;0;4;;@Override public boolean supportsAutoWiring() {     return false. }
-false;public;0;16;;@Before public void init() throws Exception {     converter = new DefaultTypeConverter(new DefaultPackageScanClassResolver(), new Injector() {          @Override         public <T> T newInstance(Class<T> type) {             return ObjectHelper.newInstance(type).         }          @Override         public boolean supportsAutoWiring() {             return false.         }     }, new DefaultFactoryFinderResolver().resolveDefaultFactoryFinder(new DefaultClassResolver()), true).     ServiceHelper.startService(converter). }
-false;public;0;4;;@Test public void testBooleanValueConverter() throws Exception {     assertJcrConverterAvailable(BooleanValue.class, Boolean.TRUE). }
-false;public;0;4;;@Test public void testBinaryValueConverter() throws Exception {     assertJcrConverterAvailable(BinaryValue.class, new ByteArrayInputStream("test".getBytes())). }
-false;public;0;4;;@Test public void testDateValueConverter() throws Exception {     assertJcrConverterAvailable(DateValue.class, Calendar.getInstance()). }
-false;public;0;4;;@Test public void testStringValueConverter() throws Exception {     assertJcrConverterAvailable(StringValue.class, "plain text"). }
-false;private;2;5;;private void assertJcrConverterAvailable(Class<?> expected, Object object) {     Value value = converter.convertTo(Value.class, object).     assertNotNull(value).     assertTrue(expected.isAssignableFrom(value.getClass())). }

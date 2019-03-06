@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;8;;@Override public String apply(String name) {     int index = name.toLowerCase(Locale.ENGLISH).indexOf("healthindicator").     if (index > 0) {         return name.substring(0, index).     }     return name. }

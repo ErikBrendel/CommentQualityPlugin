@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;7;;@Override public CompletableFuture<ClusterOverviewWithVersion> handleRequest(@Nonnull HandlerRequest<EmptyRequestBody, EmptyMessageParameters> request, @Nonnull RestfulGateway gateway) {     CompletableFuture<ClusterOverview> overviewFuture = gateway.requestClusterOverview(timeout).     return overviewFuture.thenApply(statusOverview -> ClusterOverviewWithVersion.fromStatusOverview(statusOverview, version, commitID)). }

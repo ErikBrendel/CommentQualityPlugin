@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Test public void testCustomContext(CamelContext context) {     assertEquals("Management strategy is incorrect!", context.getManagementStrategy().getClass(), DefaultManagementStrategy.class). }
-false;;0;4;;@PostConstruct void customize() {     disableJMX(). }

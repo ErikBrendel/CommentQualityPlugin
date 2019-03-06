@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;public Object evaluate(Exchange exchange) {     Message inputMessage = exchange.getIn().     InputStream inputStream = inputMessage.getBody(InputStream.class).     return new ASN1MessageIterator(exchange, inputStream). }
-false;public;2;5;;@Override public <T> T evaluate(Exchange exchange, Class<T> type) {     Object result = evaluate(exchange).     return exchange.getContext().getTypeConverter().convertTo(type, exchange, result). }

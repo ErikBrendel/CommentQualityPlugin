@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@SuppressWarnings("deprecation") @Override public void doPostSetup() {     mongo = applicationContext.getBean(MongoClient.class).     gridfs = new GridFS(mongo.getDB("test"), getBucket()). }
-false;public;0;3;;public String getBucket() {     return this.getClass().getSimpleName(). }
-false;public;0;6;;@Override @After public void tearDown() throws Exception {     super.tearDown().     mongo.close(). }
-false;protected;0;9;;@Override protected CamelContext createCamelContext() throws Exception {     applicationContext = new AnnotationConfigApplicationContext(EmbedMongoConfiguration.class).     CamelContext ctx = new SpringCamelContext(applicationContext).     ctx.init().     PropertiesComponent pc = new PropertiesComponent("classpath:mongodb.test.properties").     ctx.addComponent("properties", pc).     return ctx. }

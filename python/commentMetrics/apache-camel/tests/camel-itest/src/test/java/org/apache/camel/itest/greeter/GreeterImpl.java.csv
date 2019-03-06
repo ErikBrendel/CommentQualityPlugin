@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;public String greetMe(String me) {     LOG.info("Executing operation greetMe").     LOG.info("Executing operation greetMe").     LOG.info("Message received: " + me + "\n").     return "Hello " + me. }
-false;public;1;6;;public void greetMeOneWay(String me) {     LOG.info("Executing operation greetMeOneWay").     LOG.info("Executing operation greetMeOneWay\n").     LOG.info("Hello there " + me).     oneWayCounter++. }
-false;public;0;5;;public String sayHi() {     LOG.info("Executing operation sayHi").     LOG.info("Executing operation sayHi\n").     return "Bonjour". }
-false;public;1;9;;public void pingMe(String messageIn) throws PingMeFault {     FaultDetail faultDetail = new FaultDetail().     faultDetail.setMajor((short) 2).     faultDetail.setMinor((short) 1).     LOG.info("Executing operation pingMe, throwing PingMeFault exception, message = " + messageIn).     LOG.info("Executing operation pingMe, throwing PingMeFault exception\n").     throw new PingMeFault("PingMeFault raised by server", faultDetail). }
-false;public;0;3;;public int getOneWayCounter() {     return oneWayCounter. }
-false;public;0;3;;public void resetOneWayCounter() {     oneWayCounter = 0. }

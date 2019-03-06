@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;1;1;;void onPause(long nanos).
-false;private;1;10;;private void maybePause(int bytes) throws IOException {     bytesSinceLastRateLimit += bytes.     if (bytesSinceLastRateLimit >= rateLimiter.getMinPauseCheckBytes()) {         long pause = rateLimiter.pause(bytesSinceLastRateLimit).         bytesSinceLastRateLimit = 0.         if (pause > 0) {             listener.onPause(pause).         }     } }
-false;public;0;6;;@Override public int read() throws IOException {     int b = super.read().     maybePause(1).     return b. }
-false;public;3;8;;@Override public int read(byte[] b, int off, int len) throws IOException {     int n = super.read(b, off, len).     if (n > 0) {         maybePause(n).     }     return n. }

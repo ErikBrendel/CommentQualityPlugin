@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;3;;public void sendResponse(HttpResponse response, ActionListener<Void> listener) {     getContext().sendMessage(response, ActionListener.toBiConsumer(listener)). }
-false;public;1;4;;@Override public void addCloseListener(ActionListener<Void> listener) {     addCloseListener(ActionListener.toBiConsumer(listener)). }
-false;public;0;7;;@Override public String toString() {     return "NioHttpChannel{" + "localAddress=" + getLocalAddress() + ", remoteAddress=" + getRemoteAddress() + '}'. }

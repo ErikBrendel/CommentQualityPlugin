@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected NodesDeprecationCheckRequest createBlankInstance() {     return new NodesDeprecationCheckRequest(). }
-false;protected;1;6;;@Override protected NodesDeprecationCheckRequest mutateInstance(NodesDeprecationCheckRequest instance) throws IOException {     int newSize = randomValueOtherThan(instance.nodesIds().length, () -> randomIntBetween(0, 10)).     String[] newNodeIds = randomArray(newSize, newSize, String[]::new, () -> randomAlphaOfLengthBetween(5, 10)).     return new NodesDeprecationCheckRequest(newNodeIds). }
-false;protected;0;5;;@Override protected NodesDeprecationCheckRequest createTestInstance() {     return new NodesDeprecationCheckRequest(randomArray(0, 10, String[]::new, () -> randomAlphaOfLengthBetween(5, 10))). }

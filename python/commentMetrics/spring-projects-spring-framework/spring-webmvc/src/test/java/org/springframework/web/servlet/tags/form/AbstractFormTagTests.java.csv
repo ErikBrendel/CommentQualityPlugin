@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;4;;@Override protected void extendRequest(MockHttpServletRequest request) {     request.setAttribute(COMMAND_NAME, createTestBean()). }
-false;protected,abstract;0;1;;protected abstract TestBean createTestBean().
-false;protected;1;7;;@Override protected void extendPageContext(MockPageContext pageContext) throws JspException {     this.formTag.setModelAttribute(COMMAND_NAME).     this.formTag.setAction("myAction").     this.formTag.setPageContext(pageContext).     this.formTag.doStartTag(). }
-false;protected,final;0;3;;protected final FormTag getFormTag() {     return this.formTag. }

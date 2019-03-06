@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;private;0;3;;private String getFtpUrl() {     return "ftp://admin@localhost:" + getPort() + "/sorter?password=admin&sorter=#mySorter". }
-false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry jndi = super.createRegistry().     jndi.bind("mySorter", new MyRemoteFileSorter()).     return jndi. }
-false;public;0;6;;@Override @Before public void setUp() throws Exception {     super.setUp().     prepareFtpServer(). }
-false;public;0;7;;@Test public void testFtpSorter() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMessageCount(3).     mock.expectedBodiesReceived("Hello Copenhagen", "Hello London", "Hello Paris").     mock.assertIsSatisfied(). }
-false;private;0;7;;private void prepareFtpServer() throws Exception {     // prepares the FTP Server by creating files on the server that we want to unit     // test that we can pool     sendFile(getFtpUrl(), "Hello Paris", "paris.txt").     sendFile(getFtpUrl(), "Hello London", "london.txt").     sendFile(getFtpUrl(), "Hello Copenhagen", "copenhagen.txt"). }
-false;public;0;3;;public void configure() throws Exception {     from(getFtpUrl()).to("mock:result"). }
-false;protected;0;7;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from(getFtpUrl()).to("mock:result").         }     }. }
-false;public;2;3;;public int compare(RemoteFile<?> o1, RemoteFile<?> o2) {     return o1.getFileNameOnly().compareToIgnoreCase(o2.getFileNameOnly()). }

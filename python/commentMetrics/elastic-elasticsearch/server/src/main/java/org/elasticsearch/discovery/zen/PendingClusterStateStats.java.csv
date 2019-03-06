@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeVInt(total).     out.writeVInt(pending).     out.writeVInt(committed). }
-false;public;0;3;;public int getCommitted() {     return committed. }
-false;public;0;3;;public int getPending() {     return pending. }
-false;public;0;3;;public int getTotal() {     return total. }
-false;public;2;9;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject(Fields.QUEUE).     builder.field(Fields.TOTAL, total).     builder.field(Fields.PENDING, pending).     builder.field(Fields.COMMITTED, committed).     builder.endObject().     return builder. }
-false;public;0;4;;@Override public String toString() {     return "PendingClusterStateStats(total=" + total + ", pending=" + pending + ", committed=" + committed + ")". }

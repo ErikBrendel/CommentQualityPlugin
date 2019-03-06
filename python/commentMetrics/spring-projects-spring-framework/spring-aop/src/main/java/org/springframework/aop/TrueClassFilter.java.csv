@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public boolean matches(Class<?> clazz) {     return true. }
-true;private;0;3;/**  * Required to support serialization. Replaces with canonical  * instance on deserialization, protecting Singleton pattern.  * Alternative to overriding {@code equals()}.  */ ;/**  * Required to support serialization. Replaces with canonical  * instance on deserialization, protecting Singleton pattern.  * Alternative to overriding {@code equals()}.  */ private Object readResolve() {     return INSTANCE. }
-false;public;0;4;;@Override public String toString() {     return "ClassFilter.TRUE". }

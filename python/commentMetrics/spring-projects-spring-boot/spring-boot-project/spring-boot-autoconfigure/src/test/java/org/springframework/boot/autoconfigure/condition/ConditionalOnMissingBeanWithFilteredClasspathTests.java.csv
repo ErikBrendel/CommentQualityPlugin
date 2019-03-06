@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@After public void closeContext() {     this.context.close(). }
-false;public;0;6;;@Test public void testNameOnMissingBeanTypeWithMissingImport() {     this.context.register(OnBeanTypeConfiguration.class).     this.context.refresh().     assertThat(this.context.containsBean("foo")).isTrue(). }
-false;public;0;5;;@Bean @ConditionalOnMissingBean(type = "org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBeanWithFilteredClasspathTests.TestCacheManager") public String foo() {     return "foo". }

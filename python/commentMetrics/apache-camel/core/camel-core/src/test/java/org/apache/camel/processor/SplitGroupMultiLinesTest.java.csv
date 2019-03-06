@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void testSplitMultiLines() throws Exception {     getMockEndpoint("mock:group").expectedBodiesReceived("ABC\nDEF\nGHI", "JKL\nMN").     template.sendBody("direct:start", "ABC\nDEF\nGHI\nJKL\nMN").     assertMockEndpointsSatisfied(). }
-false;public;0;9;;@Override public void configure() throws Exception {     // START SNIPPET: e1     from("direct:start").split().tokenize("\n", 3).streaming().to("mock:group"). // END SNIPPET: e1 }
-false;protected;0;14;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             // START SNIPPET: e1             from("direct:start").split().tokenize("\n", 3).streaming().to("mock:group").         // END SNIPPET: e1         }     }. }

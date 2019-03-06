@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected Class<TaskManagersInfo> getTestResponseClass() {     return TaskManagersInfo.class. }
-false;protected;0;7;;@Override protected TaskManagersInfo getTestResponseInstance() throws Exception {     final TaskManagerInfo taskManagerInfo1 = createRandomTaskManagerInfo().     final TaskManagerInfo taskManagerInfo2 = createRandomTaskManagerInfo().     return new TaskManagersInfo(Arrays.asList(taskManagerInfo1, taskManagerInfo2)). }

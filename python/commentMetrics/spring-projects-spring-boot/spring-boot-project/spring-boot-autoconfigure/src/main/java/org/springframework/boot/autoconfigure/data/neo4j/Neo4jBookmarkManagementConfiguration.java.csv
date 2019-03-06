@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Bean(BOOKMARK_MANAGER_BEAN_NAME) @ConditionalOnWebApplication @Scope(value = WebApplicationContext.SCOPE_REQUEST, proxyMode = ScopedProxyMode.INTERFACES) public BookmarkManager requestScopedBookmarkManager() {     return new CaffeineBookmarkManager(). }
-false;public;0;5;;@Bean(BOOKMARK_MANAGER_BEAN_NAME) @ConditionalOnNotWebApplication public BookmarkManager singletonScopedBookmarkManager() {     return new CaffeineBookmarkManager(). }

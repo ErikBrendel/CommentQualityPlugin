@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Before public void init() throws Exception {     webServer.start(). }
-false;public;0;4;;@After public void cleanup() {     webServer.close(). }
-false;public;0;3;;public MockWebServer webServer() {     return webServer. }
-false;;0;3;;MainResponse createCurrentVersionMainResponse() {     return createMainResponse(Version.CURRENT). }
-false;;1;11;;MainResponse createMainResponse(Version version) {     String clusterUuid = randomAlphaOfLength(10).     ClusterName clusterName = new ClusterName(randomAlphaOfLength(10)).     String nodeName = randomAlphaOfLength(10).     final String date = new Date(randomNonNegativeLong()).toString().     Build build = new Build(Build.Flavor.UNKNOWN, Build.Type.UNKNOWN, randomAlphaOfLength(8), date, randomBoolean(), version.toString()).     return new MainResponse(nodeName, version, clusterName, clusterUuid, build). }
-false;;0;3;;String webServerAddress() {     return webServer.getHostName() + ":" + webServer.getPort(). }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;16;;@Test public void testBeanInfoOverloaded() throws Exception {     BeanInfo beanInfo = new BeanInfo(context, Bean.class).     Message message = new DefaultMessage(context).     message.setBody(new RequestB()).     Exchange exchange = new DefaultExchange(context).     exchange.setIn(message).     MethodInvocation methodInvocation = beanInfo.createInvocation(new Bean(), exchange).     Method method = methodInvocation.getMethod().     assertEquals("doSomething", method.getName()).     assertEquals(RequestB.class, method.getGenericParameterTypes()[0]). }
-false;public;1;2;;public void doSomething(RequestA request) { }
-false;public;1;2;;public void doSomething(RequestB request) { }

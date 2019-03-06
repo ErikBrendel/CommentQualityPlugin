@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Override @Before public void setUp() throws Exception {     deleteDirectory("target/data/consumer").     super.setUp(). }
-false;public;0;4;;@Override public boolean isUseRouteBuilder() {     return false. }
-false;public;0;14;;@Test public void testFileConsumerTemplate() throws Exception {     template.sendBodyAndHeader("file:target/data/consumer", "Hello World", Exchange.FILE_NAME, "hello.txt").     // file should exist     File file = new File("target/data/consumer/hello.txt").     assertTrue("File should exist " + file, file.exists()).     String body = consumer.receiveBody("file:target/data/consumer?delete=true", 5000, String.class).     assertEquals("Hello World", body).     // file should be deleted     assertFalse("File should be deleted " + file, file.exists()). }

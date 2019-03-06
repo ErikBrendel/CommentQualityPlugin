@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;7;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry registry = super.createRegistry().     amazonSWClient = mock(AmazonSimpleWorkflowClient.class).     registry.bind("amazonSWClient", amazonSWClient).     return registry. }

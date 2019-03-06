@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;@Override @Before public void setUp() throws Exception {     try {         super.setUp().         fail("Should fail, because Blueprint XML uses property placeholders, but we didn't resolve the placeholder").     } catch (Exception e) {         assertThat(e.getCause().getCause().getCause().getMessage(), equalTo("Property with key [TESTYYY.source] not found in properties from text: {{source}}")).     } }
-false;protected;0;4;;@Override protected String getBlueprintDescriptor() {     return "org/apache/camel/test/blueprint/augmented-properties-no-fallback.xml". }
-false;protected;0;4;;@Override protected String[] loadConfigAdminConfigurationFile() {     return new String[] { "src/test/resources/etc/augmented.no.fallback.cfg", "augmented.no.fallback" }. }
-false;public;0;3;;@Test public void testFallbackToUnaugmentedProperty() throws Exception { }

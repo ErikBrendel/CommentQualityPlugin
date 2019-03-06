@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public void configure() throws Exception {     from("seda:test").to("seda:test"). }
-false;public;0;10;;@Bean public RoutesBuilder routeCreatedWithInjectedCamelContext() {     Assert.notNull(camelContext, "camelContext must not be null").     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("seda:test").to("seda:test").         }     }. }

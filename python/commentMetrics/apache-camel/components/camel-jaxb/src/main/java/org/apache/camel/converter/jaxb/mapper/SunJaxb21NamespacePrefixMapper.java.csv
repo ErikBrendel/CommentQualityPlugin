@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public void setNamespaces(Map<String, String> namespaces) {     this.namespaces = namespaces. }
-false;public;0;4;;@Override public String getRegistrationKey() {     return "com.sun.xml.bind.namespacePrefixMapper". }
-false;public;3;10;;@Override public String getPreferredPrefix(String namespaceUri, String suggestion, boolean requirePrefix) {     if (namespaces != null) {         String prefix = namespaces.get(namespaceUri).         if (prefix != null) {             return prefix.         }     }     return suggestion. }

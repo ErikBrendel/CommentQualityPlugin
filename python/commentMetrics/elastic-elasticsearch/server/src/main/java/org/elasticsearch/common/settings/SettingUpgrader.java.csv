@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * The setting upgraded by this upgrader.  *  * @return the setting  */ ;/**  * The setting upgraded by this upgrader.  *  * @return the setting  */ Setting<T> getSetting().
-true;;1;1;/**  * The logic to upgrade the setting key, for example by mapping the old setting key to the new setting key.  *  * @param key the setting key to upgrade  * @return the upgraded setting key  */ ;/**  * The logic to upgrade the setting key, for example by mapping the old setting key to the new setting key.  *  * @param key the setting key to upgrade  * @return the upgraded setting key  */ String getKey(String key).
-true;default;1;3;/**  * The logic to upgrade the setting value.  *  * @param value the setting value to upgrade  * @return the upgraded setting value  */ ;/**  * The logic to upgrade the setting value.  *  * @param value the setting value to upgrade  * @return the upgraded setting value  */ default String getValue(final String value) {     return value. }
-false;default;1;3;;default List<String> getListValue(final List<String> value) {     return value. }

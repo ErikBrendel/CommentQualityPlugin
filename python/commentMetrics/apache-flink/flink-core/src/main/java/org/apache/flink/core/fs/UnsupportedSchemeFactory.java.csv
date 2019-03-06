@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getScheme() {     return "n/a". }
-false;public;1;4;;@Override public void configure(Configuration config) { // nothing to do here }
-false;public;1;9;;@Override public FileSystem create(URI fsUri) throws IOException {     if (exceptionCause == null) {         throw new UnsupportedFileSystemSchemeException(exceptionMessage).     } else {         throw new UnsupportedFileSystemSchemeException(exceptionMessage, exceptionCause).     } }

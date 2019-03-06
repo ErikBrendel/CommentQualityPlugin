@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Test public void createListener() {     SimpleJmsListenerEndpoint endpoint = new SimpleJmsListenerEndpoint().     MessageListener messageListener = new MessageListenerAdapter().     endpoint.setMessageListener(messageListener).     assertSame(messageListener, endpoint.createMessageListener(container)). }

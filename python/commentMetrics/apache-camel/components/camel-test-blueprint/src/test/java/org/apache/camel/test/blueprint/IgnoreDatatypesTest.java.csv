@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected String getBlueprintDescriptor() {     return "org/apache/camel/test/blueprint/ignoreDatatypes.xml". }
-false;protected;0;4;;@Override protected String getBundleDirectives() {     return "blueprint.aries.xml-validation:=false". }
-false;public;0;8;;@Test public void testConfigAdmin() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("Hello World").     template.sendBody("direct:start", "World").     assertMockEndpointsSatisfied(). }

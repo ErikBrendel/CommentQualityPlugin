@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;public void testIsValidFieldName() {     assertTrue(ReservedFieldNames.isValidFieldName("host")).     assertTrue(ReservedFieldNames.isValidFieldName("host.actual")).     assertFalse(ReservedFieldNames.isValidFieldName("actual.host")).     assertFalse(ReservedFieldNames.isValidFieldName(AnomalyRecord.BUCKET_SPAN.getPreferredName())). }

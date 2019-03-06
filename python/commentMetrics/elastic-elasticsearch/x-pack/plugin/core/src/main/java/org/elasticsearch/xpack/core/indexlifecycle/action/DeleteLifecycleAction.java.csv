@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public Response newResponse() {     return new Response(). }
-false;public;0;3;;public String getPolicyName() {     return policyName. }
-false;public;0;4;;@Override public ActionRequestValidationException validate() {     return null. }
-false;public;1;5;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     policyName = in.readString(). }
-false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeString(policyName). }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(policyName). }
-false;public;1;11;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (obj.getClass() != getClass()) {         return false.     }     Request other = (Request) obj.     return Objects.equals(policyName, other.policyName). }

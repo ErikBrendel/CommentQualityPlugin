@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public boolean isUseRouteBuilder() {     return false. }
-false;public;0;4;;@Override public void configure() throws Exception {     from("direct:start").to("mybatis:selectAllAccounts"). }
-false;public;0;16;;@Test public void testStatementTypeNotSet() throws Exception {     context.addRoutes(new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").to("mybatis:selectAllAccounts").         }     }).     try {         context.start().         fail("Should have thrown exception").     } catch (Exception e) {         assertIsInstanceOf(IllegalArgumentException.class, e.getCause().getCause()).         assertEquals("statementType must be specified on: mybatis://selectAllAccounts", e.getCause().getCause().getMessage()).     } }

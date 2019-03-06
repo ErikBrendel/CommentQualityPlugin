@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void poolingTargetSource() {     new AnnotationConfigApplicationContext(PoolingTargetSourceConfig.class). }
-false;public;0;7;;@Bean @Scope(value = "request", proxyMode = ScopedProxyMode.TARGET_CLASS) public ProxyFactoryBean myObject() {     ProxyFactoryBean pfb = new ProxyFactoryBean().     pfb.setTargetSource(poolTargetSource()).     return pfb. }
-false;public;0;7;;@Bean public CommonsPool2TargetSource poolTargetSource() {     CommonsPool2TargetSource pool = new CommonsPool2TargetSource().     pool.setMaxSize(3).     pool.setTargetBeanName("myObjectTarget").     return pool. }
-false;public;0;5;;@Bean(name = "myObjectTarget") @Scope(scopeName = "prototype") public Object myObjectTarget() {     return new Object(). }

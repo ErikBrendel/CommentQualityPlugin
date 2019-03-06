@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;9;;public Object extractBodyFromIrc(Exchange exchange, IrcMessage message) {     String type = message.getMessageType().     String text = message.getMessage().     if (text != null) {         return text.     } else {         return type.     } }

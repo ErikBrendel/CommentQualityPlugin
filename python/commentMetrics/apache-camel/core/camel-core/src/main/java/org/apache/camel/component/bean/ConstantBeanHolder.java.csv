@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Override public String toString() {     // avoid invoke toString on bean as it may be a remote proxy     return ObjectHelper.className(bean) + "(" + ObjectHelper.getIdentityHashCode(bean) + ")". }
-false;public;0;3;;public Object getBean() {     return bean. }
-false;public;0;6;;public Processor getProcessor() {     if (this.processor == null) {         this.processor = CamelContextHelper.convertTo(beanInfo.getCamelContext(), Processor.class, bean).     }     return this.processor. }
-false;public;0;3;;public boolean supportProcessor() {     return true. }
-false;public;0;3;;public BeanInfo getBeanInfo() {     return beanInfo. }
-false;public;1;3;;public BeanInfo getBeanInfo(Object bean) {     return null. }

@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;protected,abstract;0;1;/**  * Make a new random instance.  */ ;/**  * Make a new random instance.  */ protected abstract T randomInstance().
-true;protected,abstract;1;1;/**  * Mutate an instance into some other similar instance that  * shouldn't be {@link #equals} to the original.  */ ;/**  * Mutate an instance into some other similar instance that  * shouldn't be {@link #equals} to the original.  */ protected abstract T mutate(T instance).
-true;protected,abstract;1;1;/**  * Copy and instance so it isn't {@code ==} but should still  * be {@link #equals}.  */ ;/**  * Copy and instance so it isn't {@code ==} but should still  * be {@link #equals}.  */ protected abstract T copy(T instance).
-true;public,abstract;0;1;/**  * Test this subclass's implementation of {@link Node#transformNodeProps}.  */ ;/**  * Test this subclass's implementation of {@link Node#transformNodeProps}.  */ public abstract void testTransform().
-true;public,abstract;0;1;/**  * Test this subclass's implementation of {@link Node#replaceChildren}.  */ ;/**  * Test this subclass's implementation of {@link Node#replaceChildren}.  */ public abstract void testReplaceChildren().
-false;public,final;0;3;;public final void testHashCodeAndEquals() {     EqualsHashCodeTestUtils.checkEqualsAndHashCode(randomInstance(), this::copy, this::mutate). }

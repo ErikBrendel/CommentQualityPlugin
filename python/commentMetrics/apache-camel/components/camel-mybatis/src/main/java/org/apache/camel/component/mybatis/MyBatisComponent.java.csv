@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;3;6;;@Override protected Endpoint createEndpoint(String uri, String remaining, Map<String, Object> parameters) throws Exception {     MyBatisEndpoint answer = new MyBatisEndpoint(uri, this, remaining).     setProperties(answer, parameters).     return answer. }
-false;protected;0;9;;protected SqlSessionFactory createSqlSessionFactory() throws IOException {     ObjectHelper.notNull(configurationUri, "configurationUri", this).     InputStream is = ResourceHelper.resolveMandatoryResourceAsInputStream(getCamelContext(), configurationUri).     try {         return new SqlSessionFactoryBuilder().build(is).     } finally {         IOHelper.close(is).     } }
-false;public;0;3;;public SqlSessionFactory getSqlSessionFactory() {     return sqlSessionFactory. }
-true;public;1;3;/**  * To use the {@link SqlSessionFactory}  */ ;/**  * To use the {@link SqlSessionFactory}  */ public void setSqlSessionFactory(SqlSessionFactory sqlSessionFactory) {     this.sqlSessionFactory = sqlSessionFactory. }
-false;public;0;3;;public String getConfigurationUri() {     return configurationUri. }
-true;public;1;3;/**  * Location of MyBatis xml configuration file.  * <p/>  * The default value is: SqlMapConfig.xml loaded from the classpath  */ ;/**  * Location of MyBatis xml configuration file.  * <p/>  * The default value is: SqlMapConfig.xml loaded from the classpath  */ public void setConfigurationUri(String configurationUri) {     this.configurationUri = configurationUri. }
-false;protected;0;8;;@Override protected void doStart() throws Exception {     super.doStart().     if (sqlSessionFactory == null) {         sqlSessionFactory = createSqlSessionFactory().     } }
-false;protected;0;4;;@Override protected void doStop() throws Exception {     super.doStop(). }

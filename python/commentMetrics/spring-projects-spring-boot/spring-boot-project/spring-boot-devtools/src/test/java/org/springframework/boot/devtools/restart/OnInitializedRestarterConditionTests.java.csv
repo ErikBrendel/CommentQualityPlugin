@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Before @After public void cleanup() {     Restarter.clearInstance(). }
-false;public;0;8;;@Test public void noInstance() {     Restarter.clearInstance().     ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(Config.class).     assertThat(context.containsBean("bean")).isFalse().     context.close(). }
-false;public;0;8;;@Test public void noInitialization() {     Restarter.initialize(new String[0], false, RestartInitializer.NONE).     ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(Config.class).     assertThat(context.containsBean("bean")).isFalse().     context.close(). }
-false;public;0;8;;@Test public void initialized() throws Exception {     Thread thread = new Thread(TestInitialized::main).     thread.start().     synchronized (wait) {         wait.wait().     } }
-false;public,static;1;12;;public static void main(String... args) {     RestartInitializer initializer = mock(RestartInitializer.class).     given(initializer.getInitialUrls(any(Thread.class))).willReturn(new URL[0]).     Restarter.initialize(new String[0], false, initializer).     ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(Config.class).     assertThat(context.containsBean("bean")).isTrue().     context.close().     synchronized (wait) {         wait.notify().     } }
-false;public;0;5;;@Bean @ConditionalOnInitializedRestarter public String bean() {     return "bean". }

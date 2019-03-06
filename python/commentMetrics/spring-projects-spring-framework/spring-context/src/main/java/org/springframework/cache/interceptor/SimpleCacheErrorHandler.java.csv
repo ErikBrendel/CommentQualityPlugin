@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;3;4;;@Override public void handleCacheGetError(RuntimeException exception, Cache cache, Object key) {     throw exception. }
-false;public;4;4;;@Override public void handleCachePutError(RuntimeException exception, Cache cache, Object key, @Nullable Object value) {     throw exception. }
-false;public;3;4;;@Override public void handleCacheEvictError(RuntimeException exception, Cache cache, Object key) {     throw exception. }
-false;public;2;4;;@Override public void handleCacheClearError(RuntimeException exception, Cache cache) {     throw exception. }

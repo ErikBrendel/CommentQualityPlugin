@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;8;;public static YammerFunctionType fromUri(String uri) {     for (YammerFunctionType endpointType : YammerFunctionType.values()) {         if (endpointType.name().equalsIgnoreCase(uri)) {             return endpointType.         }     }     return YammerFunctionType.MESSAGES. }

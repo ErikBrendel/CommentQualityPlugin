@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Before public void captureSystemProperties() {     this.systemProperties.putAll(System.getProperties()). }
-false;public;0;4;;@After public void restoreSystemProperties() {     System.setProperties(this.systemProperties). }
-false;public;0;7;;@Test public void bannerAndLoggingIsOutputByDefault() throws Exception {     String output = this.cli.run("quiet.groovy").     assertThat(output).contains(" :: Spring Boot ::").     assertThat(output).contains("Starting application").     assertThat(output).contains("Ssshh"). }
-false;public;0;6;;@Test public void quietModeSuppressesAllCliOutput() throws Exception {     this.cli.run("quiet.groovy").     String output = this.cli.run("quiet.groovy", "-q").     assertThat(output).isEqualTo("Ssshh"). }

@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;13;;@Override public Count<T> run(DataSet<T> input) throws Exception {     super.run(input).     countHelper = new CountHelper<>().     input.output(countHelper).name("Count").     return this. }
-false;public;0;4;;@Override public Long getResult() {     return countHelper.getAccumulator(env, COUNT). }
-false;public;1;4;;@Override public void writeRecord(U record) throws IOException {     count++. }
-false;public;0;4;;@Override public void close() throws IOException {     addAccumulator(COUNT, new LongCounter(count)). }

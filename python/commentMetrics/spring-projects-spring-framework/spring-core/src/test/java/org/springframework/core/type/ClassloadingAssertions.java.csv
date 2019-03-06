@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;private,static;1;7;;private static boolean isClassLoaded(String className) {     ClassLoader cl = ClassUtils.getDefaultClassLoader().     Method findLoadedClassMethod = ReflectionUtils.findMethod(cl.getClass(), "findLoadedClass", String.class).     ReflectionUtils.makeAccessible(findLoadedClassMethod).     Class<?> loadedClass = (Class<?>) ReflectionUtils.invokeMethod(findLoadedClassMethod, cl, className).     return loadedClass != null. }
-false;public,static;1;3;;public static void assertClassNotLoaded(String className) {     assertFalse("Class [" + className + "] should not have been loaded", isClassLoaded(className)). }

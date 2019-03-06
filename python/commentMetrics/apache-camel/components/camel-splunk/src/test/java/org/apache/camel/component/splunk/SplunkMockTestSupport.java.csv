@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;11;;@Override protected CamelContext createCamelContext() throws Exception {     CamelContext context = super.createCamelContext().     // set splunk to use mocked connection factory     SplunkComponent splunk = context.getComponent("splunk", SplunkComponent.class).     DefaultSplunkConfigurationFactory cf = Helper.mockComponent(service, socket).     splunk.setSplunkConfigurationFactory(cf).     return context. }

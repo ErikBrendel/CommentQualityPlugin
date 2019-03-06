@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public boolean supportsParameter(MethodParameter parameter) {     return parameter.hasParameterAnnotation(CookieValue.class). }
-false;protected;1;6;;@Override protected NamedValueInfo createNamedValueInfo(MethodParameter parameter) {     CookieValue annotation = parameter.getParameterAnnotation(CookieValue.class).     Assert.state(annotation != null, "No CookieValue annotation").     return new CookieValueNamedValueInfo(annotation). }
-false;protected;2;4;;@Override protected void handleMissingValue(String name, MethodParameter parameter) throws ServletRequestBindingException {     throw new MissingRequestCookieException(name, parameter). }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public String getName() {     return (fieldName == null) ? patternName : fieldName. }
-false;public;0;18;;public Object getValue() {     if (groupValue == null) {         return null.     }     switch(type) {         case "int":             return Integer.parseInt(groupValue).         case "long":             return Long.parseLong(groupValue).         case "double":             return Double.parseDouble(groupValue).         case "float":             return Float.parseFloat(groupValue).         case "boolean":             return Boolean.parseBoolean(groupValue).         default:             return groupValue.     } }

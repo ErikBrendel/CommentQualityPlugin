@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Before public void resetTerminal() {     terminal.reset().     terminal.setVerbosity(Terminal.Verbosity.NORMAL). }
-true;protected,abstract;0;1;/**  * Creates a Command to test execution.  */ ;/**  * Creates a Command to test execution.  */ protected abstract Command newCommand().
-true;public;1;5;/**  * Runs the command with the given args.  *  * Output can be found in {@link #terminal}.  * The command created can be found in {@link #command}.  */ ;/**  * Runs the command with the given args.  *  * Output can be found in {@link #terminal}.  * The command created can be found in {@link #command}.  */ public String execute(String... args) throws Exception {     command = newCommand().     command.mainWithoutErrorHandling(args, terminal).     return terminal.getOutput(). }

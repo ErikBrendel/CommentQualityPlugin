@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void testNegate() {     Assert.assertFalse(Predicates.of(String::isEmpty).test("something")).     Assert.assertTrue(Predicates.of(String::isEmpty).negate().test("something")).     Assert.assertTrue(Predicates.negate(String::isEmpty).test("something")).     Assert.assertFalse(Predicates.negate(String::isEmpty).test("")).     Assert.assertFalse(Predicates.of(String::isEmpty).negate().test("")). }

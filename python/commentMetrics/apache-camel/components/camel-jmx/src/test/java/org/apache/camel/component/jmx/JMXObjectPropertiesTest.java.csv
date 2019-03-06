@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void testObjectProperties() throws Exception {     ISimpleMXBean bean = getSimpleMXBean().     bean.touch().     getMockFixture().waitForMessages(). }
-false;protected;0;4;;@Override protected JMXUriBuilder buildFromURI() {     return new JMXUriBuilder().withObjectDomain(DOMAIN).withObjectPropertiesReference("#myTable"). }
-false;protected;0;6;;@Override protected void initRegistry() {     Map<String, String> ht = new Hashtable<>().     ht.put("name", "simpleBean").     getRegistry().put("myTable", ht). }

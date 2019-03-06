@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public int getOrder() {     return 0. }
-false;public;1;9;;@Override public void customize(ConfigurableReactiveWebServerFactory factory) {     PropertyMapper map = PropertyMapper.get().alwaysApplyingWhenNonNull().     map.from(this.serverProperties::getPort).to(factory::setPort).     map.from(this.serverProperties::getAddress).to(factory::setAddress).     map.from(this.serverProperties::getSsl).to(factory::setSsl).     map.from(this.serverProperties::getCompression).to(factory::setCompression).     map.from(this.serverProperties::getHttp2).to(factory::setHttp2). }

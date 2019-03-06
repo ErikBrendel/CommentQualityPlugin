@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;public void configure() {     from(routerEndpointURI).to("log:org.apache.camel?level=DEBUG").setHeader(Exchange.DESTINATION_OVERRIDE_URL, constant(getServiceAddress())).to(serviceEndpointURI).to("mock:result"). }
-false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from(routerEndpointURI).to("log:org.apache.camel?level=DEBUG").setHeader(Exchange.DESTINATION_OVERRIDE_URL, constant(getServiceAddress())).to(serviceEndpointURI).to("mock:result").         }     }. }

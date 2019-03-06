@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;1;3;;boolean shouldSign(SAMLObject object) {     return shouldSign(object.getElementQName().getLocalPart()). }
-false;;1;6;;boolean shouldSign(String elementName) {     if (credential == null) {         return false.     }     return messageTypes.contains(elementName) || messageTypes.contains("*"). }
-false;;2;3;;byte[] sign(String text, String algo) throws SecurityException {     return sign(text.getBytes(StandardCharsets.UTF_8), algo). }
-false;;2;3;;byte[] sign(byte[] content, String algo) throws SecurityException {     return XMLSigningUtil.signWithURI(this.credential, algo, content). }
-false;;0;3;;X509Credential getCredential() {     return credential. }

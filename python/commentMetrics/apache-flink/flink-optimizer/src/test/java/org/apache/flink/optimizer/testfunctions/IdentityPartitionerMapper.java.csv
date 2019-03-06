@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;6;;@Override public void mapPartition(Iterable<T> values, Collector<T> out) {     for (T in : values) {         out.collect(in).     } }

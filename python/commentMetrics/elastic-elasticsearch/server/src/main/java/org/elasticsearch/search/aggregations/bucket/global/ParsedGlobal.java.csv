@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getType() {     return GlobalAggregationBuilder.NAME. }
-false;public,static;2;3;;public static ParsedGlobal fromXContent(XContentParser parser, final String name) throws IOException {     return parseXContent(parser, new ParsedGlobal(), name). }

@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * The unique user name.  */ ;/**  * The unique user name.  */ String getName().
-true;;0;1;/**  * Whether the user has any sessions.  */ ;/**  * Whether the user has any sessions.  */ boolean hasSessions().
-true;;1;2;/**  * Look up the session for the given id.  * @param sessionId the session id  * @return the matching session, or {@code null} if none found  */ ;/**  * Look up the session for the given id.  * @param sessionId the session id  * @return the matching session, or {@code null} if none found  */ @Nullable SimpSession getSession(String sessionId).
-true;;0;1;/**  * Return the sessions for the user.  * The returned set is a copy and will never be modified.  * @return a set of session ids, or an empty set if none  */ ;/**  * Return the sessions for the user.  * The returned set is a copy and will never be modified.  * @return a set of session ids, or an empty set if none  */ Set<SimpSession> getSessions().

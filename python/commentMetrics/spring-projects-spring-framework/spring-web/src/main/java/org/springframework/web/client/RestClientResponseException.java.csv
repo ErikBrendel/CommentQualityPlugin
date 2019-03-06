@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Return the raw HTTP status code value.  */ ;/**  * Return the raw HTTP status code value.  */ public int getRawStatusCode() {     return this.rawStatusCode. }
-true;public;0;3;/**  * Return the HTTP status text.  */ ;/**  * Return the HTTP status text.  */ public String getStatusText() {     return this.statusText. }
-true;public;0;4;/**  * Return the HTTP response headers.  */ ;/**  * Return the HTTP response headers.  */ @Nullable public HttpHeaders getResponseHeaders() {     return this.responseHeaders. }
-true;public;0;3;/**  * Return the response body as a byte array.  */ ;/**  * Return the response body as a byte array.  */ public byte[] getResponseBodyAsByteArray() {     return this.responseBody. }
-true;public;0;12;/**  * Return the response body as a string.  */ ;/**  * Return the response body as a string.  */ public String getResponseBodyAsString() {     if (this.responseCharset == null) {         return new String(this.responseBody, DEFAULT_CHARSET).     }     try {         return new String(this.responseBody, this.responseCharset).     } catch (UnsupportedEncodingException ex) {         // should not occur         throw new IllegalStateException(ex).     } }

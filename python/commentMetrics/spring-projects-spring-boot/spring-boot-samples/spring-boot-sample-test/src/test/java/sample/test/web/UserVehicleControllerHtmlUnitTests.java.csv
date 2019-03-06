@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Test public void getVehicleWhenRequestingTextShouldReturnMakeAndModel() throws Exception {     given(this.userVehicleService.getVehicleDetails("sboot")).willReturn(new VehicleDetails("Honda", "Civic")).     HtmlPage page = this.webClient.getPage("/sboot/vehicle.html").     assertThat(page.getBody().getTextContent()).isEqualTo("Honda Civic"). }

@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected CouchbaseConfigurer couchbaseConfigurer() {     return this.couchbaseConfigurer. }
-false;protected;0;4;;@Override protected Consistency getDefaultConsistency() {     return this.properties.getConsistency(). }
-false;public;0;6;;@Override @ConditionalOnMissingBean(name = BeanNames.RXJAVA1_COUCHBASE_TEMPLATE) @Bean(name = BeanNames.RXJAVA1_COUCHBASE_TEMPLATE) public RxJavaCouchbaseTemplate reactiveCouchbaseTemplate() throws Exception {     return super.reactiveCouchbaseTemplate(). }
-false;public;1;7;;@Override @ConditionalOnMissingBean(name = BeanNames.REACTIVE_COUCHBASE_OPERATIONS_MAPPING) @Bean(name = BeanNames.REACTIVE_COUCHBASE_OPERATIONS_MAPPING) public ReactiveRepositoryOperationsMapping reactiveRepositoryOperationsMapping(RxJavaCouchbaseTemplate reactiveCouchbaseTemplate) throws Exception {     return super.reactiveRepositoryOperationsMapping(reactiveCouchbaseTemplate). }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;4;/**  * Closes this request queue.  *  * @see java.io.Closeable#close()  */ ;/**  * Closes this request queue.  *  * @see java.io.Closeable#close()  */ @Override public void close() {     this.closed = true. }
-true;public;0;3;/**  * Checks whether this request queue is closed.  *  * @return True, if the queue is closed, false otherwise.  */ ;/**  * Checks whether this request queue is closed.  *  * @return True, if the queue is closed, false otherwise.  */ public boolean isClosed() {     return this.closed. }

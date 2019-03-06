@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;1;1;/**  * Adds the web socket to both (always if present) stores.  *  * @param socket the web socket  */ ;/**  * Adds the web socket to both (always if present) stores.  *  * @param socket the web socket  */ void addSocket(DefaultWebsocket socket).
-true;;1;1;/**  * Removes the Websocket from both stores  *  * @param id id of the web socket  */ ;/**  * Removes the Websocket from both stores  *  * @param id id of the web socket  */ void removeSocket(String id).
-true;;1;1;/**  * Removes the Websocket from both stores  *  * @param socket web socket to remove  */ ;/**  * Removes the Websocket from both stores  *  * @param socket web socket to remove  */ void removeSocket(DefaultWebsocket socket).

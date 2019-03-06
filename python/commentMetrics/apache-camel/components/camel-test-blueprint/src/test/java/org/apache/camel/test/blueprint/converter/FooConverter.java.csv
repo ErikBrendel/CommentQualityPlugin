@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;8;;@Converter public Foo convertToFoo(String data) {     String[] s = data.split(",").     Foo foo = new Foo().     foo.setFirst(s[0]).     foo.setLast(s[1]).     return foo. }

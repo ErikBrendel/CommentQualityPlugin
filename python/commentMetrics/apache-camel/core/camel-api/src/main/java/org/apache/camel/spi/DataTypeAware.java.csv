@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;1;1;/**  * Set the data type of the message.  *  * @param type data type  */ ;/**  * Set the data type of the message.  *  * @param type data type  */ void setDataType(DataType type).
-true;;0;1;/**  * Get the data type of the message.  *  * @return data type  */ ;/**  * Get the data type of the message.  *  * @return data type  */ DataType getDataType().
-true;;0;1;/**  * Whether any data type has been configured  */ ;/**  * Whether any data type has been configured  */ boolean hasDataType().
-true;;2;1;/**  * Set the message body with data type.  *  * @param body message body  * @param type data type  */ ;/**  * Set the message body with data type.  *  * @param body message body  * @param type data type  */ void setBody(Object body, DataType type).

@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void testSetSecurityPolicies1() {     final MiloServerComponent component = new MiloServerComponent().     component.setSecurityPoliciesById("None"). }
-false;public;0;5;;@Test public void testSetSecurityPolicies2() {     final MiloServerComponent component = new MiloServerComponent().     component.setSecurityPoliciesById("http://opcfoundation.org/UA/SecurityPolicy#Basic256Sha256"). }
-false;public;0;5;;@Test public void testSetSecurityPolicies3() {     final MiloServerComponent component = new MiloServerComponent().     component.setSecurityPoliciesById("None", "http://opcfoundation.org/UA/SecurityPolicy#Basic256Sha256"). }
-false;public;0;5;;@Test(expected = IllegalArgumentException.class) public void testSetSecurityPolicies4() {     final MiloServerComponent component = new MiloServerComponent().     component.setSecurityPoliciesById("I just made that up"). }

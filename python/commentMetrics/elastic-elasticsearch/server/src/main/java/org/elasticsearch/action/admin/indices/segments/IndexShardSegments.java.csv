@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public ShardId getShardId() {     return this.shardId. }
-false;public;1;3;;public ShardSegments getAt(int i) {     return shards[i]. }
-false;public;0;3;;public ShardSegments[] getShards() {     return this.shards. }
-false;public;0;4;;@Override public Iterator<ShardSegments> iterator() {     return Arrays.stream(shards).iterator(). }

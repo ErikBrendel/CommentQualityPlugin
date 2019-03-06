@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;1;4;/**  * Configure resolvers for custom controller method arguments.  * @param resolver the resolver(s) to add  */ ;/**  * Configure resolvers for custom controller method arguments.  * @param resolver the resolver(s) to add  */ public void addCustomResolver(HandlerMethodArgumentResolver... resolver) {     Assert.notNull(resolver, "'resolvers' must not be null").     this.customResolvers.addAll(Arrays.asList(resolver)). }
-false;;0;3;;List<HandlerMethodArgumentResolver> getCustomResolvers() {     return this.customResolvers. }

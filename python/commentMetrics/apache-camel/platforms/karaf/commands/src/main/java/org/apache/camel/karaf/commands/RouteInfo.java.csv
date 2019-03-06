@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;public Object execute() throws Exception {     RouteInfoCommand command = new RouteInfoCommand(route, context).     command.setStringEscape(stringEscape).     return command.execute(this, System.out, System.err). }

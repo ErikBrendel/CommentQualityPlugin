@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;3;10;;@Override protected void doHandle(Map<String, Object> attributes, ScannedGenericBeanDefinition beanDefinition, BeanDefinitionRegistry registry) {     BeanDefinitionBuilder builder = BeanDefinitionBuilder.rootBeanDefinition(ServletListenerRegistrationBean.class).     builder.addPropertyValue("listener", beanDefinition).     registry.registerBeanDefinition(beanDefinition.getBeanClassName(), builder.getBeanDefinition()). }

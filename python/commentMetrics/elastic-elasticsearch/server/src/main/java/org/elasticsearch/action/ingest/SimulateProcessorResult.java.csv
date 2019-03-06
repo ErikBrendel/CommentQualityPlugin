@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;11;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeString(processorTag).     if (ingestDocument == null) {         out.writeBoolean(false).     } else {         out.writeBoolean(true).         ingestDocument.writeTo(out).     }     out.writeException(failure). }
-false;public;0;6;;public IngestDocument getIngestDocument() {     if (ingestDocument == null) {         return null.     }     return ingestDocument.getIngestDocument(). }
-false;public;0;3;;public String getProcessorTag() {     return processorTag. }
-false;public;0;3;;public Exception getFailure() {     return failure. }
-false;public;2;23;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     if (processorTag != null) {         builder.field(ConfigurationUtils.TAG_KEY, processorTag).     }     if (failure != null && ingestDocument != null) {         builder.startObject(IGNORED_ERROR_FIELD).         ElasticsearchException.generateFailureXContent(builder, params, failure, true).         builder.endObject().     } else if (failure != null) {         ElasticsearchException.generateFailureXContent(builder, params, failure, true).     }     if (ingestDocument != null) {         ingestDocument.toXContent(builder, params).     }     builder.endObject().     return builder. }
-false;public,static;1;3;;public static SimulateProcessorResult fromXContent(XContentParser parser) {     return PARSER.apply(parser, null). }

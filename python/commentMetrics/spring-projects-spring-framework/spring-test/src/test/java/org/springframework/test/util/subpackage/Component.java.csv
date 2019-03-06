@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public Integer getNumber() {     return this.number. }
-false;public;0;3;;public String getText() {     return this.text. }
-false;protected;2;5;;@Autowired protected void configure(Integer number, String text) {     this.number = number.     this.text = text. }
-false;protected;0;5;;@PostConstruct protected void init() {     Assert.state(number != null, "number must not be null").     Assert.state(StringUtils.hasText(text), "text must not be empty"). }
-false;protected;0;5;;@PreDestroy protected void destroy() {     this.number = null.     this.text = null. }
-false;;2;3;;int subtract(int a, int b) {     return a - b. }
-false;;1;7;;int add(int... args) {     int sum = 0.     for (int i = 0. i < args.length. i++) {         sum += args[i].     }     return sum. }
-false;;1;7;;int multiply(Integer... args) {     int product = 1.     for (int i = 0. i < args.length. i++) {         product *= args[i].     }     return product. }

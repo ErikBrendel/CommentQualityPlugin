@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public int id() {     return id. }
-false;public,static;1;11;;public static LicensesStatus fromId(int id) {     if (id == 0) {         return VALID.     } else if (id == 1) {         return INVALID.     } else if (id == 2) {         return EXPIRED.     } else {         throw new IllegalStateException("no valid LicensesStatus for id=" + id).     } }
-false;public;0;4;;@Override public String toString() {     return this.name().toLowerCase(Locale.ROOT). }
-false;public,static;1;12;;public static LicensesStatus fromString(String value) {     switch(value) {         case "valid":             return VALID.         case "invalid":             return INVALID.         case "expired":             return EXPIRED.         default:             throw new IllegalArgumentException("unknown licenses status [" + value + "]").     } }

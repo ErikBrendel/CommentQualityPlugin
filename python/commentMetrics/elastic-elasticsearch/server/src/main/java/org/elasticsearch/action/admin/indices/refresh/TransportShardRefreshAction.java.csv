@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected ReplicationResponse newResponseInstance() {     return new ReplicationResponse(). }
-false;protected;2;6;;@Override protected PrimaryResult shardOperationOnPrimary(BasicReplicationRequest shardRequest, IndexShard primary) {     primary.refresh("api").     logger.trace("{} refresh request executed on primary", primary.shardId()).     return new PrimaryResult(shardRequest, new ReplicationResponse()). }
-false;protected;2;6;;@Override protected ReplicaResult shardOperationOnReplica(BasicReplicationRequest request, IndexShard replica) {     replica.refresh("api").     logger.trace("{} refresh request executed on replica", replica.shardId()).     return new ReplicaResult(). }

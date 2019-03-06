@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,synchronized;1;6;;@Override public synchronized void onTaskRegistered(Task task) {     if (Regex.simpleMatch(actionMasks, task.getAction())) {         events.add(new Tuple<>(true, task.taskInfo(localNodeId, true))).     } }
-false;public,synchronized;1;6;;@Override public synchronized void onTaskUnregistered(Task task) {     if (Regex.simpleMatch(actionMasks, task.getAction())) {         events.add(new Tuple<>(false, task.taskInfo(localNodeId, true))).     } }
-false;public;1;3;;@Override public void waitForTaskCompletion(Task task) { }
-false;public,synchronized;0;3;;public synchronized List<Tuple<Boolean, TaskInfo>> getEvents() {     return Collections.unmodifiableList(new ArrayList<>(events)). }
-false;public,synchronized;0;4;;public synchronized List<TaskInfo> getRegistrationEvents() {     List<TaskInfo> events = this.events.stream().filter(Tuple::v1).map(Tuple::v2).collect(Collectors.toList()).     return Collections.unmodifiableList(events). }
-false;public,synchronized;0;4;;public synchronized List<TaskInfo> getUnregistrationEvents() {     List<TaskInfo> events = this.events.stream().filter(event -> event.v1() == false).map(Tuple::v2).collect(Collectors.toList()).     return Collections.unmodifiableList(events). }
-false;public,synchronized;0;3;;public synchronized void reset() {     events.clear(). }

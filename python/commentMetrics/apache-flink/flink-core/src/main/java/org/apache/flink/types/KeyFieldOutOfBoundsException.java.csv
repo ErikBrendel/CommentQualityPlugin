@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Gets the field number that was attempted to access. If the number is not set, this method returns  * {@code -1}.  *  * @return The field number that was attempted to access, or {@code -1}, if not set.  */ ;/**  * Gets the field number that was attempted to access. If the number is not set, this method returns  * {@code -1}.  *  * @return The field number that was attempted to access, or {@code -1}, if not set.  */ public int getFieldNumber() {     return this.fieldNumber. }

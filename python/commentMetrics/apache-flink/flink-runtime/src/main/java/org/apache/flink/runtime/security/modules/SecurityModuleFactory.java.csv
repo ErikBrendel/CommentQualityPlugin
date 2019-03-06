@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;1;1;/**  * Creates and returns a {@link SecurityModule}. This can return {@code null} if the type  * of {@link SecurityModule} that this factory can create does not work in the current  * environment.  */ ;/**  * Creates and returns a {@link SecurityModule}. This can return {@code null} if the type  * of {@link SecurityModule} that this factory can create does not work in the current  * environment.  */ SecurityModule createModule(SecurityConfiguration securityConfig).

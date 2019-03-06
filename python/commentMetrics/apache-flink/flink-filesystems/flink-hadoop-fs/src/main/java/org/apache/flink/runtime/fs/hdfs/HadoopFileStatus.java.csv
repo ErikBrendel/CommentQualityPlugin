@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public long getLen() {     return fileStatus.getLen(). }
-false;public;0;9;;@Override public long getBlockSize() {     long blocksize = fileStatus.getBlockSize().     if (blocksize > fileStatus.getLen()) {         return fileStatus.getLen().     }     return blocksize. }
-false;public;0;4;;@Override public long getAccessTime() {     return fileStatus.getAccessTime(). }
-false;public;0;4;;@Override public long getModificationTime() {     return fileStatus.getModificationTime(). }
-false;public;0;4;;@Override public short getReplication() {     return fileStatus.getReplication(). }
-false;public;0;3;;public org.apache.hadoop.fs.FileStatus getInternalFileStatus() {     return this.fileStatus. }
-false;public;0;4;;@Override public Path getPath() {     return new Path(fileStatus.getPath().toUri()). }
-false;public;0;5;;@SuppressWarnings("deprecation") @Override public boolean isDir() {     return fileStatus.isDir(). }

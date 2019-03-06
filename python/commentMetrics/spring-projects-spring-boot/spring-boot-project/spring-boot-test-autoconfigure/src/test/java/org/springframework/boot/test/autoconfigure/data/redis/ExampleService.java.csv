@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;public boolean hasRecord(PersonHash personHash) {     return this.operations.execute((RedisConnection connection) -> connection.exists(("persons:" + personHash.getId()).getBytes(CHARSET))). }

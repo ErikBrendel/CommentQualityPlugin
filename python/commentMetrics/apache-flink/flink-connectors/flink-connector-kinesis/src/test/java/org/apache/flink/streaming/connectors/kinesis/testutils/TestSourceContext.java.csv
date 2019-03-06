@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public void collect(T element) {     this.collectedOutputs.add(new StreamRecord<>(element)). }
-false;public;2;4;;@Override public void collectWithTimestamp(T element, long timestamp) {     this.collectedOutputs.add(new StreamRecord<>(element, timestamp)). }
-false;public;1;4;;@Override public void emitWatermark(Watermark mark) {     throw new UnsupportedOperationException(). }
-false;public;0;2;;@Override public void markAsTemporarilyIdle() { }
-false;public;0;4;;@Override public Object getCheckpointLock() {     return checkpointLock. }
-false;public;0;2;;@Override public void close() { }
-false;public;0;3;;public StreamRecord<T> removeLatestOutput() {     return collectedOutputs.poll(). }
-false;public;0;3;;public ConcurrentLinkedQueue<StreamRecord<T>> getCollectedOutputs() {     return collectedOutputs. }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;7;;@Bean @ConditionalOnClass(CamelContext.class) @ConditionalOnMissingBean @ConditionalOnEnabledEndpoint public CamelRouteControllerEndpoint routeControllerEndpoint(CamelContext camelContext) {     return new CamelRouteControllerEndpoint(camelContext). }

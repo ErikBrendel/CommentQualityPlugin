@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected NodeInfo<PercentileRank> info() {     return NodeInfo.create(this, PercentileRank::new, field(), value). }
-false;public;1;7;;@Override public Expression replaceChildren(List<Expression> newChildren) {     if (newChildren.size() != 2) {         throw new IllegalArgumentException("expected [2] children but received [" + newChildren.size() + "]").     }     return new PercentileRank(source(), newChildren.get(0), newChildren.get(1)). }
-false;protected;0;14;;@Override protected TypeResolution resolveType() {     TypeResolution resolution = isFoldable(value, sourceText(), ParamOrdinal.SECOND).     if (resolution.unresolved()) {         return resolution.     }     resolution = super.resolveType().     if (resolution.unresolved()) {         return resolution.     }     return isNumeric(value, sourceText(), ParamOrdinal.DEFAULT). }
-false;public;0;3;;public Expression value() {     return value. }
-false;public;0;4;;@Override public DataType dataType() {     return DataType.DOUBLE. }
-false;public;0;4;;@Override public String innerName() {     return Double.toString(Foldables.doubleValueOf(value)). }

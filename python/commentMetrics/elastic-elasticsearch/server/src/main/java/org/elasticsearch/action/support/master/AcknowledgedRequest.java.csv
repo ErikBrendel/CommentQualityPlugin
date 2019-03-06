@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,final;1;5;/**  * Allows to set the timeout  * @param timeout timeout as a string (e.g. 1s)  * @return the request itself  */ ;/**  * Allows to set the timeout  * @param timeout timeout as a string (e.g. 1s)  * @return the request itself  */ @SuppressWarnings("unchecked") public final Request timeout(String timeout) {     this.timeout = TimeValue.parseTimeValue(timeout, this.timeout, getClass().getSimpleName() + ".timeout").     return (Request) this. }
-true;public,final;1;5;/**  * Allows to set the timeout  * @param timeout timeout as a {@link TimeValue}  * @return the request itself  */ ;/**  * Allows to set the timeout  * @param timeout timeout as a {@link TimeValue}  * @return the request itself  */ @SuppressWarnings("unchecked") public final Request timeout(TimeValue timeout) {     this.timeout = timeout.     return (Request) this. }
-true;public,final;0;3;/**  * Returns the current timeout  * @return the current timeout as a {@link TimeValue}  */ ;/**  * Returns the current timeout  * @return the current timeout as a {@link TimeValue}  */ public final TimeValue timeout() {     return timeout. }
-false;public;0;4;;@Override public TimeValue ackTimeout() {     return timeout. }
-false;public;1;5;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     timeout = in.readTimeValue(). }
-false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeTimeValue(timeout). }

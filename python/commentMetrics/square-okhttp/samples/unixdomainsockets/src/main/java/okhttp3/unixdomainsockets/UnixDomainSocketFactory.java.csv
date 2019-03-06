@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public Socket createSocket() throws IOException {     UnixSocketChannel channel = UnixSocketChannel.open().     return new TunnelingUnixSocket(path, channel). }
-false;public;2;5;;@Override public Socket createSocket(String host, int port) throws IOException {     Socket result = createSocket().     result.connect(new InetSocketAddress(host, port)).     return result. }
-false;public;4;4;;@Override public Socket createSocket(String host, int port, InetAddress localHost, int localPort) throws IOException {     return createSocket(host, port). }
-false;public;2;5;;@Override public Socket createSocket(InetAddress host, int port) throws IOException {     Socket result = createSocket().     result.connect(new InetSocketAddress(host, port)).     return result. }
-false;public;4;4;;@Override public Socket createSocket(InetAddress host, int port, InetAddress localAddress, int localPort) throws IOException {     return createSocket(host, port). }

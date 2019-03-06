@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@RecipientList @Consume(uri = "direct:inbound") public List<String> route() {     return Arrays.asList("mock:outbound1", "mock:outbound2"). }

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;13;;@Test public void testSendToDisruptorVm() throws Exception {     MockEndpoint result = getMockEndpoint("mock:result").     result.expectedBodiesReceived("Hello World").     template2.sendBody("direct:start", "Hello World").     assertMockEndpointsSatisfied().     // check the camel context of the exchange     assertEquals("Get a wrong context. ", context, result.getExchanges().get(0).getContext()). }
-false;public;0;5;;@Override public void configure() throws Exception {     from("disruptor-vm:foo?concurrentConsumers=5").to("mock:result"). }
-false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("disruptor-vm:foo?concurrentConsumers=5").to("mock:result").         }     }. }
-false;public;0;5;;@Override public void configure() throws Exception {     from("direct:start").to("disruptor-vm:foo"). }
-false;protected;0;10;;@Override protected RouteBuilder createRouteBuilderForSecondContext() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").to("disruptor-vm:foo").         }     }. }

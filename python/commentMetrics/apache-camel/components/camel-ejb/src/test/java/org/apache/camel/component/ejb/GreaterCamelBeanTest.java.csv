@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;8;;@Override protected JndiRegistry createRegistry() throws Exception {     Properties properties = new Properties().     properties.setProperty(Context.INITIAL_CONTEXT_FACTORY, "org.apache.openejb.client.LocalInitialContextFactory").     InitialContext initialContext = new InitialContext(properties).     return new JndiRegistry(initialContext). }
-false;public;0;8;;@Test public void testGreaterViaCamelBean() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("Hello World").     template.sendBody("direct:start", "World").     assertMockEndpointsSatisfied(). }
-false;public;0;6;;@Override public void configure() throws Exception {     from("direct:start").bean("GreaterImplLocal", "hello").to("mock:result"). }
-false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").bean("GreaterImplLocal", "hello").to("mock:result").         }     }. }

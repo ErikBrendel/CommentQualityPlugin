@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;6;;@Override protected MergedContextConfiguration processMergedContextConfiguration(MergedContextConfiguration mergedConfig) {     return new ReactiveWebMergedContextConfiguration(super.processMergedContextConfiguration(mergedConfig)). }
-false;protected;1;6;;@Override protected String[] getProperties(Class<?> testClass) {     WebFluxTest annotation = AnnotatedElementUtils.getMergedAnnotation(testClass, WebFluxTest.class).     return (annotation != null) ? annotation.properties() : null. }

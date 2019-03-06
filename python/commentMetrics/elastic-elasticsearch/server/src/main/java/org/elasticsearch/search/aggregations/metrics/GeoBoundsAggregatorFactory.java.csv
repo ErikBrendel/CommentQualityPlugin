@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;3;5;;@Override protected Aggregator createUnmapped(Aggregator parent, List<PipelineAggregator> pipelineAggregators, Map<String, Object> metaData) throws IOException {     return new GeoBoundsAggregator(name, context, parent, null, wrapLongitude, pipelineAggregators, metaData). }
-false;protected;5;5;;@Override protected Aggregator doCreateInternal(ValuesSource.GeoPoint valuesSource, Aggregator parent, boolean collectsFromSingleBucket, List<PipelineAggregator> pipelineAggregators, Map<String, Object> metaData) throws IOException {     return new GeoBoundsAggregator(name, context, parent, valuesSource, wrapLongitude, pipelineAggregators, metaData). }

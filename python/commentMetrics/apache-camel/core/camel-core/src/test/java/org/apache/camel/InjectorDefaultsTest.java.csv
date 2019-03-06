@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void testInjectorIsDefaultByDefault() throws Exception {     Injector injector = context.getInjector().     assertIsInstanceOf(DefaultInjector.class, injector). }
-false;public;0;13;;@Test public void testNewInstance() throws Exception {     Injector injector = context.getInjector().     MyFoo foo = injector.newInstance(MyFoo.class).     foo.setName("Claus").     MyFoo foo2 = injector.newInstance(MyFoo.class).     assertNotSame(foo, foo2).     assertEquals("Claus", foo.getName()).     assertNull(foo2.getName()). }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;private;1;5;;private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {     in.defaultReadObject().     this.dateTimeFormatter = DateTimeFormatter.ofPattern(formatString).withZone(zoneId). }
-false;public;3;5;;@Override public Path getBucketPath(Clock clock, Path basePath, T element) {     String newDateTimeString = dateTimeFormatter.format(Instant.ofEpochMilli(clock.currentTimeMillis())).     return new Path(basePath + "/" + newDateTimeString). }
-false;public;0;7;;@Override public String toString() {     return "DateTimeBucketer{" + "formatString='" + formatString + '\'' + ", zoneId=" + zoneId + '}'. }

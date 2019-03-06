@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;3;;protected boolean hasThreadPool() {     return getExecutor() != null. }
-false;protected;1;3;;protected void setThreadPoolOrExecutor(Executor pool) {     setExecutor(pool). }
-false;public;2;3;;public void setProxy(String host, int port) {     getProxyConfiguration().getProxies().add(new org.eclipse.jetty.client.HttpProxy(host, port)). }
-false;public;0;4;;@Override public String getProxyHost() {     return getProxyConfiguration().getProxies().get(0).getAddress().getHost(). }
-false;public;0;4;;@Override public int getProxyPort() {     return getProxyConfiguration().getProxies().get(0).getAddress().getPort(). }

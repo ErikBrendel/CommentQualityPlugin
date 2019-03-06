@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;@Bean @ConditionalOnMissingBean(name = "ldapHealthIndicator") public HealthIndicator ldapHealthIndicator(Map<String, LdapOperations> ldapOperations) {     return createHealthIndicator(ldapOperations). }

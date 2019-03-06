@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public boolean canConvert(final Class type) {     return SObjectNode.class.equals(type). }
-false;public;3;17;;@Override public void marshal(final Object source, final HierarchicalStreamWriter writer, final MarshallingContext context) {     final SObjectNode node = (SObjectNode) source.     writer.addAttribute("type", node.attributes.type).     writer.addAttribute("referenceId", node.attributes.referenceId).     context.convertAnother(node.object).     for (final Map.Entry<String, List<SObjectNode>> e : node.records.entrySet()) {         writer.startNode(e.getKey()).         context.convertAnother(e.getValue()).         writer.endNode().     } }
-false;public;2;4;;@Override public Object unmarshal(final HierarchicalStreamReader reader, final UnmarshallingContext context) {     throw new ConversionException("Unmarshalling is not supported"). }

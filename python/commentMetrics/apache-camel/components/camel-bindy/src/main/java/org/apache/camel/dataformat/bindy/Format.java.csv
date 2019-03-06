@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;1;1;/**  * Formats the object into a String  *  * @param object the object  * @return formatted as a String  * @throws Exception can be thrown  */ ;/**  * Formats the object into a String  *  * @param object the object  * @return formatted as a String  * @throws Exception can be thrown  */ String format(T object) throws Exception.
-true;;1;1;/**  * Parses a String into an object  *  * @param string the string  * @return T the object  * @throws Exception can be thrown  */ ;/**  * Parses a String into an object  *  * @param string the string  * @return T the object  * @throws Exception can be thrown  */ T parse(String string) throws Exception.

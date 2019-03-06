@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected RouteBuilder[] createRouteBuilders() throws Exception {     return new RouteBuilder[] {}. }
-false;protected;0;10;;protected CamelContext createCamelContext() throws Exception {     KeyGenerator generator = KeyGenerator.getInstance("DES").     deskey = generator.generateKey().     generator = KeyGenerator.getInstance("DESede").     desEdekey = generator.generateKey().     generator = KeyGenerator.getInstance("AES").     aeskey = generator.generateKey().     return SpringCamelContext.springCamelContext(new ClassPathXmlApplicationContext("/org/apache/camel/component/crypto/SpringCryptoDataFormatTest.xml"), true). }
-false;public,static;0;3;;public static Key getDesKey() {     return deskey. }
-false;public,static;0;3;;public static Key getDesEdeKey() {     return desEdekey. }
-false;public,static;0;3;;public static Key getAESKey() {     return aeskey. }
-false;public,static;0;3;;public static byte[] getIV() {     return new byte[] { 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07 }. }

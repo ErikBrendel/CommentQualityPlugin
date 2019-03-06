@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public Locale getLocale() {     return locale. }
-false;public;0;5;;@Override @Nullable public TimeZone getTimeZone() {     return timeZone. }
-false;public;1;14;;@Override public LocaleContext resolveLocaleContext(ServerWebExchange exchange) {     return new TimeZoneAwareLocaleContext() {          @Override         public Locale getLocale() {             return locale.         }          @Override         @Nullable         public TimeZone getTimeZone() {             return timeZone.         }     }. }
-false;public;2;5;;@Override public void setLocaleContext(ServerWebExchange exchange, @Nullable LocaleContext localeContext) {     throw new UnsupportedOperationException("Cannot change fixed locale - use a different locale context resolution strategy"). }

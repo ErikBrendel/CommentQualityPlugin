@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;15;;@Before public void setup() throws Exception {     ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext(getClass().getSimpleName() + ".xml", getClass()).     AdviceBindingTestAspect afterAdviceAspect = (AdviceBindingTestAspect) ctx.getBean("testAspect").     testBeanProxy = (ITestBean) ctx.getBean("testBean").     assertTrue(AopUtils.isAopProxy(testBeanProxy)).     // we need the real target too, not just the proxy...     testBeanTarget = (TestBean) ((Advised) testBeanProxy).getTargetSource().getTarget().     mockCollaborator = mock(AdviceBindingCollaborator.class).     afterAdviceAspect.setCollaborator(mockCollaborator). }
-false;public;0;5;;@Test public void testOneIntArg() {     testBeanProxy.setAge(5).     verify(mockCollaborator).oneIntArg(5). }
-false;public;0;5;;@Test public void testOneObjectArgBindingProxyWithThis() {     testBeanProxy.getAge().     verify(mockCollaborator).oneObjectArg(this.testBeanProxy). }
-false;public;0;5;;@Test public void testOneObjectArgBindingTarget() {     testBeanProxy.getDoctor().     verify(mockCollaborator).oneObjectArg(this.testBeanTarget). }
-false;public;0;5;;@Test public void testOneIntAndOneObjectArgs() {     testBeanProxy.setAge(5).     verify(mockCollaborator).oneIntAndOneObject(5, this.testBeanProxy). }
-false;public;0;5;;@Test public void testNeedsJoinPoint() {     testBeanProxy.getAge().     verify(mockCollaborator).needsJoinPoint("getAge"). }
-false;public;0;5;;@Test public void testNeedsJoinPointStaticPart() {     testBeanProxy.getAge().     verify(mockCollaborator).needsJoinPointStaticPart("getAge"). }

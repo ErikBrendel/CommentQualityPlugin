@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getName() {     return "ml_set_upgrade_mode_action". }
-false;protected;2;8;;@Override protected RestChannelConsumer prepareRequest(RestRequest restRequest, NodeClient client) throws IOException {     SetUpgradeModeAction.Request request = new SetUpgradeModeAction.Request(restRequest.paramAsBoolean("enabled", false)).     request.timeout(restRequest.paramAsTime("timeout", request.timeout())).     request.masterNodeTimeout(restRequest.paramAsTime("master_timeout", request.masterNodeTimeout())).     return channel -> client.execute(SetUpgradeModeAction.INSTANCE, request, new RestToXContentListener<>(channel)). }

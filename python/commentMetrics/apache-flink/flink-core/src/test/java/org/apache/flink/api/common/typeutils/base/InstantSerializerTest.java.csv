@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected TypeSerializer<Instant> createSerializer() {     return new InstantSerializer(). }
-false;protected;0;4;;@Override protected int getLength() {     return 12. }
-false;protected;0;4;;@Override protected Class<Instant> getTypeClass() {     return Instant.class. }
-false;private,static;1;4;;private static long rndSeconds(Random rnd) {     return (long) (Instant.MIN.getEpochSecond() + rnd.nextDouble() * (Instant.MAX.getEpochSecond() - Instant.MIN.getEpochSecond())). }
-false;private,static;1;3;;private static int rndNanos(Random rnd) {     return (int) (rnd.nextDouble() * 999999999). }
-false;protected;0;11;;@Override protected Instant[] getTestData() {     final Random rnd = new Random(874597969123412341L).     return new Instant[] { Instant.EPOCH, Instant.MIN, Instant.MAX, Instant.ofEpochSecond(rndSeconds(rnd), rndNanos(rnd)), Instant.ofEpochSecond(1534135584, 949495), Instant.ofEpochSecond(56090783) }. }

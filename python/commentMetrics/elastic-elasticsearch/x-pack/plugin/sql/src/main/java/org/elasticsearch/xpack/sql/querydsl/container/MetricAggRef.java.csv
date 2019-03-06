@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public String name() {     return name. }
-false;public;0;3;;public String property() {     return property. }
-false;public;0;3;;public String innerKey() {     return innerKey. }
-false;public;0;5;;@Override public String toString() {     String i = innerKey != null ? "[" + innerKey + "]" : "".     return Aggs.ROOT_GROUP_NAME + ">" + name + "." + property + i. }

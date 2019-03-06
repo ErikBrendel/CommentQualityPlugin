@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Override public void close() throws IOException {     try {         IOHelper.closeIterator(it).     } finally {         // we are now closed         closed = true.     } }
-false;public;0;21;;@Override public boolean hasNext() {     if (closed) {         return false.     }     if (hasSkip.compareAndSet(false, true)) {         doSkip().     }     boolean answer = it.hasNext().     if (!answer) {         // auto close         try {             close().         } catch (IOException e) {         // ignore         }     }     return answer. }
-false;public;0;8;;@Override public Object next() {     if (hasSkip.compareAndSet(false, true)) {         doSkip().     }     return it.next(). }
-false;private;0;8;;private void doSkip() {     for (int i = 0. i < skip. i++) {         if (it.hasNext()) {             // skip             it.next().         }     } }
-false;public;0;4;;@Override public void remove() {     it.remove(). }

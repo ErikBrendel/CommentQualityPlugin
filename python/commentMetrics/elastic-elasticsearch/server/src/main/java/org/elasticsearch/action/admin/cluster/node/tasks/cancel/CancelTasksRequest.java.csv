@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeString(reason). }
-false;public;1;4;;@Override public boolean match(Task task) {     return super.match(task) && task instanceof CancellableTask. }
-true;public;1;4;/**  * Set the reason for canceling the task.  */ ;/**  * Set the reason for canceling the task.  */ public CancelTasksRequest setReason(String reason) {     this.reason = reason.     return this. }
-true;public;0;3;/**  * The reason for canceling the task.  */ ;/**  * The reason for canceling the task.  */ public String getReason() {     return reason. }

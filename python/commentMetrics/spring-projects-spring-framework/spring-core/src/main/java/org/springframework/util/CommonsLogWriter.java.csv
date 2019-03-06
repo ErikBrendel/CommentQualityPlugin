@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;9;;public void write(char ch) {     if (ch == '\n' && this.buffer.length() > 0) {         logger.debug(this.buffer.toString()).         this.buffer.setLength(0).     } else {         this.buffer.append(ch).     } }
-false;public;3;13;;@Override public void write(char[] buffer, int offset, int length) {     for (int i = 0. i < length. i++) {         char ch = buffer[offset + i].         if (ch == '\n' && this.buffer.length() > 0) {             logger.debug(this.buffer.toString()).             this.buffer.setLength(0).         } else {             this.buffer.append(ch).         }     } }
-false;public;0;3;;@Override public void flush() { }
-false;public;0;3;;@Override public void close() { }

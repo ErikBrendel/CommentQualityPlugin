@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;private;1;5;;private void initializeBytes(byte[] bytes) {     for (int i = 0. i < bytes.length. ++i) {         bytes[i] = (byte) i.     } }
-false;protected;1;4;;@Override protected BytesReference newBytesReference(int length) throws IOException {     return newBytesReferenceWithOffsetOfZero(length). }
-false;protected;1;6;;@Override protected BytesReference newBytesReferenceWithOffsetOfZero(int length) throws IOException {     byte[] bytes = new byte[length].     initializeBytes(bytes).     return new ByteBufferReference(ByteBuffer.wrap(bytes)). }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;14;;@Override protected CompletableFuture<T> createGateway(CompletableFuture<Tuple2<String, UUID>> leaderFuture) {     return FutureUtils.retryWithDelay(() -> leaderFuture.thenCompose((Tuple2<String, UUID> addressLeaderTuple) -> rpcService.connect(addressLeaderTuple.f0, fencingTokenMapper.apply(addressLeaderTuple.f1), gatewayType)), retries, retryDelay, rpcService.getScheduledExecutor()). }

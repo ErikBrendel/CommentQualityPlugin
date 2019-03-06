@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void spr12233() throws Exception {     AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext().     ctx.register(PropertySourcesPlaceholderConfigurer.class).     ctx.register(ImportConfiguration.class).     ctx.refresh().     ctx.close(). }
-false;public;2;4;;@Override public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {     return false. }
-false;public;0;4;;@Override public ConfigurationPhase getConfigurationPhase() {     return ConfigurationPhase.REGISTER_BEAN. }

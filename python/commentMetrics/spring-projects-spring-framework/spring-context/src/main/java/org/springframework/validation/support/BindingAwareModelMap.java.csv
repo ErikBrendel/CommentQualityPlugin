@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;5;;@Override public Object put(String key, Object value) {     removeBindingResultIfNecessary(key, value).     return super.put(key, value). }
-false;public;1;5;;@Override public void putAll(Map<? extends String, ?> map) {     map.forEach(this::removeBindingResultIfNecessary).     super.putAll(map). }
-false;private;2;12;;private void removeBindingResultIfNecessary(Object key, Object value) {     if (key instanceof String) {         String attributeName = (String) key.         if (!attributeName.startsWith(BindingResult.MODEL_KEY_PREFIX)) {             String bindingResultKey = BindingResult.MODEL_KEY_PREFIX + attributeName.             BindingResult bindingResult = (BindingResult) get(bindingResultKey).             if (bindingResult != null && bindingResult.getTarget() != value) {                 remove(bindingResultKey).             }         }     } }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;2;4;;@Override protected ViewPreparer getPreparer(String name, WebApplicationContext context) throws TilesException {     return context.getBean(name, ViewPreparer.class). }

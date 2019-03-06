@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String type() {     return SearchTransform.TYPE. }
-false;public;2;4;;@Override public SearchTransform parseTransform(String watchId, XContentParser parser) throws IOException {     return SearchTransform.parse(watchId, parser). }
-false;public;1;4;;@Override public ExecutableSearchTransform createExecutable(SearchTransform transform) {     return new ExecutableSearchTransform(transform, transformLogger, client, searchTemplateService, defaultTimeout). }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Bean public String root() {     return "root". }
-false;public;0;6;;@Ignore("Superseded by verifyRootWacConfig()") @Test @Override public void verifyEarConfig() { /* no-op */ }
-false;public;0;8;;@Test public void verifyRootWacConfig() {     ApplicationContext parent = wac.getParent().     assertNotNull(parent).     assertFalse(parent instanceof WebApplicationContext).     assertEquals("ear", ear).     assertEquals("root", root). }

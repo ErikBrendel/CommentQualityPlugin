@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@After public void tearDown() throws Exception {     super.tearDown().     connector.stop(). }
-false;protected;0;12;;@Override protected void initServer() throws Exception {     int port = AvailablePortFinder.getNextAvailable(39000).     registry = LocateRegistry.createRegistry(port).     url = new JMXServiceURL("service:jmx:rmi:///jndi/rmi://localhost:" + port + "/" + DOMAIN).     // create MBean server     server = MBeanServerFactory.createMBeanServer(DOMAIN).     // create JMXConnectorServer MBean     connector = JMXConnectorServerFactory.newJMXConnectorServer(url, Collections.<String, Object>emptyMap(), server).     connector.start(). }
-false;protected;0;5;;@Override protected JMXUriBuilder buildFromURI() {     String uri = url.toString().     return super.buildFromURI().withServerName(uri). }
-false;public;0;6;;@Test public void notification() throws Exception {     getSimpleMXBean().touch().     getMockFixture().waitForMessages().     getMockFixture().assertMessageReceived(new File("src/test/resources/consumer-test/touched.xml")). }

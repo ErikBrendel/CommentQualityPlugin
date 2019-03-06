@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;0;4;;void startRecovery() {     store.incRef().     onGoingRecoveries.incrementAndGet(). }
-false;public;0;3;;public int get() {     return onGoingRecoveries.get(). }
-true;;0;6;/**  * End the recovery counter by decrementing the store's ref and the ongoing recovery counter  * @return number of ongoing recoveries remaining  */ ;/**  * End the recovery counter by decrementing the store's ref and the ongoing recovery counter  * @return number of ongoing recoveries remaining  */ int endRecovery() {     store.decRef().     int left = onGoingRecoveries.decrementAndGet().     assert onGoingRecoveries.get() >= 0 : "ongoingRecoveries must be >= 0 but was: " + onGoingRecoveries.get().     return left. }
-false;public;0;4;;@Override public void close() {     endRecovery(). }

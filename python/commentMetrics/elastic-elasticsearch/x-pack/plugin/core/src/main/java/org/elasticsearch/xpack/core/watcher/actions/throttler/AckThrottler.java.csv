@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;9;;@Override public Result throttle(String actionId, WatchExecutionContext ctx) {     ActionStatus actionStatus = ctx.watch().status().actionStatus(actionId).     AckStatus ackStatus = actionStatus.ackStatus().     if (ackStatus.state() == AckStatus.State.ACKED) {         return Result.throttle(ACK, "action [{}] was acked at [{}]", actionId, formatDate(ackStatus.timestamp())).     }     return Result.NO. }

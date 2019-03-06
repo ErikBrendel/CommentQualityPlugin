@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;10;;@Override protected void onSpanFinished(MockSpan mockSpan) {     System.out.println("SPAN FINISHED: traceId=" + mockSpan.context().traceId() + " spanId=" + mockSpan.context().spanId() + " parentId=" + mockSpan.parentId() + " operation=" + mockSpan.operationName() + " tags=" + mockSpan.tags() + " logs=[" + toText(mockSpan.logEntries()) + "]"). }
-false;protected;1;5;;protected String toText(List<MockSpan.LogEntry> logEntries) {     StringBuilder builder = new StringBuilder().     logEntries.forEach(entry -> builder.append(entry.fields())).     return builder.toString(). }

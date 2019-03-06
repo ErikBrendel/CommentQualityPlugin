@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;public void testDirtyFlag() {     boolean dirty = randomBoolean().     WriteStateException ex = new WriteStateException(dirty, "test", null).     assertThat(ex.isDirty(), equalTo(dirty)). }
-false;public;0;5;;public void testNonDirtyRethrow() {     WriteStateException ex = new WriteStateException(false, "test", null).     UncheckedIOException ex2 = expectThrows(UncheckedIOException.class, () -> ex.rethrowAsErrorOrUncheckedException()).     assertThat(ex2.getCause(), instanceOf(WriteStateException.class)). }
-false;public;0;5;;public void testDirtyRethrow() {     WriteStateException ex = new WriteStateException(true, "test", null).     IOError err = expectThrows(IOError.class, () -> ex.rethrowAsErrorOrUncheckedException()).     assertThat(err.getCause(), instanceOf(WriteStateException.class)). }

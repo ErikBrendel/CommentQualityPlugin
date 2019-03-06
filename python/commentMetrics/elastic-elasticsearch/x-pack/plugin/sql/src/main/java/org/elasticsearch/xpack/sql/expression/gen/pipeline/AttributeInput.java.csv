@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected NodeInfo<AttributeInput> info() {     return NodeInfo.create(this, AttributeInput::new, expression(), context()). }
-false;public,final;0;4;;@Override public final boolean supportedByAggsOnlyQuery() {     return true. }
-false;public;1;4;;@Override public Pipe resolveAttributes(AttributeResolver resolver) {     return new ReferenceInput(source(), expression(), resolver.resolve(context())). }
-false;public,final;1;4;;@Override public final void collectFields(SqlSourceBuilder sourceBuilder) { // Nothing to extract }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;14;;@Override public void start(File tmpDataFolder, String clusterName) throws Exception {     if (node == null) {         node = nodeBuilder().settings(ImmutableSettings.settingsBuilder().put("http.enabled", false).put("path.data", tmpDataFolder.getAbsolutePath())).clusterName(clusterName).local(true).node().         node.start().     } }
-false;public;0;7;;@Override public void close() throws Exception {     if (node != null && !node.isClosed()) {         node.close().         node = null.     } }
-false;public;0;8;;@Override public Client getClient() {     if (node != null && !node.isClosed()) {         return node.client().     } else {         return null.     } }

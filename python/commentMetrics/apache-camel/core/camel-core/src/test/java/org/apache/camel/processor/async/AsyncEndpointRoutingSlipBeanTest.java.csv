@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry jndi = super.createRegistry().     jndi.bind("myBean", new MyRoutingSlipBean()).     return jndi. }
-false;public;0;9;;@Test public void testAsyncEndpoint() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("Bye Camel").     String reply = template.requestBody("direct:start", "Hello Camel", String.class).     assertEquals("Bye Camel", reply).     assertMockEndpointsSatisfied(). }
-false;public;0;7;;@Override public void configure() throws Exception {     context.addComponent("async", new MyAsyncComponent()).     from("direct:start").bean("myBean"). }
-false;protected;0;12;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             context.addComponent("async", new MyAsyncComponent()).             from("direct:start").bean("myBean").         }     }. }
-false;public;0;4;;@RoutingSlip public String doSomething() {     return "async:bye:camel,mock:result". }

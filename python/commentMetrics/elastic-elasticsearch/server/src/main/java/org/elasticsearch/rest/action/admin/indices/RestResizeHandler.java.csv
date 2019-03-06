@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,abstract;0;2;;@Override public abstract String getName().
-false;abstract;0;1;;abstract ResizeType getResizeType().
-false;public,final;2;10;;@Override public final RestChannelConsumer prepareRequest(final RestRequest request, final NodeClient client) throws IOException {     final ResizeRequest resizeRequest = new ResizeRequest(request.param("target"), request.param("index")).     resizeRequest.setResizeType(getResizeType()).     request.applyContentParser(resizeRequest::fromXContent).     resizeRequest.timeout(request.paramAsTime("timeout", resizeRequest.timeout())).     resizeRequest.masterNodeTimeout(request.paramAsTime("master_timeout", resizeRequest.masterNodeTimeout())).     resizeRequest.setWaitForActiveShards(ActiveShardCount.parseString(request.param("wait_for_active_shards"))).     return channel -> client.admin().indices().resizeIndex(resizeRequest, new RestToXContentListener<>(channel)). }
-false;public;0;4;;@Override public String getName() {     return "shrink_index_action". }
-false;protected;0;4;;@Override protected ResizeType getResizeType() {     return ResizeType.SHRINK. }
-false;public;0;4;;@Override public String getName() {     return "split_index_action". }
-false;protected;0;4;;@Override protected ResizeType getResizeType() {     return ResizeType.SPLIT. }

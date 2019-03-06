@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public void setBeanManager(BeanManager manager) {     this.manager = manager. }
-false;protected;1;4;;@Override protected CamelContext getCamelContextWithId(String camelContextId) {     return BeanManagerHelper.getCamelContextById(manager, camelContextId). }
-false;protected;0;4;;@Override protected CamelContext discoverDefaultCamelContext() {     return BeanManagerHelper.getDefaultCamelContext(manager). }
-false;public;0;7;;@Override @SuppressWarnings("unchecked") public // which leads to OpenWebBeans being unable to create proxies for the corresponding bean Class getObjectType() {     return ProducerTemplate.class. }

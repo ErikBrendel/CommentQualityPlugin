@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Override public void open() throws Exception {     super.open().     ValueStateDescriptor<IN> stateId = new ValueStateDescriptor<>(STATE_NAME, serializer).     values = getPartitionedState(stateId). }
-false;public;1;14;;@Override public void processElement(StreamRecord<IN> element) throws Exception {     IN value = element.getValue().     IN currentValue = values.value().     if (currentValue != null) {         IN reduced = userFunction.reduce(currentValue, value).         values.update(reduced).         output.collect(element.replace(reduced)).     } else {         values.update(value).         output.collect(element.replace(value)).     } }

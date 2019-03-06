@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@GET public Response listVipCustomers() {     return null. }
-false;public;2;4;;@PUT @Path("/{id}") public Response updateVipCustomer(@PathParam("id") String id, Customer customer) {     return null. }
-false;public;2;4;;@DELETE @Path("/{id}") public Response deleteVipCustomer(@PathParam("id") String id, @QueryParam("sendEmail") Boolean sendEmail) {     return null. }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * Returns true, if state was restored from the snapshot of a previous execution. This returns always false for  * stateless tasks.  */ ;/**  * Returns true, if state was restored from the snapshot of a previous execution. This returns always false for  * stateless tasks.  */ boolean isRestored().
-true;;0;1;/**  * Returns an interface that allows for registering operator state with the backend.  */ ;/**  * Returns an interface that allows for registering operator state with the backend.  */ OperatorStateStore getOperatorStateStore().
-true;;0;1;/**  * Returns an interface that allows for registering keyed state with the backend.  */ ;/**  * Returns an interface that allows for registering keyed state with the backend.  */ KeyedStateStore getKeyedStateStore().

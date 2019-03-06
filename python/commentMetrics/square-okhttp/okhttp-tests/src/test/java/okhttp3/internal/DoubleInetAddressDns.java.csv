@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public List<InetAddress> lookup(String hostname) throws UnknownHostException {     List<InetAddress> addresses = Dns.SYSTEM.lookup(hostname).     return Arrays.asList(addresses.get(0), addresses.get(0)). }

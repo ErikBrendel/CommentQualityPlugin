@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected DeprecationInfoAction.Request createTestInstance() {     return new DeprecationInfoAction.Request(randomAlphaOfLength(10)). }
-false;protected;0;4;;@Override protected Writeable.Reader<DeprecationInfoAction.Request> instanceReader() {     return DeprecationInfoAction.Request::new. }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected String getIncrementStatement() {     return "insert into " + getIncrementerName() + " values()". }
-false;protected;0;4;;@Override protected String getIdentityStatement() {     return "select @@identity". }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;4;;public Object newRecord(Object old, Schema schema) {     Class c = new SpecificDataNoCache().getClass(schema).     return c == null ? super.newRecord(old, schema) : (c.isInstance(old) ? old : newInstance(c, schema)). }

@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;1;2;;@Override void extractVariables(Set<String> variables) { }
-false;;1;12;;@Override void analyze(Locals locals) {     if (expected == null) {         ref = null.         actual = String.class.         defPointer = "S" + type + "." + call + ",0".     } else {         defPointer = null.         ref = FunctionRef.create(locals.getPainlessLookup(), locals.getMethods(), location, expected, type, call, 0).         actual = expected.     } }
-false;;2;10;;@Override void write(MethodWriter writer, Globals globals) {     if (ref != null) {         writer.writeDebugInfo(location).         writer.invokeLambdaCall(ref).     } else {         // TODO: don't do this: its just to cutover :)         writer.push((String) null).     } }
-false;public;0;4;;@Override public String getPointer() {     return defPointer. }
-false;public;0;4;;@Override public Type[] getCaptures() {     // no captures     return new Type[0]. }
-false;public;0;4;;@Override public String toString() {     return singleLineToString(type, call). }

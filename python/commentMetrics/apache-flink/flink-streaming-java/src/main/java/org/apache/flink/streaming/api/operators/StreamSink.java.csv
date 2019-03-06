@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Override public void open() throws Exception {     super.open().     this.sinkContext = new SimpleContext<>(getProcessingTimeService()). }
-false;public;1;5;;@Override public void processElement(StreamRecord<IN> element) throws Exception {     sinkContext.element = element.     userFunction.invoke(element.getValue(), sinkContext). }
-false;protected;1;7;;@Override protected void reportOrForwardLatencyMarker(LatencyMarker marker) {     // all operators are tracking latencies     this.latencyStats.reportLatency(marker). // sinks don't forward latency markers }
-false;public;1;5;;@Override public void processWatermark(Watermark mark) throws Exception {     super.processWatermark(mark).     this.currentWatermark = mark.getTimestamp(). }
-false;public;0;4;;@Override public long currentProcessingTime() {     return processingTimeService.getCurrentProcessingTime(). }
-false;public;0;4;;@Override public long currentWatermark() {     return currentWatermark. }
-false;public;0;7;;@Override public Long timestamp() {     if (element.hasTimestamp()) {         return element.getTimestamp().     }     return null. }

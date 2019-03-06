@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;10;;public VehicleDetails getVehicleDetails(String username) throws UserNameNotFoundException, VehicleIdentificationNumberNotFoundException {     Assert.notNull(username, "Username must not be null").     User user = this.userRepository.findByUsername(username).     if (user == null) {         throw new UserNameNotFoundException(username).     }     return this.vehicleDetailsService.getVehicleDetails(user.getVin()). }

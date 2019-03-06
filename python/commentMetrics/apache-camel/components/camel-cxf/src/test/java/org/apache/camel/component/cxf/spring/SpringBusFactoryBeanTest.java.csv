@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected String[] getApplicationContextFiles() {     return new String[] { "org/apache/camel/component/cxf/spring/SpringBusFactoryBeans.xml" }. }
-false;public;0;11;;@Test public void getTheBusInstance() {     Bus bus = ctx.getBean("cxfBus", Bus.class).     assertNotNull("The bus should not be null", bus).     bus = ctx.getBean("myBus", Bus.class).     assertNotNull("The bus should not be null", bus).     SoapBindingFactory soapBindingFactory = bus.getExtension(SoapBindingFactory.class).     assertNotNull("You should find the factory here", soapBindingFactory). }

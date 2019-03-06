@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String toString() {     return "When[" + description() + " -> " + getOutputs() + "]". }
-false;protected;0;14;;protected String description() {     StringBuilder sb = new StringBuilder().     if (getExpression() != null) {         String language = getExpression().getLanguage().         if (language != null) {             sb.append(language).append("{").         }         sb.append(getExpression().getLabel()).         if (language != null) {             sb.append("}").         }     }     return sb.toString(). }
-false;public;0;4;;@Override public String getShortName() {     return "when". }
-false;public;0;4;;@Override public String getLabel() {     return "when[" + description() + "]". }
-true;public;1;5;/**  * Expression used as the predicate to evaluate whether this when should trigger and route the message or not.  */ ;/**  * Expression used as the predicate to evaluate whether this when should trigger and route the message or not.  */ @Override public void setExpression(ExpressionDefinition expression) {     // override to include javadoc what the expression is used for     super.setExpression(expression). }
-false;public;0;6;;@Override public ProcessorDefinition<?> endParent() {     // the parent of this, so return the parent     return this.getParent(). }

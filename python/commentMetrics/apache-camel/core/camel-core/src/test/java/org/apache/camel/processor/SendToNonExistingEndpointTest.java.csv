@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;@Test public void testSendToNonExistingEndpoint() throws Exception {     try {         template.sendBody("thisUriDoesNotExist", "<hello>world!</hello>").         fail("Should have failed to send this message!").     } catch (NoSuchEndpointException e) {         log.debug("Caught expected exception: " + e, e).         assertEquals("uri", "thisUriDoesNotExist", e.getUri()).     } }

@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;0;8;;@Override JobVertexMetricsHandler getMetricsHandler() {     return new JobVertexMetricsHandler(leaderRetriever, TIMEOUT, TEST_HEADERS, mockMetricFetcher). }
-false;;0;4;;@Override QueryScopeInfo getQueryScopeInfo() {     return new QueryScopeInfo.TaskQueryScopeInfo(TEST_JOB_ID, TEST_VERTEX_ID, TEST_SUBTASK_INDEX). }
-false;;0;7;;@Override Map<String, String> getPathParameters() {     final HashMap<String, String> pathParameters = new HashMap<>().     pathParameters.put("jobid", TEST_JOB_ID).     pathParameters.put("vertexid", TEST_VERTEX_ID).     return pathParameters. }
-false;;1;4;;@Override String getExpectedIdForMetricName(final String metricName) {     return String.format("%s.%s", TEST_SUBTASK_INDEX, metricName). }

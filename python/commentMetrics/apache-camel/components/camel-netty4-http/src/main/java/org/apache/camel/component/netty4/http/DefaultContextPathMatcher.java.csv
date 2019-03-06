@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;11;;@Override public boolean matches(String path) {     path = path.toLowerCase(Locale.US).     if (!matchOnUriPrefix) {         // exact match         return path.equals(this.path).     } else {         // match on prefix, then we just need to match the start of the context-path         return path.startsWith(this.path).     } }
-false;public;2;4;;@Override public boolean matchesRest(String path, boolean wildcard) {     return false. }
-false;public;2;5;;@Override public boolean matchMethod(String method, String restrict) {     // always match as HttpServerChannelHandler will deal with HTTP method restrictions     return true. }
-false;public;0;3;;public String getPath() {     return path. }
-false;public;1;20;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     DefaultContextPathMatcher that = (DefaultContextPathMatcher) o.     if (matchOnUriPrefix != that.matchOnUriPrefix) {         return false.     }     if (!path.equals(that.path)) {         return false.     }     return true. }
-false;public;0;6;;@Override public int hashCode() {     int result = path.hashCode().     result = 31 * result + (matchOnUriPrefix ? 1 : 0).     return result. }

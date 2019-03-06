@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;@ReadOperation public Mono<WebEndpointResponse<Health>> health(SecurityContext securityContext) {     return this.delegate.health().map((health) -> this.responseMapper.map(health, securityContext)). }
-false;public;2;5;;public Mono<WebEndpointResponse<Health>> health(SecurityContext securityContext, ShowDetails showDetails) {     return this.delegate.health().map((health) -> this.responseMapper.map(health, securityContext, showDetails)). }

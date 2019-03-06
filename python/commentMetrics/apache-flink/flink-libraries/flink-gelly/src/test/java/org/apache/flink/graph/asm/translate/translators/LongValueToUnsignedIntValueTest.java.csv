@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void testTranslation() throws Exception {     assertEquals(new IntValue(0), translator.translate(new LongValue(0L), reuse)).     assertEquals(new IntValue(Integer.MIN_VALUE), translator.translate(new LongValue((long) Integer.MAX_VALUE + 1), reuse)).     assertEquals(new IntValue(-1), translator.translate(new LongValue((1L << 32) - 1), reuse)). }
-false;public;0;4;;@Test(expected = IllegalArgumentException.class) public void testUpperOutOfRange() throws Exception {     translator.translate(new LongValue(1L << 32), reuse). }
-false;public;0;4;;@Test(expected = IllegalArgumentException.class) public void testLowerOutOfRange() throws Exception {     translator.translate(new LongValue(-1), reuse). }

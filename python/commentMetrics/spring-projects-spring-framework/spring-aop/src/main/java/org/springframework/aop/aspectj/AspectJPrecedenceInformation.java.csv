@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * Return the name of the aspect (bean) in which the advice was declared.  */ ;// Implementation note: // We need the level of indirection this interface provides as otherwise the // AspectJPrecedenceComparator must ask an Advisor for its Advice in all cases // in order to sort advisors. This causes problems with the // InstantiationModelAwarePointcutAdvisor which needs to delay creating // its advice for aspects with non-singleton instantiation models. /**  * Return the name of the aspect (bean) in which the advice was declared.  */ String getAspectName().
-true;;0;1;/**  * Return the declaration order of the advice member within the aspect.  */ ;/**  * Return the declaration order of the advice member within the aspect.  */ int getDeclarationOrder().
-true;;0;1;/**  * Return whether this is a before advice.  */ ;/**  * Return whether this is a before advice.  */ boolean isBeforeAdvice().
-true;;0;1;/**  * Return whether this is an after advice.  */ ;/**  * Return whether this is an after advice.  */ boolean isAfterAdvice().

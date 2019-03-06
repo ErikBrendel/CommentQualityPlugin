@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public void write(final int b) throws IOException {     fos.write(b). }
-false;public;3;4;;@Override public void write(final byte[] b, final int off, final int len) throws IOException {     fos.write(b, off, len). }
-false;public;0;4;;@Override public void close() throws IOException {     fos.close(). }
-false;public;0;4;;@Override public void flush() throws IOException {     fos.flush(). }
-false;public;0;4;;@Override public void sync() throws IOException {     fos.getFD().sync(). }
-false;public;0;4;;@Override public long getPos() throws IOException {     return fos.getChannel().position(). }

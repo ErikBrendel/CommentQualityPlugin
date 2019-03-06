@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,static;2;3;/**  * Returns the table connector name used for log and web UI.  */ ;/**  * Returns the table connector name used for log and web UI.  */ public static String generateRuntimeName(Class<?> clazz, String[] fields) {     return TableConnectorUtils.generateRuntimeName(clazz, fields). }

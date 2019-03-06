@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;3;4;;public static void subnumbers(int val1, int val2, int[] ret) {     LOG.info("calling addnumbers:{} + {}", val1, val2).     ret[0] = val1 - val2. }
-false;public,static;1;7;;public static void batchfn(String val1) {     LOG.info("calling batchfn:{}", val1).     if (val1 == null) {         throw new IllegalArgumentException("Argument val1 is null!").     }     BATCHFN_CALL_COUNTER.incrementAndGet(). }
-false;public,static;0;3;;public static void niladic() {     LOG.info("nilacid called"). }
-false;public,static;3;5;;public static void inoutdemo(int in1, int[] inout1, int[] out1) {     LOG.info("calling inoutdemo: {}, {}", inout1[0], out1[0]).     inout1[0] = 1.     out1[0] = 2. }

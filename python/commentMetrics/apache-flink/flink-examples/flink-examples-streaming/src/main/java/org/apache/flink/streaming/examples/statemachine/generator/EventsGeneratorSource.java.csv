@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;16;;@Override public void run(SourceContext<Event> sourceContext) throws Exception {     final EventsGenerator generator = new EventsGenerator(errorProbability).     final int range = Integer.MAX_VALUE / getRuntimeContext().getNumberOfParallelSubtasks().     final int min = range * getRuntimeContext().getIndexOfThisSubtask().     final int max = min + range.     while (running) {         sourceContext.collect(generator.next(min, max)).         if (delayPerRecordMillis > 0) {             Thread.sleep(delayPerRecordMillis).         }     } }
-false;public;0;4;;@Override public void cancel() {     running = false. }

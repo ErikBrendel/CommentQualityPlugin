@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;5;;@AfterClass public static void verify() throws Exception {     assertEquals(NUMBER_OF_RUNS + 1, numberOfFailedRuns).     assertEquals(3, numberOfSuccessfulRuns). }
-false;public;0;12;;@Test @RetryOnFailure(times = NUMBER_OF_RUNS) public void testRetryOnFailure() throws Exception {     // All but the (expected) last run should be successful     if (numberOfFailedRuns < NUMBER_OF_RUNS) {         numberOfFailedRuns++.         throw new RuntimeException("Expected test exception").     } else {         numberOfSuccessfulRuns++.     } }
-false;public;0;12;;@Test @RetryOnFailure(times = NUMBER_OF_RUNS) public void testRetryOnceOnFailure() throws Exception {     if (firstRun) {         numberOfFailedRuns++.         firstRun = false.         throw new RuntimeException("Expected test exception").     } else {         numberOfSuccessfulRuns++.     } }
-false;public;0;5;;@Test @RetryOnFailure(times = NUMBER_OF_RUNS) public void testDontRetryOnSuccess() throws Exception {     numberOfSuccessfulRuns++. }

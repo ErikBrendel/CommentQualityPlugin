@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * Returns true if the method was called in the thread of this executor.  */ ;/**  * Returns true if the method was called in the thread of this executor.  */ void assertRunningInMainThread().
-false;public;0;4;;@Override public void assertRunningInMainThread() {     throw createException(). }
-false;public;3;4;;@Override public ScheduledFuture<?> schedule(Runnable command, long delay, TimeUnit unit) {     throw createException(). }
-false;public;3;4;;@Override public <V> ScheduledFuture<V> schedule(Callable<V> callable, long delay, TimeUnit unit) {     throw createException(). }
-false;public;4;4;;@Override public ScheduledFuture<?> scheduleAtFixedRate(Runnable command, long initialDelay, long period, TimeUnit unit) {     throw createException(). }
-false;public;4;4;;@Override public ScheduledFuture<?> scheduleWithFixedDelay(Runnable command, long initialDelay, long delay, TimeUnit unit) {     throw createException(). }
-false;public;1;4;;@Override public void execute(@Nonnull Runnable command) {     throw createException(). }
-false;private;0;3;;private UnsupportedOperationException createException() {     return new UnsupportedOperationException(exceptionMessageOnInvocation). }

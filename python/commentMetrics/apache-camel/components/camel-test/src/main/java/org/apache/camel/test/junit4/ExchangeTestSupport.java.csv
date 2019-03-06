@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;protected;0;3;/**  * A factory method to create an Exchange implementation  */ ;/**  * A factory method to create an Exchange implementation  */ protected Exchange createExchange() {     return new DefaultExchange(context). }
-true;protected;1;6;/**  * A strategy method to populate an exchange with some example values for use  * by language plugins  */ ;/**  * A strategy method to populate an exchange with some example values for use  * by language plugins  */ protected void populateExchange(Exchange exchange) {     Message in = exchange.getIn().     in.setHeader("foo", "abc").     in.setHeader("bar", 123).     in.setBody("<hello id='m123'>world!</hello>"). }
-false;public;0;8;;@Override @Before public void setUp() throws Exception {     super.setUp().     exchange = createExchange().     assertNotNull("No exchange created!", exchange).     populateExchange(exchange). }

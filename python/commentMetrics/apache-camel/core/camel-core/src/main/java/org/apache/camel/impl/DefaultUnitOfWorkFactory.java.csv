@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;10;;@Override public UnitOfWork createUnitOfWork(Exchange exchange) {     UnitOfWork answer.     if (exchange.getContext().isUseMDCLogging()) {         answer = new MDCUnitOfWork(exchange).     } else {         answer = new DefaultUnitOfWork(exchange).     }     return answer. }

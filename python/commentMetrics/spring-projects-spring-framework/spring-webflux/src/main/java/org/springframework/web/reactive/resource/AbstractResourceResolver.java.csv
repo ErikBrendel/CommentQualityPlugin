@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;4;6;;@Override public Mono<Resource> resolveResource(@Nullable ServerWebExchange exchange, String requestPath, List<? extends Resource> locations, ResourceResolverChain chain) {     return resolveResourceInternal(exchange, requestPath, locations, chain). }
-false;public;3;6;;@Override public Mono<String> resolveUrlPath(String resourceUrlPath, List<? extends Resource> locations, ResourceResolverChain chain) {     return resolveUrlPathInternal(resourceUrlPath, locations, chain). }
-false;protected,abstract;4;2;;protected abstract Mono<Resource> resolveResourceInternal(@Nullable ServerWebExchange exchange, String requestPath, List<? extends Resource> locations, ResourceResolverChain chain).
-false;protected,abstract;3;2;;protected abstract Mono<String> resolveUrlPathInternal(String resourceUrlPath, List<? extends Resource> locations, ResourceResolverChain chain).

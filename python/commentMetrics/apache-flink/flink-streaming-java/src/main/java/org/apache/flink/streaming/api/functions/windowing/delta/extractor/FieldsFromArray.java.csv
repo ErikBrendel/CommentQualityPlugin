@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;9;;@SuppressWarnings("unchecked") @Override public OUT[] extract(Object in) {     OUT[] output = (OUT[]) Array.newInstance(clazz, order.length).     for (int i = 0. i < order.length. i++) {         output[i] = (OUT) Array.get(in, this.order[i]).     }     return output. }

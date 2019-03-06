@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;11;12;/**  * Create a {@link Dispatcher} of the given type {@link T}.  */ ;/**  * Create a {@link Dispatcher} of the given type {@link T}.  */ T createDispatcher(Configuration configuration, RpcService rpcService, HighAvailabilityServices highAvailabilityServices, GatewayRetriever<ResourceManagerGateway> resourceManagerGatewayRetriever, BlobServer blobServer, HeartbeatServices heartbeatServices, JobManagerMetricGroup jobManagerMetricGroup, @Nullable String metricQueryServicePath, ArchivedExecutionGraphStore archivedExecutionGraphStore, FatalErrorHandler fatalErrorHandler, HistoryServerArchivist historyServerArchivist) throws Exception.
-false;default;0;3;;default String generateEndpointIdWithUUID() {     return getEndpointId() + UUID.randomUUID(). }
-false;default;0;3;;default String getEndpointId() {     return Dispatcher.DISPATCHER_NAME. }

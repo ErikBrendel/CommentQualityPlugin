@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * @return The name of this realm.  */ ;/**  * @return The name of this realm.  */ String name().
-true;;1;1;/**  * Expires a single user from the cache identified by the String agument  * @param username the identifier of the user to be cleared  */ ;/**  * Expires a single user from the cache identified by the String agument  * @param username the identifier of the user to be cleared  */ void expire(String username).
-true;;0;1;/**  * Expires all of the data that has been cached in this realm  */ ;/**  * Expires all of the data that has been cached in this realm  */ void expireAll().

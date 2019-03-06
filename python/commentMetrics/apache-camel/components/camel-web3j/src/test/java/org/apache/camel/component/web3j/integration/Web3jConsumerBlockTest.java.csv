@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void consumerTest() throws Exception {     mockResult.expectedMinimumMessageCount(1).     mockError.expectedMessageCount(0).     MockEndpoint.assertIsSatisfied(context). }
-false;public;0;7;;public void configure() {     errorHandler(deadLetterChannel("mock:error")).     from("web3j://" + getUrl() + OPERATION.toLowerCase() + "=" + BLOCK_OBSERVABLE).to("mock:result"). }
-false;protected;0;12;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() {             errorHandler(deadLetterChannel("mock:error")).             from("web3j://" + getUrl() + OPERATION.toLowerCase() + "=" + BLOCK_OBSERVABLE).to("mock:result").         }     }. }

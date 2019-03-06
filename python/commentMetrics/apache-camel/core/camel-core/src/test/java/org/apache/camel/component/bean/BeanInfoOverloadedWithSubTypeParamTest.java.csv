@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void testBeanInfoOverloadedWithSubTypedParam() {     BeanInfo beanInfo = new BeanInfo(context, Bean.class).     Assert.assertEquals(2, beanInfo.getMethods().size()). }
-false;public;1;2;;public void doSomething(RequestB request) { }
-false;public;1;2;;public void doSomething(RequestC request) { }

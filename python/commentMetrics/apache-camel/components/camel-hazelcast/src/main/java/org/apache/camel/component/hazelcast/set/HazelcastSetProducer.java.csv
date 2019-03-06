@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;37;;public void process(Exchange exchange) throws Exception {     final HazelcastOperation operation = lookupOperation(exchange).     switch(operation) {         case ADD:             this.add(exchange).             break.         case REMOVE_VALUE:             this.remove(exchange).             break.         case CLEAR:             this.clear().             break.         case ADD_ALL:             this.addAll(exchange).             break.         case REMOVE_ALL:             this.removeAll(exchange).             break.         case RETAIN_ALL:             this.retainAll(exchange).             break.         default:             throw new IllegalArgumentException(String.format("The value '%s' is not allowed for parameter '%s' on the LIST cache.", operation, HazelcastConstants.OPERATION)).     }     // finally copy headers     HazelcastComponentHelper.copyHeaders(exchange). }
-false;private;1;4;;private void add(Exchange exchange) {     final Object body = exchange.getIn().getBody().     set.add(body). }
-false;private;1;4;;private void remove(Exchange exchange) {     final Object body = exchange.getIn().getBody().     set.remove(body). }
-false;private;0;3;;private void clear() {     set.clear(). }
-false;private;1;4;;private void addAll(Exchange exchange) {     final Object body = exchange.getIn().getBody().     set.addAll((Collection<? extends Object>) body). }
-false;private;1;4;;private void removeAll(Exchange exchange) {     final Object body = exchange.getIn().getBody().     set.removeAll((Collection<?>) body). }
-false;private;1;4;;private void retainAll(Exchange exchange) {     final Object body = exchange.getIn().getBody().     set.retainAll((Collection<?>) body). }

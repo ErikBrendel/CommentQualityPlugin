@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * Returns the user-supplied, unscoped provider.  */ ;/**  * Returns the user-supplied, unscoped provider.  */ Provider<? extends T> getProviderInstance().
-true;;0;1;/**  * Returns the field and method injection points of the provider, injected at injector-creation  * time only.  *  * @return a possibly empty set  */ ;/**  * Returns the field and method injection points of the provider, injected at injector-creation  * time only.  *  * @return a possibly empty set  */ Set<InjectionPoint> getInjectionPoints().

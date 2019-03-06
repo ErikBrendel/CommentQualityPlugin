@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public TypeInformation<Row> getOutputType() {     return new RowTypeInfo(fieldTypes). }
-false;public;0;4;;@Override public String[] getFieldNames() {     return this.fieldNames. }
-false;public;0;4;;@Override public TypeInformation<?>[] getFieldTypes() {     return this.fieldTypes. }
-false;public;2;9;;@Override public CassandraAppendTableSink configure(String[] fieldNames, TypeInformation<?>[] fieldTypes) {     CassandraAppendTableSink cassandraTableSink = new CassandraAppendTableSink(this.builder, this.cql, this.properties).     cassandraTableSink.fieldNames = Preconditions.checkNotNull(fieldNames, "Field names must not be null.").     cassandraTableSink.fieldTypes = Preconditions.checkNotNull(fieldTypes, "Field types must not be null.").     Preconditions.checkArgument(fieldNames.length == fieldTypes.length, "Number of provided field names and types does not match.").     return cassandraTableSink. }
-false;public;1;12;;@Override public void emitDataStream(DataStream<Row> dataStream) {     try {         CassandraSink.addSink(dataStream).setClusterBuilder(this.builder).setQuery(this.cql).build().name(TableConnectorUtils.generateRuntimeName(this.getClass(), fieldNames)).     } catch (Exception e) {         throw new RuntimeException(e).     } }

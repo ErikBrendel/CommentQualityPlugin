@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;1;1;/**  * Currently, the key encryption algorithm is fixed to "RSA".  */ ;/**  * Currently, the key encryption algorithm is fixed to "RSA".  */ String getKeyEncryptionAlgorithm(Exchange exchange) throws CryptoCmsException.
-true;;1;1;/**  * Returns the certificate containign the public key which is used for the  * encryption and the issuer and serial number which is added to the  * recipient information.  */ ;/**  * Returns the certificate containign the public key which is used for the  * encryption and the issuer and serial number which is added to the  * recipient information.  */ X509Certificate getCertificate(Exchange exchange) throws CryptoCmsException.

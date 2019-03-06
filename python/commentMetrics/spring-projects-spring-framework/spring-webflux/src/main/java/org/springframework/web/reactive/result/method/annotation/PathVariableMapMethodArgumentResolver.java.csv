@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public boolean supportsParameter(MethodParameter parameter) {     return checkAnnotatedParamNoReactiveWrapper(parameter, PathVariable.class, this::allVariables). }
-false;private;2;3;;private boolean allVariables(PathVariable pathVariable, Class<?> type) {     return (Map.class.isAssignableFrom(type) && !StringUtils.hasText(pathVariable.value())). }
-false;public;3;7;;@Override public Object resolveArgumentValue(MethodParameter methodParameter, BindingContext context, ServerWebExchange exchange) {     String name = HandlerMapping.URI_TEMPLATE_VARIABLES_ATTRIBUTE.     return exchange.getAttributeOrDefault(name, Collections.emptyMap()). }

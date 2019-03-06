@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;@Override public ServerWebExchange.Builder request(Consumer<ServerHttpRequest.Builder> consumer) {     ServerHttpRequest.Builder builder = this.delegate.getRequest().mutate().     consumer.accept(builder).     return request(builder.build()). }
-false;public;1;5;;@Override public ServerWebExchange.Builder request(ServerHttpRequest request) {     this.request = request.     return this. }
-false;public;1;5;;@Override public ServerWebExchange.Builder response(ServerHttpResponse response) {     this.response = response.     return this. }
-false;public;1;5;;@Override public ServerWebExchange.Builder principal(Mono<Principal> principalMono) {     this.principalMono = principalMono.     return this. }
-false;public;0;4;;@Override public ServerWebExchange build() {     return new MutativeDecorator(this.delegate, this.request, this.response, this.principalMono). }
-false;public;0;4;;@Override public ServerHttpRequest getRequest() {     return (this.request != null ? this.request : getDelegate().getRequest()). }
-false;public;0;4;;@Override public ServerHttpResponse getResponse() {     return (this.response != null ? this.response : getDelegate().getResponse()). }
-false;public;0;5;;@SuppressWarnings("unchecked") @Override public <T extends Principal> Mono<T> getPrincipal() {     return (this.principalMono != null ? (Mono<T>) this.principalMono : getDelegate().getPrincipal()). }

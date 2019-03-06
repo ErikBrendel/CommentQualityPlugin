@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String toString() {     return this.name().toLowerCase(Locale.ROOT). }
-false;private,static;1;11;;private static KeepTypesMode fromString(String modeString) {     String lc = modeString.toLowerCase(Locale.ROOT).     if (lc.equals("include")) {         return INCLUDE.     } else if (lc.equals("exclude")) {         return EXCLUDE.     } else {         throw new IllegalArgumentException("`keep_types` tokenfilter mode can only be [" + KeepTypesMode.INCLUDE + "] or [" + KeepTypesMode.EXCLUDE + "] but was [" + modeString + "].").     } }
-false;public;1;4;;@Override public TokenStream create(TokenStream tokenStream) {     return new TypeTokenFilter(tokenStream, keepTypes, includeMode == KeepTypesMode.INCLUDE). }

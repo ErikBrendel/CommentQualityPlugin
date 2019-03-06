@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Before public void setupForTest() {     threadPool = new TestThreadPool(getTestName()).     task = new BulkByScrollTask(1, "test", "test", "test", TaskId.EMPTY_TASK_ID, Collections.emptyMap()).     task.setWorker(Float.POSITIVE_INFINITY, null). }
-false;public;0;6;;@After @Override public void tearDown() throws Exception {     super.tearDown().     threadPool.shutdown(). }
-false;protected,abstract;0;1;;protected abstract Request request().
-false;protected;0;3;;protected PlainActionFuture<Response> listener() {     return new PlainActionFuture<>(). }

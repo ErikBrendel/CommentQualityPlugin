@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;13;;@Override protected void createIndex() {     logger.info("Creating index [test1] with alias [test]").     try {         client().admin().indices().prepareDelete("test1").execute().actionGet().     } catch (Exception e) {     // ignore     }     logger.info("--> creating index test").     client().admin().indices().create(createIndexRequest("test1").mapping("type1", "name", "type=keyword,store=true").alias(new Alias("test"))).actionGet(). }
-false;protected;0;4;;@Override protected String getConcreteIndexName() {     return "test1". }

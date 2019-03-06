@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public void process(Exchange exchange) throws Exception {     processor.process(exchange). }
-false;protected;0;5;;@Override protected void doStart() throws Exception {     super.doStart().     ServiceHelper.startService(processor). }
-false;protected;0;5;;@Override protected void doStop() throws Exception {     super.doStop().     ServiceHelper.stopService(processor). }

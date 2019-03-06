@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Override public boolean isCreateCamelContextPerClass() {     // re-use the CamelContext between each test method in this class     return true. }
-false;public;0;10;;@Test public void testSendMatchingMessage() throws Exception {     String expectedBody = "<matched/>".     getMockEndpoint("mock:result").expectedBodiesReceived(expectedBody).     template.sendBodyAndHeader("direct:start", expectedBody, "foo", "bar").     assertMockEndpointsSatisfied(). }
-false;public;0;8;;@Test public void testSendNotMatchingMessage() throws Exception {     getMockEndpoint("mock:result").expectedMessageCount(0).     template.sendBodyAndHeader("direct:start", "<notMatched/>", "foo", "notMatchedHeaderValue").     assertMockEndpointsSatisfied(). }
-false;public;0;3;;public void configure() {     from("direct:start").filter(header("foo").isEqualTo("bar")).to("mock:result"). }
-false;protected;0;8;;@Override protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("direct:start").filter(header("foo").isEqualTo("bar")).to("mock:result").         }     }. }

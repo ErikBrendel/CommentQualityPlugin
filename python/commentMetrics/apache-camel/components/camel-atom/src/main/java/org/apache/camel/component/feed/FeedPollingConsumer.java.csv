@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;10;;protected int poll() throws Exception {     Object feed = createFeed().     if (feed != null) {         Exchange exchange = endpoint.createExchange(feed).         getProcessor().process(exchange).         return 1.     } else {         return 0.     } }
-false;protected,abstract;0;1;;protected abstract Object createFeed() throws Exception.

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void nullParameterValuesPassedToCtorIsOk() throws Exception {     new MapSqlParameterSource(null). }
-false;public;0;5;;@Test(expected = IllegalArgumentException.class) public void getValueChokesIfParameterIsNotPresent() throws Exception {     MapSqlParameterSource source = new MapSqlParameterSource().     source.getValue("pechorin was right!"). }
-false;public;0;8;;@Test public void sqlParameterValueRegistersSqlType() throws Exception {     MapSqlParameterSource msps = new MapSqlParameterSource("FOO", new SqlParameterValue(2, "Foo")).     assertEquals("Correct SQL Type not registered", 2, msps.getSqlType("FOO")).     MapSqlParameterSource msps2 = new MapSqlParameterSource().     msps2.addValues(msps.getValues()).     assertEquals("Correct SQL Type not registered", 2, msps2.getSqlType("FOO")). }

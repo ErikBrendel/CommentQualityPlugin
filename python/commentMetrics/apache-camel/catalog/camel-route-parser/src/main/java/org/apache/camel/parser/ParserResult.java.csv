@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Character based position in the source code (not line based).  */ ;/**  * Character based position in the source code (not line based).  */ public int getPosition() {     return position. }
-true;public;0;3;/**  * Length of node in the source code (not line based).  */ ;/**  * Length of node in the source code (not line based).  */ public int getLength() {     return length. }
-true;public;0;3;/**  * The element such as a Camel endpoint uri  */ ;/**  * The element such as a Camel endpoint uri  */ public String getElement() {     return element. }
-true;public;0;3;/**  * Whether the element was successfully parsed. If the parser cannot parse  * the element for whatever reason this will return <tt>false</tt>.  */ ;/**  * Whether the element was successfully parsed. If the parser cannot parse  * the element for whatever reason this will return <tt>false</tt>.  */ public boolean isParsed() {     return parsed. }
-true;public;0;3;/**  * The node which is typically a Camel EIP name such as <tt>to</tt>, <tt>wireTap</tt> etc.  */ ;/**  * The node which is typically a Camel EIP name such as <tt>to</tt>, <tt>wireTap</tt> etc.  */ public String getNode() {     return node. }
-false;public;0;3;;public Boolean getPredicate() {     return predicate. }
-true;public;1;3;/**  * Tells if it was an expression which is intended to be used as a predicate (determined from camel-core mode)  */ ;/**  * Tells if it was an expression which is intended to be used as a predicate (determined from camel-core mode)  */ public void setPredicate(Boolean predicate) {     this.predicate = predicate. }
-false;public;0;3;;public String toString() {     return element. }

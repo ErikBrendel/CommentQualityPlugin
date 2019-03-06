@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;2;4;;@Override protected void upgradeMetaData(MetaDataIndexUpgradeService metaDataIndexUpgradeService, MetaDataUpgrader metaDataUpgrader) { // MetaData upgrade is tested in GatewayMetaStateTests, we override this method to NOP to make mocking easier }
-false;public;0;5;;@Override public void applyClusterStateUpdaters() {     // Just set localNode here, not to mess with ClusterService and IndicesService mocking     previousClusterState = ClusterStateUpdaters.setLocalNode(previousClusterState, localNode). }

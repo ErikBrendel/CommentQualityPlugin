@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;9;;@Override public boolean handleRequest(MessageContext messageContext) throws WebServiceClientException {     // no extra op     TransportContext context = TransportContextHolder.getTransportContext().     CommonsHttpConnection connection = (CommonsHttpConnection) context.getConnection().     PostMethod postMethod = connection.getPostMethod().     postMethod.addRequestHeader("breadcrumbId", "ID-Ralfs-MacBook-Pro-local-50523-1423553069254-0-5").     return true. }
-false;public;1;5;;@Override public boolean handleResponse(MessageContext messageContext) throws WebServiceClientException {     // no extra op     return true. }
-false;public;1;5;;@Override public boolean handleFault(MessageContext messageContext) throws WebServiceClientException {     // no extra op     return true. }
-false;public;2;5;;@Override public void afterCompletion(MessageContext messageContext, Exception ex) throws WebServiceClientException { // noop }

@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;3;5;;public WriteOperation createWriteOperation(SocketChannelContext context, Object message, BiConsumer<Void, Exception> listener) {     assert message instanceof ByteBuffer[] : "This channel only supports messages that are of type: " + ByteBuffer[].class + ". Found type: " + message.getClass() + ".".     return new FlushReadyWrite(context, (ByteBuffer[]) message, listener). }
-false;public;1;5;;@Override public List<FlushOperation> writeToBytes(WriteOperation writeOperation) {     assert writeOperation instanceof FlushReadyWrite : "Write operation must be flush ready".     return Collections.singletonList((FlushReadyWrite) writeOperation). }
-false;public;0;4;;@Override public List<FlushOperation> pollFlushOperations() {     return EMPTY_LIST. }
-false;public;0;2;;@Override public void close() { }

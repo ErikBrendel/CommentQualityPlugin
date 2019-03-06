@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;7;;@Bean @Order(0) @ConditionalOnBean(ClientHttpConnector.class) public WebClientCustomizer clientConnectorCustomizer(ClientHttpConnector clientHttpConnector) {     return (builder) -> builder.clientConnector(clientHttpConnector). }

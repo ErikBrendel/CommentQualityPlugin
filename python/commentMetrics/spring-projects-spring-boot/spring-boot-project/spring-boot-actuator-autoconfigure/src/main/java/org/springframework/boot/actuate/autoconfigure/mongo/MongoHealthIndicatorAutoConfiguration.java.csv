@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;@Bean @ConditionalOnMissingBean(name = "mongoHealthIndicator") public HealthIndicator mongoHealthIndicator(Map<String, MongoTemplate> mongoTemplates) {     return createHealthIndicator(mongoTemplates). }

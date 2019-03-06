@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeString(id). }
-false;;1;4;;GetWatchRequest setId(String id) {     this.id = id.     return this. }
-false;public;0;11;;@Override public ActionRequestValidationException validate() {     ActionRequestValidationException validationException = null.     if (id == null) {         validationException = ValidateActions.addValidationError("watch id is missing", validationException).     } else if (WatcherUtils.isValidId(id) == false) {         validationException = ValidateActions.addValidationError("watch id contains whitespace", validationException).     }     return validationException. }
-true;public;0;3;/**  * @return The name of the watch to retrieve  */ ;/**  * @return The name of the watch to retrieve  */ public String getId() {     return id. }
-false;public;1;4;;@Override public void readFrom(StreamInput in) throws IOException {     throw new UnsupportedOperationException("usage of Streamable is to be replaced by Writeable"). }
-false;public;0;4;;@Override public String toString() {     return "get [" + id + "]". }

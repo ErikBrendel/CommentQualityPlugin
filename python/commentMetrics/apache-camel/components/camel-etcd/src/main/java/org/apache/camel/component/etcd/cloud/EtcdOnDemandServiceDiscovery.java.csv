@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public List<ServiceDefinition> getServices(String name) {     return getServices(s -> name.equalsIgnoreCase(s.getName())). }

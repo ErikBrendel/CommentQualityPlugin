@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;3;;public Customer getCustomer(String id) {     return null. }
-false;public;2;4;;@Override public Response updateCustomer(Customer customer, String id) {     return null. }
-false;public;3;4;;@Override public Response newCustomer(Customer customer, String type, int age) {     return null. }
-false;public;1;4;;@Override public VipCustomerResource vipCustomer(String status) {     return new VipCustomerResource(). }
-false;public;1;4;;@Override public Response uploadImageInputStream(InputStream is) {     return null. }
-false;public;1;4;;@Override public Response uploadImageDataHandler(DataHandler dh) {     return null. }
-false;public;0;4;;@Override public MultipartCustomer multipart() {     return new MultipartCustomer(). }
-false;public;2;4;;@Override public Customer getCustomer(String id, String test) {     return null. }

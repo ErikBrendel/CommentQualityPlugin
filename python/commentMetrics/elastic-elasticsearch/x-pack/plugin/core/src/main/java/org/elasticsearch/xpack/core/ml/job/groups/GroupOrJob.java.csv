@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;0;1;;boolean isGroup().
-false;;0;1;;List<Job> jobs().
-false;public;0;4;;@Override public boolean isGroup() {     return true. }
-false;public;0;4;;@Override public List<Job> jobs() {     return jobs. }
-false;public;0;4;;@Override public boolean isGroup() {     return false. }
-false;public;0;4;;@Override public List<Job> jobs() {     return Collections.singletonList(job). }

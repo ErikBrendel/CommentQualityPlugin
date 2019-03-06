@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;4;;@Override public String getOperationName(Exchange exchange, Endpoint endpoint) {     return getDestination(exchange, endpoint). }
-false;public;3;11;;@Override public void pre(Entity segment, Exchange exchange, Endpoint endpoint) {     super.pre(segment, exchange, endpoint).     segment.putMetadata("message_bus.destination", getDestination(exchange, endpoint)).     String messageId = getMessageId(exchange).     if (null != messageId) {         segment.putMetadata(MESSAGE_BUS_ID, messageId).     } }
-false;protected;2;3;;protected String getDestination(Exchange exchange, Endpoint endpoint) {     return stripSchemeAndOptions(endpoint). }
-false;protected;1;3;;protected String getMessageId(Exchange exchange) {     return null. }

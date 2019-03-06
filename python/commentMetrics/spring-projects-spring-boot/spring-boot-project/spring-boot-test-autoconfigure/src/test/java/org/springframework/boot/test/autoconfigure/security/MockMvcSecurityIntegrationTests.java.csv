@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test @WithMockUser(username = "test", password = "test", roles = "USER") public void okResponseWithMockUser() throws Exception {     this.mockMvc.perform(get("/")).andExpect(status().isOk()). }
-false;public;0;5;;@Test public void unauthorizedResponseWithNoUser() throws Exception {     this.mockMvc.perform(get("/").accept(MediaType.APPLICATION_JSON)).andExpect(status().isUnauthorized()). }
-false;public;0;7;;@Test public void okResponseWithBasicAuthCredentialsForKnownUser() throws Exception {     this.mockMvc.perform(get("/").header(HttpHeaders.AUTHORIZATION, "Basic " + Base64Utils.encodeToString("user:secret".getBytes()))).andExpect(status().isOk()). }

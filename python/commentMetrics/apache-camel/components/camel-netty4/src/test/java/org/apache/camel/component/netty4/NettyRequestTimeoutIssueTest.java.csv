@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Override public void configure() throws Exception {     from("direct:out").to("netty4:tcp://localhost:8080?requestTimeout=5000").     from("netty4:tcp://localhost:8080").to("log:nettyCase?showAll=true&multiline=true"). }
-false;protected;0;13;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:out").to("netty4:tcp://localhost:8080?requestTimeout=5000").             from("netty4:tcp://localhost:8080").to("log:nettyCase?showAll=true&multiline=true").         }     }. }
-false;public;0;8;;@Test public void test() throws Exception {     String result = template.requestBody("direct:out", "hello", String.class).     Assert.assertEquals("hello", result).     log.info("Sleeping for 20 seconds, and no Netty exception should occur").     Thread.sleep(20000). }

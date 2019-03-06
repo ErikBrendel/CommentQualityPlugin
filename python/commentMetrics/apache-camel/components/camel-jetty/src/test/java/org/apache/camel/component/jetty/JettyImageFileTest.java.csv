@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;private;1;11;;private void sendImageContent(boolean usingGZip) throws Exception {     Endpoint endpoint = context.getEndpoint("http://localhost:{{port}}/myapp/myservice").     Exchange exchange = endpoint.createExchange().     if (usingGZip) {         exchange.getIn().setHeader(Exchange.CONTENT_ENCODING, "gzip").     }     template.send(endpoint, exchange).     assertNotNull(exchange.getOut().getBody()).     assertEquals("Get a wrong content-type ", MessageHelper.getContentType(exchange.getOut()), "image/jpeg"). }
-false;public;0;4;;@Test public void testImageContentType() throws Exception {     sendImageContent(false). }
-false;public;0;4;;@Test public void testImageContentWithGZip() throws Exception {     sendImageContent(true). }
-false;public;0;3;;public void configure() throws Exception {     from("jetty:http://localhost:{{port}}/myapp/myservice").process(new MyImageService()). }
-false;protected;0;8;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from("jetty:http://localhost:{{port}}/myapp/myservice").process(new MyImageService()).         }     }. }
-false;public;1;4;;public void process(Exchange exchange) throws Exception {     exchange.getOut().setBody(new File("src/test/data/logo.jpeg")).     exchange.getOut().setHeader("Content-Type", "image/jpeg"). }

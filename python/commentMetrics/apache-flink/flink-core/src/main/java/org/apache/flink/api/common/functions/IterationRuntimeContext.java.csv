@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * Gets the number of the current superstep. Superstep numbers start at <i>1</i>.  *  * @return The number of the current superstep.  */ ;/**  * Gets the number of the current superstep. Superstep numbers start at <i>1</i>.  *  * @return The number of the current superstep.  */ int getSuperstepNumber().
-false;;1;2;;@PublicEvolving <T extends Aggregator<?>> T getIterationAggregator(String name).
-false;;1;1;;<T extends Value> T getPreviousIterationAggregate(String name).

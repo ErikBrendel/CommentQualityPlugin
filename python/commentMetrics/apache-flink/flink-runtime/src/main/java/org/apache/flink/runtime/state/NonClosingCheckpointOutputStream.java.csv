@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public void flush() throws IOException {     delegate.flush(). }
-false;public;1;4;;@Override public void write(int b) throws IOException {     delegate.write(b). }
-false;public;1;4;;@Override public void write(byte[] b) throws IOException {     delegate.write(b). }
-false;public;3;4;;@Override public void write(byte[] b, int off, int len) throws IOException {     delegate.write(b, off, len). }
-false;public;0;5;;@Override public void close() throws IOException { // users should not be able to actually close the stream, it is closed by the system. // TODO if we want to support async writes, this call could trigger a callback to the snapshot context that a handle is available. }
-true;;0;3;/**  * This method should not be public so as to not expose internals to user code.  */ ;/**  * This method should not be public so as to not expose internals to user code.  */ CheckpointStreamFactory.CheckpointStateOutputStream getDelegate() {     return delegate. }
-true;abstract;0;1;/**  * This method should not be public so as to not expose internals to user code. Closes the underlying stream and  * returns a state handle.  */ ;/**  * This method should not be public so as to not expose internals to user code. Closes the underlying stream and  * returns a state handle.  */ abstract T closeAndGetHandle() throws IOException.

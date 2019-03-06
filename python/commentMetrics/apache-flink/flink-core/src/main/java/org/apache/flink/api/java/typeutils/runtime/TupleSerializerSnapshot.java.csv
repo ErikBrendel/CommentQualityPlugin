@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected int getCurrentOuterSnapshotVersion() {     return VERSION. }
-false;protected;1;4;;@Override protected TypeSerializer<?>[] getNestedSerializers(TupleSerializer<T> outerSerializer) {     return outerSerializer.getFieldSerializers(). }
-false;protected;1;5;;@Override protected TupleSerializer<T> createOuterSerializerWithNestedSerializers(TypeSerializer<?>[] nestedSerializers) {     checkState(tupleClass != null, "tuple class can not be NULL").     return new TupleSerializer<>(tupleClass, nestedSerializers). }
-false;protected;1;5;;@Override protected void writeOuterSnapshot(DataOutputView out) throws IOException {     checkState(tupleClass != null, "tuple class can not be NULL").     out.writeUTF(tupleClass.getName()). }
-false;protected;3;4;;@Override protected void readOuterSnapshot(int readOuterSnapshotVersion, DataInputView in, ClassLoader userCodeClassLoader) throws IOException {     this.tupleClass = InstantiationUtil.resolveClassByName(in, userCodeClassLoader). }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;1;1;;void acceptWithException(T value) throws E.
-false;default;1;8;;@Override default void accept(T value) {     try {         acceptWithException(value).     } catch (Throwable t) {         throw new CompletionException(t).     } }

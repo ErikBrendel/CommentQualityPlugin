@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;4;10;;@Override protected Object performContextCommand(CamelController camelController, String contextName, PrintStream out, PrintStream err) throws Exception {     String xml = camelController.getRestModelAsXml(contextName).     if (xml == null) {         out.println("There are no REST services in CamelContext with name: " + contextName).     } else {         out.println(xml).     }     return null. }

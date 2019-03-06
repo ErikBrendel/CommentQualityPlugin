@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void testConvertStringToValue() {     assertEquals("42", parallelismQueryParameter.convertValueToString(42)). }
-false;public;0;4;;@Test public void testConvertValueFromString() {     assertEquals(42, (int) parallelismQueryParameter.convertStringToValue("42")). }

@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void testExchangeFoo() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("Hello World").     template.sendBody("direct:foo", "Hello").     assertMockEndpointsSatisfied(). }
-false;public;0;8;;@Test public void testExchangeBar() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("Bye World").     template.sendBody("direct:bar", "Bye").     assertMockEndpointsSatisfied(). }
-false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry jndi = super.createRegistry().     jndi.bind("foo", new MyBean()).     return jndi. }
-false;public;0;10;;@Override public void configure() throws Exception {     from("direct:foo").to("bean:foo?method=bar(${exchange}, 'World')").to("mock:result").     from("direct:bar").to("bean:foo?method=bar(*, 'World')").to("mock:result"). }
-false;protected;0;15;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:foo").to("bean:foo?method=bar(${exchange}, 'World')").to("mock:result").             from("direct:bar").to("bean:foo?method=bar(*, 'World')").to("mock:result").         }     }. }
-false;public;2;3;;public String bar(Exchange exchange, String extra) {     return exchange.getIn().getBody(String.class) + " " + extra. }

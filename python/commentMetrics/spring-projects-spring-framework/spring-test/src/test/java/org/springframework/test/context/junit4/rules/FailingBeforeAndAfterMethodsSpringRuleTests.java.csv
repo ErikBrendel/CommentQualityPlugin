@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;12;;@Parameters(name = "{0}") public static Object[] testData() {     return new Object[] { //      AlwaysFailingBeforeTestClassSpringRuleTestCase.class.getSimpleName(), //      AlwaysFailingAfterTestClassSpringRuleTestCase.class.getSimpleName(), //      AlwaysFailingPrepareTestInstanceSpringRuleTestCase.class.getSimpleName(), //      AlwaysFailingBeforeTestMethodSpringRuleTestCase.class.getSimpleName(), //      AlwaysFailingAfterTestMethodSpringRuleTestCase.class.getSimpleName(), //      FailingBeforeTransactionSpringRuleTestCase.class.getSimpleName(), //      FailingAfterTransactionSpringRuleTestCase.class.getSimpleName() }. }
-false;protected;0;4;;@Override protected Class<? extends Runner> getRunnerClass() {     return JUnit4.class. }
-false;public;0;3;;@Test public void testNothing() { }
-false;public;0;3;;@Test public void testNothing() { }
-false;public;0;4;;@BeforeTransaction public void beforeTransaction() {     fail("always failing beforeTransaction()"). }
-false;public;0;3;;@Test public void testNothing() { }
-false;public;0;4;;@AfterTransaction public void afterTransaction() {     fail("always failing afterTransaction()"). }

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;7;;@Override public void run(String... args) throws Exception {     this.repository.deleteAll().     saveCustomers().     fetchAllCustomers().     fetchIndividualCustomers(). }
-false;private;0;4;;private void saveCustomers() {     this.repository.save(new Customer("Alice", "Smith")).     this.repository.save(new Customer("Bob", "Smith")). }
-false;private;0;8;;private void fetchAllCustomers() {     System.out.println("Customers found with findAll():").     System.out.println("-------------------------------").     for (Customer customer : this.repository.findAll()) {         System.out.println(customer).     }     System.out.println(). }
-false;private;0;11;;private void fetchIndividualCustomers() {     System.out.println("Customer found with findByFirstName('Alice'):").     System.out.println("--------------------------------").     System.out.println(this.repository.findByFirstName("Alice")).     System.out.println("Customers found with findByLastName('Smith'):").     System.out.println("--------------------------------").     for (Customer customer : this.repository.findByLastName("Smith")) {         System.out.println(customer).     } }
-false;public,static;1;3;;public static void main(String[] args) {     SpringApplication.run(SampleElasticsearchApplication.class, "--debug").close(). }

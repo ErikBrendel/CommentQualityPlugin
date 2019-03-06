@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public <T extends Number> Converter<Number, T> getConverter(Class<T> targetType) {     return new NumberToNumber<>(targetType). }
-false;public;2;4;;@Override public boolean matches(TypeDescriptor sourceType, TypeDescriptor targetType) {     return !sourceType.equals(targetType). }
-false;public;1;4;;@Override public T convert(Number source) {     return NumberUtils.convertNumberToTargetClass(source, this.targetType). }

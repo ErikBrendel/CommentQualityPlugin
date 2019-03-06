@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;7;;@Parameterized.Parameters public static Collection<Object[]> data() {     return Arrays.asList(new Object[][] { { new SavepointTriggerRequestBody("/tmp", true) }, { new SavepointTriggerRequestBody("/tmp", false) } }). }
-false;protected;0;4;;@Override protected Class<SavepointTriggerRequestBody> getTestRequestClass() {     return SavepointTriggerRequestBody.class. }
-false;protected;0;4;;@Override protected SavepointTriggerRequestBody getTestRequestInstance() {     return savepointTriggerRequestBody. }
-false;protected;2;6;;@Override protected void assertOriginalEqualsToUnmarshalled(final SavepointTriggerRequestBody expected, final SavepointTriggerRequestBody actual) {     assertEquals(expected.getTargetDirectory(), actual.getTargetDirectory()). }

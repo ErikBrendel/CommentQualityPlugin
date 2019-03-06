@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;4;;@Consume(uri = "direct:startBeanExpression") public void doSomethingBeanExpression(String payload, @Bean(ref = "myCounter") int count) {     template.sendBodyAndHeader("mock:result", "Bye " + payload, "count", count). }
-false;public;2;4;;@Consume(uri = "direct:startConstantExpression") public void doSomethingConstantExpression(String payload, @Constant("5") int count) {     template.sendBodyAndHeader("mock:result", "Bye " + payload, "count", count). }
-false;public;2;4;;@Consume(uri = "direct:startHeaderExpression") public void doSomethingHeaderExpression(String payload, @Header("number") int count) {     template.sendBodyAndHeader("mock:result", "Bye " + payload, "count", count). }
-false;public;3;4;;@Consume(uri = "direct:startMany") public void doSomethingManyExpression(String payload, @Constant("5") int count, @Header("number") int number) {     template.sendBodyAndHeader("mock:result", "Bye " + payload, "count", count * number). }
-false;public;1;3;;public void setTemplate(ProducerTemplate template) {     this.template = template. }

@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected boolean useJmx() {     return true. }
-false;protected;0;9;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry registry = super.createRegistry().     meterRegistry = new CompositeMeterRegistry().     meterRegistry.add(new SimpleMeterRegistry()).     meterRegistry.add(new JmxMeterRegistry(CamelJmxConfig.DEFAULT, Clock.SYSTEM, HierarchicalNameMapper.DEFAULT)).     registry.bind(MicrometerConstants.METRICS_REGISTRY_NAME, meterRegistry).     return registry. }
-false;protected;0;9;;@Override protected CamelContext createCamelContext() throws Exception {     CamelContext camelContext = super.createCamelContext().     AbstractMicrometerEventNotifier<?> eventNotifier = getEventNotifier().     eventNotifier.setMeterRegistry(meterRegistry).     eventNotifier.setPrettyPrint(true).     camelContext.getManagementStrategy().addEventNotifier(eventNotifier).     return camelContext. }
-false;protected,abstract;0;1;;protected abstract AbstractMicrometerEventNotifier<?> getEventNotifier().

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test @MetaSql public void metaSqlAnnotation() {     assertNumUsers(1). }
-false;public;0;5;;@Test @MetaSqlGroup public void metaSqlGroupAnnotation() {     assertNumUsers(1). }
-false;protected;1;3;;protected void assertNumUsers(int expected) {     assertEquals("Number of rows in the 'user' table.", expected, countRowsInTable("user")). }

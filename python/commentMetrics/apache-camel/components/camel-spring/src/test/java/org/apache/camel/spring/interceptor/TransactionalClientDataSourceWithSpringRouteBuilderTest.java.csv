@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Override @Before public void setUp() throws Exception {     setUseRouteBuilder(false).     super.setUp(). }
-false;protected;0;5;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("/org/apache/camel/spring/interceptor/transactionalClientDataSourceWithSpringRouteBuilder.xml"). }

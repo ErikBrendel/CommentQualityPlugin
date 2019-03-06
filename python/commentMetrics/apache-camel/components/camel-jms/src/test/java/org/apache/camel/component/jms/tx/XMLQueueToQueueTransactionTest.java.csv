@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;3;;protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/component/jms/tx/XMLQueueToQueueTransactionTest.xml"). }
-false;public;0;5;;@Test public void testRollbackUsingXmlQueueToQueue() throws Exception {     // routes should have been configured via xml and added to the camel context     assertResult(). }

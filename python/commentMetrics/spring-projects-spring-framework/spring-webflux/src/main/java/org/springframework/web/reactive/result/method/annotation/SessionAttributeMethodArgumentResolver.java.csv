@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public boolean supportsParameter(MethodParameter parameter) {     return parameter.hasParameterAnnotation(SessionAttribute.class). }
-false;protected;1;6;;@Override protected NamedValueInfo createNamedValueInfo(MethodParameter parameter) {     SessionAttribute ann = parameter.getParameterAnnotation(SessionAttribute.class).     Assert.state(ann != null, "No SessionAttribute annotation").     return new NamedValueInfo(ann.name(), ann.required(), ValueConstants.DEFAULT_NONE). }
-false;protected;3;6;;@Override protected Mono<Object> resolveName(String name, MethodParameter parameter, ServerWebExchange exchange) {     return exchange.getSession().filter(session -> session.getAttribute(name) != null).map(session -> session.getAttribute(name)). }
-false;protected;2;6;;@Override protected void handleMissingValue(String name, MethodParameter parameter) {     String type = parameter.getNestedParameterType().getSimpleName().     String reason = "Missing session attribute '" + name + "' of type " + type.     throw new ServerWebInputException(reason, parameter). }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;12;;@Override @Nullable protected HttpStatus determineStatus(Throwable ex) {     HttpStatus status = super.determineStatus(ex).     if (status == null) {         ResponseStatus ann = AnnotatedElementUtils.findMergedAnnotation(ex.getClass(), ResponseStatus.class).         if (ann != null) {             status = ann.code().         }     }     return status. }

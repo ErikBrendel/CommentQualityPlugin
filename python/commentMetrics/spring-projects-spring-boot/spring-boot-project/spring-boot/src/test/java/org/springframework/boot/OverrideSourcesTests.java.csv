@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@After public void cleanUp() {     if (this.context != null) {         this.context.close().     } }
-false;public;0;6;;@Test public void beanInjectedToMainConfiguration() {     this.context = SpringApplication.run(new Class<?>[] { MainConfiguration.class }, new String[] { "--spring.main.web-application-type=none" }).     assertThat(this.context.getBean(Service.class).bean.name).isEqualTo("foo"). }
-false;public;0;9;;@Test public void primaryBeanInjectedProvingSourcesNotOverridden() {     this.context = SpringApplication.run(new Class<?>[] { MainConfiguration.class, TestConfiguration.class }, new String[] { "--spring.main.web-application-type=none", "--spring.main.allow-bean-definition-overriding=true", "--spring.main.sources=org.springframework.boot.OverrideSourcesTests.MainConfiguration" }).     assertThat(this.context.getBean(Service.class).bean.name).isEqualTo("bar"). }
-false;public;0;5;;@Bean @Primary public TestBean another() {     return new TestBean("bar"). }
-false;public;0;4;;@Bean public TestBean first() {     return new TestBean("foo"). }
-false;public;0;4;;@Bean public Service Service() {     return new Service(). }

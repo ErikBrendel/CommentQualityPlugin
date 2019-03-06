@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;3;7;;@Override public void onResponse(InputStream response, Map<String, String> headers, SalesforceException exception) {     this.response = response.     this.headers = headers.     this.exception = exception.     latch.countDown(). }
-false;public;0;3;;public void reset() {     latch = new CountDownLatch(1). }
-false;public;2;3;;public boolean await(long duration, TimeUnit unit) throws InterruptedException {     return latch.await(duration, unit). }
-false;public;0;3;;public InputStream getResponse() {     return response. }
-false;public;0;3;;public SalesforceException getException() {     return exception. }
-false;public;0;3;;public Map<String, String> getHeaders() {     return headers. }

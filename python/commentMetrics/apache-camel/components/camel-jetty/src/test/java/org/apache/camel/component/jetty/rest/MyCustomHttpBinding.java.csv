@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;3;5;;@Override public void doWriteResponse(Message message, HttpServletResponse response, Exchange exchange) throws IOException {     message.setBody(greeting + message.getBody()).     super.doWriteResponse(message, response, exchange). }

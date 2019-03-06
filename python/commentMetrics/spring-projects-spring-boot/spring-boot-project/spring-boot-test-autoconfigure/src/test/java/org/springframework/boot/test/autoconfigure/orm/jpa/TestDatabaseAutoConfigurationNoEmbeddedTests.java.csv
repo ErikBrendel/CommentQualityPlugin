@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;11;;@Test public void applyAnyReplace() {     this.contextRunner.run((context) -> assertThat(context).getFailure().isInstanceOf(BeanCreationException.class).hasMessageContaining("Failed to replace DataSource with an embedded database for tests.").hasMessageContaining("If you want an embedded database please put a supported one on the classpath").hasMessageContaining("or tune the replace attribute of @AutoConfigureTestDatabase.")). }
-false;public;0;9;;@Test public void applyNoReplace() {     this.contextRunner.withPropertyValues("spring.test.database.replace=NONE").run((context) -> {         assertThat(context).hasSingleBean(DataSource.class).         assertThat(context).getBean(DataSource.class).isSameAs(context.getBean("myCustomDataSource")).     }). }
-false;public;0;4;;@Bean public DataSource myCustomDataSource() {     return mock(DataSource.class). }

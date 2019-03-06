@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;12;;public void stop() {     log.info("Stopping Excecutor Service").     List<Runnable> runnables = executor.shutdownNow().     log.info("{} Runnables were active", runnables == null ? 0 : runnables.size()).     for (Runnable runnable : runnables) {         if (runnable instanceof TestRunnable) {             log.info(((TestRunnable) runnable).status()).         } else {             log.warn("Runnable is not instance of TestRunnable: {}", runnable.getClass().getName()).         }     } }
-false;public;1;3;;public void addRunnable(TestRunnable runnable) {     executor.submit(runnable). }

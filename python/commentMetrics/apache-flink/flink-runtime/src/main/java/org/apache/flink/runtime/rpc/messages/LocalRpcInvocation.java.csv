@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getMethodName() {     return methodName. }
-false;public;0;4;;@Override public Class<?>[] getParameterTypes() {     return parameterTypes. }
-false;public;0;4;;@Override public Object[] getArgs() {     return args. }
-false;public;0;20;;@Override public String toString() {     if (toString == null) {         StringBuilder paramTypeStringBuilder = new StringBuilder(parameterTypes.length * 5).         if (parameterTypes.length > 0) {             paramTypeStringBuilder.append(parameterTypes[0].getSimpleName()).             for (int i = 1. i < parameterTypes.length. i++) {                 paramTypeStringBuilder.append(", ").append(parameterTypes[i].getSimpleName()).             }         }         toString = "LocalRpcInvocation(" + methodName + '(' + paramTypeStringBuilder + "))".     }     return toString. }

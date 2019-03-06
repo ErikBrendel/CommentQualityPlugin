@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getName() {     return "die_with_dignity_action". }
-false;protected;2;4;;@Override protected RestChannelConsumer prepareRequest(RestRequest request, NodeClient client) throws IOException {     throw new OutOfMemoryError("die with dignity"). }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;1;1;/**  * Takes a snapshot of the current table and returns the number of pages for navigating  * through the snapshot.  */ ;/**  * Takes a snapshot of the current table and returns the number of pages for navigating  * through the snapshot.  */ TypedResult<Integer> snapshot(int pageSize).
-true;;1;1;/**  * Retrieves a page of a snapshotted result.  */ ;/**  * Retrieves a page of a snapshotted result.  */ List<Row> retrievePage(int page).

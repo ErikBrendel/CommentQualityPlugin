@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;3;9;;@Override public boolean handle(CliTerminal terminal, CliSession cliSession, String line) {     for (CliCommand cliCommand : commands) {         if (cliCommand.handle(terminal, cliSession, line)) {             return true.         }     }     return false. }

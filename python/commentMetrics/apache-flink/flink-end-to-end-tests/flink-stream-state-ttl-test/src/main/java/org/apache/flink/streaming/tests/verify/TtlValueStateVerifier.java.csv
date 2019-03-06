@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;1;5;;@Override @Nonnull State createState(FunctionInitializationContext context) {     return context.getKeyedStateStore().getState(stateDesc). }
-false;public;0;4;;@Nonnull public String generateRandomUpdate() {     return randomString(). }
-false;;1;4;;@Override String getInternal(@Nonnull ValueState<String> state) throws Exception {     return state.value(). }
-false;;2;4;;@Override void updateInternal(@Nonnull ValueState<String> state, String update) throws Exception {     state.update(update). }
-false;;2;8;;@Override String expected(@Nonnull List<ValueWithTs<String>> updates, long currentTimestamp) {     if (updates.isEmpty()) {         return null.     }     ValueWithTs<String> lastUpdate = updates.get(updates.size() - 1).     return expired(lastUpdate.getTimestamp(), currentTimestamp) ? null : lastUpdate.getValue(). }

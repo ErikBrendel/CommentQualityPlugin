@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public CamelContext getCamelContext() {     return camelContext. }
-false;public;0;12;;@Override public void run() {     if (camelContext != null) {         try {             camelContext.stop().         } catch (final Exception e) {             LOG.warn("Unable to stop CamelContext", e).         }     } else {         LOG.warn("Unable to stop CamelContext, no CamelContext was set!").     } }
-false;public;1;4;;@Override public void setCamelContext(final CamelContext camelContext) {     this.camelContext = camelContext. }

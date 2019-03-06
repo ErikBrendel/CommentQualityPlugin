@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Return the {@link ContentType} of this instance.  * @return the content type  */ ;/**  * Return the {@link ContentType} of this instance.  * @return the content type  */ public ContentType getContentType() {     return this.contentType. }
-true;public;0;3;/**  * The generated project archive or file.  * @return the content  */ ;/**  * The generated project archive or file.  * @return the content  */ public byte[] getContent() {     return this.content. }
-false;public;1;3;;public void setContent(byte[] content) {     this.content = content. }
-true;public;0;3;/**  * The preferred file name to use to store the entity on disk or {@code null} if no  * preferred value has been set.  * @return the file name, or {@code null}  */ ;/**  * The preferred file name to use to store the entity on disk or {@code null} if no  * preferred value has been set.  * @return the file name, or {@code null}  */ public String getFileName() {     return this.fileName. }
-false;public;1;3;;public void setFileName(String fileName) {     this.fileName = fileName. }

@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;// -------------------------------------------------------------------------------------------- public Class<? extends Driver<?, ?>> getDriverClass() {     return this.driverClass. }
-false;public;0;3;;public Class<? extends ChainedDriver<?, ?>> getPushChainDriverClass() {     return this.pushChainDriver. }
-false;public;0;3;;public int getNumInputs() {     return this.numInputs. }
-false;public;0;3;;public DamBehavior firstDam() {     return this.dam1. }
-false;public;0;7;;public DamBehavior secondDam() {     if (this.numInputs == 2) {         return this.dam2.     } else {         throw new IllegalArgumentException("The given strategy does not work on two inputs.").     } }
-false;public;1;10;;public DamBehavior damOnInput(int num) {     if (num < this.numInputs) {         if (num == 0) {             return this.dam1.         } else if (num == 1) {             return this.dam2.         }     }     throw new IllegalArgumentException(). }
-false;public;0;3;;public boolean isMaterializing() {     return this.dam1.isMaterializing() || (this.dam2 != null && this.dam2.isMaterializing()). }
-false;public;0;3;;public int getNumRequiredComparators() {     return this.numRequiredComparators. }

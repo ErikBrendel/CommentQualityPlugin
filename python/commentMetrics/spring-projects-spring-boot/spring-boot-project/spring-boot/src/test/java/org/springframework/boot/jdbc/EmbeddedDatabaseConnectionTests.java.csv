@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void h2CustomDatabaseName() {     assertThat(EmbeddedDatabaseConnection.H2.getUrl("mydb")).isEqualTo("jdbc:h2:mem:mydb.DB_CLOSE_DELAY=-1.DB_CLOSE_ON_EXIT=FALSE"). }
-false;public;0;5;;@Test public void derbyCustomDatabaseName() {     assertThat(EmbeddedDatabaseConnection.DERBY.getUrl("myderbydb")).isEqualTo("jdbc:derby:memory:myderbydb.create=true"). }
-false;public;0;5;;@Test public void hsqlCustomDatabaseName() {     assertThat(EmbeddedDatabaseConnection.HSQL.getUrl("myhsql")).isEqualTo("jdbc:hsqldb:mem:myhsql"). }
-false;public;0;6;;@Test public void getUrlWithNullDatabaseName() {     assertThatIllegalArgumentException().isThrownBy(() -> EmbeddedDatabaseConnection.HSQL.getUrl(null)).withMessageContaining("DatabaseName must not be empty"). }
-false;public;0;6;;@Test public void getUrlWithEmptyDatabaseName() {     assertThatIllegalArgumentException().isThrownBy(() -> EmbeddedDatabaseConnection.HSQL.getUrl("  ")).withMessageContaining("DatabaseName must not be empty"). }

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getDataFormatName() {     return "serialization". }
-false;public;3;13;;public void marshal(Exchange exchange, Object graph, OutputStream stream) throws Exception {     ObjectOutput out = ExchangeHelper.convertToMandatoryType(exchange, ObjectOutput.class, stream).     try {         out.writeObject(graph).     } finally {         out.flush().         try {             out.close().         } catch (IOException e) {         // ignore         }     } }
-false;public;2;12;;public Object unmarshal(Exchange exchange, InputStream stream) throws Exception {     ObjectInput in = ExchangeHelper.convertToMandatoryType(exchange, ObjectInput.class, stream).     try {         return in.readObject().     } finally {         try {             in.close().         } catch (IOException e) {         // ignore         }     } }
-false;protected;0;4;;@Override protected void doStart() throws Exception { // noop }
-false;protected;0;4;;@Override protected void doStop() throws Exception { // noop }

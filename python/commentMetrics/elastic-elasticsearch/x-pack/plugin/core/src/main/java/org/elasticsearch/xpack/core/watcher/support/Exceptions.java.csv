@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;2;3;;public static IllegalArgumentException illegalArgument(String msg, Object... args) {     return new IllegalArgumentException(format(msg, args)). }
-false;public,static;3;3;;public static IllegalArgumentException illegalArgument(String msg, Throwable cause, Object... args) {     return new IllegalArgumentException(format(msg, args), cause). }
-false;public,static;2;3;;public static IllegalStateException illegalState(String msg, Object... args) {     return new IllegalStateException(format(msg, args)). }
-false;public,static;3;3;;public static IllegalStateException illegalState(String msg, Throwable cause, Object... args) {     return new IllegalStateException(format(msg, args), cause). }
-false;public,static;2;3;;public static IOException ioException(String msg, Object... args) {     return new IOException(format(msg, args)). }
-false;public,static;3;3;;public static IOException ioException(String msg, Throwable cause, Object... args) {     return new IOException(format(msg, args), cause). }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;6;;@Override public TtlValue<ACC> fold(TtlValue<ACC> accumulator, T value) throws Exception {     ACC userAcc = getUnexpired(accumulator).     userAcc = userAcc == null ? defaultAccumulator : userAcc.     return wrapWithTs(original.fold(userAcc, value)). }

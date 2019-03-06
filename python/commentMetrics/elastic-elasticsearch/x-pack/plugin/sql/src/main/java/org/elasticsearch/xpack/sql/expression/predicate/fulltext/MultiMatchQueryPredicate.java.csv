@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected NodeInfo<MultiMatchQueryPredicate> info() {     return NodeInfo.create(this, MultiMatchQueryPredicate::new, fieldString, query(), options()). }
-false;public;1;4;;@Override public Expression replaceChildren(List<Expression> newChildren) {     throw new UnsupportedOperationException("this type of node doesn't have any children to replace"). }
-false;public;0;3;;public String fieldString() {     return fieldString. }
-false;public;0;3;;public Map<String, Float> fields() {     return fields. }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(fieldString, super.hashCode()). }
-false;public;1;8;;@Override public boolean equals(Object obj) {     if (super.equals(obj)) {         MultiMatchQueryPredicate other = (MultiMatchQueryPredicate) obj.         return Objects.equals(fieldString, other.fieldString).     }     return false. }

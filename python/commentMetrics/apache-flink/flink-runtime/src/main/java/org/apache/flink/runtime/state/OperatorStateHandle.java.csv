@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * Returns a map of meta data for all contained states by their name.  */ ;/**  * Returns a map of meta data for all contained states by their name.  */ Map<String, StateMetaInfo> getStateNameToPartitionOffsets().
-true;;0;2;/**  * Returns an input stream to read the operator state information.  */ ;/**  * Returns an input stream to read the operator state information.  */ @Override FSDataInputStream openInputStream() throws IOException.
-true;;0;1;/**  * Returns the underlying stream state handle that points to the state data.  */ ;/**  * Returns the underlying stream state handle that points to the state data.  */ StreamStateHandle getDelegateStateHandle().
-false;public;0;3;;public long[] getOffsets() {     return offsets. }
-false;public;0;3;;public Mode getDistributionMode() {     return distributionMode. }
-false;public;1;14;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     StateMetaInfo that = (StateMetaInfo) o.     return Arrays.equals(getOffsets(), that.getOffsets()) && getDistributionMode() == that.getDistributionMode(). }
-false;public;0;6;;@Override public int hashCode() {     int result = Arrays.hashCode(getOffsets()).     result = 31 * result + getDistributionMode().hashCode().     return result. }
-false;public;0;7;;@Override public String toString() {     return "StateMetaInfo{" + "offsets=" + Arrays.toString(offsets) + ", distributionMode=" + distributionMode + '}'. }

@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void testString() throws Exception {     testJson("\"A string\"", "A string"). }
-false;public;0;4;;@Test public void testMap() throws Exception {     testJson("{\"value\":123}", Collections.singletonMap("value", 123)). }
-false;public;0;4;;@Test public void testList() throws Exception {     testJson("[{\"value\":123}]", new ArrayList<>(Collections.singletonList(Collections.singletonMap("value", 123)))). }
-false;private;2;10;;private void testJson(String json, Object expected) throws Exception {     Object unmarshalled.     JacksonDataFormat gsonDataFormat = new JacksonDataFormat().     gsonDataFormat.doStart().     try (InputStream in = new ByteArrayInputStream(json.getBytes())) {         unmarshalled = gsonDataFormat.unmarshal(new DefaultExchange(new DefaultCamelContext()), in).     }     assertEquals(expected, unmarshalled). }

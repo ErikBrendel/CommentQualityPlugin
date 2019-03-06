@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Override public int read() throws IOException {     byteCounter.incrementAndGet().     checkMaximumLengthReached().     return super.read(). }
-false;public;3;6;;@Override public int read(byte[] b, int off, int len) throws IOException {     byteCounter.addAndGet(len).     checkMaximumLengthReached().     return super.read(b, off, len). }
-false;public,synchronized;1;4;;@Override public synchronized void mark(int readlimit) {     throw new UnsupportedOperationException("mark not supported"). }
-false;public,synchronized;0;4;;@Override public synchronized void reset() throws IOException {     throw new IOException("reset not supported"). }
-false;public;0;4;;@Override public boolean markSupported() {     return false. }
-false;private;0;5;;private void checkMaximumLengthReached() throws IOException {     if (byteCounter.get() > maxByteSize) {         throw new IOException("Maximum limit of [" + maxByteSize + "] bytes reached").     } }

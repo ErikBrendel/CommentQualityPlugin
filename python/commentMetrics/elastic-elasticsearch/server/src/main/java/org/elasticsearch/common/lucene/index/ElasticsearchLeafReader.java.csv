@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Returns the shard id this segment belongs to.  */ ;/**  * Returns the shard id this segment belongs to.  */ public ShardId shardId() {     return this.shardId. }
-false;public;0;4;;@Override public CacheHelper getCoreCacheHelper() {     return in.getCoreCacheHelper(). }
-false;public;0;4;;@Override public CacheHelper getReaderCacheHelper() {     return in.getReaderCacheHelper(). }
-false;public,static;1;14;;public static ElasticsearchLeafReader getElasticsearchLeafReader(LeafReader reader) {     if (reader instanceof FilterLeafReader) {         if (reader instanceof ElasticsearchLeafReader) {             return (ElasticsearchLeafReader) reader.         } else {             // may be instance of ElasticsearchLeafReader. This can cause us to miss the shardId.             return getElasticsearchLeafReader(((FilterLeafReader) reader).getDelegate()).         }     }     return null. }

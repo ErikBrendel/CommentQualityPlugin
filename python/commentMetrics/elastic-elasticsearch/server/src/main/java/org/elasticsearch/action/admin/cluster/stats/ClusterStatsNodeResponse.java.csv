@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public NodeInfo nodeInfo() {     return this.nodeInfo. }
-false;public;0;3;;public NodeStats nodeStats() {     return this.nodeStats. }
-true;public;0;4;/**  * Cluster Health Status, only populated on master nodes.  */ ;/**  * Cluster Health Status, only populated on master nodes.  */ @Nullable public ClusterHealthStatus clusterStatus() {     return clusterStatus. }
-false;public;0;3;;public ShardStats[] shardsStats() {     return this.shardsStats. }
-false;public,static;1;5;;public static ClusterStatsNodeResponse readNodeResponse(StreamInput in) throws IOException {     ClusterStatsNodeResponse nodeResponse = new ClusterStatsNodeResponse().     nodeResponse.readFrom(in).     return nodeResponse. }
-false;public;1;15;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     clusterStatus = null.     if (in.readBoolean()) {         clusterStatus = ClusterHealthStatus.fromValue(in.readByte()).     }     this.nodeInfo = NodeInfo.readNodeInfo(in).     this.nodeStats = NodeStats.readNodeStats(in).     int size = in.readVInt().     shardsStats = new ShardStats[size].     for (int i = 0. i < size. i++) {         shardsStats[i] = ShardStats.readShardStats(in).     } }
-false;public;1;16;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     if (clusterStatus == null) {         out.writeBoolean(false).     } else {         out.writeBoolean(true).         out.writeByte(clusterStatus.value()).     }     nodeInfo.writeTo(out).     nodeStats.writeTo(out).     out.writeVInt(shardsStats.length).     for (ShardStats ss : shardsStats) {         ss.writeTo(out).     } }

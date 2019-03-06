@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;public void testConstructor_GivenNullId() {     NullPointerException ex = expectThrows(NullPointerException.class, () -> new DeleteJobRequest(null)).     assertEquals("[job_id] must not be null", ex.getMessage()). }
-false;public;0;7;;public void testSetForce() {     DeleteDatafeedRequest deleteDatafeedRequest = createTestInstance().     assertNull(deleteDatafeedRequest.getForce()).     deleteDatafeedRequest.setForce(true).     assertTrue(deleteDatafeedRequest.getForce()). }
-false;private;0;3;;private DeleteDatafeedRequest createTestInstance() {     return new DeleteDatafeedRequest(DatafeedConfigTests.randomValidDatafeedId()). }

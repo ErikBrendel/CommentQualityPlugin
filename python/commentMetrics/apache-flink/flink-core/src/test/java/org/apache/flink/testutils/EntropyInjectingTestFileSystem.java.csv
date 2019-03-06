@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getEntropyInjectionKey() {     return ENTROPY_INJECTION_KEY. }
-false;public;0;4;;@Override public String generateEntropy() {     return ENTROPY. }
-false;public;0;4;;@Override public String getScheme() {     return "test-entropy". }
-false;public;1;3;;@Override public void configure(final Configuration config) { }
-false;public;1;4;;@Override public FileSystem create(final URI fsUri) {     return new EntropyInjectingTestFileSystem(). }

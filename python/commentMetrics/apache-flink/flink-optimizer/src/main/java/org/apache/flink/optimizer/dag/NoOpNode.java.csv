@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;5;;@Override protected void computeOperatorSpecificDefaultEstimates(DataStatistics statistics) {     this.estimatedNumRecords = getPredecessorNode().getEstimatedNumRecords().     this.estimatedOutputSize = getPredecessorNode().getEstimatedOutputSize(). }

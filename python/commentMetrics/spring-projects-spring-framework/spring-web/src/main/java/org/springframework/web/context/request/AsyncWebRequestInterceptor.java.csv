@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;1;1;/**  * Called instead of {@code postHandle} and {@code afterCompletion}, when the  * handler started handling the request concurrently.  *  * @param request the current request  */ ;/**  * Called instead of {@code postHandle} and {@code afterCompletion}, when the  * handler started handling the request concurrently.  *  * @param request the current request  */ void afterConcurrentHandlingStarted(WebRequest request).

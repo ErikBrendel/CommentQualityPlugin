@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;1;7;;@Test void springMvcTest(WebApplicationContext wac) throws Exception {     webAppContextSetup(wac).build().perform(get("/person/42").accept(MediaType.APPLICATION_JSON)).andExpect(status().isOk()).andExpect(jsonPath("$.name", is("Dilbert"))). }

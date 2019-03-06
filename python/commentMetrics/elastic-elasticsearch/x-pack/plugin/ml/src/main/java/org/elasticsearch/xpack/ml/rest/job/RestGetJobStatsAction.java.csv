@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getName() {     return "ml_get_job_stats_action". }
-false;protected;2;11;;@Override protected RestChannelConsumer prepareRequest(RestRequest restRequest, NodeClient client) throws IOException {     String jobId = restRequest.param(Job.ID.getPreferredName()).     if (Strings.isNullOrEmpty(jobId)) {         jobId = MetaData.ALL.     }     GetJobsStatsAction.Request request = new GetJobsStatsAction.Request(jobId).     request.setAllowNoJobs(restRequest.paramAsBoolean(GetJobsStatsAction.Request.ALLOW_NO_JOBS.getPreferredName(), request.allowNoJobs())).     return channel -> client.execute(GetJobsStatsAction.INSTANCE, request, new RestToXContentListener<>(channel)). }

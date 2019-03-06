@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;2;4;;@Override protected PagerDutyAccount createAccount(String name, Settings accountSettings) {     return new PagerDutyAccount(name, accountSettings, httpClient). }
-false;private,static;0;3;;private static List<Setting<?>> getDynamicSettings() {     return Arrays.asList(SETTING_DEFAULTS, SETTING_DEFAULT_ACCOUNT). }
-false;private,static;0;3;;private static List<Setting<?>> getSecureSettings() {     return Arrays.asList(SETTING_SECURE_SERVICE_API_KEY). }
-false;public,static;0;5;;public static List<Setting<?>> getSettings() {     List<Setting<?>> allSettings = new ArrayList<Setting<?>>(getDynamicSettings()).     allSettings.addAll(getSecureSettings()).     return allSettings. }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Return the HTTP method for the failed request.  */ ;/**  * Return the HTTP method for the failed request.  */ public String getHttpMethod() {     return this.method. }
-true;public;0;3;/**  * Return the list of supported HTTP methods.  */ ;/**  * Return the list of supported HTTP methods.  */ public Set<HttpMethod> getSupportedMethods() {     return this.supportedMethods. }

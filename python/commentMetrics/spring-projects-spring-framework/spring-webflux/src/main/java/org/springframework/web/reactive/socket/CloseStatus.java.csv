@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Return the status code.  */ ;/**  * Return the status code.  */ public int getCode() {     return this.code. }
-true;public;0;4;/**  * Return the reason, or {@code null} if none.  */ ;/**  * Return the reason, or {@code null} if none.  */ @Nullable public String getReason() {     return this.reason. }
-true;public;1;4;/**  * Create a new {@link CloseStatus} from this one with the specified reason.  * @param reason the reason  * @return a new {@link CloseStatus} instance  */ ;/**  * Create a new {@link CloseStatus} from this one with the specified reason.  * @param reason the reason  * @return a new {@link CloseStatus} instance  */ public CloseStatus withReason(String reason) {     Assert.hasText(reason, "Reason must not be empty").     return new CloseStatus(this.code, reason). }
-false;public;1;3;;public boolean equalsCode(CloseStatus other) {     return (this.code == other.code). }
-false;public;1;12;;@Override public boolean equals(Object other) {     if (this == other) {         return true.     }     if (!(other instanceof CloseStatus)) {         return false.     }     CloseStatus otherStatus = (CloseStatus) other.     return (this.code == otherStatus.code && ObjectUtils.nullSafeEquals(this.reason, otherStatus.reason)). }
-false;public;0;4;;@Override public int hashCode() {     return this.code * 29 + ObjectUtils.nullSafeHashCode(this.reason). }
-false;public;0;4;;@Override public String toString() {     return "CloseStatus[code=" + this.code + ", reason=" + this.reason + "]". }

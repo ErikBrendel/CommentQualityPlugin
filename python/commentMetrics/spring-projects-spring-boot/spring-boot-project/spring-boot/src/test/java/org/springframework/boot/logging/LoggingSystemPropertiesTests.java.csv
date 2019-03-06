@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Before public void captureSystemPropertyNames() {     this.systemPropertyNames = new HashSet<>(System.getProperties().keySet()). }
-false;public;0;4;;@After public void restoreSystemProperties() {     System.getProperties().keySet().retainAll(this.systemPropertyNames). }
-false;public;0;5;;@Test public void pidIsSet() {     new LoggingSystemProperties(new MockEnvironment()).apply(null).     assertThat(System.getProperty(LoggingSystemProperties.PID_KEY)).isNotNull(). }
-false;public;0;7;;@Test public void consoleLogPatternIsSet() {     new LoggingSystemProperties(new MockEnvironment().withProperty("logging.pattern.console", "console pattern")).apply(null).     assertThat(System.getProperty(LoggingSystemProperties.CONSOLE_LOG_PATTERN)).isEqualTo("console pattern"). }
-false;public;0;7;;@Test public void fileLogPatternIsSet() {     new LoggingSystemProperties(new MockEnvironment().withProperty("logging.pattern.file", "file pattern")).apply(null).     assertThat(System.getProperty(LoggingSystemProperties.FILE_LOG_PATTERN)).isEqualTo("file pattern"). }
-false;public;0;7;;@Test public void consoleLogPatternCanReferencePid() {     new LoggingSystemProperties(environment("logging.pattern.console", "${PID:unknown}")).apply(null).     assertThat(System.getProperty(LoggingSystemProperties.CONSOLE_LOG_PATTERN)).matches("[0-9]+"). }
-false;public;0;7;;@Test public void fileLogPatternCanReferencePid() {     new LoggingSystemProperties(environment("logging.pattern.file", "${PID:unknown}")).apply(null).     assertThat(System.getProperty(LoggingSystemProperties.FILE_LOG_PATTERN)).matches("[0-9]+"). }
-false;private;2;6;;private Environment environment(String key, Object value) {     StandardEnvironment environment = new StandardEnvironment().     environment.getPropertySources().addLast(new MapPropertySource("test", Collections.singletonMap(key, value))).     return environment. }

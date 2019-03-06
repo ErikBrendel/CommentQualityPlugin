@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;11;;@Test public void testSimpleTransform() throws Exception {     int out = template.requestBodyAndHeader("direct:start", "Random number", "max", "5", int.class).     assertTrue(out <= 5).     out = template.requestBodyAndHeader("direct:start", "Random number", "max", "20", int.class).     assertTrue(out <= 20).     out = template.requestBodyAndHeader("direct:start", "Random number", "max", "30", int.class).     assertTrue(out <= 30). }
-false;public;0;4;;public void configure() throws Exception {     from("direct:start").transform().simple("${random(1,${header.max})}"). }
-false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from("direct:start").transform().simple("${random(1,${header.max})}").         }     }. }

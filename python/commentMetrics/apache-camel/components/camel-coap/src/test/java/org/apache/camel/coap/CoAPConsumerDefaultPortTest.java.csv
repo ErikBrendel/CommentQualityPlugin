@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void testCoAPConsumerWithDefaultPort() throws Exception {     CoapClient client = createClient("/greeting", CoAPComponent.DEFAULT_PORT).     CoapResponse response = client.get().     assertEquals("Hello World", response.getResponseText()). }
-false;public;0;5;;@Override public void configure() throws Exception {     from("coap:localhost/greeting").setBody(constant("Hello World")). }
-false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("coap:localhost/greeting").setBody(constant("Hello World")).         }     }. }

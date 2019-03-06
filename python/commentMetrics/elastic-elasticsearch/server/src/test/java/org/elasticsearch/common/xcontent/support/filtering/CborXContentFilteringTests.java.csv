@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected XContentType getXContentType() {     return XContentType.CBOR. }
-false;protected;2;4;;@Override protected void assertFilterResult(XContentBuilder expected, XContentBuilder actual) {     assertXContentBuilderAsBytes(expected, actual). }

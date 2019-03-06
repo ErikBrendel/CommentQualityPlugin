@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Override @Before public void setUp() throws Exception {     super.setUp().     keyValue = (KeyValueProtocolImpl) applicationContext.getBean("keyValue").     testReflection = (TestReflectionImpl) applicationContext.getBean("testReflection"). }
-false;public;0;7;;@Override @After public void tearDown() throws Exception {     super.tearDown().     IOHelper.close(applicationContext). }
-false;protected;0;5;;@Override protected CamelContext createCamelContext() throws Exception {     applicationContext = new ClassPathXmlApplicationContext("org/apache/camel/component/avro/avro-netty-consumer.xml").     return SpringCamelContext.springCamelContext(applicationContext, true). }
-false;public;0;4;;@Override public boolean isUseRouteBuilder() {     return false. }

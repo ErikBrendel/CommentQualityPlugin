@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@After public void tearDown() {     if (this.context != null) {         this.context.close().     } }
-false;public;0;5;;@Test public void defaultResourceAndNoExplicitKey() {     load(DefaultLocationConfiguration.class).     assertThat(this.context.containsBean("foo")).isTrue(). }
-false;public;0;5;;@Test public void unknownDefaultLocationAndNoExplicitKey() {     load(UnknownDefaultLocationConfiguration.class).     assertThat(this.context.containsBean("foo")).isFalse(). }
-false;public;0;6;;@Test public void unknownDefaultLocationAndExplicitKeyToResource() {     load(UnknownDefaultLocationConfiguration.class, "spring.foo.test.config=logging.properties").     assertThat(this.context.containsBean("foo")).isTrue(). }
-false;private;2;7;;private void load(Class<?> config, String... environment) {     AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext().     TestPropertyValues.of(environment).applyTo(applicationContext).     applicationContext.register(config).     applicationContext.refresh().     this.context = applicationContext. }
-false;public;0;4;;@Bean public String foo() {     return "foo". }
-false;public;0;4;;@Bean public String foo() {     return "foo". }

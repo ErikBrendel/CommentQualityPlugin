@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected ReplicationResponse newResponseInstance() {     return new ReplicationResponse(). }
-false;protected;2;7;;@Override protected PrimaryResult<ShardFlushRequest, ReplicationResponse> shardOperationOnPrimary(ShardFlushRequest shardRequest, IndexShard primary) {     primary.flush(shardRequest.getRequest()).     logger.trace("{} flush request executed on primary", primary.shardId()).     return new PrimaryResult<ShardFlushRequest, ReplicationResponse>(shardRequest, new ReplicationResponse()). }
-false;protected;2;6;;@Override protected ReplicaResult shardOperationOnReplica(ShardFlushRequest request, IndexShard replica) {     replica.flush(request.getRequest()).     logger.trace("{} flush request executed on replica", replica.shardId()).     return new ReplicaResult(). }

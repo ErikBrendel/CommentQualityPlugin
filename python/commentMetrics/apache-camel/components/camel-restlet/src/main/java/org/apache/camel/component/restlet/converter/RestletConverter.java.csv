@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;4;;@Converter public static Method toMethod(String name) {     return Method.valueOf(name.toUpperCase()). }
-false;public,static;1;10;;@Converter public static Method[] toMethods(String name) {     String[] strings = name.split(",").     List<Method> methods = new ArrayList<>().     for (String string : strings) {         methods.add(toMethod(string)).     }     return methods.toArray(new Method[methods.size()]). }
-false;public,static;1;4;;@Converter public static MediaType toMediaType(String name) {     return MediaType.valueOf(name). }
-false;public,static;1;13;;@Converter public static MediaType[] toMediaTypes(final String name) {     final String[] strings = name.split(",").     final List<MediaType> answer = new ArrayList<>(strings.length).     for (String string : strings) {         final MediaType mediaType = toMediaType(string).         if (mediaType != null) {             answer.add(mediaType).         }     }     return answer.toArray(new MediaType[answer.size()]). }

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;15;;@Test public void testExchangeAsReturnTypeNotAllowed() throws Exception {     MockEndpoint result = getMockEndpoint("mock:result").     result.expectedMessageCount(0).     try {         template.sendBody("direct:in", "Hello World").         fail("Should have thrown IllegalStateException").     } catch (RuntimeCamelException e) {         assertTrue(e.getCause() instanceof IllegalStateException).     // expected     }     result.assertIsSatisfied(). }
-false;protected;0;5;;protected Context createJndiContext() throws Exception {     JndiContext answer = new JndiContext().     answer.bind("myBean", new MyBean()).     return answer. }
-false;public;0;5;;public void configure() throws Exception {     from("direct:in").to("bean:myBean").to("mock:result"). }
-false;protected;0;9;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from("direct:in").to("bean:myBean").to("mock:result").         }     }. }
-false;public;1;4;;public Exchange doSomething(Exchange exchange) {     // this method should not be called     return exchange. }

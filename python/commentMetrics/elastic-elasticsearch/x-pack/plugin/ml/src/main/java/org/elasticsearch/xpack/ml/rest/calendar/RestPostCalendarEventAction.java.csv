@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getName() {     return "ml_post_calendar_event_action". }
-false;protected;2;9;;@Override protected BaseRestHandler.RestChannelConsumer prepareRequest(RestRequest restRequest, NodeClient client) throws IOException {     String calendarId = restRequest.param(Calendar.ID.getPreferredName()).     XContentParser parser = restRequest.contentOrSourceParamParser().     PostCalendarEventsAction.Request request = PostCalendarEventsAction.Request.parseRequest(calendarId, parser).     return channel -> client.execute(PostCalendarEventsAction.INSTANCE, request, new RestToXContentListener<>(channel)). }

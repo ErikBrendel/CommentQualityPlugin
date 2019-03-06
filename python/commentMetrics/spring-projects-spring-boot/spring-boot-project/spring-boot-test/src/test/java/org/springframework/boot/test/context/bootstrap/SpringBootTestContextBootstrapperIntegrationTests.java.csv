@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void findConfigAutomatically() {     assertThat(this.config).isNotNull(). }
-false;public;0;4;;@Test public void contextWasCreatedViaSpringApplication() {     assertThat(this.context.getId()).startsWith("application"). }
-false;public;0;4;;@Test public void testConfigurationWasApplied() {     assertThat(this.context.getBean(ExampleBean.class)).isNotNull(). }
-false;public;0;4;;@Test public void defaultTestExecutionListenersPostProcessorShouldBeCalled() {     assertThat(this.defaultTestExecutionListenersPostProcessorCalled).isTrue(). }
-false;public;0;4;;@Bean public ExampleBean exampleBean() {     return new ExampleBean(). }

@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;public T get() {     if (value == null) {         throw new NoSuchElementException("No value present").     }     return value. }
-false;public;0;3;;public boolean isPresent() {     return value != null. }
-false;public;1;5;;public void ifPresent(Consumer<? super T> consumer) {     if (value != null) {         consumer.accept(value).     } }
-false;public;1;7;;public <R> Optional<R> map(Function<? super T, ? extends R> mapper) {     if (value == null) {         return Optional.empty().     } else {         return Optional.ofNullable(mapper.apply(value)).     } }
-false;public,static;1;3;;public static <T extends Serializable> SerializableOptional<T> of(@Nonnull T value) {     return new SerializableOptional<>(value). }
-false;public,static;1;7;;public static <T extends Serializable> SerializableOptional<T> ofNullable(@Nullable T value) {     if (value == null) {         return empty().     } else {         return of(value).     } }
-false;public,static;0;4;;@SuppressWarnings("unchecked") public static <T extends Serializable> SerializableOptional<T> empty() {     return (SerializableOptional<T>) EMPTY. }

@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;1;5;;@Override @Nonnull State createState(@Nonnull FunctionInitializationContext context) {     return context.getKeyedStateStore().getMapState(stateDesc). }
-false;public;0;7;;@SuppressWarnings("unchecked") @Override @Nonnull public TypeSerializer<Tuple2<String, String>> getUpdateSerializer() {     return new TupleSerializer(Tuple2.class, new TypeSerializer[] { StringSerializer.INSTANCE, StringSerializer.INSTANCE }). }
-false;public;0;5;;@Override @Nonnull public Tuple2<String, String> generateRandomUpdate() {     return Tuple2.of(KEYS.get(RANDOM.nextInt(KEYS.size())), randomString()). }
-false;;1;6;;@Override @Nonnull Map<String, String> getInternal(@Nonnull MapState<String, String> state) throws Exception {     return StreamSupport.stream(state.entries().spliterator(), false).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue)). }
-false;;2;4;;@Override void updateInternal(@Nonnull MapState<String, String> state, Tuple2<String, String> update) throws Exception {     state.put(update.f0, update.f1). }
-false;;2;11;;@Override @Nonnull Map<String, String> expected(@Nonnull List<ValueWithTs<Tuple2<String, String>>> updates, long currentTimestamp) {     return updates.stream().collect(Collectors.groupingBy(u -> u.getValue().f0)).entrySet().stream().map(e -> e.getValue().get(e.getValue().size() - 1)).filter(u -> !expired(u.getTimestamp(), currentTimestamp)).map(ValueWithTs::getValue).collect(Collectors.toMap(u -> u.f0, u -> u.f1)). }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected String getBlueprintDescriptor() {     return "org/apache/camel/test/blueprint/configadmin-endpoint.xml". }
-false;public;0;8;;@Test public void testConfigAdmin() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("Bye World").     template.sendBody("direct:start", "World").     assertMockEndpointsSatisfied(). }

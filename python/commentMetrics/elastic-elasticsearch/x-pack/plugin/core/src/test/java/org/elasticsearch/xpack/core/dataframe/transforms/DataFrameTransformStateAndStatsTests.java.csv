@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;5;;public static DataFrameTransformStateAndStats randomDataFrameTransformStateAndStats() {     return new DataFrameTransformStateAndStats(randomAlphaOfLengthBetween(1, 10), DataFrameTransformStateTests.randomDataFrameTransformState(), DataFrameIndexerTransformStatsTests.randomStats()). }
-false;protected;1;4;;@Override protected DataFrameTransformStateAndStats doParseInstance(XContentParser parser) throws IOException {     return DataFrameTransformStateAndStats.PARSER.apply(parser, null). }
-false;protected;0;4;;@Override protected DataFrameTransformStateAndStats createTestInstance() {     return randomDataFrameTransformStateAndStats(). }
-false;protected;0;4;;@Override protected Reader<DataFrameTransformStateAndStats> instanceReader() {     return DataFrameTransformStateAndStats::new. }

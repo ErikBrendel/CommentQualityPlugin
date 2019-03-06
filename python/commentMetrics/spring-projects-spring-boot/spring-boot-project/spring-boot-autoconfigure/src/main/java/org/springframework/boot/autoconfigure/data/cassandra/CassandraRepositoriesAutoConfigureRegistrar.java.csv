@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected Class<? extends Annotation> getAnnotation() {     return EnableCassandraRepositories.class. }
-false;protected;0;4;;@Override protected Class<?> getConfiguration() {     return EnableCassandraRepositoriesConfiguration.class. }
-false;protected;0;4;;@Override protected RepositoryConfigurationExtension getRepositoryConfigurationExtension() {     return new CassandraRepositoryConfigurationExtension(). }

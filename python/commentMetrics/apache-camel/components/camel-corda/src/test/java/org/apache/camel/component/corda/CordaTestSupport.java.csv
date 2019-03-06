@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public boolean isUseAdviceWith() {     return true. }
-false;protected;0;5;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry registry = super.createRegistry().     return registry. }
-false;protected;0;3;;protected String getUrl() {     return "corda://localhost:10006?username=user1&password=test". }
-false;protected;3;6;;protected Exchange createExchangeWithBodyAndHeader(Object body, String key, Object value) {     DefaultExchange exchange = new DefaultExchange(context).     exchange.getIn().setBody(body).     exchange.getIn().setHeader(key, value).     return exchange. }
-false;public,static;0;3;;@BeforeClass public static void startServer() throws Exception { }
-false;public,static;0;3;;@AfterClass public static void stopServer() throws Exception { }
-false;public;0;6;;@Override @Before public void setUp() throws Exception {     MockitoAnnotations.initMocks(this).     super.setUp(). }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;1;4;/**  * The list of field names to retrieve.  */ ;/**  * The list of field names to retrieve.  */ public FieldCapabilitiesRequestBuilder setFields(String... fields) {     request().fields(fields).     return this. }

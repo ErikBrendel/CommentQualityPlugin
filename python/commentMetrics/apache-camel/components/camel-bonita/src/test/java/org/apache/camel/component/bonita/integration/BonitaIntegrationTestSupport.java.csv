@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;11;;@Override protected CamelContext createCamelContext() throws Exception {     final CamelContext context = super.createCamelContext().     PropertiesComponent component = new PropertiesComponent().     component.setLocation("classpath:test-options.properties").     context.addComponent("properties", component).     return context. }

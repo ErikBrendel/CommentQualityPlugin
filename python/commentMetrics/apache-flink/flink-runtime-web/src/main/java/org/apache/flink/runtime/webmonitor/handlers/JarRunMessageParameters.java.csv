@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Override public Collection<MessageQueryParameter<?>> getQueryParameters() {     Collection<MessageQueryParameter<?>> pars = new ArrayList<>(Arrays.asList(allowNonRestoredStateQueryParameter, savepointPathQueryParameter)).     pars.addAll(super.getQueryParameters()).     return Collections.unmodifiableCollection(pars). }

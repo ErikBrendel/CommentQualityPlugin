@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;5;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().field("found", found).endObject().     return builder. }
-true;public;0;3;/**  * If <code>true</code>, indicates the {@link DeleteRoleMappingRequest#getName() named role-mapping} was found and deleted.  * Otherwise, the role-mapping could not be found.  */ ;/**  * If <code>true</code>, indicates the {@link DeleteRoleMappingRequest#getName() named role-mapping} was found and deleted.  * Otherwise, the role-mapping could not be found.  */ public boolean isFound() {     return this.found. }
-false;public;1;5;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     found = in.readBoolean(). }
-false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeBoolean(found). }

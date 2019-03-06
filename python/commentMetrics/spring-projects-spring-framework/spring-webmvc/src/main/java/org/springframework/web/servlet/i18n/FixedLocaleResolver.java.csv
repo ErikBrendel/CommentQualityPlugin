@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;8;;@Override public Locale resolveLocale(HttpServletRequest request) {     Locale locale = getDefaultLocale().     if (locale == null) {         locale = Locale.getDefault().     }     return locale. }
-false;public;0;5;;@Override @Nullable public Locale getLocale() {     return getDefaultLocale(). }
-false;public;0;4;;@Override public TimeZone getTimeZone() {     return getDefaultTimeZone(). }
-false;public;1;14;;@Override public LocaleContext resolveLocaleContext(HttpServletRequest request) {     return new TimeZoneAwareLocaleContext() {          @Override         @Nullable         public Locale getLocale() {             return getDefaultLocale().         }          @Override         public TimeZone getTimeZone() {             return getDefaultTimeZone().         }     }. }
-false;public;3;6;;@Override public void setLocaleContext(HttpServletRequest request, @Nullable HttpServletResponse response, @Nullable LocaleContext localeContext) {     throw new UnsupportedOperationException("Cannot change fixed locale - use a different locale resolution strategy"). }

@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;3;5;;@Override protected SqlStatsResponse newResponse(SqlStatsRequest request, List<SqlStatsResponse.NodeStatsResponse> nodes, List<FailedNodeException> failures) {     return new SqlStatsResponse(clusterService.getClusterName(), nodes, failures). }
-false;protected;2;4;;@Override protected SqlStatsRequest.NodeStatsRequest newNodeRequest(String nodeId, SqlStatsRequest request) {     return new SqlStatsRequest.NodeStatsRequest(request, nodeId). }
-false;protected;0;4;;@Override protected SqlStatsResponse.NodeStatsResponse newNodeResponse() {     return new SqlStatsResponse.NodeStatsResponse(). }
-false;protected;1;7;;@Override protected SqlStatsResponse.NodeStatsResponse nodeOperation(SqlStatsRequest.NodeStatsRequest request) {     SqlStatsResponse.NodeStatsResponse statsResponse = new SqlStatsResponse.NodeStatsResponse(clusterService.localNode()).     statsResponse.setStats(planExecutor.metrics().stats()).     return statsResponse. }

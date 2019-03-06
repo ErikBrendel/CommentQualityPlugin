@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;11;;@Test public void beanMethods() throws Exception {     MockAtomikosDataSourceBean bean = spy(new MockAtomikosDataSourceBean()).     bean.setBeanName("bean").     bean.afterPropertiesSet().     assertThat(bean.getUniqueResourceName()).isEqualTo("bean").     verify(bean).init().     verify(bean, never()).close().     bean.destroy().     verify(bean).close(). }
-false;public,synchronized;0;3;;@Override public synchronized void init() { }
-false;public;0;3;;@Override public void close() { }

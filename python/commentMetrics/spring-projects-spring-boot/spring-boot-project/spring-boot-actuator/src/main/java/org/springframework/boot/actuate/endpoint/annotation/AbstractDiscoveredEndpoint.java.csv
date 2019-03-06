@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public Object getEndpointBean() {     return this.endpointBean. }
-false;public;1;4;;@Override public boolean wasDiscoveredBy(Class<? extends EndpointDiscoverer<?, ?>> discoverer) {     return discoverer.isInstance(this.discoverer). }
-false;public;0;8;;@Override public String toString() {     ToStringCreator creator = new ToStringCreator(this).append("discoverer", this.discoverer.getClass().getName()).append("endpointBean", this.endpointBean.getClass().getName()).     appendFields(creator).     return creator.toString(). }
-false;protected;1;2;;protected void appendFields(ToStringCreator creator) { }

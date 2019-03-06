@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;public Collection<File> getUploadedFiles() throws IOException {     if (uploadDirectory == null) {         return Collections.emptyList().     }     FileAdderVisitor visitor = new FileAdderVisitor().     Files.walkFileTree(uploadDirectory, visitor).     return Collections.unmodifiableCollection(visitor.getContainedFiles()). }
-false;public;0;6;;@Override public void close() throws IOException {     if (uploadDirectory != null) {         FileUtils.deleteDirectory(uploadDirectory.toFile()).     } }
-false;;0;3;;Collection<File> getContainedFiles() {     return files. }
-false;public;2;6;;@Override public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {     FileVisitResult result = super.visitFile(file, attrs).     files.add(file.toFile()).     return result. }

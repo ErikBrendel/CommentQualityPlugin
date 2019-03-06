@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public String getKeyString() {     return keyString. }
-false;public;1;12;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     StringBasedID that = (StringBasedID) o.     return keyString.equals(that.keyString). }
-false;public;0;4;;@Override public int hashCode() {     return keyString.hashCode(). }
-false;public;0;4;;@Override public String toString() {     return keyString. }

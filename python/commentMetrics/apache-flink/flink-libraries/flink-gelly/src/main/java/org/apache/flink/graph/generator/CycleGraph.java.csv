@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Override public Graph<LongValue, NullValue, NullValue> generate() {     return new GridGraph(env).addDimension(vertexCount, true).setParallelism(parallelism).generate(). }

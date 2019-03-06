@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;2;7;;public static int numberOfShardsOfType(RoutingNodes nodes, ShardRoutingState state) {     int count = 0.     for (RoutingNode routingNode : nodes) {         count += routingNode.numberOfShardsWithState(state).     }     return count. }

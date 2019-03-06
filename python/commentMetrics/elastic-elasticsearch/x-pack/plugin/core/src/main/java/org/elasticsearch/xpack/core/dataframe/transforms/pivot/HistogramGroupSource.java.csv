@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;private,static;1;10;;private static ConstructingObjectParser<HistogramGroupSource, Void> createParser(boolean lenient) {     ConstructingObjectParser<HistogramGroupSource, Void> parser = new ConstructingObjectParser<>(NAME, lenient, (args) -> {         String field = (String) args[0].         double interval = (double) args[1].         return new HistogramGroupSource(field, interval).     }).     declareValuesSourceFields(parser, null).     parser.declareDouble(optionalConstructorArg(), INTERVAL).     return parser. }
-false;public;0;4;;@Override public Type getType() {     return Type.HISTOGRAM. }
-false;public,static;2;3;;public static HistogramGroupSource fromXContent(final XContentParser parser, boolean lenient) throws IOException {     return lenient ? LENIENT_PARSER.apply(parser, null) : STRICT_PARSER.apply(parser, null). }
-false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeOptionalString(field).     out.writeDouble(interval). }
-false;public;0;3;;public double getInterval() {     return interval. }
-false;public;2;10;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     if (field != null) {         builder.field(FIELD.getPreferredName(), field).     }     builder.field(INTERVAL.getPreferredName(), interval).     builder.endObject().     return builder. }
-false;public;1;15;;@Override public boolean equals(Object other) {     if (this == other) {         return true.     }     if (other == null || getClass() != other.getClass()) {         return false.     }     final HistogramGroupSource that = (HistogramGroupSource) other.     return Objects.equals(this.field, that.field) && Objects.equals(this.interval, that.interval). }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(field, interval). }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public boolean supports(Object handler) {     return WebHandler.class.isAssignableFrom(handler.getClass()). }
-false;public;2;6;;@Override public Mono<HandlerResult> handle(ServerWebExchange exchange, Object handler) {     WebHandler webHandler = (WebHandler) handler.     Mono<Void> mono = webHandler.handle(exchange).     return mono.then(Mono.empty()). }

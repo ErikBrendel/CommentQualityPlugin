@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;3;;public static JobExecutionResultResponseBody inProgress() {     return new JobExecutionResultResponseBody(QueueStatus.inProgress(), null). }
-false;public,static;1;4;;public static JobExecutionResultResponseBody created(final JobResult jobExecutionResult) {     return new JobExecutionResultResponseBody(QueueStatus.completed(), jobExecutionResult). }
-false;public;0;3;;public QueueStatus getStatus() {     return status. }
-false;public;0;4;;@Nullable public JobResult getJobExecutionResult() {     return jobExecutionResult. }
-false;public;0;4;;@Override public QueueStatus queueStatus() {     return status. }
-false;public;0;4;;@Override public JobResult resource() {     return jobExecutionResult. }

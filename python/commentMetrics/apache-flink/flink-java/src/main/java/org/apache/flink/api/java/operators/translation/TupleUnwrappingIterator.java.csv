@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;public void set(Iterator<Tuple2<K, T>> iterator) {     this.iterator = iterator.     this.iteratorAvailable = true. }
-false;public;0;3;;public K getLastKey() {     return lastKey. }
-false;public;0;4;;@Override public boolean hasNext() {     return iterator.hasNext(). }
-false;public;0;6;;@Override public T next() {     Tuple2<K, T> t = iterator.next().     this.lastKey = t.f0.     return t.f1. }
-false;public;0;4;;@Override public void remove() {     throw new UnsupportedOperationException(). }
-false;public;0;9;;@Override public Iterator<T> iterator() {     if (iteratorAvailable) {         iteratorAvailable = false.         return this.     } else {         throw new TraversableOnceException().     } }

@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;3;11;;protected Endpoint createEndpoint(String uri, String remaining, Map<String, Object> parameters) throws Exception {     XQueryEndpoint answer = new XQueryEndpoint(uri, this).     answer.setConfiguration(configuration).     answer.setConfigurationProperties(getConfigurationProperties()).     setProperties(answer, parameters).     answer.setResourceUri(remaining).     answer.setModuleURIResolver(getModuleURIResolver()).     return answer. }
-false;public;1;3;;public URL resolveModuleResource(String uri) throws Exception {     return ResourceHelper.resolveMandatoryResourceAsUrl(getCamelContext().getClassResolver(), uri). }
-false;public;0;3;;public ModuleURIResolver getModuleURIResolver() {     return moduleURIResolver. }
-true;public;1;3;/**  * To use the custom {@link ModuleURIResolver}  */ ;/**  * To use the custom {@link ModuleURIResolver}  */ public void setModuleURIResolver(ModuleURIResolver moduleURIResolver) {     this.moduleURIResolver = moduleURIResolver. }
-false;public;0;3;;public Configuration getConfiguration() {     return configuration. }
-true;public;1;3;/**  * To use a custom Saxon configuration  */ ;/**  * To use a custom Saxon configuration  */ public void setConfiguration(Configuration configuration) {     this.configuration = configuration. }
-false;public;0;3;;public Map<String, Object> getConfigurationProperties() {     return configurationProperties. }
-true;public;1;3;/**  * To set custom Saxon configuration properties  */ ;/**  * To set custom Saxon configuration properties  */ public void setConfigurationProperties(Map<String, Object> configurationProperties) {     this.configurationProperties = configurationProperties. }

@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public void configure() {     weaveAddLast().to("mock:matrix"). }
-false;;2;10;;void pipeMatrixStream(@Observes CamelContextStartingEvent event, ModelCamelContext context) throws Exception {     RouteReifier.adviceWith(context.getRouteDefinition("matrix"), context, new AdviceWithRouteBuilder() {          @Override         public void configure() {             weaveAddLast().to("mock:matrix").         }     }). }
-false;public;0;4;;@Override public void configure() {     from("seda:rescue?multipleConsumers=true").routeId("rescue mission").to("mock:zion"). }
-false;public;1;10;;@Test @Order(1) public void takeTheBluePill(@Uri("mock:matrix") MockEndpoint matrix) throws InterruptedException {     matrix.expectedMessageCount(1).     matrix.expectedBodiesReceived("Matrix » Take the blue pill!").     prompt.sendBody(neo, "Take the blue pill!").     assertIsSatisfied(2L, TimeUnit.SECONDS, matrix). }
-false;public;1;10;;@Test @Order(2) public void takeTheRedPill(@Uri("mock:zion") MockEndpoint zion) throws InterruptedException {     zion.expectedMessageCount(1).     zion.expectedHeaderReceived("location", "matrix").     prompt.sendBody(neo, "Take the red pill!").     assertIsSatisfied(2L, TimeUnit.SECONDS, zion). }
-false;public;1;7;;@Test @Order(3) public void verifyRescue(CamelContext context) {     Awaitility.await("Neo is still in the matrix!").atMost(5, TimeUnit.SECONDS).until(() -> ServiceStatus.Stopped.equals(context.getRouteController().getRouteStatus("terminal"))). }

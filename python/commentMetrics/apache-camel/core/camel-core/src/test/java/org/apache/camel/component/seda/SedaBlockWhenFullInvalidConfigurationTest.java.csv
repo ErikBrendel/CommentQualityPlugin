@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public boolean isUseRouteBuilder() {     return false. }
-false;public;0;5;;@Override public void configure() throws Exception {     from("direct:start").to("seda:foo?blockWhenFull=true&blockWhenFull=true"). }
-false;public;0;18;;@Test public void testInvalidConfiguration() throws Exception {     context.addRoutes(new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").to("seda:foo?blockWhenFull=true&blockWhenFull=true").         }     }).     try {         context.start().         fail("Should fail").     } catch (FailedToCreateRouteException e) {         ResolveEndpointFailedException refe = assertIsInstanceOf(ResolveEndpointFailedException.class, e.getCause()).         assertEquals("Value [true, true] converted to java.lang.Boolean cannot be null", refe.getCause().getMessage()).     } }

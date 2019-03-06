@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;3;;public void info(String jobId, String message) {     indexDoc(AuditMessage.newInfo(jobId, message, nodeName)). }
-false;public;2;3;;public void warning(String jobId, String message) {     indexDoc(AuditMessage.newWarning(jobId, message, nodeName)). }
-false;public;2;3;;public void error(String jobId, String message) {     indexDoc(AuditMessage.newError(jobId, message, nodeName)). }
-false;public;1;4;;@Override public void onResponse(IndexResponse indexResponse) {     LOGGER.trace("Successfully persisted audit message"). }
-false;public;1;4;;@Override public void onFailure(Exception e) {     LOGGER.debug("Error writing audit message", e). }
-false;private;1;16;;private void indexDoc(ToXContent toXContent) {     IndexRequest indexRequest = new IndexRequest(AuditorField.NOTIFICATIONS_INDEX).     indexRequest.source(toXContentBuilder(toXContent)).     indexRequest.timeout(TimeValue.timeValueSeconds(5)).     executeAsyncWithOrigin(client.threadPool().getThreadContext(), ML_ORIGIN, indexRequest, new ActionListener<IndexResponse>() {          @Override         public void onResponse(IndexResponse indexResponse) {             LOGGER.trace("Successfully persisted audit message").         }          @Override         public void onFailure(Exception e) {             LOGGER.debug("Error writing audit message", e).         }     }, client::index). }
-false;private;1;7;;private XContentBuilder toXContentBuilder(ToXContent toXContent) {     try (XContentBuilder jsonBuilder = jsonBuilder()) {         return toXContent.toXContent(jsonBuilder, ToXContent.EMPTY_PARAMS).     } catch (IOException e) {         throw new RuntimeException(e).     } }

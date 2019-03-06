@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;15;;@Override public void flatMap(Event event, Collector<String> out) throws Exception {     Long currentValue = sequenceValue.value().     if (currentValue == null) {         currentValue = 0L.     }     long nextValue = event.getSequenceNumber().     sequenceValue.update(nextValue).     if (!validator.check(currentValue, nextValue)) {         out.collect("Alert: " + currentValue + " -> " + nextValue + " (" + event.getKey() + ")").     } }
-false;public;1;7;;@Override public void open(Configuration parameters) {     ValueStateDescriptor<Long> sequenceStateDescriptor = new ValueStateDescriptor<>("sequenceState", Long.class).     sequenceValue = getRuntimeContext().getState(sequenceStateDescriptor). }
-false;;2;1;;boolean check(long current, long update).
-false;static;0;3;;static ValidatorFunction exactlyOnce() {     return (current, update) -> (update - current) == 1. }
-false;static;0;3;;static ValidatorFunction atLeastOnce() {     return (current, update) -> (update - current) <= 1. }

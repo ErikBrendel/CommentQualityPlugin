@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public byte[] serializeKey(T element) {     return null. }
-false;public;1;4;;@Override public byte[] serializeValue(T element) {     return serializationSchema.serialize(element). }
-false;public;1;4;;@Override public String getTargetTopic(T element) {     // we are never overriding the topic     return null. }

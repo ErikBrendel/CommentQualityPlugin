@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;public void writeTo(ByteBuf buf) {     buf.writeLong(this.lowerPart).     buf.writeLong(this.upperPart). }
-false;public,static;1;5;;public static IntermediateResultPartitionID fromByteBuf(ByteBuf buf) {     long lower = buf.readLong().     long upper = buf.readLong().     return new IntermediateResultPartitionID(lower, upper). }

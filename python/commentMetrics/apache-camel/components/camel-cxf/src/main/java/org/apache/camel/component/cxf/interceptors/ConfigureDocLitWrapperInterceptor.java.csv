@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;public void handleMessage(Message message) throws Fault {     message.put("org.apache.cxf.interceptor.DocLiteralInInterceptor.DocLiteralInInterceptor.keep-parameters-wrapper", unwrapParameterFlag).     message.put("org.apache.cxf.wsdl.interceptors.DocLiteralInInterceptor.DocLiteralInInterceptor.keep-parameters-wrapper", unwrapParameterFlag). }
-false;public;0;3;;public boolean isUnwrapParameterFlag() {     return unwrapParameterFlag. }
-false;public;1;3;;public void setUnwrapParameterFlag(boolean unwrapParameterFlag) {     this.unwrapParameterFlag = unwrapParameterFlag. }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;4;;@Override protected TypeComparator<IntValueArray> createComparator(boolean ascending) {     return new IntValueArrayComparator(ascending). }
-false;protected;0;4;;@Override protected TypeSerializer<IntValueArray> createSerializer() {     return new IntValueArraySerializer(). }
-false;protected;0;13;;@Override protected IntValueArray[] getSortedTestData() {     IntValueArray iva0 = new IntValueArray().     IntValueArray iva1 = new IntValueArray().     iva1.add(new IntValue(5)).     IntValueArray iva2 = new IntValueArray().     iva2.add(new IntValue(5)).     iva2.add(new IntValue(10)).     return new IntValueArray[] { iva0, iva1, iva2 }. }

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;private,static;1;6;;private static List<Runner> createRunners(Class<?> clazz) throws InitializationError {     List<Runner> runners = new ArrayList<>().     runners.add(new GradleDslClassRunner(clazz, new GradleBuild(Dsl.GROOVY))).     runners.add(new GradleDslClassRunner(clazz, new GradleBuild(Dsl.KOTLIN))).     return runners. }
-false;protected;0;6;;@Override protected Object createTest() throws Exception {     Object test = super.createTest().     configureTest(test).     return test. }
-false;private;1;3;;private void configureTest(Object test) throws Exception {     test.getClass().getField("gradleBuild").set(test, this.gradleBuild). }
-false;protected;0;4;;@Override protected String getName() {     return this.gradleBuild.getDsl().getName() + " DSL". }
-false;protected;1;4;;@Override protected String testName(FrameworkMethod method) {     return method.getName() + " [" + getName() + "]". }

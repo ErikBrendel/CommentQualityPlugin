@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void testForNoSideEffects() throws Exception {     long milliseconds = context.getTypeConverter().convertTo(long.class, "444").     assertEquals(Long.valueOf("444").longValue(), milliseconds). }
-false;public;0;5;;@Test public void testForNoSideEffects2() throws Exception {     long milliseconds = context.getTypeConverter().convertTo(long.class, "-72").     assertEquals(Long.valueOf("-72").longValue(), milliseconds). }
-false;public;0;5;;@Test public void testHMSTimePattern() throws Exception {     long milliseconds = context.getTypeConverter().convertTo(long.class, "1hours30m1s").     assertEquals(5401000, milliseconds). }
-false;public;0;5;;@Test public void testMTimePattern() throws Exception {     long milliseconds = context.getTypeConverter().convertTo(long.class, "30m55s").     assertEquals(1855000, milliseconds). }

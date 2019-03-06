@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;3;/**  * The SAML identifier (as a URI) for the Sp  */ ;/**  * The SAML identifier (as a URI) for the Sp  */ String getEntityId() {     return entityId. }
-false;;0;3;;String getAscUrl() {     return ascUrl. }
-false;;0;3;;String getLogoutUrl() {     return logoutUrl. }
-false;;0;3;;List<X509Credential> getEncryptionCredentials() {     return encryptionCredentials. }
-false;;0;3;;SigningConfiguration getSigningConfiguration() {     return signingConfiguration. }
-false;;0;3;;List<String> getReqAuthnCtxClassRef() {     return reqAuthnCtxClassRef. }

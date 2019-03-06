@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public void onComplete(Exchange exchange) {     nsqMessage.finished(). }
-false;public;1;4;;@Override public void onFailure(Exchange exchange) {     nsqMessage.requeue(requeueInterval). }
-false;public;0;4;;@Override public boolean allowHandover() {     return false. }

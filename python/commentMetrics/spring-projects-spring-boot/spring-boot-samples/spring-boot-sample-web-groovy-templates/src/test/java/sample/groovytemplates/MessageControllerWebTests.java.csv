@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Before public void setup() {     this.mockMvc = MockMvcBuilders.webAppContextSetup(this.wac).build(). }
-false;public;0;5;;@Test public void testHome() throws Exception {     this.mockMvc.perform(get("/")).andExpect(status().isOk()).andExpect(content().string(containsString("<title>Messages"))). }
-false;public;0;6;;@Test public void testCreate() throws Exception {     this.mockMvc.perform(post("/").param("text", "FOO text").param("summary", "FOO")).andExpect(status().isFound()).andExpect(header().string("location", RegexMatcher.matches("/[0-9]+"))). }
-false;public;0;6;;@Test public void testCreateValidation() throws Exception {     this.mockMvc.perform(post("/").param("text", "").param("summary", "")).andExpect(status().isOk()).andExpect(content().string(containsString("is required"))). }
-false;public;1;4;;@Override public boolean matchesSafely(String item) {     return Pattern.compile(this.regex).matcher(item).find(). }
-false;public;2;4;;@Override public void describeMismatchSafely(String item, Description mismatchDescription) {     mismatchDescription.appendText("was \"").appendText(item).appendText("\""). }
-false;public;1;5;;@Override public void describeTo(Description description) {     description.appendText("a string that matches regex: ").appendText(this.regex). }
-false;public,static;1;3;;public static org.hamcrest.Matcher<java.lang.String> matches(String regex) {     return new RegexMatcher(regex). }

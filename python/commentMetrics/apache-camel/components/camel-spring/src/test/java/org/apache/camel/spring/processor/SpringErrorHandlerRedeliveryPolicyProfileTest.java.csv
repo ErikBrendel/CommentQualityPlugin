@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/spring/processor/SpringErrorHandlerRedeliveryPolicyProfileTest.xml"). }
-false;public;0;9;;@Test public void testErrorHandlerRedeliveryPolicyProfile() throws Exception {     try {         template.sendBody("direct:start", "Hello World").         fail("Should have thrown an exception").     } catch (Exception e) {     // expected     } }

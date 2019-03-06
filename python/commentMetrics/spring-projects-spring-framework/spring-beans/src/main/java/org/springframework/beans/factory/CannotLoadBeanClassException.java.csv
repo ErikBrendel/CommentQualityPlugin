@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;4;/**  * Return the description of the resource that the bean  * definition came from.  */ ;/**  * Return the description of the resource that the bean  * definition came from.  */ @Nullable public String getResourceDescription() {     return this.resourceDescription. }
-true;public;0;3;/**  * Return the name of the bean requested.  */ ;/**  * Return the name of the bean requested.  */ public String getBeanName() {     return this.beanName. }
-true;public;0;4;/**  * Return the name of the class we were trying to load.  */ ;/**  * Return the name of the class we were trying to load.  */ @Nullable public String getBeanClassName() {     return this.beanClassName. }

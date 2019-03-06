@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public boolean isUseRouteBuilder() {     return false. }
-false;public;0;4;;@Test public void testFoo() throws Exception { // noop }
-false;public;0;12;;@Override public void configure() throws Exception {     from("direct:foo").routeId("foo").to("mock:foo").     from("direct:bar").routeId("bar").to("mock:bar").     // duplicate route id on purpose     from("direct:baz").routeId("foo").to("mock:baz"). }
-false;protected;0;17;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:foo").routeId("foo").to("mock:foo").             from("direct:bar").routeId("bar").to("mock:bar").             // duplicate route id on purpose             from("direct:baz").routeId("foo").to("mock:baz").         }     }. }

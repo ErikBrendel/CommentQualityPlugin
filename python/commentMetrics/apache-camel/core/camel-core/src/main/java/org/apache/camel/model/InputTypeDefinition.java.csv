@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Get input type URN.  * @return input type URN  */ ;/**  * Get input type URN.  * @return input type URN  */ public String getUrn() {     return urn. }
-true;public;1;3;/**  * Set input type URN.  * @param urn input type URN  */ ;/**  * Set input type URN.  * @param urn input type URN  */ public void setUrn(String urn) {     this.urn = urn. }
-true;public;1;3;/**  * Set input type via Java Class.  * @param clazz Java Class  */ ;/**  * Set input type via Java Class.  * @param clazz Java Class  */ public void setJavaClass(Class<?> clazz) {     this.urn = "java:" + clazz.getName(). }
-true;public;0;3;/**  * Get if validation is required for this input type.  * @return true if validate  */ ;/**  * Get if validation is required for this input type.  * @return true if validate  */ public boolean isValidate() {     return this.validate. }
-true;public;1;3;/**  * Set if validation is required for this input type.  * @param validate true if validate  */ ;/**  * Set if validation is required for this input type.  * @param validate true if validate  */ public void setValidate(boolean validate) {     this.validate = validate. }
-false;public;0;4;;@Override public String toString() {     return "inputType[" + urn + "]". }
-false;public;0;4;;@Override public String getShortName() {     return "inputType". }
-false;public;0;4;;@Override public String getLabel() {     return "inputType[" + urn + "]". }

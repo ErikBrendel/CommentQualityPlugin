@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public Boolean isFromBase64(Exchange exchange) {     return fromBase64. }
-true;public;1;3;/**  * If <tt>true</tt> then the CMS message is base 64 encoded and must be  * decoded during the processing. Default value is <code>false</code>.  */ ;/**  * If <tt>true</tt> then the CMS message is base 64 encoded and must be  * decoded during the processing. Default value is <code>false</code>.  */ public void setFromBase64(Boolean base64) {     this.fromBase64 = base64. }

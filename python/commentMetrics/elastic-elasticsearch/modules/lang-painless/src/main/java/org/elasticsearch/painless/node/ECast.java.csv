@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;1;4;;@Override void extractVariables(Set<String> variables) {     throw new IllegalStateException("Illegal tree structure."). }
-false;;1;4;;@Override void analyze(Locals locals) {     throw createError(new IllegalStateException("Illegal tree structure.")). }
-false;;2;6;;@Override void write(MethodWriter writer, Globals globals) {     child.write(writer, globals).     writer.writeDebugInfo(location).     writer.writeCast(cast). }
-false;public;0;4;;@Override public String toString() {     return singleLineToString(PainlessLookupUtility.typeToCanonicalTypeName(cast.targetType), child). }

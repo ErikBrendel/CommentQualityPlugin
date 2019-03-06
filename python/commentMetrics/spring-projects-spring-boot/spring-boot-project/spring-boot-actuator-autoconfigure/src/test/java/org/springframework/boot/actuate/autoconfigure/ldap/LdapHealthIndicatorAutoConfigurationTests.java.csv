@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void runShouldCreateIndicator() {     this.contextRunner.run((context) -> assertThat(context).hasSingleBean(LdapHealthIndicator.class).doesNotHaveBean(ApplicationHealthIndicator.class)). }
-false;public;0;7;;@Test public void runWhenDisabledShouldNotCreateIndicator() {     this.contextRunner.withPropertyValues("management.health.ldap.enabled:false").run((context) -> assertThat(context).doesNotHaveBean(LdapHealthIndicator.class).hasSingleBean(ApplicationHealthIndicator.class)). }
-false;public;0;4;;@Bean public LdapOperations ldapOperations() {     return mock(LdapOperations.class). }

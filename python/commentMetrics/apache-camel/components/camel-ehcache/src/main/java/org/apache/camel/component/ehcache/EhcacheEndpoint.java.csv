@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public Producer createProducer() throws Exception {     return new EhcacheProducer(this, this.cacheName, configuration). }
-false;public;1;4;;@Override public Consumer createConsumer(Processor processor) throws Exception {     return new EhcacheConsumer(this, this.cacheName, configuration, processor). }
-false;public;0;4;;@Override public boolean isSingleton() {     return true. }
-false;protected;0;5;;@Override protected void doStart() throws Exception {     cacheManager.start().     super.doStart(). }
-false;protected;0;5;;@Override protected void doStop() throws Exception {     super.doStop().     cacheManager.stop(). }
-false;;0;3;;EhcacheManager getManager() {     return cacheManager. }
-false;;0;3;;EhcacheConfiguration getConfiguration() {     return configuration. }

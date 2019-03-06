@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void foundImmediatelyWithString() {     RollbackRuleAttribute rr = new RollbackRuleAttribute(java.lang.Exception.class.getName()).     assertEquals(0, rr.getDepth(new Exception())). }
-false;public;0;5;;@Test public void foundImmediatelyWithClass() {     RollbackRuleAttribute rr = new RollbackRuleAttribute(Exception.class).     assertEquals(0, rr.getDepth(new Exception())). }
-false;public;0;5;;@Test public void notFound() {     RollbackRuleAttribute rr = new RollbackRuleAttribute(java.io.IOException.class.getName()).     assertEquals(-1, rr.getDepth(new MyRuntimeException(""))). }
-false;public;0;6;;@Test public void ancestry() {     RollbackRuleAttribute rr = new RollbackRuleAttribute(java.lang.Exception.class.getName()).     // Exception -> Runtime -> NestedRuntime -> MyRuntimeException     assertThat(rr.getDepth(new MyRuntimeException("")), equalTo(3)). }
-false;public;0;8;;@Test public void alwaysTrueForThrowable() {     RollbackRuleAttribute rr = new RollbackRuleAttribute(java.lang.Throwable.class.getName()).     assertTrue(rr.getDepth(new MyRuntimeException("")) > 0).     assertTrue(rr.getDepth(new IOException()) > 0).     assertTrue(rr.getDepth(new FatalBeanException(null, null)) > 0).     assertTrue(rr.getDepth(new RuntimeException()) > 0). }
-false;public;0;4;;@Test(expected = IllegalArgumentException.class) public void ctorArgMustBeAThrowableClassWithNonThrowableType() {     new RollbackRuleAttribute(StringBuffer.class). }
-false;public;0;4;;@Test(expected = IllegalArgumentException.class) public void ctorArgMustBeAThrowableClassWithNullThrowableType() {     new RollbackRuleAttribute((Class<?>) null). }
-false;public;0;4;;@Test(expected = IllegalArgumentException.class) public void ctorArgExceptionStringNameVersionWithNull() {     new RollbackRuleAttribute((String) null). }

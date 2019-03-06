@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;16;;@Override public DataSet<Vertex<K, VV>> run(Graph<K, VV, EV> graph) throws Exception {     // get type information for vertex value     TypeInformation<VV> valueTypeInfo = ((TupleTypeInfo<?>) graph.getVertices().getType()).getTypeAt(1).     Graph<K, VV, NullValue> undirectedGraph = graph.mapEdges(new MapTo<>(NullValue.getInstance())).getUndirected().     return undirectedGraph.runGatherSumApplyIteration(new GatherNeighborIds<>(valueTypeInfo), new SelectMinId<>(valueTypeInfo), new UpdateComponentId<>(valueTypeInfo), maxIterations).getVertices(). }
-false;public;1;3;;public VV gather(Neighbor<VV, NullValue> neighbor) {     return neighbor.getNeighborValue(). }
-false;public;0;4;;@Override public TypeInformation<VV> getProducedType() {     return typeInformation. }
-false;public;2;3;;public VV sum(VV newValue, VV currentValue) {     return newValue.compareTo(currentValue) < 0 ? newValue : currentValue. }
-false;public;0;4;;@Override public TypeInformation<VV> getProducedType() {     return typeInformation. }
-false;public;2;5;;public void apply(VV summedValue, VV origValue) {     if (summedValue.compareTo(origValue) < 0) {         setResult(summedValue).     } }
-false;public;0;4;;@Override public TypeInformation<VV> getProducedType() {     return typeInformation. }

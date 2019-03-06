@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String isMockEndpointsAndSkip() {     return "seda*". }
-false;protected;0;4;;@Override protected String getBlueprintDescriptor() {     return "org/apache/camel/test/blueprint/MockEndpointsAndSkipTest.xml". }
-false;public;0;8;;@Test public void testHelloWorld() throws Exception {     getMockEndpoint("mock:seda:foo").expectedBodiesReceived("Hello World").     template.sendBody("direct:start", "Hello World").     assertMockEndpointsSatisfied(). }

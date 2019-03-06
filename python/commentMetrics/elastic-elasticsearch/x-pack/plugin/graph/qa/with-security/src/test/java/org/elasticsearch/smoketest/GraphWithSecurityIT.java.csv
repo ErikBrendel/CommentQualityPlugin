@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;4;;@ParametersFactory public static Iterable<Object[]> parameters() throws Exception {     return ESClientYamlSuiteTestCase.createParameters(). }
-false;protected;0;3;;protected String[] getCredentials() {     return new String[] { "graph_explorer", "x-pack-test-password" }. }
-false;protected;0;8;;@Override protected Settings restClientSettings() {     String[] creds = getCredentials().     String token = basicAuthHeaderValue(creds[0], new SecureString(creds[1].toCharArray())).     return Settings.builder().put(ThreadContext.PREFIX + ".Authorization", token).build(). }
-false;protected;0;7;;@Override protected Settings restAdminSettings() {     String token = basicAuthHeaderValue(TEST_ADMIN_USERNAME, new SecureString(TEST_ADMIN_PASSWORD.toCharArray())).     return Settings.builder().put(ThreadContext.PREFIX + ".Authorization", token).build(). }

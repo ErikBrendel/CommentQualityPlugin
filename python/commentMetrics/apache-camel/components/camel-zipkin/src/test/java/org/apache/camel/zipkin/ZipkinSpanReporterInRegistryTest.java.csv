@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;9;;@Override protected CamelContext createCamelContext() throws Exception {     CamelContext context = super.createCamelContext().     zipkin = new ZipkinTracer().     zipkin.init(context).     return context. }
-false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry registry = super.createRegistry().     registry.bind("span", Reporter.NOOP).     return registry. }
-false;public;0;5;;@Test public void testZipkinConfiguration() throws Exception {     assertNotNull(zipkin.getSpanReporter()).     assertTrue(zipkin.getSpanReporter() == Reporter.NOOP). }

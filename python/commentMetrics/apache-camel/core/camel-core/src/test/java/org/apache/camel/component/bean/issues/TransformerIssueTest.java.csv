@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void testTransformer() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("test").     template.sendBody("direct:start", "Hello World").     assertMockEndpointsSatisfied(). }
-false;public;0;6;;@Override public void configure() throws Exception {     from("direct:start").bean(TransformerImpl.class, "transform").to("mock:result"). }
-false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").bean(TransformerImpl.class, "transform").to("mock:result").         }     }. }

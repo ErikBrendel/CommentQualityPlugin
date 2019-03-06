@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;4;;@Override protected String getBeanClassName(Element element) {     return "org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler". }
-false;protected;2;7;;@Override protected void doParse(Element element, BeanDefinitionBuilder builder) {     String poolSize = element.getAttribute("pool-size").     if (StringUtils.hasText(poolSize)) {         builder.addPropertyValue("poolSize", poolSize).     } }

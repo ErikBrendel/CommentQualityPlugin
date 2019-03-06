@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * Returns the class of the response message.  *  * @return class of the response message  */ ;/**  * Returns the class of the response message.  *  * @return class of the response message  */ Class<P> getResponseClass().
-true;;0;1;/**  * Returns the http status code for the response.  *  * @return http status code of the response  */ ;/**  * Returns the http status code for the response.  *  * @return http status code of the response  */ HttpResponseStatus getResponseStatusCode().
-true;default;0;3;/**  * Returns the collection of type parameters for the response type.  *  * @return Collection of type parameters for the response type  */ ;/**  * Returns the collection of type parameters for the response type.  *  * @return Collection of type parameters for the response type  */ default Collection<Class<?>> getResponseTypeParameters() {     return Collections.emptyList(). }
-true;;0;1;/**  * Returns the description for this header.  *  * @return description for the header  */ ;/**  * Returns the description for this header.  *  * @return description for the header  */ String getDescription().

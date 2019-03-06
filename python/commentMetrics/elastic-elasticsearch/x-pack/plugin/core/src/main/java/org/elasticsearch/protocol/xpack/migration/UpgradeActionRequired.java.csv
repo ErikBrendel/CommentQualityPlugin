@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;3;;public static UpgradeActionRequired fromString(String value) {     return UpgradeActionRequired.valueOf(value.toUpperCase(Locale.ROOT)). }
-false;public,static;1;3;;public static UpgradeActionRequired readFromStream(StreamInput in) throws IOException {     return in.readEnum(UpgradeActionRequired.class). }
-false;public;1;4;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeEnum(this). }
-false;public;0;4;;@Override public String toString() {     return name().toLowerCase(Locale.ROOT). }

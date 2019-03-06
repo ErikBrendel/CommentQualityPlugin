@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;4;6;;@Override protected Aggregator createInternal(Aggregator parent, boolean collectsFromSingleBucket, List<PipelineAggregator> pipelineAggregators, Map<String, Object> metaData) throws IOException {     return new CompositeAggregator(name, factories, context, parent, pipelineAggregators, metaData, size, sources, afterKey). }

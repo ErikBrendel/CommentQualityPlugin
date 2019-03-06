@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected boolean createTestData() {     return false. }
-false;public;0;9;;@Test public void testConsumeIdleMessages() throws Exception {     Thread.sleep(110).     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMinimumMessageCount(2).     assertMockEndpointsSatisfied().     assertTrue(mock.getExchanges().get(0).getIn().getBody() == null).     assertTrue(mock.getExchanges().get(1).getIn().getBody() == null). }
-false;public;0;6;;@Override public void configure() throws Exception {     from("mybatis:selectAllAccounts?statementType=SelectList" + "&sendEmptyMessageWhenIdle=true").to("mock:result"). }
-false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("mybatis:selectAllAccounts?statementType=SelectList" + "&sendEmptyMessageWhenIdle=true").to("mock:result").         }     }. }

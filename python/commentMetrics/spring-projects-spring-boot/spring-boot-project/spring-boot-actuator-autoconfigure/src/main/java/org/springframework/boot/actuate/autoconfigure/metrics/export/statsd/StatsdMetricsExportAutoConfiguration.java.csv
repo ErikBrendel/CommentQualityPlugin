@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;@Bean @ConditionalOnMissingBean public StatsdConfig statsdConfig(StatsdProperties statsdProperties) {     return new StatsdPropertiesConfigAdapter(statsdProperties). }
-false;public;2;6;;@Bean @ConditionalOnMissingBean public StatsdMeterRegistry statsdMeterRegistry(StatsdConfig statsdConfig, Clock clock) {     return new StatsdMeterRegistry(statsdConfig, clock). }
-false;public;0;4;;@Bean public StatsdMetrics statsdMetrics() {     return new StatsdMetrics(). }

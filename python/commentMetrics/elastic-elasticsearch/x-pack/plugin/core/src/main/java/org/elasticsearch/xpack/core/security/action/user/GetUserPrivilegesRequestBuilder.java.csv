@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;1;4;/**  * Set the username of the user whose privileges should be retrieved. Must not be {@code null}  */ ;/**  * Set the username of the user whose privileges should be retrieved. Must not be {@code null}  */ public GetUserPrivilegesRequestBuilder username(String username) {     request.username(username).     return this. }

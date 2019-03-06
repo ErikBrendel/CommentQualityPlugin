@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public void testExactlyOnceRegularSink() throws Exception { // Kafka08 does not support exactly once semantic }
-false;public;0;4;;@Override public void testExactlyOnceCustomOperator() throws Exception { // Kafka08 does not support exactly once semantic }
-false;public;0;4;;@Override public void testOneToOneAtLeastOnceRegularSink() throws Exception { // TODO: enable this for Kafka 0.8 - now it hangs indefinitely }
-false;public;0;4;;@Override public void testOneToOneAtLeastOnceCustomOperator() throws Exception { // Disable this test since FlinkKafka08Producer doesn't support custom operator mode }

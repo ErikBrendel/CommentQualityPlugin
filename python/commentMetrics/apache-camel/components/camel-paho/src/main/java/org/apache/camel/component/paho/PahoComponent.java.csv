@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;3;17;;@Override protected Endpoint createEndpoint(String uri, String remaining, Map<String, Object> parameters) throws Exception {     PahoEndpoint answer = new PahoEndpoint(uri, remaining, this).     if (brokerUrl != null) {         answer.setBrokerUrl(brokerUrl).     }     if (clientId != null) {         answer.setClientId(clientId).     }     if (connectOptions != null) {         answer.setConnectOptions(connectOptions).     }     setProperties(answer, parameters).     return answer. }
-false;public;0;3;;// Getters and setters public String getBrokerUrl() {     return brokerUrl. }
-true;public;1;3;/**  * The URL of the MQTT broker.  */ ;/**  * The URL of the MQTT broker.  */ public void setBrokerUrl(String brokerUrl) {     this.brokerUrl = brokerUrl. }
-false;public;0;3;;public String getClientId() {     return clientId. }
-true;public;1;3;/**  * MQTT client identifier.  */ ;/**  * MQTT client identifier.  */ public void setClientId(String clientId) {     this.clientId = clientId. }
-false;public;0;3;;public MqttConnectOptions getConnectOptions() {     return connectOptions. }
-true;public;1;3;/**  * Client connection options  */ ;/**  * Client connection options  */ public void setConnectOptions(MqttConnectOptions connectOptions) {     this.connectOptions = connectOptions. }

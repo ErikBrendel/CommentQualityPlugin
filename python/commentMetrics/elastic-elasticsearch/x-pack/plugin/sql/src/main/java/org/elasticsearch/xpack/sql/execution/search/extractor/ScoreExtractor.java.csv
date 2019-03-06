@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public void writeTo(StreamOutput out) throws IOException { // Nothing to write }
-false;public;0;4;;@Override public String getWriteableName() {     return NAME. }
-false;public;1;4;;@Override public Object extract(SearchHit hit) {     return hit.getScore(). }
-false;public;0;4;;@Override public String hitName() {     return null. }
-false;public;1;7;;@Override public boolean equals(Object obj) {     if (obj == null || obj.getClass() != getClass()) {         return false.     }     return true. }
-false;public;0;4;;@Override public int hashCode() {     return 31. }
-false;public;0;4;;@Override public String toString() {     return "SCORE". }

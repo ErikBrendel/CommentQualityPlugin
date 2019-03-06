@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Reverses the direction of this Edge.  * @return a new Edge, where the source is the original Edge's target  * and the target is the original Edge's source.  */ ;/**  * Reverses the direction of this Edge.  * @return a new Edge, where the source is the original Edge's target  * and the target is the original Edge's source.  */ public Edge<K, V> reverse() {     return new Edge<>(this.f1, this.f0, this.f2). }
-false;public;1;3;;public void setSource(K source) {     this.f0 = source. }
-false;public;0;3;;public K getSource() {     return this.f0. }
-false;public;1;3;;public void setTarget(K target) {     this.f1 = target. }
-false;public;0;3;;public K getTarget() {     return f1. }
-false;public;1;3;;public void setValue(V value) {     this.f2 = value. }
-false;public;0;3;;public V getValue() {     return f2. }

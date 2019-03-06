@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;20;;@SuppressWarnings("deprecation") @Override public void run() {     final long deadline = System.nanoTime() / 1_000_000L + timeout.     long now.     while (toKill.isAlive() && (now = (System.nanoTime() / 1_000_000L)) < deadline) {         try {             toKill.join(deadline - now).         } catch (InterruptedException e) {         // ignore here, our job is important!         }     }     // this is harsh, but this watchdog is a last resort     if (toKill.isAlive()) {         toKill.stop().     } }

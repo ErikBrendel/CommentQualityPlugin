@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,final;0;3;/**  * Get the {@code ApplicationContext} that the event was raised for.  */ ;/**  * Get the {@code ApplicationContext} that the event was raised for.  */ public final ApplicationContext getApplicationContext() {     return (ApplicationContext) getSource(). }

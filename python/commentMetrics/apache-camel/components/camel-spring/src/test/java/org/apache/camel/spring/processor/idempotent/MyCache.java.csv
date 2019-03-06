@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;4;;@Override public void put(Object key, Object value) {     cache.put(key, value). }
-false;public;2;5;;@Override public ValueWrapper putIfAbsent(Object key, Object value) {     Object answer = cache.putIfAbsent(key, value).     return answer != null ? new SimpleValueWrapper(answer) : null. }
-false;public;1;5;;@Override public ValueWrapper get(Object key) {     Object answer = cache.get(key).     return answer != null ? new SimpleValueWrapper(answer) : null. }

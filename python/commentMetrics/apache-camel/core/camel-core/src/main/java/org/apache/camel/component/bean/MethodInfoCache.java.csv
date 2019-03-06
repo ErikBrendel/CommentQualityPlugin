@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,synchronized;1;8;;public synchronized MethodInfo getMethodInfo(Method method) {     MethodInfo answer = methodCache.get(method).     if (answer == null) {         answer = createMethodInfo(method).         methodCache.put(method, answer).     }     return answer. }
-false;protected;1;5;;protected MethodInfo createMethodInfo(Method method) {     Class<?> declaringClass = method.getDeclaringClass().     BeanInfo info = getBeanInfo(declaringClass).     return info.getMethodInfo(method). }
-false;protected,synchronized;1;8;;protected synchronized BeanInfo getBeanInfo(Class<?> declaringClass) {     BeanInfo beanInfo = classCache.get(declaringClass).     if (beanInfo == null) {         beanInfo = createBeanInfo(declaringClass).         classCache.put(declaringClass, beanInfo).     }     return beanInfo. }
-false;protected;1;3;;protected BeanInfo createBeanInfo(Class<?> declaringClass) {     return new BeanInfo(camelContext, declaringClass). }
-false;protected,static;1;5;;@SuppressWarnings("unchecked") protected static <K, V> Map<K, V> createLruCache(int size) {     // use a soft cache     return LRUCacheFactory.newLRUSoftCache(size). }
-false;private,static;1;3;;private static Map<Class<?>, BeanInfo> createClassCache(int size) {     return createLruCache(size). }
-false;private,static;1;3;;private static Map<Method, MethodInfo> createMethodCache(int size) {     return createLruCache(size). }

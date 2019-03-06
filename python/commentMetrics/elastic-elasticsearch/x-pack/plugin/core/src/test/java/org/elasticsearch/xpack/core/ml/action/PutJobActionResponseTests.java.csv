@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;5;;@Override protected Response createTestInstance() {     Job.Builder builder = buildJobBuilder(randomValidJobId()).     return new Response(builder.build()). }
-false;protected;0;4;;@Override protected Response createBlankInstance() {     return new Response(). }

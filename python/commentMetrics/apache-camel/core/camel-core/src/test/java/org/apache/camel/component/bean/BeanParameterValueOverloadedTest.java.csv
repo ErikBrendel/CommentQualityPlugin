@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void testBeanParameterValueBoolean() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("Hello World").     template.sendBody("direct:start", "World").     assertMockEndpointsSatisfied(). }
-false;public;0;8;;@Test public void testBeanParameterValueBoolean2() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("Bye World").     template.sendBody("direct:start2", "World").     assertMockEndpointsSatisfied(). }
-false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry jndi = super.createRegistry().     jndi.bind("foo", new MyBean()).     return jndi. }
-false;public;0;10;;@Override public void configure() throws Exception {     from("direct:start").to("bean:foo?method=bar(*,true)").to("mock:result").     from("direct:start2").to("bean:foo?method=bar(${body},false,true)").to("mock:result"). }
-false;protected;0;15;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").to("bean:foo?method=bar(*,true)").to("mock:result").             from("direct:start2").to("bean:foo?method=bar(${body},false,true)").to("mock:result").         }     }. }
-false;public;2;7;;public String bar(String body, boolean hello) {     if (hello) {         return "Hello " + body.     } else {         return body.     } }
-false;public;3;9;;public String bar(String body, boolean hello, boolean bye) {     if (hello) {         return "Hi " + body.     } else if (bye) {         return "Bye " + body.     } else {         return body.     } }

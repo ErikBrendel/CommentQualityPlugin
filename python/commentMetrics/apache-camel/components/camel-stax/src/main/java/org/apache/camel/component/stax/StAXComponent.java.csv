@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;3;7;;@Override protected Endpoint createEndpoint(String uri, String remaining, Map<String, Object> parameters) throws Exception {     StAXEndpoint answer = new StAXEndpoint(uri, this).     answer.setContentHandlerClass(remaining).     setProperties(answer, parameters).     return answer. }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;protected;2;4;/**  * Always returns {@code true}.  */ ;/**  * Always returns {@code true}.  */ @Override protected boolean includeReadAttribute(Method method, String beanKey) {     return true. }
-true;protected;2;4;/**  * Always returns {@code true}.  */ ;/**  * Always returns {@code true}.  */ @Override protected boolean includeWriteAttribute(Method method, String beanKey) {     return true. }
-true;protected;2;4;/**  * Always returns {@code true}.  */ ;/**  * Always returns {@code true}.  */ @Override protected boolean includeOperation(Method method, String beanKey) {     return true. }

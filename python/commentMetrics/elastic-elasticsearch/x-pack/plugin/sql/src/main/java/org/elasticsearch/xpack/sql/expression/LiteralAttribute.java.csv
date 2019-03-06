@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;5;;@Override protected NodeInfo<LiteralAttribute> info() {     return NodeInfo.create(this, LiteralAttribute::new, name(), qualifier(), nullable(), id(), synthetic(), dataType(), literal). }
-false;protected;6;5;;@Override protected LiteralAttribute clone(Source source, String name, String qualifier, Nullability nullability, ExpressionId id, boolean synthetic) {     return new LiteralAttribute(source, name, qualifier, nullability, id, synthetic, dataType(), literal). }
-false;protected;0;4;;@Override protected String label() {     return "c". }
-false;public;0;4;;@Override public Pipe asPipe() {     return literal.asPipe(). }

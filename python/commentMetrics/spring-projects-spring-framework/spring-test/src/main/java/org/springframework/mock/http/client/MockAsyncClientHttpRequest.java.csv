@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Override public ListenableFuture<ClientHttpResponse> executeAsync() throws IOException {     SettableListenableFuture<ClientHttpResponse> future = new SettableListenableFuture<>().     future.set(execute()).     return future. }

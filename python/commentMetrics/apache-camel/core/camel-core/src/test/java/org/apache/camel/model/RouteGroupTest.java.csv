@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void testRouteGroup() {     RouteDefinition definition = context.getRouteDefinition("route-id").     Route route = context.getRoute("route-id").     assertEquals("route-group", definition.getGroup()).     assertEquals("route-group", route.getGroup()). }
-false;public;0;7;;@Override public void configure() throws Exception {     from("direct:start").routeId("route-id").routeGroup("route-group").to("mock:output"). }
-false;protected;0;12;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").routeId("route-id").routeGroup("route-group").to("mock:output").         }     }. }

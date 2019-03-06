@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public boolean advanceExact(int target) throws IOException {     return values.advanceExact(target). }
-false;public;0;4;;@Override public double nextValue() throws IOException {     return NumericUtils.sortableLongToDouble(values.nextValue()). }
-false;public;0;4;;@Override public int docValueCount() {     return values.docValueCount(). }
-true;public;0;3;/**  * Return the wrapped values.  */ ;/**  * Return the wrapped values.  */ public SortedNumericDocValues getLongValues() {     return values. }

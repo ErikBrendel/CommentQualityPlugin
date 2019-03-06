@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Before public void setup() {     now = new Date().     fixture = new UpdatedDateFilter(now). }
-false;public;0;17;;@Test public void testFilter() {     SyndEntry entry = new SyndEntryImpl().     entry.setPublishedDate(now).     entry.setAuthor("ANDY").     assertTrue(fixture.isValidEntry(new RssEndpoint(), new SyndFeedImpl(), entry)).     entry = new SyndEntryImpl().     entry.setPublishedDate(now).     entry.setAuthor("ANDY").     assertFalse(fixture.isValidEntry(new RssEndpoint(), new SyndFeedImpl(), entry)).     entry = new SyndEntryImpl().     entry.setPublishedDate(now).     entry.setAuthor("FRED").     assertTrue(fixture.isValidEntry(new RssEndpoint(), new SyndFeedImpl(), entry)). }

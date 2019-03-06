@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * @return The significant score for the subset  */ ;/**  * @return The significant score for the subset  */ double getSignificanceScore().
-true;;0;1;/**  * @return The number of docs in the subset containing a particular term.  * This number is equal to the document count of the bucket.  */ ;/**  * @return The number of docs in the subset containing a particular term.  * This number is equal to the document count of the bucket.  */ long getSubsetDf().
-true;;0;1;/**  * @return The numbers of docs in the subset (also known as "foreground set").  * This number is equal to the document count of the containing aggregation.  */ ;/**  * @return The numbers of docs in the subset (also known as "foreground set").  * This number is equal to the document count of the containing aggregation.  */ long getSubsetSize().
-true;;0;1;/**  * @return The number of docs in the superset containing a particular term (also  * known as the "background count" of the bucket)  */ ;/**  * @return The number of docs in the superset containing a particular term (also  * known as the "background count" of the bucket)  */ long getSupersetDf().
-true;;0;1;/**  * @return The numbers of docs in the superset (ordinarily the background count  * of the containing aggregation).  */ ;/**  * @return The numbers of docs in the superset (ordinarily the background count  * of the containing aggregation).  */ long getSupersetSize().
-true;;0;1;/**  * @return The key, expressed as a number  */ ;/**  * @return The key, expressed as a number  */ Number getKeyAsNumber().
-false;;0;2;;@Override List<? extends Bucket> getBuckets().
-true;;1;1;/**  * Get the bucket for the given term, or null if there is no such bucket.  */ ;/**  * Get the bucket for the given term, or null if there is no such bucket.  */ Bucket getBucketByKey(String term).

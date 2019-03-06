@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Before public void before1() throws Exception {     Settings settings = Settings.builder().put(Node.NODE_DATA_SETTING.getKey(), false).build().     internalCluster().startNodes(settings, Settings.EMPTY). }

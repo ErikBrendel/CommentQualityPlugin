@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;private,static;1;9;;private static ConstructingObjectParser<TermsGroupSource, Void> createParser(boolean lenient) {     ConstructingObjectParser<TermsGroupSource, Void> parser = new ConstructingObjectParser<>(NAME, lenient, (args) -> {         String field = (String) args[0].         return new TermsGroupSource(field).     }).     SingleGroupSource.declareValuesSourceFields(parser, null).     return parser. }
-false;public;0;4;;@Override public Type getType() {     return Type.TERMS. }
-false;public,static;2;3;;public static TermsGroupSource fromXContent(final XContentParser parser, boolean lenient) throws IOException {     return lenient ? LENIENT_PARSER.apply(parser, null) : STRICT_PARSER.apply(parser, null). }

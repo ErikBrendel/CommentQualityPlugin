@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String name() {     return "Empty XPackFeatureSet". }
-false;public;0;4;;@Override public String description() {     return "Core will not function without this empty featureset compliments of the way the TransportXPackInfoAction Guice works". }
-false;public;0;4;;@Override public boolean available() {     return false. }
-false;public;0;4;;@Override public boolean enabled() {     return false. }
-false;public;0;4;;@Override public Map<String, Object> nativeCodeInfo() {     return Collections.emptyMap(). }
-false;public;1;4;;@Override public void usage(ActionListener<Usage> listener) { }

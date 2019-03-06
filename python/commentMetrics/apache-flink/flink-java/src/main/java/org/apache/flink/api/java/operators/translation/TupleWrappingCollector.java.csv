@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;3;;public void set(Collector<Tuple2<K, IN>> wrappedCollector) {     this.wrappedCollector = wrappedCollector. }
-false;public;0;4;;@Override public void close() {     this.wrappedCollector.close(). }
-false;public;1;6;;@Override public void collect(IN record) {     this.outTuple.f0 = this.tui.getLastKey().     this.outTuple.f1 = record.     this.wrappedCollector.collect(outTuple). }

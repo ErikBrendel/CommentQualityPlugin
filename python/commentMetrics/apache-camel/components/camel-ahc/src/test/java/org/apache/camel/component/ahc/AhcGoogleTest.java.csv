@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void testAhcGoogle() throws Exception {     getMockEndpoint("mock:result").expectedMessageCount(1).     template.sendBody("direct:start", null).     assertMockEndpointsSatisfied(). }
-false;public;0;9;;@Override public void configure() throws Exception {     from("direct:start").to("ahc:http://www.google.se").to("log:result?showAll=true").convertBodyTo(String.class).log("Google responded with body:\n${body}").to("mock:result"). }
-false;protected;0;14;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").to("ahc:http://www.google.se").to("log:result?showAll=true").convertBodyTo(String.class).log("Google responded with body:\n${body}").to("mock:result").         }     }. }

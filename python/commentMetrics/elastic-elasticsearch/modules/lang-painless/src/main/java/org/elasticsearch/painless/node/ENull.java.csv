@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;1;4;;@Override void extractVariables(Set<String> variables) { // Do nothing. }
-false;;1;19;;@Override void analyze(Locals locals) {     if (!read) {         throw createError(new IllegalArgumentException("Must read from null constant.")).     }     isNull = true.     if (expected != null) {         if (expected.isPrimitive()) {             throw createError(new IllegalArgumentException("Cannot cast null to a primitive type [" + PainlessLookupUtility.typeToCanonicalTypeName(expected) + "].")).         }         actual = expected.     } else {         actual = Object.class.     } }
-false;;2;4;;@Override void write(MethodWriter writer, Globals globals) {     writer.visitInsn(Opcodes.ACONST_NULL). }
-false;public;0;4;;@Override public String toString() {     return singleLineToString(). }

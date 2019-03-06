@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;2;15;;public static LRASagaStep fromCamelSagaStep(CamelSagaStep step, Exchange exchange) {     LRASagaStep t = new LRASagaStep().     t.compensation = step.getCompensation().     t.completion = step.getCompletion().     t.timeoutInMilliseconds = step.getTimeoutInMilliseconds().     t.options = new TreeMap<>().     for (Map.Entry<String, Expression> entry : step.getOptions().entrySet()) {         try {             t.options.put(entry.getKey(), entry.getValue().evaluate(exchange, String.class)).         } catch (Exception ex) {             throw new RuntimeCamelException("Cannot evaluate saga option '" + entry.getKey() + "'", ex).         }     }     return t. }
-false;public;0;3;;public Optional<Endpoint> getCompensation() {     return compensation. }
-false;public;0;3;;public Optional<Endpoint> getCompletion() {     return completion. }
-false;public;0;3;;public Map<String, String> getOptions() {     return options. }
-false;public;0;3;;public Optional<Long> getTimeoutInMilliseconds() {     return timeoutInMilliseconds. }
-false;public;0;9;;@Override public String toString() {     return "LRASagaStep{" + "compensation=" + compensation + ", completion=" + completion + ", options=" + options + ", timeoutInMilliseconds=" + timeoutInMilliseconds + '}'. }

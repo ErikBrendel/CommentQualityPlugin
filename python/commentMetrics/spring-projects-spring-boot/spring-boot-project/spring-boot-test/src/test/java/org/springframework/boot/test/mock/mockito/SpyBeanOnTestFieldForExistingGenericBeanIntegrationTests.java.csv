@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void testSpying() {     assertThat(this.caller.sayGreeting()).isEqualTo("I say 123 simple").     verify(this.exampleService).greeting(). }
-false;public;0;6;;@Bean public ExampleGenericService<String> simpleExampleStringGenericService() {     // generic type not the actual implementation class     return new SimpleExampleStringGenericService(). }

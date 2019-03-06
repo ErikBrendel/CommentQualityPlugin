@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;13;;@Consume(uri = "activemq:personnel.records") @RecipientList public String[] route(@XPath("/person/city/text()") String city) {     if (city.equals("London")) {         LOG.info("Person is from EMEA region").         return new String[] { "file:target/messages/emea/hr_pickup", "file:target/messages/emea/finance_pickup" }.     } else {         LOG.info("Person is from AMER region").         return new String[] { "file:target/messages/amer/hr_pickup", "file:target/messages/amer/finance_pickup" }.     } }

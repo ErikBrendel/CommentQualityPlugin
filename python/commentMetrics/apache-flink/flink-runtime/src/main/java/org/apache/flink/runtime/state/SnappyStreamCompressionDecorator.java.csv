@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;4;;@Override protected OutputStream decorateWithCompression(NonClosingOutpusStreamDecorator stream) throws IOException {     return new SnappyFramedOutputStream(stream, COMPRESSION_BLOCK_SIZE, MIN_COMPRESSION_RATIO). }
-false;protected;1;4;;@Override protected InputStream decorateWithCompression(NonClosingInputStreamDecorator stream) throws IOException {     return new SnappyFramedInputStream(stream, false). }

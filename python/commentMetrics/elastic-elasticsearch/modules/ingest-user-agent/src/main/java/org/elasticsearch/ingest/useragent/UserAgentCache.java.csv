@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;3;;public Details get(String parserName, String userAgent) {     return cache.get(new CompositeCacheKey(parserName, userAgent)). }
-false;public;3;3;;public void put(String parserName, String userAgent, Details details) {     cache.put(new CompositeCacheKey(parserName, userAgent), details). }
-false;public;1;8;;@Override public boolean equals(Object obj) {     if (obj != null && obj instanceof CompositeCacheKey) {         CompositeCacheKey s = (CompositeCacheKey) obj.         return parserName.equals(s.parserName) && userAgent.equals(s.userAgent).     }     return false. }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(parserName, userAgent). }

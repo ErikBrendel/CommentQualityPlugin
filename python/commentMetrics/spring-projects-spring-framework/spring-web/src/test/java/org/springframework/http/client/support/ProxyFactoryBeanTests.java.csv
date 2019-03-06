@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Before public void setUp() {     factoryBean = new ProxyFactoryBean(). }
-false;public;0;5;;@Test(expected = IllegalArgumentException.class) public void noType() {     factoryBean.setType(null).     factoryBean.afterPropertiesSet(). }
-false;public;0;5;;@Test(expected = IllegalArgumentException.class) public void noHostname() {     factoryBean.setHostname("").     factoryBean.afterPropertiesSet(). }
-false;public;0;5;;@Test(expected = IllegalArgumentException.class) public void noPort() {     factoryBean.setHostname("example.com").     factoryBean.afterPropertiesSet(). }
-false;public;0;17;;@Test public void normal() {     Proxy.Type type = Proxy.Type.HTTP.     factoryBean.setType(type).     String hostname = "example.com".     factoryBean.setHostname(hostname).     int port = 8080.     factoryBean.setPort(port).     factoryBean.afterPropertiesSet().     Proxy result = factoryBean.getObject().     assertEquals(type, result.type()).     InetSocketAddress address = (InetSocketAddress) result.address().     assertEquals(hostname, address.getHostName()).     assertEquals(port, address.getPort()). }

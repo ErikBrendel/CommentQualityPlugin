@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public Class<X> getJavaClass() {     return decoratedType.getJavaClass(). }
-false;public;0;4;;@Override public Set<AnnotatedConstructor<X>> getConstructors() {     return decoratedType.getConstructors(). }
-false;public;0;10;;@Override public Set<AnnotatedMethod<? super X>> getMethods() {     Set<AnnotatedMethod<? super X>> methods = new HashSet<>(decoratedType.getMethods()).     for (AnnotatedMethod<? super X> method : decoratedMethods) {         methods.remove(method).         methods.add(method).     }     return Collections.unmodifiableSet(methods). }
-false;public;0;4;;@Override public Set<AnnotatedField<? super X>> getFields() {     return decoratedType.getFields(). }

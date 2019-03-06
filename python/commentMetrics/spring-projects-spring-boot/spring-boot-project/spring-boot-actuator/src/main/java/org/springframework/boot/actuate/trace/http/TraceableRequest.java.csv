@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * Returns the method (GET, POST, etc) of the request.  * @return the method  */ ;/**  * Returns the method (GET, POST, etc) of the request.  * @return the method  */ String getMethod().
-true;;0;1;/**  * Returns the URI of the request.  * @return the URI  */ ;/**  * Returns the URI of the request.  * @return the URI  */ URI getUri().
-true;;0;1;/**  * Returns a modifiable copy of the headers of the request.  * @return the headers  */ ;/**  * Returns a modifiable copy of the headers of the request.  * @return the headers  */ Map<String, List<String>> getHeaders().
-true;;0;1;/**  * Returns the remote address from which the request was sent, if available.  * @return the remote address or {@code null}  */ ;/**  * Returns the remote address from which the request was sent, if available.  * @return the remote address or {@code null}  */ String getRemoteAddress().

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Override public void configure() {     // you can configure the route rule with Java DSL here     from("timer:trigger?exchangePattern=InOut&period=30s").streamCaching().bean("counterBean").log(" Client request: ${body}").to("http://localhost:9090/service1").log("Client response: ${body}"). }

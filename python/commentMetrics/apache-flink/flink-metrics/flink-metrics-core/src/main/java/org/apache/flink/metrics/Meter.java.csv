@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * Mark occurrence of an event.  */ ;/**  * Mark occurrence of an event.  */ void markEvent().
-true;;1;1;/**  * Mark occurrence of multiple events.  *  * @param n number of events occurred  */ ;/**  * Mark occurrence of multiple events.  *  * @param n number of events occurred  */ void markEvent(long n).
-true;;0;1;/**  * Returns the current rate of events per second.  *  * @return current rate of events per second  */ ;/**  * Returns the current rate of events per second.  *  * @return current rate of events per second  */ double getRate().
-true;;0;1;/**  * Get number of events marked on the meter.  *  * @return number of events marked on the meter  */ ;/**  * Get number of events marked on the meter.  *  * @return number of events marked on the meter  */ long getCount().

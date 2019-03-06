@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;0;3;;Set<String> getFilters() {     return filters. }
-false;public,final;2;13;;@Override public final XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     final XContent xContent = builder.contentType().xContent().     try (BytesStreamOutput out = new BytesStreamOutput()) {         try (XContentBuilder filteredBuilder = new XContentBuilder(xContent, out, filters)) {             super.toXContent(filteredBuilder, params).         }         try (InputStream stream = out.bytes().streamInput().             XContentParser parser = xContent.createParser(EMPTY, LoggingDeprecationHandler.INSTANCE, stream)) {             return builder.copyCurrentStructure(parser).         }     } }

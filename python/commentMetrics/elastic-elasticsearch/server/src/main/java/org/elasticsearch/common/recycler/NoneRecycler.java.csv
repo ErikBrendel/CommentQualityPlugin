@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public V<T> obtain(int sizing) {     return new NV<>(c.newInstance(sizing)). }
-false;public;0;4;;@Override public void close() { // no-op }
-false;public;0;4;;@Override public T v() {     return value. }
-false;public;0;4;;@Override public boolean isRecycled() {     return false. }
-false;public;0;7;;@Override public void close() {     if (value == null) {         throw new IllegalStateException("recycler entry already released...").     }     value = null. }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;11;;@Test public void testReceiveTiAnalyticsArrayOfJsonEvents() {     NotifyBuilder notifier = new NotifyBuilder(context).wereSentTo("stub:direct:somewhere").whenExactlyDone(7).create().     template.sendBody("direct:split", "A,B,C,D,E,F,G").     assertTrue(notifier.matches(10, TimeUnit.SECONDS)). }
-false;public;0;7;;@Override public void configure() throws Exception {     from("direct:split").split(body()).parallelProcessing().log("Received: ${body}").to("stub:direct:somewhere"). }
-false;protected;0;12;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:split").split(body()).parallelProcessing().log("Received: ${body}").to("stub:direct:somewhere").         }     }. }

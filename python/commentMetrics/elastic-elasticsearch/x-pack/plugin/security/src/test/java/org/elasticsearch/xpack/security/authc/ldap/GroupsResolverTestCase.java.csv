@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected,static;2;6;;protected static RealmConfig config(RealmConfig.RealmIdentifier realmId, Settings settings) {     if (settings.hasValue("path.home") == false) {         settings = Settings.builder().put(settings).put("path.home", createTempDir()).build().     }     return new RealmConfig(realmId, settings, TestEnvironment.newEnvironment(settings), new ThreadContext(Settings.EMPTY)). }
-false;protected,abstract;0;1;;protected abstract String ldapUrl().
-false;protected,abstract;0;1;;protected abstract String bindDN().
-false;protected,abstract;0;1;;protected abstract String bindPassword().
-false;protected,abstract;0;1;;protected abstract String trustPath().
-false;public;0;5;;@Before public void setUpLdapConnection() throws Exception {     Path trustPath = getDataPath(trustPath()).     this.ldapConnection = LdapTestUtils.openConnection(ldapUrl(), bindDN(), bindPassword(), trustPath). }
-false;public;0;6;;@After public void tearDownLdapConnection() throws Exception {     if (ldapConnection != null) {         ldapConnection.close().     } }
-false;protected,static;6;6;;protected static List<String> resolveBlocking(GroupsResolver resolver, LDAPInterface ldapConnection, String dn, TimeValue timeLimit, Logger logger, Collection<Attribute> attributes) {     PlainActionFuture<List<String>> future = new PlainActionFuture<>().     resolver.resolve(ldapConnection, dn, timeLimit, logger, attributes, future).     return future.actionGet(). }

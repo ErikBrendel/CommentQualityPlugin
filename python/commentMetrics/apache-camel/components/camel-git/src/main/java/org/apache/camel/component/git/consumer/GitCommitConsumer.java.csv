@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;15;;@Override protected int poll() throws Exception {     int count = 0.     Iterable<RevCommit> commits = getGit().log().all().call().     for (RevCommit commit : commits) {         if (!commitsConsumed.contains(commit.getId())) {             Exchange e = getEndpoint().createExchange().             e.getOut().setBody(commit).             getProcessor().process(e).             commitsConsumed.add(commit.getId()).             count++.         }     }     return count. }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;@Override public Object getProperty(String name) {     Object answer = properties != null ? properties.getProperty(name) : null.     LOG.trace("getProperty {} -> {}", name, answer).     return answer. }

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public boolean isValid() {     return this.valid. }
-false;public;0;3;;public String getExplanation() {     return explanation. }
-false;public;0;3;;public String getError() {     return error. }
-false;public;1;7;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     valid = in.readBoolean().     explanation = in.readOptionalString().     error = in.readOptionalString(). }
-false;public;1;7;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeBoolean(valid).     out.writeOptionalString(explanation).     out.writeOptionalString(error). }

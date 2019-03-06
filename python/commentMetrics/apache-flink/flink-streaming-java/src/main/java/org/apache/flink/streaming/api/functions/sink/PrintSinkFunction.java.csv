@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;@Override public void open(Configuration parameters) throws Exception {     super.open(parameters).     StreamingRuntimeContext context = (StreamingRuntimeContext) getRuntimeContext().     writer.open(context.getIndexOfThisSubtask(), context.getNumberOfParallelSubtasks()). }
-false;public;1;4;;@Override public void invoke(IN record) {     writer.write(record). }
-false;public;0;4;;@Override public String toString() {     return writer.toString(). }

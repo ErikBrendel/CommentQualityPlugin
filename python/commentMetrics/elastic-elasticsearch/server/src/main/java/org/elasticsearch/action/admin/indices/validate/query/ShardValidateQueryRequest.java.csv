@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public QueryBuilder query() {     return query. }
-false;public;0;3;;public String[] types() {     return this.types. }
-false;public;0;3;;public boolean explain() {     return this.explain. }
-false;public;0;3;;public boolean rewrite() {     return this.rewrite. }
-false;public;0;3;;public AliasFilter filteringAliases() {     return filteringAliases. }
-false;public;0;3;;public long nowInMillis() {     return this.nowInMillis. }
-false;public;1;17;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     query = in.readNamedWriteable(QueryBuilder.class).     int typesSize = in.readVInt().     if (typesSize > 0) {         types = new String[typesSize].         for (int i = 0. i < typesSize. i++) {             types[i] = in.readString().         }     }     filteringAliases = new AliasFilter(in).     explain = in.readBoolean().     rewrite = in.readBoolean().     nowInMillis = in.readVLong(). }
-false;public;1;13;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeNamedWriteable(query).     out.writeVInt(types.length).     for (String type : types) {         out.writeString(type).     }     filteringAliases.writeTo(out).     out.writeBoolean(explain).     out.writeBoolean(rewrite).     out.writeVLong(nowInMillis). }

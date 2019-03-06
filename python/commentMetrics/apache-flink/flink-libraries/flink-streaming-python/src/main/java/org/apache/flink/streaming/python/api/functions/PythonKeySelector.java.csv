@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;13;;@Override @SuppressWarnings("unchecked") public PyKey getKey(PyObject value) throws Exception {     if (fun == null) {         fun = SerializationUtils.deserializeObject(serFun).     }     try {         Object key = fun.getKey(value).         return new PyKey(key).     } catch (PyException pe) {         throw AbstractPythonUDF.createAndLogException(pe, LOG).     } }

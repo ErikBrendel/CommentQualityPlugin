@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public Method getMethod() {     return this.method. }
-false;public;0;4;;@Override public Set<Annotation> getAnnotations() {     return this.annotations. }
-false;public;0;4;;@Override public A getCacheAnnotation() {     return this.cacheAnnotation. }
-false;public;0;4;;@Override public String getCacheName() {     return this.cacheName. }
-false;public;0;9;;@Override public String toString() {     StringBuilder sb = new StringBuilder("CacheMethodDetails[").     sb.append("method=").append(this.method).     sb.append(", cacheAnnotation=").append(this.cacheAnnotation).     sb.append(", cacheName='").append(this.cacheName).append('\'').     sb.append(']').     return sb.toString(). }

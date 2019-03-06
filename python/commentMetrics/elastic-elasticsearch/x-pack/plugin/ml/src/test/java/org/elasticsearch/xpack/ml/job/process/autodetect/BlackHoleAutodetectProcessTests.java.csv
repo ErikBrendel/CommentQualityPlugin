@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;public void testFlushJob_writesAck() throws Exception {     try (BlackHoleAutodetectProcess process = new BlackHoleAutodetectProcess("foo")) {         String flushId = process.flushJob(FlushJobParams.builder().build()).         Iterator<AutodetectResult> iterator = process.readAutodetectResults().         iterator.hasNext().         AutodetectResult result = iterator.next().         FlushAcknowledgement ack = result.getFlushAcknowledgement().         assertEquals(flushId, ack.getId()).     } }

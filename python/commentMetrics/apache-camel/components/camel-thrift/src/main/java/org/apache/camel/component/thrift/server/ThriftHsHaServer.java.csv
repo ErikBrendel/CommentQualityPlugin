@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;public Args startThreadPool(ExecutorService startThreadPool) {     this.startThreadPool = startThreadPool.     return this. }
-false;public;1;4;;public Args context(CamelContext context) {     this.context = context.     return this. }
-false;public;0;19;;@Override public void serve() throws IllegalArgumentException {     if (!startThreads()) {         throw new IllegalArgumentException("Failed to start selector thread!").     }     if (!startListening()) {         throw new IllegalArgumentException("Failed to start listening on server socket!").     }     startExecutor.execute(() -> {         setServing(true).         waitForShutdown().         setServing(false).         stopListening().     }). }
-false;public;0;5;;@Override public void stop() {     super.stop().     context.getExecutorServiceManager().shutdownGraceful(startExecutor). }
-false;protected;0;5;;@Override protected void waitForShutdown() {     joinSelector().     context.getExecutorServiceManager().shutdownGraceful(getInvoker()). }

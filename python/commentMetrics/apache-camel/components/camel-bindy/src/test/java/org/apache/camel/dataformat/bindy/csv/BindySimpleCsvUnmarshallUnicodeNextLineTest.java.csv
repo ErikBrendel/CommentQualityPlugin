@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;14;;@Test @DirtiesContext public void testUnicodeNextLineCharacterParsing() throws Exception {     record = "123\u0085 Anywhere Lane,United States".     template.sendBody(record).     result.expectedMessageCount(1).     result.assertIsSatisfied().     LocationRecord data = result.getExchanges().get(0).getIn().getBody(LocationRecord.class).     assertNotNull(data).     assertEquals("Parsing error with unicode next line", "123\u0085 Anywhere Lane", data.getAddress()).     assertEquals("Parsing error with unicode next line", "United States", data.getNation()). }
-false;public;0;5;;public void configure() {     from(URI_DIRECT_START).unmarshal(locationRecordBindyDataFormat).to(URI_MOCK_RESULT). }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void profileFromTestInterface() {     assertNotNull(employee).     assertEquals("dev", employee.getName()). }
-false;;0;5;;@Bean @Profile("dev") Employee employee1() {     return new Employee("dev"). }
-false;;0;5;;@Bean @Profile("prod") Employee employee2() {     return new Employee("prod"). }

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Override public int read() throws IOException {     int read = in.read().     checkProgress(read == -1 ? -1 : 1).     return read. }
-false;public;3;6;;@Override public int read(byte[] b, int off, int len) throws IOException {     int byteCount = super.read(b, off, len).     checkProgress(byteCount).     return byteCount. }
-false;public;1;4;;@Override public int read(byte[] b) throws IOException {     return read(b, 0, b.length). }
-false;;1;16;;void checkProgress(int byteCount) {     // are we done?     if (byteCount == -1) {         currentPercent = 100.         onProgress(currentPercent).     } else {         count += byteCount.         // rounding up to 100% would mean we say we are done, before we are...         // this also catches issues, when expectedTotalSize was guessed wrong         int percent = Math.min(99, (int) Math.floor(100.0 * count / expectedTotalSize)).         if (percent > currentPercent) {             currentPercent = percent.             onProgress(percent).         }     } }
-false;public;1;1;;public void onProgress(int percent) { }

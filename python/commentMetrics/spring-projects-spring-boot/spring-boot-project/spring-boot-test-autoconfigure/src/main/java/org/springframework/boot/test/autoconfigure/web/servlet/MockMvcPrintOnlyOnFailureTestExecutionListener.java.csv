@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public int getOrder() {     return Ordered.LOWEST_PRECEDENCE - 100. }
-false;public;1;11;;@Override public void afterTestMethod(TestContext testContext) throws Exception {     if (testContext.getTestException() != null) {         DeferredLinesWriter writer = DeferredLinesWriter.get(testContext.getApplicationContext()).         if (writer != null) {             writer.writeDeferredResult().         }     } }

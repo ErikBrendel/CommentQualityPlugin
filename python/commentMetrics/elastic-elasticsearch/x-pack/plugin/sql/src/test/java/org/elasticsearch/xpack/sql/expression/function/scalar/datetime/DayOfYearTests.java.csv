@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;public void testAsColumnProcessor() {     assertEquals(1, extract(dateTime(0), UTC)).     assertEquals(1, extract(dateTime(0), ZoneId.of("GMT+01:00"))).     assertEquals(365, extract(dateTime(0), ZoneId.of("GMT-01:00"))). }
-false;private;2;3;;private Object extract(Object value, ZoneId zoneId) {     return build(value, zoneId).asPipe().asProcessor().process(value). }
-false;private;2;3;;private DayOfYear build(Object value, ZoneId zoneId) {     return new DayOfYear(Source.EMPTY, new Literal(Source.EMPTY, value, DataType.DATETIME), zoneId). }

@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;private,static;1;17;;private static List<Dependency> extractDependenciesFromModel(Model model) {     List<Dependency> dependencies = new ArrayList<>().     for (org.apache.maven.model.Dependency mavenDependency : model.getDependencyManagement().getDependencies()) {         List<Exclusion> exclusions = new ArrayList<>().         for (org.apache.maven.model.Exclusion mavenExclusion : mavenDependency.getExclusions()) {             exclusions.add(new Exclusion(mavenExclusion.getGroupId(), mavenExclusion.getArtifactId())).         }         Dependency dependency = new Dependency(mavenDependency.getGroupId(), mavenDependency.getArtifactId(), mavenDependency.getVersion(), exclusions).         dependencies.add(dependency).     }     return dependencies. }
-false;public;0;4;;@Override public List<Dependency> getDependencies() {     return this.dependencies. }
-false;public;0;4;;@Override public String getSpringBootVersion() {     return find("spring-boot").getVersion(). }
-false;public;1;4;;@Override public Dependency find(String artifactId) {     return this.byArtifactId.get(artifactId). }

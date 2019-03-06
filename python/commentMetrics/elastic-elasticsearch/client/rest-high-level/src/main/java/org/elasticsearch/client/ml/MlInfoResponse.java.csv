@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public Map<String, Object> getInfo() {     return info. }
-false;public,static;1;4;;public static MlInfoResponse fromXContent(XContentParser parser) throws IOException {     Map<String, Object> info = parser.map().     return new MlInfoResponse(info). }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(info). }
-false;public;1;11;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     MlInfoResponse other = (MlInfoResponse) obj.     return Objects.equals(info, other.info). }

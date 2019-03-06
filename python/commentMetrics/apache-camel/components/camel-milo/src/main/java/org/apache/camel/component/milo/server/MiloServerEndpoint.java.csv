@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;5;;@Override protected void doStart() throws Exception {     super.doStart().     this.item = this.namespace.getOrAddItem(this.itemId). }
-false;protected;0;8;;@Override protected void doStop() throws Exception {     if (this.item != null) {         this.item.dispose().         this.item = null.     }     super.doStop(). }
-false;public;0;4;;@Override public Producer createProducer() throws Exception {     return new MiloServerProducer(this, this.item). }
-false;public;1;4;;@Override public Consumer createConsumer(final Processor processor) throws Exception {     return new MiloServerConsumer(this, processor, this.item). }
-false;public;0;4;;@Override public boolean isSingleton() {     return true. }
-true;public;1;3;/**  * ID of the item  *  * @param itemId the new ID of the item  */ ;/**  * ID of the item  *  * @param itemId the new ID of the item  */ public void setItemId(final String itemId) {     this.itemId = itemId. }
-true;public;0;3;/**  * Get the ID of the item  *  * @return the ID of the item  */ ;/**  * Get the ID of the item  *  * @return the ID of the item  */ public String getItemId() {     return this.itemId. }

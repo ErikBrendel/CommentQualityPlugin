@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Override public T retrieveState() throws IOException, ClassNotFoundException {     try (FSDataInputStream in = openInputStream()) {         return InstantiationUtil.deserializeObject(in, Thread.currentThread().getContextClassLoader()).     } }
-false;public;0;4;;@Override public FSDataInputStream openInputStream() throws IOException {     return wrappedStreamStateHandle.openInputStream(). }
-false;public;0;4;;@Override public void discardState() throws Exception {     wrappedStreamStateHandle.discardState(). }
-false;public;0;4;;@Override public long getStateSize() {     return wrappedStreamStateHandle.getStateSize(). }
-false;public;0;4;;@Override public void close() throws IOException { // wrappedStreamStateHandle.close(). }

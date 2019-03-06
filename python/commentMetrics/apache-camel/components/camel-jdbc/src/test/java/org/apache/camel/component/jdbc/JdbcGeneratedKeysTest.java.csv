@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void testRetrieveGeneratedKeys() throws Exception {     super.testRetrieveGeneratedKeys("insert into tableWithAutoIncr (content) values ('value2')"). }
-false;public;0;4;;@Test public void testRetrieveGeneratedKeysWithStringGeneratedColumns() throws Exception {     super.testRetrieveGeneratedKeysWithStringGeneratedColumns("insert into tableWithAutoIncr (content) values ('value2')"). }
-false;public;0;4;;@Test public void testRetrieveGeneratedKeysWithIntGeneratedColumns() throws Exception {     super.testRetrieveGeneratedKeysWithIntGeneratedColumns("insert into tableWithAutoIncr (content) values ('value2')"). }
-false;public;0;4;;@Test public void testGivenAnInvalidGeneratedColumnsHeaderThenAnExceptionIsThrown() throws Exception {     super.testGivenAnInvalidGeneratedColumnsHeaderThenAnExceptionIsThrown("insert into tableWithAutoIncr (content) values ('value2')"). }
-true;public;0;3;// lets add simple route ;// START SNIPPET: route // lets add simple route public void configure() throws Exception {     from("direct:hello").to("jdbc:testdb?readSize=100"). }
-false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          // START SNIPPET: route         // lets add simple route         public void configure() throws Exception {             from("direct:hello").to("jdbc:testdb?readSize=100").         }     }. }

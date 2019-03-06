@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void testSendMessage() throws Exception {     String expectedBody = "Wobble".     template.sendBodyAndHeader("direct:in", expectedBody, "foo", "bar").     assertEquals("bean body: " + myPredicate, expectedBody, myPredicate.body). }
-false;protected;0;6;;@Override protected Context createJndiContext() throws Exception {     JndiContext answer = new JndiContext().     answer.bind("myPredicate", myPredicate).     return answer. }
-false;public;0;3;;public void configure() {     from("direct:in").to("bean:myPredicate"). }
-false;protected;0;7;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("direct:in").to("bean:myPredicate").         }     }. }
-false;public;1;5;;public boolean matches(Exchange exchange) {     LOG.info("matches(exchange) called with: " + exchange).     body = exchange.getIn().getBody(String.class).     return (null != body) && (body.equals("Wobble")). }

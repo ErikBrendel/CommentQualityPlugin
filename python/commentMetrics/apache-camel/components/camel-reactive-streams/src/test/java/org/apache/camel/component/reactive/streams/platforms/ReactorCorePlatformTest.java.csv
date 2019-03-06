@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;2;7;;@Override protected void changeSign(Publisher<Integer> data, Consumer<Integer> consume) {     Flux.from(data).map(i -> -i).doOnNext(consume).subscribe(). }
-false;protected;2;6;;@Override protected void changeSign(Iterable<Integer> data, Subscriber<Integer> camel) {     Flux.fromIterable(data).map(i -> -i).subscribe(camel). }

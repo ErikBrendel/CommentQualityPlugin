@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public boolean isOpen() {     return getContext().isOpen(). }
-true;public;1;3;/**  * Adds a close listener to the channel. Multiple close listeners can be added. There is no guarantee  * about the order in which close listeners will be executed. If the channel is already closed, the  * listener is executed immediately.  *  * @param listener to be called at close  */ ;/**  * Adds a close listener to the channel. Multiple close listeners can be added. There is no guarantee  * about the order in which close listeners will be executed. If the channel is already closed, the  * listener is executed immediately.  *  * @param listener to be called at close  */ public void addCloseListener(BiConsumer<Void, Exception> listener) {     getContext().addCloseListener(listener). }
-true;public;0;3;/**  * Schedules channel for close. This process is asynchronous.  */ ;/**  * Schedules channel for close. This process is asynchronous.  */ public void close() {     getContext().closeChannel(). }
-false;public,abstract;0;1;;public abstract InetSocketAddress getLocalAddress().
-false;public,abstract;0;1;;public abstract NetworkChannel getRawChannel().
-false;public,abstract;0;1;;public abstract ChannelContext<?> getContext().

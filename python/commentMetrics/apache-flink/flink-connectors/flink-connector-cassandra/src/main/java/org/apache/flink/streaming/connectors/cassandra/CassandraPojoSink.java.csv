@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;16;;@Override public void open(Configuration configuration) {     super.open(configuration).     try {         this.mappingManager = new MappingManager(session).         this.mapper = mappingManager.mapper(clazz).         if (options != null) {             Mapper.Option[] optionsArray = options.getMapperOptions().             if (optionsArray != null) {                 this.mapper.setDefaultSaveOptions(optionsArray).             }         }     } catch (Exception e) {         throw new RuntimeException("Cannot create CassandraPojoSink with input: " + clazz.getSimpleName(), e).     } }
-false;protected;0;4;;@Override protected Session createSession() {     return cluster.connect(keyspace). }
-false;public;1;4;;@Override public ListenableFuture<ResultSet> send(IN value) {     return session.executeAsync(mapper.saveQuery(value)). }

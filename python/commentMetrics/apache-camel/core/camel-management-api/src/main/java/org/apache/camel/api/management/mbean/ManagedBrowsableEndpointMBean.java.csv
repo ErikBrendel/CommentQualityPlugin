@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;0;2;;@ManagedOperation(description = "Current number of Exchanges in Queue") long queueSize().
-false;;1;2;;@ManagedOperation(description = "Get Exchange from queue by index") String browseExchange(Integer index).
-false;;1;2;;@ManagedOperation(description = "Get message body from queue by index") String browseMessageBody(Integer index).
-true;;1;3;/**  * @deprecated use {@link #browseAllMessagesAsXml(Boolean)} instead  */ ;/**  * @deprecated use {@link #browseAllMessagesAsXml(Boolean)} instead  */ @ManagedOperation(description = "Get message as XML from queue by index") @Deprecated String browseMessageAsXml(Integer index).
-false;;2;2;;@ManagedOperation(description = "Get message as XML from queue by index") String browseMessageAsXml(Integer index, Boolean includeBody).
-false;;1;2;;@ManagedOperation(description = "Gets all the messages as XML from the queue") String browseAllMessagesAsXml(Boolean includeBody).
-false;;3;2;;@ManagedOperation(description = "Gets the range of messages as XML from the queue") String browseRangeMessagesAsXml(Integer fromIndex, Integer toIndex, Boolean includeBody).

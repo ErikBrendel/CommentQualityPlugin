@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected NodeInfo<ShowFunctions> info() {     return NodeInfo.create(this, ShowFunctions::new, pattern). }
-false;public;0;3;;public LikePattern pattern() {     return pattern. }
-false;public;0;5;;@Override public List<Attribute> output() {     return asList(new FieldAttribute(source(), "name", new KeywordEsField("name")), new FieldAttribute(source(), "type", new KeywordEsField("type"))). }
-false;public;2;9;;@Override public void execute(SqlSession session, ActionListener<SchemaRowSet> listener) {     FunctionRegistry registry = session.functionRegistry().     Collection<FunctionDefinition> functions = registry.listFunctions(pattern != null ? pattern.asJavaRegex() : null).     listener.onResponse(Rows.of(output(), functions.stream().map(f -> asList(f.name(), f.type().name())).collect(toList()))). }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(pattern). }
-false;public;1;13;;@Override public boolean equals(Object obj) {     if (this == obj) {         return true.     }     if (obj == null || getClass() != obj.getClass()) {         return false.     }     ShowFunctions other = (ShowFunctions) obj.     return Objects.equals(pattern, other.pattern). }

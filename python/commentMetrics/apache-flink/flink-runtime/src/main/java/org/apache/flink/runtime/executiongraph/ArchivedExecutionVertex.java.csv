@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;// -------------------------------------------------------------------------------------------- // Accessors // -------------------------------------------------------------------------------------------- @Override public String getTaskNameWithSubtaskIndex() {     return this.taskNameWithSubtask. }
-false;public;0;4;;@Override public int getParallelSubtaskIndex() {     return this.subTaskIndex. }
-false;public;0;4;;@Override public ArchivedExecution getCurrentExecutionAttempt() {     return currentExecution. }
-false;public;0;4;;@Override public ExecutionState getExecutionState() {     return currentExecution.getState(). }
-false;public;1;4;;@Override public long getStateTimestamp(ExecutionState state) {     return currentExecution.getStateTimestamp(state). }
-false;public;0;4;;@Override public String getFailureCauseAsString() {     return currentExecution.getFailureCauseAsString(). }
-false;public;0;4;;@Override public TaskManagerLocation getCurrentAssignedResourceLocation() {     return currentExecution.getAssignedResourceLocation(). }
-false;public;1;8;;@Override public ArchivedExecution getPriorExecutionAttempt(int attemptNumber) {     if (attemptNumber >= 0 && attemptNumber < priorExecutions.size()) {         return priorExecutions.get(attemptNumber).     } else {         throw new IllegalArgumentException("attempt does not exist").     } }

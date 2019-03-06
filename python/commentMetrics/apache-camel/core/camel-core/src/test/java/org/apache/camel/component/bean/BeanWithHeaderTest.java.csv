@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;11;;@Test public void testBeanWithHeader() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedBodiesReceived("StartMyBeanMyBean").     mock.expectedHeaderReceived("foo", "bar").     mock.expectedHeaderReceived("user", "admin").     template.requestBody("direct:in", "Start").     mock.assertIsSatisfied(). }
-false;protected;0;5;;protected Context createJndiContext() throws Exception {     JndiContext answer = new JndiContext().     answer.bind("myBean", new MyBean()).     return answer. }
-false;public;0;10;;public void configure() throws Exception {     from("direct:in").setHeader("foo", constant("bar")).to("bean:myBean").to("seda:a").     from("seda:a").to("bean:myBean").to("mock:result"). }
-false;protected;0;14;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from("direct:in").setHeader("foo", constant("bar")).to("bean:myBean").to("seda:a").             from("seda:a").to("bean:myBean").to("mock:result").         }     }. }
-false;public;1;5;;public void doSomething(Exchange exchange) {     String body = exchange.getIn().getBody(String.class).     exchange.getIn().setHeader("user", "admin").     exchange.getIn().setBody(body + "MyBean"). }

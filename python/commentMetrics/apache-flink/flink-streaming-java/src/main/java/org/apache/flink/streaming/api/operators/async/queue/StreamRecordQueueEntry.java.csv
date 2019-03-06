@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public boolean hasTimestamp() {     return hasTimestamp. }
-false;public;0;4;;@Override public long getTimestamp() {     return timestamp. }
-false;public;0;4;;@Override public Collection<OUT> get() throws Exception {     return resultFuture.get(). }
-false;protected;0;4;;@Override protected CompletableFuture<Collection<OUT>> getFuture() {     return resultFuture. }
-false;public;1;4;;@Override public void complete(Collection<OUT> result) {     resultFuture.complete(result). }
-false;public;1;4;;@Override public void completeExceptionally(Throwable error) {     resultFuture.completeExceptionally(error). }

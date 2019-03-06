@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;4;7;;@FallbackConverter public static Object convertTo(Class<?> type, Exchange exchange, Object value, TypeConverterRegistry registry) {     if (TimeZone.class.isAssignableFrom(value.getClass())) {         return "Time talks".     }     return null. }

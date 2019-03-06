@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;private;0;3;;private String getFtpUrl() {     return "ftp://admin@localhost:" + getPort() + "/filefilter?password=admin&filter=#myFilter". }
-false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry jndi = super.createRegistry().     jndi.bind("myFilter", new MyFileFilter<>()).     return jndi. }
-false;public;0;6;;@Override @Before public void setUp() throws Exception {     super.setUp().     prepareFtpServer(). }
-false;public;0;13;;@Test public void testFtpFilter() throws Exception {     if (isPlatform("aix")) {         // skip testing on AIX as it have an issue with this test with the file filter         return.     }     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMessageCount(2).     mock.expectedBodiesReceivedInAnyOrder("Report 1", "Report 2").     mock.assertIsSatisfied(). }
-false;private;0;8;;private void prepareFtpServer() throws Exception {     // prepares the FTP Server by creating files on the server that we want to unit     // test that we can pool     sendFile(getFtpUrl(), "Hello World", "hello.txt").     sendFile(getFtpUrl(), "Report 1", "report1.txt").     sendFile(getFtpUrl(), "Bye World", "bye.txt").     sendFile(getFtpUrl(), "Report 2", "report2.txt"). }
-false;public;0;3;;public void configure() throws Exception {     from(getFtpUrl()).convertBodyTo(String.class).to("mock:result"). }
-false;protected;0;7;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from(getFtpUrl()).convertBodyTo(String.class).to("mock:result").         }     }. }
-false;public;1;4;;public boolean accept(GenericFile<T> file) {     // we only want report files     return file.getFileName().startsWith("report"). }

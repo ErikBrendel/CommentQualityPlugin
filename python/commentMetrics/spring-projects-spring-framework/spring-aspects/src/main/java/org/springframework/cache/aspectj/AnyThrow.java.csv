@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;static;1;3;;static void throwUnchecked(Throwable e) {     AnyThrow.<RuntimeException>throwAny(e). }
-false;private,static;1;4;;@SuppressWarnings("unchecked") private static <E extends Throwable> void throwAny(Throwable e) throws E {     throw (E) e. }

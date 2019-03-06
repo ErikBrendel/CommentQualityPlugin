@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected Class<JarRunResponseBody> getTestResponseClass() {     return JarRunResponseBody.class. }
-false;protected;0;4;;@Override protected JarRunResponseBody getTestResponseInstance() throws Exception {     return new JarRunResponseBody(new JobID()). }
-false;protected;2;6;;@Override protected void assertOriginalEqualsToUnmarshalled(final JarRunResponseBody expected, final JarRunResponseBody actual) {     assertEquals(expected.getJobId(), actual.getJobId()). }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;9;;@Override public CompletableFuture<Acknowledge> archiveExecutionGraph(AccessExecutionGraph executionGraph) {     try {         FsJobArchivist.archiveJob(archivePath, executionGraph.getJobID(), jsonArchivist.archiveJsonWithPath(executionGraph)).         return CompletableFuture.completedFuture(Acknowledge.get()).     } catch (IOException e) {         return FutureUtils.completedExceptionally(e).     } }

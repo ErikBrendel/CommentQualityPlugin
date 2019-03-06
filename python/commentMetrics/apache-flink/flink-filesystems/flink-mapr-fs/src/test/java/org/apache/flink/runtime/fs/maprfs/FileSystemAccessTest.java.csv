@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Test public void testGetMapRFs() throws Exception {     final Path path = new Path("maprfs:///my/path").     FileSystem fs = path.getFileSystem().     assertEquals(path.toUri().getScheme(), fs.getUri().getScheme()). }

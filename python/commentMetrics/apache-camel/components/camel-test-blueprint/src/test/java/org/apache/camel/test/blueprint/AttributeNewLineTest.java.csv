@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected String getBlueprintDescriptor() {     return "org/apache/camel/test/blueprint/AttributeNewLineTest.xml". }
-false;public;0;11;;@Test public void testAttributeNewLineTest() throws Exception {     getMockEndpoint("mock:bar").expectedMessageCount(1).     template.sendBody("direct:start", "Hello World").     assertMockEndpointsSatisfied().     Object stub = context.hasEndpoint("stub:GET    /v1/phonebook/companies/{companyCode}?oauth=OPTIONAL").     assertNotNull("Should have stub endpoint with double spaces", stub). }

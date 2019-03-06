@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;public void process(Exchange exchange) throws Exception {     String request = exchange.getIn().getBody(String.class).     exchange.getOut().setHeaders(exchange.getIn().getHeaders()).     exchange.getOut().setBody(request). }

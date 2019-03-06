@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public TypedValue getLiteralValue() {     return this.value. }
-false;public;0;4;;@Override public boolean isCompilable() {     return true. }
-false;public;2;5;;@Override public void generateCode(MethodVisitor mv, CodeFlow cf) {     mv.visitLdcInsn(this.value.getValue()).     cf.pushDescriptor(this.exitTypeDescriptor). }

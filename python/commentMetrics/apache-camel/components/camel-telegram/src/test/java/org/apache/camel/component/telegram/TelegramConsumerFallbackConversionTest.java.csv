@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Before public void mockAPIs() {     mockTelegramService(). }
-false;public;0;15;;@Test public void testEverythingOk() throws Exception {     TelegramService service = currentMockService().     template.sendBody(new BrandNewType("wrapped message")).     ArgumentCaptor<OutgoingTextMessage> captor = ArgumentCaptor.forClass(OutgoingTextMessage.class).     verify(service).sendMessage(eq("mock-token"), captor.capture()).     List<OutgoingTextMessage> msgs = captor.getAllValues().     assertCollectionSize(msgs, 1).     String text = msgs.get(0).getText().     assertEquals("wrapped message", text). }
-false;public;0;5;;@Override public void configure() throws Exception {     from("direct:message").to("telegram:bots/mock-token?chatId=1234"). }
-false;protected;0;10;;@Override protected RoutesBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:message").to("telegram:bots/mock-token?chatId=1234").         }     }. }
-false;public;0;5;;@Override public String toString() {     // to use default conversion from Object to String     return message. }

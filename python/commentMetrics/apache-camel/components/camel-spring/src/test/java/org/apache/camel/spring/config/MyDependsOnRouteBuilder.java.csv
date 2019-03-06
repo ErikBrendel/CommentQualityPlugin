@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Override public void configure() throws Exception {     // time when we was invoked by Spring     this.time = System.nanoTime().     MyDependsOnBean bean = lookup("myDependsOnBean", MyDependsOnBean.class).     from("direct:start").to(bean.getEndpointName()). }
-false;public;0;3;;public long getTime() {     return time. }

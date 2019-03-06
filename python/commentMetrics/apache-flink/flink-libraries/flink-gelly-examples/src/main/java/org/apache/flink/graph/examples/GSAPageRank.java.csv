@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;14;;@Override public DataSet<Vertex<K, Double>> run(Graph<K, Double, Double> network) throws Exception {     DataSet<Tuple2<K, LongValue>> vertexOutDegrees = network.outDegrees().     Graph<K, Double, Double> networkWithWeights = network.joinWithEdgesOnSource(vertexOutDegrees, new InitWeights()).     GSAConfiguration parameters = new GSAConfiguration().     parameters.setOptNumVertices(true).     return networkWithWeights.runGatherSumApplyIteration(new GatherRanks(), new SumRanks(), new UpdateRanks<>(beta), maxIterations, parameters).getVertices(). }
-false;public;1;10;;@Override public Double gather(Neighbor<Double, Double> neighbor) {     double neighborRank = neighbor.getNeighborValue().     if (getSuperstepNumber() == 1) {         neighborRank = 1.0 / this.getNumberOfVertices().     }     return neighborRank * neighbor.getEdgeValue(). }
-false;public;2;4;;@Override public Double sum(Double newValue, Double currentValue) {     return newValue + currentValue. }
-false;public;2;4;;@Override public void apply(Double rankSum, Double currentValue) {     setResult((1 - beta) / this.getNumberOfVertices() + beta * rankSum). }
-false;public;2;3;;public Double edgeJoin(Double edgeValue, LongValue inputValue) {     return edgeValue / (double) inputValue.getValue(). }

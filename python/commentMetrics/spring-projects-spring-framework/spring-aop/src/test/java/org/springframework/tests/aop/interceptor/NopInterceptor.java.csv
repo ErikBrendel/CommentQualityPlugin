@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;@Override public Object invoke(MethodInvocation invocation) throws Throwable {     increment().     return invocation.proceed(). }
-false;protected;0;3;;protected void increment() {     this.count++. }
-false;public;0;3;;public int getCount() {     return this.count. }
-false;public;1;10;;@Override public boolean equals(Object other) {     if (!(other instanceof NopInterceptor)) {         return false.     }     if (this == other) {         return true.     }     return this.count == ((NopInterceptor) other).count. }
-false;public;0;4;;@Override public int hashCode() {     return NopInterceptor.class.hashCode(). }

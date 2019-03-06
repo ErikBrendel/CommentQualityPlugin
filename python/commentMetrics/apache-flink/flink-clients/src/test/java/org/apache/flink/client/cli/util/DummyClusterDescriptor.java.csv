@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getClusterDescription() {     return "DummyClusterDescriptor". }
-false;public;1;4;;@Override public ClusterClient<T> retrieve(T clusterId) {     return clusterClient. }
-false;public;1;4;;@Override public ClusterClient<T> deploySessionCluster(ClusterSpecification clusterSpecification) {     return clusterClient. }
-false;public;3;7;;@Override public ClusterClient<T> deployJobCluster(ClusterSpecification clusterSpecification, JobGraph jobGraph, boolean detached) {     return clusterClient. }
-false;public;1;4;;@Override public void killCluster(T clusterId) throws FlinkException {     throw new UnsupportedOperationException("Cannot terminate a dummy cluster."). }
-false;public;0;4;;@Override public void close() { // nothing to do }

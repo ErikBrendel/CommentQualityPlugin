@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeList(infos). }
-false;public;0;4;;@Override public Iterator<ThreadPool.Info> iterator() {     return infos.iterator(). }
-false;public;2;9;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject(Fields.THREAD_POOL).     for (ThreadPool.Info info : infos) {         info.toXContent(builder, params).     }     builder.endObject().     return builder. }

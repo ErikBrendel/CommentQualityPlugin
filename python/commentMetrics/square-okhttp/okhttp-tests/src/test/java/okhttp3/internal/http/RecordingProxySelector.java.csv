@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public List<Proxy> select(URI uri) {     requestedUris.add(uri).     return proxies. }
-false;public;1;4;;public void assertRequests(URI... expectedUris) {     assertEquals(Arrays.asList(expectedUris), requestedUris).     requestedUris.clear(). }
-false;public;3;5;;@Override public void connectFailed(URI uri, SocketAddress sa, IOException ioe) {     InetSocketAddress socketAddress = (InetSocketAddress) sa.     failures.add(Util.format("%s %s:%d %s", uri, socketAddress, socketAddress.getPort(), ioe.getMessage())). }
-false;public;0;3;;@Override public String toString() {     return "RecordingProxySelector". }

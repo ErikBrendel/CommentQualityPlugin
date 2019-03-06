@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Test public void testSendAMessageWhosInBodyIsTransformed() throws Exception {     MockEndpoint resultEndpoint = getMockEndpoint("mock:end").     resultEndpoint.expectedBodiesReceived("Hello World!").     sendBody("direct:start", "Hello").     resultEndpoint.assertIsSatisfied(). }
-false;protected;0;3;;protected CamelContext createCamelContext() throws Exception {     return createSpringCamelContext(this, "org/apache/camel/spring/processor/setBody.xml"). }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;3;;public void setTarget(DataSource target) {     this.target = target. }
-false;public;0;4;;@Override public Connection getConnection() throws SQLException {     return target.getConnection(). }
-false;public;2;4;;@Override public Connection getConnection(String username, String password) throws SQLException {     return target.getConnection(username, password). }

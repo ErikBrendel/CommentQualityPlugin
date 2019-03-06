@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public List<String> getIndices() {     return indices. }
-false;public;1;11;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     RetryLifecyclePolicyRequest that = (RetryLifecyclePolicyRequest) o.     return indices.size() == that.indices.size() && indices.containsAll(that.indices). }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(indices). }

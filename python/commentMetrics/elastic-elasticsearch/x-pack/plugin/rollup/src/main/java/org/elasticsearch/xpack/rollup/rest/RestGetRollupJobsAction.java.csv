@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;2;7;;@Override protected RestChannelConsumer prepareRequest(RestRequest restRequest, NodeClient client) {     String id = restRequest.param(ID.getPreferredName()).     GetRollupJobsAction.Request request = new GetRollupJobsAction.Request(id).     return channel -> client.execute(GetRollupJobsAction.INSTANCE, request, new RestToXContentListener<>(channel)). }
-false;public;0;4;;@Override public String getName() {     return "get_rollup_job". }

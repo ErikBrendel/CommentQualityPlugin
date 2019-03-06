@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;3;;public static ScriptService instance() {     return new TestTemplateService(false). }
-false;public,static;1;3;;public static ScriptService instance(boolean compilationException) {     return new TestTemplateService(compilationException). }
-false;public;2;8;;@Override public <FactoryType> FactoryType compile(Script script, ScriptContext<FactoryType> context) {     if (this.compilationException) {         throw new RuntimeException("could not compile script").     } else {         return (FactoryType) new MockTemplateScript.Factory(script.getIdOrCode()).     } }
-false;public;0;4;;@Override public String execute() {     return expected. }
-false;public;1;4;;@Override public TemplateScript newInstance(Map<String, Object> params) {     return new MockTemplateScript(expected). }

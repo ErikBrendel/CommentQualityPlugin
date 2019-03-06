@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Before public void setup() {     ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext(getClass().getSimpleName() + ".xml", getClass()).     testBean = (ITestBean) ctx.getBean("testBean").     interceptor = (CallCountingInterceptor) ctx.getBean("interceptor"). }
-false;public;0;8;;@Test public void testPointcutting() {     assertEquals("Count should be 0", 0, interceptor.getCount()).     testBean.getSpouses().     assertEquals("Count should be 1", 1, interceptor.getCount()).     testBean.getSpouse().     assertEquals("Count should be 1", 1, interceptor.getCount()). }
-false;public;1;5;;@Override public Object invoke(MethodInvocation methodInvocation) throws Throwable {     count++.     return methodInvocation.proceed(). }
-false;public;0;3;;public int getCount() {     return count. }
-false;public;0;3;;public void reset() {     this.count = 0. }

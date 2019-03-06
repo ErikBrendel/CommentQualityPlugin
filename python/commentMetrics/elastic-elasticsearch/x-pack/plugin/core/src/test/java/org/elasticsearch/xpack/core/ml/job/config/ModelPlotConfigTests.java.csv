@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;public void testConstructorDefaults() {     assertThat(new ModelPlotConfig().isEnabled(), is(true)).     assertThat(new ModelPlotConfig().getTerms(), is(nullValue())). }
-false;protected;0;4;;@Override protected ModelPlotConfig createTestInstance() {     return new ModelPlotConfig(randomBoolean(), randomAlphaOfLengthBetween(1, 30)). }
-false;protected;0;4;;@Override protected Reader<ModelPlotConfig> instanceReader() {     return ModelPlotConfig::new. }
-false;protected;1;4;;@Override protected ModelPlotConfig doParseInstance(XContentParser parser) {     return ModelPlotConfig.STRICT_PARSER.apply(parser, null). }

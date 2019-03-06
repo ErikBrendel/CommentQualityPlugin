@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Test public void testSpying() {     MockingDetails mockingDetails = Mockito.mockingDetails(this.spy).     assertThat(mockingDetails.isSpy()).isTrue().     assertThat(mockingDetails.getMockCreationSettings().getMockName().toString()).isEqualTo("two"). }
-false;public;0;4;;@Bean public SimpleExampleStringGenericService one() {     return new SimpleExampleStringGenericService("one"). }
-false;public;0;4;;@Bean public SimpleExampleStringGenericService two() {     return new SimpleExampleStringGenericService("two"). }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;13;;// SPR-16869 @Test public void sseWithFlux() throws Exception {     MockMvc mockMvc = MockMvcBuilders.standaloneSetup(ReactiveController.class).build().     MvcResult mvcResult = mockMvc.perform(get("/spr16869")).andExpect(request().asyncStarted()).andExpect(status().isOk()).andReturn().     mockMvc.perform(asyncDispatch(mvcResult)).andExpect(content().string("data:event0\n\ndata:event1\n\ndata:event2\n\n")). }
-false;;0;5;;@GetMapping(path = "/spr16869", produces = MediaType.TEXT_EVENT_STREAM_VALUE) Flux<String> sseFlux() {     return Flux.interval(Duration.ofSeconds(1)).take(3).map(aLong -> String.format("event%d", aLong)). }

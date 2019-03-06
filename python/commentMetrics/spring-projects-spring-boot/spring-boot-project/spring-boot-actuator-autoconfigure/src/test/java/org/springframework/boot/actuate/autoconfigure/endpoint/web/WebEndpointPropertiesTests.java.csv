@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void defaultBasePathShouldBeApplication() {     WebEndpointProperties properties = new WebEndpointProperties().     assertThat(properties.getBasePath()).isEqualTo("/actuator"). }
-false;public;0;8;;@Test public void basePathShouldBeCleaned() {     WebEndpointProperties properties = new WebEndpointProperties().     properties.setBasePath("/").     assertThat(properties.getBasePath()).isEqualTo("").     properties.setBasePath("/actuator/").     assertThat(properties.getBasePath()).isEqualTo("/actuator"). }
-false;public;0;7;;@Test public void basePathMustStartWithSlash() {     WebEndpointProperties properties = new WebEndpointProperties().     assertThatIllegalArgumentException().isThrownBy(() -> properties.setBasePath("admin")).withMessageContaining("Base path must start with '/' or be empty"). }
-false;public;0;6;;@Test public void basePathCanBeEmpty() {     WebEndpointProperties properties = new WebEndpointProperties().     properties.setBasePath("").     assertThat(properties.getBasePath()).isEqualTo(""). }

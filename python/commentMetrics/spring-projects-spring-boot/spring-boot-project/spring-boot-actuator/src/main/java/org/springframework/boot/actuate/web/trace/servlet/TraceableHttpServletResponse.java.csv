@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public int getStatus() {     return this.delegate.getStatus(). }
-false;public;0;4;;@Override public Map<String, List<String>> getHeaders() {     return extractHeaders(). }
-false;private;0;7;;private Map<String, List<String>> extractHeaders() {     Map<String, List<String>> headers = new LinkedHashMap<>().     for (String name : this.delegate.getHeaderNames()) {         headers.put(name, new ArrayList<>(this.delegate.getHeaders(name))).     }     return headers. }

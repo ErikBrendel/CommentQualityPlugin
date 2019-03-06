@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;private;0;13;;private void run() {     OkHttpClient client = new OkHttpClient.Builder().readTimeout(0, TimeUnit.MILLISECONDS).build().     Request request = new Request.Builder().url("ws://echo.websocket.org").build().     client.newWebSocket(request, this).     // Trigger shutdown of the dispatcher's executor so this process can exit cleanly.     client.dispatcher().executorService().shutdown(). }
-false;public;2;6;;@Override public void onOpen(WebSocket webSocket, Response response) {     webSocket.send("Hello...").     webSocket.send("...World!").     webSocket.send(ByteString.decodeHex("deadbeef")).     webSocket.close(1000, "Goodbye, World!"). }
-false;public;2;3;;@Override public void onMessage(WebSocket webSocket, String text) {     System.out.println("MESSAGE: " + text). }
-false;public;2;3;;@Override public void onMessage(WebSocket webSocket, ByteString bytes) {     System.out.println("MESSAGE: " + bytes.hex()). }
-false;public;3;4;;@Override public void onClosing(WebSocket webSocket, int code, String reason) {     webSocket.close(1000, null).     System.out.println("CLOSE: " + code + " " + reason). }
-false;public;3;3;;@Override public void onFailure(WebSocket webSocket, Throwable t, Response response) {     t.printStackTrace(). }
-false;public,static;1;3;;public static void main(String... args) {     new WebSocketEcho().run(). }

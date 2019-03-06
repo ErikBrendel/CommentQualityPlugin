@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;20;;@Override public ObjectNode deserialize(ConsumerRecord<byte[], byte[]> record) throws Exception {     if (mapper == null) {         mapper = new ObjectMapper().     }     ObjectNode node = mapper.createObjectNode().     if (record.key() != null) {         node.set("key", mapper.readValue(record.key(), JsonNode.class)).     }     if (record.value() != null) {         node.set("value", mapper.readValue(record.value(), JsonNode.class)).     }     if (includeMetadata) {         node.putObject("metadata").put("offset", record.offset()).put("topic", record.topic()).put("partition", record.partition()).     }     return node. }
-false;public;1;4;;@Override public boolean isEndOfStream(ObjectNode nextElement) {     return false. }
-false;public;0;4;;@Override public TypeInformation<ObjectNode> getProducedType() {     return getForClass(ObjectNode.class). }

@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected,abstract;0;1;;protected abstract Class<A> getSpiType().
-false;protected,final;0;3;;protected final A getSpi() {     return spi. }
-false;protected,final;0;3;;protected final String getApiVersion() {     return this.apiVersion. }
-false;public,final;1;7;;@Override public final void setWordpressAuthentication(WordpressAuthentication authentication) {     this.authentication = authentication.     if (this.authentication != null) {         this.authentication.configureAuthentication(spi).     } }

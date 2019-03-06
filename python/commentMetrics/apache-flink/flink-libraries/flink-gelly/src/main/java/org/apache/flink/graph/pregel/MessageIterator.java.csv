@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;1;3;;void setSource(Iterator<Tuple2<?, Either<NullValue, Message>>> source) {     this.source = source. }
-false;;1;3;;void setFirst(Message msg) {     this.first = msg. }
-false;public,final;0;9;;@Override public final boolean hasNext() {     if (first != null) {         return true.     } else {         return ((this.source != null) && (this.source.hasNext())).     } }
-false;public,final;0;9;;@Override public final Message next() {     if (first != null) {         Message toReturn = first.         first = null.         return toReturn.     }     return this.source.next().f1.right(). }
-false;public,final;0;4;;@Override public final void remove() {     throw new UnsupportedOperationException(). }
-false;public;0;4;;@Override public Iterator<Message> iterator() {     return this. }

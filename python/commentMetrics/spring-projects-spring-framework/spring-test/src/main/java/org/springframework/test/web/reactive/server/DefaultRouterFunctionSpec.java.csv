@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;@Override public WebTestClient.RouterFunctionSpec handlerStrategies(HandlerStrategies handlerStrategies) {     this.handlerStrategies = handlerStrategies.     return this. }
-false;protected;0;8;;@Override protected WebHttpHandlerBuilder initHttpHandlerBuilder() {     WebHandler webHandler = RouterFunctions.toWebHandler(this.routerFunction, this.handlerStrategies).     return WebHttpHandlerBuilder.webHandler(webHandler).filters(filters -> filters.addAll(this.handlerStrategies.webFilters())).exceptionHandlers(handlers -> handlers.addAll(this.handlerStrategies.exceptionHandlers())).localeContextResolver(this.handlerStrategies.localeContextResolver()). }

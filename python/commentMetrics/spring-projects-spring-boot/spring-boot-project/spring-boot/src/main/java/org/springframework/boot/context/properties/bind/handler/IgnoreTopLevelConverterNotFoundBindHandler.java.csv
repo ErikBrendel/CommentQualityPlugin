@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;4;8;;@Override public Object onFailure(ConfigurationPropertyName name, Bindable<?> target, BindContext context, Exception error) throws Exception {     if (context.getDepth() == 0 && error instanceof ConverterNotFoundException) {         return null.     }     throw error. }

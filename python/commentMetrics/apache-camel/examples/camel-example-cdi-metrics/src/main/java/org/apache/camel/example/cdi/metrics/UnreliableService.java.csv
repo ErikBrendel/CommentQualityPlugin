@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;@Metered public void attempt(Exchange exchange) {     if (Math.random() < 0.5) {         throw new RuntimeExchangeException("Random failure", exchange).     } }

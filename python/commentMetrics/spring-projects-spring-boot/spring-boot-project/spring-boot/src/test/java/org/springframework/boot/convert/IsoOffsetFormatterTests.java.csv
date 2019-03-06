@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Test public void convertShouldConvertStringToIsoDate() {     OffsetDateTime now = OffsetDateTime.now().     OffsetDateTime converted = this.conversionService.convert(DateTimeFormatter.ISO_OFFSET_DATE_TIME.format(now), OffsetDateTime.class).     assertThat(converted).isEqualTo(now). }
-false;public;0;7;;@Test public void convertShouldConvertIsoDateToString() {     OffsetDateTime now = OffsetDateTime.now().     String converted = this.conversionService.convert(now, String.class).     assertThat(converted).isNotNull().startsWith(now.format(DateTimeFormatter.ISO_OFFSET_DATE_TIME)). }
-false;public,static;0;4;;@Parameters(name = "{0}") public static Iterable<Object[]> conversionServices() {     return new ConversionServiceParameters(new IsoOffsetFormatter()). }

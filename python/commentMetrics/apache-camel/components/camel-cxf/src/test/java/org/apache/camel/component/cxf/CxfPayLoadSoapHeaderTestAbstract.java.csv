@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;protected String getRouterEndpointURI() {     return "cxf:http://localhost:" + port1 + "/" + getClass().getSimpleName() + "/pizza_service/services/PizzaService?wsdlURL=classpath:pizza_service.wsdl&dataFormat=PAYLOAD". }
-false;protected;0;4;;protected String getServiceEndpointURI() {     return "cxf:http://localhost:" + port2 + "/" + getClass().getSimpleName() + "/new_pizza_service/services/PizzaService?wsdlURL=classpath:pizza_service.wsdl&dataFormat=PAYLOAD". }
-false;public;0;4;;@Override public boolean isCreateCamelContextPerClass() {     return true. }
-false;protected;1;6;;protected void start(String n) {     Object implementor = new PizzaImpl().     String address = "http://localhost:" + port2 + "/" + n + "/new_pizza_service/services/PizzaService".     Endpoint.publish(address, implementor). }
-false;public;0;4;;@Before public void startService() {     start(getClass().getSimpleName()). }

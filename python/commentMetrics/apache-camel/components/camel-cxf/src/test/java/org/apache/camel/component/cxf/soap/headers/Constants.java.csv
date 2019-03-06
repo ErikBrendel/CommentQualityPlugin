@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;2;12;;public static boolean equals(SOAPHeaderData lhs, SOAPHeaderData rhs) {     if (compare(lhs, rhs)) {         return true.     }     if (compare(lhs.getMessage(), rhs.getMessage())) {         return true.     }     if (compare(lhs.getOriginator(), rhs.getOriginator())) {         return true.     }     return false. }
-false;public,static;2;9;;public static <L, R> boolean compare(L lhs, R rhs) {     if (lhs == rhs) {         return true.     }     if (lhs == null || rhs == null && lhs != rhs) {         return false.     }     return lhs.equals(rhs). }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;@Bean @ConditionalOnMissingBean public GraphiteConfig graphiteConfig(GraphiteProperties graphiteProperties) {     return new GraphitePropertiesConfigAdapter(graphiteProperties). }
-false;public;2;6;;@Bean @ConditionalOnMissingBean public GraphiteMeterRegistry graphiteMeterRegistry(GraphiteConfig graphiteConfig, Clock clock) {     return new GraphiteMeterRegistry(graphiteConfig, clock). }

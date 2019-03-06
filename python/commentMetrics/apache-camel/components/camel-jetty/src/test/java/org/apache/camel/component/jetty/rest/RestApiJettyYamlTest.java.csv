@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;11;;@Test public void testApi() throws Exception {     String out = template.requestBody("jetty:http://localhost:{{port}}/api-doc/swagger.yaml", null, String.class).     assertNotNull(out).     assertTrue(out.contains("version: \"1.2.3\"")).     assertTrue(out.contains("title: \"The hello rest thing")).     assertTrue(out.contains("/hello/bye:")).     assertTrue(out.contains("- \"hello\"")).     assertTrue(out.contains("/hello/bye/{name}:")).     assertTrue(out.contains("- name: \"name\"")). }

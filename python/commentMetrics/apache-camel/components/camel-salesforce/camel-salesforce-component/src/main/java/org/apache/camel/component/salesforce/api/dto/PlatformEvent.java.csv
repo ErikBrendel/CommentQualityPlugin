@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;10;;@Override public boolean equals(Object obj) {     if (!(obj instanceof PlatformEvent)) {         return false.     }     final PlatformEvent other = (PlatformEvent) obj.     return Objects.equals(created, other.created) && Objects.equals(createdById, other.createdById) && Objects.equals(eventData, other.eventData). }
-false;public;0;3;;public ZonedDateTime getCreated() {     return created. }
-false;public;0;3;;public String getCreatedById() {     return createdById. }
-false;public;0;3;;public Map<String, String> getEventData() {     return eventData. }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(created, createdById, eventData). }
-false;public;2;4;;@JsonAnySetter public void set(final String name, final String value) {     eventData.put(name, value). }
-false;public;0;5;;@Override public String toString() {     return new StringBuilder().append("PlatformEvent: createdById: ").append(createdById).append(", createdId: ").append(created).append(", data: ").append(eventData).toString(). }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Bean @ConditionalOnMissingBean(name = "websocketServletWebServerCustomizer") public TomcatWebSocketServletWebServerCustomizer websocketServletWebServerCustomizer() {     return new TomcatWebSocketServletWebServerCustomizer(). }
-false;public;0;5;;@Bean @ConditionalOnMissingBean(name = "websocketServletWebServerCustomizer") public JettyWebSocketServletWebServerCustomizer websocketServletWebServerCustomizer() {     return new JettyWebSocketServletWebServerCustomizer(). }
-false;public;0;5;;@Bean @ConditionalOnMissingBean(name = "websocketServletWebServerCustomizer") public UndertowWebSocketServletWebServerCustomizer websocketServletWebServerCustomizer() {     return new UndertowWebSocketServletWebServerCustomizer(). }

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * Used by states to access the current key.  */ ;/**  * Used by states to access the current key.  */ K getCurrentKey().
-true;;0;1;/**  * Returns the key-group to which the current key belongs.  */ ;/**  * Returns the key-group to which the current key belongs.  */ int getCurrentKeyGroupIndex().
-true;;0;1;/**  * Returns the number of key-groups aka max parallelism.  */ ;/**  * Returns the number of key-groups aka max parallelism.  */ int getNumberOfKeyGroups().
-true;;0;1;/**  * Returns the key groups for this backend.  */ ;/**  * Returns the key groups for this backend.  */ KeyGroupRange getKeyGroupRange().
-true;;0;1;/**  * {@link TypeSerializer} for the state backend key type.  */ ;/**  * {@link TypeSerializer} for the state backend key type.  */ TypeSerializer<K> getKeySerializer().

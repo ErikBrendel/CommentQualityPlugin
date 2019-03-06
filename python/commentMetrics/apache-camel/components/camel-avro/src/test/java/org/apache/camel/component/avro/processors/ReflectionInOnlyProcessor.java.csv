@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;10;;@Override public void process(Exchange exchange) throws Exception {     Object body = exchange.getIn().getBody().     if (body instanceof String) {         testReflection.setName(String.valueOf(body)).     }     if (body instanceof TestPojo) {         testReflection.setTestPojo((TestPojo) body).     } }
-false;public;0;3;;public TestReflection getTestReflection() {     return testReflection. }
-false;public;1;3;;public void setTestReflection(TestReflection testReflection) {     this.testReflection = testReflection. }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;4;;@Converter public static long toMilliSeconds(Duration source) {     return source.toMillis(). }
-false;public,static;1;4;;@Converter public static Duration toDuration(String source) {     return Duration.parse(source). }
-false;public,static;1;4;;@Converter public static String toString(Duration source) {     return source.toString(). }

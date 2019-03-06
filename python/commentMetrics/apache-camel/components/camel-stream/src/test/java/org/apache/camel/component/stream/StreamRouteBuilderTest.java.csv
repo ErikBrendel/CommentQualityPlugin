@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void testStringContent() {     template.sendBody("direct:start", "this is text\n"). }
-false;public;0;4;;@Test public void testBinaryContent() {     template.sendBody("direct:start", "This is bytes\n".getBytes()). }
-false;public;0;4;;public void configure() {     from("direct:start").setHeader("stream", constant(System.out)).to("stream:err", "stream:out", "stream:header"). }
-false;protected;0;8;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("direct:start").setHeader("stream", constant(System.out)).to("stream:err", "stream:out", "stream:header").         }     }. }

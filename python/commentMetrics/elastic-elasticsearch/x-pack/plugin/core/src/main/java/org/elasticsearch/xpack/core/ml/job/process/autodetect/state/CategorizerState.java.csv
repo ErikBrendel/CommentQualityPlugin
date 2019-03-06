@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static,final;2;3;;public static final String documentId(String jobId, int docNum) {     return documentPrefix(jobId) + docNum. }
-false;public,static,final;1;3;;public static final String documentPrefix(String jobId) {     return jobId + "_" + TYPE + "#". }
-true;public,static,final;2;3;/**  * This is how the IDs were formed in v5.4  */ ;/**  * This is how the IDs were formed in v5.4  */ public static final String v54DocumentId(String jobId, int docNum) {     return v54DocumentPrefix(jobId) + docNum. }
-false;public,static,final;1;3;;public static final String v54DocumentPrefix(String jobId) {     return jobId + "#". }
-true;public,static,final;1;4;/**  * Given the id of a categorizer state document it extracts the job id  * @param docId the categorizer state document id  * @return the job id or {@code null} if the id is not valid  */ ;/**  * Given the id of a categorizer state document it extracts the job id  * @param docId the categorizer state document id  * @return the job id or {@code null} if the id is not valid  */ public static final String extractJobId(String docId) {     int suffixIndex = docId.lastIndexOf("_" + TYPE).     return suffixIndex <= 0 ? null : docId.substring(0, suffixIndex). }

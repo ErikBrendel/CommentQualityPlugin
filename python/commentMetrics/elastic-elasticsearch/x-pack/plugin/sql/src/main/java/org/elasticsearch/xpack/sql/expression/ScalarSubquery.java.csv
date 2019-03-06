@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected NodeInfo<ScalarSubquery> info() {     return NodeInfo.create(this, ScalarSubquery::new, query(), id()). }
-false;protected;1;4;;@Override protected ScalarSubquery clone(LogicalPlan newQuery) {     return new ScalarSubquery(source(), newQuery). }
-false;public;0;4;;@Override public DataType dataType() {     throw new UnsupportedOperationException(). }
-false;public;0;4;;@Override public Nullability nullable() {     return Nullability.TRUE. }

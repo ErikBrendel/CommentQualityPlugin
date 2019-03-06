@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getIdentity() {     return getName() + " (" + vertexCount.getValue() + ":" + vertexDegree.getValue() + ")". }
-false;protected;0;4;;@Override protected long vertexCount() {     return vertexCount.getValue(). }
-false;public;1;6;;@Override public Graph<LongValue, NullValue, NullValue> create(ExecutionEnvironment env) throws Exception {     return new org.apache.flink.graph.generator.EchoGraph(env, vertexCount.getValue(), vertexDegree.getValue()).setParallelism(parallelism.getValue().intValue()).generate(). }

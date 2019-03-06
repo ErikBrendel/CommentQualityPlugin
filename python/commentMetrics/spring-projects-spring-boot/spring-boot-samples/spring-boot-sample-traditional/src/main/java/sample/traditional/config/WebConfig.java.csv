@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public void addViewControllers(ViewControllerRegistry registry) {     registry.addViewController("/").setViewName("home"). }
-false;public;0;7;;@Bean public InternalResourceViewResolver viewResolver() {     InternalResourceViewResolver viewResolver = new InternalResourceViewResolver().     viewResolver.setPrefix("/WEB-INF/views/").     viewResolver.setSuffix(".jsp").     return viewResolver. }
-false;public;0;5;;@Bean public // Only used when running in embedded servlet DispatcherServlet dispatcherServlet() {     return new DispatcherServlet(). }
-false;public;1;5;;@Override public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {     configurer.enable(). }

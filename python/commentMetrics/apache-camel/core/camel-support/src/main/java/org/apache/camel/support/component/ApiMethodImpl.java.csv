@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getName() {     return name. }
-false;public;0;4;;@Override public Class<?> getResultType() {     return resultType. }
-false;public;0;4;;@Override public List<String> getArgNames() {     return argNames. }
-false;public;0;4;;@Override public List<Class<?>> getArgTypes() {     return argTypes. }
-false;public;0;4;;@Override public Method getMethod() {     return method. }
-false;public;0;12;;@Override public String toString() {     StringBuilder builder = new StringBuilder().     builder.append("{").append("name=").append(name).append(", resultType=").append(resultType).append(", argNames=").append(argNames).append(", argTypes=").append(argTypes).append("}").     return builder.toString(). }

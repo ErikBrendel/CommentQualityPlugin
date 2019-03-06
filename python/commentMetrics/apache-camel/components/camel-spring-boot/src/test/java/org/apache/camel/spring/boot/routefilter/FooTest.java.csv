@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;12;;@Test public void shouldSendToFoo() throws Exception {     // Given     MockEndpoint mock = camelContext.getEndpoint("mock:foo", MockEndpoint.class).     mock.expectedBodiesReceived("Hello Foo").     // When     producerTemplate.sendBody("direct:start", "Hello Foo").     // Then     mock.assertIsSatisfied(). }

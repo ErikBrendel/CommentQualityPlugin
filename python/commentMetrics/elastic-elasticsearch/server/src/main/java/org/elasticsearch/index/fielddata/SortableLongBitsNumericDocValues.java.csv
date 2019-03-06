@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public long longValue() throws IOException {     return NumericUtils.doubleToSortableLong(values.doubleValue()). }
-false;public;1;5;;@Override public boolean advanceExact(int target) throws IOException {     docID = target.     return values.advanceExact(target). }
-false;public;0;4;;@Override public int docID() {     return docID. }
-true;public;0;3;/**  * Return the wrapped values.  */ ;/**  * Return the wrapped values.  */ public NumericDoubleValues getDoubleValues() {     return values. }

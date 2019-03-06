@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;6;;public static Set<Setting.AffixSetting<?>> getSettings(String realmType) {     return Stream.of(POOL_INITIAL_SIZE, POOL_SIZE, HEALTH_CHECK_ENABLED, HEALTH_CHECK_INTERVAL, HEALTH_CHECK_DN, BIND_DN, LEGACY_BIND_PASSWORD, SECURE_BIND_PASSWORD).map(f -> f.apply(realmType)).collect(Collectors.toSet()). }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;8;;@Override public TokenStream create(TokenStream tokenStream) {     if (keywordPattern != null) {         return new PatternKeywordMarkerFilter(tokenStream, keywordPattern).     } else {         return new SetKeywordMarkerFilter(tokenStream, keywordLookup).     } }

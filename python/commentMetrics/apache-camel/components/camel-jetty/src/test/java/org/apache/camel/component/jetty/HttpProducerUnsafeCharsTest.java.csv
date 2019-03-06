@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;@Test public void unsafeCharsInHttpURIHeader() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMessageCount(1).     template.sendBodyAndHeader("jetty:http://localhost:{{port}}/test?bridgeEndpoint=true", "Hello World", Exchange.HTTP_URI, "/<>{}").     assertMockEndpointsSatisfied(). }
-false;public;0;4;;@Override public void configure() throws Exception {     from("jetty:http://localhost:{{port}}/test").to("mock:result"). }
-false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("jetty:http://localhost:{{port}}/test").to("mock:result").         }     }. }

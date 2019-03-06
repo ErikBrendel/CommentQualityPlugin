@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;@Before public void setUp() {     this.webSocketHandler = mock(WebSocketHandler.class).     this.taskScheduler = mock(TaskScheduler.class).     this.sockJsConfig = new StubSockJsServiceConfig().     this.sockJsConfig.setTaskScheduler(this.taskScheduler).     this.session = initSockJsSession(). }
-false;protected,abstract;0;1;;protected abstract S initSockJsSession().
-false;protected;0;3;;protected void assertNew() {     assertState(true, false, false). }
-false;protected;0;3;;protected void assertOpen() {     assertState(false, true, false). }
-false;protected;0;3;;protected void assertClosed() {     assertState(false, false, true). }
-false;private;3;5;;private void assertState(boolean isNew, boolean isOpen, boolean isClosed) {     assertEquals(isNew, this.session.isNew()).     assertEquals(isOpen, this.session.isOpen()).     assertEquals(isClosed, this.session.isClosed()). }

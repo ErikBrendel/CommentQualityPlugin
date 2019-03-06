@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;5;;@Override protected RevertModelSnapshotResponse createTestInstance() {     ModelSnapshot.Builder modelBuilder = ModelSnapshotTests.createRandomizedBuilder().     return new RevertModelSnapshotResponse(modelBuilder). }
-false;protected;1;4;;@Override protected RevertModelSnapshotResponse doParseInstance(XContentParser parser) throws IOException {     return RevertModelSnapshotResponse.fromXContent(parser). }
-false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }

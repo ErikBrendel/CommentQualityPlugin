@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public Class<JobPlanInfo> getResponseClass() {     return JobPlanInfo.class. }
-false;public;0;4;;@Override public HttpResponseStatus getResponseStatusCode() {     return HttpResponseStatus.OK. }
-false;public;0;4;;@Override public Class<JarPlanRequestBody> getRequestClass() {     return JarPlanRequestBody.class. }
-false;public;0;4;;@Override public JarPlanMessageParameters getUnresolvedMessageParameters() {     return new JarPlanMessageParameters(). }
-false;public;0;4;;@Override public HttpMethodWrapper getHttpMethod() {     return HttpMethodWrapper.GET. }
-false;public;0;4;;@Override public String getTargetRestEndpointURL() {     return "/jars/:" + JarIdPathParameter.KEY + "/plan". }
-false;public,static;0;3;;public static JarPlanHeaders getInstance() {     return INSTANCE. }
-false;public;0;5;;@Override public String getDescription() {     return "Returns the dataflow plan of a job contained in a jar previously uploaded via '" + JarUploadHeaders.URL + "'. " + "Program arguments can be passed both via the JSON request (recommended) or query parameters.". }

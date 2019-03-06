@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;2;8;;@Override protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {     resp.getWriter().print(((String) req.getServletContext().getAttribute("listenerAttribute")) + " " + req.getAttribute("filterAttribute")).     resp.getWriter().flush(). }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;9;;@Override public TokenStream create(TokenStream tokenStream) {     CommonGramsFilter filter = new CommonGramsFilter(tokenStream, words).     if (queryMode) {         return new CommonGramsQueryFilter(filter).     } else {         return filter.     } }
-false;public;0;11;;@Override public TokenFilterFactory getSynonymFilter() {     if (indexSettings.getIndexVersionCreated().onOrAfter(Version.V_7_0_0)) {         throw new IllegalArgumentException("Token filter [" + name() + "] cannot be used to parse synonyms").     } else {         DEPRECATION_LOGGER.deprecatedAndMaybeLog("synonym_tokenfilters", "Token filter [" + name() + "] will not be usable to parse synonyms after v7.0").     }     return this. }

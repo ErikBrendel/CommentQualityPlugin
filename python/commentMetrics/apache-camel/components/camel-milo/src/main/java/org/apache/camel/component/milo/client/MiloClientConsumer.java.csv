@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;6;;@Override protected void doStart() throws Exception {     super.doStart().     this.handle = this.connection.monitorValue(this.node, this.samplingInterval, this::handleValueUpdate). }
-false;protected;0;9;;@Override protected void doStop() throws Exception {     if (this.handle != null) {         this.handle.unregister().         this.handle = null.     }     super.doStop(). }
-false;private;1;11;;private void handleValueUpdate(final DataValue value) {     log.debug("Handle item update - {} = {}", node, value).     final Exchange exchange = getEndpoint().createExchange().     exchange.setIn(mapMessage(value)).     try {         getAsyncProcessor().process(exchange).     } catch (final Exception e) {         log.debug("Failed to process message", e).     } }
-false;private;1;11;;private Message mapMessage(final DataValue value) {     if (value == null) {         return null.     }     final DefaultMessage result = new DefaultMessage(getEndpoint().getCamelContext()).     Messages.fillFromDataValue(value, result).     return result. }

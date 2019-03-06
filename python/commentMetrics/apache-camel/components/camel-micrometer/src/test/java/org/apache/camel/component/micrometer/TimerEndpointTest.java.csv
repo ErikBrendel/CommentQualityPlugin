@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Before public void setUp() {     endpoint = new MicrometerEndpoint(null, null, registry, Meter.Type.TIMER, METRICS_NAME, Tags.empty()).     inOrder = Mockito.inOrder(registry). }
-false;public;0;4;;@After public void tearDown() {     inOrder.verifyNoMoreInteractions(). }
-false;public;0;6;;@Test public void testTimerEndpoint() {     assertThat(endpoint, is(notNullValue())).     assertThat(endpoint.getRegistry(), is(registry)).     assertThat(endpoint.getMetricsName(), is(METRICS_NAME)). }
-false;public;0;6;;@Test public void testCreateProducer() throws Exception {     Producer producer = endpoint.createProducer().     assertThat(producer, is(notNullValue())).     assertThat(producer, is(instanceOf(TimerProducer.class))). }
-false;public;0;4;;@Test public void testGetAction() {     assertThat(endpoint.getAction(), is(nullValue())). }
-false;public;0;6;;@Test public void testSetAction() {     assertThat(endpoint.getAction(), is(nullValue())).     endpoint.setAction(MicrometerTimerAction.start.name()).     assertThat(MicrometerTimerAction.valueOf(endpoint.getAction()), is(MicrometerTimerAction.start)). }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Override public void configure() throws Exception {     from("reactive-streams:data").log("${body}"). }
-false;public;0;15;;@Test public void testAutoConfiguration() throws Exception {     new RouteBuilder() {          @Override         public void configure() throws Exception {             from("reactive-streams:data").log("${body}").         }     }.addRoutesToCamelContext(context).     Assert.assertTrue(context.getStatus().isStarted()).     CamelReactiveStreamsService service = CamelReactiveStreams.get(context).     Assert.assertTrue(service instanceof DefaultCamelReactiveStreamsService). }

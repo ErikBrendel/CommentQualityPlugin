@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Bean @ConditionalOnMissingBean public WavefrontConfig wavefrontConfig() {     return new WavefrontPropertiesConfigAdapter(this.properties). }
-false;public;2;10;;@Bean @ConditionalOnMissingBean public WavefrontMeterRegistry wavefrontMeterRegistry(WavefrontConfig wavefrontConfig, Clock clock) {     return WavefrontMeterRegistry.builder(wavefrontConfig).clock(clock).httpClient(new HttpUrlConnectionSender(this.properties.getConnectTimeout(), this.properties.getReadTimeout())).build(). }

@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getName() {     return getBeanName(). }
-false;public;0;4;;@Override public String getDescription() {     return getShortDescription(). }
-false;public;0;4;;@Override public BeanDefinition[] getBeanDefinitions() {     return new BeanDefinition[] { getBeanDefinition() }. }
-false;public;0;4;;@Override public BeanDefinition[] getInnerBeanDefinitions() {     return this.innerBeanDefinitions. }
-false;public;0;4;;@Override public BeanReference[] getBeanReferences() {     return this.beanReferences. }
-true;public;0;4;/**  * This implementation returns this ComponentDefinition's description.  * @see #getDescription()  */ ;/**  * This implementation returns this ComponentDefinition's description.  * @see #getDescription()  */ @Override public String toString() {     return getDescription(). }
-true;public;1;4;/**  * This implementations expects the other object to be of type BeanComponentDefinition  * as well, in addition to the superclass's equality requirements.  */ ;/**  * This implementations expects the other object to be of type BeanComponentDefinition  * as well, in addition to the superclass's equality requirements.  */ @Override public boolean equals(Object other) {     return (this == other || (other instanceof BeanComponentDefinition && super.equals(other))). }

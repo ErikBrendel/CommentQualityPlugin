@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test @Timed(millis = 10000) @Repeat(5) public void transactionalWithSpringTimeout() {     assertInTransaction(true). }
-false;public;0;5;;@Test(timeout = 10000) @Repeat(5) public void transactionalWithJUnitTimeout() {     assertInTransaction(true). }
-false;public;0;7;;@Test @Transactional(propagation = Propagation.NOT_SUPPORTED) @Timed(millis = 10000) @Repeat(5) public void notTransactionalWithSpringTimeout() {     assertInTransaction(false). }
-false;public;0;6;;@Test(timeout = 10000) @Transactional(propagation = Propagation.NOT_SUPPORTED) @Repeat(5) public void notTransactionalWithJUnitTimeout() {     assertInTransaction(false). }

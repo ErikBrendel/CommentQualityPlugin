@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected,final;1;7;;protected final void copyApplicationTo(File location) throws IOException {     FileSystemUtils.deleteRecursively(location).     location.mkdirs().     FileSystemUtils.copyRecursively(new File(this.directories.getTestClassesDirectory(), "com"), new File(location, "com")). }
-false;protected,final;0;4;;protected final List<String> getDependencyJarPaths() {     return Stream.of(this.directories.getDependenciesDirectory().listFiles()).map(File::getAbsolutePath).collect(Collectors.toList()). }
-false;protected,final;0;3;;protected final Directories getDirectories() {     return this.directories. }

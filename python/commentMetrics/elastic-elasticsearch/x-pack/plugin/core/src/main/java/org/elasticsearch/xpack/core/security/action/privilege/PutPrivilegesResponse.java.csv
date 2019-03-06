@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Get a list of privileges that were created (as opposed to updated)  * @return A map from <em>Application Name</em> to a {@code List} of <em>privilege names</em>  */ ;/**  * Get a list of privileges that were created (as opposed to updated)  * @return A map from <em>Application Name</em> to a {@code List} of <em>privilege names</em>  */ public Map<String, List<String>> created() {     return created. }
-false;public;2;5;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().field("created", created).endObject().     return builder. }
-false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeMap(created, StreamOutput::writeString, StreamOutput::writeStringCollection). }
-false;public;1;5;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     this.created = Collections.unmodifiableMap(in.readMap(StreamInput::readString, StreamInput::readStringList)). }

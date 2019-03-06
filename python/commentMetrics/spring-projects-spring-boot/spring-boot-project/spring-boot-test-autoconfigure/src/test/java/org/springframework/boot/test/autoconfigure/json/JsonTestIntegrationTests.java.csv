@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void basicJson() {     assertThat(this.basicJson.from("{\"a\":\"b\"}")).hasJsonPathStringValue("@.a"). }
-false;public;0;6;;@Test public void jacksonBasic() throws Exception {     ExampleBasicObject object = new ExampleBasicObject().     object.setValue("spring").     assertThat(this.jacksonBasicJson.write(object)).isEqualToJson("example.json"). }
-false;public;0;5;;@Test public void jacksonCustom() throws Exception {     ExampleCustomObject object = new ExampleCustomObject("spring").     assertThat(this.jacksonCustomJson.write(object)).isEqualToJson("example.json"). }
-false;public;0;6;;@Test public void gson() throws Exception {     ExampleBasicObject object = new ExampleBasicObject().     object.setValue("spring").     assertThat(this.gsonJson.write(object)).isEqualToJson("example.json"). }
-false;public;0;6;;@Test public void jsonb() throws Exception {     ExampleBasicObject object = new ExampleBasicObject().     object.setValue("spring").     assertThat(this.jsonbJson.write(object)).isEqualToJson("example.json"). }
-false;public;0;9;;@Test public void customView() throws Exception {     ExampleJsonObjectWithView object = new ExampleJsonObjectWithView().     object.setValue("spring").     JsonContent<ExampleJsonObjectWithView> content = this.jacksonWithViewJson.forView(ExampleJsonObjectWithView.TestView.class).write(object).     assertThat(content).doesNotHaveJsonPathValue("id").     assertThat(content).isEqualToJson("example.json"). }

@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;5;;@BeforeClass public static void setUpBeforeClass() throws Exception {     bf = new DefaultListableBeanFactory().     new XmlBeanDefinitionReader(bf).loadBeanDefinitions(new ClassPathResource("com/foo/component-config.xml")). }
-false;public,static;0;4;;@AfterClass public static void tearDownAfterClass() throws Exception {     bf.destroySingletons(). }
-false;private;0;3;;private Component getBionicFamily() {     return bf.getBean("bionic-family", Component.class). }
-false;public;0;5;;@Test public void testBionicBasic() throws Exception {     Component cp = getBionicFamily().     assertThat("Bionic-1", equalTo(cp.getName())). }
-false;public;0;8;;@Test public void testBionicFirstLevelChildren() throws Exception {     Component cp = getBionicFamily().     List<Component> components = cp.getComponents().     assertThat(2, equalTo(components.size())).     assertThat("Mother-1", equalTo(components.get(0).getName())).     assertThat("Rock-1", equalTo(components.get(1).getName())). }
-false;public;0;8;;@Test public void testBionicSecondLevelChildren() throws Exception {     Component cp = getBionicFamily().     List<Component> components = cp.getComponents().get(0).getComponents().     assertThat(2, equalTo(components.size())).     assertThat("Karate-1", equalTo(components.get(0).getName())).     assertThat("Sport-1", equalTo(components.get(1).getName())). }

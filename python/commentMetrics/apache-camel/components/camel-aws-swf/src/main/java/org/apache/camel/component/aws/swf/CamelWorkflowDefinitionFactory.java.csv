@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public WorkflowTypeRegistrationOptions getWorkflowRegistrationOptions() {     return registrationOptions. }
-false;public;1;5;;@Override public WorkflowDefinition getWorkflowDefinition(DecisionContext context) throws Exception {     CurrentDecisionContext.set(context).     return new CamelWorkflowDefinition(swfWorkflowConsumer, context, dataConverter). }
-false;public;1;4;;@Override public void deleteWorkflowDefinition(WorkflowDefinition instance) {     CurrentDecisionContext.unset(). }
-false;public;0;4;;@Override public WorkflowType getWorkflowType() {     return workflowType. }

@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;// -------------------------------------------------------------------------------------------- public BulkPartialSolutionNode getPartialSolutionNode() {     return (BulkPartialSolutionNode) this.template. }
-false;public;0;3;;public BulkIterationPlanNode getContainingIterationNode() {     return this.containingIterationNode. }
-false;public;1;3;;public void setContainingIterationNode(BulkIterationPlanNode containingIterationNode) {     this.containingIterationNode = containingIterationNode. }
-false;public;1;6;;// -------------------------------------------------------------------------------------------- @Override public void accept(Visitor<PlanNode> visitor) {     if (visitor.preVisit(this)) {         visitor.postVisit(this).     } }
-false;public;0;4;;@Override public Iterable<PlanNode> getPredecessors() {     return Collections.<PlanNode>emptyList(). }
-false;public;0;4;;@Override public Iterable<Channel> getInputs() {     return Collections.<Channel>emptyList(). }
-false;public;1;19;;@Override public SourceAndDamReport hasDamOnPathDownTo(PlanNode source) {     if (source == this) {         return FOUND_SOURCE.     }     SourceAndDamReport res = this.initialInput.getSource().hasDamOnPathDownTo(source).     if (res == FOUND_SOURCE_AND_DAM) {         return FOUND_SOURCE_AND_DAM.     } else if (res == FOUND_SOURCE) {         return (this.initialInput.getLocalStrategy().dams() || this.initialInput.getTempMode().breaksPipeline() || getDriverStrategy().firstDam() == DamBehavior.FULL_DAM) ? FOUND_SOURCE_AND_DAM : FOUND_SOURCE.     } else {         return NOT_FOUND.     } }

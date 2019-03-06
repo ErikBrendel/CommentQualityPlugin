@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;1;1;/**  * @param timestamp A String representing a timestamp  * @return Milliseconds since the epoch that the timestamp corresponds to  * @throws CannotParseTimestampException If the timestamp cannot be parsed  */ ;/**  * @param timestamp A String representing a timestamp  * @return Milliseconds since the epoch that the timestamp corresponds to  * @throws CannotParseTimestampException If the timestamp cannot be parsed  */ long transform(String timestamp) throws CannotParseTimestampException.

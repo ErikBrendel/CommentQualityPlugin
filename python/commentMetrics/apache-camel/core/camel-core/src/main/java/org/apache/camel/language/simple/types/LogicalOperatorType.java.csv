@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;10;;public static LogicalOperatorType asOperator(String text) {     switch(text) {         case "&&":             return AND.         case "||":             return OR.         default:             throw new IllegalArgumentException("Operator not supported: " + text).     } }
-false;public;1;10;;public String getOperatorText(LogicalOperatorType operator) {     switch(operator) {         case AND:             return "&&".         case OR:             return "||".         default:             return "".     } }
-false;public;0;4;;@Override public String toString() {     return getOperatorText(this). }

@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;3;6;;@Override protected Aggregator createUnmapped(Aggregator parent, List<PipelineAggregator> pipelineAggregators, Map<String, Object> metaData) throws IOException {     return new RangeAggregator.Unmapped<>(name, ranges, keyed, config.format(), context, parent, rangeFactory, pipelineAggregators, metaData). }
-false;protected;5;8;;@Override protected Aggregator doCreateInternal(final ValuesSource.GeoPoint valuesSource, Aggregator parent, boolean collectsFromSingleBucket, List<PipelineAggregator> pipelineAggregators, Map<String, Object> metaData) throws IOException {     DistanceSource distanceSource = new DistanceSource(valuesSource, distanceType, origin, unit).     return new RangeAggregator(name, factories, distanceSource, config.format(), rangeFactory, ranges, keyed, context, parent, pipelineAggregators, metaData). }
-false;public;0;4;;@Override public boolean isFloatingPoint() {     return true. }
-false;public;1;4;;@Override public SortedNumericDocValues longValues(LeafReaderContext ctx) {     throw new UnsupportedOperationException(). }
-false;public;1;5;;@Override public SortedNumericDoubleValues doubleValues(LeafReaderContext ctx) {     final MultiGeoPointValues geoValues = source.geoPointValues(ctx).     return GeoUtils.distanceValues(distanceType, units, geoValues, origin). }
-false;public;1;4;;@Override public SortedBinaryDocValues bytesValues(LeafReaderContext ctx) {     throw new UnsupportedOperationException(). }

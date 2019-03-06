@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;public boolean get(int index) {     assert 0 <= index && index < this.length().     assert bitset == null || onBits < bitset.length() : "Bitset should be released when all bits are set".     return bitset == null ? true : bitset.get(index). }
-false;public;1;17;;public void set(int index) {     assert 0 <= index && index < this.length().     assert bitset == null || onBits < bitset.length() : "Bitset should be released when all bits are set".     // Ignore set when bitset is full.     if (bitset != null) {         final boolean wasOn = bitset.getAndSet(index).         if (wasOn == false) {             onBits++.             // This allows us to clear the internal bitset and use null check as the guard.             if (onBits == bitset.length()) {                 bitset = null.             }         }     } }
-false;;0;3;;// Below methods are pkg-private for testing int cardinality() {     return onBits. }
-false;;0;3;;int length() {     return bitset == null ? onBits : bitset.length(). }
-false;;0;3;;boolean isInternalBitsetReleased() {     return bitset == null. }

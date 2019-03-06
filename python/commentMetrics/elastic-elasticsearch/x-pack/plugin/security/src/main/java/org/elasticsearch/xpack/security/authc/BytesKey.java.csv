@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public int hashCode() {     return hashCode. }
-false;public;1;12;;@Override public boolean equals(Object other) {     if (other == null) {         return false.     }     if (other instanceof BytesKey == false) {         return false.     }     BytesKey otherBytes = (BytesKey) other.     return Arrays.equals(otherBytes.bytes, bytes). }
-false;public;0;4;;@Override public String toString() {     return new BytesRef(bytes).toString(). }

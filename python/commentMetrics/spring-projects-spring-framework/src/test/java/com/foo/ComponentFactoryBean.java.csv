@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;3;;public void setParent(Component parent) {     this.parent = parent. }
-false;public;1;3;;public void setChildren(List<Component> children) {     this.children = children. }
-false;public;0;9;;@Override public Component getObject() throws Exception {     if (this.children != null && this.children.size() > 0) {         for (Component child : children) {             this.parent.addComponent(child).         }     }     return this.parent. }
-false;public;0;4;;@Override public Class<Component> getObjectType() {     return Component.class. }
-false;public;0;4;;@Override public boolean isSingleton() {     return true. }

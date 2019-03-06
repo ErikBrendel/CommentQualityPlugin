@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void searchWhenIterableIsNullShouldThrowException() {     assertThatIllegalArgumentException().isThrownBy(() -> ConfigurationPropertyState.search(null, (e) -> true)).withMessageContaining("Source must not be null"). }
-false;public;0;6;;@Test public void searchWhenPredicateIsNullShouldThrowException() {     assertThatIllegalArgumentException().isThrownBy(() -> ConfigurationPropertyState.search(Collections.emptyList(), null)).withMessageContaining("Predicate must not be null"). }
-false;public;0;7;;@Test public void searchWhenContainsItemShouldReturnPresent() {     List<String> source = Arrays.asList("a", "b", "c").     ConfigurationPropertyState result = ConfigurationPropertyState.search(source, "b"::equals).     assertThat(result).isEqualTo(ConfigurationPropertyState.PRESENT). }
-false;public;0;7;;@Test public void searchWhenContainsNoItemShouldReturnAbsent() {     List<String> source = Arrays.asList("a", "x", "c").     ConfigurationPropertyState result = ConfigurationPropertyState.search(source, "b"::equals).     assertThat(result).isEqualTo(ConfigurationPropertyState.ABSENT). }

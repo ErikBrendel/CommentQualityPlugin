@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;4;;@Override protected void customize(ResourceDatabasePopulator populator) {     populator.setCommentPrefix(this.properties.getJdbc().getCommentPrefix()). }
-false;protected;0;4;;@Override protected DataSourceInitializationMode getMode() {     return this.properties.getJdbc().getInitializeSchema(). }
-false;protected;0;4;;@Override protected String getSchemaLocation() {     return this.properties.getJdbc().getSchema(). }
-false;protected;0;17;;@Override protected String getDatabaseName() {     String databaseName = super.getDatabaseName().     if ("db2".equals(databaseName)) {         return "db2_v95".     }     if ("mysql".equals(databaseName)) {         return "mysql_innodb".     }     if ("postgresql".equals(databaseName)) {         return "postgres".     }     if ("sqlserver".equals(databaseName)) {         return "sqlServer".     }     return databaseName. }

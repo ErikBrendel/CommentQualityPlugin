@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void testGroovyExpressions() throws Exception {     assertExpression("exchange.in.headers.foo", "abc").     assertExpression("request.headers.foo", "abc").     assertExpression("headers.foo", "abc"). }
-false;protected;0;3;;protected String getLanguageName() {     return "groovy". }

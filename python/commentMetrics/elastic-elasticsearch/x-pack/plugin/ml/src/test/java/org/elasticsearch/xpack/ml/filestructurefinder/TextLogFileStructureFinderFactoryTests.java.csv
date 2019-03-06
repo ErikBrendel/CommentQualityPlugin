@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;// No need to check NDJSON, XML, CSV, TSV, semi-colon delimited values or pipe // delimited values because they come earlier in the order we check formats public void testCanCreateFromSampleGivenText() {     assertTrue(factory.canCreateFromSample(explanation, TEXT_SAMPLE)). }

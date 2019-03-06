@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Test public void getResourceByPath() throws Exception {     GenericReactiveWebApplicationContext context = new GenericReactiveWebApplicationContext().     Resource rootResource = context.getResourceByPath("/").     assertThat(rootResource.exists()).isFalse().     assertThat(rootResource.createRelative("application.properties").exists()).isFalse().     context.close(). }

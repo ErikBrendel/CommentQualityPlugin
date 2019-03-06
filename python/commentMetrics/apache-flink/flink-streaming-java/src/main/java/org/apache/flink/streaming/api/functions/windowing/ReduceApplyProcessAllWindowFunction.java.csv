@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;3;17;;@Override public void process(final Context context, Iterable<T> input, Collector<R> out) throws Exception {     T curr = null.     for (T val : input) {         if (curr == null) {             curr = val.         } else {             curr = reduceFunction.reduce(curr, val).         }     }     this.ctx.window = context.window().     this.ctx.context = context.     windowFunction.process(ctx, Collections.singletonList(curr), out). }
-false;public;1;7;;@Override public void clear(final Context context) throws Exception {     this.ctx.window = context.window().     this.ctx.context = context.     windowFunction.clear(ctx). }
-false;public;1;5;;@Override public void open(Configuration configuration) throws Exception {     FunctionUtils.openFunction(this.windowFunction, configuration).     ctx = new InternalProcessApplyAllWindowContext<>(windowFunction). }
-false;public;0;4;;@Override public void close() throws Exception {     FunctionUtils.closeFunction(this.windowFunction). }
-false;public;1;6;;@Override public void setRuntimeContext(RuntimeContext t) {     super.setRuntimeContext(t).     FunctionUtils.setFunctionRuntimeContext(this.windowFunction, t). }

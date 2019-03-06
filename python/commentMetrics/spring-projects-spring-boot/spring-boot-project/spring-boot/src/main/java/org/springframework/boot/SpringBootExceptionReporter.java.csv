@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;1;1;/**  * Report a startup failure to the user.  * @param failure the source failure  * @return {@code true} if the failure was reported or {@code false} if default  * reporting should occur.  */ ;/**  * Report a startup failure to the user.  * @param failure the source failure  * @return {@code true} if the failure was reported or {@code false} if default  * reporting should occur.  */ boolean reportException(Throwable failure).

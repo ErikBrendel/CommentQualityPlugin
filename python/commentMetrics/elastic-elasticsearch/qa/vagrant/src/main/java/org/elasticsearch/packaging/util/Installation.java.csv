@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;12;;public static Installation ofArchive(Path home) {     return new Installation(home, home.resolve("config"), home.resolve("data"), home.resolve("logs"), home.resolve("plugins"), home.resolve("modules"), null, null). }
-false;public,static;1;17;;public static Installation ofPackage(Distribution.Packaging packaging) {     final Path envFile = (packaging == Distribution.Packaging.RPM) ? Paths.get("/etc/sysconfig/elasticsearch") : Paths.get("/etc/default/elasticsearch").     return new Installation(Paths.get("/usr/share/elasticsearch"), Paths.get("/etc/elasticsearch"), Paths.get("/var/lib/elasticsearch"), Paths.get("/var/log/elasticsearch"), Paths.get("/usr/share/elasticsearch/plugins"), Paths.get("/usr/share/elasticsearch/modules"), Paths.get("/var/run/elasticsearch"), envFile). }
-false;public;1;3;;public Path bin(String executableName) {     return bin.resolve(executableName). }
-false;public;1;3;;public Path config(String configFileName) {     return config.resolve(configFileName). }
-false;public;0;3;;public Executables executables() {     return new Executables(). }
-false;private;1;6;;private Path platformExecutable(String name) {     final String platformExecutableName = Platforms.WINDOWS ? name + ".bat" : name.     return bin(platformExecutableName). }

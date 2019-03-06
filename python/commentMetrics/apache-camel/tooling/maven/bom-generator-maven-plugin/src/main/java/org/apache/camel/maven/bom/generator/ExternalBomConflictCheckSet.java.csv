@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public Set<ExternalBomConflictCheck> getBoms() {     return boms. }
-false;public;1;3;;public void setBoms(Set<ExternalBomConflictCheck> boms) {     this.boms = boms. }
-false;public;0;7;;@Override public String toString() {     final StringBuilder sb = new StringBuilder("ExternalBomConflictCheckSet{").     sb.append("boms=").append(boms).     sb.append('}').     return sb.toString(). }

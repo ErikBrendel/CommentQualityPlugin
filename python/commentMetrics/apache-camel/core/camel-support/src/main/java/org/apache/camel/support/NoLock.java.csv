@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;@Override public void lock() { }
-false;public;0;3;;@Override public void lockInterruptibly() { }
-false;public;0;4;;@Override public boolean tryLock() {     return true. }
-false;public;2;4;;@Override public boolean tryLock(long time, TimeUnit unit) {     return true. }
-false;public;0;3;;@Override public void unlock() { }
-false;public;0;4;;@Override public Condition newCondition() {     throw new UnsupportedOperationException(). }

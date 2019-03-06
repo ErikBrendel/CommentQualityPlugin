@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;11;;@Test public void fromElementsTest() throws Exception {     List<Integer> expectedList = Arrays.asList(1, 2, 3).     List<Integer> actualList = SourceFunctionUtil.runSourceFunction(CommonTestUtils.createCopySerializable(new FromElementsFunction<Integer>(IntSerializer.INSTANCE, 1, 2, 3))).     assertEquals(expectedList, actualList). }
-false;public;0;9;;@Test public void fromCollectionTest() throws Exception {     List<Integer> expectedList = Arrays.asList(1, 2, 3).     List<Integer> actualList = SourceFunctionUtil.runSourceFunction(CommonTestUtils.createCopySerializable(new FromElementsFunction<Integer>(IntSerializer.INSTANCE, Arrays.asList(1, 2, 3)))).     assertEquals(expectedList, actualList). }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;1;5;/**  * {@inheritDoc}  * The {@code ObjectMapper} parameter must be a {@link XmlMapper} instance.  */ ;/**  * {@inheritDoc}  * The {@code ObjectMapper} parameter must be a {@link XmlMapper} instance.  */ @Override public void setObjectMapper(ObjectMapper objectMapper) {     Assert.isInstanceOf(XmlMapper.class, objectMapper, "XmlMapper required").     super.setObjectMapper(objectMapper). }

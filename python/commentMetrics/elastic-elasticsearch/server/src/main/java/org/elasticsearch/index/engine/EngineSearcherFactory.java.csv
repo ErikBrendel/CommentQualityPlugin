@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;8;;@Override public IndexSearcher newSearcher(IndexReader reader, IndexReader previousReader) throws IOException {     IndexSearcher searcher = super.newSearcher(reader, previousReader).     searcher.setQueryCache(engineConfig.getQueryCache()).     searcher.setQueryCachingPolicy(engineConfig.getQueryCachingPolicy()).     searcher.setSimilarity(engineConfig.getSimilarity()).     return searcher. }

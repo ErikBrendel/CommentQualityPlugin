@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void contextLoads() {     ResponseEntity<String> entity = this.restTemplate.getForEntity("/hello", String.class).     assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.OK). }
-false;public;0;4;;@GET public String message() {     return "Hello " + this.msg. }
-false;public,static;1;3;;public static void main(String[] args) {     SpringApplication.run(Application.class, args). }

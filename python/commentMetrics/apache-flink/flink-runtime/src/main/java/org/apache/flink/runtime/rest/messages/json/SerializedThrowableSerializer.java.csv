@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;3;8;;@Override public void serialize(final SerializedThrowable value, final JsonGenerator gen, final SerializerProvider provider) throws IOException {     gen.writeStartObject().     gen.writeStringField(FIELD_NAME_CLASS, value.getOriginalErrorClassName()).     gen.writeStringField(FIELD_NAME_STACK_TRACE, value.getFullStringifiedStackTrace()).     gen.writeBinaryField(FIELD_NAME_SERIALIZED_THROWABLE, InstantiationUtil.serializeObject(value)).     gen.writeEndObject(). }

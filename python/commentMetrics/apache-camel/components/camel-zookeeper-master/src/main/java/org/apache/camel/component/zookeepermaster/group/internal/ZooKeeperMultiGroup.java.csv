@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;12;;@Override public boolean isMaster(String name) {     List<ChildData<T>> children = getActiveChildren().     Collections.sort(children, getSequenceComparator()).     for (ChildData child : children) {         NodeState node = (NodeState) child.getNode().         if (node.id.equals(name)) {             return child.getPath().equals(getId()).         }     }     return false. }

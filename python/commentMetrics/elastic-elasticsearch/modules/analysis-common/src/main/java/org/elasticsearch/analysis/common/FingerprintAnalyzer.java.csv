@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;10;;@Override protected TokenStreamComponents createComponents(String s) {     final Tokenizer tokenizer = new StandardTokenizer().     TokenStream stream = tokenizer.     stream = new LowerCaseFilter(stream).     stream = new ASCIIFoldingFilter(stream, false).     stream = new StopFilter(stream, stopWords).     stream = new FingerprintFilter(stream, maxOutputSize, separator).     return new TokenStreamComponents(tokenizer, stream). }

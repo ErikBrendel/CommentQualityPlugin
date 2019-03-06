@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;2;1;;MessageConsumer createMessageConsumer(Session session, Endpoint endpoint) throws Exception.
-false;;7;3;;MessageConsumer createMessageConsumer(Session session, Destination destination, String messageSelector, boolean topic, String subscriptionId, boolean durable, boolean shared) throws Exception.
-false;;8;3;;MessageConsumer createMessageConsumer(Session session, Destination destination, String messageSelector, boolean topic, String subscriptionId, boolean durable, boolean shared, boolean noLocal) throws Exception.
-false;;2;1;;MessageProducer createMessageProducer(Session session, Endpoint endpoint) throws Exception.
-false;;4;2;;MessageProducer createMessageProducer(Session session, Destination destination, boolean persistent, long ttl) throws Exception.

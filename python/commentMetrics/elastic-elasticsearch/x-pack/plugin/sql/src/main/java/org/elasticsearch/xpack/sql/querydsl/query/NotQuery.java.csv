@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public Query child() {     return child. }
-false;public;2;4;;@Override public boolean containsNestedField(String path, String field) {     return child.containsNestedField(path, field). }
-false;public;4;8;;@Override public Query addNestedField(String path, String field, String format, boolean hasDocValues) {     Query rewrittenChild = child.addNestedField(path, field, format, hasDocValues).     if (child == rewrittenChild) {         return this.     }     return new NotQuery(source(), child). }
-false;public;1;4;;@Override public void enrichNestedSort(NestedSortBuilder sort) {     child.enrichNestedSort(sort). }
-false;public;0;4;;@Override public QueryBuilder asBuilder() {     return boolQuery().mustNot(child.asBuilder()). }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(super.hashCode(), child.hashCode()). }
-false;public;1;8;;@Override public boolean equals(Object obj) {     if (false == super.equals(obj)) {         return false.     }     NotQuery other = (NotQuery) obj.     return child.equals(other.child). }
-false;protected;0;4;;@Override protected String innerToString() {     return child.toString(). }

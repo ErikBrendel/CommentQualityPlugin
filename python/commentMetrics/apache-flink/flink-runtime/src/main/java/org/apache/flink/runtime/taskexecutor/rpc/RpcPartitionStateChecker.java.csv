@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;3;8;;@Override public CompletableFuture<ExecutionState> requestPartitionProducerState(JobID jobId, IntermediateDataSetID resultId, ResultPartitionID partitionId) {     return jobMasterGateway.requestPartitionState(resultId, partitionId). }

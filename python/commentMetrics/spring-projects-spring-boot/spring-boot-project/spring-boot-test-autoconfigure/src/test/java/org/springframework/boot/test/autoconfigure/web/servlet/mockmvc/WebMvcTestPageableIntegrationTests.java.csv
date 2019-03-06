@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void shouldSupportPageable() throws Exception {     this.mvc.perform(get("/paged").param("page", "2").param("size", "42")).andExpect(status().isOk()).andExpect(content().string("2:42")). }

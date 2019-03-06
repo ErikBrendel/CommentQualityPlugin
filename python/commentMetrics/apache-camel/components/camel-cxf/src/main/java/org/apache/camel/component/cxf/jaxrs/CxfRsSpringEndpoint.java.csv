@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;private;1;9;;private void init(AbstractJAXRSFactoryBean bean) {     this.bean = bean.     if (bean instanceof BeanIdAware) {         setBeanId(((BeanIdAware) bean).getBeanId()).     }     ApplicationContext applicationContext = ((SpringCamelContext) getCamelContext()).getApplicationContext().     configurer = new ConfigurerImpl(applicationContext). }
-false;protected;0;5;;@Override protected JAXRSServerFactoryBean newJAXRSServerFactoryBean() {     checkBeanType(bean, JAXRSServerFactoryBean.class).     return (JAXRSServerFactoryBean) bean. }
-false;protected;0;5;;@Override protected JAXRSClientFactoryBean newJAXRSClientFactoryBean() {     checkBeanType(bean, JAXRSClientFactoryBean.class).     return newInstanceWithCommonProperties(). }
-false;protected;2;8;;@Override protected void setupJAXRSClientFactoryBean(JAXRSClientFactoryBean cfb, String address) {     configurer.configureBean(beanId, cfb).     // support to call the configurer here     getNullSafeCxfRsEndpointConfigurer().configure(cfb).     cfb.setAddress(address).     cfb.setThreadSafe(true). }
-false;public;0;3;;public String getBeanId() {     return beanId. }
-false;public;1;3;;public void setBeanId(String id) {     this.beanId = id. }
-false;private;0;9;;private JAXRSClientFactoryBean newInstanceWithCommonProperties() {     SpringJAXRSClientFactoryBean cfb = new SpringJAXRSClientFactoryBean().     if (bean instanceof SpringJAXRSClientFactoryBean) {         ReflectionUtils.shallowCopyFieldState(bean, cfb).     }     return cfb. }

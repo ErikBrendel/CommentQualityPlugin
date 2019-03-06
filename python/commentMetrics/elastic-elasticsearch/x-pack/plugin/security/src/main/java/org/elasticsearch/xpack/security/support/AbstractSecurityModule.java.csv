@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected,final;0;4;;@Override protected final void configure() {     configure(clientMode). }
-false;protected,abstract;1;1;;protected abstract void configure(boolean clientMode).
-false;protected,final;1;5;;@Override protected final void configure(boolean clientMode) {     assert !clientMode : "[" + getClass().getSimpleName() + "] is a node only module".     configureNode(). }
-false;protected,abstract;0;1;;protected abstract void configureNode().

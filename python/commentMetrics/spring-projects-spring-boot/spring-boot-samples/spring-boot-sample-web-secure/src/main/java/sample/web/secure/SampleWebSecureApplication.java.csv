@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;7;;@GetMapping("/") public String home(Map<String, Object> model) {     model.put("message", "Hello World").     model.put("title", "Hello Home").     model.put("date", new Date()).     return "home". }
-false;public;0;4;;@RequestMapping("/foo") public String foo() {     throw new RuntimeException("Expected exception in controller"). }
-false;public;1;4;;@Override public void addViewControllers(ViewControllerRegistry registry) {     registry.addViewController("/login").setViewName("login"). }
-false;public,static;1;3;;public static void main(String[] args) {     new SpringApplicationBuilder(SampleWebSecureApplication.class).run(args). }
-false;protected;1;12;;@Override protected void configure(HttpSecurity http) throws Exception {     // @formatter:off     http.authorizeRequests().requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll().anyRequest().fullyAuthenticated().and().formLogin().loginPage("/login").failureUrl("/login?error").permitAll().and().logout().permitAll(). // @formatter:on }

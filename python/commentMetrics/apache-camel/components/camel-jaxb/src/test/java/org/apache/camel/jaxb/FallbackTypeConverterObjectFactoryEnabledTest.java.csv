@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Test public void testObjectFactoryTrue() throws Exception {     Message in = new Message("Hello World").     getMockEndpoint("mock:a").expectedBodiesReceived(in).     template.sendBody("direct:a", in).     assertMockEndpointsSatisfied(). }
-false;public;0;5;;@Override public void configure() throws Exception {     from("direct:a").convertBodyTo(String.class).to("direct:b").     from("direct:b").convertBodyTo(Message.class).to("mock:a"). }
-false;protected;0;13;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     context.getGlobalOptions().put(FallbackTypeConverter.OBJECT_FACTORY, "true").     return new RouteBuilder(context) {          @Override         public void configure() throws Exception {             from("direct:a").convertBodyTo(String.class).to("direct:b").             from("direct:b").convertBodyTo(Message.class).to("mock:a").         }     }. }

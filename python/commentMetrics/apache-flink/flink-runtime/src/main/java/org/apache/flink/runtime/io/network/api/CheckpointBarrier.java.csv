@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public long getId() {     return id. }
-false;public;0;3;;public long getTimestamp() {     return timestamp. }
-false;public;0;3;;public CheckpointOptions getCheckpointOptions() {     return checkpointOptions. }
-false;public;1;4;;// ------------------------------------------------------------------------ // Serialization // ------------------------------------------------------------------------ //  // These methods are inherited form the generic serialization of AbstractEvent // but would require the CheckpointBarrier to be mutable. Since all serialization // for events goes through the EventSerializer class, which has special serialization // for the CheckpointBarrier, we don't need these methods //  @Override public void write(DataOutputView out) throws IOException {     throw new UnsupportedOperationException("This method should never be called"). }
-false;public;1;4;;@Override public void read(DataInputView in) throws IOException {     throw new UnsupportedOperationException("This method should never be called"). }
-false;public;0;4;;// ------------------------------------------------------------------------ @Override public int hashCode() {     return (int) (id ^ (id >>> 32) ^ timestamp ^ (timestamp >>> 32)). }
-false;public;1;14;;@Override public boolean equals(Object other) {     if (other == this) {         return true.     } else if (other == null || other.getClass() != CheckpointBarrier.class) {         return false.     } else {         CheckpointBarrier that = (CheckpointBarrier) other.         return that.id == this.id && that.timestamp == this.timestamp && this.checkpointOptions.equals(that.checkpointOptions).     } }
-false;public;0;4;;@Override public String toString() {     return String.format("CheckpointBarrier %d @ %d Options: %s", id, timestamp, checkpointOptions). }

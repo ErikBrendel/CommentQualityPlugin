@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;2;3;;public static Bucket createBucket(final Storage storage, final String bucketName) {     return new Bucket(storage, (BucketInfo.BuilderImpl) BucketInfo.newBuilder(bucketName)). }
-false;public,static;4;3;;public static Blob createBlob(final Storage storage, final String bucketName, final String blobName, final long blobSize) {     return new Blob(storage, (BlobInfo.BuilderImpl) BlobInfo.newBuilder(bucketName, blobName).setSize(blobSize)). }

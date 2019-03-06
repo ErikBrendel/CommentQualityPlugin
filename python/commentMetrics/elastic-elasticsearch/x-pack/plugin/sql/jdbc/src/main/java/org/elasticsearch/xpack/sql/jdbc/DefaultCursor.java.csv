@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public List<JdbcColumnInfo> columns() {     return columnInfos. }
-false;public;0;17;;@Override public boolean next() throws SQLException {     if (row < rows.size() - 1) {         row++.         return true.     } else {         if (cursor.isEmpty() == false) {             Tuple<String, List<List<Object>>> nextPage = client.nextPage(cursor, meta).             cursor = nextPage.v1().             rows = nextPage.v2().             row = -1.             return next().         }         return false.     } }
-false;public;1;4;;@Override public Object column(int column) {     return rows.get(row).get(column). }
-false;public;0;4;;@Override public int batchSize() {     return rows.size(). }
-false;public;0;6;;@Override public void close() throws SQLException {     if (cursor.isEmpty() == false) {         client.queryClose(cursor).     } }

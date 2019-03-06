@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void testFail() throws Exception { // noop as its tested that it fails on startup }
-false;public;0;11;;@Override @Before public void setUp() throws Exception {     try {         super.setUp().         fail("Should have thrown an exception").     } catch (FailedToCreateRouteException e) {         IllegalArgumentException iae = assertIsInstanceOf(IllegalArgumentException.class, e.getCause()).         assertEquals("Constant field with name: XXX not found on Exchange.class", iae.getMessage()).     } }
-false;public;0;6;;@Override public void configure() throws Exception {     from("direct:bar").setHeader("Exchange.XXX", constant("bar")).to("mock:bar"). }
-false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:bar").setHeader("Exchange.XXX", constant("bar")).to("mock:bar").         }     }. }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;0;3;;Logger textLogger() {     return textLogger. }
-false;public;3;12;;@Override public Action.Result execute(String actionId, WatchExecutionContext ctx, Payload payload) throws Exception {     Map<String, Object> model = Variables.createCtxParamsMap(ctx, payload).     String loggedText = templateEngine.render(action.text, model).     if (ctx.simulateAction(actionId)) {         return new LoggingAction.Result.Simulated(loggedText).     }     action.level.log(textLogger, loggedText).     return new LoggingAction.Result.Success(loggedText). }

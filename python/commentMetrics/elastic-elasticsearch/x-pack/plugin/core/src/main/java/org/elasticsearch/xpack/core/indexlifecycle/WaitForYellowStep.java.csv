@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;15;;@Override public Result isConditionMet(Index index, ClusterState clusterState) {     RoutingTable routingTable = clusterState.routingTable().     IndexRoutingTable indexShardRoutingTable = routingTable.index(index).     if (indexShardRoutingTable == null) {         return new Result(false, new Info("index is red. no IndexRoutingTable")).     }     boolean indexIsAtLeastYellow = indexShardRoutingTable.allPrimaryShardsActive().     if (indexIsAtLeastYellow) {         return new Result(true, null).     } else {         return new Result(false, new Info("index is red. not all primary shards are active")).     } }
-false;;0;3;;String getMessage() {     return message. }
-false;public;2;7;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(MESSAGE_FIELD.getPreferredName(), message).     builder.endObject().     return builder. }
-false;public;1;7;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     Info info = (Info) o.     return Objects.equals(getMessage(), info.getMessage()). }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(getMessage()). }

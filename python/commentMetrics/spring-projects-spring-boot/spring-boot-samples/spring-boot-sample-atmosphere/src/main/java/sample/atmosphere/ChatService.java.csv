@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Ready public void onReady(AtmosphereResource resource) {     this.logger.info("Connected " + resource.uuid()). }
-false;public;1;5;;@Disconnect public void onDisconnect(AtmosphereResourceEvent event) {     this.logger.info("Client " + event.getResource().uuid() + " disconnected [" + (event.isCancelled() ? "cancelled" : "closed") + "]"). }
-false;public;1;6;;@org.atmosphere.config.service.Message(encoders = JacksonEncoderDecoder.class, decoders = JacksonEncoderDecoder.class) public Message onMessage(Message message) throws IOException {     this.logger.info("Author " + message.getAuthor() + " sent message " + message.getMessage()).     return message. }
-false;public;1;9;;@Override public String encode(Message m) {     try {         return this.mapper.writeValueAsString(m).     } catch (IOException ex) {         throw new IllegalStateException(ex).     } }
-false;public;1;9;;@Override public Message decode(String s) {     try {         return this.mapper.readValue(s, Message.class).     } catch (IOException ex) {         throw new IllegalStateException(ex).     } }

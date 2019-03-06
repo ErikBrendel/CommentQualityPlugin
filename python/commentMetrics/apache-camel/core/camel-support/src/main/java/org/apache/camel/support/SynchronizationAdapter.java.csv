@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;3;;public void onComplete(Exchange exchange) {     onDone(exchange). }
-false;public;1;3;;public void onFailure(Exchange exchange) {     onDone(exchange). }
-false;public;1;3;;public void onDone(Exchange exchange) { // noop }
-false;public;0;4;;public boolean allowHandover() {     // allow by default     return true. }
-false;public;0;4;;public int getOrder() {     // no particular order by default     return 0. }
-false;public;2;3;;public void onBeforeRoute(Route route, Exchange exchange) { // noop }
-false;public;2;3;;public void onAfterRoute(Route route, Exchange exchange) { // noop }

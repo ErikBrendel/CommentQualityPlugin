@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;2;7;;@SuppressWarnings("unchecked") public static <T> T createProxy(Endpoint endpoint, Class<?>... interfaceClasses) throws Exception {     Producer producer = endpoint.createProducer().     // ensure the producer is started     ServiceHelper.startService(producer).     return (T) Proxy.newProxyInstance(ProxyHelper.getClassLoader(interfaceClasses), interfaceClasses.clone(), new PojoMessageInvocationHandler(endpoint, producer)). }

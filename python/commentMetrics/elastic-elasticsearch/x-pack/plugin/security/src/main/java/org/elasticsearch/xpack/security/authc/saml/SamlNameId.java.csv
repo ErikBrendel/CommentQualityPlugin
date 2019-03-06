@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String toString() {     return "NameId(" + format + ")=" + value. }
-false;public;0;9;;public NameID asXml() {     final NameID nameId = SamlUtils.buildObject(NameID.class, NameID.DEFAULT_ELEMENT_NAME).     nameId.setFormat(format).     nameId.setValue(value).     nameId.setNameQualifier(idpNameQualifier).     nameId.setSPNameQualifier(spNameQualifier).     nameId.setSPProvidedID(spProvidedId).     return nameId. }
-false;static;1;7;;static SamlNameId fromXml(NameID name) {     if (name == null) {         return null.     }     return new SamlNameId(name.getFormat(), name.getValue(), name.getNameQualifier(), name.getSPNameQualifier(), name.getSPProvidedID()). }
-false;static;1;7;;static SamlNameId forSubject(Subject subject) {     if (subject == null) {         return null.     }     final NameID name = subject.getNameID().     return fromXml(name). }

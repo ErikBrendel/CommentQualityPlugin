@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;6;;@Override protected CamelContext createCamelContext() throws Exception {     CamelContext context = super.createCamelContext().     context.setAllowUseOriginalMessage(false).     return context. }
-false;public;0;9;;@Test public void testUseOriginalMessageFalse() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("Bye World").     getMockEndpoint("mock:result").expectedHeaderReceived("HasOriginal", "false").     template.sendBody("direct:start", "World").     assertMockEndpointsSatisfied(). }
-false;public;0;7;;@Override public void configure() throws Exception {     from("direct:start").transform().simple("Bye ${body}").process(new OriginalMessageProcessor()).to("mock:result"). }
-false;protected;0;12;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").transform().simple("Bye ${body}").process(new OriginalMessageProcessor()).to("mock:result").         }     }. }

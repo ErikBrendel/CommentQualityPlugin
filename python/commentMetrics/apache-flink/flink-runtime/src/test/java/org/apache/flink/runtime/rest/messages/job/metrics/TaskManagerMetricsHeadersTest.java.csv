@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void testUrl() {     assertThat(taskManagerMetricsHeaders.getTargetRestEndpointURL(), equalTo("/taskmanagers/:" + TaskManagerIdPathParameter.KEY + "/metrics")). }
-false;public;0;5;;@Test public void testMessageParameters() {     assertThat(taskManagerMetricsHeaders.getUnresolvedMessageParameters(), instanceOf(TaskManagerMetricsMessageParameters.class)). }

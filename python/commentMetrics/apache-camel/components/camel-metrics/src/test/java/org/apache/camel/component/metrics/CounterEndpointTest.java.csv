@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Before public void setUp() throws Exception {     endpoint = new MetricsEndpoint(null, null, registry, MetricsType.COUNTER, METRICS_NAME).     inOrder = Mockito.inOrder(registry). }
-false;public;0;4;;@After public void tearDown() {     inOrder.verifyNoMoreInteractions(). }
-false;public;0;7;;@Test public void testCounterEndpoint() throws Exception {     assertThat(endpoint.getRegistry(), is(registry)).     assertThat(endpoint.getMetricsName(), is(METRICS_NAME)).     assertThat(endpoint.getIncrement(), is(nullValue())).     assertThat(endpoint.getDecrement(), is(nullValue())). }
-false;public;0;6;;@Test public void testCreateProducer() throws Exception {     Producer producer = endpoint.createProducer().     assertThat(producer, is(notNullValue())).     assertThat(producer, is(instanceOf(CounterProducer.class))). }
-false;public;0;4;;@Test public void testGetIncrement() throws Exception {     assertThat(endpoint.getIncrement(), is(nullValue())). }
-false;public;0;6;;@Test public void testSetIncrement() throws Exception {     assertThat(endpoint.getIncrement(), is(nullValue())).     endpoint.setIncrement(VALUE).     assertThat(endpoint.getIncrement(), is(VALUE)). }
-false;public;0;4;;@Test public void testGetDecrement() throws Exception {     assertThat(endpoint.getDecrement(), is(nullValue())). }
-false;public;0;6;;@Test public void testSetDecrement() throws Exception {     assertThat(endpoint.getDecrement(), is(nullValue())).     endpoint.setDecrement(VALUE).     assertThat(endpoint.getDecrement(), is(VALUE)). }

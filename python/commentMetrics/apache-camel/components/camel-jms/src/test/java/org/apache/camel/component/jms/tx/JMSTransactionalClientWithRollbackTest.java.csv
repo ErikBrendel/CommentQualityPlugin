@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;protected ClassPathXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("/org/apache/camel/component/jms/tx/JMSTransactionalClientWithRollbackTest.xml"). }
-false;public;0;12;;@Test public void testTransactionSuccess() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMessageCount(1).     mock.expectedBodiesReceived("Bye World").     // success at 3rd attempt     mock.message(0).header("count").isEqualTo(3).     template.sendBody("activemq:queue:okay", "Hello World").     mock.assertIsSatisfied(). }
-false;public;1;4;;public void process(Exchange exchange) throws Exception {     exchange.getIn().setBody("Bye World").     exchange.getIn().setHeader("count", ++count). }

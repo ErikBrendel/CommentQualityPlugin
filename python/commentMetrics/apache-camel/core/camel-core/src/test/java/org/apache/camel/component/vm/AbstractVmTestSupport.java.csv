@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;15;;@Override @Before public void setUp() throws Exception {     super.setUp().     context2 = new DefaultCamelContext().     template2 = context2.createProducerTemplate().     ServiceHelper.startService(template2, context2).     // add routes after CamelContext has been started     RouteBuilder routeBuilder = createRouteBuilderForSecondContext().     if (routeBuilder != null) {         context2.addRoutes(routeBuilder).     } }
-false;public;0;8;;@Override @After public void tearDown() throws Exception {     ServiceHelper.stopService(context2, template2).     VmComponent.ENDPOINTS.clear().     VmComponent.QUEUES.clear().     super.tearDown(). }
-false;protected;0;3;;protected RouteBuilder createRouteBuilderForSecondContext() throws Exception {     return null. }

@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;11;;@Test public void testDLCSetHeader() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:error").     mock.expectedBodiesReceived("Hello World").     mock.expectedHeaderReceived("foo", "123").     mock.expectedHeaderReceived("bar", "456").     template.sendBody("direct:start", "Hello World").     assertMockEndpointsSatisfied(). }
-false;public;0;13;;@Override public void configure() throws Exception {     MyDataFormat df = new MyDataFormat().     from("direct:start").errorHandler(deadLetterChannel("direct:error")).unmarshal(df).     from("direct:error").setHeader("foo", constant("123")).setHeader("bar", constant("456")).to("mock:error"). }
-false;protected;0;18;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             MyDataFormat df = new MyDataFormat().             from("direct:start").errorHandler(deadLetterChannel("direct:error")).unmarshal(df).             from("direct:error").setHeader("foo", constant("123")).setHeader("bar", constant("456")).to("mock:error").         }     }. }
-false;public;3;4;;@Override public void marshal(Exchange exchange, Object graph, OutputStream stream) throws Exception { // noop }
-false;public;2;4;;@Override public Object unmarshal(Exchange exchange, InputStream stream) throws Exception {     throw new IllegalArgumentException("Damn"). }
-false;protected;0;4;;@Override protected void doStart() throws Exception { // noop }
-false;protected;0;4;;@Override protected void doStop() throws Exception { // noop }

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public byte get(int index) {     return buffer.get(index). }
-false;public;0;4;;@Override public int length() {     return length. }
-false;public;2;10;;@Override public BytesReference slice(int from, int length) {     FutureObjects.checkFromIndexSize(from, length, this.length).     buffer.position(from).     buffer.limit(from + length).     ByteBufferReference newByteBuffer = new ByteBufferReference(buffer).     buffer.position(0).     buffer.limit(this.length).     return newByteBuffer. }
-true;public;0;9;/**  * This will return a bytes ref composed of the bytes. If this is a direct byte buffer, the bytes will  * have to be copied.  *  * @return the bytes ref  */ ;/**  * This will return a bytes ref composed of the bytes. If this is a direct byte buffer, the bytes will  * have to be copied.  *  * @return the bytes ref  */ @Override public BytesRef toBytesRef() {     if (buffer.hasArray()) {         return new BytesRef(buffer.array(), buffer.arrayOffset(), length).     }     final byte[] copy = new byte[length].     buffer.get(copy, 0, length).     return new BytesRef(copy). }
-false;public;0;4;;@Override public long ramBytesUsed() {     return buffer.capacity(). }

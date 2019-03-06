@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getPath() {     return resolveApplicationPath(). }
-false;private;0;7;;private String resolveApplicationPath() {     if (StringUtils.hasLength(this.applicationPath)) {         return this.applicationPath.     }     return findApplicationPath(AnnotationUtils.findAnnotation(this.config.getApplication().getClass(), ApplicationPath.class)). }
-false;private,static;1;7;;private static String findApplicationPath(ApplicationPath annotation) {     // Jersey doesn't like to be the default servlet, so map to /* as a fallback     if (annotation == null) {         return "/*".     }     return annotation.value(). }

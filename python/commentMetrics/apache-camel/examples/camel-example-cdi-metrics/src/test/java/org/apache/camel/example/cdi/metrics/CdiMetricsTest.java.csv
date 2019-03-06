@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;8;;@Test @Order(1) public void stopCamelContext(CamelContext context) throws Exception {     // Wait a while so that the timer can kick in     Thread.sleep(5000).     // And stop the Camel context so that inflight exchanges get completed     context.stop(). }
-false;public;0;11;;@Test @Order(2) public void testMetricsValues() {     assertThat("Meter counts are not consistent!", attempt.getCount() - redelivery.getCount() - success.getCount() - error.getCount(), is(equalTo(0L))).     assertThat("Success rate gauge value is incorrect!", ratio.getValue(), is(equalTo(success.getOneMinuteRate() / generated.getOneMinuteRate()))). }

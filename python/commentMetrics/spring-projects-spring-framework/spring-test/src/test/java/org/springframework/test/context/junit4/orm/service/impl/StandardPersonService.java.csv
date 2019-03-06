@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public Person findByName(String name) {     return this.personRepository.findByName(name). }
-false;public;1;5;;@Override @Transactional(readOnly = false) public Person save(Person person) {     return this.personRepository.save(person). }

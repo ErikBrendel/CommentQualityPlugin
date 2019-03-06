@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected NodeInfo<ConstantInput> info() {     return NodeInfo.create(this, ConstantInput::new, expression(), context()). }
-false;public;0;4;;@Override public Processor asProcessor() {     return new ConstantProcessor(context()). }
-false;public,final;0;4;;@Override public final boolean supportedByAggsOnlyQuery() {     return false. }
-false;public;1;4;;@Override public Pipe resolveAttributes(AttributeResolver resolver) {     return this. }
-false;public,final;1;4;;@Override public final void collectFields(SqlSourceBuilder sourceBuilder) { // Nothing to collect }

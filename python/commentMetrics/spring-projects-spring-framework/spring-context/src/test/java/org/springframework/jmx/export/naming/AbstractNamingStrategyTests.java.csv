@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void naming() throws Exception {     ObjectNamingStrategy strat = getStrategy().     ObjectName objectName = strat.getObjectName(getManagedResource(), getKey()).     assertEquals(objectName.getCanonicalName(), getCorrectObjectName()). }
-false;protected,abstract;0;1;;protected abstract ObjectNamingStrategy getStrategy() throws Exception.
-false;protected,abstract;0;1;;protected abstract Object getManagedResource() throws Exception.
-false;protected,abstract;0;1;;protected abstract String getKey().
-false;protected,abstract;0;1;;protected abstract String getCorrectObjectName().

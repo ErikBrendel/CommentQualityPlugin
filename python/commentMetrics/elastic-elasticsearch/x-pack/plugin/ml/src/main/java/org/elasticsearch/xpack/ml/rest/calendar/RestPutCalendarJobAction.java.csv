@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getName() {     return "ml_put_calendar_job_action". }
-false;protected;2;8;;@Override protected RestChannelConsumer prepareRequest(RestRequest restRequest, NodeClient client) throws IOException {     String calendarId = restRequest.param(Calendar.ID.getPreferredName()).     String jobId = restRequest.param(Job.ID.getPreferredName()).     UpdateCalendarJobAction.Request putCalendarRequest = new UpdateCalendarJobAction.Request(calendarId, jobId, null).     return channel -> client.execute(UpdateCalendarJobAction.INSTANCE, putCalendarRequest, new RestToXContentListener<>(channel)). }

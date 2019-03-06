@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected PutCalendarAction.Response createTestInstance() {     return new PutCalendarAction.Response(CalendarTests.testInstance()). }
-false;protected;1;4;;@Override protected PutCalendarAction.Response doParseInstance(XContentParser parser) throws IOException {     return new PutCalendarAction.Response(Calendar.LENIENT_PARSER.parse(parser, null).build()). }
-false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }
-false;public;1;4;;@Override public PutCalendarResponse doHlrcParseInstance(XContentParser parser) throws IOException {     return PutCalendarResponse.fromXContent(parser). }
-false;public;1;6;;@Override public PutCalendarAction.Response convertHlrcToInternal(PutCalendarResponse instance) {     org.elasticsearch.client.ml.calendars.Calendar hlrcCalendar = instance.getCalendar().     Calendar internalCalendar = new Calendar(hlrcCalendar.getId(), hlrcCalendar.getJobIds(), hlrcCalendar.getDescription()).     return new PutCalendarAction.Response(internalCalendar). }
-false;protected;0;4;;@Override protected PutCalendarAction.Response createBlankInstance() {     return new PutCalendarAction.Response(). }

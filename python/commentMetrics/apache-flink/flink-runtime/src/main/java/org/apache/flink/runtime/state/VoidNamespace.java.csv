@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,static;0;3;/**  * Getter for the singleton instance  */ ;/**  * Getter for the singleton instance  */ public static VoidNamespace get() {     return INSTANCE. }
-false;public;0;4;;// ------------------------------------------------------------------------ // Standard Utilities // ------------------------------------------------------------------------ @Override public int hashCode() {     return 99. }
-false;public;1;4;;@Override public boolean equals(Object obj) {     return obj == this. }
-false;public;0;4;;@Override public String toString() {     return getClass().getSimpleName(). }
-true;private;0;3;// make sure that we preserve the singleton properly on serialization ;// ------------------------------------------------------------------------ // Singleton serialization // ------------------------------------------------------------------------ // make sure that we preserve the singleton properly on serialization private Object readResolve() throws ObjectStreamException {     return INSTANCE. }

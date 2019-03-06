@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;public void inc(long n) {     counter.increment().     sum.add(n). }
-false;public;1;4;;public void dec(long n) {     counter.decrement().     sum.add(-n). }
-false;public;0;3;;public long count() {     return counter.sum(). }
-false;public;0;3;;public long sum() {     return sum.sum(). }
-false;public;0;7;;public double mean() {     long count = count().     if (count > 0) {         return sum.sum() / (double) count.     }     return 0.0. }
-false;public;0;4;;public void clear() {     counter.reset().     sum.reset(). }

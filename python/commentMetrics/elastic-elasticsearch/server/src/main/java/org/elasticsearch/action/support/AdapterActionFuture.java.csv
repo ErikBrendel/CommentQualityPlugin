@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public T actionGet() {     return FutureUtils.get(this). }
-false;public;1;4;;@Override public T actionGet(String timeout) {     return actionGet(TimeValue.parseTimeValue(timeout, null, getClass().getSimpleName() + ".actionGet.timeout")). }
-false;public;1;4;;@Override public T actionGet(long timeoutMillis) {     return actionGet(timeoutMillis, TimeUnit.MILLISECONDS). }
-false;public;1;4;;@Override public T actionGet(TimeValue timeout) {     return actionGet(timeout.millis(), TimeUnit.MILLISECONDS). }
-false;public;2;4;;@Override public T actionGet(long timeout, TimeUnit unit) {     return FutureUtils.get(this, timeout, unit). }
-false;public;1;4;;@Override public void onResponse(L result) {     set(convert(result)). }
-false;public;1;4;;@Override public void onFailure(Exception e) {     setException(e). }
-false;protected,abstract;1;1;;protected abstract T convert(L listenerResponse).

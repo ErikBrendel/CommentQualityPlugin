@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry jndi = super.createRegistry().     jndi.bind("myExp", new MyExpression()).     return jndi. }
-false;public;0;4;;@Test public void testRefExpressions() throws Exception {     assertExpression("myExp", "Hello World"). }
-false;public;0;9;;@Test public void testRefExpressionsNotFound() throws Exception {     try {         assertExpression("foo", "Hello World").         fail("Should have thrown exception").     } catch (IllegalArgumentException e) {         assertEquals("Cannot find expression or predicate in registry with ref: foo", e.getMessage()).     } }
-false;public;0;4;;@Test public void testPredicates() throws Exception {     assertPredicate("myExp"). }
-false;protected;0;3;;protected String getLanguageName() {     return "ref". }
-false;public;1;4;;@Override public Object evaluate(Exchange exchange) {     return "Hello World". }

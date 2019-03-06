@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,final;2;7;;@Override public final Number apply(Number left, Number right) {     if (left == null || right == null) {         return null.     }     return process.apply(left, right). }
-false;public;0;4;;@Override public String getWriteableName() {     return NAME. }
-false;protected;1;6;;@Override protected void checkParameter(Object param) {     if (!(param instanceof Number)) {         throw new SqlIllegalArgumentException("A number is required. received {}", param).     } }

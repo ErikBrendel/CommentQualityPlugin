@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("SpringDozerTypeConverterConfigurationTest.xml"). }
-false;public;0;9;;@Test public void verifyCamelConversionViaDozer() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:verify-model").     mock.expectedMessageCount(1).     template.sendBody("direct:service-in", createServiceCustomer()).     assertMockEndpointsSatisfied(). }

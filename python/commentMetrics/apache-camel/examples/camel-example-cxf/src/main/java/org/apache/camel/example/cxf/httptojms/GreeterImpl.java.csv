@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;public String greetMe(String me) {     LOG.info("Executing operation greetMe").     System.out.println("Executing operation greetMe").     System.out.println("Message received: " + me + "\n").     return "Hello " + me. }
-false;public;1;5;;public void greetMeOneWay(String me) {     LOG.info("Executing operation greetMeOneWay").     System.out.println("Executing operation greetMeOneWay\n").     System.out.println("Hello there " + me). }
-false;public;0;5;;public String sayHi() {     LOG.info("Executing operation sayHi").     System.out.println("Executing operation sayHi\n").     return "Bonjour". }
-false;public;1;9;;public void pingMe(String messageIn) throws PingMeFault {     FaultDetail faultDetail = new FaultDetail().     faultDetail.setMajor((short) 2).     faultDetail.setMinor((short) 1).     LOG.info("Executing operation pingMe, throwing PingMeFault exception, message = " + messageIn).     System.out.println("Executing operation pingMe, throwing PingMeFault exception\n").     throw new PingMeFault("PingMeFault raised by server", faultDetail). }

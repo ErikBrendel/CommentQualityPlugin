@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;7;;@Override protected void useCachingConfigurer(CachingConfigurer config) {     super.useCachingConfigurer(config).     if (config instanceof JCacheConfigurer) {         this.exceptionCacheResolver = ((JCacheConfigurer) config)::exceptionCacheResolver.     } }
-false;public;0;6;;@Bean(name = "jCacheOperationSource") @Role(BeanDefinition.ROLE_INFRASTRUCTURE) public JCacheOperationSource cacheOperationSource() {     return new DefaultJCacheOperationSource(this.cacheManager, this.cacheResolver, this.exceptionCacheResolver, this.keyGenerator). }

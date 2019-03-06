@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String[] getFieldNames() {     return fieldNames. }
-false;public;0;4;;@Override public TypeInformation<?>[] getFieldTypes() {     return fieldTypes. }
-false;public;2;7;;@Override public TableSink<Tuple2<Boolean, Row>> configure(String[] fieldNames, TypeInformation<?>[] fieldTypes) {     final CollectStreamTableSink copy = new CollectStreamTableSink(targetAddress, targetPort, serializer).     copy.fieldNames = fieldNames.     copy.fieldTypes = fieldTypes.     return copy. }
-false;public;0;4;;@Override public TypeInformation<Row> getRecordType() {     return Types.ROW_NAMED(fieldNames, fieldTypes). }
-false;public;1;8;;@Override public void emitDataStream(DataStream<Tuple2<Boolean, Row>> stream) {     // add sink     stream.addSink(new CollectSink<>(targetAddress, targetPort, serializer)).name("SQL Client Stream Collect Sink").setParallelism(1). }
-false;public;0;4;;@Override public TupleTypeInfo<Tuple2<Boolean, Row>> getOutputType() {     return new TupleTypeInfo<>(Types.BOOLEAN, getRecordType()). }

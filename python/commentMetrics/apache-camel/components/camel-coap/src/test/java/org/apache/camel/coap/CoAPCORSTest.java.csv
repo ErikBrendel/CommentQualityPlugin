@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void testEnableCors() throws Exception {     CoapClient client = createClient("/rest").     CoapResponse response = client.get().     assertEquals(COAP_RESPONSE, response.getResponseText()). }
-false;public;0;6;;@Override public void configure() throws Exception {     restConfiguration().component("coap").port(PORT).enableCORS(true).     rest().get("/rest").route().setBody(constant(COAP_RESPONSE)). }
-false;protected;0;11;;@Override protected RoutesBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             restConfiguration().component("coap").port(PORT).enableCORS(true).             rest().get("/rest").route().setBody(constant(COAP_RESPONSE)).         }     }. }

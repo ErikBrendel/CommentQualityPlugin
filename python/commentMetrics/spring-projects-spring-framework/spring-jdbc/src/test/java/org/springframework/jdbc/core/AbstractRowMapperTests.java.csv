@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;6;;protected void verifyPerson(Person bean) throws Exception {     assertEquals("Bubba", bean.getName()).     assertEquals(22L, bean.getAge()).     assertEquals(new java.util.Date(1221222L), bean.getBirth_date()).     assertEquals(new BigDecimal("1234.56"), bean.getBalance()). }
-false;protected;1;6;;protected void verifyPerson(ConcretePerson bean) throws Exception {     assertEquals("Bubba", bean.getName()).     assertEquals(22L, bean.getAge()).     assertEquals(new java.util.Date(1221222L), bean.getBirth_date()).     assertEquals(new BigDecimal("1234.56"), bean.getBalance()). }
-false;protected;1;6;;protected void verifyPerson(SpacePerson bean) {     assertEquals("Bubba", bean.getLastName()).     assertEquals(22L, bean.getAge()).     assertEquals(new java.sql.Timestamp(1221222L).toLocalDateTime(), bean.getBirthDate()).     assertEquals(new BigDecimal("1234.56"), bean.getBalance()). }
-false;protected;1;6;;protected void verifyPerson(DatePerson bean) {     assertEquals("Bubba", bean.getLastName()).     assertEquals(22L, bean.getAge()).     assertEquals(new java.sql.Date(1221222L).toLocalDate(), bean.getBirthDate()).     assertEquals(new BigDecimal("1234.56"), bean.getBalance()). }
-false;public;0;3;;public JdbcTemplate getJdbcTemplate() {     return jdbcTemplate. }
-false;public;0;4;;public void verifyClosed() throws Exception {     verify(resultSet).close().     verify(statement).close(). }

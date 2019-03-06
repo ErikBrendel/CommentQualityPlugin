@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     upgradeOnlyAncientSegments = in.readBoolean(). }
-false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeBoolean(upgradeOnlyAncientSegments). }
-true;public;0;3;/**  * Should the upgrade only the ancient (older major version of Lucene) segments?  * Defaults to {@code false}.  */ ;/**  * Should the upgrade only the ancient (older major version of Lucene) segments?  * Defaults to {@code false}.  */ public boolean upgradeOnlyAncientSegments() {     return upgradeOnlyAncientSegments. }
-true;public;1;4;/**  * See {@link #upgradeOnlyAncientSegments()}  */ ;/**  * See {@link #upgradeOnlyAncientSegments()}  */ public UpgradeRequest upgradeOnlyAncientSegments(boolean upgradeOnlyAncientSegments) {     this.upgradeOnlyAncientSegments = upgradeOnlyAncientSegments.     return this. }
-false;public;0;6;;@Override public String toString() {     return "UpgradeRequest{" + "upgradeOnlyAncientSegments=" + upgradeOnlyAncientSegments + '}'. }

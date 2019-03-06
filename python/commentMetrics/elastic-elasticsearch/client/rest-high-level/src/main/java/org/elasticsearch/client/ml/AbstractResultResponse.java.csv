@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;8;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(COUNT.getPreferredName(), count).     builder.field(resultsField.getPreferredName(), results).     builder.endObject().     return builder. }
-false;public;0;3;;public long count() {     return count. }

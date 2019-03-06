@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected ConfigurableEnvironment createEnvironment() {     return new StandardReactiveWebEnvironment(). }
-false;protected;1;5;;@Override protected Resource getResourceByPath(String path) {     // We must be careful not to expose classpath resources     return new FilteredReactiveWebContextResource(path). }

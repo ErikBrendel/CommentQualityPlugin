@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;25;;@Override public void configure() throws Exception {     from("timer:foo?period=5s").id("foo").startupOrder(2).log("From timer (foo) ...").     from("timer:bar?period=5s").id("bar").startupOrder(1).log("From timer (bar) ...").     from("undertow:http://localhost:9011").id("undertow").log("From undertow ...").     from("undertow:http://localhost:9012").id("undertow2").autoStartup(false).log("From undertow 2...").     from("undertow:http://localhost:9013").id("undertow3").log("From undertow 3..."). }

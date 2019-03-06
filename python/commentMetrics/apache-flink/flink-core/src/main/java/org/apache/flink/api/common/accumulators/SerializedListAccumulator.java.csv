@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public void add(T value) {     throw new UnsupportedOperationException(). }
-false;public;2;11;;public void add(T value, TypeSerializer<T> serializer) throws IOException {     try {         ByteArrayOutputStream outStream = new ByteArrayOutputStream().         DataOutputViewStreamWrapper out = new DataOutputViewStreamWrapper(outStream).         serializer.serialize(value, out).         localValue.add(outStream.toByteArray()).     } catch (IOException e) {         throw new IOException("Failed to serialize value '" + value + '\'', e).     } }
-false;public;0;4;;@Override public ArrayList<byte[]> getLocalValue() {     return localValue. }
-false;public;0;4;;@Override public void resetLocal() {     localValue.clear(). }
-false;public;1;4;;@Override public void merge(Accumulator<T, ArrayList<byte[]>> other) {     localValue.addAll(other.getLocalValue()). }
-false;public;0;6;;@Override public SerializedListAccumulator<T> clone() {     SerializedListAccumulator<T> newInstance = new SerializedListAccumulator<T>().     newInstance.localValue = new ArrayList<byte[]>(localValue).     return newInstance. }
-false;public,static;2;13;;@SuppressWarnings("unchecked") public static <T> List<T> deserializeList(ArrayList<byte[]> data, TypeSerializer<T> serializer) throws IOException, ClassNotFoundException {     List<T> result = new ArrayList<T>(data.size()).     for (byte[] bytes : data) {         ByteArrayInputStream inStream = new ByteArrayInputStream(bytes).         DataInputViewStreamWrapper in = new DataInputViewStreamWrapper(inStream).         T val = serializer.deserialize(in).         result.add(val).     }     return result. }
-false;public;0;4;;@Override public String toString() {     return "SerializedListAccumulator: " + localValue.size() + " elements". }

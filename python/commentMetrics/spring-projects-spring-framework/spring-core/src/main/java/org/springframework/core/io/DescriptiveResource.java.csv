@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public boolean exists() {     return false. }
-false;public;0;4;;@Override public boolean isReadable() {     return false. }
-false;public;0;5;;@Override public InputStream getInputStream() throws IOException {     throw new FileNotFoundException(getDescription() + " cannot be opened because it does not point to a readable resource"). }
-false;public;0;4;;@Override public String getDescription() {     return this.description. }
-true;public;1;5;/**  * This implementation compares the underlying description String.  */ ;/**  * This implementation compares the underlying description String.  */ @Override public boolean equals(Object other) {     return (this == other || (other instanceof DescriptiveResource && ((DescriptiveResource) other).description.equals(this.description))). }
-true;public;0;4;/**  * This implementation returns the hash code of the underlying description String.  */ ;/**  * This implementation returns the hash code of the underlying description String.  */ @Override public int hashCode() {     return this.description.hashCode(). }

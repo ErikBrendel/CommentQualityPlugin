@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public Stream<ConfigurationPropertyName> stream() {     return getSource().stream().flatMap(this::addAliases). }
-false;private;1;8;;private Stream<ConfigurationPropertyName> addAliases(ConfigurationPropertyName name) {     Stream<ConfigurationPropertyName> names = Stream.of(name).     List<ConfigurationPropertyName> aliases = getAliases().getAliases(name).     if (CollectionUtils.isEmpty(aliases)) {         return names.     }     return Stream.concat(names, aliases.stream()). }
-false;protected;0;4;;@Override protected IterableConfigurationPropertySource getSource() {     return (IterableConfigurationPropertySource) super.getSource(). }

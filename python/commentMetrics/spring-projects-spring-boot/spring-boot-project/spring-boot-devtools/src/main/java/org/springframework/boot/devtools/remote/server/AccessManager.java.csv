@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;1;1;/**  * Determine if the specific request is allowed to be handled by the  * {@link Dispatcher}.  * @param request the request to check  * @return {@code true} if access is allowed.  */ ;/**  * Determine if the specific request is allowed to be handled by the  * {@link Dispatcher}.  * @param request the request to check  * @return {@code true} if access is allowed.  */ boolean isAllowed(ServerHttpRequest request).

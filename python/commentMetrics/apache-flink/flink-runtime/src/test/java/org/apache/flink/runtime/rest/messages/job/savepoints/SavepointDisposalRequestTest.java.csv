@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected Class<SavepointDisposalRequest> getTestRequestClass() {     return SavepointDisposalRequest.class. }
-false;protected;0;4;;@Override protected SavepointDisposalRequest getTestRequestInstance() {     return new SavepointDisposalRequest(UUID.randomUUID().toString()). }
-false;protected;2;4;;@Override protected void assertOriginalEqualsToUnmarshalled(SavepointDisposalRequest expected, SavepointDisposalRequest actual) {     Assert.assertThat(actual.getSavepointPath(), Matchers.is(Matchers.equalTo(expected.getSavepointPath()))). }

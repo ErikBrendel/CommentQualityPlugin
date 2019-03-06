@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * Whether there is a remaining count of invocations for this expectation.  */ ;/**  * Whether there is a remaining count of invocations for this expectation.  */ boolean hasRemainingCount().
-true;;0;1;/**  * Increase the matched request count and check we haven't passed the max count.  * @since 5.0.3  */ ;/**  * Increase the matched request count and check we haven't passed the max count.  * @since 5.0.3  */ void incrementAndValidate().
-true;;0;1;/**  * Whether the requirements for this request expectation have been met.  */ ;/**  * Whether the requirements for this request expectation have been met.  */ boolean isSatisfied().

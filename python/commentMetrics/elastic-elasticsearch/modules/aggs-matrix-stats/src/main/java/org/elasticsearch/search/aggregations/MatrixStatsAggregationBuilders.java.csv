@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,static;1;3;/**  * Create a new {@link MatrixStats} aggregation with the given name.  */ ;/**  * Create a new {@link MatrixStats} aggregation with the given name.  */ public static MatrixStatsAggregationBuilder matrixStats(String name) {     return new MatrixStatsAggregationBuilder(name). }

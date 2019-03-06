@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void userDefinedMappingsSecureByDefault() {     this.webClient.get().uri("/").accept(MediaType.APPLICATION_JSON).exchange().expectStatus().isEqualTo(HttpStatus.UNAUTHORIZED). }
-false;public;0;5;;@Test public void healthInsecureByDefault() {     this.webClient.get().uri("/actuator/health").accept(MediaType.APPLICATION_JSON).exchange().expectStatus().isOk(). }
-false;public;0;5;;@Test public void infoInsecureByDefault() {     this.webClient.get().uri("/actuator/info").accept(MediaType.APPLICATION_JSON).exchange().expectStatus().isOk(). }
-false;public;0;5;;@Test public void otherActuatorsSecureByDefault() {     this.webClient.get().uri("/actuator/env").accept(MediaType.APPLICATION_JSON).exchange().expectStatus().isUnauthorized(). }
-false;public;0;6;;@Test public void userDefinedMappingsAccessibleOnLogin() {     this.webClient.get().uri("/").accept(MediaType.APPLICATION_JSON).header("Authorization", "basic " + getBasicAuth()).exchange().expectBody(String.class).isEqualTo("Hello user"). }
-false;public;0;6;;@Test public void actuatorsAccessibleOnLogin() {     this.webClient.get().uri("/actuator/health").accept(MediaType.APPLICATION_JSON).header("Authorization", "basic " + getBasicAuth()).exchange().expectBody(String.class).isEqualTo("{\"status\":\"UP\"}"). }
-false;private;0;3;;private String getBasicAuth() {     return new String(Base64.getEncoder().encode(("user:password").getBytes())). }

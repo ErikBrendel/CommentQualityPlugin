@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public void execute(Runnable task) {     this.taskExecutor.execute(task). }
-false;public;0;5;;@Override public void shutdown() {     throw new IllegalStateException("Manual shutdown not supported - ExecutorServiceAdapter is dependent on an external lifecycle"). }
-false;public;0;5;;@Override public List<Runnable> shutdownNow() {     throw new IllegalStateException("Manual shutdown not supported - ExecutorServiceAdapter is dependent on an external lifecycle"). }
-false;public;2;5;;@Override public boolean awaitTermination(long timeout, TimeUnit unit) throws InterruptedException {     throw new IllegalStateException("Manual shutdown not supported - ExecutorServiceAdapter is dependent on an external lifecycle"). }
-false;public;0;4;;@Override public boolean isShutdown() {     return false. }
-false;public;0;4;;@Override public boolean isTerminated() {     return false. }

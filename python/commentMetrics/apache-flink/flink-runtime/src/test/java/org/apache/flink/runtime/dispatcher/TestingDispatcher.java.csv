@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;11;;@Override public void onStart() throws Exception {     try {         super.onStart().     } catch (Exception e) {         startFuture.completeExceptionally(e).         throw e.     }     startFuture.complete(null). }
-false;;1;4;;void completeJobExecution(ArchivedExecutionGraph archivedExecutionGraph) {     runAsync(() -> jobReachedGloballyTerminalState(archivedExecutionGraph)). }
-false;;2;5;;CompletableFuture<Void> getJobTerminationFuture(@Nonnull JobID jobId, @Nonnull Time timeout) {     return callAsyncWithoutFencing(() -> getJobTerminationFuture(jobId), timeout).thenCompose(Function.identity()). }
-false;;1;5;;CompletableFuture<Void> getRecoverOperationFuture(@Nonnull Time timeout) {     return callAsyncWithoutFencing(this::getRecoveryOperation, timeout).thenCompose(Function.identity()). }
-false;;1;5;;CompletableFuture<Integer> getNumberJobs(Time timeout) {     return callAsyncWithoutFencing(() -> listJobs(timeout).get().size(), timeout). }
-false;;0;3;;void waitUntilStarted() {     startFuture.join(). }

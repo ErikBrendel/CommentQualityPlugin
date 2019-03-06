@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;1;3;/**  * Set the index of this parameter in the operation signature.  */ ;/**  * Set the index of this parameter in the operation signature.  */ public void setIndex(int index) {     this.index = index. }
-true;public;0;3;/**  * Return the index of this parameter in the operation signature.  */ ;/**  * Return the index of this parameter in the operation signature.  */ public int getIndex() {     return this.index. }
-true;public;1;3;/**  * Set the name of this parameter in the operation signature.  */ ;/**  * Set the name of this parameter in the operation signature.  */ public void setName(String name) {     this.name = name. }
-true;public;0;3;/**  * Return the name of this parameter in the operation signature.  */ ;/**  * Return the name of this parameter in the operation signature.  */ public String getName() {     return this.name. }
-true;public;1;3;/**  * Set a description for this parameter.  */ ;/**  * Set a description for this parameter.  */ public void setDescription(String description) {     this.description = description. }
-true;public;0;3;/**  * Return a description for this parameter.  */ ;/**  * Return a description for this parameter.  */ public String getDescription() {     return this.description. }

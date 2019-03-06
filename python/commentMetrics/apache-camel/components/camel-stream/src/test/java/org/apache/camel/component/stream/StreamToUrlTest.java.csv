@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;5;;@Override protected void doPreSetup() throws Exception {     System.setProperty("java.protocol.handler.pkgs", getClass().getPackage().getName()).     MockURLConnection.setOutputStream(buffer). }
-false;public;0;8;;@Override @After public void tearDown() throws Exception {     if (existingHandlers != null) {         System.setProperty("java.protocol.handler.pkgs", existingHandlers).     }     super.tearDown(). }
-false;public;0;3;;public void configure() {     from("direct:start").to("stream:url?url=mock:&httpHeaders.foo=123&httpHeaders.bar=yes"). }
-false;protected;0;7;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("direct:start").to("stream:url?url=mock:&httpHeaders.foo=123&httpHeaders.bar=yes").         }     }. }
-false;public;0;12;;@Test public void shouldSendToUrlOutputStream() throws Exception {     // When     template.sendBody("direct:start", message).     // Then     String messageReceived = new String(buffer.toByteArray()).trim().     assertEquals(message, messageReceived).     assertEquals("123", MockURLConnection.getHeaders().get("foo")).     assertEquals("yes", MockURLConnection.getHeaders().get("bar")). }

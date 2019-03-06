@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void sendSimpleMessage() throws InterruptedException {     this.producer.send("Test message").     Thread.sleep(1000L).     assertThat(output.toString().contains("Test message")).isTrue(). }

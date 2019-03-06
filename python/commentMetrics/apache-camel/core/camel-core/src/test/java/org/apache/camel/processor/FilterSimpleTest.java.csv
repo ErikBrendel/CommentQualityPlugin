@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public void configure() {     from("direct:start").filter().simple("${header.foo} == 'bar'").to("mock:result"). }
-false;protected;0;7;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("direct:start").filter().simple("${header.foo} == 'bar'").to("mock:result").         }     }. }

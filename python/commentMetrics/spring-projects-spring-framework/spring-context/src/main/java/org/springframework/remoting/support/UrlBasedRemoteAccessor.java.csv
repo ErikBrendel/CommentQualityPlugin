@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;1;3;/**  * Set the URL of this remote accessor's target service.  * The URL must be compatible with the rules of the particular remoting provider.  */ ;/**  * Set the URL of this remote accessor's target service.  * The URL must be compatible with the rules of the particular remoting provider.  */ public void setServiceUrl(String serviceUrl) {     this.serviceUrl = serviceUrl. }
-true;public;0;3;/**  * Return the URL of this remote accessor's target service.  */ ;/**  * Return the URL of this remote accessor's target service.  */ public String getServiceUrl() {     return this.serviceUrl. }
-false;public;0;6;;@Override public void afterPropertiesSet() {     if (getServiceUrl() == null) {         throw new IllegalArgumentException("Property 'serviceUrl' is required").     } }

@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;17;;@Override @Before public void setUp() throws Exception {     super.setUp().     InputStream is = getClass().getResourceAsStream(jsonFile()).     setMessages(context.getTypeConverter().convertTo(String.class, is)).     yammerComponent = context.getComponent("yammer", YammerComponent.class).     Collection<Endpoint> endpoints = context.getEndpoints().     for (Endpoint endpoint : endpoints) {         if (endpoint instanceof YammerEndpoint) {             ((YammerEndpoint) endpoint).getConfig().setRequestor(new TestApiRequestor(getMessages())).         }     } }
-false;protected;0;3;;protected String jsonFile() {     return "/messages.json". }
-false;protected;0;3;;protected String getMessages() {     return messages. }
-false;protected;1;3;;protected void setMessages(String messages) {     this.messages = messages. }

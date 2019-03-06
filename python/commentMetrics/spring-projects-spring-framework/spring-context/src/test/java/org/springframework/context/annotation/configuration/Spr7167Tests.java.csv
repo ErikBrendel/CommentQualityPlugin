@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;11;;@Test public void test() {     ConfigurableApplicationContext ctx = new AnnotationConfigApplicationContext(MyConfig.class).     assertThat("someDependency was not post processed", ctx.getBeanFactory().getBeanDefinition("someDependency").getDescription(), equalTo("post processed by MyPostProcessor")).     MyConfig config = ctx.getBean(MyConfig.class).     assertTrue("Config class was not enhanced", ClassUtils.isCglibProxy(config)). }
-false;public;0;4;;@Bean public Dependency someDependency() {     return new Dependency(). }
-false;public;0;4;;@Bean public BeanFactoryPostProcessor thePostProcessor() {     return new MyPostProcessor(someDependency()). }
-false;public;1;5;;@Override public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {     AbstractBeanDefinition bd = (AbstractBeanDefinition) beanFactory.getBeanDefinition("someDependency").     bd.setDescription("post processed by MyPostProcessor"). }

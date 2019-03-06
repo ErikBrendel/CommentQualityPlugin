@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;4;4;;@Override public SortField sortField(@Nullable Object missingValue, MultiValueMode sortMode, Nested nested, boolean reverse) {     throw new IllegalArgumentException("can't sort on binary field"). }
-false;public;1;8;;@Override public BytesBinaryDVAtomicFieldData load(LeafReaderContext context) {     try {         return new BytesBinaryDVAtomicFieldData(DocValues.getBinary(context.reader(), fieldName)).     } catch (IOException e) {         throw new IllegalStateException("Cannot load doc values", e).     } }
-false;public;1;4;;@Override public BytesBinaryDVAtomicFieldData loadDirect(LeafReaderContext context) throws Exception {     return load(context). }
-false;public;5;7;;@Override public IndexFieldData<?> build(IndexSettings indexSettings, MappedFieldType fieldType, IndexFieldDataCache cache, CircuitBreakerService breakerService, MapperService mapperService) {     // Ignore breaker     final String fieldName = fieldType.name().     return new BytesBinaryDVIndexFieldData(indexSettings.getIndex(), fieldName). }

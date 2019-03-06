@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;3;;protected String getPayload() {     return BODY_1KB_PAYLOAD. }
-false;protected;1;7;;protected void resetMock(int count) {     MockEndpoint mock = getMockEndpoint("mock:end").     mock.reset().     mock.setRetainFirst(0).     mock.setRetainLast(0).     mock.expectedMessageCount(count). }
-false;protected;1;5;;protected void execute(int count) {     for (int counter = 0. counter < count. counter++) {         template.sendBody(getPayload()).     } }
-false;public;0;4;;@Override public boolean isCreateCamelContextPerClass() {     return true. }

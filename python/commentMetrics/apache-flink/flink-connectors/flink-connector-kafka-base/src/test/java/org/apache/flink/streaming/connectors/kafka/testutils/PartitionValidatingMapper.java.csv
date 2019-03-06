@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;11;;@Override public Integer map(Integer value) throws Exception {     // validate that the partitioning is identical     int partition = value % numPartitions.     myPartitions.add(partition).     if (myPartitions.size() > maxPartitions) {         throw new Exception("Error: Elements from too many different partitions: " + myPartitions + ". Expect elements only from " + maxPartitions + " partitions").     }     return value. }

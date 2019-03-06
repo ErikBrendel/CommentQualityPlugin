@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;4;;@Override protected TypeComparator<Float> createComparator(boolean ascending) {     return new FloatComparator(ascending). }
-false;protected;0;4;;@Override protected TypeSerializer<Float> createSerializer() {     return new FloatSerializer(). }
-false;protected;0;21;;@Override protected Float[] getSortedTestData() {     Random rnd = new Random(874597969123412338L).     float rndFloat = rnd.nextFloat().     if (rndFloat < 0) {         rndFloat = -rndFloat.     }     if (rndFloat == Float.MAX_VALUE) {         rndFloat -= 3.     }     if (rndFloat <= 2) {         rndFloat += 3.     }     return new Float[] { Float.valueOf(-rndFloat), Float.valueOf(-1.0F), Float.valueOf(0.0F), Float.valueOf(2.0F), Float.valueOf(rndFloat), Float.valueOf(Float.MAX_VALUE) }. }

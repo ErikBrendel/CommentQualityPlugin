@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@GetMapping("/three/{id}") public String three(@PathVariable @Size(max = 4) String id) {     return "Hello " + id. }

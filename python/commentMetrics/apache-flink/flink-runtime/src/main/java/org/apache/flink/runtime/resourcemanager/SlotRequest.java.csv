@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Get the JobID of the slot requested for.  * @return The job id  */ ;/**  * Get the JobID of the slot requested for.  * @return The job id  */ public JobID getJobId() {     return jobId. }
-true;public;0;3;/**  * Get the unique identification of this request  * @return the allocation id  */ ;/**  * Get the unique identification of this request  * @return the allocation id  */ public AllocationID getAllocationId() {     return allocationId. }
-true;public;0;3;/**  * Get the resource profile of the desired slot  * @return The resource profile  */ ;/**  * Get the resource profile of the desired slot  * @return The resource profile  */ public ResourceProfile getResourceProfile() {     return resourceProfile. }
-false;public;0;3;;public String getTargetAddress() {     return targetAddress. }

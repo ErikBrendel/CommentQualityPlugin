@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getMessage() {     return "Required " + this.parameterType + " parameter '" + this.parameterName + "' is not present". }
-true;public,final;0;3;/**  * Return the name of the offending parameter.  */ ;/**  * Return the name of the offending parameter.  */ public final String getParameterName() {     return this.parameterName. }
-true;public,final;0;3;/**  * Return the expected type of the offending parameter.  */ ;/**  * Return the expected type of the offending parameter.  */ public final String getParameterType() {     return this.parameterType. }

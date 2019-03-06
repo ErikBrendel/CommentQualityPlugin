@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;protected;0;8;/**  * Create Dataformat by using the setters  */ ;/**  * Create Dataformat by using the setters  */ @Override protected SoapJaxbDataFormat createDataFormat() {     String jaxbPackage = GetCustomersByName.class.getPackage().getName().     SoapJaxbDataFormat dataFormat = new SoapJaxbDataFormat().     dataFormat.setContextPath(jaxbPackage).     dataFormat.setElementNameStrategy(null).     return dataFormat. }

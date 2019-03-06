@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Override public List<CamelContext> getLocalCamelContexts() {     List<CamelContext> answer = new ArrayList<>(1).     answer.add(camelContext).     return answer. }
-false;public;0;10;;@Override public List<Map<String, String>> getCamelContexts() throws Exception {     List<Map<String, String>> answer = new ArrayList<>(1).     Map<String, String> row = new LinkedHashMap<>().     row.put("name", camelContext.getName()).     row.put("state", camelContext.getStatus().name()).     row.put("uptime", camelContext.getUptime()).     answer.add(row).     return answer. }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@After public void cleanup() {     if (this.context != null) {         this.context.close().     } }
-false;public;0;9;;@Test public void doesNotEarlyInitializeFactoryBeans() {     SpringApplication application = new SpringApplication(EarlyInitConfig.class, PropertySourcesPlaceholderConfigurer.class, ServletWebServerFactoryAutoConfiguration.class).     this.context = application.run("--server.port=0").     String bean = (String) this.context.getBean("earlyInit").     assertThat(bean).isEqualTo("bucket"). }

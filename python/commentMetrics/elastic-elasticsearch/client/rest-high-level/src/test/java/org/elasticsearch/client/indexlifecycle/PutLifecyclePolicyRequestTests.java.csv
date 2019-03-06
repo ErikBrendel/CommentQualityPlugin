@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;private;0;3;;private PutLifecyclePolicyRequest createTestInstance() {     return new PutLifecyclePolicyRequest(createRandomPolicy(randomAlphaOfLengthBetween(5, 20))). }
-false;public;0;4;;public void testValidation() {     PutLifecyclePolicyRequest req = createTestInstance().     assertFalse(req.validate().isPresent()). }
-false;public;0;3;;public void testNullPolicy() {     expectThrows(IllegalArgumentException.class, () -> new PutLifecyclePolicyRequest(null)). }
-false;public;0;3;;public void testNullPolicyName() {     expectThrows(IllegalArgumentException.class, () -> new PutLifecyclePolicyRequest(createRandomPolicy(randomFrom("", null)))). }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected void preSubmit() throws Exception {     resultPath = getTempDirPath("result"). }
-false;protected;0;16;;@Override protected void testProgram() throws Exception {     final ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment().     DataSet<Long> longs = env.generateSequence(0, 100000).     DataSet<Tuple1<Long>> longT1 = longs.map(new TupleWrapper()).     DataSet<Tuple1<Long>> longT2 = longT1.project(0).     DataSet<Tuple1<Long>> longT3 = longs.map(new TupleWrapper()).     longT2.join(longT3).where(0).equalTo(0).projectFirst(0).join(longT1).where(0).equalTo(0).projectFirst(0).writeAsText(resultPath).     env.execute(). }
-false;public;1;4;;@Override public Tuple1<Long> map(Long l) throws Exception {     return new Tuple1<Long>(l). }

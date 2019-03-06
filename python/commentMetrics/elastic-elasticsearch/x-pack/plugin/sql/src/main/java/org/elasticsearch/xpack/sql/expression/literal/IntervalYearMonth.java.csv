@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;private,static;1;3;;private static Period period(StreamInput in) throws IOException {     return Period.of(in.readVInt(), in.readVInt(), in.readVInt()). }
-false;public;1;8;;@Override public void writeTo(StreamOutput out) throws IOException {     Period p = interval().     out.writeVInt(p.getYears()).     out.writeVInt(p.getMonths()).     out.writeVInt(p.getDays()).     out.writeEnum(dataType()). }
-false;public;0;4;;@Override public String getWriteableName() {     return NAME. }
-false;public;1;5;;@Override public IntervalYearMonth add(Interval<Period> interval) {     return new IntervalYearMonth(interval().plus(interval.interval()).normalized(), DataTypes.compatibleInterval(dataType(), interval.dataType())). }
-false;public;1;5;;@Override public IntervalYearMonth sub(Interval<Period> interval) {     return new IntervalYearMonth(interval().minus(interval.interval()).normalized(), DataTypes.compatibleInterval(dataType(), interval.dataType())). }
-false;public;1;5;;@Override public Interval<Period> mul(long mul) {     int i = DataTypeConversion.safeToInt(mul).     return new IntervalYearMonth(interval().multipliedBy(i), dataType()). }

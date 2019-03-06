@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;13;;@Override public <T> T newInstance(Class<T> type) {     T answer = ObjectHelper.newInstance(type).     if (answer != null) {         try {             postProcessor.postProcessBeforeInitialization(answer, answer.getClass().getName()).             postProcessor.postProcessAfterInitialization(answer, answer.getClass().getName()).         } catch (Exception e) {             throw new RuntimeCamelException("Error during post processing of bean " + answer, e).         }     }     return answer. }
-false;public;0;4;;@Override public boolean supportsAutoWiring() {     return false. }

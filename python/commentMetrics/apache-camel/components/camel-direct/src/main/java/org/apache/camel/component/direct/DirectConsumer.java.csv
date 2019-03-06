@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public DirectEndpoint getEndpoint() {     return (DirectEndpoint) super.getEndpoint(). }
-false;protected;0;5;;@Override protected void doStart() throws Exception {     super.doStart().     endpoint.addConsumer(this). }
-false;protected;0;5;;@Override protected void doStop() throws Exception {     endpoint.removeConsumer(this).     super.doStop(). }
-false;protected;0;4;;@Override protected void doSuspend() throws Exception {     endpoint.removeConsumer(this). }
-false;protected;0;5;;@Override protected void doResume() throws Exception {     // resume by using the start logic     endpoint.addConsumer(this). }
-false;public;1;5;;public boolean deferShutdown(ShutdownRunningTask shutdownRunningTask) {     // depend on this consumer to run, so it can complete its exchanges     return true. }
-false;public;0;5;;public int getPendingExchangesSize() {     // of inflight messages.     return 0. }
-false;public;2;3;;public void prepareShutdown(boolean suspendOnly, boolean forced) { // noop }

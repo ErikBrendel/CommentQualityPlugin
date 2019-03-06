@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;7;;@Override public ConnectionFactory wrapConnectionFactory(XAConnectionFactory connectionFactory) {     AtomikosConnectionFactoryBean bean = new AtomikosConnectionFactoryBean().     bean.setXaConnectionFactory(connectionFactory).     return bean. }

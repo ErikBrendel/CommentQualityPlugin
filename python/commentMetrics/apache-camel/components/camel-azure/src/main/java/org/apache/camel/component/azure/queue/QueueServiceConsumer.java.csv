@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;16;;@Override protected int poll() throws Exception {     Exchange exchange = super.getEndpoint().createExchange().     try {         log.trace("Retrieving a message").         retrieveMessage(exchange).         super.getAsyncProcessor().process(exchange).         return 1.     } catch (StorageException ex) {         if (404 == ex.getHttpStatusCode()) {             return 0.         } else {             throw ex.         }     } }
-false;private;1;6;;private void retrieveMessage(Exchange exchange) throws Exception {     // TODO: Support the batch processing if needed, given that it is possible     // to retrieve more than 1 message in one go, similarly to camel-aws/s3 consumer.     QueueServiceUtil.retrieveMessage(exchange, getConfiguration()). }
-false;protected;0;3;;protected QueueServiceConfiguration getConfiguration() {     return getEndpoint().getConfiguration(). }
-false;public;0;4;;@Override public QueueServiceEndpoint getEndpoint() {     return (QueueServiceEndpoint) super.getEndpoint(). }

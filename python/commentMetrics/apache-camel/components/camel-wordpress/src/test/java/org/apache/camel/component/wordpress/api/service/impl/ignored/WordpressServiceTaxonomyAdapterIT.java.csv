@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;6;;@BeforeClass public static void before() {     final WordpressServiceProvider serviceProvider = WordpressServiceProvider.getInstance().     serviceProvider.init(WordpressTestConstants.WORDPRESS_DEMO_URL).     serviceTaxonomy = serviceProvider.getService(WordpressServiceTaxonomy.class). }
-false;public;0;6;;@Test public void testRetrieve() {     final Taxonomy taxonomy = serviceTaxonomy.retrieve(null, "category").     assertThat(taxonomy, not(nullValue())).     assertThat(taxonomy.getName(), not(isEmptyOrNullString())). }
-false;public;0;6;;@Test public void testList() {     final Map<String, Taxonomy> taxs = serviceTaxonomy.list(null, null).     assertThat(taxs, is(not(nullValue()))).     assertThat(taxs.size(), is(2)). }

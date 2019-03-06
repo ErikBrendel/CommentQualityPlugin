@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public boolean isSingleton() {     return true. }
-false;public;0;4;;@Override public EtcdConfiguration getConfiguration() {     return this.configuration. }
-false;public;0;4;;@Override public EtcdNamespace getNamespace() {     return this.namespace. }
-false;public;0;4;;@Override public String getPath() {     return this.path. }
-false;public;0;4;;@Override public EtcdClient createClient() throws Exception {     return configuration.createClient(). }

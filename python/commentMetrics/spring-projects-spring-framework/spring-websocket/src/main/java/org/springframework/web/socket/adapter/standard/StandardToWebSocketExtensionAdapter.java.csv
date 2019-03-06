@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;private,static;1;8;;private static Map<String, String> initParameters(Extension extension) {     List<Extension.Parameter> parameters = extension.getParameters().     Map<String, String> result = new LinkedCaseInsensitiveMap<>(parameters.size(), Locale.ENGLISH).     for (Extension.Parameter parameter : parameters) {         result.put(parameter.getName(), parameter.getValue()).     }     return result. }

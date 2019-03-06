@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Return details of the files that changed.  * @return the changed files  */ ;/**  * Return details of the files that changed.  * @return the changed files  */ public Set<ChangedFiles> getChangeSet() {     return this.changeSet. }
-true;public;0;3;/**  * Return if an application restart is required due to the change.  * @return if an application restart is required  */ ;/**  * Return if an application restart is required due to the change.  * @return if an application restart is required  */ public boolean isRestartRequired() {     return this.restartRequired. }

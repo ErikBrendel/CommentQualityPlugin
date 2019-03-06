@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;4;/**  * Returns the maximum time interval to wait for acknowledgements  */ ;/**  * Returns the maximum time interval to wait for acknowledgements  */ @Override public TimeValue ackTimeout() {     return ackTimeout. }
-true;public;1;5;/**  * Sets the acknowledgement timeout  */ ;/**  * Sets the acknowledgement timeout  */ @SuppressWarnings("unchecked") public T ackTimeout(TimeValue ackTimeout) {     this.ackTimeout = ackTimeout.     return (T) this. }
-true;public;0;4;/**  * Returns the maximum time interval to wait for the request to  * be completed on the master node  */ ;/**  * Returns the maximum time interval to wait for the request to  * be completed on the master node  */ @Override public TimeValue masterNodeTimeout() {     return masterNodeTimeout. }
-true;public;1;5;/**  * Sets the master node timeout  */ ;/**  * Sets the master node timeout  */ @SuppressWarnings("unchecked") public T masterNodeTimeout(TimeValue masterNodeTimeout) {     this.masterNodeTimeout = masterNodeTimeout.     return (T) this. }

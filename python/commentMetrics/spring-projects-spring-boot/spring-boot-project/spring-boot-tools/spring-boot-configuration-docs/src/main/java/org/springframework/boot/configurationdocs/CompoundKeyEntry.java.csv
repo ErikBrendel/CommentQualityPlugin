@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;1;4;;void addConfigurationKeys(ConfigurationMetadataProperty... properties) {     Stream.of(properties).forEach((property) -> this.configurationKeys.add(property.getId())). }
-false;public;1;7;;@Override public void writeAsciidoc(StringBuilder builder) {     builder.append("|`+++").     this.configurationKeys.forEach((key) -> builder.append(key).append(NEWLINE)).     builder.append("+++`").append(NEWLINE).append("|").append(NEWLINE).append("|+++").append(this.description).append("+++").append(NEWLINE). }

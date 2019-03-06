@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;8;;@Bean @ConditionalOnMissingBean({ WebClient.class, MockMvcWebClientBuilder.class }) @ConditionalOnBean(MockMvc.class) public MockMvcWebClientBuilder mockMvcWebClientBuilder(MockMvc mockMvc, Environment environment) {     return MockMvcWebClientBuilder.mockMvcSetup(mockMvc).withDelegate(new LocalHostWebClient(environment)). }
-false;public;1;6;;@Bean @ConditionalOnMissingBean @ConditionalOnBean(MockMvcWebClientBuilder.class) public WebClient htmlUnitWebClient(MockMvcWebClientBuilder builder) {     return builder.build(). }

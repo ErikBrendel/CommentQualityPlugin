@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * Returns whether the reader has consumed the input.  */ ;/**  * Returns whether the reader has consumed the input.  */ boolean isFinished().
-false;;1;1;;// ------------------------------------------------------------------------ // Task events // ------------------------------------------------------------------------ void sendTaskEvent(TaskEvent event) throws IOException.
-false;;2;1;;void registerTaskEventListener(EventListener<TaskEvent> listener, Class<? extends TaskEvent> eventType).
-false;;0;1;;// ------------------------------------------------------------------------ // Iterations // ------------------------------------------------------------------------ void setIterativeReader().
-false;;0;1;;void startNextSuperstep().
-false;;0;1;;boolean hasReachedEndOfSuperstep().

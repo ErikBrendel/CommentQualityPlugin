@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected Class<TaxonomySPI> getSpiType() {     return TaxonomySPI.class. }
-false;public;2;4;;@Override public Map<String, Taxonomy> list(Context context, String postType) {     return getSpi().list(this.getApiVersion(), context, postType). }
-false;public;2;5;;@Override public Taxonomy retrieve(Context context, String taxonomy) {     checkNotNull(emptyToNull(taxonomy), "Please define a taxonomy").     return getSpi().retrieve(this.getApiVersion(), context, taxonomy). }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public boolean hasNext() {     return pushBack != null || iterator.hasNext(). }
-false;public;0;9;;public IN next() {     if (pushBack != null) {         IN obj = pushBack.         pushBack = null.         return obj.     } else {         return iterator.next().     } }
-false;public;1;4;;public void pushBack(IN element) {     Preconditions.checkState(pushBack == null, "Already contains an element that was pushed back. This indicates a programming error.").     pushBack = element. }

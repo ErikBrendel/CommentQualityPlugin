@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String host() {     return get(ElasticProperties::getHost, ElasticConfig.super::host). }
-false;public;0;4;;@Override public String index() {     return get(ElasticProperties::getIndex, ElasticConfig.super::index). }
-false;public;0;5;;@Override public String indexDateFormat() {     return get(ElasticProperties::getIndexDateFormat, ElasticConfig.super::indexDateFormat). }
-false;public;0;5;;@Override public String timestampFieldName() {     return get(ElasticProperties::getTimestampFieldName, ElasticConfig.super::timestampFieldName). }
-false;public;0;5;;@Override public boolean autoCreateIndex() {     return get(ElasticProperties::isAutoCreateIndex, ElasticConfig.super::autoCreateIndex). }
-false;public;0;4;;@Override public String userName() {     return get(ElasticProperties::getUserName, ElasticConfig.super::userName). }
-false;public;0;4;;@Override public String password() {     return get(ElasticProperties::getPassword, ElasticConfig.super::password). }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;12;;public Report createReport() throws Exception {     int counter = ++count.     // Create a Report object     Report report = new Report().     report.setId(counter).     report.setTitle("Report Title: " + counter).     report.setContent("This is a dummy report").     // Add the report to the Body     return report. }

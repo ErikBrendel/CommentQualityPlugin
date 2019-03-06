@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/spring/util/EndpointHelperTest.xml"). }
-false;public;0;9;;@Test public void testLookupEndpointRegistryId() throws Exception {     Endpoint foo = context.getEndpoint("ref:foo").     Endpoint bar = context.getEndpoint("ref:coolbar").     assertEquals("foo", EndpointHelper.lookupEndpointRegistryId(foo)).     assertEquals("coolbar", EndpointHelper.lookupEndpointRegistryId(bar)).     assertEquals(null, EndpointHelper.lookupEndpointRegistryId(context.getEndpoint("mock:cheese"))). }

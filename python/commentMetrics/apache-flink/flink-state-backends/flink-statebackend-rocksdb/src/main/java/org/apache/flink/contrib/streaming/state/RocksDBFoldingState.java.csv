@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public TypeSerializer<K> getKeySerializer() {     return backend.getKeySerializer(). }
-false;public;0;4;;@Override public TypeSerializer<N> getNamespaceSerializer() {     return namespaceSerializer. }
-false;public;0;4;;@Override public TypeSerializer<ACC> getValueSerializer() {     return valueSerializer. }
-false;public;0;4;;@Override public ACC get() {     return getInternal(). }
-false;public;1;8;;@Override public void add(T value) throws Exception {     byte[] key = getKeyBytes().     ACC accumulator = getInternal(key).     accumulator = accumulator == null ? getDefaultValue() : accumulator.     accumulator = foldFunction.fold(accumulator, value).     updateInternal(key, accumulator). }
-false;static;3;13;;@SuppressWarnings("unchecked") static <K, N, SV, S extends State, IS extends S> IS create(StateDescriptor<S, SV> stateDesc, Tuple2<ColumnFamilyHandle, RegisteredKeyValueStateBackendMetaInfo<N, SV>> registerResult, RocksDBKeyedStateBackend<K> backend) {     return (IS) new RocksDBFoldingState<>(registerResult.f0, registerResult.f1.getNamespaceSerializer(), registerResult.f1.getStateSerializer(), stateDesc.getDefaultValue(), ((FoldingStateDescriptor<?, SV>) stateDesc).getFoldFunction(), backend). }

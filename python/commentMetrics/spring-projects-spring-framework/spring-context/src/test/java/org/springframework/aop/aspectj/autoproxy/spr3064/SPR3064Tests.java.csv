@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;15;;@Test public void testServiceIsAdvised() {     ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext(getClass().getSimpleName() + ".xml", getClass()).     service = (Service) ctx.getBean("service").     try {         this.service.serveMe().         fail("service operation has not been advised by transaction interceptor").     } catch (RuntimeException ex) {         assertEquals("advice invoked", ex.getMessage()).     } }
-false;public;2;5;;@Around(value = "execution(* *..Service.*(..)) && @annotation(transaction)") public Object around(ProceedingJoinPoint pjp, Transaction transaction) throws Throwable {     throw new RuntimeException("advice invoked"). // return pjp.proceed(). }
-false;;0;1;;void serveMe().
-false;public;0;4;;@Override @Transaction public void serveMe() { }

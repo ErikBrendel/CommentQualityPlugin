@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;4;;@Override public <T extends NodeState> Group<T> createGroup(String path, Class<T> clazz) {     return new ZooKeeperGroup<>(curator, path, clazz). }
-false;public;3;4;;@Override public <T extends NodeState> Group<T> createGroup(String path, Class<T> clazz, ThreadFactory threadFactory) {     return new ZooKeeperGroup<>(curator, path, clazz, threadFactory). }
-false;public;2;4;;@Override public <T extends NodeState> Group<T> createMultiGroup(String path, Class<T> clazz) {     return new ZooKeeperMultiGroup<>(curator, path, clazz). }
-false;public;3;4;;@Override public <T extends NodeState> Group<T> createMultiGroup(String path, Class<T> clazz, ThreadFactory threadFactory) {     return new ZooKeeperMultiGroup<>(curator, path, clazz, threadFactory). }

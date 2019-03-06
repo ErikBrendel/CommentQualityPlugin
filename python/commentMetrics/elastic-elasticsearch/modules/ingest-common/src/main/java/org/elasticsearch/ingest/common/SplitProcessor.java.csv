@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;0;3;;String getField() {     return field. }
-false;;0;3;;String getSeparator() {     return separator. }
-false;;0;3;;boolean isIgnoreMissing() {     return ignoreMissing. }
-false;;0;3;;String getTargetField() {     return targetField. }
-false;public;1;16;;@Override public IngestDocument execute(IngestDocument document) {     String oldVal = document.getFieldValue(field, String.class, ignoreMissing).     if (oldVal == null && ignoreMissing) {         return document.     } else if (oldVal == null) {         throw new IllegalArgumentException("field [" + field + "] is null, cannot split.").     }     String[] strings = oldVal.split(separator).     List<String> splitList = new ArrayList<>(strings.length).     Collections.addAll(splitList, strings).     document.setFieldValue(targetField, splitList).     return document. }
-false;public;0;4;;@Override public String getType() {     return TYPE. }
-false;public;3;9;;@Override public SplitProcessor create(Map<String, Processor.Factory> registry, String processorTag, Map<String, Object> config) throws Exception {     String field = ConfigurationUtils.readStringProperty(TYPE, processorTag, config, "field").     boolean ignoreMissing = ConfigurationUtils.readBooleanProperty(TYPE, processorTag, config, "ignore_missing", false).     String targetField = ConfigurationUtils.readStringProperty(TYPE, processorTag, config, "target_field", field).     return new SplitProcessor(processorTag, field, ConfigurationUtils.readStringProperty(TYPE, processorTag, config, "separator"), ignoreMissing, targetField). }

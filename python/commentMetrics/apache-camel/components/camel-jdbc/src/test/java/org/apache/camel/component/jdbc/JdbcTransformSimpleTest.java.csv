@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void testJdbcRoutes() throws Exception {     mock.expectedBodiesReceived("jstrachan").     template.sendBody("direct:hello", "select * from customer order by ID").     assertMockEndpointsSatisfied(). }
-false;public;0;8;;@Override public void configure() throws Exception {     from("direct:hello").to("jdbc:testdb").transform().simple("${body[0]['NAME']}").to("mock:result"). }
-false;protected;0;13;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:hello").to("jdbc:testdb").transform().simple("${body[0]['NAME']}").to("mock:result").         }     }. }

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public boolean supportsParameter(MethodParameter param) {     return checkAnnotatedParamNoReactiveWrapper(param, RequestHeader.class, this::singleParam). }
-false;private;2;3;;private boolean singleParam(RequestHeader annotation, Class<?> type) {     return !Map.class.isAssignableFrom(type). }
-false;protected;1;6;;@Override protected NamedValueInfo createNamedValueInfo(MethodParameter parameter) {     RequestHeader ann = parameter.getParameterAnnotation(RequestHeader.class).     Assert.state(ann != null, "No RequestHeader annotation").     return new RequestHeaderNamedValueInfo(ann). }
-false;protected;3;9;;@Override protected Object resolveNamedValue(String name, MethodParameter parameter, ServerWebExchange exchange) {     List<String> headerValues = exchange.getRequest().getHeaders().get(name).     Object result = null.     if (headerValues != null) {         result = (headerValues.size() == 1 ? headerValues.get(0) : headerValues).     }     return result. }
-false;protected;2;6;;@Override protected void handleMissingValue(String name, MethodParameter parameter) {     String type = parameter.getNestedParameterType().getSimpleName().     throw new ServerWebInputException("Missing request header '" + name + "' " + "for method parameter of type " + type, parameter). }

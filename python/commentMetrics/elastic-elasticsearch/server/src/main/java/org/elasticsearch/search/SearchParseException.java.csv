@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeInt(lineNumber).     out.writeInt(columnNumber). }
-false;public;0;4;;@Override public RestStatus status() {     return RestStatus.BAD_REQUEST. }
-false;protected;2;7;;@Override protected void metadataToXContent(XContentBuilder builder, Params params) throws IOException {     if (lineNumber != UNKNOWN_POSITION) {         builder.field("line", lineNumber).         builder.field("col", columnNumber).     } }
-true;public;0;3;/**  * Line number of the location of the error  *  * @return the line number or -1 if unknown  */ ;/**  * Line number of the location of the error  *  * @return the line number or -1 if unknown  */ public int getLineNumber() {     return lineNumber. }
-true;public;0;3;/**  * Column number of the location of the error  *  * @return the column number or -1 if unknown  */ ;/**  * Column number of the location of the error  *  * @return the column number or -1 if unknown  */ public int getColumnNumber() {     return columnNumber. }

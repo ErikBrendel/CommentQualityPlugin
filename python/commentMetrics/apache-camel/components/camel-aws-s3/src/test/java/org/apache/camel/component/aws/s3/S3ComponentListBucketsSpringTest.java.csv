@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;@Test public void sendIn() throws Exception {     result.expectedMessageCount(1).     template.sendBody("direct:listBuckets", ExchangePattern.InOnly, "").     assertMockEndpointsSatisfied().     assertResultExchange(result.getExchanges().get(0)). }
-false;private;1;6;;private void assertResultExchange(Exchange resultExchange) {     List<Bucket> list = resultExchange.getIn().getBody(List.class).     assertEquals(1, list.size()).     assertEquals("camel", list.get(0).getOwner().getDisplayName()).     assertEquals("camel-bucket", list.get(0).getName()). }
-false;protected;0;9;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry registry = super.createRegistry().     client = new AmazonS3ClientMock().     registry.bind("amazonS3Client", client).     return registry. }
-false;protected;0;4;;@Override protected ClassPathXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/component/aws/s3/S3ComponentSpringTest-context.xml"). }

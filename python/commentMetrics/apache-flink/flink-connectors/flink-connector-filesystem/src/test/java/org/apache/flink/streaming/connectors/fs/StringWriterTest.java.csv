@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;12;;@Test public void testDuplicate() {     StringWriter<String> writer = new StringWriter(StandardCharsets.UTF_16.name()).     writer.setSyncOnFlush(true).     StringWriter<String> other = writer.duplicate().     assertTrue(StreamWriterBaseComparator.equals(writer, other)).     writer.setSyncOnFlush(false).     assertFalse(StreamWriterBaseComparator.equals(writer, other)).     assertFalse(StreamWriterBaseComparator.equals(writer, new StringWriter<>())). }

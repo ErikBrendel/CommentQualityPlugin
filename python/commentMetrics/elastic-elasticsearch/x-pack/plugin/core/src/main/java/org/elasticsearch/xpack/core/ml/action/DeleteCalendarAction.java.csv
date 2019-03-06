@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public AcknowledgedResponse newResponse() {     return new AcknowledgedResponse(). }
-false;public;0;3;;public String getCalendarId() {     return calendarId. }
-false;public;0;4;;@Override public ActionRequestValidationException validate() {     return null. }
-false;public;1;5;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     calendarId = in.readString(). }
-false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeString(calendarId). }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(calendarId). }
-false;public;1;9;;@Override public boolean equals(Object obj) {     if (obj == null || getClass() != obj.getClass()) {         return false.     }     Request other = (Request) obj.     return Objects.equals(calendarId, other.calendarId). }

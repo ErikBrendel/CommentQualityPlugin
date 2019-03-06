@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;14;;@Test public void testRecovery() throws InterruptedException {     when(queue.poll(any(Long.class), any(TimeUnit.class))).thenReturn("bar").thenReturn(null).     when(tqueue.poll(any(Long.class), any(TimeUnit.class))).thenReturn("bar").thenReturn(null).     mock.expectedMessageCount(1).     assertMockEndpointsSatisfied(5000, TimeUnit.MILLISECONDS). }
-false;public;0;4;;@Override public void configure() throws Exception {     from("hazelcast-seda:foo?transacted=true&onErrorDelay=5").to("mock:result"). }
-false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("hazelcast-seda:foo?transacted=true&onErrorDelay=5").to("mock:result").         }     }. }
-false;public,final;0;4;;@After public final void stopContext() throws Exception {     context.stop(). }

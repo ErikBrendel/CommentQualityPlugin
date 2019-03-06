@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;12;;@Deployment public static Archive<?> deployment() {     return ShrinkWrap.create(JavaArchive.class).addPackage(CdiCamelExtension.class.getPackage()).addAsResource(Paths.get("src/test/resources/camel-context-properties.xml").toFile(), "imported-context.xml").addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml"). }
-false;public;1;6;;@Test public void resolvePropertyFromLocation(CamelContext context) throws Exception {     assertThat("Property from classpath location does not resolve!", context.resolvePropertyPlaceholders("{{header.message}}"), is(equalTo("message from file"))). }

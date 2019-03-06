@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Return the explanation for shard allocation in the cluster  */ ;/**  * Return the explanation for shard allocation in the cluster  */ public ClusterAllocationExplanation getExplanation() {     return this.cae. }
-false;public;1;5;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     this.cae = new ClusterAllocationExplanation(in). }
-false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     cae.writeTo(out). }

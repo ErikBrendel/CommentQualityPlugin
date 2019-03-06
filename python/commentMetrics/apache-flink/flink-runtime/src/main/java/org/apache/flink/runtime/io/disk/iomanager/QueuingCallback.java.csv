@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public void requestSuccessful(T buffer) {     queue.add(buffer). }
-false;public;2;5;;@Override public void requestFailed(T buffer, IOException e) {     // the I/O error is recorded in the writer already     queue.add(buffer). }

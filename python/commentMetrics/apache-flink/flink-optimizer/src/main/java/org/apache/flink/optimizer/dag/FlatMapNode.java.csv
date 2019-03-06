@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public FlatMapOperatorBase<?, ?, ?> getOperator() {     return (FlatMapOperatorBase<?, ?, ?>) super.getOperator(). }
-false;public;0;4;;@Override public String getOperatorName() {     return "FlatMap". }
-false;protected;0;4;;@Override protected List<OperatorDescriptorSingle> getPossibleProperties() {     return this.possibleProperties. }
-true;protected;1;4;/**  * Computes the estimates for the FlatMap operator. Since it un-nests, we assume a cardinality  * increase. To give the system a hint at data increase, we take a default magic number of a 5 times increase.  */ ;/**  * Computes the estimates for the FlatMap operator. Since it un-nests, we assume a cardinality  * increase. To give the system a hint at data increase, we take a default magic number of a 5 times increase.  */ @Override protected void computeOperatorSpecificDefaultEstimates(DataStatistics statistics) {     this.estimatedNumRecords = getPredecessorNode().getEstimatedNumRecords() * 5. }

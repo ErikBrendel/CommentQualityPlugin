@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;1;4;/**  * Set the id for the pipeline to simulate  */ ;/**  * Set the id for the pipeline to simulate  */ public SimulatePipelineRequestBuilder setId(String id) {     request.setId(id).     return this. }
-true;public;1;4;/**  * Enable or disable verbose mode  */ ;/**  * Enable or disable verbose mode  */ public SimulatePipelineRequestBuilder setVerbose(boolean verbose) {     request.setVerbose(verbose).     return this. }

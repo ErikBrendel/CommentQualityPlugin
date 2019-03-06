@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;4;/**  * @see org.springframework.beans.factory.InitializingBean#afterPropertiesSet()  */ ;/**  * @see org.springframework.beans.factory.InitializingBean#afterPropertiesSet()  */ @Override public void afterPropertiesSet() throws Exception {     this.inited = true. }
-true;public;0;4;/**  * Dummy business method that will fail unless the factory  * managed the bean's lifecycle correctly  */ ;/**  * Dummy business method that will fail unless the factory  * managed the bean's lifecycle correctly  */ public void businessMethod() {     if (!this.inited)         throw new RuntimeException("Factory didn't call afterPropertiesSet() on MustBeInitialized object"). }

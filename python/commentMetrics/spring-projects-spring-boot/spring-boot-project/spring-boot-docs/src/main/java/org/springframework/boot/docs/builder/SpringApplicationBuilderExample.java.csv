@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;11;;public void hierarchyWithDisabledBanner(String[] args) {     // @formatter:off     // tag::hierarchy[]     new SpringApplicationBuilder().sources(Parent.class).child(Application.class).bannerMode(Banner.Mode.OFF).run(args). // end::hierarchy[] // @formatter:on }

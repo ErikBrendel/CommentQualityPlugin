@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getDataFormatName() {     return "string". }
-false;public;0;3;;public String getCharset() {     return charset. }
-false;public;1;3;;public void setCharset(String charset) {     this.charset = charset. }
-false;public;3;11;;public void marshal(Exchange exchange, Object graph, OutputStream stream) throws IOException {     String text = ExchangeHelper.convertToType(exchange, String.class, graph).     byte[] bytes.     if (charset != null) {         bytes = text.getBytes(charset).     } else {         bytes = text.getBytes().     }     stream.write(bytes). }
-false;public;2;12;;public Object unmarshal(Exchange exchange, InputStream stream) throws IOException {     byte[] bytes = ExchangeHelper.convertToType(exchange, byte[].class, stream).     String answer.     if (charset != null) {         answer = new String(bytes, charset).     } else {         answer = new String(bytes).     }     return answer. }
-false;protected;0;4;;@Override protected void doStart() throws Exception { // noop }
-false;protected;0;4;;@Override protected void doStop() throws Exception { // noop }

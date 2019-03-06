@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;5;;@Converter public MyBean fromString(String text, Exchange exchange) {     String[] values = StringHelper.splitOnCharacter(text, ":", 2).     return new MyBean(Integer.parseInt(values[0]), exchange.getProperty("prefix", String.class) + values[1]). }

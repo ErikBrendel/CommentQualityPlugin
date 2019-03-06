@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Before public void setUpTests() {     threadPool = new TestThreadPool("MlDailyManagementServiceTests").     client = mock(Client.class).     when(client.threadPool()).thenReturn(threadPool). }
-false;public;0;4;;@After public void stop() throws InterruptedException {     terminate(threadPool). }
-false;public;0;10;;public void testScheduledTriggering() throws InterruptedException {     int triggerCount = randomIntBetween(2, 4).     CountDownLatch latch = new CountDownLatch(triggerCount).     try (MlDailyMaintenanceService service = createService(latch, client)) {         service.start().         latch.await(5, TimeUnit.SECONDS).     }     verify(client, Mockito.atLeast(triggerCount - 1)).execute(same(DeleteExpiredDataAction.INSTANCE), any(), any()). }
-false;private;2;6;;private MlDailyMaintenanceService createService(CountDownLatch latch, Client client) {     return new MlDailyMaintenanceService(threadPool, client, () -> {         latch.countDown().         return TimeValue.timeValueMillis(100).     }). }

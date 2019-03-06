@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;public Class<?> resolveClass(String name) {     if (name.equals("org.apache.camel.language.ognl.Animal1")) {         name = "org.apache.camel.language.ognl.Animal".     }     return loadClass(name, DefaultClassResolver.class.getClassLoader()). }

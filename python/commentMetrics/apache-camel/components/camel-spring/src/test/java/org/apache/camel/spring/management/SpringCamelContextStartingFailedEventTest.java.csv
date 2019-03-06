@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected boolean useJmx() {     return true. }
-false;protected;0;13;;protected AbstractXmlApplicationContext createApplicationContext() {     try {         new ClassPathXmlApplicationContext("org/apache/camel/spring/management/SpringCamelContextStartingFailedEventTest.xml").         fail("Should thrown an exception").     } catch (RuntimeCamelException e) {         FailedToCreateRouteException ftcre = assertIsInstanceOf(FailedToCreateRouteException.class, e.getCause()).         assertIsInstanceOf(ResolveEndpointFailedException.class, ftcre.getCause()).     // expected     }     // fallback to load another file that works     return new ClassPathXmlApplicationContext("/org/apache/camel/spring/disableJmxConfig.xml"). }
-false;public;0;4;;@Test public void testReady() { // noop }

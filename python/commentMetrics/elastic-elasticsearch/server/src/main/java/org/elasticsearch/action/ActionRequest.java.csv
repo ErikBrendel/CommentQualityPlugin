@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,abstract;0;1;;public abstract ActionRequestValidationException validate().
-true;public;0;3;/**  * Should this task store its result after it has finished?  */ ;/**  * Should this task store its result after it has finished?  */ public boolean getShouldStoreResult() {     return false. }
-false;public;1;4;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in). }
-false;public;1;4;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out). }

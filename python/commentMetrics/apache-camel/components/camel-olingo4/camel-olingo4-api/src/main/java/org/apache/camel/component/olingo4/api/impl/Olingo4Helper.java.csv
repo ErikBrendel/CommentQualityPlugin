@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,static;1;7;/**  * Gets the content type header in a safe way  */ ;/**  * Gets the content type header in a safe way  */ public static ContentType getContentTypeHeader(HttpResponse response) {     if (response.containsHeader(HttpHeaders.CONTENT_TYPE)) {         return ContentType.parse(response.getFirstHeader(HttpHeaders.CONTENT_TYPE).getValue()).     } else {         return null.     } }

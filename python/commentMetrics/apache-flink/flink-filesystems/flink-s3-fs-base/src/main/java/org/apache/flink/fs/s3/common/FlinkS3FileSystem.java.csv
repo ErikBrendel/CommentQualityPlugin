@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;// ------------------------------------------------------------------------ @Nullable @Override public String getEntropyInjectionKey() {     return entropyInjectionKey. }
-false;public;0;4;;@Override public String generateEntropy() {     return StringUtils.generateRandomAlphanumericString(ThreadLocalRandom.current(), entropyLength). }
-false;public;0;4;;@Override public FileSystemKind getKind() {     return FileSystemKind.OBJECT_STORE. }
-false;public;0;3;;public String getLocalTmpDir() {     return localTmpDir. }
-false;public;0;15;;@Override public RecoverableWriter createRecoverableWriter() throws IOException {     if (s3AccessHelper == null) {         // this is the case for Presto         throw new UnsupportedOperationException("This s3 file system implementation does not support recoverable writers.").     }     return S3RecoverableWriter.writer(getHadoopFileSystem(), tmpFileCreator, s3AccessHelper, uploadThreadPool, s3uploadPartSize, maxConcurrentUploadsPerStream). }

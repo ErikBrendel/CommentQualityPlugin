@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;4;/**  * This implementation always returns {@code true}.  */ ;/**  * This implementation always returns {@code true}.  */ @Override public boolean exists() {     return true. }
-true;public;0;4;/**  * This implementation always returns {@code true}.  */ ;/**  * This implementation always returns {@code true}.  */ @Override public boolean isOpen() {     return true. }
-false;public;0;4;;@Override public long contentLength() {     return this.multipartFile.getSize(). }
-false;public;0;4;;@Override public String getFilename() {     return this.multipartFile.getOriginalFilename(). }
-true;public;0;4;/**  * This implementation throws IllegalStateException if attempting to  * read the underlying stream multiple times.  */ ;/**  * This implementation throws IllegalStateException if attempting to  * read the underlying stream multiple times.  */ @Override public InputStream getInputStream() throws IOException, IllegalStateException {     return this.multipartFile.getInputStream(). }
-true;public;0;4;/**  * This implementation returns a description that has the Multipart name.  */ ;/**  * This implementation returns a description that has the Multipart name.  */ @Override public String getDescription() {     return "MultipartFile resource [" + this.multipartFile.getName() + "]". }
-false;public;1;5;;@Override public boolean equals(Object other) {     return (this == other || (other instanceof MultipartFileResource && ((MultipartFileResource) other).multipartFile.equals(this.multipartFile))). }
-false;public;0;4;;@Override public int hashCode() {     return this.multipartFile.hashCode(). }

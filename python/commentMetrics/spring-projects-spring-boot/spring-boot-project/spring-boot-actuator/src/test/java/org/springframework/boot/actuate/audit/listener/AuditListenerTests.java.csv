@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void testStoredEvents() {     AuditEventRepository repository = mock(AuditEventRepository.class).     AuditEvent event = new AuditEvent("principal", "type", Collections.emptyMap()).     AuditListener listener = new AuditListener(repository).     listener.onApplicationEvent(new AuditApplicationEvent(event)).     verify(repository).add(event). }

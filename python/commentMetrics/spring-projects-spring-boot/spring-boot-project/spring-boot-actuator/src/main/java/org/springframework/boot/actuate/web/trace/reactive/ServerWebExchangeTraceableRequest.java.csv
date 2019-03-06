@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;private,static;1;5;;private static String getRemoteAddress(ServerHttpRequest request) {     InetSocketAddress remoteAddress = request.getRemoteAddress().     InetAddress address = (remoteAddress != null) ? remoteAddress.getAddress() : null.     return (address != null) ? address.toString() : null. }
-false;public;0;4;;@Override public String getMethod() {     return this.method. }
-false;public;0;4;;@Override public URI getUri() {     return this.uri. }
-false;public;0;4;;@Override public Map<String, List<String>> getHeaders() {     return new LinkedHashMap<>(this.headers). }
-false;public;0;4;;@Override public String getRemoteAddress() {     return this.remoteAddress. }

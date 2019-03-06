@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public double getValue() {     return value(). }
-false;public;0;4;;@Override public String getType() {     return AvgAggregationBuilder.NAME. }
-false;protected;2;11;;@Override protected XContentBuilder doXContentBody(XContentBuilder builder, Params params) throws IOException {     // InternalAvg renders value only if the avg normalizer (count) is not 0.     // We parse back `null` as Double.POSITIVE_INFINITY so we check for that value here to get the same xContent output     boolean hasValue = value != Double.POSITIVE_INFINITY.     builder.field(CommonFields.VALUE.getPreferredName(), hasValue ? value : null).     if (hasValue && valueAsString != null) {         builder.field(CommonFields.VALUE_AS_STRING.getPreferredName(), valueAsString).     }     return builder. }
-false;public,static;2;5;;public static ParsedAvg fromXContent(XContentParser parser, final String name) {     ParsedAvg avg = PARSER.apply(parser, null).     avg.setName(name).     return avg. }

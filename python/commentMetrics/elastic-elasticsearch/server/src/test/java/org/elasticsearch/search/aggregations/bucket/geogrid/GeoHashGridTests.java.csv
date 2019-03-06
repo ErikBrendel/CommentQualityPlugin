@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;5;5;;@Override protected InternalGeoHashGrid createInternalGeoGrid(String name, int size, List<InternalGeoGridBucket> buckets, List<PipelineAggregator> pipelineAggregators, Map<String, Object> metaData) {     return new InternalGeoHashGrid(name, size, buckets, pipelineAggregators, metaData). }
-false;protected;0;4;;@Override protected Writeable.Reader<InternalGeoHashGrid> instanceReader() {     return InternalGeoHashGrid::new. }
-false;protected;3;4;;@Override protected InternalGeoHashGridBucket createInternalGeoGridBucket(Long key, long docCount, InternalAggregations aggregations) {     return new InternalGeoHashGridBucket(key, docCount, aggregations). }
-false;protected;3;4;;@Override protected long longEncode(double lng, double lat, int precision) {     return GeoHashUtils.longEncode(lng, lat, precision). }
-false;protected;0;4;;@Override protected int randomPrecision() {     return randomIntBetween(4, 12). }

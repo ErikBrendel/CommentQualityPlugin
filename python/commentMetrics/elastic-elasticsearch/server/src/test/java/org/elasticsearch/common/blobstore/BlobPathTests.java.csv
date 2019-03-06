@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;13;;public void testBuildAsString() {     BlobPath path = new BlobPath().     assertThat(path.buildAsString(), is("")).     path = path.add("a").     assertThat(path.buildAsString(), is("a/")).     path = path.add("b").add("c").     assertThat(path.buildAsString(), is("a/b/c/")).     path = path.add("d/").     assertThat(path.buildAsString(), is("a/b/c/d/")). }

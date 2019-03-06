@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;12;;@Test public void testUriIssue() throws Exception {     String uri = "rss:http://api.flickr.com/services/feeds/photos_public.gne?id=23353282@N05&tags=lowlands&lang=en-us&format=rss_200".     PollingConsumer consumer = context.getEndpoint(uri).createPollingConsumer().     consumer.start().     Exchange exchange = consumer.receive().     log.info("Receive " + exchange).     assertNotNull(exchange).     assertNotNull(exchange.getIn().getBody()).     consumer.stop(). }

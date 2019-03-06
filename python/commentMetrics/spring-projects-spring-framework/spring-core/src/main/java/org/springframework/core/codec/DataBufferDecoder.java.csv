@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;5;;@Override public boolean canDecode(ResolvableType elementType, @Nullable MimeType mimeType) {     return (DataBuffer.class.isAssignableFrom(elementType.toClass()) && super.canDecode(elementType, mimeType)). }
-false;public;4;6;;@Override public Flux<DataBuffer> decode(Publisher<DataBuffer> inputStream, ResolvableType elementType, @Nullable MimeType mimeType, @Nullable Map<String, Object> hints) {     return Flux.from(inputStream). }
-false;protected;4;9;;@Override protected DataBuffer decodeDataBuffer(DataBuffer buffer, ResolvableType elementType, @Nullable MimeType mimeType, @Nullable Map<String, Object> hints) {     if (logger.isDebugEnabled()) {         logger.debug(Hints.getLogPrefix(hints) + "Read " + buffer.readableByteCount() + " bytes").     }     return buffer. }

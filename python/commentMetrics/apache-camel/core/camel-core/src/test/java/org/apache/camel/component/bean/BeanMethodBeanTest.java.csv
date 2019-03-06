@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;14;;@Test public void testBeanMethod() throws Exception {     Method method = MyFooBean.class.getMethod("hello", String.class).     MethodBean mb = new MethodBean().     mb.setName("hello").     mb.setType(MyFooBean.class).     mb.setParameterTypes(method.getParameterTypes()).     assertEquals("hello", mb.getName()).     assertEquals(method, mb.getMethod()).     assertNotNull(mb.getParameterTypes()).     assertEquals(MyFooBean.class, mb.getType()). }

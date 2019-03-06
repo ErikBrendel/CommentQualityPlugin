@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;9;;@Bean public HazelcastInstance hazelcastInstance(HazelcastProperties properties) throws IOException {     Resource config = properties.resolveConfigLocation().     if (config != null) {         return new HazelcastClientFactory(config).getHazelcastInstance().     }     return HazelcastClient.newHazelcastClient(). }
-false;public;1;4;;@Bean public HazelcastInstance hazelcastInstance(ClientConfig config) {     return new HazelcastClientFactory(config).getHazelcastInstance(). }

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public Set<User> getUsers() {     return users. }
-false;public;0;3;;public Set<User> getEnabledUsers() {     return enabledUsers. }
-false;public,static;1;15;;public static GetUsersResponse fromXContent(XContentParser parser) throws IOException {     XContentParserUtils.ensureExpectedToken(Token.START_OBJECT, parser.nextToken(), parser::getTokenLocation).     final Set<User> users = new HashSet<>().     final Set<User> enabledUsers = new HashSet<>().     Token token.     while ((token = parser.nextToken()) != Token.END_OBJECT) {         XContentParserUtils.ensureExpectedToken(Token.FIELD_NAME, token, parser::getTokenLocation).         ParsedUser parsedUser = USER_PARSER.parse(parser, parser.currentName()).         users.add(parsedUser.user).         if (parsedUser.enabled) {             enabledUsers.add(parsedUser.user).         }     }     return new GetUsersResponse(users, enabledUsers). }
-false;public;1;7;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (!(o instanceof GetUsersResponse))         return false.     GetUsersResponse that = (GetUsersResponse) o.     return Objects.equals(users, that.users). }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(users). }

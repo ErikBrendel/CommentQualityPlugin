@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * @return The name of this aggregation.  */ ;/**  * @return The name of this aggregation.  */ String getName().
-true;;0;1;/**  * @return a string representing the type of the aggregation. This type is added to  * the aggregation name in the response, so that it can later be used by clients  * to determine type of the aggregation and parse it into the proper object.  */ ;/**  * @return a string representing the type of the aggregation. This type is added to  * the aggregation name in the response, so that it can later be used by clients  * to determine type of the aggregation and parse it into the proper object.  */ String getType().
-true;;0;1;/**  * Get the optional byte array metadata that was set on the aggregation  */ ;/**  * Get the optional byte array metadata that was set on the aggregation  */ Map<String, Object> getMetaData().

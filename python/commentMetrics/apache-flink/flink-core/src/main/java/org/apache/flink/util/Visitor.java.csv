@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;1;1;/**  * Method that is invoked on the visit before visiting and child nodes or descendant nodes.  *  * @return True, if the traversal should continue, false otherwise.  */ ;/**  * Method that is invoked on the visit before visiting and child nodes or descendant nodes.  *  * @return True, if the traversal should continue, false otherwise.  */ boolean preVisit(T visitable).
-true;;1;1;/**  * Method that is invoked after all child nodes or descendant nodes were visited.  */ ;/**  * Method that is invoked after all child nodes or descendant nodes were visited.  */ void postVisit(T visitable).

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected QueryBuilder getQuery() {     return new TermQueryBuilder(Job.JOB_TYPE.getPreferredName(), Job.ANOMALY_DETECTOR_JOB_TYPE). }
-false;protected;1;10;;@Override protected Job.Builder map(SearchHit hit) {     try (InputStream stream = hit.getSourceRef().streamInput().         XContentParser parser = XContentFactory.xContent(XContentType.JSON).createParser(NamedXContentRegistry.EMPTY, LoggingDeprecationHandler.INSTANCE, stream)) {         return Job.LENIENT_PARSER.apply(parser, null).     } catch (IOException e) {         throw new ElasticsearchParseException("failed to parse job document [" + hit.getId() + "]", e).     } }

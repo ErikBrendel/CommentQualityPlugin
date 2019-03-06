@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public String getCursor() {     return cursor. }
-false;public;1;8;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     if (!super.equals(o))         return false.     SqlClearCursorRequest that = (SqlClearCursorRequest) o.     return Objects.equals(cursor, that.cursor). }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(super.hashCode(), cursor). }
-false;public;2;9;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.field("cursor", cursor).     builder.field("mode", mode().toString()).     if (clientId() != null) {         builder.field("client_id", clientId()).     }     return builder. }

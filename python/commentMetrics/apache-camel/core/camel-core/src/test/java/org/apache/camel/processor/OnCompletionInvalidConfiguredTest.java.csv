@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public boolean isUseRouteBuilder() {     return false. }
-false;public;0;6;;@Override public void configure() throws Exception {     onCompletion().onFailureOnly().onCompleteOnly().to("mock:foo").     from("direct:start").to("mock:result"). }
-false;public;0;16;;@Test public void testInvalidConfigured() throws Exception {     try {         context.addRoutes(new RouteBuilder() {              @Override             public void configure() throws Exception {                 onCompletion().onFailureOnly().onCompleteOnly().to("mock:foo").                 from("direct:start").to("mock:result").             }         }).         fail("Should throw exception").     } catch (IllegalArgumentException e) {         assertEquals("Both onCompleteOnly and onFailureOnly cannot be true. Only one of them can be true. On node: onCompletion[[]]", e.getMessage()).     } }

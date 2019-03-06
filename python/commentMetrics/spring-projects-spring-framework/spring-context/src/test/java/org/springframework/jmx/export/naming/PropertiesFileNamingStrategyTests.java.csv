@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;7;;@Override protected ObjectNamingStrategy getStrategy() throws Exception {     KeyNamingStrategy strat = new KeyNamingStrategy().     strat.setMappingLocation(new ClassPathResource("jmx-names.properties", getClass())).     strat.afterPropertiesSet().     return strat. }

@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Bean public LifecycleBean lifecycleBean() {     return new LifecycleBean(). }
-false;public;0;4;;@PostConstruct public void beforeAllTests() {     logger.info("beforeAllTests()"). }
-false;public;0;4;;@PreDestroy public void afterTestSuite() {     logger.info("afterTestSuite()"). }
-false;public;0;4;;@Before public void setUp() throws Exception {     logger.info("setUp()"). }
-false;public;0;4;;@After public void tearDown() throws Exception {     logger.info("tearDown()"). }
-false;public;0;5;;@Test public void test1() {     logger.info("test1()").     assertNotNull(lifecycleBean). }
-false;public;0;5;;@Test public void test2() {     logger.info("test2()").     assertNotNull(lifecycleBean). }

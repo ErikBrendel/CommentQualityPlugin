@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public SkipToElementStrategy throwExceptionOnMiss() {     return new SkipToFirstStrategy(getPatternName().get(), true). }
-false;;1;4;;@Override int getIndex(int size) {     return 0. }
-false;public;0;6;;@Override public String toString() {     return "SkipToFirstStrategy{" + "patternName='" + getPatternName().get() + '\'' + '}'. }

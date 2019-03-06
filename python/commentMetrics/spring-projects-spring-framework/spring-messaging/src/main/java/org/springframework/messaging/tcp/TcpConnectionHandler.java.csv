@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;1;1;/**  * Invoked after a connection is successfully established.  * @param connection the connection  */ ;/**  * Invoked after a connection is successfully established.  * @param connection the connection  */ void afterConnected(TcpConnection<P> connection).
-true;;1;1;/**  * Invoked on failure to connect.  * @param ex the exception  */ ;/**  * Invoked on failure to connect.  * @param ex the exception  */ void afterConnectFailure(Throwable ex).
-true;;1;1;/**  * Handle a message received from the remote host.  * @param message the message  */ ;/**  * Handle a message received from the remote host.  * @param message the message  */ void handleMessage(Message<P> message).
-true;;1;1;/**  * Handle a failure on the connection.  * @param ex the exception  */ ;/**  * Handle a failure on the connection.  * @param ex the exception  */ void handleFailure(Throwable ex).
-true;;0;1;/**  * Invoked after the connection is closed.  */ ;/**  * Invoked after the connection is closed.  */ void afterConnectionClosed().

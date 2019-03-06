@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;@Override public Set<Class<? extends TestExecutionListener>> postProcessDefaultTestExecutionListeners(Set<Class<? extends TestExecutionListener>> listeners) {     listeners.add(ExampleTestExecutionListener.class).     return listeners. }
-false;public;1;8;;@Override public void prepareTestInstance(TestContext testContext) throws Exception {     Object testInstance = testContext.getTestInstance().     if (testInstance instanceof SpringBootTestContextBootstrapperIntegrationTests) {         SpringBootTestContextBootstrapperIntegrationTests test = (SpringBootTestContextBootstrapperIntegrationTests) testInstance.         test.defaultTestExecutionListenersPostProcessorCalled = true.     } }

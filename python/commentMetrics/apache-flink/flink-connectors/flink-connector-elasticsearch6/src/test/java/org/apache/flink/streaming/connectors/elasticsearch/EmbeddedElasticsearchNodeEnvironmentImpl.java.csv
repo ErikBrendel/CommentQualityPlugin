@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;14;;@Override public void start(File tmpDataFolder, String clusterName) throws Exception {     if (node == null) {         Settings settings = Settings.builder().put("cluster.name", clusterName).put("http.enabled", true).put("path.home", tmpDataFolder.getParent()).put("path.data", tmpDataFolder.getAbsolutePath()).build().         node = new PluginNode(settings).         node.start().     } }
-false;public;0;7;;@Override public void close() throws Exception {     if (node != null && !node.isClosed()) {         node.close().         node = null.     } }
-false;public;0;8;;@Override public Client getClient() {     if (node != null && !node.isClosed()) {         return node.client().     } else {         return null.     } }

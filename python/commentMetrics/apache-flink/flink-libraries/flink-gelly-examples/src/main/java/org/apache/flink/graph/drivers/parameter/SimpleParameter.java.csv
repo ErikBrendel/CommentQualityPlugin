@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;protected;1;6;/**  * Set the default value, used if no value is set by the command-line  * configuration.  *  * @param defaultValue the default value  * @return this  */ ;/**  * Set the default value, used if no value is set by the command-line  * configuration.  *  * @param defaultValue the default value  * @return this  */ protected SimpleParameter setDefaultValue(T defaultValue) {     this.hasDefaultValue = true.     this.defaultValue = defaultValue.     return this. }
-false;public;0;6;;@Override public String getUsage() {     String option = "--" + name + " " + name.toUpperCase().     return hasDefaultValue ? "[" + option + "]" : option. }
-false;public;0;4;;@Override public boolean isHidden() {     return name.startsWith("__"). }
-false;public;0;4;;@Override public T getValue() {     return value. }

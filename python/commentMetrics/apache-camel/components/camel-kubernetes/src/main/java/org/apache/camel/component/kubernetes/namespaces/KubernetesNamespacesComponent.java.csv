@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;3;4;;protected KubernetesNamespacesEndpoint doCreateEndpoint(String uri, String remaining, KubernetesConfiguration config) throws Exception {     KubernetesNamespacesEndpoint endpoint = new KubernetesNamespacesEndpoint(uri, this, config).     return endpoint. }

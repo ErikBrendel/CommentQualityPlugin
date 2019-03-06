@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;10;;@Override public void writeTo(StreamOutput out) throws IOException {     if (failure == null) {         out.writeBoolean(false).         ingestDocument.writeTo(out).     } else {         out.writeBoolean(true).         out.writeException(failure).     } }
-false;public;0;6;;public IngestDocument getIngestDocument() {     if (ingestDocument == null) {         return null.     }     return ingestDocument.getIngestDocument(). }
-false;public;0;3;;public Exception getFailure() {     return failure. }
-false;public;2;11;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     if (failure == null) {         ingestDocument.toXContent(builder, params).     } else {         ElasticsearchException.generateFailureXContent(builder, params, failure, true).     }     builder.endObject().     return builder. }
-false;public,static;1;3;;public static SimulateDocumentBaseResult fromXContent(XContentParser parser) {     return PARSER.apply(parser, null). }

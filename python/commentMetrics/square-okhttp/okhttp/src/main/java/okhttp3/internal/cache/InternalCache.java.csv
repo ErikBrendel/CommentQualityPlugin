@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;1;1;;@Nullable Response get(Request request) throws IOException.
-false;;1;1;;@Nullable CacheRequest put(Response response) throws IOException.
-true;;1;1;/**  * Remove any cache entries for the supplied {@code request}. This is invoked when the client  * invalidates the cache, such as when making POST requests.  */ ;/**  * Remove any cache entries for the supplied {@code request}. This is invoked when the client  * invalidates the cache, such as when making POST requests.  */ void remove(Request request) throws IOException.
-true;;2;1;/**  * Handles a conditional request hit by updating the stored cache response with the headers from  * {@code network}. The cached response body is not updated. If the stored response has changed  * since {@code cached} was returned, this does nothing.  */ ;/**  * Handles a conditional request hit by updating the stored cache response with the headers from  * {@code network}. The cached response body is not updated. If the stored response has changed  * since {@code cached} was returned, this does nothing.  */ void update(Response cached, Response network).
-true;;0;1;/**  * Track an conditional GET that was satisfied by this cache.  */ ;/**  * Track an conditional GET that was satisfied by this cache.  */ void trackConditionalCacheHit().
-true;;1;1;/**  * Track an HTTP response being satisfied with {@code cacheStrategy}.  */ ;/**  * Track an HTTP response being satisfied with {@code cacheStrategy}.  */ void trackResponse(CacheStrategy cacheStrategy).

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;1;3;/**  * Set the charset.  * @param charSet the charset  */ ;/**  * Set the charset.  * @param charSet the charset  */ public void setCharset(String charSet) {     this.charSet = charSet. }
-true;public;1;4;/**  * Set the resource loader.  * @param resourceLoader the resource loader  */ ;/**  * Set the resource loader.  * @param resourceLoader the resource loader  */ @Override public void setResourceLoader(ResourceLoader resourceLoader) {     this.resourceLoader = resourceLoader. }
-false;public;1;6;;@Override public Reader getTemplate(String name) throws Exception {     return new InputStreamReader(this.resourceLoader.getResource(this.prefix + name + this.suffix).getInputStream(), this.charSet). }

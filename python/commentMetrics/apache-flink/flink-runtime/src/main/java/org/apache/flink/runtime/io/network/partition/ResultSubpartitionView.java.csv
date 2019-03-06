@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;2;/**  * Returns the next {@link Buffer} instance of this queue iterator.  *  * <p>If there is currently no instance available, it will return <code>null</code>.  * This might happen for example when a pipelined queue producer is slower  * than the consumer or a spilled queue needs to read in more data.  *  * <p><strong>Important</strong>: The consumer has to make sure that each  * buffer instance will eventually be recycled with {@link Buffer#recycleBuffer()}  * after it has been consumed.  */ ;/**  * Returns the next {@link Buffer} instance of this queue iterator.  *  * <p>If there is currently no instance available, it will return <code>null</code>.  * This might happen for example when a pipelined queue producer is slower  * than the consumer or a spilled queue needs to read in more data.  *  * <p><strong>Important</strong>: The consumer has to make sure that each  * buffer instance will eventually be recycled with {@link Buffer#recycleBuffer()}  * after it has been consumed.  */ @Nullable BufferAndBacklog getNextBuffer() throws IOException, InterruptedException.
-false;;0;1;;void notifyDataAvailable().
-false;;0;1;;void releaseAllResources() throws IOException.
-false;;0;1;;void notifySubpartitionConsumed() throws IOException.
-false;;0;1;;boolean isReleased().
-false;;0;1;;Throwable getFailureCause().
-true;;0;1;/**  * Returns whether the next buffer is an event or not.  */ ;/**  * Returns whether the next buffer is an event or not.  */ boolean nextBufferIsEvent().
-false;;0;1;;boolean isAvailable().

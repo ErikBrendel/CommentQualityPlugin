@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;9;;public OrderPizzaResponseType orderPizza(OrderPizzaType body, CallerIDHeaderType callerID) {     OrderPizzaResponseType resp = new OrderPizzaResponseType().     if (callerID == null) {         resp.setMinutesUntilReady(100).     } else {         resp.setMinutesUntilReady(100 + Integer.parseInt(callerID.getPhoneNumber())).     }     return resp. }

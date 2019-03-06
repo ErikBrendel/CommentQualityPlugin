@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String toString() {     return text. }
-false;public;0;3;;public boolean canConsume() {     return canConsume. }
-false;public;0;3;;public boolean canProduce() {     return canProduce. }
-false;public;0;3;;public boolean isAsync() {     return async. }
-false;public;0;3;;public Map<String, Class<?>> getParameters() {     return parameters. }
-false;public,static;1;9;;public static DockerOperation getDockerOperation(String name) {     for (DockerOperation dockerOperation : DockerOperation.values()) {         if (dockerOperation.toString().equals(name)) {             return dockerOperation.         }     }     return null. }

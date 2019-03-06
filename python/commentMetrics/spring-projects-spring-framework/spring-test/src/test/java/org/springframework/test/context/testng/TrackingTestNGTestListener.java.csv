@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public void onFinish(ITestContext testContext) {     this.failedConfigurationsCount += testContext.getFailedConfigurations().size(). }
-false;public;1;3;;@Override public void onStart(ITestContext testContext) { }
-false;public;1;3;;@Override public void onTestFailedButWithinSuccessPercentage(ITestResult testResult) { }
-false;public;1;4;;@Override public void onTestFailure(ITestResult testResult) {     this.testFailureCount++. }
-false;public;1;3;;@Override public void onTestSkipped(ITestResult testResult) { }
-false;public;1;4;;@Override public void onTestStart(ITestResult testResult) {     this.testStartCount++. }
-false;public;1;4;;@Override public void onTestSuccess(ITestResult testResult) {     this.testSuccessCount++. }

@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Bean public MessageRepository messageRepository() {     return new InMemoryMessageRepository(). }
-false;public;1;4;;@Override public Message convert(String id) {     return messageRepository().findMessage(Long.valueOf(id)). }
-false;public;0;9;;@Bean public Converter<String, Message> messageConverter() {     return new Converter<String, Message>() {          @Override         public Message convert(String id) {             return messageRepository().findMessage(Long.valueOf(id)).         }     }. }
-false;public,static;1;3;;public static void main(String[] args) {     SpringApplication.run(SampleWebUiApplication.class, args). }

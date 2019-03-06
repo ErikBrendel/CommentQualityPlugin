@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;4;7;;@Override public Aggregator createInternal(Aggregator parent, boolean collectsFromSingleBucket, List<PipelineAggregator> pipelineAggregators, Map<String, Object> metaData) throws IOException {     return doCreateInternal(configs, format, parent, collectsFromSingleBucket, pipelineAggregators, metaData). }
-false;protected,abstract;3;2;;protected abstract Aggregator createUnmapped(Aggregator parent, List<PipelineAggregator> pipelineAggregators, Map<String, Object> metaData) throws IOException.
-false;protected,abstract;6;4;;protected abstract Aggregator doCreateInternal(Map<String, ValuesSourceConfig<VS>> configs, DocValueFormat format, Aggregator parent, boolean collectsFromSingleBucket, List<PipelineAggregator> pipelineAggregators, Map<String, Object> metaData) throws IOException.

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected Request createTestInstance() {     return new Request(randomAlphaOfLengthBetween(1, 20)). }
-false;protected;0;4;;@Override protected Request createBlankInstance() {     return new Request(). }
-false;protected;1;4;;@Override protected Request mutateInstance(Request request) {     return new Request(request.getPolicyName() + randomAlphaOfLengthBetween(1, 10)). }

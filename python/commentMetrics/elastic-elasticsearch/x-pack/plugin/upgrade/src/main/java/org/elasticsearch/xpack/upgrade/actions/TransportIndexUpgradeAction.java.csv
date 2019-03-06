@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected String executor() {     return ThreadPool.Names.GENERIC. }
-false;protected;0;4;;@Override protected BulkByScrollResponse newResponse() {     return new BulkByScrollResponse(). }
-false;protected;2;5;;@Override protected ClusterBlockException checkBlock(IndexUpgradeAction.Request request, ClusterState state) {     // Cluster is not affected but we look up repositories in metadata     return state.blocks().globalBlockedException(ClusterBlockLevel.METADATA_READ). }
-false;protected,final;4;6;;@Override protected final void masterOperation(Task task, IndexUpgradeAction.Request request, ClusterState state, ActionListener<BulkByScrollResponse> listener) {     TaskId taskId = new TaskId(clusterService.localNode().getId(), task.getId()).     indexUpgradeService.upgrade(taskId, request.index(), state, listener). }
-false;protected,final;3;5;;@Override protected final void masterOperation(IndexUpgradeAction.Request request, ClusterState state, ActionListener<BulkByScrollResponse> listener) {     throw new UnsupportedOperationException("the task parameter is required"). }

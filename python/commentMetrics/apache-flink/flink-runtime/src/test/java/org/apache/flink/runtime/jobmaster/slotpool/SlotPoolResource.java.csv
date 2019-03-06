@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;public SlotProvider getSlotProvider() {     checkInitialized().     return scheduler. }
-false;public;0;4;;public TestingResourceManagerGateway getTestingResourceManagerGateway() {     checkInitialized().     return testingResourceManagerGateway. }
-false;public;0;4;;public SlotPoolImpl getSlotPool() {     checkInitialized().     return slotPool. }
-false;private;0;3;;private void checkInitialized() {     assert (slotPool != null). }
-false;protected;0;14;;@Override protected void before() throws Throwable {     if (slotPool != null) {         terminateSlotPool().     }     testingResourceManagerGateway = new TestingResourceManagerGateway().     slotPool = new SlotPoolImpl(new JobID()).     scheduler = new SchedulerImpl(schedulingStrategy, slotPool).     slotPool.start(JobMasterId.generate(), "foobar", mainThreadExecutor).     scheduler.start(mainThreadExecutor).     slotPool.connectToResourceManager(testingResourceManagerGateway). }
-false;protected;0;7;;@Override protected void after() {     if (slotPool != null) {         terminateSlotPool().         slotPool = null.     } }
-false;private;0;3;;private void terminateSlotPool() {     slotPool.close(). }

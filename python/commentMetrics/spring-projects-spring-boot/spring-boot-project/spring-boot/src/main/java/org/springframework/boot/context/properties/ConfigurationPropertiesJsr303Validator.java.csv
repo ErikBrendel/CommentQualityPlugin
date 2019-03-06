@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public boolean supports(Class<?> type) {     return this.delegate.supports(type). }
-false;public;2;4;;@Override public void validate(Object target, Errors errors) {     this.delegate.validate(target, errors). }
-false;public,static;1;9;;public static boolean isJsr303Present(ApplicationContext applicationContext) {     ClassLoader classLoader = applicationContext.getClassLoader().     for (String validatorClass : VALIDATOR_CLASSES) {         if (!ClassUtils.isPresent(validatorClass, classLoader)) {             return false.         }     }     return true. }

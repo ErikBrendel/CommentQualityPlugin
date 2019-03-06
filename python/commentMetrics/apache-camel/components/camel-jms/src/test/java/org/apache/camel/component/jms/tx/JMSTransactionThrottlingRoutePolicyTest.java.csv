@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;protected ClassPathXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("/org/apache/camel/component/jms/tx/JMSTransactionThrottlingRoutePolicyTest.xml"). }
-false;public;0;6;;@Override @Before public void setUp() throws Exception {     deleteDirectory("activemq-data").     super.setUp(). }
-false;public;0;11;;@Test public void testJmsTransactedThrottlingRoutePolicy() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMinimumMessageCount(size).     for (int i = 0. i < size. i++) {         template.sendBody("activemq-sender:queue:foo", "Message " + i).     }     assertMockEndpointsSatisfied(). }

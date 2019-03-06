@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test @DirtiesContext public void testRouteUsingBean() throws Exception {     endpoint.expectedMessageCount(1).     endpoint.message(0).body().isEqualTo("Hello World").     producer.sendBody("World").     endpoint.assertIsSatisfied(). }
-false;public;1;4;;@Handler public String someMethod(String body) {     return "Hello " + body. }
-false;public;0;7;;@Override public void configure() throws Exception {     from("direct:start").errorHandler(deadLetterChannel("mock:end")).bean(new SomeBean()).to("mock:end"). }
-false;public;0;13;;@Bean @Override public RouteBuilder route() {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").errorHandler(deadLetterChannel("mock:end")).bean(new SomeBean()).to("mock:end").         }     }. }

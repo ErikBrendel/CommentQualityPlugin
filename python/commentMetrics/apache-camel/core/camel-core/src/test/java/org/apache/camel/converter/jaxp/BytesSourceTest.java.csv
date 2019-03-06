@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;@Test public void testBytesSourceCtr() {     BytesSource bs = new BytesSource("foo".getBytes()).     assertNotNull(bs.getData()).     assertEquals("BytesSource[foo]", bs.toString()).     assertNull(bs.getSystemId()).     assertNotNull(bs.getInputStream()).     assertNotNull(bs.getReader()). }
-false;public;0;10;;@Test public void testBytesSourceCtrSystemId() {     BytesSource bs = new BytesSource("foo".getBytes(), "Camel").     assertNotNull(bs.getData()).     assertEquals("BytesSource[foo]", bs.toString()).     assertEquals("Camel", bs.getSystemId()).     assertNotNull(bs.getInputStream()).     assertNotNull(bs.getReader()). }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;static;2;4;;static CamelContext getCamelContextById(BeanManager manager, String camelContextId) {     Bean<?> bean = manager.resolve(manager.getBeans(camelContextId)).     return (CamelContext) manager.getReference(bean, CamelContext.class, manager.createCreationalContext(bean)). }
-false;static;1;4;;static CamelContext getDefaultCamelContext(BeanManager manager) {     Bean<?> bean = manager.resolve(manager.getBeans(CamelContext.class)).     return (CamelContext) manager.getReference(bean, CamelContext.class, manager.createCreationalContext(bean)). }

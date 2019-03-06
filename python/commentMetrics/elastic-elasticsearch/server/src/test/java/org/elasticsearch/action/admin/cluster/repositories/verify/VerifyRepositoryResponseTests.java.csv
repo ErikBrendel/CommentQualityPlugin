@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;4;;@Override protected VerifyRepositoryResponse doParseInstance(XContentParser parser) {     return VerifyRepositoryResponse.fromXContent(parser). }
-false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return false. }
-false;protected;0;8;;@Override protected VerifyRepositoryResponse createTestInstance() {     VerifyRepositoryResponse response = new VerifyRepositoryResponse().     List<VerifyRepositoryResponse.NodeView> nodes = new ArrayList<>().     nodes.add(new VerifyRepositoryResponse.NodeView("node-id", "node-name")).     response.setNodes(nodes).     return response. }

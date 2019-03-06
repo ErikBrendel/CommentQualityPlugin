@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;2;8;;@Override protected RestChannelConsumer prepareRequest(RestRequest restRequest, NodeClient client) throws IOException {     SearchRequest searchRequest = new SearchRequest().     restRequest.withContentOrSourceParamParserOrNull(parser -> RestSearchAction.parseSearchRequest(searchRequest, restRequest, parser, size -> searchRequest.source().size(size))).     RestSearchAction.checkRestTotalHits(restRequest, searchRequest).     return channel -> client.execute(RollupSearchAction.INSTANCE, searchRequest, new RestToXContentListener<>(channel)). }
-false;public;0;4;;@Override public String getName() {     return "rollup_search_action". }
-false;protected;0;4;;@Override protected Set<String> responseParams() {     return RESPONSE_PARAMS. }

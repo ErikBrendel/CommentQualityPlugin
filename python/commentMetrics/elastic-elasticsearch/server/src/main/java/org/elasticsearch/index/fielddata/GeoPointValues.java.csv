@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,abstract;1;1;/**  * Advance this instance to the given document id  * @return true if there is a value for this document  */ ;/**  * Advance this instance to the given document id  * @return true if there is a value for this document  */ public abstract boolean advanceExact(int doc) throws IOException.
-true;public,abstract;0;1;/**  * Get the {@link GeoPoint} associated with the current document.  * The returned {@link GeoPoint} might be reused across calls.  */ ;/**  * Get the {@link GeoPoint} associated with the current document.  * The returned {@link GeoPoint} might be reused across calls.  */ public abstract GeoPoint geoPointValue().

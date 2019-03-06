@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;4;;// ------------------------------------------------------------------------ @BeforeClass public static void verifyOS() {     Assume.assumeTrue("HDFS cluster cannot be started on Windows without extensions.", !OperatingSystem.isWindows()). }
-false;public,static;0;14;;@BeforeClass public static void createHDFS() throws Exception {     final File baseDir = TMP.newFolder().     Configuration hdConf = new Configuration().     hdConf.set(MiniDFSCluster.HDFS_MINIDFS_BASEDIR, baseDir.getAbsolutePath()).     MiniDFSCluster.Builder builder = new MiniDFSCluster.Builder(hdConf).     hdfsCluster = builder.build().     org.apache.hadoop.fs.FileSystem hdfs = hdfsCluster.getFileSystem().     fs = new HadoopFileSystem(hdfs).     basePath = new Path(hdfs.getUri().toString() + "/tests"). }
-false;public,static;0;7;;@AfterClass public static void destroyHDFS() throws Exception {     if (hdfsCluster != null) {         hdfsCluster.getFileSystem().delete(new org.apache.hadoop.fs.Path(basePath.toUri()), true).         hdfsCluster.shutdown().     } }
-false;public;0;4;;// ------------------------------------------------------------------------ @Override public FileSystem getFileSystem() {     return fs. }
-false;public;0;4;;@Override public Path getBasePath() {     return basePath. }
-false;public;0;5;;@Override public FileSystemKind getFileSystemKind() {     // this tests tests only HDFS, so it should be a file system     return FileSystemKind.FILE_SYSTEM. }

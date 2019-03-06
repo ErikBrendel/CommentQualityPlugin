@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected boolean useJmx() {     return true. }
-false;protected;0;3;;protected MBeanServer getMBeanServer() {     return context.getManagementStrategy().getManagementAgent().getMBeanServer(). }
-false;protected;3;5;;@SuppressWarnings("unchecked") protected <T> T invoke(MBeanServerConnection server, ObjectName name, String operationName) throws InstanceNotFoundException, MBeanException, ReflectionException, IOException {     return (T) server.invoke(name, operationName, null, null). }
-false;protected;5;5;;@SuppressWarnings("unchecked") protected <T> T invoke(MBeanServerConnection server, ObjectName name, String operationName, Object[] params, String[] signature) throws InstanceNotFoundException, MBeanException, ReflectionException, IOException {     return (T) server.invoke(name, operationName, params, signature). }

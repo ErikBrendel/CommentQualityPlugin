@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry jndi = super.createRegistry().     jndi.bind("myPoll", new MyPollStrategy()).     return jndi. }
-false;public;0;6;;@Override @Before public void setUp() throws Exception {     deleteDirectory("target/data/pollstrategy").     super.setUp(). }
-false;public;0;18;;@Test public void testPolledMessages() throws Exception {     template.sendBodyAndHeader("file:target/data/pollstrategy/", "Hello World", Exchange.FILE_NAME, "hello.txt").     template.sendBodyAndHeader("file:target/data/pollstrategy/", "Bye World", Exchange.FILE_NAME, "bye.txt").     // start route now files have been created     context.getRouteController().startRoute("foo").     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMessageCount(2).     assertMockEndpointsSatisfied().     // wait for commit to be issued     assertTrue(latch.await(5, TimeUnit.SECONDS)).     assertEquals(2, maxPolls). }
-false;public;0;4;;public void configure() throws Exception {     from(fileUrl).routeId("foo").noAutoStartup().convertBodyTo(String.class).to("mock:result"). }
-false;protected;0;8;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from(fileUrl).routeId("foo").noAutoStartup().convertBodyTo(String.class).to("mock:result").         }     }. }
-false;public;2;3;;public boolean begin(Consumer consumer, Endpoint endpoint) {     return true. }
-false;public;3;6;;public void commit(Consumer consumer, Endpoint endpoint, int polledMessages) {     if (polledMessages > maxPolls) {         maxPolls = polledMessages.     }     latch.countDown(). }
-false;public;4;3;;public boolean rollback(Consumer consumer, Endpoint endpoint, int retryCounter, Exception cause) throws Exception {     return false. }

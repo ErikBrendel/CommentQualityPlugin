@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;1;1;/**  * Handle a run failure. Implementations may block, for example to wait until specific  * files are updated.  * @param failure the exception  * @return the outcome  */ ;/**  * Handle a run failure. Implementations may block, for example to wait until specific  * files are updated.  * @param failure the exception  * @return the outcome  */ Outcome handle(Throwable failure).

@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeString(watchId).     out.writeBoolean(activate). }
-true;public;0;3;/**  * @return The id of the watch to be acked  */ ;/**  * @return The id of the watch to be acked  */ public String getWatchId() {     return watchId. }
-true;public;0;3;/**  * @return {@code true} if the request is for activating the watch, {@code false} if its  *         for deactivating it.  */ ;/**  * @return {@code true} if the request is for activating the watch, {@code false} if its  *         for deactivating it.  */ public boolean isActivate() {     return activate. }
-false;public;0;10;;@Override public ActionRequestValidationException validate() {     ActionRequestValidationException validationException = null.     if (watchId == null) {         validationException = ValidateActions.addValidationError("watch id is missing", validationException).     } else if (WatcherUtils.isValidId(watchId) == false) {         validationException = ValidateActions.addValidationError("watch id contains whitespace", validationException).     }     return validationException. }
-false;public;1;4;;@Override public void readFrom(StreamInput in) throws IOException {     throw new UnsupportedOperationException("usage of Streamable is to be replaced by Writeable"). }
-false;public;0;6;;@Override public String toString() {     return activate ? "activate [" + watchId + "]" : "deactivate [" + watchId + "]". }

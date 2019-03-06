@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected String getBlueprintDescriptor() {     return "org/apache/camel/test/blueprint/propertyInjectTest.xml". }
-false;public;0;13;;@Test public void testPropertyInject() throws Exception {     if (isPlatform("windows")) {         // need a bit slack         Thread.sleep(1000).     }     getMockEndpoint("mock:result").expectedBodiesReceived("Hello").     template.sendBody("seda:start", "Camel").     assertMockEndpointsSatisfied(). }

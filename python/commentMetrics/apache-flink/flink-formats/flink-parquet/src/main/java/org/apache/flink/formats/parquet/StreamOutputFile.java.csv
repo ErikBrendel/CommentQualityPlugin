@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;9;;@Override public PositionOutputStream create(long blockSizeHint) {     if (used.compareAndSet(false, true)) {         return new PositionOutputStreamAdapter(stream).     } else {         throw new IllegalStateException("A stream against this file was already created.").     } }
-false;public;1;4;;@Override public PositionOutputStream createOrOverwrite(long blockSizeHint) {     return create(blockSizeHint). }
-false;public;0;4;;@Override public boolean supportsBlockSize() {     return false. }
-false;public;0;4;;@Override public long defaultBlockSize() {     return DEFAULT_BLOCK_SIZE. }

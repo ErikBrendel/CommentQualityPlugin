@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;8;;@Override protected NumberFormat getNumberFormat(Locale locale) {     NumberFormat format = NumberFormat.getPercentInstance(locale).     if (format instanceof DecimalFormat) {         ((DecimalFormat) format).setParseBigDecimal(true).     }     return format. }

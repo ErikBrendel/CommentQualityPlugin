@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;16;;@Test public void testQuartzComponentCustomScheduler() throws Exception {     QuartzComponent comp = new QuartzComponent().     comp.setCamelContext(context).     SchedulerFactory fac = new StdSchedulerFactory().     comp.setSchedulerFactory(fac).     assertSame(fac, comp.getSchedulerFactory()).     Scheduler sch = fac.getScheduler().     comp.setScheduler(sch).     assertSame(sch, comp.getScheduler()).     comp.start().     comp.stop(). }
-false;public;0;6;;@Test public void testQuartzComponent() throws Exception {     QuartzComponent comp = new QuartzComponent(context).     comp.start().     comp.stop(). }

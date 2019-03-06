@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Override @Before public void setUp() throws Exception {     System.setProperty(JmxSystemPropertyKeys.MANAGEMENT_NAME_PATTERN, "cool-#name#").     super.setUp(). }
-false;public;0;6;;@Override @After public void tearDown() throws Exception {     System.clearProperty(JmxSystemPropertyKeys.MANAGEMENT_NAME_PATTERN).     super.tearDown(). }
-false;public;0;14;;@Test public void testManagedNamePattern() throws Exception {     // JMX tests dont work well on AIX CI servers (hangs them)     if (isPlatform("aix")) {         return.     }     MBeanServer mbeanServer = getMBeanServer().     assertEquals("cool-camel-1", context.getManagementName()).     ObjectName on = ObjectName.getInstance("org.apache.camel:context=cool-camel-1,type=context,name=\"camel-1\"").     assertTrue("Should be registered", mbeanServer.isRegistered(on)). }
-false;public;0;4;;@Override public void configure() throws Exception {     from("direct:start").to("mock:result"). }
-false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").to("mock:result").         }     }. }

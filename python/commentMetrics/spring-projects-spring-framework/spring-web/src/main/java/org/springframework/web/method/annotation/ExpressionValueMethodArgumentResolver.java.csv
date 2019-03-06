@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public boolean supportsParameter(MethodParameter parameter) {     return parameter.hasParameterAnnotation(Value.class). }
-false;protected;1;6;;@Override protected NamedValueInfo createNamedValueInfo(MethodParameter parameter) {     Value ann = parameter.getParameterAnnotation(Value.class).     Assert.state(ann != null, "No Value annotation").     return new ExpressionValueNamedValueInfo(ann). }
-false;protected;3;6;;@Override @Nullable protected Object resolveName(String name, MethodParameter parameter, NativeWebRequest webRequest) throws Exception {     // No name to resolve     return null. }
-false;protected;2;4;;@Override protected void handleMissingValue(String name, MethodParameter parameter) throws ServletException {     throw new UnsupportedOperationException("@Value is never required: " + parameter.getMethod()). }

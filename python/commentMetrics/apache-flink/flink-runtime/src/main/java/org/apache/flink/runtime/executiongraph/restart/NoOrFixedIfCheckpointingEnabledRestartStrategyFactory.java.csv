@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public RestartStrategy createRestartStrategy() {     return createRestartStrategy(false). }
-false;;1;7;;RestartStrategy createRestartStrategy(boolean isCheckpointingEnabled) {     if (isCheckpointingEnabled) {         return new FixedDelayRestartStrategy(Integer.MAX_VALUE, DEFAULT_RESTART_DELAY).     } else {         return new NoRestartStrategy().     } }

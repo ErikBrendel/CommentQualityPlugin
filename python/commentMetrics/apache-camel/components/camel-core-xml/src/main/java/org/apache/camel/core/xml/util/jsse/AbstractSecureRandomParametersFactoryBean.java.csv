@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public String getAlgorithm() {     return algorithm. }
-false;public;1;3;;public void setAlgorithm(String algorithm) {     this.algorithm = algorithm. }
-false;public;0;3;;public String getProvider() {     return provider. }
-false;public;1;3;;public void setProvider(String provider) {     this.provider = provider. }
-false;public;0;12;;@Override public SecureRandomParameters getObject() throws Exception {     if (this.isSingleton()) {         if (instance == null) {             instance = createInstance().         }         return instance.     } else {         return createInstance().     } }
-false;protected;0;9;;protected SecureRandomParameters createInstance() {     SecureRandomParameters newInstance = new SecureRandomParameters().     newInstance.setAlgorithm(algorithm).     newInstance.setProvider(provider).     newInstance.setCamelContext(getCamelContext()).     return newInstance. }
-false;public;0;4;;@Override public Class<? extends SecureRandomParameters> getObjectType() {     return SecureRandomParameters.class. }

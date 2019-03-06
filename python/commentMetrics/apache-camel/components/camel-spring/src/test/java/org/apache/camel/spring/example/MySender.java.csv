@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;12;;public void doSomething(String name) {     notNull(successDesetination, "successDesetination").     notNull(failureDesetination, "failureDesetination").     String body = "<hello>" + name + "</hello>".     if (name.equals("James")) {         successDesetination.sendBody(body).     } else {         failureDesetination.sendBody(body).     } }

@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;private;0;4;;private String getFtpUrl() {     return "ftp://dummy@localhost:" + getPort() + "/badlogin?password=cantremember" + "&throwExceptionOnConnectFailed=true&maximumReconnectAttempts=0&pollStrategy=#myPoll&autoCreate=false". }
-false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry jndi = super.createRegistry().     jndi.bind("myPoll", new MyPoll()).     return jndi. }
-false;public;0;14;;@Test public void testBadLogin() throws Exception {     getMockEndpoint("mock:result").expectedMessageCount(0).     assertTrue(latch.await(5, TimeUnit.SECONDS)).     assertMockEndpointsSatisfied().     // consumer should be stopped     Thread.sleep(1000).     Consumer consumer = context.getRoute("foo").getConsumer().     assertTrue("Consumer should be stopped", ((ServiceSupport) consumer).isStopped()). }
-false;public;0;4;;@Override public void configure() throws Exception {     from(getFtpUrl()).routeId("foo").to("mock:result"). }
-false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from(getFtpUrl()).routeId("foo").to("mock:result").         }     }. }
-false;public;2;3;;public boolean begin(Consumer consumer, Endpoint endpoint) {     return true. }
-false;public;3;2;;public void commit(Consumer consumer, Endpoint endpoint, int polledMessages) { }
-false;public;4;11;;public boolean rollback(Consumer consumer, Endpoint endpoint, int retryCounter, Exception cause) throws Exception {     GenericFileOperationFailedException e = assertIsInstanceOf(GenericFileOperationFailedException.class, cause).     assertEquals(530, e.getCode()).     // stop the consumer     consumer.stop().     latch.countDown().     return false. }

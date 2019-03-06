@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public DriverStrategy getStrategy() {     return DriverStrategy.NESTEDLOOP_STREAMED_OUTER_FIRST. }
-false;public;2;11;;@Override public LocalProperties computeLocalProperties(LocalProperties in1, LocalProperties in2) {     // uniqueness becomes grouping with streamed nested loops     if ((in1.getGroupedFields() == null || in1.getGroupedFields().size() == 0) && in1.getUniqueFields() != null && in1.getUniqueFields().size() > 0) {         return LocalProperties.forGrouping(in1.getUniqueFields().iterator().next().toFieldList()).     } else {         return in1.clearUniqueFieldSets().     } }

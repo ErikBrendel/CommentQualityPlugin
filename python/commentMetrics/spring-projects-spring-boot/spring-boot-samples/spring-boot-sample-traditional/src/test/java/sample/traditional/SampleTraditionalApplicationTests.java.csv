@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Test public void testHomeJsp() {     ResponseEntity<String> entity = this.restTemplate.getForEntity("/", String.class).     assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.OK).     String body = entity.getBody().     assertThat(body).contains("<html>").contains("<h1>Home</h1>"). }
-false;public;0;8;;@Test public void testStaticPage() {     ResponseEntity<String> entity = this.restTemplate.getForEntity("/index.html", String.class).     assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.OK).     String body = entity.getBody().     assertThat(body).contains("<html>").contains("<h1>Hello</h1>"). }

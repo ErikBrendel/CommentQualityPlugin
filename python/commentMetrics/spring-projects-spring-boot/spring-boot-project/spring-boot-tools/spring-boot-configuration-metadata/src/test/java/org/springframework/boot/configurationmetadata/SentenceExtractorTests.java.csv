@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void extractFirstSentence() {     String sentence = this.extractor.getFirstSentence("My short " + "description. More stuff.").     assertThat(sentence).isEqualTo("My short description."). }
-false;public;0;6;;@Test public void extractFirstSentenceNewLineBeforeDot() {     String sentence = this.extractor.getFirstSentence("My short" + NEW_LINE + "description." + NEW_LINE + "More stuff.").     assertThat(sentence).isEqualTo("My short description."). }
-false;public;0;6;;@Test public void extractFirstSentenceNewLineBeforeDotWithSpaces() {     String sentence = this.extractor.getFirstSentence("My short  " + NEW_LINE + " description.  " + NEW_LINE + "More stuff.").     assertThat(sentence).isEqualTo("My short description."). }
-false;public;0;5;;@Test public void extractFirstSentenceNoDot() {     String sentence = this.extractor.getFirstSentence("My short description").     assertThat(sentence).isEqualTo("My short description"). }
-false;public;0;6;;@Test public void extractFirstSentenceNoDotMultipleLines() {     String sentence = this.extractor.getFirstSentence("My short description " + NEW_LINE + " More stuff").     assertThat(sentence).isEqualTo("My short description"). }
-false;public;0;4;;@Test public void extractFirstSentenceNull() {     assertThat(this.extractor.getFirstSentence(null)).isNull(). }

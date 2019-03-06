@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;@SuppressWarnings("unchecked") public Builder setIndices(String... indices) {     request.indices(indices).     return (Builder) this. }
-false;public;1;5;;@SuppressWarnings("unchecked") public Builder addIndices(String... indices) {     request.indices(ArrayUtils.concat(request.indices(), indices)).     return (Builder) this. }
-false;public;1;5;;@SuppressWarnings("unchecked") public Builder setTypes(String... types) {     request.types(types).     return (Builder) this. }
-false;public;1;5;;@SuppressWarnings("unchecked") public Builder addTypes(String... types) {     request.types(ArrayUtils.concat(request.types(), types)).     return (Builder) this. }
-false;public;1;5;;@SuppressWarnings("unchecked") public Builder setIndicesOptions(IndicesOptions indicesOptions) {     request.indicesOptions(indicesOptions).     return (Builder) this. }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;default;0;3;/**  * The minimal version of the recipient this custom object can be sent to  */ ;/**  * The minimal version of the recipient this custom object can be sent to  */ default Version getMinimalSupportedVersion() {     return Version.CURRENT.minimumIndexCompatibilityVersion(). }

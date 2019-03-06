@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;3;6;;@Override protected NodesDeprecationCheckResponse newResponse(NodesDeprecationCheckRequest request, List<NodesDeprecationCheckAction.NodeResponse> nodeResponses, List<FailedNodeException> failures) {     return new NodesDeprecationCheckResponse(clusterService.getClusterName(), nodeResponses, failures). }
-false;protected;2;4;;@Override protected NodesDeprecationCheckAction.NodeRequest newNodeRequest(String nodeId, NodesDeprecationCheckRequest request) {     return new NodesDeprecationCheckAction.NodeRequest(nodeId, request). }
-false;protected;0;4;;@Override protected NodesDeprecationCheckAction.NodeResponse newNodeResponse() {     return new NodesDeprecationCheckAction.NodeResponse(). }
-false;protected;1;7;;@Override protected NodesDeprecationCheckAction.NodeResponse nodeOperation(NodesDeprecationCheckAction.NodeRequest request) {     List<DeprecationIssue> issues = DeprecationInfoAction.filterChecks(DeprecationChecks.NODE_SETTINGS_CHECKS, (c) -> c.apply(settings, pluginsService.info())).     return new NodesDeprecationCheckAction.NodeResponse(transportService.getLocalNode(), issues). }

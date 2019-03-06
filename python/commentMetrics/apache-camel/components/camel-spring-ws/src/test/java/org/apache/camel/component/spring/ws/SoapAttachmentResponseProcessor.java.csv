@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;public void process(Exchange exchange) throws Exception {     exchange.setOut(exchange.getIn()).     exchange.getOut().addAttachment("responseAttachment1.txt", new DataHandler("responseAttachment1", "text/plain")).     exchange.getOut().addAttachment("responseAttachment2.xml", new DataHandler("<responseAttachment2/>", "application/xml")). }

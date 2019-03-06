@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;@Test public void testSimple() {     try {         doTest("org/apache/camel/spring/CircularComponentCreationSimpleTest.xml").         Assert.fail("Exception should have been thrown").     } catch (RuntimeCamelException e) {         Assert.assertTrue(e.getCause() instanceof FailedToCreateRouteException).     } }
-false;public;0;4;;@Test public void testComplex() {     doTest("org/apache/camel/spring/CircularComponentCreationComplexTest.xml"). }
-false;private;1;9;;// ******************************* // Test implementation // ******************************* private void doTest(String path) {     AbstractXmlApplicationContext applicationContext = null.     try {         applicationContext = new ClassPathXmlApplicationContext(path).         new SpringCamelContext(applicationContext).     } finally {         IOHelper.close(applicationContext).     } }

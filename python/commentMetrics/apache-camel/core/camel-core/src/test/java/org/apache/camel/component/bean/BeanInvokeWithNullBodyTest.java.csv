@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void testWithHelloWorld() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("Hello World").     template.sendBody("direct:start", "Hello World").     assertMockEndpointsSatisfied(). }
-false;public;0;8;;@Test public void testWithEmptyBody() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("").     template.sendBody("direct:start", "").     assertMockEndpointsSatisfied(). }
-false;public;0;9;;@Test public void testWithNullBody() throws Exception {     getMockEndpoint("mock:result").expectedMessageCount(1).     getMockEndpoint("mock:result").message(0).body().isNull().     template.sendBody("direct:start", null).     assertMockEndpointsSatisfied(). }
-false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry jndi = super.createRegistry().     jndi.bind("foo", new MyNullFooBean()).     return jndi. }
-false;public;0;4;;@Override public void configure() throws Exception {     from("direct:start").to("bean:foo").to("mock:result"). }
-false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").to("bean:foo").to("mock:result").         }     }. }
-false;public;1;3;;public String doSomething(String s) {     return s. }

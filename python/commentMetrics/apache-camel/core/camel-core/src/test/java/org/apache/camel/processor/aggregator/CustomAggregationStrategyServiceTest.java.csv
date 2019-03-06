@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;20;;@Test public void testCustomAggregationStrategy() throws Exception {     assertTrue("Should be started", strategy.start).     assertFalse("Should not be stopped", strategy.stop).     MockEndpoint result = getMockEndpoint("mock:result").     result.expectedMessageCount(1).     template.sendBodyAndHeader("direct:start", "100", "id", "1").     template.sendBodyAndHeader("direct:start", "150", "id", "1").     template.sendBodyAndHeader("direct:start", "130", "id", "1").     assertMockEndpointsSatisfied().     // stop Camel     context.stop().     assertFalse("Should not be started", strategy.start).     assertTrue("Should be stopped", strategy.stop). }
-false;public;0;7;;@Override public void configure() throws Exception {     from("direct:start").aggregate(strategy).header("id").completionSize(3).to("mock:result"). }
-false;protected;0;12;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").aggregate(strategy).header("id").completionSize(3).to("mock:result").         }     }. }
-false;public;2;4;;@Override public Exchange aggregate(Exchange oldExchange, Exchange newExchange) {     return newExchange. }
-false;protected;0;5;;@Override protected void doStart() throws Exception {     start = true.     stop = false. }
-false;protected;0;5;;@Override protected void doStop() throws Exception {     stop = true.     start = false. }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;@Test public void indexSingleDocumentToNonexistentServer() throws Exception {     Exchange exchange = createExchangeWithBody(null).     exchange.getIn().setHeader(SolrConstants.OPERATION, SolrConstants.OPERATION_INSERT).     exchange.getIn().setHeader("SolrField.id", "MA147LL/A").     template.send("direct:start", exchange).     assertTrue(exchange.isFailed()). }
-false;public;0;4;;@Override public void configure() throws Exception {     from("direct:start").to("solr://localhost:" + getPort() + "/missingSolr"). }
-false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").to("solr://localhost:" + getPort() + "/missingSolr").         }     }. }

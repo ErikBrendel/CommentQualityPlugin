@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;10;;@SuppressWarnings("Convert2MethodRef") public static void main(String[] args) throws Exception {     ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment().     DataSet<String> input = env.fromElements("Please filter", "the words", "but not this").     DataSet<String> output = input.filter((v) -> WordFilter.filter(v)).     output.print().     env.execute(). }

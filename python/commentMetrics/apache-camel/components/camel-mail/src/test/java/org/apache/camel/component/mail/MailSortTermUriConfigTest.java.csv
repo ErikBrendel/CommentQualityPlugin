@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;public void configure() throws Exception {     context.setAutoStartup(false).     from("pop3://bill@localhost?password=secret&searchTerm=#searchTerm&sortTerm=date").to("mock:resultAscending"). }
-false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             context.setAutoStartup(false).             from("pop3://bill@localhost?password=secret&searchTerm=#searchTerm&sortTerm=date").to("mock:resultAscending").         }     }. }

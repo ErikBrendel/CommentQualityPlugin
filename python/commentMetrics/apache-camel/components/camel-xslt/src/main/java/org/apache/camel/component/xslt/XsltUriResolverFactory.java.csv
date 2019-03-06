@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;2;1;/**  * Method is called during the creation of a xslt endpoint.  *  * @param camelContext camel context  * @param resourceUri resource URI specified in the endpoint URI  * @return URI resolver  */ ;/**  * Method is called during the creation of a xslt endpoint.  *  * @param camelContext camel context  * @param resourceUri resource URI specified in the endpoint URI  * @return URI resolver  */ URIResolver createUriResolver(CamelContext camelContext, String resourceUri).

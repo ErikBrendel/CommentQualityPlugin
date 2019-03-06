@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;private;2;5;;private String buildDescription(BeanReference adviceReference, BeanDefinition pointcutDefinition) {     return "Advisor <advice(ref)='" + adviceReference.getBeanName() + "', pointcut(expression)=[" + pointcutDefinition.getPropertyValues().get("expression") + "]>". }
-false;private;2;5;;private String buildDescription(BeanReference adviceReference, BeanReference pointcutReference) {     return "Advisor <advice(ref)='" + adviceReference.getBeanName() + "', pointcut(ref)='" + pointcutReference.getBeanName() + "'>". }
-false;public;0;4;;@Override public String getName() {     return this.advisorBeanName. }
-false;public;0;4;;@Override public String getDescription() {     return this.description. }
-false;public;0;4;;@Override public BeanDefinition[] getBeanDefinitions() {     return this.beanDefinitions. }
-false;public;0;4;;@Override public BeanReference[] getBeanReferences() {     return this.beanReferences. }
-false;public;0;5;;@Override @Nullable public Object getSource() {     return this.advisorDefinition.getSource(). }

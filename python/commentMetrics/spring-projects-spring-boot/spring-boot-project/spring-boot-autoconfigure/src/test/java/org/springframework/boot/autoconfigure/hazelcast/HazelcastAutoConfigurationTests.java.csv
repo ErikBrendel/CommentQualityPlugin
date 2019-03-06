@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Test public void defaultConfigFile() {     // no hazelcast-client.xml and hazelcast.xml is present in root classpath     this.contextRunner.run((context) -> {         Config config = context.getBean(HazelcastInstance.class).getConfig().         assertThat(config.getConfigurationUrl()).isEqualTo(new ClassPathResource("hazelcast.xml").getURL()).     }). }

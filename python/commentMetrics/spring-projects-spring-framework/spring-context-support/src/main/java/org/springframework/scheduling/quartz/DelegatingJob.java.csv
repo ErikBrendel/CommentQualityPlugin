@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,final;0;3;/**  * Return the wrapped Runnable implementation.  */ ;/**  * Return the wrapped Runnable implementation.  */ public final Runnable getDelegate() {     return this.delegate. }
-true;public;1;4;/**  * Delegates execution to the underlying Runnable.  */ ;/**  * Delegates execution to the underlying Runnable.  */ @Override public void execute(JobExecutionContext context) throws JobExecutionException {     this.delegate.run(). }

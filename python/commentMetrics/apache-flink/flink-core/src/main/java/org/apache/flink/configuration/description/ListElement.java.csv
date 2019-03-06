@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,static;1;3;/**  * Creates a list with blocks of text. For example:  * <pre>{@code  * .list(  * 	text("this is first element of list"),  * 	text("this is second element of list with a %s", link("https://link"))  * )  * }</pre>  *  * @param elements list of this list entries  * @return list representation  */ ;/**  * Creates a list with blocks of text. For example:  * <pre>{@code  * .list(  * 	text("this is first element of list"),  * 	text("this is second element of list with a %s", link("https://link"))  * )  * }</pre>  *  * @param elements list of this list entries  * @return list representation  */ public static ListElement list(InlineElement... elements) {     return new ListElement(Arrays.asList(elements)). }
-false;public;0;3;;public List<InlineElement> getEntries() {     return entries. }
-false;public;1;4;;@Override public void format(Formatter formatter) {     formatter.format(this). }

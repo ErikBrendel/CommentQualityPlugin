@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected String getBlueprintDescriptor() {     return "org/apache/camel/test/blueprint/configadmin-loadfile.xml". }
-false;public;0;10;;@Override @Before public void setUp() throws Exception {     try {         super.setUp().         fail("Should throw IllegalArgumentException, because the config file wasn't found").     } catch (IllegalArgumentException e) {         assertTrue(e.getMessage().contains("../../src/test/resources/etc/stuff.cfg")).     } }
-true;protected;0;7;// START SNIPPET: e1 ;// START SNIPPET: e1 @Override protected String[] loadConfigAdminConfigurationFile() {     // String[1] = tell Camel the persistence-id of the cm:property-placeholder in the blueprint XML file     return new String[] { "../../src/test/resources/etc/stuff.cfg", "stuff" }. }
-false;public;0;4;;// END SNIPPET: e1 @Test public void test() throws Exception { // irrelevant }

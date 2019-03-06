@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;1;4;/**  * Sets the id of the watch to be deleted  */ ;/**  * Sets the id of the watch to be deleted  */ public DeleteWatchRequestBuilder setId(String id) {     this.request().setId(id).     return this. }

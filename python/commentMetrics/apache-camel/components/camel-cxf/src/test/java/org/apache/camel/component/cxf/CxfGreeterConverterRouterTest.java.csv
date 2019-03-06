@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;6;;@AfterClass public static void stopService() {     if (endpoint != null) {         endpoint.stop().     } }
-false;public,static;0;7;;@BeforeClass public static void startService() {     Object implementor = new GreeterImpl().     String address = "http://localhost:" + getPort1() + "/CxfGreeterConverterRouterTest/SoapContext/SoapPort".     endpoint = Endpoint.publish(address, implementor). }
-false;protected;0;3;;protected ClassPathXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/component/cxf/GreeterConverterEndpointsRouterContext.xml"). }

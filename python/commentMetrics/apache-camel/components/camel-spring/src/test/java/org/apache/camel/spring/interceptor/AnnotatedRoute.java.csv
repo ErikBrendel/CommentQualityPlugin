@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;11;;public void configure() throws Exception {     from("direct:okay").transacted().setBody(constant("Tiger in Action")).bean("bookService").setBody(constant("Elephant in Action")).bean("bookService").     from("direct:fail").transacted().setBody(constant("Tiger in Action")).bean("bookService").setBody(constant("Donkey in Action")).bean("bookService"). }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Before public void init() {     when(kafkaConsumer.poll(1000)).thenReturn(ConsumerRecords.empty()). }
-false;public;0;5;;@Test public void testPollGivenReturnsEmptyConsumerRecordShouldNotBeNull() {     ConsumerRecords<Object, Object> consumerRecords = kafkaConsumer.poll(1000).     assertThat(consumerRecords, IsNot.not(nullValue())). }
-false;public;0;5;;@Test public void testPollGivenReturnsEmptyPartitionsShouldNotBeNull() {     ConsumerRecords<Object, Object> consumerRecords = kafkaConsumer.poll(1000).     assertThat(consumerRecords.partitions(), IsNot.not(nullValue())). }

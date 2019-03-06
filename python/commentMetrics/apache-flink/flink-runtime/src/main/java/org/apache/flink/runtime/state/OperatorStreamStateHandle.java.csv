@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public Map<String, StateMetaInfo> getStateNameToPartitionOffsets() {     return stateNameToPartitionOffsets. }
-false;public;0;4;;@Override public void discardState() throws Exception {     delegateStateHandle.discardState(). }
-false;public;0;4;;@Override public long getStateSize() {     return delegateStateHandle.getStateSize(). }
-false;public;0;4;;@Override public FSDataInputStream openInputStream() throws IOException {     return delegateStateHandle.openInputStream(). }
-false;public;0;4;;@Override public StreamStateHandle getDelegateStateHandle() {     return delegateStateHandle. }
-false;public;1;24;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (!(o instanceof OperatorStreamStateHandle)) {         return false.     }     OperatorStreamStateHandle that = (OperatorStreamStateHandle) o.     if (stateNameToPartitionOffsets.size() != that.stateNameToPartitionOffsets.size()) {         return false.     }     for (Map.Entry<String, StateMetaInfo> entry : stateNameToPartitionOffsets.entrySet()) {         if (!entry.getValue().equals(that.stateNameToPartitionOffsets.get(entry.getKey()))) {             return false.         }     }     return delegateStateHandle.equals(that.delegateStateHandle). }
-false;public;0;13;;@Override public int hashCode() {     int result = delegateStateHandle.hashCode().     for (Map.Entry<String, StateMetaInfo> entry : stateNameToPartitionOffsets.entrySet()) {         int entryHash = entry.getKey().hashCode().         if (entry.getValue() != null) {             entryHash += entry.getValue().hashCode().         }         result = 31 * result + entryHash.     }     return result. }
-false;public;0;7;;@Override public String toString() {     return "OperatorStateHandle{" + "stateNameToPartitionOffsets=" + stateNameToPartitionOffsets + ", delegateStateHandle=" + delegateStateHandle + '}'. }

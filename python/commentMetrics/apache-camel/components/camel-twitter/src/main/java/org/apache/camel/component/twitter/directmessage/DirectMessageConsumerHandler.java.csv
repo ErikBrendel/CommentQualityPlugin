@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Override public List<Exchange> pollConsume() throws TwitterException {     List<DirectMessage> directMessages = getTwitter().getDirectMessages(getLastIdPaging()).     for (int i = 0. i < directMessages.size(). i++) {         setLastIdIfGreater(directMessages.get(i).getId()).     }     return TwitterEventType.DIRECT_MESSAGE.createExchangeList(endpoint, directMessages). }
-false;public;0;7;;@Override public List<Exchange> directConsume() throws TwitterException {     return TwitterEventType.DIRECT_MESSAGE.createExchangeList(endpoint, getTwitter().getDirectMessages()). }

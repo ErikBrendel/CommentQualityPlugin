@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;// SPR-17330 @Test public void matchDateFormattedWithHttpHeaders() throws Exception {     long epochMilli = ZonedDateTime.of(2018, 10, 5, 0, 0, 0, 0, ZoneId.of("GMT")).toInstant().toEpochMilli().     HttpHeaders headers = new HttpHeaders().     headers.setDate("myDate", epochMilli).     this.response.setHeader("d", headers.getFirst("myDate")).     this.matchers.dateValue("d", epochMilli).match(this.mvcResult). }

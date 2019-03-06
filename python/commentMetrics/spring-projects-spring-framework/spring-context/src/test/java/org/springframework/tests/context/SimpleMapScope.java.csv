@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,final;0;3;;public final Map<String, Object> getMap() {     return this.map. }
-false;public;2;11;;@Override public Object get(String name, ObjectFactory<?> objectFactory) {     synchronized (this.map) {         Object scopedObject = this.map.get(name).         if (scopedObject == null) {             scopedObject = objectFactory.getObject().             this.map.put(name, scopedObject).         }         return scopedObject.     } }
-false;public;1;6;;@Override public Object remove(String name) {     synchronized (this.map) {         return this.map.remove(name).     } }
-false;public;2;4;;@Override public void registerDestructionCallback(String name, Runnable callback) {     this.callbacks.add(callback). }
-false;public;1;4;;@Override public Object resolveContextualObject(String key) {     return null. }
-false;public;0;6;;public void close() {     for (Iterator<Runnable> it = this.callbacks.iterator(). it.hasNext(). ) {         Runnable runnable = it.next().         runnable.run().     } }
-false;public;0;4;;@Override public String getConversationId() {     return null. }

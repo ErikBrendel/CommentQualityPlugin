@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void whenThereIsNoMBeanServerAutoConfigurationBacksOff() {     this.contextRunner.run((context) -> assertThat(context).doesNotHaveBean(KafkaConsumerMetrics.class)). }
-false;public;0;7;;@Test public void whenThereIsAnMBeanServerKafkaConsumerMetricsIsConfigured() {     this.contextRunner.withConfiguration(AutoConfigurations.of(JmxAutoConfiguration.class)).run((context) -> assertThat(context).hasSingleBean(KafkaConsumerMetrics.class)). }
-false;public;0;9;;@Test public void allowsCustomKafkaConsumerMetricsToBeUsed() {     this.contextRunner.withConfiguration(AutoConfigurations.of(JmxAutoConfiguration.class)).withUserConfiguration(CustomKafkaConsumerMetricsConfiguration.class).run((context) -> assertThat(context).hasSingleBean(KafkaConsumerMetrics.class).hasBean("customKafkaConsumerMetrics")). }
-false;public;0;4;;@Bean public KafkaConsumerMetrics customKafkaConsumerMetrics() {     return new KafkaConsumerMetrics(). }

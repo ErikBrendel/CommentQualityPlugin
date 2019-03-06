@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public Producer createProducer() throws Exception {     return new InfinispanProducer(this, cacheName, configuration). }
-false;public;1;4;;@Override public Consumer createConsumer(Processor processor) throws Exception {     return new InfinispanConsumer(this, processor, cacheName, configuration). }
-false;public;0;4;;@Override public boolean isSingleton() {     return true. }
-false;public;0;3;;public String getCacheName() {     return cacheName. }
-false;public;0;3;;public InfinispanConfiguration getConfiguration() {     return configuration. }

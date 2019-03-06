@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public void serverSentEventEncoder(Encoder<?> encoder) {     this.sseEncoder = encoder. }
-false;protected;1;14;;@Override protected void extendTypedReaders(List<HttpMessageReader<?>> typedReaders) {     if (synchronossMultipartPresent) {         boolean enable = isEnableLoggingRequestDetails().         SynchronossPartHttpMessageReader partReader = new SynchronossPartHttpMessageReader().         partReader.setEnableLoggingRequestDetails(enable).         typedReaders.add(partReader).         MultipartHttpMessageReader reader = new MultipartHttpMessageReader(partReader).         reader.setEnableLoggingRequestDetails(enable).         typedReaders.add(reader).     } }
-false;protected;1;4;;@Override protected void extendObjectWriters(List<HttpMessageWriter<?>> objectWriters) {     objectWriters.add(new ServerSentEventHttpMessageWriter(getSseEncoder())). }
-false;private;0;4;;@Nullable private Encoder<?> getSseEncoder() {     return this.sseEncoder != null ? this.sseEncoder : jackson2Present ? getJackson2JsonEncoder() : null. }

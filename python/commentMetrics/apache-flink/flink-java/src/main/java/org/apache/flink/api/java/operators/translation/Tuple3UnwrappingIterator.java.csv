@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;public void set(Iterator<Tuple3<K1, K2, T>> iterator) {     this.iterator = iterator.     this.iteratorAvailable = true. }
-false;public;0;3;;public K1 getLastGroupKey() {     return lastGroupKey. }
-false;public;0;3;;public K2 getLastSortKey() {     return lastSortKey. }
-false;public;0;4;;@Override public boolean hasNext() {     return iterator.hasNext(). }
-false;public;0;7;;@Override public T next() {     Tuple3<K1, K2, T> t = iterator.next().     this.lastGroupKey = t.f0.     this.lastSortKey = t.f1.     return t.f2. }
-false;public;0;4;;@Override public void remove() {     throw new UnsupportedOperationException(). }
-false;public;0;9;;@Override public Iterator<T> iterator() {     if (iteratorAvailable) {         iteratorAvailable = false.         return this.     } else {         throw new TraversableOnceException().     } }

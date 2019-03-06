@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void testMockEndpointWithParameter() throws Exception {     getMockEndpoint(uri).expectedBodiesReceived("Hello World").     template.sendBody("direct:start", "Hello World").     assertMockEndpointsSatisfied(). }
-false;protected;0;7;;@Override protected CamelContext createCamelContext() throws Exception {     CamelContext context = super.createCamelContext().     // replace smtp with mock     context.addComponent("smtp", new MockComponent()).     return context. }
-false;public;0;5;;@Override public void configure() throws Exception {     from("direct:start").to(uri). }
-false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").to(uri).         }     }. }

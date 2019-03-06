@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;0;2;;@ManagedAttribute(description = "Number of rest services in the registry") int getNumberOfRestServices().
-false;;0;2;;@ManagedOperation(description = "Lists all the Rest services in the registry (url, path, verb, consumes, produces)") TabularData listRestServices().
-false;;0;2;;@ManagedOperation(description = "Outputs the Rest services API documentation in JSon (requires camel-swagger-java on classpath)") String apiDocAsJson().

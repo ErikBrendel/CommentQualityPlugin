@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;9;;public Exchange aggregate(Exchange oldExchange, Exchange newExchange) {     if (oldExchange != null) {         String oldBody = oldExchange.getIn().getBody(String.class).         String newBody = newExchange.getIn().getBody(String.class).         newExchange.getOut().setBody(oldBody + "+" + newBody).     }     return newExchange. }

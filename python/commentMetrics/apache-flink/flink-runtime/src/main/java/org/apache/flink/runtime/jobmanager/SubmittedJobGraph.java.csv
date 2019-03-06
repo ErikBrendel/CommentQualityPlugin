@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Returns the submitted {@link JobGraph}.  */ ;/**  * Returns the submitted {@link JobGraph}.  */ public JobGraph getJobGraph() {     return jobGraph. }
-true;public;0;3;/**  * Returns the {@link JobID} of the submitted {@link JobGraph}.  */ ;/**  * Returns the {@link JobID} of the submitted {@link JobGraph}.  */ public JobID getJobId() {     return jobGraph.getJobID(). }
-false;public;0;4;;@Override public String toString() {     return String.format("SubmittedJobGraph(%s)", jobGraph.getJobID()). }

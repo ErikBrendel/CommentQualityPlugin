@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getWriteableName() {     return NAME. }
-false;public;2;4;;@Override public InternalAggregation doReduce(List<InternalAggregation> aggregations, ReduceContext reduceContext) {     return new UnmappedSampler(name, pipelineAggregators(), metaData). }
-false;public;0;4;;@Override public boolean isMapped() {     return false. }
-false;public;2;5;;@Override public XContentBuilder doXContentBody(XContentBuilder builder, Params params) throws IOException {     builder.field(Aggregation.CommonFields.DOC_COUNT.getPreferredName(), 0).     return builder. }

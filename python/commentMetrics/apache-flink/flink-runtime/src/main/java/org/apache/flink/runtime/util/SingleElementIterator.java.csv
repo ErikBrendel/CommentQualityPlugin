@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;1;4;/**  * Resets the element. After this call, the iterator has one element available, which is the given element.  *  * @param current The element to make available to the iterator.  */ ;/**  * Resets the element. After this call, the iterator has one element available, which is the given element.  *  * @param current The element to make available to the iterator.  */ public void set(E current) {     this.current = current.     this.available = true. }
-false;public;0;4;;@Override public boolean hasNext() {     return available. }
-false;public;0;9;;@Override public E next() {     if (available) {         available = false.         return current.     } else {         throw new NoSuchElementException().     } }
-false;public;0;4;;@Override public void remove() {     throw new UnsupportedOperationException(). }
-false;public;0;4;;@Override public Iterator<E> iterator() {     return this. }

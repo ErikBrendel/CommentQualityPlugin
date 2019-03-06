@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;3;;public static DatafeedState fromString(String name) {     return valueOf(name.trim().toUpperCase(Locale.ROOT)). }
-false;public,static;1;3;;public static DatafeedState fromStream(StreamInput in) throws IOException {     return in.readEnum(DatafeedState.class). }
-false;public;0;4;;@Override public String getWriteableName() {     return NAME. }
-false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     DatafeedState state = this.     out.writeEnum(state). }
-false;public;2;7;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field("state", name().toLowerCase(Locale.ROOT)).     builder.endObject().     return builder. }
-false;public;0;4;;@Override public boolean isFragment() {     return false. }
-false;public,static;1;3;;public static DatafeedState fromXContent(XContentParser parser) throws IOException {     return PARSER.parse(parser, null). }
-false;public;0;4;;@Override public String toString() {     return name().toLowerCase(Locale.ROOT). }

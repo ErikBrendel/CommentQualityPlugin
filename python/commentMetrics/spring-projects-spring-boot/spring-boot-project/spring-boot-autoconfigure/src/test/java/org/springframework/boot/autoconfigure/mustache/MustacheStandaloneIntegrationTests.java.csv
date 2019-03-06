@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void directCompilation() {     assertThat(this.compiler.compile("Hello: {{world}}").execute(Collections.singletonMap("world", "World"))).isEqualTo("Hello: World"). }
-false;public;0;5;;@Test public void environmentCollectorCompoundKey() {     assertThat(this.compiler.compile("Hello: {{env.foo}}").execute(new Object())).isEqualTo("Hello: There"). }
-false;public;0;5;;@Test public void environmentCollectorCompoundKeyStandard() {     assertThat(this.compiler.standardsMode(true).compile("Hello: {{env.foo}}").execute(new Object())).isEqualTo("Hello: There"). }
-false;public;0;5;;@Test public void environmentCollectorSimpleKey() {     assertThat(this.compiler.compile("Hello: {{foo}}").execute(new Object())).isEqualTo("Hello: World"). }

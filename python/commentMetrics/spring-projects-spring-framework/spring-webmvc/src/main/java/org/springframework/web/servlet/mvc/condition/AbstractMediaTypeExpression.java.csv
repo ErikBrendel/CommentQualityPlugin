@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public MediaType getMediaType() {     return this.mediaType. }
-false;public;0;4;;@Override public boolean isNegated() {     return this.isNegated. }
-false;public;1;4;;@Override public int compareTo(AbstractMediaTypeExpression other) {     return MediaType.SPECIFICITY_COMPARATOR.compare(this.getMediaType(), other.getMediaType()). }
-false;public;1;11;;@Override public boolean equals(@Nullable Object other) {     if (this == other) {         return true.     }     if (other == null || getClass() != other.getClass()) {         return false.     }     AbstractMediaTypeExpression otherExpr = (AbstractMediaTypeExpression) other.     return (this.mediaType.equals(otherExpr.mediaType) && this.isNegated == otherExpr.isNegated). }
-false;public;0;4;;@Override public int hashCode() {     return this.mediaType.hashCode(). }
-false;public;0;9;;@Override public String toString() {     StringBuilder builder = new StringBuilder().     if (this.isNegated) {         builder.append('!').     }     builder.append(this.mediaType.toString()).     return builder.toString(). }

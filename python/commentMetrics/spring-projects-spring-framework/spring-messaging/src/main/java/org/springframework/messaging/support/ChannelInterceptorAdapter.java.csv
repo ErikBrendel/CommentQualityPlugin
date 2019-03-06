@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;4;;@Override public Message<?> preSend(Message<?> message, MessageChannel channel) {     return message. }
-false;public;3;3;;@Override public void postSend(Message<?> message, MessageChannel channel, boolean sent) { }
-false;public;4;3;;@Override public void afterSendCompletion(Message<?> message, MessageChannel channel, boolean sent, @Nullable Exception ex) { }
-false;public;1;3;;public boolean preReceive(MessageChannel channel) {     return true. }
-false;public;2;4;;@Override public Message<?> postReceive(Message<?> message, MessageChannel channel) {     return message. }
-false;public;3;3;;@Override public void afterReceiveCompletion(@Nullable Message<?> message, MessageChannel channel, @Nullable Exception ex) { }

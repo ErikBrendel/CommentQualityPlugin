@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;3;7;;@Override public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {     request.setAttribute(RESOURCE_URL_PROVIDER_ATTR, this.resourceUrlProvider).     return true. }

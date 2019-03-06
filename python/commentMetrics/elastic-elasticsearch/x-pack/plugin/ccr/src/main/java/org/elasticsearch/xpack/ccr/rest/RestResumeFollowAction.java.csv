@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getName() {     return "ccr_resume_follow_action". }
-false;protected;2;5;;@Override protected RestChannelConsumer prepareRequest(RestRequest restRequest, NodeClient client) throws IOException {     Request request = createRequest(restRequest).     return channel -> client.execute(INSTANCE, request, new RestToXContentListener<>(channel)). }
-false;static;1;11;;static Request createRequest(RestRequest restRequest) throws IOException {     if (restRequest.hasContentOrSourceParam()) {         try (XContentParser parser = restRequest.contentOrSourceParamParser()) {             return Request.fromXContent(parser, restRequest.param("index")).         }     } else {         Request request = new Request().         request.setFollowerIndex(restRequest.param("index")).         return request.     } }

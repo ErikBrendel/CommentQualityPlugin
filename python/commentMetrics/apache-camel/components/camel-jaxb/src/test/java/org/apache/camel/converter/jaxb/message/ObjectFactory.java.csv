@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Create an instance of {@link Message }  */ ;/**  * Create an instance of {@link Message }  */ public Message createMessage() {     return new Message(). }
-false;public;1;4;;@XmlElementDecl(namespace = "", name = "message") public JAXBElement<Message> createMessage(Message value) {     return new JAXBElement<>(MESSAGE_QNAME, Message.class, null, value). }

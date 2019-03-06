@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;10;/**  * This method ensures that compression is complete and returns the underlying bytes.  *  * @return bytes underlying the stream  * @throws IOException if an exception occurs when writing or flushing  */ ;/**  * This method ensures that compression is complete and returns the underlying bytes.  *  * @return bytes underlying the stream  * @throws IOException if an exception occurs when writing or flushing  */ BytesReference materializeBytes() throws IOException {     // passed to the deflater stream.     if (shouldCompress) {         stream.close().     }     return bytesStreamOutput.bytes(). }
-false;public;1;4;;@Override public void writeByte(byte b) throws IOException {     stream.write(b). }
-false;public;3;4;;@Override public void writeBytes(byte[] b, int offset, int length) throws IOException {     stream.writeBytes(b, offset, length). }
-false;public;0;4;;@Override public void flush() throws IOException {     stream.flush(). }
-false;public;0;7;;@Override public void close() throws IOException {     if (stream != bytesStreamOutput) {         assert shouldCompress : "If the streams are different we should be compressing".         IOUtils.close(stream).     } }
-false;public;0;4;;@Override public void reset() throws IOException {     throw new UnsupportedOperationException(). }

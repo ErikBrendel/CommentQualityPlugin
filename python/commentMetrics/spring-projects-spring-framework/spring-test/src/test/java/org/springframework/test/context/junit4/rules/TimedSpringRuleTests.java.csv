@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;// All tests are in superclass. @Override protected Class<?> getTestCase() {     return TimedSpringRuleTestCase.class. }
-false;protected;0;4;;@Override protected Class<? extends Runner> getRunnerClass() {     return JUnit4.class. }
-true;public;0;4;/**  * Overridden to always throw an exception, since Spring's Rule-based  * JUnit integration does not fail a test for duplicate configuration  * of timeouts.  */ ;/**  * Overridden to always throw an exception, since Spring's Rule-based  * JUnit integration does not fail a test for duplicate configuration  * of timeouts.  */ @Override public void springAndJUnitTimeouts() {     fail("intentional failure to make tests in superclass pass"). }

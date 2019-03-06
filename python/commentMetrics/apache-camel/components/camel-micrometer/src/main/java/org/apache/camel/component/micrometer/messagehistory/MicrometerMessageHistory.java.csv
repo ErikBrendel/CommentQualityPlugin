@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Override public void nodeProcessingDone() {     super.nodeProcessingDone().     Timer timer = Timer.builder(namingStrategy.getName(route, getNode())).tags(namingStrategy.getTags(route, getNode())).description(getNode().getDescriptionText()).register(meterRegistry).     sample.stop(timer). }
-false;public;0;3;;public String toString() {     return "MicrometerMessageHistory[routeId=" + getRouteId() + ", node=" + getNode().getId() + ']'. }

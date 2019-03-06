@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String toString() {     return "PollingConsumer on " + endpoint. }
-false;public;0;3;;public Endpoint getEndpoint() {     return endpoint. }
-false;public;0;4;;@Override public Processor getProcessor() {     return null. }
-false;public;0;3;;public ExceptionHandler getExceptionHandler() {     return exceptionHandler. }
-false;public;1;3;;public void setExceptionHandler(ExceptionHandler exceptionHandler) {     this.exceptionHandler = exceptionHandler. }
-true;protected;1;3;/**  * Handles the given exception using the {@link #getExceptionHandler()}  *  * @param t the exception to handle  */ ;/**  * Handles the given exception using the {@link #getExceptionHandler()}  *  * @param t the exception to handle  */ protected void handleException(Throwable t) {     getExceptionHandler().handleException(t). }

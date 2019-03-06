@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void testEndpointCreatedWithCorrectUri() throws Exception {     assertNotNull("foo", endpoint).     assertEquals("foo.getEndpointUri()", "foo:bar", endpoint.getEndpointUri()).     log.info("Found endpoint " + endpoint + " with URI: " + endpoint.getEndpointUri()). }

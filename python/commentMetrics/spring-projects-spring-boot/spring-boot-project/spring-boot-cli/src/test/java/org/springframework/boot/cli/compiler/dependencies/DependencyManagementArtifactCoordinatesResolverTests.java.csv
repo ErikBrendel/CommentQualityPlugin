@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Before public void setup() {     this.dependencyManagement = mock(DependencyManagement.class).     given(this.dependencyManagement.find("a1")).willReturn(new Dependency("g1", "a1", "0")).     given(this.dependencyManagement.getSpringBootVersion()).willReturn("1").     this.resolver = new DependencyManagementArtifactCoordinatesResolver(this.dependencyManagement). }
-false;public;0;6;;@Test public void getGroupIdForBootArtifact() {     assertThat(this.resolver.getGroupId("spring-boot-something")).isEqualTo("org.springframework.boot").     verify(this.dependencyManagement, never()).find(anyString()). }
-false;public;0;4;;@Test public void getGroupIdFound() {     assertThat(this.resolver.getGroupId("a1")).isEqualTo("g1"). }
-false;public;0;4;;@Test public void getGroupIdNotFound() {     assertThat(this.resolver.getGroupId("a2")).isNull(). }

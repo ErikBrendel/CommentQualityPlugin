@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;4;/**  * The number of non-null values in this column.  */ ;/**  * The number of non-null values in this column.  */ @Override public long getNonNullCount() {     return 0. }
-false;public;0;4;;@Override public long getNullCount() {     return nullCount. }
-false;public;0;8;;@Override public String toString() {     return "ObjectColumnSummary{" + "totalCount=" + getTotalCount() + ", notNullCount=" + notNullCount + ", nullCount=" + nullCount + '}'. }

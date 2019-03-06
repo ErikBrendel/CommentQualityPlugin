@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Scheduled(fixedDelay = 1000L) public void send() {     this.rabbitTemplate.convertAndSend("foo", "hello"). }

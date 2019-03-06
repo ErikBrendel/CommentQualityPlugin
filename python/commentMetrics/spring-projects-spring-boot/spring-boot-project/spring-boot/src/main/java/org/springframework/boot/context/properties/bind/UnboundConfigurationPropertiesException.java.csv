@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public Set<ConfigurationProperty> getUnboundProperties() {     return this.unboundProperties. }
-false;private,static;1;8;;private static String buildMessage(Set<ConfigurationProperty> unboundProperties) {     StringBuilder builder = new StringBuilder().     builder.append("The elements [").     String message = unboundProperties.stream().map((p) -> p.getName().toString()).collect(Collectors.joining(",")).     builder.append(message).append("] were left unbound.").     return builder.toString(). }

@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;9;;@BeforeClass public static void setUp() throws Exception {     TypeInformation<?>[] fieldTypes = new TypeInformation[numberOfFields].     for (int i = 0. i < numberOfFields. i++) {         fieldTypes[i] = BasicTypeInfo.STRING_TYPE_INFO.     }     typeInfo = new RowTypeInfo(fieldTypes). }
-false;protected;3;10;;@Override protected void deepEquals(String message, Row should, Row is) {     int arity = should.getArity().     assertEquals(message, arity, is.getArity()).     for (int i = 0. i < arity. i++) {         Object copiedValue = should.getField(i).         Object element = is.getField(i).         assertEquals(message, element, copiedValue).     } }
-false;protected;1;8;;@Override protected TypeComparator<Row> createComparator(boolean ascending) {     return typeInfo.createComparator(new int[] { 0 }, new boolean[] { ascending }, 0, new ExecutionConfig()). }
-false;protected;0;4;;@Override protected TypeSerializer<Row> createSerializer() {     return typeInfo.createSerializer(new ExecutionConfig()). }
-false;protected;0;4;;@Override protected Row[] getSortedTestData() {     return data. }
-false;protected;0;4;;@Override protected boolean supportsNullKeys() {     return true. }
-false;private,static;1;9;;private static Row createRow(Object... values) {     checkNotNull(values).     checkArgument(values.length == numberOfFields).     Row row = new Row(numberOfFields).     for (int i = 0. i < values.length. i++) {         row.setField(i, values[i]).     }     return row. }

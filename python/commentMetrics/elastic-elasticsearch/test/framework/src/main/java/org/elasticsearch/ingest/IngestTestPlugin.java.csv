@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;10;;@Override public Map<String, Processor.Factory> getProcessors(Processor.Parameters parameters) {     return Collections.singletonMap("test", (factories, tag, config) -> new TestProcessor("id", "test", doc -> {         doc.setFieldValue("processed", true).         if (doc.hasField("fail") && doc.getFieldValue("fail", Boolean.class)) {             throw new IllegalArgumentException("test processor failed").         }     })). }

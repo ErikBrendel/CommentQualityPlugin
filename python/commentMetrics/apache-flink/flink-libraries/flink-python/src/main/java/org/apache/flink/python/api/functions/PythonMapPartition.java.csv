@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;1;5;/**  * Opens this function.  *  * @param config configuration  * @throws IOException  */ ;/**  * Opens this function.  *  * @param config configuration  * @throws IOException  */ @Override public void open(Configuration config) throws IOException {     streamer.open().     streamer.sendBroadCastVariables(config). }
-false;public;2;4;;@Override public void mapPartition(Iterable<IN> values, Collector<OUT> out) throws Exception {     streamer.streamBufferWithoutGroups(values.iterator(), out). }
-true;public;0;4;/**  * Closes this function.  *  * @throws IOException  */ ;/**  * Closes this function.  *  * @throws IOException  */ @Override public void close() throws IOException {     streamer.close(). }
-false;public;0;4;;@Override public TypeInformation<OUT> getProducedType() {     return typeInformation. }

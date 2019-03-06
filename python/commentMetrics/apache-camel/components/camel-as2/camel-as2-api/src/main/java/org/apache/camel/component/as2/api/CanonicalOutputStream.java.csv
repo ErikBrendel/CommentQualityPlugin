@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;17;;public void write(int i) throws IOException {     if (i == '\r') {         // convert all carriage-return characters into line-break sequence         out.write(newline).     } else if (i == '\n') {         // preceded by carriage-return         if (lastByte != '\r') {             out.write(newline).         }     // otherwise the line-feed was preceded by carriage-return so ignore it.     } else {         out.write(i).     }     lastByte = i. }
-false;public;1;3;;public void write(byte[] buf) throws IOException {     this.write(buf, 0, buf.length). }
-false;public;3;5;;public void write(byte[] buf, int off, int len) throws IOException {     for (int i = off. i != off + len. i++) {         this.write(buf[i]).     } }
-false;public;1;5;;public void writeln(String s) throws IOException {     byte[] bytes = s.getBytes(charset).     write(bytes).     write(newline). }
-false;public;0;3;;public void writeln() throws IOException {     write(newline). }

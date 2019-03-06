@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,abstract;0;1;;public abstract void testToSteps().
-false;protected;0;3;;protected boolean isSafeAction() {     return true. }
-false;public,final;0;4;;public final void testIsSafeAction() {     LifecycleAction action = createTestInstance().     assertEquals(isSafeAction(), action.isSafeAction()). }
-false;public;0;12;;public void testToStepKeys() {     T action = createTestInstance().     String phase = randomAlphaOfLengthBetween(1, 10).     StepKey nextStepKey = new StepKey(randomAlphaOfLengthBetween(1, 10), randomAlphaOfLengthBetween(1, 10), randomAlphaOfLengthBetween(1, 10)).     List<Step> steps = action.toSteps(null, phase, nextStepKey).     assertNotNull(steps).     List<StepKey> stepKeys = action.toStepKeys(phase).     assertNotNull(stepKeys).     List<StepKey> expectedStepKeys = steps.stream().map(Step::getKey).collect(Collectors.toList()).     assertEquals(expectedStepKeys, stepKeys). }

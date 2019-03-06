@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;3;;public boolean addExportException(ExportException e) {     return exceptions.add(e). }
-false;public;0;3;;public boolean hasExportExceptions() {     return exceptions.size() > 0. }
-false;public;0;4;;@Override public Iterator<ExportException> iterator() {     return exceptions.iterator(). }
-false;public;1;8;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeVInt(exceptions.size()).     for (ExportException e : exceptions) {         e.writeTo(out).     } }
-false;protected;2;12;;@Override protected void metadataToXContent(XContentBuilder builder, Params params) throws IOException {     if (hasExportExceptions()) {         builder.startArray("exceptions").         for (ExportException exception : exceptions) {             builder.startObject().             exception.toXContent(builder, params).             builder.endObject().         }         builder.endArray().     } }

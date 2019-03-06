@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public void onInit(Route route) {     this.route = route. }
-false;public;0;3;;public void startRoute() throws Exception {     startRoute(route). }
-false;public;0;17;;@Test public void testCustomPolicy() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedBodiesReceived("Hello World").     mock.setResultWaitTime(2000).     template.sendBody("seda:foo", "Hello World").     // wait 2 sec but the route is not started     mock.assertIsNotSatisfied().     // now start it using our policy     policy.startRoute().     // now the message should be routed     mock.assertIsSatisfied(). }
-false;public;0;4;;@Override public void configure() throws Exception {     from("seda:foo").noAutoStartup().routePolicy(policy).to("mock:result"). }
-false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("seda:foo").noAutoStartup().routePolicy(policy).to("mock:result").         }     }. }

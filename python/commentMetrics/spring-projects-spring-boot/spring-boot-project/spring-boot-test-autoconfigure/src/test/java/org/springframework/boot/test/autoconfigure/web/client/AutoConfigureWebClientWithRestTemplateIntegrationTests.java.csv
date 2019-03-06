@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void restTemplateTest() {     this.server.expect(requestTo("/test")).andRespond(withSuccess("hello", MediaType.TEXT_HTML)).     ResponseEntity<String> entity = this.restTemplate.getForEntity("/test", String.class).     assertThat(entity.getBody()).isEqualTo("hello"). }

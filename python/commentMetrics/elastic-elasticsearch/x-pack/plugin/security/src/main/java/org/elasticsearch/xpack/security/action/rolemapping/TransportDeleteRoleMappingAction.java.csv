@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public void onResponse(Boolean found) {     listener.onResponse(new DeleteRoleMappingResponse(found)). }
-false;public;1;4;;@Override public void onFailure(Exception t) {     listener.onFailure(t). }
-false;protected;3;14;;@Override protected void doExecute(Task task, DeleteRoleMappingRequest request, ActionListener<DeleteRoleMappingResponse> listener) {     roleMappingStore.deleteRoleMapping(request, new ActionListener<Boolean>() {          @Override         public void onResponse(Boolean found) {             listener.onResponse(new DeleteRoleMappingResponse(found)).         }          @Override         public void onFailure(Exception t) {             listener.onFailure(t).         }     }). }

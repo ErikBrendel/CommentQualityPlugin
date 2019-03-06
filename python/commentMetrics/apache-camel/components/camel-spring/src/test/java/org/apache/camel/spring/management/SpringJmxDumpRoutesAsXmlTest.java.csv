@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected boolean useJmx() {     return true. }
-false;protected;0;4;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/spring/management/SpringJmxDumpRouteAsXmlTest.xml"). }
-false;protected;0;3;;protected MBeanServer getMBeanServer() {     return context.getManagementStrategy().getManagementAgent().getMBeanServer(). }
-false;public;0;17;;@Test public void testJmxDumpRoutesAsXml() throws Exception {     MBeanServer mbeanServer = getMBeanServer().     ObjectName on = ObjectName.getInstance("org.apache.camel:context=camel-1,type=context,name=\"camel-1\"").     String xml = (String) mbeanServer.invoke(on, "dumpRoutesAsXml", null, null).     assertNotNull(xml).     log.info(xml).     assertTrue(xml.contains("route")).     assertTrue(xml.contains("myRoute")).     assertTrue(xml.contains("myOtherRoute")).     assertTrue(xml.contains("direct:start")).     assertTrue(xml.contains("mock:result")).     assertTrue(xml.contains("seda:bar")).     assertTrue(xml.contains("mock:bar")). }

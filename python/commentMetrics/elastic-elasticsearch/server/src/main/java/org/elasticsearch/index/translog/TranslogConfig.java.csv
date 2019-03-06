@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Returns the index indexSettings  */ ;/**  * Returns the index indexSettings  */ public IndexSettings getIndexSettings() {     return indexSettings. }
-true;public;0;3;/**  * Returns the shard ID this config is created for  */ ;/**  * Returns the shard ID this config is created for  */ public ShardId getShardId() {     return shardId. }
-true;public;0;3;/**  * Returns a BigArrays instance for this engine  */ ;/**  * Returns a BigArrays instance for this engine  */ public BigArrays getBigArrays() {     return bigArrays. }
-true;public;0;3;/**  * Returns the translog path for this engine  */ ;/**  * Returns the translog path for this engine  */ public Path getTranslogPath() {     return translogPath. }
-true;public;0;3;/**  * The translog buffer size. Default is {@code 8kb}  */ ;/**  * The translog buffer size. Default is {@code 8kb}  */ public ByteSizeValue getBufferSize() {     return bufferSize. }

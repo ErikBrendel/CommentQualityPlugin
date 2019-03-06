@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Before public void setUp() {     MockitoAnnotations.initMocks(this). }
-false;public;0;8;;@Test public void readOperationShouldReturnGraph() {     Graph mockedGraph = mock(Graph.class).     given(this.integrationGraphServer.getGraph()).willReturn(mockedGraph).     Graph graph = this.integrationGraphEndpoint.graph().     verify(this.integrationGraphServer).getGraph().     assertThat(graph).isEqualTo(mockedGraph). }
-false;public;0;5;;@Test public void writeOperationShouldRebuildGraph() {     this.integrationGraphEndpoint.rebuild().     verify(this.integrationGraphServer).rebuild(). }

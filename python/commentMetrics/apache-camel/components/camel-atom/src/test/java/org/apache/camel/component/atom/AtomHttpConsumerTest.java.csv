@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Ignore("requires to be online for testing") @Test public void testHttpConsumer() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMessageCount(1).     mock.assertIsSatisfied(). }
-false;public;0;3;;public void configure() throws Exception {     from("atom:http://feeds2.feedburner.com/ApacheCamel.atom?splitEntries=false").to("mock:result"). }
-false;protected;0;7;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from("atom:http://feeds2.feedburner.com/ApacheCamel.atom?splitEntries=false").to("mock:result").         }     }. }

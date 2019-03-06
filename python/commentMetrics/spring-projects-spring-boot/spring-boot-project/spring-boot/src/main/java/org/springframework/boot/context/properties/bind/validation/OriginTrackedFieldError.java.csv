@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public Origin getOrigin() {     return this.origin. }
-false;public;0;7;;@Override public String toString() {     if (this.origin == null) {         return super.toString().     }     return super.toString() + ". origin " + this.origin. }
-false;public,static;2;6;;public static FieldError of(FieldError fieldError, Origin origin) {     if (fieldError == null || origin == null) {         return fieldError.     }     return new OriginTrackedFieldError(fieldError, origin). }

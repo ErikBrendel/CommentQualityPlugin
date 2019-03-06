@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;8;;@Override @SuppressWarnings("unchecked") public O process(I i) throws Exception {     LOG.debug("processing item [{}]...", i).     O result = (O) producerTemplate.requestBody(endpointUri, i).     LOG.debug("processed item").     return result. }

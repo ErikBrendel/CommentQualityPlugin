@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;3;10;;public String hello(@Body String body, @Header("foo") String foo, @Headers Map<String, Object> headers) {     String s = body.replaceFirst("Hello", "Bye").     if (!foo.equals("ABC")) {         throw new IllegalArgumentException("Foo has not expected value ABC but " + foo).     }     headers.put("foo", 123).     return s. }

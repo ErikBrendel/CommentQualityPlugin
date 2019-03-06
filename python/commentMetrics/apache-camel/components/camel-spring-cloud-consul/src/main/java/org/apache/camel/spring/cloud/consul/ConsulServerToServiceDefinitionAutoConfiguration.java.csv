@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Bean(name = "consul-server-to-service-definition") public Converter<ConsulServer, ServiceDefinition> consulServerToServiceDefinition() {     return new ConsulServerToServiceDefinition(). }

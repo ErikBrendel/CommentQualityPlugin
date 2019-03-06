@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;// -------------------------------------------------------------------------------------------- @Override protected TypeSerializer<T> createSerializer() {     return this.serializer. }
-false;protected;0;4;;@Override protected int getLength() {     return this.length. }
-false;protected;0;4;;@Override protected Class<T> getTypeClass() {     return this.typeClass. }
-false;protected;0;4;;@Override protected T[] getTestData() {     return this.testData. }
-false;public;0;14;;// -------------------------------------------------------------------------------------------- public void testAll() {     testInstantiate().     testGetLength().     testCopy().     testCopyIntoNewElements().     testCopyIntoReusedElements().     testSerializeIndividually().     testSerializeIndividuallyReusingValues().     testSerializeAsSequenceNoReuse().     testSerializeAsSequenceReusingValues().     testSerializedCopyIndividually().     testSerializedCopyAsSequence().     testSerializabilityAndEquals(). }

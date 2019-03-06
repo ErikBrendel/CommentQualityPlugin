@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Bean public ServletManagementContextFactory servletWebChildContextFactory() {     return new ServletManagementContextFactory(). }
-false;public;1;5;;@Bean public ManagementServletContext managementServletContext(WebEndpointProperties properties) {     return properties::getBasePath. }
-false;public;1;5;;@Bean public ApplicationContextHeaderFilter applicationContextIdFilter(ApplicationContext context) {     return new ApplicationContextHeaderFilter(context). }

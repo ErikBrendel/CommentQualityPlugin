@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;12;;@Test public void bindWhenBindingCamelCaseToEnvironmentWithExtractUnderscore() {     // gh-10873     MockEnvironment environment = new MockEnvironment().     SystemEnvironmentPropertySource propertySource = new SystemEnvironmentPropertySource(StandardEnvironment.SYSTEM_ENVIRONMENT_PROPERTY_SOURCE_NAME, Collections.singletonMap("FOO_ZK_NODES", "foo")).     environment.getPropertySources().addFirst(propertySource).     ExampleCamelCaseBean result = Binder.get(environment).bind("foo", Bindable.of(ExampleCamelCaseBean.class)).get().     assertThat(result.getZkNodes()).isEqualTo("foo"). }
-false;public;0;10;;@Test public void bindWhenUsingSystemEnvironmentToOverride() {     MockEnvironment environment = new MockEnvironment().     SystemEnvironmentPropertySource propertySource = new SystemEnvironmentPropertySource("override", Collections.singletonMap("foo.password", "test")).     environment.getPropertySources().addFirst(propertySource).     PasswordProperties result = Binder.get(environment).bind("foo", Bindable.of(PasswordProperties.class)).get().     assertThat(result.getPassword()).isEqualTo("test"). }
-false;public;0;3;;public String getZkNodes() {     return this.zkNodes. }
-false;public;1;3;;public void setZkNodes(String zkNodes) {     this.zkNodes = zkNodes. }
-false;public;0;3;;public String getPassword() {     return this.password. }
-false;public;1;3;;public void setPassword(String password) {     this.password = password. }

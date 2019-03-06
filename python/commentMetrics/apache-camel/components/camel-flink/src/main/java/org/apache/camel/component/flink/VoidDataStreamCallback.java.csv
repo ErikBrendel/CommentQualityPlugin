@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,abstract;2;1;;public abstract void doOnDataStream(DataStream ds, Object... payloads) throws Exception.
-false;public;2;5;;@Override public Void onDataStream(DataStream ds, Object... payloads) throws Exception {     doOnDataStream(ds, payloads).     return null. }

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Override public ErrorStep createRandomInstance() {     StepKey stepKey = new StepKey(randomAlphaOfLength(10), randomAlphaOfLength(10), ErrorStep.NAME).     return new ErrorStep(stepKey). }
-false;public;1;9;;@Override public ErrorStep mutateInstance(ErrorStep instance) {     StepKey key = instance.getKey().     assertSame(instance.getNextStepKey(), instance.getKey()).     key = new StepKey(key.getPhase(), key.getAction() + randomAlphaOfLength(5), key.getName()).     return new ErrorStep(key). }
-false;public;1;5;;@Override public ErrorStep copyInstance(ErrorStep instance) {     assertSame(instance.getNextStepKey(), instance.getKey()).     return new ErrorStep(instance.getKey()). }
-false;public;0;5;;public void testInvalidStepKey() {     StepKey invalidKey = randomStepKey().     IllegalArgumentException exception = expectThrows(IllegalArgumentException.class, () -> new ErrorStep(invalidKey)).     assertEquals("An error step must have a step key whose step name is " + ErrorStep.NAME, exception.getMessage()). }
-false;public;0;5;;@Override public void testStepNameNotError() { // Need to override this test because this is the one special step that // is allowed to have ERROR as the step name }

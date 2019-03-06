@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry jndi = super.createRegistry().     jndi.bind("myPolicy", policy).     return jndi. }
-false;protected;0;4;;@Override protected MyRoutePolicy getAndInitMyRoutePolicy() {     return context.getRegistry().lookupByNameAndType("myPolicy", MyRoutePolicy.class). }
-false;public;0;5;;@Override public void configure() throws Exception {     from("direct:start").routeId("foo").routePolicyRef("myPolicy").to("mock:result"). }
-false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").routeId("foo").routePolicyRef("myPolicy").to("mock:result").         }     }. }

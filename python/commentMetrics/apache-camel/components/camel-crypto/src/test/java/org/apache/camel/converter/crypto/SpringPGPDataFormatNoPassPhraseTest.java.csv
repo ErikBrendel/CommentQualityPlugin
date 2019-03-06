@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;3;;protected CamelContext createCamelContext() throws Exception {     return SpringCamelContext.springCamelContext(new ClassPathXmlApplicationContext("/org/apache/camel/component/crypto/SpringPGPDataFormatTest.xml"), true). }
-false;public;0;4;;@Test public void testEncryption() throws Exception {     doRoundTripEncryptionTests("direct:inline"). }
-false;public;0;4;;@Test public void testEncryptionWithKeyRingByteArray() throws Exception {     doRoundTripEncryptionTests("direct:pgp-key-ring-byte-array"). }

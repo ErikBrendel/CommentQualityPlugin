@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,static;2;3;/**  * Creates a link with a given url and description.  *  * @param link address that this link should point to  * @param text a description for that link, that should be used in text  * @return link representation  */ ;/**  * Creates a link with a given url and description.  *  * @param link address that this link should point to  * @param text a description for that link, that should be used in text  * @return link representation  */ public static LinkElement link(String link, String text) {     return new LinkElement(link, text). }
-true;public,static;1;3;/**  * Creates a link with a given url. This url will be used as a description for that link.  *  * @param link address that this link should point to  * @return link representation  */ ;/**  * Creates a link with a given url. This url will be used as a description for that link.  *  * @param link address that this link should point to  * @return link representation  */ public static LinkElement link(String link) {     return new LinkElement(link, link). }
-false;public;0;3;;public String getLink() {     return link. }
-false;public;0;3;;public String getText() {     return text. }
-false;public;1;4;;@Override public void format(Formatter formatter) {     formatter.format(this). }

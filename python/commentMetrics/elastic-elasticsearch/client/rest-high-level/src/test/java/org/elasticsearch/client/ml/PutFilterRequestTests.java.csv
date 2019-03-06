@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected PutFilterRequest createTestInstance() {     return new PutFilterRequest(MlFilterTests.createRandom()). }
-false;protected;1;4;;@Override protected PutFilterRequest doParseInstance(XContentParser parser) {     return new PutFilterRequest(MlFilter.PARSER.apply(parser, null).build()). }
-false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return false. }

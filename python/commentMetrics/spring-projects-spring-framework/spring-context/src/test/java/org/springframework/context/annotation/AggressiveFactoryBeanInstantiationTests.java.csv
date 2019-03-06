@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;@Test public void directlyRegisteredFactoryBean() {     try (AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext()) {         context.register(SimpleFactoryBean.class).         context.addBeanFactoryPostProcessor((factory) -> {             BeanFactoryUtils.beanNamesForTypeIncludingAncestors(factory, String.class).         }).         context.refresh().     } }
-false;public;0;10;;@Test public void beanMethodFactoryBean() {     try (AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext()) {         context.register(BeanMethodConfiguration.class).         context.addBeanFactoryPostProcessor((factory) -> {             BeanFactoryUtils.beanNamesForTypeIncludingAncestors(factory, String.class).         }).         context.refresh().     } }
-false;public;1;4;;@Bean public SimpleFactoryBean simpleFactoryBean(ApplicationContext applicationContext) {     return new SimpleFactoryBean(applicationContext). }
-false;public;0;4;;@Override public Object getObject() {     return new Object(). }
-false;public;0;4;;@Override public Class<?> getObjectType() {     return Object.class. }

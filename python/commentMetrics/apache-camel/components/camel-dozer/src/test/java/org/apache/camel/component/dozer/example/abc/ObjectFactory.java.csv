@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Create an instance of {@link ABCOrder }  */ ;/**  * Create an instance of {@link ABCOrder }  */ public ABCOrder createABCOrder() {     return new ABCOrder(). }
-true;public;0;3;/**  * Create an instance of {@link ABCOrder.OrderItems }  */ ;/**  * Create an instance of {@link ABCOrder.OrderItems }  */ public ABCOrder.OrderItems createABCOrderOrderItems() {     return new ABCOrder.OrderItems(). }
-true;public;0;3;/**  * Create an instance of {@link ABCOrder.Header }  */ ;/**  * Create an instance of {@link ABCOrder.Header }  */ public ABCOrder.Header createABCOrderHeader() {     return new ABCOrder.Header(). }
-true;public;0;3;/**  * Create an instance of {@link ABCOrder.OrderItems.Item }  */ ;/**  * Create an instance of {@link ABCOrder.OrderItems.Item }  */ public ABCOrder.OrderItems.Item createABCOrderOrderItemsItem() {     return new ABCOrder.OrderItems.Item(). }

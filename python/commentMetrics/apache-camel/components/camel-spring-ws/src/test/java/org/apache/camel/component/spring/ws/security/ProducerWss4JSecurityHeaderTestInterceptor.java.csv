@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;2;12;;protected void validateMessage(SoapMessage soapMessage, MessageContext messageContext) {     ByteArrayOutputStream out = new ByteArrayOutputStream().     try {         soapMessage.writeTo(out).     } catch (IOException exception) {     // do nothing - because this is a sample class     }     String strMsg = new String(out.toByteArray()).     isX509DataPresent = strMsg.contains("X509Data").     super.validateMessage(soapMessage, messageContext). }

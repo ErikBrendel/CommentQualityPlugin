@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public void initialize(ConfigurableApplicationContext applicationContext) {     applicationContext.getBeanFactory().registerScope("restart", new RestartScope()). }
-false;public;2;4;;@Override public Object get(String name, ObjectFactory<?> objectFactory) {     return Restarter.getInstance().getOrAddAttribute(name, objectFactory). }
-false;public;1;4;;@Override public Object remove(String name) {     return Restarter.getInstance().removeAttribute(name). }
-false;public;2;3;;@Override public void registerDestructionCallback(String name, Runnable callback) { }
-false;public;1;4;;@Override public Object resolveContextualObject(String key) {     return null. }
-false;public;0;4;;@Override public String getConversationId() {     return null. }

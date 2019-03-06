@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Return the configuration mode for parsers using this configuration object.  */ ;/**  * Return the configuration mode for parsers using this configuration object.  */ public SpelCompilerMode getCompilerMode() {     return this.compilerMode. }
-true;public;0;4;/**  * Return the ClassLoader to use as the basis for expression compilation.  */ ;/**  * Return the ClassLoader to use as the basis for expression compilation.  */ @Nullable public ClassLoader getCompilerClassLoader() {     return this.compilerClassLoader. }
-true;public;0;3;/**  * Return {@code true} if {@code null} references should be automatically grown.  */ ;/**  * Return {@code true} if {@code null} references should be automatically grown.  */ public boolean isAutoGrowNullReferences() {     return this.autoGrowNullReferences. }
-true;public;0;3;/**  * Return {@code true} if collections should be automatically grown.  */ ;/**  * Return {@code true} if collections should be automatically grown.  */ public boolean isAutoGrowCollections() {     return this.autoGrowCollections. }
-true;public;0;3;/**  * Return the maximum size that a collection can auto grow.  */ ;/**  * Return the maximum size that a collection can auto grow.  */ public int getMaximumAutoGrowSize() {     return this.maximumAutoGrowSize. }

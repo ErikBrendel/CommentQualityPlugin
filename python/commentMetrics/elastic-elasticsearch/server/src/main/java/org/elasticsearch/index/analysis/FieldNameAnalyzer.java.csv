@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public Map<String, Analyzer> analyzers() {     return analyzers. }
-false;protected;1;10;;@Override protected Analyzer getWrappedAnalyzer(String fieldName) {     Analyzer analyzer = analyzers.get(fieldName).     if (analyzer != null) {         return analyzer.     }     // Fields need to be explicitly added     throw new IllegalArgumentException("Field [" + fieldName + "] has no associated analyzer"). }

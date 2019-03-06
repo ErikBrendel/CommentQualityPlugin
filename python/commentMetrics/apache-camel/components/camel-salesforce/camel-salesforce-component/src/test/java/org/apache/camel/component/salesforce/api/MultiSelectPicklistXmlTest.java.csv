@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;14;;@Test public void testMarshal() throws Exception {     final MSPTest mspTest = new MSPTest().     mspTest.setMspField(MSPTest.MSPEnum.values()).     String xml = xStream.toXML(mspTest).     assertEquals(TEST_XML, xml).     // test null value     mspTest.setMspField(null).     xml = xStream.toXML(mspTest).     assertEquals(TEST_NULL_XML, xml). }
-false;public;0;9;;@Test public void testUnmarshal() throws Exception {     MSPTest mspTest = (MSPTest) xStream.fromXML(TEST_XML).     assertArrayEquals(MSPTest.MSPEnum.values(), mspTest.getMspField()).     // test null field value     mspTest = (MSPTest) xStream.fromXML(TEST_NULL_XML).     assertNull(mspTest.getMspField()). }

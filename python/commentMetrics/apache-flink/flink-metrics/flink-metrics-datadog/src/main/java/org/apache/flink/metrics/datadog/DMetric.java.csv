@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public MetricType getType() {     return type. }
-false;public;0;3;;public String getMetric() {     return metric. }
-false;public;0;3;;public String getHost() {     return host. }
-false;public;0;3;;public List<String> getTags() {     return tags. }
-false;public;0;11;;public List<List<Number>> getPoints() {     // One single data point     List<Number> point = new ArrayList<>().     point.add(getUnixEpochTimestamp()).     point.add(getMetricValue()).     List<List<Number>> points = new ArrayList<>().     points.add(point).     return points. }
-false;public,abstract;0;2;;@JsonIgnore public abstract Number getMetricValue().
-false;public,static;0;3;;public static long getUnixEpochTimestamp() {     return (System.currentTimeMillis() / MILLIS_TO_SEC). }

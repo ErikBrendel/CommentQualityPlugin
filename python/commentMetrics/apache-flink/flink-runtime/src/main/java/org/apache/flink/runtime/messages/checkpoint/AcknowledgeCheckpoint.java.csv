@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;// ------------------------------------------------------------------------ // properties // ------------------------------------------------------------------------ public TaskStateSnapshot getSubtaskState() {     return subtaskState. }
-false;public;0;3;;public CheckpointMetrics getCheckpointMetrics() {     return checkpointMetrics. }
-false;public;1;17;;// -------------------------------------------------------------------------------------------- @Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (!(o instanceof AcknowledgeCheckpoint)) {         return false.     }     if (!super.equals(o)) {         return false.     }     AcknowledgeCheckpoint that = (AcknowledgeCheckpoint) o.     return subtaskState != null ? subtaskState.equals(that.subtaskState) : that.subtaskState == null. }
-false;public;0;6;;@Override public int hashCode() {     int result = super.hashCode().     result = 31 * result + (subtaskState != null ? subtaskState.hashCode() : 0).     return result. }
-false;public;0;5;;@Override public String toString() {     return String.format("Confirm Task Checkpoint %d for (%s/%s) - state=%s", getCheckpointId(), getJob(), getTaskExecutionId(), subtaskState). }

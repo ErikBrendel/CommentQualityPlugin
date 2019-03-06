@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public String getOrderId() {     return orderId. }
-false;public;1;4;;public Order setOrderId(String orderId) {     this.orderId = orderId.     return this. }
-false;public;0;3;;public String getItemId() {     return itemId. }
-false;public;1;4;;public Order setItemId(String itemId) {     this.itemId = itemId.     return this. }
-false;public;0;3;;public int getQuantity() {     return quantity. }
-false;public;1;4;;public Order setQuantity(int quantity) {     this.quantity = quantity.     return this. }
-false;public;0;4;;@Override public String toString() {     return String.format("Order[orderId='%s', itemId='%s', quantity='%s']", orderId, itemId, quantity). }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;5;;@Override protected PostDataAction.Response createTestInstance() {     DataCounts counts = new DataCountsTests().createTestInstance().     return new PostDataAction.Response(counts). }
-false;protected;0;4;;@Override protected Writeable.Reader<PostDataAction.Response> instanceReader() {     return PostDataAction.Response::new. }

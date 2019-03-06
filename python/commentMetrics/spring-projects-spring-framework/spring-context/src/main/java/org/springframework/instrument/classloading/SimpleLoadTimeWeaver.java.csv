@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public void addTransformer(ClassFileTransformer transformer) {     this.classLoader.addTransformer(transformer). }
-false;public;0;4;;@Override public ClassLoader getInstrumentableClassLoader() {     return this.classLoader. }
-true;public;0;4;/**  * This implementation builds a {@link SimpleThrowawayClassLoader}.  */ ;/**  * This implementation builds a {@link SimpleThrowawayClassLoader}.  */ @Override public ClassLoader getThrowawayClassLoader() {     return new SimpleThrowawayClassLoader(getInstrumentableClassLoader()). }

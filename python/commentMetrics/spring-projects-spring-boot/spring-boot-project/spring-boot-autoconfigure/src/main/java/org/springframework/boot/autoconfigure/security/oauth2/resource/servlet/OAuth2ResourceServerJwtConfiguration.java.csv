@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Bean @ConditionalOnProperty(name = "spring.security.oauth2.resourceserver.jwt.jwk-set-uri") @ConditionalOnMissingBean public JwtDecoder jwtDecoderByJwkKeySetUri() {     return new NimbusJwtDecoderJwkSupport(this.properties.getJwkSetUri(), this.properties.getJwsAlgorithm()). }
-false;public;0;6;;@Bean @Conditional(IssuerUriCondition.class) @ConditionalOnMissingBean public JwtDecoder jwtDecoderByIssuerUri() {     return JwtDecoders.fromOidcIssuerLocation(this.properties.getIssuerUri()). }

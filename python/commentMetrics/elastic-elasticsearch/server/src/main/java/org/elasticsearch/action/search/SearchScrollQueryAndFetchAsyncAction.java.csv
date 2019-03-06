@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;3;5;;@Override protected void executeInitialPhase(Transport.Connection connection, InternalScrollSearchRequest internalRequest, SearchActionListener<ScrollQueryFetchSearchResult> searchActionListener) {     searchTransportService.sendExecuteScrollFetch(connection, internalRequest, task, searchActionListener). }
-false;protected;1;4;;@Override protected SearchPhase moveToNextPhase(BiFunction<String, String, DiscoveryNode> clusterNodeLookup) {     return sendResponsePhase(searchPhaseController.reducedScrollQueryPhase(queryFetchResults.asList()), queryFetchResults). }
-false;protected;2;4;;@Override protected void onFirstPhaseResult(int shardId, ScrollQueryFetchSearchResult result) {     queryFetchResults.setOnce(shardId, result.result()). }

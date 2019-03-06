@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public Expression replaceChildren(List<Expression> newChildren) {     return new IfNull(source(), newChildren). }
-false;protected;0;4;;@Override protected NodeInfo<IfNull> info() {     return NodeInfo.create(this, IfNull::new, children().get(0), children().get(1)). }

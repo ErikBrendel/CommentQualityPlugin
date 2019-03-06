@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;9;;@Override public void addTransformer(ClassFileTransformer transformer) {     try {         this.addTransformer.invoke(this.delegatingTransformer, transformer).     } catch (Throwable ex) {         throw new IllegalStateException("Could not add transformer on JBoss ClassLoader: " + this.classLoader, ex).     } }
-false;public;0;4;;@Override public ClassLoader getInstrumentableClassLoader() {     return this.classLoader. }
-false;public;0;4;;@Override public ClassLoader getThrowawayClassLoader() {     return new SimpleThrowawayClassLoader(getInstrumentableClassLoader()). }

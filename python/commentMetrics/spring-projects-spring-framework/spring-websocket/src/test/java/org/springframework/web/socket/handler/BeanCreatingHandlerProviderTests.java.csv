@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void getHandlerSimpleInstantiation() {     BeanCreatingHandlerProvider<SimpleEchoHandler> provider = new BeanCreatingHandlerProvider<>(SimpleEchoHandler.class).     assertNotNull(provider.getHandler()). }
-false;public;0;12;;@Test public void getHandlerWithBeanFactory() {     @SuppressWarnings("resource")     ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(Config.class).     BeanCreatingHandlerProvider<EchoHandler> provider = new BeanCreatingHandlerProvider<>(EchoHandler.class).     provider.setBeanFactory(context.getBeanFactory()).     assertNotNull(provider.getHandler()). }
-false;public;0;8;;@Test(expected = BeanInstantiationException.class) public void getHandlerNoBeanFactory() {     BeanCreatingHandlerProvider<EchoHandler> provider = new BeanCreatingHandlerProvider<>(EchoHandler.class).     provider.getHandler(). }
-false;public;0;4;;@Bean public EchoService echoService() {     return new EchoService(). }

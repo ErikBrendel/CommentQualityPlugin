@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;6;;public static Comparator<EtcdServiceDefinition> comparator() {     Comparator<EtcdServiceDefinition> byAddress = (e1, e2) -> e2.getHost().compareTo(e1.getHost()).     Comparator<EtcdServiceDefinition> byPort = (e1, e2) -> Integer.compare(e2.getPort(), e1.getPort()).     return byAddress.thenComparing(byPort). }

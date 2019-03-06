@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void servletPathWhenEndsWithSlashHasValidMappingAndPrefix() {     bind("spring.mvc.servlet.path", "/foo/").     assertThat(this.properties.getServlet().getServletMapping()).isEqualTo("/foo/*").     assertThat(this.properties.getServlet().getServletPrefix()).isEqualTo("/foo"). }
-false;public;0;6;;@Test public void servletPathWhenDoesNotEndWithSlashHasValidMappingAndPrefix() {     bind("spring.mvc.servlet.path", "/foo").     assertThat(this.properties.getServlet().getServletMapping()).isEqualTo("/foo/*").     assertThat(this.properties.getServlet().getServletPrefix()).isEqualTo("/foo"). }
-false;public;0;8;;@Test public void servletPathWhenHasWildcardThrowsException() {     assertThatExceptionOfType(BindException.class).isThrownBy(() -> bind("spring.mvc.servlet.path", "/*")).withRootCauseInstanceOf(IllegalArgumentException.class).satisfies((ex) -> assertThat(Throwables.getRootCause(ex)).hasMessage("Path must not contain wildcards")). }
-false;private;2;3;;private void bind(String name, String value) {     bind(Collections.singletonMap(name, value)). }
-false;private;1;4;;private void bind(Map<String, String> map) {     ConfigurationPropertySource source = new MapConfigurationPropertySource(map).     new Binder(source).bind("spring.mvc", Bindable.ofInstance(this.properties)). }

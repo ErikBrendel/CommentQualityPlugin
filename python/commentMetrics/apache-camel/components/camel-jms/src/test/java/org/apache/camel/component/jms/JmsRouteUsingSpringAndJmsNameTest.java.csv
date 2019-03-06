@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;3;;protected ClassPathXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/component/jms/jmsRouteUsingSpringAndJmsName.xml"). }
-false;public;0;6;;@Override @Before public void setUp() throws Exception {     componentName = "jms".     super.setUp(). }

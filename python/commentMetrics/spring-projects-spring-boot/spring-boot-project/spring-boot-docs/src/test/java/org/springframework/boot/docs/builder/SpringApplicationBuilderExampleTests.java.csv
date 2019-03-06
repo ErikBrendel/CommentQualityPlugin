@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void contextHierarchyWithDisabledBanner() {     new SpringApplicationBuilderExample().hierarchyWithDisabledBanner(new String[0]).     assertThat(this.outputCapture.toString()).doesNotContain(":: Spring Boot ::"). }

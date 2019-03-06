@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;1;4;/**  * Initialize the specified lookups, either immediately or when the injector is created.  */ ;/**  * Initialize the specified lookups, either immediately or when the injector is created.  */ public void initialize(Errors errors) {     injector.lookups = injector.     new LookupProcessor(errors).process(injector, lookups). }
-false;public;1;6;;@Override public <T> Provider<T> getProvider(Key<T> key) {     ProviderLookup<T> lookup = new ProviderLookup<>(key, key).     lookups.add(lookup).     return lookup.getProvider(). }
-false;public;1;6;;@Override public <T> MembersInjector<T> getMembersInjector(TypeLiteral<T> type) {     MembersInjectorLookup<T> lookup = new MembersInjectorLookup<>(type, type).     lookups.add(lookup).     return lookup.getMembersInjector(). }

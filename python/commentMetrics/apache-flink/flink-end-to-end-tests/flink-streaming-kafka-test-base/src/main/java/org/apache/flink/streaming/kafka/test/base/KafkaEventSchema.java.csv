@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public byte[] serialize(KafkaEvent event) {     return event.toString().getBytes(). }
-false;public;1;4;;@Override public KafkaEvent deserialize(byte[] message) throws IOException {     return KafkaEvent.fromString(new String(message)). }
-false;public;1;4;;@Override public boolean isEndOfStream(KafkaEvent nextElement) {     return false. }
-false;public;0;4;;@Override public TypeInformation<KafkaEvent> getProducedType() {     return TypeInformation.of(KafkaEvent.class). }

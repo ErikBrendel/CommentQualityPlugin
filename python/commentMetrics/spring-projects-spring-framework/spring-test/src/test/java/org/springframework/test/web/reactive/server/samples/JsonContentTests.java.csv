@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void jsonContent() {     this.client.get().uri("/persons").accept(MediaType.APPLICATION_JSON_UTF8).exchange().expectStatus().isOk().expectBody().json("[{\"name\":\"Jane\"},{\"name\":\"Jason\"},{\"name\":\"John\"}]"). }
-false;public;0;11;;@Test public void jsonPathIsEqualTo() {     this.client.get().uri("/persons").accept(MediaType.APPLICATION_JSON_UTF8).exchange().expectStatus().isOk().expectBody().jsonPath("$[0].name").isEqualTo("Jane").jsonPath("$[1].name").isEqualTo("Jason").jsonPath("$[2].name").isEqualTo("John"). }
-false;public;0;9;;@Test public void jsonPathMatches() {     this.client.get().uri("/persons/John").accept(MediaType.APPLICATION_JSON_UTF8).exchange().expectStatus().isOk().expectBody().jsonPath("$.name").value(containsString("oh")). }
-false;public;0;9;;@Test public void postJsonContent() {     this.client.post().uri("/persons").contentType(MediaType.APPLICATION_JSON_UTF8).syncBody("{\"name\":\"John\"}").exchange().expectStatus().isCreated().expectBody().isEmpty(). }
-false;;0;4;;@GetMapping Flux<Person> getPersons() {     return Flux.just(new Person("Jane"), new Person("Jason"), new Person("John")). }
-false;;1;4;;@GetMapping("/{name}") Person getPerson(@PathVariable String name) {     return new Person(name). }
-false;;1;4;;@PostMapping ResponseEntity<String> savePerson(@RequestBody Person person) {     return ResponseEntity.created(URI.create("/persons/" + person.getName())).build(). }

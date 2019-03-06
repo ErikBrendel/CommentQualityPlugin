@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Benchmark public void baseline() {     Blackhole.consumeCPU(tokens). }
-false;public;0;6;;@Benchmark @Threads(1) public long getMemoryStats_01() {     Blackhole.consumeCPU(tokens).     return MEMORY_MX_BEAN.getHeapMemoryUsage().getUsed(). }
-false;public;0;6;;@Benchmark @Threads(2) public long getMemoryStats_02() {     Blackhole.consumeCPU(tokens).     return MEMORY_MX_BEAN.getHeapMemoryUsage().getUsed(). }
-false;public;0;6;;@Benchmark @Threads(4) public long getMemoryStats_04() {     Blackhole.consumeCPU(tokens).     return MEMORY_MX_BEAN.getHeapMemoryUsage().getUsed(). }
-false;public;0;6;;@Benchmark @Threads(8) public long getMemoryStats_08() {     Blackhole.consumeCPU(tokens).     return MEMORY_MX_BEAN.getHeapMemoryUsage().getUsed(). }
-false;public;0;6;;@Benchmark @Threads(16) public long getMemoryStats_16() {     Blackhole.consumeCPU(tokens).     return MEMORY_MX_BEAN.getHeapMemoryUsage().getUsed(). }
-false;public;0;6;;@Benchmark @Threads(32) public long getMemoryStats_32() {     Blackhole.consumeCPU(tokens).     return MEMORY_MX_BEAN.getHeapMemoryUsage().getUsed(). }
-false;public;0;6;;@Benchmark @Threads(64) public long getMemoryStats_64() {     Blackhole.consumeCPU(tokens).     return MEMORY_MX_BEAN.getHeapMemoryUsage().getUsed(). }

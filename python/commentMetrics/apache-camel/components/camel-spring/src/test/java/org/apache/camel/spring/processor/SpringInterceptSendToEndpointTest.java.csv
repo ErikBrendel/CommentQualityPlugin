@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;3;;protected CamelContext createCamelContext() throws Exception {     return createSpringCamelContext(this, "org/apache/camel/spring/processor/interceptSendToEndpoint.xml"). }
-false;public;0;11;;@Test public void testInterceptEndpoint() throws Exception {     getMockEndpoint("mock:bar").expectedBodiesReceived("Hello World").     getMockEndpoint("mock:detour").expectedBodiesReceived("Hello World").     getMockEndpoint("mock:foo").expectedBodiesReceived("Bye World").     getMockEndpoint("mock:result").expectedBodiesReceived("Bye World").     template.sendBody("direct:first", "Hello World").     assertMockEndpointsSatisfied(). }

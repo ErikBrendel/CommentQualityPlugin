@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,final;2;6;;@Override public final void flatMap(T value, Collector<T> out) throws Exception {     if (this.wrappedFunction.filter(value)) {         out.collect(value).     } }

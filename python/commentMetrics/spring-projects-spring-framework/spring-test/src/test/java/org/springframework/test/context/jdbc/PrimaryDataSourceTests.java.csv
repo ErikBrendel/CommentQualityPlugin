@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;@Primary @Bean public DataSource primaryDataSource() {     // @formatter:off     return new EmbeddedDatabaseBuilder().generateUniqueName(true).addScript("classpath:/org/springframework/test/context/jdbc/schema.sql").build(). // @formatter:on }
-false;public;0;4;;@Bean public DataSource additionalDataSource() {     return new EmbeddedDatabaseBuilder().generateUniqueName(true).build(). }
-false;public;1;4;;@Autowired public void setDataSource(DataSource dataSource) {     this.jdbcTemplate = new JdbcTemplate(dataSource). }
-false;public;0;7;;@Test @Sql("data.sql") public void dataSourceTest() {     TransactionTestUtils.assertInTransaction(false).     assertEquals("Number of rows in the 'user' table.", 1, JdbcTestUtils.countRowsInTable(this.jdbcTemplate, "user")). }

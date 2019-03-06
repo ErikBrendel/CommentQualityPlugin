@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void testArgNamesOK() {     new ClassPathXmlApplicationContext(getClass().getSimpleName() + "-ok.xml", getClass()). }
-false;public;0;10;;@Test public void testArgNamesError() {     try {         new ClassPathXmlApplicationContext(getClass().getSimpleName() + "-error.xml", getClass()).         fail("Expected BeanCreationException").     } catch (BeanCreationException ex) {         assertTrue(ex.contains(IllegalArgumentException.class)).     } }

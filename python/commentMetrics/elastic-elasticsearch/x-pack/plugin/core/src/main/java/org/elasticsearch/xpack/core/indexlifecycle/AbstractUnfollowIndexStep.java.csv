@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,final;4;12;;@Override public final void performAction(IndexMetaData indexMetaData, ClusterState currentClusterState, ClusterStateObserver observer, Listener listener) {     String followerIndex = indexMetaData.getIndex().getName().     Map<String, String> customIndexMetadata = indexMetaData.getCustomData(CCR_METADATA_KEY).     if (customIndexMetadata == null) {         listener.onResponse(true).         return.     }     innerPerformAction(followerIndex, listener). }
-false;abstract;2;1;;abstract void innerPerformAction(String followerIndex, Listener listener).

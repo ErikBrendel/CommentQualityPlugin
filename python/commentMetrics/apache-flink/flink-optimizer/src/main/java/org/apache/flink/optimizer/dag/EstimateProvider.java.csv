@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * Gets the estimated output size from this node.  *  * @return The estimated output size.  */ ;/**  * Gets the estimated output size from this node.  *  * @return The estimated output size.  */ long getEstimatedOutputSize().
-true;;0;1;/**  * Gets the estimated number of records in the output of this node.  *  * @return The estimated number of records.  */ ;/**  * Gets the estimated number of records in the output of this node.  *  * @return The estimated number of records.  */ long getEstimatedNumRecords().
-true;;0;1;/**  * Gets the estimated number of bytes per record.  *  * @return The estimated number of bytes per record.  */ ;/**  * Gets the estimated number of bytes per record.  *  * @return The estimated number of bytes per record.  */ float getEstimatedAvgWidthPerOutputRecord().

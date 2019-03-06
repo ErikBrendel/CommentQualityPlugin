@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public void setup() {     latch = new CountDownLatch(1). }
-true;public;0;3;/**  * Waits (blocking) on barrier.  *  * @throws InterruptedException  */ ;/**  * Waits (blocking) on barrier.  *  * @throws InterruptedException  */ public void waitForSolutionSetUpdate() throws InterruptedException {     latch.await(). }
-true;public;0;3;/**  * Releases the waiting thread.  */ ;/**  * Releases the waiting thread.  */ public void notifySolutionSetUpdate() {     latch.countDown(). }

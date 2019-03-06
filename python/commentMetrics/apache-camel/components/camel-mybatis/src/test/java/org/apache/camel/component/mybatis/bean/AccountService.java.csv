@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;1;3;;@Select("select ACC_ID as id, ACC_FIRST_NAME as firstName, ACC_LAST_NAME as lastName" + ", ACC_EMAIL as emailAddress from ACCOUNT where ACC_ID = #{id}") Account selectBeanAccountById(@Param("id") int no).
-false;;0;3;;@Select("select * from ACCOUNT order by ACC_ID") @ResultMap("Account.AccountResult") List<Account> selectBeanAllAccounts().
-false;;1;3;;@Insert("insert into ACCOUNT (ACC_ID,ACC_FIRST_NAME,ACC_LAST_NAME,ACC_EMAIL)" + " values (#{id}, #{firstName}, #{lastName}, #{emailAddress})") void insertBeanAccount(Account account).

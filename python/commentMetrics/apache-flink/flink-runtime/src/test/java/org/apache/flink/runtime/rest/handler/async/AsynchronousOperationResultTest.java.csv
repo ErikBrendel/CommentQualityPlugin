@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;7;;@Parameterized.Parameters public static Collection<Object[]> data() {     return Arrays.asList(new Object[][] { { AsynchronousOperationResult.inProgress() }, { AsynchronousOperationResult.completed(new TriggerId()) } }). }
-false;protected;0;4;;@Override protected Class<AsynchronousOperationResult<TriggerId>> getTestResponseClass() {     return (Class<AsynchronousOperationResult<TriggerId>>) (Class<?>) AsynchronousOperationResult.class. }
-false;protected;0;4;;@Override protected Collection<Class<?>> getTypeParameters() {     return Collections.singleton(TriggerId.class). }
-false;protected;0;4;;@Override protected AsynchronousOperationResult<TriggerId> getTestResponseInstance() throws Exception {     return asynchronousOperationResult. }
-false;protected;2;5;;@Override protected void assertOriginalEqualsToUnmarshalled(AsynchronousOperationResult<TriggerId> expected, AsynchronousOperationResult<TriggerId> actual) {     assertThat(actual.queueStatus().getId(), is(expected.queueStatus().getId())).     assertThat(actual.resource(), is(expected.resource())). }

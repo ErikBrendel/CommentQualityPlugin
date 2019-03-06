@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;3;;protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/spring/issues/SpringPackageTest.xml"). }
-false;public;0;9;;@Test public void testFoundRoute() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMessageCount(1).     template.sendBody("direct:start", "Hello World").     mock.assertIsSatisfied(). }

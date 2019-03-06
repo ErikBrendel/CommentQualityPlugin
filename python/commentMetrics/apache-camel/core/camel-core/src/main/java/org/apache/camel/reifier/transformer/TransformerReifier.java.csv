@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;7;;public static TransformerReifier<? extends TransformerDefinition> reifier(TransformerDefinition definition) {     Function<TransformerDefinition, TransformerReifier<? extends TransformerDefinition>> reifier = TRANSFORMERS.get(definition.getClass()).     if (reifier != null) {         return reifier.apply(definition).     }     throw new IllegalStateException("Unsupported definition: " + definition). }
-false;public;1;3;;public Transformer createTransformer(CamelContext context) throws Exception {     return doCreateTransformer(context). }
-false;protected,abstract;1;1;;protected abstract Transformer doCreateTransformer(CamelContext context) throws Exception.

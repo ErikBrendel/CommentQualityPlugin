@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;5;5;;@Override InternalGeoHashGrid buildAggregation(String name, int requiredSize, List<InternalGeoGridBucket> buckets, List<PipelineAggregator> pipelineAggregators, Map<String, Object> metaData) {     return new InternalGeoHashGrid(name, requiredSize, buckets, pipelineAggregators, metaData). }
-false;public;0;4;;@Override public InternalGeoHashGrid buildEmptyAggregation() {     return new InternalGeoHashGrid(name, requiredSize, Collections.emptyList(), pipelineAggregators(), metaData()). }
-false;;0;3;;InternalGeoGridBucket newEmptyBucket() {     return new InternalGeoHashGridBucket(0, 0, null). }

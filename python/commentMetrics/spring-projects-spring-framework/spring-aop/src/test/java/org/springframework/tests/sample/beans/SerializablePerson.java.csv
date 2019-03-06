@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getName() {     return name. }
-false;public;1;4;;@Override public void setName(String name) {     this.name = name. }
-false;public;0;4;;@Override public int getAge() {     return age. }
-false;public;1;4;;@Override public void setAge(int age) {     this.age = age. }
-false;public;1;7;;@Override public Object echo(Object o) throws Throwable {     if (o instanceof Throwable) {         throw (Throwable) o.     }     return o. }
-false;public;1;8;;@Override public boolean equals(Object other) {     if (!(other instanceof SerializablePerson)) {         return false.     }     SerializablePerson p = (SerializablePerson) other.     return p.age == age && ObjectUtils.nullSafeEquals(name, p.name). }
-false;public;0;4;;@Override public int hashCode() {     return SerializablePerson.class.hashCode(). }

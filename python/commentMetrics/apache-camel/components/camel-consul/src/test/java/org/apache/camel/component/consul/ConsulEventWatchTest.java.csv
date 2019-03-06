@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Override public void doPreSetup() {     key = generateRandomString().     client = getConsul().eventClient(). }
-false;public;0;12;;@Test public void testWatchEvent() throws Exception {     List<String> values = generateRandomListOfStrings(3).     MockEndpoint mock = getMockEndpoint("mock:event-watch").     mock.expectedBodiesReceived(values).     mock.expectedHeaderReceived(ConsulConstants.CONSUL_RESULT, true).     values.forEach(v -> client.fireEvent(key, v)).     mock.assertIsSatisfied(). }
-false;public;0;5;;public void configure() {     fromF("consul:event?key=%s&blockSeconds=1", key).to("log:org.apache.camel.component.consul?level=INFO&showAll=true").to("mock:event-watch"). }
-false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() {             fromF("consul:event?key=%s&blockSeconds=1", key).to("log:org.apache.camel.component.consul?level=INFO&showAll=true").to("mock:event-watch").         }     }. }

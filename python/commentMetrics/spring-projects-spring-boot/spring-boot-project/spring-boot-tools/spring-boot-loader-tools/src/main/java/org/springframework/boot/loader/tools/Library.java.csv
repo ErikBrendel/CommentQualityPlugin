@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Return the name of file as it should be written.  * @return the name  */ ;/**  * Return the name of file as it should be written.  * @return the name  */ public String getName() {     return this.name. }
-true;public;0;3;/**  * Return the library file.  * @return the file  */ ;/**  * Return the library file.  * @return the file  */ public File getFile() {     return this.file. }
-true;public;0;3;/**  * Return the scope of the library.  * @return the scope  */ ;/**  * Return the scope of the library.  * @return the scope  */ public LibraryScope getScope() {     return this.scope. }
-true;public;0;3;/**  * Return if the file cannot be used directly as a nested jar and needs to be  * unpacked.  * @return if unpack is required  */ ;/**  * Return if the file cannot be used directly as a nested jar and needs to be  * unpacked.  * @return if unpack is required  */ public boolean isUnpackRequired() {     return this.unpackRequired. }

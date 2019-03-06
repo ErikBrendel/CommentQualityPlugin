@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;13;;@Test public void testGetMessageId() {     String messageId = "abcd".     Exchange exchange = Mockito.mock(Exchange.class).     Message message = Mockito.mock(Message.class).     Mockito.when(exchange.getIn()).thenReturn(message).     Mockito.when(message.getHeader(IronmqSpanDecorator.CAMEL_IRON_MQ_MESSAGE_ID)).thenReturn(messageId).     IronmqSpanDecorator decorator = new IronmqSpanDecorator().     assertEquals(messageId, decorator.getMessageId(exchange)). }

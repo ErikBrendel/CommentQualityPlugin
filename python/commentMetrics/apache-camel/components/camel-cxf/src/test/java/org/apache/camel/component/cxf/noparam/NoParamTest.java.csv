@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;5;;@BeforeClass public static void loadTestSupport() {     // Need to load the static class first     CXFTestSupport.getPort1(). }
-false;protected;0;4;;@Override protected AbstractApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/component/cxf/noparam/camel-route.xml"). }
-false;public;0;5;;@Test public void testNullBodoy() throws Exception {     Object body = template.sendBody("direct:noParam", ExchangePattern.InOut, null).     LOGGER.error(body.toString()). }

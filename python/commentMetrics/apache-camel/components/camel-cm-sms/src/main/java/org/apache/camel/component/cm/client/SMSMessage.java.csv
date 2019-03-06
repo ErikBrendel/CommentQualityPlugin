@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public String getId() {     return id. }
-false;public;0;3;;public String getMessage() {     return message. }
-false;public;0;3;;public String getPhoneNumber() {     return phoneNumber. }
-false;public;0;3;;public String getFrom() {     return from. }
-false;public;0;12;;@Override public String toString() {     StringBuffer toS = new StringBuffer("{phoneNumber: " + phoneNumber + ", message: " + message).     if (from != null && !from.isEmpty()) {         toS.append(", from: " + from).     }     if (id != null && !id.isEmpty()) {         toS.append(", id: " + id).     }     toS.append(" }").     return toS.toString(). }

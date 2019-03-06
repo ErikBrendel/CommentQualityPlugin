@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Creates a transaction error handler that will lookup in application  * context for an exiting transaction manager.  *  * @return the created error handler  */ ;/**  * Creates a transaction error handler that will lookup in application  * context for an exiting transaction manager.  *  * @return the created error handler  */ public JtaTransactionErrorHandlerBuilder transactionErrorHandler() {     return new JtaTransactionErrorHandlerBuilder(). }

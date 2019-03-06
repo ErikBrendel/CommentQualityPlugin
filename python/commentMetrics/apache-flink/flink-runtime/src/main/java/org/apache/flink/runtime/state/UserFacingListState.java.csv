@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;// ------------------------------------------------------------------------ @Override public Iterable<T> get() throws Exception {     Iterable<T> original = originalState.get().     return original != null ? original : emptyState. }
-false;public;1;4;;@Override public void add(T value) throws Exception {     originalState.add(value). }
-false;public;0;4;;@Override public void clear() {     originalState.clear(). }
-false;public;1;4;;@Override public void update(List<T> values) throws Exception {     originalState.update(values). }
-false;public;1;4;;@Override public void addAll(List<T> values) throws Exception {     originalState.addAll(values). }

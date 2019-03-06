@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * Returns the {@link InetSocketAddress address} the server is listening to.  * @return Server address.  */ ;/**  * Returns the {@link InetSocketAddress address} the server is listening to.  * @return Server address.  */ InetSocketAddress getServerAddress().
-true;;0;1;/**  * Starts the server.  */ ;/**  * Starts the server.  */ void start() throws Throwable.
-true;;0;1;/**  * Shuts down the server and all related thread pools.  */ ;/**  * Shuts down the server and all related thread pools.  */ void shutdown().

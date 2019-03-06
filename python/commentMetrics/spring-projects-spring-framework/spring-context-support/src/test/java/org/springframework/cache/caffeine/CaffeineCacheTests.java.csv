@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Before public void setUp() {     nativeCache = Caffeine.newBuilder().build().     cache = new CaffeineCache(CACHE_NAME, nativeCache).     com.github.benmanes.caffeine.cache.Cache<Object, Object> nativeCacheNoNull = Caffeine.newBuilder().build().     cacheNoNull = new CaffeineCache(CACHE_NAME_NO_NULL, nativeCacheNoNull, false). }
-false;protected;0;4;;@Override protected CaffeineCache getCache() {     return getCache(true). }
-false;protected;1;4;;@Override protected CaffeineCache getCache(boolean allowNull) {     return allowNull ? this.cache : this.cacheNoNull. }
-false;protected;0;4;;@Override protected Object getNativeCache() {     return nativeCache. }
-false;public;0;15;;@Test public void testPutIfAbsentNullValue() throws Exception {     CaffeineCache cache = getCache().     Object key = new Object().     Object value = null.     assertNull(cache.get(key)).     assertNull(cache.putIfAbsent(key, value)).     assertEquals(value, cache.get(key).get()).     Cache.ValueWrapper wrapper = cache.putIfAbsent(key, "anotherValue").     // A value is set but is 'null'     assertNotNull(wrapper).     assertEquals(null, wrapper.get()).     // not changed     assertEquals(value, cache.get(key).get()). }

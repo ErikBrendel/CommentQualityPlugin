@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;synchronized;1;9;;synchronized void addReference(SedaEndpoint endpoint) {     if (!endpoints.contains(endpoint)) {         endpoints.add(endpoint).         // update the multipleConsumers setting if need         if (endpoint.isMultipleConsumers()) {             multipleConsumers = true.         }     } }
-false;synchronized;1;5;;synchronized void removeReference(SedaEndpoint endpoint) {     if (endpoints.contains(endpoint)) {         endpoints.remove(endpoint).     } }
-true;public,synchronized;0;3;/**  * Gets the reference counter  */ ;/**  * Gets the reference counter  */ public synchronized int getCount() {     return endpoints.size(). }
-true;public;0;3;/**  * Gets the queue size  *  * @return <tt>null</tt> if unbounded  */ ;/**  * Gets the queue size  *  * @return <tt>null</tt> if unbounded  */ public Integer getSize() {     return size. }
-false;public;0;3;;public Boolean getMultipleConsumers() {     return multipleConsumers. }
-true;public;0;3;/**  * Gets the queue  */ ;/**  * Gets the queue  */ public BlockingQueue<Exchange> getQueue() {     return queue. }
-false;public,synchronized;0;9;;public synchronized boolean hasConsumers() {     for (SedaEndpoint endpoint : endpoints) {         if (endpoint.getConsumers().size() > 0) {             return true.         }     }     return false. }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;14;;@Override public String format(Tuple2<Integer, CoordVector> value) {     line.setLength(0).     line.append(value.f0).     for (double coord : value.f1.getCoordinates()) {         line.append('|').         line.append(df.format(coord)).     }     line.append('|').     return line.toString(). }

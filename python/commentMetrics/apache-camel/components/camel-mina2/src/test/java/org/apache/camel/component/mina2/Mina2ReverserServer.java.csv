@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;12;;public void start() throws Exception {     acceptor = new NioSocketAcceptor().     // Prepare the configuration     ((NioSocketAcceptor) acceptor).setReuseAddress(true).     Charset charset = Charset.forName("UTF-8").     acceptor.getFilterChain().addLast("codec", new ProtocolCodecFilter(new TextLineCodecFactory(charset))).     acceptor.setHandler(new Mina2ReverseProtocolHandler()).     // Bind     acceptor.bind(new InetSocketAddress(port)). }
-false;public;0;3;;public void stop() throws Exception {     acceptor.unbind(). }
-false;public;0;3;;public int getPort() {     return port. }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;7;;public static Terminal createDummyTerminal() {     try {         return new DumbTerminal(new MockInputStream(), new MockOutputStream()).     } catch (IOException e) {         throw new RuntimeException("Unable to create dummy terminal.").     } }
-false;public;0;4;;@Override public int read() {     return 0. }
-false;public;1;4;;@Override public void write(int b) { // do nothing }

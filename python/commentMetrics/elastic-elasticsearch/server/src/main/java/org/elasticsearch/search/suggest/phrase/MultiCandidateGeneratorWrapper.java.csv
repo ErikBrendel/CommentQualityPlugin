@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public boolean isKnownWord(BytesRef term) throws IOException {     return candidateGenerator[0].isKnownWord(term). }
-false;public;1;4;;@Override public TermStats termStats(BytesRef term) throws IOException {     return candidateGenerator[0].termStats(term). }
-false;public;1;7;;@Override public CandidateSet drawCandidates(CandidateSet set) throws IOException {     for (CandidateGenerator generator : candidateGenerator) {         generator.drawCandidates(set).     }     return reduce(set, numCandidates). }
-false;private;2;11;;private CandidateSet reduce(CandidateSet set, int numCandidates) {     if (set.candidates.length > numCandidates) {         Candidate[] candidates = set.candidates.         Arrays.sort(candidates, (left, right) -> Double.compare(right.score, left.score)).         Candidate[] newSet = new Candidate[numCandidates].         System.arraycopy(candidates, 0, newSet, 0, numCandidates).         set.candidates = newSet.     }     return set. }
-false;public;4;4;;@Override public Candidate createCandidate(BytesRef term, TermStats termStats, double channelScore, boolean userInput) throws IOException {     return candidateGenerator[0].createCandidate(term, termStats, channelScore, userInput). }

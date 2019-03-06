@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;10;;@Override public void process(Exchange exchange) throws Exception {     Object body = exchange.getIn().getBody().     if (body != null) {         log.debug("Posting: {} to EventBus: {}", body, eventBus).         eventBus.post(body).     } else {         log.debug("Body is null, cannot post to EventBus").     } }

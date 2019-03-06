@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@ReadOperation public HttpTraceDescriptor traces() {     return new HttpTraceDescriptor(this.repository.findAll()). }
-false;public;0;3;;public List<HttpTrace> getTraces() {     return this.traces. }

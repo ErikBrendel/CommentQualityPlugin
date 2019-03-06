@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public void setRuntimeContext(RuntimeContext t) {     this.runtimeContext = t. }
-false;public;0;8;;@Override public RuntimeContext getRuntimeContext() {     if (this.runtimeContext != null) {         return this.runtimeContext.     } else {         throw new IllegalStateException("The runtime context has not been initialized.").     } }
-false;public;0;10;;@Override public IterationRuntimeContext getIterationRuntimeContext() {     if (this.runtimeContext == null) {         throw new IllegalStateException("The runtime context has not been initialized.").     } else if (this.runtimeContext instanceof IterationRuntimeContext) {         return (IterationRuntimeContext) this.runtimeContext.     } else {         throw new IllegalStateException("This stub is not part of an iteration step function.").     } }
-false;public;1;2;;// -------------------------------------------------------------------------------------------- // Default life cycle methods // -------------------------------------------------------------------------------------------- @Override public void open(Configuration parameters) throws Exception { }
-false;public;0;2;;@Override public void close() throws Exception { }

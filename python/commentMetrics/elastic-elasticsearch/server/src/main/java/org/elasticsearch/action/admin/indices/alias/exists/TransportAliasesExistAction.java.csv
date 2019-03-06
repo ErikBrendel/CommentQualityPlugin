@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;5;;@Override protected String executor() {     // very lightweight operation, no need to fork     return ThreadPool.Names.SAME. }
-false;protected;2;5;;@Override protected ClusterBlockException checkBlock(GetAliasesRequest request, ClusterState state) {     return state.blocks().indicesBlockedException(ClusterBlockLevel.METADATA_READ, indexNameExpressionResolver.concreteIndexNames(state, request)). }
-false;protected;0;4;;@Override protected AliasesExistResponse newResponse() {     return new AliasesExistResponse(). }
-false;protected;3;6;;@Override protected void masterOperation(GetAliasesRequest request, ClusterState state, ActionListener<AliasesExistResponse> listener) {     String[] concreteIndices = indexNameExpressionResolver.concreteIndexNames(state, request).     boolean result = state.metaData().hasAliases(request.aliases(), concreteIndices).     listener.onResponse(new AliasesExistResponse(result)). }

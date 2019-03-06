@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;2;1;/**  * @return true if the first parameter is LT/LTEQ/EQ/GTEQ/GT the second  */ ;/**  * @return true if the first parameter is LT/LTEQ/EQ/GTEQ/GT the second  */ boolean matches(BigInteger first, BigInteger second).
-false;public;2;4;;@Override public boolean matches(BigInteger first, BigInteger second) {     return first.compareTo(second) < 0. }
-false;public;2;4;;@Override public boolean matches(BigInteger first, BigInteger second) {     return first.compareTo(second) <= 0. }

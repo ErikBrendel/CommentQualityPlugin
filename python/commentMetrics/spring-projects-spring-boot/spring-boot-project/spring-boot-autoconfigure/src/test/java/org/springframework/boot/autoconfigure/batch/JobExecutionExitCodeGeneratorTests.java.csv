@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void testExitCodeForRunning() {     this.generator.onApplicationEvent(new JobExecutionEvent(new JobExecution(0L))).     assertThat(this.generator.getExitCode()).isEqualTo(1). }
-false;public;0;7;;@Test public void testExitCodeForCompleted() {     JobExecution execution = new JobExecution(0L).     execution.setStatus(BatchStatus.COMPLETED).     this.generator.onApplicationEvent(new JobExecutionEvent(execution)).     assertThat(this.generator.getExitCode()).isEqualTo(0). }
-false;public;0;7;;@Test public void testExitCodeForFailed() {     JobExecution execution = new JobExecution(0L).     execution.setStatus(BatchStatus.FAILED).     this.generator.onApplicationEvent(new JobExecutionEvent(execution)).     assertThat(this.generator.getExitCode()).isEqualTo(5). }

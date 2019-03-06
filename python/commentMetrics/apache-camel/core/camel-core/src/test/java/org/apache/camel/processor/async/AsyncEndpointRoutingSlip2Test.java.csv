@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void testAsyncEndpoint() throws Exception {     String reply = template.requestBody("direct:start", "Hello Camel", String.class).     assertEquals("Bye World", reply). }
-false;public;0;7;;@Override public void configure() throws Exception {     context.addComponent("async", new MyAsyncComponent()).     from("direct:start").routingSlip(constant("async:bye:camel,async:bye:world")). }
-false;protected;0;12;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             context.addComponent("async", new MyAsyncComponent()).             from("direct:start").routingSlip(constant("async:bye:camel,async:bye:world")).         }     }. }

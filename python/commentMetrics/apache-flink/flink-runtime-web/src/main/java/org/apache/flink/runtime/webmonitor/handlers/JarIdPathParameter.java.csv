@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;8;;@Override protected String convertFromString(final String value) throws ConversionException {     final Path path = Paths.get(value).     if (path.getParent() != null) {         throw new ConversionException(String.format("%s must be a filename only (%s)", KEY, path)).     }     return value. }
-false;protected;1;4;;@Override protected String convertToString(final String value) {     return value. }
-false;public;0;6;;@Override public String getDescription() {     return "String value that identifies a jar. When uploading the jar a path is returned, where the filename " + "is the ID. This value is equivalent to the `" + JarListInfo.JarFileInfo.JAR_FILE_FIELD_ID + "` field " + "in the list of uploaded jars (" + JarListHeaders.URL + ").". }

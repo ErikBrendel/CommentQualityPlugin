@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;1;4;;RequestMeta queryTimeout(long timeout) {     this.queryTimeoutInMs = timeout.     return this. }
-false;;1;4;;RequestMeta timeout(long timeout) {     this.timeoutInMs = timeout.     return this. }
-false;;1;4;;RequestMeta fetchSize(int size) {     this.fetchSize = size.     return this. }
-false;;0;3;;int fetchSize() {     return fetchSize. }
-false;;0;3;;long timeoutInMs() {     return timeoutInMs. }
-false;;0;3;;long queryTimeoutInMs() {     return queryTimeoutInMs. }

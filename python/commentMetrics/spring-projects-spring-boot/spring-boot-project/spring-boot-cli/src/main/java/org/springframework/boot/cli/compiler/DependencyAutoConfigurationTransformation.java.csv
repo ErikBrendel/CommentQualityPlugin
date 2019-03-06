@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;8;;@Override public void visit(ASTNode[] nodes, SourceUnit source) {     for (ASTNode astNode : nodes) {         if (astNode instanceof ModuleNode) {             visitModule((ModuleNode) astNode).         }     } }
-false;private;1;11;;private void visitModule(ModuleNode module) {     DependencyCustomizer dependencies = new DependencyCustomizer(this.loader, module, this.dependencyResolutionContext).     for (ClassNode classNode : module.getClasses()) {         for (CompilerAutoConfiguration autoConfiguration : this.compilerAutoConfigurations) {             if (autoConfiguration.matches(classNode)) {                 autoConfiguration.applyDependencies(dependencies).             }         }     } }

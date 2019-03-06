@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;5;;@Override public void combine(Iterable<IN> values, Collector<IN> out) throws Exception {     IN outValue = wrappedFunction.combine(values).     out.collect(outValue). }
-false;public;2;4;;@Override public void reduce(Iterable<IN> values, Collector<OUT> out) throws Exception {     wrappedFunction.reduce(values, out). }

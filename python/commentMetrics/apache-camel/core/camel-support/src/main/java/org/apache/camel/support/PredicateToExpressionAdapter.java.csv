@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;5;;@Override public <T> T evaluate(Exchange exchange, Class<T> type) {     boolean matches = predicate.matches(exchange).     return exchange.getContext().getTypeConverter().convertTo(type, exchange, matches). }
-false;public;0;4;;@Override public String toString() {     return predicate.toString(). }
-true;public,static;1;3;/**  * Converts the given predicate into an {@link org.apache.camel.Expression}  */ ;/**  * Converts the given predicate into an {@link org.apache.camel.Expression}  */ public static Expression toExpression(final Predicate predicate) {     return new PredicateToExpressionAdapter(predicate). }

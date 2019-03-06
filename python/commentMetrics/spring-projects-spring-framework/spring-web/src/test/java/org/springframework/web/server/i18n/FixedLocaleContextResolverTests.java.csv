@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Before public void setup() {     Locale.setDefault(US). }
-false;public;0;6;;@Test public void resolveDefaultLocale() {     FixedLocaleContextResolver resolver = new FixedLocaleContextResolver().     assertEquals(US, resolver.resolveLocaleContext(exchange()).getLocale()).     assertEquals(US, resolver.resolveLocaleContext(exchange(CANADA)).getLocale()). }
-false;public;0;6;;@Test public void resolveCustomizedLocale() {     FixedLocaleContextResolver resolver = new FixedLocaleContextResolver(FRANCE).     assertEquals(FRANCE, resolver.resolveLocaleContext(exchange()).getLocale()).     assertEquals(FRANCE, resolver.resolveLocaleContext(exchange(CANADA)).getLocale()). }
-false;public;0;8;;@Test public void resolveCustomizedAndTimeZoneLocale() {     TimeZone timeZone = TimeZone.getTimeZone(ZoneId.of("UTC")).     FixedLocaleContextResolver resolver = new FixedLocaleContextResolver(FRANCE, timeZone).     TimeZoneAwareLocaleContext context = (TimeZoneAwareLocaleContext) resolver.resolveLocaleContext(exchange()).     assertEquals(FRANCE, context.getLocale()).     assertEquals(timeZone, context.getTimeZone()). }
-false;private;1;3;;private ServerWebExchange exchange(Locale... locales) {     return MockServerWebExchange.from(MockServerHttpRequest.get("").acceptLanguageAsLocales(locales)). }

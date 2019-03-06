@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;private;2;9;;private List<OperationParameter> getOperationParameters(Parameter[] parameters, String[] names) {     List<OperationParameter> operationParameters = new ArrayList<>(parameters.length).     for (int i = 0. i < names.length. i++) {         operationParameters.add(new OperationMethodParameter(names[i], parameters[i])).     }     return Collections.unmodifiableList(operationParameters). }
-false;public;0;4;;@Override public int getParameterCount() {     return this.operationParameters.size(). }
-false;public;1;4;;@Override public OperationParameter get(int index) {     return this.operationParameters.get(index). }
-false;public;0;4;;@Override public Iterator<OperationParameter> iterator() {     return this.operationParameters.iterator(). }
-false;public;0;4;;@Override public Stream<OperationParameter> stream() {     return this.operationParameters.stream(). }

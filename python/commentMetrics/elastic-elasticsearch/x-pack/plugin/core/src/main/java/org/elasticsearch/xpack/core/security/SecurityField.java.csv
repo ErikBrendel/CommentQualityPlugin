@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;4;;public static String setting(String setting) {     assert setting != null && setting.startsWith(".") == false.     return settingPrefix() + setting. }
-false;public,static;0;3;;public static String settingPrefix() {     return XPackField.featureSettingPrefix(XPackField.SECURITY) + ".". }

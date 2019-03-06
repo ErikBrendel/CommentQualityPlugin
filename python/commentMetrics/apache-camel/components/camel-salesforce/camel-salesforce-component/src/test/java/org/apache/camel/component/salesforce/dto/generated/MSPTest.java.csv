@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@JsonProperty("MspField") @JsonSerialize(using = MultiSelectPicklistSerializer.class) @JsonInclude(value = Include.ALWAYS) public MSPEnum[] getMspField() {     return MspField. }
-false;public;1;5;;@JsonProperty("MspField") @JsonDeserialize(using = MultiSelectPicklistDeserializer.class) public void setMspField(MSPEnum[] mspField) {     this.MspField = mspField. }
-false;public;0;4;;@JsonValue public String value() {     return this.value. }
-false;public,static;1;9;;@JsonCreator public static MSPEnum fromValue(String value) {     for (MSPEnum e : MSPEnum.values()) {         if (e.value.equals(value)) {             return e.         }     }     throw new IllegalArgumentException(value). }

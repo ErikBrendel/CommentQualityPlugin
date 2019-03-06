@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;9;;@Override public void onApplicationEvent(ApplicationEnvironmentPreparedEvent event) {     ConfigurableEnvironment environment = event.getEnvironment().     Binder.get(environment).bind("spring.output.ansi.enabled", AnsiOutput.Enabled.class).ifBound(AnsiOutput::setEnabled).     AnsiOutput.setConsoleAvailable(environment.getProperty("spring.output.ansi.console-available", Boolean.class)). }
-false;public;0;5;;@Override public int getOrder() {     // Apply after ConfigFileApplicationListener has called EnvironmentPostProcessors     return ConfigFileApplicationListener.DEFAULT_ORDER + 1. }

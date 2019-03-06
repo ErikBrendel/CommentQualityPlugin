@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;7;;@Override public String getBucketId(IN element, BucketAssigner.Context context) {     if (dateTimeFormatter == null) {         dateTimeFormatter = DateTimeFormatter.ofPattern(formatString).withZone(zoneId).     }     return dateTimeFormatter.format(Instant.ofEpochMilli(context.currentProcessingTime())). }
-false;public;0;4;;@Override public SimpleVersionedSerializer<String> getSerializer() {     return SimpleVersionedStringSerializer.INSTANCE. }
-false;public;0;7;;@Override public String toString() {     return "DateTimeBucketAssigner{" + "formatString='" + formatString + '\'' + ", zoneId=" + zoneId + '}'. }

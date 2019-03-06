@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;10;;@Override protected CumulativeSumPipelineAggregationBuilder createTestAggregatorFactory() {     String name = randomAlphaOfLengthBetween(3, 20).     String bucketsPath = randomAlphaOfLengthBetween(3, 20).     CumulativeSumPipelineAggregationBuilder factory = new CumulativeSumPipelineAggregationBuilder(name, bucketsPath).     if (randomBoolean()) {         factory.format(randomAlphaOfLengthBetween(1, 10)).     }     return factory. }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;2;5;;protected AsyncProcessor chooseProcessor(AsyncProcessor[] processors, Exchange exchange) {     int size = processors.length.     int c = counter.updateAndGet(x -> ++x < size ? x : 0).     return processors[c]. }
-false;public;0;3;;public int getLastChosenProcessorIndex() {     return counter.get(). }

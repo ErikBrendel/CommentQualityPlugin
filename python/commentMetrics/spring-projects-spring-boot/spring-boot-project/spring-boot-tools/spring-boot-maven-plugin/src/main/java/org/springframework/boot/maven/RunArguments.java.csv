@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public Deque<String> getArgs() {     return this.args. }
-false;public;0;3;;public String[] asArray() {     return this.args.toArray(new String[0]). }
-false;private,static;1;13;;private static String[] parseArgs(String arguments) {     if (arguments == null || arguments.trim().isEmpty()) {         return NO_ARGS.     }     try {         arguments = arguments.replace('\n', ' ').replace('\t', ' ').         return CommandLineUtils.translateCommandline(arguments).     } catch (Exception ex) {         throw new IllegalArgumentException("Failed to parse arguments [" + arguments + "]", ex).     } }

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public List<Message<byte[]>> getMessages() {     return this.messages. }
-false;public;1;6;;@Override @SuppressWarnings("unchecked") public boolean send(Message<?> message) {     this.messages.add((Message<byte[]>) message).     return true. }
-false;public;2;6;;@Override @SuppressWarnings("unchecked") public boolean send(Message<?> message, long timeout) {     this.messages.add((Message<byte[]>) message).     return true. }
-false;public;1;5;;@Override public boolean subscribe(MessageHandler handler) {     this.handlers.add(handler).     return true. }
-false;public;1;5;;@Override public boolean unsubscribe(MessageHandler handler) {     this.handlers.remove(handler).     return true. }

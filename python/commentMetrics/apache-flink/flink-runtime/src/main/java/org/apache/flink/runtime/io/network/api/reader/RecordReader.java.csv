@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;16;;@Override public boolean hasNext() throws IOException, InterruptedException {     if (currentRecord != null) {         return true.     } else {         T record = instantiateRecordType().         if (getNextRecord(record)) {             currentRecord = record.             return true.         } else {             return false.         }     } }
-false;public;0;11;;@Override public T next() throws IOException, InterruptedException {     if (hasNext()) {         T tmp = currentRecord.         currentRecord = null.         return tmp.     } else {         return null.     } }
-false;public;0;4;;@Override public void clearBuffers() {     super.clearBuffers(). }
-false;private;0;8;;private T instantiateRecordType() {     try {         return recordType.newInstance().     } catch (InstantiationException | IllegalAccessException e) {         throw new RuntimeException("Cannot instantiate class " + recordType.getName(), e).     } }

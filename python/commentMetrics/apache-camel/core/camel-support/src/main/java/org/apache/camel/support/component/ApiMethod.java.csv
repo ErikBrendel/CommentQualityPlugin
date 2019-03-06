@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * Returns method name.  * @return name  */ ;/**  * Returns method name.  * @return name  */ String getName().
-true;;0;1;/**  * Returns method result type.  * @return result type  */ ;/**  * Returns method result type.  * @return result type  */ Class<?> getResultType().
-true;;0;1;/**  * Returns method argument names.  * @return argument names  */ ;/**  * Returns method argument names.  * @return argument names  */ List<String> getArgNames().
-true;;0;1;/**  * Return method argument types.  * @return argument types  */ ;/**  * Return method argument types.  * @return argument types  */ List<Class<?>> getArgTypes().
-true;;0;1;/**  * Returns {@link Method} in proxy type.  * @return method  */ ;/**  * Returns {@link Method} in proxy type.  * @return method  */ Method getMethod().

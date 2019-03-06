@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Returns true if this indexing iteration is done and job should go into sleep mode.  */ ;/**  * Returns true if this indexing iteration is done and job should go into sleep mode.  */ public boolean isDone() {     return isDone. }
-true;public;0;3;/**  * Return the position of the job, a generic to be passed to the next query construction.  *  * @return the position  */ ;/**  * Return the position of the job, a generic to be passed to the next query construction.  *  * @return the position  */ public JobPosition getPosition() {     return position. }
-true;public;0;3;/**  * List of requests to be passed to bulk indexing.  *  * @return List of index requests.  */ ;/**  * List of requests to be passed to bulk indexing.  *  * @return List of index requests.  */ public List<IndexRequest> getToIndex() {     return toIndex. }

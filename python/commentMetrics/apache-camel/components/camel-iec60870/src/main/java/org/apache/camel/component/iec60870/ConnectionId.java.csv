@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public String getHost() {     return this.host. }
-false;public;0;3;;public int getPort() {     return this.port. }
-false;public;0;3;;public String getConnectionId() {     return this.connectionId. }
-false;public;0;9;;@Override public int hashCode() {     final int prime = 31.     int result = 1.     result = prime * result + (this.connectionId == null ? 0 : this.connectionId.hashCode()).     result = prime * result + (this.host == null ? 0 : this.host.hashCode()).     result = prime * result + this.port.     return result. }
-false;public;1;31;;@Override public boolean equals(final Object obj) {     if (this == obj) {         return true.     }     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     final ConnectionId other = (ConnectionId) obj.     if (this.connectionId == null) {         if (other.connectionId != null) {             return false.         }     } else if (!this.connectionId.equals(other.connectionId)) {         return false.     }     if (this.host == null) {         if (other.host != null) {             return false.         }     } else if (!this.host.equals(other.host)) {         return false.     }     if (this.port != other.port) {         return false.     }     return true. }

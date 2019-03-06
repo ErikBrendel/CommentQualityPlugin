@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Test public void trace() {     HttpTraceRepository repository = new InMemoryHttpTraceRepository().     repository.add(new HttpTrace(createRequest("GET"))).     List<HttpTrace> traces = new HttpTraceEndpoint(repository).traces().getTraces().     assertThat(traces).hasSize(1).     HttpTrace trace = traces.get(0).     assertThat(trace.getRequest().getMethod()).isEqualTo("GET"). }
-false;private;1;5;;private TraceableRequest createRequest(String method) {     TraceableRequest request = mock(TraceableRequest.class).     given(request.getMethod()).willReturn(method).     return request. }

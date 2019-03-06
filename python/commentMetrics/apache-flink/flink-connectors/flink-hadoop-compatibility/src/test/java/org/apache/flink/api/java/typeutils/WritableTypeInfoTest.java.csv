@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;7;;@Override protected WritableTypeInfo<?>[] getTestData() {     return new WritableTypeInfo<?>[] { new WritableTypeInfo<>(TestClass.class), new WritableTypeInfo<>(AlternateClass.class) }. }
-false;public;1;2;;@Override public void write(DataOutput dataOutput) throws IOException { }
-false;public;1;2;;@Override public void readFields(DataInput dataInput) throws IOException { }
-false;public;1;2;;@Override public void write(DataOutput dataOutput) throws IOException { }
-false;public;1;2;;@Override public void readFields(DataInput dataInput) throws IOException { }

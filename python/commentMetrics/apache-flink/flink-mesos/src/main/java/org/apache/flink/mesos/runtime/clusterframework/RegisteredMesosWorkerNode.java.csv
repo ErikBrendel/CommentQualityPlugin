@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public MesosWorkerStore.Worker getWorker() {     return worker. }
-false;public;0;4;;@Override public ResourceID getResourceID() {     return MesosResourceManager.extractResourceID(worker.taskID()). }
-false;public;0;6;;@Override public String toString() {     return "RegisteredMesosWorkerNode{" + "worker=" + worker + '}'. }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void spr7816() {     ApplicationContext ctx = new ClassPathXmlApplicationContext("spr7816.xml", getClass()).     FilterAdapter adapter = ctx.getBean(FilterAdapter.class).     assertEquals(Building.class, adapter.getSupportedTypes().get("Building")).     assertEquals(Entrance.class, adapter.getSupportedTypes().get("Entrance")).     assertEquals(Dwelling.class, adapter.getSupportedTypes().get("Dwelling")). }
-false;public;0;3;;public String getExtensionPrefix() {     return extensionPrefix. }
-false;public;0;3;;public Map<String, Class<? extends DomainEntity>> getSupportedTypes() {     return supportedTypes. }

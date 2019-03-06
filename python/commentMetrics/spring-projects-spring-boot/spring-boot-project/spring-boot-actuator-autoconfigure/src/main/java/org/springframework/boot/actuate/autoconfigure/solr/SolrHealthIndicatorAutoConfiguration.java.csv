@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;@Bean @ConditionalOnMissingBean(name = "solrHealthIndicator") public HealthIndicator solrHealthIndicator(Map<String, SolrClient> solrClients) {     return createHealthIndicator(solrClients). }

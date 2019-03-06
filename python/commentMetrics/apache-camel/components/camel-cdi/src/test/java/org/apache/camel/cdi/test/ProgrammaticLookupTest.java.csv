@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;10;;@Deployment public static Archive<?> deployment() {     return ShrinkWrap.create(JavaArchive.class).addPackage(CdiCamelExtension.class.getPackage()).addClass(EndpointInjectRoute.class).addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml"). }
-false;public;0;4;;@Test public void verifyCamelContext() {     assertThat("Context instance status is incorrect!", contexts.get().getStatus(), is(equalTo(ServiceStatus.Started))). }
-false;public;0;12;;@Test public void sendMessageToInbound() throws InterruptedException {     ProducerTemplate inbound = producers.select(Uri.Literal.of("direct:inbound")).get().     MockEndpoint outbound = endpoints.select(MockEndpoint.class, Uri.Literal.of("mock:outbound")).get().     outbound.expectedMessageCount(1).     outbound.expectedBodiesReceived("test").     inbound.sendBody("test").     assertIsSatisfied(2L, TimeUnit.SECONDS, outbound). }

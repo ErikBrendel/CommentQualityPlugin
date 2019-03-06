@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Test public void testPassThroughContract() throws Exception {     Object source = new Object().     Object extractedSource = new PassThroughSourceExtractor().extractSource(source, null).     assertSame("The contract of PassThroughSourceExtractor states that the supplied " + "source object *must* be returned as-is", source, extractedSource). }
-false;public;0;6;;@Test public void testPassThroughContractEvenWithNull() throws Exception {     Object extractedSource = new PassThroughSourceExtractor().extractSource(null, null).     assertNull("The contract of PassThroughSourceExtractor states that the supplied " + "source object *must* be returned as-is (even if null)", extractedSource). }

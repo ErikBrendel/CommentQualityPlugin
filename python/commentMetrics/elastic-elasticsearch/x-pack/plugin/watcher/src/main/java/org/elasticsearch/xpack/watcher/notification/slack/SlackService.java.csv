@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;2;4;;@Override protected SlackAccount createAccount(String name, Settings accountSettings) {     return new SlackAccount(name, accountSettings, httpClient, logger). }
-false;private,static;0;3;;private static List<Setting<?>> getDynamicSettings() {     return Arrays.asList(SETTING_DEFAULT_ACCOUNT, SETTING_DEFAULTS). }
-false;private,static;0;3;;private static List<Setting<?>> getSecureSettings() {     return Arrays.asList(SETTING_URL_SECURE). }
-false;public,static;0;5;;public static List<Setting<?>> getSettings() {     List<Setting<?>> allSettings = new ArrayList<Setting<?>>(getDynamicSettings()).     allSettings.addAll(getSecureSettings()).     return allSettings. }

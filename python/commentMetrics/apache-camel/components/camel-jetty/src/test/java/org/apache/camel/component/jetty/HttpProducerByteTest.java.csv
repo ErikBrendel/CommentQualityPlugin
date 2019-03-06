@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void testHttpProducerByteTest() throws Exception {     byte[] data = "Hello World".getBytes().     String out = template.requestBody("http://localhost:{{port}}/test", data, String.class).     assertEquals("Bye World", out). }
-false;public;0;4;;@Override public void configure() throws Exception {     from("jetty://http://localhost:{{port}}/test").transform(constant("Bye World")). }
-false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("jetty://http://localhost:{{port}}/test").transform(constant("Bye World")).         }     }. }

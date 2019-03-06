@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,final;0;4;/**  * Checks whether any of the data buffers created by {@link #bufferFactory} have not been  * released, throwing an assertion error if so.  */ ;/**  * Checks whether any of the data buffers created by {@link #bufferFactory} have not been  * released, throwing an assertion error if so.  */ @After public final void checkForLeaks() {     this.bufferFactory.checkForLeaks(). }

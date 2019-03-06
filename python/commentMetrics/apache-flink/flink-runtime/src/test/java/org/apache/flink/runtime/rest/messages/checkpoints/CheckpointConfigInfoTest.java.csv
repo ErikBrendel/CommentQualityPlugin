@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected Class<CheckpointConfigInfo> getTestResponseClass() {     return CheckpointConfigInfo.class. }
-false;protected;0;13;;@Override protected CheckpointConfigInfo getTestResponseInstance() {     final CheckpointConfigInfo.ExternalizedCheckpointInfo externalizedCheckpointInfo = new CheckpointConfigInfo.ExternalizedCheckpointInfo(true, false).     return new CheckpointConfigInfo(CheckpointConfigInfo.ProcessingMode.AT_LEAST_ONCE, 1L, 2L, 3L, 4, externalizedCheckpointInfo). }

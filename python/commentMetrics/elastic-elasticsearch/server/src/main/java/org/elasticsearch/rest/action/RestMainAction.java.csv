@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getName() {     return "main_action". }
-false;public;2;4;;@Override public RestResponse buildResponse(MainResponse mainResponse, XContentBuilder builder) throws Exception {     return convertMainResponse(mainResponse, request, builder). }
-false;public;2;9;;@Override public RestChannelConsumer prepareRequest(final RestRequest request, final NodeClient client) throws IOException {     return channel -> client.execute(MainAction.INSTANCE, new MainRequest(), new RestBuilderListener<MainResponse>(channel) {          @Override         public RestResponse buildResponse(MainResponse mainResponse, XContentBuilder builder) throws Exception {             return convertMainResponse(mainResponse, request, builder).         }     }). }
-false;static;3;8;;static BytesRestResponse convertMainResponse(MainResponse response, RestRequest request, XContentBuilder builder) throws IOException {     // Default to pretty printing, but allow ?pretty=false to disable     if (request.hasParam("pretty") == false) {         builder.prettyPrint().lfAtEnd().     }     response.toXContent(builder, request).     return new BytesRestResponse(RestStatus.OK, builder). }
-false;public;0;4;;@Override public boolean canTripCircuitBreaker() {     return false. }

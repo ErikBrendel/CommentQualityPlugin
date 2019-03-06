@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;public void testCreate_GivenDataFormatIsJson() {     DataDescription.Builder dataDescription = new DataDescription.Builder().     dataDescription.setFormat(DataFormat.XCONTENT).     assertTrue(createWriter(dataDescription.build()) instanceof JsonDataToProcessWriter). }
-false;public;0;6;;public void testCreate_GivenDataFormatIsCsv() {     DataDescription.Builder dataDescription = new DataDescription.Builder().     dataDescription.setFormat(DataFormat.DELIMITED).     assertTrue(createWriter(dataDescription.build()) instanceof CsvDataToProcessWriter). }
-false;private,static;1;5;;private static DataToProcessWriter createWriter(DataDescription dataDescription) {     return DataToProcessWriterFactory.create(true, false, mock(AutodetectProcess.class), dataDescription, AnalysisConfigTests.createRandomized().build(), mock(DataCountsReporter.class), new NamedXContentRegistry(Collections.emptyList())). }

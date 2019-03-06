@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Test public void validatedPropertiesTest() {     assertThatExceptionOfType(Exception.class).isThrownBy(() -> new AnnotationConfigApplicationContext(TestConfiguration.class).close()).satisfies((ex) -> assertThat(new ValidationExceptionFailureAnalyzer().analyze(ex)).isNotNull()). }
-false;public;0;5;;@Test public void nonValidatedPropertiesTest() {     new AnnotationConfigApplicationContext(NonValidatedTestConfiguration.class).close(). }

@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public K getSessionKey() {     return sessionKey. }
-false;public;1;4;;public void setSessionKey(K sessionKey) {     Preconditions.checkNotNull(sessionKey).     this.sessionKey = sessionKey. }
-false;public;0;3;;public V getEventValue() {     return eventValue. }
-false;public;1;4;;public void setEventValue(V eventValue) {     Preconditions.checkNotNull(eventValue).     this.eventValue = eventValue. }
-false;public;0;3;;public long getEventTimestamp() {     return eventTimestamp. }
-false;public;1;3;;public void setEventTimestamp(long eventTimestamp) {     this.eventTimestamp = eventTimestamp. }
-false;public;0;8;;@Override public String toString() {     return "SessionEvent{" + "sessionKey=" + sessionKey + ", eventValue=" + eventValue + ", eventTimestamp=" + eventTimestamp + '}'. }
-false;public,static;3;3;;public static <K, V> SessionEvent<K, V> of(K sessionKey, V eventValue, long eventTimestamp) {     return new SessionEvent<>(sessionKey, eventValue, eventTimestamp). }

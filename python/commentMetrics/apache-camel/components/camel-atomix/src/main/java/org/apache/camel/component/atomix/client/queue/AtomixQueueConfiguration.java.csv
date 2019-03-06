@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;// **************************************** // Properties // **************************************** public AtomixQueue.Action getDefaultAction() {     return defaultAction. }
-true;public;1;3;/**  * The default action.  */ ;/**  * The default action.  */ public void setDefaultAction(AtomixQueue.Action defaultAction) {     this.defaultAction = defaultAction. }
-false;public;0;7;;// **************************************** // Copy // **************************************** public AtomixQueueConfiguration copy() {     try {         return (AtomixQueueConfiguration) super.clone().     } catch (CloneNotSupportedException e) {         throw new RuntimeCamelException(e).     } }

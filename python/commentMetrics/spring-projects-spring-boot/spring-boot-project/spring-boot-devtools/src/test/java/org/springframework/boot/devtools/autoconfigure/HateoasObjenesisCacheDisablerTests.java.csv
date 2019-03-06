@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;@Before @After public void resetCacheField() {     ReflectionTestUtils.setField(HateoasObjenesisCacheDisabler.class, "cacheDisabled", false).     this.objenesis = (ObjenesisStd) ReflectionTestUtils.getField(DummyInvocationUtils.class, "OBJENESIS").     ReflectionTestUtils.setField(this.objenesis, "cache", new ConcurrentHashMap<String, ObjectInstantiator<?>>()). }
-false;public;0;5;;@Test public void cacheIsEnabledByDefault() {     assertThat(this.objenesis.getInstantiatorOf(TestObject.class)).isSameAs(this.objenesis.getInstantiatorOf(TestObject.class)). }
-false;public;0;6;;@Test public void cacheIsDisabled() {     new HateoasObjenesisCacheDisabler().afterPropertiesSet().     assertThat(this.objenesis.getInstantiatorOf(TestObject.class)).isNotSameAs(this.objenesis.getInstantiatorOf(TestObject.class)). }

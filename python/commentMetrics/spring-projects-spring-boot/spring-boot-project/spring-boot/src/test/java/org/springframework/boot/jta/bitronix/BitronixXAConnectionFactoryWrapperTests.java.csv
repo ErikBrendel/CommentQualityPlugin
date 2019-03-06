@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Test public void wrap() {     XAConnectionFactory connectionFactory = mock(XAConnectionFactory.class).     BitronixXAConnectionFactoryWrapper wrapper = new BitronixXAConnectionFactoryWrapper().     ConnectionFactory wrapped = wrapper.wrapConnectionFactory(connectionFactory).     assertThat(wrapped).isInstanceOf(PoolingConnectionFactoryBean.class).     assertThat(((PoolingConnectionFactoryBean) wrapped).getConnectionFactory()).isSameAs(connectionFactory). }

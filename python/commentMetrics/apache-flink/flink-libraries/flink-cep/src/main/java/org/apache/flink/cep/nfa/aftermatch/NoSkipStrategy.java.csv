@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public boolean isSkipStrategy() {     return false. }
-false;protected;2;4;;@Override protected boolean shouldPrune(EventId startEventID, EventId pruningId) {     throw new IllegalStateException("This should never happen. Please file a bug."). }
-false;protected;1;4;;@Override protected EventId getPruningId(Collection<Map<String, List<EventId>>> match) {     throw new IllegalStateException("This should never happen. Please file a bug."). }
-false;public;0;4;;@Override public String toString() {     return "NoSkipStrategy{}". }

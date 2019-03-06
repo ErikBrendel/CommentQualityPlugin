@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;12;;@Override protected ForecastJobRequest createTestInstance() {     ForecastJobRequest request = new ForecastJobRequest(randomAlphaOfLengthBetween(1, 20)).     if (randomBoolean()) {         request.setExpiresIn(TimeValue.timeValueHours(randomInt(10))).     }     if (randomBoolean()) {         request.setDuration(TimeValue.timeValueHours(randomIntBetween(24, 72))).     }     return request. }
-false;protected;1;4;;@Override protected ForecastJobRequest doParseInstance(XContentParser parser) throws IOException {     return ForecastJobRequest.PARSER.apply(parser, null). }
-false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return false. }

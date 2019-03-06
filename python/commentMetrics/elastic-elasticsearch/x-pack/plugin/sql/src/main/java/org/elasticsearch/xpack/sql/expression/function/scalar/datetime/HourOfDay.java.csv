@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected NodeCtor2<Expression, ZoneId, BaseDateTimeFunction> ctorForInfo() {     return HourOfDay::new. }
-false;protected;1;4;;@Override protected HourOfDay replaceChild(Expression newChild) {     return new HourOfDay(source(), newChild, zoneId()). }
-false;public;0;4;;@Override public String dateTimeFormat() {     return "hour". }

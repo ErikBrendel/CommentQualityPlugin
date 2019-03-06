@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getType() {     return DoubleTerms.NAME. }
-false;public,static;2;5;;public static ParsedDoubleTerms fromXContent(XContentParser parser, String name) throws IOException {     ParsedDoubleTerms aggregation = PARSER.parse(parser, null).     aggregation.setName(name).     return aggregation. }
-false;public;0;4;;@Override public Object getKey() {     return key. }
-false;public;0;11;;@Override public String getKeyAsString() {     String keyAsString = super.getKeyAsString().     if (keyAsString != null) {         return keyAsString.     }     if (key != null) {         return Double.toString(key).     }     return null. }
-false;public;0;3;;public Number getKeyAsNumber() {     return key. }
-false;protected;1;8;;@Override protected XContentBuilder keyToXContent(XContentBuilder builder) throws IOException {     builder.field(CommonFields.KEY.getPreferredName(), key).     if (super.getKeyAsString() != null) {         builder.field(CommonFields.KEY_AS_STRING.getPreferredName(), getKeyAsString()).     }     return builder. }
-false;static;1;3;;static ParsedBucket fromXContent(XContentParser parser) throws IOException {     return parseTermsBucketXContent(parser, ParsedBucket::new, (p, bucket) -> bucket.key = p.doubleValue()). }

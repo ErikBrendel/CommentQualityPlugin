@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;10;;@Override protected void assertHeaders(Map<String, Object> headers) {     assertEquals("Should return " + HttpStatus.SC_OK, HttpStatus.SC_OK, headers.get(Exchange.HTTP_RESPONSE_CODE)).     assertEquals("Should return mocked 12 CL", "12", headers.get("Content-Length")).     assertNotNull("Should have any Content-Type header propagated", headers.get("Content-Type")).     assertNull("Should not copy TestHeader from in to out", headers.get("TestHeader")).     assertNull("Should not copy Accept-Language from in to out", headers.get("Accept-Language")). }
-false;protected;0;4;;@Override protected String setupEndpointParams() {     return "?copyHeaders=false". }

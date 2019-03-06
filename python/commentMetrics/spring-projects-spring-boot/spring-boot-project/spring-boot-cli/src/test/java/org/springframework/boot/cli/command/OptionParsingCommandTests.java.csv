@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void optionHelp() {     OptionHandler handler = new OptionHandler().     handler.option("bar", "Bar").     OptionParsingCommand command = new TestOptionParsingCommand("foo", "Foo", handler).     assertThat(command.getHelp()).contains("--bar"). }

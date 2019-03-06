@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;4;;@Override public JobVertexID deserialize(JsonParser p, DeserializationContext ctxt) throws IOException {     return JobVertexID.fromHexString(p.getValueAsString()). }

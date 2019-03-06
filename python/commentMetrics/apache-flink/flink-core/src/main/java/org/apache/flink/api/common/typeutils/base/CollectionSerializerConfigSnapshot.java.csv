@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;12;;@Override @SuppressWarnings("unchecked") public TypeSerializerSchemaCompatibility<C> resolveSchemaCompatibility(TypeSerializer<C> newSerializer) {     if (!(newSerializer instanceof ListSerializer)) {         return super.resolveSchemaCompatibility(newSerializer).     }     return CompositeTypeSerializerUtil.delegateCompatibilityCheckToNewSnapshot(newSerializer, (CompositeTypeSerializerSnapshot<C, ? extends TypeSerializer>) new ListSerializerSnapshot<>(), getSingleNestedSerializerAndConfig().f1). }
-false;public;0;4;;@Override public int getVersion() {     return VERSION. }

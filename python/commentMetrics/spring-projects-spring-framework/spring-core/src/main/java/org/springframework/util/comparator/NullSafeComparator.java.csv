@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;13;;@Override public int compare(@Nullable T o1, @Nullable T o2) {     if (o1 == o2) {         return 0.     }     if (o1 == null) {         return (this.nullsLow ? -1 : 1).     }     if (o2 == null) {         return (this.nullsLow ? 1 : -1).     }     return this.nonNullComparator.compare(o1, o2). }
-false;public;1;12;;@Override @SuppressWarnings("unchecked") public boolean equals(Object other) {     if (this == other) {         return true.     }     if (!(other instanceof NullSafeComparator)) {         return false.     }     NullSafeComparator<T> otherComp = (NullSafeComparator<T>) other.     return (this.nonNullComparator.equals(otherComp.nonNullComparator) && this.nullsLow == otherComp.nullsLow). }
-false;public;0;4;;@Override public int hashCode() {     return this.nonNullComparator.hashCode() * (this.nullsLow ? -1 : 1). }
-false;public;0;5;;@Override public String toString() {     return "NullSafeComparator: non-null comparator [" + this.nonNullComparator + "]. " + (this.nullsLow ? "nulls low" : "nulls high"). }

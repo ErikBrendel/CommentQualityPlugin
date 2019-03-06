@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Override public String getMessage() {     return "Missing request header '" + this.headerName + "' for method parameter of type " + this.parameter.getNestedParameterType().getSimpleName(). }
-true;public,final;0;3;/**  * Return the expected name of the request header.  */ ;/**  * Return the expected name of the request header.  */ public final String getHeaderName() {     return this.headerName. }
-true;public,final;0;3;/**  * Return the method parameter bound to the request header.  */ ;/**  * Return the method parameter bound to the request header.  */ public final MethodParameter getParameter() {     return this.parameter. }

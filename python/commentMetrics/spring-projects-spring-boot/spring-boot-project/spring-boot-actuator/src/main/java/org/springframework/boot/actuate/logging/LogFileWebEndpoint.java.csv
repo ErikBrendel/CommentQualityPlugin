@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@ReadOperation public Resource logFile() {     Resource logFileResource = getLogFileResource().     if (logFileResource == null || !logFileResource.isReadable()) {         return null.     }     return logFileResource. }
-false;private;0;11;;private Resource getLogFileResource() {     if (this.externalFile != null) {         return new FileSystemResource(this.externalFile).     }     LogFile logFile = LogFile.get(this.environment).     if (logFile == null) {         logger.debug("Missing 'logging.file.name' or 'logging.file.path' properties").         return null.     }     return new FileSystemResource(logFile.toString()). }

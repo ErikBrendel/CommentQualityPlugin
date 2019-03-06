@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;12;;public static List<? extends Setting<?>> getSettings() {     final ArrayList<Setting<?>> settings = new ArrayList<>().     settings.addAll(SSL.getAllSettings()).     settings.add(READ_TIMEOUT).     settings.add(CONNECTION_TIMEOUT).     settings.add(PROXY_HOST).     settings.add(PROXY_PORT).     settings.add(PROXY_SCHEME).     settings.add(MAX_HTTP_RESPONSE_SIZE).     settings.add(HOSTS_WHITELIST).     return settings. }

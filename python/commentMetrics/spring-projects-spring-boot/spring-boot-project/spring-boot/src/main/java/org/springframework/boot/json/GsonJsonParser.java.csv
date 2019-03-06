@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;@Override public Map<String, Object> parseMap(String json) {     return parseMap(json, (trimmed) -> this.gson.fromJson(trimmed, MAP_TYPE.getType())). }
-false;public;1;5;;@Override public List<Object> parseList(String json) {     return parseList(json, (trimmed) -> this.gson.fromJson(trimmed, LIST_TYPE.getType())). }

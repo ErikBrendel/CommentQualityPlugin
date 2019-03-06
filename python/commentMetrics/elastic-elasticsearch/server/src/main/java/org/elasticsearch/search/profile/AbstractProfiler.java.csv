@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;1;3;/**  * Get the {@link AbstractProfileBreakdown} for the given element in the  * tree, potentially creating it if it did not exist.  */ ;/**  * Get the {@link AbstractProfileBreakdown} for the given element in the  * tree, potentially creating it if it did not exist.  */ public PB getQueryBreakdown(E query) {     return profileTree.getProfileBreakdown(query). }
-true;public;0;3;/**  * Removes the last (e.g. most recent) element on the stack.  */ ;/**  * Removes the last (e.g. most recent) element on the stack.  */ public void pollLastElement() {     profileTree.pollLast(). }
-true;public;0;3;/**  * @return a hierarchical representation of the profiled tree  */ ;/**  * @return a hierarchical representation of the profiled tree  */ public List<ProfileResult> getTree() {     return profileTree.getTree(). }

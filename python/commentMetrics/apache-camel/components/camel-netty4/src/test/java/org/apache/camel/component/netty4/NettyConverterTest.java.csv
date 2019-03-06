@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Before public void startUp() {     byte[] bytes = PAYLOAD.getBytes().     buf = PooledByteBufAllocator.DEFAULT.buffer(bytes.length).     buf.writeBytes(bytes). }
-false;public;0;4;;@After public void tearDown() {     buf.release(). }
-false;public;0;6;;@Test public void testConversionWithExchange() {     String result = context.getTypeConverter().convertTo(String.class, new DefaultExchange(context), buf).     assertNotNull(result).     assertEquals(PAYLOAD, result). }
-false;public;0;6;;@Test public void testConversionWithoutExchange() {     String result = context.getTypeConverter().convertTo(String.class, buf).     assertNotNull(result).     assertEquals(PAYLOAD, result). }

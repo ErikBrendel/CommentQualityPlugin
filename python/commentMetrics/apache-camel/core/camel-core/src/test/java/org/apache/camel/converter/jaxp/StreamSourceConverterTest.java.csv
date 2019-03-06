@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void testToInputStream() throws Exception {     StreamSource source = context.getTypeConverter().convertTo(StreamSource.class, "<foo>bar</foo>").     InputStream out = StreamSourceConverter.toInputStream(source).     assertNotNull(out).     assertEquals("<foo>bar</foo>", context.getTypeConverter().convertTo(String.class, out)). }
-false;public;0;8;;@Test public void testToReader() throws Exception {     StreamSource source = context.getTypeConverter().convertTo(StreamSource.class, "<foo>bar</foo>").     Reader out = StreamSourceConverter.toReader(source).     assertNotNull(out).     assertEquals("<foo>bar</foo>", context.getTypeConverter().convertTo(String.class, out)). }

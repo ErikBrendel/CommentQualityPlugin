@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Set if the check associated to this configuration is enabled or not.  */ ;/**  * Set if the check associated to this configuration is enabled or not.  */ public Boolean isEnabled() {     return enabled. }
-true;public;1;3;/**  * Set if the check associated to this configuration is enabled or not.  */ ;/**  * Set if the check associated to this configuration is enabled or not.  */ public void setEnabled(Boolean enabled) {     this.enabled = enabled. }
-false;public;0;3;;public String getInterval() {     return interval. }
-true;public;1;3;/**  * Set the check interval.  */ ;/**  * Set the check interval.  */ public void setInterval(String interval) {     this.interval = interval. }
-false;public;0;3;;public Integer getFailureThreshold() {     return failureThreshold. }
-true;public;1;3;/**  * Set the number of failure before reporting the service as un-healthy.  */ ;/**  * Set the number of failure before reporting the service as un-healthy.  */ public void setFailureThreshold(Integer failureThreshold) {     this.failureThreshold = failureThreshold. }
-true;public;0;7;/**  * Convert this configuration to a {@link HealthCheckConfiguration} using default values.  */ ;/**  * Convert this configuration to a {@link HealthCheckConfiguration} using default values.  */ public HealthCheckConfiguration asHealthCheckConfiguration() {     return HealthCheckConfiguration.builder().enabled(this.isEnabled()).interval(this.getInterval()).failureThreshold(this.getFailureThreshold()).build(). }

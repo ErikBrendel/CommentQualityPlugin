@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Override public boolean isUseDebugger() {     // must enable debugger     return true. }
-false;protected;0;4;;@Override protected AbstractApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/itest/test/SpringDebugBeforeTest.xml"). }
-false;protected;5;4;;@Override protected void debugBefore(Exchange exchange, Processor processor, ProcessorDefinition<?> definition, String id, String label) {     before.add(id). }
-false;public;0;12;;@Test public void testDebugBefore() throws Exception {     getMockEndpoint("mock:result").expectedMessageCount(1).     template.sendBody("direct:start", "Hello World").     assertMockEndpointsSatisfied().     assertEquals(2, before.size()).     assertEquals("log1", before.get(0)).     assertEquals("to1", before.get(1)). }

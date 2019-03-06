@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected,abstract;1;1;;protected abstract void innerOnResponse(Response response).
-false;protected,abstract;1;1;;protected abstract void innerOnFailure(Exception e).
-false;public,final;1;6;;@Override public final void onResponse(Response response) {     if (hasBeenCalled.compareAndSet(false, true)) {         innerOnResponse(response).     } }
-false;public,final;1;6;;@Override public final void onFailure(Exception e) {     if (hasBeenCalled.compareAndSet(false, true)) {         innerOnFailure(e).     } }

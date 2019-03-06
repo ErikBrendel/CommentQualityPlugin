@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;11;;@Test public void testRoute() throws Exception {     String stringBody = "stringBody".     String stringResponse = (String) template.requestBody("direct:in", stringBody).     assertEquals(stringBody, stringResponse).     Integer intBody = 1.     Integer intResponse = (Integer) template.requestBody("direct:in", intBody).     assertEquals(1, intResponse.intValue()). }
-false;public;0;3;;public void configure() {     from("direct:in").to("bean:myBean"). }
-false;protected;0;7;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("direct:in").to("bean:myBean").         }     }. }
-false;protected;0;6;;@Override protected Context createJndiContext() throws Exception {     JndiContext answer = new JndiContext().     answer.bind("myBean", new MyBean()).     return answer. }
-false;public;1;3;;public Integer intRequest(Integer request) {     return request. }
-false;public;1;3;;public String stringRequest(String request) {     return request. }

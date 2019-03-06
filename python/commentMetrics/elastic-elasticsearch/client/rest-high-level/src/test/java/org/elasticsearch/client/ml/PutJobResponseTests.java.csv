@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected PutJobResponse createTestInstance() {     return new PutJobResponse(JobTests.createRandomizedJob()). }
-false;protected;1;4;;@Override protected PutJobResponse doParseInstance(XContentParser parser) throws IOException {     return PutJobResponse.fromXContent(parser). }
-false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return false. }

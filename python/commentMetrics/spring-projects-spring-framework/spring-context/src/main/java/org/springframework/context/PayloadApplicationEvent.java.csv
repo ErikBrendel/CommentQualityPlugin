@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public ResolvableType getResolvableType() {     return ResolvableType.forClassWithGenerics(getClass(), ResolvableType.forInstance(getPayload())). }
-true;public;0;3;/**  * Return the payload of the event.  */ ;/**  * Return the payload of the event.  */ public T getPayload() {     return this.payload. }

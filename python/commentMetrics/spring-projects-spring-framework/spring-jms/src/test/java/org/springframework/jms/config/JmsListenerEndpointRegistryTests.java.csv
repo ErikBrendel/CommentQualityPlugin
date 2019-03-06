@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void createWithNullEndpoint() {     thrown.expect(IllegalArgumentException.class).     registry.registerListenerContainer(null, containerFactory). }
-false;public;0;5;;@Test public void createWithNullEndpointId() {     thrown.expect(IllegalArgumentException.class).     registry.registerListenerContainer(new SimpleJmsListenerEndpoint(), containerFactory). }
-false;public;0;5;;@Test public void createWithNullContainerFactory() {     thrown.expect(IllegalArgumentException.class).     registry.registerListenerContainer(createEndpoint("foo", "myDestination"), null). }
-false;public;0;7;;@Test public void createWithDuplicateEndpointId() {     registry.registerListenerContainer(createEndpoint("test", "queue"), containerFactory).     thrown.expect(IllegalStateException.class).     registry.registerListenerContainer(createEndpoint("test", "queue"), containerFactory). }
-false;private;2;6;;private SimpleJmsListenerEndpoint createEndpoint(String id, String destinationName) {     SimpleJmsListenerEndpoint endpoint = new SimpleJmsListenerEndpoint().     endpoint.setId(id).     endpoint.setDestination(destinationName).     return endpoint. }

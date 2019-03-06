@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;public void process(Exchange exchange) throws Exception {     SOAPMessage soapMessage = (SOAPMessage) exchange.getIn().getBody(List.class).get(0).     exchange.getIn().setBody(soapMessage). }

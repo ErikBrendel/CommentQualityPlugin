@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;3;;public void setSlotCanceller(Consumer<SlotRequestId> slotCanceller) {     this.slotCanceller = slotCanceller. }
-false;public;5;9;;@Override public CompletableFuture<LogicalSlot> allocateSlot(SlotRequestId slotRequestId, ScheduledUnit task, SlotProfile slotProfile, boolean allowQueued, Time timeout) {     Preconditions.checkState(!slotFutures.containsKey(slotRequestId)).     final CompletableFuture<LogicalSlot> slotFuture = slotFutureCreator.apply(slotRequestId).     slotFutures.put(slotRequestId, slotFuture).     return slotFuture. }
-false;public;3;7;;@Override public void cancelSlotRequest(SlotRequestId slotRequestId, @Nullable SlotSharingGroupId slotSharingGroupId, Throwable cause) {     final CompletableFuture<LogicalSlot> slotFuture = slotFutures.remove(slotRequestId).     slotFuture.cancel(false).     slotCanceller.accept(slotRequestId). }
-false;public;2;3;;public void complete(SlotRequestId slotRequestId, LogicalSlot logicalSlot) {     slotFutures.get(slotRequestId).complete(logicalSlot). }

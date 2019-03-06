@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;1;4;/**  * Sets the license  *  * @param license license  * @return this builder  */ ;/**  * Sets the license  *  * @param license license  * @return this builder  */ public PutLicenseRequestBuilder setLicense(License license) {     request.license(license).     return this. }
-false;public;2;4;;public PutLicenseRequestBuilder setLicense(BytesReference licenseSource, XContentType xContentType) {     request.license(licenseSource, xContentType).     return this. }
-false;public;1;4;;public PutLicenseRequestBuilder setAcknowledge(boolean acknowledge) {     request.acknowledge(acknowledge).     return this. }

@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public ClientHttpResponse getDelegate() {     return this.delegate. }
-false;public;0;4;;// ServerHttpResponse delegation methods... @Override public HttpStatus getStatusCode() {     return this.delegate.getStatusCode(). }
-false;public;0;4;;@Override public int getRawStatusCode() {     return this.delegate.getRawStatusCode(). }
-false;public;0;4;;@Override public HttpHeaders getHeaders() {     return this.delegate.getHeaders(). }
-false;public;0;4;;@Override public MultiValueMap<String, ResponseCookie> getCookies() {     return this.delegate.getCookies(). }
-false;public;0;4;;@Override public Flux<DataBuffer> getBody() {     return this.delegate.getBody(). }
-false;public;0;4;;@Override public String toString() {     return getClass().getSimpleName() + " [delegate=" + getDelegate() + "]". }

@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;10;;@Override public void open(Configuration parameters) throws Exception {     super.open(parameters).     FunctionUtils.setFunctionRuntimeContext(flatTimeoutFunction, getRuntimeContext()).     FunctionUtils.openFunction(flatTimeoutFunction, parameters).     if (sideCollector == null) {         sideCollector = new SideCollector<>(checkNotNull(timedOutPartialMatchesTag)).     } }
-false;public;0;5;;@Override public void close() throws Exception {     super.close().     FunctionUtils.closeFunction(flatTimeoutFunction). }
-false;public;2;7;;@Override public void processTimedOutMatch(Map<String, List<IN>> match, Context ctx) throws Exception {     sideCollector.setCtx(ctx).     flatTimeoutFunction.timeout(match, ctx.timestamp(), sideCollector). }
-false;public;1;3;;public void setCtx(Context ctx) {     this.ctx = ctx. }
-false;public;1;4;;@Override public void collect(T record) {     ctx.output(timedOutPartialMatchesTag, record). }
-false;public;0;2;;@Override public void close() { }

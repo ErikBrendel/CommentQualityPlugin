@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public boolean usePersist() {     return true. }
-false;public;0;19;;@Test public void produceExistingEntityShouldThrowAnException() throws Exception {     setUp("jpa://" + Order.class.getName() + "?usePersist=true").     Order order = createOrder().     save(order).     // and adjust some values     order = createOrder().     order.setProductName("Cheese").     order.setProductSku("54321").     order.setQuantity(2).     // we cannot store the 2nd order as its using the same id as the 1st     expectedException.expectCause(CoreMatchers.instanceOf(PersistenceException.class)).     template.requestBody(endpoint, order).     assertEntitiesInDatabase(1, Order.class.getName()). }
-false;private;0;8;;private Order createOrder() {     Order order = new Order().     order.setId(1L).     order.setProductName("Beer").     order.setProductSku("12345").     order.setQuantity(5).     return order. }

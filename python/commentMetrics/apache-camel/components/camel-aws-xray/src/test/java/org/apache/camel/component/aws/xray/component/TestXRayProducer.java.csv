@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;12;;@Override public void process(Exchange exchange) {     byte[] body = exchange.getIn().getBody(byte[].class).     if (trim(CommonEndpoints.RECEIVED).equals(this.state) || trim(CommonEndpoints.READY).equals(this.state)) {         String traceId = exchange.getIn().getHeader(XRayTracer.XRAY_TRACE_ID, String.class).         backingService.performMethod(body, state, traceId).     } }
-false;private,static;1;3;;private static String trim(String endpoint) {     return endpoint.substring(endpoint.indexOf(":") + 1). }

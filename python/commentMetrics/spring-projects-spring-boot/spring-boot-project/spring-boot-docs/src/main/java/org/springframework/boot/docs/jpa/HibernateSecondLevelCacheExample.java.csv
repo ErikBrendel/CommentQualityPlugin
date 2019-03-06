@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;7;;@Bean public HibernatePropertiesCustomizer hibernateSecondLevelCacheCustomizer(JCacheCacheManager cacheManager) {     return (properties) -> properties.put(ConfigSettings.CACHE_MANAGER, cacheManager.getCacheManager()). }

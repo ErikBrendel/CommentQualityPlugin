@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public String getIndex() {     return this.index. }
-true;public;0;3;/**  * A shard id to index shard upgrade status map (note, index shard upgrade status is the replication shard group that maps  * to the shard id).  */ ;/**  * A shard id to index shard upgrade status map (note, index shard upgrade status is the replication shard group that maps  * to the shard id).  */ public Map<Integer, IndexShardUpgradeStatus> getShards() {     return this.indexShards. }
-false;public;0;4;;@Override public Iterator<IndexShardUpgradeStatus> iterator() {     return indexShards.values().iterator(). }
-false;public;0;7;;public long getTotalBytes() {     long totalBytes = 0.     for (IndexShardUpgradeStatus indexShardUpgradeStatus : indexShards.values()) {         totalBytes += indexShardUpgradeStatus.getTotalBytes().     }     return totalBytes. }
-false;public;0;7;;public long getToUpgradeBytes() {     long upgradeBytes = 0.     for (IndexShardUpgradeStatus indexShardUpgradeStatus : indexShards.values()) {         upgradeBytes += indexShardUpgradeStatus.getToUpgradeBytes().     }     return upgradeBytes. }
-false;public;0;7;;public long getToUpgradeBytesAncient() {     long upgradeBytesAncient = 0.     for (IndexShardUpgradeStatus indexShardUpgradeStatus : indexShards.values()) {         upgradeBytesAncient += indexShardUpgradeStatus.getToUpgradeBytesAncient().     }     return upgradeBytesAncient. }

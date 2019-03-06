@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected,final;2;4;;protected final Map<String, Object> parseMap(String json, Function<String, Map<String, Object>> parser) {     return trimParse(json, "{", parser). }
-false;protected,final;2;4;;protected final List<Object> parseList(String json, Function<String, List<Object>> parser) {     return trimParse(json, "[", parser). }
-false;protected,final;3;8;;protected final <T> T trimParse(String json, String prefix, Function<String, T> parser) {     String trimmed = (json != null) ? json.trim() : "".     if (trimmed.startsWith(prefix)) {         return parser.apply(trimmed).     }     throw new JsonParseException(). }
-false;protected,final;2;12;;protected final <T> T tryParse(Callable<T> parser, Class<? extends Exception> check) {     try {         return parser.call().     } catch (Exception ex) {         if (check.isAssignableFrom(ex.getClass())) {             throw new JsonParseException(ex).         }         ReflectionUtils.rethrowRuntimeException(ex).         throw new IllegalStateException(ex).     } }

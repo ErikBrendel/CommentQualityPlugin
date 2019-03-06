@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * The number of all rows in this column including both nulls and non-nulls.  */ ;/**  * The number of all rows in this column including both nulls and non-nulls.  */ public long getTotalCount() {     return getNullCount() + getNonNullCount(). }
-true;public,abstract;0;1;/**  * The number of non-null values in this column.  */ ;/**  * The number of non-null values in this column.  */ public abstract long getNonNullCount().
-true;public,abstract;0;1;/**  * The number of null values in this column.  */ ;/**  * The number of null values in this column.  */ public abstract long getNullCount().
-true;public;0;3;/**  * True if this column contains any null values.  */ ;/**  * True if this column contains any null values.  */ public boolean containsNull() {     return getNullCount() > 0L. }
-true;public;0;3;/**  * True if this column contains any non-null values.  */ ;/**  * True if this column contains any non-null values.  */ public boolean containsNonNull() {     return getNonNullCount() > 0L. }

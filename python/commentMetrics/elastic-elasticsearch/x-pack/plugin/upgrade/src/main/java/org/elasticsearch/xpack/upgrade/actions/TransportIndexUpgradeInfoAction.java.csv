@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected String executor() {     return ThreadPool.Names.GENERIC. }
-false;protected;0;4;;@Override protected IndexUpgradeInfoResponse newResponse() {     return new IndexUpgradeInfoResponse(). }
-false;protected;2;5;;@Override protected ClusterBlockException checkBlock(IndexUpgradeInfoRequest request, ClusterState state) {     // Cluster is not affected but we look up repositories in metadata     return state.blocks().globalBlockedException(ClusterBlockLevel.METADATA_READ). }
-false;protected,final;3;11;;@Override protected final void masterOperation(final IndexUpgradeInfoRequest request, ClusterState state, final ActionListener<IndexUpgradeInfoResponse> listener) {     if (licenseState.isUpgradeAllowed()) {         Map<String, UpgradeActionRequired> results = indexUpgradeService.upgradeInfo(request.indices(), request.indicesOptions(), state).         listener.onResponse(new IndexUpgradeInfoResponse(results)).     } else {         listener.onFailure(LicenseUtils.newComplianceException(XPackField.UPGRADE)).     } }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * Trigger the closing of the resource and return the corresponding  * close future.  *  * @return Future which is completed once the resource has been closed  */ ;/**  * Trigger the closing of the resource and return the corresponding  * close future.  *  * @return Future which is completed once the resource has been closed  */ CompletableFuture<Void> closeAsync().
-false;default;0;7;;default void close() throws Exception {     try {         closeAsync().get().     } catch (ExecutionException e) {         throw new FlinkException("Could not close resource.", ExceptionUtils.stripExecutionException(e)).     } }

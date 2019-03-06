@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeBoolean(local). }
-false;public,final;1;5;;@SuppressWarnings("unchecked") public final Request local(boolean local) {     this.local = local.     return (Request) this. }
-true;public,final;0;3;/**  * Return local information, do not retrieve the state from master node (default: false).  * @return <code>true</code> if local information is to be returned.  * <code>false</code> if information is to be retrieved from master node (default).  */ ;/**  * Return local information, do not retrieve the state from master node (default: false).  * @return <code>true</code> if local information is to be returned.  * <code>false</code> if information is to be retrieved from master node (default).  */ public final boolean local() {     return local. }
-false;public;1;4;;@Override public void readFrom(StreamInput in) throws IOException {     throw new UnsupportedOperationException("usage of Streamable is to be replaced by Writeable"). }

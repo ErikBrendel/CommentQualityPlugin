@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,static;1;3;/**  * Handle {@literal INT} signals by calling the specified {@link Runnable}.  * @param runnable the runnable to call on SIGINT.  */ ;/**  * Handle {@literal INT} signals by calling the specified {@link Runnable}.  * @param runnable the runnable to call on SIGINT.  */ public static void attachSignalHandler(Runnable runnable) {     Signal.handle(SIG_INT, (signal) -> runnable.run()). }

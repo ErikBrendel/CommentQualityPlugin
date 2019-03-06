@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;8;;public Language resolveLanguage(String name, CamelContext context) {     // only return if we can support the language     if (ScriptBuilder.supportScriptLanguage(name)) {         return new ScriptLanguage(name).     } else {         return null.     } }

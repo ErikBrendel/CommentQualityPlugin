@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;9;;@Override protected Collection<Class<?>> sort(Collection<Class<?>> classes) {     List<String> names = classes.stream().map(Class::getName).collect(Collectors.toList()).     List<String> sorted = SORTER.getInPriorityOrder(names).     return sorted.stream().map((className) -> ClassUtils.resolveClassName(className, null)).collect(Collectors.toCollection(ArrayList::new)). }
-false;public;0;4;;@Override public int getOrder() {     return ORDER.getOrder(). }
-false;protected;1;4;;@Override protected AutoConfigurations merge(Set<Class<?>> mergedClasses) {     return new AutoConfigurations(mergedClasses). }
-false;public,static;1;3;;public static AutoConfigurations of(Class<?>... classes) {     return new AutoConfigurations(Arrays.asList(classes)). }

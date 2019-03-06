@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Test public void testSend() throws Exception {     result.expectedBodiesReceived("Bye World").     tap.expectedBodiesReceived("World").     template.sendBody("direct:start", "World").     assertMockEndpointsSatisfied(). }
-false;public;0;7;;@Override @Before public void setUp() throws Exception {     super.setUp().     tap = getMockEndpoint("mock:tap").     result = getMockEndpoint("mock:result"). }
-false;public;0;10;;public void configure() {     from("direct:start").to("log:foo").wireTap("seda:tap").bean(MyBean.class).to("mock:result").     from("seda:tap").to("mock:tap"). }
-false;protected;0;14;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("direct:start").to("log:foo").wireTap("seda:tap").bean(MyBean.class).to("mock:result").             from("seda:tap").to("mock:tap").         }     }. }
-false;public;1;3;;public String transform(String body) {     return "Bye " + body. }

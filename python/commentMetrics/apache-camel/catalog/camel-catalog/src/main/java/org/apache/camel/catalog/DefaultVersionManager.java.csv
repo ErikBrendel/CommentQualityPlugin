@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getLoadedVersion() {     return camelCatalog.getCatalogVersion(). }
-false;public;1;4;;@Override public boolean loadVersion(String version) {     return getLoadedVersion().equals(version). }
-false;public;0;5;;@Override public String getRuntimeProviderLoadedVersion() {     // not supported     return null. }
-false;public;3;5;;@Override public boolean loadRuntimeProviderVersion(String groupId, String artifactId, String version) {     // not supported     return false. }
-false;public;1;4;;@Override public InputStream getResourceAsStream(String name) {     return DefaultCamelCatalog.class.getClassLoader().getResourceAsStream(name). }

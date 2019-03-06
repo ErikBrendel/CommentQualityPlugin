@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected int getCurrentOuterSnapshotVersion() {     return VERSION. }
-false;protected;1;4;;@Override protected TypeSerializer<?>[] getNestedSerializers(ScalaCaseClassSerializer<T> outerSerializer) {     return outerSerializer.getFieldSerializers(). }
-false;protected;1;5;;@Override protected ScalaCaseClassSerializer<T> createOuterSerializerWithNestedSerializers(TypeSerializer<?>[] nestedSerializers) {     checkState(type != null, "type can not be NULL").     return new ScalaCaseClassSerializer<>(type, nestedSerializers). }
-false;protected;1;5;;@Override protected void writeOuterSnapshot(DataOutputView out) throws IOException {     checkState(type != null, "type can not be NULL").     out.writeUTF(type.getName()). }
-false;protected;3;4;;@Override protected void readOuterSnapshot(int readOuterSnapshotVersion, DataInputView in, ClassLoader userCodeClassLoader) throws IOException {     this.type = InstantiationUtil.resolveClassByName(in, userCodeClassLoader). }
-false;protected;1;4;;@Override protected boolean isOuterSnapshotCompatible(ScalaCaseClassSerializer<T> newSerializer) {     return Objects.equals(type, newSerializer.getTupleClass()). }

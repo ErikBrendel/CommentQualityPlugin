@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Before public void setup() {     ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext(getClass().getSimpleName() + ".xml", getClass()).     toBeAdvised = (ToBeAdvised) ctx.getBean("toBeAdvised"). }
-false;public;0;4;;@Test public void testMismatchedArgBinding() {     this.toBeAdvised.foo("Hello"). }
-false;public;1;3;;public void foo(String s) {     System.out.println(s). }
-false;public;1;3;;public void doBefore(int x) {     System.out.println(x). }
-false;public;1;3;;public void doBefore(String x) {     System.out.println(x). }

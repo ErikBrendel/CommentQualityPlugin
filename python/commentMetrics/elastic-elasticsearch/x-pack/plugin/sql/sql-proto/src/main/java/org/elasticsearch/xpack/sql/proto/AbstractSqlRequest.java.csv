@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public RequestInfo requestInfo() {     return requestInfo. }
-false;public;0;3;;public Mode mode() {     return requestInfo.mode(). }
-false;public;0;3;;public String clientId() {     return requestInfo.clientId(). }
-false;public;1;7;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     AbstractSqlRequest that = (AbstractSqlRequest) o.     return Objects.equals(requestInfo, that.requestInfo). }
-false;public;0;4;;@Override public int hashCode() {     return requestInfo.hashCode(). }

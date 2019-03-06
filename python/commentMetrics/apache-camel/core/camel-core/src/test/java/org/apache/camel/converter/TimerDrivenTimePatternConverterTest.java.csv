@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Test public void testTimerInvocation() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMinimumMessageCount(2).     assertMockEndpointsSatisfied(). }
-false;public;0;12;;@Test public void testTimerUsingStopWatch() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMinimumMessageCount(2).     StopWatch watch = new StopWatch().     assertMockEndpointsSatisfied().     long interval = watch.taken().     LOG.trace("Should take approx 50 milliseconds, was: {}", interval).     assertTrue("Should take approx 50 milliseconds, was: " + interval, interval >= 40). }
-false;public;0;3;;public void configure() {     from("timer://foo?fixedRate=true&delay=0&period=50").to("mock:result"). }
-false;protected;0;8;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() {             from("timer://foo?fixedRate=true&delay=0&period=50").to("mock:result").         }     }. }

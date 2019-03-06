@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;@Override public void execute() {     PutItemResult result = ddbClient.putItem(new PutItemRequest().withTableName(determineTableName()).withItem(determineItem()).withExpected(determineUpdateCondition()).withReturnValues(determineReturnValues())).     addAttributesToResult(result.getAttributes()). }

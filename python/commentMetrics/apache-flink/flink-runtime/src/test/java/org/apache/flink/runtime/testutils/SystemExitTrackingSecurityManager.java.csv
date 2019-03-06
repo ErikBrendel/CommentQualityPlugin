@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public void checkPermission(final Permission perm) { }
-false;public;2;4;;@Override public void checkPermission(final Permission perm, final Object context) { }
-false;public,synchronized;1;6;;@Override public synchronized void checkExit(final int status) {     this.status = status.     ++count.     throw new SecurityException("SystemExitTrackingSecurityManager is installed. JVM will not exit"). }
-false;public,synchronized;0;4;;public synchronized int getStatus() {     checkState(isSystemExitCalled()).     return status. }
-false;public,synchronized;0;3;;public synchronized boolean isSystemExitCalled() {     return getCount() > 0. }
-false;public,synchronized;0;3;;public synchronized int getCount() {     return count. }

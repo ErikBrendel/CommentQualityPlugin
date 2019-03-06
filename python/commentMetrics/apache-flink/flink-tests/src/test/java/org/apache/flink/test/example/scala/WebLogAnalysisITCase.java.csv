@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;7;;@Override protected void preSubmit() throws Exception {     docsPath = createTempFile("docs", WebLogAnalysisData.DOCS).     ranksPath = createTempFile("ranks", WebLogAnalysisData.RANKS).     visitsPath = createTempFile("visits", WebLogAnalysisData.VISITS).     resultPath = getTempDirPath("result"). }
-false;protected;0;4;;@Override protected void postSubmit() throws Exception {     compareResultsByLinesInMemory(WebLogAnalysisData.EXCEPTED_RESULT, resultPath). }
-false;protected;0;8;;@Override protected void testProgram() throws Exception {     WebLogAnalysis.main(new String[] { "--documents", docsPath, "--ranks", ranksPath, "--visits", visitsPath, "--output", resultPath }). }

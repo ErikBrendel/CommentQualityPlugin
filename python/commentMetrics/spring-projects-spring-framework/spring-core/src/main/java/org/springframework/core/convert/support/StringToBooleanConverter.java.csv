@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;17;;@Override public Boolean convert(String source) {     String value = source.trim().     if (value.isEmpty()) {         return null.     }     value = value.toLowerCase().     if (trueValues.contains(value)) {         return Boolean.TRUE.     } else if (falseValues.contains(value)) {         return Boolean.FALSE.     } else {         throw new IllegalArgumentException("Invalid boolean value '" + source + "'").     } }

@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Setup the barrier, has to be called at the beginning of each superstep.  */ ;/**  * Setup the barrier, has to be called at the beginning of each superstep.  */ public void setup() {     latch = new CountDownLatch(1). }
-true;public;0;3;/**  * Wait on the barrier.  */ ;/**  * Wait on the barrier.  */ public void waitForOtherWorkers() throws InterruptedException {     latch.await(). }
-false;public;0;3;;public String[] getAggregatorNames() {     return aggregatorNames. }
-false;public;0;3;;public Value[] getAggregates() {     return aggregates. }
-true;public;1;16;/**  * Barrier will release the waiting thread if an event occurs.  */ ;/**  * Barrier will release the waiting thread if an event occurs.  */ @Override public void onEvent(TaskEvent event) {     if (event instanceof TerminationEvent) {         terminationSignaled = true.     } else if (event instanceof AllWorkersDoneEvent) {         AllWorkersDoneEvent wde = (AllWorkersDoneEvent) event.         aggregatorNames = wde.getAggregatorNames().         aggregates = wde.getAggregates(userCodeClassLoader).     } else {         throw new IllegalArgumentException("Unknown event type.").     }     latch.countDown(). }
-false;public;0;3;;public boolean terminationSignaled() {     return terminationSignaled. }

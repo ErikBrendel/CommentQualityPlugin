@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void testBeanLanguageOGNL() throws Exception {     String reply = template.requestBody("direct:start", "World", String.class).     assertEquals("Hello World", reply). }
-false;public;0;5;;@Override public void configure() throws Exception {     from("direct:start").transform().method(MyReallyCoolBean.class, "getOther.greet"). }
-false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").transform().method(MyReallyCoolBean.class, "getOther.greet").         }     }. }
-false;public;0;3;;public MyOtherReallyCoolBean getOther() {     return other. }
-false;public;1;3;;public String greet(String name) {     return "Hello " + name. }

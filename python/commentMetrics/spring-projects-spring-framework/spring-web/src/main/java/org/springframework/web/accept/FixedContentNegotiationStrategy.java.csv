@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Return the configured list of media types.  */ ;/**  * Return the configured list of media types.  */ public List<MediaType> getContentTypes() {     return this.contentTypes. }
-false;public;1;4;;@Override public List<MediaType> resolveMediaTypes(NativeWebRequest request) {     return this.contentTypes. }

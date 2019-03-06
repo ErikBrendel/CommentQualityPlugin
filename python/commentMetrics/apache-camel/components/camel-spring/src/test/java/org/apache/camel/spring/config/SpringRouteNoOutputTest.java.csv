@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Override @Before public void setUp() throws Exception {     createApplicationContext(). }
-false;public;0;4;;@Test public void testRouteNoOutput() { // noop }
-false;protected;0;14;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     AbstractXmlApplicationContext answer.     try {         answer = new ClassPathXmlApplicationContext("org/apache/camel/spring/config/SpringRouteNoOutputTest.xml").         fail("Should have thrown exception").     } catch (RuntimeCamelException e) {         IllegalArgumentException iae = assertIsInstanceOf(IllegalArgumentException.class, e.getCause()).         assertEquals("Route myRoute has no outputs: Route(myRoute)[[From[direct:start]] -> []]", iae.getMessage()).         return null.     }     return answer. }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;0;7;;BeanManager getBeanManager() {     BeanManager manager = this.manager.get().     if (manager == null) {         throw new IllegalStateException("Bean manager is not set!").     }     return manager. }
-false;;1;5;;void setBeanManager(BeanManager manager) {     if (!this.manager.compareAndSet(null, manager)) {         throw new IllegalStateException("Bean manager already set!").     } }
-false;;0;5;;void unsetBeanManager() {     if (manager.getAndSet(null) == null) {         throw new IllegalStateException("Bean manager is not set!").     } }

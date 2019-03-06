@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public Type getType() {     return type. }
-false;public;0;3;;public String getName() {     return name. }
-false;public;1;11;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     FunctionDefinition that = (FunctionDefinition) o.     return Objects.equals(name, that.name). }
-false;public;0;4;;@Override public int hashCode() {     return name.hashCode(). }
-false;public;0;4;;@Override public String toString() {     return name. }

@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;0;1;;long getUid().
-false;;0;1;;Date getTimestamp().
-false;;0;1;;String getRouteId().
-false;;0;1;;String getToNode().
-false;;0;1;;String getExchangeId().
-false;;0;1;;String getMessageAsXml().
-true;;1;1;/**  * Dumps the event message as XML using the {@link #ROOT_TAG} as root tag.  * <p/>  * The <tt>timestamp</tt> tag is formatted in the format defined by {@link #TIMESTAMP_FORMAT}  *  * @param indent number of spaces to indent  * @return xml representation of this event  */ ;/**  * Dumps the event message as XML using the {@link #ROOT_TAG} as root tag.  * <p/>  * The <tt>timestamp</tt> tag is formatted in the format defined by {@link #TIMESTAMP_FORMAT}  *  * @param indent number of spaces to indent  * @return xml representation of this event  */ String toXml(int indent).

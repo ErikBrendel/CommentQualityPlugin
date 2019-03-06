@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;10;;@Override public PostingsFormat getPostingsFormatForField(String field) {     final MappedFieldType fieldType = mapperService.fullName(field).     if (fieldType == null) {         logger.warn("no index mapper found for field: [{}] returning default postings format", field).     } else if (fieldType instanceof CompletionFieldMapper.CompletionFieldType) {         return CompletionFieldMapper.CompletionFieldType.postingsFormat().     }     return super.getPostingsFormatForField(field). }

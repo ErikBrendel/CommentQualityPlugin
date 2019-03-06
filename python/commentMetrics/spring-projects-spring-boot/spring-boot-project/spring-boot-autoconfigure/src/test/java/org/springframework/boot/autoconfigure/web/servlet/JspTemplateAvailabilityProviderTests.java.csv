@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void availabilityOfTemplateThatDoesNotExist() {     assertThat(isTemplateAvailable("whatever")).isFalse(). }
-false;public;0;6;;@Test public void availabilityOfTemplateWithCustomPrefix() {     this.environment.setProperty("spring.mvc.view.prefix", "classpath:/custom-templates/").     assertThat(isTemplateAvailable("custom.jsp")).isTrue(). }
-false;public;0;7;;@Test public void availabilityOfTemplateWithCustomSuffix() {     this.environment.setProperty("spring.mvc.view.prefix", "classpath:/custom-templates/").     this.environment.setProperty("spring.mvc.view.suffix", ".jsp").     assertThat(isTemplateAvailable("suffixed")).isTrue(). }
-false;private;1;4;;private boolean isTemplateAvailable(String view) {     return this.provider.isTemplateAvailable(view, this.environment, getClass().getClassLoader(), this.resourceLoader). }

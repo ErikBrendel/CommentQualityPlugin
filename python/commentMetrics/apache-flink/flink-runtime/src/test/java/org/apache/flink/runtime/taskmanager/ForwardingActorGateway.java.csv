@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;7;;@Override public Object handleMessage(Object message) throws Exception {     // don't do anything with the message, but storing it in queue     queue.add(message).     return null. }

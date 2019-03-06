@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeOptionalBytesReference(status). }
-false;public;2;6;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     try (InputStream stream = status.streamInput()) {         return builder.rawValue(stream, XContentHelper.xContentType(status)).     } }
-false;public;0;4;;@Override public String getWriteableName() {     return NAME. }
-false;public;0;4;;@Override public String toString() {     return Strings.toString(this). }
-true;public;0;3;/**  * Convert the from XContent to a Map for easy reading.  */ ;/**  * Convert the from XContent to a Map for easy reading.  */ public Map<String, Object> toMap() {     return convertToMap(status, false).v2(). }
-true;public;1;9;// Implements equals and hashcode for testing ;// Implements equals and hashcode for testing @Override public boolean equals(Object obj) {     if (obj == null || obj.getClass() != RawTaskStatus.class) {         return false.     }     RawTaskStatus other = (RawTaskStatus) obj.     // Totally not efficient, but ok for testing because it ignores order and spacing differences     return toMap().equals(other.toMap()). }
-false;public;0;5;;@Override public int hashCode() {     // Totally not efficient, but ok for testing because consistent with equals     return toMap().hashCode(). }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;2;3;;public static float getAverageFontHeight(PDFont font, float fontSize) throws IOException {     return font.getBoundingBox().getHeight() / PDF_PIXEL_SIZE * fontSize. }
-false;public,static;3;3;;public static float getFontHeightForString(String str, PDFont font, float fontSize) throws IOException {     return font.getBoundingBox().getHeight() / PDF_PIXEL_SIZE * fontSize. }
-false;public,static;3;3;;public static float getFontWidth(String str, PDFont font, float fontSize) throws IOException {     return font.getStringWidth(str) / PDF_PIXEL_SIZE * fontSize. }

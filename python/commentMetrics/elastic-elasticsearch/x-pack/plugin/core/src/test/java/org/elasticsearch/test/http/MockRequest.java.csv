@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * @return The HTTP method of the incoming request  */ ;/**  * @return The HTTP method of the incoming request  */ public String getMethod() {     return method. }
-true;public;0;3;/**  * @return The URI of the incoming request  */ ;/**  * @return The URI of the incoming request  */ public URI getUri() {     return uri. }
-true;public;1;3;/**  * @return The specific value of a request header, null if it does not exist  */ ;/**  * @return The specific value of a request header, null if it does not exist  */ public String getHeader(String name) {     return headers.getFirst(name). }
-true;public;0;3;/**  * @return All headers associated with this request  */ ;/**  * @return All headers associated with this request  */ public Headers getHeaders() {     return headers. }
-true;public;0;3;/**  * @return The body the incoming request had, null if no body was found  */ ;/**  * @return The body the incoming request had, null if no body was found  */ public String getBody() {     return body. }
-false;public;0;4;;@Override public String toString() {     return String.format(Locale.ROOT, "%s %s", method, uri). }
-true;;1;3;/**  * @param body Sets the body of the incoming request  */ ;/**  * @param body Sets the body of the incoming request  */ void setBody(String body) {     this.body = body. }

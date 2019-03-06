@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Before public void setUp() {     this.scope = new SimpSessionScope().     this.objectFactory = Mockito.mock(ObjectFactory.class).     this.simpAttributes = new SimpAttributes("session1", new ConcurrentHashMap<>()).     SimpAttributesContextHolder.setAttributes(this.simpAttributes). }
-false;public;0;4;;@After public void tearDown() {     SimpAttributesContextHolder.resetAttributes(). }
-false;public;0;7;;@Test public void get() {     this.simpAttributes.setAttribute("name", "value").     Object actual = this.scope.get("name", this.objectFactory).     assertThat(actual, is("value")). }
-false;public;0;8;;@Test public void getWithObjectFactory() {     given(this.objectFactory.getObject()).willReturn("value").     Object actual = this.scope.get("name", this.objectFactory).     assertThat(actual, is("value")).     assertThat(this.simpAttributes.getAttribute("name"), is("value")). }
-false;public;0;11;;@Test public void remove() {     this.simpAttributes.setAttribute("name", "value").     Object removed = this.scope.remove("name").     assertThat(removed, is("value")).     assertThat(this.simpAttributes.getAttribute("name"), nullValue()).     removed = this.scope.remove("name").     assertThat(removed, nullValue()). }
-false;public;0;8;;@Test public void registerDestructionCallback() {     Runnable runnable = Mockito.mock(Runnable.class).     this.scope.registerDestructionCallback("name", runnable).     this.simpAttributes.sessionCompleted().     verify(runnable, times(1)).run(). }
-false;public;0;4;;@Test public void getSessionId() {     assertThat(this.scope.getConversationId(), is("session1")). }

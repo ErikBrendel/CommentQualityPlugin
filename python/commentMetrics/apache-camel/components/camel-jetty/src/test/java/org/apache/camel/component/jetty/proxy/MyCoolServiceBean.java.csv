@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;7;;public String hello(String name) throws MyAppException {     if ("Kaboom".equals(name)) {         throw new MyAppException("Invalid name", "Kaboom").     }     return "Hello " + name. }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void testTransforms() throws Exception {     endEndpoint.expectedBodiesReceived("Some data plus ... extra data!").     template.sendBody("direct:start", "Some data plus ...").     assertMockEndpointsSatisfied(). }
-false;public;0;7;;@Override @Before public void setUp() throws Exception {     super.setUp().     endEndpoint = getMockEndpoint("mock:end"). }
-false;protected;0;3;;protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/spring/processor/transformWithExpressionContext.xml"). }

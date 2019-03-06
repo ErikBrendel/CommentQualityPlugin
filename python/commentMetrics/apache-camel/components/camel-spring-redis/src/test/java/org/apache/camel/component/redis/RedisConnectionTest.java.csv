@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry registry = super.createRegistry().     registry.bind("redisTemplate", redisTemplate).     return registry. }
-false;public;0;10;;@Test public void shouldExecuteECHO() throws Exception {     when(redisTemplate.execute(ArgumentMatchers.<RedisCallback<String>>any())).thenReturn("value").     Object result = sendHeaders(RedisConstants.COMMAND, "ECHO", RedisConstants.VALUE, "value").     assertEquals("value", result). }
-false;public;0;8;;@Test public void shouldExecutePING() throws Exception {     when(redisTemplate.execute(ArgumentMatchers.<RedisCallback<String>>any())).thenReturn("PONG").     Object result = sendHeaders(RedisConstants.COMMAND, "PING").     assertEquals("PONG", result). }
-false;public;0;6;;@Test public void shouldExecuteQUIT() throws Exception {     sendHeaders(RedisConstants.COMMAND, "QUIT").     verify(redisTemplate).execute(ArgumentMatchers.<RedisCallback<String>>any()). }
-false;public;0;9;;@Test public void shouldExecutePUBLISH() throws Exception {     sendHeaders(RedisConstants.COMMAND, "PUBLISH", RedisConstants.CHANNEL, "channel", RedisConstants.MESSAGE, "a message").     verify(redisTemplate).convertAndSend("channel", "a message"). }

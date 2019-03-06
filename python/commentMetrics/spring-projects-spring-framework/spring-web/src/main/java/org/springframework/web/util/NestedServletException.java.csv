@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;5;/**  * Return the detail message, including the message from the nested exception  * if there is one.  */ ;/**  * Return the detail message, including the message from the nested exception  * if there is one.  */ @Override @Nullable public String getMessage() {     return NestedExceptionUtils.buildMessage(super.getMessage(), getCause()). }

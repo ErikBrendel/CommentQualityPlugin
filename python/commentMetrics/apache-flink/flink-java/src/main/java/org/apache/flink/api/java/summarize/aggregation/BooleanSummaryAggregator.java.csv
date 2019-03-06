@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;10;;@Override public void aggregate(Boolean value) {     if (value == null) {         nullCount++.     } else if (value) {         trueCount++.     } else {         falseCount++.     } }
-false;public;1;7;;@Override public void combine(Aggregator<Boolean, BooleanColumnSummary> otherSameType) {     BooleanSummaryAggregator other = (BooleanSummaryAggregator) otherSameType.     trueCount += other.trueCount.     falseCount += other.falseCount.     nullCount += other.nullCount. }
-false;public;0;4;;@Override public BooleanColumnSummary result() {     return new BooleanColumnSummary(trueCount, falseCount, nullCount). }

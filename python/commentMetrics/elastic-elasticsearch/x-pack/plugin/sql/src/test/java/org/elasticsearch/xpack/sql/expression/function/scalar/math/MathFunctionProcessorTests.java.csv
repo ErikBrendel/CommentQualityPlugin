@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;3;;public static MathProcessor randomMathFunctionProcessor() {     return new MathProcessor(randomFrom(MathOperation.values())). }
-false;protected;0;4;;@Override protected MathProcessor createTestInstance() {     return randomMathFunctionProcessor(). }
-false;protected;0;4;;@Override protected Reader<MathProcessor> instanceReader() {     return MathProcessor::new. }
-false;protected;1;4;;@Override protected MathProcessor mutateInstance(MathProcessor instance) throws IOException {     return new MathProcessor(randomValueOtherThan(instance.processor(), () -> randomFrom(MathOperation.values()))). }
-false;public;0;10;;public void testApply() {     MathProcessor proc = new MathProcessor(MathOperation.E).     assertEquals(Math.E, proc.process(null)).     assertEquals(Math.E, proc.process(Math.PI)).     proc = new MathProcessor(MathOperation.SQRT).     assertEquals(2.0, (double) proc.process(4), 0).     assertEquals(3.0, (double) proc.process(9d), 0).     assertEquals(1.77, (double) proc.process(3.14), 0.01). }
-false;public;0;6;;public void testNumberCheck() {     MathProcessor proc = new MathProcessor(MathOperation.E).     SqlIllegalArgumentException siae = expectThrows(SqlIllegalArgumentException.class, () -> proc.process("string")).     assertEquals("A number is required. received [string]", siae.getMessage()). }
-false;public;0;5;;public void testRandom() {     MathProcessor proc = new MathProcessor(MathOperation.RANDOM).     assertNotNull(proc.process(null)).     assertNotNull(proc.process(randomLong())). }

@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void testSendAndReceiveMessage() throws Exception {     assertSendAndReceiveBody("Hello there!"). }
-false;public;0;9;;@Test public void testSendEmptyMessage() throws Exception {     resultEndpoint.expectedMessageCount(2).     sendExchange("").     sendExchange(null).     resultEndpoint.assertIsSatisfied(). }
-false;protected;1;8;;protected void assertSendAndReceiveBody(Object expectedBody) throws InterruptedException {     resultEndpoint.expectedBodiesReceived(expectedBody).     resultEndpoint.message(0).header("cheese").isEqualTo(123).     sendExchange(expectedBody).     resultEndpoint.assertIsSatisfied(). }
-false;protected;1;3;;protected void sendExchange(final Object expectedBody) {     template.sendBodyAndHeader(startEndpointUri, expectedBody, "cheese", 123). }
-false;public;0;9;;@Override @Before public void setUp() throws Exception {     startEndpointUri = componentName + ":queue:test.a".     super.setUp().     resultEndpoint = context.getEndpoint("mock:result", MockEndpoint.class). }
-false;protected;0;8;;protected CamelContext createCamelContext() throws Exception {     CamelContext camelContext = super.createCamelContext().     ConnectionFactory connectionFactory = CamelJmsTestHelper.createConnectionFactory().     camelContext.addComponent(componentName, jmsComponentAutoAcknowledge(connectionFactory)).     return camelContext. }
-false;public;0;4;;public void configure() throws Exception {     from(startEndpointUri).to(componentName + ":queue:test.b").     from(componentName + ":queue:test.b").to("mock:result"). }
-false;protected;0;8;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from(startEndpointUri).to(componentName + ":queue:test.b").             from(componentName + ":queue:test.b").to("mock:result").         }     }. }

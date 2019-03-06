@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void testTranslation() throws Exception {     StringValue reuse = new StringValue().     assertEquals(new StringValue("-9223372036854775808"), translator.translate(new LongValue(Long.MIN_VALUE), reuse)).     assertEquals(new StringValue("0"), translator.translate(new LongValue(0), reuse)).     assertEquals(new StringValue("9223372036854775807"), translator.translate(new LongValue(Long.MAX_VALUE), reuse)). }

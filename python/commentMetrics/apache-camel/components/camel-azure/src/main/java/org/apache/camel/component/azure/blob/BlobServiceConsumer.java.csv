@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;16;;@Override protected int poll() throws Exception {     Exchange exchange = super.getEndpoint().createExchange().     try {         log.trace("Getting the blob content").         getBlob(exchange).         super.getAsyncProcessor().process(exchange).         return 1.     } catch (StorageException ex) {         if (404 == ex.getHttpStatusCode()) {             return 0.         } else {             throw ex.         }     } }
-false;private;1;3;;private void getBlob(Exchange exchange) throws Exception {     BlobServiceUtil.getBlob(exchange, getConfiguration()). }
-false;protected;0;3;;protected BlobServiceConfiguration getConfiguration() {     return getEndpoint().getConfiguration(). }
-false;public;0;4;;@Override public BlobServiceEndpoint getEndpoint() {     return (BlobServiceEndpoint) super.getEndpoint(). }

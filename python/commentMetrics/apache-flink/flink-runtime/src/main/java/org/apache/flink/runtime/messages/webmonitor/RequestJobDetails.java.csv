@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;// ------------------------------------------------------------------------ public boolean shouldIncludeFinished() {     return includeFinished. }
-false;public;0;3;;public boolean shouldIncludeRunning() {     return includeRunning. }
-false;public;1;15;;// ------------------------------------------------------------------------ @Override public boolean equals(Object o) {     if (this == o) {         return true.     } else if (o instanceof RequestJobDetails) {         RequestJobDetails that = (RequestJobDetails) o.         return this.includeFinished == that.includeFinished && this.includeRunning == that.includeRunning.     } else {         return false.     } }
-false;public;0;4;;@Override public int hashCode() {     return (includeRunning ? 31 : 0) + (includeFinished ? 1 : 0). }
-false;public;0;7;;@Override public String toString() {     return "RequestJobDetails{" + "includeRunning=" + includeRunning + ", includeFinished=" + includeFinished + '}'. }

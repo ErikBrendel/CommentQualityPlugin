@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * Is renormalization enabled?  * @return {@code true} if renormalization is enabled or {@code false} otherwise  */ ;/**  * Is renormalization enabled?  * @return {@code true} if renormalization is enabled or {@code false} otherwise  */ boolean isEnabled().
-true;;1;1;/**  * Update the anomaly score field on all previously persisted buckets  * and all contained records  */ ;/**  * Update the anomaly score field on all previously persisted buckets  * and all contained records  */ void renormalize(Quantiles quantiles).
-true;;0;1;/**  * Blocks until the renormalizer is idle and no further quantiles updates are pending.  */ ;/**  * Blocks until the renormalizer is idle and no further quantiles updates are pending.  */ void waitUntilIdle().
-true;;0;1;/**  * Shut down the renormalization ASAP.  Do not wait for it to fully complete.  */ ;/**  * Shut down the renormalization ASAP.  Do not wait for it to fully complete.  */ void shutdown().

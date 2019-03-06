@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Before public void startServices() throws Exception {     applicationContext = new ClassPathXmlApplicationContext("META-INF/spring/server.xml").     camelContext = getCamelContext().     camelContext.addRoutes(new LoanBrokerRoute()).     template = camelContext.createProducerTemplate().     camelContext.start(). }
-false;public;0;6;;@After public void stopServices() throws Exception {     if (camelContext != null) {         camelContext.stop().     } }
-false;public;0;8;;@Test public void testClientInvocation() throws Exception {     String out = template.requestBodyAndHeader("jms:queue:loan", null, Constants.PROPERTY_SSN, "Client-A", String.class).     log.info("Result: {}", out).     assertNotNull(out).     assertTrue(out.startsWith("The best rate is [ssn:Client-A bank:bank")). }
-false;protected;0;3;;protected CamelContext getCamelContext() throws Exception {     return applicationContext.getBean("camel", CamelContext.class). }

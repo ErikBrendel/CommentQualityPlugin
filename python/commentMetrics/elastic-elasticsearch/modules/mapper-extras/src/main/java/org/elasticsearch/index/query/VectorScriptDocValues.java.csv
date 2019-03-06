@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;8;;@Override public void setNextDocId(int docId) throws IOException {     if (in.advanceExact(docId)) {         value = in.binaryValue().     } else {         value = null.     } }
-true;;0;3;// package private access only for {@link ScoreScriptUtils} ;// package private access only for {@link ScoreScriptUtils} BytesRef getEncodedValue() {     return value. }
-false;public;1;4;;@Override public BytesRef get(int index) {     throw new UnsupportedOperationException("vector fields may only be used via vector functions in scripts"). }
-false;public;0;4;;@Override public int size() {     throw new UnsupportedOperationException("vector fields may only be used via vector functions in scripts"). }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Test public void testRepository() {     this.repository.save(new ExampleEntity(42, "Smith")).     ExampleEntity entity = this.repository.findById(42).     assertThat(entity).isNotNull().     assertThat(entity.getName()).isEqualTo("Smith"). }

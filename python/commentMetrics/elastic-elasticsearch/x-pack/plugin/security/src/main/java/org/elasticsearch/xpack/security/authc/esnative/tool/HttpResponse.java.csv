@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;0;3;;int getHttpStatus() {     return httpStatus. }
-false;;0;3;;Map<String, Object> getResponseBody() {     return responseBody. }
-false;;1;4;;HttpResponseBuilder withHttpStatus(final int httpStatus) {     this.httpStatus = httpStatus.     return this. }
-false;;1;9;;HttpResponseBuilder withResponseBody(final String responseJson) throws ElasticsearchParseException, UnsupportedEncodingException {     if (responseJson == null || responseJson.trim().isEmpty()) {         throw new ElasticsearchParseException("Invalid string provided as http response body, Failed to parse content to form response body.").     }     this.responseBody = XContentHelper.convertToMap(XContentType.JSON.xContent(), responseJson, false).     return this. }
-false;;0;4;;HttpResponse build() {     HttpResponse httpResponse = new HttpResponse(this.httpStatus, this.responseBody).     return httpResponse. }

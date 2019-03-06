@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;public boolean matches(Exchange exchange) {     String str = (String) exchange.getIn().getBody().     return RESPONSE_MONKEY.equals(str). }
-false;public;0;15;;@Test @Ignore("Testing behind nat produces timeouts") public void testWikipediaForMonkey() throws Exception {     resultEndpoint.expectedMessageCount(1).     resultEndpoint.expectedMessagesMatches(new Predicate() {          public boolean matches(Exchange exchange) {             String str = (String) exchange.getIn().getBody().             return RESPONSE_MONKEY.equals(str).         }     }).     Map<String, Object> headers = new HashMap<>().     headers.put("term", "monkey").     template.sendBodyAndHeaders(null, headers).     resultEndpoint.assertIsSatisfied(). }
-false;protected;0;4;;@Override protected AbstractApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("Wikipedia.xml"). }

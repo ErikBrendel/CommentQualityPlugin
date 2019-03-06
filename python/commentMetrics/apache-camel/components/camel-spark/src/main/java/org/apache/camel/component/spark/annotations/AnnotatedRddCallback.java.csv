@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;3;;public static RddCallback annotatedRddCallback(Object objectWithCallback) {     return new AnnotatedRddCallbackProxy(objectWithCallback). }
-false;public,static;2;3;;public static RddCallback annotatedRddCallback(Object objectWithCallback, CamelContext camelContext) {     return new AnnotatedRddCallbackProxy(objectWithCallback, camelContext). }

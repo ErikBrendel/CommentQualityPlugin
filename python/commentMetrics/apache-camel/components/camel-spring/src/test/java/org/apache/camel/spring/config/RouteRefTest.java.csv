@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void testRouteRefInside() throws Exception {     getMockEndpoint("mock:inside").expectedMessageCount(1).     template.sendBody("direct:inside", "Hello World").     assertMockEndpointsSatisfied(). }
-false;public;0;8;;@Test public void testRouteRefOutside() throws Exception {     getMockEndpoint("mock:result").expectedMessageCount(1).     template.sendBody("direct:start", "Hello World").     assertMockEndpointsSatisfied(). }
-false;protected;0;4;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/spring/config/RouteRefTest.xml"). }

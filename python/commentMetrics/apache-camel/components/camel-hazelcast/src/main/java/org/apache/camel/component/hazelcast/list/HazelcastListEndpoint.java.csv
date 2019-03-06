@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;@Override public Consumer createConsumer(Processor processor) throws Exception {     HazelcastListConsumer answer = new HazelcastListConsumer(hazelcastInstance, this, processor, cacheName).     configureConsumer(answer).     return answer. }
-false;public;0;4;;@Override public Producer createProducer() throws Exception {     return new HazelcastListProducer(hazelcastInstance, this, cacheName). }

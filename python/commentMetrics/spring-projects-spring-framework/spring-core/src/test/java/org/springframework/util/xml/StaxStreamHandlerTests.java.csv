@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;6;;@Override protected AbstractStaxHandler createStaxHandler(Result result) throws XMLStreamException {     XMLOutputFactory outputFactory = XMLOutputFactory.newFactory().     XMLStreamWriter streamWriter = outputFactory.createXMLStreamWriter(result).     return new StaxStreamHandler(streamWriter). }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;12;;// ------------------------------------------------------------------------ // Services // ------------------------------------------------------------------------ @Override public RunningJobsRegistry getRunningJobsRegistry() throws IOException {     enter().     try {         // cleaned up by these services.         return new FsNegativeRunningJobsRegistry(flinkFileSystem, workingDirectory).     } finally {         exit().     } }
-false;public;0;10;;@Override public CheckpointRecoveryFactory getCheckpointRecoveryFactory() {     enter().     try {         return new StandaloneCheckpointRecoveryFactory().     } finally {         exit().     } }
-false;public;0;4;;@Override public SubmittedJobGraphStore getSubmittedJobGraphStore() throws Exception {     throw new UnsupportedOperationException("These High-Availability Services do not support storing job graphs"). }

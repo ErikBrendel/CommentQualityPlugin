@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void testSendingTwoWayMessage() throws Exception {     String result = template.requestBody("direct:twowayMessage", "Willem", String.class).     assertEquals("Can't get the right response", result, "Hello Willem"). }
-false;public;0;7;;@Test public void testSendingOneWayMessage() throws Exception {     template.sendBody("direct:onewayMessage", "Greet").     HelloWorldService service = getMandatoryBean(HelloWorldService.class, "helloService").     assertEquals("We should call the service", service.getGreetName(), "Greet"). }
-false;protected;0;3;;protected ClassPathXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/component/spring/integration/producer.xml"). }

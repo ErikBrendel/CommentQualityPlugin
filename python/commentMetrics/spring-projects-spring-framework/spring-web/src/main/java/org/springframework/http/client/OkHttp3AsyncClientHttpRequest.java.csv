@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public HttpMethod getMethod() {     return this.method. }
-false;public;0;4;;@Override public String getMethodValue() {     return this.method.name(). }
-false;public;0;4;;@Override public URI getURI() {     return this.uri. }
-false;protected;2;7;;@Override protected ListenableFuture<ClientHttpResponse> executeInternal(HttpHeaders headers, byte[] content) throws IOException {     Request request = OkHttp3ClientHttpRequestFactory.buildRequest(headers, content, this.uri, this.method).     return new OkHttpListenableFuture(this.client.newCall(request)). }
-false;public;2;4;;@Override public void onResponse(Call call, Response response) {     set(new OkHttp3ClientHttpResponse(response)). }
-false;public;2;4;;@Override public void onFailure(Call call, IOException ex) {     setException(ex). }
-false;protected;0;4;;@Override protected void interruptTask() {     this.call.cancel(). }

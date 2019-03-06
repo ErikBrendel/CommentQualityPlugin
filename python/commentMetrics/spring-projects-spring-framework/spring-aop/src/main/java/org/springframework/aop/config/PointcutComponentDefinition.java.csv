@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getName() {     return this.pointcutBeanName. }
-false;public;0;4;;@Override public String getDescription() {     return this.description. }
-false;public;0;4;;@Override public BeanDefinition[] getBeanDefinitions() {     return new BeanDefinition[] { this.pointcutDefinition }. }
-false;public;0;5;;@Override @Nullable public Object getSource() {     return this.pointcutDefinition.getSource(). }

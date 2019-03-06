@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;@Override public void progress() { }
-false;public;1;4;;@Override public void setStatus(String status) { }
-false;public;1;4;;@Override public Counter getCounter(Enum<?> name) {     return null. }
-false;public;2;4;;@Override public Counter getCounter(String group, String name) {     return null. }
-false;public;2;4;;@Override public void incrCounter(Enum<?> key, long amount) { }
-false;public;3;4;;@Override public void incrCounter(String group, String counter, long amount) { }
-false;public;0;4;;@Override public InputSplit getInputSplit() throws UnsupportedOperationException {     return null. }
-true;public;0;3;// There should be an @Override, but some CDH4 dependency does not contain this method ;// There should be an @Override, but some CDH4 dependency does not contain this method public float getProgress() {     return 0. }

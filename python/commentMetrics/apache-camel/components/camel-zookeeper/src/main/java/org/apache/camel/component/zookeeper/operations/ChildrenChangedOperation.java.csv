@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;5;2;;public void processResult(int rc, String path, Object ctx, List<String> children, Stat stat) { }
-false;protected;0;7;;@Override protected void installWatch() {     connection.getChildren(getNode(), this, new Children2Callback() {          public void processResult(int rc, String path, Object ctx, List<String> children, Stat stat) {         }     }, null). }
-false;public;0;4;;@Override public OperationResult<List<String>> getResult() {     return getChangedListing ? new GetChildrenOperation(connection, node).getResult() : null. }
-false;public;0;6;;@Override public ZooKeeperOperation<?> createCopy() throws Exception {     ChildrenChangedOperation copy = (ChildrenChangedOperation) super.createCopy().     copy.getChangedListing = getChangedListing.     return copy. }

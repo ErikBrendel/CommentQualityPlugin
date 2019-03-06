@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;7;;@Override public void setApplicationContext(ApplicationContext applicationContext) {     this.applicationContext = applicationContext.     if (applicationContext.getDisplayName().contains("listener")) {         applicationContext.getBean("listener").     } }

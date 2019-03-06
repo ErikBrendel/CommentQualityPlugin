@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getType() {     return InternalHDRPercentileRanks.NAME. }
-false;public;0;4;;@Override public boolean hasNext() {     return iterator.hasNext(). }
-false;public;0;5;;@Override public Percentile next() {     Percentile percentile = iterator.next().     return new Percentile(percentile.getValue(), percentile.getPercent()). }
-false;public;0;16;;@Override public Iterator<Percentile> iterator() {     final Iterator<Percentile> iterator = super.iterator().     return new Iterator<Percentile>() {          @Override         public boolean hasNext() {             return iterator.hasNext().         }          @Override         public Percentile next() {             Percentile percentile = iterator.next().             return new Percentile(percentile.getValue(), percentile.getPercent()).         }     }. }
-false;public,static;2;5;;public static ParsedHDRPercentileRanks fromXContent(XContentParser parser, String name) throws IOException {     ParsedHDRPercentileRanks aggregation = PARSER.parse(parser, null).     aggregation.setName(name).     return aggregation. }

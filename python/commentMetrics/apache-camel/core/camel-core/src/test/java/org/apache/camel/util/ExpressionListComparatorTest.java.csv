@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;4;;@SuppressWarnings("unchecked") public <T> T evaluate(Exchange exchange, Class<T> type) {     return (T) "foo". }
-false;public;2;4;;@SuppressWarnings("unchecked") public <T> T evaluate(Exchange exchange, Class<T> type) {     return (T) "bar". }
-false;public;0;14;;@Test public void testExpressionListComparator() {     List<Expression> list = new ArrayList<>().     list.add(new MyFooExpression()).     list.add(new MyBarExpression()).     ExpressionListComparator comp = new ExpressionListComparator(list).     Exchange e1 = new DefaultExchange(context).     Exchange e2 = new DefaultExchange(context).     int out = comp.compare(e1, e2).     assertEquals(0, out). }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected FilterRef createTestInstance() {     return new FilterRef(randomAlphaOfLength(20), randomFrom(FilterRef.FilterType.values())). }
-false;protected;1;4;;@Override protected FilterRef doParseInstance(XContentParser parser) throws IOException {     return FilterRef.PARSER.parse(parser, null). }
-false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }

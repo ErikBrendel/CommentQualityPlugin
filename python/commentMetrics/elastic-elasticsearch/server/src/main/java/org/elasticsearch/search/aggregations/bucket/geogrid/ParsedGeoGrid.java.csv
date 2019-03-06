@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public List<? extends GeoGrid.Bucket> getBuckets() {     return buckets. }
-false;public,static;3;7;;public static ObjectParser<ParsedGeoGrid, Void> createParser(Supplier<ParsedGeoGrid> supplier, CheckedFunction<XContentParser, ParsedBucket, IOException> bucketParser, CheckedFunction<XContentParser, ParsedBucket, IOException> keyedBucketParser) {     ObjectParser<ParsedGeoGrid, Void> parser = new ObjectParser<>(ParsedGeoGrid.class.getSimpleName(), true, supplier).     declareMultiBucketAggregationFields(parser, bucketParser, keyedBucketParser).     return parser. }
-false;protected;1;3;;protected void setName(String name) {     super.setName(name). }

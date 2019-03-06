@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;1;4;/**  * Sets the repository name  *  * @param repository repository name  * @return this builder  */ ;/**  * Sets the repository name  *  * @param repository repository name  * @return this builder  */ public DeleteSnapshotRequestBuilder setRepository(String repository) {     request.repository(repository).     return this. }
-true;public;1;4;/**  * Sets the snapshot name  *  * @param snapshot snapshot name  * @return this builder  */ ;/**  * Sets the snapshot name  *  * @param snapshot snapshot name  * @return this builder  */ public DeleteSnapshotRequestBuilder setSnapshot(String snapshot) {     request.snapshot(snapshot).     return this. }

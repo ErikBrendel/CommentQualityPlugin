@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;6;;@Override protected SearchRequestBuilder buildSearchRequest(SearchSourceBuilder searchSourceBuilder) {     return new SearchRequestBuilder(client, SearchAction.INSTANCE).setSource(searchSourceBuilder).setIndices(context.indices). }

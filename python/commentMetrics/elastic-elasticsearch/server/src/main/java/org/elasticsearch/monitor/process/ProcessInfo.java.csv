@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeLong(refreshInterval).     out.writeLong(id).     out.writeBoolean(mlockall). }
-false;public;0;3;;public long refreshInterval() {     return this.refreshInterval. }
-false;public;0;3;;public long getRefreshInterval() {     return this.refreshInterval. }
-true;public;0;3;/**  * The process id.  */ ;/**  * The process id.  */ public long getId() {     return id. }
-false;public;0;3;;public boolean isMlockall() {     return mlockall. }
-false;public;2;9;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject(Fields.PROCESS).     builder.humanReadableField(Fields.REFRESH_INTERVAL_IN_MILLIS, Fields.REFRESH_INTERVAL, new TimeValue(refreshInterval)).     builder.field(Fields.ID, id).     builder.field(Fields.MLOCKALL, mlockall).     builder.endObject().     return builder. }

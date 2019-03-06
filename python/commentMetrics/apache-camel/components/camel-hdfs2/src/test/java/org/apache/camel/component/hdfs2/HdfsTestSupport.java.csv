@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;16;;public boolean canTest() {     // Hadoop doesn't run on IBM JDK     if (System.getProperty("java.vendor").contains("IBM")) {         return false.     }     // must be able to get security configuration     try {         javax.security.auth.login.Configuration.getConfiguration().     } catch (Exception e) {         log.debug("Cannot run test due security exception", e).         return false.     }     return true. }

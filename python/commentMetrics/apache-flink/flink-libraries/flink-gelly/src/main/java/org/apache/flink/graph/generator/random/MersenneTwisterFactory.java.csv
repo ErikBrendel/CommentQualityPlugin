@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected int getMinimumCyclesPerBlock() {     return MINIMUM_CYCLES_PER_BLOCK. }
-false;protected;0;4;;@Override protected MersenneTwisterGenerable next() {     return new MersenneTwisterGenerable(random.nextLong()). }
-false;public;0;8;;@Override public MersenneTwister generator() {     MersenneTwister random = new MersenneTwister().     random.setSeed(seed).     return random. }

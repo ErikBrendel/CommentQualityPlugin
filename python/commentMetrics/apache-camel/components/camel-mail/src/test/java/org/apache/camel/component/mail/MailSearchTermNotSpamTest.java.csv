@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;8;;@Override protected SearchTerm createSearchTerm() {     // we just want the unseen mails which is not spam     SearchTermBuilder build = new SearchTermBuilder().     build.unseen().body(Op.not, "Spam").subject(Op.not, "Spam").     return build.build(). }
-false;public;0;11;;@Test public void testSearchTerm() throws Exception {     Mailbox mailbox = Mailbox.get("bill@localhost").     assertEquals(6, mailbox.size()).     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedBodiesReceivedInAnyOrder("I like riding the Camel", "Ordering Camel in Action", "Ordering ActiveMQ in Action", "We meet at 7pm the usual place").     assertMockEndpointsSatisfied(). }

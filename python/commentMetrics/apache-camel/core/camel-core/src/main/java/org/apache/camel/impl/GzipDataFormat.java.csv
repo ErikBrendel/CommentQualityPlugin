@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getDataFormatName() {     return "gzip". }
-false;public;3;11;;public void marshal(final Exchange exchange, final Object graph, final OutputStream stream) throws Exception {     InputStream is = exchange.getContext().getTypeConverter().mandatoryConvertTo(InputStream.class, exchange, graph).     GZIPOutputStream zipOutput = new GZIPOutputStream(stream).     try {         IOHelper.copy(is, zipOutput).     } finally {         // must close all input streams         IOHelper.close(is, zipOutput).     } }
-false;public;2;13;;public Object unmarshal(final Exchange exchange, final InputStream inputStream) throws Exception {     GZIPInputStream unzipInput = null.     OutputStreamBuilder osb = OutputStreamBuilder.withExchange(exchange).     try {         unzipInput = new GZIPInputStream(inputStream).         IOHelper.copy(unzipInput, osb).         return osb.build().     } finally {         // must close all input streams         IOHelper.close(osb, unzipInput, inputStream).     } }
-false;protected;0;4;;@Override protected void doStart() throws Exception { // noop }
-false;protected;0;4;;@Override protected void doStop() throws Exception { // noop }

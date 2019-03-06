@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;12;;@Handler public void performTask() {     INVOKED.incrementAndGet().     try {         // sleep 5 seconds         Thread.sleep(3000).     } catch (InterruptedException iEx) {     // do nothing     } }
-false;public,static;0;3;;public static int gotInvoked() {     return INVOKED.get(). }

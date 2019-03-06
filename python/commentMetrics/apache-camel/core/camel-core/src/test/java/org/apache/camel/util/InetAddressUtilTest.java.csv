@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Test public void testGetLocalHostName() throws Exception {     try {         String name = InetAddressUtil.getLocalHostName().         assertNotNull(name).     } catch (UnknownHostException e) {     // ignore if this test is run on a OS which cannot resolve hostname     } }

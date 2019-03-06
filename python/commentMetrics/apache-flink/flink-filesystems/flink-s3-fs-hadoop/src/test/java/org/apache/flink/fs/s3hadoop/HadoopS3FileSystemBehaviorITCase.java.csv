@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;11;;@BeforeClass public static void checkCredentialsAndSetup() throws IOException {     // check whether credentials exist     S3TestCredentials.assumeCredentialsAvailable().     // initialize configuration with valid credentials     final Configuration conf = new Configuration().     conf.setString("s3.access.key", S3TestCredentials.getS3AccessKey()).     conf.setString("s3.secret.key", S3TestCredentials.getS3SecretKey()).     FileSystem.initialize(conf). }
-false;public,static;0;4;;@AfterClass public static void clearFsConfig() throws IOException {     FileSystem.initialize(new Configuration()). }
-false;public;0;4;;@Override public FileSystem getFileSystem() throws Exception {     return getBasePath().getFileSystem(). }
-false;public;0;4;;@Override public Path getBasePath() throws Exception {     return new Path(S3TestCredentials.getTestBucketUri() + TEST_DATA_DIR). }
-false;public;0;4;;@Override public FileSystemKind getFileSystemKind() {     return FileSystemKind.OBJECT_STORE. }

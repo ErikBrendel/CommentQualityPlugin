@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public void configure() throws Exception {     from(from).to("{{to}}"). }
-false;;0;9;;@Bean RouteBuilder routeBuilder() {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from(from).to("{{to}}").         }     }. }
-false;public;0;12;;// Tests @Test public void shouldResolveBothCamelAndSpringPlaceholders() throws InterruptedException {     // Given     MockEndpoint mockEndpoint = camelContext.getEndpoint("mock:test", MockEndpoint.class).     mockEndpoint.expectedMessageCount(1).     // When     producerTemplate.sendBody(from, "msg").     // Then     mockEndpoint.assertIsSatisfied(). }

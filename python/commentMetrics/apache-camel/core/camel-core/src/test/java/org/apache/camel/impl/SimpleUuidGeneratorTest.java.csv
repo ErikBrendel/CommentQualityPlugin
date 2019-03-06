@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Test public void testGenerateUUID() {     SimpleUuidGenerator uuidGenerator = new SimpleUuidGenerator().     assertEquals("1", uuidGenerator.generateUuid()).     assertEquals("2", uuidGenerator.generateUuid()). }
-false;public;0;13;;@Test public void testPerformance() {     SimpleUuidGenerator uuidGenerator = new SimpleUuidGenerator().     StopWatch watch = new StopWatch().     LOG.info("First id: " + uuidGenerator.generateUuid()).     for (int i = 0. i < 500000. i++) {         uuidGenerator.generateUuid().     }     LOG.info("Last id:  " + uuidGenerator.generateUuid()).     LOG.info("Took " + TimeUtils.printDuration(watch.taken())). }

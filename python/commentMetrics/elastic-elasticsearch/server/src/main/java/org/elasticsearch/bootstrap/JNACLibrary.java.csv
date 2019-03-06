@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;static,native;1;1;;static native int mlockall(int flags).
-false;static,native;0;1;;static native int geteuid().
-false;protected;0;4;;@Override protected List<String> getFieldOrder() {     return Arrays.asList("rlim_cur", "rlim_max"). }
-false;static,native;2;1;;static native int getrlimit(int resource, Rlimit rlimit).
-false;static,native;2;1;;static native int setrlimit(int resource, Rlimit rlimit).
-false;static,native;1;1;;static native String strerror(int errno).

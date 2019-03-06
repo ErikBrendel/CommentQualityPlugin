@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected,final;0;13;;@Override protected final PAF createTestAggregatorFactory() {     String name = randomAlphaOfLengthBetween(3, 20).     String bucketsPath = randomAlphaOfLengthBetween(3, 20).     PAF factory = doCreateTestAggregatorFactory(name, bucketsPath).     if (randomBoolean()) {         factory.format(randomAlphaOfLengthBetween(1, 10)).     }     if (randomBoolean()) {         factory.gapPolicy(randomFrom(GapPolicy.values())).     }     return factory. }
-false;protected,abstract;2;1;;protected abstract PAF doCreateTestAggregatorFactory(String name, String bucketsPath).

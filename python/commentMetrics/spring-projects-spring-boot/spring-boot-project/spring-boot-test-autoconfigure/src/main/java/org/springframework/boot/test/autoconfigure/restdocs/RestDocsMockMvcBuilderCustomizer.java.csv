@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Override public void afterPropertiesSet() throws Exception {     PropertyMapper map = PropertyMapper.get().     RestDocsProperties properties = this.properties.     UriConfigurer uri = this.delegate.uris().     map.from(properties::getUriScheme).whenHasText().to(uri::withScheme).     map.from(properties::getUriHost).whenHasText().to(uri::withHost).     map.from(properties::getUriPort).whenNonNull().to(uri::withPort). }
-false;public;1;7;;@Override public void customize(ConfigurableMockMvcBuilder<?> builder) {     builder.apply(this.delegate).     if (this.resultHandler != null) {         builder.alwaysDo(this.resultHandler).     } }

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;3;;public static void setOutputStream(OutputStream outputStream) {     THREAD_OUTPUT_STREAM.set(outputStream). }
-false;public;0;3;;@Override public void connect() throws IOException { }
-false;public;0;4;;@Override public OutputStream getOutputStream() throws IOException {     return THREAD_OUTPUT_STREAM.get(). }
-false;public;2;4;;@Override public void addRequestProperty(String key, String value) {     HEADERS.put(key, value). }
-false;public,static;0;3;;public static Map<String, String> getHeaders() {     return HEADERS. }

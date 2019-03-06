@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;4;;@Converter public static String toString(Response response) {     return response.toString(). }
-false;public,static;4;12;;@FallbackConverter @SuppressWarnings("unchecked") public static <T> T convertTo(Class<T> type, Exchange exchange, Object value, TypeConverterRegistry registry) {     if (value != null) {         // should not try to convert Request as its not possible         if (Request.class.isAssignableFrom(value.getClass())) {             return (T) MISS_VALUE.         }     }     return null. }

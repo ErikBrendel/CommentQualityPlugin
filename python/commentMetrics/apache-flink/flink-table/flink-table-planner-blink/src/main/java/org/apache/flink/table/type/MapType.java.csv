@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public InternalType getKeyType() {     return keyType. }
-false;public;0;3;;public InternalType getValueType() {     return valueType. }
-false;public;1;14;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     MapType mapType = (MapType) o.     return getKeyType().equals(mapType.getKeyType()) && getValueType().equals(mapType.getValueType()). }
-false;public;0;6;;@Override public int hashCode() {     int result = getKeyType().hashCode().     result = 31 * result + getValueType().hashCode().     return result. }
-false;public;0;7;;@Override public String toString() {     return "MapType{" + "keyType=" + keyType + ", valueType=" + valueType + '}'. }

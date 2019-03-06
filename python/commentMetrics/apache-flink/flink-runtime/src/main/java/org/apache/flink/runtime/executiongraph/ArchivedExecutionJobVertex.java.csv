@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;// -------------------------------------------------------------------------------------------- // Accessors // -------------------------------------------------------------------------------------------- @Override public String getName() {     return name. }
-false;public;0;4;;@Override public int getParallelism() {     return parallelism. }
-false;public;0;4;;@Override public int getMaxParallelism() {     return maxParallelism. }
-false;public;0;4;;@Override public JobVertexID getJobVertexId() {     return id. }
-false;public;0;4;;@Override public ArchivedExecutionVertex[] getTaskVertices() {     return taskVertices. }
-false;public;0;9;;@Override public ExecutionState getAggregateState() {     int[] num = new int[ExecutionState.values().length].     for (ArchivedExecutionVertex vertex : this.taskVertices) {         num[vertex.getExecutionState().ordinal()]++.     }     return getAggregateJobVertexState(num, parallelism). }
-false;public;0;4;;// -------------------------------------------------------------------------------------------- // Static / pre-assigned input splits // -------------------------------------------------------------------------------------------- @Override public StringifiedAccumulatorResult[] getAggregatedUserAccumulatorsStringified() {     return archivedUserAccumulators. }

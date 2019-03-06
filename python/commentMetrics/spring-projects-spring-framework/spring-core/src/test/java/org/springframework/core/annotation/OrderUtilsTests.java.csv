@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void getSimpleOrder() {     assertEquals(Integer.valueOf(50), OrderUtils.getOrder(SimpleOrder.class, null)).     assertEquals(Integer.valueOf(50), OrderUtils.getOrder(SimpleOrder.class, null)). }
-false;public;0;5;;@Test public void getPriorityOrder() {     assertEquals(Integer.valueOf(55), OrderUtils.getOrder(SimplePriority.class, null)).     assertEquals(Integer.valueOf(55), OrderUtils.getOrder(SimplePriority.class, null)). }
-false;public;0;5;;@Test public void getOrderWithBoth() {     assertEquals(Integer.valueOf(50), OrderUtils.getOrder(OrderAndPriority.class, null)).     assertEquals(Integer.valueOf(50), OrderUtils.getOrder(OrderAndPriority.class, null)). }
-false;public;0;5;;@Test public void getDefaultOrder() {     assertEquals(33, OrderUtils.getOrder(NoOrder.class, 33)).     assertEquals(33, OrderUtils.getOrder(NoOrder.class, 33)). }
-false;public;0;5;;@Test public void getPriorityValueNoAnnotation() {     assertNull(OrderUtils.getPriority(SimpleOrder.class)).     assertNull(OrderUtils.getPriority(SimpleOrder.class)). }
-false;public;0;5;;@Test public void getPriorityValue() {     assertEquals(Integer.valueOf(55), OrderUtils.getPriority(OrderAndPriority.class)).     assertEquals(Integer.valueOf(55), OrderUtils.getPriority(OrderAndPriority.class)). }

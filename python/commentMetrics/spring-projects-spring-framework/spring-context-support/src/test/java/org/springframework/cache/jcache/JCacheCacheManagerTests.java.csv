@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;13;;@Before public void setupOnce() {     cacheManagerMock = new CacheManagerMock().     cacheManagerMock.addCache(CACHE_NAME).     cacheManager = new JCacheCacheManager(cacheManagerMock.getCacheManager()).     cacheManager.setTransactionAware(false).     cacheManager.afterPropertiesSet().     transactionalCacheManager = new JCacheCacheManager(cacheManagerMock.getCacheManager()).     transactionalCacheManager.setTransactionAware(true).     transactionalCacheManager.afterPropertiesSet(). }
-false;protected;1;9;;@Override protected JCacheCacheManager getCacheManager(boolean transactionAware) {     if (transactionAware) {         return transactionalCacheManager.     } else {         return cacheManager.     } }
-false;protected;0;4;;@Override protected Class<? extends org.springframework.cache.Cache> getCacheType() {     return JCacheCache.class. }
-false;protected;1;4;;@Override protected void addNativeCache(String cacheName) {     cacheManagerMock.addCache(cacheName). }
-false;protected;1;4;;@Override protected void removeNativeCache(String cacheName) {     cacheManagerMock.removeCache(cacheName). }
-false;private;0;3;;private CacheManager getCacheManager() {     return cacheManager. }
-false;public;1;7;;@SuppressWarnings("unchecked") public void addCache(String name) {     cacheNames.add(name).     Cache cache = mock(Cache.class).     given(cache.getName()).willReturn(name).     given(cacheManager.getCache(name)).willReturn(cache). }
-false;public;1;4;;public void removeCache(String name) {     cacheNames.remove(name).     given(cacheManager.getCache(name)).willReturn(null). }

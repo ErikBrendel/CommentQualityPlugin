@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;2;4;;@Override protected RoutingSlipIterator createRoutingSlipIterator(Exchange exchange, Expression expression) throws Exception {     return new DynamicRoutingSlipIterator(expression). }
-false;public;1;12;;public boolean hasNext(Exchange exchange) {     if (current != null && current.hasNext()) {         return true.     }     // evaluate next slip     Object routingSlip = slip.evaluate(exchange, Object.class).     if (routingSlip == null) {         return false.     }     current = ObjectHelper.createIterator(routingSlip, uriDelimiter).     return current.hasNext(). }
-false;public;1;3;;public Object next(Exchange exchange) {     return current.next(). }

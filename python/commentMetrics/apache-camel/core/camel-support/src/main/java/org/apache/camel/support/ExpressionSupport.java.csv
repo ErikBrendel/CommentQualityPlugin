@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;public boolean matches(Exchange exchange) {     Object value = evaluate(exchange, Object.class).     return ObjectHelper.evaluateValuePredicate(value). }
-false;public;1;3;;public Object evaluate(Exchange exchange) {     return evaluate(exchange, Object.class). }
-false;public;2;5;;public void assertMatches(String text, Exchange exchange) {     if (!matches(exchange)) {         throw new AssertionError(text + " " + assertionFailureMessage(exchange) + " for exchange: " + exchange).     } }
-false;protected,abstract;1;1;;protected abstract String assertionFailureMessage(Exchange exchange).

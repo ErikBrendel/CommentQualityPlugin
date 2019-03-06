@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/spring/multipleLifecycleStrategyInjection.xml"). }
-false;public;0;6;;@Test public void testInjectedStrategy() throws Exception {     assertEquals(3, context.getLifecycleStrategies().size()).     assertIsInstanceOf(DummyLifecycleStrategy.class, context.getLifecycleStrategies().get(0)).     assertIsInstanceOf(DummyLifecycleStrategy.class, context.getLifecycleStrategies().get(1)). }

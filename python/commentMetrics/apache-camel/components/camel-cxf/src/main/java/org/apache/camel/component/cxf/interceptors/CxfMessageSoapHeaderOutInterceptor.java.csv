@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;10;;public void handleMessage(SoapMessage message) {     // remove the soap header to avoid the endless loop     SOAPMessage saaj = message.getContent(SOAPMessage.class).     if (saaj != null) {         // AS CXF_MESSAGE already build up all the SOAP message         // need to clean up the soap Header from message to avoid endless loop         message.getHeaders().clear().     } }

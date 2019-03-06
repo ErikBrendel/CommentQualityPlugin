@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public ExpressionNode getDefinition() {     return (ExpressionNode) super.getDefinition(). }
-false;public;0;5;;@Override public void reset() {     processor.reset().     super.reset(). }
-false;public;0;4;;@Override public String getPredicate() {     return getDefinition().getExpression().getExpression(). }
-false;public;0;4;;@Override public String getPredicateLanguage() {     return getDefinition().getExpression().getLanguage(). }
-false;public;0;4;;@Override public Long getFilteredCount() {     return processor.getFilteredCount(). }

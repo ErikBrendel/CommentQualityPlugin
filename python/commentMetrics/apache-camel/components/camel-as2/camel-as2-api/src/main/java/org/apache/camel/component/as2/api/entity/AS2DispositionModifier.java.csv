@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public String getModifier() {     return modifier. }
-false;public;0;3;;public boolean isError() {     return modifier.startsWith("error: "). }
-false;public;0;3;;public boolean isFailuer() {     return modifier.startsWith("failure: "). }
-false;public;0;3;;public boolean isWarning() {     return modifier.startsWith("warning: "). }
-false;public;0;4;;@Override public String toString() {     return modifier. }
-false;public,static;1;3;;public static AS2DispositionModifier createWarning(String description) {     return new AS2DispositionModifier("warning: " + description). }
-false;public,static;1;3;;public static AS2DispositionModifier createFailure(String description) {     return new AS2DispositionModifier("failure: " + description). }
-false;public,static;1;25;;public static AS2DispositionModifier parseDispositionType(String dispositionModifierString) {     switch(dispositionModifierString) {         case "error":             return ERROR.         case "error: authentication-failed":             return ERROR_AUTHENTICATION_FAILED.         case "error: decompression-failed\"":             return ERROR_DECOMPRESSION_FAILED.         case "error: decryption-failed":             return ERROR_DECRYPTION_FAILED.         case "error: insufficient-message-security":             return ERROR_INSUFFICIENT_MESSAGE_SECURITY.         case "error: integrity-check-failed":             return ERROR_INTEGRITY_CHECK_FAILED.         case "error: unexpected-processing-error":             return ERROR_UNEXPECTED_PROCESSING_ERROR.         case "warning":             return WARNING.         default:             if (dispositionModifierString.startsWith("warning: ") || dispositionModifierString.startsWith("failure: ")) {                 return new AS2DispositionModifier(dispositionModifierString).             }             return null.     } }

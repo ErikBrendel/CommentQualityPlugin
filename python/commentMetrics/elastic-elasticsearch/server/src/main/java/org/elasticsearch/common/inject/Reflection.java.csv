@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;static;0;8;;@SuppressWarnings("unchecked") static <T> Constructor<T> invalidConstructor() {     try {         return (Constructor<T>) InvalidConstructor.class.getConstructor().     } catch (NoSuchMethodException e) {         throw new AssertionError(e).     } }

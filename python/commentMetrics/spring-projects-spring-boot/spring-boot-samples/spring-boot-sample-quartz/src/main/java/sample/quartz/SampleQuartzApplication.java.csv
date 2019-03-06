@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;3;;public static void main(String[] args) {     SpringApplication.run(SampleQuartzApplication.class, args). }
-false;public;0;5;;@Bean public JobDetail sampleJobDetail() {     return JobBuilder.newJob(SampleJob.class).withIdentity("sampleJob").usingJobData("name", "World").storeDurably().build(). }
-false;public;0;8;;@Bean public Trigger sampleJobTrigger() {     SimpleScheduleBuilder scheduleBuilder = SimpleScheduleBuilder.simpleSchedule().withIntervalInSeconds(2).repeatForever().     return TriggerBuilder.newTrigger().forJob(sampleJobDetail()).withIdentity("sampleTrigger").withSchedule(scheduleBuilder).build(). }

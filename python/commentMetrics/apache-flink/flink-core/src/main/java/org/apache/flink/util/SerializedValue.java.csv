@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;@SuppressWarnings("unchecked") public T deserializeValue(ClassLoader loader) throws IOException, ClassNotFoundException {     Preconditions.checkNotNull(loader, "No classloader has been passed").     return serializedData == null ? null : (T) InstantiationUtil.deserializeObject(serializedData, loader). }
-true;public;0;3;/**  * Returns the serialized value or <code>null</code> if no value is set.  *  * @return Serialized data.  */ ;/**  * Returns the serialized value or <code>null</code> if no value is set.  *  * @return Serialized data.  */ public byte[] getByteArray() {     return serializedData. }
-false;public,static;1;3;;public static <T> SerializedValue<T> fromBytes(byte[] serializedData) {     return new SerializedValue<>(serializedData). }
-false;public;0;4;;// -------------------------------------------------------------------------------------------- @Override public int hashCode() {     return serializedData == null ? 0 : Arrays.hashCode(serializedData). }
-false;public;1;11;;@Override public boolean equals(Object obj) {     if (obj instanceof SerializedValue) {         SerializedValue<?> other = (SerializedValue<?>) obj.         return this.serializedData == null ? other.serializedData == null : (other.serializedData != null && Arrays.equals(this.serializedData, other.serializedData)).     } else {         return false.     } }
-false;public;0;4;;@Override public String toString() {     return "SerializedValue". }

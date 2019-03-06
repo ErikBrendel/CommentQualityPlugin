@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected String getBlueprintDescriptor() {     return "org/apache/camel/test/blueprint/BlueprintProduceConsumeImplicitPropertyTest.xml". }
-false;public;0;8;;@Test public void testImplicit() throws Exception {     getMockEndpoint("mock:result").expectedMessageCount(1).     template.sendBody("seda:input", "Hello World").     assertMockEndpointsSatisfied(). }

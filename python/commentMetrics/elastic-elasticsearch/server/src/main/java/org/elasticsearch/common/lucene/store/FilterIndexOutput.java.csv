@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public void close() throws IOException {     out.close(). }
-false;public;0;4;;@Override public long getFilePointer() {     return out.getFilePointer(). }
-false;public;0;4;;@Override public long getChecksum() throws IOException {     return out.getChecksum(). }
-false;public;1;4;;@Override public void writeByte(byte b) throws IOException {     out.writeByte(b). }
-false;public;3;4;;@Override public void writeBytes(byte[] b, int offset, int length) throws IOException {     out.writeBytes(b, offset, length). }

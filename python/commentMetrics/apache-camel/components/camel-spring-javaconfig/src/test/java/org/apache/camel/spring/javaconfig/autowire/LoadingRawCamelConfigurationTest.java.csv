@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void shouldAutodetectRouteBuilders() throws InterruptedException {     assertNotNull(moduleMockEndpoint). }
-false;public;0;4;;@Override public void configure() throws Exception {     from("direct:rawConfigTest").to("mock:rawConfigTest"). }
-false;public;0;9;;@Bean public RouteBuilder routeBuilder() {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:rawConfigTest").to("mock:rawConfigTest").         }     }. }

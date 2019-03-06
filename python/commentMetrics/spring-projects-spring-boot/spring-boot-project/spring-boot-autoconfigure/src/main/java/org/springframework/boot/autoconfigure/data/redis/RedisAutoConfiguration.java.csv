@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;8;;@Bean @ConditionalOnMissingBean(name = "redisTemplate") public RedisTemplate<Object, Object> redisTemplate(RedisConnectionFactory redisConnectionFactory) throws UnknownHostException {     RedisTemplate<Object, Object> template = new RedisTemplate<>().     template.setConnectionFactory(redisConnectionFactory).     return template. }
-false;public;1;8;;@Bean @ConditionalOnMissingBean public StringRedisTemplate stringRedisTemplate(RedisConnectionFactory redisConnectionFactory) throws UnknownHostException {     StringRedisTemplate template = new StringRedisTemplate().     template.setConnectionFactory(redisConnectionFactory).     return template. }

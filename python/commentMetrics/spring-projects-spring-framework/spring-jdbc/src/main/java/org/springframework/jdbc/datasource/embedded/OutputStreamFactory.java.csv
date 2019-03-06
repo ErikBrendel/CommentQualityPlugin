@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public void write(int b) throws IOException { // ignore the output }
-true;public,static;0;8;/**  * Returns an {@link java.io.OutputStream} that ignores all data given to it.  */ ;/**  * Returns an {@link java.io.OutputStream} that ignores all data given to it.  */ public static OutputStream getNoopOutputStream() {     return new OutputStream() {          @Override         public void write(int b) throws IOException {         // ignore the output         }     }. }

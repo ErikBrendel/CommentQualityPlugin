@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Before public void setup() {     createStats(). }
-false;public;0;7;;public void createStats() {     for (int n = 0. n < numObs. ++n) {         fieldA.add(randomDouble()).         fieldB.add(randomDouble()).     }     actualStats.computeStats(fieldA, fieldB). }

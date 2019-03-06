@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected Class<JobVertexAccumulatorsInfo> getTestResponseClass() {     return JobVertexAccumulatorsInfo.class. }
-false;protected;0;18;;@Override protected JobVertexAccumulatorsInfo getTestResponseInstance() throws Exception {     List<UserAccumulator> userAccumulatorList = new ArrayList<>(3).     userAccumulatorList.add(new UserAccumulator("test name1", "test type1", "test value1")).     userAccumulatorList.add(new UserAccumulator("test name2", "test type2", "test value2")).     userAccumulatorList.add(new UserAccumulator("test name3", "test type3", "test value3")).     return new JobVertexAccumulatorsInfo("testId", userAccumulatorList). }

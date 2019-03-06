@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;@Test public void exportJar() throws Exception {     Archive<?> archive = ArquillianPackager.springBootPackage(new ITestConfigBuilder().module("camel-websocket").build()).     new ZipExporterImpl(archive).exportTo(new File("target/export.zip"), true). }

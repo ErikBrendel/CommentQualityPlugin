@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Test public void shouldAutoConfigureWebClient() {     this.webDriver.get("/html").     WebElement element = this.webDriver.findElement(By.tagName("body")).     assertThat(element.getText()).isEqualTo("Hello").     WebMvcTestWebDriverIntegrationTests.previousWebDriver = this.webDriver. }
-false;public;0;9;;@Test public void shouldBeADifferentWebClient() {     this.webDriver.get("/html").     WebElement element = this.webDriver.findElement(By.tagName("body")).     assertThat(element.getText()).isEqualTo("Hello").     assertThatExceptionOfType(NoSuchWindowException.class).isThrownBy(previousWebDriver::getWindowHandle).     assertThat(previousWebDriver).isNotNull().isNotSameAs(this.webDriver). }

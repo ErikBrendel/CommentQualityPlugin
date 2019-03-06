@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;7;;public void restartRemote(int port) throws InterruptedException {     if (this.remoteProcessRestarter != null) {         stop(this.remoteProcess).         this.remoteProcess = this.remoteProcessRestarter.apply(port, this.classesDirectory).     } }
-false;;0;4;;void stop() throws InterruptedException {     stop(this.localProcess).     stop(this.remoteProcess). }
-false;private;1;6;;private void stop(Process process) throws InterruptedException {     if (process != null) {         process.destroy().         process.waitFor().     } }
-false;;0;3;;File getStandardOut() {     return this.standardOut. }
-false;;0;3;;File getStandardError() {     return this.standardError. }
-false;;0;3;;File getClassesDirectory() {     return this.classesDirectory. }

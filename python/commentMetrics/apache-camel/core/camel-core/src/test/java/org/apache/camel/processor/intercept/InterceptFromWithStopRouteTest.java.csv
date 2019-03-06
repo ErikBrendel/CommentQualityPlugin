@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;11;;public void configure() {     interceptFrom().filter(header("foo").isEqualTo("bar")).to("mock:b").end().stop().     from("direct:start").to("mock:a"). }
-false;protected;0;16;;@Override protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             interceptFrom().filter(header("foo").isEqualTo("bar")).to("mock:b").end().stop().             from("direct:start").to("mock:a").         }     }. }
-false;protected;0;5;;@Override protected void prepareMatchingTest() {     a.expectedMessageCount(0).     b.expectedMessageCount(1). }
-false;protected;0;5;;@Override protected void prepareNonMatchingTest() {     a.expectedMessageCount(0).     b.expectedMessageCount(0). }

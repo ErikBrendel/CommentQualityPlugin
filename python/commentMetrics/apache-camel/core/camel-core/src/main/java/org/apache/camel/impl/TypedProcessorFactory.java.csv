@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;3;8;;@Override public Processor createChildProcessor(RouteContext routeContext, NamedNode definition, boolean mandatory) throws Exception {     if (definition != null && type.isInstance(definition)) {         return doCreateChildProcessor(routeContext, type.cast(definition), mandatory).     }     return null. }
-false;public;2;8;;@Override public Processor createProcessor(RouteContext routeContext, NamedNode definition) throws Exception {     if (definition != null && type.isInstance(definition)) {         return doCreateProcessor(routeContext, type.cast(definition)).     }     return null. }
-false;protected;3;3;;protected Processor doCreateChildProcessor(RouteContext routeContext, T definition, boolean mandatory) throws Exception {     return null. }
-false;public;2;3;;public Processor doCreateProcessor(RouteContext routeContext, T definition) throws Exception {     return null. }

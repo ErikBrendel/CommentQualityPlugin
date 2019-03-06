@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;0;4;;@Bean CamelContext camelContext() {     return new SpringCamelContext(). }
-false;;0;6;;@Override ConfigurableApplicationContext createContext() {     final ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(CamelContextConfiguration.class, Beans.class).     return context. }

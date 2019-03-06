@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;7;;@Override public void processElement(StreamRecord<IN> element) throws Exception {     for (int i = 0. i < this.numFields. i++) {         outTuple.setField(((Tuple) element.getValue()).getField(fields[i]), i).     }     output.collect(element.replace(outTuple)). }
-false;public;0;5;;@Override public void open() throws Exception {     super.open().     outTuple = outSerializer.createInstance(). }

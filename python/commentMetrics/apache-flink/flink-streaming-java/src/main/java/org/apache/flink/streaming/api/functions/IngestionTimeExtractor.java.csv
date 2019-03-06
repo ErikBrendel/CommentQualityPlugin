@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;7;;@Override public long extractTimestamp(T element, long previousElementTimestamp) {     // make sure timestamps are monotonously increasing, even when the system clock re-syncs     final long now = Math.max(System.currentTimeMillis(), maxTimestamp).     maxTimestamp = now.     return now. }
-false;public;0;7;;@Override public Watermark getCurrentWatermark() {     // make sure timestamps are monotonously increasing, even when the system clock re-syncs     final long now = Math.max(System.currentTimeMillis(), maxTimestamp).     maxTimestamp = now.     return new Watermark(now - 1). }

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;7;;@Override public void onExhausted(Exchange exchange) {     if (exchange.getException() != null) {         addFailedException(exchange.getException()).         failed = true.     } }
-false;public;1;7;;@Override public void onDone(Exchange exchange) {     if (exchange.getException() != null) {         addFailedException(exchange.getException()).         failed = true.     } }
-false;public;0;4;;@Override public boolean isFailed() {     return failed. }
-false;public;0;4;;@Override public List<Exception> getExceptions() {     return failedExceptions. }
-false;private;1;9;;private void addFailedException(Exception exception) {     if (failedExceptions == null) {         failedExceptions = new ArrayList<>().     }     if (!failedExceptions.contains(exception)) {         // avoid adding the same exception multiple times         failedExceptions.add(exception).     } }

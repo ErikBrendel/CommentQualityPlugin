@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void testSendMessageToLog() throws Exception {     template.sendBody("log:org.apache.camel.TEST", "<level>default</level>"). }
-false;public;0;4;;@Test public void testSendMessageToInfoLog() throws Exception {     template.sendBody("log:org.apache.camel.TEST?level=INFO", "<level>INFO</level>"). }
-false;public;0;4;;@Test public void testSendMessageToWarnLog() throws Exception {     template.sendBody("log:org.apache.camel.TEST?level=warn", "<level>WARN</level>"). }
-false;public;0;9;;@Test public void testSendMessageToBadLevel() throws Exception {     try {         template.sendBody("log:org.apache.camel.TEST?level=noSuchLevel", "<level>noSuchLevel</level>").         fail("Should have failed!").     } catch (Exception e) {         LOG.debug("Caught expected exception: " + e, e).     } }

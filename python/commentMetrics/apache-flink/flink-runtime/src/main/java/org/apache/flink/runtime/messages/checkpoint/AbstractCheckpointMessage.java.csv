@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;// -------------------------------------------------------------------------------------------- public JobID getJob() {     return job. }
-false;public;0;3;;public ExecutionAttemptID getTaskExecutionId() {     return taskExecutionId. }
-false;public;0;3;;public long getCheckpointId() {     return checkpointId. }
-false;public;0;4;;// -------------------------------------------------------------------------------------------- @Override public int hashCode() {     return job.hashCode() + taskExecutionId.hashCode() + (int) (checkpointId ^ (checkpointId >>> 32)). }
-false;public;1;14;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     } else if (o instanceof AbstractCheckpointMessage) {         AbstractCheckpointMessage that = (AbstractCheckpointMessage) o.         return this.job.equals(that.job) && this.taskExecutionId.equals(that.taskExecutionId) && this.checkpointId == that.checkpointId.     } else {         return false.     } }
-false;public;0;4;;@Override public String toString() {     return "(" + checkpointId + ':' + job + '/' + taskExecutionId + ')'. }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public String getImportance() {     return importance. }
-false;public;0;4;;@Override public String toString() {     return importance. }
-false;public,static;1;14;;public static Importance get(String importance) {     if (importance == null) {         return null.     }     switch(importance.toLowerCase()) {         case "required":             return REQUIRED.         case "optional":             return OPTIONAL.         default:             return null.     } }

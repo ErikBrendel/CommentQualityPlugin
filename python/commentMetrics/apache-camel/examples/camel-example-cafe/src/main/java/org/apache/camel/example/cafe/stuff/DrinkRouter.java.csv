@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;3;;public String resolveOrderItemChannel(OrderItem orderItem) {     return (orderItem.isIced()) ? "seda:coldDrinks" : "seda:hotDrinks". }

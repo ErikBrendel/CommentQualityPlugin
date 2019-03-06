@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public DataInputView getInputView() {     return inputView. }
-false;public;0;8;;@Override public int read() throws IOException {     try {         return inputView.readUnsignedByte().     } catch (EOFException ex) {         return -1.     } }
-false;public;1;14;;@Override public long skip(long n) throws IOException {     long counter = n.     while (counter > Integer.MAX_VALUE) {         int skippedBytes = inputView.skipBytes(Integer.MAX_VALUE).         if (skippedBytes == 0) {             return n - counter.         }         counter -= skippedBytes.     }     return n - counter - inputView.skipBytes((int) counter). }
-false;public;3;4;;@Override public int read(byte[] b, int off, int len) throws IOException {     return inputView.read(b, off, len). }

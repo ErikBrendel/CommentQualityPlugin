@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;3;7;;@Override public void serialize(final Instant value, final JsonGenerator gen, final SerializerProvider serializers) throws IOException {     final ZonedDateTime zonedDateTime = value.atZone(ZoneId.systemDefault()).     serializers.defaultSerializeValue(zonedDateTime, gen). }

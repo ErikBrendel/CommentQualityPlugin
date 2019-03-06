@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void shouldAllowNewerPayloadsWhenConfiguredWithNewerVersion() throws SalesforceException {     final SObjectBatch batch = new SObjectBatch(V34_0).     DefaultCompositeApiClient.checkCompositeBatchVersion(V35_0, batch.getVersion()). }
-false;public;0;6;;@Test(expected = SalesforceException.class) public void shouldNotAllowNewerPayloadsWhenConfiguredWithOlderVersion() throws SalesforceException {     final SObjectBatch batch = new SObjectBatch(V35_0).     DefaultCompositeApiClient.checkCompositeBatchVersion(V34_0, batch.getVersion()). }
-false;public;0;6;;@Test public void shouldUseCompositeApiFromVersion34Onwards() throws SalesforceException {     final SObjectBatch batch = new SObjectBatch(V34_0).     DefaultCompositeApiClient.checkCompositeBatchVersion(V34_0, batch.getVersion()). }

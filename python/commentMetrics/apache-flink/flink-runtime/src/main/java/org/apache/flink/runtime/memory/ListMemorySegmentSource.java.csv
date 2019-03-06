@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Override public MemorySegment nextSegment() {     if (this.segments.size() > 0) {         return this.segments.remove(this.segments.size() - 1).     } else {         return null.     } }

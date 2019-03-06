@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;5;;public String[] formatScope(String hostname, String taskManagerId) {     final String[] template = copyTemplate().     final String[] values = { hostname, taskManagerId }.     return bindVariables(template, values). }

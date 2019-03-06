@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected String getBlueprintDescriptor() {     return "org/apache/camel/test/blueprint/converter2/MyConvertersTest.xml". }
-false;public;0;10;;@Test public void testConvertersShouldBeAddedAutomaticByBlueprint() throws Exception {     Country country = context.getTypeConverter().convertTo(Country.class, "en").     assertNotNull(country).     assertEquals("England", country.getName()).     String iso = context.getTypeConverter().convertTo(String.class, country).     assertNotNull(iso).     assertEquals("en", iso). }

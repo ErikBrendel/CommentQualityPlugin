@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public boolean canRestart() {     return false. }
-false;public;2;4;;@Override public void restart(RestartCallback restarter, ScheduledExecutor executor) {     throw new UnsupportedOperationException("NoRestartStrategy does not support restart."). }
-true;public,static;1;3;/**  * Creates a NoRestartStrategyFactory instance.  *  * @param configuration Configuration object which is ignored  * @return NoRestartStrategyFactory instance  */ ;/**  * Creates a NoRestartStrategyFactory instance.  *  * @param configuration Configuration object which is ignored  * @return NoRestartStrategyFactory instance  */ public static NoRestartStrategyFactory createFactory(Configuration configuration) {     return new NoRestartStrategyFactory(). }
-false;public;0;4;;@Override public String toString() {     return "NoRestartStrategy". }
-false;public;0;4;;@Override public RestartStrategy createRestartStrategy() {     return new NoRestartStrategy(). }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;// we do not have to use @Inject to inject the endpoints // camel-cdi will auto detect all RouteBuilder classes and include those in the application @Override public void configure() throws Exception {     // route files form src/data (noop = keep the file as-is after done, and do not pickup the same file again)     from("file:src/data?noop=true").to("activemq:queue:newOrder"). }

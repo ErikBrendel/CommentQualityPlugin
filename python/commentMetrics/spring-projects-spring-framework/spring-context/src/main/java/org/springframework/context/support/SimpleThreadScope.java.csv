@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected Map<String, Object> initialValue() {     return new HashMap<>(). }
-false;public;2;10;;@Override public Object get(String name, ObjectFactory<?> objectFactory) {     Map<String, Object> scope = this.threadScope.get().     Object scopedObject = scope.get(name).     if (scopedObject == null) {         scopedObject = objectFactory.getObject().         scope.put(name, scopedObject).     }     return scopedObject. }
-false;public;1;6;;@Override @Nullable public Object remove(String name) {     Map<String, Object> scope = this.threadScope.get().     return scope.remove(name). }
-false;public;2;5;;@Override public void registerDestructionCallback(String name, Runnable callback) {     logger.warn("SimpleThreadScope does not support destruction callbacks. " + "Consider using RequestScope in a web environment."). }
-false;public;1;5;;@Override @Nullable public Object resolveContextualObject(String key) {     return null. }
-false;public;0;4;;@Override public String getConversationId() {     return Thread.currentThread().getName(). }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;11;;public static HazelcastOperation getHazelcastOperation(String name) {     if (name == null) {         return null.     }     for (HazelcastOperation hazelcastOperation : values) {         if (hazelcastOperation.toString().equalsIgnoreCase(name) || hazelcastOperation.name().equalsIgnoreCase(name)) {             return hazelcastOperation.         }     }     throw new IllegalArgumentException(String.format("Operation '%s' is not supported by this component.", name)). }
-false;public;0;3;;public String toString() {     return operation. }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;public void execute() {     BatchDeleteAttributesRequest request = new BatchDeleteAttributesRequest().withDomainName(determineDomainName()).withItems(determineDeletableItems()).     log.trace("Sending request [{}] for exchange [{}]...", request, exchange).     this.sdbClient.batchDeleteAttributes(request).     log.trace("Request sent"). }
-false;protected;0;4;;@SuppressWarnings("unchecked") protected Collection<DeletableItem> determineDeletableItems() {     return exchange.getIn().getHeader(SdbConstants.DELETABLE_ITEMS, Collection.class). }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;14;;@Override public Exchange aggregate(Exchange oldExchange, Exchange newExchange) {     String body = newExchange.getIn().getBody(String.class).     if (oldExchange == null) {         List<String> list = new ArrayList<>().         list.add(body).         newExchange.getIn().setBody(list).         return newExchange.     } else {         List<String> list = oldExchange.getIn().getBody(List.class).         list.add(body).         return oldExchange.     } }

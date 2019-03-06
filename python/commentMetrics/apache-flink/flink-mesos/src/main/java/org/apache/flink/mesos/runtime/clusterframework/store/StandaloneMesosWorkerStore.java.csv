@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public void start() throws Exception { }
-false;public;1;4;;@Override public void stop(boolean cleanup) throws Exception { }
-false;public;0;4;;@Override public Option<Protos.FrameworkID> getFrameworkID() throws Exception {     return frameworkID. }
-false;public;1;4;;@Override public void setFrameworkID(Option<Protos.FrameworkID> frameworkID) throws Exception {     this.frameworkID = frameworkID. }
-false;public;0;6;;@Override public List<Worker> recoverWorkers() throws Exception {     List<Worker> workers = new ArrayList<>(storedWorkers.size()).     workers.addAll(storedWorkers.values()).     return workers. }
-false;public;0;5;;@Override public Protos.TaskID newTaskID() throws Exception {     Protos.TaskID taskID = Protos.TaskID.newBuilder().setValue(TASKID_FORMAT.format(++taskCount)).build().     return taskID. }
-false;public;1;4;;@Override public void putWorker(Worker worker) throws Exception {     storedWorkers.put(worker.taskID(), worker). }
-false;public;1;5;;@Override public boolean removeWorker(Protos.TaskID taskID) throws Exception {     Worker prior = storedWorkers.remove(taskID).     return prior != null. }

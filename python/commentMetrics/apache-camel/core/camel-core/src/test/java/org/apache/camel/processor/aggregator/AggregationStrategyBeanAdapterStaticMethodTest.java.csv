@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;@Test public void testAggregate() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("ABC").     template.sendBody("direct:start", "A").     template.sendBody("direct:start", "B").     template.sendBody("direct:start", "C").     assertMockEndpointsSatisfied(). }
-false;public;0;7;;@Override public void configure() throws Exception {     from("direct:start").aggregate(constant(true), AggregationStrategies.bean(MyBodyAppender.class, "append")).completionSize(3).to("mock:result"). }
-false;protected;0;12;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").aggregate(constant(true), AggregationStrategies.bean(MyBodyAppender.class, "append")).completionSize(3).to("mock:result").         }     }. }
-false;public,static;2;7;;public static String append(String existing, String next) {     if (next != null) {         return existing + next.     } else {         return existing.     } }

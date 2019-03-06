@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test(expected = IllegalArgumentException.class) public void testCtorWithNullBeanFactory() throws Exception {     new DefaultScopedObject(null, GOOD_BEAN_NAME). }
-false;public;0;4;;@Test(expected = IllegalArgumentException.class) public void testCtorWithNullTargetBeanName() throws Exception {     testBadTargetBeanName(null). }
-false;public;0;4;;@Test(expected = IllegalArgumentException.class) public void testCtorWithEmptyTargetBeanName() throws Exception {     testBadTargetBeanName(""). }
-false;public;0;4;;@Test(expected = IllegalArgumentException.class) public void testCtorWithJustWhitespacedTargetBeanName() throws Exception {     testBadTargetBeanName("   "). }
-false;private,static;1;4;;private static void testBadTargetBeanName(final String badTargetBeanName) {     ConfigurableBeanFactory factory = mock(ConfigurableBeanFactory.class).     new DefaultScopedObject(factory, badTargetBeanName). }

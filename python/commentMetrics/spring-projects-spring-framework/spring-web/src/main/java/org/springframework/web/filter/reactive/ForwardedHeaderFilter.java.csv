@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;8;;@Override public Mono<Void> filter(ServerWebExchange exchange, WebFilterChain chain) {     ServerHttpRequest request = exchange.getRequest().     if (hasForwardedHeaders(request)) {         exchange = exchange.mutate().request(apply(request)).build().     }     return chain.filter(exchange). }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;1;1;/**  * Set the callback action for rejecting a lease.  */ ;/**  * Set the callback action for rejecting a lease.  */ TaskSchedulerBuilder withLeaseRejectAction(Action1<VirtualMachineLease> action).
-true;;0;1;/**  * Build a Fenzo task scheduler.  */ ;/**  * Build a Fenzo task scheduler.  */ TaskScheduler build().

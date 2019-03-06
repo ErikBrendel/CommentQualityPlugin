@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public ActionRequestValidationException validate() {     return null. }
-false;public;0;3;;public String getId() {     return id. }
-false;public;0;3;;public BytesReference getSource() {     return source. }
-false;public;0;3;;public XContentType getXContentType() {     return xContentType. }
-false;public;1;7;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     id = in.readString().     source = in.readBytesReference().     xContentType = in.readEnum(XContentType.class). }
-false;public;1;7;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeString(id).     out.writeBytesReference(source).     out.writeEnum(xContentType). }
-false;public;2;9;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     if (source != null) {         builder.rawValue(source.streamInput(), xContentType).     } else {         builder.startObject().endObject().     }     return builder. }

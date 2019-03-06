@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;6;;@Override public void usedDeprecatedName(String usedName, String modernName) {     LoggingDeprecationHandler.INSTANCE.usedDeprecatedName(usedName, modernName).     deprecations.add(LoggerMessageFormat.format("Deprecated field [{}] used, expected [{}] instead", new Object[] { usedName, modernName })). }
-false;public;2;6;;@Override public void usedDeprecatedField(String usedName, String replacedWith) {     LoggingDeprecationHandler.INSTANCE.usedDeprecatedField(usedName, replacedWith).     deprecations.add(LoggerMessageFormat.format("Deprecated field [{}] used, replaced by [{}]", new Object[] { usedName, replacedWith })). }
-true;public;0;3;/**  * The collected deprecation warnings  */ ;/**  * The collected deprecation warnings  */ public List<String> getDeprecations() {     return Collections.unmodifiableList(deprecations). }

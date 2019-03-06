@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;@Override public void bestSolutionChanged(BestSolutionChangedEvent<Object> event) {     if (event.isEveryProblemFactChangeProcessed() && event.getNewBestScore().isSolutionInitialized()) {         processEvent(event).     } }
-false;public;1;9;;public void processEvent(BestSolutionChangedEvent<Object> event) {     Exchange exchange = getEndpoint().createExchange().     exchange.getOut().setHeader(OptaPlannerConstants.BEST_SOLUTION, event.getNewBestSolution()).     try {         getProcessor().process(exchange).     } catch (Exception e) {         LOGGER.error("Error processing event ", e).     } }
-false;protected;0;6;;@Override protected void doStart() throws Exception {     Solver<Object> solver = endpoint.getOrCreateSolver(configuration.getSolverId()).     solver.addEventListener(listener).     super.doStart(). }
-false;protected;0;6;;@Override protected void doStop() throws Exception {     Solver<Object> solver = endpoint.getOrCreateSolver(configuration.getSolverId()).     solver.removeEventListener(listener).     super.doStop(). }

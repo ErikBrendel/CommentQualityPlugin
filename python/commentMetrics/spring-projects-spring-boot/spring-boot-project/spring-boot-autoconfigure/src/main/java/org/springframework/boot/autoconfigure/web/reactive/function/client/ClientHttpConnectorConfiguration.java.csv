@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Bean @ConditionalOnMissingBean public ReactorResourceFactory reactorClientResourceFactory() {     return new ReactorResourceFactory(). }
-false;public;1;6;;@Bean public ReactorClientHttpConnector reactorClientHttpConnector(ReactorResourceFactory reactorResourceFactory) {     return new ReactorClientHttpConnector(reactorResourceFactory, Function.identity()). }
-false;public;0;5;;@Bean @ConditionalOnMissingBean public JettyResourceFactory jettyClientResourceFactory() {     return new JettyResourceFactory(). }
-false;public;1;6;;@Bean public JettyClientHttpConnector jettyClientHttpConnector(JettyResourceFactory jettyResourceFactory) {     return new JettyClientHttpConnector(jettyResourceFactory, (httpClient) -> {     }). }

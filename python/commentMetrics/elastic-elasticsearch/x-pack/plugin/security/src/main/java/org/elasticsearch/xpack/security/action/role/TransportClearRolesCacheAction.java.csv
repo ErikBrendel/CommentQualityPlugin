@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;3;5;;@Override protected ClearRolesCacheResponse newResponse(ClearRolesCacheRequest request, List<ClearRolesCacheResponse.Node> responses, List<FailedNodeException> failures) {     return new ClearRolesCacheResponse(clusterService.getClusterName(), responses, failures). }
-false;protected;2;4;;@Override protected ClearRolesCacheRequest.Node newNodeRequest(String nodeId, ClearRolesCacheRequest request) {     return new ClearRolesCacheRequest.Node(request, nodeId). }
-false;protected;0;4;;@Override protected ClearRolesCacheResponse.Node newNodeResponse() {     return new ClearRolesCacheResponse.Node(). }
-false;protected;1;11;;@Override protected ClearRolesCacheResponse.Node nodeOperation(ClearRolesCacheRequest.Node request) {     if (request.getNames() == null || request.getNames().length == 0) {         rolesStore.invalidateAll().     } else {         for (String role : request.getNames()) {             rolesStore.invalidate(role).         }     }     return new ClearRolesCacheResponse.Node(clusterService.localNode()). }

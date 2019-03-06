@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public void start() throws Exception {     applicationContext.start(). }
-false;public;0;3;;public void stop() throws Exception {     applicationContext.stop(). }
-false;protected;0;18;;protected CamelContext createCamelContext() throws Exception {     setUseRouteBuilder(false).     final AbstractXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("org/apache/camel/dataformat/xstream/SpringXStreamConfigurationTest.xml").     setCamelContextService(new Service() {          public void start() throws Exception {             applicationContext.start().         }          public void stop() throws Exception {             applicationContext.stop().         }     }).     return SpringCamelContext.springCamelContext(applicationContext, true). }

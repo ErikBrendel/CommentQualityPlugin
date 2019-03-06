@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;private;2;4;;private String getId(EndpointId endpointId, Method method) {     return endpointId + Stream.of(method.getParameters()).filter(this::hasSelector).map(this::dashName).collect(Collectors.joining()). }
-false;private;1;3;;private boolean hasSelector(Parameter parameter) {     return parameter.getAnnotation(Selector.class) != null. }
-false;private;1;3;;private String dashName(Parameter parameter) {     return "-" + parameter.getName(). }
-false;private;1;4;;private boolean getBlocking(Method method) {     return !REACTIVE_STREAMS_PRESENT || !Publisher.class.isAssignableFrom(method.getReturnType()). }
-false;public;0;4;;@Override public String getId() {     return this.id. }
-false;public;0;4;;@Override public boolean isBlocking() {     return this.blocking. }
-false;public;0;4;;@Override public WebOperationRequestPredicate getRequestPredicate() {     return this.requestPredicate. }
-false;protected;1;5;;@Override protected void appendFields(ToStringCreator creator) {     creator.append("id", this.id).append("blocking", this.blocking).append("requestPredicate", this.requestPredicate). }

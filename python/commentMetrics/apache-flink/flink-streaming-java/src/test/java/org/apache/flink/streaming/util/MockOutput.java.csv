@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;10;;@Override public void collect(StreamRecord<T> record) {     try {         ClassLoader cl = record.getClass().getClassLoader().         T copied = InstantiationUtil.deserializeObject(InstantiationUtil.serializeObject(record.getValue()), cl).         outputs.add(copied).     } catch (IOException | ClassNotFoundException ex) {         throw new RuntimeException("Unable to deserialize record: " + record, ex).     } }
-false;public;2;4;;@Override public <X> void collect(OutputTag<X> outputTag, StreamRecord<X> record) {     throw new UnsupportedOperationException("Side output not supported for MockOutput"). }
-false;public;1;4;;@Override public void emitWatermark(Watermark mark) {     throw new RuntimeException("THIS MUST BE IMPLEMENTED"). }
-false;public;1;4;;@Override public void emitLatencyMarker(LatencyMarker latencyMarker) {     throw new RuntimeException(). }
-false;public;0;3;;@Override public void close() { }

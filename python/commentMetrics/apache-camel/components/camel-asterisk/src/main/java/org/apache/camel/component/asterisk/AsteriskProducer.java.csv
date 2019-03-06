@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;6;;@Override protected void doStart() throws Exception {     connection.login().     super.doStart(). }
-false;protected;0;6;;@Override protected void doStop() throws Exception {     super.doStop().     connection.logoff(). }
-false;public;1;19;;@Override public void process(Exchange exchange) throws Exception {     // The action set in the URI can be overridden using the message     // header CamelAsteriskAction     AsteriskAction action = exchange.getIn().getHeader(AsteriskConstants.ACTION, AsteriskAction.class).     if (action == null) {         action = endpoint.getAction().     }     // Action must be set     ObjectHelper.notNull(action, "action").     log.debug("Send action {}", action).     ManagerAction managerAction = action.apply(exchange).     ManagerResponse managerResponse = connection.sendAction(managerAction).     exchange.getIn().setBody(managerResponse). }

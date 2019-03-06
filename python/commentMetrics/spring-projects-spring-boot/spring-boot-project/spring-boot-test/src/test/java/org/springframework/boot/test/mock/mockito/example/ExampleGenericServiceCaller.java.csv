@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public ExampleGenericService<Integer> getIntegerService() {     return this.integerService. }
-false;public;0;3;;public ExampleGenericService<String> getStringService() {     return this.stringService. }
-false;public;0;4;;public String sayGreeting() {     return "I say " + this.integerService.greeting() + " " + this.stringService.greeting(). }

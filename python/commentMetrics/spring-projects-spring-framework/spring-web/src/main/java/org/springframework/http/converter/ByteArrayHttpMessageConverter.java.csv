@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public boolean supports(Class<?> clazz) {     return byte[].class == clazz. }
-false;public;2;8;;@Override public byte[] readInternal(Class<? extends byte[]> clazz, HttpInputMessage inputMessage) throws IOException {     long contentLength = inputMessage.getHeaders().getContentLength().     ByteArrayOutputStream bos = new ByteArrayOutputStream(contentLength >= 0 ? (int) contentLength : StreamUtils.BUFFER_SIZE).     StreamUtils.copy(inputMessage.getBody(), bos).     return bos.toByteArray(). }
-false;protected;2;4;;@Override protected Long getContentLength(byte[] bytes, @Nullable MediaType contentType) {     return (long) bytes.length. }
-false;protected;2;4;;@Override protected void writeInternal(byte[] bytes, HttpOutputMessage outputMessage) throws IOException {     StreamUtils.copy(bytes, outputMessage.getBody()). }

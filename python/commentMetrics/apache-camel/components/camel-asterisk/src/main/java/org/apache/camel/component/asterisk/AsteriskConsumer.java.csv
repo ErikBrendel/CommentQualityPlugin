@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;8;;@Override protected void doStart() throws Exception {     connection.connect().     connection.addListener(listener).     connection.login().     super.doStart(). }
-false;protected;0;7;;@Override protected void doStop() throws Exception {     super.doStop().     connection.removeListener(listener).     connection.logoff(). }
-false;public;1;12;;@Override public void onManagerEvent(ManagerEvent event) {     Exchange exchange = endpoint.createExchange().     exchange.getIn().setHeader(AsteriskConstants.EVENT_NAME, event.getClass().getSimpleName()).     exchange.getIn().setBody(event).     try {         getProcessor().process(exchange).     } catch (Exception e) {         getExceptionHandler().handleException("Error processing exchange.", exchange, e).     } }

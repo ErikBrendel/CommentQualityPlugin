@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry jndi = super.createRegistry().     jndi.bind("myAppender", new AggregationStrategyBeanAdapterRefMethodNameTest.MyBodyAppender()).     return jndi. }
-false;public;0;10;;@Test public void testAggregate() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("ABC").     template.sendBody("direct:start", "A").     template.sendBody("direct:start", "B").     template.sendBody("direct:start", "C").     assertMockEndpointsSatisfied(). }
-false;public;0;7;;@Override public void configure() throws Exception {     from("direct:start").aggregate(constant(true)).aggregationStrategyRef("myAppender").aggregationStrategyMethodName("append").completionSize(3).to("mock:result"). }
-false;protected;0;12;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").aggregate(constant(true)).aggregationStrategyRef("myAppender").aggregationStrategyMethodName("append").completionSize(3).to("mock:result").         }     }. }
-false;public;2;7;;public String append(String existing, String next) {     if (next != null) {         return existing + next.     } else {         return existing.     } }
-false;public;2;3;;public String foo(String foo, String bar) {     return "foobar". }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public boolean isUseRouteBuilder() {     return false. }
-false;public;0;14;;@Test public void testProducerWithCharset() throws Exception {     if (!canTest()) {         return.     }     template.sendBodyAndHeader(getSftpUri(), SAMPLE_FILE_PAYLOAD, Exchange.FILE_NAME, SAMPLE_FILE_NAME).     File file = new File(FTP_ROOT_DIR + "/" + SAMPLE_FILE_NAME).     assertTrue("The uploaded file should exist", file.exists()).     String storedPayload = FileUtils.readFileToString(file, SAMPLE_FILE_CHARSET).     assertEquals(SAMPLE_FILE_PAYLOAD, storedPayload). }
-false;private;0;3;;private String getSftpUri() {     return "sftp://localhost:" + getPort() + "/" + FTP_ROOT_DIR + "?username=admin&password=admin&charset=" + SAMPLE_FILE_CHARSET. }

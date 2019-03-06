@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;12;;protected void initialize() {     getOutFilter().add(CxfConstants.OPERATION_NAME.toLowerCase()).     getOutFilter().add("Content-Type".toLowerCase()).     // Support to filter the Content-Type case insensitive     setLowerCase(true).     // filter headers begin with "Camel" or "org.apache.camel"     setOutFilterPattern("(Camel|org\\.apache\\.camel)[\\.|a-z|A-z|0-9]*"). }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;@Test public void testBodySupplier() throws Exception {     MockEndpoint functionMock1 = getMockEndpoint("mock:output1").     functionMock1.expectedMessageCount(1).     functionMock1.expectedBodyReceived().constant(BODY_SUPPLIER_MSG).     template.sendBody("direct:supplier1", "are you there?").     assertMockEndpointsSatisfied(). }
-false;public;0;6;;@Override public void configure() throws Exception {     from("direct:supplier1").transform().body(() -> BODY_SUPPLIER_MSG).to("mock:output1"). }
-false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:supplier1").transform().body(() -> BODY_SUPPLIER_MSG).to("mock:output1").         }     }. }

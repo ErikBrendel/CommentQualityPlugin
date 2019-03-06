@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;9;;@Override public boolean isRestartRequired(ChangedFile file) {     for (String pattern : this.excludePatterns) {         if (this.matcher.match(pattern, file.getRelativeName())) {             return false.         }     }     return true. }

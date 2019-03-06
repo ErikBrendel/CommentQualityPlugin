@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;static;1;3;;static TaskStackTraceSampleableTaskAdapter fromTask(final Task task) {     return new TaskStackTraceSampleableTaskAdapter(task). }
-false;public;0;4;;@Override public boolean isRunning() {     return task.getExecutionState() == ExecutionState.RUNNING. }
-false;public;0;4;;@Override public StackTraceElement[] getStackTrace() {     return task.getExecutingThread().getStackTrace(). }
-false;public;0;4;;@Override public ExecutionAttemptID getExecutionId() {     return task.getExecutionId(). }

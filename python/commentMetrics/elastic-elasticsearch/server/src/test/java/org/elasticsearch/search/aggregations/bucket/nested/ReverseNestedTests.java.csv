@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;8;;@Override protected ReverseNestedAggregationBuilder createTestAggregatorBuilder() {     ReverseNestedAggregationBuilder factory = new ReverseNestedAggregationBuilder(randomAlphaOfLengthBetween(1, 20)).     if (randomBoolean()) {         factory.path(randomAlphaOfLengthBetween(3, 40)).     }     return factory. }

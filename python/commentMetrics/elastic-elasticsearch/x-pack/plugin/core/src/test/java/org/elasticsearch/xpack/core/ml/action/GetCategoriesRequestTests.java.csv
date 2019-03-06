@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;13;;@Override protected GetCategoriesAction.Request createTestInstance() {     String jobId = randomAlphaOfLength(10).     GetCategoriesAction.Request request = new GetCategoriesAction.Request(jobId).     if (randomBoolean()) {         request.setCategoryId(randomNonNegativeLong()).     } else {         int from = randomInt(10000).         int size = randomInt(10000).         request.setPageParams(new PageParams(from, size)).     }     return request. }
-false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return false. }
-false;protected;0;4;;@Override protected GetCategoriesAction.Request createBlankInstance() {     return new GetCategoriesAction.Request(). }
-false;protected;1;4;;@Override protected GetCategoriesAction.Request doParseInstance(XContentParser parser) {     return GetCategoriesAction.Request.parseRequest(null, parser). }

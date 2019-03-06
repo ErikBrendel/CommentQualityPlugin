@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public URI getSockJsUrl() {     return this.sockJsUrl. }
-false;public;0;6;;public String getServerId() {     if (this.serverId == null) {         this.serverId = String.valueOf(Math.abs(getUuid().getMostSignificantBits()) % 1000).     }     return this.serverId. }
-false;public;0;6;;public String getSessionId() {     if (this.sessionId == null) {         this.sessionId = StringUtils.delete(getUuid().toString(), "-").     }     return this.sessionId. }
-false;protected;0;6;;protected UUID getUuid() {     if (this.uuid == null) {         this.uuid = idGenerator.generateId().     }     return this.uuid. }
-false;public;0;6;;public URI getInfoUrl() {     return UriComponentsBuilder.fromUri(this.sockJsUrl).scheme(getScheme(TransportType.XHR)).pathSegment("info").build(true).toUri(). }
-false;public;1;8;;public URI getTransportUrl(TransportType transportType) {     return UriComponentsBuilder.fromUri(this.sockJsUrl).scheme(getScheme(transportType)).pathSegment(getServerId()).pathSegment(getSessionId()).pathSegment(transportType.toString()).build(true).toUri(). }
-false;private;1;14;;private String getScheme(TransportType transportType) {     String scheme = this.sockJsUrl.getScheme().     if (TransportType.WEBSOCKET.equals(transportType)) {         if (!scheme.startsWith("ws")) {             scheme = ("https".equals(scheme) ? "wss" : "ws").         }     } else {         if (!scheme.startsWith("http")) {             scheme = ("wss".equals(scheme) ? "https" : "http").         }     }     return scheme. }
-false;public;0;4;;@Override public String toString() {     return "SockJsUrlInfo[url=" + this.sockJsUrl + "]". }

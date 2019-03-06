@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,static;1;3;/**  * Checks the format of an internal index and returns true if the index is up to date or false if upgrade is required  */ ;/**  * Checks the format of an internal index and returns true if the index is up to date or false if upgrade is required  */ public static boolean checkInternalIndexFormat(IndexMetaData indexMetaData) {     return indexMetaData.getSettings().getAsInt(IndexMetaData.INDEX_FORMAT_SETTING.getKey(), 0) == EXPECTED_INDEX_FORMAT_VERSION. }

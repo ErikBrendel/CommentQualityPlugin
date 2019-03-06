@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String type() {     return ChainInput.TYPE. }
-false;public;2;4;;@Override public ChainInput parseInput(String watchId, XContentParser parser) throws IOException {     return ChainInput.parse(watchId, parser, inputRegistry). }
-false;public;1;10;;@Override public ExecutableChainInput createExecutable(ChainInput input) {     List<Tuple<String, ExecutableInput>> executableInputs = new ArrayList<>().     for (Tuple<String, Input> tuple : input.getInputs()) {         ExecutableInput executableInput = inputRegistry.factories().get(tuple.v2().type()).createExecutable(tuple.v2()).         executableInputs.add(new Tuple<>(tuple.v1(), executableInput)).     }     return new ExecutableChainInput(input, executableInputs). }

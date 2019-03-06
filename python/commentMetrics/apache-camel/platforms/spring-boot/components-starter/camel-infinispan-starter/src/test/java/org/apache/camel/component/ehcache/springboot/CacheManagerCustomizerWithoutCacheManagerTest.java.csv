@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Test public void testComponentConfiguration() throws Exception {     Assert.assertNotNull(component).     Assert.assertNull(component.getCacheContainer()).     Assert.assertEquals(0, context.getBeansOfType(EmbeddedCacheManagerCustomizer.class).size()).     Assert.assertEquals(0, context.getBeansOfType(RemoteCacheManagerCustomizer.class).size()). }

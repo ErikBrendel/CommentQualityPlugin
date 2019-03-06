@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void isSingleton() {     assertThat(factory.isSingleton(), is(true)). }
-false;public;0;4;;@Test public void getObjectType() {     assertThat(factory.getObjectType(), is(equalTo(DateTimeFormatter.class))). }
-false;public;0;5;;@Test public void getObject() {     factory.afterPropertiesSet().     assertThat(factory.getObject().toString(), is(equalTo(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM).toString()))). }
-false;public;0;8;;@Test public void getObjectIsAlwaysSingleton() {     factory.afterPropertiesSet().     DateTimeFormatter formatter = factory.getObject().     assertThat(formatter.toString(), is(equalTo(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM).toString()))).     factory.setStylePattern("LL").     assertThat(factory.getObject(), is(sameInstance(formatter))). }

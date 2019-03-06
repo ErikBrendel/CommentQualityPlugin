@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;8;;@Override public E next(E reuse) throws IOException {     try {         return this.serializer.deserialize(reuse, this.inputView).     } catch (EOFException e) {         return null.     } }
-false;public;0;8;;@Override public E next() throws IOException {     try {         return this.serializer.deserialize(this.inputView).     } catch (EOFException e) {         return null.     } }

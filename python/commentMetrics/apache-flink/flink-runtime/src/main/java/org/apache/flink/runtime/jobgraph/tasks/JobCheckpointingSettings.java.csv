@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;// -------------------------------------------------------------------------------------------- public List<JobVertexID> getVerticesToTrigger() {     return verticesToTrigger. }
-false;public;0;3;;public List<JobVertexID> getVerticesToAcknowledge() {     return verticesToAcknowledge. }
-false;public;0;3;;public List<JobVertexID> getVerticesToConfirm() {     return verticesToConfirm. }
-false;public;0;3;;public CheckpointCoordinatorConfiguration getCheckpointCoordinatorConfiguration() {     return checkpointCoordinatorConfiguration. }
-false;public;0;4;;@Nullable public SerializedValue<StateBackend> getDefaultStateBackend() {     return defaultStateBackend. }
-false;public;0;4;;@Nullable public SerializedValue<MasterTriggerRestoreHook.Factory[]> getMasterHooks() {     return masterHooks. }
-false;public;0;8;;// -------------------------------------------------------------------------------------------- @Override public String toString() {     return String.format("SnapshotSettings: config=%s, trigger=%s, ack=%s, commit=%s", checkpointCoordinatorConfiguration, verticesToTrigger, verticesToAcknowledge, verticesToConfirm). }

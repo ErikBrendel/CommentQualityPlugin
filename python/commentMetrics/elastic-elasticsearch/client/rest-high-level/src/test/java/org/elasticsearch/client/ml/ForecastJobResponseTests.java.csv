@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected ForecastJobResponse createTestInstance() {     return new ForecastJobResponse(randomBoolean(), randomAlphaOfLength(10)). }
-false;protected;1;4;;@Override protected ForecastJobResponse doParseInstance(XContentParser parser) throws IOException {     return ForecastJobResponse.PARSER.apply(parser, null). }
-false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }

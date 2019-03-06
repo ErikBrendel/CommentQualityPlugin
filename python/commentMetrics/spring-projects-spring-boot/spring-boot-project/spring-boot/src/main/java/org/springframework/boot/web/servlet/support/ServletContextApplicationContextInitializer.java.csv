@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;3;;public void setOrder(int order) {     this.order = order. }
-false;public;0;4;;@Override public int getOrder() {     return this.order. }
-false;public;1;10;;@Override public void initialize(ConfigurableWebApplicationContext applicationContext) {     applicationContext.setServletContext(this.servletContext).     if (this.addApplicationContextAttribute) {         this.servletContext.setAttribute(WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE, applicationContext).     } }

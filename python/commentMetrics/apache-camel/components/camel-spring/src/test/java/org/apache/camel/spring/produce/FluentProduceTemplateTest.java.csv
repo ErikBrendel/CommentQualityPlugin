@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Test public void testProducerTemplate() throws Exception {     result.expectedBodiesReceived("hello").     // lets send a message     producer.withBody("hello").to("direct:start").send().     result.assertIsSatisfied(). }

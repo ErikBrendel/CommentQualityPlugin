@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;@Handler public void decrement(Exchange exchange) {     LOG.info("Decrementing latch count: " + label).     latch.countDown(). }

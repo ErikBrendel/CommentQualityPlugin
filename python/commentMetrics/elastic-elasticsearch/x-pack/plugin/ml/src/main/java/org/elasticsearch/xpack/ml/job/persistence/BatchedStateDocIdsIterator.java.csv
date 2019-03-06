@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected boolean shouldFetchSource() {     return false. }
-false;protected;0;4;;@Override protected QueryBuilder getQuery() {     return QueryBuilders.matchAllQuery(). }
-false;protected;1;4;;@Override protected String map(SearchHit hit) {     return hit.getId(). }

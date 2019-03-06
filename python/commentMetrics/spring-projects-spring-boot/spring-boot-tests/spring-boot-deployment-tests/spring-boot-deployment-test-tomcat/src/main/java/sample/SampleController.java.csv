@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@RequestMapping("/") public String hello() {     return "Hello World". }
-false;public;1;4;;@RequestMapping("/send-error") public void sendError(HttpServletResponse response) throws IOException {     response.sendError(500). }
-false;public;0;4;;@RequestMapping("/exception") public void exception() {     throw new RuntimeException(). }

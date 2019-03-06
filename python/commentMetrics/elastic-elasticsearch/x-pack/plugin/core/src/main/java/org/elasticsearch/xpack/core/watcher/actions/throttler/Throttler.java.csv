@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;2;1;;Result throttle(String actionId, WatchExecutionContext ctx).
-false;public,static;3;3;;public static Result throttle(Type type, String reason, Object... args) {     return new Result(type, true, LoggerMessageFormat.format(reason, args)). }
-false;public;0;3;;public boolean throttle() {     return throttle. }
-false;public;0;3;;public String reason() {     return reason. }
-false;public;0;3;;public Type type() {     return type. }

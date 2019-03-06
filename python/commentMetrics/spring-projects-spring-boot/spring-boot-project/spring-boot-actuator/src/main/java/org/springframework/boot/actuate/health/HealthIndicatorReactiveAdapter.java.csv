@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public Mono<Health> health() {     return Mono.create((sink) -> Schedulers.elastic().schedule(() -> invoke(sink))). }
-false;private;1;9;;private void invoke(MonoSink<Health> sink) {     try {         Health health = this.delegate.health().         sink.success(health).     } catch (Exception ex) {         sink.error(ex).     } }

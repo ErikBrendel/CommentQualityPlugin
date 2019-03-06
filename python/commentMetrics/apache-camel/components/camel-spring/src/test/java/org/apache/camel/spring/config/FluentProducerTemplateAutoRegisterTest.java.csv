@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Test public void testHasFluentTemplate() {     assertNotNull("Should have injected a fluent producer template", template).     FluentProducerTemplate lookup = context.getRegistry().lookupByNameAndType("fluentTemplate", FluentProducerTemplate.class).     assertNotNull("Should lookup fluent producer template", lookup). }

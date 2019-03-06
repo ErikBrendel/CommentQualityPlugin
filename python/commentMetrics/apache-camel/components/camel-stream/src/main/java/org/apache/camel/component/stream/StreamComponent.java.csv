@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;3;13;;@Override protected Endpoint createEndpoint(String uri, String remaining, Map<String, Object> parameters) throws Exception {     StreamEndpoint answer = new StreamEndpoint(uri, this).     Map<String, Object> httpHeaders = URISupport.extractProperties(parameters, "httpHeaders.").     if (!httpHeaders.isEmpty()) {         answer.setHttpHeaders(httpHeaders).     }     answer.setKind(remaining).     setProperties(answer, parameters).     return answer. }

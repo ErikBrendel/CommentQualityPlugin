@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;17;;public void open(int subtaskIndex, int numParallelSubtasks) {     // get the target stream     stream = target == STD_OUT ? System.out : System.err.     completedPrefix = sinkIdentifier.     if (numParallelSubtasks > 1) {         if (!completedPrefix.isEmpty()) {             completedPrefix += ":".         }         completedPrefix += (subtaskIndex + 1).     }     if (!completedPrefix.isEmpty()) {         completedPrefix += "> ".     } }
-false;public;1;3;;public void write(IN record) {     stream.println(completedPrefix + record.toString()). }
-false;public;0;4;;@Override public String toString() {     return "Print to " + (target == STD_OUT ? "System.out" : "System.err"). }

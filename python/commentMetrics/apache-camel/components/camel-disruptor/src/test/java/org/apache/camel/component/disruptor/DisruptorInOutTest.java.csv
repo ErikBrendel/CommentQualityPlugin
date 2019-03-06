@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Test public void testInOut() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("Bye World").     final String out = template.requestBody("direct:start", "Hello World", String.class).     assertEquals("Bye World", out).     assertMockEndpointsSatisfied(). }
-false;public;0;6;;@Override public void configure() throws Exception {     from("direct:start").to("disruptor:foo").     from("disruptor:foo").transform(constant("Bye World")).to("mock:result"). }
-false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").to("disruptor:foo").             from("disruptor:foo").transform(constant("Bye World")).to("mock:result").         }     }. }

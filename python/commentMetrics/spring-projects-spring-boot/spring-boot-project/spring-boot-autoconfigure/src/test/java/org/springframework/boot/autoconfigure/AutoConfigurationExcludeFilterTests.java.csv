@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@After public void cleanUp() {     if (this.context != null) {         this.context.close().     } }
-false;public;0;8;;@Test public void filterExcludeAutoConfiguration() {     this.context = new AnnotationConfigApplicationContext(Config.class).     assertThat(this.context.getBeansOfType(String.class)).hasSize(1).     assertThat(this.context.getBean(String.class)).isEqualTo("test").     assertThatExceptionOfType(NoSuchBeanDefinitionException.class).isThrownBy(() -> this.context.getBean(FILTERED)). }
-false;protected;0;4;;@Override protected List<String> getAutoConfigurations() {     return Collections.singletonList(FILTERED.getName()). }

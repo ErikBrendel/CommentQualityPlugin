@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;1;6;/**  * Creates a rate limiter with the runtime context provided.  * @param runtimeContext  */ ;/**  * Creates a rate limiter with the runtime context provided.  * @param runtimeContext  */ @Override public void open(RuntimeContext runtimeContext) {     this.runtimeContext = runtimeContext.     localRateBytesPerSecond = globalRateBytesPerSecond / runtimeContext.getNumberOfParallelSubtasks().     this.rateLimiter = RateLimiter.create(localRateBytesPerSecond). }
-true;public;1;4;/**  * Set the global per consumer and per sub-task rates.  * @param globalRate Value of rate in bytes per second.  */ ;/**  * Set the global per consumer and per sub-task rates.  * @param globalRate Value of rate in bytes per second.  */ @Override public void setRate(long globalRate) {     this.globalRateBytesPerSecond = globalRate. }
-false;public;1;5;;@Override public void acquire(int permits) {     // Ensure permits > 0     rateLimiter.acquire(Math.max(1, permits)). }
-false;public;0;4;;@Override public long getRate() {     return globalRateBytesPerSecond. }
-false;public;0;4;;@Override public void close() { }

@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;@Override public CdiCamelConfiguration autoConfigureRoutes(boolean autoConfigureRoutes) {     throwsIfUnmodifiable().     this.autoConfigureRoutes = autoConfigureRoutes.     return this. }
-false;public;0;4;;@Override public boolean autoConfigureRoutes() {     return autoConfigureRoutes. }
-false;public;1;6;;@Override public CdiCamelConfiguration autoStartContexts(boolean autoStartContexts) {     throwsIfUnmodifiable().     this.autoStartContexts = autoStartContexts.     return this. }
-false;public;0;4;;@Override public boolean autoStartContexts() {     return autoStartContexts. }
-false;;0;3;;void unmodifiable() {     unmodifiable = true. }
-false;private;0;6;;private void throwsIfUnmodifiable() {     if (unmodifiable) {         throw new IllegalStateException("Camel CDI configuration event must not be used outside " + "its observer method!").     } }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public int getOrder() {     return Ordered.LOWEST_PRECEDENCE. }
-false;protected;1;4;;@Override protected UserConfigurations merge(Set<Class<?>> mergedClasses) {     return new UserConfigurations(mergedClasses). }
-false;public,static;1;3;;public static UserConfigurations of(Class<?>... classes) {     return new UserConfigurations(Arrays.asList(classes)). }

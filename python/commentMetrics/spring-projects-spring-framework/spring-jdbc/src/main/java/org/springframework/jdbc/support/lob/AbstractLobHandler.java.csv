@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;5;;@Override @Nullable public byte[] getBlobAsBytes(ResultSet rs, String columnName) throws SQLException {     return getBlobAsBytes(rs, rs.findColumn(columnName)). }
-false;public;2;5;;@Override @Nullable public InputStream getBlobAsBinaryStream(ResultSet rs, String columnName) throws SQLException {     return getBlobAsBinaryStream(rs, rs.findColumn(columnName)). }
-false;public;2;5;;@Override @Nullable public String getClobAsString(ResultSet rs, String columnName) throws SQLException {     return getClobAsString(rs, rs.findColumn(columnName)). }
-false;public;2;5;;@Override @Nullable public InputStream getClobAsAsciiStream(ResultSet rs, String columnName) throws SQLException {     return getClobAsAsciiStream(rs, rs.findColumn(columnName)). }
-false;public;2;4;;@Override public Reader getClobAsCharacterStream(ResultSet rs, String columnName) throws SQLException {     return getClobAsCharacterStream(rs, rs.findColumn(columnName)). }

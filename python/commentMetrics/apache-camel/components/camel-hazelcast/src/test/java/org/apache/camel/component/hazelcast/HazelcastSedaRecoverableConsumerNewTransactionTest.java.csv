@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;8;;protected void trainHazelcastInstance(HazelcastInstance hazelcastInstance) {     TransactionContext transactionContext = Mockito.mock(TransactionContext.class).     when(hazelcastInstance.newTransactionContext()).thenThrow(new HazelcastException("Could not obtain Connection!!!")).thenReturn(transactionContext).     when(hazelcastInstance.getQueue("foo")).thenReturn(queue).     when(transactionContext.getQueue("foo")).thenReturn(tqueue). }
-false;protected;1;4;;protected void verifyHazelcastInstance(HazelcastInstance hazelcastInstance) {     verify(hazelcastInstance, times(2)).getQueue("foo").     verify(hazelcastInstance, atLeastOnce()).newTransactionContext(). }

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeTimeValue(masterNodeTimeout). }
-true;public,final;1;5;/**  * A timeout value in case the master has not been discovered yet or disconnected.  */ ;/**  * A timeout value in case the master has not been discovered yet or disconnected.  */ @SuppressWarnings("unchecked") public final Request masterNodeTimeout(TimeValue timeout) {     this.masterNodeTimeout = timeout.     return (Request) this. }
-true;public,final;1;3;/**  * A timeout value in case the master has not been discovered yet or disconnected.  */ ;/**  * A timeout value in case the master has not been discovered yet or disconnected.  */ public final Request masterNodeTimeout(String timeout) {     return masterNodeTimeout(TimeValue.parseTimeValue(timeout, null, getClass().getSimpleName() + ".masterNodeTimeout")). }
-false;public,final;0;3;;public final TimeValue masterNodeTimeout() {     return this.masterNodeTimeout. }
-false;public;1;7;;@Override public void readFrom(StreamInput in) throws IOException {     // TODO(talevy): throw exception once all MasterNodeRequest     // subclasses have been migrated to Writeable Readers     super.readFrom(in).     masterNodeTimeout = in.readTimeValue(). }

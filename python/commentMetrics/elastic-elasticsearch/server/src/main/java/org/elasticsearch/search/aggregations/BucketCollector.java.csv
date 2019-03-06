@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public LeafBucketCollector getLeafCollector(LeafReaderContext reader) {     return LeafBucketCollector.NO_OP_COLLECTOR. }
-false;public;0;4;;@Override public void preCollection() throws IOException { // no-op }
-false;public;0;4;;@Override public void postCollection() throws IOException { // no-op }
-false;public;0;4;;@Override public ScoreMode scoreMode() {     return ScoreMode.COMPLETE_NO_SCORES. }
-false;public,abstract;1;2;;@Override public abstract LeafBucketCollector getLeafCollector(LeafReaderContext ctx) throws IOException.
-true;public,abstract;0;1;/**  * Pre collection callback.  */ ;/**  * Pre collection callback.  */ public abstract void preCollection() throws IOException.
-true;public,abstract;0;1;/**  * Post-collection callback.  */ ;/**  * Post-collection callback.  */ public abstract void postCollection() throws IOException.

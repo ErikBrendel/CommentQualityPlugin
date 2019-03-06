@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public boolean hasNext() {     return !closed.get(). }
-false;public;0;15;;@Override public Object next() {     if (!hasNext()) {         throw new NoSuchElementException().     }     try {         Object next = rowMapper.mapRow(resultSet, rowNum++).         loadNext().         return next.     } catch (SQLException e) {         close().         throw new RuntimeCamelException("Cannot process result", e).     } }
-false;private;0;6;;private void loadNext() throws SQLException {     boolean hasNext = resultSet.next().     if (!hasNext) {         close().     } }
-false;public;0;8;;@Override public void close() {     if (closed.compareAndSet(false, true)) {         safeCloseResultSet().         safeCloseStatement().         safeCloseConnection().     } }
-false;private;0;7;;private void safeCloseResultSet() {     try {         resultSet.close().     } catch (SQLException e) {         LOG.warn("Error by closing result set: {}", e, e).     } }
-false;private;0;7;;private void safeCloseStatement() {     try {         statement.close().     } catch (SQLException e) {         LOG.warn("Error by closing statement: {}", e, e).     } }
-false;private;0;7;;private void safeCloseConnection() {     try {         connection.close().     } catch (SQLException e) {         LOG.warn("Error by closing connection: {}", e, e).     } }

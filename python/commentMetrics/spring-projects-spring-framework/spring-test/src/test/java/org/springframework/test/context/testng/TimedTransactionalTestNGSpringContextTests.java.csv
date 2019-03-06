@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void testWithoutTimeout() {     assertInTransaction(true). }
-true;public;0;4;// TODO Enable TestNG test with timeout once we have a solution. ;// TODO Enable TestNG test with timeout once we have a solution. @Test(timeOut = 10000, enabled = false) public void testWithTimeout() {     assertInTransaction(true). }

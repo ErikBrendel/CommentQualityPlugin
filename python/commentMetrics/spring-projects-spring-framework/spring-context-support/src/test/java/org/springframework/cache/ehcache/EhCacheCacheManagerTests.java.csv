@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;14;;@Before public void setup() {     nativeCacheManager = new CacheManager(new Configuration().name("EhCacheCacheManagerTests").defaultCache(new CacheConfiguration("default", 100))).     addNativeCache(CACHE_NAME).     cacheManager = new EhCacheCacheManager(nativeCacheManager).     cacheManager.setTransactionAware(false).     cacheManager.afterPropertiesSet().     transactionalCacheManager = new EhCacheCacheManager(nativeCacheManager).     transactionalCacheManager.setTransactionAware(true).     transactionalCacheManager.afterPropertiesSet(). }
-false;public;0;4;;@After public void shutdown() {     nativeCacheManager.shutdown(). }
-false;protected;1;9;;@Override protected EhCacheCacheManager getCacheManager(boolean transactionAware) {     if (transactionAware) {         return transactionalCacheManager.     } else {         return cacheManager.     } }
-false;protected;0;4;;@Override protected Class<? extends org.springframework.cache.Cache> getCacheType() {     return EhCacheCache.class. }
-false;protected;1;4;;@Override protected void addNativeCache(String cacheName) {     nativeCacheManager.addCache(cacheName). }
-false;protected;1;4;;@Override protected void removeNativeCache(String cacheName) {     nativeCacheManager.removeCache(cacheName). }

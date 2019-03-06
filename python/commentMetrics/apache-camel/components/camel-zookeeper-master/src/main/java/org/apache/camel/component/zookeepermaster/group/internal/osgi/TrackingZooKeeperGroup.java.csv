@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;@Override public CuratorFramework addingService(ServiceReference<CuratorFramework> reference) {     CuratorFramework curator = TrackingZooKeeperGroup.this.bundleContext.getService(reference).     useCurator(curator).     return curator. }
-false;public;2;3;;@Override public void modifiedService(ServiceReference<CuratorFramework> reference, CuratorFramework service) { }
-false;public;2;5;;@Override public void removedService(ServiceReference<CuratorFramework> reference, CuratorFramework service) {     useCurator(null).     TrackingZooKeeperGroup.this.bundleContext.ungetService(reference). }
-false;protected;0;4;;@Override protected void doStart() {     tracker.open(). }
-false;protected;0;4;;@Override protected void doStop() {     tracker.close(). }

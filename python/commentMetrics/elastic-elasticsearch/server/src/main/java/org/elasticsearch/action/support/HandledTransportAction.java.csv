@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,final;3;6;;@Override public final void messageReceived(final Request request, final TransportChannel channel, Task task) throws Exception {     // We already got the task created on the network layer - no need to create it again on the transport layer     Logger logger = HandledTransportAction.this.logger.     execute(task, request, new ChannelActionListener<>(channel, actionName, request)). }

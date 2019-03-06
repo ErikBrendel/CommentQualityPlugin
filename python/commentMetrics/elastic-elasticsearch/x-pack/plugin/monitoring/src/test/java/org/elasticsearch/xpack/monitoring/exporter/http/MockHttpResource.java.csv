@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;2;12;;@Override protected void doCheck(final RestClient client, final ActionListener<Boolean> listener) {     assert client != null.     ++checked.     if (check == null) {         listener.onFailure(new RuntimeException("TEST - expected")).     } else {         listener.onResponse(check).     } }
-false;protected;2;13;;@Override protected void doPublish(final RestClient client, final ActionListener<Boolean> listener) {     assert client != null.     ++published.     if (publish == null) {         listener.onFailure(new RuntimeException("TEST - expected")).     } else {         listener.onResponse(publish).     } }

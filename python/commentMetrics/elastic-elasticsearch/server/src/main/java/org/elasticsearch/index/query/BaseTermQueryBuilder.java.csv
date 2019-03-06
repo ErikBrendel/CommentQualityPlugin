@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;5;;@Override protected void doWriteTo(StreamOutput out) throws IOException {     out.writeString(fieldName).     out.writeGenericValue(value). }
-true;public;0;3;/**  * Returns the field name used in this query.  */ ;/**  * Returns the field name used in this query.  */ public String fieldName() {     return this.fieldName. }
-true;public;0;3;/**  *  Returns the value used in this query.  *  If necessary, converts internal {@link BytesRef} representation back to string.  */ ;/**  *  Returns the value used in this query.  *  If necessary, converts internal {@link BytesRef} representation back to string.  */ public Object value() {     return maybeConvertToString(this.value). }
-false;protected;2;9;;@Override protected void doXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject(getName()).     builder.startObject(fieldName).     builder.field(VALUE_FIELD.getPreferredName(), maybeConvertToString(this.value)).     printBoostAndQueryName(builder).     builder.endObject().     builder.endObject(). }
-false;protected,final;0;4;;@Override protected final int doHashCode() {     return Objects.hash(fieldName, value). }
-false;protected,final;1;5;;@Override protected final boolean doEquals(QB other) {     return Objects.equals(fieldName, other.fieldName) && Objects.equals(value, other.value). }

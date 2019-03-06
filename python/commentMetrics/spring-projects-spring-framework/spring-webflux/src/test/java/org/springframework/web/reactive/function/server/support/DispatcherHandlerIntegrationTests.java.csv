@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;8;;@Override protected HttpHandler createHttpHandler() {     AnnotationConfigApplicationContext wac = new AnnotationConfigApplicationContext().     wac.register(TestConfiguration.class).     wac.refresh().     return WebHttpHandlerBuilder.webHandler(new DispatcherHandler(wac)).build(). }
-false;public;0;7;;@Test public void nested() {     ResponseEntity<String> result = this.restTemplate.getForEntity("http://localhost:" + this.port + "/foo/bar", String.class).     assertEquals(200, result.getStatusCodeValue()). }
-false;public;1;9;;@Bean public RouterFunction<ServerResponse> router(Handler handler) {     return route().path("/foo", () -> route().nest(accept(MediaType.APPLICATION_JSON), builder -> builder.GET("/bar", handler::handle)).build()).build(). }
-false;public;0;4;;@Bean public Handler handler() {     return new Handler(). }
-false;public;1;3;;public Mono<ServerResponse> handle(ServerRequest request) {     return ServerResponse.ok().build(). }

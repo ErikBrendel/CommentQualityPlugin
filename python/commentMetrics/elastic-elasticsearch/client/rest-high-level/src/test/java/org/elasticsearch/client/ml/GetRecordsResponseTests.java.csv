@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;11;;@Override protected GetRecordsResponse createTestInstance() {     String jobId = randomAlphaOfLength(20).     int listSize = randomInt(10).     List<AnomalyRecord> records = new ArrayList<>(listSize).     for (int j = 0. j < listSize. j++) {         AnomalyRecord record = AnomalyRecordTests.createTestInstance(jobId).         records.add(record).     }     return new GetRecordsResponse(records, listSize). }
-false;protected;1;4;;@Override protected GetRecordsResponse doParseInstance(XContentParser parser) throws IOException {     return GetRecordsResponse.fromXContent(parser). }
-false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }

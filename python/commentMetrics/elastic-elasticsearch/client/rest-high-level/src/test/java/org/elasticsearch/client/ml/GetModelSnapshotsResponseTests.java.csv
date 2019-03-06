@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;9;;@Override protected GetModelSnapshotsResponse createTestInstance() {     int listSize = randomInt(10).     List<ModelSnapshot.Builder> modelSnapshots = new ArrayList<>(listSize).     for (int j = 0. j < listSize. j++) {         modelSnapshots.add(ModelSnapshotTests.createRandomizedBuilder()).     }     return new GetModelSnapshotsResponse(modelSnapshots, listSize). }
-false;protected;1;4;;@Override protected GetModelSnapshotsResponse doParseInstance(XContentParser parser) throws IOException {     return GetModelSnapshotsResponse.fromXContent(parser). }
-false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }

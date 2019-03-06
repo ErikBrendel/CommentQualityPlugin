@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;1;4;/**  * The scroll id to use to continue scrolling.  */ ;/**  * The scroll id to use to continue scrolling.  */ public SearchScrollRequestBuilder setScrollId(String scrollId) {     request.scrollId(scrollId).     return this. }
-true;public;1;4;/**  * If set, will enable scrolling of the search request.  */ ;/**  * If set, will enable scrolling of the search request.  */ public SearchScrollRequestBuilder setScroll(Scroll scroll) {     request.scroll(scroll).     return this. }
-true;public;1;4;/**  * If set, will enable scrolling of the search request for the specified timeout.  */ ;/**  * If set, will enable scrolling of the search request for the specified timeout.  */ public SearchScrollRequestBuilder setScroll(TimeValue keepAlive) {     request.scroll(keepAlive).     return this. }
-true;public;1;4;/**  * If set, will enable scrolling of the search request for the specified timeout.  */ ;/**  * If set, will enable scrolling of the search request for the specified timeout.  */ public SearchScrollRequestBuilder setScroll(String keepAlive) {     request.scroll(keepAlive).     return this. }

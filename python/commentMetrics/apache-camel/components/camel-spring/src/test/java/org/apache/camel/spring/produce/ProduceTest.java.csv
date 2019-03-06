@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Test public void testInvokeServiceWithMessageHeader() throws Exception {     Map<String, Object> headers = new HashMap<>().     headers.put("greeter", "Nihao ").     String response = producer.greet(headers, "Willem").     assertEquals("response is wrong", "Nihao Willem", response). }

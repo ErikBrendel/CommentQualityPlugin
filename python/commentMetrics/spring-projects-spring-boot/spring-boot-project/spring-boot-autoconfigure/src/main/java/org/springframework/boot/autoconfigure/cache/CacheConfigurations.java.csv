@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;5;;public static String getConfigurationClass(CacheType cacheType) {     Class<?> configurationClass = MAPPINGS.get(cacheType).     Assert.state(configurationClass != null, () -> "Unknown cache type " + cacheType).     return configurationClass.getName(). }
-false;public,static;1;9;;public static CacheType getType(String configurationClassName) {     for (Map.Entry<CacheType, Class<?>> entry : MAPPINGS.entrySet()) {         if (entry.getValue().getName().equals(configurationClassName)) {             return entry.getKey().         }     }     throw new IllegalStateException("Unknown configuration class " + configurationClassName). }

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;3;;public void registerUser(User user) {     this.lookup.put(user.principal(), user). }
-false;public;1;4;;@Override public boolean supports(AuthenticationToken token) {     return false. }
-false;public;1;4;;@Override public AuthenticationToken token(ThreadContext context) {     return null. }
-false;public;2;4;;@Override public void authenticate(AuthenticationToken token, ActionListener<AuthenticationResult> listener) {     listener.onResponse(AuthenticationResult.notHandled()). }
-false;public;2;4;;@Override public void lookupUser(String username, ActionListener<User> listener) {     listener.onResponse(lookup.get(username)). }

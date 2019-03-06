@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected ConfigurableApplicationContext getApplicationContext() {     return new AnnotationConfigApplicationContext(EnableCachingConfig.class). }
-false;public;0;5;;@Override @Bean public CacheManager cacheManager() {     return CacheTestUtils.createSimpleCacheManager("testCache", "primary", "secondary"). }
-false;public;0;4;;@Bean public CacheableService<?> service() {     return new DefaultCacheableService(). }
-false;public;0;4;;@Bean public CacheableService<?> classService() {     return new AnnotatedClassCacheableService(). }
-false;public;0;5;;@Override @Bean public KeyGenerator keyGenerator() {     return new SomeKeyGenerator(). }
-false;public;0;5;;@Override @Bean public CacheErrorHandler errorHandler() {     return new SimpleCacheErrorHandler(). }
-false;public;0;4;;@Bean public KeyGenerator customKeyGenerator() {     return new SomeCustomKeyGenerator(). }
-false;public;0;4;;@Bean public CacheManager customCacheManager() {     return CacheTestUtils.createSimpleCacheManager("testCache"). }

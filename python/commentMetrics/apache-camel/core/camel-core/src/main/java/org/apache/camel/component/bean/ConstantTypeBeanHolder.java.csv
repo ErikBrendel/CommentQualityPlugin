@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;4;/**  * Creates a cached and constant {@link org.apache.camel.component.bean.BeanHolder} from this holder.  *  * @return a new {@link org.apache.camel.component.bean.BeanHolder} that has cached the lookup of the bean.  */ ;/**  * Creates a cached and constant {@link org.apache.camel.component.bean.BeanHolder} from this holder.  *  * @return a new {@link org.apache.camel.component.bean.BeanHolder} that has cached the lookup of the bean.  */ public ConstantBeanHolder createCacheHolder() throws Exception {     Object bean = getBean().     return new ConstantBeanHolder(bean, beanInfo). }
-false;public;0;4;;@Override public String toString() {     return type.toString(). }
-false;public;0;8;;public Object getBean() {     // only create a bean if we have constructors     if (beanInfo.hasPublicConstructors()) {         return getBeanInfo().getCamelContext().getInjector().newInstance(type).     } else {         return null.     } }
-false;public;0;3;;public Processor getProcessor() {     return null. }
-false;public;0;3;;public boolean supportProcessor() {     return false. }
-false;public;0;3;;public BeanInfo getBeanInfo() {     return beanInfo. }
-false;public;1;3;;public BeanInfo getBeanInfo(Object bean) {     return null. }
-false;public;0;3;;public Class<?> getType() {     return type. }

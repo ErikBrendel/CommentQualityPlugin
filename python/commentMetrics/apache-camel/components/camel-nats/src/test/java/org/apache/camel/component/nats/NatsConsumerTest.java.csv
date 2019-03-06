@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Test public void testConsumer() throws InterruptedException, IOException {     mockResultEndpoint.expectedMessageCount(1).     template.requestBody("direct:send", "test").     mockResultEndpoint.assertIsSatisfied(). }
-false;public;0;5;;@Override public void configure() throws Exception {     from("direct:send").to("nats://" + getNatsUrl() + "?topic=test&flushConnection=true").     from("nats://" + getNatsUrl() + "?topic=test&flushConnection=true").to(mockResultEndpoint). }
-false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:send").to("nats://" + getNatsUrl() + "?topic=test&flushConnection=true").             from("nats://" + getNatsUrl() + "?topic=test&flushConnection=true").to(mockResultEndpoint).         }     }. }

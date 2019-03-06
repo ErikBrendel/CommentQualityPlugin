@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;2;1;/**  * The action to be triggered upon reception of a watermark.  *  * @param key The current key.  * @param watermark The current watermark.  */ ;/**  * The action to be triggered upon reception of a watermark.  *  * @param key The current key.  * @param watermark The current watermark.  */ void onWatermark(KEY key, Watermark watermark) throws IOException.

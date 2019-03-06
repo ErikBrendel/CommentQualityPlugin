@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Returns the name of the index that the request alias was pointing to  */ ;/**  * Returns the name of the index that the request alias was pointing to  */ public String getOldIndex() {     return oldIndex. }
-true;public;0;3;/**  * Returns the name of the index that the request alias currently points to  */ ;/**  * Returns the name of the index that the request alias currently points to  */ public String getNewIndex() {     return newIndex. }
-true;public;0;3;/**  * Returns the statuses of all the request conditions  */ ;/**  * Returns the statuses of all the request conditions  */ public Map<String, Boolean> getConditionStatus() {     return conditionStatus. }
-true;public;0;3;/**  * Returns if the rollover execution was skipped even when conditions were met  */ ;/**  * Returns if the rollover execution was skipped even when conditions were met  */ public boolean isDryRun() {     return dryRun. }
-true;public;0;3;/**  * Returns true if the rollover was not simulated and the conditions were met  */ ;/**  * Returns true if the rollover was not simulated and the conditions were met  */ public boolean isRolledOver() {     return rolledOver. }
-false;public,static;1;3;;public static RolloverResponse fromXContent(XContentParser parser) {     return PARSER.apply(parser, null). }
-false;public;1;12;;@Override public boolean equals(Object o) {     if (super.equals(o)) {         RolloverResponse that = (RolloverResponse) o.         return dryRun == that.dryRun && rolledOver == that.rolledOver && Objects.equals(oldIndex, that.oldIndex) && Objects.equals(newIndex, that.newIndex) && Objects.equals(conditionStatus, that.conditionStatus).     }     return false. }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(super.hashCode(), oldIndex, newIndex, conditionStatus, dryRun, rolledOver). }

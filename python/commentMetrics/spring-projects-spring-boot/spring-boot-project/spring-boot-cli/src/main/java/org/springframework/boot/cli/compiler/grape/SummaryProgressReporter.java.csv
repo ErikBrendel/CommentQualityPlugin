@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public void transferStarted(TransferEvent event) {     reportProgress(). }
-false;public;1;4;;@Override public void transferProgressed(TransferEvent event) {     reportProgress(). }
-false;public;1;4;;@Override public void artifactResolved(RepositoryEvent event) {     reportProgress(). }
-false;private;0;15;;private void reportProgress() {     if (!this.finished && System.currentTimeMillis() - this.startTime > INITIAL_DELAY) {         if (!this.started) {             this.started = true.             this.out.print("Resolving dependencies..").             this.lastProgressTime = System.currentTimeMillis().         } else if (System.currentTimeMillis() - this.lastProgressTime > PROGRESS_DELAY) {             this.out.print(".").             this.lastProgressTime = System.currentTimeMillis().         }     } }
-false;public;0;7;;@Override public void finished() {     if (this.started && !this.finished) {         this.finished = true.         this.out.println().     } }

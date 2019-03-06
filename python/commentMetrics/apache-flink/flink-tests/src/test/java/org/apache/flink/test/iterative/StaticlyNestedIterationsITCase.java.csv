@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;23;;@Override protected void testProgram() throws Exception {     ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment().     DataSet<Long> data1 = env.generateSequence(1, 100).     DataSet<Long> data2 = env.generateSequence(1, 100).     IterativeDataSet<Long> firstIteration = data1.iterate(100).     DataSet<Long> firstResult = firstIteration.closeWith(firstIteration.map(new IdMapper())).     IterativeDataSet<Long> mainIteration = data2.map(new IdMapper()).iterate(100).     DataSet<Long> joined = mainIteration.join(firstResult).where(new IdKeyExtractor()).equalTo(new IdKeyExtractor()).with(new Joiner()).     DataSet<Long> mainResult = mainIteration.closeWith(joined).     mainResult.output(new DiscardingOutputFormat<Long>()).     env.execute(). }
-false;public;1;4;;@Override public Long getKey(Long value) {     return value. }
-false;public;1;4;;@Override public Long map(Long value) {     return value. }
-false;public;2;4;;@Override public Long join(Long first, Long second) {     return first. }

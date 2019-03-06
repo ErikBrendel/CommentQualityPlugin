@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;9;;@Override public Object resolve(EvaluationContext context, String beanName) throws AccessException {     try {         return this.beanFactory.getBean(beanName).     } catch (BeansException ex) {         throw new AccessException("Could not resolve bean reference against BeanFactory", ex).     } }

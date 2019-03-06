@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;private;1;10;;private List<String> getSeedProviderNames(Settings settings) {     if (LEGACY_DISCOVERY_HOSTS_PROVIDER_SETTING.exists(settings)) {         if (DISCOVERY_SEED_PROVIDERS_SETTING.exists(settings)) {             throw new IllegalArgumentException("it is forbidden to set both [" + DISCOVERY_SEED_PROVIDERS_SETTING.getKey() + "] and [" + LEGACY_DISCOVERY_HOSTS_PROVIDER_SETTING.getKey() + "]").         }         return LEGACY_DISCOVERY_HOSTS_PROVIDER_SETTING.get(settings).     }     return DISCOVERY_SEED_PROVIDERS_SETTING.get(settings). }
-false;public;0;3;;public Discovery getDiscovery() {     return discovery. }

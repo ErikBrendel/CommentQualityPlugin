@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public ShardRouting getShardRouting() {     return this.shardRouting. }
-false;public;0;3;;public long getTotalBytes() {     return totalBytes. }
-false;public;0;3;;public long getToUpgradeBytes() {     return toUpgradeBytes. }
-false;public;0;3;;public long getToUpgradeBytesAncient() {     return toUpgradeBytesAncient. }
-false;public,static;1;5;;public static ShardUpgradeStatus readShardUpgradeStatus(StreamInput in) throws IOException {     ShardUpgradeStatus shard = new ShardUpgradeStatus().     shard.readFrom(in).     return shard. }
-false;public;1;8;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     shardRouting = new ShardRouting(in).     totalBytes = in.readLong().     toUpgradeBytes = in.readLong().     toUpgradeBytesAncient = in.readLong(). }
-false;public;1;8;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     shardRouting.writeTo(out).     out.writeLong(totalBytes).     out.writeLong(toUpgradeBytes).     out.writeLong(toUpgradeBytesAncient). }

@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public int getMaxNumSegments() {     return maxNumSegments. }
-false;public;4;8;;@Override public void performAction(IndexMetaData indexMetaData, ClusterState currentState, ClusterStateObserver observer, Listener listener) {     ForceMergeRequest request = new ForceMergeRequest(indexMetaData.getIndex().getName()).     request.maxNumSegments(maxNumSegments).     getClient().admin().indices().forceMerge(request, ActionListener.wrap(response -> listener.onResponse(true), listener::onFailure)). }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(super.hashCode(), maxNumSegments). }
-false;public;1;12;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     ForceMergeStep other = (ForceMergeStep) obj.     return super.equals(obj) && Objects.equals(maxNumSegments, other.maxNumSegments). }

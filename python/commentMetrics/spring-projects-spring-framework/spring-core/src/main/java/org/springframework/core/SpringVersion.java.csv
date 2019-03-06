@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,static;0;5;/**  * Return the full version string of the present Spring codebase,  * or {@code null} if it cannot be determined.  * @see Package#getImplementationVersion()  */ ;/**  * Return the full version string of the present Spring codebase,  * or {@code null} if it cannot be determined.  * @see Package#getImplementationVersion()  */ @Nullable public static String getVersion() {     Package pkg = SpringVersion.class.getPackage().     return (pkg != null ? pkg.getImplementationVersion() : null). }

@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;12;;public static ClusterType parse(String value) {     switch(value) {         case "old_cluster":             return OLD.         case "mixed_cluster":             return MIXED.         case "upgraded_cluster":             return UPGRADED.         default:             throw new AssertionError("unknown cluster type: " + value).     } }
-false;protected,final;0;4;;@Override protected final boolean preserveIndicesUponCompletion() {     return true. }
-false;protected,final;0;4;;@Override protected final boolean preserveReposUponCompletion() {     return true. }
-false;protected,final;0;9;;@Override protected final Settings restClientSettings() {     return Settings.builder().put(super.restClientSettings()).put(ESRestTestCase.CLIENT_SOCKET_TIMEOUT, "90s").build(). }

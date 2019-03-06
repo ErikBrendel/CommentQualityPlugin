@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Returns the name of the registered Filter or Servlet.  * @return the name  */ ;/**  * Returns the name of the registered Filter or Servlet.  * @return the name  */ public String getName() {     return this.registration.getName(). }
-true;public;0;3;/**  * Returns the class name of the registered Filter or Servlet.  * @return the class name  */ ;/**  * Returns the class name of the registered Filter or Servlet.  * @return the class name  */ public String getClassName() {     return this.registration.getClassName(). }
-true;protected,final;0;3;/**  * Returns the registration that is being described.  * @return the registration  */ ;/**  * Returns the registration that is being described.  * @return the registration  */ protected final T getRegistration() {     return this.registration. }

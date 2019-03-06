@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected void initialize() throws ResourceManagerException { // noop }
-false;protected;2;4;;@Override protected void internalDeregisterApplication(ApplicationStatus finalStatus, @Nullable String diagnostics) throws ResourceManagerException { // noop }
-false;public;1;4;;@Override public Collection<ResourceProfile> startNewWorker(ResourceProfile resourceProfile) {     return Collections.emptyList(). }
-false;protected;1;4;;@Override protected ResourceID workerStarted(ResourceID resourceID) {     return resourceID. }
-false;public;1;5;;@Override public boolean stopWorker(ResourceID worker) {     // cannot stop workers     return false. }

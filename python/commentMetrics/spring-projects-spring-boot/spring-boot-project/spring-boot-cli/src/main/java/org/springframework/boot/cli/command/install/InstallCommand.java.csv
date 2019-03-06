@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getUsageHelp() {     return "[options] <coordinates>". }
-false;protected;1;15;;@Override @SuppressWarnings("unchecked") protected ExitStatus run(OptionSet options) throws Exception {     List<String> args = (List<String>) options.nonOptionArguments().     Assert.notEmpty(args, "Please specify at least one " + "dependency, in the form group:artifact:version, to install").     try {         new Installer(options, this).install(args).     } catch (Exception ex) {         String message = ex.getMessage().         Log.error((message != null) ? message : ex.getClass().toString()).     }     return ExitStatus.OK. }

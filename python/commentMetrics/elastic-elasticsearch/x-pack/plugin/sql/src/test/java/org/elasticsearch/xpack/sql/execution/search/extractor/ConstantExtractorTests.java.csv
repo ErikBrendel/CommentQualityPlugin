@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;3;;public static ConstantExtractor randomConstantExtractor() {     return new ConstantExtractor(randomValidConstant()). }
-false;private,static;0;8;;private static Object randomValidConstant() {     @SuppressWarnings("unchecked")     Supplier<Object> valueSupplier = randomFrom(() -> randomInt(), () -> randomDouble(), () -> randomAlphaOfLengthBetween(1, 140)).     return valueSupplier.get(). }
-false;protected;0;4;;@Override protected ConstantExtractor createTestInstance() {     return randomConstantExtractor(). }
-false;protected;0;4;;@Override protected Reader<ConstantExtractor> instanceReader() {     return ConstantExtractor::new. }
-false;protected;1;4;;@Override protected ConstantExtractor mutateInstance(ConstantExtractor instance) throws IOException {     return new ConstantExtractor(instance.extract((SearchHit) null) + "mutated"). }
-false;public;0;7;;public void testGet() {     Object expected = randomValidConstant().     int times = between(1, 1000).     for (int i = 0. i < times. i++) {         assertSame(expected, new ConstantExtractor(expected).extract((SearchHit) null)).     } }
-false;public;0;4;;public void testToString() {     assertEquals("^foo", new ConstantExtractor("foo").toString()).     assertEquals("^42", new ConstantExtractor("42").toString()). }

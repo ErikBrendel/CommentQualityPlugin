@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;@Test public void testSerializationWithExceptionOutsideClassLoader() throws Exception {     final ErrorInfo error = new ErrorInfo(new ExceptionWithCustomClassLoader(), System.currentTimeMillis()).     final ErrorInfo copy = CommonTestUtils.createCopySerializable(error).     assertEquals(error.getTimestamp(), copy.getTimestamp()).     assertEquals(error.getExceptionAsString(), copy.getExceptionAsString()).     assertEquals(error.getException().getMessage(), copy.getException().getMessage()). }

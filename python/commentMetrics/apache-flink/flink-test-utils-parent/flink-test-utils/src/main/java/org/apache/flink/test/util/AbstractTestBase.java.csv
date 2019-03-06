@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;// -------------------------------------------------------------------------------------------- // Temporary File Utilities // -------------------------------------------------------------------------------------------- public String getTempDirPath(String dirName) throws IOException {     File f = createAndRegisterTempFile(dirName).     return f.toURI().toString(). }
-false;public;1;4;;public String getTempFilePath(String fileName) throws IOException {     File f = createAndRegisterTempFile(fileName).     return f.toURI().toString(). }
-false;public;2;9;;public String createTempFile(String fileName, String contents) throws IOException {     File f = createAndRegisterTempFile(fileName).     if (!f.getParentFile().exists()) {         f.getParentFile().mkdirs().     }     f.createNewFile().     FileUtils.writeFileUtf8(f, contents).     return f.toURI().toString(). }
-false;public;1;3;;public File createAndRegisterTempFile(String fileName) throws IOException {     return new File(TEMPORARY_FOLDER.newFolder(), fileName). }

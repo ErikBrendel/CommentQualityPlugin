@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void testDefaultSettings() {     assertThat(this.template.queryForObject("SELECT COUNT(*) from PERSON", Integer.class)).isEqualTo(1). }

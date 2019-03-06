@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;8;;@Override public AggregationMode convertStringToValue(String value) throws ConversionException {     try {         return AggregationMode.valueOf(value.toUpperCase(Locale.ROOT)).     } catch (IllegalArgumentException iae) {         throw new ConversionException("Not a valid aggregation: " + value, iae).     } }
-false;public;1;4;;@Override public String convertValueToString(AggregationMode value) {     return value.name().toLowerCase(). }
-false;public;0;5;;@Override public String getDescription() {     return "Comma-separated list of aggregation modes which should be calculated. " + "Available aggregations are: " + StringUtils.toQuotedListString(AggregationMode.values()) + '.'. }

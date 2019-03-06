@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getName() {     return "ssl_get_certificates". }
-false;public;2;4;;@Override public RestResponse buildResponse(Response response, XContentBuilder builder) throws Exception {     return new BytesRestResponse(RestStatus.OK, response.toXContent(builder, request)). }
-false;protected,final;2;10;;@Override protected final RestChannelConsumer prepareRequest(RestRequest request, NodeClient client) throws IOException {     return channel -> new GetCertificateInfoAction.RequestBuilder(client, GetCertificateInfoAction.INSTANCE).execute(new RestBuilderListener<Response>(channel) {          @Override         public RestResponse buildResponse(Response response, XContentBuilder builder) throws Exception {             return new BytesRestResponse(RestStatus.OK, response.toXContent(builder, request)).         }     }). }

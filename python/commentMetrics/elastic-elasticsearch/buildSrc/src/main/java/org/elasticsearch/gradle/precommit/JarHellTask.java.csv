@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@TaskAction public void runJarHellCheck() {     LoggedExec.javaexec(getProject(), spec -> {         spec.classpath(getClasspath()).         spec.executable(getJavaHome() + "/bin/java").         spec.setMain("org.elasticsearch.bootstrap.JarHell").     }). }
-false;public;0;4;;@Input public Object getJavaHome() {     return javaHome. }
-false;public;1;3;;public void setJavaHome(Object javaHome) {     this.javaHome = javaHome. }
-false;public;0;4;;@Classpath public FileCollection getClasspath() {     return classpath.filter(file -> file.exists()). }
-false;public;1;3;;public void setClasspath(FileCollection classpath) {     this.classpath = classpath. }

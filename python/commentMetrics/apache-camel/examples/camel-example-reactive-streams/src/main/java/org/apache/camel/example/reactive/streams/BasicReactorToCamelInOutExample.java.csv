@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;11;;@PostConstruct public void setupStreams() {     Flux.interval(Duration.ofSeconds(8)).map(// to start from 1     i -> i + 1).flatMap(// call Camel and continue     camel.toStream("sqrt", Double.class)).map(d -> "BasicReactorToCamelInOut - sqrt=" + d).doOnNext(LOG::info).subscribe(). }
-false;public;0;10;;@Override public void configure() throws Exception {     // Transform the body of every exchange into its square root     from("reactive-streams:sqrt").setBody().body(Double.class, Math::sqrt). // This route can be much more complex: it can use any Camel component to compute the output data }

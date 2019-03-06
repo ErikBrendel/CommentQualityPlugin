@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;3;4;;@Override public void write(Kryo kryo, Output output, PyString object) {     output.writeString(object.asString()). }
-false;public;3;4;;@Override public PyString read(Kryo kryo, Input input, Class<PyString> type) {     return new PyString(input.readString()). }

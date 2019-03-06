@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Override public Iterator<E> iterator() {     if (available) {         available = false.         return this.     } else {         throw new TraversableOnceException().     } }
-false;public;0;4;;@Override public boolean hasNext() {     return source.hasNext(). }
-false;public;0;5;;@Override public E next() {     E next = source.next().     return serializer.copy(next). }
-false;public;0;4;;@Override public void remove() {     throw new UnsupportedOperationException(). }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;12;;@Override public CMISSessionFacade create(CMISEndpoint endpoint) throws Exception {     CMISSessionFacade facade = new CMISSessionFacade(endpoint.getCmsUrl()).     // must use a copy of the properties     Map<String, Object> copy = new HashMap<>(endpoint.getProperties()).     // which we then set on the newly created facade     EndpointHelper.setReferenceProperties(endpoint.getCamelContext(), facade, copy).     EndpointHelper.setProperties(endpoint.getCamelContext(), facade, copy).     return facade. }

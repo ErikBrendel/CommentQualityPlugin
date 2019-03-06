@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Test public void testLanguage() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("Hello World").     template.sendBodyAndHeader("direct:start", "World", Exchange.LANGUAGE_SCRIPT, "classpath:org/apache/camel/component/language/mysimplescript.txt").     assertMockEndpointsSatisfied(). }
-false;public;0;6;;@Override public void configure() throws Exception {     from("direct:start").to("language:simple").to("mock:result"). }
-false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").to("language:simple").to("mock:result").         }     }. }

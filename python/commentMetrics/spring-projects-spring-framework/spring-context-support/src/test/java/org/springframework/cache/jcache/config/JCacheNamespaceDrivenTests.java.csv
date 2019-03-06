@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;5;;@Override protected ApplicationContext getApplicationContext() {     return new GenericXmlApplicationContext("/org/springframework/cache/jcache/config/jCacheNamespaceDriven.xml"). }
-false;public;0;9;;@Test public void cacheResolver() {     ConfigurableApplicationContext context = new GenericXmlApplicationContext("/org/springframework/cache/jcache/config/jCacheNamespaceDriven-resolver.xml").     DefaultJCacheOperationSource ci = context.getBean(DefaultJCacheOperationSource.class).     assertSame(context.getBean("cacheResolver"), ci.getCacheResolver()).     context.close(). }
-false;public;0;5;;@Test public void testCacheErrorHandler() {     JCacheInterceptor ci = ctx.getBean(JCacheInterceptor.class).     assertSame(ctx.getBean("errorHandler", CacheErrorHandler.class), ci.getErrorHandler()). }

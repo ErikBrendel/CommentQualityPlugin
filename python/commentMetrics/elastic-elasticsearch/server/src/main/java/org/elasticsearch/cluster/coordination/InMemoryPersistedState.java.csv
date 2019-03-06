@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;@Override public void setCurrentTerm(long currentTerm) {     assert this.currentTerm <= currentTerm.     this.currentTerm = currentTerm. }
-false;public;1;4;;@Override public void setLastAcceptedState(ClusterState clusterState) {     this.acceptedState = clusterState. }
-false;public;0;4;;@Override public long getCurrentTerm() {     return currentTerm. }
-false;public;0;4;;@Override public ClusterState getLastAcceptedState() {     return acceptedState. }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;1;1;/**  * Set the streaming body callback for this message.  * @param body the streaming body callback  */ ;/**  * Set the streaming body callback for this message.  * @param body the streaming body callback  */ void setBody(Body body).
-true;;1;1;/**  * Write this body to the given {@link OutputStream}.  * @param outputStream the output stream to write to  * @throws IOException in case of I/O errors  */ ;/**  * Write this body to the given {@link OutputStream}.  * @param outputStream the output stream to write to  * @throws IOException in case of I/O errors  */ void writeTo(OutputStream outputStream) throws IOException.

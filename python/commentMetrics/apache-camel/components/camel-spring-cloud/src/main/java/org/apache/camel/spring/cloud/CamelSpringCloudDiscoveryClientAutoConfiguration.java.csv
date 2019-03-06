@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;@Bean(name = "service-discovery-client") @ConditionalOnMissingBean public DiscoveryClient serviceDiscoveryClient(CamelCloudServiceDiscovery serviceDiscovery) {     return new CamelSpringCloudDiscoveryClient("service-discovery-client", serviceDiscovery). }

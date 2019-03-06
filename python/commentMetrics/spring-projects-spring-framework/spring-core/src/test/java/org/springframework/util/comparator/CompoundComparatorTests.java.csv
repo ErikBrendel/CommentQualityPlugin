@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void shouldNeedAtLeastOneComparator() {     Comparator<String> c = new CompoundComparator<>().     thrown.expect(IllegalStateException.class).     c.compare("foo", "bar"). }

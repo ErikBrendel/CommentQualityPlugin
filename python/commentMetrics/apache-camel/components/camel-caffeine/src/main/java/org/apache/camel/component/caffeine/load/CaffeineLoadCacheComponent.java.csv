@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;3;7;;@Override protected Endpoint createEndpoint(String uri, String remaining, Map<String, Object> parameters) throws Exception {     CaffeineConfiguration configuration = this.configuration.copy().     setProperties(configuration, parameters).     return new CaffeineLoadCacheEndpoint(uri, this, remaining, configuration). }
-false;public;0;3;;// **************************** // Properties // **************************** public CaffeineConfiguration getConfiguration() {     return configuration. }
-true;public;1;6;/**  * Sets the global component configuration  */ ;/**  * Sets the global component configuration  */ public void setConfiguration(CaffeineConfiguration configuration) {     // The component configuration can't be null     ObjectHelper.notNull(configuration, "CaffeineConfiguration").     this.configuration = configuration. }

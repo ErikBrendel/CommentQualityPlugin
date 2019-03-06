@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Before public void copyData() throws IOException {     FileUtils.copyDirectory(new File("src/main/data"), new File("target/work/fhir/testinput")). }
-false;public;0;6;;@Test public void shouldPushConvertedHl7toFhir() throws Exception {     mock.expectedBodiesReceived("{\"resourceType\":\"Patient\",\"id\":\"100005056\",\"name\":[{\"family\":\"Freeman\",\"given\":[\"Vincent\"]}]}").     mock.assertIsSatisfied(). }

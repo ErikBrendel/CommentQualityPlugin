@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;1;1;/**  * Emits a record.  *  * @param record The record to collect.  */ ;/**  * Emits a record.  *  * @param record The record to collect.  */ void collect(T record).
-true;;0;1;/**  * Closes the collector. If any data was buffered, that data will be flushed.  */ ;/**  * Closes the collector. If any data was buffered, that data will be flushed.  */ void close().

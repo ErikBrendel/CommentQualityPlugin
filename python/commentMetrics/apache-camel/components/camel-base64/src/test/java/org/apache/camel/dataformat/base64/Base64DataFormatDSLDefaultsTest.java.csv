@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Override public void configure() throws Exception {     from("direct:startEncode").marshal().base64().to("mock:result").     from("direct:startDecode").unmarshal().base64().to("mock:result"). }
-false;protected;0;12;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:startEncode").marshal().base64().to("mock:result").             from("direct:startDecode").unmarshal().base64().to("mock:result").         }     }. }

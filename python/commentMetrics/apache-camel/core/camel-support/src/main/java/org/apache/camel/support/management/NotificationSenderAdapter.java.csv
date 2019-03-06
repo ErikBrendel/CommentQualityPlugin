@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;8;;@Override public void sendNotification(Notification notification) {     try {         broadcaster.sendNotification(notification).     } catch (Exception e) {         throw new RuntimeException(e).     } }

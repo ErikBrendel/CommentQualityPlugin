@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public SourceVersion getSupportedSourceVersion() {     return SourceVersion.latest(). }
-false;public;2;13;;@Override public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {     try {         if (roundEnv.processingOver()) {             return false.         }         doProcess(annotations, roundEnv).     } catch (Throwable e) {         processingEnv.getMessager().printMessage(Kind.ERROR, "Unable to process annotated elements in " + getClass().getSimpleName() + ": " + e.getMessage()).         dumpExceptionToErrorFile("camel-apt-error.log", "Error processing annotation in " + getClass().getSimpleName(), e).     }     return false. }
-false;protected,abstract;2;1;;protected abstract void doProcess(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) throws Exception.

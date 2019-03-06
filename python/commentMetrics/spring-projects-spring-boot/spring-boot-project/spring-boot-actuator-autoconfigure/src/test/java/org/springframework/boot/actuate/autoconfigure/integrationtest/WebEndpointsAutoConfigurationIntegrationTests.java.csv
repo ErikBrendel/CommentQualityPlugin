@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Test public void healthEndpointWebExtensionIsAutoConfigured() {     servletWebRunner().run((context) -> context.getBean(WebEndpointTestApplication.class)).     servletWebRunner().run((context) -> assertThat(context).hasSingleBean(HealthEndpointWebExtension.class)). }
-false;public;0;5;;@Test public void healthEndpointReactiveWebExtensionIsAutoConfigured() {     reactiveWebRunner().run((context) -> assertThat(context).hasSingleBean(ReactiveHealthEndpointWebExtension.class)). }
-false;private;0;4;;private WebApplicationContextRunner servletWebRunner() {     return new WebApplicationContextRunner().withConfiguration(UserConfigurations.of(WebEndpointTestApplication.class)). }
-false;private;0;4;;private ReactiveWebApplicationContextRunner reactiveWebRunner() {     return new ReactiveWebApplicationContextRunner().withConfiguration(UserConfigurations.of(WebEndpointTestApplication.class)). }

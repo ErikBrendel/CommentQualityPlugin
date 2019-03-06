@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;8;;public static ConsumerType fromUri(String uri) {     for (ConsumerType consumerType : ConsumerType.values()) {         if (consumerType.name().equalsIgnoreCase(uri)) {             return consumerType.         }     }     throw new RuntimeException("Unable to construct consumerType from uri : " + uri). }

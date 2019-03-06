@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Before public void setUp() throws Exception {     hb = new URI("urn:some:handback:object").     super.setUp(). }
-false;public;0;11;;@Test public void test() throws Exception {     ISimpleMXBean simpleBean = getSimpleMXBean().     simpleBean.userData("myUserData").     getMockFixture().waitForMessages().     Message m = getMockFixture().getMessage(0).     URI uri = (URI) m.getHeader("jmx.handback").     assertSame(hb, uri). }
-false;protected;0;4;;@Override protected JMXUriBuilder buildFromURI() {     return super.buildFromURI().withHandback("#hb").withFormat("raw"). }
-false;protected;0;5;;@Override protected void initRegistry() {     super.initRegistry().     getRegistry().put("hb", hb). }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;4;6;;@Override public Flux<T> decode(Publisher<DataBuffer> inputStream, ResolvableType elementType, @Nullable MimeType mimeType, @Nullable Map<String, Object> hints) {     return Flux.from(inputStream).map(buffer -> decodeDataBuffer(buffer, elementType, mimeType, hints)). }
-false;public;4;7;;@Override public Mono<T> decodeToMono(Publisher<DataBuffer> inputStream, ResolvableType elementType, @Nullable MimeType mimeType, @Nullable Map<String, Object> hints) {     return DataBufferUtils.join(inputStream).map(buffer -> decodeDataBuffer(buffer, elementType, mimeType, hints)). }
-true;protected,abstract;4;2;/**  * How to decode a {@code DataBuffer} to the target element type.  */ ;/**  * How to decode a {@code DataBuffer} to the target element type.  */ protected abstract T decodeDataBuffer(DataBuffer buffer, ResolvableType elementType, @Nullable MimeType mimeType, @Nullable Map<String, Object> hints).

@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@After public void closeContext() {     this.context.close(). }
-false;public;0;5;;@Test public void disabledByDefault() {     load().     assertThat(this.context.containsBean("foo")).isFalse(). }
-false;public;0;5;;@Test public void disabledExplicitly() {     load("spring.resources.chain.enabled:false").     assertThat(this.context.containsBean("foo")).isFalse(). }
-false;public;0;5;;@Test public void enabledViaMainEnabledFlag() {     load("spring.resources.chain.enabled:true").     assertThat(this.context.containsBean("foo")).isTrue(). }
-false;public;0;5;;@Test public void enabledViaFixedStrategyFlag() {     load("spring.resources.chain.strategy.fixed.enabled:true").     assertThat(this.context.containsBean("foo")).isTrue(). }
-false;public;0;5;;@Test public void enabledViaContentStrategyFlag() {     load("spring.resources.chain.strategy.content.enabled:true").     assertThat(this.context.containsBean("foo")).isTrue(). }
-false;private;1;5;;private void load(String... environment) {     this.context.register(Config.class).     TestPropertyValues.of(environment).applyTo(this.context).     this.context.refresh(). }
-false;public;0;5;;@Bean @ConditionalOnEnabledResourceChain public String foo() {     return "foo". }

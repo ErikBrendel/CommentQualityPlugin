@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;3;;public static InProcessor randomProcessor() {     return new InProcessor(Arrays.asList(new ConstantProcessor(randomLong()), new ConstantProcessor(randomLong()))). }
-false;protected;0;4;;@Override protected InProcessor createTestInstance() {     return randomProcessor(). }
-false;protected;0;4;;@Override protected Reader<InProcessor> instanceReader() {     return InProcessor::new. }
-false;protected;0;4;;@Override protected NamedWriteableRegistry getNamedWriteableRegistry() {     return new NamedWriteableRegistry(Processors.getNamedWriteables()). }
-false;public;0;4;;public void testEq() {     assertEquals(true, new In(EMPTY, TWO, Arrays.asList(ONE, TWO, THREE)).makePipe().asProcessor().process(null)).     assertEquals(false, new In(EMPTY, THREE, Arrays.asList(ONE, TWO)).makePipe().asProcessor().process(null)). }
-false;public;0;4;;public void testHandleNullOnLeftValue() {     assertNull(new In(EMPTY, NULL, Arrays.asList(ONE, TWO, THREE)).makePipe().asProcessor().process(null)).     assertNull(new In(EMPTY, NULL, Arrays.asList(ONE, NULL, TWO)).makePipe().asProcessor().process(null)). }
-false;public;0;4;;public void testHandleNullOnRightValue() {     assertEquals(true, new In(EMPTY, THREE, Arrays.asList(ONE, NULL, THREE)).makePipe().asProcessor().process(null)).     assertNull(new In(EMPTY, TWO, Arrays.asList(ONE, NULL, THREE)).makePipe().asProcessor().process(null)). }
-false;private,static;1;3;;private static Literal L(Object value) {     return Literal.of(EMPTY, value). }

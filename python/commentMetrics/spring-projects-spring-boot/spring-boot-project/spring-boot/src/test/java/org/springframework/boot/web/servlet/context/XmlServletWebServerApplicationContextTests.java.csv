@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void createFromResource() {     this.context = new XmlServletWebServerApplicationContext(new ClassPathResource(FILE, getClass())).     verifyContext(). }
-false;public;0;5;;@Test public void createFromResourceLocation() {     this.context = new XmlServletWebServerApplicationContext(PATH + FILE).     verifyContext(). }
-false;public;0;5;;@Test public void createFromRelativeResourceLocation() {     this.context = new XmlServletWebServerApplicationContext(getClass(), FILE).     verifyContext(). }
-false;public;0;7;;@Test public void loadAndRefreshFromResource() {     this.context = new XmlServletWebServerApplicationContext().     this.context.load(new ClassPathResource(FILE, getClass())).     this.context.refresh().     verifyContext(). }
-false;public;0;7;;@Test public void loadAndRefreshFromResourceLocation() {     this.context = new XmlServletWebServerApplicationContext().     this.context.load(PATH + FILE).     this.context.refresh().     verifyContext(). }
-false;public;0;7;;@Test public void loadAndRefreshFromRelativeResourceLocation() {     this.context = new XmlServletWebServerApplicationContext().     this.context.load(getClass(), FILE).     this.context.refresh().     verifyContext(). }
-false;private;0;6;;private void verifyContext() {     MockServletWebServerFactory factory = this.context.getBean(MockServletWebServerFactory.class).     Servlet servlet = this.context.getBean(Servlet.class).     verify(factory.getServletContext()).addServlet("servlet", servlet). }

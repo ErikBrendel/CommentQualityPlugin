@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;2;5;;@Override protected boolean onAdvance(final int phase, final int registeredParties) {     terminationFuture.complete(null).     return true. }
-true;public;0;3;/**  * Registers an in-flight request.  */ ;/**  * Registers an in-flight request.  */ public void registerRequest() {     phaser.register(). }
-true;public;0;3;/**  * Deregisters an in-flight request.  */ ;/**  * Deregisters an in-flight request.  */ public void deregisterRequest() {     phaser.arriveAndDeregister(). }
-true;public;0;4;/**  * Returns a future that completes when the in-flight requests that were registered prior to  * calling this method are deregistered.  */ ;/**  * Returns a future that completes when the in-flight requests that were registered prior to  * calling this method are deregistered.  */ public CompletableFuture<Void> awaitAsync() {     phaser.arriveAndDeregister().     return terminationFuture. }

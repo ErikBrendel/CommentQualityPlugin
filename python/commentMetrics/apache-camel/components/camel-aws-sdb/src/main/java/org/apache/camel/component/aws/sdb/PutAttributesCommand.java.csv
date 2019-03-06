@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;12;;public void execute() {     PutAttributesRequest request = new PutAttributesRequest().withDomainName(determineDomainName()).withItemName(determineItemName()).withAttributes(determineReplaceableAttributes()).withExpected(determineUpdateCondition()).     log.trace("Sending request [{}] for exchange [{}]...", request, exchange).     this.sdbClient.putAttributes(request).     log.trace("Request sent"). }
-false;protected;0;4;;@SuppressWarnings("unchecked") protected Collection<ReplaceableAttribute> determineReplaceableAttributes() {     return exchange.getIn().getHeader(SdbConstants.REPLACEABLE_ATTRIBUTES, Collection.class). }

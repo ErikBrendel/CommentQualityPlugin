@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;@Test public void testToDynamic() throws Exception {     getMockEndpoint("mock:foo").expectedBodiesReceived("Hello Camel").     getMockEndpoint("mock:bar").expectedBodiesReceived("Hello World").     template.sendBodyAndHeader("direct:start", "Hello Camel", "foo", "foo").     template.sendBodyAndHeader("direct:start", "Hello World", "foo", "bar").     assertMockEndpointsSatisfied(). }
-false;public;0;9;;@Test public void testToDynamicInvalid() throws Exception {     try {         template.sendBody("direct:start", "Hello Camel").         fail("Should fail").     } catch (CamelExecutionException e) {         assertIsInstanceOf(ResolveEndpointFailedException.class, e.getCause()).     } }
-false;public;0;5;;@Override public void configure() throws Exception {     from("direct:start").toD("mock:${header.foo}"). }
-false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").toD("mock:${header.foo}").         }     }. }

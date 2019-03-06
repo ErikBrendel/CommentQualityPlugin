@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public RetrievableStateHandle<T> store(T state) {     return new TestingRetrievableStateHandle<>(state). }
-false;public;0;4;;@Override public T retrieveState() {     return state. }
-false;public;0;4;;@Override public void discardState() { // no op }
-false;public;0;4;;@Override public long getStateSize() {     return 0. }

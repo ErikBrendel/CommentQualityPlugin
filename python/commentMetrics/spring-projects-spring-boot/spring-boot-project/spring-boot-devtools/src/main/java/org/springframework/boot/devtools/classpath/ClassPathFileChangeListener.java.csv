@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;@Override public void onChange(Set<ChangedFiles> changeSet) {     boolean restart = isRestartRequired(changeSet).     publishEvent(new ClassPathChangedEvent(this, changeSet, restart)). }
-false;private;1;6;;private void publishEvent(ClassPathChangedEvent event) {     this.eventPublisher.publishEvent(event).     if (event.isRestartRequired() && this.fileSystemWatcherToStop != null) {         this.fileSystemWatcherToStop.stop().     } }
-false;private;1;13;;private boolean isRestartRequired(Set<ChangedFiles> changeSet) {     if (AgentReloader.isActive()) {         return false.     }     for (ChangedFiles changedFiles : changeSet) {         for (ChangedFile changedFile : changedFiles) {             if (this.restartStrategy.isRestartRequired(changedFile)) {                 return true.             }         }     }     return false. }

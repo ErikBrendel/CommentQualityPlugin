@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;3;;public Value getPreviousGlobalAggregate(String name) {     return this.previousGlobalAggregate.get(name). }
-false;public;1;4;;@SuppressWarnings("unchecked") public <T extends Aggregator<?>> T getAggregator(String name) {     return (T) this.aggregators.get(name). }
-false;public;0;3;;public Map<String, Aggregator<?>> getAllAggregators() {     return this.aggregators. }
-false;public;2;15;;public void updateGlobalAggregatesAndReset(String[] names, Value[] aggregates) {     if (names == null || aggregates == null || names.length != aggregates.length) {         throw new IllegalArgumentException().     }     // add global aggregates     for (int i = 0. i < names.length. i++) {         this.previousGlobalAggregate.put(names[i], aggregates[i]).     }     // reset all aggregators     for (Aggregator<?> agg : this.aggregators.values()) {         agg.reset().     } }

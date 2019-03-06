@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * Get token from secure storage.  * @return null if a secure token doesn't exist and {@link LinkedInOAuthRequestFilter} must create one.  */ ;/**  * Get token from secure storage.  * @return null if a secure token doesn't exist and {@link LinkedInOAuthRequestFilter} must create one.  */ OAuthToken getOAuthToken().
-true;;1;1;/**  * Save token to secure storage.  * Only called when {@link LinkedInOAuthRequestFilter} creates one.  * @param newToken  */ ;/**  * Save token to secure storage.  * Only called when {@link LinkedInOAuthRequestFilter} creates one.  * @param newToken  */ void saveOAuthToken(OAuthToken newToken).

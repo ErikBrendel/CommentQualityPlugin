@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;8;;public String doSomething(@XQuery("//payload") Document payload, TypeConverter converter) {     // grab the DOM payload     ObjectHelper.notNull(payload, "@XQuery payload").     // and convert it to a String which contains the xml tags     String xml = converter.convertTo(String.class, payload).     return xml. }

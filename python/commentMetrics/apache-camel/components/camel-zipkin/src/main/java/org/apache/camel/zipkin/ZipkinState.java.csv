@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;3;;public void pushClientSpan(Span span) {     clientSpans.push(span). }
-false;public;0;7;;public Span popClientSpan() {     if (!clientSpans.empty()) {         return clientSpans.pop().     } else {         return null.     } }
-false;public;1;3;;public void pushServerSpan(Span span) {     serverSpans.push(span). }
-false;public;0;7;;public Span popServerSpan() {     if (!serverSpans.empty()) {         return serverSpans.pop().     } else {         return null.     } }
-false;public;0;7;;public Span peekServerSpan() {     if (!serverSpans.empty()) {         return serverSpans.peek().     } else {         return null.     } }

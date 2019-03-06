@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public ResourceID convertStringToValue(String value) {     return new ResourceID(value). }
-false;public;1;4;;@Override public String convertValueToString(ResourceID value) {     return value.getResourceIdString(). }
-false;public;0;4;;@Override public String getDescription() {     return "Comma-separated list of 32-character hexadecimal strings to select specific task managers.". }

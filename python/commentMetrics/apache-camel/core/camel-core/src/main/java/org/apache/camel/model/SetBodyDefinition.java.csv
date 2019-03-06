@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String toString() {     return "SetBody[" + getExpression() + "]". }
-false;public;0;4;;@Override public String getShortName() {     return "setBody". }
-false;public;0;4;;@Override public String getLabel() {     return "setBody[" + getExpression() + "]". }
-true;public;1;5;/**  * Expression that returns the new body to use  */ ;/**  * Expression that returns the new body to use  */ @Override public void setExpression(ExpressionDefinition expression) {     // override to include javadoc what the expression is used for     super.setExpression(expression). }

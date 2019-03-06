@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public Iterator<Segment> iterator() {     return segments.iterator(). }
-false;public;0;3;;public ShardRouting getShardRouting() {     return this.shardRouting. }
-false;public;0;3;;public List<Segment> getSegments() {     return this.segments. }
-false;public;0;9;;public int getNumberOfCommitted() {     int count = 0.     for (Segment segment : segments) {         if (segment.isCommitted()) {             count++.         }     }     return count. }
-false;public;0;9;;public int getNumberOfSearch() {     int count = 0.     for (Segment segment : segments) {         if (segment.isSearch()) {             count++.         }     }     return count. }
-false;public,static;1;5;;public static ShardSegments readShardSegments(StreamInput in) throws IOException {     ShardSegments shard = new ShardSegments().     shard.readFrom(in).     return shard. }
-false;public;1;13;;@Override public void readFrom(StreamInput in) throws IOException {     shardRouting = new ShardRouting(in).     int size = in.readVInt().     if (size == 0) {         segments = Collections.emptyList().     } else {         segments = new ArrayList<>(size).         for (int i = 0. i < size. i++) {             segments.add(Segment.readSegment(in)).         }     } }
-false;public;1;8;;@Override public void writeTo(StreamOutput out) throws IOException {     shardRouting.writeTo(out).     out.writeVInt(segments.size()).     for (Segment segment : segments) {         segment.writeTo(out).     } }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public Producer createProducer() throws Exception {     return new KubernetesDeploymentsProducer(this). }
-false;public;1;4;;@Override public Consumer createConsumer(Processor processor) throws Exception {     return new KubernetesDeploymentsConsumer(this, processor). }

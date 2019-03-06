@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;8;;@Override public void applyToCluster(InternalTestCluster cluster) {     this.cluster = cluster.     if (disruptedNode == null) {         String[] nodes = cluster.getNodeNames().         disruptedNode = nodes[random.nextInt(nodes.length)].     } }
-false;public;1;6;;@Override public void removeFromCluster(InternalTestCluster cluster) {     if (disruptedNode != null) {         removeFromNode(disruptedNode, cluster).     } }
-false;public,synchronized;2;4;;@Override public synchronized void applyToNode(String node, InternalTestCluster cluster) { }
-false;public,synchronized;2;11;;@Override public synchronized void removeFromNode(String node, InternalTestCluster cluster) {     if (disruptedNode == null) {         return.     }     if (!node.equals(disruptedNode)) {         return.     }     stopDisrupting().     disruptedNode = null. }
-false;public,synchronized;0;4;;@Override public synchronized void testClusterClosed() {     disruptedNode = null. }
-false;protected;1;6;;protected void ensureNodeCount(InternalTestCluster cluster) {     assertFalse("cluster failed to form after disruption was healed", cluster.client().admin().cluster().prepareHealth().setWaitForNodes(String.valueOf(cluster.size())).setWaitForNoRelocatingShards(true).get().isTimedOut()). }

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;3;;public static SearchTransform.Builder searchTransform(WatcherSearchTemplateRequest request) {     return SearchTransform.builder(request). }
-false;public,static;1;3;;public static ScriptTransform.Builder scriptTransform(String script) {     return scriptTransform(new Script(ScriptType.INLINE, Script.DEFAULT_SCRIPT_LANG, script, emptyMap())). }
-false;public,static;1;3;;public static ScriptTransform.Builder scriptTransform(Script script) {     return ScriptTransform.builder(script). }
-false;public,static;1;3;;public static ChainTransform.Builder chainTransform(Transform.Builder... transforms) {     return ChainTransform.builder().add(transforms). }
-false;public,static;1;3;;public static ChainTransform.Builder chainTransform(Transform... transforms) {     return ChainTransform.builder(transforms). }

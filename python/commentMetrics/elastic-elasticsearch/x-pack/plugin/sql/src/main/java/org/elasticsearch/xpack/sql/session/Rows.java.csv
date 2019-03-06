@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;10;;public static Schema schema(List<Attribute> attr) {     List<String> names = new ArrayList<>(attr.size()).     List<DataType> types = new ArrayList<>(attr.size()).     for (Attribute a : attr) {         names.add(a.name()).         types.add(a.dataType()).     }     return new Schema(names, types). }
-false;public,static;2;12;;public static SchemaRowSet of(List<Attribute> attrs, List<List<?>> values) {     if (values.isEmpty()) {         return empty(attrs).     }     if (values.size() == 1) {         return singleton(attrs, values.get(0).toArray()).     }     Schema schema = schema(attrs).     return new ListRowSet(schema, values). }
-false;public,static;2;3;;public static SchemaRowSet singleton(List<Attribute> attrs, Object... values) {     return singleton(schema(attrs), values). }
-false;public,static;2;4;;public static SchemaRowSet singleton(Schema schema, Object... values) {     Check.isTrue(schema.size() == values.length, "Schema {} and values {} are out of sync", schema, values).     return new SingletonRowSet(schema, values). }
-false;public,static;1;3;;public static SchemaRowSet empty(Schema schema) {     return new EmptyRowSet(schema). }
-false;public,static;1;3;;public static SchemaRowSet empty(List<Attribute> attrs) {     return new EmptyRowSet(schema(attrs)). }

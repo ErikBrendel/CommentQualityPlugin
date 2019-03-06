@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public Context getInitialContext(Hashtable<?, ?> environment) throws NamingException {     return getContext(). }
-false;public,static;2;8;;public static void bind(String name, Object obj) {     try {         getContext().bind(name, obj).     } catch (NamingException ex) {         throw new IllegalStateException(ex).     } }
-false;public,static;0;3;;public static void clearAll() {     getContext().clearAll(). }
-false;private,static;0;11;;private static TestableContext getContext() {     if (context == null) {         try {             context = new TestableContext().         } catch (NamingException ex) {             throw new IllegalStateException(ex).         }     }     return context. }
-false;public;2;4;;@Override public void bind(String name, Object obj) throws NamingException {     this.bindings.put(name, obj). }
-false;public;1;4;;@Override public Object lookup(String name) throws NamingException {     return this.bindings.get(name). }
-false;public;0;5;;@Override public Hashtable<?, ?> getEnvironment() throws NamingException {     // Used to detect if JNDI is     return new Hashtable<>(). // available }
-false;public;0;3;;public void clearAll() {     this.bindings.clear(). }

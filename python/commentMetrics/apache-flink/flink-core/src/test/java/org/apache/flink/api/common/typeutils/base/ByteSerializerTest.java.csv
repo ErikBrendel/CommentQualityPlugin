@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected TypeSerializer<Byte> createSerializer() {     return new ByteSerializer(). }
-false;protected;0;4;;@Override protected int getLength() {     return 1. }
-false;protected;0;4;;@Override protected Class<Byte> getTypeClass() {     return Byte.class. }
-false;protected;0;10;;@Override protected Byte[] getTestData() {     Random rnd = new Random(874597969123412341L).     byte[] byteArray = new byte[1].     rnd.nextBytes(byteArray).     return new Byte[] { Byte.valueOf((byte) 0), Byte.valueOf((byte) 1), Byte.valueOf((byte) -1), Byte.MAX_VALUE, Byte.MIN_VALUE, Byte.valueOf(byteArray[0]), Byte.valueOf((byte) -byteArray[0]) }. }

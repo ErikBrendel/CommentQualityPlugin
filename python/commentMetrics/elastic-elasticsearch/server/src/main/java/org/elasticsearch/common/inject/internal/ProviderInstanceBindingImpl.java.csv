@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public <V> V acceptTargetVisitor(BindingTargetVisitor<? super T, V> visitor) {     return visitor.visit(this). }
-false;public;0;4;;@Override public Provider<? extends T> getProviderInstance() {     return providerInstance. }
-false;public;0;4;;@Override public Set<InjectionPoint> getInjectionPoints() {     return injectionPoints. }
-false;public;0;6;;@Override public Set<Dependency<?>> getDependencies() {     return providerInstance instanceof HasDependencies ? unmodifiableSet(new HashSet<>((((HasDependencies) providerInstance).getDependencies()))) : Dependency.forInjectionPoints(injectionPoints). }
-false;public;1;5;;@Override public BindingImpl<T> withScoping(Scoping scoping) {     return new ProviderInstanceBindingImpl<>(getSource(), getKey(), scoping, injectionPoints, providerInstance). }
-false;public;1;5;;@Override public BindingImpl<T> withKey(Key<T> key) {     return new ProviderInstanceBindingImpl<>(getSource(), key, getScoping(), injectionPoints, providerInstance). }
-false;public;1;5;;@Override public void applyTo(Binder binder) {     getScoping().applyTo(binder.withSource(getSource()).bind(getKey()).toProvider(getProviderInstance())). }
-false;public;0;9;;@Override public String toString() {     return new ToStringBuilder(ProviderInstanceBinding.class).add("key", getKey()).add("source", getSource()).add("scope", getScoping()).add("provider", providerInstance).toString(). }

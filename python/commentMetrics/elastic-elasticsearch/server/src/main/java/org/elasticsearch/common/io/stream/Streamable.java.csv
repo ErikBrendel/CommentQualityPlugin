@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;1;1;/**  * Set this object's fields from a {@linkplain StreamInput}.  */ ;/**  * Set this object's fields from a {@linkplain StreamInput}.  */ void readFrom(StreamInput in) throws IOException.
-true;;1;1;/**  * Write this object's fields to a {@linkplain StreamOutput}.  */ ;/**  * Write this object's fields to a {@linkplain StreamOutput}.  */ void writeTo(StreamOutput out) throws IOException.
-false;static;1;7;;static <T extends Streamable> Writeable.Reader<T> newWriteableReader(Supplier<T> supplier) {     return (StreamInput in) -> {         T request = supplier.get().         request.readFrom(in).         return request.     }. }

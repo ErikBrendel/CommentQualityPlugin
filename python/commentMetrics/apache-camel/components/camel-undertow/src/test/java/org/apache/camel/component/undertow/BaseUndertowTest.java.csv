@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;5;;@BeforeClass public static void initPort() throws Exception {     port = AvailablePortFinder.getNextAvailable(8000).     port2 = AvailablePortFinder.getNextAvailable(9000). }
-false;protected,static;0;3;;protected static int getPort() {     return port. }
-false;protected,static;0;3;;protected static int getPort2() {     return port2. }
-false;protected;0;6;;@Override protected CamelContext createCamelContext() throws Exception {     CamelContext context = super.createCamelContext().     context.addComponent("properties", new PropertiesComponent("ref:prop")).     return context. }
-false;protected;0;10;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry jndi = super.createRegistry().     Properties prop = new Properties().     prop.setProperty("port", "" + getPort()).     prop.setProperty("port2", "" + getPort2()).     jndi.bind("prop", prop).     return jndi. }
-false;protected;0;3;;protected int getNextPort() {     return AvailablePortFinder.getNextAvailable(port + counter.getAndIncrement()). }
-false;protected;1;3;;protected int getNextPort(int startWithPort) {     return AvailablePortFinder.getNextAvailable(startWithPort). }

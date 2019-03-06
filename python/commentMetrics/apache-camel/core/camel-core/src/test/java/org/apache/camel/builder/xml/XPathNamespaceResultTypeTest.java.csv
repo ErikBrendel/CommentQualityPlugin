@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;public void configure() throws Exception {     Namespaces ns = new Namespaces("c", "http://acme.com/cheese").     from("direct:in").choice().when().xpath("/c:number = 55", Integer.class, ns).to("mock:55").otherwise().to("mock:other").end(). }
-false;protected;0;14;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             Namespaces ns = new Namespaces("c", "http://acme.com/cheese").             from("direct:in").choice().when().xpath("/c:number = 55", Integer.class, ns).to("mock:55").otherwise().to("mock:other").end().         }     }. }

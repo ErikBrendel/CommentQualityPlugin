@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;public void test_WithNullFilter() {     NullPointerException ex = expectThrows(NullPointerException.class, () -> new DeleteFilterRequest(null)).     assertEquals("[filter_id] is required", ex.getMessage()). }
-false;public;0;5;;public void test_instance() {     String filterId = randomAlphaOfLengthBetween(2, 10).     DeleteFilterRequest deleteFilterRequest = new DeleteFilterRequest(filterId).     assertEquals(deleteFilterRequest.getId(), filterId). }

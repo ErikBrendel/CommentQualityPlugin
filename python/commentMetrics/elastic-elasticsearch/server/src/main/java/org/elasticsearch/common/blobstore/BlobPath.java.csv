@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;3;;public static BlobPath cleanPath() {     return new BlobPath(). }
-false;public;0;4;;@Override public Iterator<String> iterator() {     return paths.iterator(). }
-false;public;0;3;;public String[] toArray() {     return paths.toArray(new String[paths.size()]). }
-false;public;1;5;;public BlobPath add(String path) {     List<String> paths = new ArrayList<>(this.paths).     paths.add(path).     return new BlobPath(Collections.unmodifiableList(paths)). }
-false;public;0;7;;public String buildAsString() {     String p = String.join(SEPARATOR, paths).     if (p.isEmpty() || p.endsWith(SEPARATOR)) {         return p.     }     return p + SEPARATOR. }
-false;public;0;8;;@Override public String toString() {     StringBuilder sb = new StringBuilder().     for (String path : paths) {         sb.append('[').append(path).append(']').     }     return sb.toString(). }

@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public void add(T value) {     localValue.add(value). }
-false;public;0;4;;@Override public ArrayList<T> getLocalValue() {     return localValue. }
-false;public;0;4;;@Override public void resetLocal() {     localValue.clear(). }
-false;public;1;4;;@Override public void merge(Accumulator<T, ArrayList<T>> other) {     localValue.addAll(other.getLocalValue()). }
-false;public;0;6;;@Override public Accumulator<T, ArrayList<T>> clone() {     ListAccumulator<T> newInstance = new ListAccumulator<T>().     newInstance.localValue = new ArrayList<T>(localValue).     return newInstance. }
-false;public;0;4;;@Override public String toString() {     return "List Accumulator " + localValue. }

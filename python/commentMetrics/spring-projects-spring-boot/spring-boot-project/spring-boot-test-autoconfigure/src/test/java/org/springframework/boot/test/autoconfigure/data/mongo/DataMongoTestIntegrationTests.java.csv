@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void testRepository() {     ExampleDocument exampleDocument = new ExampleDocument().     exampleDocument.setText("Look, new @DataMongoTest!").     exampleDocument = this.exampleRepository.save(exampleDocument).     assertThat(exampleDocument.getId()).isNotNull().     assertThat(this.mongoTemplate.collectionExists("exampleDocuments")).isTrue(). }
-false;public;0;5;;@Test public void didNotInjectExampleService() {     assertThatExceptionOfType(NoSuchBeanDefinitionException.class).isThrownBy(() -> this.applicationContext.getBean(ExampleService.class)). }

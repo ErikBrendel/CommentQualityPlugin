@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;3;11;;@Override public Mono<Object> resolveArgument(MethodParameter parameter, BindingContext bindingContext, ServerWebExchange exchange) {     return super.resolveArgument(parameter, bindingContext, exchange). }
-false;public;3;7;;@Override public Object resolveArgumentValue(MethodParameter parameter, BindingContext context, ServerWebExchange exchange) {     // This won't block since resolveName below doesn't     return resolveArgument(parameter, context, exchange).block(). }
-false;protected,final;3;4;;@Override protected final Mono<Object> resolveName(String name, MethodParameter param, ServerWebExchange exchange) {     return Mono.justOrEmpty(resolveNamedValue(name, param, exchange)). }
-true;protected,abstract;3;2;/**  * Actually resolve the value synchronously.  */ ;/**  * Actually resolve the value synchronously.  */ @Nullable protected abstract Object resolveNamedValue(String name, MethodParameter param, ServerWebExchange exchange).

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;8;/**  * Report 1 byte read  */ ;/**  * Report 1 byte read  */ @Override public int read() throws IOException {     int read = in.read().     dataCountsReporter.reportBytesRead(read < 0 ? 0 : 1).     currentPosition += read < 0 ? 0 : 1.     return read. }
-false;public;1;8;;@Override public int read(byte[] b) throws IOException {     int read = in.read(b).     dataCountsReporter.reportBytesRead(read < 0 ? 0 : read).     currentPosition += read < 0 ? 0 : read.     return read. }
-false;public;3;8;;@Override public int read(byte[] b, int off, int len) throws IOException {     int read = in.read(b, off, len).     dataCountsReporter.reportBytesRead(read < 0 ? 0 : read).     currentPosition += read < 0 ? 0 : read.     return read. }
-false;public,synchronized;1;5;;@Override public synchronized void mark(int readlimit) {     super.mark(readlimit).     markPosition = currentPosition. }
-false;public,synchronized;0;6;;@Override public synchronized void reset() throws IOException {     super.reset().     dataCountsReporter.reportBytesRead(-(currentPosition - markPosition)).     currentPosition = markPosition. }

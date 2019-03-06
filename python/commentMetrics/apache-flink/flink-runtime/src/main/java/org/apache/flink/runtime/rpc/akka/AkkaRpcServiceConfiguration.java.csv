@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Nonnull public Configuration getConfiguration() {     return configuration. }
-false;public;0;4;;@Nonnull public Time getTimeout() {     return timeout. }
-false;public;0;3;;public long getMaximumFramesize() {     return maximumFramesize. }
-false;public,static;1;8;;public static AkkaRpcServiceConfiguration fromConfiguration(Configuration configuration) {     final FiniteDuration duration = AkkaUtils.getTimeout(configuration).     final Time timeout = Time.of(duration.length(), duration.unit()).     final long maximumFramesize = AkkaRpcServiceUtils.extractMaximumFramesize(configuration).     return new AkkaRpcServiceConfiguration(configuration, timeout, maximumFramesize). }
-false;public,static;0;3;;public static AkkaRpcServiceConfiguration defaultConfiguration() {     return fromConfiguration(new Configuration()). }

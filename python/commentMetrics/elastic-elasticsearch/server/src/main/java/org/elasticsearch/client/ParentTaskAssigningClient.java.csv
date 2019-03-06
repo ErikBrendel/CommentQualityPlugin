@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Fetch the wrapped client. Use this to make calls that don't set {@link ActionRequest#setParentTask(TaskId)}.  */ ;/**  * Fetch the wrapped client. Use this to make calls that don't set {@link ActionRequest#setParentTask(TaskId)}.  */ public Client unwrap() {     return in(). }
-false;protected;3;6;;@Override protected <Request extends ActionRequest, Response extends ActionResponse> void doExecute(Action<Response> action, Request request, ActionListener<Response> listener) {     request.setParentTask(parentTask).     super.doExecute(action, request, listener). }

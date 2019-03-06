@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;1;1;/**  * Returns a map with a hash for each {@link StreamNode} of the {@link  * StreamGraph}. The hash is used as the {@link JobVertexID} in order to  * identify nodes across job submissions if they didn't change.  */ ;/**  * Returns a map with a hash for each {@link StreamNode} of the {@link  * StreamGraph}. The hash is used as the {@link JobVertexID} in order to  * identify nodes across job submissions if they didn't change.  */ Map<Integer, byte[]> traverseStreamGraphAndGenerateHashes(StreamGraph streamGraph).

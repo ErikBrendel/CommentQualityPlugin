@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;9;;public String validateOrder(String payload) throws Exception {     if (payload.indexOf("Tech") > -1) {         throw new MyTechnicalException("Damm a tech problem").     } else if (payload.indexOf("Func") > -1) {         throw new MyFunctionalException("Damm a func problem").     }     return "James". }

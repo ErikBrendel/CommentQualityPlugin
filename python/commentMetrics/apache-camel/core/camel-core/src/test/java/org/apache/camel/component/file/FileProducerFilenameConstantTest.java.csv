@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Override @Before public void setUp() throws Exception {     deleteDirectory("target/data/constant").     super.setUp(). }
-false;public;0;7;;@Test public void testFileProducerFilenameConstant() throws Exception {     template.sendBody("file://target/data/constant?fileName=header.txt", "Hello World").     File file = new File("target/data/constant/header.txt").     assertTrue("File should exists " + file, file.exists()). }

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Before public void setup() {     cacheManager = new CacheManager(new Configuration().name("EhCacheCacheTests").defaultCache(new CacheConfiguration("default", 100))).     nativeCache = new net.sf.ehcache.Cache(new CacheConfiguration(CACHE_NAME, 100)).     cacheManager.addCache(nativeCache).     cache = new EhCacheCache(nativeCache). }
-false;public;0;4;;@After public void shutdown() {     cacheManager.shutdown(). }
-false;protected;0;4;;@Override protected EhCacheCache getCache() {     return cache. }
-false;protected;0;4;;@Override protected Ehcache getNativeCache() {     return nativeCache. }
-false;public;0;16;;@Test public void testExpiredElements() throws Exception {     Assume.group(TestGroup.LONG_RUNNING).     String key = "brancusi".     String value = "constantin".     Element brancusi = new Element(key, value).     // ttl = 10s     brancusi.setTimeToLive(3).     nativeCache.put(brancusi).     assertEquals(value, cache.get(key).get()).     // wait for the entry to expire     Thread.sleep(5 * 1000).     assertNull(cache.get(key)). }

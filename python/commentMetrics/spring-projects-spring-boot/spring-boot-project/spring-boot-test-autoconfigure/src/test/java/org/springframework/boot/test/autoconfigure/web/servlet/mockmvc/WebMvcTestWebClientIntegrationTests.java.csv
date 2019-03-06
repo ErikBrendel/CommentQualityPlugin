@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void shouldAutoConfigureWebClient() throws Exception {     HtmlPage page = this.webClient.getPage("/html").     assertThat(page.getBody().getTextContent()).isEqualTo("Hello"). }

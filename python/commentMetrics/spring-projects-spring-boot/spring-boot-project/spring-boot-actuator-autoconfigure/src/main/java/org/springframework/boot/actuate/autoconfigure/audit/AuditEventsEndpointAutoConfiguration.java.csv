@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;7;;@Bean @ConditionalOnMissingBean @ConditionalOnBean(AuditEventRepository.class) public AuditEventsEndpoint auditEventsEndpoint(AuditEventRepository auditEventRepository) {     return new AuditEventsEndpoint(auditEventRepository). }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;2;9;;Map<Command, Processor> getProcessors(RedisClient redisClient, ExchangeConverter exchangeConverter) {     bind(Command.DISCARD, exchange -> redisClient.discard()).     bind(Command.EXEC, exchange -> redisClient.exec()).     bind(Command.MULTI, exchange -> redisClient.multi()).     bind(Command.WATCH, exchange -> redisClient.watch(exchangeConverter.getKeys(exchange))).     bind(Command.UNWATCH, exchange -> redisClient.unwatch()).     return result. }

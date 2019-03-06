@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public double getValue(double quantile) {     return histogramStatistics.getQuantile(quantile). }
-false;public;0;4;;@Override public long[] getValues() {     return histogramStatistics.getValues(). }
-false;public;0;4;;@Override public int size() {     return histogramStatistics.size(). }
-false;public;0;4;;@Override public long getMax() {     return histogramStatistics.getMax(). }
-false;public;0;4;;@Override public double getMean() {     return histogramStatistics.getMean(). }
-false;public;0;4;;@Override public long getMin() {     return histogramStatistics.getMin(). }
-false;public;0;4;;@Override public double getStdDev() {     return histogramStatistics.getStdDev(). }
-false;public;1;9;;@Override public void dump(OutputStream output) {     try (PrintWriter printWriter = new PrintWriter(new OutputStreamWriter(output, UTF_8))) {         for (Long value : histogramStatistics.getValues()) {             printWriter.printf("%d%n", value).         }     } }

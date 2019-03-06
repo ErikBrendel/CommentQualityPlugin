@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Before public void setup() {     this.mockMvc = standaloneSetup(new SimpleController()).defaultRequest(get("/")).alwaysExpect(status().isOk()).build(). }
-false;public;0;6;;@Test public void testSessionAttributeEqualTo() throws Exception {     this.mockMvc.perform(get("/")).andExpect(request().sessionAttribute("locale", Locale.UK)).andExpect(request().sessionAttribute("locale", equalTo(Locale.UK))). }
-false;public;0;5;;@Test public void testSessionAttributeMatcher() throws Exception {     this.mockMvc.perform(get("/")).andExpect(request().sessionAttribute("locale", notNullValue())). }
-false;public;1;4;;@ModelAttribute public void populate(Model model) {     model.addAttribute("locale", Locale.UK). }
-false;public;0;4;;@RequestMapping("/") public String handle() {     return "view". }

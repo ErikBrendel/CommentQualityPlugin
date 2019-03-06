@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public void configure() throws Exception {     from("direct:start").to("jgroups:" + CLUSTER_NAME). }
-false;protected;0;9;;// Routes fixture @Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").to("jgroups:" + CLUSTER_NAME).         }     }. }
-false;public;1;4;;@Override public void receive(Message msg) {     messageReceived = msg.getObject(). }
-false;protected;0;12;;// Fixture setup @Override protected void doPreSetup() throws Exception {     super.doPreSetup().     channel = new JChannel().     channel.setReceiver(new ReceiverAdapter() {          @Override         public void receive(Message msg) {             messageReceived = msg.getObject().         }     }).     channel.connect(CLUSTER_NAME). }
-false;public;0;6;;@Override @After public void tearDown() throws Exception {     channel.close().     super.tearDown(). }
-false;public;0;9;;@Test public void shouldReceiveMulticastedBody() throws Exception {     // When     sendBody("direct:start", MESSAGE).     // Then     waitForMulticastChannel(5).     assertEquals(MESSAGE, messageReceived). }
-false;public;0;9;;@Test public void shouldNotSendNullMessage() throws Exception {     // When     sendBody("direct:start", null).     // Then     waitForMulticastChannel(2).     assertNull(messageReceived). }
-false;private;1;6;;// Helpers private void waitForMulticastChannel(int attempts) throws InterruptedException {     while (messageReceived == null && attempts > 0) {         TimeUnit.SECONDS.sleep(1).         attempts--.     } }

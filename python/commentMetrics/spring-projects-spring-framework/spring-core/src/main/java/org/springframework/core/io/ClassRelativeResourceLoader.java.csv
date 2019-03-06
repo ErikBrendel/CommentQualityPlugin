@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;4;;@Override protected Resource getResourceByPath(String path) {     return new ClassRelativeContextResource(path, this.clazz). }
-false;public;0;4;;@Override public String getPathWithinContext() {     return getPath(). }
-false;public;1;5;;@Override public Resource createRelative(String relativePath) {     String pathToUse = StringUtils.applyRelativePath(getPath(), relativePath).     return new ClassRelativeContextResource(pathToUse, this.clazz). }

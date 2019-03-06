@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Override public WorkManager getWorkManager() {     Assert.state(this.workManager != null, "No WorkManager available").     return this.workManager. }
-false;public;0;5;;@Override @Nullable public XATerminator getXATerminator() {     return this.xaTerminator. }
-false;public;0;4;;@Override public Timer createTimer() throws UnavailableException {     return new Timer(). }
-false;public;1;4;;@Override public boolean isContextSupported(Class<? extends WorkContext> workContextClass) {     return false. }
-false;public;0;5;;@Override @Nullable public TransactionSynchronizationRegistry getTransactionSynchronizationRegistry() {     return this.transactionSynchronizationRegistry. }

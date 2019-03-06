@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void testMocking() {     given(this.config.exampleService.greeting()).willReturn("Boot").     assertThat(this.caller.sayGreeting()).isEqualTo("I say Boot"). }

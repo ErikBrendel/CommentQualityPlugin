@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;1;1;/**  * Get an element given its index.  */ ;/**  * Get an element given its index.  */ float get(long index).
-true;;2;1;/**  * Set a value at the given index and return the previous value.  */ ;/**  * Set a value at the given index and return the previous value.  */ float set(long index, float value).
-true;;2;1;/**  * Increment value at the given index by <code>inc</code> and return the value.  */ ;/**  * Increment value at the given index by <code>inc</code> and return the value.  */ float increment(long index, float inc).
-true;;3;1;/**  * Fill slots between <code>fromIndex</code> inclusive to <code>toIndex</code> exclusive with <code>value</code>.  */ ;/**  * Fill slots between <code>fromIndex</code> inclusive to <code>toIndex</code> exclusive with <code>value</code>.  */ void fill(long fromIndex, long toIndex, float value).

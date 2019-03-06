@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void testTicketCacheEntry() {     AppConfigurationEntry entry = KerberosUtils.ticketCacheEntry().     assertNotNull(entry). }
-false;public;0;7;;@Test public void testKeytabEntry() {     String keytab = "user.keytab".     String principal = "user".     AppConfigurationEntry entry = KerberosUtils.keytabEntry(keytab, principal).     assertNotNull(entry). }

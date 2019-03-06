@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Override public void init() {     registerScriptBeanDefinitionParser("groovy", "org.springframework.scripting.groovy.GroovyScriptFactory").     registerScriptBeanDefinitionParser("bsh", "org.springframework.scripting.bsh.BshScriptFactory").     registerScriptBeanDefinitionParser("std", "org.springframework.scripting.support.StandardScriptFactory").     registerBeanDefinitionParser("defaults", new ScriptingDefaultsParser()). }
-false;private;2;3;;private void registerScriptBeanDefinitionParser(String key, String scriptFactoryClassName) {     registerBeanDefinitionParser(key, new ScriptBeanDefinitionParser(scriptFactoryClassName)). }

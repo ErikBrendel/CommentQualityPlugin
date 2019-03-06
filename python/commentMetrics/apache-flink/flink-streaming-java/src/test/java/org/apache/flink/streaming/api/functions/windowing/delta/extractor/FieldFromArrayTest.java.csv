@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Test public void testStringArray() {     for (int i = 0. i < this.testStringArray.length. i++) {         assertEquals(this.testStringArray[i], new FieldFromArray<String>(i).extract(testStringArray)).     } }
-false;public;0;7;;@Test public void testIntegerArray() {     for (int i = 0. i < this.testIntegerArray.length. i++) {         assertEquals(this.testIntegerArray[i], new FieldFromArray<String>(i).extract(testIntegerArray)).     } }
-false;public;0;7;;@Test public void testIntArray() {     for (int i = 0. i < this.testIntArray.length. i++) {         assertEquals(new Integer(this.testIntArray[i]), new FieldFromArray<Integer>(i).extract(testIntArray)).     } }

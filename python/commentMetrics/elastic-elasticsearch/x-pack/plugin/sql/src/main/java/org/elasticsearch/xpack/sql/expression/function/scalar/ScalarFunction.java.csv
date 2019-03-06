@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,final;0;8;;@Override public final ScalarFunctionAttribute toAttribute() {     if (lazyAttribute == null) {         lazyAttribute = new ScalarFunctionAttribute(source(), name(), dataType(), id(), functionId(), asScript(), orderBy(), asPipe()).     }     return lazyAttribute. }
-true;public;0;3;// null means the script needs to be used. expression means the field/expression to be used instead ;// used if the function is monotonic and thus does not have to be computed for ordering purposes // null means the script needs to be used. expression means the field/expression to be used instead public Expression orderBy() {     return null. }

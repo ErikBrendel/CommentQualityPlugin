@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;2;;@Override public void configure(Configuration parameters) { }
-false;public;2;4;;@Override public void open(int taskNumber, int numTasks) {     writer.open(taskNumber, numTasks). }
-false;public;1;4;;@Override public void writeRecord(T record) {     writer.write(record). }
-false;public;0;4;;@Override public void close() { }
-false;public;0;4;;// -------------------------------------------------------------------------------------------- @Override public String toString() {     return writer.toString(). }

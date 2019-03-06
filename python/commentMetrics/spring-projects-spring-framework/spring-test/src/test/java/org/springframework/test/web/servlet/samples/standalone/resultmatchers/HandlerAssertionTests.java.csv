@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void handlerType() throws Exception {     this.mockMvc.perform(get("/")).andExpect(handler().handlerType(SimpleController.class)). }
-false;public;0;9;;@Test public void methodCallOnNonMock() throws Exception {     exception.expect(AssertionError.class).     exception.expectMessage("The supplied object [bogus] is not an instance of").     exception.expectMessage(MvcUriComponentsBuilder.MethodInvocationInfo.class.getName()).     exception.expectMessage("Ensure that you invoke the handler method via MvcUriComponentsBuilder.on()").     this.mockMvc.perform(get("/")).andExpect(handler().methodCall("bogus")). }
-false;public;0;4;;@Test public void methodCall() throws Exception {     this.mockMvc.perform(get("/")).andExpect(handler().methodCall(on(SimpleController.class).handle())). }
-false;public;0;4;;@Test public void methodName() throws Exception {     this.mockMvc.perform(get("/")).andExpect(handler().methodName("handle")). }
-false;public;0;5;;@Test public void methodNameMatchers() throws Exception {     this.mockMvc.perform(get("/")).andExpect(handler().methodName(equalTo("handle"))).     this.mockMvc.perform(get("/")).andExpect(handler().methodName(is(not("save")))). }
-false;public;0;5;;@Test public void method() throws Exception {     Method method = SimpleController.class.getMethod("handle").     this.mockMvc.perform(get("/")).andExpect(handler().method(method)). }
-false;public;0;4;;@RequestMapping("/") public ResponseEntity<Void> handle() {     return ResponseEntity.ok().build(). }

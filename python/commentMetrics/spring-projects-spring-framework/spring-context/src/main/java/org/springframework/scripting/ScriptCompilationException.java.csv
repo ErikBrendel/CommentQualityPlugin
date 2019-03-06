@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;4;/**  * Return the source for the offending script.  * @return the source, or {@code null} if not available  */ ;/**  * Return the source for the offending script.  * @return the source, or {@code null} if not available  */ @Nullable public ScriptSource getScriptSource() {     return this.scriptSource. }

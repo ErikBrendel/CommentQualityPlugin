@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;4;5;;@Override public Processor wrapProcessorInInterceptors(CamelContext camelContext, NamedNode processorDefinition, Processor target, Processor nextTarget) throws Exception {     return new DelegateAsyncProcessor(target). }

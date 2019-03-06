@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;14;;@Test public void testDefaultSettings() {     try {         new SpringApplicationBuilder(SampleElasticsearchApplication.class).run().     } catch (Exception ex) {         if (!elasticsearchRunning(ex)) {             return.         }         throw ex.     }     assertThat(this.output.toString()).contains("firstName='Alice', lastName='Smith'"). }
-false;private;1;10;;private boolean elasticsearchRunning(Exception ex) {     Throwable candidate = ex.     while (candidate != null) {         if (candidate instanceof NoNodeAvailableException) {             return false.         }         candidate = candidate.getCause().     }     return true. }

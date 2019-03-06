@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;6;;public static void main(String... args) throws Exception {     // create a new main which will boot the Spring XML file     Main main = new Main().     main.setApplicationContext(new ClassPathXmlApplicationContext("META-INF/spring/webServiceCamelContext.xml")).     main.run(). }

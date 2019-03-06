@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;5;;@Override public CompletableFuture<Acknowledge> cancelTask(ExecutionAttemptID executionAttemptID, Time timeout) {     cancelTaskCount.incrementAndGet().     return CompletableFuture.completedFuture(Acknowledge.get()). }
-false;public;2;5;;@Override public CompletableFuture<Acknowledge> submitTask(TaskDeploymentDescriptor tdd, Time timeout) {     submitTaskCount.incrementAndGet().     return CompletableFuture.completedFuture(Acknowledge.get()). }
-false;;0;4;;void resetCounts() {     cancelTaskCount.set(0).     submitTaskCount.set(0). }
-false;;0;3;;int getCancelTaskCount() {     return cancelTaskCount.get(). }
-false;;0;3;;int getSubmitTaskCount() {     return submitTaskCount.get(). }
-false;;0;3;;int getInteractionsCount() {     return cancelTaskCount.get() + submitTaskCount.get(). }

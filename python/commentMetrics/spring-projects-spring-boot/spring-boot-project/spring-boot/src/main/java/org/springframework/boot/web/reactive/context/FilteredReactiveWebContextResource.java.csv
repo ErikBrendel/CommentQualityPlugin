@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public boolean exists() {     return false. }
-false;public;1;5;;@Override public Resource createRelative(String relativePath) throws IOException {     String pathToUse = StringUtils.applyRelativePath(this.path, relativePath).     return new FilteredReactiveWebContextResource(pathToUse). }
-false;public;0;4;;@Override public String getDescription() {     return "ReactiveWebContext resource [" + this.path + "]". }
-false;public;0;5;;@Override public InputStream getInputStream() throws IOException {     throw new FileNotFoundException(this.getDescription() + " cannot be opened because it does not exist"). }

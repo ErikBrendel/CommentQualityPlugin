@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;4;1;/**  * Continue processing the request. Should only be called if a response has not been sent through  * the given {@link ActionListener listener}  */ ;/**  * Continue processing the request. Should only be called if a response has not been sent through  * the given {@link ActionListener listener}  */ void proceed(Task task, String action, Request request, ActionListener<Response> listener).

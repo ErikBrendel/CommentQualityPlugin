@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,final;0;4;;@Override public final ScriptDocValues<?> getScriptValues() {     return scriptFunction.apply(getOrdinalsValues()). }
-false;public,final;0;4;;@Override public final SortedBinaryDocValues getBytesValues() {     return FieldData.toString(getOrdinalsValues()). }
-false;public;0;4;;@Override public long ramBytesUsed() {     return 0. }
-false;public;0;4;;@Override public Collection<Accountable> getChildResources() {     return Collections.emptyList(). }
-false;public;0;3;;@Override public void close() { }
-false;public;0;4;;@Override public SortedSetDocValues getOrdinalsValues() {     return DocValues.emptySortedSet(). }
-false;public,static;0;23;;public static AtomicOrdinalsFieldData empty() {     return new AbstractAtomicOrdinalsFieldData(DEFAULT_SCRIPT_FUNCTION) {          @Override         public long ramBytesUsed() {             return 0.         }          @Override         public Collection<Accountable> getChildResources() {             return Collections.emptyList().         }          @Override         public void close() {         }          @Override         public SortedSetDocValues getOrdinalsValues() {             return DocValues.emptySortedSet().         }     }. }

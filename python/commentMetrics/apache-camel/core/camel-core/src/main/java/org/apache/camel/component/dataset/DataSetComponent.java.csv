@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;3;5;;@Override protected Endpoint createEndpoint(String uri, String remaining, Map<String, Object> parameters) throws Exception {     DataSet dataSet = CamelContextHelper.mandatoryLookup(getCamelContext(), remaining, DataSet.class).     return new DataSetEndpoint(uri, this, dataSet). }

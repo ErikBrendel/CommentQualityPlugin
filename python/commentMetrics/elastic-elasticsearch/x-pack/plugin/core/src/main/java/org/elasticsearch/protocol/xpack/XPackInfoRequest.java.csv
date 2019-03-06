@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;14;;public static EnumSet<Category> toSet(String... categories) {     EnumSet<Category> set = EnumSet.noneOf(Category.class).     for (String category : categories) {         switch(category) {             case "_all":                 return EnumSet.allOf(Category.class).             case "_none":                 return EnumSet.noneOf(Category.class).             default:                 set.add(Category.valueOf(category.toUpperCase(Locale.ROOT))).         }     }     return set. }
-false;public;1;3;;public void setVerbose(boolean verbose) {     this.verbose = verbose. }
-false;public;0;3;;public boolean isVerbose() {     return verbose. }
-false;public;1;3;;public void setCategories(EnumSet<Category> categories) {     this.categories = categories. }
-false;public;0;3;;public EnumSet<Category> getCategories() {     return categories. }
-false;public;0;4;;@Override public ActionRequestValidationException validate() {     return null. }
-false;public;1;10;;@Override public void readFrom(StreamInput in) throws IOException {     this.verbose = in.readBoolean().     EnumSet<Category> categories = EnumSet.noneOf(Category.class).     int size = in.readVInt().     for (int i = 0. i < size. i++) {         categories.add(Category.valueOf(in.readString())).     }     this.categories = categories. }
-false;public;1;8;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeBoolean(verbose).     out.writeVInt(categories.size()).     for (Category category : categories) {         out.writeString(category.name()).     } }

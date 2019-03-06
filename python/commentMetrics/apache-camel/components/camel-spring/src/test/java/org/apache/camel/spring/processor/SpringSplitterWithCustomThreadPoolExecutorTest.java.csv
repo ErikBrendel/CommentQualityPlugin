@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected ThreadPoolExecutor getThreadPoolExecutor() {     return context.getRegistry().lookupByNameAndType("myThreadPoolExecutor", ThreadPoolExecutor.class). }
-false;protected;0;3;;protected CamelContext createCamelContext() throws Exception {     return createSpringCamelContext(this, "org/apache/camel/spring/processor/splitterWithCustomThreadPoolExecutor.xml"). }

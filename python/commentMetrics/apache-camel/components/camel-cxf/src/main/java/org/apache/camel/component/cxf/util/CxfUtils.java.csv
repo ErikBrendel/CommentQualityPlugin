@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;7;;public static String getStringFromInputStream(InputStream in) throws Exception {     CachedOutputStream bos = new CachedOutputStream().     IOUtils.copy(in, bos).     in.close().     bos.close().     return bos.getOut().toString(). }
-false;public,static;1;9;;public static void closeCamelUnitOfWork(Message message) {     Exchange cxfExchange.     if ((cxfExchange = message.getExchange()) != null) {         org.apache.camel.Exchange exchange = cxfExchange.get(org.apache.camel.Exchange.class).         if (exchange != null) {             UnitOfWorkHelper.doneUow(exchange.getUnitOfWork(), exchange).         }     } }

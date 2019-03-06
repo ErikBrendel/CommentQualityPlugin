@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void resourceConfigCustomizerForEndpointsIsAutoConfigured() {     this.runner.run((context) -> assertThat(context).hasSingleBean(ResourceConfigCustomizer.class)). }
-false;public;0;8;;@Test public void autoConfigurationIsConditionalOnServletWebApplication() {     ApplicationContextRunner contextRunner = new ApplicationContextRunner().withConfiguration(AutoConfigurations.of(JerseySameManagementContextConfiguration.class)).     contextRunner.run((context) -> assertThat(context).doesNotHaveBean(JerseySameManagementContextConfiguration.class)). }
-false;public;0;6;;@Test public void autoConfigurationIsConditionalOnClassResourceConfig() {     this.runner.withClassLoader(new FilteredClassLoader(ResourceConfig.class)).run((context) -> assertThat(context).doesNotHaveBean(JerseySameManagementContextConfiguration.class)). }
-false;public;0;4;;@Bean public WebEndpointsSupplier webEndpointsSupplier() {     return Collections::emptyList. }

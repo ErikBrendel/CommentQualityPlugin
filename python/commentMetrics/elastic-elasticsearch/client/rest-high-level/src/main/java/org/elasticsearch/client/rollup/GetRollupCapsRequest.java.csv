@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public String getIndexPattern() {     return indexPattern. }
-false;public;2;7;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(ID, indexPattern).     builder.endObject().     return builder. }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(indexPattern). }
-false;public;1;11;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     }     if (getClass() != obj.getClass()) {         return false.     }     GetRollupCapsRequest other = (GetRollupCapsRequest) obj.     return Objects.equals(indexPattern, other.indexPattern). }

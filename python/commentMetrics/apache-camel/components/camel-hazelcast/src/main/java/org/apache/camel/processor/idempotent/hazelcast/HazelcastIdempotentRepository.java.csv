@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected void doStart() throws Exception {     repo = hazelcastInstance.getMap(repositoryName). }
-false;protected;0;4;;@Override protected void doStop() throws Exception { // noop }
-false;public;1;9;;@Override public boolean add(String key) {     repo.lock(key).     try {         return repo.putIfAbsent(key, false) == null.     } finally {         repo.unlock(key).     } }
-false;public;1;9;;@Override public boolean confirm(String key) {     repo.lock(key).     try {         return repo.replace(key, false, true).     } finally {         repo.unlock(key).     } }
-false;public;1;9;;@Override public boolean contains(String key) {     repo.lock(key).     try {         return this.repo.containsKey(key).     } finally {         repo.unlock(key).     } }
-false;public;1;9;;@Override public boolean remove(String key) {     repo.lock(key).     try {         return repo.remove(key) != null.     } finally {         repo.unlock(key).     } }
-false;public;0;4;;@Override public void clear() {     repo.clear(). }
-false;public;0;3;;public String getRepositoryName() {     return repositoryName. }

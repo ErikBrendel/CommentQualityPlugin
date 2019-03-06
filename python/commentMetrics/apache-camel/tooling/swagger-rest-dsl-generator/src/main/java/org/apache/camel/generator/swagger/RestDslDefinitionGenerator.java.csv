@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;9;;public RestsDefinition generate(final CamelContext context) {     final RestDefinitionEmitter emitter = new RestDefinitionEmitter(context).     final PathVisitor<RestsDefinition> restDslStatement = new PathVisitor<>(swagger.getBasePath(), emitter, filter, destinationGenerator()).     swagger.getPaths().forEach(restDslStatement::visit).     return emitter.result(). }

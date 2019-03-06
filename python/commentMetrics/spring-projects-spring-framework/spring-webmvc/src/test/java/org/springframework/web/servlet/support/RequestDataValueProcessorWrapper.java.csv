@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;3;;public void setRequestDataValueProcessor(RequestDataValueProcessor processor) {     this.processor = processor. }
-false;public;2;4;;@Override public String processUrl(HttpServletRequest request, String url) {     return (this.processor != null) ? this.processor.processUrl(request, url) : url. }
-false;public;4;4;;@Override public String processFormFieldValue(HttpServletRequest request, String name, String value, String type) {     return (this.processor != null) ? this.processor.processFormFieldValue(request, name, value, type) : value. }
-false;public;3;4;;@Override public String processAction(HttpServletRequest request, String action, String httpMethod) {     return (this.processor != null) ? this.processor.processAction(request, action, httpMethod) : action. }
-false;public;1;4;;@Override public Map<String, String> getExtraHiddenFields(HttpServletRequest request) {     return (this.processor != null) ? this.processor.getExtraHiddenFields(request) : null. }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;3;;protected boolean supportsMimeType(@Nullable MimeType mimeType) {     return (mimeType == null || MIME_TYPES.stream().anyMatch(m -> m.isCompatibleWith(mimeType))). }
-false;protected;0;3;;protected List<MimeType> getMimeTypes() {     return MIME_TYPES. }

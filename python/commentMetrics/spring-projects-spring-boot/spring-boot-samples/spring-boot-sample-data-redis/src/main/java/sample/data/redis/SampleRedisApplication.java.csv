@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;9;;@Override public void run(String... args) throws Exception {     ValueOperations<String, String> ops = this.template.opsForValue().     String key = "spring.boot.redis.test".     if (!this.template.hasKey(key)) {         ops.set(key, "foo").     }     System.out.println("Found key " + key + ", value=" + ops.get(key)). }
-false;public,static;1;4;;public static void main(String[] args) {     // Close the context so it doesn't stay awake listening for redis     SpringApplication.run(SampleRedisApplication.class, args).close(). }

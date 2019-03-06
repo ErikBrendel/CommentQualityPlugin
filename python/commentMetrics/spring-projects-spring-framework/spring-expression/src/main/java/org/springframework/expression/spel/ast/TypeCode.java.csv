@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public Class<?> getType() {     return this.type. }
-false;public,static;1;10;;public static TypeCode forName(String name) {     String searchingFor = name.toUpperCase().     TypeCode[] tcs = values().     for (int i = 1. i < tcs.length. i++) {         if (tcs[i].name().equals(searchingFor)) {             return tcs[i].         }     }     return OBJECT. }
-false;public,static;1;9;;public static TypeCode forClass(Class<?> clazz) {     TypeCode[] allValues = TypeCode.values().     for (TypeCode typeCode : allValues) {         if (clazz == typeCode.getType()) {             return typeCode.         }     }     return OBJECT. }

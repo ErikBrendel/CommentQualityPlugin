@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;8;;@Override protected Integer convertFromString(String value) throws ConversionException {     try {         return Integer.parseInt(value).     } catch (NumberFormatException e) {         throw new ConversionException("Invalid attempt num " + value).     } }
-false;protected;1;4;;@Override protected String convertToString(Integer value) {     return value.toString(). }
-false;public;0;4;;@Override public String getDescription() {     return "Positive integer value that identifies an execution attempt.". }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;11;;public static Configuration randomConfiguration() {     return new Configuration(randomZone(), randomIntBetween(0, 1000), new TimeValue(randomNonNegativeLong()), new TimeValue(randomNonNegativeLong()), null, randomFrom(Mode.values()), randomAlphaOfLength(10), randomAlphaOfLength(10), randomAlphaOfLength(10)). }
-false;public,static;1;11;;public static Configuration randomConfiguration(ZoneId providedZoneId) {     return new Configuration(providedZoneId, randomIntBetween(0, 1000), new TimeValue(randomNonNegativeLong()), new TimeValue(randomNonNegativeLong()), null, randomFrom(Mode.values()), randomAlphaOfLength(10), randomAlphaOfLength(10), randomAlphaOfLength(10)). }

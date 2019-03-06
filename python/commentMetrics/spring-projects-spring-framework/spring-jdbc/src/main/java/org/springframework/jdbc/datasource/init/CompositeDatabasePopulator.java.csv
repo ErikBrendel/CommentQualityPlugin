@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;1;4;/**  * Specify one or more populators to delegate to.  */ ;/**  * Specify one or more populators to delegate to.  */ public void setPopulators(DatabasePopulator... populators) {     this.populators.clear().     this.populators.addAll(Arrays.asList(populators)). }
-true;public;1;3;/**  * Add one or more populators to the list of delegates.  */ ;/**  * Add one or more populators to the list of delegates.  */ public void addPopulators(DatabasePopulator... populators) {     this.populators.addAll(Arrays.asList(populators)). }
-false;public;1;6;;@Override public void populate(Connection connection) throws SQLException, ScriptException {     for (DatabasePopulator populator : this.populators) {         populator.populate(connection).     } }

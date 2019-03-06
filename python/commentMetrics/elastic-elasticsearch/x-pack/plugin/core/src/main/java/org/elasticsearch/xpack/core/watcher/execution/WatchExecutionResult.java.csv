@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public ZonedDateTime executionTime() {     return executionTime. }
-false;public;0;3;;public long executionDurationMs() {     return executionDurationMs. }
-false;public;0;3;;public Input.Result inputResult() {     return inputResult. }
-false;public;0;3;;public Condition.Result conditionResult() {     return conditionResult. }
-false;public;0;3;;public Transform.Result transformResult() {     return transformResult. }
-false;public;0;3;;public Map<String, ActionWrapperResult> actionsResults() {     return actionsResults. }
-false;public;2;24;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     WatcherDateTimeUtils.writeDate(Field.EXECUTION_TIME.getPreferredName(), builder, executionTime).     builder.field(Field.EXECUTION_DURATION.getPreferredName(), executionDurationMs).     if (inputResult != null) {         builder.field(Field.INPUT.getPreferredName(), inputResult, params).     }     if (conditionResult != null) {         builder.field(Field.CONDITION.getPreferredName(), conditionResult, params).     }     if (transformResult != null) {         builder.field(Transform.TRANSFORM.getPreferredName(), transformResult, params).     }     builder.startArray(Field.ACTIONS.getPreferredName()).     for (ActionWrapperResult result : actionsResults.values()) {         result.toXContent(builder, params).     }     builder.endArray().     builder.endObject().     return builder. }

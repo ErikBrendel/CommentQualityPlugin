@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;4;;@Converter public static Date toDate(DateProperty property) {     return property.getDate(). }
-false;public,static;2;4;;@Converter public static ByteArrayInputStream toStream(Calendar calendar, Exchange exchange) throws UnsupportedEncodingException {     return new ByteArrayInputStream(calendar.toString().getBytes(ExchangeHelper.getCharsetName(exchange))). }

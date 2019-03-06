@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;1;1;/**  * Being called when a fatal error occurs.  *  * <p>IMPORTANT: This call should never be blocking since it might be called from within  * the main thread of an {@link RpcEndpoint}.  *  * @param exception cause  */ ;/**  * Being called when a fatal error occurs.  *  * <p>IMPORTANT: This call should never be blocking since it might be called from within  * the main thread of an {@link RpcEndpoint}.  *  * @param exception cause  */ void onFatalError(Throwable exception).

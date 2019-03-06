@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;4;/**  * Return a formatted message with inserts applied.  */ ;/**  * Return a formatted message with inserts applied.  */ @Override public String getMessage() {     return this.messageType.formatMessage(this.inserts). }
-true;public;0;10;/**  * Return a detailed message that includes the original pattern text  * with a pointer to the error position, as well as the error message.  */ ;/**  * Return a detailed message that includes the original pattern text  * with a pointer to the error position, as well as the error message.  */ public String toDetailedString() {     StringBuilder buf = new StringBuilder().     buf.append(this.pattern).append('\n').     for (int i = 0. i < this.position. i++) {         buf.append(' ').     }     buf.append("^\n").     buf.append(getMessage()).     return buf.toString(). }
-false;public;0;3;;public int getPosition() {     return this.position. }
-false;public;0;3;;public PatternMessage getMessageType() {     return this.messageType. }
-false;public;0;3;;public Object[] getInserts() {     return this.inserts. }
-false;public;1;3;;public String formatMessage(Object... inserts) {     return MessageFormat.format(this.message, inserts). }

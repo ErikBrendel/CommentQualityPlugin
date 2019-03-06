@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * Invoked by the containing {@code BeanFactory} on destruction of a bean.  * @throws Exception in case of shutdown errors. Exceptions will get logged  * but not rethrown to allow other beans to release their resources as well.  */ ;/**  * Invoked by the containing {@code BeanFactory} on destruction of a bean.  * @throws Exception in case of shutdown errors. Exceptions will get logged  * but not rethrown to allow other beans to release their resources as well.  */ void destroy() throws Exception.

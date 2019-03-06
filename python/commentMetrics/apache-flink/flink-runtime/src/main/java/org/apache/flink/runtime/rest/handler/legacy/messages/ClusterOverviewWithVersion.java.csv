@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;3;12;;public static ClusterOverviewWithVersion fromStatusOverview(ClusterOverview statusOverview, String version, String commitId) {     return new ClusterOverviewWithVersion(statusOverview.getNumTaskManagersConnected(), statusOverview.getNumSlotsTotal(), statusOverview.getNumSlotsAvailable(), statusOverview.getNumJobsRunningOrPending(), statusOverview.getNumJobsFinished(), statusOverview.getNumJobsCancelled(), statusOverview.getNumJobsFailed(), version, commitId). }
-false;public;0;3;;public String getVersion() {     return version. }
-false;public;0;3;;public String getCommitId() {     return commitId. }
-false;public;1;16;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     if (!super.equals(o)) {         return false.     }     ClusterOverviewWithVersion that = (ClusterOverviewWithVersion) o.     return Objects.equals(version, that.getVersion()) && Objects.equals(commitId, that.getCommitId()). }
-false;public;0;7;;@Override public int hashCode() {     int result = super.hashCode().     result = 31 * result + (version != null ? version.hashCode() : 0).     result = 31 * result + (commitId != null ? commitId.hashCode() : 0).     return result. }

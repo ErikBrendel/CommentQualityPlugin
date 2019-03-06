@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;11;;@Override protected GetDatafeedStatsResponse createTestInstance() {     int count = randomIntBetween(1, 5).     List<DatafeedStats> results = new ArrayList<>(count).     for (int i = 0. i < count. i++) {         results.add(DatafeedStatsTests.createRandomInstance()).     }     return new GetDatafeedStatsResponse(results, count). }
-false;protected;1;4;;@Override protected GetDatafeedStatsResponse doParseInstance(XContentParser parser) throws IOException {     return GetDatafeedStatsResponse.fromXContent(parser). }
-false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }
-false;protected;0;4;;@Override protected Predicate<String> getRandomFieldsExcludeFilter() {     return field -> !field.isEmpty(). }

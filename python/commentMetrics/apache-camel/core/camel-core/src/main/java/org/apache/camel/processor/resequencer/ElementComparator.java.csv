@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;4;;@Override public boolean predecessor(Element<E> o1, Element<E> o2) {     return comparator.predecessor(o1.getObject(), o2.getObject()). }
-false;public;2;4;;@Override public boolean successor(Element<E> o1, Element<E> o2) {     return comparator.successor(o1.getObject(), o2.getObject()). }
-false;public;2;4;;@Override public int compare(Element<E> o1, Element<E> o2) {     return comparator.compare(o1.getObject(), o2.getObject()). }
-false;public;1;4;;@Override public boolean isValid(Element<E> o1) {     return comparator.isValid(o1.getObject()). }
-false;public;0;4;;@Override public String toString() {     return comparator.toString(). }

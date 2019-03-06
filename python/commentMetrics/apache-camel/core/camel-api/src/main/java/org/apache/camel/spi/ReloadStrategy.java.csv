@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;3;1;/**  * A reload is triggered when a XML resource is changed which contains Camel routes.  *  * @param camelContext  the running CamelContext  * @param name          name of resource such as a file name (can be null)  * @param resource      the changed resource  */ ;/**  * A reload is triggered when a XML resource is changed which contains Camel routes.  *  * @param camelContext  the running CamelContext  * @param name          name of resource such as a file name (can be null)  * @param resource      the changed resource  */ void onReloadXml(CamelContext camelContext, String name, InputStream resource).
-true;;0;1;/**  * Number of reloads succeeded.  */ ;/**  * Number of reloads succeeded.  */ int getReloadCounter().
-true;;0;1;/**  * Number of reloads failed.  */ ;/**  * Number of reloads failed.  */ int getFailedCounter().
-true;;0;1;/**  * Reset the counters.  */ ;/**  * Reset the counters.  */ void resetCounters().

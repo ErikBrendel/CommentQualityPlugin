@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void testTimerInvoked() throws Exception {     mock.expectedMinimumMessageCount(1).     assertMockEndpointsSatisfied(). }
-false;public;0;7;;public void configure() throws Exception {     // trigger every second     from("timer://kickoff?period=1s").setBody(constant("select * from customer")).to("jdbc:testdb").to("mock:result"). }
-false;protected;0;12;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             // trigger every second             from("timer://kickoff?period=1s").setBody(constant("select * from customer")).to("jdbc:testdb").to("mock:result").         }     }. }

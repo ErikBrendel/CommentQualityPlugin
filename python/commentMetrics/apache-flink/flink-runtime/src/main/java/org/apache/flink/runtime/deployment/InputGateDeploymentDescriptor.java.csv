@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public IntermediateDataSetID getConsumedResultId() {     return consumedResultId. }
-true;public;0;3;/**  * Returns the type of this input channel's consumed result partition.  *  * @return consumed result partition type  */ ;/**  * Returns the type of this input channel's consumed result partition.  *  * @return consumed result partition type  */ public ResultPartitionType getConsumedPartitionType() {     return consumedPartitionType. }
-false;public;0;3;;public int getConsumedSubpartitionIndex() {     return consumedSubpartitionIndex. }
-false;public;0;3;;public InputChannelDeploymentDescriptor[] getInputChannelDeploymentDescriptors() {     return inputChannels. }
-false;public;0;7;;@Override public String toString() {     return String.format("InputGateDeploymentDescriptor [result id: %s, " + "consumed subpartition index: %d, input channels: %s]", consumedResultId.toString(), consumedSubpartitionIndex, Arrays.toString(inputChannels)). }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;10;;@Override public long transform(String timestamp) throws CannotParseTimestampException {     try {         long longValue = Double.valueOf(timestamp).longValue().         return isMillisecond ? longValue : longValue * MS_IN_SECOND.     } catch (NumberFormatException e) {         String message = String.format(Locale.ROOT, "Cannot parse timestamp '%s' as epoch value", timestamp).         throw new CannotParseTimestampException(message, e).     } }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;14;;@Override protected UpdateModelSnapshotRequest createTestInstance() {     String jobId = randomAlphaOfLengthBetween(1, 20).     String snapshotId = randomAlphaOfLengthBetween(1, 20).     UpdateModelSnapshotRequest request = new UpdateModelSnapshotRequest(jobId, snapshotId).     if (randomBoolean()) {         request.setDescription(String.valueOf(randomNonNegativeLong())).     }     if (randomBoolean()) {         request.setRetain(randomBoolean()).     }     return request. }
-false;protected;1;4;;@Override protected UpdateModelSnapshotRequest doParseInstance(XContentParser parser) throws IOException {     return UpdateModelSnapshotRequest.PARSER.apply(parser, null). }
-false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return false. }

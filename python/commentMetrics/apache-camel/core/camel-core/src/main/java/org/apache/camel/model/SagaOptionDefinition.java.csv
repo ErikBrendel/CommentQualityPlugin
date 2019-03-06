@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String toString() {     return "option:" + getOptionName() + "=" + getExpression(). }
-true;public;1;3;/**  * Name of the option. It identifies the name of the header where the value of the expression will be stored when the  * compensation or completion routes will be called.  */ ;/**  * Name of the option. It identifies the name of the header where the value of the expression will be stored when the  * compensation or completion routes will be called.  */ public void setOptionName(String optionName) {     this.optionName = optionName. }
-false;public;0;3;;public String getOptionName() {     return optionName. }
-false;public;0;3;;public ExpressionDefinition getExpression() {     return expression. }
-true;public;1;3;/**  * The expression to be used to determine the value of the option.  */ ;/**  * The expression to be used to determine the value of the option.  */ public void setExpression(ExpressionDefinition expression) {     this.expression = expression. }

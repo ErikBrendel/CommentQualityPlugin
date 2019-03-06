@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;13;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(Job.ID.getPreferredName(), jobId).     if (timestamp != null) {         builder.field(TIMESTAMP.getPreferredName(), timestamp.getTime()).     }     if (quantileState != null) {         builder.field(QUANTILE_STATE.getPreferredName(), quantileState).     }     builder.endObject().     return builder. }
-false;public;0;3;;public String getJobId() {     return jobId. }
-false;public;0;3;;public Date getTimestamp() {     return timestamp. }
-false;public;0;3;;public String getQuantileState() {     return quantileState. }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(jobId, timestamp, quantileState). }
-true;public;1;15;/**  * Compare all the fields.  */ ;/**  * Compare all the fields.  */ @Override public boolean equals(Object other) {     if (this == other) {         return true.     }     if (other == null || getClass() != other.getClass()) {         return false.     }     Quantiles that = (Quantiles) other.     return Objects.equals(this.jobId, that.jobId) && Objects.equals(this.timestamp, that.timestamp) && Objects.equals(this.quantileState, that.quantileState). }

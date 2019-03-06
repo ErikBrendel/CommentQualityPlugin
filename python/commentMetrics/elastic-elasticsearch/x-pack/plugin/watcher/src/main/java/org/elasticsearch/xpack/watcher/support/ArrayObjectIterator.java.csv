@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public boolean hasNext() {     return index < length. }
-false;public;0;4;;@Override public Object next() {     return Array.get(array, index++). }
-false;public;0;4;;@Override public void remove() {     throw new UnsupportedOperationException("array iterator does not support removing elements"). }
-false;public;0;4;;@Override public Iterator<Object> iterator() {     return new ArrayObjectIterator(array). }

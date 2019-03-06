@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void testHystrixServletMapping() {     Assert.assertEquals(404, restTemplate.getForEntity("/hystrix.stream", String.class).getStatusCodeValue()). }

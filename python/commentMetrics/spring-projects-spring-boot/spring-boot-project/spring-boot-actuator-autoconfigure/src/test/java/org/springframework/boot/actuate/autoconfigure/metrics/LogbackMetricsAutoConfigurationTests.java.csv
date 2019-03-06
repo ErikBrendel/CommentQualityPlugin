@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void autoConfiguresLogbackMetrics() {     this.contextRunner.run((context) -> assertThat(context).hasSingleBean(LogbackMetrics.class)). }
-false;public;0;6;;@Test public void allowsCustomLogbackMetricsToBeUsed() {     this.contextRunner.withUserConfiguration(CustomLogbackMetricsConfiguration.class).run((context) -> assertThat(context).hasSingleBean(LogbackMetrics.class).hasBean("customLogbackMetrics")). }
-false;public;0;4;;@Bean public LogbackMetrics customLogbackMetrics() {     return new LogbackMetrics(). }

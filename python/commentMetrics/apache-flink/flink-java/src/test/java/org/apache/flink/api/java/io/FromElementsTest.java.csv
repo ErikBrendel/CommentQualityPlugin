@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void fromElementsWithBaseTypeTest1() {     ExecutionEnvironment executionEnvironment = ExecutionEnvironment.getExecutionEnvironment().     executionEnvironment.fromElements(ParentType.class, new SubType(1, "Java"), new ParentType(1, "hello")). }
-false;public;0;5;;@Test(expected = IllegalArgumentException.class) public void fromElementsWithBaseTypeTest2() {     ExecutionEnvironment executionEnvironment = ExecutionEnvironment.getExecutionEnvironment().     executionEnvironment.fromElements(SubType.class, new SubType(1, "Java"), new ParentType(1, "hello")). }

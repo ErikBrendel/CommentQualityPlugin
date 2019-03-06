@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public Class<?> getUnmarshallClass() {     return unmarshallClass. }
-true;public;1;3;/**  * Class use when unmarshalling from XML to Java.  */ ;/**  * Class use when unmarshalling from XML to Java.  */ public void setUnmarshallClass(Class<?> unmarshallClass) {     this.unmarshallClass = unmarshallClass. }
-false;public;0;3;;public String getUnmarshallTypeName() {     return unmarshallTypeName. }
-true;public;1;3;/**  * Class name to use when unmarshalling from XML to Java.  */ ;/**  * Class name to use when unmarshalling from XML to Java.  */ public void setUnmarshallTypeName(String unmarshallTypeName) {     this.unmarshallTypeName = unmarshallTypeName. }
-false;public;0;3;;public String getBindingName() {     return bindingName. }
-true;public;1;3;/**  * To use a custom binding factory  */ ;/**  * To use a custom binding factory  */ public void setBindingName(String bindingName) {     this.bindingName = bindingName. }
-false;protected;1;12;;@Override protected DataFormat createDataFormat(RouteContext routeContext) {     if (unmarshallClass == null && unmarshallTypeName != null) {         try {             unmarshallClass = routeContext.getCamelContext().getClassResolver().resolveMandatoryClass(unmarshallTypeName).         } catch (ClassNotFoundException e) {             throw RuntimeCamelException.wrapRuntimeCamelException(e).         }     }     return super.createDataFormat(routeContext). }
-false;protected;2;9;;@Override protected void configureDataFormat(DataFormat dataFormat, CamelContext camelContext) {     if (unmarshallClass != null) {         setProperty(camelContext, dataFormat, "unmarshallClass", unmarshallClass).     }     if (bindingName != null) {         setProperty(camelContext, dataFormat, "bindingName", bindingName).     } }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;3;4;;@Override protected void deepEquals(String message, double[] should, double[] is) {     Assert.assertArrayEquals(message, should, is, 0.00001). }
-false;protected;0;11;;@Override protected double[][] getSortedTestData() {     return new double[][] { new double[] { -1, 0 }, new double[] { 0, -1 }, new double[] { 0, 0 }, new double[] { 0, 1 }, new double[] { 0, 1, 2 }, new double[] { 2 } }. }

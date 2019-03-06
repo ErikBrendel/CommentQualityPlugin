@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void testStringContent() {     template.sendBody("direct:in", "Hello").     // StreamProducer appends \n in text mode     assertEquals("Hello" + LS, sb.toString()). }
-false;public;0;6;;@Test public void testBinaryContent() {     template.sendBody("direct:in", "Hello".getBytes()).     // StreamProducer is in binary mode so no \n is appended     assertEquals("Hello", sb.toString()). }
-false;public;0;4;;public void configure() {     from("direct:in").setHeader("stream", constant(mystream)).to("stream:header"). }
-false;protected;0;8;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("direct:in").setHeader("stream", constant(mystream)).to("stream:header").         }     }. }
-false;public;1;3;;public void write(int b) throws IOException {     sb.append((char) b). }

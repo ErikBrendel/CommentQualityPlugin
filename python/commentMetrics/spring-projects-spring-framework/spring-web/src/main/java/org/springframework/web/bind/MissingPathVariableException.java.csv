@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Override public String getMessage() {     return "Missing URI template variable '" + this.variableName + "' for method parameter of type " + this.parameter.getNestedParameterType().getSimpleName(). }
-true;public,final;0;3;/**  * Return the expected name of the path variable.  */ ;/**  * Return the expected name of the path variable.  */ public final String getVariableName() {     return this.variableName. }
-true;public,final;0;3;/**  * Return the method parameter bound to the path variable.  */ ;/**  * Return the method parameter bound to the path variable.  */ public final MethodParameter getParameter() {     return this.parameter. }

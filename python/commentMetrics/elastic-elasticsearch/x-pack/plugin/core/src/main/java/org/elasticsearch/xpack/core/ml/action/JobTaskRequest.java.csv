@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeString(jobId). }
-false;public;0;3;;public String getJobId() {     return jobId. }
-false;public;1;4;;@Override public boolean match(Task task) {     return OpenJobAction.JobTaskMatcher.match(task, jobId). }

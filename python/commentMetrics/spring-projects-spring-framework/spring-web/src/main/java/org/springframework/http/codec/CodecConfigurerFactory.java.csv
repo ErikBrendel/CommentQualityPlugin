@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;8;;@SuppressWarnings("unchecked") public static <T extends CodecConfigurer> T create(Class<T> ifc) {     Class<?> impl = defaultCodecConfigurers.get(ifc).     if (impl == null) {         throw new IllegalStateException("No default codec configurer found for " + ifc).     }     return (T) BeanUtils.instantiateClass(impl). }

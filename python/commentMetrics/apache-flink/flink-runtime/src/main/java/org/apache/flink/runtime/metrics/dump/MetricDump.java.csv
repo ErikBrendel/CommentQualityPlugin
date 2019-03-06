@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,abstract;0;1;/**  * Returns the category for this MetricDump.  *  * @return category  */ ;/**  * Returns the category for this MetricDump.  *  * @return category  */ public abstract byte getCategory().
-false;public;0;8;;@Override public String toString() {     return "MetricDump{" + "scopeInfo=" + scopeInfo + ", name='" + name + '\'' + ", category='" + getCategory() + '\'' + '}'. }
-false;public;0;4;;@Override public byte getCategory() {     return METRIC_CATEGORY_COUNTER. }
-false;public;0;4;;@Override public byte getCategory() {     return METRIC_CATEGORY_GAUGE. }
-false;public;0;4;;@Override public byte getCategory() {     return METRIC_CATEGORY_HISTOGRAM. }
-false;public;0;4;;@Override public byte getCategory() {     return METRIC_CATEGORY_METER. }

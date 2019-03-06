@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;4;;@ParametersFactory public static Iterable<Object[]> parameters() throws Exception {     return ESClientYamlSuiteTestCase.createParameters(). }
-false;public,static;0;8;;@BeforeClass public static void findTrustStore() throws Exception {     final URL resource = ReindexWithSecurityClientYamlTestSuiteIT.class.getResource("/ssl/ca.p12").     if (resource == null) {         throw new FileNotFoundException("Cannot find classpath resource /ssl/ca.p12").     }     httpTrustStore = PathUtils.get(resource.toURI()). }
-false;public,static;0;4;;@AfterClass public static void cleanupStatics() {     httpTrustStore = null. }
-false;protected;0;4;;@Override protected String getProtocol() {     return "https". }
-true;protected;0;9;/**  * All tests run as a an administrative user but use <code>es-security-runas-user</code> to become a less privileged user.  */ ;/**  * All tests run as a an administrative user but use <code>es-security-runas-user</code> to become a less privileged user.  */ @Override protected Settings restClientSettings() {     String token = basicAuthHeaderValue(USER, new SecureString(PASS.toCharArray())).     return Settings.builder().put(ThreadContext.PREFIX + ".Authorization", token).put(TRUSTSTORE_PATH, httpTrustStore).put(TRUSTSTORE_PASSWORD, "password").build(). }

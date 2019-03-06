@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;3;6;;@Override public ExecutableJiraAction parseExecutable(String watchId, String actionId, XContentParser parser) throws IOException {     JiraAction action = JiraAction.parse(watchId, actionId, parser).     // for validation -- throws exception if account not present     jiraService.getAccount(action.getAccount()).     return new ExecutableJiraAction(action, actionLogger, jiraService, templateEngine). }

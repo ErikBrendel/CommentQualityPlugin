@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;// ------------------------------------------------------------------------ public boolean isSuccess() {     return success != null. }
-false;public;0;3;;public boolean isFailure() {     return failure != null. }
-false;public;0;7;;public PendingCheckpoint getPendingCheckpoint() {     if (success != null) {         return success.     } else {         throw new IllegalStateException("Checkpoint triggering failed").     } }
-false;public;0;7;;public CheckpointDeclineReason getFailureReason() {     if (failure != null) {         return failure.     } else {         throw new IllegalStateException("Checkpoint triggering was successful").     } }
-false;public;0;7;;// ------------------------------------------------------------------------ @Override public String toString() {     return "CheckpointTriggerResult(" + (isSuccess() ? ("success: " + success) : ("failure: " + failure.message())) + ")". }

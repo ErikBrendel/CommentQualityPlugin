@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;@Bean @ConditionalOnMissingBean(AbstractAuditListener.class) public AuditListener auditListener(ObjectProvider<AuditEventRepository> auditEventRepository) throws Exception {     return new AuditListener(auditEventRepository.getIfAvailable()). }
-false;public;0;6;;@Bean @ConditionalOnClass(name = "org.springframework.security.authentication.event.AbstractAuthenticationEvent") @ConditionalOnMissingBean(AbstractAuthenticationAuditListener.class) public AuthenticationAuditListener authenticationAuditListener() throws Exception {     return new AuthenticationAuditListener(). }
-false;public;0;6;;@Bean @ConditionalOnClass(name = "org.springframework.security.access.event.AbstractAuthorizationEvent") @ConditionalOnMissingBean(AbstractAuthorizationAuditListener.class) public AuthorizationAuditListener authorizationAuditListener() throws Exception {     return new AuthorizationAuditListener(). }
-false;public;0;4;;@Bean public InMemoryAuditEventRepository auditEventRepository() throws Exception {     return new InMemoryAuditEventRepository(). }

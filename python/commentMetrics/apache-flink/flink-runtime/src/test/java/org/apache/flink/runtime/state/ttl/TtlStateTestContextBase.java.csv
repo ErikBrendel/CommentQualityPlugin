@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;abstract;0;1;;abstract void initTestValues().
-false;public,abstract;0;1;;public abstract <US extends State, SV> StateDescriptor<US, SV> createStateDescriptor().
-false;public,abstract;1;1;;public abstract void update(UV value) throws Exception.
-false;public,abstract;0;1;;public abstract GV get() throws Exception.
-false;public,abstract;0;1;;public abstract Object getOriginal() throws Exception.
-false;public;0;3;;public String getName() {     return this.getClass().getSimpleName(). }
-false;public;0;4;;@Override public String toString() {     return this.getClass().getSimpleName(). }

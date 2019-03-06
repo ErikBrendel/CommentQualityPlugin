@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public StompEndpoint getEndpoint() {     return (StompEndpoint) super.getEndpoint(). }
-false;protected;0;4;;protected void doStart() throws Exception {     getEndpoint().addConsumer(this).     super.doStart(). }
-false;protected;0;4;;protected void doStop() throws Exception {     getEndpoint().removeConsumer(this).     super.doStop(). }
-false;;1;11;;void processExchange(Exchange exchange) {     try {         getProcessor().process(exchange).     } catch (Throwable e) {         exchange.setException(e).     }     if (exchange.getException() != null) {         getExceptionHandler().handleException("Error processing exchange.", exchange, exchange.getException()).     } }

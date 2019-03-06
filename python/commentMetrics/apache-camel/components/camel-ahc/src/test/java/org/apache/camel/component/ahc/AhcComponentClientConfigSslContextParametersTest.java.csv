@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;public void configureComponent() {     super.configureComponent().     AhcComponent component = context.getComponent("ahc", AhcComponent.class).     component.setSslContextParameters(context.getRegistry().lookupByNameAndType("sslContextParameters", SSLContextParameters.class)). }
-false;protected;0;3;;protected String getTestServerEndpointUri() {     return super.getTestServerEndpointUri() + "?sslContextParameters=#sslContextParameters". }
-false;protected;0;3;;protected String getTestServerEndpointTwoUri() {     return super.getTestServerEndpointTwoUri() + "?sslContextParameters=#sslContextParameters". }
-false;protected;0;4;;@Override protected boolean isHttps() {     return true. }

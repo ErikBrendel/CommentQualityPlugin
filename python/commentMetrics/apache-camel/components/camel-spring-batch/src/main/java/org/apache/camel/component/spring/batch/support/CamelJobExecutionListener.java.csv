@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;@Override public void beforeJob(JobExecution jobExecution) {     LOG.debug("sending before job execution event [{}]...", jobExecution).     producerTemplate.sendBodyAndHeader(endpointUri, jobExecution, EventType.HEADER_KEY, EventType.BEFORE.name()).     LOG.debug("sent before job execution event"). }
-false;public;1;6;;@Override public void afterJob(JobExecution jobExecution) {     LOG.debug("sending after job execution event [{}]...", jobExecution).     producerTemplate.sendBodyAndHeader(endpointUri, jobExecution, EventType.HEADER_KEY, EventType.AFTER.name()).     LOG.debug("sent after job execution event"). }

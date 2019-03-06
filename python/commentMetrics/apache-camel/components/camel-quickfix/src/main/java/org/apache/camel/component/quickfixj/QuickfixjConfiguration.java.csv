@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public Map<Object, Object> getDefaultSettings() {     return defaultSettings. }
-false;public;1;3;;public void setDefaultSettings(Map<Object, Object> defaultSettings) {     this.defaultSettings = defaultSettings. }
-false;public;0;3;;public Map<SessionID, Map<Object, Object>> getSessionSettings() {     return sessionSettings. }
-false;public;1;3;;public void setSessionSettings(Map<SessionID, Map<Object, Object>> sessionSettings) {     this.sessionSettings = sessionSettings. }
-false;public;2;6;;public void addSessionSetting(SessionID sessionID, Map<Object, Object> settings) {     if (sessionSettings == null) {         sessionSettings = new HashMap<>().     }     sessionSettings.put(sessionID, settings). }
-false;public;0;13;;public SessionSettings createSessionSettings() throws ConfigError {     SessionSettings settings = new SessionSettings().     if (defaultSettings != null && !defaultSettings.isEmpty()) {         settings.set(new Dictionary("defaults", defaultSettings)).     }     if (sessionSettings != null && !sessionSettings.isEmpty()) {         for (Map.Entry<SessionID, Map<Object, Object>> sessionSetting : sessionSettings.entrySet()) {             settings.set(sessionSetting.getKey(), new Dictionary("session", sessionSetting.getValue())).         }     }     return settings. }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;4;;@BeforeClass public static void prepareFiles() throws Exception {     TestSupport.deleteDirectory("target/camel-route-coverage"). }
-false;public;0;5;;@Test public void testJmx() throws Exception {     // JMX is enabled with route coverage     assertEquals(JmxManagementStrategy.class, camelContext.getManagementStrategy().getClass()). }
-false;public;0;10;;@Override public void testRouteCoverage() throws Exception {     camelContext.stop().     camelContext2.stop().     // there should be files     String[] names = new File("target/camel-route-coverage").list().     assertNotNull(names).     assertTrue(names.length > 0). }

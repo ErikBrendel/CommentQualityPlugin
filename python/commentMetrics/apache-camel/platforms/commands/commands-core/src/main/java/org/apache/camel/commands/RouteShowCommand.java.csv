@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;5;9;;@Override public void executeOnRoute(CamelController camelController, String contextName, String routeId, PrintStream out, PrintStream err) throws Exception {     String xml = camelController.getRouteModelAsXml(routeId, contextName).     if (xml == null) {         err.println("Definition of route " + routeId + " not found.").     } else {         out.println(xml).     } }

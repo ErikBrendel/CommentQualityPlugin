@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;11;;@Test public void testSendMessage() throws Exception {     final String expectedBody = "Wibble".     getMockEndpoint("mock:a").expectedBodiesReceived(expectedBody).     getMockEndpoint("mock:b").expectedBodiesReceived(expectedBody).     template.sendBody("direct:in", expectedBody).     assertMockEndpointsSatisfied(). }
-false;public;0;6;;@Override @Before public void setUp() throws Exception {     super.setUp().     checkBean(). }
-false;protected;0;4;;protected void checkBean() throws Exception {     Object lookedUpBean = context.getRegistry().lookupByName("myBean").     assertSame("Lookup of 'myBean' should return same object!", myBean, lookedUpBean). }
-false;protected;0;6;;@Override protected Context createJndiContext() throws Exception {     JndiContext answer = new JndiContext().     answer.bind("myBean", myBean).     return answer. }
-false;public;0;3;;public void configure() {     from("direct:in").bean("myBean", "route"). }
-false;protected;0;7;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("direct:in").bean("myBean", "route").         }     }. }
-false;public;0;4;;@Override public String toString() {     return "MyBean:" + id. }
-false;public;1;5;;@org.apache.camel.RecipientList public String[] route(String body) {     LOG.debug("Called {} with body: {}", this, body).     return new String[] { "mock:a", "mock:b" }. }

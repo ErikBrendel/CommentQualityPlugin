@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;3;4;;@Override protected ServletEndpoint createServletEndpoint(String endpointUri, ServletComponent component, URI httpUri) throws Exception {     return new WebsocketEndpoint(endpointUri, (WebsocketComponent) component, httpUri). }
-false;;1;11;;WebSocketStore getWebSocketStore(String name) {     WebSocketStore store.     synchronized (stores) {         store = stores.get(name).         if (store == null) {             store = new MemoryWebSocketStore().             stores.put(name, store).         }     }     return store. }

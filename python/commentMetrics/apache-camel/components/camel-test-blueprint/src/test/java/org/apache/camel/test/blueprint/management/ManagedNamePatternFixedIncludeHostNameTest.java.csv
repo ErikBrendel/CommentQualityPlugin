@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected boolean useJmx() {     return true. }
-false;protected;0;4;;@Override protected String getBlueprintDescriptor() {     return "org/apache/camel/test/blueprint/management/managedNamePatternFixedIncludeHostNameTest.xml". }
-false;protected;0;4;;@Override protected String getBundleVersion() {     return "1.2.3". }
-false;public;0;14;;@Test public void testManagedNamePattern() throws Exception {     getMockEndpoint("mock:result").expectedMessageCount(1).     template.sendBody("direct:start", "World").     assertMockEndpointsSatisfied().     MBeanServer mbeanServer = context.getManagementStrategy().getManagementAgent().getMBeanServer().     assertEquals("cool-1.2.3", context.getManagementName()).     ObjectName on = ObjectName.getInstance("org.apache.camel:context=localhost/" + context.getManagementName() + ",type=context,name=\"" + context.getName() + "\"").     assertTrue("Should be registered", mbeanServer.isRegistered(on)). }

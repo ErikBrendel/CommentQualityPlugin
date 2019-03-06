@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Test public void testRouteJpa() throws Exception {     try {         template.sendBody("direct:start", null).         fail("Should have thrown an exception").     } catch (CamelExecutionException e) {         assertIsInstanceOf(InvalidPayloadRuntimeException.class, e.getCause()).     } }
-false;public;0;3;;public void configure() {     from("direct:start").to("jpa://" + SendEmail.class.getName()).to("mock:result"). }
-false;protected;0;8;;@Override protected RouteBuilder createRouteBuilder() {     return new SpringRouteBuilder() {          public void configure() {             from("direct:start").to("jpa://" + SendEmail.class.getName()).to("mock:result").         }     }. }
-false;protected;0;4;;@Override protected String routeXml() {     return "org/apache/camel/processor/jpa/springJpaRouteTest.xml". }
-false;protected;0;4;;@Override protected String selectAllString() {     return SELECT_ALL_STRING. }

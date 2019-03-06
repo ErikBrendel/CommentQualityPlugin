@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;3;10;;protected Endpoint createEndpoint(String uri, String remaining, Map<String, Object> parameters) throws Exception {     KubernetesConfiguration config = new KubernetesConfiguration().     setProperties(config, parameters).     config.setMasterUrl(remaining).     if (ObjectHelper.isEmpty(config.getMasterUrl())) {         throw new IllegalArgumentException("Master URL must be specified").     }     return doCreateEndpoint(uri, remaining, config). }
-false;protected,abstract;3;1;;protected abstract AbstractKubernetesEndpoint doCreateEndpoint(String uri, String remaining, KubernetesConfiguration config) throws Exception.

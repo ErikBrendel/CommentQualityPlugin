@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public int length() {     return (this.end - this.start). }
-false;public;1;4;;@Override public char charAt(int index) {     return this.chars[this.start + index]. }
-false;public;2;4;;@Override public CharSequence subSequence(int start, int end) {     return new SubSequence(this.chars, this.start + start, this.start + end). }
-false;public;0;4;;@Override public String toString() {     return new String(this.chars, this.start, this.end - this.start). }

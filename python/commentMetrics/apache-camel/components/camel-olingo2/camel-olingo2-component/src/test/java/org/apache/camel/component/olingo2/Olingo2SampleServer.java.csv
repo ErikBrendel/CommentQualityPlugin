@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;public void start() throws Exception {     server.start().     LOG.debug("Olingo sample server started at port {}", port). }
-false;public;0;3;;public void stop() throws Exception {     server.stop(). }
-false;public;0;3;;public void destroy() {     server.destroy(). }
-false;static;1;11;;static void generateSampleData(String serviceUrl) throws IOException {     try {         // need to use reflection to avoid a build error even when the sample source is not available         Class<?> clz = Class.forName("org.apache.olingo.sample.annotation.util.AnnotationSampleDataGenerator").         Method m = clz.getMethod("generateData", String.class).         m.invoke(null, serviceUrl).     } catch (Throwable t) {         LOG.error("Unable to load the required sample class", t).         throw new IOException("unable to load the required sample class").     } }

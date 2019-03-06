@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Override public void close() throws IOException {     for (ResourceManager resourceManager : this.resourceManagers) {         resourceManager.close().     } }
-false;public;1;10;;@Override public Resource getResource(String path) throws IOException {     for (ResourceManager resourceManager : this.resourceManagers) {         Resource resource = resourceManager.getResource(path).         if (resource != null) {             return resource.         }     }     return null. }
-false;public;0;4;;@Override public boolean isResourceChangeListenerSupported() {     return false. }
-false;public;1;4;;@Override public void registerResourceChangeListener(ResourceChangeListener listener) {     throw UndertowMessages.MESSAGES.resourceChangeListenerNotSupported(). }
-false;public;1;4;;@Override public void removeResourceChangeListener(ResourceChangeListener listener) {     throw UndertowMessages.MESSAGES.resourceChangeListenerNotSupported(). }

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public CMISEndpoint getEndpoint() {     return (CMISEndpoint) super.getEndpoint(). }
-false;protected;0;4;;@Override protected int poll() throws Exception {     return getSessionFacade().poll(this). }
-false;public;0;3;;public OperationContext createOperationContext() throws Exception {     return getSessionFacade().createOperationContext(). }
-false;;2;9;;int sendExchangeWithPropsAndBody(Map<String, Object> properties, InputStream inputStream) throws Exception {     Exchange exchange = getEndpoint().createExchange().     exchange.getIn().setHeaders(properties).     exchange.getIn().setBody(inputStream).     log.debug("Polling node : {}", properties.get("cmis:name")).     getProcessor().process(exchange).     return 1. }
-false;private;0;8;;private CMISSessionFacade getSessionFacade() throws Exception {     if (sessionFacade == null) {         sessionFacade = sessionFacadeFactory.create(getEndpoint()).         sessionFacade.initSession().     }     return sessionFacade. }

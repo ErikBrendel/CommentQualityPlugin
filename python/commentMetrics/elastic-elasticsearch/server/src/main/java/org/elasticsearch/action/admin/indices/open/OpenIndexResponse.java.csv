@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;7;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     if (in.getVersion().onOrAfter(Version.V_6_1_0)) {         readShardsAcknowledged(in).     } }
-false;public;1;7;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     if (out.getVersion().onOrAfter(Version.V_6_1_0)) {         writeShardsAcknowledged(out).     } }
-false;public,static;1;3;;public static OpenIndexResponse fromXContent(XContentParser parser) {     return PARSER.apply(parser, null). }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void testRepeatInterval() throws Exception {     resultEndpoint = getMockEndpoint("mock:result").     resultEndpoint.expectedMinimumMessageCount(5).     // lets test the receive worked     resultEndpoint.assertIsSatisfied(). }
-false;public;0;5;;public void configure() {     from("quartz2://myGroup/myTimerName?trigger.repeatInterval=50").routeId("myRoute").to("log:result").to("mock:result"). }
-false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("quartz2://myGroup/myTimerName?trigger.repeatInterval=50").routeId("myRoute").to("log:result").to("mock:result").         }     }. }

@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public boolean hasNext() {     return false. }
-false;public;0;4;;@Override public T next() {     return null. }
-true;public,abstract;1;1;/**  * Randomly sample the elements from input in sequence, and return the result iterator.  *  * @param input Source data  * @return The sample result.  */ ;/**  * Randomly sample the elements from input in sequence, and return the result iterator.  *  * @param input Source data  * @return The sample result.  */ public abstract Iterator<T> sample(Iterator<T> input).
-false;public;0;4;;@Override public void remove() {     throw new UnsupportedOperationException("Do not support this operation."). }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Bean @ConditionalOnMissingBean public InfluxConfig influxConfig() {     return new InfluxPropertiesConfigAdapter(this.properties). }
-false;public;3;11;;@Bean @ConditionalOnMissingBean public InfluxMeterRegistry influxMeterRegistry(InfluxConfig influxConfig, Clock clock, InfluxProperties influxProperties) {     return InfluxMeterRegistry.builder(influxConfig).clock(clock).httpClient(new HttpUrlConnectionSender(this.properties.getConnectTimeout(), this.properties.getReadTimeout())).build(). }

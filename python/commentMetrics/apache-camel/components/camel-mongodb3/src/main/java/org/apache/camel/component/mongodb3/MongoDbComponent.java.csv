@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;3;8;;protected Endpoint createEndpoint(String uri, String remaining, Map<String, Object> parameters) throws Exception {     MongoDbEndpoint endpoint = new MongoDbEndpoint(uri, this).     endpoint.setConnectionBean(remaining).     setProperties(endpoint, parameters).     return endpoint. }
-false;protected;0;5;;@Override protected void doShutdown() throws Exception {     super.doShutdown(). }
-false;public,static;1;7;;public static CamelMongoDbException wrapInCamelMongoDbException(Throwable t) {     if (t instanceof CamelMongoDbException) {         return (CamelMongoDbException) t.     } else {         return new CamelMongoDbException(t).     } }

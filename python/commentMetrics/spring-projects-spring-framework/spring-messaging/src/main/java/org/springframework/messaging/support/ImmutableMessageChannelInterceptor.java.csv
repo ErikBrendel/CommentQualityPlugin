@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;8;;@Override public Message<?> preSend(Message<?> message, MessageChannel channel) {     MessageHeaderAccessor accessor = MessageHeaderAccessor.getAccessor(message, MessageHeaderAccessor.class).     if (accessor != null && accessor.isMutable()) {         accessor.setImmutable().     }     return message. }

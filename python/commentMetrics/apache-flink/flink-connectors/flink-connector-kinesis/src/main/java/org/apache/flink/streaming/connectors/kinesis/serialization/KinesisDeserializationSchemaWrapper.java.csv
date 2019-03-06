@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;6;5;;@Override public T deserialize(byte[] recordValue, String partitionKey, String seqNum, long approxArrivalTimestamp, String stream, String shardId) throws IOException {     return deserializationSchema.deserialize(recordValue). }
-false;public;0;4;;/* 	FLINK-4194  	@Override 	public boolean isEndOfStream(T nextElement) { 		return deserializationSchema.isEndOfStream(nextElement). 	} */ @Override public TypeInformation<T> getProducedType() {     return deserializationSchema.getProducedType(). }

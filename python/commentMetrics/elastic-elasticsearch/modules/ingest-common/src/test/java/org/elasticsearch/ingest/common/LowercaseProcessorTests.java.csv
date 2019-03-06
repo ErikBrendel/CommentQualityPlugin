@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;3;4;;@Override protected AbstractStringProcessor newProcessor(String field, boolean ignoreMissing, String targetField) {     return new LowercaseProcessor(randomAlphaOfLength(10), field, ignoreMissing, targetField). }
-false;protected;1;4;;@Override protected String expectedResult(String input) {     return input.toLowerCase(Locale.ROOT). }

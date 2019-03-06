@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;6;;@Converter public static Pojo toPojo(String name) {     Pojo pojo = new Pojo().     pojo.setName(name).     return pojo. }
-false;public;1;4;;@Converter public String toString(Pojo pojo) {     return pojo.getName(). }

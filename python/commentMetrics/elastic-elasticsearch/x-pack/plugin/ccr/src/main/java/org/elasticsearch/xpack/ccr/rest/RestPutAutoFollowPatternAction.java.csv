@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getName() {     return "ccr_put_auto_follow_pattern_action". }
-false;protected;2;5;;@Override protected RestChannelConsumer prepareRequest(RestRequest restRequest, NodeClient client) throws IOException {     Request request = createRequest(restRequest).     return channel -> client.execute(INSTANCE, request, new RestToXContentListener<>(channel)). }
-false;static;1;5;;static Request createRequest(RestRequest restRequest) throws IOException {     try (XContentParser parser = restRequest.contentOrSourceParamParser()) {         return Request.fromXContent(parser, restRequest.param("name")).     } }

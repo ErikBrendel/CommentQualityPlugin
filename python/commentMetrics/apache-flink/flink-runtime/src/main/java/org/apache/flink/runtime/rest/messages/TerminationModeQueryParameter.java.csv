@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public TerminationMode convertStringToValue(String value) {     return TerminationMode.valueOf(value.toUpperCase()). }
-false;public;1;4;;@Override public String convertValueToString(TerminationMode value) {     return value.name().toLowerCase(). }
-false;public;0;5;;@Override public String getDescription() {     return "String value that specifies the termination mode. Supported values are: " + StringUtils.toQuotedListString(TerminationMode.values()) + '.'. }

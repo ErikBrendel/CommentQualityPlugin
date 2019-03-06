@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;5;;@Override protected FlushJobResponse createTestInstance() {     return new FlushJobResponse(randomBoolean(), randomBoolean() ? null : new Date(randomNonNegativeLong())). }
-false;protected;1;4;;@Override protected FlushJobResponse doParseInstance(XContentParser parser) throws IOException {     return FlushJobResponse.PARSER.apply(parser, null). }
-false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }

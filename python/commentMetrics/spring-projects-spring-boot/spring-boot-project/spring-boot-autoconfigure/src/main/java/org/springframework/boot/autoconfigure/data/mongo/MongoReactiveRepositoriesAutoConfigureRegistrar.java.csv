@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected Class<? extends Annotation> getAnnotation() {     return EnableReactiveMongoRepositories.class. }
-false;protected;0;4;;@Override protected Class<?> getConfiguration() {     return EnableReactiveMongoRepositoriesConfiguration.class. }
-false;protected;0;4;;@Override protected RepositoryConfigurationExtension getRepositoryConfigurationExtension() {     return new ReactiveMongoRepositoryConfigurationExtension(). }

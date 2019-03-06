@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;9;;@Override public boolean matches(TypeDescriptor sourceType, TypeDescriptor targetType) {     for (Class<?> interfaceType : ClassUtils.getAllInterfacesForClassAsSet(sourceType.getType())) {         if (this.conversionService.canConvert(TypeDescriptor.valueOf(interfaceType), targetType)) {             return false.         }     }     return true. }

@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;3;;protected String getRouterEndpointURI() {     return "cxf:bean:routerEndpoint?dataFormat=PAYLOAD". }
-false;protected;0;3;;protected String getServiceEndpointURI() {     return "cxf:bean:serviceEndpoint?dataFormat=PAYLOAD". }
-false;public;0;6;;@Before public void setUp() throws Exception {     applicationContext = createApplicationContext().     super.setUp().     assertNotNull("Should have created a valid spring context", applicationContext). }
-false;public;0;5;;@After public void tearDown() throws Exception {     IOHelper.close(applicationContext).     super.tearDown(). }
-false;protected;0;4;;@Override protected CamelContext createCamelContext() throws Exception {     return SpringCamelContext.springCamelContext(applicationContext, true). }
-false;protected;0;3;;protected ClassPathXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/component/cxf/PizzaEndpoints.xml"). }

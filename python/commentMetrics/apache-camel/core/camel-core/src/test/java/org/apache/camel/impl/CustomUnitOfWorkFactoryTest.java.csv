@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;6;;@Override protected CamelContext createCamelContext() throws Exception {     CamelContext context = super.createCamelContext().     context.setUnitOfWorkFactory(new MyUnitOfWorkFactory()).     return context. }
-false;public;0;9;;@Test public void testCustomUnitOfWorkFactory() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("Hello World").     getMockEndpoint("mock:result").expectedHeaderReceived("before", "I was here").     template.sendBody("direct:start", "Hello World").     assertMockEndpointsSatisfied(). }
-false;public;0;6;;@Override public void configure() throws Exception {     from("direct:start").to("log:foo").to("mock:result"). }
-false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").to("log:foo").to("mock:result").         }     }. }
-false;public;1;4;;@Override public UnitOfWork createUnitOfWork(Exchange exchange) {     return new MyUnitOfWork(exchange). }
-false;public;3;5;;@Override public AsyncCallback beforeProcess(Processor processor, Exchange exchange, AsyncCallback callback) {     exchange.getIn().setHeader("before", "I was here").     return callback. }

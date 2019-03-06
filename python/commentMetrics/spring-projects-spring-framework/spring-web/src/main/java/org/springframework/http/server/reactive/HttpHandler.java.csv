@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;2;1;/**  * Handle the given request and write to the response.  * @param request current request  * @param response current response  * @return indicates completion of request handling  */ ;/**  * Handle the given request and write to the response.  * @param request current request  * @param response current response  * @return indicates completion of request handling  */ Mono<Void> handle(ServerHttpRequest request, ServerHttpResponse response).

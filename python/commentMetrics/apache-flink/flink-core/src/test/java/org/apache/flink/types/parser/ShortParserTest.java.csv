@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Override public String[] getValidTestValues() {     return new String[] { "0", "1", "576", "-8778", String.valueOf(Short.MAX_VALUE), String.valueOf(Short.MIN_VALUE), "119" }. }
-false;public;0;6;;@Override public Short[] getValidTestResults() {     return new Short[] { (short) 0, (short) 1, (short) 576, (short) -8778, Short.MAX_VALUE, Short.MIN_VALUE, (short) 119 }. }
-false;public;0;7;;@Override public String[] getInvalidTestValues() {     return new String[] { "a", "1569a86", "-57-6", "7-877678", String.valueOf(Short.MAX_VALUE) + "0", String.valueOf(Integer.MIN_VALUE), String.valueOf(Short.MAX_VALUE + 1), String.valueOf(Short.MIN_VALUE - 1), " 1", "2 ", " ", "\t" }. }
-false;public;0;4;;@Override public boolean allowsEmptyField() {     return false. }
-false;public;0;4;;@Override public FieldParser<Short> getParser() {     return new ShortParser(). }
-false;public;0;4;;@Override public Class<Short> getTypeClass() {     return Short.class. }

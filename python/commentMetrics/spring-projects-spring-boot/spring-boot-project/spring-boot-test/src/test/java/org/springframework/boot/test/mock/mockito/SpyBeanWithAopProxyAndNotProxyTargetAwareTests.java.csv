@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Test public void verifyShouldUseProxyTarget() {     this.dateService.getDate(false).     verify(this.dateService, times(1)).getDate(false).     assertThatExceptionOfType(UnfinishedVerificationException.class).isThrownBy(() -> reset(this.dateService)). }
-false;public;1;6;;@Bean public CacheResolver cacheResolver(CacheManager cacheManager) {     SimpleCacheResolver resolver = new SimpleCacheResolver().     resolver.setCacheManager(cacheManager).     return resolver. }
-false;public;0;6;;@Bean public ConcurrentMapCacheManager cacheManager() {     ConcurrentMapCacheManager cacheManager = new ConcurrentMapCacheManager().     cacheManager.setCacheNames(Arrays.asList("test")).     return cacheManager. }
-false;public;1;4;;@Cacheable(cacheNames = "test") public Long getDate(boolean arg) {     return System.nanoTime(). }

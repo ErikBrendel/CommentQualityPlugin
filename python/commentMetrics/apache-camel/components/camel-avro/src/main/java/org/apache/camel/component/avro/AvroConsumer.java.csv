@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public AvroEndpoint getEndpoint() {     return (AvroEndpoint) super.getEndpoint(). }
-false;protected;0;6;;@Override protected void doStart() throws Exception {     super.doStart().     ((AvroComponent) getEndpoint().getComponent()).register(getEndpoint().getConfiguration().getUriAuthority(), getEndpoint().getConfiguration().getMessageName(), this). }
-false;protected;0;5;;@Override protected void doStop() throws Exception {     ((AvroComponent) getEndpoint().getComponent()).unregister(getEndpoint().getConfiguration().getUriAuthority(), getEndpoint().getConfiguration().getMessageName()).     super.doStop(). }

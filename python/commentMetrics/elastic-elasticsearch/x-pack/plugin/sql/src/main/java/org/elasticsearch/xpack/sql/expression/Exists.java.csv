@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected NodeInfo<Exists> info() {     return NodeInfo.create(this, Exists::new, query(), id()). }
-false;protected;1;4;;@Override protected SubQueryExpression clone(LogicalPlan newQuery) {     return new Exists(source(), newQuery). }
-false;public;0;4;;@Override public DataType dataType() {     return DataType.BOOLEAN. }
-false;public;0;4;;@Override public Nullability nullable() {     return Nullability.FALSE. }

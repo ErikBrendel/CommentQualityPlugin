@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public ClusterGroup getClusterGroup(Ignite ignite) {     return ignite.cluster().forClients(). }
-false;public;1;4;;@Override public ClusterGroup getClusterGroup(Ignite ignite) {     return ignite.cluster().forDaemons(). }
-false;public;1;4;;@Override public ClusterGroup getClusterGroup(Ignite ignite) {     return ignite.cluster().forLocal(). }
-false;public;1;4;;@Override public ClusterGroup getClusterGroup(Ignite ignite) {     return ignite.cluster().forOldest(). }
-false;public;1;4;;@Override public ClusterGroup getClusterGroup(Ignite ignite) {     return ignite.cluster().forYoungest(). }
-false;public;1;4;;@Override public ClusterGroup getClusterGroup(Ignite ignite) {     return ignite.cluster().forRandom(). }
-false;public;1;4;;@Override public ClusterGroup getClusterGroup(Ignite ignite) {     return ignite.cluster().forRemotes(). }
-false;public;1;4;;@Override public ClusterGroup getClusterGroup(Ignite ignite) {     return ignite.cluster().forServers(). }

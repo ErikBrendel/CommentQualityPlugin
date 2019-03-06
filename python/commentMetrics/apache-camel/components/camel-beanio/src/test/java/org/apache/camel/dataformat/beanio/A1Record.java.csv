@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public Double getCurrentPrice() {     return currentPrice. }
-false;public;1;3;;public void setCurrentPrice(Double currentPrice) {     this.currentPrice = currentPrice. }
-false;public;0;4;;@Override public int hashCode() {     return currentPrice != null ? currentPrice.hashCode() : 0. }
-false;public;1;11;;@Override public boolean equals(Object obj) {     if (obj == null) {         return false.     } else if (obj == this) {         return true.     } else {         A1Record record = (A1Record) obj.         return super.equals(record) && this.currentPrice.doubleValue() == record.getCurrentPrice().doubleValue().     } }
-false;public;0;4;;@Override public String toString() {     return "SEDOL[" + this.sedol + "], SOURCE[" + this.source + "], PRICE[" + this.currentPrice + "]". }

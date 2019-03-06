@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;8;;@Override public JobExecutionResult execute(String jobName) throws Exception {     this.plan = createProgramPlan(jobName).     this.previewPlan = Optimizer.createPreOptimizedPlan(plan).     // do not go on with anything now!     throw new OptimizerPlanEnvironment.ProgramAbortException(). }
-false;public;0;8;;@Override public String getExecutionPlan() throws Exception {     Plan plan = createProgramPlan("unused").     this.previewPlan = Optimizer.createPreOptimizedPlan(plan).     // do not go on with anything now!     throw new OptimizerPlanEnvironment.ProgramAbortException(). }
-false;public;0;3;;@Override public void startNewSession() { }
-false;public;0;4;;@Override public ExecutionEnvironment createExecutionEnvironment() {     return PreviewPlanEnvironment.this. }
-false;public;0;9;;public void setAsContext() {     ExecutionEnvironmentFactory factory = new ExecutionEnvironmentFactory() {          @Override         public ExecutionEnvironment createExecutionEnvironment() {             return PreviewPlanEnvironment.this.         }     }.     initializeContextEnvironment(factory). }
-false;public;0;3;;public void unsetAsContext() {     resetContextEnvironment(). }
-false;public;1;3;;public void setPreview(String preview) {     this.preview = preview. }
-false;public;0;3;;public Plan getPlan() {     return plan. }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;@Override public void artificialStateForElement(IN event) throws Exception {     listOperatorState.update(keyedStateGenerator.join(event, listOperatorState.get())).     listKeyedState.update(operatorStateGenerator.join(event, listKeyedState.get())). }
-false;public;1;5;;@Override public void initialize(FunctionInitializationContext initializationContext) throws Exception {     listOperatorState = initializationContext.getOperatorStateStore().getListState(listStateDescriptor).     listKeyedState = initializationContext.getKeyedStateStore().getListState(listStateDescriptor). }

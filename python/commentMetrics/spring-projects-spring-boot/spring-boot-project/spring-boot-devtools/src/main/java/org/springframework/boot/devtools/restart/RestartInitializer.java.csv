@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;1;1;/**  * Return the initial set of URLs for the {@link Restarter} or {@code null} if no  * initial restart is required.  * @param thread the source thread  * @return initial URLs or {@code null}  */ ;/**  * Return the initial set of URLs for the {@link Restarter} or {@code null} if no  * initial restart is required.  * @param thread the source thread  * @return initial URLs or {@code null}  */ URL[] getInitialUrls(Thread thread).

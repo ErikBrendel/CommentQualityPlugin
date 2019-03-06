@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void buildsWhenJdk9() {     assumeTrue(getPlatform().equals("jdk9")).     assertNotNull(Jdk9Platform.buildIfSupported()). }
-false;public;0;9;;@Test public void findsAlpnMethods() {     assumeTrue(getPlatform().equals("jdk9")).     Jdk9Platform platform = Jdk9Platform.buildIfSupported().     assertEquals("getApplicationProtocol", platform.getProtocolMethod.getName()).     assertEquals("setApplicationProtocols", platform.setProtocolMethod.getName()). }
-false;public;0;4;;@Test public void testToStringIsClassname() {     assertEquals("Jdk9Platform", new Jdk9Platform(null, null).toString()). }

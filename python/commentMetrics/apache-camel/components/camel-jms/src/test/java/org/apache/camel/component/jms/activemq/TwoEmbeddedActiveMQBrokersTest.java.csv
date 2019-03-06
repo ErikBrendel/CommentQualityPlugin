@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;@Test public void sendToTwoEmbeddedBrokers() throws Exception {     getMockEndpoint("mock:foo").expectedMessageCount(1).     getMockEndpoint("mock:bar").expectedMessageCount(1).     template.sendBody("activemq1:queue:foo", "foo").     template.sendBody("activemq2:queue:bar", "bar").     assertMockEndpointsSatisfied(). }
-false;protected;0;3;;protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("classpath:org/apache/camel/component/jms/activemq/twoActiveMQBrokers.xml"). }

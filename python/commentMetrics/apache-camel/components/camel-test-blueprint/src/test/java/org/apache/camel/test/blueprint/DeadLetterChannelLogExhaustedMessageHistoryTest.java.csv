@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected String getBlueprintDescriptor() {     return "org/apache/camel/test/blueprint/DeadLetterChannelLogExhaustedMessageHistoryTest.xml". }
-false;public;0;4;;@Test public void testLogExhaustedMessageHistory() throws Exception {     template.sendBody("direct:start", "Hello World"). }

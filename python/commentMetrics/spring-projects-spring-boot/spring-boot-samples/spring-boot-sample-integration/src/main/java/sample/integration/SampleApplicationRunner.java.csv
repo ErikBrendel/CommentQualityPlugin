@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;@Override public void run(ApplicationArguments args) throws Exception {     for (String arg : args.getNonOptionArgs()) {         this.gateway.echo(arg).     } }

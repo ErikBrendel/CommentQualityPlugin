@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void verifyAnnotationAutowiredFields() {     assertNotNull("The cat field should have been autowired.", this.cat).     assertEquals("Garfield", this.cat.getName()).     assertNotNull("The testString field should have been autowired.", this.testString).     assertEquals("Test String", this.testString). }
-false;protected;1;4;;@Override protected Class<? extends ContextLoader> getDefaultContextLoaderClass(Class<?> testClass) {     return GenericPropertiesContextLoader.class. }

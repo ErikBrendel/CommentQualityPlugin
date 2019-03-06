@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;8;;@Override protected Validator doCreateValidator(CamelContext context) throws Exception {     Predicate pred = definition.getExpression().createPredicate(context).     PredicateValidatingProcessor processor = new PredicateValidatingProcessor(pred).     return new ProcessorValidator(context).setProcessor(processor).setType(definition.getType()). }

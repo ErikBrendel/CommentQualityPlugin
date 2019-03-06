@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;16;;public TestProcess start() throws IOException {     final ArrayList<String> commands = new ArrayList<>().     commands.add(javaCommand).     commands.add(String.format("-Xms%dm", jvmMemory.getMebiBytes())).     commands.add(String.format("-Xmx%dm", jvmMemory.getMebiBytes())).     commands.addAll(jvmArgs).     commands.add(mainClass).     commands.addAll(mainClassArgs).     StringWriter processOutput = new StringWriter().     Process process = new ProcessBuilder(commands).start().     new PipeForwarder(process.getErrorStream(), processOutput).     return new TestProcess(process, processOutput). }
-false;public;1;4;;public TestProcessBuilder setJvmMemory(MemorySize jvmMemory) {     this.jvmMemory = jvmMemory.     return this. }
-false;public;1;4;;public TestProcessBuilder addMainClassArg(String arg) {     mainClassArgs.add(arg).     return this. }
-false;public;1;7;;public TestProcessBuilder addConfigAsMainClassArgs(Configuration config) {     for (Entry<String, String> keyValue : config.toMap().entrySet()) {         addMainClassArg("--" + keyValue.getKey()).         addMainClassArg(keyValue.getValue()).     }     return this. }
-false;public;0;3;;public Process getProcess() {     return process. }
-false;public;0;3;;public StringWriter getOutput() {     return processOutput. }
-false;public;0;3;;public void destroy() {     process.destroy(). }

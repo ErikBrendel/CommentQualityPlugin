@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void emptyCacheControl() throws Exception {     CacheControl cc = CacheControl.empty().     assertThat(cc.getHeaderValue(), Matchers.nullValue()). }
-false;public;0;5;;@Test public void maxAge() throws Exception {     CacheControl cc = CacheControl.maxAge(1, TimeUnit.HOURS).     assertThat(cc.getHeaderValue(), Matchers.equalTo("max-age=3600")). }
-false;public;0;5;;@Test public void maxAgeAndDirectives() throws Exception {     CacheControl cc = CacheControl.maxAge(3600, TimeUnit.SECONDS).cachePublic().noTransform().     assertThat(cc.getHeaderValue(), Matchers.equalTo("max-age=3600, no-transform, public")). }
-false;public;0;5;;@Test public void maxAgeAndSMaxAge() throws Exception {     CacheControl cc = CacheControl.maxAge(1, TimeUnit.HOURS).sMaxAge(30, TimeUnit.MINUTES).     assertThat(cc.getHeaderValue(), Matchers.equalTo("max-age=3600, s-maxage=1800")). }
-false;public;0;5;;@Test public void noCachePrivate() throws Exception {     CacheControl cc = CacheControl.noCache().cachePrivate().     assertThat(cc.getHeaderValue(), Matchers.equalTo("no-cache, private")). }
-false;public;0;5;;@Test public void noStore() throws Exception {     CacheControl cc = CacheControl.noStore().     assertThat(cc.getHeaderValue(), Matchers.equalTo("no-store")). }
-false;public;0;5;;@Test public void staleIfError() throws Exception {     CacheControl cc = CacheControl.maxAge(1, TimeUnit.HOURS).staleIfError(2, TimeUnit.HOURS).     assertThat(cc.getHeaderValue(), Matchers.equalTo("max-age=3600, stale-if-error=7200")). }
-false;public;0;5;;@Test public void staleWhileRevalidate() throws Exception {     CacheControl cc = CacheControl.maxAge(1, TimeUnit.HOURS).staleWhileRevalidate(2, TimeUnit.HOURS).     assertThat(cc.getHeaderValue(), Matchers.equalTo("max-age=3600, stale-while-revalidate=7200")). }

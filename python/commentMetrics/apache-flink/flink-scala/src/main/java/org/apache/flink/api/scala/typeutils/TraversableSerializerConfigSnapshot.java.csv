@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public int getVersion() {     return VERSION. }
-false;public;1;12;;@Override public TypeSerializerSchemaCompatibility<T> resolveSchemaCompatibility(TypeSerializer<T> newSerializer) {     TraversableSerializer<T, E> previousSerializer = (TraversableSerializer<T, E>) restoreSerializer().     TraversableSerializerSnapshot<T, E> newCompositeSnapshot = new TraversableSerializerSnapshot<>(previousSerializer.cbfCode()).     return CompositeTypeSerializerUtil.delegateCompatibilityCheckToNewSnapshot(newSerializer, newCompositeSnapshot, getSingleNestedSerializerAndConfig().f1). }

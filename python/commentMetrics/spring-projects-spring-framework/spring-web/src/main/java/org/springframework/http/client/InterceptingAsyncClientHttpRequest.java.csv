@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;2;6;;@Override protected ListenableFuture<ClientHttpResponse> executeInternal(HttpHeaders headers, byte[] body) throws IOException {     return new AsyncRequestExecution().executeAsync(this, body). }
-false;public;0;4;;@Override public HttpMethod getMethod() {     return this.httpMethod. }
-false;public;0;4;;@Override public String getMethodValue() {     return this.httpMethod.name(). }
-false;public;0;4;;@Override public URI getURI() {     return this.uri. }
-false;public;2;23;;@Override public ListenableFuture<ClientHttpResponse> executeAsync(HttpRequest request, byte[] body) throws IOException {     if (this.iterator.hasNext()) {         AsyncClientHttpRequestInterceptor interceptor = this.iterator.next().         return interceptor.intercept(request, body, this).     } else {         URI uri = request.getURI().         HttpMethod method = request.getMethod().         HttpHeaders headers = request.getHeaders().         Assert.state(method != null, "No standard HTTP method").         AsyncClientHttpRequest delegate = requestFactory.createAsyncRequest(uri, method).         delegate.getHeaders().putAll(headers).         if (body.length > 0) {             StreamUtils.copy(body, delegate.getBody()).         }         return delegate.executeAsync().     } }

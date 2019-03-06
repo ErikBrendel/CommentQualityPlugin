@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void testCompareShardIds() {     assertThat(StreamShardHandle.compareShardIds("shardId-000000000001", "shardId-000000000010"), lessThan(0)).     assertThat(StreamShardHandle.compareShardIds("shardId-000000000010", "shardId-000000000010"), equalTo(0)).     assertThat(StreamShardHandle.compareShardIds("shardId-000000000015", "shardId-000000000010"), greaterThan(0)). }

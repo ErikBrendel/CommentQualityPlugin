@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected Collection<Class<? extends Plugin>> getPlugins() {     return Collections.singleton(ParentJoinPlugin.class). }
-false;protected;0;6;;@Override protected ParentAggregationBuilder createTestAggregatorBuilder() {     String name = randomAlphaOfLengthBetween(3, 20).     String parentType = randomAlphaOfLengthBetween(5, 40).     return new ParentAggregationBuilder(name, parentType). }

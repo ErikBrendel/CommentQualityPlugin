@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;11;;@Before public void setUp() throws Exception {     processor = new ModelMethodProcessor().     mavContainer = new ModelAndViewContainer().     Method method = getClass().getDeclaredMethod("model", Model.class).     paramModel = new MethodParameter(method, 0).     returnParamModel = new MethodParameter(method, -1).     webRequest = new ServletWebRequest(new MockHttpServletRequest()). }
-false;public;0;4;;@Test public void supportsParameter() {     assertTrue(processor.supportsParameter(paramModel)). }
-false;public;0;4;;@Test public void supportsReturnType() {     assertTrue(processor.supportsReturnType(returnParamModel)). }
-false;public;0;4;;@Test public void resolveArgumentValue() throws Exception {     assertSame(mavContainer.getModel(), processor.resolveArgument(paramModel, mavContainer, webRequest, null)). }
-false;public;0;11;;@Test public void handleModelReturnValue() throws Exception {     mavContainer.addAttribute("attr1", "value1").     Model returnValue = new ExtendedModelMap().     returnValue.addAttribute("attr2", "value2").     processor.handleReturnValue(returnValue, returnParamModel, mavContainer, webRequest).     assertEquals("value1", mavContainer.getModel().get("attr1")).     assertEquals("value2", mavContainer.getModel().get("attr2")). }
-false;private;1;4;;@SuppressWarnings("unused") private Model model(Model model) {     return null. }

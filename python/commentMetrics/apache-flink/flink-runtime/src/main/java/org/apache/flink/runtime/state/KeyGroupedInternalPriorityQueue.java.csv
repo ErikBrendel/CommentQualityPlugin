@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;1;2;/**  * Returns the subset of elements in the priority queue that belongs to the given key-group, within the operator's  * key-group range.  */ ;/**  * Returns the subset of elements in the priority queue that belongs to the given key-group, within the operator's  * key-group range.  */ @Nonnull Set<T> getSubsetForKeyGroup(int keyGroupId).

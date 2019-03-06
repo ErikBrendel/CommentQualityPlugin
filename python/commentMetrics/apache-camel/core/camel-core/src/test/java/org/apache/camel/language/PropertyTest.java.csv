@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void testPropertyExpressions() throws Exception {     assertExpression("quote", "Camel rocks"). }
-false;public;0;4;;@Test public void testPredicates() throws Exception {     assertPredicate("quote"). }
-false;protected;0;3;;protected String getLanguageName() {     return "exchangeProperty". }
-false;public;0;5;;@Test public void testSingleton() {     ExchangePropertyLanguage prop = new ExchangePropertyLanguage().     assertTrue(prop.isSingleton()). }
-false;protected;1;5;;@Override protected void populateExchange(Exchange exchange) {     super.populateExchange(exchange).     exchange.setProperty("quote", "Camel rocks"). }

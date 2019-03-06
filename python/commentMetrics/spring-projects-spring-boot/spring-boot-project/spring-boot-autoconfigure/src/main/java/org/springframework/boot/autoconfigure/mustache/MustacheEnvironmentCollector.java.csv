@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public void setEnvironment(Environment environment) {     this.environment = (ConfigurableEnvironment) environment. }
-false;public;2;11;;@Override public VariableFetcher createFetcher(Object ctx, String name) {     VariableFetcher fetcher = super.createFetcher(ctx, name).     if (fetcher != null) {         return fetcher.     }     if (this.environment.containsProperty(name)) {         return this.propertyFetcher.     }     return null. }
-false;public;2;4;;@Override public Object get(Object ctx, String name) {     return MustacheEnvironmentCollector.this.environment.getProperty(name). }

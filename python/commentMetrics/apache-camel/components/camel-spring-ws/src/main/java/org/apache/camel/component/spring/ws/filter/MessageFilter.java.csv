@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;2;1;/**  * Calls filter for a producer  *  * @param exchange the exchange  * @param response provided by the producer  */ ;/**  * Calls filter for a producer  *  * @param exchange the exchange  * @param response provided by the producer  */ void filterProducer(Exchange exchange, WebServiceMessage response).
-true;;2;1;/**  * Calls filter for a consumer  *  * @param exchange the exchange  * @param response provided by the consumer  */ ;/**  * Calls filter for a consumer  *  * @param exchange the exchange  * @param response provided by the consumer  */ void filterConsumer(Exchange exchange, WebServiceMessage response).

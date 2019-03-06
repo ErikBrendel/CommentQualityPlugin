@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;8;;@Consume(uri = "activemq:Test.BindingQueue") public void myMethod(@Headers Map<?, ?> headers, String body) {     this.headers = headers.     this.body = body.     // now lets notify we've completed     producer.sendBody("Completed"). }
-false;public;0;3;;public String getBody() {     return body. }
-false;public;0;3;;public Map<?, ?> getHeaders() {     return headers. }

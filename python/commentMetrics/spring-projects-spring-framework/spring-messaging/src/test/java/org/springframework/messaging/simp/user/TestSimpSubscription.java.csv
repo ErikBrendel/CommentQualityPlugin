@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getId() {     return id. }
-false;public;0;4;;@Override public TestSimpSession getSession() {     return this.session. }
-false;public;1;3;;public void setSession(TestSimpSession session) {     this.session = session. }
-false;public;0;4;;@Override public String getDestination() {     return destination. }
-false;public;1;12;;@Override public boolean equals(Object other) {     if (this == other) {         return true.     }     if (!(other instanceof SimpSubscription)) {         return false.     }     SimpSubscription otherSubscription = (SimpSubscription) other.     return (ObjectUtils.nullSafeEquals(getSession(), otherSubscription.getSession()) && this.id.equals(otherSubscription.getId())). }
-false;public;0;4;;@Override public int hashCode() {     return this.id.hashCode() * 31 + ObjectUtils.nullSafeHashCode(getSession()). }
-false;public;0;4;;@Override public String toString() {     return "destination=" + this.destination. }

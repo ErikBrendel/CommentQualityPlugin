@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;11;;@Override public void configure() throws Exception {     from("timer://foo?period=10000&repeatCount=1").setHeader(InfinispanConstants.OPERATION).constant(InfinispanOperation.PUT).setHeader(InfinispanConstants.KEY).constant("1").setHeader(InfinispanConstants.VALUE).constant("test").to("infinispan://default").setHeader(InfinispanConstants.OPERATION).constant(InfinispanOperation.GET).setHeader(InfinispanConstants.KEY).constant("1").to("infinispan://default").log("Received body: ${body}"). }

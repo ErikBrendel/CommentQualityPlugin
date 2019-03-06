@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public boolean isReturnResultSetSupported() {     return false. }
-false;public;0;4;;@Override public boolean isRefCursorSupported() {     return true. }
-false;public;0;4;;@Override public int getRefCursorSqlType() {     return -10. }
-false;public;1;6;;@Override @Nullable public String metaDataCatalogNameToUse(@Nullable String catalogName) {     // Oracle uses catalog name for package name or an empty string if no package     return (catalogName == null ? "" : catalogNameToUse(catalogName)). }
-false;public;1;6;;@Override @Nullable public String metaDataSchemaNameToUse(@Nullable String schemaName) {     // Use current user schema if no schema specified     return (schemaName == null ? getUserName() : super.metaDataSchemaNameToUse(schemaName)). }
-false;public;2;9;;@Override public SqlParameter createDefaultOutParameter(String parameterName, CallParameterMetaData meta) {     if (meta.getSqlType() == Types.OTHER && REF_CURSOR_NAME.equals(meta.getTypeName())) {         return new SqlOutParameter(parameterName, getRefCursorSqlType(), new ColumnMapRowMapper()).     } else {         return super.createDefaultOutParameter(parameterName, meta).     } }

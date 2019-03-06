@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;3;5;;@SuppressWarnings("unchecked") @Override public void join(Tuple2<K, I1> value1, I2 value2, Collector<OUT> collector) throws Exception {     wrappedFunction.join(value1 == null ? null : (I1) value1.getField(1), value2, collector). }

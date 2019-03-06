@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public CouchbaseEnvironment couchbaseEnvironment() throws Exception {     return mock(CouchbaseEnvironment.class). }
-false;public;0;4;;@Override public Cluster couchbaseCluster() throws Exception {     return mock(Cluster.class). }
-false;public;0;4;;@Override public ClusterInfo couchbaseClusterInfo() {     return mock(ClusterInfo.class). }
-false;public;0;4;;@Override public Bucket couchbaseClient() {     return mock(CouchbaseBucket.class). }

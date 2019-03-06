@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;1;3;/**  * Set the name of the dummy column.  */ ;/**  * Set the name of the dummy column.  */ public void setDummyName(String dummyName) {     this.dummyName = dummyName. }
-true;public;0;3;/**  * Return the name of the dummy column.  */ ;/**  * Return the name of the dummy column.  */ public String getDummyName() {     return this.dummyName. }
-false;protected;0;4;;@Override protected String getIncrementStatement() {     return "insert into " + getIncrementerName() + " (" + getDummyName() + ") values(null)". }
-false;protected;0;4;;@Override protected String getIdentityStatement() {     return "select IDENTITY_VAL_LOCAL() from " + getIncrementerName(). }

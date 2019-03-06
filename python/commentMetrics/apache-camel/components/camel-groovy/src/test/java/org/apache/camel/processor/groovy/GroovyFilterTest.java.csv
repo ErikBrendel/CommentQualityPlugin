@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected AbstractApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/processor/groovy/groovyFilter.xml"). }
-false;public;0;8;;@Test public void testSendMatchingMessage() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("Hello World").     template.sendBodyAndHeader("direct:start", "Hello World", "foo", 123).     assertMockEndpointsSatisfied(). }
-false;public;0;8;;@Test public void testSendNotMatchingMessage() throws Exception {     getMockEndpoint("mock:result").expectedMessageCount(0).     template.sendBody("direct:start", "Bye World").     assertMockEndpointsSatisfied(). }

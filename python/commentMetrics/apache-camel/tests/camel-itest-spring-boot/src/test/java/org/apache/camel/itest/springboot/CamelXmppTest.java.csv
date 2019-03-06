@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;4;;@Deployment public static Archive<?> createSpringBootPackage() throws Exception {     return ArquillianPackager.springBootPackage(createTestConfig()). }
-false;public,static;0;6;;public static ITestConfig createTestConfig() throws IOException {     return new ITestConfigBuilder().module(inferModuleName(CamelXmppTest.class)).systemProperty("javax.net.ssl.trustStore", new File("../../components/camel-xmpp/src/test/resources/xmppServer.jks").getCanonicalPath()).build(). }
-false;public;0;5;;@Test public void componentTests() throws Exception {     this.runComponentTest(config).     this.runModuleUnitTestsIfEnabled(config). }

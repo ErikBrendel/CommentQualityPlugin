@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected int getPort() {     return PORT2. }
-false;protected;0;4;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/component/cxf/jaxrs/JettyCxfRsSpringRouter.xml"). }
-false;public;0;4;;@Test public void testEndpointUris() throws Exception { // Don't test anything here }

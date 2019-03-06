@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;public Producer createProducer() throws Exception {     Command defaultCommand = configuration.getCommand().     if (defaultCommand == null) {         defaultCommand = Command.SET.     }     return new RedisProducer(this, RedisConstants.COMMAND, defaultCommand.name(), redisProcessorsCreator). }
-false;public;1;5;;public Consumer createConsumer(Processor processor) throws Exception {     RedisConsumer answer = new RedisConsumer(this, processor, configuration).     configureConsumer(answer).     return answer. }
-false;public;0;3;;public boolean isSingleton() {     return true. }
-false;protected;0;4;;protected void doShutdown() throws Exception {     super.doShutdown().     configuration.stop(). }
-false;public;0;3;;public RedisConfiguration getConfiguration() {     return configuration. }

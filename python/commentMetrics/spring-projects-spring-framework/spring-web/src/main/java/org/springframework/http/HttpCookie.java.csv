@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Return the cookie name.  */ ;/**  * Return the cookie name.  */ public String getName() {     return this.name. }
-true;public;0;3;/**  * Return the cookie value or an empty string (never {@code null}).  */ ;/**  * Return the cookie value or an empty string (never {@code null}).  */ public String getValue() {     return this.value. }
-false;public;0;4;;@Override public int hashCode() {     return this.name.hashCode(). }
-false;public;1;11;;@Override public boolean equals(Object other) {     if (this == other) {         return true.     }     if (!(other instanceof HttpCookie)) {         return false.     }     HttpCookie otherCookie = (HttpCookie) other.     return (this.name.equalsIgnoreCase(otherCookie.getName())). }
-false;public;0;4;;@Override public String toString() {     return this.name + '=' + this.value. }

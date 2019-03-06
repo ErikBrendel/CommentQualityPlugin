@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void testNoConcurrentProducers() throws Exception {     doSendMessages(1, 1). }
-false;public;0;4;;@Test public void testConcurrentProducers() throws Exception {     doSendMessages(10, 5). }
-false;public;0;4;;@Test public void testMoreConcurrentProducers() throws Exception {     doSendMessages(50, 10). }
-false;public;0;6;;public Object call() throws Exception {     template.sendBodyAndHeader("direct:start", index, "id", 123).     // simulate a little delay     Thread.sleep(3).     return null. }
-false;private;2;21;;private void doSendMessages(int files, int poolSize) throws Exception {     MockEndpoint mock = getMockEndpoint("mock:aggregated").     mock.setResultWaitTime(30 * 1000L).     mock.expectedMessageCount(1).     ExecutorService executor = Executors.newFixedThreadPool(poolSize).     for (int i = 0. i < files. i++) {         final int index = i.         executor.submit(new Callable<Object>() {              public Object call() throws Exception {                 template.sendBodyAndHeader("direct:start", index, "id", 123).                 // simulate a little delay                 Thread.sleep(3).                 return null.             }         }).     }     assertMockEndpointsSatisfied().     executor.shutdownNow(). }
-false;;0;4;;@Override long getCompletionInterval() {     return 1000. }

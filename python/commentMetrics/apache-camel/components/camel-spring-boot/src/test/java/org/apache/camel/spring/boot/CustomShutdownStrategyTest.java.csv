@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public void configure() throws Exception {     from("seda:foo").to("mock:foo"). }
-false;public;0;6;;@Bean public ShutdownStrategy shutdownStrategy() {     ShutdownStrategy strat = new MyShutdown().     strat.setTimeout(60000).     return strat. }
-false;public;0;10;;@Test public void testCustomShutdown() throws Exception {     ShutdownStrategy stat = camelContext.getShutdownStrategy().     assertEquals(60000, stat.getTimeout()).     assertTrue(stat instanceof MyShutdown).     camelContext.stop().     assertTrue(((MyShutdown) stat).isInvoked()). }
-false;protected;7;6;;@Override protected boolean doShutdown(CamelContext context, List<RouteStartupOrder> routes, long timeout, TimeUnit timeUnit, boolean suspendOnly, boolean abortAfterTimeout, boolean forceShutdown) throws Exception {     invoked = true.     return super.doShutdown(context, routes, timeout, timeUnit, suspendOnly, abortAfterTimeout, forceShutdown). }
-false;;0;3;;boolean isInvoked() {     return invoked. }

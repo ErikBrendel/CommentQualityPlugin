@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * Get a representation of the task requirements as understood by Fenzo.  */ ;/**  * Get a representation of the task requirements as understood by Fenzo.  */ TaskRequest taskRequest().
-true;;2;1;/**  * Prepare to launch the task by producing a Mesos TaskInfo record.  * @param slaveId the slave assigned to the task.  * @param allocation the resource allocation to take from.  * @return a TaskInfo.  */ ;/**  * Prepare to launch the task by producing a Mesos TaskInfo record.  * @param slaveId the slave assigned to the task.  * @param allocation the resource allocation to take from.  * @return a TaskInfo.  */ Protos.TaskInfo launch(Protos.SlaveID slaveId, MesosResourceAllocation allocation).

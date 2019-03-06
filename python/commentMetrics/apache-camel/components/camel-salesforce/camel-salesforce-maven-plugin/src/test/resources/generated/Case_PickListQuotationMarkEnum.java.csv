@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@JsonValue public String value() {     return this.value. }
-false;public,static;1;9;;@JsonCreator public static Case_PickListQuotationMarkEnum fromValue(String value) {     for (Case_PickListQuotationMarkEnum e : Case_PickListQuotationMarkEnum.values()) {         if (e.value.equals(value)) {             return e.         }     }     throw new IllegalArgumentException(value). }

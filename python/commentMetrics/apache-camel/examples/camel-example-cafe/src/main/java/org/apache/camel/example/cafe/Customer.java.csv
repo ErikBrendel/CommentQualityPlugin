@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public CamelContext getCamelContext() {     return camelContext. }
-false;public;1;4;;public void setCamelContext(CamelContext camelContext) {     this.camelContext = camelContext. }
-false;public;0;6;;public void afterPropertiesSet() throws Exception {     if (camelContext != null) {         // setup a timer to send the cafe order         camelContext.addRoutes(this).     } }
-false;public;1;8;;public void process(Exchange exchange) throws Exception {     Order order = new Order(2).     order.addItem(DrinkType.ESPRESSO, 2, true).     order.addItem(DrinkType.CAPPUCCINO, 4, false).     order.addItem(DrinkType.LATTE, 4, false).     order.addItem(DrinkType.MOCHA, 2, false).     exchange.getIn().setBody(order). }
-false;public;0;17;;@Override public void configure() throws Exception {     from("timer://myTimer?fixedRate=true&period=60000").process(new Processor() {          public void process(Exchange exchange) throws Exception {             Order order = new Order(2).             order.addItem(DrinkType.ESPRESSO, 2, true).             order.addItem(DrinkType.CAPPUCCINO, 4, false).             order.addItem(DrinkType.LATTE, 4, false).             order.addItem(DrinkType.MOCHA, 2, false).             exchange.getIn().setBody(order).         }     }).to("direct:cafe"). }

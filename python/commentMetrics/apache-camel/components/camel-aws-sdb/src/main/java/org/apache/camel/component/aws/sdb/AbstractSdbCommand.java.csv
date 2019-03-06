@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,abstract;0;1;;public abstract void execute().
-false;protected;0;4;;protected String determineDomainName() {     String domainName = exchange.getIn().getHeader(SdbConstants.DOMAIN_NAME, String.class).     return domainName != null ? domainName : configuration.getDomainName(). }
-false;protected;0;7;;protected String determineItemName() {     String key = exchange.getIn().getHeader(SdbConstants.ITEM_NAME, String.class).     if (key == null) {         throw new IllegalArgumentException("AWS SDB Item Name header is missing.").     }     return key. }
-false;protected;0;3;;protected Boolean determineConsistentRead() {     return exchange.getIn().getHeader(SdbConstants.CONSISTENT_READ, this.configuration.isConsistentRead(), Boolean.class). }
-false;protected;0;3;;protected UpdateCondition determineUpdateCondition() {     return exchange.getIn().getHeader(SdbConstants.UPDATE_CONDITION, UpdateCondition.class). }
-false;protected;0;3;;protected String determineNextToken() {     return exchange.getIn().getHeader(SdbConstants.NEXT_TOKEN, String.class). }

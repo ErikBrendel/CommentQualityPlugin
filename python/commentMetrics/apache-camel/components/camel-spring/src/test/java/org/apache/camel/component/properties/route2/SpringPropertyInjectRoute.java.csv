@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Override public void configure() throws Exception {     from("direct:start").transform().constant(greeting).to("{{result}}"). }

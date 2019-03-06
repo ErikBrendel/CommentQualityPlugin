@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public Settings nodeSettings(int nodeOrdinal) {     return Settings.EMPTY. }
-false;public;1;4;;@Override public Path nodeConfigPath(int nodeOrdinal) {     return null. }
-false;public;0;4;;@Override public Settings transportClientSettings() {     return Settings.EMPTY. }
-true;public,abstract;1;1;/**  * @return the settings for the node represented by the given ordinal, or {@code null} if there are no settings defined  */ ;/**  * @return the settings for the node represented by the given ordinal, or {@code null} if there are no settings defined  */ public abstract Settings nodeSettings(int nodeOrdinal).
-false;public,abstract;1;1;;public abstract Path nodeConfigPath(int nodeOrdinal).
-true;public;0;3;/**  * Returns plugins that should be loaded on the node  */ ;/**  * Returns plugins that should be loaded on the node  */ public Collection<Class<? extends Plugin>> nodePlugins() {     return Collections.emptyList(). }
-false;public;0;3;;public Settings transportClientSettings() {     return Settings.EMPTY. }
-true;public;0;3;/**  * Returns plugins that should be loaded in the transport client  */ ;/**  * Returns plugins that should be loaded in the transport client  */ public Collection<Class<? extends Plugin>> transportClientPlugins() {     return Collections.emptyList(). }

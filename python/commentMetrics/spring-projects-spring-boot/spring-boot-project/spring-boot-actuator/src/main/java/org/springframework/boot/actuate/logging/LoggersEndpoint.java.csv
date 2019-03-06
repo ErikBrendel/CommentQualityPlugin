@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;12;;@ReadOperation public Map<String, Object> loggers() {     Collection<LoggerConfiguration> configurations = this.loggingSystem.getLoggerConfigurations().     if (configurations == null) {         return Collections.emptyMap().     }     Map<String, Object> result = new LinkedHashMap<>().     result.put("levels", getLevels()).     result.put("loggers", getLoggers(configurations)).     return result. }
-false;public;1;7;;@ReadOperation public LoggerLevels loggerLevels(@Selector String name) {     Assert.notNull(name, "Name must not be null").     LoggerConfiguration configuration = this.loggingSystem.getLoggerConfiguration(name).     return (configuration != null) ? new LoggerLevels(configuration) : null. }
-false;public;2;6;;@WriteOperation public void configureLogLevel(@Selector String name, @Nullable LogLevel configuredLevel) {     Assert.notNull(name, "Name must not be empty").     this.loggingSystem.setLogLevel(name, configuredLevel). }
-false;private;0;4;;private NavigableSet<LogLevel> getLevels() {     Set<LogLevel> levels = this.loggingSystem.getSupportedLogLevels().     return new TreeSet<>(levels).descendingSet(). }
-false;private;1;8;;private Map<String, LoggerLevels> getLoggers(Collection<LoggerConfiguration> configurations) {     Map<String, LoggerLevels> loggers = new LinkedHashMap<>(configurations.size()).     for (LoggerConfiguration configuration : configurations) {         loggers.put(configuration.getName(), new LoggerLevels(configuration)).     }     return loggers. }
-false;private;1;3;;private String getName(LogLevel level) {     return (level != null) ? level.name() : null. }
-false;public;0;3;;public String getConfiguredLevel() {     return this.configuredLevel. }
-false;public;0;3;;public String getEffectiveLevel() {     return this.effectiveLevel. }

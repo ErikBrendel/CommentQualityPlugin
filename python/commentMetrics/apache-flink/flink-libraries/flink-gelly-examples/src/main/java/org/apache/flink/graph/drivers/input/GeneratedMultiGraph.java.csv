@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;protected;0;3;/**  * Get the short string representation of the simplify transformation.  *  * @return short string representation of the simplify transformation  */ ;/**  * Get the short string representation of the simplify transformation.  *  * @return short string representation of the simplify transformation  */ protected String getSimplifyShortString() {     return simplify.getShortString(). }
-false;public;1;9;;@Override public Graph<LongValue, NullValue, NullValue> create(ExecutionEnvironment env) throws Exception {     Graph<LongValue, NullValue, NullValue> graph = generate(env).     // simplify operators by processing smaller data types     return simplify.simplify(graph, parallelism.getValue().intValue()). }
-false;public,abstract;1;1;;public abstract Graph<LongValue, NullValue, NullValue> generate(ExecutionEnvironment env) throws Exception.

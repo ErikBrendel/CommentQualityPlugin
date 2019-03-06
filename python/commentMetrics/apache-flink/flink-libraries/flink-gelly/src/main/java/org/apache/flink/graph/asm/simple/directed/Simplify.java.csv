@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;17;;@Override public Graph<K, VV, EV> runInternal(Graph<K, VV, EV> input) throws Exception {     // Edges     DataSet<Edge<K, EV>> edges = input.getEdges().filter(new RemoveSelfLoops<>()).setParallelism(parallelism).name("Remove self-loops").distinct(0, 1).setCombineHint(CombineHint.NONE).setParallelism(parallelism).name("Remove duplicate edges").     // Graph     return Graph.fromDataSet(input.getVertices(), edges, input.getContext()). }
-false;public;1;4;;@Override public boolean filter(Edge<T, ET> value) throws Exception {     return (value.f0.compareTo(value.f1) != 0). }

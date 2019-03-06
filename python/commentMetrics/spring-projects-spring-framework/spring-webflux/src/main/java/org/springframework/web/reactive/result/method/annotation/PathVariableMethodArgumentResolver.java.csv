@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public boolean supportsParameter(MethodParameter parameter) {     return checkAnnotatedParamNoReactiveWrapper(parameter, PathVariable.class, this::singlePathVariable). }
-false;private;2;3;;private boolean singlePathVariable(PathVariable pathVariable, Class<?> type) {     return !Map.class.isAssignableFrom(type) || StringUtils.hasText(pathVariable.name()). }
-false;protected;1;6;;@Override protected NamedValueInfo createNamedValueInfo(MethodParameter parameter) {     PathVariable ann = parameter.getParameterAnnotation(PathVariable.class).     Assert.state(ann != null, "No PathVariable annotation").     return new PathVariableNamedValueInfo(ann). }
-false;protected;3;6;;@Override @SuppressWarnings("unchecked") protected Object resolveNamedValue(String name, MethodParameter parameter, ServerWebExchange exchange) {     String attributeName = HandlerMapping.URI_TEMPLATE_VARIABLES_ATTRIBUTE.     return exchange.getAttributeOrDefault(attributeName, Collections.emptyMap()).get(name). }
-false;protected;2;4;;@Override protected void handleMissingValue(String name, MethodParameter parameter) {     throw new ServerErrorException(name, parameter, null). }
-false;protected;5;7;;@Override @SuppressWarnings("unchecked") protected void handleResolvedValue(@Nullable Object arg, String name, MethodParameter parameter, Model model, ServerWebExchange exchange) { // TODO: View.PATH_VARIABLES ? }

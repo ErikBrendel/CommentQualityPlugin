@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;10;;@Override public Iterable<String> select(Tuple1<Integer> tuple) {     String[] outputs = new String[tuple.f0].     for (Integer i = 0. i < tuple.f0. i++) {         outputs[i] = i.toString().     }     return Arrays.asList(outputs). }
-false;public;0;10;;@Test public void testGetOutputs() {     OutputSelector<Tuple1<Integer>> selector = new MyOutputSelector().     List<String> expectedOutputs = new ArrayList<String>().     expectedOutputs.add("0").     expectedOutputs.add("1").     assertEquals(expectedOutputs, selector.select(new Tuple1<Integer>(2))).     expectedOutputs.add("2").     assertEquals(expectedOutputs, selector.select(new Tuple1<Integer>(3))). }

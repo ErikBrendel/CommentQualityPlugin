@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;0;3;;boolean isEligibleToStartBasic() {     return eligibleToStartBasic. }
-false;public;1;4;;@Override public void readFrom(StreamInput in) throws IOException {     eligibleToStartBasic = in.readBoolean(). }
-false;public;1;4;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeBoolean(eligibleToStartBasic). }
-false;public;2;7;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field("eligible_to_start_basic", eligibleToStartBasic).     builder.endObject().     return builder. }
-false;public;1;11;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     GetBasicStatusResponse that = (GetBasicStatusResponse) o.     return eligibleToStartBasic == that.eligibleToStartBasic. }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(eligibleToStartBasic). }

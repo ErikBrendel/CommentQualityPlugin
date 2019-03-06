@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * @return the name of the method  */ ;/**  * @return the name of the method  */ public ParseField getParseField() {     return parseField. }
-false;public,static;1;3;;public static PercentilesMethod readFromStream(StreamInput in) throws IOException {     return in.readEnum(PercentilesMethod.class). }
-false;public;1;4;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeEnum(this). }
-false;public;0;4;;@Override public String toString() {     return parseField.getPreferredName(). }

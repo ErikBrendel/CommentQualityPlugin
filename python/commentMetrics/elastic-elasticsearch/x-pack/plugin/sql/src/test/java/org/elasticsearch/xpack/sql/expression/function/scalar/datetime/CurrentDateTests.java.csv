@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;3;;public static CurrentDate randomCurrentDate() {     return new CurrentDate(Source.EMPTY, TestUtils.randomConfiguration()). }
-false;protected;0;4;;@Override protected CurrentDate randomInstance() {     return randomCurrentDate(). }
-false;protected;1;4;;@Override protected CurrentDate copy(CurrentDate instance) {     return new CurrentDate(instance.source(), instance.configuration()). }
-false;protected;1;7;;@Override protected CurrentDate mutate(CurrentDate instance) {     ZonedDateTime now = instance.configuration().now().     ZoneId mutatedZoneId = randomValueOtherThanMany(o -> Objects.equals(now.getOffset(), o.getRules().getOffset(now.toInstant())), () -> randomZone()).     return new CurrentDate(instance.source(), TestUtils.randomConfiguration(mutatedZoneId)). }
-false;public;0;3;;@Override public void testTransform() { }
-false;public;0;3;;@Override public void testReplaceChildren() { }

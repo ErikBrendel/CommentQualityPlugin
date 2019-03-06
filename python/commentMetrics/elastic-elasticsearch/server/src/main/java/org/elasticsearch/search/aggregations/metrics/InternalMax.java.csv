@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;5;;@Override protected void doWriteTo(StreamOutput out) throws IOException {     out.writeNamedWriteable(format).     out.writeDouble(max). }
-false;public;0;4;;@Override public String getWriteableName() {     return MaxAggregationBuilder.NAME. }
-false;public;0;4;;@Override public double value() {     return max. }
-false;public;0;4;;@Override public double getValue() {     return max. }
-false;public;2;8;;@Override public InternalMax doReduce(List<InternalAggregation> aggregations, ReduceContext reduceContext) {     double max = Double.NEGATIVE_INFINITY.     for (InternalAggregation aggregation : aggregations) {         max = Math.max(max, ((InternalMax) aggregation).max).     }     return new InternalMax(name, max, format, pipelineAggregators(), getMetaData()). }
-false;public;2;9;;@Override public XContentBuilder doXContentBody(XContentBuilder builder, Params params) throws IOException {     boolean hasValue = !Double.isInfinite(max).     builder.field(CommonFields.VALUE.getPreferredName(), hasValue ? max : null).     if (hasValue && format != DocValueFormat.RAW) {         builder.field(CommonFields.VALUE_AS_STRING.getPreferredName(), format.format(max).toString()).     }     return builder. }
-false;protected;0;4;;@Override protected int doHashCode() {     return Objects.hash(max). }
-false;protected;1;5;;@Override protected boolean doEquals(Object obj) {     InternalMax other = (InternalMax) obj.     return Objects.equals(max, other.max). }

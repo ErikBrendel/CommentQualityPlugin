@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void validateConfiguration() throws SQLException {     assertThat(this.context.getBeansOfType(DataSource.class)).hasSize(1).     HikariDataSource dataSource = this.context.getBean(HikariDataSource.class).     assertThat(dataSource.getConnection().getMetaData().getURL()).isEqualTo("jdbc:h2:mem:simple").     assertThat(dataSource.getMaximumPoolSize()).isEqualTo(42). }

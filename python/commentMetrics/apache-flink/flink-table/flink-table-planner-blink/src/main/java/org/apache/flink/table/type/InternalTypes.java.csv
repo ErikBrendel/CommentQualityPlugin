@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;3;;public static ArrayType createArrayType(InternalType elementType) {     return new ArrayType(elementType). }
-false;public,static;2;3;;public static DecimalType createDecimalType(int precision, int scale) {     return new DecimalType(precision, scale). }
-false;public,static;2;3;;public static MapType createMapType(InternalType keyType, InternalType valueType) {     return new MapType(keyType, valueType). }
-false;public,static;1;3;;public static <T> GenericType<T> createGenericType(Class<T> cls) {     return new GenericType<>(cls). }
-false;public,static;1;3;;public static <T> GenericType<T> createGenericType(TypeInformation<T> typeInfo) {     return new GenericType<>(typeInfo). }
-false;public,static;2;3;;public static RowType createRowType(InternalType[] types, String[] fieldNames) {     return new RowType(types, fieldNames). }
-false;public,static;1;3;;public static RowType createRowType(InternalType... types) {     return new RowType(types). }

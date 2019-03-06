@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;8;;@Override protected void configure() {     bind(RepositoriesService.class).toInstance(repositoriesService).     bind(SnapshotsService.class).asEagerSingleton().     bind(SnapshotShardsService.class).asEagerSingleton().     bind(TransportNodesSnapshotsStatus.class).asEagerSingleton().     bind(RestoreService.class).asEagerSingleton(). }

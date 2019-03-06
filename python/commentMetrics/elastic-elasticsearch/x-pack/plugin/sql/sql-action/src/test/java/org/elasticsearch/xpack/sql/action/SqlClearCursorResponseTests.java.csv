@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected SqlClearCursorResponse createTestInstance() {     return new SqlClearCursorResponse(randomBoolean()). }
-false;protected;0;4;;@Override protected SqlClearCursorResponse createBlankInstance() {     return new SqlClearCursorResponse(). }
-false;protected;1;4;;@Override protected SqlClearCursorResponse mutateInstance(SqlClearCursorResponse instance) {     return new SqlClearCursorResponse(instance.isSucceeded() == false). }
-false;protected;1;6;;@Override protected SqlClearCursorResponse doParseInstance(XContentParser parser) {     org.elasticsearch.xpack.sql.proto.SqlClearCursorResponse response = org.elasticsearch.xpack.sql.proto.SqlClearCursorResponse.fromXContent(parser).     return new SqlClearCursorResponse(response.isSucceeded()). }

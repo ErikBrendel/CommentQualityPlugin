@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;@Bean @ConditionalOnMissingBean public SignalFxConfig signalfxConfig(SignalFxProperties props) {     return new SignalFxPropertiesConfigAdapter(props). }
-false;public;2;6;;@Bean @ConditionalOnMissingBean public SignalFxMeterRegistry signalFxMeterRegistry(SignalFxConfig config, Clock clock) {     return new SignalFxMeterRegistry(config, clock). }

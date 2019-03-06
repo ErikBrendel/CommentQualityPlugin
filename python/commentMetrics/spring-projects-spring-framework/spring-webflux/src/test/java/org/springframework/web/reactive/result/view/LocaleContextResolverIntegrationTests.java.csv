@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;7;;@Override protected ApplicationContext initApplicationContext() {     AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext().     context.register(WebConfig.class).     context.refresh().     return context. }
-false;public;0;14;;@Test public void fixedLocale() {     Mono<ClientResponse> result = webClient.get().uri("http://localhost:" + this.port + "/").exchange().     StepVerifier.create(result).consumeNextWith(response -> {         assertEquals(HttpStatus.OK, response.statusCode()).         assertEquals(Locale.GERMANY, response.headers().asHttpHeaders().getContentLanguage()).     }).verifyComplete(). }
-false;protected;0;4;;@Override protected LocaleContextResolver createLocaleContextResolver() {     return new FixedLocaleContextResolver(Locale.GERMANY). }
-false;protected;1;4;;@Override protected void configureViewResolvers(ViewResolverRegistry registry) {     registry.viewResolver((viewName, locale) -> Mono.just(new DummyView(locale))). }
-false;public;0;4;;@Override public List<MediaType> getSupportedMediaTypes() {     return Collections.singletonList(MediaType.TEXT_HTML). }
-false;public;3;6;;@Override public Mono<Void> render(@Nullable Map<String, ?> model, @Nullable MediaType contentType, ServerWebExchange exchange) {     exchange.getResponse().getHeaders().setContentLanguage(locale).     return Mono.empty(). }
-false;public;0;4;;@GetMapping("/") public String foo() {     return "foo". }

@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Override public String[] getValidTestValues() {     return new String[] { "abcdefgh", "i", "jklmno", "\"abc\"defgh\"", "\"i\"", "Hello9" }. }
-false;public;0;6;;@Override public String[] getValidTestResults() {     return new String[] { "abcdefgh", "i", "jklmno", "\"abc\"defgh\"", "\"i\"", "Hello9" }. }
-false;public;0;4;;@Override public boolean allowsEmptyField() {     return true. }
-false;public;0;4;;@Override public String[] getInvalidTestValues() {     return new String[] {}. }
-false;public;0;4;;@Override public FieldParser<String> getParser() {     return new StringParser(). }
-false;public;0;4;;@Override public Class<String> getTypeClass() {     return String.class. }

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;4;;@Override protected RolloverAction doParseInstance(XContentParser parser) {     return RolloverAction.parse(parser). }
-false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }
-false;protected;0;4;;@Override protected RolloverAction createTestInstance() {     return randomInstance(). }
-false;static;0;9;;static RolloverAction randomInstance() {     ByteSizeUnit maxSizeUnit = randomFrom(ByteSizeUnit.values()).     ByteSizeValue maxSize = randomBoolean() ? null : new ByteSizeValue(randomNonNegativeLong() / maxSizeUnit.toBytes(1), maxSizeUnit).     Long maxDocs = randomBoolean() ? null : randomNonNegativeLong().     TimeValue maxAge = (maxDocs == null && maxSize == null || randomBoolean()) ? TimeValue.parseTimeValue(randomPositiveTimeValue(), "rollover_action_test") : null.     return new RolloverAction(maxSize, maxAge, maxDocs). }
-false;public;0;5;;public void testNoConditions() {     IllegalArgumentException exception = expectThrows(IllegalArgumentException.class, () -> new RolloverAction(null, null, null)).     assertEquals("At least one rollover condition must be set.", exception.getMessage()). }

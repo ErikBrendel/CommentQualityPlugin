@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;public void testFreezeUnfreeze() throws Exception {     ClockMock clockMock = ClockMock.frozen().     final long millis = clockMock.millis().     for (int i = 0. i < 10. i++) {         assertThat(clockMock.millis(), equalTo(millis)).     }     clockMock.unfreeze().     assertBusy(() -> assertThat(clockMock.millis(), greaterThan(millis))). }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;11;;@Test public void testDuplicate() {     SequenceFileWriter<Text, Text> writer = new SequenceFileWriter("BZ", SequenceFile.CompressionType.BLOCK).     writer.setSyncOnFlush(true).     SequenceFileWriter<Text, Text> other = writer.duplicate().     assertTrue(StreamWriterBaseComparator.equals(writer, other)).     writer.setSyncOnFlush(false).     assertFalse(StreamWriterBaseComparator.equals(writer, other)). }

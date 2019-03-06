@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * Returns the range of the key groups contained in the state.  */ ;/**  * Returns the range of the key groups contained in the state.  */ KeyGroupRange getKeyGroupRange().
-true;;1;1;/**  * Returns a state over a range that is the intersection between this  * handle's key-group range and the provided key-group range.  *  * @param keyGroupRange The key group range to intersect with  */ ;/**  * Returns a state over a range that is the intersection between this  * handle's key-group range and the provided key-group range.  *  * @param keyGroupRange The key group range to intersect with  */ KeyedStateHandle getIntersection(KeyGroupRange keyGroupRange).

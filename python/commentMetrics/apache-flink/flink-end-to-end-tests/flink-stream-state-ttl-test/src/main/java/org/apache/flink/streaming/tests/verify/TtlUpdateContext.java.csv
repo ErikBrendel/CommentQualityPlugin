@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;0;3;;long getTimestamp() {     return timestamp. }
-false;;0;3;;GV getValueBeforeUpdate() {     return valueBeforeUpdate. }
-false;public;0;4;;@Nonnull public ValueWithTs<UV> getUpdateWithTs() {     return new ValueWithTs<>(update, timestamp). }
-false;;0;3;;GV getValueAfterUpdate() {     return valueAfterUpdate. }
-false;public;0;9;;@Override public String toString() {     return "TtlUpdateContext{" + "valueBeforeUpdate=" + valueBeforeUpdate + ", update=" + update + ", valueAfterUpdate=" + valueAfterUpdate + ", timestamp=" + timestamp + '}'. }

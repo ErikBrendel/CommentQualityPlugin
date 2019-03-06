@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void testInjectionWorks() {     assertNotNull(datasource). }
-false;public;0;6;;@Test public void testSqlComponentUsesTheConfiguredDatasource() throws Exception {     SqlComponent component = (SqlComponent) context.getComponent("sql").     SqlEndpoint endpoint = (SqlEndpoint) component.createEndpoint("sql:select * from table where id=#").     assertEquals(datasource, endpoint.getJdbcTemplate().getDataSource()). }
-false;public;0;6;;@Test public void testSqlStoredComponentUsesTheConfiguredDatasource() throws Exception {     SqlStoredComponent component = (SqlStoredComponent) context.getComponent("sql-stored").     SqlStoredEndpoint endpoint = (SqlStoredEndpoint) component.createEndpoint("sql:select * from table where id=#").     assertEquals(datasource, endpoint.getJdbcTemplate().getDataSource()). }

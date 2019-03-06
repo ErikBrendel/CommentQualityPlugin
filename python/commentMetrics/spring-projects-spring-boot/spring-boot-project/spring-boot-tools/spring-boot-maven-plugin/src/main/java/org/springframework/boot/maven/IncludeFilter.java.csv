@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;9;;@Override protected boolean filter(Artifact artifact) {     for (FilterableDependency dependency : getFilters()) {         if (equals(artifact, dependency)) {             return false.         }     }     return true. }

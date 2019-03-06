@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@TaskAction public void runLoggerUsageTask() {     LoggedExec.javaexec(getProject(), spec -> {         spec.setMain("org.elasticsearch.test.loggerusage.ESLoggerUsageChecker").         spec.classpath(getClasspath()).         spec.executable(getJavaHome() + "/bin/java").         getClassDirectories().forEach(spec::args).     }). }
-false;public;0;4;;@Classpath public FileCollection getClasspath() {     return classpath. }
-false;public;1;3;;public void setClasspath(FileCollection classpath) {     this.classpath = classpath. }
-false;public;0;11;;@InputFiles @SkipWhenEmpty public FileCollection getClassDirectories() {     return getProject().getConvention().getPlugin(JavaPluginConvention.class).getSourceSets().stream().filter(sourceSet -> sourceSet.getName().equals("main") || sourceSet.getName().equals("test")).map(sourceSet -> sourceSet.getOutput().getClassesDirs()).reduce(FileCollection::plus).orElse(getProject().files()).filter(File::exists). }
-false;public;0;4;;@Input public Object getJavaHome() {     return javaHome. }
-false;public;1;3;;public void setJavaHome(Object javaHome) {     this.javaHome = javaHome. }

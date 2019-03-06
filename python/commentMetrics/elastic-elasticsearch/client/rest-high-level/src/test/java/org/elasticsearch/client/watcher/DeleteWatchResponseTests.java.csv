@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;public void testFromXContent() throws IOException {     xContentTester(this::createParser, DeleteWatchResponseTests::createTestInstance, DeleteWatchResponseTests::toXContent, DeleteWatchResponse::fromXContent).supportsUnknownFields(true).assertToXContentEquivalence(false).test(). }
-false;private,static;2;7;;private static XContentBuilder toXContent(DeleteWatchResponse response, XContentBuilder builder) throws IOException {     return builder.startObject().field("_id", response.getId()).field("_version", response.getVersion()).field("found", response.isFound()).endObject(). }
-false;private,static;0;6;;private static DeleteWatchResponse createTestInstance() {     String id = randomAlphaOfLength(10).     long version = randomLongBetween(1, 10).     boolean found = randomBoolean().     return new DeleteWatchResponse(id, version, found). }

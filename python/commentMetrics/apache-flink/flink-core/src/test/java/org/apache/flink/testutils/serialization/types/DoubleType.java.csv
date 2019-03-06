@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public DoubleType getRandom(Random rnd) {     return new DoubleType(rnd.nextDouble()). }
-false;public;0;4;;@Override public int length() {     return 8. }
-false;public;1;4;;@Override public void write(DataOutputView out) throws IOException {     out.writeDouble(this.value). }
-false;public;1;4;;@Override public void read(DataInputView in) throws IOException {     this.value = in.readDouble(). }
-false;public;0;5;;@Override public int hashCode() {     final long l = Double.doubleToLongBits(this.value).     return (int) (l ^ l >>> 32). }
-false;public;1;9;;@Override public boolean equals(Object obj) {     if (obj instanceof DoubleType) {         DoubleType other = (DoubleType) obj.         return Double.doubleToLongBits(this.value) == Double.doubleToLongBits(other.value).     } else {         return false.     } }

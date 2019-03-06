@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;12;;@Override public void write(Buffer source, long byteCount) throws IOException {     if (hasErrors) {         source.skip(byteCount).         return.     }     try {         super.write(source, byteCount).     } catch (IOException e) {         hasErrors = true.         onException(e).     } }
-false;public;0;9;;@Override public void flush() throws IOException {     if (hasErrors)         return.     try {         super.flush().     } catch (IOException e) {         hasErrors = true.         onException(e).     } }
-false;public;0;9;;@Override public void close() throws IOException {     if (hasErrors)         return.     try {         super.close().     } catch (IOException e) {         hasErrors = true.         onException(e).     } }
-false;protected;1;2;;protected void onException(IOException e) { }

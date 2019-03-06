@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public ActionRequestValidationException validate() {     return null. }
-false;public;1;4;;@Override public void readFrom(StreamInput in) throws IOException {     throw new UnsupportedOperationException("PutInternalRepositoryRequest cannot be serialized for sending across the wire."). }
-false;public;1;4;;@Override public void writeTo(StreamOutput out) throws IOException {     throw new UnsupportedOperationException("PutInternalRepositoryRequest cannot be serialized for sending across the wire."). }
-false;public;0;3;;public String getName() {     return name. }
-false;public;0;3;;public String getType() {     return type. }
-false;public;1;8;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     PutInternalCcrRepositoryRequest that = (PutInternalCcrRepositoryRequest) o.     return Objects.equals(name, that.name) && Objects.equals(type, that.type). }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(name, type). }
-false;public;0;7;;@Override public String toString() {     return "PutInternalCcrRepositoryRequest{" + "name='" + name + '\'' + ", type='" + type + '\'' + '}'. }

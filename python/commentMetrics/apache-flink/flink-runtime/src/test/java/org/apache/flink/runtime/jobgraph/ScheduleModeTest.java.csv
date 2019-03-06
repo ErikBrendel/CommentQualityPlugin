@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;5;/**  * Test that schedule modes set the lazy deployment flag correctly.  */ ;/**  * Test that schedule modes set the lazy deployment flag correctly.  */ @Test public void testAllowLazyDeployment() throws Exception {     assertTrue(ScheduleMode.LAZY_FROM_SOURCES.allowLazyDeployment()).     assertFalse(ScheduleMode.EAGER.allowLazyDeployment()). }

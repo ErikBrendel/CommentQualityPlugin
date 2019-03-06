@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * returns a list of nodes in which the cache was cleared  */ ;/**  * returns a list of nodes in which the cache was cleared  */ public List<Node> getNodes() {     return nodes. }
-false;public;0;3;;public String getId() {     return id. }
-false;public;0;3;;public String getName() {     return name. }
-false;public,static;1;5;;public static <T extends NodesResponse> void declareCommonNodesResponseParsing(ConstructingObjectParser<T, Void> parser) {     parser.declareNamedObjects(ConstructingObjectParser.constructorArg(), (p, c, n) -> Node.PARSER.apply(p, n), new ParseField("nodes")).     NodesResponse.declareCommonNodesResponseParsing(parser). }

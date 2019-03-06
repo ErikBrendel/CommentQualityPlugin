@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;2;12;/**  * Append text with the given ANSI codes.  * @param text the text to append  * @param codes the ANSI codes  * @return this string  */ ;/**  * Append text with the given ANSI codes.  * @param text the text to append  * @param codes the ANSI codes  * @return this string  */ AnsiString append(String text, Code... codes) {     if (codes.length == 0 || !isAnsiSupported()) {         this.value.append(text).         return this.     }     Ansi ansi = Ansi.ansi().     for (Code code : codes) {         ansi = applyCode(ansi, code).     }     this.value.append(ansi.a(text).reset().toString()).     return this. }
-false;private;2;9;;private Ansi applyCode(Ansi ansi, Code code) {     if (code.isColor()) {         if (code.isBackground()) {             return ansi.bg(code.getColor()).         }         return ansi.fg(code.getColor()).     }     return ansi.a(code.getAttribute()). }
-false;private;0;3;;private boolean isAnsiSupported() {     return this.terminal.isAnsiSupported(). }
-false;public;0;4;;@Override public String toString() {     return this.value.toString(). }

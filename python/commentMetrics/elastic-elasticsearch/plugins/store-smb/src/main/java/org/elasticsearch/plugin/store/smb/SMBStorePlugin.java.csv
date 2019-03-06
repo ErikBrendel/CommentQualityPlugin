@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Override public Map<String, Function<IndexSettings, IndexStore>> getIndexStoreFactories() {     final Map<String, Function<IndexSettings, IndexStore>> indexStoreFactories = new HashMap<>(2).     indexStoreFactories.put("smb_mmap_fs", SmbMmapFsIndexStore::new).     indexStoreFactories.put("smb_simple_fs", SmbSimpleFsIndexStore::new).     return Collections.unmodifiableMap(indexStoreFactories). }

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,static;0;3;/**  * Gets the singleton instance.  * @return The singleton instance.  */ ;/**  * Gets the singleton instance.  * @return The singleton instance.  */ public static Acknowledge get() {     return INSTANCE. }
-false;public;1;4;;// ------------------------------------------------------------------------ @Override public boolean equals(Object obj) {     return obj != null && obj.getClass() == Acknowledge.class. }
-false;public;0;4;;@Override public int hashCode() {     return 41. }
-false;public;0;4;;@Override public String toString() {     return getClass().getSimpleName(). }
-true;protected;0;3;/**  * Read resolve to preserve the singleton object property.  * (per best practices, this should have visibility 'protected')  */ ;/**  * Read resolve to preserve the singleton object property.  * (per best practices, this should have visibility 'protected')  */ protected Object readResolve() throws java.io.ObjectStreamException {     return INSTANCE. }

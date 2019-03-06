@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Return the parameters for this script.  */ ;/**  * Return the parameters for this script.  */ public Map<String, Object> getParams() {     return params. }
-true;public;0;3;/**  * Return the update context for this script.  */ ;/**  * Return the update context for this script.  */ public Map<String, Object> getCtx() {     return ctx. }
-false;public,abstract;0;1;;public abstract void execute().
-false;;2;1;;UpdateScript newInstance(Map<String, Object> params, Map<String, Object> ctx).

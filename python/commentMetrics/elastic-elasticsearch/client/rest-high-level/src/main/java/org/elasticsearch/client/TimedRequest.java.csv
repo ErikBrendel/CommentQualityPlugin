@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;1;3;/**  * Sets the timeout to wait for the all the nodes to acknowledge  * @param timeout timeout as a {@link TimeValue}  */ ;/**  * Sets the timeout to wait for the all the nodes to acknowledge  * @param timeout timeout as a {@link TimeValue}  */ public void setTimeout(TimeValue timeout) {     this.timeout = timeout. }
-true;public;1;3;/**  * Sets the timeout to connect to the master node  * @param masterTimeout timeout as a {@link TimeValue}  */ ;/**  * Sets the timeout to connect to the master node  * @param masterTimeout timeout as a {@link TimeValue}  */ public void setMasterTimeout(TimeValue masterTimeout) {     this.masterTimeout = masterTimeout. }
-true;public;0;3;/**  * Returns the request timeout  */ ;/**  * Returns the request timeout  */ public TimeValue timeout() {     return timeout. }
-true;public;0;3;/**  * Returns the timeout for the request to be completed on the master node  */ ;/**  * Returns the timeout for the request to be completed on the master node  */ public TimeValue masterNodeTimeout() {     return masterTimeout. }

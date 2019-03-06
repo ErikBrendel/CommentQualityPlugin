@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void configurationExistShouldSucceedtIfMethodExist() throws Exception {     final GoraConfiguration conf = new GoraConfiguration().     assertTrue(GoraUtils.configurationExist(GoraAttribute.GORA_QUERY_LIMIT, conf)). }
-false;public;0;5;;@Test(expected = NoSuchMethodException.class) public void configurationExistShouldThrowExceptionIfMethodDoesNotExist() throws Exception {     final GoraConfiguration conf = new GoraConfiguration().     GoraUtils.configurationExist(GoraAttribute.GORA_KEY, conf). }
-false;public;0;6;;@Test public void getAttributeAsLongShouldSReturnTheCorrectValue() throws Exception {     final GoraConfiguration conf = new GoraConfiguration().     conf.setLimit(3L).     assertEquals(new Long(3), GoraUtils.getAttributeAsLong(GoraAttribute.GORA_QUERY_LIMIT, conf)). }

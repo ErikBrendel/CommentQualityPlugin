@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void testPollStrategy() throws Exception {     RemoteFileEndpoint<?> endpoint = context.getEndpoint("ftp://hostname", RemoteFileEndpoint.class).     assertTrue(endpoint.getPollStrategy() instanceof RemoteFilePollingConsumerPollStrategy). }

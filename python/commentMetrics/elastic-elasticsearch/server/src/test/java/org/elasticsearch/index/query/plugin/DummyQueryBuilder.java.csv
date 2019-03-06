@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;4;;@Override protected void doWriteTo(StreamOutput out) throws IOException { // only the superclass has state }
-false;protected;2;4;;@Override protected void doXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject(NAME).endObject(). }
-false;public,static;1;5;;public static DummyQueryBuilder fromXContent(XContentParser parser) throws IOException {     XContentParser.Token token = parser.nextToken().     assert token == XContentParser.Token.END_OBJECT.     return new DummyQueryBuilder(). }
-false;protected;1;4;;@Override protected Query doToQuery(QueryShardContext context) throws IOException {     return new DummyQuery(). }
-false;protected;0;4;;@Override protected int doHashCode() {     return 0. }
-false;protected;1;4;;@Override protected boolean doEquals(DummyQueryBuilder other) {     return true. }
-false;public;0;4;;@Override public String getWriteableName() {     return NAME. }

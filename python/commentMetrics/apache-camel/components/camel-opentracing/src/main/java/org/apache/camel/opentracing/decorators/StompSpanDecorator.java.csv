@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getComponent() {     return "stomp". }
-false;public;2;8;;@Override public String getDestination(Exchange exchange, Endpoint endpoint) {     String destination = super.getDestination(exchange, endpoint).     if (destination.startsWith(QUEUE_PREFIX)) {         destination = destination.substring(QUEUE_PREFIX.length()).     }     return destination. }

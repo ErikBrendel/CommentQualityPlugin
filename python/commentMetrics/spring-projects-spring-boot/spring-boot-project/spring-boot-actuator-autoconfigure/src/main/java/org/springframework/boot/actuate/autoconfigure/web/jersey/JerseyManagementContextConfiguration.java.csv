@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;6;;@Bean public ServletRegistrationBean<ServletContainer> jerseyServletRegistration(JerseyApplicationPath jerseyApplicationPath, ResourceConfig resourceConfig) {     return new ServletRegistrationBean<>(new ServletContainer(resourceConfig), jerseyApplicationPath.getUrlMapping()). }
-false;public;1;8;;@Bean public ResourceConfig resourceConfig(ObjectProvider<ResourceConfigCustomizer> resourceConfigCustomizers) {     ResourceConfig resourceConfig = new ResourceConfig().     resourceConfigCustomizers.orderedStream().forEach((customizer) -> customizer.customize(resourceConfig)).     return resourceConfig. }

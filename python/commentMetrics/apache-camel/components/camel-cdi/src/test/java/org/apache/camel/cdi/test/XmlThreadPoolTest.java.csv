@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;12;;@Deployment public static Archive<?> deployment() {     return ShrinkWrap.create(JavaArchive.class).addPackage(CdiCamelExtension.class.getPackage()).addAsResource(Paths.get("src/test/resources/camel-context-threadPool.xml").toFile(), "imported-context.xml").addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml"). }
-false;public;1;4;;@Test public void verifyThreadPool(@Named("thread-pool") ExecutorService executor) {     assertThat("Thread pool is incorrect!", executor, is(notNullValue())). }
-false;public;0;7;;@Test public void sendMessageToInbound() {     String body = inbound.requestBody((Object) "message", String.class).     assertThat("Body is incorrect!", body, matchesPattern("^Processed \\[message] with \\[Camel \\(test\\) thread #\\d+ - Thread Name]$")). }

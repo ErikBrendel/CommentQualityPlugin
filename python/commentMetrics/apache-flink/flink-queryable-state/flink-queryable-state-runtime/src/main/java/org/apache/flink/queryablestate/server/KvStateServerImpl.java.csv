@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Override public AbstractServerHandler<KvStateInternalRequest, KvStateResponse> initializeHandler() {     this.serializer = new MessageSerializer<>(new KvStateInternalRequest.KvStateInternalRequestDeserializer(), new KvStateResponse.KvStateResponseDeserializer()).     return new KvStateServerHandler(this, kvStateRegistry, serializer, stats). }
-false;public;0;4;;public MessageSerializer<KvStateInternalRequest, KvStateResponse> getSerializer() {     Preconditions.checkState(serializer != null, "Server " + getServerName() + " has not been started.").     return serializer. }
-false;public;0;4;;@Override public void start() throws Throwable {     super.start(). }
-false;public;0;4;;@Override public InetSocketAddress getServerAddress() {     return super.getServerAddress(). }
-false;public;0;9;;@Override public void shutdown() {     try {         shutdownServer().get(10L, TimeUnit.SECONDS).         log.info("{} was shutdown successfully.", getServerName()).     } catch (Exception e) {         log.warn("{} shutdown failed: {}", getServerName(), e).     } }

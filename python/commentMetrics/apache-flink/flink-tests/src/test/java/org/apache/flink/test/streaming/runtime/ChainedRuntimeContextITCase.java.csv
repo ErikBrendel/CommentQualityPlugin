@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;11;;@Test public void test() throws Exception {     StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment().     env.setParallelism(1).     env.addSource(new TestSource()).map(new TestMap()).addSink(new DiscardingSink<Integer>()).     env.execute().     assertNotEquals(srcContext, mapContext). }
-false;public;1;3;;@Override public void run(SourceContext<Integer> ctx) throws Exception { }
-false;public;0;3;;@Override public void cancel() { }
-false;public;1;4;;@Override public void open(Configuration c) {     srcContext = getRuntimeContext(). }
-false;public;1;4;;@Override public Integer map(Integer value) throws Exception {     return value. }
-false;public;1;4;;@Override public void open(Configuration c) {     mapContext = getRuntimeContext(). }

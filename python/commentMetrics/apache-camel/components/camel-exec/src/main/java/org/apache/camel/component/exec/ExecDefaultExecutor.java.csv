@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;3;5;;@Override protected Process launch(CommandLine command, Map<String, String> env, File dir) throws IOException {     process = super.launch(command, env, dir).     return process. }
-false;public;0;10;;public int getExitValue() {     if (process != null) {         try {             return process.exitValue().         } catch (IllegalThreadStateException e) {         // ignore the process is alive         }     }     return 0. }

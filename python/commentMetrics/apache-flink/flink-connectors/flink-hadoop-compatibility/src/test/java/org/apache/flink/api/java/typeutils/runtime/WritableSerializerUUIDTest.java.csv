@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected TypeSerializer<WritableID> createSerializer() {     return new WritableSerializer<>(WritableID.class). }
-false;protected;0;4;;@Override protected int getLength() {     return -1. }
-false;protected;0;4;;@Override protected Class<WritableID> getTypeClass() {     return WritableID.class. }
-false;protected;0;8;;@Override protected WritableID[] getTestData() {     return new WritableID[] { new WritableID(new UUID(0, 0)), new WritableID(new UUID(1, 0)), new WritableID(new UUID(1, 1)) }. }

@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;private;0;6;;@Named @Produces @ApplicationScoped private CamelContext getEmptyNamedGetterContext() {     return new DefaultCamelContext(). }
-false;private;0;6;;@Named @Produces @ApplicationScoped private CamelContext getEmptyNamedMethodContext() {     return new DefaultCamelContext(). }
-false;private;0;6;;@Produces @ApplicationScoped @Named("named-getter-context") private CamelContext getNamedGetterContext() {     return new DefaultCamelContext(). }
-false;private;0;6;;@Produces @ApplicationScoped @Named("named-method-context") private CamelContext getNamedMethodContext() {     return new DefaultCamelContext(). }
-false;public,static;0;8;;@Deployment public static Archive<?> deployment() {     return ShrinkWrap.create(JavaArchive.class).addPackage(CdiCamelExtension.class.getPackage()).addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml"). }
-false;public;1;13;;@Test public void verifyCamelContexts(Instance<CamelContext> contexts) {     assertThat(contexts, containsInAnyOrder(hasProperty("name", equalTo("emptyNamedFieldContext")), hasProperty("name", equalTo("emptyNamedGetterContext")), hasProperty("name", equalTo("emptyNamedMethodContext")), hasProperty("name", equalTo("named-field-context")), hasProperty("name", equalTo("named-getter-context")), hasProperty("name", equalTo("named-method-context")), hasProperty("name", equalTo("emptyNamedBeanContext")), hasProperty("name", equalTo("named-bean-context")))). }

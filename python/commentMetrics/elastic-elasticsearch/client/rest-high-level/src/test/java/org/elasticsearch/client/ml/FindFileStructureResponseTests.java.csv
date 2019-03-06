@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected FindFileStructureResponse createTestInstance() {     return new FindFileStructureResponse(FileStructureTests.createTestFileStructure()). }
-false;protected;1;4;;@Override protected FindFileStructureResponse doParseInstance(XContentParser parser) throws IOException {     return FindFileStructureResponse.fromXContent(parser). }
-false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }
-false;protected;0;4;;@Override protected Predicate<String> getRandomFieldsExcludeFilter() {     return field -> !field.isEmpty(). }

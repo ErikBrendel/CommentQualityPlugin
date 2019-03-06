@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public String hitName() {     return hitName. }
-false;public;0;4;;@Override public String name() {     return name. }
-false;public;0;3;;public DataType getDataType() {     return dataType. }
-false;public;0;3;;public boolean useDocValue() {     return docValue. }
-false;public;1;12;;@Override public void collectFields(SqlSourceBuilder sourceBuilder) {     // nested fields are handled by inner hits     if (hitName != null) {         return.     }     if (docValue) {         sourceBuilder.addDocField(name, dataType.format()).     } else {         sourceBuilder.addSourceField(name).     } }
-false;public;0;4;;@Override public String toString() {     return name. }

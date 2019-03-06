@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public Result evaluate(final Stats stats) {     return new Result(this, this.value <= stats.numDocs). }
-false;public;0;4;;@Override public String getWriteableName() {     return NAME. }
-false;public;1;4;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeLong(value). }
-false;public;2;4;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     return builder.field(NAME, value). }
-false;public,static;1;7;;public static MaxDocsCondition fromXContent(XContentParser parser) throws IOException {     if (parser.nextToken() == XContentParser.Token.VALUE_NUMBER) {         return new MaxDocsCondition(parser.longValue()).     } else {         throw new IllegalArgumentException("invalid token: " + parser.currentToken()).     } }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;public void testTempBlobName() {     final String blobName = randomAlphaOfLengthBetween(1, 20).     final String tempBlobName = FsBlobContainer.tempBlobName(blobName).     assertThat(tempBlobName, startsWith("pending-")).     assertThat(tempBlobName, containsString(blobName)). }
-false;public;0;4;;public void testIsTempBlobName() {     final String tempBlobName = FsBlobContainer.tempBlobName(randomAlphaOfLengthBetween(1, 20)).     assertThat(FsBlobContainer.isTempBlobName(tempBlobName), is(true)). }

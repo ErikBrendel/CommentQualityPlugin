@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void testMocking() {     given(this.caller.getService().greeting()).willReturn("Boot").     assertThat(this.caller.sayGreeting()).isEqualTo("I say Boot"). }
-false;public;0;5;;@Bean @Scope(proxyMode = ScopedProxyMode.TARGET_CLASS) public ExampleService exampleService() {     return new FailingExampleService(). }

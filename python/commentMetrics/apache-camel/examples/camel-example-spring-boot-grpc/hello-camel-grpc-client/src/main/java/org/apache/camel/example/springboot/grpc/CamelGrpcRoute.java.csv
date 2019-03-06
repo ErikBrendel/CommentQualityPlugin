@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;@Override public void process(Exchange exchange) throws Exception {     exchange.getIn().setBody(request, CamelHelloRequest.class). }
-false;public;0;13;;@Override public void configure() throws Exception {     CamelHelloRequest request = CamelHelloRequest.newBuilder().setName("Camel").build().     from("timer://foo?period=10000&repeatCount=5").process(new Processor() {          @Override         public void process(Exchange exchange) throws Exception {             exchange.getIn().setBody(request, CamelHelloRequest.class).         }     }).to("grpc://localhost:50051/org.apache.camel.examples.CamelHello?method=sayHelloToCamel&synchronous=true").log("Received ${body}"). }

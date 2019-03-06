@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void testInvokeRouter() {     Object returnValue = template.requestBody("direct:router", REQUEST_MESSAGE).     assertNotNull(returnValue).     assertTrue(returnValue instanceof String).     assertTrue(((String) returnValue).contains("Return Value")).     assertTrue(((String) returnValue).contains("http://www.w3.org/2001/XMLSchema-instance")). }

@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Before public void setUp() {     this.applicationContext = new ClassPathXmlApplicationContext(CONTEXT, CLASS).     resetInterceptor(). }
-false;public;0;8;;@Test public void testAutoProxiedLookup() {     OverloadLookup olup = (OverloadLookup) applicationContext.getBean("autoProxiedOverload").     ITestBean jenny = olup.newTestBean().     assertEquals("Jenny", jenny.getName()).     assertEquals("foo", olup.testMethod()).     assertInterceptorCount(2). }
-false;public;0;8;;@Test public void testRegularlyProxiedLookup() {     OverloadLookup olup = (OverloadLookup) applicationContext.getBean("regularlyProxiedOverload").     ITestBean jenny = olup.newTestBean().     assertEquals("Jenny", jenny.getName()).     assertEquals("foo", olup.testMethod()).     assertInterceptorCount(2). }
-false;private;1;4;;private void assertInterceptorCount(int count) {     DebugInterceptor interceptor = getInterceptor().     assertEquals("Interceptor count is incorrect", count, interceptor.getCount()). }
-false;private;0;4;;private void resetInterceptor() {     DebugInterceptor interceptor = getInterceptor().     interceptor.resetCount(). }
-false;private;0;3;;private DebugInterceptor getInterceptor() {     return (DebugInterceptor) applicationContext.getBean("interceptor"). }
-false;public,abstract;0;1;;public abstract ITestBean newTestBean().
-false;public;0;3;;public String testMethod() {     return "foo". }

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;8;;@Bean @ConditionalOnEnabledEndpoint public MappingsEndpoint mappingsEndpoint(ApplicationContext applicationContext, ObjectProvider<MappingDescriptionProvider> descriptionProviders) {     return new MappingsEndpoint(descriptionProviders.orderedStream().collect(Collectors.toList()), applicationContext). }
-false;;0;4;;@Bean ServletsMappingDescriptionProvider servletMappingDescriptionProvider() {     return new ServletsMappingDescriptionProvider(). }
-false;;0;4;;@Bean FiltersMappingDescriptionProvider filterMappingDescriptionProvider() {     return new FiltersMappingDescriptionProvider(). }
-false;;0;4;;@Bean DispatcherServletsMappingDescriptionProvider dispatcherServletMappingDescriptionProvider() {     return new DispatcherServletsMappingDescriptionProvider(). }
-false;public;0;4;;@Bean public DispatcherHandlersMappingDescriptionProvider dispatcherHandlerMappingDescriptionProvider() {     return new DispatcherHandlersMappingDescriptionProvider(). }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;7;;public static DataSet<Long> getDefaultVertexDataSet(ExecutionEnvironment env) {     List<Long> verticesList = new LinkedList<Long>().     for (long vertexId : VERTICES) {         verticesList.add(vertexId).     }     return env.fromCollection(verticesList). }
-false;public,static;1;8;;public static DataSet<Tuple2<Long, Long>> getDefaultEdgeDataSet(ExecutionEnvironment env) {     List<Tuple2<Long, Long>> edgeList = new LinkedList<Tuple2<Long, Long>>().     for (Object[] edge : EDGES) {         edgeList.add(new Tuple2<Long, Long>((Long) edge[0], (Long) edge[1])).     }     return env.fromCollection(edgeList). }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Override public void defaultValuesAreConsistent() {     DynatraceProperties properties = new DynatraceProperties().     DynatraceConfig config = (key) -> null.     assertStepRegistryDefaultValues(properties, config).     assertThat(properties.getTechnologyType()).isEqualTo(config.technologyType()). }

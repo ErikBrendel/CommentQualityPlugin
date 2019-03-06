@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;3;;public static DateTimeProcessor randomDateTimeProcessor() {     return new DateTimeProcessor(randomFrom(DateTimeExtractor.values()), UTC). }
-false;protected;0;4;;@Override protected DateTimeProcessor createTestInstance() {     return randomDateTimeProcessor(). }
-false;protected;0;4;;@Override protected Reader<DateTimeProcessor> instanceReader() {     return DateTimeProcessor::new. }
-false;protected;1;5;;@Override protected DateTimeProcessor mutateInstance(DateTimeProcessor instance) throws IOException {     DateTimeExtractor replaced = randomValueOtherThan(instance.extractor(), () -> randomFrom(DateTimeExtractor.values())).     return new DateTimeProcessor(replaced, UTC). }
-false;public;0;10;;public void testApply() {     DateTimeProcessor proc = new DateTimeProcessor(DateTimeExtractor.YEAR, UTC).     assertEquals(1970, proc.process(dateTime(0L))).     assertEquals(2017, proc.process(dateTime(2017, 01, 02, 10, 10))).     proc = new DateTimeProcessor(DateTimeExtractor.DAY_OF_MONTH, UTC).     assertEquals(1, proc.process(dateTime(0L))).     assertEquals(2, proc.process(dateTime(2017, 01, 02, 10, 10))).     assertEquals(31, proc.process(dateTime(2017, 01, 31, 10, 10))). }

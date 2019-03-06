@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;8;;@Override protected Object[] extract(IN record) {     Object[] al = new Object[record.productArity()].     for (int i = 0. i < record.productArity(). i++) {         al[i] = record.productElement(i).     }     return al. }

@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;12;;@Test public void sendIn() throws Exception {     result.expectedMessageCount(1).     Map<String, Object> headers = new HashMap<>().     headers.put(S3Constants.KEY, "test").     template.sendBodyAndHeaders("direct:downloadLink", headers).     assertMockEndpointsSatisfied().     assertResultExchange(result.getExchanges().get(0)). }
-false;private;1;4;;private void assertResultExchange(Exchange resultExchange) {     String dlLink = resultExchange.getIn().getHeader(S3Constants.DOWNLOAD_LINK, String.class).     assertEquals("http://aws.amazonas.s3/file.zip", dlLink). }
-false;protected;0;9;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry registry = super.createRegistry().     client = new AmazonS3ClientMock().     registry.bind("amazonS3Client", client).     return registry. }
-false;protected;0;4;;@Override protected AbstractApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/component/aws/s3/S3ComponentSpringTest-context.xml"). }

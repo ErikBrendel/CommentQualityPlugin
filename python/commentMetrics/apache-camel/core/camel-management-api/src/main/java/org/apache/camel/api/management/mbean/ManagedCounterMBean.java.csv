@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;0;2;;@ManagedOperation(description = "Reset counters") void reset().
-false;;0;2;;@ManagedAttribute(description = "Timestamp when the stats was initially started") Date getStartTimestamp().
-false;;0;2;;@ManagedAttribute(description = "Timestamp when the stats was last reset or initially started") Date getResetTimestamp().
-false;;0;2;;@ManagedAttribute(description = "Total number of exchanges") long getExchangesTotal() throws Exception.

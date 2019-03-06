@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;5;;@Override protected ConfigurableApplicationContext getApplicationContext() {     return new GenericXmlApplicationContext("/org/springframework/cache/config/cache-advice.xml"). }
-false;public;0;5;;@Test public void testKeyStrategy() throws Exception {     CacheInterceptor bean = this.ctx.getBean("cacheAdviceClass", CacheInterceptor.class).     Assert.assertSame(this.ctx.getBean("keyGenerator"), bean.getKeyGenerator()). }

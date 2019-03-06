@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public Collection<TaskManagerInfo> getTaskManagerInfos() {     return taskManagerInfos. }
-false;public;1;11;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     TaskManagersInfo that = (TaskManagersInfo) o.     return Objects.equals(taskManagerInfos, that.taskManagerInfos). }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(taskManagerInfos). }

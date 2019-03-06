@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected TypeSerializer<BooleanValue> createSerializer() {     return new BooleanValueSerializer(). }
-false;protected;0;4;;@Override protected int getLength() {     return 1. }
-false;protected;0;4;;@Override protected Class<BooleanValue> getTypeClass() {     return BooleanValue.class. }
-false;protected;0;9;;@Override protected BooleanValue[] getTestData() {     Random rnd = new Random(874597969123412341L).     return new BooleanValue[] { new BooleanValue(true), new BooleanValue(false), new BooleanValue(rnd.nextBoolean()), new BooleanValue(rnd.nextBoolean()), new BooleanValue(rnd.nextBoolean()) }. }

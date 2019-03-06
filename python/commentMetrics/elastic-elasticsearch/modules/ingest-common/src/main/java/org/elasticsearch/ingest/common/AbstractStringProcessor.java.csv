@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public String getField() {     return field. }
-false;;0;3;;boolean isIgnoreMissing() {     return ignoreMissing. }
-false;;0;3;;String getTargetField() {     return targetField. }
-false;public,final;1;13;;@Override public final IngestDocument execute(IngestDocument document) {     String val = document.getFieldValue(field, String.class, ignoreMissing).     if (val == null && ignoreMissing) {         return document.     } else if (val == null) {         throw new IllegalArgumentException("field [" + field + "] is null, cannot process it.").     }     document.setFieldValue(targetField, process(val)).     return document. }
-false;protected,abstract;1;1;;protected abstract T process(String value).
-false;public;3;9;;@Override public AbstractStringProcessor create(Map<String, Processor.Factory> registry, String tag, Map<String, Object> config) throws Exception {     String field = ConfigurationUtils.readStringProperty(processorType, tag, config, "field").     boolean ignoreMissing = ConfigurationUtils.readBooleanProperty(processorType, tag, config, "ignore_missing", false).     String targetField = ConfigurationUtils.readStringProperty(processorType, tag, config, "target_field", field).     return newProcessor(tag, config, field, ignoreMissing, targetField). }
-false;protected,abstract;5;2;;protected abstract AbstractStringProcessor newProcessor(String processorTag, Map<String, Object> config, String field, boolean ignoreMissing, String targetField).

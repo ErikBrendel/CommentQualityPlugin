@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;// -------------------------------------------------------------------------------------------- // All mutating methods must fail // -------------------------------------------------------------------------------------------- @Override public void addAllToProperties(Properties props) {     // override to make the UnmodifiableConfigurationTest happy     super.addAllToProperties(props). }
-false;public,final;1;4;;@Override public final void addAll(Configuration other) {     error(). }
-false;public,final;2;4;;@Override public final void addAll(Configuration other, String prefix) {     error(). }
-false;final;2;4;;@Override final <T> void setValueInternal(String key, T value) {     error(). }
-false;public;1;5;;@Override public <T> boolean removeConfig(ConfigOption<T> configOption) {     error().     return false. }
-false;private;0;3;;private void error() {     throw new UnsupportedOperationException("The configuration is unmodifiable. its contents cannot be changed."). }

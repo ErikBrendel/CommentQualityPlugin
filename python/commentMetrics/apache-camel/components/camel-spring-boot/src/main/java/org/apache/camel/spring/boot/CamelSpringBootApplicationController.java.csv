@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected ProducerTemplate findOrCreateCamelTemplate() {     return applicationContext.getBean(ProducerTemplate.class). }
-false;protected;0;4;;@Override protected CamelContext createCamelContext() {     return camelContext. }
-false;protected;0;11;;@Override protected void doStop() throws Exception {     LOG.debug("Controller is shutting down CamelContext").     try {         super.doStop().     } finally {         completed.set(true).         // should use the latch on this instance         CamelSpringBootApplicationController.this.latch.countDown().     } }
-false;public;0;3;;public CountDownLatch getLatch() {     return this.latch. }
-false;public;0;3;;public AtomicBoolean getCompleted() {     return completed. }
-true;public;0;12;/**  * Runs the application and blocks the main thread and shutdown Camel graceful when the JVM is stopping.  */ ;/**  * Runs the application and blocks the main thread and shutdown Camel graceful when the JVM is stopping.  */ public void run() {     LOG.debug("Controller is starting and waiting for Spring-Boot to stop or JVM to terminate").     try {         main.run().         // keep the daemon thread running         LOG.debug("Waiting for CamelContext to complete shutdown").         latch.await().     } catch (Exception e) {         throw new RuntimeException(e).     }     LOG.debug("CamelContext shutdown complete."). }
-true;public;0;4;/**  * @deprecated use {@link #run()}  */ ;/**  * @deprecated use {@link #run()}  */ @Deprecated public void blockMainThread() {     run(). }
-false;private;0;4;;@PreDestroy private void destroy() {     main.completed(). }

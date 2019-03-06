@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Before public void setup() {     resetRequestAndResponse(). }
-false;protected;2;5;;protected void setRequest(String method, String requestUri) {     this.servletRequest.setMethod(method).     this.servletRequest.setRequestURI(requestUri).     this.request = new ServletServerHttpRequest(this.servletRequest). }
-false;protected;0;5;;protected void resetRequestAndResponse() {     resetRequest().     resetResponse().     this.asyncControl = this.request.getAsyncRequestControl(this.response). }
-false;protected;0;5;;protected void resetRequest() {     this.servletRequest = new MockHttpServletRequest().     this.servletRequest.setAsyncSupported(true).     this.request = new ServletServerHttpRequest(this.servletRequest). }
-false;protected;0;4;;protected void resetResponse() {     this.servletResponse = new MockHttpServletResponse().     this.response = new ServletServerHttpResponse(this.servletResponse). }

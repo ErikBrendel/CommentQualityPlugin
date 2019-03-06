@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;11;;public static JobGraph stoppableJob(final StopJobSignal stopJobSignal) {     final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment().     env.addSource(new InfiniteSourceFunction(stopJobSignal)).setParallelism(2).shuffle().addSink(new DiscardingSink<>()).setParallelism(2).     return env.getStreamGraph().getJobGraph(). }
-false;public,static;1;3;;public static StopJobSignal usingMarkerFile(final Path stopJobMarkerFile) {     return new StopJobSignal(stopJobMarkerFile.toString()). }
-true;public;0;7;/**  * Signals that the job should stop.  */ ;/**  * Signals that the job should stop.  */ public void signal() {     try {         Files.delete(Paths.get(stopJobMarkerFile)).     } catch (final IOException e) {         throw new RuntimeException(e).     } }
-true;public;0;3;/**  * True if job should stop.  */ ;/**  * True if job should stop.  */ public boolean isSignaled() {     return !Files.exists(Paths.get(stopJobMarkerFile)). }
-false;public;1;10;;@Override public void run(SourceContext<Integer> ctx) throws Exception {     while (running && !stopJobSignal.isSignaled()) {         synchronized (ctx.getCheckpointLock()) {             ctx.collect(0).         }         Thread.sleep(5L).     } }
-false;public;0;4;;@Override public void cancel() {     running = false. }

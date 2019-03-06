@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void propertyNotDefined() {     this.contextRunner.run((context) -> assertThat(context).doesNotHaveBean("foo")). }
-false;public;0;5;;@Test public void propertyDefinedAsCommaSeparated() {     this.contextRunner.withPropertyValues("spring.test.my-list=value1").run((context) -> assertThat(context).hasBean("foo")). }
-false;public;0;5;;@Test public void propertyDefinedAsList() {     this.contextRunner.withPropertyValues("spring.test.my-list[0]=value1").run((context) -> assertThat(context).hasBean("foo")). }
-false;public;0;5;;@Test public void propertyDefinedAsCommaSeparatedRelaxed() {     this.contextRunner.withPropertyValues("spring.test.myList=value1").run((context) -> assertThat(context).hasBean("foo")). }
-false;public;0;5;;@Test public void propertyDefinedAsListRelaxed() {     this.contextRunner.withPropertyValues("spring.test.myList[0]=value1").run((context) -> assertThat(context).hasBean("foo")). }
-false;public;0;4;;@Bean public String foo() {     return "foo". }

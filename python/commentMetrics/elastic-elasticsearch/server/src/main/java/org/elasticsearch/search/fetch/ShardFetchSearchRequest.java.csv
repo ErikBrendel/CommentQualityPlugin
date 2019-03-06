@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     OriginalIndices.writeOriginalIndices(originalIndices, out). }
-false;public;0;7;;@Override public String[] indices() {     if (originalIndices == null) {         return null.     }     return originalIndices.indices(). }
-false;public;0;7;;@Override public IndicesOptions indicesOptions() {     if (originalIndices == null) {         return null.     }     return originalIndices.indicesOptions(). }
-false;public;1;4;;@Override public void readFrom(StreamInput in) throws IOException {     throw new UnsupportedOperationException("usage of Streamable is to be replaced by Writeable"). }

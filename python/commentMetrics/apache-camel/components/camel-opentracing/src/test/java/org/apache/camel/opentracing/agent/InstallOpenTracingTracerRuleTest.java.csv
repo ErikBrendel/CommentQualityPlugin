@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Before public void init() {     tracer.reset(). }
-false;public,static;0;3;;public static MockTracer getTracer() {     return tracer. }
-false;protected;0;9;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry registry = super.createRegistry().     // Add the mock tracer to the registry     registry.bind("tracer", tracer).     return registry. }
-false;public;0;4;;@Override public boolean isDumpRouteCoverage() {     return true. }
-false;public;0;19;;@Test public void testSendMatchingMessage() throws Exception {     String expectedBody = "<matched/>".     resultEndpoint.expectedBodiesReceived(expectedBody).     template.sendBodyAndHeader(expectedBody, "foo", "bar").     resultEndpoint.assertIsSatisfied().     List<MockSpan> spans = getTracer().finishedSpans().     assertEquals(3, spans.size()).     assertEquals("mock", spans.get(0).operationName()).     assertEquals("start", spans.get(1).operationName()).     assertEquals("start", spans.get(2).operationName()).     assertEquals(Tags.SPAN_KIND_CLIENT, spans.get(0).tags().get(Tags.SPAN_KIND.getKey())).     assertEquals(Tags.SPAN_KIND_SERVER, spans.get(1).tags().get(Tags.SPAN_KIND.getKey())).     assertEquals(Tags.SPAN_KIND_CLIENT, spans.get(2).tags().get(Tags.SPAN_KIND.getKey())). }
-false;public;0;4;;@Override public void configure() {     from("direct:start").filter(header("foo").isEqualTo("bar")).to("mock:result"). }
-false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          @Override         public void configure() {             from("direct:start").filter(header("foo").isEqualTo("bar")).to("mock:result").         }     }. }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String toString() {     return "stale shard, shard " + shardId + ", alloc. id [" + allocationId + "]". }
-true;public;0;3;/**  * The shard id of the stale shard.  */ ;/**  * The shard id of the stale shard.  */ public ShardId getShardId() {     return shardId. }
-true;public;0;3;/**  * The allocation id of the stale shard.  */ ;/**  * The allocation id of the stale shard.  */ public String getAllocationId() {     return allocationId. }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;8;;@Override public IN next(IN reuse) throws IOException {     IN next = iterator.next(reuse).     if (next != null) {         numRecordsIn.inc().     }     return next. }
-false;public;0;8;;@Override public IN next() throws IOException {     IN next = iterator.next().     if (next != null) {         numRecordsIn.inc().     }     return next. }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void testInfo() throws Exception {     MainResponse infoResult = template.requestBody("direct:info", "test", MainResponse.class).     assertNotNull(infoResult.getClusterName()).     assertNotNull(infoResult.getNodeName()). }
-false;public;0;4;;@Override public void configure() {     from("direct:info").to("elasticsearch-rest://elasticsearch?operation=Info&hostAddresses=localhost:" + ES_BASE_HTTP_PORT). }
-false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() {             from("direct:info").to("elasticsearch-rest://elasticsearch?operation=Info&hostAddresses=localhost:" + ES_BASE_HTTP_PORT).         }     }. }

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;4;;public static ChannelHandlerFactory createMyCustomDecoder() {     ByteBuf[] delimiters = new ByteBuf[] { nullDelimiter, nullDelimiter }.     return ChannelHandlerFactories.newDelimiterBasedFrameDecoder(4096, delimiters, "tcp"). }
-false;public,static;0;3;;public static ChannelHandler createMyCustomDecoder2() {     return new BytesDecoder(). }
-false;public,static;0;3;;public static ChannelHandler createMyCustomEncoder() {     return new BytesEncoder(). }
-false;protected;3;11;;@Override protected void decode(ChannelHandlerContext ctx, ByteBuf msg, List<Object> out) throws Exception {     // it may be empty, then return null     if (msg.isReadable()) {         // ByteBuf may not expose array method for accessing the under layer bytes         byte[] bytes = new byte[msg.readableBytes()].         int readerIndex = msg.readerIndex().         msg.getBytes(readerIndex, bytes).         out.add(bytes).     } }
-false;protected;3;7;;@Override protected void encode(ChannelHandlerContext ctx, byte[] msg, List<Object> out) throws Exception {     byte[] bytes = msg.     ByteBuf buf = ByteBufAllocator.DEFAULT.buffer(bytes.length).     buf.writeBytes(bytes).     out.add(buf). }

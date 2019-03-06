@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void testFromString() {     final String input1 = "PRIVATE".     final String input2 = "private".     assertThat(PublishableStatus.fromString(input1), is(PublishableStatus.private_)).     assertThat(PublishableStatus.fromString(input2), is(PublishableStatus.private_)). }
-false;public;0;6;;@Test(expected = IllegalArgumentException.class) public void testFromStringEmpty() {     final String input3 = "".     assertThat(PublishableStatus.fromString(input3), is(PublishableStatus.private_)). }
-false;public;0;6;;@Test(expected = NullPointerException.class) public void testFromStringNull() {     final String input4 = null.     assertThat(PublishableStatus.fromString(input4), is(PublishableStatus.private_)). }

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public List<ProcessorDefinition<?>> getOutputs() {     return outputs. }
-false;public;0;3;;public boolean isOutputSupported() {     return true. }
-false;public;1;8;;public void setOutputs(List<ProcessorDefinition<?>> outputs) {     this.outputs = outputs.     if (outputs != null) {         for (ProcessorDefinition<?> output : outputs) {             configureChild(output).         }     } }
-false;public;0;4;;@Override public String getShortName() {     return "output". }
-false;public;0;4;;@Override public String toString() {     return getShortName() + " -> [" + outputs + "]". }

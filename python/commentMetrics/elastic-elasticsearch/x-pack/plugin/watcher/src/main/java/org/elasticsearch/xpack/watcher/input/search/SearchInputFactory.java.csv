@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String type() {     return SearchInput.TYPE. }
-false;public;2;4;;@Override public SearchInput parseInput(String watchId, XContentParser parser) throws IOException {     return SearchInput.parse(watchId, parser). }
-false;public;1;4;;@Override public ExecutableSearchInput createExecutable(SearchInput input) {     return new ExecutableSearchInput(input, client, searchTemplateService, defaultTimeout). }

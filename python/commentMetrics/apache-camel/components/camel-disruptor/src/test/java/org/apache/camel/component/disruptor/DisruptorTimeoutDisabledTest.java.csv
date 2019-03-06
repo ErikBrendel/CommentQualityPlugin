@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Test public void testDisruptorNoTimeout() throws Exception {     final Future<String> out = template.asyncRequestBody("disruptor:foo?timeout=0", "World", String.class).     // use 5 sec failsafe in case something hangs     assertEquals("Bye World", out.get(5, TimeUnit.SECONDS)). }
-false;public;0;5;;@Override public void configure() throws Exception {     from("disruptor:foo").to("mock:before").delay(500).transform(body().prepend("Bye ")).to("mock:result"). }
-false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("disruptor:foo").to("mock:before").delay(500).transform(body().prepend("Bye ")).to("mock:result").         }     }. }

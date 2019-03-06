@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;5;;public static TermsGroupSource randomTermsGroupSource() {     String field = randomAlphaOfLengthBetween(1, 20).     return new TermsGroupSource(field). }
-false;protected;1;4;;@Override protected TermsGroupSource doParseInstance(XContentParser parser) throws IOException {     return TermsGroupSource.fromXContent(parser, false). }
-false;protected;0;4;;@Override protected TermsGroupSource createTestInstance() {     return randomTermsGroupSource(). }
-false;protected;0;4;;@Override protected Reader<TermsGroupSource> instanceReader() {     return TermsGroupSource::new. }

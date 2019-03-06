@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry jndi = super.createRegistry().     jndi.bind("myPoll", new MyPollStrategy()).     return jndi. }
-false;public;0;7;;@Override @Before public void setUp() throws Exception {     deleteDirectory("target/data/pollstrategy").     super.setUp().     template.sendBodyAndHeader("file:target/data/pollstrategy/", "Hello World", Exchange.FILE_NAME, "hello.txt"). }
-false;public;0;14;;@Test public void testFirstPollNotBegin() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMessageCount(1).     assertMockEndpointsSatisfied().     oneExchangeDone.matchesMockWaitTime().     // the poll strategy commit is executed after the exchange is done     Thread.sleep(100).     assertTrue(event.startsWith("beginbegincommit")). }
-false;public;0;3;;public void configure() throws Exception {     from(fileUrl).convertBodyTo(String.class).to("mock:result"). }
-false;protected;0;7;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from(fileUrl).convertBodyTo(String.class).to("mock:result").         }     }. }
-false;public;2;8;;public boolean begin(Consumer consumer, Endpoint endpoint) {     event += "begin".     if (counter++ == 0) {         // deny polling at first call         return false.     }     return true. }
-false;public;3;3;;public void commit(Consumer consumer, Endpoint endpoint, int polledMessages) {     event += "commit". }
-false;public;4;4;;public boolean rollback(Consumer consumer, Endpoint endpoint, int retryCounter, Exception cause) throws Exception {     event += "rollback".     return false. }

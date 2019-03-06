@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void viewClass() throws Exception {     ScriptTemplateViewResolver resolver = new ScriptTemplateViewResolver().     Assert.assertEquals(ScriptTemplateView.class, resolver.requiredViewClass()).     DirectFieldAccessor viewAccessor = new DirectFieldAccessor(resolver).     Class<?> viewClass = (Class<?>) viewAccessor.getPropertyValue("viewClass").     Assert.assertEquals(ScriptTemplateView.class, viewClass). }

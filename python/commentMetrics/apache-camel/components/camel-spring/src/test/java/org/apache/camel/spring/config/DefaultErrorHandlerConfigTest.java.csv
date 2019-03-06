@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void testRouteInheritsConfiguredErrorHandler() throws Exception {     assertReceivedMessageWithErrorHandlerValue("foo", null). }
-false;public;0;4;;@Test public void testRouteConfiguredErrorHandler() throws Exception {     assertReceivedMessageWithErrorHandlerValue("bar", null). }
-false;protected;2;7;;protected void assertReceivedMessageWithErrorHandlerValue(String name, String value) throws Exception {     template.sendBody("direct:" + name, expectedBody).     MockEndpoint endpoint = MockEndpoint.resolve(context, "mock:" + name).     endpoint.expectedMessageCount(1).     endpoint.assertIsSatisfied(). }

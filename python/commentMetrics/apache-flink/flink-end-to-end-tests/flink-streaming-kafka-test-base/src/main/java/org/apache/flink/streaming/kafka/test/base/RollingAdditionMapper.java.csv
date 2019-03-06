@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;13;;@Override public KafkaEvent map(KafkaEvent event) throws Exception {     Integer totalCount = currentTotalCount.value().     if (totalCount == null) {         totalCount = 0.     }     totalCount += event.getFrequency().     currentTotalCount.update(totalCount).     return new KafkaEvent(event.getWord(), totalCount, event.getTimestamp()). }
-false;public;1;4;;@Override public void open(Configuration parameters) throws Exception {     currentTotalCount = getRuntimeContext().getState(new ValueStateDescriptor<>("currentTotalCount", Integer.class)). }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;3;4;;@Override public void before(Method method, Object[] args, @Nullable Object target) throws Throwable {     invokeAdviceMethod(getJoinPointMatch(), null, null). }
-false;public;0;4;;@Override public boolean isBeforeAdvice() {     return true. }
-false;public;0;4;;@Override public boolean isAfterAdvice() {     return false. }

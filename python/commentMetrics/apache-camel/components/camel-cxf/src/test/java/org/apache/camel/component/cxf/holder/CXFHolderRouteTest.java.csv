@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;public void configure() {     from(CXF_ENDPOINT_URI).wireTap("seda:tap").process(new MyProcessor()).     from("seda:tap").to("log:myEndpoint"). }
-false;protected;0;9;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from(CXF_ENDPOINT_URI).wireTap("seda:tap").process(new MyProcessor()).             from("seda:tap").to("log:myEndpoint").         }     }. }

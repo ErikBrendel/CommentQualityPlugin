@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public BlockingQueue<Runnable> queue() {     return executor().getQueue(). }
-false;public;0;4;;@Override public Stream<Runnable> tasks() {     return executor().getTasks(). }
-false;public;0;4;;@Override public long largestPoolSize() {     return executor().getLargestPoolSize(). }
-false;public;1;4;;@Override public void execute(Runnable runnable) {     executor().execute(runnable). }
-false;private;0;3;;private EsThreadPoolExecutor executor() {     return (EsThreadPoolExecutor) threadPool.executor(THREAD_POOL_NAME). }

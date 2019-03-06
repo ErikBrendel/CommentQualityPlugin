@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;7;;@Override public ListenableFuture<Void> send(Message<P> message) {     ByteBuf byteBuf = this.outbound.alloc().buffer().     this.codec.encode(message, byteBuf).     Mono<Void> sendCompletion = this.outbound.send(Mono.just(byteBuf)).then().     return new MonoToListenableFutureAdapter<>(sendCompletion). }
-false;public;2;5;;@Override @SuppressWarnings("deprecation") public void onReadInactivity(Runnable runnable, long inactivityDuration) {     this.inbound.withConnection(conn -> conn.onReadIdle(inactivityDuration, runnable)). }
-false;public;2;5;;@Override @SuppressWarnings("deprecation") public void onWriteInactivity(Runnable runnable, long inactivityDuration) {     this.inbound.withConnection(conn -> conn.onWriteIdle(inactivityDuration, runnable)). }
-false;public;0;4;;@Override public void close() {     this.closeProcessor.onComplete(). }

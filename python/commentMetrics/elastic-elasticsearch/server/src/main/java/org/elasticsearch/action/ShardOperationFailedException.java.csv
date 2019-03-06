@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,final;0;4;/**  * The index the operation failed on. Might return {@code null} if it can't be derived.  */ ;/**  * The index the operation failed on. Might return {@code null} if it can't be derived.  */ @Nullable public final String index() {     return index. }
-true;public,final;0;3;/**  * The index the operation failed on. Might return {@code -1} if it can't be derived.  */ ;/**  * The index the operation failed on. Might return {@code -1} if it can't be derived.  */ public final int shardId() {     return shardId. }
-true;public,final;0;3;/**  * The reason of the failure.  */ ;/**  * The reason of the failure.  */ public final String reason() {     return reason. }
-true;public,final;0;3;/**  * The status of the failure.  */ ;/**  * The status of the failure.  */ public final RestStatus status() {     return status. }
-true;public,final;0;3;/**  * The cause of this failure  */ ;/**  * The cause of this failure  */ public final Throwable getCause() {     return cause. }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;15;;@Override protected Request createTestInstance() {     Request request = new Request(randomAlphaOfLengthBetween(1, 20)).     request.setCalcInterim(randomBoolean()).     if (randomBoolean()) {         request.setStart(randomAlphaOfLengthBetween(1, 20)).     }     if (randomBoolean()) {         request.setEnd(randomAlphaOfLengthBetween(1, 20)).     }     if (randomBoolean()) {         request.setAdvanceTime(randomAlphaOfLengthBetween(1, 20)).     }     return request. }
-false;protected;0;4;;@Override protected Writeable.Reader<Request> instanceReader() {     return Request::new. }
-false;public;0;3;;public void testNullJobIdThrows() {     expectThrows(IllegalArgumentException.class, () -> new Request((String) null)). }

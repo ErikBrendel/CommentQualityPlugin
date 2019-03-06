@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;12;;@Override public CompletableFuture<Void> beginStep(Exchange exchange, CamelSagaStep step) {     LRASagaStep sagaStep.     try {         sagaStep = LRASagaStep.fromCamelSagaStep(step, exchange).     } catch (RuntimeException ex) {         return CompletableFuture.supplyAsync(() -> {             throw ex.         }).     }     return sagaService.getClient().join(this.lraURL, sagaStep). }
-false;public;0;4;;@Override public CompletableFuture<Void> compensate() {     return sagaService.getClient().compensate(this.lraURL). }
-false;public;0;4;;@Override public CompletableFuture<Void> complete() {     return sagaService.getClient().complete(this.lraURL). }
-false;public;0;4;;@Override public String getId() {     return this.lraURL.toString(). }

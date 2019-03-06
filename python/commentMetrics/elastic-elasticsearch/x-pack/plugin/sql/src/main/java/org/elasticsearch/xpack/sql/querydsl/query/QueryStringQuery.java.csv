@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;13;;@Override public QueryBuilder asBuilder() {     final QueryStringQueryBuilder queryBuilder = QueryBuilders.queryStringQuery(query).     queryBuilder.fields(fields).     options.forEach((k, v) -> {         if (BUILDER_APPLIERS.containsKey(k)) {             BUILDER_APPLIERS.get(k).accept(queryBuilder, v).         } else {             throw new IllegalArgumentException("illegal query_string option [" + k + "]").         }     }).     return queryBuilder. }
-false;public;0;3;;public Map<String, Float> fields() {     return fields. }
-false;public;0;3;;public String query() {     return query. }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(query, fields, predicate). }
-false;public;1;15;;@Override public boolean equals(Object obj) {     if (this == obj) {         return true.     }     if (obj == null || getClass() != obj.getClass()) {         return false.     }     QueryStringQuery other = (QueryStringQuery) obj.     return Objects.equals(query, other.query) && Objects.equals(fields, other.fields) && Objects.equals(predicate, other.predicate). }
-false;protected;0;4;;@Override protected String innerToString() {     return fields + ":" + query. }

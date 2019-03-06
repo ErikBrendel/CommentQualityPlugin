@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Test public void testDocker() throws Exception {     template.sendBody("direct:in", "").     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMinimumMessageCount(1).     assertMockEndpointsSatisfied(60, TimeUnit.SECONDS). }
-false;public;0;6;;public void configure() {     from("direct:in").to("docker://imagelist?maxTotalConnections=10").log("${body}").to("mock:result"). }
-false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() {             from("direct:in").to("docker://imagelist?maxTotalConnections=10").log("${body}").to("mock:result").         }     }. }

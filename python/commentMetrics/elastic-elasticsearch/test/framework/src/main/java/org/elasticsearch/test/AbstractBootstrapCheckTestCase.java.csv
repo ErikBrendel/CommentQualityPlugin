@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;2;7;;protected BootstrapContext createTestContext(Settings settings, MetaData metaData) {     Path homePath = createTempDir().     Environment environment = new Environment(settings(Version.CURRENT).put(settings).put(Environment.PATH_HOME_SETTING.getKey(), homePath.toString()).build(), null).     return new BootstrapContext(environment, metaData). }

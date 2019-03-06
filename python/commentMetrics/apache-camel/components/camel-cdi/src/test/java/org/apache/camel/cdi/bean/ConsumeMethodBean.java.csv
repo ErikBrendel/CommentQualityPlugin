@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Consume(uri = "seda:inbound") public void consume(@Body String body) {     producer.sendBody(body). }

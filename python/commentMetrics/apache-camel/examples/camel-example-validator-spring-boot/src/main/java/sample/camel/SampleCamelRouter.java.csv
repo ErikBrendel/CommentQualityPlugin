@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;11;;@Override public void configure() throws Exception {     validator().type("greeting").withBean("greetingValidator").     from("timer:hello?period={{timer.period}}").outputTypeWithValidate("greeting").transform(method("myBean", "saySomething")).to("stream:out"). }

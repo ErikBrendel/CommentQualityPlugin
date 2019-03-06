@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Before public void setUp() {     this.mvc = MockMvcBuilders.webAppContextSetup(this.context).build(). }
-false;public;0;5;;@Test public void testHome() throws Exception {     this.mvc.perform(get("/")).andExpect(status().isOk()).andExpect(xpath("//tbody/tr").nodeCount(4)). }

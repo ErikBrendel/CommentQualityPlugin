@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getShortDescription() {     return "score vertices as hubs and authorities". }
-false;public;0;10;;@Override public String getLongDescription() {     return WordUtils.wrap(new StrBuilder().appendln("Hyperlink-Induced Topic Search computes two interdependent scores for " + "each vertex in a directed graph. A good \"hub\" links to good \"authorities\" " + "and good \"authorities\" are linked to from good \"hubs\".").appendNewLine().append("The result contains the vertex ID, hub score, and authority score.").toString(), 80). }
-false;public;1;8;;@Override public DataSet plan(Graph<K, VV, EV> graph) throws Exception {     return graph.run(new org.apache.flink.graph.library.linkanalysis.HITS<K, VV, EV>(iterationConvergence.getValue().iterations, iterationConvergence.getValue().convergenceThreshold).setParallelism(parallelism.getValue().intValue())). }

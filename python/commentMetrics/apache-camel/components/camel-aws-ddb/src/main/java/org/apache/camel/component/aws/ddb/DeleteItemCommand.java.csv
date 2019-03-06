@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;@Override public void execute() {     DeleteItemResult result = ddbClient.deleteItem(new DeleteItemRequest().withTableName(determineTableName()).withKey(determineKey()).withReturnValues(determineReturnValues()).withExpected(determineUpdateCondition())).     addAttributesToResult(result.getAttributes()). }

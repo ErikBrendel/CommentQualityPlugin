@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;16;;@Override public X509Certificate findByIssuerAndSignature(X509Certificate cert) {     X500Principal issuer = cert.getIssuerX500Principal().     Set<X509Certificate> subjectCaCerts = subjectToCaCerts.get(issuer).     if (subjectCaCerts == null)         return null.     for (X509Certificate caCert : subjectCaCerts) {         PublicKey publicKey = caCert.getPublicKey().         try {             cert.verify(publicKey).             return caCert.         } catch (Exception ignored) {         }     }     return null. }
-false;public;1;6;;@Override public boolean equals(Object other) {     if (other == this)         return true.     return other instanceof okhttp3.internal.tls.BasicTrustRootIndex && ((okhttp3.internal.tls.BasicTrustRootIndex) other).subjectToCaCerts.equals(subjectToCaCerts). }
-false;public;0;3;;@Override public int hashCode() {     return subjectToCaCerts.hashCode(). }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Before public void init() throws Exception {     MustacheScriptEngine engine = new MustacheScriptEngine().     Map<String, ScriptEngine> engines = Collections.singletonMap(engine.getType(), engine).     scriptService = new ScriptService(Settings.EMPTY, engines, ScriptModule.CORE_CONTEXTS). }
-false;protected;1;4;;protected TemplateScript.Factory compile(String template) {     Script script = new Script(ScriptType.INLINE, DEFAULT_TEMPLATE_LANG, template, Collections.emptyMap()).     return scriptService.compile(script, TemplateScript.CONTEXT). }

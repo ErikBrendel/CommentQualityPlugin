@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * Gets the {@link SoapJaxbDataFormat} SOAP data format.  */ ;/**  * Gets the {@link SoapJaxbDataFormat} SOAP data format.  */ SoapJaxbDataFormat getDataFormat().
-true;;0;1;/**  * Gets the JAXB package names where the JAXB generated sources is for either SOAP 1.1 or 1.2 implementations.  */ ;/**  * Gets the JAXB package names where the JAXB generated sources is for either SOAP 1.1 or 1.2 implementations.  */ String getSoapPackageName().
-true;;4;1;/**  * Executes the marshal  *  * @return soap envelope  */ ;/**  * Executes the marshal  *  * @return soap envelope  */ Object doMarshal(Exchange exchange, Object inputObject, OutputStream stream, String soapAction) throws IOException.
-true;;3;1;/**  * Executes the unmarshal  *  * @return the payload  */ ;/**  * Executes the unmarshal  *  * @return the payload  */ Object doUnmarshal(Exchange exchange, InputStream stream, Object rootObject) throws IOException.

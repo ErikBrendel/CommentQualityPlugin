@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;@Bean @ConditionalOnMissingBean public ReactiveSession reactiveCassandraSession(Session session) {     return new DefaultBridgedReactiveSession(session). }
-false;public;1;5;;@Bean public ReactiveSessionFactory reactiveCassandraSessionFactory(ReactiveSession reactiveCassandraSession) {     return new DefaultReactiveSessionFactory(reactiveCassandraSession). }
-false;public;2;6;;@Bean @ConditionalOnMissingBean public ReactiveCassandraTemplate reactiveCassandraTemplate(ReactiveSession reactiveCassandraSession, CassandraConverter converter) {     return new ReactiveCassandraTemplate(reactiveCassandraSession, converter). }

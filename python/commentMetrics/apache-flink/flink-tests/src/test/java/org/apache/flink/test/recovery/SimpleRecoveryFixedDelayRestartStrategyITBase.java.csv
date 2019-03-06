@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;private,static;0;8;;private static Configuration getConfiguration() {     Configuration config = new Configuration().     config.setString(ConfigConstants.RESTART_STRATEGY, "fixed-delay").     config.setInteger(ConfigConstants.RESTART_STRATEGY_FIXED_DELAY_ATTEMPTS, 1).     config.setString(ConfigConstants.RESTART_STRATEGY_FIXED_DELAY_DELAY, "100 ms").     return config. }

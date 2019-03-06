@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;8;;@Override public void install(String coordinates) {     try {         FileUtils.writeStringToFile(repository, coordinates + "\n", true).     } catch (IOException e) {         throw new IOError(e).     } }
-false;public;0;8;;@Override public List<String> listPatches() {     try {         return IOUtils.readLines(new FileReader(repository)).     } catch (IOException e) {         throw new IOError(e).     } }
-false;public;0;9;;@Override public void clear() {     try {         repository.delete().         repository.createNewFile().     } catch (IOException e) {         throw new IOError(e).     } }

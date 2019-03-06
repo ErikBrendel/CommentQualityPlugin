@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;2;1;/**  * Opens and binds a server channel to accept incoming connections.  */ ;/**  * Opens and binds a server channel to accept incoming connections.  */ <S extends NioServerSocketChannel> S bindServerChannel(InetSocketAddress address, ChannelFactory<S, ?> factory) throws IOException.
-true;;2;1;/**  * Opens a outgoing client channel.  */ ;/**  * Opens a outgoing client channel.  */ <S extends NioSocketChannel> S openChannel(InetSocketAddress address, ChannelFactory<?, S> factory) throws IOException.
-false;;0;2;;@Override void close() throws IOException.

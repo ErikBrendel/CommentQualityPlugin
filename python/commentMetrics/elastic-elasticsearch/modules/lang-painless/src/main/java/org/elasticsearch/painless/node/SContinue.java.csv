@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;1;4;;@Override void extractVariables(Set<String> variables) { // Do nothing. }
-false;;1;14;;@Override void analyze(Locals locals) {     if (!inLoop) {         throw createError(new IllegalArgumentException("Continue statement outside of a loop.")).     }     if (lastLoop) {         throw createError(new IllegalArgumentException("Extraneous continue statement.")).     }     allEscape = true.     anyContinue = true.     statementCount = 1. }
-false;;2;4;;@Override void write(MethodWriter writer, Globals globals) {     writer.goTo(continu). }
-false;public;0;4;;@Override public String toString() {     return singleLineToString(). }

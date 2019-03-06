@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public ActionRequestValidationException validate() {     return (license == null) ? ValidateActions.addValidationError("license is missing", null) : null. }
-true;public;2;7;/**  * Parses license from json format to an instance of {@link License}  *  * @param licenseDefinition licenses definition  * @param xContentType the content type of the license  */ ;/**  * Parses license from json format to an instance of {@link License}  *  * @param licenseDefinition licenses definition  * @param xContentType the content type of the license  */ public PutLicenseRequest license(BytesReference licenseDefinition, XContentType xContentType) {     try {         return license(License.fromSource(licenseDefinition, xContentType)).     } catch (IOException e) {         throw new IllegalArgumentException("failed to parse license source", e).     } }
-false;public;1;4;;public PutLicenseRequest license(License license) {     this.license = license.     return this. }
-false;public;0;3;;public License license() {     return license. }
-false;public;1;4;;public PutLicenseRequest acknowledge(boolean acknowledge) {     this.acknowledge = acknowledge.     return this. }
-false;public;0;3;;public boolean acknowledged() {     return acknowledge. }
-false;public;1;6;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     license = License.readLicense(in).     acknowledge = in.readBoolean(). }
-false;public;1;6;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     license.writeTo(out).     out.writeBoolean(acknowledge). }

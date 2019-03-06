@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;3;16;;protected Endpoint createEndpoint(String uri, String remaining, Map<String, Object> parameters) throws Exception {     // first remove the scheme from the URI     int index = uri.indexOf(':').     String name = uri.     if (index >= 0) {         name = uri.substring(index + 1).     }     if (name.startsWith("//")) {         name = name.substring(2).     }     RefEndpoint answer = new RefEndpoint(uri, this).     answer.setName(name).     setProperties(answer, parameters).     return answer. }

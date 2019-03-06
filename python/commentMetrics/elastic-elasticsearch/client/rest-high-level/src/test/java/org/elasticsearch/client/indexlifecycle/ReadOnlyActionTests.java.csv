@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;4;;@Override protected ReadOnlyAction doParseInstance(XContentParser parser) {     return ReadOnlyAction.parse(parser). }
-false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }
-false;protected;0;4;;@Override protected ReadOnlyAction createTestInstance() {     return new ReadOnlyAction(). }

@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String toString() {     return "MIN". }
-false;public;0;4;;@Override public void initializeAggregate() {     value = null. }
-false;public;1;9;;@Override public void aggregate(U val) {     if (value != null) {         int cmp = value.compareTo(val).         value = (cmp < 0) ? value : val.     } else {         value = val.     } }
-false;public;0;4;;@Override public U getAggregate() {     return value. }
-false;public;0;4;;@Override public void initializeAggregate() {     value = null. }
-false;public;1;11;;@Override public void aggregate(U val) {     if (value != null) {         int cmp = value.compareTo(val).         if (cmp > 0) {             value.setValue(val).         }     } else {         value = val.copy().     } }
-false;public;0;4;;@Override public U getAggregate() {     return value. }
-false;public;1;15;;@SuppressWarnings({ "unchecked", "rawtypes" }) @Override public <T> AggregationFunction<T> createAggregationFunction(Class<T> type) {     if (Comparable.class.isAssignableFrom(type)) {         if (ResettableValue.class.isAssignableFrom(type) && CopyableValue.class.isAssignableFrom(type)) {             return (AggregationFunction<T>) new MutableMinAgg().         } else {             return (AggregationFunction<T>) new ImmutableMinAgg().         }     } else {         throw new UnsupportedAggregationTypeException("The type " + type.getName() + " is not supported for minimum aggregation. " + "Minimum aggregatable types must implement the Comparable interface.").     } }

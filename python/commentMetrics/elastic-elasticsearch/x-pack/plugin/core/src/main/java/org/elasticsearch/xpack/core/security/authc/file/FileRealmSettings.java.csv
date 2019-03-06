@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,static;0;5;/**  * @return The {@link Setting setting configuration} for this realm type  */ ;/**  * @return The {@link Setting setting configuration} for this realm type  */ public static Set<Setting.AffixSetting<?>> getSettings() {     final Set<Setting.AffixSetting<?>> set = new HashSet<>(CachingUsernamePasswordRealmSettings.getSettings(TYPE)).     set.addAll(RealmSettings.getStandardSettings(TYPE)).     return set. }

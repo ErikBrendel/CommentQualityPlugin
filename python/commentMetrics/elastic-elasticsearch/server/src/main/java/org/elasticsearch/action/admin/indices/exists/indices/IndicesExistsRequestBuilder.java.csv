@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;public IndicesExistsRequestBuilder setIndices(String... indices) {     request.indices(indices).     return this. }
-true;public;1;4;/**  * Controls whether wildcard expressions will be expanded to existing open indices  */ ;/**  * Controls whether wildcard expressions will be expanded to existing open indices  */ public IndicesExistsRequestBuilder setExpandWildcardsOpen(boolean expandWildcardsOpen) {     request.expandWilcardsOpen(expandWildcardsOpen).     return this. }
-true;public;1;4;/**  * Controls whether wildcard expressions will be expanded to existing closed indices  */ ;/**  * Controls whether wildcard expressions will be expanded to existing closed indices  */ public IndicesExistsRequestBuilder setExpandWildcardsClosed(boolean expandWildcardsClosed) {     request.expandWilcardsClosed(expandWildcardsClosed).     return this. }

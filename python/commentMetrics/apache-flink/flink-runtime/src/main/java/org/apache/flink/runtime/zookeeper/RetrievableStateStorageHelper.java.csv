@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;1;1;/**  * Stores the given state and returns a state handle to it.  *  * @param state State to be stored  * @return State handle to the stored state  * @throws Exception  */ ;/**  * Stores the given state and returns a state handle to it.  *  * @param state State to be stored  * @return State handle to the stored state  * @throws Exception  */ RetrievableStateHandle<T> store(T state) throws Exception.

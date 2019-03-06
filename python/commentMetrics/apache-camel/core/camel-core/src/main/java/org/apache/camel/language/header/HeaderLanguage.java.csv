@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;3;;public static Expression header(String headerName) {     return ExpressionBuilder.headerExpression(headerName). }
-false;public;1;3;;public Predicate createPredicate(String expression) {     return ExpressionToPredicateAdapter.toPredicate(createExpression(expression)). }
-false;public;1;3;;public Expression createExpression(String expression) {     return HeaderLanguage.header(expression). }
-false;public;0;3;;public boolean isSingleton() {     return true. }

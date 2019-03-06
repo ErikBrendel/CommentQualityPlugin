@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String toString() {     return path.toString(). }
-false;public;0;3;;public Path path() {     return path. }
-false;public;0;3;;public int bufferSizeInBytes() {     return this.bufferSizeInBytes. }
-false;public;1;8;;@Override public BlobContainer blobContainer(BlobPath path) {     try {         return new FsBlobContainer(this, path, buildAndCreate(path)).     } catch (IOException ex) {         throw new ElasticsearchException("failed to create blob container", ex).     } }
-false;public;1;4;;@Override public void delete(BlobPath path) throws IOException {     IOUtils.rm(buildPath(path)). }
-false;public;0;4;;@Override public void close() { // nothing to do here... }
-false;private,synchronized;1;7;;private synchronized Path buildAndCreate(BlobPath path) throws IOException {     Path f = buildPath(path).     if (!readOnly) {         Files.createDirectories(f).     }     return f. }
-false;private;1;13;;private Path buildPath(BlobPath path) {     String[] paths = path.toArray().     if (paths.length == 0) {         return path().     }     Path blobPath = this.path.resolve(paths[0]).     if (paths.length > 1) {         for (int i = 1. i < paths.length. i++) {             blobPath = blobPath.resolve(paths[i]).         }     }     return blobPath. }

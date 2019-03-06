@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;14;;@Test public void testSmallGraph() throws Exception {     Graph<Long, Long, Long> graph = Graph.fromDataSet(TestGraphUtils.getLongLongVertexData(env), TestGraphUtils.getLongLongEdgeData(env), env).     Checksum checksum = graph.run(new ChecksumHashCode<>()).execute().     assertEquals(12, checksum.getCount()).     assertEquals(0x4cd1, checksum.getChecksum()). }
-false;public;0;9;;@Test public void testEmptyGraphWithVertices() throws Exception {     Checksum checksum = emptyGraphWithVertices.run(new ChecksumHashCode<>()).execute().     assertEquals(3, checksum.getCount()).     assertEquals(0x109b, checksum.getChecksum()). }
-false;public;0;9;;@Test public void testEmptyGraphWithoutVertices() throws Exception {     Checksum checksum = emptyGraphWithoutVertices.run(new ChecksumHashCode<>()).execute().     assertEquals(0, checksum.getCount()).     assertEquals(0, checksum.getChecksum()). }

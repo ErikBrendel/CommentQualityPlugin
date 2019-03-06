@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;13;;@Before public void setUp() throws Exception {     super.setUp().     context.setUseMDCLogging(true).     context2 = new DefaultCamelContext().     context2.setUseMDCLogging(true).     template2 = context2.createProducerTemplate().     ServiceHelper.startService(template2, context2).     // add routes after CamelContext has been started     context2.adapt(ModelCamelContext.class).addRoutes(createRouteBuilder2()). }
-false;public;0;6;;@After public void tearDown() throws Exception {     ServiceHelper.stopAndShutdownServices(context2, template2).     super.tearDown(). }
-false;protected;1;3;;protected MockEndpoint getMockEndpoint2(String uri) {     return context2.getEndpoint(uri, MockEndpoint.class). }
-false;protected;0;3;;protected RouteBuilder createRouteBuilder2() throws Exception {     return createRouteBuilder(). }

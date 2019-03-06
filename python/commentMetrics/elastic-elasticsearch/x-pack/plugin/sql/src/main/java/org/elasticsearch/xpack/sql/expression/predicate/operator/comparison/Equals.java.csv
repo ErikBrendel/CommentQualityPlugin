@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected NodeInfo<Equals> info() {     return NodeInfo.create(this, Equals::new, left(), right()). }
-false;protected;2;4;;@Override protected Equals replaceChildren(Expression newLeft, Expression newRight) {     return new Equals(source(), newLeft, newRight). }
-false;public;0;4;;@Override public Equals swapLeftAndRight() {     return new Equals(source(), right(), left()). }
-false;public;0;4;;@Override public BinaryComparison negate() {     return new NotEquals(source(), left(), right()). }

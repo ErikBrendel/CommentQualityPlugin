@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * return the total document count  */ ;/**  * return the total document count  */ long getDocCount().
-true;;1;1;/**  * return total field count (differs from docCount if there are missing values)  */ ;/**  * return total field count (differs from docCount if there are missing values)  */ long getFieldCount(String field).
-true;;1;1;/**  * return the field mean  */ ;/**  * return the field mean  */ double getMean(String field).
-true;;1;1;/**  * return the field variance  */ ;/**  * return the field variance  */ double getVariance(String field).
-true;;1;1;/**  * return the skewness of the distribution  */ ;/**  * return the skewness of the distribution  */ double getSkewness(String field).
-true;;1;1;/**  * return the kurtosis of the distribution  */ ;/**  * return the kurtosis of the distribution  */ double getKurtosis(String field).
-true;;2;1;/**  * return the covariance between field x and field y  */ ;/**  * return the covariance between field x and field y  */ double getCovariance(String fieldX, String fieldY).
-true;;2;1;/**  * return the correlation coefficient of field x and field y  */ ;/**  * return the correlation coefficient of field x and field y  */ double getCorrelation(String fieldX, String fieldY).

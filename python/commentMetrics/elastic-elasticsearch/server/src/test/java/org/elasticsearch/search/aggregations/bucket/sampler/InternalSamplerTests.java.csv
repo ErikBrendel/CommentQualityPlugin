@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;5;5;;@Override protected InternalSampler createTestInstance(String name, long docCount, InternalAggregations aggregations, List<PipelineAggregator> pipelineAggregators, Map<String, Object> metaData) {     return new InternalSampler(name, docCount, aggregations, pipelineAggregators, metaData). }
-false;protected;2;4;;@Override protected void extraAssertReduced(InternalSampler reduced, List<InternalSampler> inputs) { // Nothing extra to assert }
-false;protected;0;4;;@Override protected Writeable.Reader<InternalSampler> instanceReader() {     return InternalSampler::new. }
-false;protected;0;4;;@Override protected Class<? extends ParsedSingleBucketAggregation> implementationClass() {     return ParsedSampler.class. }

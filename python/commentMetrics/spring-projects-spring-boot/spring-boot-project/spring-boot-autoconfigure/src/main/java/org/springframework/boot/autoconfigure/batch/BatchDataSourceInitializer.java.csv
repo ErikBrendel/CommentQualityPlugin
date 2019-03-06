@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected DataSourceInitializationMode getMode() {     return this.properties.getInitializeSchema(). }
-false;protected;0;4;;@Override protected String getSchemaLocation() {     return this.properties.getSchema(). }
-false;protected;0;8;;@Override protected String getDatabaseName() {     String databaseName = super.getDatabaseName().     if ("oracle".equals(databaseName)) {         return "oracle10g".     }     return databaseName. }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public HazelcastDefaultEndpoint getEndpoint() {     return (HazelcastDefaultEndpoint) super.getEndpoint(). }
-false;protected;1;5;;protected HazelcastOperation lookupOperation(Exchange exchange) {     return HazelcastComponentHelper.lookupOperation(exchange, getEndpoint().getDefaultOperation()). }

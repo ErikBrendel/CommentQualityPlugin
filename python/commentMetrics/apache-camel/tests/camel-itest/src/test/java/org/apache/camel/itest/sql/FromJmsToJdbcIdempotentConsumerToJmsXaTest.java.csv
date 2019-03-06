@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Override @Before public void setUp() throws Exception {     deleteDirectory("target/testdb").     super.setUp(). }
-false;public;0;14;;@Override @After public void tearDown() throws Exception {     super.tearDown().     // shutdown the embedded Derby database so that the next test becomes a clean initial state     try {         DriverManager.getConnection("jdbc:derby:target/testdb.shutdown=true").         fail("Should have thrown exception").     } catch (SQLException e) {         // a successful shutdown always results in an SQLException to indicate that Derby has shut down and that there is no other exception.         assertEquals("Database 'target/testdb' shutdown.", e.getMessage()).     } }
-false;protected;0;4;;@Override protected String getDatasourceName() {     return "myXADataSource". }
-false;protected;0;5;;@Override protected AbstractApplicationContext createApplicationContext() {     ITestSupport.getPort1().     return new ClassPathXmlApplicationContext("org/apache/camel/itest/sql/FromJmsToJdbcIdempotentConsumerToJmsXaTest.xml"). }

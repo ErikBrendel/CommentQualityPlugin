@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected NodeInfo<ACos> info() {     return NodeInfo.create(this, ACos::new, field()). }
-false;protected;1;4;;@Override protected ACos replaceChild(Expression newChild) {     return new ACos(source(), newChild). }
-false;protected;0;4;;@Override protected MathOperation operation() {     return MathOperation.ACOS. }

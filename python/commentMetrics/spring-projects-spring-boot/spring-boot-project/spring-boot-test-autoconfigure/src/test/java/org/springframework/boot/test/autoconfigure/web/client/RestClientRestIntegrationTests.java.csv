@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void mockServerCall1() {     this.server.expect(requestTo("/test")).andRespond(withSuccess("1", MediaType.TEXT_HTML)).     assertThat(this.client.test()).isEqualTo("1"). }
-false;public;0;6;;@Test public void mockServerCall2() {     this.server.expect(requestTo("/test")).andRespond(withSuccess("2", MediaType.TEXT_HTML)).     assertThat(this.client.test()).isEqualTo("2"). }
-false;public;0;6;;@Test public void mockServerCallWithContent() {     this.server.expect(requestTo("/test")).andExpect(content().string("test")).andRespond(withSuccess("1", MediaType.TEXT_HTML)).     this.client.testPostWithBody("test"). }

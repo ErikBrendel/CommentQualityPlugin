@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;public FakeProxySelector addProxy(Proxy proxy) {     proxies.add(proxy).     return this. }
-false;public;1;5;;@Override public List<Proxy> select(URI uri) {     // Don't handle 'socket' schemes, which the RI's Socket class may request (for SOCKS).     return uri.getScheme().equals("http") || uri.getScheme().equals("https") ? proxies : Collections.singletonList(Proxy.NO_PROXY). }
-false;public;3;2;;@Override public void connectFailed(URI uri, SocketAddress sa, IOException ioe) { }

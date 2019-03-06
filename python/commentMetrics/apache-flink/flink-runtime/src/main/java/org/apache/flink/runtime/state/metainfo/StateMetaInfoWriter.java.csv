@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;2;3;/**  * Writes the given snapshot to the output view.  *  * @param snapshot the snapshot to write.  * @param outputView the output to write into.  * @throws IOException on write problems.  */ ;/**  * Writes the given snapshot to the output view.  *  * @param snapshot the snapshot to write.  * @param outputView the output to write into.  * @throws IOException on write problems.  */ void writeStateMetaInfoSnapshot(@Nonnull StateMetaInfoSnapshot snapshot, @Nonnull DataOutputView outputView) throws IOException.

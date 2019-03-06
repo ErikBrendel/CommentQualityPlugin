@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String toString() {     return "InterceptFrom[" + getOutputs() + "]". }
-false;public;0;4;;@Override public String getShortName() {     return "interceptFrom". }
-false;public;0;4;;@Override public String getLabel() {     return "interceptFrom". }
-false;public;0;4;;@Override public boolean isAbstract() {     return true. }
-false;public;0;4;;@Override public boolean isTopLevelOnly() {     return true. }
-false;public;0;3;;public String getUri() {     return uri. }
-true;public;1;3;/**  * Intercept incoming messages from the uri or uri pattern.  * If this option is not configured, then all incoming messages is intercepted.  */ ;/**  * Intercept incoming messages from the uri or uri pattern.  * If this option is not configured, then all incoming messages is intercepted.  */ public void setUri(String uri) {     this.uri = uri. }

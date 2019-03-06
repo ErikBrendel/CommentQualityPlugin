@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;7;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     sourceNode.writeTo(out).     out.writeLong(term).     out.writeLong(version). }
-false;public;0;3;;public DiscoveryNode getSourceNode() {     return sourceNode. }
-false;public;0;3;;public long getTerm() {     return term. }
-false;public;0;3;;public long getVersion() {     return version. }
-false;public;1;11;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     TermVersionRequest versionTerm = (TermVersionRequest) o.     if (term != versionTerm.term)         return false.     if (version != versionTerm.version)         return false.     return sourceNode.equals(versionTerm.sourceNode). }
-false;public;0;7;;@Override public int hashCode() {     int result = (int) (term ^ (term >>> 32)).     result = 31 * result + (int) (version ^ (version >>> 32)).     result = 31 * result + sourceNode.hashCode().     return result. }
-false;public;0;8;;@Override public String toString() {     return "TermVersionRequest{" + "term=" + term + ", version=" + version + ", sourceNode=" + sourceNode + '}'. }

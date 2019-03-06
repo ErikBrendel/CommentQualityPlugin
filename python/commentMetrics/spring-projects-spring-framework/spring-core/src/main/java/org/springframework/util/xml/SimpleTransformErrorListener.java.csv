@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public void warning(TransformerException ex) throws TransformerException {     logger.warn("XSLT transformation warning", ex). }
-false;public;1;4;;@Override public void error(TransformerException ex) throws TransformerException {     logger.error("XSLT transformation error", ex). }
-false;public;1;4;;@Override public void fatalError(TransformerException ex) throws TransformerException {     throw ex. }

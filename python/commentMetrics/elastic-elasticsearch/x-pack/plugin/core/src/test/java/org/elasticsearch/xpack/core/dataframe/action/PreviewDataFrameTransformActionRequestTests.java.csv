@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Before public void registerAggregationNamedObjects() throws Exception {     // register aggregations as NamedWriteable     SearchModule searchModule = new SearchModule(Settings.EMPTY, false, emptyList()).     namedWriteableRegistry = new NamedWriteableRegistry(searchModule.getNamedWriteables()).     namedXContentRegistry = new NamedXContentRegistry(searchModule.getNamedXContents()). }
-false;protected;0;4;;@Override protected NamedWriteableRegistry getNamedWriteableRegistry() {     return namedWriteableRegistry. }
-false;protected;0;4;;@Override protected NamedXContentRegistry xContentRegistry() {     return namedXContentRegistry. }
-false;protected;1;4;;@Override protected Request doParseInstance(XContentParser parser) throws IOException {     return Request.fromXContent(parser). }
-false;protected;0;4;;@Override protected Request createBlankInstance() {     return new Request(). }
-false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return false. }
-false;protected;0;6;;@Override protected Request createTestInstance() {     DataFrameTransformConfig config = new DataFrameTransformConfig("transform-preview", randomAlphaOfLength(10), "unused-transform-preview-index", null, QueryConfigTests.randomQueryConfig(), PivotConfigTests.randomPivotConfig()).     return new Request(config). }

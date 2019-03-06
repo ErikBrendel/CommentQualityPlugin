@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;@Converter public TypeConverterOutput convert(TypeConverterInput input) throws Exception {     TypeConverterOutput output = new TypeConverterOutput().     output.setProperty(context.resolvePropertyPlaceholders(input.getProperty())).     return output. }

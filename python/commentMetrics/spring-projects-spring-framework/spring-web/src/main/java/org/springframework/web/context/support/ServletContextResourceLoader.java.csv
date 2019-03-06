@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;protected;1;4;/**  * This implementation supports file paths beneath the root of the web application.  * @see ServletContextResource  */ ;/**  * This implementation supports file paths beneath the root of the web application.  * @see ServletContextResource  */ @Override protected Resource getResourceByPath(String path) {     return new ServletContextResource(this.servletContext, path). }

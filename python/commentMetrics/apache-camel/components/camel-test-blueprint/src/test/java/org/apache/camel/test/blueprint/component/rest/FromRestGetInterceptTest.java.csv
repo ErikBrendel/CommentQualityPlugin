@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected String getBlueprintDescriptor() {     return "org/apache/camel/test/blueprint/component/rest/FromRestGetInterceptTest.xml". }
-false;public;0;11;;@Test public void testFromRestModel() throws Exception {     getMockEndpoint("mock:hello").expectedMessageCount(1).     getMockEndpoint("mock:bar").expectedMessageCount(1).     getMockEndpoint("mock:intercept").expectedMessageCount(3).     String out = template.requestBody("seda:get-say-hello", "I was here", String.class).     assertEquals("Bye World", out).     assertMockEndpointsSatisfied(). }

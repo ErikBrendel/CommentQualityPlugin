@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public int getCurrentOuterSnapshotVersion() {     return CURRENT_VERSION. }
-false;protected;1;6;;@Override protected MapViewSerializer<K, V> createOuterSerializerWithNestedSerializers(TypeSerializer<?>[] nestedSerializers) {     @SuppressWarnings("unchecked")     TypeSerializer<Map<K, V>> mapSerializer = (TypeSerializer<Map<K, V>>) nestedSerializers[0].     return new MapViewSerializer<>(mapSerializer). }
-false;protected;1;4;;@Override protected TypeSerializer<?>[] getNestedSerializers(MapViewSerializer<K, V> outerSerializer) {     return new TypeSerializer<?>[] { outerSerializer.getMapSerializer() }. }

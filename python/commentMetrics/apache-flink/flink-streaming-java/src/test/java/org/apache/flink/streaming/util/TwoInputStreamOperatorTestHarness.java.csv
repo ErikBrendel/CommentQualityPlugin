@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;public void processElement1(StreamRecord<IN1> element) throws Exception {     twoInputOperator.setKeyContextElement1(element).     twoInputOperator.processElement1(element). }
-false;public;1;4;;public void processElement2(StreamRecord<IN2> element) throws Exception {     twoInputOperator.setKeyContextElement2(element).     twoInputOperator.processElement2(element). }
-false;public;1;3;;public void processWatermark1(Watermark mark) throws Exception {     twoInputOperator.processWatermark1(mark). }
-false;public;1;3;;public void processWatermark2(Watermark mark) throws Exception {     twoInputOperator.processWatermark2(mark). }
-false;public;1;4;;public void processBothWatermarks(Watermark mark) throws Exception {     twoInputOperator.processWatermark1(mark).     twoInputOperator.processWatermark2(mark). }

@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void testMethodClassByTypeAIssue() throws Exception {     getMockEndpoint("mock:a").expectedBodiesReceived("Hello World").     template.sendBody("direct:a", "World").     assertMockEndpointsSatisfied(). }
-false;public;0;8;;@Test public void testMethodClassByTypeBIssue() throws Exception {     getMockEndpoint("mock:b").expectedBodiesReceived("Hello World").     template.sendBody("direct:b", "World").     assertMockEndpointsSatisfied(). }
-false;public;0;10;;@Override public void configure() throws Exception {     from("direct:a").transform().method(MyTransformBean.class, "transformMe").to("mock:a").     from("direct:b").transform().method(methodClass, "transformMe").to("mock:b"). }
-false;protected;0;15;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:a").transform().method(MyTransformBean.class, "transformMe").to("mock:a").             from("direct:b").transform().method(methodClass, "transformMe").to("mock:b").         }     }. }

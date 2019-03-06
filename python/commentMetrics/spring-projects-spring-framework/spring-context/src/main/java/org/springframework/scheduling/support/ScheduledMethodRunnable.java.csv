@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Return the target instance to call the method on.  */ ;/**  * Return the target instance to call the method on.  */ public Object getTarget() {     return this.target. }
-true;public;0;3;/**  * Return the target method to call.  */ ;/**  * Return the target method to call.  */ public Method getMethod() {     return this.method. }
-false;public;0;13;;@Override public void run() {     try {         ReflectionUtils.makeAccessible(this.method).         this.method.invoke(this.target).     } catch (InvocationTargetException ex) {         ReflectionUtils.rethrowRuntimeException(ex.getTargetException()).     } catch (IllegalAccessException ex) {         throw new UndeclaredThrowableException(ex).     } }
-false;public;0;4;;@Override public String toString() {     return this.method.getDeclaringClass().getName() + "." + this.method.getName(). }

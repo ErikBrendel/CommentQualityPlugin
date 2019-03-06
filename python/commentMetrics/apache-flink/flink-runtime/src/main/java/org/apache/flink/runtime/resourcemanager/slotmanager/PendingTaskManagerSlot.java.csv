@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public TaskManagerSlotId getTaskManagerSlotId() {     return taskManagerSlotId. }
-false;public;0;3;;public ResourceProfile getResourceProfile() {     return resourceProfile. }
-false;public;1;4;;public void assignPendingSlotRequest(@Nonnull PendingSlotRequest pendingSlotRequestToAssign) {     Preconditions.checkState(pendingSlotRequest == null).     pendingSlotRequest = pendingSlotRequestToAssign. }
-false;public;0;3;;public void unassignPendingSlotRequest() {     pendingSlotRequest = null. }
-false;public;0;4;;@Nullable public PendingSlotRequest getAssignedPendingSlotRequest() {     return pendingSlotRequest. }

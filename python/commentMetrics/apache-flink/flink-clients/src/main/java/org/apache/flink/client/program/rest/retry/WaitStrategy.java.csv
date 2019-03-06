@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;1;1;/**  * Returns the time to wait until the next attempt. Attempts start at {@code 0}.  * @param attempt The number of the last attempt.  * @return Waiting time in ms.  */ ;/**  * Returns the time to wait until the next attempt. Attempts start at {@code 0}.  * @param attempt The number of the last attempt.  * @return Waiting time in ms.  */ long sleepTime(long attempt).

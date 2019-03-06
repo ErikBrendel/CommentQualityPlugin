@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public CMISEndpoint getEndpoint() {     return (CMISEndpoint) super.getEndpoint(). }
-false;public;1;5;;public void process(Exchange exchange) throws Exception {     List<Map<String, Object>> nodes = executeQuery(exchange).     exchange.getOut().setBody(nodes).     exchange.getOut().setHeader(CamelCMISConstants.CAMEL_CMIS_RESULT_COUNT, nodes.size()). }
-false;private;1;8;;private List<Map<String, Object>> executeQuery(Exchange exchange) throws Exception {     String query = exchange.getIn().getMandatoryBody(String.class).     Boolean retrieveContent = getRetrieveContent(exchange).     Integer readSize = getReadSize(exchange).     ItemIterable<QueryResult> itemIterable = getSessionFacade().executeQuery(query).     return getSessionFacade().retrieveResult(retrieveContent, readSize, itemIterable). }
-false;private;1;3;;private Integer getReadSize(Exchange exchange) {     return exchange.getIn().getHeader(CamelCMISConstants.CAMEL_CMIS_READ_SIZE, Integer.class). }
-false;private;1;3;;private Boolean getRetrieveContent(Exchange exchange) {     return exchange.getIn().getHeader(CamelCMISConstants.CAMEL_CMIS_RETRIEVE_CONTENT, Boolean.class). }
-false;private;0;8;;private CMISSessionFacade getSessionFacade() throws Exception {     if (sessionFacade == null) {         sessionFacade = sessionFacadeFactory.create(getEndpoint()).         sessionFacade.initSession().     }     return sessionFacade. }

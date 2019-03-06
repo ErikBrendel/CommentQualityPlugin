@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void testIfProfileValueDisabled() {     fail("The body of a disabled test should never be executed!"). }
-false;public;1;4;;@Override public void beforeTestClass(TestContext testContext) throws Exception {     fail("A listener method for a disabled test should never be executed!"). }
-false;public;1;4;;@Override public void prepareTestInstance(TestContext testContext) throws Exception {     fail("A listener method for a disabled test should never be executed!"). }
-false;public;1;4;;@Override public void beforeTestMethod(TestContext testContext) throws Exception {     fail("A listener method for a disabled test should never be executed!"). }
-false;public;1;4;;@Override public void afterTestMethod(TestContext testContext) throws Exception {     fail("A listener method for a disabled test should never be executed!"). }
-false;public;1;4;;@Override public void afterTestClass(TestContext testContext) throws Exception {     fail("A listener method for a disabled test should never be executed!"). }

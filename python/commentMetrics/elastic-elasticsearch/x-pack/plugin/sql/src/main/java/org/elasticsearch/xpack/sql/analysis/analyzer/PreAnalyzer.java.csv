@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;7;;public PreAnalysis preAnalyze(LogicalPlan plan) {     if (plan.analyzed()) {         return PreAnalysis.EMPTY.     }     return doPreAnalyze(plan). }
-false;private;1;10;;private PreAnalysis doPreAnalyze(LogicalPlan plan) {     List<TableIdentifier> indices = new ArrayList<>().     plan.forEachUp(p -> indices.add(p.table()), UnresolvedRelation.class).     // mark plan as preAnalyzed (if it were marked, there would be no analysis)     plan.forEachUp(LogicalPlan::setPreAnalyzed).     return new PreAnalysis(indices). }

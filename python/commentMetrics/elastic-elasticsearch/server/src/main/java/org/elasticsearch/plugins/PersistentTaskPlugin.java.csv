@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;default;4;6;/**  * Returns additional persistent tasks executors added by this plugin.  */ ;/**  * Returns additional persistent tasks executors added by this plugin.  */ default List<PersistentTasksExecutor<?>> getPersistentTasksExecutor(ClusterService clusterService, ThreadPool threadPool, Client client, SettingsModule settingsModule) {     return Collections.emptyList(). }

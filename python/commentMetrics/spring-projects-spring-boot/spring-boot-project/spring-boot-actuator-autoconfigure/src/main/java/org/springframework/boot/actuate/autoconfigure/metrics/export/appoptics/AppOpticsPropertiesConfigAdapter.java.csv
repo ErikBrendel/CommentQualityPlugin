@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String uri() {     return get(AppOpticsProperties::getUri, AppOpticsConfig.super::uri). }
-false;public;0;4;;@Override public String apiToken() {     return get(AppOpticsProperties::getApiToken, AppOpticsConfig.super::apiToken). }
-false;public;0;4;;@Override public String hostTag() {     return get(AppOpticsProperties::getHostTag, AppOpticsConfig.super::hostTag). }

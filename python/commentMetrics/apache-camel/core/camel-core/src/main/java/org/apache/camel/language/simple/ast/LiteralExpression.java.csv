@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String toString() {     return getText(). }
-false;public;1;4;;@Override public void addText(String text) {     this.text.append(text). }
-false;public;0;4;;@Override public String getText() {     return text.toString(). }
-false;public;0;7;;@Override public boolean quoteEmbeddedNodes() {     // issues with commas in parameter values being mixed up with commas used for parameter separator     return text.toString().startsWith("bean:"). }
-false;public;1;4;;@Override public Expression createExpression(String expression) {     return ExpressionBuilder.constantExpression(getText()). }

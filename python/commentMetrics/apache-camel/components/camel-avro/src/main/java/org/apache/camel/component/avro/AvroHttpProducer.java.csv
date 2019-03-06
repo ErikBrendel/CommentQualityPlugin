@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public Transceiver createTransceiver() throws Exception {     return new HttpTransceiver(new URL(URISupport.normalizeUri(getEndpoint().getEndpointUri()))). }

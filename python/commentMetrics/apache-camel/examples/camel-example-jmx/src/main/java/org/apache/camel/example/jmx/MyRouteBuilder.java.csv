@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;public void configure() {     // START SNIPPET: e1     from("jmx:platform?objectDomain=jmxExample&key.name=simpleBean").to("log:jmxEvent").     // END SNIPPET: e1     from("timer:foo?period=6000").bean(bean, "tick"). }

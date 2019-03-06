@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;17;;public Object getBody(GenericFile<File> file) {     // if file content has been loaded then return it     if (content != null) {         return content.     }     // handle that is correct     if (body == null || !file.getAbsoluteFilePath().equals(body.getAbsolutePath())) {         body = new File(file.getAbsoluteFilePath()).     }     return body. }
-false;public;2;3;;public void setBody(GenericFile<File> file, Object body) { // noop }
-false;public;2;9;;public void loadContent(Exchange exchange, GenericFile<?> file) throws IOException {     if (content == null) {         try {             content = exchange.getContext().getTypeConverter().mandatoryConvertTo(byte[].class, exchange, file).         } catch (NoTypeConversionAvailableException e) {             throw new IOException("Cannot load file content: " + file.getAbsoluteFilePath(), e).         }     } }

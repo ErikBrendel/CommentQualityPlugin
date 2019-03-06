@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@After public void tearDown() {     TestUtil.ensureAllConnectionsReleased(client). }
-false;private;0;9;;private OkHttpClient buildClient() {     ConnectionSpec spec = new ConnectionSpec.Builder(true).cipherSuites(// Check we are using strong ciphers     MANDATORY_CIPHER_SUITES).tlsVersions(// and modern TLS     TlsVersion.TLS_1_2).supportsTlsExtensions(true).build().     return new OkHttpClient.Builder().connectionSpecs(Arrays.asList(spec)).build(). }
-false;private,static;0;3;;private static void assumeConscrypt() {     Assume.assumeTrue("conscrypt".equals(System.getProperty("okhttp.platform"))). }
-false;private,static;0;7;;private static void assumeNetwork() {     try {         InetAddress.getByName("www.google.com").     } catch (UnknownHostException uhe) {         Assume.assumeNoException(uhe).     } }
-false;public;0;11;;@Test public void testMozilla() throws IOException {     assumeNetwork().     assumeConscrypt().     Request request = new Request.Builder().url("https://mozilla.org/robots.txt").build().     Response response = client.newCall(request).execute().     assertEquals(Protocol.HTTP_2, response.protocol()). }
-false;public;0;11;;@Test public void testGoogle() throws IOException {     assumeNetwork().     assumeConscrypt().     Request request = new Request.Builder().url("https://google.com/robots.txt").build().     Response response = client.newCall(request).execute().     assertEquals(Protocol.HTTP_2, response.protocol()). }
-false;public;0;4;;@Test public void testBuild() {     assertNotNull(ConscryptPlatform.buildIfSupported()). }
-false;public;0;11;;@Test public void testPreferred() {     Assume.assumeFalse(Platform.isConscryptPreferred()).     try {         Security.insertProviderAt(new OpenSSLProvider(), 1).         assertTrue(Platform.isConscryptPreferred()).     } finally {         Security.removeProvider("Conscrypt").     } }

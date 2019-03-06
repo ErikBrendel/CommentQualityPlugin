@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;5;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     setUseRouteBuilder(false).     return new ClassPathXmlApplicationContext("org/apache/camel/spring/RegistryInjection.xml"). }
-false;public;0;7;;@Test public void testInjectedStrategy() throws Exception {     CamelContext context = createCamelContext().     JndiRegistry jndi = context.getRegistry(JndiRegistry.class).     assertNotNull(jndi). }

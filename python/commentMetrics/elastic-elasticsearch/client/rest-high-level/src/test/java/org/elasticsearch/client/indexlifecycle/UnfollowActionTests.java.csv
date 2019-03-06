@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected UnfollowAction createTestInstance() {     return new UnfollowAction(). }
-false;protected;1;4;;@Override protected UnfollowAction doParseInstance(XContentParser parser) throws IOException {     return UnfollowAction.parse(parser). }
-false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }

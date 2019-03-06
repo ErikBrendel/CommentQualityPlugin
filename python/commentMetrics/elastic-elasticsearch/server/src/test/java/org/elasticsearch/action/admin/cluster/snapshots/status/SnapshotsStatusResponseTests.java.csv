@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;4;;@Override protected SnapshotsStatusResponse doParseInstance(XContentParser parser) throws IOException {     return SnapshotsStatusResponse.fromXContent(parser). }
-false;protected;0;5;;@Override protected Predicate<String> getRandomFieldsExcludeFilter() {     // Do not place random fields in the indices field or shards field since their fields correspond to names.     return (s) -> s.endsWith("shards") || s.endsWith("indices"). }
-false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }
-false;protected;0;9;;@Override protected SnapshotsStatusResponse createTestInstance() {     SnapshotStatusTests statusBuilder = new SnapshotStatusTests().     List<SnapshotStatus> snapshotStatuses = new ArrayList<>().     for (int idx = 0. idx < randomIntBetween(0, 5). idx++) {         snapshotStatuses.add(statusBuilder.createTestInstance()).     }     return new SnapshotsStatusResponse(snapshotStatuses). }

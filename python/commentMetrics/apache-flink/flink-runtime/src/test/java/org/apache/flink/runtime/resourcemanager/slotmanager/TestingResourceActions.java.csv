@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;4;;@Override public void releaseResource(InstanceID instanceId, Exception cause) {     releaseResourceConsumer.accept(instanceId, cause). }
-false;public;1;4;;@Override public Collection<ResourceProfile> allocateResource(ResourceProfile resourceProfile) throws ResourceManagerException {     return allocateResourceFunction.apply(resourceProfile). }
-false;public;3;4;;@Override public void notifyAllocationFailure(JobID jobId, AllocationID allocationId, Exception cause) {     notifyAllocationFailureConsumer.accept(Tuple3.of(jobId, allocationId, cause)). }

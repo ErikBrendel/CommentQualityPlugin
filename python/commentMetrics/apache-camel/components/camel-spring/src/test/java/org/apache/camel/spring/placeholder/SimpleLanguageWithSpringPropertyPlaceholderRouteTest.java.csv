@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Before public void setUp() throws Exception {     deleteDirectory("target/outBox").     deleteDirectory("target/outBoxSimple"). }
-false;public;0;7;;@Test @DirtiesContext public void replaceSimpleExpression() throws Exception {     template.sendBody("Test").     await().atMost(2, TimeUnit.SECONDS).untilAsserted(() -> assertDirectoryExists("target/outBoxSimple/")). }
-false;public;0;8;;@Ignore(value = "disabled because of https://jira.springsource.org/browse/SPR-7593") @Test @DirtiesContext public void replaceExpression() throws Exception {     template.sendBody("direct:start", "Test").     await().atMost(2, TimeUnit.SECONDS).untilAsserted(() -> assertFileExists("target/outBox/" + getTestFileName())). }
-false;private;0;5;;private String getTestFileName() {     SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd").     String s = sdf.format(new Date()).     return "test-" + s + ".txt". }

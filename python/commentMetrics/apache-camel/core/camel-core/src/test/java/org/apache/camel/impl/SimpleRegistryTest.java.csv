@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Before public void setUp() throws Exception {     registry = new SimpleRegistry().     registry.bind("a", "b").     registry.bind("c", 1). }
-false;public;0;4;;@Test public void testLookupByName() {     assertEquals("b", registry.lookupByName("a")). }
-false;public;0;4;;@Test public void testLookupByWrongName() {     assertNull(registry.lookupByName("x")). }
-false;public;0;4;;@Test public void testLookupByNameAndType() {     assertEquals("b", registry.lookupByNameAndType("a", String.class)). }
-false;public;0;11;;@Test public void testLookupByNameAndWrongType() {     try {         registry.lookupByNameAndType("a", Float.class).         fail().     } catch (NoSuchBeanException e) {         // expected         assertEquals("a", e.getName()).         assertTrue(e.getMessage().endsWith("of type: java.lang.String expected type was: class java.lang.Float")).     } }
-false;public;0;10;;@Test public void testLookupByType() {     Map<?, ?> map = registry.findByTypeWithName(String.class).     assertEquals(1, map.size()).     assertEquals("b", map.get("a")).     map = registry.findByTypeWithName(Object.class).     assertEquals(2, map.size()).     assertEquals("b", map.get("a")).     assertEquals(1, map.get("c")). }
-false;public;0;5;;@Test public void testLookupByWrongType() {     Map<?, ?> map = registry.findByTypeWithName(Float.class).     assertEquals(0, map.size()). }
-false;public;0;8;;@Test public void testBind() {     Object foo = "foo".     // will override     registry.bind("c", foo).     assertEquals(2, registry.size()).     assertSame(foo, registry.get("c")). }

@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Override public JobExecutionResult getLastJobExecutionResult() {     if (lastEnv == null) {         return this.lastJobExecutionResult.     } else {         return lastEnv.getLastJobExecutionResult().     } }
-false;public;0;4;;@Override public JobExecutionResult execute() throws Exception {     return execute("test job"). }
-false;public;1;6;;@Override public JobExecutionResult execute(String jobName) throws Exception {     JobExecutionResult result = super.execute(jobName).     this.lastJobExecutionResult = result.     return result. }
-false;public;0;5;;@Override public ExecutionEnvironment createExecutionEnvironment() {     lastEnv = new CollectionTestEnvironment().     return lastEnv. }
-false;protected;0;11;;protected void setAsContext() {     ExecutionEnvironmentFactory factory = new ExecutionEnvironmentFactory() {          @Override         public ExecutionEnvironment createExecutionEnvironment() {             lastEnv = new CollectionTestEnvironment().             return lastEnv.         }     }.     initializeContextEnvironment(factory). }
-false;protected,static;0;3;;protected static void unsetAsContext() {     resetContextEnvironment(). }

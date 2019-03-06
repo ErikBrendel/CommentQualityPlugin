@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;@Test public void testGetDestination() {     Endpoint endpoint = Mockito.mock(Endpoint.class).     Mockito.when(endpoint.getEndpointUri()).thenReturn("stomp:queue:test").     StompSpanDecorator decorator = new StompSpanDecorator().     assertEquals("test", decorator.getDestination(null, endpoint)). }

@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;0;2;;@ManagedAttribute(description = "The namespaces handled by the service") Collection<String> getNamespaces().
-false;;0;2;;@ManagedAttribute(description = "Service State") String getState().
-false;;0;2;;@ManagedAttribute(description = "Camel ID") String getCamelId().
-false;;0;2;;@ManagedOperation(description = "Start Service") void start() throws Exception.
-false;;0;2;;@ManagedOperation(description = "Stop Service") void stop() throws Exception.
-false;;1;2;;@ManagedOperation(description = "Start the View") void startView(String namespace) throws Exception.
-false;;1;2;;@ManagedOperation(description = "Stop the View") void stopView(String namespace) throws Exception.
-false;;1;2;;@ManagedOperation(description = "If the local view is leader") boolean isLeader(String namespace).

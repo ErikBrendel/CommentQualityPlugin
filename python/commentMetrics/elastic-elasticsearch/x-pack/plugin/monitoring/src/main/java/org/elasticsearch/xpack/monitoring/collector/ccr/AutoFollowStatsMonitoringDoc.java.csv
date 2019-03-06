@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public AutoFollowStats stats() {     return stats. }
-false;protected;2;8;;@Override protected void innerToXContent(final XContentBuilder builder, final Params params) throws IOException {     builder.startObject(TYPE).     {         stats.toXContentFragment(builder, params).     }     builder.endObject(). }

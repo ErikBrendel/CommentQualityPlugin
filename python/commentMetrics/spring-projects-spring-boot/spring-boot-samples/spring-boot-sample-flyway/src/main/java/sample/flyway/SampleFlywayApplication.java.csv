@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;3;;public static void main(String[] args) {     SpringApplication.run(SampleFlywayApplication.class, args). }
-false;public;1;4;;@Override public void run(String... args) throws Exception {     System.err.println(repository.findAll()). }
-false;public;1;11;;@Bean public CommandLineRunner runner(PersonRepository repository) {     return new CommandLineRunner() {          @Override         public void run(String... args) throws Exception {             System.err.println(repository.findAll()).         }     }. }

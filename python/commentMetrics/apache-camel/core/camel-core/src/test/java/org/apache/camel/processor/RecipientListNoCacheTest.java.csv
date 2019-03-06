@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;15;;@Test public void testNoCache() throws Exception {     MockEndpoint x = getMockEndpoint("mock:x").     MockEndpoint y = getMockEndpoint("mock:y").     MockEndpoint z = getMockEndpoint("mock:z").     x.expectedBodiesReceived("foo", "bar").     y.expectedBodiesReceived("foo", "bar").     z.expectedBodiesReceived("foo", "bar").     sendBody("foo").     sendBody("bar").     assertMockEndpointsSatisfied(). }
-false;protected;1;4;;protected void sendBody(String body) {     template.sendBodyAndHeader("direct:a", body, "recipientListHeader", "mock:x,mock:y,mock:z"). }
-false;public;0;4;;public void configure() {     from("direct:a").recipientList(header("recipientListHeader").tokenize(",")).cacheSize(-1). }
-false;protected;0;9;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("direct:a").recipientList(header("recipientListHeader").tokenize(",")).cacheSize(-1).         }     }. }

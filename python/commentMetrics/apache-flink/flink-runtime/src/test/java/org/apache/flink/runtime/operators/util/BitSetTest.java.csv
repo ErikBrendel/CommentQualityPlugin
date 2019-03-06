@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Before public void init() {     bitSet = new BitSet(byteSize).     bitSet.setMemorySegment(memorySegment, 0).     bitSet.clear(). }
-false;public;0;4;;@Test(expected = IllegalArgumentException.class) public void verifyBitSetSize1() {     bitSet.setMemorySegment(memorySegment, 1). }
-false;public;0;4;;@Test(expected = IllegalArgumentException.class) public void verifyBitSetSize2() {     bitSet.setMemorySegment(null, 1). }
-false;public;0;4;;@Test(expected = IllegalArgumentException.class) public void verifyBitSetSize3() {     bitSet.setMemorySegment(memorySegment, -1). }
-false;public;0;4;;@Test(expected = IllegalArgumentException.class) public void verifyInputIndex1() {     bitSet.set(8 * byteSize + 1). }
-false;public;0;4;;@Test(expected = IllegalArgumentException.class) public void verifyInputIndex2() {     bitSet.set(-1). }
-false;public;0;19;;@Test public void testSetValues() {     int bitSize = bitSet.bitSize().     assertEquals(bitSize, 8 * 1024).     for (int i = 0. i < bitSize. i++) {         assertFalse(bitSet.get(i)).         if (i % 2 == 0) {             bitSet.set(i).         }     }     for (int i = 0. i < bitSize. i++) {         if (i % 2 == 0) {             assertTrue(bitSet.get(i)).         } else {             assertFalse(bitSet.get(i)).         }     } }

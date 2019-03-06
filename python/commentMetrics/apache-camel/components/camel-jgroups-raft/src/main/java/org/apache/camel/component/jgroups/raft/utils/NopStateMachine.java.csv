@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;3;5;;@Override public byte[] apply(byte[] bytes, int offset, int length) throws Exception {     LOG.trace("Called StateMachine.apply(byte[] {}, int {}, int {}) on {}", bytes, offset, length, this).     return new byte[0]. }
-false;public;1;4;;@Override public void readContentFrom(DataInput dataInput) throws Exception {     LOG.trace("Called StateMachine.readContentFrom(DataInput {}) on {}", dataInput, this). }
-false;public;1;4;;@Override public void writeContentTo(DataOutput dataOutput) throws Exception {     LOG.trace("Called StateMachine.readContentFrom(DataOutput {}) on {}", dataOutput, this). }

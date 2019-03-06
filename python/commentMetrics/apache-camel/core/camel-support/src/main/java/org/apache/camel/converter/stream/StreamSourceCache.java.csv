@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;public void reset() {     if (streamCache != null) {         streamCache.reset().     }     if (readCache != null) {         readCache.reset().     } }
-false;public;1;7;;public void writeTo(OutputStream os) throws IOException {     if (streamCache != null) {         streamCache.writeTo(os).     } else if (readCache != null) {         readCache.writeTo(os).     } }
-false;public;1;9;;public StreamCache copy(Exchange exchange) throws IOException {     if (streamCache != null) {         return new StreamSourceCache(streamCache.copy(exchange)).     }     if (readCache != null) {         return new StreamSourceCache(readCache.copy(exchange)).     }     return null. }
-false;public;0;10;;public boolean inMemory() {     if (streamCache != null) {         return streamCache.inMemory().     } else if (readCache != null) {         return readCache.inMemory().     } else {         // should not happen         return true.     } }
-false;public;0;10;;public long length() {     if (streamCache != null) {         return streamCache.length().     } else if (readCache != null) {         return readCache.length().     } else {         // should not happen         return 0.     } }

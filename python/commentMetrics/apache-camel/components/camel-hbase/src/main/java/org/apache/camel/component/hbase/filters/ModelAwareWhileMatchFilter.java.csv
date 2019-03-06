@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;2;6;/**  * Applies the message to {@link org.apache.hadoop.hbase.filter.Filter} to context.  */ ;/**  * Applies the message to {@link org.apache.hadoop.hbase.filter.Filter} to context.  */ @Override public void apply(CamelContext context, HBaseRow rowModel) {     if (ModelAwareFilter.class.isAssignableFrom(getFilter().getClass())) {         ((ModelAwareFilter<?>) getFilter()).apply(context, rowModel).     } }
-true;public,static;1;3;/**  * Wraps an existing {@link WhileMatchFilter} filter into a {@link ModelAwareWhileMatchFilter}.  */ ;/**  * Wraps an existing {@link WhileMatchFilter} filter into a {@link ModelAwareWhileMatchFilter}.  */ public static ModelAwareWhileMatchFilter wrap(WhileMatchFilter filter) {     return new ModelAwareWhileMatchFilter(filter.getFilter()). }
-false;public;0;4;;@Override public FilterList getFilteredList() {     return null. }

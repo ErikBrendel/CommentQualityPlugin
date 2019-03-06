@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;3;7;;public static void maybePropagateIncomingBody(AbstractIgniteEndpoint endpoint, Message in, Message out) {     if (!endpoint.isPropagateIncomingBodyIfNoReturnValue()) {         return.     }     out.setBody(in.getBody()). }

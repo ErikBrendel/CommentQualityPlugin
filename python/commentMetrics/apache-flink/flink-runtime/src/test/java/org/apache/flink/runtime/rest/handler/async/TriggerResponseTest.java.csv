@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected Class<TriggerResponse> getTestResponseClass() {     return TriggerResponse.class. }
-false;protected;0;4;;@Override protected TriggerResponse getTestResponseInstance() throws Exception {     return new TriggerResponse(new TriggerId()). }
-false;protected;2;4;;@Override protected void assertOriginalEqualsToUnmarshalled(TriggerResponse expected, TriggerResponse actual) {     assertThat(actual.getTriggerId(), is(equalTo(expected.getTriggerId()))). }

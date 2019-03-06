@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public Map<String, Properties> findComponents() throws LoadPropertiesException, IOException {     return BundleContextUtils.findComponents(bundleContext, this). }
-false;protected;0;10;;@Override protected TypeConverter createTypeConverter() {     // CAMEL-3614: make sure we use a bundle context which imports org.apache.camel.impl.converter package     BundleContext ctx = BundleContextUtils.getBundleContext(getClass()).     if (ctx == null) {         ctx = bundleContext.     }     FactoryFinder finder = new OsgiFactoryFinderResolver(bundleContext).resolveDefaultFactoryFinder(getClassResolver()).     return new OsgiTypeConverter(ctx, this, getInjector(), finder). }

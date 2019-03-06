@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;8;;@Override public List<AtmosphereRequest> onTextStream(WebSocket webSocket, Reader data) {     LOG.debug("processing reader message {}", data).     String connectionKey = store.getConnectionKey(webSocket).     consumer.sendMessage(connectionKey, data).     LOG.debug("reader message sent").     return null. }
-false;public;2;8;;@Override public List<AtmosphereRequest> onBinaryStream(WebSocket webSocket, InputStream data) {     LOG.debug("processing inputstream message {}", data).     String connectionKey = store.getConnectionKey(webSocket).     consumer.sendMessage(connectionKey, data).     LOG.debug("reader message sent").     return null. }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,final;0;4;;@Override public final boolean isRuntime() {     return true. }
-true;public;2;4;/**  * Can override to add preconditions for dynamic matching. This implementation  * always returns true.  */ ;/**  * Can override to add preconditions for dynamic matching. This implementation  * always returns true.  */ @Override public boolean matches(Method method, Class<?> targetClass) {     return true. }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;private,static;2;7;;private static String corruptedMessage(String source, String details) {     String msg = "translog from source [" + source + "] is corrupted".     if (details != null) {         msg += ", " + details.     }     return msg. }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;10;;@Override public void invalidRecord(InvalidRecordException ex) throws Exception {     String id = getExchange().getExchangeId().     String line = "ExchangeId: " + id + " Invalid record: " + ex.getMessage() + ": " + ex.getRecordContext().getRecordText().     LOG.warn(line).     // lets handle the error and store to the results a dummy error DTO     MyErrorDto dto = new MyErrorDto(ex.getRecordName(), ex.getMessage()).     handleErrorAndAddAsResult(dto). }

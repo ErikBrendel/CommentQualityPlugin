@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;2;4;;@Override protected BinaryPipe replaceChildren(Pipe left, Pipe right) {     return new NullIfPipe(source(), expression(), left, right). }
-false;protected;0;4;;@Override protected NodeInfo<NullIfPipe> info() {     return NodeInfo.create(this, NullIfPipe::new, expression(), children().get(0), children().get(1)). }
-false;public;0;4;;@Override public Processor asProcessor() {     return new NullIfProcessor(left().asProcessor(), right().asProcessor()). }

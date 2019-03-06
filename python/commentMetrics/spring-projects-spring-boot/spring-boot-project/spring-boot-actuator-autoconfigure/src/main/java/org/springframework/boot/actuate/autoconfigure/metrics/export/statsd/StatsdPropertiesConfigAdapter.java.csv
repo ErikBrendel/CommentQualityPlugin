@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public String get(String s) {     return null. }
-false;public;0;4;;@Override public StatsdFlavor flavor() {     return get(StatsdProperties::getFlavor, StatsdConfig.super::flavor). }
-false;public;0;4;;@Override public boolean enabled() {     return get(StatsdProperties::isEnabled, StatsdConfig.super::enabled). }
-false;public;0;4;;@Override public String host() {     return get(StatsdProperties::getHost, StatsdConfig.super::host). }
-false;public;0;4;;@Override public int port() {     return get(StatsdProperties::getPort, StatsdConfig.super::port). }
-false;public;0;5;;@Override public int maxPacketLength() {     return get(StatsdProperties::getMaxPacketLength, StatsdConfig.super::maxPacketLength). }
-false;public;0;5;;@Override public Duration pollingFrequency() {     return get(StatsdProperties::getPollingFrequency, StatsdConfig.super::pollingFrequency). }
-false;public;0;5;;@Override public boolean publishUnchangedMeters() {     return get(StatsdProperties::isPublishUnchangedMeters, StatsdConfig.super::publishUnchangedMeters). }

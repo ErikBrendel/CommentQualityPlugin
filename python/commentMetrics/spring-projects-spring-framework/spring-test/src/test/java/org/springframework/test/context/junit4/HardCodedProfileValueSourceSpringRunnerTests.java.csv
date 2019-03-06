@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;7;;@BeforeClass public static void setProfileValue() {     numTestsExecuted = 0.     // Set the system property to something other than VALUE as a sanity     // check.     System.setProperty(NAME, "999999999999"). }
-false;public;1;4;;@Override public String get(final String key) {     return (key.equals(NAME) ? VALUE : null). }

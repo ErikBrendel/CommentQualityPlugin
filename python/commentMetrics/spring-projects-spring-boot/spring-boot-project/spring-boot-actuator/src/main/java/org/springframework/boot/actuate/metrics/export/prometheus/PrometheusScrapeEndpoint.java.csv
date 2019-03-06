@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;13;;@ReadOperation(produces = TextFormat.CONTENT_TYPE_004) public String scrape() {     try {         Writer writer = new StringWriter().         TextFormat.write004(writer, this.collectorRegistry.metricFamilySamples()).         return writer.toString().     } catch (IOException ex) {         // IOException         throw new RuntimeException("Writing metrics failed", ex).     } }

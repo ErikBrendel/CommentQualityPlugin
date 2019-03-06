@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test(expected = IllegalArgumentException.class) public void createWithNullScriptSource() throws Exception {     new RefreshableScriptTargetSource(mock(BeanFactory.class), "a.bean", null, null, false). }

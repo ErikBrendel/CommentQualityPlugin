@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void createWhenMethodIsNullShouldThrowException() {     assertThatIllegalArgumentException().isThrownBy(() -> new OperationMethod(null, OperationType.READ)).withMessageContaining("Method must not be null"). }
-false;public;0;6;;@Test public void createWhenOperationTypeIsNullShouldThrowException() {     assertThatIllegalArgumentException().isThrownBy(() -> new OperationMethod(this.exampleMethod, null)).withMessageContaining("OperationType must not be null"). }
-false;public;0;6;;@Test public void getMethodShouldReturnMethod() {     OperationMethod operationMethod = new OperationMethod(this.exampleMethod, OperationType.READ).     assertThat(operationMethod.getMethod()).isEqualTo(this.exampleMethod). }
-false;public;0;6;;@Test public void getOperationTypeShouldReturnOperationType() {     OperationMethod operationMethod = new OperationMethod(this.exampleMethod, OperationType.READ).     assertThat(operationMethod.getOperationType()).isEqualTo(OperationType.READ). }
-false;public;0;8;;@Test public void getParametersShouldReturnParameters() {     OperationMethod operationMethod = new OperationMethod(this.exampleMethod, OperationType.READ).     OperationParameters parameters = operationMethod.getParameters().     assertThat(parameters.getParameterCount()).isEqualTo(1).     assertThat(parameters.iterator().next().getName()).isEqualTo("name"). }
-false;;1;3;;String example(String name) {     return name. }

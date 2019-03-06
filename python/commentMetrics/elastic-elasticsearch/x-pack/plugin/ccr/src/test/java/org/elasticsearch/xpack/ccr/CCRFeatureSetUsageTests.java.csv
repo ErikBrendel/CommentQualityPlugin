@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;5;;@Override protected CCRFeatureSet.Usage createTestInstance() {     return new CCRFeatureSet.Usage(randomBoolean(), randomBoolean(), randomIntBetween(0, Integer.MAX_VALUE), randomIntBetween(0, Integer.MAX_VALUE), randomNonNegativeLong()). }
-false;protected;0;4;;@Override protected Writeable.Reader<CCRFeatureSet.Usage> instanceReader() {     return CCRFeatureSet.Usage::new. }

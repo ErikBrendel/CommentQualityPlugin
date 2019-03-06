@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;10;;@Override protected GetOverallBucketsResponse createTestInstance() {     int listSize = randomInt(10).     List<OverallBucket> overallBuckets = new ArrayList<>(listSize).     for (int j = 0. j < listSize. j++) {         OverallBucket overallBucket = OverallBucketTests.createRandom().         overallBuckets.add(overallBucket).     }     return new GetOverallBucketsResponse(overallBuckets, listSize). }
-false;protected;1;4;;@Override protected GetOverallBucketsResponse doParseInstance(XContentParser parser) throws IOException {     return GetOverallBucketsResponse.fromXContent(parser). }
-false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }

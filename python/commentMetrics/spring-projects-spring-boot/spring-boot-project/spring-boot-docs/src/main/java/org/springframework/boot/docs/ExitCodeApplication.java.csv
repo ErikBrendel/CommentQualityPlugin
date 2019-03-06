@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Bean public ExitCodeGenerator exitCodeGenerator() {     return () -> 42. }
-false;public,static;1;4;;public static void main(String[] args) {     System.exit(SpringApplication.exit(SpringApplication.run(ExitCodeApplication.class, args))). }

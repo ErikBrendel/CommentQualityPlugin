@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;1;3;/**  * Set an alternative logger to use than the one based on the class name.  * @param logger the logger to use  * @since 5.1  */ ;/**  * Set an alternative logger to use than the one based on the class name.  * @param logger the logger to use  * @since 5.1  */ public void setLogger(Log logger) {     this.logger = logger. }
-true;public;0;3;/**  * Return the currently configured Logger.  * @since 5.1  */ ;/**  * Return the currently configured Logger.  * @since 5.1  */ public Log getLogger() {     return logger. }
-false;public;0;4;;@Override public List<MimeType> getEncodableMimeTypes() {     return this.encodableMimeTypes. }
-false;public;2;12;;@Override public boolean canEncode(ResolvableType elementType, @Nullable MimeType mimeType) {     if (mimeType == null) {         return true.     }     for (MimeType candidate : this.encodableMimeTypes) {         if (candidate.isCompatibleWith(mimeType)) {             return true.         }     }     return false. }

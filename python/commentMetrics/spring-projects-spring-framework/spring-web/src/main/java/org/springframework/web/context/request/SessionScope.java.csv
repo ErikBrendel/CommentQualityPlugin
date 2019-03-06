@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected int getScope() {     return RequestAttributes.SCOPE_SESSION. }
-false;public;0;4;;@Override public String getConversationId() {     return RequestContextHolder.currentRequestAttributes().getSessionId(). }
-false;public;2;7;;@Override public Object get(String name, ObjectFactory<?> objectFactory) {     Object mutex = RequestContextHolder.currentRequestAttributes().getSessionMutex().     synchronized (mutex) {         return super.get(name, objectFactory).     } }
-false;public;1;8;;@Override @Nullable public Object remove(String name) {     Object mutex = RequestContextHolder.currentRequestAttributes().getSessionMutex().     synchronized (mutex) {         return super.remove(name).     } }

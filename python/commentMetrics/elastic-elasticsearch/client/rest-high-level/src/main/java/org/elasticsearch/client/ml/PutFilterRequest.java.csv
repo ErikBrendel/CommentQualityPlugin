@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public MlFilter getMlFilter() {     return filter. }
-false;public;2;4;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     return filter.toXContent(builder, params). }
-false;public;1;13;;@Override public boolean equals(Object object) {     if (this == object) {         return true.     }     if (object == null || getClass() != object.getClass()) {         return false.     }     PutFilterRequest request = (PutFilterRequest) object.     return Objects.equals(filter, request.filter). }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(filter). }
-false;public,final;0;4;;@Override public final String toString() {     return Strings.toString(this). }
-false;public;0;4;;@Override public ActionRequestValidationException validate() {     return null. }

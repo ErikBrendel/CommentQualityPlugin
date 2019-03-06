@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void endpointIsAutoConfigured() {     this.contextRunner.run((context) -> assertThat(context).hasSingleBean(ScheduledTasksEndpoint.class)). }
-false;public;0;7;;@Test public void endpointCanBeDisabled() {     this.contextRunner.withPropertyValues("management.endpoint.scheduledtasks.enabled:false").run((context) -> assertThat(context).doesNotHaveBean(ScheduledTasksEndpoint.class)). }
-false;public;0;7;;@Test public void endpointBacksOffWhenUserProvidedEndpointIsPresent() {     this.contextRunner.withUserConfiguration(CustomEndpointConfiguration.class).run((context) -> assertThat(context).hasSingleBean(ScheduledTasksEndpoint.class).hasBean("customEndpoint")). }
-false;public;0;4;;@Bean public CustomEndpoint customEndpoint() {     return new CustomEndpoint(). }

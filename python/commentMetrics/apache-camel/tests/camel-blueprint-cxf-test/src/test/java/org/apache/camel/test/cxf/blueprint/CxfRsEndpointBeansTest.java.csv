@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected String getBlueprintDescriptor() {     return "org/apache/camel/test/cxf/blueprint/CxfRsEndpointBeans.xml". }
-false;protected;0;4;;@Override protected String getBundleDirectives() {     return "blueprint.aries.xml-validation:=false". }
-false;public;0;9;;@Test public void testCxfBusInjection() {     CxfRsEndpoint serviceEndpoint = context.getEndpoint("cxfrs:bean:serviceEndpoint", CxfRsEndpoint.class).     CxfRsEndpoint routerEndpoint = context.getEndpoint("cxfrs:bean:routerEndpoint", CxfRsEndpoint.class).     JAXRSServerFactoryBean server = routerEndpoint.createJAXRSServerFactoryBean().     JAXRSClientFactoryBean client = serviceEndpoint.createJAXRSClientFactoryBean().     assertEquals("These cxfrs endpoints don't share the same bus", server.getBus().getId(), client.getBus().getId()). }

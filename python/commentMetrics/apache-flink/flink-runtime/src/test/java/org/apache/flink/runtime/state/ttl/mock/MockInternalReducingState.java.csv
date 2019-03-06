@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public T get() {     return getInternal(). }
-false;public;1;4;;@Override public void add(T value) throws Exception {     updateInternal(reduceFunction.reduce(get(), value)). }
-false;;2;4;;@Override T mergeState(T t, T nAcc) throws Exception {     return reduceFunction.reduce(t, nAcc). }
-false;static;2;7;;@SuppressWarnings({ "unchecked", "unused" }) static <N, T, S extends State, IS extends S> IS createState(TypeSerializer<N> namespaceSerializer, StateDescriptor<S, T> stateDesc) {     ReducingStateDescriptor<T> reducingStateDesc = (ReducingStateDescriptor<T>) stateDesc.     return (IS) new MockInternalReducingState<>(reducingStateDesc.getReduceFunction()). }

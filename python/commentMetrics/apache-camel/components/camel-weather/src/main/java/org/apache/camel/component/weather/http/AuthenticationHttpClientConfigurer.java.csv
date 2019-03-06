@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;10;;@Override public HttpClient configureHttpClient(HttpClient client) {     if (proxy) {         client.getState().setProxyCredentials(AuthScope.ANY, this.credentials).     } else {         client.getState().setCredentials(AuthScope.ANY, this.credentials).     }     return client. }
-false;public,static;3;3;;public static HttpClientConfigurer basicAutenticationConfigurer(boolean proxy, String user, String pwd) {     return new AuthenticationHttpClientConfigurer(proxy, new UsernamePasswordCredentials(user, pwd)). }
-false;public,static;5;3;;public static HttpClientConfigurer ntlmAutenticationConfigurer(boolean proxy, String user, String pwd, String domain, String host) {     return new AuthenticationHttpClientConfigurer(proxy, new NTCredentials(user, pwd, host, domain)). }

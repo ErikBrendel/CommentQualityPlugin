@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getPath() {     return this.path. }
-false;public;1;5;;@Override public void setUrlMappings(Collection<String> urlMappings) {     throw new UnsupportedOperationException("URL Mapping cannot be changed on a DispatcherServlet registration"). }
-false;public;1;5;;@Override public void addUrlMappings(String... urlMappings) {     throw new UnsupportedOperationException("URL Mapping cannot be changed on a DispatcherServlet registration"). }

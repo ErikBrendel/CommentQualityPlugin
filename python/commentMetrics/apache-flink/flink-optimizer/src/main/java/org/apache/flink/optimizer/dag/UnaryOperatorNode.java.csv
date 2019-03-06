@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected List<OperatorDescriptorSingle> getPossibleProperties() {     return this.operators. }
-false;public;0;4;;@Override public String getOperatorName() {     return this.name. }
-false;public;0;4;;@Override public SemanticProperties getSemanticProperties() {     return new SingleInputSemanticProperties.AllFieldsForwardedProperties(). }
-false;protected;1;4;;@Override protected void computeOperatorSpecificDefaultEstimates(DataStatistics statistics) { // we have no estimates by default }

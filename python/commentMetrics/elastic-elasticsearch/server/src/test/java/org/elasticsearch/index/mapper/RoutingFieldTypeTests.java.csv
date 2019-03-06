@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected MappedFieldType createDefaultFieldType() {     return new RoutingFieldMapper.RoutingFieldType(). }
-false;public;0;8;;public void testPrefixQuery() {     MappedFieldType ft = createDefaultFieldType().     ft.setName("field").     ft.setIndexOptions(IndexOptions.DOCS).     Query expected = new PrefixQuery(new Term("field", new BytesRef("foo*"))).     assertEquals(expected, ft.prefixQuery("foo*", null, null)). }
-false;public;0;8;;public void testRegexpQuery() {     MappedFieldType ft = createDefaultFieldType().     ft.setName("field").     ft.setIndexOptions(IndexOptions.DOCS).     Query expected = new RegexpQuery(new Term("field", new BytesRef("foo?"))).     assertEquals(expected, ft.regexpQuery("foo?", 0, 10, null, null)). }
-false;public;0;8;;public void testWildcardQuery() {     MappedFieldType ft = createDefaultFieldType().     ft.setName("field").     ft.setIndexOptions(IndexOptions.DOCS).     Query expected = new WildcardQuery(new Term("field", new BytesRef("foo*"))).     assertEquals(expected, ft.wildcardQuery("foo*", null, null)). }

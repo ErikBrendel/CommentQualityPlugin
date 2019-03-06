@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public JobExecutionResult execute() throws Exception {     return execute(""). }
-false;public;1;16;;@Override public JobExecutionResult execute(String jobName) throws Exception {     StreamGraph streamGraph = getStreamGraph().     streamGraph.setJobName(jobName).     transformations.clear().     if (env instanceof OptimizerPlanEnvironment) {         ((OptimizerPlanEnvironment) env).setPlan(streamGraph).     } else if (env instanceof PreviewPlanEnvironment) {         ((PreviewPlanEnvironment) env).setPreview(streamGraph.getStreamingPlanAsJSON()).     }     throw new OptimizerPlanEnvironment.ProgramAbortException(). }

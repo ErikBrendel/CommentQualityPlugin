@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;1;1;/**  * Method called when an XMLSignatureException is thrown by the method  * {@link XMLSignature#validate(javax.xml.crypto.dsig.XMLValidateContext)}.  * <p>  * You can return more specific exceptions which are useful for your  * use-case.  *  * @param e exception  * @return exception exception which is then thrown by XmlSignerProcessor.  */ ;/**  * Method called when an XMLSignatureException is thrown by the method  * {@link XMLSignature#validate(javax.xml.crypto.dsig.XMLValidateContext)}.  * <p>  * You can return more specific exceptions which are useful for your  * use-case.  *  * @param e exception  * @return exception exception which is then thrown by XmlSignerProcessor.  */ Exception onXMLSignatureException(XMLSignatureException e).
-false;;0;1;;void start().
-true;;1;1;// NOPMD ;// NOPMD void signatureValueValidationFailed(SignatureValue value) throws Exception.
-true;;1;1;// NOPMD ;// NOPMD void referenceValidationFailed(Reference ref) throws Exception.
-true;;1;1;// NOPMD ;// NOPMD void manifestReferenceValidationFailed(Reference ref) throws Exception.
-true;;0;1;// NOPMD ;/**  * If <tt>true</tt> is returned then the verifier will go-on as if there was  * no validation failure. If <tt>false</tt> is returned than the verifier  * will throw an {@link XmlSignatureInvalidException}.  * <p>  * Best practice is to return <code>false</code> to ensure that after a core  * validation failure, the verification fails.  *  * @return true or false  * @throws Exception  */ // NOPMD boolean ignoreCoreValidationFailure() throws Exception.
-true;;0;1;// NOPMD ;// NOPMD void end() throws Exception.

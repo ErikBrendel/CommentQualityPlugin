@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;@Test public void testVanillaExchange() throws Exception {     long end = System.currentTimeMillis() + 10000.     List<SampleMessage> messages = this.consumer.getMessages().     while (messages.size() != 1 && System.currentTimeMillis() < end) {         Thread.sleep(250).     }     assertThat(messages).hasSize(1).     assertThat(messages.get(0).getMessage()).isEqualTo("A simple test message"). }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;public Message receive(long timeout) throws JMSException {     if (isBadSession) {         throw new IllegalStateException("asdf").     }     return super.receive(timeout). }

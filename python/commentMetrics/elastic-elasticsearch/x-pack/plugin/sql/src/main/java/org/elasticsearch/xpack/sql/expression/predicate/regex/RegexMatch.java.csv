@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public DataType dataType() {     return DataType.BOOLEAN. }
-false;public;0;7;;@Override public Nullability nullable() {     if (pattern == null) {         return Nullability.TRUE.     }     return field().nullable(). }
-false;protected;0;4;;@Override protected TypeResolution resolveType() {     return isStringAndExact(field(), sourceText(), Expressions.ParamOrdinal.DEFAULT). }
-false;public;0;5;;@Override public boolean foldable() {     // right() is not directly foldable in any context but Like can fold it.     return field().foldable(). }
-false;public;0;5;;@Override public Boolean fold() {     Object val = field().fold().     return RegexOperation.match(val, pattern). }
-false;protected;0;4;;@Override protected Processor makeProcessor() {     return new RegexProcessor(pattern). }

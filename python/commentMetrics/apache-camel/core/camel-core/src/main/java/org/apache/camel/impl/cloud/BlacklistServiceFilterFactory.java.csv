@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;// ************************************************************************* // Properties // ************************************************************************* public List<String> getServers() {     return servers. }
-false;public;1;3;;public void setServers(List<String> servers) {     this.servers = servers. }
-false;public;1;9;;// ************************************************************************* // Factory // ************************************************************************* @Override public ServiceFilter newInstance(CamelContext camelContext) throws Exception {     BlacklistServiceFilter serviceFilter = new BlacklistServiceFilter().     if (servers != null) {         serviceFilter.setServers(servers).     }     return serviceFilter. }

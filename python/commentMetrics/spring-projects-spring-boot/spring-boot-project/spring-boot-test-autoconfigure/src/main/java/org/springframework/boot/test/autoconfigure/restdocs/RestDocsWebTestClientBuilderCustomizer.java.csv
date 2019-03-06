@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;@Override public void customize(WebTestClient.Builder builder) {     customizeBaseUrl(builder).     builder.filter(this.delegate). }
-false;private;1;11;;private void customizeBaseUrl(WebTestClient.Builder builder) {     String scheme = this.properties.getUriScheme().     String host = this.properties.getUriHost().     String baseUrl = (StringUtils.hasText(scheme) ? scheme : "http") + "://" + (StringUtils.hasText(host) ? host : "localhost").     Integer port = this.properties.getUriPort().     if (!isStandardPort(scheme, port)) {         baseUrl += ":" + port.     }     builder.baseUrl(baseUrl). }
-false;private;2;7;;private boolean isStandardPort(String scheme, Integer port) {     if (port == null) {         return true.     }     return (scheme.equals("http") && port == 80) || (scheme.equals("https") && port == 443). }

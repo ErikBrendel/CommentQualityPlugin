@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;9;/**  * This test checks the channel selection.  */ ;/**  * This test checks the channel selection.  */ @Test public void channelSelect() {     final StringValue dummyRecord = new StringValue("abc").     final RoundRobinChannelSelector<StringValue> selector = new RoundRobinChannelSelector<>().     selector.setup(2).     assertSelectedChannel(selector, dummyRecord, 0).     assertSelectedChannel(selector, dummyRecord, 1). }
-false;private;3;8;;private void assertSelectedChannel(ChannelSelector<StringValue> selector, StringValue record, int expectedChannel) {     int actualResult = selector.selectChannel(record).     assertEquals(expectedChannel, actualResult). }

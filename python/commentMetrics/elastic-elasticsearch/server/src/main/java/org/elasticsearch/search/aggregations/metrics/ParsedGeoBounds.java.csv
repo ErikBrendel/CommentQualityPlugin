@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getType() {     return GeoBoundsAggregationBuilder.NAME. }
-false;public;2;16;;@Override public XContentBuilder doXContentBody(XContentBuilder builder, Params params) throws IOException {     if (topLeft != null) {         builder.startObject(BOUNDS_FIELD.getPreferredName()).         builder.startObject(TOP_LEFT_FIELD.getPreferredName()).         builder.field(LAT_FIELD.getPreferredName(), topLeft.getLat()).         builder.field(LON_FIELD.getPreferredName(), topLeft.getLon()).         builder.endObject().         builder.startObject(BOTTOM_RIGHT_FIELD.getPreferredName()).         builder.field(LAT_FIELD.getPreferredName(), bottomRight.getLat()).         builder.field(LON_FIELD.getPreferredName(), bottomRight.getLon()).         builder.endObject().         builder.endObject().     }     return builder. }
-false;public;0;4;;@Override public GeoPoint topLeft() {     return topLeft. }
-false;public;0;4;;@Override public GeoPoint bottomRight() {     return bottomRight. }
-false;public,static;2;5;;public static ParsedGeoBounds fromXContent(XContentParser parser, final String name) {     ParsedGeoBounds geoBounds = PARSER.apply(parser, null).     geoBounds.setName(name).     return geoBounds. }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected DeleteAction createTestInstance() {     return new DeleteAction(). }
-false;protected;1;4;;@Override protected DeleteAction doParseInstance(XContentParser parser) {     return DeleteAction.parse(parser). }
-false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }

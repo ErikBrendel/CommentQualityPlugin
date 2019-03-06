@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void shouldUseProvidedConversionService() {     assertSame(TestConfig.CONVERSION_SERVICE, conversionService). }
-false;;0;4;;@Bean(name = "myService") ConversionService providedConversionService() {     return CONVERSION_SERVICE. }

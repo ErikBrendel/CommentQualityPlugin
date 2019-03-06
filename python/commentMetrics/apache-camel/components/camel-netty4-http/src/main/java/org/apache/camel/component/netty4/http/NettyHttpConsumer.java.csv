@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public NettyHttpEndpoint getEndpoint() {     return (NettyHttpEndpoint) super.getEndpoint(). }
-false;public;0;4;;@Override public NettyHttpConfiguration getConfiguration() {     return (NettyHttpConfiguration) super.getConfiguration(). }
-false;protected;0;6;;@Override protected void doStart() throws Exception {     super.doStart().     ObjectHelper.notNull(getNettyServerBootstrapFactory(), "HttpServerBootstrapFactory", this).     getNettyServerBootstrapFactory().addConsumer(this). }
-false;protected;0;5;;@Override protected void doStop() throws Exception {     getNettyServerBootstrapFactory().removeConsumer(this).     super.doStop(). }
-false;protected;0;9;;@Override protected void doSuspend() throws Exception {     if (getConfiguration().isSend503whenSuspended()) {     // noop as the server handler will send back 503 when suspended     } else {         // will stop the acceptor         doStop().     } }
-false;protected;0;9;;@Override protected void doResume() throws Exception {     if (getConfiguration().isSend503whenSuspended()) {     // noop     } else {         // will start the acceptor         doStart().     } }

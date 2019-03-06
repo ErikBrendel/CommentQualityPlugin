@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;3;;public SearchHitBuilder addField(String name, Object value) {     return addField(name, Arrays.asList(value)). }
-false;public;2;4;;public SearchHitBuilder addField(String name, List<Object> values) {     fields.put(name, new DocumentField(name, values)).     return this. }
-false;public;1;4;;public SearchHitBuilder setSource(String sourceJson) {     hit.sourceRef(new BytesArray(sourceJson)).     return this. }
-false;public;0;6;;public SearchHit build() {     if (!fields.isEmpty()) {         hit.fields(fields).     }     return hit. }

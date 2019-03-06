@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;8;;@Override public LoadBalancer createLoadBalancer(RouteContext routeContext) {     if (definition.getCustomLoadBalancer() != null) {         return definition.getCustomLoadBalancer().     }     StringHelper.notEmpty(definition.getRef(), "ref", this).     return CamelContextHelper.mandatoryLookup(routeContext.getCamelContext(), definition.getRef(), LoadBalancer.class). }

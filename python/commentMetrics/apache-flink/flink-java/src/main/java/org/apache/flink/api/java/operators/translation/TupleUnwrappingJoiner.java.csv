@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;3;4;;@Override public void join(Tuple2<K, I1> value1, Tuple2<K, I2> value2, Collector<OUT> collector) throws Exception {     wrappedFunction.join(unwrap(value1), unwrap(value2), collector). }
-false;private;1;4;;@SuppressWarnings("unchecked") private <V> V unwrap(Tuple2<K, V> t) {     return t == null ? null : (V) (t.getField(1)). }

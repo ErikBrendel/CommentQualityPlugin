@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public void configure(CamelContext context) {     context.addLifecycleStrategy(new MyVetoLifecycle()). }
-false;public;0;20;;@Test public void testMain() throws Exception {     // lets make a simple route     Main main = new Main().     main.setDuration(30).     main.setDurationHitExitCode(99).     main.addRouteBuilder(new MyRoute()).     main.addMainListener(new MainListenerSupport() {          @Override         public void configure(CamelContext context) {             context.addLifecycleStrategy(new MyVetoLifecycle()).         }     }).     // should not hang as we veto fail     main.run().     // should complete normally due veto     assertEquals(0, main.getExitCode()). }
-false;public;0;4;;@Override public void configure() throws Exception {     from("timer:foo").to("mock:foo"). }
-false;public;1;4;;@Override public void onContextStart(CamelContext context) throws VetoCamelContextStartException {     throw new VetoCamelContextStartException("We do not like this route", context, false). }

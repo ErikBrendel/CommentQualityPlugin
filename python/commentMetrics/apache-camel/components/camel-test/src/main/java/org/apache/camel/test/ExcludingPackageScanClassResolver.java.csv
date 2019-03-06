@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;public void setExcludedClasses(Set<Class<?>> excludedClasses) {     Set<Class<?>> parents = excludedClasses == null ? Collections.<Class<?>>emptySet() : excludedClasses.     addFilter(new InvertingPackageScanFilter(new AssignableToPackageScanFilter(parents))). }

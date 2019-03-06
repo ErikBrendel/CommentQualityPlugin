@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;4;/**  * Return the injection point (field or method/constructor parameter), if known.  * @since 4.3  */ ;/**  * Return the injection point (field or method/constructor parameter), if known.  * @since 4.3  */ @Nullable public InjectionPoint getInjectionPoint() {     return this.injectionPoint. }

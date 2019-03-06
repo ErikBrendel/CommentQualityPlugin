@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;public void throwException() throws Exception {     // wrap the problem in an IO exception     IOException io = new IOException("Forced").     io.initCause(new MyCustomException("I'm being thrown!!")).     throw io. }
-true;public;1;4;// in the exception hieracy ;// to unit test that we can set a type to the @ExchangeException that we want this caused by exception // in the exception hieracy public void handleException(@ExchangeException MyCustomException custom) {     assertNotNull(custom).     assertEquals("I'm being thrown!!", custom.getMessage()). }

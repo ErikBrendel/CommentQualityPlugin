@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,abstract;0;1;/**  * @return  The type of the transform  */ ;/**  * @return  The type of the transform  */ public abstract String type().
-true;public,abstract;2;1;/**  * Parses the given xcontent and creates a concrete transform  *  * @param watchId                   The id of the watch  * @param parser                    The parsing that contains the condition content  */ ;/**  * Parses the given xcontent and creates a concrete transform  *  * @param watchId                   The id of the watch  * @param parser                    The parsing that contains the condition content  */ public abstract T parseTransform(String watchId, XContentParser parser) throws IOException.
-true;public,abstract;1;1;/**  * Creates an executable transform out of the given transform.  */ ;/**  * Creates an executable transform out of the given transform.  */ public abstract E createExecutable(T transform).
-false;public;2;4;;public E parseExecutable(String watchId, XContentParser parser) throws IOException {     T transform = parseTransform(watchId, parser).     return createExecutable(transform). }

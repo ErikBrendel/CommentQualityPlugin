@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Returns the {@code StreamSource}, the operator of this {@code SourceTransformation}.  */ ;/**  * Returns the {@code StreamSource}, the operator of this {@code SourceTransformation}.  */ public StreamSource<T, ?> getOperator() {     return operator. }
-false;public;0;4;;@Override public Collection<StreamTransformation<?>> getTransitivePredecessors() {     return Collections.<StreamTransformation<?>>singleton(this). }
-false;public,final;1;4;;@Override public final void setChainingStrategy(ChainingStrategy strategy) {     operator.setChainingStrategy(strategy). }

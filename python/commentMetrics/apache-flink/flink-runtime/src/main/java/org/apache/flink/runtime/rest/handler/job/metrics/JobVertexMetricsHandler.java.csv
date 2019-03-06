@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;2;10;;@Override protected MetricStore.ComponentMetricStore getComponentMetricStore(HandlerRequest<EmptyRequestBody, JobVertexMetricsMessageParameters> request, MetricStore metricStore) {     final JobID jobId = request.getPathParameter(JobIDPathParameter.class).     final JobVertexID vertexId = request.getPathParameter(JobVertexIdPathParameter.class).     return metricStore.getTaskMetricStore(jobId.toString(), vertexId.toString()). }

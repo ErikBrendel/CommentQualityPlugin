@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;3;6;;public void sent(Session session, Message message, Destination destination) {     String newCorrelationID = getJMSMessageID(message).     if (newCorrelationID != null) {         replyManager.updateCorrelationId(correlationId, newCorrelationID, requestTimeout).     } }

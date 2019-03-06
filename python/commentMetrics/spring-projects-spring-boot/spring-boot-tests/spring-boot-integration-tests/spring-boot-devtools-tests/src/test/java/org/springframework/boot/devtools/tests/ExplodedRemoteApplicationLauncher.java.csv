@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;9;;@Override protected String createApplicationClassPath() throws Exception {     File appDirectory = getDirectories().getAppDirectory().     copyApplicationTo(appDirectory).     List<String> entries = new ArrayList<>().     entries.add(appDirectory.getAbsolutePath()).     entries.addAll(getDependencyJarPaths()).     return StringUtils.collectionToDelimitedString(entries, File.pathSeparator). }
-false;public;0;4;;@Override public String toString() {     return "exploded remote". }

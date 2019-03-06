@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;8;;@SuppressWarnings("unchecked") public void customize(PlatformTransactionManager transactionManager) {     LambdaSafe.callbacks(PlatformTransactionManagerCustomizer.class, this.customizers, transactionManager).withLogger(TransactionManagerCustomizers.class).invoke((customizer) -> customizer.customize(transactionManager)). }

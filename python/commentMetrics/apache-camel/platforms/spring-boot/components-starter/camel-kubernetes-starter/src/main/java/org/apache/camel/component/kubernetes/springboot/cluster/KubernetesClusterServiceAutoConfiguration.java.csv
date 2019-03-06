@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;12;;@Bean(name = "kubernetes-cluster-service") @Scope(ConfigurableBeanFactory.SCOPE_SINGLETON) public CamelClusterService kubernetesClusterService() throws Exception {     KubernetesClusterService service = new KubernetesClusterService().     IntrospectionSupport.setProperties(service, IntrospectionSupport.getNonNullProperties(configuration)).     return service. }

@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;private;0;12;;private void validateApiKey() {     Request r = new Request.Builder().url(validateUrl).get().build().     try (Response response = client.newCall(r).execute()) {         if (!response.isSuccessful()) {             throw new IllegalArgumentException(String.format("API key: %s is invalid", apiKey)).         }     } catch (IOException e) {         throw new IllegalStateException("Failed contacting Datadog to validate API key", e).     } }
-false;public;1;10;;public void send(DatadogHttpReporter.DatadogHttpRequest request) throws Exception {     String postBody = serialize(request.getSeries()).     Request r = new Request.Builder().url(seriesUrl).post(RequestBody.create(MEDIA_TYPE, postBody)).build().     client.newCall(r).enqueue(EmptyCallback.getEmptyCallback()). }
-false;public,static;1;3;;public static String serialize(Object obj) throws JsonProcessingException {     return MAPPER.writeValueAsString(obj). }
-false;public;0;4;;public void close() {     client.dispatcher().executorService().shutdown().     client.connectionPool().evictAll(). }
-false;public,static;0;3;;public static Callback getEmptyCallback() {     return singleton. }
-false;public;2;4;;@Override public void onFailure(Call call, IOException e) {     LOGGER.debug("Failed sending request to Datadog", e). }
-false;public;2;4;;@Override public void onResponse(Call call, Response response) throws IOException {     response.close(). }

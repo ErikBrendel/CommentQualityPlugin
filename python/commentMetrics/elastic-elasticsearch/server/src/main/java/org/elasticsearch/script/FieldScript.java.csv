@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,abstract;0;1;;public abstract Object execute().
-true;protected,final;0;3;/**  * The leaf lookup for the Lucene segment this script was created for.  */ ;/**  * The leaf lookup for the Lucene segment this script was created for.  */ protected final LeafSearchLookup getLeafLookup() {     return leafLookup. }
-true;public;0;3;/**  * Return the parameters for this script.  */ ;/**  * Return the parameters for this script.  */ public Map<String, Object> getParams() {     return params. }
-true;public,final;0;3;/**  * The doc lookup for the Lucene segment this script was created for.  */ ;/**  * The doc lookup for the Lucene segment this script was created for.  */ public final Map<String, ScriptDocValues<?>> getDoc() {     return leafLookup.doc(). }
-true;public;1;3;/**  * Set the current document to run the script on next.  */ ;/**  * Set the current document to run the script on next.  */ public void setDocument(int docid) {     leafLookup.setDocument(docid). }
-false;;1;1;;FieldScript newInstance(LeafReaderContext ctx) throws IOException.
-false;;2;1;;LeafFactory newFactory(Map<String, Object> params, SearchLookup lookup).

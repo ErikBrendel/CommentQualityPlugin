@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;// ---------------------------------------------------------------------- // HighAvailabilityServices method implementations // ---------------------------------------------------------------------- @Override public CheckpointRecoveryFactory getCheckpointRecoveryFactory() {     synchronized (lock) {         checkNotShutdown().         return new StandaloneCheckpointRecoveryFactory().     } }
-false;public;0;8;;@Override public SubmittedJobGraphStore getSubmittedJobGraphStore() throws Exception {     synchronized (lock) {         checkNotShutdown().         return new StandaloneSubmittedJobGraphStore().     } }
-false;public;0;8;;@Override public RunningJobsRegistry getRunningJobsRegistry() throws Exception {     synchronized (lock) {         checkNotShutdown().         return runningJobsRegistry.     } }
-false;public;0;8;;@Override public BlobStore createBlobStore() throws IOException {     synchronized (lock) {         checkNotShutdown().         return voidBlobStore.     } }
-false;public;0;8;;@Override public void close() throws Exception {     synchronized (lock) {         if (!shutdown) {             shutdown = true.         }     } }
-false;public;0;5;;@Override public void closeAndCleanupAllData() throws Exception {     // this stores no data, so this method is the same as 'close()'     close(). }
-false;protected;0;4;;// ---------------------------------------------------------------------- // Helper methods // ---------------------------------------------------------------------- @GuardedBy("lock") protected void checkNotShutdown() {     checkState(!shutdown, "high availability services are shut down"). }
-false;protected;0;3;;protected boolean isShutDown() {     return shutdown. }

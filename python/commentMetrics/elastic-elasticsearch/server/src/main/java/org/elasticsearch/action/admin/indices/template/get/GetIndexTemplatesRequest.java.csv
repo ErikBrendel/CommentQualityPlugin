@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeStringArray(names). }
-false;public;0;14;;@Override public ActionRequestValidationException validate() {     ActionRequestValidationException validationException = null.     if (names == null) {         validationException = addValidationError("names is null or empty", validationException).     } else {         for (String name : names) {             if (name == null || !Strings.hasText(name)) {                 validationException = addValidationError("name is missing", validationException).             }         }     }     return validationException. }
-true;public;1;4;/**  * Sets the names of the index templates.  */ ;/**  * Sets the names of the index templates.  */ public GetIndexTemplatesRequest names(String... names) {     this.names = names.     return this. }
-true;public;0;3;/**  * The names of the index templates.  */ ;/**  * The names of the index templates.  */ public String[] names() {     return this.names. }
-false;public;1;4;;@Override public void readFrom(StreamInput in) throws IOException {     throw new UnsupportedOperationException("usage of Streamable is to be replaced by Writeable"). }

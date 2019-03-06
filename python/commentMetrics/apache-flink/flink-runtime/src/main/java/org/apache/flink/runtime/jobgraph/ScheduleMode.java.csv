@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Returns whether we are allowed to deploy consumers lazily.  */ ;/**  * Returns whether we are allowed to deploy consumers lazily.  */ public boolean allowLazyDeployment() {     return this == LAZY_FROM_SOURCES. }

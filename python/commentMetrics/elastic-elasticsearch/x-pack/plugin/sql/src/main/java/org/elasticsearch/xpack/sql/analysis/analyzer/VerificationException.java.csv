@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Override public String getMessage() {     return failures.stream().map(f -> {         Location l = f.source().source().source().         return "line " + l.getLineNumber() + ":" + l.getColumnNumber() + ": " + f.message().     }).collect(Collectors.joining(StringUtils.NEW_LINE, "Found " + failures.size() + " problem(s)\n", StringUtils.EMPTY)). }

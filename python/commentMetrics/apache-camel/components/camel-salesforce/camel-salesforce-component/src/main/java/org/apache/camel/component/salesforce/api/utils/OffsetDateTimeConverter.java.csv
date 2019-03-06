@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public boolean canConvert(@SuppressWarnings("rawtypes") final Class type) {     return OffsetDateTime.class.equals(type). }
-false;public;1;4;;@Override public Object fromString(final String value) {     return ZonedDateTime.parse(value, ISO_OFFSET_DATE_TIME).toOffsetDateTime(). }
-false;public;1;10;;@Override public String toString(final Object value) {     if (value == null) {         return null.     }     final OffsetDateTime offsetDateTime = (OffsetDateTime) value.     return ISO_OFFSET_DATE_TIME.format(offsetDateTime). }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;15;;@Test public void testSourceCache() throws Exception {     SourceCache cache = new SourceCache("<foo>bar</foo>").     ByteArrayOutputStream bos = new ByteArrayOutputStream().     cache.writeTo(bos).     String s = context.getTypeConverter().convertTo(String.class, bos).     assertEquals("<foo>bar</foo>", s).     cache.reset().     s = context.getTypeConverter().convertTo(String.class, cache).     assertEquals("<foo>bar</foo>", s). }

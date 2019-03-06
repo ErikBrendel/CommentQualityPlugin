@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;public void sendRecord(Object record) throws IOException {     byte[] data = SerializationUtils.getSerializer(record).serialize(record).     output.write(data). }

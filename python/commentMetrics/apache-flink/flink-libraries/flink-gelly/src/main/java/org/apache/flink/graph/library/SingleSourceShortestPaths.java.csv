@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;7;;@Override public DataSet<Vertex<K, Double>> run(Graph<K, VV, Double> input) {     return input.mapVertices(new InitVerticesMapper<>(srcVertexId)).runScatterGatherIteration(new MinDistanceMessenger<>(), new VertexDistanceUpdater<>(), maxIterations).getVertices(). }
-false;public;1;7;;public Double map(Vertex<K, VV> value) {     if (value.f0.equals(srcVertexId)) {         return 0.0.     } else {         return Double.MAX_VALUE.     } }
-false;public;1;8;;@Override public void sendMessages(Vertex<K, Double> vertex) {     if (vertex.getValue() < Double.POSITIVE_INFINITY) {         for (Edge<K, Double> edge : getEdges()) {             sendMessageTo(edge.getTarget(), vertex.getValue() + edge.getValue()).         }     } }
-false;public;2;16;;@Override public void updateVertex(Vertex<K, Double> vertex, MessageIterator<Double> inMessages) {     Double minDistance = Double.MAX_VALUE.     for (double msg : inMessages) {         if (msg < minDistance) {             minDistance = msg.         }     }     if (vertex.getValue() > minDistance) {         setNewVertexValue(minDistance).     } }

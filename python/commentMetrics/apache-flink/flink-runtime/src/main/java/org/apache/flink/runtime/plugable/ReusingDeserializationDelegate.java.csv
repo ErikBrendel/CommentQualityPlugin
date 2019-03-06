@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public void setInstance(T instance) {     this.instance = instance. }
-false;public;0;4;;@Override public T getInstance() {     return instance. }
-false;public;1;4;;@Override public void write(DataOutputView out) throws IOException {     throw new IllegalStateException("Serialization method called on DeserializationDelegate."). }
-false;public;1;4;;@Override public void read(DataInputView in) throws IOException {     this.instance = this.serializer.deserialize(this.instance, in). }

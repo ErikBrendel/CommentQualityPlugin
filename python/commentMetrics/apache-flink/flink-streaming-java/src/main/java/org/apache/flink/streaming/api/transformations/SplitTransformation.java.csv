@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Returns the input {@code StreamTransformation}.  */ ;/**  * Returns the input {@code StreamTransformation}.  */ public StreamTransformation<T> getInput() {     return input. }
-true;public;0;3;/**  * Returns the {@code OutputSelector}.  */ ;/**  * Returns the {@code OutputSelector}.  */ public OutputSelector<T> getOutputSelector() {     return outputSelector. }
-false;public;0;7;;@Override public Collection<StreamTransformation<?>> getTransitivePredecessors() {     List<StreamTransformation<?>> result = Lists.newArrayList().     result.add(this).     result.addAll(input.getTransitivePredecessors()).     return result. }
-false;public,final;1;4;;@Override public final void setChainingStrategy(ChainingStrategy strategy) {     throw new UnsupportedOperationException("Cannot set chaining strategy on Split Transformation."). }

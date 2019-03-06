@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@After public void close() {     if (this.context != null) {         this.context.close().     } }
-false;public;0;9;;@Test public void propertyPlaceholders() {     this.context.register(PropertyPlaceholderAutoConfiguration.class, PlaceholderConfig.class).     TestPropertyValues.of("foo:two").applyTo(this.context).     this.context.refresh().     assertThat(this.context.getBean(PlaceholderConfig.class).getFoo()).isEqualTo("two"). }
-false;public;0;9;;@Test public void propertyPlaceholdersOverride() {     this.context.register(PropertyPlaceholderAutoConfiguration.class, PlaceholderConfig.class, PlaceholdersOverride.class).     TestPropertyValues.of("foo:two").applyTo(this.context).     this.context.refresh().     assertThat(this.context.getBean(PlaceholderConfig.class).getFoo()).isEqualTo("spam"). }
-false;public;0;3;;public String getFoo() {     return this.foo. }
-false;public,static;0;9;;@Bean public static PropertySourcesPlaceholderConfigurer morePlaceholders() {     PropertySourcesPlaceholderConfigurer configurer = new PropertySourcesPlaceholderConfigurer().     configurer.setProperties(StringUtils.splitArrayElementsIntoProperties(new String[] { "foo=spam" }, "=")).     configurer.setLocalOverride(true).     configurer.setOrder(0).     return configurer. }

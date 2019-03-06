@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void templateExists() {     this.contextRunner.run((context) -> assertThat(context).hasSingleBean(ReactiveMongoTemplate.class)). }
-false;public;0;9;;@Test public void backsOffIfMongoClientBeanIsNotPresent() {     ApplicationContextRunner runner = new ApplicationContextRunner().withConfiguration(AutoConfigurations.of(PropertyPlaceholderAutoConfiguration.class, MongoReactiveDataAutoConfiguration.class)).     runner.run((context) -> assertThat(context).doesNotHaveBean(MongoReactiveDataAutoConfiguration.class)). }

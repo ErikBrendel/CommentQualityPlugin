@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public SplunkConfiguration parseMap(Map<String, Object> parameters) {     return new MockConnectionSettings(service, socket). }
-false;public,static;2;8;;public static DefaultSplunkConfigurationFactory mockComponent(final Service service, final Socket socket) {     return new DefaultSplunkConfigurationFactory() {          @Override         public SplunkConfiguration parseMap(Map<String, Object> parameters) {             return new MockConnectionSettings(service, socket).         }     }. }
-false;public;1;4;;@Override public Service createService(CamelContext camelContext) {     return service. }

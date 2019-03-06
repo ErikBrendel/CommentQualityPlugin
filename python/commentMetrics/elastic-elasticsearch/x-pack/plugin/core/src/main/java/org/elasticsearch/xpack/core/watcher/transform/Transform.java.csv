@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;0;1;;String type().
-false;public;0;3;;public String type() {     return type. }
-false;public;0;3;;public Status status() {     return status. }
-false;public;0;4;;public Payload payload() {     assert status == Status.SUCCESS.     return payload. }
-false;public;0;4;;public String reason() {     assert status == Status.FAILURE.     return reason. }
-false;public,final;2;21;;@Override public final XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(TYPE.getPreferredName(), type).     builder.field(STATUS.getPreferredName(), status.name().toLowerCase(Locale.ROOT)).     switch(status) {         case SUCCESS:             assert exception == null.             builder.field(PAYLOAD.getPreferredName(), payload, params).             break.         case FAILURE:             assert payload == null.             builder.field(REASON.getPreferredName(), reason).             ElasticsearchException.generateFailureXContent(builder, params, exception, true).             break.         default:             assert false.     }     typeXContent(builder, params).     return builder.endObject(). }
-false;protected,abstract;2;1;;protected abstract XContentBuilder typeXContent(XContentBuilder builder, Params params) throws IOException.
-false;;0;1;;T build().

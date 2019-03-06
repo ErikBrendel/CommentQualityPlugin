@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public void configure() throws Exception {     from("direct:start").to("xslt:org/apache/camel/component/xslt/transform.xsl"). }
-false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").to("xslt:org/apache/camel/component/xslt/transform.xsl").         }     }. }
-false;public;0;4;;@Test public void testTransformWithDefaultNamespace() throws Exception {     template.sendBody("direct:start", PAYLOAD). }

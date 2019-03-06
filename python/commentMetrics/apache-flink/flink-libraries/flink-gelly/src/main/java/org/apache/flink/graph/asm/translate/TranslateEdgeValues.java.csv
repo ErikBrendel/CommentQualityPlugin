@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;10;;@Override protected boolean canMergeConfigurationWith(GraphAlgorithmWrappingBase other) {     if (!super.canMergeConfigurationWith(other)) {         return false.     }     TranslateEdgeValues rhs = (TranslateEdgeValues) other.     return translator == rhs.translator. }
-false;public;1;7;;@Override public Graph<K, VV, NEW> runInternal(Graph<K, VV, OLD> input) throws Exception {     DataSet<Edge<K, NEW>> translatedEdges = translateEdgeValues(input.getEdges(), translator, parallelism).     return Graph.fromDataSet(input.getVertices(), translatedEdges, input.getContext()). }

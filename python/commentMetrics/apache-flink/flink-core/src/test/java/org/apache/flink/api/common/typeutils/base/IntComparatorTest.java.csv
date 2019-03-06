@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;4;;@Override protected TypeComparator<Integer> createComparator(boolean ascending) {     return new IntComparator(ascending). }
-false;protected;0;4;;@Override protected TypeSerializer<Integer> createSerializer() {     return new IntSerializer(). }
-false;protected;0;24;;@Override protected Integer[] getSortedTestData() {     Random rnd = new Random(874597969123412338L).     int rndInt = rnd.nextInt().     if (rndInt < 0) {         rndInt = -rndInt.     }     if (rndInt == Integer.MAX_VALUE) {         rndInt -= 3.     }     if (rndInt <= 2) {         rndInt += 3.     }     return new Integer[] { Integer.valueOf(Integer.MIN_VALUE), Integer.valueOf(-rndInt), Integer.valueOf(-1), Integer.valueOf(0), Integer.valueOf(1), Integer.valueOf(2), Integer.valueOf(rndInt), Integer.valueOf(Integer.MAX_VALUE) }. }

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;3;;public static PostDataResponse fromXContent(XContentParser parser) throws IOException {     return new PostDataResponse(DataCounts.PARSER.parse(parser, null)). }
-false;public;0;3;;public DataCounts getDataCounts() {     return dataCounts. }
-false;public;2;4;;@Override public XContentBuilder toXContent(XContentBuilder builder, ToXContent.Params params) throws IOException {     return dataCounts.toXContent(builder, params). }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hashCode(dataCounts). }
-false;public;1;13;;@Override public boolean equals(Object obj) {     if (obj == this) {         return true.     }     if (obj == null || getClass() != obj.getClass()) {         return false.     }     PostDataResponse other = (PostDataResponse) obj.     return Objects.equals(dataCounts, other.dataCounts). }

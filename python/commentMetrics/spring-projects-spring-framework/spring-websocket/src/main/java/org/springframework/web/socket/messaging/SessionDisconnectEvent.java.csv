@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Return the session id.  */ ;/**  * Return the session id.  */ public String getSessionId() {     return this.sessionId. }
-true;public;0;3;/**  * Return the status with which the session was closed.  */ ;/**  * Return the status with which the session was closed.  */ public CloseStatus getCloseStatus() {     return this.status. }
-false;public;0;4;;@Override public String toString() {     return "SessionDisconnectEvent[sessionId=" + this.sessionId + ", " + this.status.toString() + "]". }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;4;16;;@Override public <I, O> HeartbeatManager<I, O> createHeartbeatManagerSender(ResourceID resourceId, HeartbeatListener<I, O> heartbeatListener, ScheduledExecutor scheduledExecutor, Logger log) {     return new HeartbeatManagerSenderImpl<>(heartbeatInterval, heartbeatTimeout, resourceId, heartbeatListener, org.apache.flink.runtime.concurrent.Executors.directExecutor(), scheduledExecutorToUse, log). }

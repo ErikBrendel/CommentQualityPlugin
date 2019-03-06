@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void orderedList() {     ApplicationContext context = new AnnotationConfigApplicationContext(Config.class).     StringHolder holder = context.getBean(StringHolder.class).     assertEquals("second", holder.itemsList.get(0)).     assertEquals("first", holder.itemsList.get(1)).     assertEquals("unknownOrder", holder.itemsList.get(2)). }
-false;public;0;8;;@Test public void orderedArray() {     ApplicationContext context = new AnnotationConfigApplicationContext(Config.class).     StringHolder holder = context.getBean(StringHolder.class).     assertEquals("second", holder.itemsArray[0]).     assertEquals("first", holder.itemsArray[1]).     assertEquals("unknownOrder", holder.itemsArray[2]). }
-false;public;0;5;;@Bean @Order(50) public String first() {     return "first". }
-false;public;0;4;;@Bean public String unknownOrder() {     return "unknownOrder". }
-false;public;0;5;;@Bean @Order(5) public String second() {     return "second". }
-false;public;0;4;;@Bean public StringHolder stringHolder() {     return new StringHolder(). }

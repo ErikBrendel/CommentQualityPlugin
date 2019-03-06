@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Test public void testToStringWithStringParam() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:stringParamResult").     mock.expectedBodiesReceived("toString(String) was called").     template.sendBody("direct:stringParam", "").     assertMockEndpointsSatisfied(). }
-false;public;0;4;;@Override public void configure() throws Exception {     from("direct:stringParam").bean(new MyOtherFooBean(), "toString(String)").to("mock:stringParamResult"). }
-false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:stringParam").bean(new MyOtherFooBean(), "toString(String)").to("mock:stringParamResult").         }     }. }

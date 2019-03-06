@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public GeoPoint centroid() {     return centroid. }
-false;public;0;4;;@Override public long count() {     return count. }
-false;public;0;4;;@Override public String getType() {     return GeoCentroidAggregationBuilder.NAME. }
-false;public;2;13;;@Override public XContentBuilder doXContentBody(XContentBuilder builder, Params params) throws IOException {     if (centroid != null) {         builder.startObject(Fields.CENTROID.getPreferredName()).         {             builder.field(Fields.CENTROID_LAT.getPreferredName(), centroid.lat()).             builder.field(Fields.CENTROID_LON.getPreferredName(), centroid.lon()).         }         builder.endObject().     }     builder.field(Fields.COUNT.getPreferredName(), count).     return builder. }
-false;public,static;2;5;;public static ParsedGeoCentroid fromXContent(XContentParser parser, final String name) {     ParsedGeoCentroid geoCentroid = PARSER.apply(parser, null).     geoCentroid.setName(name).     return geoCentroid. }

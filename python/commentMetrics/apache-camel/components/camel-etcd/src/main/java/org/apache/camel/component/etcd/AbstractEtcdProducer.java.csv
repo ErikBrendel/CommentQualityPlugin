@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;8;;@Override protected void doStop() throws Exception {     if (client != null) {         client.close().     }     super.doStop(). }
-false;protected;0;7;;protected EtcdClient getClient() throws Exception {     if (client == null) {         client = ((EtcdEndpoint) getEndpoint()).createClient().     }     return client. }
-false;protected;0;3;;protected EtcdConfiguration getConfiguration() {     return configuration. }
-false;protected;0;3;;protected EtcdNamespace getNamespace() {     return namespace. }
-false;protected;0;3;;protected String getPath() {     return this.path. }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public Iterable<String> select(Integer value) {     return value % 2 == 0 ? Collections.singleton("even") : Collections.singleton("odd"). }

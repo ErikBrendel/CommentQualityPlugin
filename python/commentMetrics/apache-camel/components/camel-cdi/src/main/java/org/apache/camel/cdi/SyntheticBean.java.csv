@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public Class<?> getBeanClass() {     return type. }
-false;public;1;11;;@Override public T create(CreationalContext<T> creationalContext) {     try {         T instance = target.produce(creationalContext).         target.inject(instance, creationalContext).         target.postConstruct(instance).         return instance.     } catch (Exception cause) {         throw new CreationException("Error while instantiating " + this, cause).     } }
-false;public;2;11;;@Override public void destroy(T instance, CreationalContext<T> creationalContext) {     try {         target.preDestroy(instance).         target.dispose(instance).     } catch (Exception cause) {         throw new InjectionException("Error while destroying " + this, cause).     } finally {         creationalContext.release().     } }
-false;public;0;4;;@Override public Set<InjectionPoint> getInjectionPoints() {     return Collections.emptySet(). }
-false;public;0;4;;@Override public boolean isNullable() {     return false. }
-false;public;0;4;;@Override public String toString() {     return toString.apply(this). }
-false;public;0;9;;@Override public String getId() {     return new StringJoiner("%").add("CAMEL-CDI").add(getClass().getSimpleName()).add(type.getName()).add(createBeanId(this)).toString(). }

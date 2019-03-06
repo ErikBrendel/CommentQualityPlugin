@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Override public void configure() throws Exception {     from("direct:a").to("direct:b").     from("direct:b").to("mock:end"). }
-false;public;0;9;;@Test public void testMock() throws InterruptedException {     end.expectedMessageCount(0).     directB.expectedBodiesReceived("hello").     producer.sendBody("hello").     MockEndpoint.assertIsSatisfied(context). }
-false;public;0;9;;@Test public void testMock2() throws InterruptedException {     end.expectedMessageCount(0).     directB.expectedBodiesReceived("bye").     producer.sendBody("bye").     MockEndpoint.assertIsSatisfied(context). }

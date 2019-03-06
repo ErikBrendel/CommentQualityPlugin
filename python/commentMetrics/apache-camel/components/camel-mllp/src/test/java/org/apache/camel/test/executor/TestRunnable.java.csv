@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;17;;@Override public void run() {     String threadName = Thread.currentThread().getName().     log.info("{}: Runnable {} starting", threadName, id).     int currentRun = 0.     started = true.     try {         while (started && ++currentRun <= runCount) {             Thread.sleep(SLEEP_MILLIS).             log.info("{}: Runnable {} running {} of {} runs", threadName, id, currentRun, runCount).         }     } catch (InterruptedException e) {         log.info("{}: Runnable {} interrupted on run {}", threadName, id, currentRun).     } finally {         log.info("{}: Runnable {} exiting after {} runs", threadName, id, currentRun - 1).     } }
-false;public;0;3;;public void stop() {     started = false. }
-false;public;0;3;;public String status() {     return String.format("Runnable %d is %s", id, started ? "started" : "stopped"). }

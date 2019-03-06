@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void testShouldOnlyStartSingleServer() {     ApplicationContext parent = this.context.getParent().     assertThat(this.context).isInstanceOf(WebApplicationContext.class).     assertThat(parent).isNotInstanceOf(WebApplicationContext.class). }

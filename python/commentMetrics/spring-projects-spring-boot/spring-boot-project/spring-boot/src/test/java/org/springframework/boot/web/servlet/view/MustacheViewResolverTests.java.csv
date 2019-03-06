@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Before public void init() {     GenericApplicationContext applicationContext = new GenericApplicationContext().     applicationContext.refresh().     this.resolver.setApplicationContext(applicationContext).     this.resolver.setServletContext(new MockServletContext()).     this.resolver.setPrefix(this.prefix).     this.resolver.setSuffix(".html"). }
-false;public;0;4;;@Test public void resolveNonExistent() throws Exception {     assertThat(this.resolver.resolveViewName("bar", null)).isNull(). }
-false;public;0;4;;@Test public void resolveExisting() throws Exception {     assertThat(this.resolver.resolveViewName("template", null)).isNotNull(). }
-false;public;0;7;;@Test public void setsContentType() throws Exception {     this.resolver.setContentType("application/octet-stream").     View view = this.resolver.resolveViewName("template", null).     assertThat(view.getContentType()).isEqualTo("application/octet-stream"). }

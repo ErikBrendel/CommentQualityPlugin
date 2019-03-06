@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public String jobName() {     return jobName. }
-false;public,abstract;0;1;;public abstract String type().
-false;public;0;3;;public ZonedDateTime triggeredTime() {     return triggeredTime. }
-false;public,final;0;3;;public final Map<String, Object> data() {     return data. }
-false;public;0;9;;@Override public String toString() {     return new StringBuilder("[").append("name=[").append(jobName).append("],").append("triggered_time=[").append(triggeredTime).append("],").append("data=[").append(data).append("]").append("]").toString(). }
-false;public;2;7;;public void recordXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(Field.TYPE.getPreferredName(), type()).     WatcherDateTimeUtils.writeDate(Field.TRIGGERED_TIME.getPreferredName(), builder, triggeredTime).     recordDataXContent(builder, params).     builder.endObject(). }
-false;public,abstract;2;1;;public abstract void recordDataXContent(XContentBuilder builder, Params params) throws IOException.

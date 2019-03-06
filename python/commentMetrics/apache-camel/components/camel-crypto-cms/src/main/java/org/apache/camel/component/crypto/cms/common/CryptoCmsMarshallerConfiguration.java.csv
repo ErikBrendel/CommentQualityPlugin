@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public Boolean getToBase64() {     return toBase64. }
-true;public;1;3;/**  * Indicates whether the Signed Data or Enveloped Data instance shall be  * base 64 encoded. Default value is <code>false</code>.  */ ;/**  * Indicates whether the Signed Data or Enveloped Data instance shall be  * base 64 encoded. Default value is <code>false</code>.  */ public void setToBase64(Boolean toBase64) {     this.toBase64 = toBase64. }
-false;protected;0;3;;protected CamelContext getContext() {     return context. }
-false;protected;2;4;;protected void logErrorAndThrow(final Logger log, String message) throws CryptoCmsException {     log.error(message).     throw new CryptoCmsException(message). }

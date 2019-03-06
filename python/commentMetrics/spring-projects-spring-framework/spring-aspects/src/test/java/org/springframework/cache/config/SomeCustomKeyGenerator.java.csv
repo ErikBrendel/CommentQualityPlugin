@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;3;4;;@Override public Object generate(Object target, Method method, Object... params) {     return generateKey(method.getName(), params). }
-true;static;2;7;/**  * @see #generate(Object, java.lang.reflect.Method, Object...)  */ ;/**  * @see #generate(Object, java.lang.reflect.Method, Object...)  */ static Object generateKey(String methodName, Object... params) {     final StringBuilder sb = new StringBuilder(methodName).     for (Object param : params) {         sb.append(param).     }     return sb.toString(). }

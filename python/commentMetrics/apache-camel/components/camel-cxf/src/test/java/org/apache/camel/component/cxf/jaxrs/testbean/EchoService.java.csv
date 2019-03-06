@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;9;;@POST @Path("/echo/") public Response echo(String string) {     Cookie fooCookie = headers.getCookies().get("foo").     if (fooCookie != null && "bar".equals(fooCookie.getValue())) {         return Response.ok("Old " + string).build().     }     return Response.ok("New " + string).cookie(new NewCookie("foo", "bar", "/", null, 1, null, -1, false)).build(). }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;@Test public void testCollectionStringBufferDefault() {     CollectionStringBuffer buf = new CollectionStringBuffer().     assertEquals(", ", buf.getSeparator()).     buf.append("foo").     buf.append("bar").     assertEquals("foo, bar", buf.toString()). }
-false;public;0;10;;@Test public void testCollectionStringBufferSeparator() {     CollectionStringBuffer buf = new CollectionStringBuffer("#").     assertEquals("#", buf.getSeparator()).     buf.append("foo").     buf.append("bar").     assertEquals("foo#bar", buf.toString()). }
-false;public;0;11;;@Test public void testCollectionStringBufferSetSeparator() {     CollectionStringBuffer buf = new CollectionStringBuffer().     buf.setSeparator("#").     assertEquals("#", buf.getSeparator()).     buf.append("foo").     buf.append("bar").     assertEquals("foo#bar", buf.toString()). }

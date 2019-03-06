@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;7;;@Bean @ConditionalOnMissingBean public TransactionManagerCustomizers platformTransactionManagerCustomizers(ObjectProvider<PlatformTransactionManagerCustomizer<?>> customizers) {     return new TransactionManagerCustomizers(customizers.orderedStream().collect(Collectors.toList())). }
-false;public;1;6;;@Bean @ConditionalOnMissingBean public TransactionTemplate transactionTemplate(PlatformTransactionManager transactionManager) {     return new TransactionTemplate(transactionManager). }

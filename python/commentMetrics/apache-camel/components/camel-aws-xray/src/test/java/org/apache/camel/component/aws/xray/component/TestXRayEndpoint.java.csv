@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public TestXRayComponent getComponent() {     return (TestXRayComponent) super.getComponent(). }
-false;public;0;4;;@Override public Producer createProducer() {     return new TestXRayProducer(this, remaining). }
-false;public;1;4;;@Override public Consumer createConsumer(Processor processor) {     throw new UnsupportedOperationException("You cannot create a Consumer for message monitoring"). }
-false;public;0;4;;@Override public boolean isSingleton() {     return true. }

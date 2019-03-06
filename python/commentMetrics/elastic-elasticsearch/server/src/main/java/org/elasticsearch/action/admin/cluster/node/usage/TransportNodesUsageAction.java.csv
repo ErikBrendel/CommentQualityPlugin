@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;3;4;;@Override protected NodesUsageResponse newResponse(NodesUsageRequest request, List<NodeUsage> responses, List<FailedNodeException> failures) {     return new NodesUsageResponse(clusterService.getClusterName(), responses, failures). }
-false;protected;2;4;;@Override protected NodeUsageRequest newNodeRequest(String nodeId, NodesUsageRequest request) {     return new NodeUsageRequest(nodeId, request). }
-false;protected;0;4;;@Override protected NodeUsage newNodeResponse() {     return new NodeUsage(). }
-false;protected;1;5;;@Override protected NodeUsage nodeOperation(NodeUsageRequest nodeUsageRequest) {     NodesUsageRequest request = nodeUsageRequest.request.     return usageService.getUsageStats(clusterService.localNode(), request.restActions()). }
-false;public;1;6;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     request = new NodesUsageRequest().     request.readFrom(in). }
-false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     request.writeTo(out). }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@ResponseBody @RequestMapping(path = "/", produces = MediaTypes.HAL_JSON_VALUE) public Map<String, Object> index() {     Map<String, Object> response = new HashMap<>().     Map<String, String> links = new HashMap<>().     links.put("self", WebMvcLinkBuilder.linkTo(getClass()).toUri().toString()).     response.put("_links", links).     return response. }

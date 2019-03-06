@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;9;;public static DataSet<EnumTrianglesDataTypes.Edge> getDefaultEdgeDataSet(ExecutionEnvironment env) {     List<EnumTrianglesDataTypes.Edge> edges = new ArrayList<EnumTrianglesDataTypes.Edge>().     for (Object[] e : EDGES) {         edges.add(new Edge((Integer) e[0], (Integer) e[1])).     }     return env.fromCollection(edges). }

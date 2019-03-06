@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;// SPR-13225 @Test public void headerWithNullValue() {     HttpURLConnection urlConnection = mock(HttpURLConnection.class).     HttpHeaders headers = new HttpHeaders().     headers.set("foo", null).     SimpleBufferingClientHttpRequest.addHeaders(urlConnection, headers).     verify(urlConnection, times(1)).addRequestProperty("foo", ""). }

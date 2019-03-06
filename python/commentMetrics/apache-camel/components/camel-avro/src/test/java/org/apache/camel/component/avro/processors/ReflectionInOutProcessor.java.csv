@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;9;;@Override public void process(Exchange exchange) throws Exception {     Object body = exchange.getIn().getBody().     if (body instanceof Object[] && ((Object[]) body).length == 0) {         exchange.getOut().setBody(testReflection.getTestPojo()).     } else if (body instanceof Object) {         exchange.getOut().setBody(testReflection.increaseAge((Integer) body)).     } }

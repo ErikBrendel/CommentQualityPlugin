@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test @Override public void testShutdownTimeout() throws Exception {     assertEquals(11, camelContext.getShutdownStrategy().getTimeout()).     assertEquals(TimeUnit.MILLISECONDS, camelContext.getShutdownStrategy().getTimeUnit()). }

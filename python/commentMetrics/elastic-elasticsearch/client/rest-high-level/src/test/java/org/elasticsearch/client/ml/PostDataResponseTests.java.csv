@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected PostDataResponse createTestInstance() {     return new PostDataResponse(DataCountsTests.createTestInstance(randomAlphaOfLength(10))). }
-false;protected;1;4;;@Override protected PostDataResponse doParseInstance(XContentParser parser) throws IOException {     return PostDataResponse.fromXContent(parser). }
-false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }

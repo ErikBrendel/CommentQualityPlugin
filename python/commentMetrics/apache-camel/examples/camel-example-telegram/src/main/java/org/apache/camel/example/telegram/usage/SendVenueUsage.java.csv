@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;public void run(CamelContext context) throws InterruptedException {     ProducerTemplate template = context.createProducerTemplate().     SendVenueMessage msg = new SendVenueMessage(latitude, longitude, "MyTitle", "MyAddress").     MessageResult result = template.requestBody("direct:start", msg, MessageResult.class).     System.out.println(result). }

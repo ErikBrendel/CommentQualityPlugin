@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;4;/**  * {@inheritDoc}  */ ;/**  * {@inheritDoc}  */ @Override public Class<?> getTestClass() {     return this.testClass. }
-true;public;0;4;/**  * {@inheritDoc}  */ ;/**  * {@inheritDoc}  */ @Override public CacheAwareContextLoaderDelegate getCacheAwareContextLoaderDelegate() {     return this.cacheAwareContextLoaderDelegate. }
-true;public;0;7;/**  * Provide a String representation of this bootstrap context's state.  */ ;/**  * Provide a String representation of this bootstrap context's state.  */ @Override public String toString() {     return //      new ToStringCreator(this).append("testClass", //      this.testClass.getName()).append("cacheAwareContextLoaderDelegate", //      this.cacheAwareContextLoaderDelegate.getClass().getName()).toString(). }

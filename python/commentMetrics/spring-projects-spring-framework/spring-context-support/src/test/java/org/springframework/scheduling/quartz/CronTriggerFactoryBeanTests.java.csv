@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Test public void createWithoutJobDetail() throws ParseException {     CronTriggerFactoryBean factory = new CronTriggerFactoryBean().     factory.setName("myTrigger").     factory.setCronExpression("0 15 10 ? * *").     factory.afterPropertiesSet().     CronTrigger trigger = factory.getObject().     assertEquals("0 15 10 ? * *", trigger.getCronExpression()). }

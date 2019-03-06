@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected,final;0;5;;@Override protected final HttpHandler createHttpHandler() {     RouterFunction<?> routerFunction = routerFunction().     return RouterFunctions.toHttpHandler(routerFunction, handlerStrategies()). }
-false;protected,abstract;0;1;;protected abstract RouterFunction<?> routerFunction().
-false;protected;0;3;;protected HandlerStrategies handlerStrategies() {     return HandlerStrategies.withDefaults(). }

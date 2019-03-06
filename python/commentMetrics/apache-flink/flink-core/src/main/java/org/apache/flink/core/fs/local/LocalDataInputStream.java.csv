@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;@Override public void seek(long desired) throws IOException {     if (desired != getPos()) {         this.fileChannel.position(desired).     } }
-false;public;0;4;;@Override public long getPos() throws IOException {     return this.fileChannel.position(). }
-false;public;0;4;;@Override public int read() throws IOException {     return this.fis.read(). }
-false;public;3;4;;@Override public int read(@Nonnull byte[] buffer, int offset, int length) throws IOException {     return this.fis.read(buffer, offset, length). }
-false;public;0;5;;@Override public void close() throws IOException {     // According to javadoc, this also closes the channel     this.fis.close(). }
-false;public;0;4;;@Override public int available() throws IOException {     return this.fis.available(). }
-false;public;1;4;;@Override public long skip(final long n) throws IOException {     return this.fis.skip(n). }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public boolean isUseRouteBuilder() {     return false. }
-false;protected;0;4;;@Override protected CamelContext createCamelContext() throws Exception {     return SpringCamelContext.springCamelContext(new ClassPathXmlApplicationContext("org/apache/camel/spring/example/xpathFilter.xml"), true). }

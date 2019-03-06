@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@PostConstruct public void validateConnection() {     try {         this.mailSender.testConnection().     } catch (MessagingException ex) {         throw new IllegalStateException("Mail server is not available", ex).     } }

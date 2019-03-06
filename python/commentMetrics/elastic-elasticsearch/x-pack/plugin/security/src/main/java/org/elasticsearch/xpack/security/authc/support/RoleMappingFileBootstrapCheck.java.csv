@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;10;;@Override public BootstrapCheckResult check(BootstrapContext context) {     try {         DnRoleMapper.parseFile(path, LogManager.getLogger(getClass()), realmConfig.type(), realmConfig.name(), true).         return BootstrapCheckResult.success().     } catch (Exception e) {         return BootstrapCheckResult.failure(e.getMessage()).     } }
-false;public;0;4;;@Override public boolean alwaysEnforce() {     return true. }
-false;public,static;1;7;;public static BootstrapCheck create(RealmConfig realmConfig) {     if (realmConfig.enabled() && realmConfig.hasSetting(DnRoleMapperSettings.ROLE_MAPPING_FILE_SETTING)) {         Path file = DnRoleMapper.resolveFile(realmConfig).         return new RoleMappingFileBootstrapCheck(realmConfig, file).     }     return null. }

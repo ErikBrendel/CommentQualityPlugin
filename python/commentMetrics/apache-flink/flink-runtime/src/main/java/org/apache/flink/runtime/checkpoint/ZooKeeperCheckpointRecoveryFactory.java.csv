@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;3;7;;@Override public CompletedCheckpointStore createCheckpointStore(JobID jobId, int maxNumberOfCheckpointsToRetain, ClassLoader userClassLoader) throws Exception {     return ZooKeeperUtils.createCompletedCheckpoints(client, config, jobId, maxNumberOfCheckpointsToRetain, executor). }
-false;public;1;4;;@Override public CheckpointIDCounter createCheckpointIDCounter(JobID jobID) throws Exception {     return ZooKeeperUtils.createCheckpointIDCounter(client, config, jobID). }

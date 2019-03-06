@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Before public void setup() {     this.mockMvc = MockMvcBuilders.webAppContextSetup(this.wac).alwaysExpect(status().isOk()).build(). }
-false;public;0;6;;@Test public void test() throws Exception {     RestTemplate template = new RestTemplate(new MockMvcClientHttpRequestFactory(this.mockMvc)).     String result = template.getForObject("/foo", String.class).     assertEquals("bar", result). }
-false;public;0;8;;@Test @SuppressWarnings("deprecation") public void testAsyncTemplate() throws Exception {     org.springframework.web.client.AsyncRestTemplate template = new org.springframework.web.client.AsyncRestTemplate(new MockMvcClientHttpRequestFactory(this.mockMvc)).     ListenableFuture<ResponseEntity<String>> entity = template.getForEntity("/foo", String.class).     assertEquals("bar", entity.get().getBody()). }
-false;public;0;5;;@RequestMapping(value = "/foo", method = RequestMethod.GET) @ResponseBody public String handle() {     return "bar". }

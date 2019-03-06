@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;static;0;5;;static MockLog attach() {     MockLog log = mock(MockLog.class).     Log.setListener(log).     return log. }
-false;static;0;3;;static void clear() {     Log.setListener(null). }

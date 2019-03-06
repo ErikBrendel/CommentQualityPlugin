@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public String get(String k) {     return null. }
-false;public;0;4;;@Override public String uri() {     return get(HumioProperties::getUri, HumioConfig.super::uri). }
-false;public;0;4;;@Override public String repository() {     return get(HumioProperties::getRepository, HumioConfig.super::repository). }
-false;public;0;4;;@Override public Map<String, String> tags() {     return get(HumioProperties::getTags, HumioConfig.super::tags). }
-false;public;0;4;;@Override public String apiToken() {     return get(HumioProperties::getApiToken, HumioConfig.super::apiToken). }

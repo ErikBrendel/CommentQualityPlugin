@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;default;0;4;;@Nonnull default String getId() {     return this.getClass().getSimpleName(). }
-false;;2;2;;@Nonnull State createState(@Nonnull FunctionInitializationContext context, @Nonnull StateTtlConfig ttlConfig).
-false;;0;2;;@Nonnull TypeSerializer<UV> getUpdateSerializer().
-false;;0;1;;UV generateRandomUpdate().
-false;;1;1;;GV get(@Nonnull State state) throws Exception.
-false;;2;1;;void update(@Nonnull State state, Object update) throws Exception.
-false;;1;1;;boolean verify(@Nonnull TtlVerificationContext<?, ?> verificationContext).

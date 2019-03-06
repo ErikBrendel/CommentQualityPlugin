@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,static;1;8;/**  * Count the number of elements in a DataSet.  *  * @param input DataSet of elements to be counted  * @param <T> element type  * @return count  */ ;/**  * Count the number of elements in a DataSet.  *  * @param input DataSet of elements to be counted  * @param <T> element type  * @return count  */ public static <T> DataSet<LongValue> count(DataSet<T> input) {     return input.map(new MapTo<>(new LongValue(1))).returns(LONG_VALUE_TYPE_INFO).name("Emit 1").reduce(new AddLongValue()).name("Sum"). }
-false;public;1;3;;public T map(T value) {     return value. }
-false;public;1;3;;public T map(T value) {     return value. }
-false;public;1;4;;@Override public O map(I input) throws Exception {     return value. }
-false;public;2;5;;@Override public O translate(I input, O reuse) throws Exception {     return value. }
-false;public;0;4;;@Override public TypeInformation<O> getProducedType() {     return (TypeInformation<O>) TypeExtractor.createTypeInfo(value.getClass()). }
-false;public;2;6;;@Override public LongValue reduce(LongValue value1, LongValue value2) throws Exception {     value1.setValue(value1.getValue() + value2.getValue()).     return value1. }

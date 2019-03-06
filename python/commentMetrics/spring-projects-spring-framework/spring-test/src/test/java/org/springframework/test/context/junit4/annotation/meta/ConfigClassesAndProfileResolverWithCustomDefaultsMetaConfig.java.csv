@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Bean public String foo() {     return "Dev Foo". }
-false;public;0;4;;@Bean public String foo() {     return "Production Foo". }
-false;public;0;4;;@Bean public String foo() {     return "Resolver Foo". }
-false;public;1;5;;@Override public String[] resolve(Class<?> testClass) {     return testClass.getSimpleName().equals("ConfigClassesAndProfileResolverWithCustomDefaultsMetaConfigTests") ? new String[] { "resolver" } : new String[] {}. }

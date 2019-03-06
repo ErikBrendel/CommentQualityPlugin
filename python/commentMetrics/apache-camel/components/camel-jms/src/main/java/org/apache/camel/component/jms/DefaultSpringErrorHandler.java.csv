@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;8;;@Override public void handleError(Throwable throwable) {     if (logStackTrace) {         handler.handleException("Execution of JMS message listener failed", throwable).     } else {         handler.handleException("Execution of JMS message listener failed. Caused by: [" + throwable.getMessage() + "]", null).     } }

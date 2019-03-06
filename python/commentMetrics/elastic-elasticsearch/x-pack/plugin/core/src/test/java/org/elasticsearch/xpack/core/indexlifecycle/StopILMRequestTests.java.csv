@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected StopILMRequest createBlankInstance() {     return new StopILMRequest(). }
-false;protected;0;4;;@Override protected StopILMRequest createTestInstance() {     return new StopILMRequest(). }
-false;public;0;4;;public void testValidate() {     StopILMRequest request = createTestInstance().     assertNull(request.validate()). }

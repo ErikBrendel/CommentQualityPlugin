@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Before public void setup() {     ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext(getClass().getSimpleName() + "-context.xml", getClass()).     testBean = (AnnotatedTestBean) ctx.getBean("testBean"). }
-false;public;0;4;;@Test public void testAnnotationBindingInAroundAdvice() {     assertEquals("this value", testBean.doThis()). }
-false;public;0;4;;@Test public void testNoMatchingWithoutAnnotationPresent() {     assertEquals("doTheOther", testBean.doTheOther()). }
-false;public;1;4;;@Override public Object invoke(MethodInvocation methodInvocation) throws Throwable {     return "this value". }

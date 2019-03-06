@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;13;;@Test public void testMEPInOutTest() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMessageCount(1).     mock.expectedBodiesReceived("Hello World").     mock.expectedFileExists("target/data/FileMEPInOutTest.txt", "Hello World").     // request is InOut     template.requestBodyAndHeader("direct:in", "Hello World", Exchange.FILE_NAME, "FileMEPInOutTest.txt").     assertMockEndpointsSatisfied(). }
-false;public;0;5;;public void configure() throws Exception {     from("direct:in").to("file://target/data/?fileExist=Override").to("mock:result"). }
-false;protected;0;9;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from("direct:in").to("file://target/data/?fileExist=Override").to("mock:result").         }     }. }

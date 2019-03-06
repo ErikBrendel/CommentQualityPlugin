@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public boolean isRestored() {     return restored. }
-false;public;0;4;;@Override public Iterable<StatePartitionStreamProvider> getRawOperatorStateInputs() {     return rawOperatorStateInputs. }
-false;public;0;8;;@Override public Iterable<KeyGroupStatePartitionStreamProvider> getRawKeyedStateInputs() {     if (null == keyedStateStore) {         throw new IllegalStateException("Attempt to access keyed state from non-keyed operator.").     }     return rawKeyedStateInputs. }
-false;public;0;4;;@Override public OperatorStateStore getOperatorStateStore() {     return operatorStateStore. }
-false;public;0;4;;@Override public KeyedStateStore getKeyedStateStore() {     return keyedStateStore. }

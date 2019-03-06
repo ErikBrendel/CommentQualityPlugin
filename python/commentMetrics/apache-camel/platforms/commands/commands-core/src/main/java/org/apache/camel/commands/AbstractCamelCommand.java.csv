@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;7;;public String safeNull(String s) {     if (ObjectHelper.isEmpty(s)) {         return "".     } else {         return s.     } }
-false;public;1;7;;public String safeNull(Object s) {     if (ObjectHelper.isEmpty(s)) {         return "".     } else {         return s.toString().     } }

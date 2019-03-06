@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;protected;3;6;/**  * Returns an instance of {@link ExtendedServletRequestDataBinder}.  */ ;/**  * Returns an instance of {@link ExtendedServletRequestDataBinder}.  */ @Override protected ServletRequestDataBinder createBinderInstance(@Nullable Object target, String objectName, NativeWebRequest request) throws Exception {     return new ExtendedServletRequestDataBinder(target, objectName). }

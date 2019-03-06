@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected int randomPrecision() {     return randomIntBetween(1, 12). }
-false;protected;3;4;;@Override protected String hashAsString(double lng, double lat, int precision) {     return stringEncode(lng, lat, precision). }
-false;protected;1;4;;@Override protected GeoGridAggregationBuilder createBuilder(String name) {     return new GeoHashGridAggregationBuilder(name). }

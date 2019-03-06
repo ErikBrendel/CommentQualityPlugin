@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Override public void configure() throws Exception {     // route files form src/data (noop = keep the file as-is after done, and do not pickup the same file again)     from("file:src/data?noop=true").to("activemq:queue:newOrder"). }

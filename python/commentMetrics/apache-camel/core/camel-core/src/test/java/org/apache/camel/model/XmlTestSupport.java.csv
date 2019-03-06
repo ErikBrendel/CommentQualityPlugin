@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;6;;protected RouteContainer assertParseAsJaxb(String uri) throws JAXBException {     Object value = parseUri(uri).     RouteContainer context = assertIsInstanceOf(RouteContainer.class, value).     log.info("Found: " + context).     return context. }
-false;protected;1;6;;protected RestContainer assertParseRestAsJaxb(String uri) throws JAXBException {     Object value = parseUri(uri).     RestContainer context = assertIsInstanceOf(RestContainer.class, value).     log.info("Found: " + context).     return context. }
-false;protected;1;7;;protected Object parseUri(String uri) throws JAXBException {     Unmarshaller unmarshaller = jaxbContext.createUnmarshaller().     URL resource = getClass().getResource(uri).     assertNotNull("Cannot find resource on the classpath: " + uri, resource).     Object value = unmarshaller.unmarshal(resource).     return value. }
-false;public;0;5;;@Override public void setUp() throws Exception {     super.setUp().     jaxbContext = createJaxbContext(). }
-false;public,static;0;3;;public static JAXBContext createJaxbContext() throws JAXBException {     return new DefaultModelJAXBContextFactory().newJAXBContext(). }

@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public W window() {     return window. }
-false;public;0;4;;@Override public KeyedStateStore windowState() {     return internalContext.windowState(). }
-false;public;0;4;;@Override public KeyedStateStore globalState() {     return internalContext.globalState(). }
-false;public;2;4;;@Override public <X> void output(OutputTag<X> outputTag, X value) {     internalContext.output(outputTag, value). }

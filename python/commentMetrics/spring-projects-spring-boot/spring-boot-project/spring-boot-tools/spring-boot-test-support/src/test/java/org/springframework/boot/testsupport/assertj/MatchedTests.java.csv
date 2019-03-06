@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void byMatcherMatches() {     assertThat("1234").is(Matched.by(startsWith("12"))). }
-false;public;0;6;;@Test public void byMatcherDoesNotMatch() {     assertThatExceptionOfType(AssertionError.class).isThrownBy(() -> assertThat("1234").is(Matched.by(startsWith("23")))).withMessageContaining("a string starting with \"23\""). }
-false;public;0;4;;@Test public void whenMatcherMatches() {     assertThat("1234").is(Matched.when(startsWith("12"))). }
-false;public;0;6;;@Test public void whenMatcherDoesNotMatch() {     assertThatExceptionOfType(AssertionError.class).isThrownBy(() -> assertThat("1234").is(Matched.when(startsWith("23")))).withMessageContaining("a string starting with \"23\""). }

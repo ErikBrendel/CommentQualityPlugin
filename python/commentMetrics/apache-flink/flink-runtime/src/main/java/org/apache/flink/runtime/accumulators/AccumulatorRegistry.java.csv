@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;8;/**  * Creates a snapshot of this accumulator registry.  * @return a serialized accumulator map  */ ;/**  * Creates a snapshot of this accumulator registry.  * @return a serialized accumulator map  */ public AccumulatorSnapshot getSnapshot() {     try {         return new AccumulatorSnapshot(jobID, taskID, userAccumulators).     } catch (Throwable e) {         LOG.warn("Failed to serialize accumulators for task.", e).         return null.     } }
-true;public;0;3;/**  * Gets the map for user-defined accumulators.  */ ;/**  * Gets the map for user-defined accumulators.  */ public Map<String, Accumulator<?, ?>> getUserMap() {     return userAccumulators. }

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;15;;@Override public Collect<T> run(DataSet<T> input) throws Exception {     super.run(input).     serializer = input.getType().createSerializer(env.getConfig()).     collectHelper = new CollectHelper<>(serializer).     input.output(collectHelper).name("Collect").     return this. }
-false;public;0;15;;@Override public List<T> getResult() {     ArrayList<byte[]> accResult = collectHelper.getAccumulator(env, COLLECT).     if (accResult != null) {         try {             return SerializedListAccumulator.deserializeList(accResult, serializer).         } catch (ClassNotFoundException e) {             throw new RuntimeException("Cannot find type class of collected data type", e).         } catch (IOException e) {             throw new RuntimeException("Serialization error while deserializing collected data", e).         }     } else {         throw new RuntimeException("Unable to retrieve the DataSet").     } }
-false;public;2;4;;@Override public void open(int taskNumber, int numTasks) {     this.accumulator = new SerializedListAccumulator<>(). }
-false;public;1;4;;@Override public void writeRecord(U record) throws IOException {     accumulator.add(record, serializer). }
-false;public;0;4;;@Override public void close() throws IOException {     addAccumulator(COLLECT, accumulator). }

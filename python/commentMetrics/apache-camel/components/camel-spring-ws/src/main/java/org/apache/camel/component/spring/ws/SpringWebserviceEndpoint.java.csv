@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;8;;public Consumer createConsumer(Processor processor) throws Exception {     SpringWebserviceConsumer consumer = new SpringWebserviceConsumer(this, processor).     if (configuration.getEndpointDispatcher() != null) {         configuration.getEndpointDispatcher().setConsumerMessageEndpoint(consumer).     }     configureConsumer(consumer).     return consumer. }
-false;public;0;3;;public Producer createProducer() throws Exception {     return new SpringWebserviceProducer(this). }
-false;public;0;3;;public boolean isSingleton() {     return true. }
-false;public;0;3;;public SpringWebserviceConfiguration getConfiguration() {     return configuration. }

@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;public void testMulNumeric() {     Mul m = new Mul(EMPTY, L(1), L(2)).     assertEquals(TypeResolution.TYPE_RESOLVED, m.typeResolved()). }
-false;public;0;4;;public void testMulIntervalAndNumber() {     Mul m = new Mul(EMPTY, L(1), randomYearInterval()).     assertEquals(TypeResolution.TYPE_RESOLVED, m.typeResolved()). }
-false;public;0;4;;public void testMulNumberAndInterval() {     Mul m = new Mul(EMPTY, randomYearInterval(), L(1)).     assertEquals(TypeResolution.TYPE_RESOLVED, m.typeResolved()). }
-false;public;0;4;;public void testMulTypeResolution() throws Exception {     Mul mul = new Mul(EMPTY, randomYearInterval(), randomYearInterval()).     assertTrue(mul.typeResolved().unresolved()). }
-false;private,static;0;3;;private static Literal randomYearInterval() {     return Literal.of(EMPTY, new IntervalYearMonth(Period.ofMonths(randomInt(123)), DataType.INTERVAL_YEAR_TO_MONTH)). }
-false;private,static;1;3;;private static Literal L(Object value) {     return Literal.of(EMPTY, value). }

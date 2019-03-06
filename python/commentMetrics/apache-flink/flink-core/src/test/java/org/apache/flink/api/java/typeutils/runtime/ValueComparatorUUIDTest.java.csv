@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;4;;@Override protected TypeComparator<ValueID> createComparator(boolean ascending) {     return new ValueComparator<>(ascending, ValueID.class). }
-false;protected;0;4;;@Override protected TypeSerializer<ValueID> createSerializer() {     return new ValueSerializer<>(ValueID.class). }
-false;protected;0;8;;@Override protected ValueID[] getSortedTestData() {     return new ValueID[] { new ValueID(new UUID(0, 0)), new ValueID(new UUID(1, 0)), new ValueID(new UUID(1, 1)) }. }

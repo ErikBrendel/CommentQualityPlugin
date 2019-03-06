@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;15;;@Test public void testSendMessageToDifferentBeans() throws Exception {     MockEndpoint endpoint = getMockEndpoint("mock:result").     endpoint.expectedBodiesReceived(1, 2).     template.sendBody("direct:start", ExchangePattern.InOut, "first").     // lets simulate spring's factory bean stuff     jndiContext.unbind("myBean").     jndiContext.bind("myBean", new MyBean()).     template.sendBody("direct:start", ExchangePattern.InOut, "second").     assertMockEndpointsSatisfied(). }
-false;protected;0;6;;@Override protected Context createJndiContext() throws Exception {     jndiContext = new JndiContext().     jndiContext.bind("myBean", new MyBean()).     return jndiContext. }
-false;public;0;3;;public void configure() {     from("direct:start").bean("myBean", false).to("mock:result"). }
-false;protected;0;7;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("direct:start").bean("myBean", false).to("mock:result").         }     }. }
-false;protected,static,synchronized;0;3;;protected static synchronized int generateId() {     return ++counter. }
-false;public;0;4;;@Override public String toString() {     return "MyBean[" + id + "]". }
-false;public;1;4;;public int read(@Body String body) {     LOG.info("read() method called with: {} on {}", body, this).     return id. }

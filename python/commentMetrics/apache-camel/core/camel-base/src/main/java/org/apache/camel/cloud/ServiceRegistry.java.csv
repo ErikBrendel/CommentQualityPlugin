@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;default;0;4;;@Override default int getOrder() {     return Ordered.LOWEST. }
-true;default;0;3;/**  * Attributes associated to the service.  */ ;/**  * Attributes associated to the service.  */ default Map<String, Object> getAttributes() {     return Collections.emptyMap(). }
-true;;1;1;/**  * Register the service definition.  *  * @param definition the service definition  */ ;/**  * Register the service definition.  *  * @param definition the service definition  */ void register(ServiceDefinition definition).
-true;;1;1;/**  * Remove the service definition.  *  * @param definition the service definition  */ ;/**  * Remove the service definition.  *  * @param definition the service definition  */ void deregister(ServiceDefinition definition).
-true;;1;1;/**  * Select a specific ServiceRegistry instance among a collection.  */ ;/**  * Select a specific ServiceRegistry instance among a collection.  */ Optional<ServiceRegistry> select(Collection<ServiceRegistry> services).

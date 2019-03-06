@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String[] indices() {     return indices. }
-false;public;0;4;;@Override public IndicesOptions indicesOptions() {     return indicesOptions. }
-false;public,static;1;3;;public static OriginalIndices readOriginalIndices(StreamInput in) throws IOException {     return new OriginalIndices(in.readStringArray(), IndicesOptions.readIndicesOptions(in)). }
-false;public,static;2;5;;public static void writeOriginalIndices(OriginalIndices originalIndices, StreamOutput out) throws IOException {     assert originalIndices != NONE.     out.writeStringArrayNullable(originalIndices.indices).     originalIndices.indicesOptions.writeIndicesOptions(out). }
-false;public;0;7;;@Override public String toString() {     return "OriginalIndices{" + "indices=" + Arrays.toString(indices) + ", indicesOptions=" + indicesOptions + '}'. }

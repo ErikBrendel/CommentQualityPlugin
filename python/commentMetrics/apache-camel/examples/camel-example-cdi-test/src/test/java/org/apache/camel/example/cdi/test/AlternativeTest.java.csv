@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Test public void testAlternativeBean() throws InterruptedException {     mock.expectedMessageCount(1).     mock.expectedBodiesReceived("test with alternative bean!").     producer.sendBody("test").     assertIsSatisfied(1L, TimeUnit.SECONDS, mock). }

@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public String getLanguage() {     return "simple". }
-false;public;0;3;;public Class<?> getResultType() {     return resultType. }
-true;public;1;3;/**  * Sets the class of the result type (type from output)  */ ;/**  * Sets the class of the result type (type from output)  */ public void setResultType(Class<?> resultType) {     this.resultType = resultType. }
-false;public;0;3;;public String getResultTypeName() {     return resultTypeName. }
-true;public;1;3;/**  * Sets the class name of the result type (type from output)  */ ;/**  * Sets the class name of the result type (type from output)  */ public void setResultTypeName(String resultTypeName) {     this.resultTypeName = resultTypeName. }
-false;public;1;21;;@Override public Expression createExpression(CamelContext camelContext) {     if (resultType == null && resultTypeName != null) {         try {             resultType = camelContext.getClassResolver().resolveMandatoryClass(resultTypeName).         } catch (ClassNotFoundException e) {             throw RuntimeCamelException.wrapRuntimeCamelException(e).         }     }     String exp = getExpression().     // should be true by default     boolean isTrim = getTrim() == null || getTrim().     if (exp != null && isTrim) {         exp = exp.trim().     }     SimpleBuilder answer = new SimpleBuilder(exp).     answer.setResultType(resultType).     return answer. }
-false;public;1;5;;@Override public Predicate createPredicate(CamelContext camelContext) {     // SimpleBuilder is also a Predicate     return (Predicate) createExpression(camelContext). }

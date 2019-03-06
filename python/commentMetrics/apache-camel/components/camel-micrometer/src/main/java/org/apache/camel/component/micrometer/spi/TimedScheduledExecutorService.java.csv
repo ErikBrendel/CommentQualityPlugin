@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;3;4;;@Override public ScheduledFuture<?> schedule(Runnable command, long delay, TimeUnit unit) {     return delegate.schedule(meter().wrap(command), delay, unit). }
-false;public;3;4;;@Override public <V> ScheduledFuture<V> schedule(Callable<V> callable, long delay, TimeUnit unit) {     return delegate.schedule(meter().wrap(callable), delay, unit). }
-false;public;4;4;;@Override public ScheduledFuture<?> scheduleAtFixedRate(Runnable command, long initialDelay, long period, TimeUnit unit) {     return delegate.scheduleAtFixedRate(meter().wrap(command), initialDelay, period, unit). }
-false;public;4;4;;@Override public ScheduledFuture<?> scheduleWithFixedDelay(Runnable command, long initialDelay, long delay, TimeUnit unit) {     return delegate.scheduleWithFixedDelay(meter().wrap(command), initialDelay, delay, unit). }
-false;private;0;3;;private Timer meter() {     return registry.find("executor").timer(). }

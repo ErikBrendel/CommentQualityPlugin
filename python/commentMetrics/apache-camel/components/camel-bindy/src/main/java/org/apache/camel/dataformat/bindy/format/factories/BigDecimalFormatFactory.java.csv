@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public boolean canBuild(FormattingOptions formattingOptions) {     return super.canBuild(formattingOptions) && ObjectHelper.isEmpty(formattingOptions.getPattern()). }
-false;public;1;6;;@Override public Format<?> build(FormattingOptions formattingOptions) {     return new BigDecimalFormat(formattingOptions.isImpliedDecimalSeparator(), formattingOptions.getPrecision(), formattingOptions.getLocale()). }
-false;public;1;5;;public String format(BigDecimal object) throws Exception {     return !super.hasImpliedDecimalPosition() ? super.getFormat().format(object) : super.getFormat().format(object.multiply(new BigDecimal(super.getMultiplier()))). }
-false;public;1;11;;public BigDecimal parse(String string) throws Exception {     BigDecimal result = new BigDecimal(string.trim()).     if (super.hasImpliedDecimalPosition()) {         result = result.divide(new BigDecimal(super.getMultiplier()), super.getPrecision(), RoundingMode.HALF_EVEN).     } else {         if (super.getPrecision() != -1) {             result = result.setScale(super.getPrecision()).         }     }     return result. }

@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;11;;@Parameterized.Parameters public static Collection<Object[]> data() {     return Arrays.asList(new Object[][] { { new SavepointInfo("/tmp", null) }, { new SavepointInfo(null, new SerializedThrowable(new RuntimeException("expected"))) } }). }
-false;protected;0;4;;@Override protected Class<SavepointInfo> getTestResponseClass() {     return SavepointInfo.class. }
-false;protected;0;4;;@Override protected SavepointInfo getTestResponseInstance() throws Exception {     return savepointInfo. }
-false;protected;2;10;;@Override protected void assertOriginalEqualsToUnmarshalled(SavepointInfo expected, SavepointInfo actual) {     assertThat(actual.getLocation(), is(expected.getLocation())).     if (expected.getFailureCause() != null) {         assertThat(actual.getFailureCause(), notNullValue()).         assertThat(actual.getFailureCause().deserializeError(ClassLoader.getSystemClassLoader()).getMessage(), is(expected.getFailureCause().deserializeError(ClassLoader.getSystemClassLoader()).getMessage())).     } }

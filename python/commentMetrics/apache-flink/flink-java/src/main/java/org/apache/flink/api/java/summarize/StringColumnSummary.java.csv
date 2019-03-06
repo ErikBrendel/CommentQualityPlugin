@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public long getNonNullCount() {     return nonNullCount. }
-false;public;0;4;;@Override public long getNullCount() {     return nullCount. }
-true;public;0;3;/**  * Number of empty strings e.g. java.lang.String.isEmpty().  */ ;/**  * Number of empty strings e.g. java.lang.String.isEmpty().  */ public long getEmptyCount() {     return emptyCount. }
-true;public;0;3;/**  * Shortest String length.  */ ;/**  * Shortest String length.  */ public Integer getMinLength() {     return minLength. }
-true;public;0;3;/**  * Longest String length.  */ ;/**  * Longest String length.  */ public Integer getMaxLength() {     return maxLength. }
-false;public;0;3;;public Double getMeanLength() {     return meanLength. }
-false;public;0;12;;@Override public String toString() {     return "StringColumnSummary{" + "totalCount=" + getTotalCount() + ", nonNullCount=" + nonNullCount + ", nullCount=" + nullCount + ", emptyCount=" + emptyCount + ", minLength=" + minLength + ", maxLength=" + maxLength + ", meanLength=" + meanLength + '}'. }

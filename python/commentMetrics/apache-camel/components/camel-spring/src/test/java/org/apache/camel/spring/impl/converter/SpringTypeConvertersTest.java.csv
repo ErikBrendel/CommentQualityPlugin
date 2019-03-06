@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/spring/impl/converter/SpringTypeConvertersTest.xml"). }
-false;public;0;10;;@Test public void testConvertersShouldBeAddedAutomaticBySpring() throws Exception {     Country country = context.getTypeConverter().convertTo(Country.class, "en").     assertNotNull(country).     assertEquals("England", country.getName()).     String iso = context.getTypeConverter().convertTo(String.class, country).     assertNotNull(iso).     assertEquals("en", iso). }

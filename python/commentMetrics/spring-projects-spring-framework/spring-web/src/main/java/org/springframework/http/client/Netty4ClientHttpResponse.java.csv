@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public int getRawStatusCode() throws IOException {     return this.nettyResponse.getStatus().code(). }
-false;public;0;4;;@Override public String getStatusText() throws IOException {     return this.nettyResponse.getStatus().reasonPhrase(). }
-false;public;0;12;;@Override public HttpHeaders getHeaders() {     HttpHeaders headers = this.headers.     if (headers == null) {         headers = new HttpHeaders().         for (Map.Entry<String, String> entry : this.nettyResponse.headers()) {             headers.add(entry.getKey(), entry.getValue()).         }         this.headers = headers.     }     return headers. }
-false;public;0;4;;@Override public InputStream getBody() throws IOException {     return this.body. }
-false;public;0;5;;@Override public void close() {     this.nettyResponse.release().     this.context.close(). }

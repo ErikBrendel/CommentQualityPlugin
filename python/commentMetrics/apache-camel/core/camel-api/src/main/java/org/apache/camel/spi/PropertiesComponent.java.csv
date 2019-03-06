@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;0;1;;String getPrefixToken().
-false;;0;1;;String getSuffixToken().
-false;;1;1;;String parseUri(String uri) throws Exception.
-false;;2;1;;String parseUri(String uri, String... uris) throws Exception.
-true;;1;1;/**  * A list of locations to load properties. You can use comma to separate multiple locations.  * This option will override any default locations and only use the locations from this option.  */ ;/**  * A list of locations to load properties. You can use comma to separate multiple locations.  * This option will override any default locations and only use the locations from this option.  */ void setLocation(String location).
-true;;1;1;/**  * Adds the list of locations to the current locations, where to load properties.  * You can use comma to separate multiple locations.  * This option will override any default locations and only use the locations from this option.  */ ;/**  * Adds the list of locations to the current locations, where to load properties.  * You can use comma to separate multiple locations.  * This option will override any default locations and only use the locations from this option.  */ void addLocation(String location).
-true;;1;1;/**  * Whether to silently ignore if a location cannot be located, such as a properties file not found.  */ ;/**  * Whether to silently ignore if a location cannot be located, such as a properties file not found.  */ void setIgnoreMissingLocation(boolean ignoreMissingLocation).

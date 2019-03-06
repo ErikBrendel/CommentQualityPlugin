@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Test public void testGet() throws Exception {     com.google.api.services.calendar.model.Colors result = requestBody("direct://GET", null).     assertNotNull("get result", result).     LOG.debug("get: " + result). }
-false;public;0;6;;@Override public void configure() {     // test route for get     from("direct://GET").to("google-calendar://" + PATH_PREFIX + "/get"). }
-false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() {             // test route for get             from("direct://GET").to("google-calendar://" + PATH_PREFIX + "/get").         }     }. }

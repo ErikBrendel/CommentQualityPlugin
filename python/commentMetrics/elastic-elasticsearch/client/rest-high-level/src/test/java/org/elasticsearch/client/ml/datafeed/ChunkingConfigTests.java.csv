@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected ChunkingConfig createTestInstance() {     return createRandomizedChunk(). }
-false;protected;1;4;;@Override protected ChunkingConfig doParseInstance(XContentParser parser) {     return ChunkingConfig.PARSER.apply(parser, null). }
-false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }
-false;public,static;0;9;;public static ChunkingConfig createRandomizedChunk() {     ChunkingConfig.Mode mode = randomFrom(ChunkingConfig.Mode.values()).     TimeValue timeSpan = null.     if (mode == ChunkingConfig.Mode.MANUAL) {         // time span is required to be at least 1 millis, so we use a custom method to generate a time value here         timeSpan = randomPositiveSecondsMinutesHours().     }     return new ChunkingConfig(mode, timeSpan). }
-false;private,static;0;3;;private static TimeValue randomPositiveSecondsMinutesHours() {     return new TimeValue(randomIntBetween(1, 1000), randomFrom(Arrays.asList(TimeUnit.SECONDS, TimeUnit.MINUTES, TimeUnit.HOURS))). }

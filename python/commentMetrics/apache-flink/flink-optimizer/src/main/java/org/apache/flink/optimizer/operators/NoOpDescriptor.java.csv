@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public DriverStrategy getStrategy() {     return DriverStrategy.UNARY_NO_OP. }
-false;public;2;4;;@Override public SingleInputPlanNode instantiate(Channel in, SingleInputNode node) {     return new SingleInputPlanNode(node, "Pipe", in, DriverStrategy.UNARY_NO_OP). }
-false;protected;0;4;;@Override protected List<RequestedGlobalProperties> createPossibleGlobalProperties() {     return Collections.singletonList(new RequestedGlobalProperties()). }
-false;protected;0;4;;@Override protected List<RequestedLocalProperties> createPossibleLocalProperties() {     return Collections.singletonList(new RequestedLocalProperties()). }
-false;public;1;4;;@Override public GlobalProperties computeGlobalProperties(GlobalProperties gProps) {     return gProps. }
-false;public;1;4;;@Override public LocalProperties computeLocalProperties(LocalProperties lProps) {     return lProps. }

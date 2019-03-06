@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;3;;public static boolean isAnonymousEnabled(Settings settings) {     return ROLES_SETTING.exists(settings) && ROLES_SETTING.get(settings).isEmpty() == false. }
-false;public,static;2;4;;public static boolean isAnonymousUsername(String username, Settings settings) {     // this is possibly the same check but we should not let anything use the default name either     return USERNAME_SETTING.get(settings).equals(username) || DEFAULT_ANONYMOUS_USERNAME.equals(username). }
-false;public,static;1;4;;public static void addSettings(List<Setting<?>> settingsList) {     settingsList.add(USERNAME_SETTING).     settingsList.add(ROLES_SETTING). }

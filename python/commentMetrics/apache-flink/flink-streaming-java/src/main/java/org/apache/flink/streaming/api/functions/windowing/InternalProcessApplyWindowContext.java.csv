@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public W window() {     return window. }
-false;public;0;4;;@Override public long currentProcessingTime() {     return context.currentProcessingTime(). }
-false;public;0;4;;@Override public long currentWatermark() {     return context.currentWatermark(). }
-false;public;0;3;;public KeyedStateStore windowState() {     return context.windowState(). }
-false;public;0;4;;@Override public KeyedStateStore globalState() {     return context.globalState(). }
-false;public;2;4;;@Override public <X> void output(OutputTag<X> outputTag, X value) {     context.output(outputTag, value). }

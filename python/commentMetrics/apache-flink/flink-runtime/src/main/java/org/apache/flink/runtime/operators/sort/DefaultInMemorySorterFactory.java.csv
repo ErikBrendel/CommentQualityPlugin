@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;11;;@Override public InMemorySorter<T> create(List<MemorySegment> sortSegments) {     final TypeSerializer<T> typeSerializer = typeSerializerFactory.getSerializer().     final TypeComparator<T> duplicateTypeComparator = typeComparator.duplicate().     if (useFixedLengthRecordSorter) {         return new FixedLengthRecordSorter<>(typeSerializer, duplicateTypeComparator, sortSegments).     } else {         return new NormalizedKeySorter<>(typeSerializer, duplicateTypeComparator, sortSegments).     } }

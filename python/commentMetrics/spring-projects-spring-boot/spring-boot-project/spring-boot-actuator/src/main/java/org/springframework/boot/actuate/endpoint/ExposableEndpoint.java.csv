@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * Return the endpoint ID.  * @return the endpoint ID  */ ;/**  * Return the endpoint ID.  * @return the endpoint ID  */ EndpointId getEndpointId().
-true;;0;1;/**  * Returns if the endpoint is enabled by default.  * @return if the endpoint is enabled by default  */ ;/**  * Returns if the endpoint is enabled by default.  * @return if the endpoint is enabled by default  */ boolean isEnableByDefault().
-true;;0;1;/**  * Returns the operations of the endpoint.  * @return the operations  */ ;/**  * Returns the operations of the endpoint.  * @return the operations  */ Collection<O> getOperations().

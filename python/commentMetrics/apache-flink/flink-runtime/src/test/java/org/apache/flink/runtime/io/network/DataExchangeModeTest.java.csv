@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void testForward() {     for (ExecutionMode mode : ExecutionMode.values()) {         assertNotNull(DataExchangeMode.getForForwardExchange(mode)).     } }
-false;public;0;6;;@Test public void testShuffleAndBroadcast() {     for (ExecutionMode mode : ExecutionMode.values()) {         assertNotNull(DataExchangeMode.getForShuffleOrBroadcast(mode)).     } }
-false;public;0;6;;@Test public void testPipelineBreaking() {     for (ExecutionMode mode : ExecutionMode.values()) {         assertNotNull(DataExchangeMode.getPipelineBreakingExchange(mode)).     } }

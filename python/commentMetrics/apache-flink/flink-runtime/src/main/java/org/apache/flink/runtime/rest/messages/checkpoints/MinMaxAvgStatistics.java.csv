@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public long getMinimum() {     return minimum. }
-false;public;0;3;;public long getMaximum() {     return maximum. }
-false;public;0;3;;public long getAverage() {     return average. }
-false;public;1;13;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     MinMaxAvgStatistics that = (MinMaxAvgStatistics) o.     return minimum == that.minimum && maximum == that.maximum && average == that.average. }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(minimum, maximum, average). }

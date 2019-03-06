@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected int getCurrentOuterSnapshotVersion() {     return VERSION. }
-false;protected;1;10;;@Override protected TimerSerializer<K, N> createOuterSerializerWithNestedSerializers(TypeSerializer<?>[] nestedSerializers) {     @SuppressWarnings("unchecked")     final TypeSerializer<K> keySerializer = (TypeSerializer<K>) nestedSerializers[0].     @SuppressWarnings("unchecked")     final TypeSerializer<N> namespaceSerializer = (TypeSerializer<N>) nestedSerializers[1].     return new TimerSerializer<>(keySerializer, namespaceSerializer). }
-false;protected;1;4;;@Override protected TypeSerializer<?>[] getNestedSerializers(TimerSerializer<K, N> outerSerializer) {     return new TypeSerializer<?>[] { outerSerializer.getKeySerializer(), outerSerializer.getNamespaceSerializer() }. }

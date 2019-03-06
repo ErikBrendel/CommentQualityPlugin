@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected ResponseStatusExceptionHandler createResponseStatusExceptionHandler() {     return new WebFluxResponseStatusExceptionHandler(). }
-false;public;0;6;;@Test public void handleAnnotatedException() {     Throwable ex = new CustomException().     this.handler.handle(this.exchange, ex).block(Duration.ofSeconds(5)).     assertEquals(HttpStatus.I_AM_A_TEAPOT, this.exchange.getResponse().getStatusCode()). }
-false;public;0;6;;@Test public void handleNestedAnnotatedException() {     Throwable ex = new Exception(new CustomException()).     this.handler.handle(this.exchange, ex).block(Duration.ofSeconds(5)).     assertEquals(HttpStatus.I_AM_A_TEAPOT, this.exchange.getResponse().getStatusCode()). }

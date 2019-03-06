@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public Map<String, MediaType> getMediaTypes() {     return this.mediaTypes. }
-false;protected;0;3;;protected List<MediaType> getAllMediaTypes() {     return new ArrayList<>(this.mediaTypes.values()). }
-true;protected;2;7;/**  * Map an extension to a MediaType. Ignore if extension already mapped.  */ ;/**  * Map an extension to a MediaType. Ignore if extension already mapped.  */ protected void addMapping(String extension, MediaType mediaType) {     MediaType previous = this.mediaTypes.putIfAbsent(extension, mediaType).     if (previous == null) {         this.fileExtensions.add(mediaType, extension).         this.allFileExtensions.add(extension).     } }
-false;public;1;5;;@Override public List<String> resolveFileExtensions(MediaType mediaType) {     List<String> fileExtensions = this.fileExtensions.get(mediaType).     return (fileExtensions != null ? fileExtensions : Collections.emptyList()). }
-false;public;0;4;;@Override public List<String> getAllFileExtensions() {     return Collections.unmodifiableList(this.allFileExtensions). }
-true;protected;1;4;/**  * Use this method for a reverse lookup from extension to MediaType.  * @return a MediaType for the key, or {@code null} if none found  */ ;/**  * Use this method for a reverse lookup from extension to MediaType.  * @return a MediaType for the key, or {@code null} if none found  */ @Nullable protected MediaType lookupMediaType(String extension) {     return this.mediaTypes.get(extension.toLowerCase(Locale.ENGLISH)). }

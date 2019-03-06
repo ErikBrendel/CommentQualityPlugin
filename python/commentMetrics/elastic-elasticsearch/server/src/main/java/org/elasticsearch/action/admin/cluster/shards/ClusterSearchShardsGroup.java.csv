@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;static;1;5;;static ClusterSearchShardsGroup readSearchShardsGroupResponse(StreamInput in) throws IOException {     ClusterSearchShardsGroup response = new ClusterSearchShardsGroup().     response.readFrom(in).     return response. }
-false;public;0;3;;public ShardId getShardId() {     return shardId. }
-false;public;0;3;;public ShardRouting[] getShards() {     return shards. }
-false;public;1;8;;@Override public void readFrom(StreamInput in) throws IOException {     shardId = ShardId.readShardId(in).     shards = new ShardRouting[in.readVInt()].     for (int i = 0. i < shards.length. i++) {         shards[i] = new ShardRouting(shardId, in).     } }
-false;public;1;8;;@Override public void writeTo(StreamOutput out) throws IOException {     shardId.writeTo(out).     out.writeVInt(shards.length).     for (ShardRouting shardRouting : shards) {         shardRouting.writeToThin(out).     } }
-false;public;2;9;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startArray().     for (ShardRouting shard : getShards()) {         shard.toXContent(builder, params).     }     builder.endArray().     return builder. }

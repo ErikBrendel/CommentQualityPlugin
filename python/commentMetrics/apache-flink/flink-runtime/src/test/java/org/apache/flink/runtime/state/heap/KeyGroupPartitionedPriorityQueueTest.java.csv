@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;8;;@Override protected InternalPriorityQueue<TestElement> newPriorityQueue(int initialCapacity) {     return new KeyGroupPartitionedPriorityQueue<>(KEY_EXTRACTOR_FUNCTION, TEST_ELEMENT_PRIORITY_COMPARATOR, newFactory(initialCapacity), KEY_GROUP_RANGE, KEY_GROUP_RANGE.getNumberOfKeyGroups()). }
-false;private;1;11;;private KeyGroupPartitionedPriorityQueue.PartitionQueueSetFactory<TestElement, KeyGroupHeapPQSet<TestElement>> newFactory(int initialCapacity) {     return (keyGroupId, numKeyGroups, keyExtractorFunction, elementComparator) -> new KeyGroupHeapPQSet<>(elementComparator, keyExtractorFunction, initialCapacity, KeyGroupRange.of(keyGroupId, keyGroupId), numKeyGroups). }
-false;protected;0;4;;@Override protected boolean testSetSemanticsAgainstDuplicateElements() {     return true. }
-false;public;0;4;;@Override public int getInternalIndex() {     return internalIndex. }
-false;public;1;4;;@Override public void setInternalIndex(int newIndex) {     internalIndex = newIndex. }

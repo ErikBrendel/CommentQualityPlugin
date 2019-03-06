@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;10;;@Deployment public static Archive<?> deployment() {     return ShrinkWrap.create(JavaArchive.class).addPackage(CdiCamelExtension.class.getPackage()).addClass(RecipientListMethodBean.class).addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml"). }
-false;public;0;13;;@Test public void consumeAnnotation() throws InterruptedException {     outbound1.expectedMessageCount(1).     outbound1.expectedBodiesReceived("test").     outbound2.expectedMessageCount(1).     outbound2.expectedBodiesReceived("test").     inbound.sendBody("test").     assertIsSatisfied(2L, TimeUnit.SECONDS, outbound1).     assertIsSatisfied(2L, TimeUnit.SECONDS, outbound2). }

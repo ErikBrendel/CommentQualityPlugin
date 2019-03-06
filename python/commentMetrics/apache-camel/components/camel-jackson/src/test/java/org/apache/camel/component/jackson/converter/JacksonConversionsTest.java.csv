@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;7;;@Override protected CamelContext createCamelContext() throws Exception {     CamelContext context = super.createCamelContext().     // enable jackson type converter by setting this property on CamelContext     context.getGlobalOptions().put(JacksonConstants.ENABLE_TYPE_CONVERTER, "true").     return context. }
-false;public;0;10;;@Test public void shouldConvertMapToPojo() {     String name = "someName".     Map<String, String> pojoAsMap = new HashMap<>().     pojoAsMap.put("name", name).     TestPojo testPojo = (TestPojo) template.requestBody("direct:test", pojoAsMap).     assertEquals(name, testPojo.getName()). }
-false;public;0;4;;@Override public void configure() throws Exception {     from("direct:test").convertBodyTo(TestPojo.class). }
-false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:test").convertBodyTo(TestPojo.class).         }     }. }

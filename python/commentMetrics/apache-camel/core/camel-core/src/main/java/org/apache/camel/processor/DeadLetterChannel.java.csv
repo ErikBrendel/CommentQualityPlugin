@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Override public String toString() {     if (output == null) {         // if no output then don't do any description         return "".     }     return "DeadLetterChannel[" + output + ", " + (deadLetterUri != null ? deadLetterUri : deadLetter) + "]". }
-false;protected;0;5;;@Override protected boolean isRunAllowedOnPreparingShutdown() {     // allow to run as we want to move the message eto DLC, instead of rejecting the message     return true. }
-false;public;0;4;;@Override public boolean isDeadLetterChannel() {     return true. }

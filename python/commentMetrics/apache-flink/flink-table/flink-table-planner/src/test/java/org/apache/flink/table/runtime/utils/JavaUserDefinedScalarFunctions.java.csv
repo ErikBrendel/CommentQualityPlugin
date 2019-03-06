@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;3;;public long eval(Long l) {     return l + 1. }
-false;public;3;3;;public String eval(Integer a, int b, Long c) {     return a + " and " + b + " and " + c. }
-false;public;2;7;;public String eval(String s, Integer... a) {     int m = 1.     for (int n : a) {         m *= n.     }     return s + m. }
-false;public;2;3;;public int eval(String a, int... b) {     return b.length. }
-false;public;1;3;;public String eval(String c) {     return c. }
-false;public;2;3;;public String eval(Integer[] a, String[] b) {     return Arrays.toString(a) + " and " + Arrays.toString(b). }

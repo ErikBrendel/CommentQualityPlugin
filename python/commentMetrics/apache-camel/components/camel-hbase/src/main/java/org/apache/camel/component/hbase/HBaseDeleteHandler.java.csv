@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;2;9;/**  * Performs a {@link Delete} of the specified row.  */ ;/**  * Performs a {@link Delete} of the specified row.  */ @Override public void remove(Table table, byte[] row) {     Delete delete = new Delete(row).     try {         table.delete(delete).     } catch (IOException e) {         LOG.warn("Failed to delete row from table. This exception will be ignored.", e).     } }

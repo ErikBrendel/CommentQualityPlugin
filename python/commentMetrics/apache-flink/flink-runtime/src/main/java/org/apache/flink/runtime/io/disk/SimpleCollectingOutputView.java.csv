@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;13;;public void reset() {     if (this.fullSegments.size() != 0) {         throw new IllegalStateException("The target list still contains memory segments.").     }     clear().     try {         advance().     } catch (IOException ioex) {         throw new RuntimeException("Error getting first segment for record collector.", ioex).     }     this.segmentNum = 0. }
-false;protected;2;11;;@Override protected MemorySegment nextSegment(MemorySegment current, int positionInCurrent) throws EOFException {     final MemorySegment next = this.memorySource.nextSegment().     if (next != null) {         this.fullSegments.add(next).         this.segmentNum++.         return next.     } else {         throw new EOFException().     } }
-false;public;0;3;;public long getCurrentOffset() {     return (((long) this.segmentNum) << this.segmentSizeBits) + getCurrentPositionInSegment(). }

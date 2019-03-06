@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Test public void testMainRunner() throws Exception {     MainRunner runner = new MainRunner().     runner.setDelay(10).     runner.setArgs(new String[] { "Hello", "World" }).     runner.setMain(MainRunnerTest.class).     runner.afterPropertiesSet().     runner.run(). }
-false;public,static;1;4;;public static void main(String[] args) {     assertEquals("Hello", args[0]).     assertEquals("World", args[1]). }

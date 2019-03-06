@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;13;;@Override public OperationResult<String> getResult() {     try {         Stat statistics = connection.exists(node, true).         boolean ok = isOk(statistics).         if (LOG.isTraceEnabled()) {             LOG.trace(ok ? "node exists" : "node does not exist").         }         return new OperationResult<>(node, statistics, ok).     } catch (Exception e) {         return new OperationResult<>(e).     } }
-false;private;1;9;;private boolean isOk(Stat statistics) {     boolean ok = false.     if (mustExist) {         ok = statistics != null.     } else {         ok = statistics == null.     }     return ok. }

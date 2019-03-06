@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public String id() {     return id. }
-false;public;0;3;;public Condition.Result condition() {     return condition. }
-false;public;0;3;;public Transform.Result transform() {     return transform. }
-false;public;0;3;;public Action.Result action() {     return action. }
-false;public;1;12;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     ActionWrapperResult result = (ActionWrapperResult) o.     return Objects.equals(id, result.id) && Objects.equals(condition, result.condition) && Objects.equals(transform, result.transform) && Objects.equals(action, result.action). }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(id, condition, transform, action). }
-false;public;2;15;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(ActionWrapperField.ID.getPreferredName(), id).     builder.field(ActionWrapperField.TYPE.getPreferredName(), action.type()).     builder.field(ActionWrapperField.STATUS.getPreferredName(), action.status().value()).     if (condition != null) {         builder.field(WatchField.CONDITION.getPreferredName(), condition, params).     }     if (transform != null) {         builder.field(Transform.TRANSFORM.getPreferredName(), transform, params).     }     action.toXContent(builder, params).     return builder.endObject(). }

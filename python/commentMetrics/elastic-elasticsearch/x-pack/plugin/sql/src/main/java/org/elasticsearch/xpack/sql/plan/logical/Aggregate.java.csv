@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected NodeInfo<Aggregate> info() {     return NodeInfo.create(this, Aggregate::new, child(), groupings, aggregates). }
-false;protected;1;4;;@Override protected Aggregate replaceChild(LogicalPlan newChild) {     return new Aggregate(source(), newChild, groupings, aggregates). }
-false;public;0;3;;public List<Expression> groupings() {     return groupings. }
-false;public;0;3;;public List<? extends NamedExpression> aggregates() {     return aggregates. }
-false;public;0;4;;@Override public boolean expressionsResolved() {     return Resolvables.resolved(groupings) && Resolvables.resolved(aggregates). }
-false;public;0;4;;@Override public List<Attribute> output() {     return Expressions.asAttributes(aggregates). }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(groupings, aggregates, child()). }
-false;public;1;15;;@Override public boolean equals(Object obj) {     if (this == obj) {         return true.     }     if (obj == null || getClass() != obj.getClass()) {         return false.     }     Aggregate other = (Aggregate) obj.     return Objects.equals(groupings, other.groupings) && Objects.equals(aggregates, other.aggregates) && Objects.equals(child(), other.child()). }

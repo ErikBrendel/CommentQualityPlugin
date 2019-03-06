@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Override public void configure() {     from("direct:{{from}}").routeId("route").setHeader("header").simple("properties:header.message").to("{{to}}"). }

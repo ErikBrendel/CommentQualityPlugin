@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;16;;@Before public void setup() throws Exception {     ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext(getClass().getSimpleName() + ".xml", getClass()).     testBeanProxy = (ITestBean) ctx.getBean("testBean").     assertTrue(AopUtils.isAopProxy(testBeanProxy)).     // we need the real target too, not just the proxy...     testBeanTarget = (TestBean) ((Advised) testBeanProxy).getTargetSource().getTarget().     AdviceBindingTestAspect beforeAdviceAspect = (AdviceBindingTestAspect) ctx.getBean("testAspect").     mockCollaborator = mock(AdviceBindingCollaborator.class).     beforeAdviceAspect.setCollaborator(mockCollaborator). }
-false;public;0;5;;@Test public void testOneIntArg() {     testBeanProxy.setAge(5).     verify(mockCollaborator).oneIntArg(5). }
-false;public;0;5;;@Test public void testOneObjectArgBoundToProxyUsingThis() {     testBeanProxy.getAge().     verify(mockCollaborator).oneObjectArg(this.testBeanProxy). }
-false;public;0;5;;@Test public void testOneIntAndOneObjectArgs() {     testBeanProxy.setAge(5).     verify(mockCollaborator).oneIntAndOneObject(5, this.testBeanTarget). }
-false;public;0;5;;@Test public void testNeedsJoinPoint() {     testBeanProxy.getAge().     verify(mockCollaborator).needsJoinPoint("getAge"). }
-false;public;0;5;;@Test public void testNeedsJoinPointStaticPart() {     testBeanProxy.getAge().     verify(mockCollaborator).needsJoinPointStaticPart("getAge"). }
-false;public;1;3;;public void logAuthenticationAttempt(String username) {     System.out.println("User [" + username + "] attempting to authenticate"). }
-false;public;2;3;;public boolean authenticate(String username, String password) {     return false. }

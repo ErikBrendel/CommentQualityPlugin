@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,abstract;1;1;;public abstract boolean isKnownWord(BytesRef term) throws IOException.
-false;public,abstract;1;1;;public abstract TermStats termStats(BytesRef term) throws IOException.
-false;public;1;4;;public CandidateSet drawCandidates(BytesRef term) throws IOException {     CandidateSet set = new CandidateSet(Candidate.EMPTY, createCandidate(term, true)).     return drawCandidates(set). }
-false;public;2;3;;public Candidate createCandidate(BytesRef term, boolean userInput) throws IOException {     return createCandidate(term, termStats(term), 1.0, userInput). }
-false;public;3;3;;public Candidate createCandidate(BytesRef term, TermStats termStats, double channelScore) throws IOException {     return createCandidate(term, termStats, channelScore, false). }
-false;public,abstract;4;2;;public abstract Candidate createCandidate(BytesRef term, TermStats termStats, double channelScore, boolean userInput) throws IOException.
-false;public,abstract;1;1;;public abstract CandidateSet drawCandidates(CandidateSet set) throws IOException.

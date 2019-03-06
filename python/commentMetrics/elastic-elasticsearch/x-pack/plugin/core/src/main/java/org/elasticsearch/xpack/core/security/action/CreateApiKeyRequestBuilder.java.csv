@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;public CreateApiKeyRequestBuilder setName(String name) {     request.setName(name).     return this. }
-false;public;1;4;;public CreateApiKeyRequestBuilder setExpiration(TimeValue expiration) {     request.setExpiration(expiration).     return this. }
-false;public;1;4;;public CreateApiKeyRequestBuilder setRoleDescriptors(List<RoleDescriptor> roleDescriptors) {     request.setRoleDescriptors(roleDescriptors).     return this. }
-false;public;1;4;;public CreateApiKeyRequestBuilder setRefreshPolicy(WriteRequest.RefreshPolicy refreshPolicy) {     request.setRefreshPolicy(refreshPolicy).     return this. }
-false;public;2;11;;public CreateApiKeyRequestBuilder source(BytesReference source, XContentType xContentType) throws IOException {     final NamedXContentRegistry registry = NamedXContentRegistry.EMPTY.     try (InputStream stream = source.streamInput().         XContentParser parser = xContentType.xContent().createParser(registry, LoggingDeprecationHandler.INSTANCE, stream)) {         CreateApiKeyRequest createApiKeyRequest = PARSER.parse(parser, null).         setName(createApiKeyRequest.getName()).         setRoleDescriptors(createApiKeyRequest.getRoleDescriptors()).         setExpiration(createApiKeyRequest.getExpiration()).     }     return this. }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public String get(String key) {     return null. }
-false;public;0;4;;@Override public String domain() {     return get(JmxProperties::getDomain, JmxConfig.super::domain). }
-false;public;0;4;;@Override public Duration step() {     return get(JmxProperties::getStep, JmxConfig.super::step). }

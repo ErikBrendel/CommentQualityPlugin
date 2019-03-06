@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Returns the stored integer value.  *  * @return the stored integer value or <code>-1</code> if no value has been set  */ ;/**  * Returns the stored integer value.  *  * @return the stored integer value or <code>-1</code> if no value has been set  */ public int getInteger() {     return this.value. }
-false;public;1;4;;@Override public void write(final DataOutputView out) throws IOException {     out.writeInt(this.value). }
-false;public;1;4;;@Override public void read(final DataInputView in) throws IOException {     this.value = in.readInt(). }
-false;public;0;5;;@Override public int hashCode() {     return this.value. }
-false;public;1;11;;@Override public boolean equals(final Object obj) {     if (!(obj instanceof IntegerTaskEvent)) {         return false.     }     final IntegerTaskEvent taskEvent = (IntegerTaskEvent) obj.     return (this.value == taskEvent.getInteger()). }

@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;7;;@Override public void begin(TransactionContext context) {     TransactionDefinition definition = new DefaultTransactionDefinition(TransactionDefinition.PROPAGATION_NESTED).     TransactionStatus status = this.transactionManager.getTransaction(definition).     context.transaction(new SpringTransaction(status)). }
-false;public;1;4;;@Override public void commit(TransactionContext ctx) {     this.transactionManager.commit(getTransactionStatus(ctx)). }
-false;public;1;4;;@Override public void rollback(TransactionContext ctx) {     this.transactionManager.rollback(getTransactionStatus(ctx)). }
-false;private;1;4;;private TransactionStatus getTransactionStatus(TransactionContext ctx) {     SpringTransaction transaction = (SpringTransaction) ctx.transaction().     return transaction.getTxStatus(). }

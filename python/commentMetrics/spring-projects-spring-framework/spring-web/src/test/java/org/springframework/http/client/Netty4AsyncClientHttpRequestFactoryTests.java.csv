@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;4;;@BeforeClass public static void createEventLoopGroup() {     eventLoopGroup = new NioEventLoopGroup(). }
-false;public,static;0;4;;@AfterClass public static void shutdownEventLoopGroup() throws InterruptedException {     eventLoopGroup.shutdownGracefully().sync(). }
-false;protected;0;5;;@SuppressWarnings("deprecation") @Override protected AsyncClientHttpRequestFactory createRequestFactory() {     return new Netty4ClientHttpRequestFactory(eventLoopGroup). }
-false;public;0;6;;@Override @Test public void httpMethods() throws Exception {     super.httpMethods().     assertHttpMethod("patch", HttpMethod.PATCH). }

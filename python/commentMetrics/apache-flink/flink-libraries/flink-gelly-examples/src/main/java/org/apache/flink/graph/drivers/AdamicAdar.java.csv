@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getShortDescription() {     return "similarity score weighted by centerpoint degree". }
-false;public;0;10;;@Override public String getLongDescription() {     return WordUtils.wrap(new StrBuilder().appendln("Adamic-Adar measures the similarity between vertex neighborhoods and is " + "computed as the sum of the inverse logarithm of centerpoint degree over shared " + "neighbors.").appendNewLine().append("The algorithm result contains two vertex IDs and the similarity score.").toString(), 80). }
-false;public;1;9;;@Override public DataSet plan(Graph<K, VV, EV> graph) throws Exception {     return graph.run(new org.apache.flink.graph.library.similarity.AdamicAdar<K, VV, EV>().setMinimumRatio(minRatio.getValue().floatValue()).setMinimumScore(minScore.getValue().floatValue()).setMirrorResults(mirrorResults.getValue()).setParallelism(parallelism.getValue().intValue())). }

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Before public void setUpOptionalId() {     jobId = randomAlphaOfLengthBetween(1, 10). }
-false;protected;0;4;;@Override protected PutRollupJobRequest createTestInstance() {     return new PutRollupJobRequest(RollupJobConfigTests.randomRollupJobConfig(jobId)). }
-false;protected;1;5;;@Override protected PutRollupJobRequest doParseInstance(final XContentParser parser) throws IOException {     final String optionalId = randomBoolean() ? jobId : null.     return new PutRollupJobRequest(RollupJobConfig.fromXContent(parser, optionalId)). }
-false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }
-false;public;0;4;;public void testRequireConfiguration() {     final NullPointerException e = expectThrows(NullPointerException.class, () -> new PutRollupJobRequest(null)).     assertEquals("rollup job configuration is required", e.getMessage()). }

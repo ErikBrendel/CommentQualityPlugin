@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,static;1;3;/**  * Case-insensitive from string method.  *  * @param value  *            String representation  * @return The condition type  */ ;/**  * Case-insensitive from string method.  *  * @param value  *            String representation  * @return The condition type  */ public static Level fromString(String value) {     return Level.valueOf(value.toUpperCase(Locale.ROOT)). }
-false;public,static;1;3;;public static Level readFromStream(StreamInput in) throws IOException {     return in.readEnum(Level.class). }
-false;public;1;4;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeEnum(this). }
-false;public;0;4;;@Override public String toString() {     return name().toLowerCase(Locale.ROOT). }

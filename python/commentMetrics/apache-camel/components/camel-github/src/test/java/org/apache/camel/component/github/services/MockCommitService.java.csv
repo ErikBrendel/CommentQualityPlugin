@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,synchronized;0;14;;public synchronized RepositoryCommit addRepositoryCommit() {     User author = new User().     // TODO change     author.setEmail("someguy@gmail.com").     author.setHtmlUrl("http://github/someguy").     author.setLogin("someguy").     RepositoryCommit rc = new RepositoryCommit().     rc.setAuthor(author).     rc.setSha(fakeSha.incrementAndGet() + "").     LOG.debug("In MockCommitService added commit with sha " + rc.getSha()).     commitsList.add(rc).     return rc. }
-false;public,synchronized;3;5;;@Override public synchronized List<RepositoryCommit> getCommits(IRepositoryIdProvider repository, String sha, String path) throws IOException {     LOG.debug("Returning list of size " + commitsList.size()).     return commitsList. }
-false;public;3;7;;@Override public CommitStatus createStatus(IRepositoryIdProvider repository, String sha, CommitStatus status) throws IOException {     commitStatus.put(sha, status).     return status. }
-false;public;0;3;;public String getNextSha() {     return fakeSha.incrementAndGet() + "". }
-false;public;1;3;;public CommitStatus getCommitStatus(String sha) {     return commitStatus.get(sha). }

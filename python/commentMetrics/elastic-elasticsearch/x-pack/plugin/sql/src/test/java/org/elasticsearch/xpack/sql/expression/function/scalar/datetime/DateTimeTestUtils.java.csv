@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;5;3;;public static ZonedDateTime dateTime(int year, int month, int day, int hour, int minute) {     return ZonedDateTime.of(year, month, day, hour, minute, 0, 0, DateUtils.UTC). }
-false;public,static;1;3;;public static ZonedDateTime dateTime(long millisSinceEpoch) {     return DateUtils.asDateTime(millisSinceEpoch). }
-false;public,static;1;3;;public static ZonedDateTime date(long millisSinceEpoch) {     return DateUtils.asDateOnly(millisSinceEpoch). }

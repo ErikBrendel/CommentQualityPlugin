@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Before public void setUp() {     sdbClient = new AmazonSDBClientMock().     configuration = new SdbConfiguration().     configuration.setDomainName("DOMAIN1").     exchange = new DefaultExchange(new DefaultCamelContext()).     command = new DeleteDomainCommand(sdbClient, configuration, exchange). }
-false;public;0;6;;@Test public void testExecute() {     command.execute().     assertEquals("DOMAIN1", sdbClient.deleteDomainRequest.getDomainName()). }

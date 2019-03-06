@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public boolean supportsReturnType(MethodParameter returnType) {     return this.adapterRegistry.getAdapter(returnType.getParameterType()) != null. }
-false;public;2;5;;@Override public boolean isAsyncReturnValue(Object returnValue, MethodParameter returnType) {     ReactiveAdapter adapter = this.adapterRegistry.getAdapter(returnType.getParameterType(), returnValue).     return (adapter != null && !adapter.isMultiValue() && !adapter.isNoValue()). }
-false;public;2;6;;@Override public ListenableFuture<?> toListenableFuture(Object returnValue, MethodParameter returnType) {     ReactiveAdapter adapter = this.adapterRegistry.getAdapter(returnType.getParameterType(), returnValue).     Assert.state(adapter != null, () -> "No ReactiveAdapter found for " + returnType.getParameterType()).     return new MonoToListenableFutureAdapter<>(Mono.from(adapter.toPublisher(returnValue))). }

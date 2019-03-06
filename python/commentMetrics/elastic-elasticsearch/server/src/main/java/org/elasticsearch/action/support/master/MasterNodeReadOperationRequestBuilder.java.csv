@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,final;1;5;/**  * Specifies if the request should be executed on local node rather than on master  */ ;/**  * Specifies if the request should be executed on local node rather than on master  */ @SuppressWarnings("unchecked") public final RequestBuilder setLocal(boolean local) {     request.local(local).     return (RequestBuilder) this. }

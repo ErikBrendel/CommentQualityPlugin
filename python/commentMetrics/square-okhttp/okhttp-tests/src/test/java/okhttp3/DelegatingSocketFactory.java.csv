@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public Socket createSocket() throws IOException {     Socket socket = delegate.createSocket().     return configureSocket(socket). }
-false;public;2;4;;@Override public Socket createSocket(String host, int port) throws IOException {     Socket socket = delegate.createSocket(host, port).     return configureSocket(socket). }
-false;public;4;5;;@Override public Socket createSocket(String host, int port, InetAddress localAddress, int localPort) throws IOException {     Socket socket = delegate.createSocket(host, port, localAddress, localPort).     return configureSocket(socket). }
-false;public;2;4;;@Override public Socket createSocket(InetAddress host, int port) throws IOException {     Socket socket = delegate.createSocket(host, port).     return configureSocket(socket). }
-false;public;4;5;;@Override public Socket createSocket(InetAddress host, int port, InetAddress localAddress, int localPort) throws IOException {     Socket socket = delegate.createSocket(host, port, localAddress, localPort).     return configureSocket(socket). }
-false;protected;1;4;;protected Socket configureSocket(Socket socket) throws IOException {     // No-op by default.     return socket. }

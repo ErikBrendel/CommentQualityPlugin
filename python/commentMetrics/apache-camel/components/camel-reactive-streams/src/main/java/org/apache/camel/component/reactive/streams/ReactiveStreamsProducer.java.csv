@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;14;;@Override public boolean process(Exchange exchange, AsyncCallback callback) {     ReactiveStreamsHelper.attachCallback(exchange, (data, error) -> {         if (error != null) {             data.setException(error).         }         callback.done(false).     }).     service.sendCamelExchange(name, exchange).     return false. }
-false;protected;0;5;;@Override protected void doStart() throws Exception {     super.doStart().     this.service.attachCamelProducer(endpoint.getStream(), this). }
-false;protected;0;6;;@Override protected void doStop() throws Exception {     super.doStop().     this.service.detachCamelProducer(endpoint.getStream()). }
-false;public;0;4;;@Override public ReactiveStreamsEndpoint getEndpoint() {     return endpoint. }

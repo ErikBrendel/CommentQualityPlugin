@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Before public void clearQueue() {     template.sendBodyAndHeader(ironMQEndpoint, "fo", IronMQConstants.OPERATION, IronMQConstants.CLEARQUEUE).     for (int i = 1. i <= 50. i++) {         template.sendBody(ironMQEndpoint, "<foo>" + i + "</foo>").     } }
-false;public;0;11;;@Test public void testIronMQFifo() throws Exception {     result.setExpectedMessageCount(50).     assertMockEndpointsSatisfied(30, TimeUnit.SECONDS).     int i = 1.     List<Exchange> exchanges = result.getExchanges().     for (Exchange exchange : exchanges) {         assertEquals("<foo>" + i + "</foo>", exchange.getIn().getBody(String.class)).         i++.     } }
-false;public;0;3;;public void configure() {     from(ironMQEndpoint).log("got message ${body}").to("mock:result"). }
-false;protected;0;8;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() {             from(ironMQEndpoint).log("got message ${body}").to("mock:result").         }     }. }

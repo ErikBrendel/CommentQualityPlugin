@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;4;;public EndpointServlet withInitParameter(String name, String value) {     Assert.hasText(name, "Name must not be empty").     return withInitParameters(Collections.singletonMap(name, value)). }
-false;public;1;10;;public EndpointServlet withInitParameters(Map<String, String> initParameters) {     Assert.notNull(initParameters, "InitParameters must not be null").     boolean hasEmptyName = initParameters.keySet().stream().anyMatch((name) -> !StringUtils.hasText(name)).     Assert.isTrue(!hasEmptyName, "InitParameters must not contain empty names").     Map<String, String> mergedInitParameters = new LinkedHashMap<>(this.initParameters).     mergedInitParameters.putAll(initParameters).     return new EndpointServlet(this.servlet, mergedInitParameters). }
-false;;0;3;;Servlet getServlet() {     return this.servlet. }
-false;;0;3;;Map<String, String> getInitParameters() {     return this.initParameters. }

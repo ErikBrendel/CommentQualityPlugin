@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;3;4;;protected KubernetesServicesEndpoint doCreateEndpoint(String uri, String remaining, KubernetesConfiguration config) throws Exception {     KubernetesServicesEndpoint endpoint = new KubernetesServicesEndpoint(uri, this, config).     return endpoint. }

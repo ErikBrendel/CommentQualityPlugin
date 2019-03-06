@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;14;;// ------------------------------------------------------------------------ @Override public Thread newThread(Runnable runnable) {     Thread t = new Thread(group, runnable, namePrefix + threadNumber.getAndIncrement()).     t.setDaemon(true).     t.setPriority(threadPriority).     // optional handler for uncaught exceptions     if (exceptionHandler != null) {         t.setUncaughtExceptionHandler(exceptionHandler).     }     return t. }
-false;public;1;4;;public Builder setPoolName(final String poolName) {     this.poolName = poolName.     return this. }
-false;public;1;4;;public Builder setThreadPriority(final int priority) {     this.priority = priority.     return this. }
-false;public;1;4;;public Builder setExceptionHandler(final UncaughtExceptionHandler exceptionHandler) {     this.exceptionHandler = exceptionHandler.     return this. }
-false;public;0;3;;public ExecutorThreadFactory build() {     return new ExecutorThreadFactory(poolName, priority, exceptionHandler). }

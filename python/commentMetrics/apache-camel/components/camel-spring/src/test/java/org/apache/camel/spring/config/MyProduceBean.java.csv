@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;public void testDoSomething(String body) throws Exception {     Exchange exchange = producer.getEndpoint().createExchange().     exchange.getIn().setBody(body).     producer.process(exchange). }

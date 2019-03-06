@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public Version version() {     return this.version. }
-false;public;0;3;;public BytesReference bytes() {     return this.bytes. }
-false;public;1;6;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     bytes = in.readBytesReference().     version = in.getVersion(). }
-true;public;1;4;/**  * Writes the data in a "thin" manner, without the actual bytes, assumes  * the actual bytes will be appended right after this content.  */ ;/**  * Writes the data in a "thin" manner, without the actual bytes, assumes  * the actual bytes will be appended right after this content.  */ public void writeThin(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeVInt(bytes.length()). }
-false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeBytesReference(bytes). }

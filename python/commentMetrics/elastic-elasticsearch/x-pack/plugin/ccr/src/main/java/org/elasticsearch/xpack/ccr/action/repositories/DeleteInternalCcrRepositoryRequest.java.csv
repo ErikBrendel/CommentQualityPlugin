@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public ActionRequestValidationException validate() {     return null. }
-false;public;1;4;;@Override public void readFrom(StreamInput in) throws IOException {     throw new UnsupportedOperationException("DeleteInternalRepositoryRequest cannot be serialized for sending across the wire."). }
-false;public;1;4;;@Override public void writeTo(StreamOutput out) throws IOException {     throw new UnsupportedOperationException("DeleteInternalRepositoryRequest cannot be serialized for sending across the wire."). }
-false;public;0;3;;public String getName() {     return name. }
-false;public;1;7;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     DeleteInternalCcrRepositoryRequest that = (DeleteInternalCcrRepositoryRequest) o.     return Objects.equals(name, that.name). }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(name). }
-false;public;0;6;;@Override public String toString() {     return "DeleteInternalRepositoryRequest{" + "name='" + name + '\'' + '}'. }

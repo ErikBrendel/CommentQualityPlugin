@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;14;;@Test public void dataSourceIsInstrumented() {     new ApplicationContextRunner().withUserConfiguration(DataSourceConfig.class, MetricsApp.class).withConfiguration(AutoConfigurations.of(DataSourceAutoConfiguration.class)).withPropertyValues("spring.datasource.generate-unique-name=true", "metrics.use-global-registry=false").run((context) -> {         context.getBean(DataSource.class).getConnection().getMetaData().         context.getBean(MeterRegistry.class).get("jdbc.connections.max").meter().     }). }
-false;;0;4;;@Bean MeterRegistry registry() {     return new SimpleMeterRegistry(). }

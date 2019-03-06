@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;3;6;;protected Endpoint createEndpoint(String uri, String remaining, Map<String, Object> parameters) throws Exception {     ApnsEndpoint endpoint = new ApnsEndpoint(uri, this).     endpoint.setName(remaining).     setProperties(endpoint, parameters).     return endpoint. }
-false;public;0;3;;public ApnsService getApnsService() {     return apnsService. }
-true;public;1;3;/**  * The ApnsService to use.  * <p/>  * The {@link org.apache.camel.component.apns.factory.ApnsServiceFactory} can be used to build a {@link ApnsService}  */ ;/**  * The ApnsService to use.  * <p/>  * The {@link org.apache.camel.component.apns.factory.ApnsServiceFactory} can be used to build a {@link ApnsService}  */ public void setApnsService(ApnsService apnsService) {     this.apnsService = apnsService. }

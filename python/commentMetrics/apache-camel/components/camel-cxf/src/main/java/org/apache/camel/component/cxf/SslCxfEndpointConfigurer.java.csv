@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;2;7;;public static CxfEndpointConfigurer create(SSLContextParameters sslContextParameters, CamelContext camelContext) {     if (sslContextParameters == null) {         return new ChainedCxfEndpointConfigurer.NullCxfEndpointConfigurer().     } else {         return new SslCxfEndpointConfigurer(sslContextParameters, camelContext).     } }
-false;public;1;3;;@Override public void configure(AbstractWSDLBasedEndpointFactory factoryBean) { }
-false;public;1;5;;@Override public void configureClient(Client client) {     HTTPConduit httpConduit = (HTTPConduit) client.getConduit().     setupHttpConduit(httpConduit). }
-false;public;1;3;;@Override public void configureServer(Server server) { }

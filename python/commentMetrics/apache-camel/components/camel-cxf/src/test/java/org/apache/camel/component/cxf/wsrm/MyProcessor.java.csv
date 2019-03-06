@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;public void process(Exchange exchange) throws Exception {     logger.info("***** Entering Processor *******").     String name = exchange.getIn().getBody(String.class).     exchange.getOut().setBody("Hello " + name).     logger.info("***** Leaving Processor *******"). }

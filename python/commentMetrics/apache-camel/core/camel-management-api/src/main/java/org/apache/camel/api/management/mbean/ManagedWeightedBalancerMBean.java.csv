@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;0;2;;@ManagedAttribute(description = "Number of processors in the load balancer") Integer getSize().
-false;;0;2;;@ManagedAttribute(description = "Whether round robin mode is enabled") Boolean isRoundRobin().
-false;;0;2;;@ManagedAttribute(description = "The distribution ratio of integer weights separated by delimiters for example '2,3,5'") String getDistributionRatio().
-false;;0;2;;@ManagedAttribute(description = "The delimiter") String getDistributionRatioDelimiter().
-false;;0;2;;@ManagedAttribute(description = "Processor id of the last chosen processor") String getLastChosenProcessorId().

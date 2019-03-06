@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;8;;@Override public String getOrder(int id) throws OrderNotFoundException {     Assert.notNull(this.webServiceContext, "WebServiceContext has not been injected").     if (id == 0) {         throw new OrderNotFoundException("Order 0 not found").     }     return "order " + id. }

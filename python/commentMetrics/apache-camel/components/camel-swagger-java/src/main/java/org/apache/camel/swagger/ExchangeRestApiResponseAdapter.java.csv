@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;4;;@Override public void setHeader(String name, String value) {     exchange.getIn().setHeader(name, value). }
-false;public;1;4;;@Override public void writeBytes(byte[] bytes) throws IOException {     exchange.getIn().setBody(bytes). }
-false;public;0;4;;@Override public void noContent() {     exchange.getIn().setHeader(Exchange.HTTP_RESPONSE_CODE, 204). }

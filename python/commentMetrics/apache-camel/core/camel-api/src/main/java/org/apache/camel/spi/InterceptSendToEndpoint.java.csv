@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * The original endpoint which was intercepted.  */ ;/**  * The original endpoint which was intercepted.  */ Endpoint getOriginalEndpoint().
-true;;0;1;/**  * The processor for routing in a detour  */ ;/**  * The processor for routing in a detour  */ Processor getDetour().
-true;;0;1;/**  * Whether to skip sending after the detour to the original endpoint.  */ ;/**  * Whether to skip sending after the detour to the original endpoint.  */ boolean isSkip().

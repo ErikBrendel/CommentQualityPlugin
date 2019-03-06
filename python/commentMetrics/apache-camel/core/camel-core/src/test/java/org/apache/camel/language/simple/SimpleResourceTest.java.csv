@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void testSimpleResource() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("The name is Camel").     template.sendBody("direct:start", "Camel").     assertMockEndpointsSatisfied(). }
-false;public;0;6;;@Override public void configure() throws Exception {     from("direct:start").transform().simple("resource:classpath:mysimple.txt").to("mock:result"). }
-false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").transform().simple("resource:classpath:mysimple.txt").to("mock:result").         }     }. }

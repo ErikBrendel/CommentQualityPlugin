@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;@Bean @ConditionalOnMissingBean public AtlasConfig atlasConfig(AtlasProperties atlasProperties) {     return new AtlasPropertiesConfigAdapter(atlasProperties). }
-false;public;2;5;;@Bean @ConditionalOnMissingBean public AtlasMeterRegistry atlasMeterRegistry(AtlasConfig atlasConfig, Clock clock) {     return new AtlasMeterRegistry(atlasConfig, clock). }

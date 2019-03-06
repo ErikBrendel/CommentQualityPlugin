@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public void flush() {     SessionFactoryUtils.flush(this.session, false). }
-false;public;1;5;;@Override public boolean equals(Object other) {     return (this == other || (other instanceof SpringFlushSynchronization && this.session == ((SpringFlushSynchronization) other).session)). }
-false;public;0;4;;@Override public int hashCode() {     return this.session.hashCode(). }

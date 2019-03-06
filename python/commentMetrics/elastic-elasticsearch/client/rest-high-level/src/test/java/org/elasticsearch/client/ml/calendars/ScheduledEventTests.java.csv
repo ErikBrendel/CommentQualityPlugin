@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;2;6;;public static ScheduledEvent testInstance(String calendarId, @Nullable String eventId) {     Date start = new Date(randomNonNegativeLong()).     Date end = new Date(start.getTime() + randomIntBetween(1, 10000) * 1000).     return new ScheduledEvent(randomAlphaOfLength(10), start, end, calendarId, eventId). }
-false;public,static;0;4;;public static ScheduledEvent testInstance() {     return testInstance(randomAlphaOfLengthBetween(1, 20), randomBoolean() ? null : randomAlphaOfLength(7)). }
-false;protected;0;4;;@Override protected ScheduledEvent createTestInstance() {     return testInstance(). }
-false;protected;1;4;;@Override protected ScheduledEvent doParseInstance(XContentParser parser) {     return ScheduledEvent.PARSER.apply(parser, null). }
-false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }

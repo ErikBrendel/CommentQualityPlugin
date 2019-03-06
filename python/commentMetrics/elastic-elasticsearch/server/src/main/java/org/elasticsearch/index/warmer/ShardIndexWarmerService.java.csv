@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public Logger logger() {     return this.logger. }
-false;public;0;3;;public void onPreWarm() {     current.inc(). }
-false;public;1;4;;public void onPostWarm(long tookInNanos) {     current.dec().     warmerMetric.inc(tookInNanos). }
-false;public;0;3;;public WarmerStats stats() {     return new WarmerStats(current.count(), warmerMetric.count(), TimeUnit.NANOSECONDS.toMillis(warmerMetric.sum())). }

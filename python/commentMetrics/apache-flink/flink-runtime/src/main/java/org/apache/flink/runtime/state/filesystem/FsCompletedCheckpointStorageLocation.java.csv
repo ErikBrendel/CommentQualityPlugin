@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getExternalPointer() {     return externalPointer. }
-false;public;0;4;;@Override public FileStateHandle getMetadataHandle() {     return metadataFileHandle. }
-false;public;0;7;;@Override public void disposeStorageLocation() throws IOException {     if (fs == null) {         fs = exclusiveCheckpointDir.getFileSystem().     }     fs.delete(exclusiveCheckpointDir, false). }

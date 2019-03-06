@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;1;5;/**  * Set the interface that the proxy must implement.  * @param serviceInterface the interface that the proxy must implement  * @throws IllegalArgumentException if the supplied {@code serviceInterface}  * is not an interface type  */ ;/**  * Set the interface that the proxy must implement.  * @param serviceInterface the interface that the proxy must implement  * @throws IllegalArgumentException if the supplied {@code serviceInterface}  * is not an interface type  */ public void setServiceInterface(Class<?> serviceInterface) {     Assert.notNull(serviceInterface, "'serviceInterface' must not be null").     Assert.isTrue(serviceInterface.isInterface(), "'serviceInterface' must be an interface").     this.serviceInterface = serviceInterface. }
-false;public;1;4;;@Override public void setBeanClassLoader(ClassLoader classLoader) {     this.beanClassLoader = classLoader. }
-false;public;0;6;;@Override public void afterPropertiesSet() {     super.afterPropertiesSet().     Assert.notNull(this.serviceInterface, "Property 'serviceInterface' is required").     this.serviceProxy = new ProxyFactory(this.serviceInterface, this).getProxy(this.beanClassLoader). }
-false;public;0;5;;@Override @Nullable public Object getObject() {     return this.serviceProxy. }
-false;public;0;4;;@Override public Class<?> getObjectType() {     return this.serviceInterface. }
-false;public;0;4;;@Override public boolean isSingleton() {     return true. }

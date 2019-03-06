@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Test public void testResourceExists() {     this.context.register(BasicConfiguration.class).     this.context.refresh().     assertThat(this.context.containsBean("foo")).isTrue().     assertThat(this.context.getBean("foo")).isEqualTo("foo"). }
-false;public;0;8;;@Test public void testResourceExistsWithPlaceholder() {     TestPropertyValues.of("schema=schema.sql").applyTo(this.context).     this.context.register(PlaceholderConfiguration.class).     this.context.refresh().     assertThat(this.context.containsBean("foo")).isTrue().     assertThat(this.context.getBean("foo")).isEqualTo("foo"). }
-false;public;0;6;;@Test public void testResourceNotExists() {     this.context.register(MissingConfiguration.class).     this.context.refresh().     assertThat(this.context.containsBean("foo")).isFalse(). }
-false;public;0;4;;@Bean public String bar() {     return "bar". }
-false;public;0;4;;@Bean public String foo() {     return "foo". }
-false;public;0;4;;@Bean public String foo() {     return "foo". }

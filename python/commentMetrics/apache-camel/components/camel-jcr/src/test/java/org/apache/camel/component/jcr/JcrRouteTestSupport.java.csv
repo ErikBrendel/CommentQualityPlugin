@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Override @Before public void setUp() throws Exception {     deleteDirectory(REPO_PATH).     super.setUp(). }
-false;protected;0;3;;protected Repository getRepository() {     return repository. }
-false;protected;0;3;;protected Session openSession() throws RepositoryException {     return getRepository().login(new SimpleCredentials("user", "pass".toCharArray())). }
-false;protected;1;10;;@Override protected void bindToRegistry(Registry registry) throws Exception {     File config = new File(CONFIG_FILE).     if (!config.exists()) {         throw new FileNotFoundException("Missing config file: " + config.getPath()).     }     repository = new TransientRepository(CONFIG_FILE, REPO_PATH).     registry.bind("repository", repository). }

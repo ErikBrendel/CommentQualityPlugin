@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;4;;@Override public ManagementStrategy create(CamelContext context, Map<String, Object> properties) throws Exception {     return new DefaultManagementStrategy(context). }
-false;public;1;5;;@Override public LifecycleStrategy createLifecycle(CamelContext context) throws Exception {     // not in use for non JMX     return null. }
-false;public;3;10;;@Override public void setupManagement(CamelContext camelContext, ManagementStrategy strategy, LifecycleStrategy lifecycle) {     camelContext.setManagementStrategy(strategy).     if (!camelContext.getLifecycleStrategies().isEmpty()) {         // camel-spring/camel-blueprint may re-initialize JMX during startup,         // so remove any previous JMX initialized lifecycle strategy         camelContext.getLifecycleStrategies().removeIf(s -> s.getClass().getName().startsWith("org.apache.camel.management")).     } }

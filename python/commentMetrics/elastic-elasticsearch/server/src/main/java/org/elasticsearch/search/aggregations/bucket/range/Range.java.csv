@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * @return  The lower bound of the range  */ ;/**  * @return  The lower bound of the range  */ Object getFrom().
-true;;0;1;/**  * @return The string value for the lower bound of the range  */ ;/**  * @return The string value for the lower bound of the range  */ String getFromAsString().
-true;;0;1;/**  * @return The upper bound of the range (excluding)  */ ;/**  * @return The upper bound of the range (excluding)  */ Object getTo().
-true;;0;1;/**  * @return The string value for the upper bound of the range (excluding)  */ ;/**  * @return The string value for the upper bound of the range (excluding)  */ String getToAsString().
-true;;0;2;/**  * Return the buckets of this range aggregation.  */ ;/**  * Return the buckets of this range aggregation.  */ @Override List<? extends Bucket> getBuckets().

@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Gets the ID that the ResourceManager assigned the registration.  */ ;/**  * Gets the ID that the ResourceManager assigned the registration.  */ public InstanceID getRegistrationId() {     return registrationId. }
-true;public;0;3;/**  * Gets the unique ID that identifies the ResourceManager.  */ ;/**  * Gets the unique ID that identifies the ResourceManager.  */ public ResourceID getResourceManagerId() {     return resourceManagerResourceId. }
-true;public;0;3;/**  * Gets the cluster information.  */ ;/**  * Gets the cluster information.  */ public ClusterInformation getClusterInformation() {     return clusterInformation. }
-false;public;0;8;;@Override public String toString() {     return "TaskExecutorRegistrationSuccess{" + "registrationId=" + registrationId + ", resourceManagerResourceId=" + resourceManagerResourceId + ", clusterInformation=" + clusterInformation + '}'. }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public String extractVersion(String requestPath) {     return (requestPath.startsWith(this.prefix) ? this.prefix : null). }
-false;public;2;4;;@Override public String removeVersion(String requestPath, String version) {     return requestPath.substring(this.prefix.length()). }
-false;public;2;12;;@Override public String addVersion(String path, String version) {     if (path.startsWith(".")) {         return path.     } else if (this.prefix.endsWith("/") || path.startsWith("/")) {         return this.prefix + path.     } else {         return this.prefix + '/' + path.     } }

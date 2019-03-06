@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public String getWord() {     return word. }
-false;public;1;3;;public void setWord(String word) {     this.word = word. }
-false;public;0;3;;public int getFrequency() {     return frequency. }
-false;public;1;3;;public void setFrequency(int frequency) {     this.frequency = frequency. }
-false;public;0;3;;public long getTimestamp() {     return timestamp. }
-false;public;1;3;;public void setTimestamp(long timestamp) {     this.timestamp = timestamp. }
-false;public,static;1;4;;public static KafkaEvent fromString(String eventStr) {     String[] split = eventStr.split(",").     return new KafkaEvent(split[0], Integer.valueOf(split[1]), Long.valueOf(split[2])). }
-false;public;0;4;;@Override public String toString() {     return word + "," + frequency + "," + timestamp. }

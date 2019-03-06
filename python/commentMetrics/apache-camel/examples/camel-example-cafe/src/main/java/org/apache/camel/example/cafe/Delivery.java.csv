@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public int getOrderNumber() {     return orderNumber. }
-false;public;0;3;;public List<Drink> getDeliveredDrinks() {     return deliveredDrinks. }
-false;public;0;11;;@Override public String toString() {     StringBuilder buffer = new StringBuilder(SEPARATOR + "\n").     buffer.append("Order #" + getOrderNumber() + "\n").     for (Drink drink : getDeliveredDrinks()) {         buffer.append(drink).         buffer.append("\n").     }     buffer.append(SEPARATOR + "\n").     return buffer.toString(). }

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;14;;@Override public Map<String, Processor.Factory> getProcessors(final Processor.Parameters parameters) {     final Map<String, String[]> processorFields = MapBuilder.<String, String[]>newMapBuilder().put("gsub", new String[] { "field", "pattern", "replacement" }).put("rename", new String[] { "field", "target_field" }).put("set", new String[] { "field", "value" }).put("script", new String[] { "source" }).map().     return processorFields.entrySet().stream().map(MockProcessorFactory::new).collect(Collectors.toMap(factory -> factory.type, factory -> factory)). }
-false;public;3;11;;@Override public Processor create(Map<String, Processor.Factory> processorFactories, String tag, Map<String, Object> config) throws Exception {     // read fields so the processor succeeds     for (final String field : fields) {         ConfigurationUtils.readObject(type, tag, config, field).     }     return new MockProcessor(type, tag). }
-false;public;1;5;;@Override public IngestDocument execute(IngestDocument ingestDocument) throws Exception {     // mock processor does nothing     return ingestDocument. }
-false;public;0;4;;@Override public String getType() {     return type. }
-false;public;0;4;;@Override public String getTag() {     return tag. }

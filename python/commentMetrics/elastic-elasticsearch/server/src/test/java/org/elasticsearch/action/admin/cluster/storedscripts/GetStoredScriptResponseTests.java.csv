@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;4;;@Override protected GetStoredScriptResponse doParseInstance(XContentParser parser) throws IOException {     return GetStoredScriptResponse.fromXContent(parser). }
-false;protected;0;4;;@Override protected GetStoredScriptResponse createBlankInstance() {     return new GetStoredScriptResponse(). }
-false;protected;0;4;;@Override protected GetStoredScriptResponse createTestInstance() {     return new GetStoredScriptResponse(randomAlphaOfLengthBetween(1, 10), randomScriptSource()). }
-false;protected;0;4;;@Override protected Predicate<String> getRandomFieldsExcludeFilter() {     return s -> "script.options".equals(s). }
-false;private,static;0;8;;private static StoredScriptSource randomScriptSource() {     final String lang = randomFrom("lang", "painless", "mustache").     final String source = randomAlphaOfLengthBetween(1, 10).     final Map<String, String> options = randomBoolean() ? Collections.singletonMap(Script.CONTENT_TYPE_OPTION, XContentType.JSON.mediaType()) : Collections.emptyMap().     return new StoredScriptSource(lang, source, options). }

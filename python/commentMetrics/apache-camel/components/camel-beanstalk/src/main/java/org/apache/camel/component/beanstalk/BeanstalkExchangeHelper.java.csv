@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;2;3;;public static long getPriority(final BeanstalkEndpoint endpoint, final Message in) {     return in.getHeader(Headers.PRIORITY, endpoint.getJobPriority(), Long.class). }
-false;public,static;2;3;;public static int getDelay(final BeanstalkEndpoint endpoint, final Message in) {     return in.getHeader(Headers.DELAY, endpoint.getJobDelay(), Integer.class). }
-false;public,static;2;3;;public static int getTimeToRun(final BeanstalkEndpoint endpoint, final Message in) {     return in.getHeader(Headers.TIME_TO_RUN, endpoint.getJobTimeToRun(), Integer.class). }
-false;public,static;1;3;;public static long getJobID(final Exchange exchange) throws NoSuchHeaderException {     return ExchangeHelper.getMandatoryHeader(exchange, Headers.JOB_ID, Long.class). }

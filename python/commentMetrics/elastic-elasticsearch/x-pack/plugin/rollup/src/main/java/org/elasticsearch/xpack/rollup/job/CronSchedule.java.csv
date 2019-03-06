@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;6;;@Override public long nextScheduledTimeAfter(long startTime, long now) {     assert now >= startTime.     long nextTime = Long.MAX_VALUE.     return Math.min(nextTime, cron.getNextValidTimeAfter(now)). }

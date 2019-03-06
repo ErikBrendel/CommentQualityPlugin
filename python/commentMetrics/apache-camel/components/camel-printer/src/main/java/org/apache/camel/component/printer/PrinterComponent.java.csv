@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;3;9;;@Override protected Endpoint createEndpoint(String uri, String remaining, Map<String, Object> parameters) throws Exception {     PrinterConfiguration config = new PrinterConfiguration().     config.parseURI(new URI(uri)).     PrinterEndpoint printerEndpoint = new PrinterEndpoint(uri, this, config).     setProperties(printerEndpoint.getConfig(), parameters).     return new PrinterEndpoint(uri, this, config). }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public ExecutableElement getSetter() {     return this.setter. }
-false;protected;1;6;;@Override protected boolean isProperty(MetadataGenerationEnvironment env) {     boolean isCollection = env.getTypeUtils().isCollectionOrMap(getType()).     return !env.isExcluded(getType()) && getGetter() != null && (getSetter() != null || isCollection). }
-false;protected;1;8;;@Override protected ItemDeprecation resolveItemDeprecation(MetadataGenerationEnvironment environment) {     boolean deprecated = environment.isDeprecated(getGetter()) || environment.isDeprecated(getSetter()) || environment.isDeprecated(getFactoryMethod()).     return deprecated ? environment.resolveItemDeprecation(getGetter()) : null. }

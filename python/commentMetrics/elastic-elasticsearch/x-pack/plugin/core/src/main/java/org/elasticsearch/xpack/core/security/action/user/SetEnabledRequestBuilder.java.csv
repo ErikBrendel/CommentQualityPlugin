@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;1;4;/**  * Set the username of the user that should enabled or disabled. Must not be {@code null}  */ ;/**  * Set the username of the user that should enabled or disabled. Must not be {@code null}  */ public SetEnabledRequestBuilder username(String username) {     request.username(username).     return this. }
-true;public;1;4;/**  * Set whether the user should be enabled or not  */ ;/**  * Set whether the user should be enabled or not  */ public SetEnabledRequestBuilder enabled(boolean enabled) {     request.enabled(enabled).     return this. }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Before public void init() throws Exception {     SplunkEvent splunkEvent = new SplunkEvent().     splunkEvent.addPair("key1", "value1").     splunkEvent.addPair("key2", "value2").     splunkEvent.addPair("key3", "value3").     template.sendBody("direct:submit", splunkEvent). }

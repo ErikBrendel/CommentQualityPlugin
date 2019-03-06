@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;12;;@Test public void testHeaderFileNameProduced() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMessageCount(1).     // the absolute path to the file written should contain the target folder     mock.message(0).header(Exchange.FILE_NAME_PRODUCED).contains("target").     template.requestBodyAndHeader("direct:in", "Hello World", Exchange.FILE_NAME, "FileHeaderFileNameProducedTest.txt").     mock.assertIsSatisfied(). }
-false;public;0;5;;public void configure() throws Exception {     from("direct:in").to("file://target/data/?fileExist=Override").to("mock:result"). }
-false;protected;0;9;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from("direct:in").to("file://target/data/?fileExist=Override").to("mock:result").         }     }. }

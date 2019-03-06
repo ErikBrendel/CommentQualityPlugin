@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;2;2;;void start(ResultPartitionProvider partitionProvider, TaskEventDispatcher taskEventDispatcher) throws IOException.
-true;;1;1;/**  * Creates a {@link PartitionRequestClient} instance for the given {@link ConnectionID}.  */ ;/**  * Creates a {@link PartitionRequestClient} instance for the given {@link ConnectionID}.  */ PartitionRequestClient createPartitionRequestClient(ConnectionID connectionId) throws IOException, InterruptedException.
-true;;1;1;/**  * Closes opened ChannelConnections in case of a resource release.  */ ;/**  * Closes opened ChannelConnections in case of a resource release.  */ void closeOpenChannelConnections(ConnectionID connectionId).
-false;;0;1;;int getNumberOfActiveConnections().
-false;;0;1;;int getDataPort().
-false;;0;1;;void shutdown() throws IOException.

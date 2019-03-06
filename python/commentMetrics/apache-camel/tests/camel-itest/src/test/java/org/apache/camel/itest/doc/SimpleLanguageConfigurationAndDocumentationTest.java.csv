@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public boolean isUseRouteBuilder() {     return false. }
-false;public;0;12;;@Test public void testLanguageJsonSchema() throws Exception {     CamelContext context = new DefaultCamelContext().     String json = context.getLanguageParameterJsonSchema("simple").     assertNotNull("Should have found some auto-generated JSON", json).     log.info(json).     assertTrue(json.contains("\"name\": \"simple\"")).     assertTrue(json.contains("\"modelName\": \"simple\"")).     assertTrue(json.contains("\"resultType\": { \"kind\": \"attribute\", \"displayName\": \"Result Type\", \"required\": false, \"type\": \"string\"" + ", \"javaType\": \"java.lang.String\", \"deprecated\": false")). }

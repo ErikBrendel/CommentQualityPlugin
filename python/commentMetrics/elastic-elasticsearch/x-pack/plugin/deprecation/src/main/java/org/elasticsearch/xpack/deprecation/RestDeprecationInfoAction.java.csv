@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getName() {     return "deprecation_info". }
-false;public;2;8;;@Override public RestChannelConsumer prepareRequest(RestRequest request, NodeClient client) throws IOException {     if (request.method().equals(RestRequest.Method.GET)) {         return handleGet(request, client).     } else {         throw new IllegalArgumentException("illegal method [" + request.method() + "] for request [" + request.path() + "]").     } }
-false;private;2;4;;private RestChannelConsumer handleGet(final RestRequest request, NodeClient client) {     Request infoRequest = new Request(Strings.splitStringByCommaToArray(request.param("index"))).     return channel -> client.execute(DeprecationInfoAction.INSTANCE, infoRequest, new RestToXContentListener<>(channel)). }

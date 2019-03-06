@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;2;3;;public static LifecyclePolicy newTestLifecyclePolicy(String policyName, Map<String, Phase> phases) {     return new LifecyclePolicy(TestLifecycleType.INSTANCE, policyName, phases). }
-false;public,static;2;3;;public static LifecyclePolicy newLockableLifecyclePolicy(String policyName, Map<String, Phase> phases) {     return new LifecyclePolicy(LockableLifecycleType.INSTANCE, policyName, phases). }
-false;public,static;1;3;;public static LifecyclePolicy randomTimeseriesLifecyclePolicy(String policyName) {     return LifecyclePolicyTests.randomTimeseriesLifecyclePolicy(policyName). }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;2;5;;void visit(final String path, final Path definition) {     final OperationVisitor<T> restDslOperation = new OperationVisitor<>(emitter, filter, path, destinationGenerator).     definition.getOperationMap().forEach(restDslOperation::visit). }

@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getWriteableName() {     return MinBucketPipelineAggregationBuilder.NAME. }
-false;protected;0;5;;@Override protected void preCollection() {     minBucketKeys = new ArrayList<>().     minValue = Double.POSITIVE_INFINITY. }
-false;protected;2;10;;@Override protected void collectBucketValue(String bucketKey, Double bucketValue) {     if (bucketValue < minValue) {         minBucketKeys.clear().         minBucketKeys.add(bucketKey).         minValue = bucketValue.     } else if (bucketValue.equals(minValue)) {         minBucketKeys.add(bucketKey).     } }
-false;protected;2;5;;@Override protected InternalAggregation buildAggregation(List<PipelineAggregator> pipelineAggregators, Map<String, Object> metadata) {     String[] keys = minBucketKeys.toArray(new String[0]).     return new InternalBucketMetricValue(name(), keys, minValue, format, Collections.emptyList(), metaData()). }

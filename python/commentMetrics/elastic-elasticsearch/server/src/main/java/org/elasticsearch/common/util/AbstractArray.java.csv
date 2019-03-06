@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,final;0;10;;@Override public final void close() {     if (closed.compareAndSet(false, true)) {         try {             bigArrays.adjustBreaker(-ramBytesUsed(), true).         } finally {             doClose().         }     } }
-false;protected,abstract;0;1;;protected abstract void doClose().
-false;public;0;4;;@Override public Collection<Accountable> getChildResources() {     return Collections.emptyList(). }

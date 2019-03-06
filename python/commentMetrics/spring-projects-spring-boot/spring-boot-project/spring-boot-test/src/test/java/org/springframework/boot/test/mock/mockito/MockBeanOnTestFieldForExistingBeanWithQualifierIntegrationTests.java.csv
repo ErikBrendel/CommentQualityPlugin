@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void testMocking() {     this.caller.sayGreeting().     verify(this.service).greeting(). }
-false;public;0;7;;@Test public void onlyQualifiedBeanIsReplaced() {     assertThat(this.applicationContext.getBean("service")).isSameAs(this.service).     ExampleService anotherService = this.applicationContext.getBean("anotherService", ExampleService.class).     assertThat(anotherService.greeting()).isEqualTo("Another"). }
-false;public;0;4;;@Bean public CustomQualifierExampleService service() {     return new CustomQualifierExampleService(). }
-false;public;0;4;;@Bean public ExampleService anotherService() {     return new RealExampleService("Another"). }
-false;public;1;4;;@Bean public ExampleServiceCaller controller(@CustomQualifier ExampleService service) {     return new ExampleServiceCaller(service). }

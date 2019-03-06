@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;4;6;;@Override protected ExposableJmxEndpoint createEndpoint(Object endpointBean, EndpointId id, boolean enabledByDefault, Collection<JmxOperation> operations) {     return new DiscoveredJmxEndpoint(this, endpointBean, id, enabledByDefault, operations). }
-false;protected;3;5;;@Override protected JmxOperation createOperation(EndpointId endpointId, DiscoveredOperationMethod operationMethod, OperationInvoker invoker) {     return new DiscoveredJmxOperation(endpointId, operationMethod, invoker). }
-false;protected;1;5;;@Override protected OperationKey createOperationKey(JmxOperation operation) {     return new OperationKey(operation.getName(), () -> "MBean call '" + operation.getName() + "'"). }

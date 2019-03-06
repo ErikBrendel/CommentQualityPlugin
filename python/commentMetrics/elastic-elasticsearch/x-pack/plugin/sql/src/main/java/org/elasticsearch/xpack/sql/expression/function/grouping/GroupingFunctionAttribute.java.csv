@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;5;;@Override protected NodeInfo<GroupingFunctionAttribute> info() {     return NodeInfo.create(this, GroupingFunctionAttribute::new, name(), dataType(), qualifier(), nullable(), id(), synthetic(), functionId()). }
-false;protected;0;4;;@Override protected Expression canonicalize() {     return new GroupingFunctionAttribute(source(), "<none>", dataType(), null, Nullability.TRUE, id(), false, "<none>"). }
-false;protected;6;7;;@Override protected Attribute clone(Source source, String name, String qualifier, Nullability nullability, ExpressionId id, boolean synthetic) {     // that is the functionId is actually derived from the expression id to easily track it across contexts     return new GroupingFunctionAttribute(source, name, dataType(), qualifier, nullability, id, synthetic, functionId()). }
-false;public;2;4;;public GroupingFunctionAttribute withFunctionId(String functionId, String propertyPath) {     return new GroupingFunctionAttribute(source(), name(), dataType(), qualifier(), nullable(), id(), synthetic(), functionId). }
-false;protected;0;4;;@Override protected String label() {     return "g->" + functionId(). }

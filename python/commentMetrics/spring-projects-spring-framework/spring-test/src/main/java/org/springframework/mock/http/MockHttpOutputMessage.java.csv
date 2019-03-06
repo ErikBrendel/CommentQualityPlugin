@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;4;/**  * Return the headers.  */ ;/**  * Return the headers.  */ @Override public HttpHeaders getHeaders() {     return this.headers. }
-true;public;0;4;/**  * Return the body content.  */ ;/**  * Return the body content.  */ @Override public OutputStream getBody() throws IOException {     return this.body. }
-true;public;0;3;/**  * Return body content as a byte array.  */ ;/**  * Return body content as a byte array.  */ public byte[] getBodyAsBytes() {     return this.body.toByteArray(). }
-true;public;0;3;/**  * Return the body content interpreted as a UTF-8 string.  */ ;/**  * Return the body content interpreted as a UTF-8 string.  */ public String getBodyAsString() {     return getBodyAsString(DEFAULT_CHARSET). }
-true;public;1;4;/**  * Return the body content as a string.  * @param charset the charset to use to turn the body content to a String  */ ;/**  * Return the body content as a string.  * @param charset the charset to use to turn the body content to a String  */ public String getBodyAsString(Charset charset) {     byte[] bytes = getBodyAsBytes().     return new String(bytes, charset). }

@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected TypeSerializer<BigInteger> createSerializer() {     return new BigIntSerializer(). }
-false;protected;0;4;;@Override protected int getLength() {     return -1. }
-false;protected;0;4;;@Override protected Class<BigInteger> getTypeClass() {     return BigInteger.class. }
-false;protected;0;9;;@Override protected BigInteger[] getTestData() {     Random rnd = new Random(874597969123412341L).     return new BigInteger[] { BigInteger.ZERO, BigInteger.ONE, BigInteger.TEN, new BigInteger(1000, rnd), new BigInteger("8745979691234123413478523984729447"), BigInteger.valueOf(-1), BigInteger.valueOf(-10000) }. }

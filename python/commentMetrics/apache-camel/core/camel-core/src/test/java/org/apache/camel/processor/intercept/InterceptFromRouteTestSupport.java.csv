@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;public void testSendMatchingMessage() throws Exception {     prepareMatchingTest().     template.sendBodyAndHeader("direct:start", "<matched/>", "foo", "bar").     assertMockEndpointsSatisfied(). }
-false;public;0;5;;public void testSendNonMatchingMessage() throws Exception {     prepareNonMatchingTest().     template.sendBodyAndHeader("direct:start", "<notMatched/>", "foo", "notMatchedHeaderValue").     assertMockEndpointsSatisfied(). }
-false;public;0;6;;@Override public void setUp() throws Exception {     super.setUp().     a = getMockEndpoint("mock:a").     b = getMockEndpoint("mock:b"). }
-false;protected,abstract;0;1;;protected abstract void prepareMatchingTest().
-false;protected,abstract;0;1;;protected abstract void prepareNonMatchingTest().

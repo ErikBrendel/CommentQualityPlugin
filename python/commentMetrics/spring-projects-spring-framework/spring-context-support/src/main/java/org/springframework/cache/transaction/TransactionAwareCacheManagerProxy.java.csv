@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;1;3;/**  * Set the target CacheManager to proxy.  */ ;/**  * Set the target CacheManager to proxy.  */ public void setTargetCacheManager(CacheManager targetCacheManager) {     this.targetCacheManager = targetCacheManager. }
-false;public;0;6;;@Override public void afterPropertiesSet() {     if (this.targetCacheManager == null) {         throw new IllegalArgumentException("Property 'targetCacheManager' is required").     } }
-false;public;1;7;;@Override @Nullable public Cache getCache(String name) {     Assert.state(this.targetCacheManager != null, "No target CacheManager set").     Cache targetCache = this.targetCacheManager.getCache(name).     return (targetCache != null ? new TransactionAwareCacheDecorator(targetCache) : null). }
-false;public;0;5;;@Override public Collection<String> getCacheNames() {     Assert.state(this.targetCacheManager != null, "No target CacheManager set").     return this.targetCacheManager.getCacheNames(). }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;14;;@Override public void configure() {     from(objectCdiEventEndpoint).to("mock:consumeObject").     from(stringCdiEventEndpoint).to("mock:consumeString").     from(stringPayloadCdiEventEndpoint).to("mock:consumeStringPayload").     from(integerPayloadCdiEventEndpoint).to("mock:consumeIntegerPayload").     from(fooQualifierCdiEventEndpoint).to("mock:consumeFooQualifier").     from(barQualifierCdiEventEndpoint).to("mock:consumeBarQualifier"). }

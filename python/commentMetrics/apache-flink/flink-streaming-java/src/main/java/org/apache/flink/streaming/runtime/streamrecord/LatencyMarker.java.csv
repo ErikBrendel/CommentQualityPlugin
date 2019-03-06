@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Returns the timestamp marked by the LatencyMarker.  */ ;/**  * Returns the timestamp marked by the LatencyMarker.  */ public long getMarkedTime() {     return markedTime. }
-false;public;0;3;;public OperatorID getOperatorId() {     return operatorId. }
-false;public;0;3;;public int getSubtaskIndex() {     return subtaskIndex. }
-false;public;1;20;;// ------------------------------------------------------------------------ @Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     LatencyMarker that = (LatencyMarker) o.     if (markedTime != that.markedTime) {         return false.     }     if (!operatorId.equals(that.operatorId)) {         return false.     }     return subtaskIndex == that.subtaskIndex. }
-false;public;0;7;;@Override public int hashCode() {     int result = (int) (markedTime ^ (markedTime >>> 32)).     result = 31 * result + operatorId.hashCode().     result = 31 * result + subtaskIndex.     return result. }
-false;public;0;8;;@Override public String toString() {     return "LatencyMarker{" + "markedTime=" + markedTime + ", operatorId=" + operatorId + ", subtaskIndex=" + subtaskIndex + '}'. }

@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * @return Default array capacity  */ ;/**  * @return Default array capacity  */ public int getDefaultCapacity() {     return defaultCapacity. }
-true;public;1;3;/**  * @param defaultCapacity Default array capacity  */ ;/**  * @param defaultCapacity Default array capacity  */ public void setDefaultCapacity(int defaultCapacity) {     this.defaultCapacity = defaultCapacity. }
-true;public;0;3;/**  * @return Lock fairness  */ ;/**  * @return Lock fairness  */ public boolean isFair() {     return fair. }
-true;public;1;3;/**  * @param fair Lock fairness  */ ;/**  * @param fair Lock fairness  */ public void setFair(boolean fair) {     this.fair = fair. }
-false;public;0;4;;@Override public ArrayBlockingQueue<E> create() {     return create(defaultCapacity). }
-false;public;1;5;;@Override public ArrayBlockingQueue<E> create(int capacity) {     return fair == null ? new ArrayBlockingQueue<>(capacity) : new ArrayBlockingQueue<>(capacity, fair). }

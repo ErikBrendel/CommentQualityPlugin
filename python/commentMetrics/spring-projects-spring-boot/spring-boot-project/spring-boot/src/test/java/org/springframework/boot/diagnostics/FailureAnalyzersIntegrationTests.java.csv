@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Test public void analysisIsPerformed() {     assertThatExceptionOfType(Exception.class).isThrownBy(() -> new SpringApplicationBuilder(TestConfiguration.class).web(WebApplicationType.NONE).run()).     assertThat(this.outputCapture.toString()).contains("APPLICATION FAILED TO START"). }
-false;public;0;4;;@PostConstruct public void fail() {     throw new PortInUseException(8080). }

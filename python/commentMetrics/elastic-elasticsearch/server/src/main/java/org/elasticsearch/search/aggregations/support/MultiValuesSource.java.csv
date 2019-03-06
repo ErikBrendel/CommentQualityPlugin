@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;7;;public SortedNumericDoubleValues getField(String fieldName, LeafReaderContext ctx) throws IOException {     ValuesSource.Numeric value = values.get(fieldName).     if (value == null) {         throw new IllegalArgumentException("Could not find field name [" + fieldName + "] in multiValuesSource").     }     return value.doubleValues(ctx). }
-false;public;0;3;;public boolean needsScores() {     return values.values().stream().anyMatch(ValuesSource::needsScores). }
-false;public;0;3;;public boolean areValuesSourcesEmpty() {     return values.values().stream().allMatch(Objects::isNull). }

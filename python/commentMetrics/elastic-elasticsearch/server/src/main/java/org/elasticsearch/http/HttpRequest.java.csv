@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;0;1;;RestRequest.Method method().
-true;;0;1;/**  * The uri of the rest request, with the query string.  */ ;/**  * The uri of the rest request, with the query string.  */ String uri().
-false;;0;1;;BytesReference content().
-true;;0;1;/**  * Get all of the headers and values associated with the headers. Modifications of this map are not supported.  */ ;/**  * Get all of the headers and values associated with the headers. Modifications of this map are not supported.  */ Map<String, List<String>> getHeaders().
-false;;0;1;;List<String> strictCookies().
-false;;0;1;;HttpVersion protocolVersion().
-false;;1;1;;HttpRequest removeHeader(String header).
-true;;2;1;/**  * Create an http response from this request and the supplied status and content.  */ ;/**  * Create an http response from this request and the supplied status and content.  */ HttpResponse createResponse(RestStatus status, BytesReference content).

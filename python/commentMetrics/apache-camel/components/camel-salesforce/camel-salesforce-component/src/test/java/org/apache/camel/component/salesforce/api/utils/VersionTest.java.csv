@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Test public void shouldCreate() {     final Version version = V34_3.     assertEquals(34, version.getMajor()).     assertEquals(3, version.getMinor()). }
-false;public;0;6;;@Test public void shouldObserveApiLimits() {     V34_0.requireAtLeast(34, 0).     V34_0.requireAtLeast(33, 9).     V35_0.requireAtLeast(34, 0). }
-false;public;0;6;;@Test(expected = UnsupportedOperationException.class) public void shouldObserveApiLimitsOnMajorVersions() {     V35_0.requireAtLeast(36, 0).     fail("No UnsupportedOperationException thrown, but expected"). }
-false;public;0;6;;@Test(expected = UnsupportedOperationException.class) public void shouldObserveApiLimitsOnMinorVersions() {     V35_0.requireAtLeast(35, 1).     fail("No UnsupportedOperationException thrown, but expected"). }
-false;public;0;14;;@Test public void testComparator() {     assertTrue(V34_0.compareTo(V34_3) < 0).     assertTrue(V34_0.compareTo(V35_0) < 0).     assertTrue(V34_3.compareTo(V35_0) < 0).     assertTrue(V34_3.compareTo(V34_0) > 0).     assertTrue(V35_0.compareTo(V34_0) > 0).     assertTrue(V35_0.compareTo(V34_3) > 0).     assertTrue(V34_0.compareTo(V34_0) == 0).     assertTrue(V34_3.compareTo(V34_3) == 0).     assertTrue(V35_0.compareTo(V35_0) == 0). }

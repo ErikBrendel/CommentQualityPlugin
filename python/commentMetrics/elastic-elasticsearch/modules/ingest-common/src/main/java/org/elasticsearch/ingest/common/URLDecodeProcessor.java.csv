@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;7;;public static String apply(String value) {     try {         return URLDecoder.decode(value, "UTF-8").     } catch (UnsupportedEncodingException e) {         throw new IllegalArgumentException("Could not URL-decode value.", e).     } }
-false;protected;1;4;;@Override protected String process(String value) {     return apply(value). }
-false;public;0;4;;@Override public String getType() {     return TYPE. }
-false;protected;5;5;;@Override protected URLDecodeProcessor newProcessor(String tag, Map<String, Object> config, String field, boolean ignoreMissing, String targetField) {     return new URLDecodeProcessor(tag, field, ignoreMissing, targetField). }

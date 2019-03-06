@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;10;;@Test public void testAutowireConstructor() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedBodiesReceived("Hello Camel at 1", "Hello World at 2").     template.sendBody("direct:start", "Camel").     template.sendBody("direct:start", "World").     assertMockEndpointsSatisfied(). }
-false;protected;0;3;;protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/component/bean/AutowireConstructorRouteTwoTest.xml"). }

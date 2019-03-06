@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected,final;2;4;;@Override protected final T copyInstance(T instance, Version version) throws IOException {     return copyStreamable(instance, getNamedWriteableRegistry(), this::createBlankInstance, version). }
-false;protected,final;0;4;;@Override protected final Writeable.Reader<T> instanceReader() {     return Streamable.newWriteableReader(this::createBlankInstance). }
-true;protected,abstract;0;1;/**  * Creates an empty instance to use when deserialising the  * {@link Streamable}. This usually returns an instance created using the  * zer-arg constructor  */ ;/**  * Creates an empty instance to use when deserialising the  * {@link Streamable}. This usually returns an instance created using the  * zer-arg constructor  */ protected abstract T createBlankInstance().

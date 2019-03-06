@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;8;;@Override public void invoke(PyObject value, Context context) throws Exception {     try {         this.fun.invoke(value, context).     } catch (PyException pe) {         throw createAndLogException(pe).     } }

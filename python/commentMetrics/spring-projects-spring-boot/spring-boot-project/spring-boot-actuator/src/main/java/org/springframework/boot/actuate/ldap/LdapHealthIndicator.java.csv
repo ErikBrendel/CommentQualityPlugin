@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;5;;@Override protected void doHealthCheck(Health.Builder builder) throws Exception {     String version = this.ldapOperations.executeReadOnly(versionContextExecutor).     builder.up().withDetail("version", version). }
-false;public;1;8;;@Override public String executeWithContext(DirContext ctx) throws NamingException {     Object version = ctx.getEnvironment().get("java.naming.ldap.version").     if (version != null) {         return (String) version.     }     return null. }

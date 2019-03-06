@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * Maximum number of elements that we can have information about  */ ;/**  * Maximum number of elements that we can have information about  */ int maxCapacity().
-true;;0;1;/**  * Current number of endpoints we have information about  */ ;/**  * Current number of endpoints we have information about  */ int size().
-true;;1;1;/**  * Callback when an endpoint is being utilizated by an {@link org.apache.camel.Processor} EIP  * such as sending a message to a dynamic endpoint.  *  * @param uri  the endpoint uri  */ ;/**  * Callback when an endpoint is being utilizated by an {@link org.apache.camel.Processor} EIP  * such as sending a message to a dynamic endpoint.  *  * @param uri  the endpoint uri  */ void onHit(String uri).
-true;;1;1;/**  * To remove an endpoint from tracking information about its utilization  *  * @param uri  the endpoint uri  */ ;/**  * To remove an endpoint from tracking information about its utilization  *  * @param uri  the endpoint uri  */ void remove(String uri).
-true;;0;1;/**  * Gets the endpoint utilization statistics.  *  * @return a map with uri and number of usage of the endpoint.  */ ;/**  * Gets the endpoint utilization statistics.  *  * @return a map with uri and number of usage of the endpoint.  */ Map<String, Long> getStatistics().
-true;;0;1;/**  * Clears all information.  */ ;/**  * Clears all information.  */ void clear().

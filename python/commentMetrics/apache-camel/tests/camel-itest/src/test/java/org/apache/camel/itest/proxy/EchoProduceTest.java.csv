@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void testEchoProduce() throws Exception {     String reply = echo.hello("Camel").     assertEquals("Hello Camel", reply). }
-false;public;0;5;;@Override public void configure() throws Exception {     from("direct:start").transform().simple("Hello ${body}"). }
-false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").transform().simple("Hello ${body}").         }     }. }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void findAllCustomers() {     assertThat(this.repository.findAll()).hasSize(2). }
-false;public;0;4;;@Test public void findByNameWithMatch() {     assertThat(this.repository.findByName("joan")).hasSize(1). }
-false;public;0;4;;@Test public void findByNameWithNoMatch() {     assertThat(this.repository.findByName("hugh")).isEmpty(). }

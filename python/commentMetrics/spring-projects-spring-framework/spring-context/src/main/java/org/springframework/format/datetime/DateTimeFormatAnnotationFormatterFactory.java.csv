@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public Set<Class<?>> getFieldTypes() {     return FIELD_TYPES. }
-false;public;2;4;;@Override public Printer<?> getPrinter(DateTimeFormat annotation, Class<?> fieldType) {     return getFormatter(annotation, fieldType). }
-false;public;2;4;;@Override public Parser<?> getParser(DateTimeFormat annotation, Class<?> fieldType) {     return getFormatter(annotation, fieldType). }
-false;protected;2;13;;protected Formatter<Date> getFormatter(DateTimeFormat annotation, Class<?> fieldType) {     DateFormatter formatter = new DateFormatter().     String style = resolveEmbeddedValue(annotation.style()).     if (StringUtils.hasLength(style)) {         formatter.setStylePattern(style).     }     formatter.setIso(annotation.iso()).     String pattern = resolveEmbeddedValue(annotation.pattern()).     if (StringUtils.hasLength(pattern)) {         formatter.setPattern(pattern).     }     return formatter. }

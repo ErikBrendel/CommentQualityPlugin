@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;10;11;;ResourceManager<T> createResourceManager(Configuration configuration, ResourceID resourceId, RpcService rpcService, HighAvailabilityServices highAvailabilityServices, HeartbeatServices heartbeatServices, MetricRegistry metricRegistry, FatalErrorHandler fatalErrorHandler, ClusterInformation clusterInformation, @Nullable String webInterfaceUrl, JobManagerMetricGroup jobManagerMetricGroup) throws Exception.
-false;default;0;3;;default String generateEndpointIdWithUUID() {     return getEndpointId() + UUID.randomUUID(). }
-false;default;0;3;;default String getEndpointId() {     return ResourceManager.RESOURCE_MANAGER_NAME. }

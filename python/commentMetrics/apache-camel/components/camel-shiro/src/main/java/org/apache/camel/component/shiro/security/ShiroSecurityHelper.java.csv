@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;3;11;;public static ByteSource encrypt(ShiroSecurityToken securityToken, byte[] passPhrase, CipherService cipherService) throws Exception {     ByteArrayOutputStream stream = new ByteArrayOutputStream().     ObjectOutput serialStream = new ObjectOutputStream(stream).     try {         serialStream.writeObject(securityToken).         return cipherService.encrypt(stream.toByteArray(), passPhrase).     } finally {         close(serialStream).         IOHelper.close(stream).     } }
-false;private,static;1;7;;private static void close(ObjectOutput output) {     try {         output.close().     } catch (IOException e) {     // ignore     } }

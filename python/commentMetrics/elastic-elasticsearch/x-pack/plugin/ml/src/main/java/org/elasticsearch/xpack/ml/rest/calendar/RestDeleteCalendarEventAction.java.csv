@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getName() {     return "ml_delete_calendar_event_action". }
-false;protected;2;7;;@Override protected BaseRestHandler.RestChannelConsumer prepareRequest(RestRequest restRequest, NodeClient client) throws IOException {     String eventId = restRequest.param(ScheduledEvent.EVENT_ID.getPreferredName()).     String calendarId = restRequest.param(Calendar.ID.getPreferredName()).     DeleteCalendarEventAction.Request request = new DeleteCalendarEventAction.Request(calendarId, eventId).     return channel -> client.execute(DeleteCalendarEventAction.INSTANCE, request, new RestToXContentListener<>(channel)). }

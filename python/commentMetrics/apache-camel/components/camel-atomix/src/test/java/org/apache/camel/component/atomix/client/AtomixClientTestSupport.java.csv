@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;9;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry registry = super.createRegistry().     createComponents().entrySet().stream().forEach(e -> registry.bind(e.getKey(), e.getValue())).     return registry. }
-false;protected;0;8;;@Override protected void doPreSetup() throws Exception {     replicaAddress = AtomixFactory.address("127.0.0.1").     replica = AtomixFactory.replica(replicaAddress).     client = AtomixFactory.client(replicaAddress).     super.doPreSetup(). }
-false;public;0;15;;@Override public void tearDown() throws Exception {     if (client != null) {         client.close().join().         client = null.     }     if (replica != null) {         replica.shutdown().join().         replica.leave().join().         replica = null.     }     super.tearDown(). }
-false;protected,abstract;0;1;;protected abstract Map<String, Component> createComponents().
-false;protected;0;3;;// ************************************* // properties // ************************************* protected Address getReplicaAddress() {     return replicaAddress. }
-false;protected;0;3;;protected AtomixReplica getReplica() {     return replica. }
-false;protected;0;3;;protected AtomixClient getClient() {     return client. }

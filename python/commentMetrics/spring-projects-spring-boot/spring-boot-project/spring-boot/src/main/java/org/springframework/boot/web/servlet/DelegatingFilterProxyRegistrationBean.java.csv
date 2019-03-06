@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;@Override public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {     this.applicationContext = applicationContext. }
-false;protected;0;3;;protected String getTargetBeanName() {     return this.targetBeanName. }
-false;protected;0;4;;@Override protected void initFilterBean() throws ServletException { // Don't initialize filter bean on init() }
-false;public;0;12;;@Override public DelegatingFilterProxy getFilter() {     return new DelegatingFilterProxy(this.targetBeanName, getWebApplicationContext()) {          @Override         protected void initFilterBean() throws ServletException {         // Don't initialize filter bean on init()         }     }. }
-false;private;0;5;;private WebApplicationContext getWebApplicationContext() {     Assert.notNull(this.applicationContext, "ApplicationContext be injected").     Assert.isInstanceOf(WebApplicationContext.class, this.applicationContext).     return (WebApplicationContext) this.applicationContext. }

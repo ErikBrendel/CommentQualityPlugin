@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;8;;@Override protected RetentionLease createTestInstance() {     final String id = randomAlphaOfLength(8).     final long retainingSequenceNumber = randomNonNegativeLong().     final long timestamp = randomNonNegativeLong().     final String source = randomAlphaOfLength(8).     return new RetentionLease(id, retainingSequenceNumber, timestamp, source). }
-false;protected;1;4;;@Override protected RetentionLease doParseInstance(final XContentParser parser) throws IOException {     return RetentionLease.fromXContent(parser). }
-false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return false. }

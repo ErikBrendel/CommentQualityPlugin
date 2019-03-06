@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;public void testCopyFromInputStream() throws IOException {     byte[] content = "content".getBytes(StandardCharsets.UTF_8).     ByteArrayInputStream in = new ByteArrayInputStream(content).     ByteArrayOutputStream out = new ByteArrayOutputStream(content.length).     long count = Streams.copy(in, out).     assertThat(count, equalTo((long) content.length)).     assertThat(Arrays.equals(content, out.toByteArray()), equalTo(true)). }

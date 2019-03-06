@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;public void testCauseCannotBeNull() {     NullPointerException nullPointerException = expectThrows(NullPointerException.class, () -> new Failure(randomAlphaOfLengthBetween(3, 10), randomInt(), randomAlphaOfLengthBetween(5, 10), randomFrom(RestStatus.values()), null)).     assertEquals("cause cannot be null", nullPointerException.getMessage()). }
-false;public;0;5;;public void testStatusCannotBeNull() {     NullPointerException nullPointerException = expectThrows(NullPointerException.class, () -> new Failure(randomAlphaOfLengthBetween(3, 10), randomInt(), randomAlphaOfLengthBetween(5, 10), null, new IllegalArgumentException())).     assertEquals("status cannot be null", nullPointerException.getMessage()). }
-false;public;0;5;;public void testReasonCannotBeNull() {     NullPointerException nullPointerException = expectThrows(NullPointerException.class, () -> new Failure(randomAlphaOfLengthBetween(3, 10), randomInt(), null, randomFrom(RestStatus.values()), new IllegalArgumentException())).     assertEquals("reason cannot be null", nullPointerException.getMessage()). }
-false;public;0;3;;public void testIndexIsNullable() {     new Failure(null, randomInt(), randomAlphaOfLengthBetween(5, 10), randomFrom(RestStatus.values()), new IllegalArgumentException()). }
-false;public;1;4;;@Override public void readFrom(StreamInput in) throws IOException { }
-false;public;1;4;;@Override public void writeTo(StreamOutput out) throws IOException { }
-false;public;2;4;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     return null. }

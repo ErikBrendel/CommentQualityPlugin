@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;1;1;/**  * Callback when a new correlation id is added  *  * @param key the correlation id  */ ;/**  * Callback when a new correlation id is added  *  * @param key the correlation id  */ void onPut(String key).
-true;;1;1;/**  * Callback when a correlation id is removed  *  * @param key the correlation id  */ ;/**  * Callback when a correlation id is removed  *  * @param key the correlation id  */ void onRemove(String key).
-true;;1;1;/**  * Callback when a correlation id is evicted due timeout  *  * @param key the correlation id  */ ;/**  * Callback when a correlation id is evicted due timeout  *  * @param key the correlation id  */ void onEviction(String key).

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;@Override public Object invoke(MethodInvocation mi) throws Throwable {     this.advice.before(mi.getMethod(), mi.getArguments(), mi.getThis()).     return mi.proceed(). }

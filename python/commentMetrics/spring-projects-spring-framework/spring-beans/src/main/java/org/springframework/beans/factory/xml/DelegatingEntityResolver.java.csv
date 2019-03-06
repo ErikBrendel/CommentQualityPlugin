@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;13;;@Override @Nullable public InputSource resolveEntity(String publicId, @Nullable String systemId) throws SAXException, IOException {     if (systemId != null) {         if (systemId.endsWith(DTD_SUFFIX)) {             return this.dtdResolver.resolveEntity(publicId, systemId).         } else if (systemId.endsWith(XSD_SUFFIX)) {             return this.schemaResolver.resolveEntity(publicId, systemId).         }     }     return null. }
-false;public;0;5;;@Override public String toString() {     return "EntityResolver delegating " + XSD_SUFFIX + " to " + this.schemaResolver + " and " + DTD_SUFFIX + " to " + this.dtdResolver. }

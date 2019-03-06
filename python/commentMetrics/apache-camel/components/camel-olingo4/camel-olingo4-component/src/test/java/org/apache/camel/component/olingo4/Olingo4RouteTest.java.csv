@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;2;4;;@SuppressWarnings("unchecked") protected <T> T requestBody(String endpoint, Object body) throws CamelExecutionException {     return (T) template().requestBody(endpoint, body). }
-false;public;0;7;;@Test public void testRead() throws Exception {     // Read entity set of the People object     final ClientEntitySet entities = (ClientEntitySet) requestBody("direct:readentities", null).     assertNotNull(entities).     assertEquals(20, entities.getEntities().size()). }
-false;public;0;3;;public void configure() {     from("direct:readentities").to("olingo4://read/People?serviceUri=" + TEST_SERVICE_BASE_URL). }
-false;protected;0;8;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() {             from("direct:readentities").to("olingo4://read/People?serviceUri=" + TEST_SERVICE_BASE_URL).         }     }. }

@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public String getName() {     return name. }
-false;public;0;3;;public String getRemoteCluster() {     return remoteCluster. }
-false;public;0;3;;public List<String> getLeaderIndexPatterns() {     return leaderIndexPatterns. }
-false;public;0;3;;public String getFollowIndexNamePattern() {     return followIndexNamePattern. }
-false;public;1;3;;public void setFollowIndexNamePattern(String followIndexNamePattern) {     this.followIndexNamePattern = followIndexNamePattern. }
-false;public;2;12;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject().     builder.field(PutFollowRequest.REMOTE_CLUSTER_FIELD.getPreferredName(), remoteCluster).     builder.field(LEADER_PATTERNS_FIELD.getPreferredName(), leaderIndexPatterns).     if (followIndexNamePattern != null) {         builder.field(FOLLOW_PATTERN_FIELD.getPreferredName(), followIndexNamePattern).     }     toXContentFragment(builder, params).     builder.endObject().     return builder. }
-false;public;1;11;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     if (!super.equals(o))         return false.     PutAutoFollowPatternRequest that = (PutAutoFollowPatternRequest) o.     return Objects.equals(name, that.name) && Objects.equals(remoteCluster, that.remoteCluster) && Objects.equals(leaderIndexPatterns, that.leaderIndexPatterns) && Objects.equals(followIndexNamePattern, that.followIndexNamePattern). }
-false;public;0;10;;@Override public int hashCode() {     return Objects.hash(super.hashCode(), name, remoteCluster, leaderIndexPatterns, followIndexNamePattern). }

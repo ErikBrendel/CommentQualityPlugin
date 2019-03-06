@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Override public ACC get() throws Exception {     accessCallback.run().     return getInternal(). }
-false;public;1;5;;@Override public void add(T value) throws Exception {     accessCallback.run().     original.add(value). }
-false;public;1;5;;@Nullable @Override public TtlValue<ACC> getUnexpiredOrNull(@Nonnull TtlValue<ACC> ttlValue) {     return expired(ttlValue) ? null : ttlValue. }
-false;public;0;4;;@Override public void clear() {     original.clear(). }
-false;public;0;4;;@Override public ACC getInternal() throws Exception {     return getWithTtlCheckAndUpdate(original::getInternal, original::updateInternal). }
-false;public;1;4;;@Override public void updateInternal(ACC valueToStore) throws Exception {     original.updateInternal(wrapWithTs(valueToStore)). }

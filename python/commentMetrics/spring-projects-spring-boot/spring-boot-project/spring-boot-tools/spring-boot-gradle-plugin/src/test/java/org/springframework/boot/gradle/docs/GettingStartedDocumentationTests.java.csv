@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;// NOTE: We can't run any `apply-plugin` tests because during a release the // jar won't be there @Test public void typicalPluginsAppliesExceptedPlugins() {     this.gradleBuild.script("src/main/gradle/getting-started/typical-plugins").build("verify"). }

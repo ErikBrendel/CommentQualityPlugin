@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected NodeInfo<ScorePipe> info() {     return NodeInfo.create(this, ScorePipe::new, expression()). }
-false;public,final;1;4;;@Override public final Pipe replaceChildren(List<Pipe> newChildren) {     throw new UnsupportedOperationException("this type of node doesn't have any children to replace"). }
-false;public;0;4;;@Override public boolean resolved() {     return true. }
-false;public;0;4;;@Override public Processor asProcessor() {     return new HitExtractorProcessor(ScoreExtractor.INSTANCE). }
-false;public;0;4;;@Override public boolean supportedByAggsOnlyQuery() {     return false. }
-false;public;1;4;;@Override public Pipe resolveAttributes(AttributeResolver resolver) {     return this. }
-false;public;1;4;;@Override public void collectFields(SqlSourceBuilder sourceBuilder) {     sourceBuilder.trackScores(). }

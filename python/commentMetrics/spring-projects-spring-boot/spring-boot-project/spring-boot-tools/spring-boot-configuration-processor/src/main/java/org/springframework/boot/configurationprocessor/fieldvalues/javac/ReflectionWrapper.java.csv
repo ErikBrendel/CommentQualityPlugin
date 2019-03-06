@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected,final;0;3;;protected final Object getInstance() {     return this.instance. }
-false;public;0;4;;@Override public String toString() {     return this.instance.toString(). }
-false;protected;1;3;;protected Class<?> findClass(String name) {     return findClass(getInstance().getClass().getClassLoader(), name). }
-false;protected;2;3;;protected Method findMethod(String name, Class<?>... parameterTypes) {     return findMethod(this.type, name, parameterTypes). }
-false;protected,static;2;8;;protected static Class<?> findClass(ClassLoader classLoader, String name) {     try {         return classLoader.loadClass(name).     } catch (ClassNotFoundException ex) {         throw new IllegalStateException(ex).     } }
-false;protected,static;3;9;;protected static Method findMethod(Class<?> type, String name, Class<?>... parameterTypes) {     try {         return type.getMethod(name, parameterTypes).     } catch (Exception ex) {         throw new IllegalStateException(ex).     } }

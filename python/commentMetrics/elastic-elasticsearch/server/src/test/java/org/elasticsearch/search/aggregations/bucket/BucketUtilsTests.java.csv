@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;public void testBadInput() {     IllegalArgumentException e = expectThrows(IllegalArgumentException.class, () -> BucketUtils.suggestShardSideQueueSize(0)).     assertEquals(e.getMessage(), "size must be positive, got 0"). }
-false;public;0;7;;public void testOverFlow() {     for (int iter = 0. iter < 10. ++iter) {         final int size = Integer.MAX_VALUE - randomInt(10).         final int shardSize = BucketUtils.suggestShardSideQueueSize(size).         assertThat(shardSize, greaterThanOrEqualTo(shardSize)).     } }
-false;public;0;7;;public void testShardSizeIsGreaterThanGlobalSize() {     for (int iter = 0. iter < 10. ++iter) {         final int size = randomIntBetween(1, Integer.MAX_VALUE).         final int shardSize = BucketUtils.suggestShardSideQueueSize(size).         assertThat(shardSize, greaterThanOrEqualTo(size)).     } }

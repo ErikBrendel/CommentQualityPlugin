@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected NodeInfo<Count> info() {     return NodeInfo.create(this, Count::new, field(), distinct). }
-false;public;1;7;;@Override public Count replaceChildren(List<Expression> newChildren) {     if (newChildren.size() != 1) {         throw new IllegalArgumentException("expected [1] child but received [" + newChildren.size() + "]").     }     return new Count(source(), newChildren.get(0), distinct). }
-false;public;0;3;;public boolean distinct() {     return distinct. }
-false;public;0;4;;@Override public DataType dataType() {     return DataType.LONG. }
-false;public;0;11;;@Override public String functionId() {     String functionId = id().toString().     // in the same query     if (!distinct() && field() instanceof NamedExpression) {         functionId = ((NamedExpression) field()).id().toString().     }     return functionId. }
-false;public;0;12;;@Override public AggregateFunctionAttribute toAttribute() {     // COUNT(*) gets its value from the parent aggregation on which _count is called     if (field() instanceof Literal) {         return new AggregateFunctionAttribute(source(), name(), dataType(), id(), functionId(), id(), "_count").     }     // COUNT(column) gets its value from a sibling aggregation (an exists filter agg) by calling its id and then _count on it     if (!distinct()) {         return new AggregateFunctionAttribute(source(), name(), dataType(), id(), functionId(), id(), functionId() + "._count").     }     return super.toAttribute(). }
-false;public;1;8;;@Override public boolean equals(Object obj) {     if (false == super.equals(obj)) {         return false.     }     Count other = (Count) obj.     return Objects.equals(other.distinct(), distinct()). }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(super.hashCode(), distinct()). }

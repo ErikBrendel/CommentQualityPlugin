@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;@RequestMapping("${server.error.path:${error.path:/error}}") @ResponseBody public Map<String, Object> invoke(ServletWebRequest request) {     return this.errorAttributes.getErrorAttributes(request, false). }

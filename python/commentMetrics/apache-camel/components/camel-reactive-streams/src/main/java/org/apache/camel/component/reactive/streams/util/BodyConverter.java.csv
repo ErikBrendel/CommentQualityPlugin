@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;12;;@Override public T apply(Exchange exchange) {     T answer.     if (exchange.hasOut()) {         answer = exchange.getOut().getBody(type).     } else {         answer = exchange.getIn().getBody(type).     }     return answer. }
-false;public,static;1;5;;public static <C> BodyConverter<C> forType(Class<C> type) {     return BodyConverter.class.cast(CACHE.computeIfAbsent(type, BodyConverter::new)). }

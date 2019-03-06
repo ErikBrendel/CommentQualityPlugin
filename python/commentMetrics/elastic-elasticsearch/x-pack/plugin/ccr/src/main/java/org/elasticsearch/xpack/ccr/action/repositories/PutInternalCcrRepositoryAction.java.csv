@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public PutInternalCcrRepositoryResponse newResponse() {     throw new UnsupportedOperationException(). }
-false;public;0;4;;@Override public Writeable.Reader<PutInternalCcrRepositoryResponse> getResponseReader() {     return PutInternalCcrRepositoryResponse::new. }
-false;protected;3;6;;@Override protected void doExecute(Task task, PutInternalCcrRepositoryRequest request, ActionListener<PutInternalCcrRepositoryResponse> listener) {     repositoriesService.registerInternalRepository(request.getName(), request.getType()).     listener.onResponse(new PutInternalCcrRepositoryResponse()). }

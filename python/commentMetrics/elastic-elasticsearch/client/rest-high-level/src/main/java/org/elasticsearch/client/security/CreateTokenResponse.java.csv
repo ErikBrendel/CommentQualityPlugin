@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public String getAccessToken() {     return accessToken. }
-false;public;0;3;;public String getType() {     return type. }
-false;public;0;3;;public TimeValue getExpiresIn() {     return expiresIn. }
-false;public;0;3;;public String getScope() {     return scope. }
-false;public;0;3;;public String getRefreshToken() {     return refreshToken. }
-false;public;1;15;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     final CreateTokenResponse that = (CreateTokenResponse) o.     return Objects.equals(accessToken, that.accessToken) && Objects.equals(type, that.type) && Objects.equals(expiresIn, that.expiresIn) && Objects.equals(scope, that.scope) && Objects.equals(refreshToken, that.refreshToken). }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(accessToken, type, expiresIn, scope, refreshToken). }
-false;public,static;1;3;;public static CreateTokenResponse fromXContent(XContentParser parser) throws IOException {     return PARSER.parse(parser, null). }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Test public void testUnMarshallMessage() throws Exception {     resultEndpoint.expectedMessageCount(1).     resultEndpoint.assertIsSatisfied().     assertCountRecords(). }
-false;protected;0;6;;protected void assertCountRecords() {     Exchange exchange = resultEndpoint.getExchanges().get(0).     List<?> models = exchange.getIn().getBody(List.class).     assertEquals(10000, models.size()). }
-false;public;0;5;;public void configure() {     BindyCsvDataFormat camelDataFormat = new BindyCsvDataFormat(org.apache.camel.dataformat.bindy.model.simple.oneclass.Order.class).     from("file://src/test/data/big?noop=true").unmarshal(camelDataFormat).to("mock:result"). }

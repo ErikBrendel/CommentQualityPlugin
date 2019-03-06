@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,final;0;18;;@Override public final boolean incrementToken() throws IOException {     if (repeat != null) {         // add repeat token         clearAttributes().         termAtt.setEmpty().append(repeat).         posIncAtt.setPositionIncrement(0).         repeat = null.         return true.     }     if (input.incrementToken()) {         repeat = termAtt.toString().         return true.     } else {         return false.     } }
-false;protected;1;6;;@Override protected TokenStreamComponents createComponents(String fieldName) {     Tokenizer tokenizer = new StandardTokenizer().     TokenStream repeatFilter = new MockRepeatFilter(tokenizer).     return new TokenStreamComponents(tokenizer, repeatFilter). }

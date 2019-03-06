@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;2;;public void start() throws Exception { }
-false;public;0;2;;public void stop() throws Exception { }
-false;public;0;3;;public void suspend() {     suspended = true. }
-false;public;0;3;;public void resume() {     suspended = false. }
-false;public;0;3;;public boolean isSuspended() {     return suspended. }
-false;public;0;11;;@Test public void testSuspendable() {     MyService my = new MyService().     assertEquals(false, my.isSuspended()).     my.suspend().     assertEquals(true, my.isSuspended()).     my.resume().     assertEquals(false, my.isSuspended()). }

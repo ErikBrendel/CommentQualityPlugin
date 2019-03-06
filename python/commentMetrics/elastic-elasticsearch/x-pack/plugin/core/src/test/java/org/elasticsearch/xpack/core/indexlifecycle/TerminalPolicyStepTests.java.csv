@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Override public TerminalPolicyStep createRandomInstance() {     StepKey stepKey = randomStepKey().     StepKey nextStepKey = randomStepKey().     return new TerminalPolicyStep(stepKey, nextStepKey). }
-false;public;1;13;;@Override public TerminalPolicyStep mutateInstance(TerminalPolicyStep instance) {     StepKey key = instance.getKey().     StepKey nextKey = instance.getNextStepKey().     if (randomBoolean()) {         key = new StepKey(key.getPhase(), key.getAction(), key.getName() + randomAlphaOfLength(5)).     } else {         nextKey = new StepKey(key.getPhase(), key.getAction(), key.getName() + randomAlphaOfLength(5)).     }     return new TerminalPolicyStep(key, nextKey). }
-false;public;1;4;;@Override public TerminalPolicyStep copyInstance(TerminalPolicyStep instance) {     return new TerminalPolicyStep(instance.getKey(), instance.getNextStepKey()). }
-false;public;0;4;;public void testInstance() {     assertEquals(new Step.StepKey("completed", "completed", "completed"), TerminalPolicyStep.INSTANCE.getKey()).     assertNull(TerminalPolicyStep.INSTANCE.getNextStepKey()). }

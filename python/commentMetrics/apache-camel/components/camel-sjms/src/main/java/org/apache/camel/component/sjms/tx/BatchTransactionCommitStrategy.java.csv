@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;11;;@Override public boolean commit(Exchange exchange) throws Exception {     boolean answer = false.     int currentVal = current.incrementAndGet().     if (currentVal >= count) {         answer = true.         current.set(0).     }     return answer. }
-false;public;1;5;;@Override public boolean rollback(Exchange exchange) throws Exception {     current.set(0).     return true. }
-false;public;0;3;;public void reset() {     current.set(0). }

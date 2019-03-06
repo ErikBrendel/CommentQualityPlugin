@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;10;;public GenericFile<T> renameFile(Exchange exchange, GenericFile<T> file) {     ObjectHelper.notNull(expression, "expression").     String newName = expression.evaluate(exchange, String.class).     // make a copy as result and change its file name     GenericFile<T> result = file.copyFrom(file).     result.changeFileName(newName).     return result. }
-false;public;0;3;;public Expression getExpression() {     return expression. }
-false;public;1;3;;public void setExpression(Expression expression) {     this.expression = expression. }

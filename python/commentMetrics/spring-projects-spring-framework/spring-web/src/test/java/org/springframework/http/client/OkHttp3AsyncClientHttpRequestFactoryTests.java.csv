@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;5;;@SuppressWarnings("deprecation") @Override protected AsyncClientHttpRequestFactory createRequestFactory() {     return new OkHttp3ClientHttpRequestFactory(). }
-false;public;0;6;;@Override @Test public void httpMethods() throws Exception {     super.httpMethods().     assertHttpMethod("patch", HttpMethod.PATCH). }

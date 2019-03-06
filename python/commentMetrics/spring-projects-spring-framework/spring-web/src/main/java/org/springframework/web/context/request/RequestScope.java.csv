@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected int getScope() {     return RequestAttributes.SCOPE_REQUEST. }
-true;public;0;5;/**  * There is no conversation id concept for a request, so this method  * returns {@code null}.  */ ;/**  * There is no conversation id concept for a request, so this method  * returns {@code null}.  */ @Override @Nullable public String getConversationId() {     return null. }

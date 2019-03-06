@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;12;;@Override public void run(String... args) throws Exception {     SecurityContextHolder.getContext().setAuthentication(new UsernamePasswordAuthenticationToken("user", "N/A", AuthorityUtils.commaSeparatedStringToAuthorityList("ROLE_USER"))).     try {         System.out.println(this.service.secure()).     } finally {         SecurityContextHolder.clearContext().     } }
-false;public,static;1;3;;public static void main(String[] args) {     SpringApplication.run(SampleSecureApplication.class, "--debug"). }

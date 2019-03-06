@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void uninitialized() {     assertEquals("Uninitialized editor did not return empty value string", EMPTY, editor.getAsText()). }
-false;public;0;5;;@Test public void setNull() {     editor.setAsText(null).     assertEquals("Setting null did not result in empty value string", EMPTY, editor.getAsText()). }
-false;public;0;5;;@Test public void setEmpty() {     editor.setAsText(EMPTY).     assertEquals("Setting empty string did not result in empty value string", EMPTY, editor.getAsText()). }
-false;public;0;5;;@Test public void allWhitespace() {     editor.setAsText(" ").     assertEquals("All whitespace was not recognized", EMPTY, editor.getAsText()). }
-false;public;0;5;;@Test public void simpleGoodAddress() {     editor.setAsText(SIMPLE).     assertEquals("Simple email address failed", SIMPLE, editor.getAsText()). }
-false;public;0;5;;@Test public void excessWhitespace() {     editor.setAsText(" " + SIMPLE + " ").     assertEquals("Whitespace was not stripped", SIMPLE, editor.getAsText()). }
-false;public;0;4;;@Test(expected = IllegalArgumentException.class) public void simpleBadAddress() {     editor.setAsText(BAD). }

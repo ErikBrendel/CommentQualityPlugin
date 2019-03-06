@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;4;/**  * Return the custom return type, if any.  */ ;/**  * Return the custom return type, if any.  */ @Nullable public SqlReturnType getSqlReturnType() {     return this.sqlReturnType. }
-true;public;0;3;/**  * Return whether this parameter holds a custom return type.  */ ;/**  * Return whether this parameter holds a custom return type.  */ public boolean isReturnTypeSupported() {     return (this.sqlReturnType != null). }

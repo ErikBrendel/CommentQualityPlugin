@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;14;;@SuppressWarnings("unchecked") @Parameterized.Parameters(name = "Test Specification = {0}") public static Collection<TestSpecification<?>> testSpecifications() {     final TestSpecifications testSpecifications = new TestSpecifications(MigrationVersion.v1_6, MigrationVersion.v1_7).     testSpecifications.add("copyable-value-serializer", CopyableValueSerializer.class, CopyableValueSerializerSnapshot.class, () -> new CopyableValueSerializer<>(SimpleCopyable.class)).     return testSpecifications.get(). }
-false;public;0;4;;@Override public int getBinaryLength() {     return 8. }
-false;public;1;4;;@Override public void copyTo(SimpleCopyable target) {     target.value = this.value. }
-false;public;0;4;;@Override public SimpleCopyable copy() {     return new SimpleCopyable(value). }
-false;public;2;4;;@Override public void copy(DataInputView source, DataOutputView target) throws IOException {     target.writeLong(source.readLong()). }
-false;public;1;4;;@Override public void write(DataOutputView out) throws IOException {     out.writeLong(value). }
-false;public;1;4;;@Override public void read(DataInputView in) throws IOException {     value = in.readLong(). }

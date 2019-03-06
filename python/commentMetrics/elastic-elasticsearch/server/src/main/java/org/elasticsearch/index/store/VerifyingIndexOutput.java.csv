@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,abstract;0;1;/**  * Verifies the checksum and compares the written length with the expected file length. This method should be  * called after all data has been written to this output.  */ ;/**  * Verifies the checksum and compares the written length with the expected file length. This method should be  * called after all data has been written to this output.  */ public abstract void verify() throws IOException.

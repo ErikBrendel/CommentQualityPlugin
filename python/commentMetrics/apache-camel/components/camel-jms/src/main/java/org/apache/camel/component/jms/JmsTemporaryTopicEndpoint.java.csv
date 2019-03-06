@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * This endpoint is a singleton so that the temporary destination instances are shared across all  * producers and consumers of the same endpoint URI  *  * @return true  */ ;/**  * This endpoint is a singleton so that the temporary destination instances are shared across all  * producers and consumers of the same endpoint URI  *  * @return true  */ public boolean isSingleton() {     return true. }
-false;public,synchronized;1;6;;public synchronized Destination getJmsDestination(Session session) throws JMSException {     if (jmsDestination == null) {         jmsDestination = createJmsDestination(session).     }     return jmsDestination. }
-false;protected;1;3;;protected Destination createJmsDestination(Session session) throws JMSException {     return session.createTemporaryTopic(). }

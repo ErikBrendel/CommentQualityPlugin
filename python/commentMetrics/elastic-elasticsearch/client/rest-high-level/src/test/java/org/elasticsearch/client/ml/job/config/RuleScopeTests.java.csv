@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;13;;@Override protected RuleScope createTestInstance() {     RuleScope.Builder scope = RuleScope.builder().     int count = randomIntBetween(0, 3).     for (int i = 0. i < count. ++i) {         if (randomBoolean()) {             scope.include(randomAlphaOfLength(20), randomAlphaOfLength(20)).         } else {             scope.exclude(randomAlphaOfLength(20), randomAlphaOfLength(20)).         }     }     return scope.build(). }
-false;public;0;3;;public void testGetReferencedFilters_GivenEmpty() {     assertTrue(RuleScope.builder().build().getReferencedFilters().isEmpty()). }
-false;public;0;8;;public void testGetReferencedFilters_GivenMultipleFields() {     RuleScope scope = RuleScope.builder().include("foo", "filter1").exclude("bar", "filter2").include("foobar", "filter3").build().     assertThat(scope.getReferencedFilters(), contains("filter1", "filter2", "filter3")). }
-false;protected;1;4;;@Override protected RuleScope doParseInstance(XContentParser parser) throws IOException {     return RuleScope.parser().parse(parser, null). }
-false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return false. }

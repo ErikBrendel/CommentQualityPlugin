@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public V value() {     return value. }
-false;public;1;4;;@Override public void update(V newValue) {     throw MODIFICATION_ATTEMPT_ERROR. }
-false;public;0;4;;@Override public void clear() {     throw MODIFICATION_ATTEMPT_ERROR. }
-false;public,static;2;9;;@SuppressWarnings("unchecked") public static <V, S extends State> S createState(StateDescriptor<S, V> stateDescriptor, byte[] serializedState) throws IOException {     final V state = KvStateSerializer.deserializeValue(serializedState, stateDescriptor.getSerializer()).     return (S) new ImmutableValueState<>(state). }

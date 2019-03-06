@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;11;;@Override public DataSourcePoolMetadata getDataSourcePoolMetadata(DataSource dataSource) {     for (DataSourcePoolMetadataProvider provider : this.providers) {         DataSourcePoolMetadata metadata = provider.getDataSourcePoolMetadata(dataSource).         if (metadata != null) {             return metadata.         }     }     return null. }

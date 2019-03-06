@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Gets the type information described by this TypeHint.  * @return The type information described by this TypeHint.  */ ;// ------------------------------------------------------------------------ /**  * Gets the type information described by this TypeHint.  * @return The type information described by this TypeHint.  */ public TypeInformation<T> getTypeInfo() {     return typeInfo. }
-false;public;0;4;;// ------------------------------------------------------------------------ @Override public int hashCode() {     return typeInfo.hashCode(). }
-false;public;1;5;;@Override public boolean equals(Object obj) {     return obj == this || obj instanceof TypeHint && this.typeInfo.equals(((TypeHint<?>) obj).typeInfo). }
-false;public;0;4;;@Override public String toString() {     return "TypeHint: " + typeInfo. }

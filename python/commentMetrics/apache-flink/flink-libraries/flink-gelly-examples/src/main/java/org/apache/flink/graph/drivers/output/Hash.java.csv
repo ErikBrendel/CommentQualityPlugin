@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;3;15;;@Override public void write(String executionName, PrintStream out, DataSet<T> data) throws Exception {     ChecksumHashCode<T> checksumHashCode = new ChecksumHashCode<T>().run(data).     if (printExecutionPlan.getValue()) {         out.println().         out.println(data.getExecutionEnvironment().getExecutionPlan()).     }     ChecksumHashCode.Checksum checksum = checksumHashCode.execute(executionName).     out.println().     out.println(checksum). }

@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public Class<EmptyRequestBody> getRequestClass() {     return EmptyRequestBody.class. }
-false;public;0;4;;@Override public Class<JobExceptionsInfo> getResponseClass() {     return JobExceptionsInfo.class. }
-false;public;0;4;;@Override public HttpResponseStatus getResponseStatusCode() {     return HttpResponseStatus.OK. }
-false;public;0;4;;@Override public JobMessageParameters getUnresolvedMessageParameters() {     return new JobMessageParameters(). }
-false;public;0;4;;@Override public HttpMethodWrapper getHttpMethod() {     return HttpMethodWrapper.GET. }
-false;public;0;4;;@Override public String getTargetRestEndpointURL() {     return URL. }
-false;public,static;0;3;;public static JobExceptionsHeaders getInstance() {     return INSTANCE. }
-false;public;0;5;;@Override public String getDescription() {     return "Returns the non-recoverable exceptions that have been observed by the job. The truncated flag defines " + "whether more exceptions occurred, but are not listed, because the response would otherwise get too big.". }

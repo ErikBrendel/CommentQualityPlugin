@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Override @Before public void setUp() throws Exception {     deleteDirectory("target/data/file&stuff").     super.setUp(). }
-false;public;0;9;;@Test public void testPathWithAmpersand() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMessageCount(1).     template.sendBodyAndHeader("file://target/data/file&stuff", "Hello World", Exchange.FILE_NAME, "hello.txt").     assertMockEndpointsSatisfied(). }
-false;public;0;4;;@Override public void configure() throws Exception {     from("file://target/data/file&stuff?delete=true&initialDelay=0&delay=10").convertBodyTo(String.class).to("mock:result"). }
-false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("file://target/data/file&stuff?delete=true&initialDelay=0&delay=10").convertBodyTo(String.class).to("mock:result").         }     }. }

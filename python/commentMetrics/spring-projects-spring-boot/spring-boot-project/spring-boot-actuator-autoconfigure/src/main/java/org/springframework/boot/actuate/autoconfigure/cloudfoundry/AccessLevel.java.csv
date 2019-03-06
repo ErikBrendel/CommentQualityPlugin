@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;1;3;/**  * Returns if the access level should allow access to the specified ID.  * @param id the ID to check  * @return {@code true} if access is allowed  */ ;/**  * Returns if the access level should allow access to the specified ID.  * @param id the ID to check  * @return {@code true} if access is allowed  */ public boolean isAccessAllowed(String id) {     return this.ids.isEmpty() || this.ids.contains(id). }

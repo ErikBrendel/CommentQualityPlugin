@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry jndi = super.createRegistry().     jndi.bind("myPoll", new MyPollStrategy()).     return jndi. }
-false;public;0;7;;@Override @Before public void setUp() throws Exception {     deleteDirectory("target/data/pollstrategy").     super.setUp().     template.sendBodyAndHeader("file:target/data/pollstrategy/", "Hello World", Exchange.FILE_NAME, "hello.txt"). }
-false;public;0;7;;@Test public void testRollbackThrowException() throws Exception {     await().atMost(2, TimeUnit.SECONDS).until(() -> LATCH.getCount() == 0).     // and we should rollback X number of times     assertTrue(event.startsWith("rollback")). }
-false;public;0;3;;public void configure() throws Exception {     from(fileUrl).convertBodyTo(String.class).to("mock:result"). }
-false;protected;0;7;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from(fileUrl).convertBodyTo(String.class).to("mock:result").         }     }. }
-false;public;2;4;;public boolean begin(Consumer consumer, Endpoint endpoint) {     // simulate an error on first poll     throw new IllegalArgumentException("Damn I cannot do this"). }
-false;public;3;3;;public void commit(Consumer consumer, Endpoint endpoint, int polledMessages) {     event += "commit". }
-false;public;4;5;;public boolean rollback(Consumer consumer, Endpoint endpoint, int retryCounter, Exception cause) throws Exception {     event += "rollback".     LATCH.countDown().     throw cause. }

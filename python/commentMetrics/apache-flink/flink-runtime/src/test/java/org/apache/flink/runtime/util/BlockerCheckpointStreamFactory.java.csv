@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public Set<BlockingCheckpointOutputStream> getAllCreatedStreams() {     return allCreatedStreams. }
-false;public;1;3;;public void setAfterNumberInvocations(int afterNumberInvocations) {     this.afterNumberInvocations = afterNumberInvocations. }
-false;public;1;3;;public void setBlockerLatch(OneShotLatch latch) {     this.blocker = latch. }
-false;public;1;3;;public void setWaiterLatch(OneShotLatch latch) {     this.waiter = latch. }
-false;public;0;3;;public OneShotLatch getBlockerLatch() {     return blocker. }
-false;public;0;3;;public OneShotLatch getWaiterLatch() {     return waiter. }
-false;public;1;14;;@Override public CheckpointStateOutputStream createCheckpointStateOutputStream(CheckpointedStateScope scope) throws IOException {     BlockingCheckpointOutputStream blockingStream = new BlockingCheckpointOutputStream(new MemCheckpointStreamFactory.MemoryCheckpointOutputStream(maxSize), waiter, blocker, afterNumberInvocations).     allCreatedStreams.add(blockingStream).     return blockingStream. }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;5;;@Override public boolean matches(ClassNode classNode) {     return AstUtils.hasAtLeastOneAnnotation(classNode, "EnableRabbit") || AstUtils.hasAtLeastOneAnnotation(classNode, "EnableRabbitMessaging"). }
-false;public;1;6;;@Override public void applyDependencies(DependencyCustomizer dependencies) throws CompilationFailedException {     dependencies.add("spring-rabbit"). }
-false;public;1;10;;@Override public void applyImports(ImportCustomizer imports) throws CompilationFailedException {     imports.addStarImports("org.springframework.amqp.rabbit.annotation", "org.springframework.amqp.rabbit.core", "org.springframework.amqp.rabbit.config", "org.springframework.amqp.rabbit.connection", "org.springframework.amqp.rabbit.listener", "org.springframework.amqp.rabbit.listener.adapter", "org.springframework.amqp.core"). }

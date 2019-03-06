@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;14;;@Test public void testInvalidStylesheet() throws Exception {     try {         RouteBuilder builder = createRouteBuilder().         CamelContext context = new DefaultCamelContext().         context.addRoutes(builder).         context.start().         fail("Should have thrown an exception due XSL compilation error").     } catch (FailedToCreateRouteException e) {         // expected         assertIsInstanceOf(TransformerConfigurationException.class, e.getCause()).     } }
-false;public;0;3;;public void configure() throws Exception {     from("seda:a").to("xslt:org/apache/camel/component/xslt/invalid.xsl"). }
-false;protected;0;7;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from("seda:a").to("xslt:org/apache/camel/component/xslt/invalid.xsl").         }     }. }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;public void testSerialization() throws IOException {     final AddVotingConfigExclusionsResponse originalRequest = new AddVotingConfigExclusionsResponse().     copyWriteable(originalRequest, writableRegistry(), AddVotingConfigExclusionsResponse::new). // there are no fields so we're just checking that this doesn't throw anything }

@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Before public void setupMockMvc() {     this.mvc = MockMvcBuilders.webAppContextSetup(this.context).addFilters(this.filter).build(). }
-false;public;0;6;;@Test public void metricsCanBeAutoTimed() throws Exception {     this.mvc.perform(get("/api/10")).andExpect(status().isOk()).     assertThat(this.registry.get("http.server.requests").tags("status", "200").timer().count()).isEqualTo(1L). }
-false;;0;4;;@Bean MockClock clock() {     return new MockClock(). }
-false;;1;4;;@Bean MeterRegistry meterRegistry(Clock clock) {     return new SimpleMeterRegistry(SimpleConfig.DEFAULT, clock). }
-false;public;2;6;;@Bean public WebMvcMetricsFilter webMetricsFilter(WebApplicationContext context, MeterRegistry registry) {     return new WebMvcMetricsFilter(registry, new DefaultWebMvcTagsProvider(), "http.server.requests", true). }
-false;public;1;4;;@GetMapping("/{id}") public String successful(@PathVariable Long id) {     return id.toString(). }

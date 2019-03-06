@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void testRouteInheritsConfiguredErrorHandler() throws Exception {     assertReceivedMessageWithErrorHandlerValue("defaultErrorHandler", "defaultErrorHandler"). }
-false;public;0;4;;@Test public void testRouteConfiguredErrorHandler() throws Exception {     assertReceivedMessageWithErrorHandlerValue("customErrorHandler", "customErrorHandler"). }
-false;protected;2;8;;protected void assertReceivedMessageWithErrorHandlerValue(String name, String value) throws InterruptedException {     template.sendBody("direct:" + name, expectedBody).     MockEndpoint endpoint = MockEndpoint.resolve(context, "mock:" + name).     endpoint.expectedMessageCount(1).     endpoint.message(0).header(DummyErrorHandlerBuilder.PROPERTY_NAME).isEqualTo(value).     endpoint.assertIsSatisfied(). }

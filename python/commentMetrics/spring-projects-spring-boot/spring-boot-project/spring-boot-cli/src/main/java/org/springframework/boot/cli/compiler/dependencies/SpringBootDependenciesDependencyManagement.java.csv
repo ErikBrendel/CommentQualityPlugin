@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;private,static;0;14;;private static Model readModel() {     DefaultModelProcessor modelProcessor = new DefaultModelProcessor().     modelProcessor.setModelLocator(new DefaultModelLocator()).     modelProcessor.setModelReader(new DefaultModelReader()).     try {         return modelProcessor.read(SpringBootDependenciesDependencyManagement.class.getResourceAsStream("effective-pom.xml"), null).     } catch (IOException ex) {         throw new IllegalStateException("Failed to build model from effective pom", ex).     } }

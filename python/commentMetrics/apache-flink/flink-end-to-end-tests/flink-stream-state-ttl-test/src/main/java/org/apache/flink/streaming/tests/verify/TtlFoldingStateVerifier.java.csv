@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;1;5;;@Override @Nonnull State createState(@Nonnull FunctionInitializationContext context) {     return context.getKeyedStateStore().getFoldingState(stateDesc). }
-false;public;0;5;;@Override @Nonnull public TypeSerializer<Integer> getUpdateSerializer() {     return IntSerializer.INSTANCE. }
-false;public;0;5;;@Override @Nonnull public Integer generateRandomUpdate() {     return RANDOM.nextInt(100). }
-false;;1;4;;@Override Long getInternal(@Nonnull FoldingState<Integer, Long> state) throws Exception {     return state.get(). }
-false;;2;4;;@Override void updateInternal(@Nonnull FoldingState<Integer, Long> state, Integer update) throws Exception {     state.add(update). }
-false;;2;16;;@Override Long expected(@Nonnull List<ValueWithTs<Integer>> updates, long currentTimestamp) {     if (updates.isEmpty()) {         return null.     }     long acc = INIT_VAL.     long lastTs = updates.get(0).getTimestamp().     for (ValueWithTs<Integer> update : updates) {         if (expired(lastTs, update.getTimestamp())) {             acc = INIT_VAL.         }         acc += update.getValue().         lastTs = update.getTimestamp().     }     return expired(lastTs, currentTimestamp) ? null : acc. }

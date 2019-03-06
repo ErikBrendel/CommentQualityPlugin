@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public ByteType getRandom(Random rnd) {     return new ByteType((byte) rnd.nextInt(256)). }
-false;public;0;4;;@Override public int length() {     return 1. }
-false;public;1;4;;@Override public void write(DataOutputView out) throws IOException {     out.writeByte(this.value). }
-false;public;1;4;;@Override public void read(DataInputView in) throws IOException {     this.value = in.readByte(). }
-false;public;0;4;;@Override public int hashCode() {     return this.value. }
-false;public;1;9;;@Override public boolean equals(Object obj) {     if (obj instanceof ByteType) {         ByteType other = (ByteType) obj.         return this.value == other.value.     } else {         return false.     } }

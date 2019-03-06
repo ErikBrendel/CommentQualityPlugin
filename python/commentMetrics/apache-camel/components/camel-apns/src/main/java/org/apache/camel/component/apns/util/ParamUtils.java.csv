@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;2;3;;public static void checkNotNull(Object param, String paramValue) {     AssertUtils.notNull(paramValue, param + " cannot be null"). }
-false;public,static;2;4;;public static void checkNotEmpty(String paramValue, String paramName) {     AssertUtils.notNull(paramValue, paramName + " cannot be null").     AssertUtils.isTrue(StringUtils.isNotEmpty(paramValue), paramName + " cannot be empty"). }
-false;public,static;3;5;;public static void checkDestination(String host, int port, String paramName) {     if ((StringUtils.isEmpty(host) && port != 0) || (StringUtils.isNotEmpty(host) && port == 0)) {         throw new IllegalArgumentException(paramName + "host and port parameters are not coherent: host=" + host + ", port=" + port).     } }

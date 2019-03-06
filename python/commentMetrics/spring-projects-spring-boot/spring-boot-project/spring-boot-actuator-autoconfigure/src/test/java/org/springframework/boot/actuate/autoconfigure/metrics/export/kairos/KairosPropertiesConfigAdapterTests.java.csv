@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected KairosProperties createProperties() {     return new KairosProperties(). }
-false;protected;1;5;;@Override protected KairosPropertiesConfigAdapter createConfigAdapter(KairosProperties properties) {     return new KairosPropertiesConfigAdapter(properties). }
-false;public;0;7;;@Test public void whenPropertiesUrisIsSetAdapterUriReturnsIt() {     KairosProperties properties = createProperties().     properties.setUri("https://kairos.example.com:8080/api/v1/datapoints").     assertThat(createConfigAdapter(properties).uri()).isEqualTo("https://kairos.example.com:8080/api/v1/datapoints"). }
-false;public;0;6;;@Test public void whenPropertiesUserNameIsSetAdapterUserNameReturnsIt() {     KairosProperties properties = createProperties().     properties.setUserName("alice").     assertThat(createConfigAdapter(properties).userName()).isEqualTo("alice"). }
-false;public;0;6;;@Test public void whenPropertiesPasswordIsSetAdapterPasswordReturnsIt() {     KairosProperties properties = createProperties().     properties.setPassword("secret").     assertThat(createConfigAdapter(properties).password()).isEqualTo("secret"). }

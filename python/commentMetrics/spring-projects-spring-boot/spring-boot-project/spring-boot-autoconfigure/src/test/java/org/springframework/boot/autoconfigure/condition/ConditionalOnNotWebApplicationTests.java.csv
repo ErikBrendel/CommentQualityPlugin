@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void testNotWebApplicationWithServletContext() {     new WebApplicationContextRunner().withUserConfiguration(NotWebApplicationConfiguration.class).run((context) -> assertThat(context).doesNotHaveBean(String.class)). }
-false;public;0;7;;@Test public void testNotWebApplicationWithReactiveContext() {     new ReactiveWebApplicationContextRunner().withUserConfiguration(ReactiveApplicationConfig.class, NotWebApplicationConfiguration.class).run((context) -> assertThat(context).doesNotHaveBean(String.class)). }
-false;public;0;7;;@Test public void testNotWebApplication() {     new ApplicationContextRunner().withUserConfiguration(NotWebApplicationConfiguration.class).run((context) -> assertThat(context).getBeans(String.class).containsExactly(entry("none", "none"))). }
-false;public;0;4;;@Bean public ReactiveWebServerFactory reactiveWebServerFactory() {     return new MockReactiveWebServerFactory(). }
-false;public;0;4;;@Bean public HttpHandler httpHandler() {     return (request, response) -> Mono.empty(). }
-false;public;0;4;;@Bean public String none() {     return "none". }

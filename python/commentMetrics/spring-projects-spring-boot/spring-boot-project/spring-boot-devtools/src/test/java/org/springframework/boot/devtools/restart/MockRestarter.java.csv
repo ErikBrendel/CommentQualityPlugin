@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Override public void evaluate() throws Throwable {     setup().     base.evaluate().     cleanup(). }
-false;public;2;13;;@Override public Statement apply(Statement base, Description description) {     return new Statement() {          @Override         public void evaluate() throws Throwable {             setup().             base.evaluate().             cleanup().         }     }. }
-false;private;0;17;;@SuppressWarnings("rawtypes") private void setup() {     Restarter.setInstance(this.mock).     given(this.mock.getInitialUrls()).willReturn(new URL[] {}).     given(this.mock.getOrAddAttribute(anyString(), any(ObjectFactory.class))).willAnswer((invocation) -> {         String name = invocation.getArgument(0).         ObjectFactory factory = invocation.getArgument(1).         Object attribute = MockRestarter.this.attributes.get(name).         if (attribute == null) {             attribute = factory.getObject().             MockRestarter.this.attributes.put(name, attribute).         }         return attribute.     }).     given(this.mock.getThreadFactory()).willReturn(Thread::new). }
-false;private;0;4;;private void cleanup() {     this.attributes.clear().     Restarter.clearInstance(). }
-false;public;0;3;;public Restarter getMock() {     return this.mock. }

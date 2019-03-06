@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;5;;@Override @Nullable protected TransactionAttributeSource getTransactionAttributeSource() {     return (transactionInterceptor != null ? transactionInterceptor.getTransactionAttributeSource() : null). }
-true;public;1;3;/**  * Set the transaction interceptor to use for this advisor.  */ ;/**  * Set the transaction interceptor to use for this advisor.  */ public void setTransactionInterceptor(TransactionInterceptor interceptor) {     this.transactionInterceptor = interceptor. }
-true;public;1;3;/**  * Set the {@link ClassFilter} to use for this pointcut.  * Default is {@link ClassFilter#TRUE}.  */ ;/**  * Set the {@link ClassFilter} to use for this pointcut.  * Default is {@link ClassFilter#TRUE}.  */ public void setClassFilter(ClassFilter classFilter) {     this.pointcut.setClassFilter(classFilter). }
-false;public;0;5;;@Override public Advice getAdvice() {     Assert.state(this.transactionInterceptor != null, "No TransactionInterceptor set").     return this.transactionInterceptor. }
-false;public;0;4;;@Override public Pointcut getPointcut() {     return this.pointcut. }

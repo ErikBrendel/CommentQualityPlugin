@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;@Override public BulkWriter<T> create(FSDataOutputStream stream) throws IOException {     final OutputFile out = new StreamOutputFile(stream).     final ParquetWriter<T> writer = writerBuilder.createWriter(out).     return new ParquetBulkWriter<>(writer). }

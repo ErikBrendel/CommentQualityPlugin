@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;3;1;/**  * Sort the items accessed through the given IndexedSortable over the given  * range of logical indices. From the perspective of the sort algorithm,  * each index between l (inclusive) and r (exclusive) is an addressable  * entry.  *  * @see IndexedSortable#compare  * @see IndexedSortable#swap  */ ;/**  * Sort the items accessed through the given IndexedSortable over the given  * range of logical indices. From the perspective of the sort algorithm,  * each index between l (inclusive) and r (exclusive) is an addressable  * entry.  *  * @see IndexedSortable#compare  * @see IndexedSortable#swap  */ void sort(IndexedSortable s, int l, int r).
-false;;1;1;;void sort(IndexedSortable s).

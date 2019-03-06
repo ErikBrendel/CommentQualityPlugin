@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;9;/**  * Checks whether all of the data buffers allocated by this factory have also been released.  * If not, then an {@link AssertionError} is thrown. Typically used from a JUnit {@link After}  * method.  */ ;/**  * Checks whether all of the data buffers allocated by this factory have also been released.  * If not, then an {@link AssertionError} is thrown. Typically used from a JUnit {@link After}  * method.  */ public void checkForLeaks() {     this.created.stream().filter(LeakAwareDataBuffer::isAllocated).findFirst().map(LeakAwareDataBuffer::leakError).ifPresent(leakError -> {         throw leakError.     }). }
-false;public;0;4;;@Override public DataBuffer allocateBuffer() {     return allocateBufferInternal(this.delegate.allocateBuffer()). }
-false;public;1;4;;@Override public DataBuffer allocateBuffer(int initialCapacity) {     return allocateBufferInternal(this.delegate.allocateBuffer(initialCapacity)). }
-false;private;1;6;;@NotNull private DataBuffer allocateBufferInternal(DataBuffer delegateBuffer) {     LeakAwareDataBuffer dataBuffer = new LeakAwareDataBuffer(delegateBuffer, this).     this.created.add(dataBuffer).     return dataBuffer. }
-false;public;1;4;;@Override public DataBuffer wrap(ByteBuffer byteBuffer) {     return this.delegate.wrap(byteBuffer). }
-false;public;1;4;;@Override public DataBuffer wrap(byte[] bytes) {     return this.delegate.wrap(bytes). }
-false;public;1;4;;@Override public DataBuffer join(List<? extends DataBuffer> dataBuffers) {     return new LeakAwareDataBuffer(this.delegate.join(dataBuffers), this). }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;4;;@Override protected TypeComparator<NullValueArray> createComparator(boolean ascending) {     return new NullValueArrayComparator(ascending). }
-false;protected;0;4;;@Override protected TypeSerializer<NullValueArray> createSerializer() {     return new NullValueArraySerializer(). }
-false;protected;0;13;;@Override protected NullValueArray[] getSortedTestData() {     NullValueArray nva0 = new NullValueArray().     NullValueArray nva1 = new NullValueArray().     nva1.add(NullValue.getInstance()).     NullValueArray nva2 = new NullValueArray().     nva2.add(NullValue.getInstance()).     nva2.add(NullValue.getInstance()).     return new NullValueArray[] { nva0, nva1 }. }

@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void testNotEqual1() {     ConnectionId id1 = new ConnectionId("host", 1202, "id1").     ConnectionId id2 = new ConnectionId("host", 1202, "id2").     Assert.assertFalse("Must be different", id1.equals(id2)). }
-false;public;0;6;;@Test public void testNotEqual2() {     ConnectionId id1 = new ConnectionId("host1", 1202, "id").     ConnectionId id2 = new ConnectionId("host2", 1202, "id").     Assert.assertFalse("Must be different", id1.equals(id2)). }
-false;public;0;6;;@Test public void testNotEqual3() {     ConnectionId id1 = new ConnectionId("host", 1202_1, "id").     ConnectionId id2 = new ConnectionId("host", 1202_2, "id").     Assert.assertFalse("Must be different", id1.equals(id2)). }
-false;public;0;4;;@Test(expected = IllegalArgumentException.class) public void testIllegal1() {     new ConnectionId("host", -1, "id"). }
-false;public;0;7;;@Test public void testGetters() {     ConnectionId id = new ConnectionId("host", 1202, "id").     Assert.assertEquals("host", id.getHost()).     Assert.assertEquals(1202, id.getPort()).     Assert.assertEquals("id", id.getConnectionId()). }
-false;public;0;6;;@Test public void testEqual1() {     ConnectionId id1 = new ConnectionId("host", 1202, "id").     ConnectionId id2 = new ConnectionId("host", 1202, "id").     Assert.assertTrue("Must be equal", id1.equals(id2)). }
-false;public;0;7;;@Test public void testEqual2() {     ConnectionId id1 = new ConnectionId("host", 1202, "id").     ConnectionId id2 = new ConnectionId("host", 1202, "id").     Assert.assertTrue("Hash code must be equal", id1.hashCode() == id2.hashCode()). }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;9;;@Override protected Transformer doCreateTransformer(CamelContext context) {     return new DataFormatTransformer(context).setDataFormatType(definition.getDataFormatType()).setDataFormatRef(definition.getRef()).setModel(definition.getScheme()).setFrom(definition.getFromType()).setTo(definition.getToType()). }

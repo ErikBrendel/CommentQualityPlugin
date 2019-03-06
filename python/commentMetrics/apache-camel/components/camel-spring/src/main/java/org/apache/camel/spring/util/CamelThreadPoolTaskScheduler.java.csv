@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;3;4;;@Override protected ScheduledExecutorService createExecutor(int poolSize, ThreadFactory threadFactory, RejectedExecutionHandler rejectedExecutionHandler) {     return camelContext.getExecutorServiceManager().newScheduledThreadPool(source, name, poolSize). }
-false;public;0;4;;@Override public void shutdown() {     camelContext.getExecutorServiceManager().shutdownNow(getScheduledExecutor()). }

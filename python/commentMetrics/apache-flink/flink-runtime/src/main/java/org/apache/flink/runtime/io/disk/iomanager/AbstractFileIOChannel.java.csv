@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,final;0;4;;// -------------------------------------------------------------------------------------------- @Override public final FileIOChannel.ID getChannelID() {     return this.id. }
-false;public;0;5;;@Override public long getSize() throws IOException {     FileChannel channel = fileChannel.     return channel == null ? 0 : channel.size(). }
-false;public,abstract;0;2;;@Override public abstract boolean isClosed().
-false;public,abstract;0;2;;@Override public abstract void close() throws IOException.
-false;public;0;14;;@Override public void deleteChannel() {     if (!isClosed() || this.fileChannel.isOpen()) {         throw new IllegalStateException("Cannot delete a channel that is open.").     }     // make a best effort to delete the file. Don't report exceptions.     try {         File f = new File(this.id.getPath()).         if (f.exists()) {             f.delete().         }     } catch (Throwable t) {     } }
-false;public;0;8;;@Override public void closeAndDelete() throws IOException {     try {         close().     } finally {         deleteChannel().     } }
-false;public;0;4;;@Override public FileChannel getNioFileChannel() {     return fileChannel. }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void shouldNotAddFilters() throws Exception {     this.mvc.perform(get("/one")).andExpect(header().doesNotExist("x-test")). }
-false;public;0;5;;@Test public void shouldNotHaveWebDriver() {     assertThatExceptionOfType(NoSuchBeanDefinitionException.class).isThrownBy(() -> this.context.getBean(WebDriver.class)). }
-false;public;0;5;;@Test public void shouldNotHaveWebClient() {     assertThatExceptionOfType(NoSuchBeanDefinitionException.class).isThrownBy(() -> this.context.getBean(WebClient.class)). }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;8;;public static void main(String[] args) {     assertEnvValue("ENV1", "5000").     assertEnvValue("ENV2", "Some Text").     assertEnvValue("ENV3", "").     assertEnvValue("ENV4", "").     System.out.println("I haz been run"). }
-false;private,static;2;7;;private static void assertEnvValue(String envKey, String expectedValue) {     String actual = System.getenv(envKey).     if (!expectedValue.equals(actual)) {         throw new IllegalStateException("env property [" + envKey + "] mismatch " + "(got [" + actual + "], expected [" + expectedValue + "]").     } }

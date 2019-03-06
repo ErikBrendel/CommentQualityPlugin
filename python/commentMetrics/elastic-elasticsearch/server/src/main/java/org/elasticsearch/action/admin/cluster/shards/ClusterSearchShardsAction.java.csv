@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public ClusterSearchShardsResponse newResponse() {     throw new UnsupportedOperationException("usage of Streamable is to be replaced by Writeable"). }
-false;public;0;4;;@Override public Writeable.Reader<ClusterSearchShardsResponse> getResponseReader() {     return ClusterSearchShardsResponse::new. }

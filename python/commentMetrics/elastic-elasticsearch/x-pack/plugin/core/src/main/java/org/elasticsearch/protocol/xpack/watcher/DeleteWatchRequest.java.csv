@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * @return The name of the watch to be deleted  */ ;/**  * @return The name of the watch to be deleted  */ public String getId() {     return id. }
-true;public;1;3;/**  * Sets the name of the watch to be deleted  */ ;/**  * Sets the name of the watch to be deleted  */ public void setId(String id) {     this.id = id. }
-false;public;0;10;;@Override public ActionRequestValidationException validate() {     ActionRequestValidationException validationException = null.     if (id == null) {         validationException = ValidateActions.addValidationError("watch id is missing", validationException).     } else if (PutWatchRequest.isValidId(id) == false) {         validationException = ValidateActions.addValidationError("watch id contains whitespace", validationException).     }     return validationException. }
-false;public;1;6;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     id = in.readString().     version = in.readLong(). }
-false;public;1;6;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeString(id).     out.writeLong(version). }
-false;public;0;4;;@Override public String toString() {     return "delete [" + id + "]". }

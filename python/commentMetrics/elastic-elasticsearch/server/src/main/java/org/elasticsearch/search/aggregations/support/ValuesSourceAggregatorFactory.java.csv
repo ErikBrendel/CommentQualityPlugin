@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;4;9;;@Override public Aggregator createInternal(Aggregator parent, boolean collectsFromSingleBucket, List<PipelineAggregator> pipelineAggregators, Map<String, Object> metaData) throws IOException {     VS vs = config.toValuesSource(context.getQueryShardContext()).     if (vs == null) {         return createUnmapped(parent, pipelineAggregators, metaData).     }     return doCreateInternal(vs, parent, collectsFromSingleBucket, pipelineAggregators, metaData). }
-false;protected,abstract;3;2;;protected abstract Aggregator createUnmapped(Aggregator parent, List<PipelineAggregator> pipelineAggregators, Map<String, Object> metaData) throws IOException.
-false;protected,abstract;5;3;;protected abstract Aggregator doCreateInternal(VS valuesSource, Aggregator parent, boolean collectsFromSingleBucket, List<PipelineAggregator> pipelineAggregators, Map<String, Object> metaData) throws IOException.

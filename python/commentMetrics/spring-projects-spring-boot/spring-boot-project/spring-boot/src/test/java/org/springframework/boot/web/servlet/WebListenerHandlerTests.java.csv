@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void listener() throws IOException {     ScannedGenericBeanDefinition scanned = new ScannedGenericBeanDefinition(new SimpleMetadataReaderFactory().getMetadataReader(TestListener.class.getName())).     this.handler.handle(scanned, this.registry).     this.registry.getBeanDefinition(TestListener.class.getName()). }
-false;public;1;4;;@Override public void attributeAdded(ServletContextAttributeEvent event) { }
-false;public;1;4;;@Override public void attributeRemoved(ServletContextAttributeEvent event) { }
-false;public;1;4;;@Override public void attributeReplaced(ServletContextAttributeEvent event) { }

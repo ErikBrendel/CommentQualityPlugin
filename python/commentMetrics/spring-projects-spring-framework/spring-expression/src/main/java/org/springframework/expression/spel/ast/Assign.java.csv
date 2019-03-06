@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;@Override public TypedValue getValueInternal(ExpressionState state) throws EvaluationException {     TypedValue newValue = this.children[1].getValueInternal(state).     getChild(0).setValue(state, newValue.getValue()).     return newValue. }
-false;public;0;4;;@Override public String toStringAST() {     return getChild(0).toStringAST() + "=" + getChild(1).toStringAST(). }

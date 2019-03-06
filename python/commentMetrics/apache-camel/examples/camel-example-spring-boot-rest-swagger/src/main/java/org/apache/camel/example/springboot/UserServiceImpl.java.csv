@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public User findUser(Integer id) {     return users.get(id). }
-false;public;0;4;;@Override public Collection<User> findUsers() {     return users.values(). }
-false;public;1;4;;@Override public void updateUser(User user) {     users.put(user.getId(), user). }

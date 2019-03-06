@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected String getBlueprintDescriptor() {     return "org/apache/camel/test/blueprint/DeadLetterChannelOnPrepareTestTest.xml". }
-false;public;0;9;;@Test public void testDeadLetterChannelOnPrepare() throws Exception {     getMockEndpoint("mock:dead").expectedBodiesReceived("Hello World").     getMockEndpoint("mock:dead").expectedHeaderReceived("FailedBecause", "Forced").     template.sendBody("direct:start", "Hello World").     assertMockEndpointsSatisfied(). }
-false;public;1;5;;@Override public void process(Exchange exchange) throws Exception {     Exception cause = exchange.getProperty(Exchange.EXCEPTION_CAUGHT, Exception.class).     exchange.getIn().setHeader("FailedBecause", cause.getMessage()). }

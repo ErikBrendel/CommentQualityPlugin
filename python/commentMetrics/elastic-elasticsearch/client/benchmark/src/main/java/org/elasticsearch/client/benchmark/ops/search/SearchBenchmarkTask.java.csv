@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public void setUp(SampleRecorder sampleRecorder) throws Exception {     this.sampleRecorder = sampleRecorder. }
-false;public;0;5;;@Override public void run() throws Exception {     runIterations(warmupIterations, false).     runIterations(measurementIterations, true). }
-false;private;2;17;;private void runIterations(int iterations, boolean addSample) {     long interval = TimeUnit.SECONDS.toNanos(1L) / targetThroughput.     long totalStart = System.nanoTime().     for (int iteration = 0. iteration < iterations. iteration++) {         long expectedStart = totalStart + iteration * interval.         while (System.nanoTime() < expectedStart) {         // busy spin         }         long start = System.nanoTime().         boolean success = searchRequestExecutor.search(searchRequestBody).         long stop = System.nanoTime().         if (addSample) {             sampleRecorder.addSample(new Sample("search", expectedStart, start, stop, success)).         }     } }
-false;public;0;4;;@Override public void tearDown() throws Exception { // no op }

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String apiKey() {     return get(DatadogProperties::getApiKey, DatadogConfig.super::apiKey). }
-false;public;0;5;;@Override public String applicationKey() {     return get(DatadogProperties::getApplicationKey, DatadogConfig.super::applicationKey). }
-false;public;0;4;;@Override public String hostTag() {     return get(DatadogProperties::getHostTag, DatadogConfig.super::hostTag). }
-false;public;0;4;;@Override public String uri() {     return get(DatadogProperties::getUri, DatadogConfig.super::uri). }
-false;public;0;4;;@Override public boolean descriptions() {     return get(DatadogProperties::isDescriptions, DatadogConfig.super::descriptions). }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;5;;@BeforeClass public static void initPort() throws Exception {     port = AvailablePortFinder.getNextAvailable(8999).     httpsPort = AvailablePortFinder.getNextAvailable(8999). }
-false;protected,static;0;3;;protected static int getPort() {     return port. }
-false;protected,static;0;3;;protected static int getHttpsPort() {     return httpsPort. }

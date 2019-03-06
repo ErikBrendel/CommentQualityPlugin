@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public String value() {     return this.value. }
-false;public;1;4;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeString(value). }
-false;public;1;11;;@Override public boolean equals(Object o) {     if (this == o)         return true.     if (o == null || getClass() != o.getClass())         return false.     ClusterName that = (ClusterName) o.     if (value != null ? !value.equals(that.value) : that.value != null)         return false.     return true. }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(value). }
-false;public;0;4;;@Override public String toString() {     return "Cluster [" + value + "]". }

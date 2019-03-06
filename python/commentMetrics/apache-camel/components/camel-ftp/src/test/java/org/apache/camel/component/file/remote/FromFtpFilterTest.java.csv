@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;3;;protected String getFtpUrl() {     return "ftp://admin@localhost:" + getPort() + "/filter?password=admin&binary=false&filter=#myFilter". }
-false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry jndi = super.createRegistry().     jndi.bind("myFilter", new MyFileFilter<>()).     return jndi. }
-false;public;0;10;;@Test public void testFilterFiles() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMessageCount(0).     sendFile(getFtpUrl(), "This is a file to be filtered", "skipme.txt").     mock.setResultWaitTime(3000).     mock.assertIsSatisfied(). }
-false;public;0;12;;@Test public void testFilterFilesWithARegularFile() throws Exception {     MockEndpoint mock = getMockEndpoint("mock:result").     mock.expectedMessageCount(1).     mock.expectedBodiesReceived("Hello World").     sendFile(getFtpUrl(), "This is a file to be filtered", "skipme.txt").     sendFile(getFtpUrl(), "Hello World", "hello.txt").     mock.assertIsSatisfied(). }
-false;public;0;3;;public void configure() throws Exception {     from(getFtpUrl()).to("mock:result"). }
-false;protected;0;7;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from(getFtpUrl()).to("mock:result").         }     }. }
-false;public;1;4;;public boolean accept(GenericFile<T> file) {     // we don't accept any files starting with skip in the name     return !file.getFileName().startsWith("skip"). }

@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public List<Transform> getTransformers() {     return Arrays.<Transform>asList(new GraphKeyTypeTransform(vertexCount())). }
-true;protected,abstract;0;1;/**  * The vertex count is verified to be no greater than the capacity of the  * selected data type. All vertices must be counted even if skipped or  * unused when generating graph edges.  *  * @return number of vertices configured for the graph  */ ;/**  * The vertex count is verified to be no greater than the capacity of the  * selected data type. All vertices must be counted even if skipped or  * unused when generating graph edges.  *  * @return number of vertices configured for the graph  */ protected abstract long vertexCount().

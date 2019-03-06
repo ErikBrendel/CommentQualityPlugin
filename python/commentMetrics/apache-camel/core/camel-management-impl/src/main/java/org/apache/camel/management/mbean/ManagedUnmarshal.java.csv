@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public UnmarshalDefinition getDefinition() {     return (UnmarshalDefinition) super.getDefinition(). }
-false;public;0;8;;@Override public String getDataFormatName() {     String name = null.     if (getDefinition().getDataFormatType() != null) {         name = getDefinition().getDataFormatType().getDataFormatName().     }     return name. }

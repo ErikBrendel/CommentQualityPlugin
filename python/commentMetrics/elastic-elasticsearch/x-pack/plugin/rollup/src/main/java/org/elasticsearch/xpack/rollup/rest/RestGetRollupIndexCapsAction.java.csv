@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;2;8;;@Override protected RestChannelConsumer prepareRequest(RestRequest restRequest, NodeClient client) {     String index = restRequest.param(INDEX.getPreferredName()).     IndicesOptions options = IndicesOptions.fromRequest(restRequest, IndicesOptions.STRICT_EXPAND_OPEN_FORBID_CLOSED).     GetRollupIndexCapsAction.Request request = new GetRollupIndexCapsAction.Request(Strings.splitStringByCommaToArray(index), options).     return channel -> client.execute(GetRollupIndexCapsAction.INSTANCE, request, new RestToXContentListener<>(channel)). }
-false;public;0;4;;@Override public String getName() {     return "get_rollup_index_caps". }

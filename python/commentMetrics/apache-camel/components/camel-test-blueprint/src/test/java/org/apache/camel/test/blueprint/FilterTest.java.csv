@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected String getBlueprintDescriptor() {     return "org/apache/camel/test/blueprint/filterTest.xml". }
-false;public;0;10;;@Test public void testSendMatchingMessage() throws Exception {     String expectedBody = "<matched/>".     resultEndpoint.expectedBodiesReceived(expectedBody).     template.sendBodyAndHeader(expectedBody, "foo", "bar").     resultEndpoint.assertIsSatisfied(). }
-false;public;0;8;;@Test public void testSendNotMatchingMessage() throws Exception {     resultEndpoint.expectedMessageCount(0).     template.sendBodyAndHeader("<notMatched/>", "foo", "notMatchedHeaderValue").     resultEndpoint.assertIsSatisfied(). }

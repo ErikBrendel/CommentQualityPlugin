@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;14;;@Override public void setUp() throws Exception {     port = AvailablePortFinder.getNextAvailable(22000).     sshd = SshServer.setUpDefaultServer().     sshd.setPort(port).     sshd.setKeyPairProvider(new FileKeyPairProvider(Paths.get("src/test/resources/hostkey.pem"))).     sshd.setCommandFactory(new TestEchoCommandFactory()).     sshd.setPasswordAuthenticator((username, password, session) -> true).     sshd.setPublickeyAuthenticator((username, key, session) -> true).     sshd.start().     super.setUp(). }
-false;public;0;9;;@Override public void tearDown() throws Exception {     super.tearDown().     if (sshd != null) {         sshd.stop(true).         Thread.sleep(50).     } }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;3;;public Timer getTimer(T timing) {     return timings[timing.ordinal()]. }
-false;public;2;3;;public void setTimer(T timing, Timer timer) {     timings[timing.ordinal()] = timer. }
-true;public;0;8;/**  * Convert this record to a map from timingType to times.  */ ;/**  * Convert this record to a map from timingType to times.  */ public Map<String, Long> toTimingMap() {     Map<String, Long> map = new HashMap<>().     for (T timingType : timingTypes) {         map.put(timingType.toString(), timings[timingType.ordinal()].getApproximateTiming()).         map.put(timingType.toString() + "_count", timings[timingType.ordinal()].getCount()).     }     return Collections.unmodifiableMap(map). }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;5;;@Override protected Request createTestInstance() {     TimeValue timeout = randomBoolean() ? TimeValue.timeValueMinutes(randomIntBetween(1, 10)) : null.     return new Request(randomAlphaOfLengthBetween(1, 10), randomBoolean(), timeout). }
-false;protected;0;4;;@Override protected Writeable.Reader<Request> instanceReader() {     return Request::new. }
-false;public;0;10;;public void testSameButDifferentTimeout() {     String id = randomAlphaOfLengthBetween(1, 10).     boolean waitForCompletion = randomBoolean().     Request r1 = new Request(id, waitForCompletion, TimeValue.timeValueSeconds(10)).     Request r2 = new Request(id, waitForCompletion, TimeValue.timeValueSeconds(20)).     assertNotEquals(r1, r2).     assertNotEquals(r1.hashCode(), r2.hashCode()). }

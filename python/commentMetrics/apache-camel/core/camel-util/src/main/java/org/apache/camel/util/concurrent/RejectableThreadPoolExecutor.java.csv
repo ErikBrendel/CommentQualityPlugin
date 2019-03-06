@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;2;8;;@Override protected <T> RunnableFuture<T> newTaskFor(Runnable runnable, T value) {     if (runnable instanceof Rejectable) {         return new RejectableFutureTask<>(runnable, value).     } else {         return super.newTaskFor(runnable, value).     } }
-false;protected;1;8;;@Override protected <T> RunnableFuture<T> newTaskFor(Callable<T> callable) {     if (callable instanceof Rejectable) {         return new RejectableFutureTask<>(callable).     } else {         return super.newTaskFor(callable).     } }
-false;public;0;10;;@Override public String toString() {     // the thread factory often have more precise details what the thread pool is used for     if (getThreadFactory() instanceof CamelThreadFactory) {         String name = ((CamelThreadFactory) getThreadFactory()).getName().         return super.toString() + "[" + name + "]".     } else {         return super.toString().     } }

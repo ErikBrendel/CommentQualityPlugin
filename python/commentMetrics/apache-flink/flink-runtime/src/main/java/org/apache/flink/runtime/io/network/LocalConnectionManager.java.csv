@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;3;;@Override public void start(ResultPartitionProvider partitionProvider, TaskEventDispatcher taskEventDispatcher) { }
-false;public;1;4;;@Override public PartitionRequestClient createPartitionRequestClient(ConnectionID connectionId) {     return null. }
-false;public;1;2;;@Override public void closeOpenChannelConnections(ConnectionID connectionId) { }
-false;public;0;4;;@Override public int getNumberOfActiveConnections() {     return 0. }
-false;public;0;4;;@Override public int getDataPort() {     return -1. }
-false;public;0;2;;@Override public void shutdown() { }

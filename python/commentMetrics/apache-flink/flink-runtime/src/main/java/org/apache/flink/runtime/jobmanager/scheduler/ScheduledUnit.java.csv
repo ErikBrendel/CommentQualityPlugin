@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;// -------------------------------------------------------------------------------------------- public JobVertexID getJobVertexId() {     return jobVertexId. }
-false;public;0;4;;@Nullable public Execution getTaskToExecute() {     return vertexExecution. }
-false;public;0;4;;@Nullable public SlotSharingGroupId getSlotSharingGroupId() {     return slotSharingGroupId. }
-false;public;0;4;;@Nullable public CoLocationConstraint getCoLocationConstraint() {     return coLocationConstraint. }
-false;public;0;5;;// -------------------------------------------------------------------------------------------- @Override public String toString() {     return "{task=" + vertexExecution.getVertexWithAttempt() + ", sharingUnit=" + slotSharingGroupId + ", locationConstraint=" + coLocationConstraint + '}'. }

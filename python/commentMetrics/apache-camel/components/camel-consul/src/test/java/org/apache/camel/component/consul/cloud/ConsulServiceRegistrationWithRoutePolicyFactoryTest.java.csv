@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;7;;@Override protected CamelContext createCamelContext() throws Exception {     CamelContext context = super.createCamelContext().     context.addRoutePolicyFactory(new ServiceRegistrationRoutePolicyFactory()).     return context. }
-false;public;0;8;;@Override public void configure() throws Exception {     fromF("jetty:http://0.0.0.0:%d/service/endpoint", SERVICE_PORT).routeId(SERVICE_ID).routeGroup(SERVICE_NAME).noAutoStartup().to("log:service-registry?level=INFO"). }
-false;protected;0;13;;@Override protected RoutesBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             fromF("jetty:http://0.0.0.0:%d/service/endpoint", SERVICE_PORT).routeId(SERVICE_ID).routeGroup(SERVICE_NAME).noAutoStartup().to("log:service-registry?level=INFO").         }     }. }

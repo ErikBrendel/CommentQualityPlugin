@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Test public void testSendBody() throws Exception {     a.expectedBodiesReceived(body).     b.expectedBodiesReceived(body).     template.sendBody("direct:start", body).     MockEndpoint.assertIsSatisfied(a, b). }

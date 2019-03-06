@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public Map<String, QueueReference> getQueues() {     return QUEUES. }
-false;public;1;4;;@Override public QueueReference getQueueReference(String key) {     return QUEUES.get(key). }
-false;protected;0;5;;@Override protected void doStart() throws Exception {     super.doStart().     START_COUNTER.incrementAndGet(). }
-false;protected;0;9;;@Override protected void doStop() throws Exception {     if (START_COUNTER.decrementAndGet() <= 0) {         // clear queues when no more vm components in use         getQueues().clear().         // also clear endpoints         ENDPOINTS.clear().     } }
-false;protected;3;11;;@Override protected Endpoint createEndpoint(String uri, String remaining, Map<String, Object> parameters) throws Exception {     if (ENDPOINTS.containsKey(uri)) {         return ENDPOINTS.get(uri).     }     VmEndpoint answer = (VmEndpoint) super.createEndpoint(uri, remaining, parameters).     ENDPOINTS.put(uri, answer).     return answer. }
-false;protected;4;4;;@Override protected VmEndpoint createEndpoint(String endpointUri, Component component, BlockingQueueFactory<Exchange> queueFactory, int concurrentConsumers) {     return new VmEndpoint(endpointUri, component, queueFactory, concurrentConsumers). }
-false;protected;4;4;;@Override protected VmEndpoint createEndpoint(String endpointUri, Component component, BlockingQueue<Exchange> queue, int concurrentConsumers) {     return new VmEndpoint(endpointUri, component, queue, concurrentConsumers). }

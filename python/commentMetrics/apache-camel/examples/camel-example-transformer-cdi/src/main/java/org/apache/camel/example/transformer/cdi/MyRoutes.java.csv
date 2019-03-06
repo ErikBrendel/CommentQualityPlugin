@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;20;;@Override public void configure() {     transformer().fromType("xml:MyRequest").toType("xml:MyResponse").withUri("xslt:transform.xsl").     from("timer:foo?period=5000").id("timer-route").log("start -->").setBody(constant("<MyRequest>foobar</MyRequest>")).log("--> Sending:[${body}]").to("direct:a").log("--> Received:[${body}]").log("<-- end").     from("direct:a").id("xslt-route").inputType("xml:MyRequest").outputType("xml:MyResponse").log("----> Received:[${body}]"). }

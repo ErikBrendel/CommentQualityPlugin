@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getName() {     return "indices_segments_action". }
-false;public;2;8;;@Override public RestChannelConsumer prepareRequest(final RestRequest request, final NodeClient client) throws IOException {     IndicesSegmentsRequest indicesSegmentsRequest = new IndicesSegmentsRequest(Strings.splitStringByCommaToArray(request.param("index"))).     indicesSegmentsRequest.verbose(request.paramAsBoolean("verbose", false)).     indicesSegmentsRequest.indicesOptions(IndicesOptions.fromRequest(request, indicesSegmentsRequest.indicesOptions())).     return channel -> client.admin().indices().segments(indicesSegmentsRequest, new RestToXContentListener<>(channel)). }

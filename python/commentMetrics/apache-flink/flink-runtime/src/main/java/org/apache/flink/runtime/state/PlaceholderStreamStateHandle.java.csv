@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Override public FSDataInputStream openInputStream() {     throw new UnsupportedOperationException("This is only a placeholder to be replaced by a real StreamStateHandle in the checkpoint coordinator."). }
-false;public;0;4;;@Override public void discardState() throws Exception { // nothing to do. }
-false;public;0;4;;@Override public long getStateSize() {     return 0L. }

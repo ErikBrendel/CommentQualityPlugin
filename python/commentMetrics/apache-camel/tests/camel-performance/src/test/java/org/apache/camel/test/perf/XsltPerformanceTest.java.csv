@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;15;;@Test public void testXslt() throws InterruptedException {     template.setDefaultEndpointUri("direct:xslt").     // warm up with 1.000 messages so that the JIT compiler kicks in     execute(1000).     resetMock(count).     StopWatch watch = new StopWatch().     execute(count).     assertMockEndpointsSatisfied().     log.warn("Ran {} tests in {}ms", count, watch.taken()). }
-false;public;0;5;;public void configure() throws Exception {     from("direct:xslt").to("xslt://META-INF/xslt/transform.xslt").to("mock:end"). }
-false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() throws Exception {             from("direct:xslt").to("xslt://META-INF/xslt/transform.xslt").to("mock:end").         }     }. }

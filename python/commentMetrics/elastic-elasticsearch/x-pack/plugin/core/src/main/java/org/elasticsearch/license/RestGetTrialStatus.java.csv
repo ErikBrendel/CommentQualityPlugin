@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;2;4;;@Override protected RestChannelConsumer doPrepareRequest(RestRequest request, XPackClient client) {     return channel -> client.licensing().prepareGetStartTrial().execute(new RestToXContentListener<>(channel)). }
-false;public;0;4;;@Override public String getName() {     return "get_trial_status". }

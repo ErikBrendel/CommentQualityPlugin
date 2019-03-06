@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected PutDatafeedResponse createTestInstance() {     return new PutDatafeedResponse(DatafeedConfigTests.createRandom()). }
-false;protected;1;4;;@Override protected PutDatafeedResponse doParseInstance(XContentParser parser) throws IOException {     return PutDatafeedResponse.fromXContent(parser). }
-false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return true. }
-false;protected;0;4;;@Override protected Predicate<String> getRandomFieldsExcludeFilter() {     return field -> !field.isEmpty(). }

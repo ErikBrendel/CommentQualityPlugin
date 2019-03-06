@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,abstract;1;1;;public abstract ClusterTasksResult<LocalClusterUpdateTask> execute(ClusterState currentState) throws Exception.
-false;public,final;2;7;;@Override public final ClusterTasksResult<LocalClusterUpdateTask> execute(ClusterState currentState, List<LocalClusterUpdateTask> tasks) throws Exception {     assert tasks.size() == 1 && tasks.get(0) == this : "expected one-element task list containing current object but was " + tasks.     ClusterTasksResult<LocalClusterUpdateTask> result = execute(currentState).     return ClusterTasksResult.<LocalClusterUpdateTask>builder().successes(tasks).build(result, currentState). }
-true;public,static;0;3;/**  * no changes were made to the cluster state. Useful to execute a runnable on the cluster state applier thread  */ ;/**  * no changes were made to the cluster state. Useful to execute a runnable on the cluster state applier thread  */ public static ClusterTasksResult<LocalClusterUpdateTask> unchanged() {     return new ClusterTasksResult<>(null, null). }
-false;public;1;4;;@Override public String describeTasks(List<LocalClusterUpdateTask> tasks) {     // one of task, source is enough     return "". }
-false;public;0;4;;@Nullable public TimeValue timeout() {     return null. }
-false;public;0;4;;@Override public Priority priority() {     return priority. }
-false;public,final;0;4;;@Override public final boolean runOnlyOnMaster() {     return false. }

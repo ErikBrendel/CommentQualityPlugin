@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;3;;public static JobState fromString(String name) {     return valueOf(name.trim().toUpperCase(Locale.ROOT)). }
-false;public,static;1;3;;public static JobState fromStream(StreamInput in) throws IOException {     return in.readEnum(JobState.class). }
-false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     JobState state = this.     out.writeEnum(state). }
-false;public;0;3;;public String value() {     return name().toLowerCase(Locale.ROOT). }
-true;public;1;3;/**  * @return {@code true} if state matches any of the given {@code candidates}  */ ;/**  * @return {@code true} if state matches any of the given {@code candidates}  */ public boolean isAnyOf(JobState... candidates) {     return Arrays.stream(candidates).anyMatch(candidate -> this == candidate). }
-false;public;0;4;;@Override public String toString() {     return name().toLowerCase(Locale.ROOT). }

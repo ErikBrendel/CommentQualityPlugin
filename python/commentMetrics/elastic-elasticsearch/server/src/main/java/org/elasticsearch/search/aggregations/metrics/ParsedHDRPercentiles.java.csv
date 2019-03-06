@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getType() {     return InternalHDRPercentiles.NAME. }
-false;public;1;4;;@Override public double percentile(double percent) {     return getPercentile(percent). }
-false;public;1;4;;@Override public String percentileAsString(double percent) {     return getPercentileAsString(percent). }
-false;public,static;2;5;;public static ParsedHDRPercentiles fromXContent(XContentParser parser, String name) throws IOException {     ParsedHDRPercentiles aggregation = PARSER.parse(parser, null).     aggregation.setName(name).     return aggregation. }

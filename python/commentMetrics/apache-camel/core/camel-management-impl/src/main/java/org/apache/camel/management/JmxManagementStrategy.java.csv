@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;public void manageObject(Object managedObject) throws Exception {     ObjectName objectName = getManagementObjectNameStrategy().getObjectName(managedObject).     if (objectName != null) {         getManagementAgent().register(managedObject, objectName).     } }
-false;public;1;6;;public void unmanageObject(Object managedObject) throws Exception {     ObjectName objectName = getManagementObjectNameStrategy().getObjectName(managedObject).     if (objectName != null) {         getManagementAgent().unregister(objectName).     } }
-false;public;1;11;;public boolean isManaged(Object managedObject) {     try {         ObjectName name = getManagementObjectNameStrategy().getObjectName(managedObject).         if (name != null) {             return getManagementAgent().isRegistered(name).         }     } catch (Exception e) {         log.warn("Cannot check whether the managed object is registered. This exception will be ignored.", e).     }     return false. }
-false;public;1;10;;public boolean isManagedName(Object name) {     try {         if (name instanceof ObjectName) {             return getManagementAgent().isRegistered((ObjectName) name).         }     } catch (Exception e) {         log.warn("Cannot check whether the managed object is registered. This exception will be ignored.", e).     }     return false. }
-false;public;1;4;;@Override public boolean manageProcessor(NamedNode definition) {     return true. }
-false;protected;0;5;;@Override protected void doStart() throws Exception {     log.info("JMX is enabled").     doStartManagementStrategy(). }
-false;protected;1;3;;protected ManagementObjectNameStrategy createManagementObjectNameStrategy(String domain) {     return new DefaultManagementObjectNameStrategy(domain). }
-false;protected;0;3;;protected ManagementObjectStrategy createManagementObjectStrategy() {     return new DefaultManagementObjectStrategy(). }

@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;8;;@Override protected ValueTypeInfo<?>[] getTestData() {     return new ValueTypeInfo<?>[] { new ValueTypeInfo<>(TestClass.class), new ValueTypeInfo<>(AlternativeClass.class), new ValueTypeInfo<>(Record.class) }. }
-false;public;0;6;;@Test public void testValueTypeEqualsWithNull() throws Exception {     ValueTypeInfo<Record> tpeInfo = new ValueTypeInfo<>(Record.class).     Assert.assertFalse(tpeInfo.equals(null)). }
-false;public;1;4;;@Override public void write(DataOutputView out) throws IOException { }
-false;public;1;4;;@Override public void read(DataInputView in) throws IOException { }
-false;public;1;4;;@Override public void write(DataOutputView out) throws IOException { }
-false;public;1;4;;@Override public void read(DataInputView in) throws IOException { }

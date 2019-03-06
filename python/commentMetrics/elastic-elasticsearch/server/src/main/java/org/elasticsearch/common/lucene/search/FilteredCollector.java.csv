@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;@Override public void collect(int doc) throws IOException {     if (bits.get(doc)) {         in.collect(doc).     } }
-false;public;1;15;;@Override public LeafCollector getLeafCollector(LeafReaderContext context) throws IOException {     final ScorerSupplier filterScorerSupplier = filter.scorerSupplier(context).     final LeafCollector in = collector.getLeafCollector(context).     final Bits bits = Lucene.asSequentialAccessBits(context.reader().maxDoc(), filterScorerSupplier).     return new FilterLeafCollector(in) {          @Override         public void collect(int doc) throws IOException {             if (bits.get(doc)) {                 in.collect(doc).             }         }     }. }
-false;public;0;4;;@Override public ScoreMode scoreMode() {     return collector.scoreMode(). }

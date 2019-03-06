@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void testSchemaNamespace() throws Exception {     assertEquals(Constants.XML_SCHEMA_NAMESPACE_URI, camelSpringNamespace.getNamespaceURI(Constants.XML_SCHEMA_NAMESPACE_PREFIX)).     assertNull(camelSpringNamespace.getNamespaceURI("unregisterdPrefix")). }
-false;public;0;9;;@Test public void testGetPrefix() throws Exception {     try {         camelSpringNamespace.getPrefix(Constants.XML_SCHEMA_NAMESPACE_URI).         fail("UnsupportedOperationException expected").     } catch (UnsupportedOperationException e) {     // Expected.     } }
-false;public;0;9;;@Test public void testGetPrefixes() throws Exception {     try {         camelSpringNamespace.getPrefixes(Constants.XML_SCHEMA_NAMESPACE_URI).         fail("UnsupportedOperationException expected").     } catch (UnsupportedOperationException e) {     // Expected.     } }

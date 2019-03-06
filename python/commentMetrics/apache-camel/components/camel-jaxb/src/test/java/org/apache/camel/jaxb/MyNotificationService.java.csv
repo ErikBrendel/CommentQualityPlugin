@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;public void createNotification(Exchange exchange) {     NotificationType notification = new NotificationType().     notification.setEvent("Hello").     exchange.getOut().setBody(notification). }
-false;public;1;5;;public void sendNotification(Exchange exchange) {     NotificationType notification = (NotificationType) exchange.getIn().getBody().     exchange.getContext().createProducerTemplate().sendBody("mock:notify", notification). }

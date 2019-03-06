@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected String getBlueprintDescriptor() {     return "org/apache/camel/test/blueprint/BlueprintOptionalPropertiesDslTest.xml". }
-false;public;0;14;;@Test public void testPlaceholderDslTest() throws Exception {     getMockEndpoint("mock:a").expectedMessageCount(1).     getMockEndpoint("mock:b").expectedMessageCount(0).     try {         template.sendBody("direct:start", "Hello World").         fail("Should have thrown an exception").     } catch (Exception e) {     // expected     }     assertMockEndpointsSatisfied(). }

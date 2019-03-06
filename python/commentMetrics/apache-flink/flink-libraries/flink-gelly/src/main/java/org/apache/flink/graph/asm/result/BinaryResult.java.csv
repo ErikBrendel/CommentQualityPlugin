@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * Get the first vertex ID.  *  * @return first vertex ID  */ ;/**  * Get the first vertex ID.  *  * @return first vertex ID  */ K getVertexId0().
-true;;1;1;/**  * Set the first vertex ID.  *  * @param vertexId0 new vertex ID  */ ;/**  * Set the first vertex ID.  *  * @param vertexId0 new vertex ID  */ void setVertexId0(K vertexId0).
-true;;0;1;/**  * Get the second vertex ID.  *  * @return second vertex ID  */ ;/**  * Get the second vertex ID.  *  * @return second vertex ID  */ K getVertexId1().
-true;;1;1;/**  * Set the second vertex ID.  *  * @param vertexId1 new vertex ID  */ ;/**  * Set the second vertex ID.  *  * @param vertexId1 new vertex ID  */ void setVertexId1(K vertexId1).
-false;public;2;11;;@Override public void flatMap(RT value, Collector<RT> out) throws Exception {     out.collect(value).     T tmp = value.getVertexId0().     value.setVertexId0(value.getVertexId1()).     value.setVertexId1(tmp).     out.collect(value). }

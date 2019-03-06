@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String getType() {     return HistogramAggregationBuilder.NAME. }
-false;public;0;4;;@Override public List<? extends Histogram.Bucket> getBuckets() {     return buckets. }
-false;public,static;2;5;;public static ParsedHistogram fromXContent(XContentParser parser, String name) throws IOException {     ParsedHistogram aggregation = PARSER.parse(parser, null).     aggregation.setName(name).     return aggregation. }
-false;public;0;4;;@Override public Object getKey() {     return key. }
-false;public;0;11;;@Override public String getKeyAsString() {     String keyAsString = super.getKeyAsString().     if (keyAsString != null) {         return keyAsString.     }     if (key != null) {         return Double.toString(key).     }     return null. }
-false;static;2;3;;static ParsedBucket fromXContent(XContentParser parser, boolean keyed) throws IOException {     return parseXContent(parser, keyed, ParsedBucket::new, (p, bucket) -> bucket.key = p.doubleValue()). }

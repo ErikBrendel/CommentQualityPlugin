@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;private;1;3;;private void readBlock(MemorySegment segment) throws IOException {     addRequest(new SegmentReadRequest(this, segment)). }
-false;public;0;10;;@Override public List<MemorySegment> getFullSegments() {     synchronized (this.closeLock) {         if (!this.isClosed() || this.requestsNotReturned.get() > 0) {             throw new IllegalStateException("Full segments can only be obtained after the reader was properly closed.").         }     }     return this.returnBuffers. }
-false;public;1;4;;@Override public void requestSuccessful(MemorySegment buffer) {     list.add(buffer). }
-false;public;2;4;;@Override public void requestFailed(MemorySegment buffer, IOException e) {     list.add(buffer). }

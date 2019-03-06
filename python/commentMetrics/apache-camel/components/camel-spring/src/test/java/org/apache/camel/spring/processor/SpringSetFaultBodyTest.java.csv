@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/spring/processor/SpringSetFaultBodyTest.xml"). }
-false;public;1;4;;@Override public void process(Exchange exchange) throws Exception {     exchange.getIn().setBody("Hello World"). }
-false;public;0;13;;@Test public void testSetFaultBody() throws Exception {     Exchange out = template.request("direct:start", new Processor() {          @Override         public void process(Exchange exchange) throws Exception {             exchange.getIn().setBody("Hello World").         }     }).     assertNotNull(out).     assertEquals("Bye World", out.getIn().getBody()).     assertTrue("Should be a fault body", out.getIn().isFault()). }

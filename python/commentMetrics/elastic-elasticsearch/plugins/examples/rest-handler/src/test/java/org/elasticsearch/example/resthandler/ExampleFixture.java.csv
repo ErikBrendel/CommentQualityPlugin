@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;7;;@Override protected Response handle(final Request request) throws IOException {     if ("GET".equals(request.getMethod()) && "/".equals(request.getPath())) {         return new Response(200, TEXT_PLAIN_CONTENT_TYPE, message.getBytes(UTF_8)).     }     return null. }
-false;public,static;1;8;;public static void main(final String[] args) throws Exception {     if (args == null || args.length != 2) {         throw new IllegalArgumentException("ExampleFixture <working directory> <echo message>").     }     final ExampleFixture fixture = new ExampleFixture(args[0], args[1]).     fixture.listen(). }

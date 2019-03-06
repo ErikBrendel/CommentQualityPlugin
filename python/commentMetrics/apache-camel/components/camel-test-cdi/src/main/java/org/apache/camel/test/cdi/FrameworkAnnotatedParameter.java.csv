@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public AnnotatedCallable<X> getDeclaringCallable() {     return null. }
-false;public;0;4;;@Override public int getPosition() {     return position. }
-false;public;1;9;;@Override public <Y extends Annotation> Y getAnnotation(Class<Y> type) {     for (Annotation annotation : getAnnotations()) {         if (annotation.annotationType() == type) {             return type.cast(annotation).         }     }     return null. }
-false;public;0;4;;@Override public Set<Annotation> getAnnotations() {     return Collections.unmodifiableSet(annotations). }
-false;public;0;4;;@Override public Type getBaseType() {     return type. }
-false;public;0;8;;@Override public Set<Type> getTypeClosure() {     if (type instanceof Class) {         return manager.createAnnotatedType((Class) type).getTypeClosure().     } else {         return Collections.singleton(type).     } }
-false;public;1;4;;@Override public boolean isAnnotationPresent(Class<? extends Annotation> type) {     return getAnnotation(type) != null. }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Test public void testSetCurrentLowWatermark() {     WatermarkGauge metric = new WatermarkGauge().     Assert.assertEquals(Long.MIN_VALUE, metric.getValue().longValue()).     metric.setCurrentWatermark(64).     Assert.assertEquals(64, metric.getValue().longValue()). }

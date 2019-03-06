@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void freemarkerAutoConfigurationWasImported() {     assertThat(this.applicationContext).has(importedAutoConfiguration(FreeMarkerAutoConfiguration.class)). }
-false;public;0;5;;@Test public void groovyTemplatesAutoConfigurationWasImported() {     assertThat(this.applicationContext).has(importedAutoConfiguration(GroovyTemplateAutoConfiguration.class)). }
-false;public;0;5;;@Test public void mustacheAutoConfigurationWasImported() {     assertThat(this.applicationContext).has(importedAutoConfiguration(MustacheAutoConfiguration.class)). }
-false;public;0;5;;@Test public void thymeleafAutoConfigurationWasImported() {     assertThat(this.applicationContext).has(importedAutoConfiguration(ThymeleafAutoConfiguration.class)). }
-false;public;0;5;;@Test public void taskExecutionAutoConfigurationWasImported() {     assertThat(this.applicationContext).has(importedAutoConfiguration(TaskExecutionAutoConfiguration.class)). }
-false;public;0;9;;@Test public void asyncTaskExecutorWithApplicationTaskExecutor() {     assertThat(this.applicationContext.getBeansOfType(AsyncTaskExecutor.class)).hasSize(1).     assertThat(ReflectionTestUtils.getField(this.applicationContext.getBean(RequestMappingHandlerAdapter.class), "taskExecutor")).isSameAs(this.applicationContext.getBean("applicationTaskExecutor")). }

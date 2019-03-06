@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Test public void testPluginInstalled() {     try (TransportClient client = new PreBuiltXPackTransportClient(Settings.EMPTY)) {         Settings settings = client.settings().         assertEquals(SecurityField.NAME4, NetworkModule.TRANSPORT_TYPE_SETTING.get(settings)).     } }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Override public Settings indexSettings() {     return Settings.builder().put(super.indexSettings()).put("index.store.type", "smb_mmap_fs").build(). }

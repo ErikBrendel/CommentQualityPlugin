@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void findsAllTags() {     List<Tag> tags = this.repository.findAll().     assertThat(tags).hasSize(3).     for (Tag tag : tags) {         assertThat(tag.getNotes().size()).isGreaterThan(0).     } }

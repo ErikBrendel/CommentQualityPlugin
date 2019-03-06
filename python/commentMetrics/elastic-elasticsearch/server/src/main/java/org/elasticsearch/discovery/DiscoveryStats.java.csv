@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;8;;@Override public void writeTo(StreamOutput out) throws IOException {     out.writeOptionalWriteable(queueStats).     if (out.getVersion().onOrAfter(Version.V_6_1_0)) {         out.writeOptionalWriteable(publishStats).     } }
-false;public;2;12;;@Override public XContentBuilder toXContent(XContentBuilder builder, Params params) throws IOException {     builder.startObject(Fields.DISCOVERY).     if (queueStats != null) {         queueStats.toXContent(builder, params).     }     if (publishStats != null) {         publishStats.toXContent(builder, params).     }     builder.endObject().     return builder. }
-false;public;0;3;;public PendingClusterStateStats getQueueStats() {     return queueStats. }
-false;public;0;3;;public PublishClusterStateStats getPublishStats() {     return publishStats. }

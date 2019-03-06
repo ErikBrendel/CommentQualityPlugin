@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;2;;@Override public void start() throws Exception { }
-false;public;1;2;;@Override public void shutdown(JobStatus jobStatus) throws Exception { }
-false;public;0;4;;@Override public long getAndIncrement() throws Exception {     return checkpointIdCounter.getAndIncrement(). }
-false;public;1;4;;@Override public void setCount(long newCount) {     checkpointIdCounter.set(newCount). }
-true;public;0;3;/**  * Returns the last checkpoint ID (current - 1).  *  * @return Last checkpoint ID.  */ ;/**  * Returns the last checkpoint ID (current - 1).  *  * @return Last checkpoint ID.  */ public long getLast() {     return checkpointIdCounter.get() - 1. }

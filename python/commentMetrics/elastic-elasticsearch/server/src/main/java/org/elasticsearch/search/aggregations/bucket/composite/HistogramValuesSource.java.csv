@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public boolean isFloatingPoint() {     return true. }
-false;public;0;4;;@Override public double nextValue() throws IOException {     return Math.floor(values.nextValue() / interval) * interval. }
-false;public;0;4;;@Override public int docValueCount() {     return values.docValueCount(). }
-false;public;1;4;;@Override public boolean advanceExact(int target) throws IOException {     return values.advanceExact(target). }
-false;public;1;20;;@Override public SortedNumericDoubleValues doubleValues(LeafReaderContext context) throws IOException {     SortedNumericDoubleValues values = vs.doubleValues(context).     return new SortedNumericDoubleValues() {          @Override         public double nextValue() throws IOException {             return Math.floor(values.nextValue() / interval) * interval.         }          @Override         public int docValueCount() {             return values.docValueCount().         }          @Override         public boolean advanceExact(int target) throws IOException {             return values.advanceExact(target).         }     }. }
-false;public;1;4;;@Override public SortedBinaryDocValues bytesValues(LeafReaderContext context) throws IOException {     throw new UnsupportedOperationException("not applicable"). }
-false;public;1;4;;@Override public SortedNumericDocValues longValues(LeafReaderContext context) throws IOException {     throw new UnsupportedOperationException("not applicable"). }

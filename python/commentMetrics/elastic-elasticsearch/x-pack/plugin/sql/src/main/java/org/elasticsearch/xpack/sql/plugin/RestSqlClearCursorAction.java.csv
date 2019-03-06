@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;2;10;;@Override protected RestChannelConsumer prepareRequest(RestRequest request, NodeClient client) throws IOException {     SqlClearCursorRequest sqlRequest.     try (XContentParser parser = request.contentParser()) {         sqlRequest = SqlClearCursorRequest.fromXContent(parser).     }     return channel -> client.executeLocally(SqlClearCursorAction.INSTANCE, sqlRequest, new RestToXContentListener<>(channel)). }
-false;public;0;4;;@Override public String getName() {     return "sql_clear_cursor". }

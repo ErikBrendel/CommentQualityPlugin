@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;public TestingBlobStoreBuilder setPutFunction(Function<Tuple3<File, JobID, BlobKey>, Boolean> putFunction) {     this.putFunction = putFunction.     return this. }
-false;public;1;4;;public TestingBlobStoreBuilder setDeleteFunction(BiFunction<JobID, BlobKey, Boolean> deleteFunction) {     this.deleteFunction = deleteFunction.     return this. }
-false;public;1;4;;public TestingBlobStoreBuilder setDeleteAllFunction(Function<JobID, Boolean> deleteAllFunction) {     this.deleteAllFunction = deleteAllFunction.     return this. }
-false;public;1;4;;public TestingBlobStoreBuilder setGetFunction(Function<Tuple3<JobID, BlobKey, File>, Boolean> getFunction) {     this.getFunction = getFunction.     return this. }
-false;public;0;3;;public TestingBlobStore createTestingBlobStore() {     return new TestingBlobStore(putFunction, deleteFunction, deleteAllFunction, getFunction). }

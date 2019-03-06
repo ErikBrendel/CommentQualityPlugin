@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;3;6;;@Override public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {     request.setAttribute(SKIP_ATTRIBUTE, Boolean.TRUE).     return true. }

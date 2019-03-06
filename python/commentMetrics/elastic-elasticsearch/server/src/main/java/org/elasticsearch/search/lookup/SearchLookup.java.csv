@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;public LeafSearchLookup getLeafSearchLookup(LeafReaderContext context) {     return new LeafSearchLookup(context, docMap.getLeafDocLookup(context), sourceLookup, fieldsLookup.getLeafFieldsLookup(context)). }
-false;public;0;3;;public DocLookup doc() {     return docMap. }
-false;public;0;3;;public SourceLookup source() {     return sourceLookup. }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;4;;@Override public String getBucketId(T element, BucketAssigner.Context context) {     return "". }
-false;public;0;5;;@Override public SimpleVersionedSerializer<String> getSerializer() {     // in the future this could be optimized as it is the empty string.     return SimpleVersionedStringSerializer.INSTANCE. }
-false;public;0;4;;@Override public String toString() {     return "BasePathBucketAssigner". }

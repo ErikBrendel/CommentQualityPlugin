@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;2;6;;@Override protected void swap(int i, int j) {     final double tmp = values[i].     values[i] = values[j].     values[j] = tmp. }
-false;protected;2;4;;@Override protected int compare(int i, int j) {     return Double.compare(values[i], values[j]). }
-true;protected,final;1;5;/**  * Set the {@link #docValueCount()} and ensure that the {@link #values} array can  * store at least that many entries.  */ ;/**  * Set the {@link #docValueCount()} and ensure that the {@link #values} array can  * store at least that many entries.  */ protected final void resize(int newSize) {     count = newSize.     values = ArrayUtil.grow(values, count).     valuesCursor = 0. }
-true;protected,final;0;3;/**  * Sort values that are stored between offsets <code>0</code> and  * {@link #docValueCount} of {@link #values}.  */ ;/**  * Sort values that are stored between offsets <code>0</code> and  * {@link #docValueCount} of {@link #values}.  */ protected final void sort() {     sorter.sort(0, count). }
-false;public,final;0;4;;@Override public final int docValueCount() {     return count. }
-false;public,final;0;4;;@Override public final double nextValue() {     return values[valuesCursor++]. }

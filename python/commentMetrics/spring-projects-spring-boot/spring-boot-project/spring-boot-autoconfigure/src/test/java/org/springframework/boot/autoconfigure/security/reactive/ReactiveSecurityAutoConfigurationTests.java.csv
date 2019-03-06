@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;9;;@Test public void backsOffWhenWebFilterChainProxyBeanPresent() {     this.contextRunner.withConfiguration(AutoConfigurations.of(ReactiveSecurityAutoConfiguration.class)).withUserConfiguration(WebFilterChainProxyConfiguration.class).run((context) -> assertThat(context).hasSingleBean(WebFilterChainProxy.class)). }
-false;public;0;9;;@Test public void enablesWebFluxSecurity() {     this.contextRunner.withConfiguration(AutoConfigurations.of(ReactiveSecurityAutoConfiguration.class, ReactiveUserDetailsServiceAutoConfiguration.class)).run((context) -> assertThat(context).getBean(WebFilterChainProxy.class).isNotNull()). }
-false;public;0;4;;@Bean public WebFilterChainProxy webFilterChainProxy() {     return mock(WebFilterChainProxy.class). }

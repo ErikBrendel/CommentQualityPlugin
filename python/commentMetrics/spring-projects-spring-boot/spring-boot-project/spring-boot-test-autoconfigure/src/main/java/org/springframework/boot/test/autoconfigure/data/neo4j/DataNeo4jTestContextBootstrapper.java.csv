@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;6;;@Override protected String[] getProperties(Class<?> testClass) {     DataNeo4jTest annotation = AnnotatedElementUtils.getMergedAnnotation(testClass, DataNeo4jTest.class).     return (annotation != null) ? annotation.properties() : null. }

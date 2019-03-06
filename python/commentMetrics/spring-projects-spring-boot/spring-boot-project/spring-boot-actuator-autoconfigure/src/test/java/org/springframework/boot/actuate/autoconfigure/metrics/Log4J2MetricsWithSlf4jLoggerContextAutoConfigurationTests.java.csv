@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void backsOffWhenLoggerContextIsBackedBySlf4j() {     assertThat(LogManager.getContext()).isInstanceOf(SLF4JLoggerContext.class).     this.contextRunner.run((context) -> assertThat(context).doesNotHaveBean(Log4j2Metrics.class)). }

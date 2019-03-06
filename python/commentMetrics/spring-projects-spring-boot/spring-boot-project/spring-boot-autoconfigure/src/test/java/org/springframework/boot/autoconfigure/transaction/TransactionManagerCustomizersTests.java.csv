@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void customizeWithNullCustomizersShouldDoNothing() {     new TransactionManagerCustomizers(null).customize(mock(PlatformTransactionManager.class)). }
-false;public;0;12;;@Test public void customizeShouldCheckGeneric() {     List<TestCustomizer<?>> list = new ArrayList<>().     list.add(new TestCustomizer<>()).     list.add(new TestJtaCustomizer()).     TransactionManagerCustomizers customizers = new TransactionManagerCustomizers(list).     customizers.customize(mock(PlatformTransactionManager.class)).     customizers.customize(mock(JtaTransactionManager.class)).     assertThat(list.get(0).getCount()).isEqualTo(2).     assertThat(list.get(1).getCount()).isEqualTo(1). }
-false;public;1;4;;@Override public void customize(T transactionManager) {     this.count++. }
-false;public;0;3;;public int getCount() {     return this.count. }

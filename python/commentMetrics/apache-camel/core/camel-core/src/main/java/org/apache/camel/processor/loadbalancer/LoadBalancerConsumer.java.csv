@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;5;;@Override protected void doStart() throws Exception {     super.doStart().     loadBalancer.addProcessor(getAsyncProcessor()). }
-false;protected;0;5;;@Override protected void doStop() throws Exception {     loadBalancer.removeProcessor(getAsyncProcessor()).     super.doStop(). }

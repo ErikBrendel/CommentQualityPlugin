@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;7;;public void setContext(SocketChannelContext context) {     if (contextSet.compareAndSet(false, true)) {         this.context = context.     } else {         throw new IllegalStateException("Context on this channel were already set. It should only be once.").     } }
-false;public;0;7;;@Override public InetSocketAddress getLocalAddress() {     if (localAddress == null) {         localAddress = (InetSocketAddress) socketChannel.socket().getLocalSocketAddress().     }     return localAddress. }
-false;public;0;4;;@Override public SocketChannel getRawChannel() {     return socketChannel. }
-false;public;0;4;;@Override public SocketChannelContext getContext() {     return context. }
-false;public;0;3;;public InetSocketAddress getRemoteAddress() {     return remoteAddress. }
-false;public;1;3;;public void addConnectListener(BiConsumer<Void, Exception> listener) {     context.addConnectListener(listener). }
-false;public;0;7;;@Override public String toString() {     return "NioSocketChannel{" + "localAddress=" + getLocalAddress() + ", remoteAddress=" + remoteAddress + '}'. }

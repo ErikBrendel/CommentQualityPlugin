@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public String isMockEndpointsAndSkip() {     return "seda:queue". }
-false;public;0;8;;@Test public void testMockAndSkip() throws Exception {     getMockEndpoint("mock:seda:queue").expectedBodiesReceived("Bye Camel").     template.sendBody("seda:start", "Camel").     assertMockEndpointsSatisfied(). }
-false;public;0;6;;@Override public void configure() throws Exception {     from("seda:start").transform(simple("Bye ${body}")).to("seda:queue"). }
-false;protected;0;11;;@Override protected RoutesBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("seda:start").transform(simple("Bye ${body}")).to("seda:queue").         }     }. }

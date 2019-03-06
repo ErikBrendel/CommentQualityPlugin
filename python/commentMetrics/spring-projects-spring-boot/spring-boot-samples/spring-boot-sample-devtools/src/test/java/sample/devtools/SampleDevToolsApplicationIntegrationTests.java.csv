@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Test public void testStaticResource() {     ResponseEntity<String> entity = this.restTemplate.getForEntity("/css/application.css", String.class).     assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.OK).     assertThat(entity.getBody()).contains("color: green."). }
-false;public;0;7;;@Test public void testPublicResource() {     ResponseEntity<String> entity = this.restTemplate.getForEntity("/public.txt", String.class).     assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.OK).     assertThat(entity.getBody()).contains("public file"). }
-false;public;0;6;;@Test public void testClassResource() {     ResponseEntity<String> entity = this.restTemplate.getForEntity("/application.properties", String.class).     assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND). }

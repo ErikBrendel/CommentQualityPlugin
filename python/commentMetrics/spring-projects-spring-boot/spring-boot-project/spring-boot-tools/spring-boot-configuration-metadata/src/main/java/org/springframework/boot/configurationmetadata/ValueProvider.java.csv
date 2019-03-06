@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;3;/**  * Return the name of the provider.  * @return the name  */ ;/**  * Return the name of the provider.  * @return the name  */ public String getName() {     return this.name. }
-false;public;1;3;;public void setName(String name) {     this.name = name. }
-true;public;0;3;/**  * Return the parameters.  * @return the parameters  */ ;/**  * Return the parameters.  * @return the parameters  */ public Map<String, Object> getParameters() {     return this.parameters. }
-false;public;0;5;;@Override public String toString() {     return "ValueProvider{" + "name='" + this.name + ", parameters=" + this.parameters + '}'. }

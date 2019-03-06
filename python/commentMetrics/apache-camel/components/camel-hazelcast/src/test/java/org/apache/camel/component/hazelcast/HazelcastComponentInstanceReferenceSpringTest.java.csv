@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;11;;@Test public void testComparePutAndGet() {     template.sendBodyAndHeader("direct:testHazelcastInstanceBeanRefPut", TEST_VALUE, HazelcastConstants.OBJECT_ID, TEST_KEY).     template.sendBodyAndHeader("direct:testHazelcastInstanceBeanRefGet", null, HazelcastConstants.OBJECT_ID, TEST_KEY).     final Object testValueReturn = consumer.receiveBody("seda:out").     assertEquals(TEST_VALUE, testValueReturn). }
-false;protected;0;6;;@Override protected AbstractApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("/META-INF/spring/test-camel-context-hazelcast-instance-reference.xml"). }

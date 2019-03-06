@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void testConvertStringToValue() {     assertEquals("false", allowNonRestoredStateQueryParameter.convertValueToString(false)).     assertEquals("true", allowNonRestoredStateQueryParameter.convertValueToString(true)). }
-false;public;0;6;;@Test public void testConvertValueFromString() {     assertEquals(false, allowNonRestoredStateQueryParameter.convertStringToValue("false")).     assertEquals(true, allowNonRestoredStateQueryParameter.convertStringToValue("true")).     assertEquals(true, allowNonRestoredStateQueryParameter.convertStringToValue("TRUE")). }

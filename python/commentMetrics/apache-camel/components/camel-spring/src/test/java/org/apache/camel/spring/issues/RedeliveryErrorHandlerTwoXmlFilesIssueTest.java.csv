@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;5;;@Override protected AbstractXmlApplicationContext createApplicationContext() {     return new ClassPathXmlApplicationContext("org/apache/camel/spring/issues/RedeliveryErrorHandlerTwoXmlFilesIssueTest-1.xml", "org/apache/camel/spring/issues/RedeliveryErrorHandlerTwoXmlFilesIssueTest-2.xml"). }
-false;public;0;13;;@Test public void testRedeliveryErrorHandlerTwoXmlFilesIssue() throws Exception {     getMockEndpoint("mock:handled").expectedMessageCount(1).     getMockEndpoint("mock:dead").expectedMessageCount(0).     getMockEndpoint("mock:result").expectedMessageCount(0).     template.sendBody("direct:start", "Hello World").     assertMockEndpointsSatisfied().     OnRedeliveryCounter counter = context.getRegistry().lookupByNameAndType("counter", OnRedeliveryCounter.class).     assertEquals(3, counter.getCounter()). }
-false;public;1;4;;@Override public void process(Exchange exchange) throws Exception {     counter++. }
-false;public;0;3;;public int getCounter() {     return counter. }

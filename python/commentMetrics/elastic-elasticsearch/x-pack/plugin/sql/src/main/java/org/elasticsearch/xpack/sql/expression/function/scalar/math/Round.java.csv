@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected NodeInfo<Round> info() {     return NodeInfo.create(this, Round::new, left(), right()). }
-false;protected;2;4;;@Override protected Round replaceChildren(Expression newLeft, Expression newRight) {     return new Round(source(), newLeft, newRight). }
-false;public;0;4;;@Override public DataType dataType() {     return left().dataType(). }

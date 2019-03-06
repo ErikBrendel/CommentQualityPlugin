@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;public void testFromXContent() throws IOException {     xContentTester(this::createParser, this::createTestInstance, AcknowledgedResponseTests::toXContent, StopRollupJobResponse::fromXContent).supportsUnknownFields(false).test(). }
-false;private;0;3;;private StopRollupJobResponse createTestInstance() {     return new StopRollupJobResponse(randomBoolean()). }

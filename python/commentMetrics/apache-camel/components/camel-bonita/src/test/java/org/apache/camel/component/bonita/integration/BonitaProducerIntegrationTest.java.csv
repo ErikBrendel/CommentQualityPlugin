@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Test public void testStartCase() throws Exception {     Map<String, Serializable> map = new HashMap<>().     map.put("vacationRequestIdContract", "1").     template.sendBody("direct:startCase", map). }
-false;public;0;5;;@Override public void configure() throws Exception {     from("direct:startCase").to("bonita:startCase?hostname={{host}}&port={{port}}&processName={{process}}&username={{username}}&password={{password}}"). }
-false;protected;0;10;;@Override protected RoutesBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:startCase").to("bonita:startCase?hostname={{host}}&port={{port}}&processName={{process}}&username={{username}}&password={{password}}").         }     }. }

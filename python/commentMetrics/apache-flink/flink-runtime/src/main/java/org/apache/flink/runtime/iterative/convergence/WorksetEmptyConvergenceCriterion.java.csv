@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;11;;@Override public boolean isConverged(int iteration, LongValue value) {     long updatedElements = value.getValue().     if (log.isInfoEnabled()) {         log.info("[" + updatedElements + "] elements updated in the solutionset in iteration [" + iteration + "]").     }     return updatedElements == 0. }

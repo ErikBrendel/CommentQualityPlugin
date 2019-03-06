@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public boolean isUseRouteBuilder() {     return true. }
-false;protected;0;6;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry registry = super.createRegistry().     registry.bind("ref", new DefaultErrorHandlerBuilder()).     return registry. }
-false;protected;0;6;;@Override protected CamelContext createCamelContext() throws Exception {     CamelContext context = super.createCamelContext().     context.setErrorHandlerFactory(errorHandlerBuilderRef).     return context. }
-false;public;0;9;;@Test public void testErrorHandlerBuilderRef() throws Exception {     String uuid = UUID.randomUUID().toString().     context.addRoutes(new TempRouteBuilder(uuid)).     checkObjectSize(2).     context.getRouteController().stopRoute(uuid).     context.removeRoute(uuid).     checkObjectSize(1). }
-false;private;1;6;;private void checkObjectSize(int size) throws Exception {     assertEquals("Get a wrong size of Route", size, context.getRoutes().size()).     Field field = ErrorHandlerBuilderRef.class.getDeclaredField("handlers").     field.setAccessible(true).     assertEquals("Get a wrong size of ErrorHandler", size, ((Map<?, ?>) field.get(errorHandlerBuilderRef)).size()). }
-false;public;0;4;;@Override public void configure() throws Exception {     from("direct:foo").routeId(routeId).to("mock:foo"). }
-false;public;0;3;;public void configure() {     from("direct:start").to("mock:result"). }
-false;protected;0;7;;protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() {             from("direct:start").to("mock:result").         }     }. }

@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void scrapeHasContentTypeText004() {     client.get().uri("/actuator/prometheus").exchange().expectStatus().isOk().expectHeader().contentType(MediaType.parseMediaType(TextFormat.CONTENT_TYPE_004)). }
-false;public;1;5;;@Bean public PrometheusScrapeEndpoint prometheusScrapeEndpoint(CollectorRegistry collectorRegistry) {     return new PrometheusScrapeEndpoint(collectorRegistry). }
-false;public;0;4;;@Bean public CollectorRegistry collectorRegistry() {     return new CollectorRegistry(true). }
-false;public;1;4;;@Bean public MeterRegistry registry(CollectorRegistry registry) {     return new PrometheusMeterRegistry((k) -> null, registry, Clock.SYSTEM). }

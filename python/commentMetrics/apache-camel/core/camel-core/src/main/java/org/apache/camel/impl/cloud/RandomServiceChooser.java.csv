@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;14;;@Override public ServiceDefinition choose(List<ServiceDefinition> definitions) {     // Fail if the service definition list is null or empty     if (ObjectHelper.isEmpty(definitions)) {         throw new IllegalArgumentException("The ServiceDefinition list should not be empty").     }     int size = definitions.size().     if (size == 1) {         return definitions.get(0).     } else {         return definitions.get(ThreadLocalRandom.current().nextInt(size)).     } }
-false;public;0;4;;@Override public String toString() {     return "RandomServiceChooser". }

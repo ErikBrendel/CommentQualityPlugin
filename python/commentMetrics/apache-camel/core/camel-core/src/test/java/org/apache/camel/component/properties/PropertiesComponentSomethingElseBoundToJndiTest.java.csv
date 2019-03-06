@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public boolean isUseRouteBuilder() {     return false. }
-false;public;0;4;;@Override public void configure() throws Exception {     from("direct:start").to("mock:result"). }
-false;public;0;19;;@Test public void testPropertiesComponent() throws Exception {     context.addRoutes(new RouteBuilder() {          @Override         public void configure() throws Exception {             from("direct:start").to("mock:result").         }     }).     context.start().     getMockEndpoint("mock:result").expectedMessageCount(1).     template.sendBody("direct:start", "Hello World").     assertMockEndpointsSatisfied().     // should not have a properties component     assertNull("Should not have a properties component", context.hasComponent("properties")). }
-false;protected;0;7;;@Override protected JndiRegistry createRegistry() throws Exception {     JndiRegistry jndi = super.createRegistry().     // bind something else as properties, but this should not cause Camel to fail start     jndi.bind("properties", this).     return jndi. }

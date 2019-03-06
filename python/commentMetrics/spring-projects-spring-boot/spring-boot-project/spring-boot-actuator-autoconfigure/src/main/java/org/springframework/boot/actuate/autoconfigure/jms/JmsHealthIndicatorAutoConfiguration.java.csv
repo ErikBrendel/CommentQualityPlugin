@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;@Bean @ConditionalOnMissingBean(name = "jmsHealthIndicator") public HealthIndicator jmsHealthIndicator(Map<String, ConnectionFactory> connectionFactories) {     return createHealthIndicator(connectionFactories). }

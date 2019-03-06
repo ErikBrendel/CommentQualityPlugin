@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;15;;@Test public void getInterceptors() {     TestInterceptingHttpAccessor accessor = new TestInterceptingHttpAccessor().     List<ClientHttpRequestInterceptor> interceptors = Arrays.asList(new SecondClientHttpRequestInterceptor(), new ThirdClientHttpRequestInterceptor(), new FirstClientHttpRequestInterceptor()).     accessor.setInterceptors(interceptors).     assertThat(accessor.getInterceptors().get(0), Matchers.instanceOf(FirstClientHttpRequestInterceptor.class)).     assertThat(accessor.getInterceptors().get(1), Matchers.instanceOf(SecondClientHttpRequestInterceptor.class)).     assertThat(accessor.getInterceptors().get(2), Matchers.instanceOf(ThirdClientHttpRequestInterceptor.class)). }
-false;public;3;4;;@Override public ClientHttpResponse intercept(HttpRequest request, byte[] body, ClientHttpRequestExecution execution) {     return null. }
-false;public;3;4;;@Override public ClientHttpResponse intercept(HttpRequest request, byte[] body, ClientHttpRequestExecution execution) {     return null. }
-false;public;0;4;;@Override public int getOrder() {     return 2. }
-false;public;3;4;;@Override public ClientHttpResponse intercept(HttpRequest request, byte[] body, ClientHttpRequestExecution execution) {     return null. }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;3;;public static Address address(String host) {     return new Address(host, AvailablePortFinder.getNextAvailable()). }
-false;public,static;1;6;;public static AtomixReplica replica(Address address) {     AtomixReplica replica = AtomixReplica.builder(address).withStorage(AtomixHelper.inMemoryStorage()).build().     replica.bootstrap().join().     return replica. }
-false;public,static;1;6;;public static AtomixClient client(Address address) {     AtomixClient client = AtomixClient.builder().build().     client.connect(address).join().     return client. }

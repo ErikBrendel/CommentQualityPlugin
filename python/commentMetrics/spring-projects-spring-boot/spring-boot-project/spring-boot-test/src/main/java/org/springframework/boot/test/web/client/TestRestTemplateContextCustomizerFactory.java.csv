@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;9;;@Override public ContextCustomizer createContextCustomizer(Class<?> testClass, List<ContextConfigurationAttributes> configAttributes) {     if (AnnotatedElementUtils.findMergedAnnotation(testClass, SpringBootTest.class) != null) {         return new TestRestTemplateContextCustomizer().     }     return null. }

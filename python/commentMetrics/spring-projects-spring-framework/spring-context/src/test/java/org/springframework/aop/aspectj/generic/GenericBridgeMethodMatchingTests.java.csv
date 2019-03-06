@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;11;;@SuppressWarnings("unchecked") @org.junit.Before public void setup() {     ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext(getClass().getSimpleName() + "-context.xml", getClass()).     counterAspect = (GenericCounterAspect) ctx.getBean("counterAspect").     counterAspect.count = 0.     testBean = (DerivedInterface<String>) ctx.getBean("testBean"). }
-false;public;0;5;;@Test public void testGenericDerivedInterfaceMethodThroughInterface() {     testBean.genericDerivedInterfaceMethod("").     assertEquals(1, counterAspect.count). }
-false;public;0;5;;@Test public void testGenericBaseInterfaceMethodThroughInterface() {     testBean.genericBaseInterfaceMethod("").     assertEquals(1, counterAspect.count). }
-false;;1;1;;void genericBaseInterfaceMethod(T t).
-false;public;1;1;;public void genericDerivedInterfaceMethod(T t).
-false;public;1;3;;@Override public void genericDerivedInterfaceMethod(String t) { }
-false;public;1;3;;@Override public void genericBaseInterfaceMethod(String t) { }
-false;public;0;4;;@Before("execution(* *..BaseInterface+.*(..))") public void increment() {     count++. }

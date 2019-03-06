@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected Collection<Class<? extends Plugin>> nodePlugins() {     return Arrays.asList(SMBStorePlugin.class). }
-false;public;0;11;;public void testAzureFs() {     // Create an index and index some documents     createIndex("test").     long nbDocs = randomIntBetween(10, 1000).     for (long i = 0. i < nbDocs. i++) {         index("test", "doc", "" + i, "foo", "bar").     }     refresh().     SearchResponse response = client().prepareSearch("test").get().     assertThat(response.getHits().getTotalHits().value, is(nbDocs)). }

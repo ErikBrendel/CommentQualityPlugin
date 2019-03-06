@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public Command createCommand(String command) {     return new EchoCommand(command). }
-false;public;1;3;;@Override public void setInputStream(InputStream in) { }
-false;public;1;4;;@Override public void setOutputStream(OutputStream out) {     this.out = out. }
-false;public;1;4;;@Override public void setErrorStream(OutputStream err) {     this.err = err. }
-false;public;1;4;;@Override public void setExitCallback(ExitCallback callback) {     this.callback = callback. }
-false;public;1;5;;@Override public void start(Environment env) throws IOException {     thread = new Thread(this, "EchoCommand").     thread.start(). }
-false;public;0;4;;@Override public void destroy() {     thread.interrupt(). }
-false;public;0;22;;@Override public void run() {     boolean succeeded = true.     String message = null.     try {         // we set the error with the same command message         err.write("Error:".getBytes()).         err.write(command.getBytes()).         err.flush().         out.write(command.getBytes()).         out.flush().     } catch (Exception e) {         succeeded = false.         message = e.toString().     } finally {         if (succeeded) {             callback.onExit(0).         } else {             callback.onExit(1, message).         }     } }

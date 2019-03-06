@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public ScpConfiguration getConfiguration() {     return configuration. }
-false;protected;1;4;;@Override protected RemoteFileConsumer<ScpFile> buildConsumer(Processor processor) {     throw new UnsupportedOperationException("This component does not support consuming from this endpoint"). }
-false;protected;0;4;;@Override protected GenericFileProducer<ScpFile> buildProducer() {     return new ScpProducer(this, createRemoteFileOperations()). }
-false;public;0;6;;@Override public RemoteFileOperations<ScpFile> createRemoteFileOperations() {     ScpOperations operations = new ScpOperations().     operations.setEndpoint(this).     return operations. }
-false;public;0;4;;@Override public String getScheme() {     return "scp". }
-false;public;0;5;;@Override public Expression getTempFileName() {     log.debug("Creation of temporary files not supported by the scp: protocol.").     return null. }

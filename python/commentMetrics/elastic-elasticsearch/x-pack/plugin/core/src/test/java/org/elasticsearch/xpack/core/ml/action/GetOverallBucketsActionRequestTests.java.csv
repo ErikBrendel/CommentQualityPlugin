@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;25;;@Override protected Request createTestInstance() {     Request request = new Request(randomAlphaOfLengthBetween(1, 20)).     if (randomBoolean()) {         request.setTopN(randomIntBetween(1, 1000)).     }     if (randomBoolean()) {         request.setBucketSpan(TimeValue.timeValueSeconds(randomIntBetween(1, 1_000_000))).     }     if (randomBoolean()) {         request.setStart(randomNonNegativeLong()).     }     if (randomBoolean()) {         request.setExcludeInterim(randomBoolean()).     }     if (randomBoolean()) {         request.setOverallScore(randomDouble()).     }     if (randomBoolean()) {         request.setEnd(randomNonNegativeLong()).     }     request.setAllowNoJobs(randomBoolean()).     return request. }
-false;protected;0;4;;@Override protected boolean supportsUnknownFields() {     return false. }
-false;protected;0;4;;@Override protected Request createBlankInstance() {     return new Request(). }
-false;protected;1;4;;@Override protected Request doParseInstance(XContentParser parser) {     return Request.parseRequest(null, parser). }

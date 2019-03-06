@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;1;1;/**  * Resolve the given media type to a list of path extensions.  * @param mediaType the media type to resolve  * @return a list of extensions or an empty list (never {@code null})  */ ;/**  * Resolve the given media type to a list of path extensions.  * @param mediaType the media type to resolve  * @return a list of extensions or an empty list (never {@code null})  */ List<String> resolveFileExtensions(MediaType mediaType).
-true;;0;1;/**  * Return all registered file extensions.  * @return a list of extensions or an empty list (never {@code null})  */ ;/**  * Return all registered file extensions.  * @return a list of extensions or an empty list (never {@code null})  */ List<String> getAllFileExtensions().

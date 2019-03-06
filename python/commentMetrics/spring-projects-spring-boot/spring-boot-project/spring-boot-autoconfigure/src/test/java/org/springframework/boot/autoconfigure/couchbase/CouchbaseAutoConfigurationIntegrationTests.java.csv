@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void defaultConfiguration() {     this.contextRunner.withPropertyValues("spring.couchbase.bootstrapHosts=localhost").run((context) -> assertThat(context).hasSingleBean(Cluster.class).hasSingleBean(ClusterInfo.class).hasSingleBean(CouchbaseEnvironment.class).hasSingleBean(Bucket.class)). }
-false;public;0;12;;@Test public void customConfiguration() {     this.contextRunner.withUserConfiguration(CustomConfiguration.class).withPropertyValues("spring.couchbase.bootstrapHosts=localhost").run((context) -> {         assertThat(context.getBeansOfType(Cluster.class)).hasSize(2).         assertThat(context.getBeansOfType(ClusterInfo.class)).hasSize(1).         assertThat(context.getBeansOfType(CouchbaseEnvironment.class)).hasSize(1).         assertThat(context.getBeansOfType(Bucket.class)).hasSize(2).     }). }
-false;public;0;4;;@Bean public Cluster myCustomCouchbaseCluster() {     return mock(Cluster.class). }
-false;public;0;4;;@Bean public Bucket myCustomCouchbaseClient() {     return mock(CouchbaseBucket.class). }

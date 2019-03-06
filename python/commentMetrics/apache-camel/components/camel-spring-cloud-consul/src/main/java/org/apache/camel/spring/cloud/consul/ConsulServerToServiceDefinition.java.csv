@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;9;;@Override public ServiceDefinition convert(ConsulServer source) {     return new DefaultServiceDefinition(source.getId(), source.getHost(), source.getPort(), source.getMetadata()). }

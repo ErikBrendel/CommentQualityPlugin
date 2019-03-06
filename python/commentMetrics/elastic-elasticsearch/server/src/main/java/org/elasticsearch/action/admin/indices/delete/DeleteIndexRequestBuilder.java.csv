@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;1;4;/**  * Specifies what type of requested indices to ignore and wildcard indices expressions.  * <p>  * For example indices that don't exist.  */ ;/**  * Specifies what type of requested indices to ignore and wildcard indices expressions.  * <p>  * For example indices that don't exist.  */ public DeleteIndexRequestBuilder setIndicesOptions(IndicesOptions options) {     request.indicesOptions(options).     return this. }

@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;8;;public void process(Exchange exchange) throws Exception {     String eventName = getEventName(exchange).     String version = getVersion(exchange).     LOGGER.debug("scheduleActivity : " + eventName + " : " + version).     Object result = camelSWFClient.scheduleActivity(eventName, version, exchange.getIn().getBody()).     endpoint.setResult(exchange, result). }
-false;private;1;4;;private String getEventName(Exchange exchange) {     String eventName = exchange.getIn().getHeader(SWFConstants.EVENT_NAME, String.class).     return eventName != null ? eventName : configuration.getEventName(). }
-false;private;1;4;;private String getVersion(Exchange exchange) {     String version = exchange.getIn().getHeader(SWFConstants.VERSION, String.class).     return version != null ? version : configuration.getVersion(). }
-false;public;0;7;;@Override public String toString() {     if (swfActivityProducerToString == null) {         swfActivityProducerToString = "SWFActivityProducer[" + URISupport.sanitizeUri(getEndpoint().getEndpointUri()) + "]".     }     return swfActivityProducerToString. }

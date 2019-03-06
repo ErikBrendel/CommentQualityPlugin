@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * Resets any state within this error handler  */ ;/**  * Resets any state within this error handler  */ void reset().
-true;;3;1;/**  * Process any errors which may have occurred during validation  *  * @param exchange the exchange  * @param schema   the schema  * @param result   the result  * @throws ValidationException is thrown in case of validation errors  */ ;/**  * Process any errors which may have occurred during validation  *  * @param exchange the exchange  * @param schema   the schema  * @param result   the result  * @throws ValidationException is thrown in case of validation errors  */ void handleErrors(Exchange exchange, Schema schema, Result result) throws ValidationException.

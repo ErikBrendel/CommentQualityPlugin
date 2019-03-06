@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;13;;@Override public void reduce(Iterable<T> values, Collector<T> out) throws Exception {     int emitCnt = 0.     for (T val : values) {         out.collect(val).         emitCnt++.         if (emitCnt == count) {             break.         }     } }
-false;public;2;4;;@Override public void combine(Iterable<T> values, Collector<T> out) throws Exception {     reduce(values, out). }

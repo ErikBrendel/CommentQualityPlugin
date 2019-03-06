@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void shouldDetermineProperAuthenticationType() {     assertEquals(AuthenticationType.USERNAME_PASSWORD, usernamePassword.getType()).     assertEquals(AuthenticationType.REFRESH_TOKEN, refreshToken.getType()).     assertEquals(AuthenticationType.JWT, jwt.getType()). }
-false;public;0;4;;@Test public void shouldJwtParameters() {     jwt.validate(). }
-false;public;0;4;;@Test public void shouldValidateRefreshTokenParameters() {     refreshToken.validate(). }
-false;public;0;4;;@Test public void shouldValidateUsernamePasswordParameters() {     usernamePassword.validate(). }

@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public Map<String, Object> asMap() {     return this.asMap. }
-false;public;0;3;;public SourceLookup source() {     return this.sourceLookup. }
-false;public;0;3;;public LeafFieldsLookup fields() {     return this.fieldsLookup. }
-false;public;0;3;;public LeafDocLookup doc() {     return this.docMap. }
-false;public;1;5;;public void setDocument(int docId) {     docMap.setDocument(docId).     sourceLookup.setSegmentAndDocument(ctx, docId).     fieldsLookup.setDocument(docId). }

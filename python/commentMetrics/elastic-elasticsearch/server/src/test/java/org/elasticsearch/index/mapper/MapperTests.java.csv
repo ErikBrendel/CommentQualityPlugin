@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;public void testSuccessfulBuilderContext() {     Settings settings = Settings.builder().put(IndexMetaData.SETTING_VERSION_CREATED, Version.CURRENT).build().     ContentPath contentPath = new ContentPath(1).     Mapper.BuilderContext context = new Mapper.BuilderContext(settings, contentPath).     assertEquals(settings, context.indexSettings()).     assertEquals(contentPath, context.path()). }
-false;public;0;3;;public void testBuilderContextWithIndexSettingsAsNull() {     expectThrows(NullPointerException.class, () -> new Mapper.BuilderContext(null, new ContentPath(1))). }

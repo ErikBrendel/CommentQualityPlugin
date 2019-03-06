@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@JsonIgnore public Collection<AggregatedMetric> getMetrics() {     return metrics. }
-false;public;3;8;;@Override public void serialize(AggregatedMetricsResponseBody metricCollectionResponseBody, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {     jsonGenerator.writeObject(metricCollectionResponseBody.getMetrics()). }
-false;public;2;9;;@Override public AggregatedMetricsResponseBody deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException {     return new AggregatedMetricsResponseBody(jsonParser.readValueAs(new TypeReference<List<AggregatedMetric>>() {     })). }

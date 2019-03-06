@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public LoadBalanceDefinition getDefinition() {     return (LoadBalanceDefinition) super.getDefinition(). }
-false;public;0;5;;@Override public String getExpressionLanguage() {     StickyLoadBalancerDefinition sticky = (StickyLoadBalancerDefinition) getDefinition().getLoadBalancerType().     return sticky.getCorrelationExpression().getExpressionType().getLanguage(). }
-false;public;0;5;;@Override public String getExpression() {     StickyLoadBalancerDefinition sticky = (StickyLoadBalancerDefinition) getDefinition().getLoadBalancerType().     return sticky.getCorrelationExpression().getExpressionType().getExpression(). }
-false;public;0;4;;@Override public Integer getSize() {     return processor.getProcessors().size(). }
-false;public;0;12;;@Override public String getLastChosenProcessorId() {     int idx = processor.getLastChosenProcessorIndex().     if (idx != -1) {         LoadBalanceDefinition def = getDefinition().         ProcessorDefinition<?> output = def.getOutputs().get(idx).         if (output != null) {             return output.getId().         }     }     return null. }

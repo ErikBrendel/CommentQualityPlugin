@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;6;5;;@Override public Record deserialize(byte[] message, String partitionKey, String seqNum, long approxArrivalTimestamp, String stream, String shardId) throws IOException {     return MAPPER.readValue(message, Record.class). }
-false;public;0;4;;@Override public TypeInformation<Record> getProducedType() {     return TypeInformation.of(Record.class). }

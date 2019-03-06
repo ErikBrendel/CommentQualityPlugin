@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;1;4;;@Converter public static String toString(Record record) {     return record.toString(). }
-false;public,static;1;8;;@Converter public static List<String> toList(Record[] records) {     List<String> list = new ArrayList<>().     for (Record rec : records) {         list.add(toString(rec)).     }     return list. }
-false;public,static;1;4;;@Converter public static String toString(Message message) {     return message.toString(). }
-false;public,static;1;4;;@Converter public static String toString(Address address) {     return address.toString(). }
-false;public,static;1;4;;@Converter public static String toString(InetAddress address) {     return address.getHostAddress(). }
-false;public,static;1;4;;@Converter public static InetAddress toInetAddress(String domain) throws UnknownHostException {     return Address.getByName(domain). }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;4;/**  * Return the original HTTP message.  * @since 5.1  */ ;/**  * Return the original HTTP message.  * @since 5.1  */ public HttpInputMessage getHttpInputMessage() {     Assert.state(this.httpInputMessage != null, "No HttpInputMessage available - use non-deprecated constructors").     return this.httpInputMessage. }

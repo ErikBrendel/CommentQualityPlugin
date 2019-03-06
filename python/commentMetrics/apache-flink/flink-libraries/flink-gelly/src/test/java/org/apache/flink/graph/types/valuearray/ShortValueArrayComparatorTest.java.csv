@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;4;;@Override protected TypeComparator<ShortValueArray> createComparator(boolean ascending) {     return new ShortValueArrayComparator(ascending). }
-false;protected;0;4;;@Override protected TypeSerializer<ShortValueArray> createSerializer() {     return new ShortValueArraySerializer(). }
-false;protected;0;13;;@Override protected ShortValueArray[] getSortedTestData() {     ShortValueArray lva0 = new ShortValueArray().     ShortValueArray lva1 = new ShortValueArray().     lva1.add(new ShortValue((short) 5)).     ShortValueArray lva2 = new ShortValueArray().     lva2.add(new ShortValue((short) 5)).     lva2.add(new ShortValue((short) 10)).     return new ShortValueArray[] { lva0, lva1 }. }

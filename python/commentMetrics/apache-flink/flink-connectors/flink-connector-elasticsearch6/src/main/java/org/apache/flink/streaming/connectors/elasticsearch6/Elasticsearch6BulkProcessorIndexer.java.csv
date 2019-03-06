@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;9;;@Override public void add(DeleteRequest... deleteRequests) {     for (DeleteRequest deleteRequest : deleteRequests) {         if (flushOnCheckpoint) {             numPendingRequestsRef.getAndIncrement().         }         this.bulkProcessor.add(deleteRequest).     } }
-false;public;1;9;;@Override public void add(IndexRequest... indexRequests) {     for (IndexRequest indexRequest : indexRequests) {         if (flushOnCheckpoint) {             numPendingRequestsRef.getAndIncrement().         }         this.bulkProcessor.add(indexRequest).     } }
-false;public;1;9;;@Override public void add(UpdateRequest... updateRequests) {     for (UpdateRequest updateRequest : updateRequests) {         if (flushOnCheckpoint) {             numPendingRequestsRef.getAndIncrement().         }         this.bulkProcessor.add(updateRequest).     } }

@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test(expected = NullPointerException.class) public void testNullRejected() {     new OutputTag<Integer>(null). }
-false;public;0;4;;@Test(expected = NullPointerException.class) public void testNullRejectedWithTypeInfo() {     new OutputTag<>(null, BasicTypeInfo.INT_TYPE_INFO). }
-false;public;0;4;;@Test(expected = IllegalArgumentException.class) public void testEmptyStringRejected() {     new OutputTag<Integer>(""). }
-false;public;0;4;;@Test(expected = IllegalArgumentException.class) public void testEmptyStringRejectedWithTypeInfo() {     new OutputTag<>("", BasicTypeInfo.INT_TYPE_INFO). }

@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void importSelectorsCouldUseAnyAnnotations() {     assertThat(new ImportsContextCustomizer(FirstImportSelectorAnnotatedClass.class)).isNotEqualTo(new ImportsContextCustomizer(SecondImportSelectorAnnotatedClass.class)). }
-false;public;0;7;;@Test public void determinableImportSelector() {     assertThat(new ImportsContextCustomizer(FirstDeterminableImportSelectorAnnotatedClass.class)).isEqualTo(new ImportsContextCustomizer(SecondDeterminableImportSelectorAnnotatedClass.class)). }
-false;public;0;6;;@Test public void customizersForTestClassesWithDifferentKotlinMetadataAreEqual() {     assertThat(new ImportsContextCustomizer(FirstKotlinAnnotatedTestClass.class)).isEqualTo(new ImportsContextCustomizer(SecondKotlinAnnotatedTestClass.class)). }
-false;public;0;7;;@Test public void customizersForTestClassesWithDifferentSpockFrameworkAnnotationsAreEqual() {     assertThat(new ImportsContextCustomizer(FirstSpockFrameworkAnnotatedTestClass.class)).isEqualTo(new ImportsContextCustomizer(SecondSpockFrameworkAnnotatedTestClass.class)). }
-false;public;0;6;;@Test public void customizersForTestClassesWithDifferentSpockLangAnnotationsAreEqual() {     assertThat(new ImportsContextCustomizer(FirstSpockLangAnnotatedTestClass.class)).isEqualTo(new ImportsContextCustomizer(SecondSpockLangAnnotatedTestClass.class)). }
-false;public;1;4;;@Override public String[] selectImports(AnnotationMetadata arg0) {     return new String[] {}. }
-false;public;1;4;;@Override public String[] selectImports(AnnotationMetadata arg0) {     return new String[] { TestConfig.class.getName() }. }
-false;public;1;4;;@Override public Set<Object> determineImports(AnnotationMetadata metadata) {     return Collections.singleton(TestConfig.class.getName()). }

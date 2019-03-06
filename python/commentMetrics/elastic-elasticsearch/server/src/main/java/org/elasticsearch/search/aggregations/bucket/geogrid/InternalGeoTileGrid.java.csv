@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public InternalGeoGrid create(List<InternalGeoGridBucket> buckets) {     return new InternalGeoTileGrid(name, requiredSize, buckets, pipelineAggregators(), metaData). }
-false;public;2;4;;@Override public InternalGeoGridBucket createBucket(InternalAggregations aggregations, InternalGeoGridBucket prototype) {     return new InternalGeoTileGridBucket(prototype.hashAsLong, prototype.docCount, aggregations). }
-false;;5;4;;@Override InternalGeoGrid create(String name, int requiredSize, List buckets, List list, Map metaData) {     return new InternalGeoTileGrid(name, requiredSize, buckets, list, metaData). }
-false;;0;4;;@Override Reader getBucketReader() {     return InternalGeoTileGridBucket::new. }
-false;public;0;4;;@Override public String getWriteableName() {     return GeoTileGridAggregationBuilder.NAME. }

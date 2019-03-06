@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;9;;public static EmbeddedCacheManager newEmbeddedCacheManagerInstance() {     return new DefaultCacheManager(new org.infinispan.configuration.global.GlobalConfigurationBuilder().build(), new org.infinispan.configuration.cache.ConfigurationBuilder().build(), false). }
-false;public,static;0;6;;public static RemoteCacheManager newRemoteCacheManagerInstance() {     return new RemoteCacheManager(new org.infinispan.client.hotrod.configuration.ConfigurationBuilder().build(), false). }

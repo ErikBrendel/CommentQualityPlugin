@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Before public void init() throws Exception {     createBqTable(TABLE_ID). }
-false;public;0;6;;public void configure() {     from(directIn).routeId("SingleRow").to(bigqueryEndpoint).to(sendResult). }
-false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() {             from(directIn).routeId("SingleRow").to(bigqueryEndpoint).to(sendResult).         }     }. }
-false;public;0;17;;@Test public void singleMessage() throws Exception {     Exchange exchange = new DefaultExchange(context).     String uuidCol1 = UUID.randomUUID().toString().     String uuidCol2 = UUID.randomUUID().toString().     Map<String, String> object = new HashMap<>().     object.put("col1", uuidCol1).     object.put("col2", uuidCol2).     exchange.getIn().setBody(object).     sendResult.expectedMessageCount(1).     producer.send(exchange).     sendResult.assertIsSatisfied(4000).     assertRowExist(TABLE_ID, object). }

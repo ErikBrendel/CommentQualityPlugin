@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * JAXB requires the mapper to be registered as a property on the {@link javax.xml.bind.JAXBContext}.  */ ;/**  * JAXB requires the mapper to be registered as a property on the {@link javax.xml.bind.JAXBContext}.  */ String getRegistrationKey().
-true;;1;1;/**  * Sets the namespace prefix mapping.  * <p/>  * The key is the namespace, the value is the prefix to use.  *  * @param namespaces  namespace mappings  */ ;/**  * Sets the namespace prefix mapping.  * <p/>  * The key is the namespace, the value is the prefix to use.  *  * @param namespaces  namespace mappings  */ void setNamespaces(Map<String, String> namespaces).
-true;;3;1;/**  * Used by JAXB to obtain the preferred prefix.  */ ;/**  * Used by JAXB to obtain the preferred prefix.  */ String getPreferredPrefix(String namespaceUri, String suggestion, boolean requirePrefix).

@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void propertyFromSpringBootTestProperties() {     assertThat(this.config.bootTestInlined).isEqualTo("foo"). }
-false;public;0;4;;@Test public void propertyFromTestPropertySourceProperties() {     assertThat(this.config.propertySourceInlined).isEqualTo("bar"). }
-false;public;0;4;;@Test public void propertyFromTestPropertySourceLocations() {     assertThat(this.config.propertySourceLocation).isEqualTo("baz"). }
-false;public;0;5;;@Test public void propertyFromPropertySourcePropertiesOverridesPropertyFromPropertySourceLocations() {     assertThat(this.config.propertySourceInlinedOverridesPropertySourceLocation).isEqualTo("property-source-inlined"). }
-false;public;0;5;;@Test public void propertyFromBootTestPropertiesOverridesPropertyFromPropertySourceLocations() {     assertThat(this.config.bootTestInlinedOverridesPropertySourceLocation).isEqualTo("boot-test-inlined"). }
-false;public;0;5;;@Test public void propertyFromPropertySourcePropertiesOverridesPropertyFromBootTestProperties() {     assertThat(this.config.propertySourceInlinedOverridesBootTestInlined).isEqualTo("property-source-inlined"). }
-false;public,static;0;4;;@Bean public static PropertySourcesPlaceholderConfigurer propertyPlaceholder() {     return new PropertySourcesPlaceholderConfigurer(). }

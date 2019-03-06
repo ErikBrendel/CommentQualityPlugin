@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;public List<Header> getHeaders() {     List<Header> result = new ArrayList<>().     for (Map<String, String> inputHeader : headers) {         Map.Entry<String, String> entry = inputHeader.entrySet().iterator().next().         result.add(new Header(entry.getKey(), entry.getValue())).     }     return result. }
-false;public;0;3;;public ByteString getWire() {     return ByteString.decodeHex(wire). }
-false;public;0;3;;public int getSeqno() {     return seqno. }
-false;public;1;3;;public void setWire(ByteString wire) {     this.wire = wire.hex(). }
-false;protected;0;11;;@Override protected Case clone() throws CloneNotSupportedException {     Case result = new Case().     result.seqno = seqno.     result.wire = wire.     result.headers = new ArrayList<>().     for (Map<String, String> header : headers) {         result.headers.add(new LinkedHashMap<String, String>(header)).     }     return result. }

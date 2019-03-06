@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Override public List<Tag> findAll() {     return this.entityManager.createQuery("SELECT t FROM Tag t", Tag.class).getResultList(). }

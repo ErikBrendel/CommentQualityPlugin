@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public TypeInformation<?> getType() {     return type. }
-false;public;0;4;;@Override public List<CommonExpression> getChildren() {     return Collections.emptyList(). }
-false;public;1;4;;@Override public <R> R accept(ExpressionVisitor<R> visitor) {     return visitor.visit(this). }
-false;public;1;11;;@Override public boolean equals(Object o) {     if (this == o) {         return true.     }     if (o == null || getClass() != o.getClass()) {         return false.     }     TypeLiteralExpression that = (TypeLiteralExpression) o.     return Objects.equals(type, that.type). }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(type). }
-false;public;0;4;;@Override public String toString() {     return TypeStringUtils.writeTypeInfo(type). }

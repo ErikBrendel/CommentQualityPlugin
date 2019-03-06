@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;4;7;;@Override public Iterable<Tag> getTags(HttpServletRequest request, HttpServletResponse response, Object handler, Throwable exception) {     return Tags.of(WebMvcTags.method(request), WebMvcTags.uri(request, response), WebMvcTags.exception(exception), WebMvcTags.status(response), WebMvcTags.outcome(response)). }
-false;public;2;4;;@Override public Iterable<Tag> getLongRequestTags(HttpServletRequest request, Object handler) {     return Tags.of(WebMvcTags.method(request), WebMvcTags.uri(request, null)). }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public ExecutorService newCachedThreadPool(ThreadFactory threadFactory) {     return new InstrumentedExecutorService(threadPoolFactory.newCachedThreadPool(threadFactory), metricRegistry). }
-false;public;2;4;;@Override public ExecutorService newThreadPool(ThreadPoolProfile profile, ThreadFactory threadFactory) {     return new InstrumentedExecutorService(threadPoolFactory.newThreadPool(profile, threadFactory), metricRegistry, profile.getId()). }
-false;public;2;4;;@Override public ScheduledExecutorService newScheduledThreadPool(ThreadPoolProfile profile, ThreadFactory threadFactory) {     return new InstrumentedScheduledExecutorService(threadPoolFactory.newScheduledThreadPool(profile, threadFactory), metricRegistry, profile.getId()). }

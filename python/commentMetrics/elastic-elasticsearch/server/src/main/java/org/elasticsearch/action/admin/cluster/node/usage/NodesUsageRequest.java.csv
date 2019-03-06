@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public;0;4;/**  * Sets all the request flags.  */ ;/**  * Sets all the request flags.  */ public NodesUsageRequest all() {     this.restActions = true.     return this. }
-true;public;0;4;/**  * Clears all the request flags.  */ ;/**  * Clears all the request flags.  */ public NodesUsageRequest clear() {     this.restActions = false.     return this. }
-true;public;0;3;/**  * Should the node rest actions usage statistics be returned.  */ ;/**  * Should the node rest actions usage statistics be returned.  */ public boolean restActions() {     return this.restActions. }
-true;public;1;4;/**  * Should the node rest actions usage statistics be returned.  */ ;/**  * Should the node rest actions usage statistics be returned.  */ public NodesUsageRequest restActions(boolean restActions) {     this.restActions = restActions.     return this. }
-false;public;1;5;;@Override public void readFrom(StreamInput in) throws IOException {     super.readFrom(in).     this.restActions = in.readBoolean(). }
-false;public;1;5;;@Override public void writeTo(StreamOutput out) throws IOException {     super.writeTo(out).     out.writeBoolean(restActions). }

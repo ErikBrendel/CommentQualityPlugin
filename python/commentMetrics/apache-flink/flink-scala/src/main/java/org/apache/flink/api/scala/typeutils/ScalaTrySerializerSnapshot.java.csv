@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected int getCurrentOuterSnapshotVersion() {     return VERSION. }
-false;protected;1;4;;@Override protected TypeSerializer<?>[] getNestedSerializers(TrySerializer<E> outerSerializer) {     return new TypeSerializer[] { outerSerializer.getElementSerializer(), outerSerializer.getThrowableSerializer() }. }
-false;protected;1;8;;@Override @SuppressWarnings("unchecked") protected TrySerializer<E> createOuterSerializerWithNestedSerializers(TypeSerializer<?>[] nestedSerializers) {     TypeSerializer<E> elementSerializer = (TypeSerializer<E>) nestedSerializers[0].     TypeSerializer<Throwable> valueSerializer = (TypeSerializer<Throwable>) nestedSerializers[1].     return new TrySerializer<>(elementSerializer, valueSerializer). }

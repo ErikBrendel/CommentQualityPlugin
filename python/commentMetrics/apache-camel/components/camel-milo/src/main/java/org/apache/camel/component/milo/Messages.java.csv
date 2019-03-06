@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,static;2;4;/**  * Fill a Message from a DataValue  *  * @param value the value to feed from  * @param result the result to feed to  */ ;/**  * Fill a Message from a DataValue  *  * @param value the value to feed from  * @param result the result to feed to  */ public static void fillFromDataValue(final DataValue value, final DefaultMessage result) {     result.setBody(value).     result.setFault(value.getStatusCode().isBad()). }

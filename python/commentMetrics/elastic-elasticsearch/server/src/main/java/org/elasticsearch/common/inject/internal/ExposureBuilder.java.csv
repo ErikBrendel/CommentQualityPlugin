@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;5;;protected void checkNotAnnotated() {     if (key.getAnnotationType() != null) {         binder.addError(AbstractBindingBuilder.ANNOTATION_ALREADY_SPECIFIED).     } }
-false;public;1;6;;@Override public void annotatedWith(Class<? extends Annotation> annotationType) {     Objects.requireNonNull(annotationType, "annotationType").     checkNotAnnotated().     key = Key.get(key.getTypeLiteral(), annotationType). }
-false;public;1;6;;@Override public void annotatedWith(Annotation annotation) {     Objects.requireNonNull(annotation, "annotation").     checkNotAnnotated().     key = Key.get(key.getTypeLiteral(), annotation). }
-false;public;0;3;;public Key<?> getKey() {     return key. }
-false;public;0;3;;public Object getSource() {     return source. }
-false;public;0;4;;@Override public String toString() {     return "AnnotatedElementBuilder". }

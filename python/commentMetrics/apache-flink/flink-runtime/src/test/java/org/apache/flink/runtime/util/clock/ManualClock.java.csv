@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public long absoluteTimeMillis() {     return currentTime.get() / 1_000L. }
-false;public;0;4;;@Override public long relativeTimeMillis() {     return currentTime.get() / 1_000L. }
-false;public;0;4;;@Override public long relativeTimeNanos() {     return currentTime.get(). }
-false;public;2;3;;public void advanceTime(long duration, TimeUnit timeUnit) {     currentTime.addAndGet(timeUnit.toNanos(duration)). }

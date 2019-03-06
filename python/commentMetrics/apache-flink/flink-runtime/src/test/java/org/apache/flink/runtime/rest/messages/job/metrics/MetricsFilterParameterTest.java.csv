@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Before public void setUp() {     metricsFilterParameter = new MetricsFilterParameter(). }
-false;public;0;4;;@Test public void testIsOptionalParameter() {     assertFalse(metricsFilterParameter.isMandatory()). }
-false;public;0;5;;@Test public void testConversions() {     assertThat(metricsFilterParameter.convertValueToString("test"), equalTo("test")).     assertThat(metricsFilterParameter.convertStringToValue("test"), equalTo("test")). }

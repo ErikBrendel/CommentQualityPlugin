@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;0;2;;@ManagedAttribute(description = "The language for the expression") String getExpressionLanguage().
-false;;0;2;;@ManagedAttribute(description = "Expression to define the routing slip, which defines which endpoints to route the message in a pipeline style.", mask = true) String getExpression().
-false;;0;2;;@ManagedAttribute(description = "The uri delimiter to use") String getUriDelimiter().
-false;;0;2;;@ManagedAttribute(description = "Sets the maximum size used by the ProducerCache which is used to cache and reuse producers") Integer getCacheSize().
-false;;0;2;;@ManagedAttribute(description = "Ignore the invalidate endpoint exception when try to create a producer with that endpoint") Boolean isIgnoreInvalidEndpoints().
-false;;0;2;;@ManagedOperation(description = "Statistics of the endpoints which has been sent to") TabularData extendedInformation().

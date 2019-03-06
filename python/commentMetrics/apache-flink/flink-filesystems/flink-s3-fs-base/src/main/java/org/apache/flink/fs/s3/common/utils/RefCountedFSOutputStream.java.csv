@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,abstract;0;1;/**  * Gets the underlying {@link File} that allows to read the contents of the file.  *  * @return A handle to the File object.  */ ;/**  * Gets the underlying {@link File} that allows to read the contents of the file.  *  * @return A handle to the File object.  */ public abstract File getInputFile().
-true;public,abstract;0;1;/**  * Checks if the file is closed for writes.  *  * @return {@link true} if the file is closed, {@link false} otherwise.  */ ;/**  * Checks if the file is closed for writes.  *  * @return {@link true} if the file is closed, {@link false} otherwise.  */ public abstract boolean isClosed() throws IOException.

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;11;;@Test public void testStreamCachingPerRoute() throws Exception {     MockEndpoint c = getMockEndpoint("mock:c").     c.expectedMessageCount(1).     new StreamSource(new StringReader("A")).     template.sendBody("direct:c", new StreamSource(new StringReader("C"))).     assertMockEndpointsSatisfied(). }
-false;public;0;6;;@Override public void configure() throws Exception {     getContext().getGlobalOptions().put("CamelCachedOutputStreamThreshold", "4096").     from("direct:c").streamCaching().to("mock:c"). }
-false;protected;0;11;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             getContext().getGlobalOptions().put("CamelCachedOutputStreamThreshold", "4096").             from("direct:c").streamCaching().to("mock:c").         }     }. }

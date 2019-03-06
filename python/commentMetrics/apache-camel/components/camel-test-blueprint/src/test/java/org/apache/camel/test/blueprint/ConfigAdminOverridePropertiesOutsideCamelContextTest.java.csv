@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected String getBlueprintDescriptor() {     return "org/apache/camel/test/blueprint/configadmin-outside.xml". }
-true;protected;1;8;// START SNIPPET: e1 ;// START SNIPPET: e1 @Override protected String useOverridePropertiesWithConfigAdmin(Dictionary props) {     // add the properties we want to override     props.put("greeting", "Bye").     // return the PID of the config-admin we are using in the blueprint xml file     return "my-placeholders". }
-false;public;0;8;;// END SNIPPET: e1 @Test public void testConfigAdmin() throws Exception {     getMockEndpoint("mock:result").expectedBodiesReceived("Bye World").     template.sendBody("direct:start", "World").     assertMockEndpointsSatisfied(). }

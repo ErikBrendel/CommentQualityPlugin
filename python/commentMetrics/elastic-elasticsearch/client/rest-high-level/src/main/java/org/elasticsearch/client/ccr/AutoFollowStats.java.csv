@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;public long getNumberOfFailedFollowIndices() {     return numberOfFailedFollowIndices. }
-false;public;0;3;;public long getNumberOfFailedRemoteClusterStateRequests() {     return numberOfFailedRemoteClusterStateRequests. }
-false;public;0;3;;public long getNumberOfSuccessfulFollowIndices() {     return numberOfSuccessfulFollowIndices. }
-false;public;0;3;;public NavigableMap<String, Tuple<Long, ElasticsearchException>> getRecentAutoFollowErrors() {     return recentAutoFollowErrors. }
-false;public;0;3;;public NavigableMap<String, AutoFollowedCluster> getAutoFollowedClusters() {     return autoFollowedClusters. }
-false;public;0;3;;public long getTimeSinceLastCheckMillis() {     return timeSinceLastCheckMillis. }
-false;public;0;3;;public long getLastSeenMetadataVersion() {     return lastSeenMetadataVersion. }

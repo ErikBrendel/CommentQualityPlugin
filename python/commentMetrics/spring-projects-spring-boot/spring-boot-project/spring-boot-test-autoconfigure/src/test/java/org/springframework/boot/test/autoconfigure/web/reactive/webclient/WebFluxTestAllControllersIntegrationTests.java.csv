@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void shouldFindController1() {     this.webClient.get().uri("/one").exchange().expectStatus().isOk().expectBody(String.class).isEqualTo("one"). }
-false;public;0;5;;@Test public void shouldFindController2() {     this.webClient.get().uri("/two").exchange().expectStatus().isOk().expectBody(String.class).isEqualTo("two"). }
-false;public;0;4;;@Test public void webExceptionHandling() {     this.webClient.get().uri("/one/error").exchange().expectStatus().isBadRequest(). }
-false;public;0;4;;@Test public void shouldFindJsonController() {     this.webClient.get().uri("/json").exchange().expectStatus().isOk(). }

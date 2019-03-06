@@ -1,6 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public BytesRef lookupOrd(long ord) {     throw new UnsupportedOperationException(). }
-true;public,abstract;0;2;/**  * The memory size this ordinals take.  */ ;/**  * The memory size this ordinals take.  */ @Override public abstract long ramBytesUsed().
-false;public,abstract;1;1;;public abstract SortedSetDocValues ordinals(ValuesHolder values).
-false;public,final;0;3;;public final SortedSetDocValues ordinals() {     return ordinals(NO_VALUES). }
-false;;1;1;;BytesRef lookupOrd(long ord).

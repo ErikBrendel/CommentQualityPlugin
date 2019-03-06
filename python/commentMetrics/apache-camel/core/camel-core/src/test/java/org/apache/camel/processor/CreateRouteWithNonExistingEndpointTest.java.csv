@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;3;;@Test public void testCreateRouteWithBadEndpoint() throws Exception { }
-false;public;0;12;;@Override @Before public void setUp() throws Exception {     try {         super.setUp().         fail("Should have failed to create this route!").     } catch (FailedToCreateRouteException e) {         log.debug("Caught expected exception: " + e, e).         NoSuchEndpointException nse = assertIsInstanceOf(NoSuchEndpointException.class, e.getCause()).         assertEquals("uri", "thisUriDoesNotExist", nse.getUri()).     } }
-false;public;0;3;;public void configure() {     from("direct:start").to("thisUriDoesNotExist"). }
-false;protected;0;7;;protected RouteBuilder createRouteBuilder() {     return new RouteBuilder() {          public void configure() {             from("direct:start").to("thisUriDoesNotExist").         }     }. }

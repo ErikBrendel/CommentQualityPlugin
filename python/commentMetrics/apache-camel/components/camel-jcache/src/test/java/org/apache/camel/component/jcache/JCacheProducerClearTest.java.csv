@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;13;;@Test public void testClear() throws Exception {     final Map<String, Object> headers = new HashMap<>().     final Cache<Object, Object> cache = getCacheFromEndpoint("jcache://test-cache").     cache.putAll(generateRandomMap(4)).     headers.clear().     headers.put(JCacheConstants.ACTION, "CLEAR").     sendBody("direct:clear", null, headers).     assertFalse(cache.iterator().hasNext()). }
-false;public;0;4;;public void configure() {     from("direct:clear").to("jcache://test-cache"). }
-false;protected;0;9;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          public void configure() {             from("direct:clear").to("jcache://test-cache").         }     }. }

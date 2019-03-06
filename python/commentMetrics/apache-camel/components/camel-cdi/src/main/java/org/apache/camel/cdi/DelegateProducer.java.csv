@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public T produce(CreationalContext<T> ctx) {     return delegate.produce(ctx). }
-false;public;1;4;;@Override public void dispose(T instance) {     delegate.dispose(instance). }
-false;public;0;4;;@Override public Set<InjectionPoint> getInjectionPoints() {     return delegate.getInjectionPoints(). }
-false;public;0;4;;@Override public String toString() {     return delegate.toString(). }

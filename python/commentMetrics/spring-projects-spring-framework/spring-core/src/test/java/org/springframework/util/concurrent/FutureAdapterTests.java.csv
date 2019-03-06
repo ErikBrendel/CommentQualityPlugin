@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;4;;@Override protected String adapt(Integer adapteeResult) throws ExecutionException {     return adapteeResult.toString(). }
-false;public;0;11;;@Before @SuppressWarnings("unchecked") public void setUp() {     adaptee = mock(Future.class).     adapter = new FutureAdapter<String, Integer>(adaptee) {          @Override         protected String adapt(Integer adapteeResult) throws ExecutionException {             return adapteeResult.toString().         }     }. }
-false;public;0;6;;@Test public void cancel() throws Exception {     given(adaptee.cancel(true)).willReturn(true).     boolean result = adapter.cancel(true).     assertTrue(result). }
-false;public;0;6;;@Test public void isCancelled() {     given(adaptee.isCancelled()).willReturn(true).     boolean result = adapter.isCancelled().     assertTrue(result). }
-false;public;0;6;;@Test public void isDone() {     given(adaptee.isDone()).willReturn(true).     boolean result = adapter.isDone().     assertTrue(result). }
-false;public;0;6;;@Test public void get() throws Exception {     given(adaptee.get()).willReturn(42).     String result = adapter.get().     assertEquals("42", result). }
-false;public;0;6;;@Test public void getTimeOut() throws Exception {     given(adaptee.get(1, TimeUnit.SECONDS)).willReturn(42).     String result = adapter.get(1, TimeUnit.SECONDS).     assertEquals("42", result). }

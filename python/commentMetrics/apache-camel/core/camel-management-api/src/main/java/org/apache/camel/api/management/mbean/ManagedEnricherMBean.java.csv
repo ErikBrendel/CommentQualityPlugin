@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;;0;2;;@ManagedAttribute(description = "The language for the expression") String getExpressionLanguage().
-false;;0;2;;@ManagedAttribute(description = "Expression that computes the endpoint uri to use as the resource endpoint to enrich from", mask = true) String getExpression().
-false;;0;2;;@ManagedAttribute(description = "Sets the maximum size used by the ProducerCache which is used to cache and reuse producers") Integer getCacheSize().
-false;;0;2;;@ManagedAttribute(description = "Ignore the invalidate endpoint exception when try to create a producer with that endpoint") Boolean isIgnoreInvalidEndpoint().
-false;;0;2;;@ManagedAttribute(description = "Shares the UnitOfWork with the parent and the resource exchange") Boolean isShareUnitOfWork().
-false;;0;2;;@ManagedAttribute(description = "Whether to aggregate when there was an exception thrown during calling the resource endpoint") Boolean isAggregateOnException().
-false;;0;2;;@ManagedOperation(description = "Statistics of the endpoints that has been enriched from") TabularData extendedInformation().

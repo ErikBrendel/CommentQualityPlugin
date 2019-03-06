@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Test public void shouldNotMatchDefaultCamelContext() {     assertFalse(isOsgiContext(new DefaultCamelContext())). }
-false;public;0;4;;@Test public void shouldMatchBlueprintCamelContext() {     assertTrue(isOsgiContext(new BlueprintCamelContext())). }
-false;public;0;4;;@Test public void shouldMatchOsgiDefaultCamelContext() {     assertTrue(isOsgiContext(new OsgiDefaultCamelContext())). }

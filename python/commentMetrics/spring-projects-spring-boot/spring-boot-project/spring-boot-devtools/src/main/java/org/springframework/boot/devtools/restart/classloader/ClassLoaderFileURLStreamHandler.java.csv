@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;4;;@Override protected URLConnection openConnection(URL url) throws IOException {     return new Connection(url). }
-false;public;0;3;;@Override public void connect() throws IOException { }
-false;public;0;5;;@Override public InputStream getInputStream() throws IOException {     return new ByteArrayInputStream(ClassLoaderFileURLStreamHandler.this.file.getContents()). }
-false;public;0;5;;@Override public long getLastModified() {     return ClassLoaderFileURLStreamHandler.this.file.getLastModified(). }

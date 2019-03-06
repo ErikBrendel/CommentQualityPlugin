@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;2;10;;@Override protected Class<?> loadClass(String name, boolean resolve) throws ClassNotFoundException {     for (Predicate<String> filter : this.classesFilters) {         if (filter.test(name)) {             throw new ClassNotFoundException().         }     }     return super.loadClass(name, resolve). }
-false;public;1;9;;@Override public URL getResource(String name) {     for (Predicate<String> filter : this.resourcesFilters) {         if (filter.test(name)) {             return null.         }     }     return super.getResource(name). }
-false;public;1;9;;@Override public boolean test(String className) {     for (Class<?> hiddenClass : this.hiddenClasses) {         if (className.equals(hiddenClass.getName())) {             return true.         }     }     return false. }
-false;public,static;1;3;;public static ClassFilter of(Class<?>... hiddenClasses) {     return new ClassFilter(hiddenClasses). }
-false;public;1;9;;@Override public boolean test(String className) {     for (String hiddenPackage : this.hiddenPackages) {         if (className.startsWith(hiddenPackage)) {             return true.         }     }     return false. }
-false;public,static;1;3;;public static PackageFilter of(String... hiddenPackages) {     return new PackageFilter(hiddenPackages). }
-false;public;1;10;;@Override public boolean test(String resourceName) {     for (ClassPathResource hiddenResource : this.hiddenResources) {         if (hiddenResource.getFilename() != null && resourceName.equals(hiddenResource.getPath())) {             return true.         }     }     return false. }
-false;public,static;1;3;;public static ClassPathResourceFilter of(ClassPathResource... hiddenResources) {     return new ClassPathResourceFilter(hiddenResources). }

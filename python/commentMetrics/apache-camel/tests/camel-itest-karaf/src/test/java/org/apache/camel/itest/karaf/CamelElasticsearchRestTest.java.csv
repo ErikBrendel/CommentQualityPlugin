@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;13;;@Configuration public static Option[] configure() {     Option[] baseOptions = BaseKarafTest.configure().     Option[] additionalOptions = CoreOptions.options(CoreOptions.systemPackage("com.sun.jna.ptr,com.sun.jna.win32")).     Option[] options = new Option[baseOptions.length + additionalOptions.length].     System.arraycopy(baseOptions, 0, options, 0, baseOptions.length).     System.arraycopy(additionalOptions, 0, options, baseOptions.length, additionalOptions.length).     return options. }
-false;public;0;4;;@Test public void test() throws Exception {     testComponent(COMPONENT). }

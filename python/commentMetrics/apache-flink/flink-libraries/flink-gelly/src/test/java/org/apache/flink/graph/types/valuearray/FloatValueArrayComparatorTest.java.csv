@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;1;4;;@Override protected TypeComparator<FloatValueArray> createComparator(boolean ascending) {     return new FloatValueArrayComparator(ascending). }
-false;protected;0;4;;@Override protected TypeSerializer<FloatValueArray> createSerializer() {     return new FloatValueArraySerializer(). }
-false;protected;0;13;;@Override protected FloatValueArray[] getSortedTestData() {     FloatValueArray lva0 = new FloatValueArray().     FloatValueArray lva1 = new FloatValueArray().     lva1.add(new FloatValue(5)).     FloatValueArray lva2 = new FloatValueArray().     lva2.add(new FloatValue(5)).     lva2.add(new FloatValue(10)).     return new FloatValueArray[] { lva0, lva1 }. }

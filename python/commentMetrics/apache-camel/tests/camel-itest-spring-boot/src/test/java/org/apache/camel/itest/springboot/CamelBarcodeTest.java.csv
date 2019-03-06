@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;0;4;;@Deployment public static Archive<?> createSpringBootPackage() throws Exception {     return ArquillianPackager.springBootPackage(createTestConfig()). }
-false;public,static;0;5;;public static ITestConfig createTestConfig() {     return new ITestConfigBuilder().module(inferModuleName(CamelBarcodeTest.class)).build(). }
-false;public;0;5;;@Test public void componentTests() throws Exception {     this.runDataformatTest(config).     this.runModuleUnitTestsIfEnabled(config). }

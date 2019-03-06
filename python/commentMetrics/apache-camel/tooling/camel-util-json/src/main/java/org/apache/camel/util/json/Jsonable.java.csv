@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * Serialize to a JSON formatted string.  *  * @return a string, formatted in JSON, that represents the Jsonable.  */ ;/**  * Serialize to a JSON formatted string.  *  * @return a string, formatted in JSON, that represents the Jsonable.  */ String toJson().
-true;;1;1;/**  * Serialize to a JSON formatted stream.  *  * @param writable where the resulting JSON text should be sent.  * @throws IOException when the writable encounters an I/O error.  */ ;/**  * Serialize to a JSON formatted stream.  *  * @param writable where the resulting JSON text should be sent.  * @throws IOException when the writable encounters an I/O error.  */ void toJson(Writer writable) throws IOException.

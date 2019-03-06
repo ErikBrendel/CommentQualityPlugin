@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;4;1;/**  * Request the next page of data.  */ ;/**  * Request the next page of data.  */ void nextPage(Configuration cfg, Client client, NamedWriteableRegistry registry, ActionListener<RowSet> listener).
-true;;3;1;/**  *  Cleans the resources associated with the cursor  */ ;/**  *  Cleans the resources associated with the cursor  */ void clear(Configuration cfg, Client client, ActionListener<Boolean> listener).

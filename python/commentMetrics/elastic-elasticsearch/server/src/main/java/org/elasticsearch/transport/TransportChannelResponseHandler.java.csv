@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;4;;@Override public T read(StreamInput in) throws IOException {     return reader.read(in). }
-false;public;1;8;;@Override public void handleResponse(T response) {     try {         channel.sendResponse(response).     } catch (IOException e) {         handleException(new TransportException(e)).     } }
-false;public;1;9;;@Override public void handleException(TransportException exp) {     try {         channel.sendResponse(exp).     } catch (IOException e) {         logger.debug(() -> new ParameterizedMessage("failed to send failure {}", extraInfoOnError == null ? "" : "(" + extraInfoOnError + ")"), e).     } }
-false;public;0;4;;@Override public String executor() {     return ThreadPool.Names.SAME. }

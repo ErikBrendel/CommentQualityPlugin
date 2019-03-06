@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;8;;@Override public int hash(float[] record) {     int result = 0.     for (float field : record) {         result += Float.floatToIntBits(field).     }     return result. }
-false;public;2;11;;@Override public int compare(float[] first, float[] second) {     for (int x = 0. x < min(first.length, second.length). x++) {         int cmp = Float.compare(first[x], second[x]).         if (cmp != 0) {             return ascending ? cmp : -cmp.         }     }     int cmp = first.length - second.length.     return ascending ? cmp : -cmp. }
-false;public;0;6;;@Override public TypeComparator<float[]> duplicate() {     FloatPrimitiveArrayComparator dupe = new FloatPrimitiveArrayComparator(this.ascending).     dupe.setReference(this.reference).     return dupe. }

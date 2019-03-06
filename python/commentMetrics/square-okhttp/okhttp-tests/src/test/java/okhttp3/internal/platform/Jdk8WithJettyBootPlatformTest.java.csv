@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void testBuildsWithJettyBoot() {     assumeTrue(getPlatform().equals("jdk-with-jetty-boot")).     assertNotNull(Jdk8WithJettyBootPlatform.buildIfSupported()). }

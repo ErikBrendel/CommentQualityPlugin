@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;6;;@Bean @ConditionalOnBean(Flyway.class) @ConditionalOnMissingBean public FlywayEndpoint flywayEndpoint(ApplicationContext context) {     return new FlywayEndpoint(context). }

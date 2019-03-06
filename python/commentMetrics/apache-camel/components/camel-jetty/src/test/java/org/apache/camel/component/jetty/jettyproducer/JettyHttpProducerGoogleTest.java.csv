@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;11;;@Test @Ignore("ignore online tests") public void testGoogleFrontPage() throws Exception {     // these tests does not run well on Windows     if (isPlatform("windows")) {         return.     }     String reply = template.requestBody("direct:start", null, String.class).     assertNotNull(reply). }
-false;public;0;5;;@Override public void configure() throws Exception {     // to prevent redirect being thrown as an exception     from("direct:start").to("jetty://http://www.google.com?throwExceptionOnFailure=false"). }
-false;protected;0;10;;@Override protected RouteBuilder createRouteBuilder() throws Exception {     return new RouteBuilder() {          @Override         public void configure() throws Exception {             // to prevent redirect being thrown as an exception             from("direct:start").to("jetty://http://www.google.com?throwExceptionOnFailure=false").         }     }. }

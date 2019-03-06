@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,final;1;7;;@Override public final UnaryScalarFunction replaceChildren(List<Expression> newChildren) {     if (newChildren.size() != 1) {         throw new IllegalArgumentException("expected [1] child but received [" + newChildren.size() + "]").     }     return replaceChild(newChildren.get(0)). }
-false;protected,abstract;1;1;;protected abstract UnaryScalarFunction replaceChild(Expression newChild).
-false;public;0;3;;public Expression field() {     return field. }
-false;public,final;0;4;;@Override public final Pipe makePipe() {     return new UnaryPipe(source(), this, Expressions.pipe(field()), makeProcessor()). }
-false;protected,abstract;0;1;;protected abstract Processor makeProcessor().
-false;public;0;4;;@Override public boolean foldable() {     return field.foldable(). }
-false;public;0;4;;@Override public ScriptTemplate asScript() {     return asScript(field). }

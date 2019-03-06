@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@After public void close() {     TestSecurityContextHolder.clearContext().     this.context.close(). }
-false;public;0;13;;@Test public void endpointsCanBeAccessed() throws Exception {     TestSecurityContextHolder.getContext().setAuthentication(new TestingAuthenticationToken("user", "N/A", "ROLE_ACTUATOR")).     this.context = new AnnotationConfigReactiveWebApplicationContext().     this.context.register(DefaultConfiguration.class, ExampleController.class).     TestPropertyValues.of("management.endpoints.web.exposure.include=*").applyTo(this.context).     this.context.refresh().     WebTestClient webClient = WebTestClient.bindToApplicationContext(this.context).build().     webClient.get().uri("/actuator/example").exchange().expectStatus().isOk(). }
-false;public;0;4;;@GetMapping("/") public String example() {     return "Example". }

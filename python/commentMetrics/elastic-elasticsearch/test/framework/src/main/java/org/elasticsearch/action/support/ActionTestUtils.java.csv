@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public,static;2;6;;public static <Request extends ActionRequest, Response extends ActionResponse> Response executeBlocking(TransportAction<Request, Response> action, Request request) {     PlainActionFuture<Response> future = newFuture().     action.execute(request, future).     return future.actionGet(). }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;1;8;;public void process(Exchange exchange) throws Exception {     // Convert the input stream into a string     String request = exchange.getIn().getBody(String.class).     exchange.getOut().setBody("<response>" + request + "</response>"). }

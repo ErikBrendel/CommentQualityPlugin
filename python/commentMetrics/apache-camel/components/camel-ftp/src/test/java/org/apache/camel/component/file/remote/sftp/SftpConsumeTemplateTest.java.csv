@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public boolean isUseRouteBuilder() {     return false. }
-false;public;0;14;;@Test public void testSftpSimpleConsume() throws Exception {     if (!canTest()) {         return.     }     // create file using regular file     template.sendBodyAndHeader("file://" + FTP_ROOT_DIR, "Hello World", Exchange.FILE_NAME, "hello.txt").     String out = consumer.receiveBody("sftp://localhost:" + getPort() + "/" + FTP_ROOT_DIR + "?username=admin&password=admin", 5000, String.class).     assertNotNull(out).     // Apache SSHD appends \u0000 at last byte in retrieved file     assertTrue(out.startsWith("Hello World")). }

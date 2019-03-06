@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;2;5;;// ------------------------------------------------------------------------ @Override public void onTaskFailure(Execution taskExecution, Throwable cause) {     // this strategy makes every task failure a global failure     executionGraph.failGlobal(cause). }
-false;public;1;4;;@Override public void notifyNewVertices(List<ExecutionJobVertex> newJobVerticesTopological) { // nothing to do }
-false;public;0;4;;@Override public String getStrategyName() {     return "full graph restart". }
-false;public;1;4;;@Override public FailoverStrategy create(ExecutionGraph executionGraph) {     return new RestartAllStrategy(executionGraph). }

@@ -1,9 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void expressionIsTrue() {     this.contextRunner.withUserConfiguration(BasicConfiguration.class).run((context) -> assertThat(context.getBean("foo")).isEqualTo("foo")). }
-false;public;0;5;;@Test public void expressionEvaluatesToTrueRegistersBean() {     this.contextRunner.withUserConfiguration(MissingConfiguration.class).run((context) -> assertThat(context).doesNotHaveBean("foo")). }
-false;public;0;5;;@Test public void expressionEvaluatesToFalseDoesNotRegisterBean() {     this.contextRunner.withUserConfiguration(NullConfiguration.class).run((context) -> assertThat(context).doesNotHaveBean("foo")). }
-false;public;0;12;;@Test public void expressionEvaluationWithNoBeanFactoryDoesNotMatch() {     OnExpressionCondition condition = new OnExpressionCondition().     MockEnvironment environment = new MockEnvironment().     ConditionContext conditionContext = mock(ConditionContext.class).     given(conditionContext.getEnvironment()).willReturn(environment).     ConditionOutcome outcome = condition.getMatchOutcome(conditionContext, mockMetaData("invalid-spel")).     assertThat(outcome.isMatch()).isFalse().     assertThat(outcome.getMessage()).contains("invalid-spel").contains("no BeanFactory available"). }
-false;private;1;6;;private AnnotatedTypeMetadata mockMetaData(String value) {     AnnotatedTypeMetadata metadata = mock(AnnotatedTypeMetadata.class).     given(metadata.getAnnotationAttributes(ConditionalOnExpression.class.getName())).willReturn(Collections.singletonMap("value", value)).     return metadata. }
-false;public;0;4;;@Bean public String bar() {     return "bar". }
-false;public;0;4;;@Bean public String foo() {     return "foo". }
-false;public;0;4;;@Bean public String foo() {     return "foo". }

@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Test public void geocoderAddressTest() {     ResponseEntity<GeocodingResult[]> response = restTemplate.exchange("/camel/geocoder?address=Paris", HttpMethod.GET, null, new ParameterizedTypeReference<GeocodingResult[]>() {     }).     assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK).     GeocodingResult[] res = response.getBody().     assertNotNull(res). }

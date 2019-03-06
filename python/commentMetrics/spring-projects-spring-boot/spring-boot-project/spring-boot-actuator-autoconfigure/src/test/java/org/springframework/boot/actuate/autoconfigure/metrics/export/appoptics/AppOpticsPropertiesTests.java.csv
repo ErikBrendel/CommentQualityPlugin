@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;8;;@Override public void defaultValuesAreConsistent() {     AppOpticsProperties properties = new AppOpticsProperties().     AppOpticsConfig config = (key) -> null.     assertStepRegistryDefaultValues(properties, config).     assertThat(properties.getUri()).isEqualToIgnoringWhitespace(config.uri()).     assertThat(properties.getHostTag()).isEqualToIgnoringWhitespace(config.hostTag()). }

@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;3;;protected String executor() {     return ThreadPool.Names.GENERIC. }
-false;protected,final;3;8;;@Override protected final void doExecute(Task task, final Request request, ActionListener<Response> listener) {     if (licenseState.isWatcherAllowed()) {         doExecute(request, listener).     } else {         listener.onFailure(LicenseUtils.newComplianceException(XPackField.WATCHER)).     } }
-false;protected,abstract;2;1;;protected abstract void doExecute(Request request, ActionListener<Response> listener).

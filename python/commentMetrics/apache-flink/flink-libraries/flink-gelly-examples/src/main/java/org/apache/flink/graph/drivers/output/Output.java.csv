@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;3;1;/**  * Write the output {@link DataSet}.  *  * @param executionName job name  * @param out output printer  * @param data the output  */ ;/**  * Write the output {@link DataSet}.  *  * @param executionName job name  * @param out output printer  * @param data the output  */ void write(String executionName, PrintStream out, DataSet<T> data) throws Exception.

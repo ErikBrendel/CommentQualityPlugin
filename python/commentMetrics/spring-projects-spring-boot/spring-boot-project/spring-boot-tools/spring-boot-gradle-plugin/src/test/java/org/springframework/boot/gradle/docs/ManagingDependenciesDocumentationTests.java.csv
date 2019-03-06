@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void dependenciesExampleEvaluatesSuccessfully() {     this.gradleBuild.script("src/main/gradle/managing-dependencies/dependencies").build(). }
-false;public;0;6;;@Test public void customManagedVersions() {     assertThat(this.gradleBuild.script("src/main/gradle/managing-dependencies/custom-version").build("slf4jVersion").getOutput()).contains("1.7.20"). }
-false;public;0;7;;@Test public void dependencyManagementInIsolation() {     assertThat(this.gradleBuild.script("src/main/gradle/managing-dependencies/configure-bom").build("dependencyManagement").getOutput()).contains("org.springframework.boot:spring-boot-starter "). }
-false;public;0;8;;@Test public void dependencyManagementInIsolationWithPluginsBlock() {     Assume.assumeTrue(this.gradleBuild.getDsl() == Dsl.KOTLIN).     assertThat(this.gradleBuild.script("src/main/gradle/managing-dependencies/configure-bom-with-plugins").build("dependencyManagement").getOutput()).contains("org.springframework.boot:spring-boot-starter TEST-SNAPSHOT"). }

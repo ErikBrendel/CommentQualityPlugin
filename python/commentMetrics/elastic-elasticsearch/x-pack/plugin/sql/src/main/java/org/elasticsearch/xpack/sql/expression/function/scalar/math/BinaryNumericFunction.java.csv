@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;4;;@Override public DataType dataType() {     return DataType.DOUBLE. }
-false;protected;0;13;;@Override protected TypeResolution resolveType() {     if (!childrenResolved()) {         return new TypeResolution("Unresolved children").     }     TypeResolution resolution = isNumeric(left(), sourceText(), ParamOrdinal.FIRST).     if (resolution.unresolved()) {         return resolution.     }     return isNumeric(right(), sourceText(), ParamOrdinal.SECOND). }
-false;public;0;4;;@Override public Object fold() {     return operation.apply((Number) left().fold(), (Number) right().fold()). }
-false;protected;0;4;;@Override protected Pipe makePipe() {     return new BinaryMathPipe(source(), this, Expressions.pipe(left()), Expressions.pipe(right()), operation). }
-false;public;0;4;;@Override public int hashCode() {     return Objects.hash(left(), right(), operation). }
-false;public;1;10;;@Override public boolean equals(Object obj) {     if (obj == null || obj.getClass() != getClass()) {         return false.     }     BinaryNumericFunction other = (BinaryNumericFunction) obj.     return Objects.equals(other.left(), left()) && Objects.equals(other.right(), right()) && Objects.equals(other.operation, operation). }

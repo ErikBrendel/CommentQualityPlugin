@@ -1,3 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Test public void defaultMessageInterpolatorShouldFail() {     // Sanity test     assertThatExceptionOfType(ValidationException.class).isThrownBy(Validation.byDefaultProvider().configure()::getDefaultMessageInterpolator).withMessageContaining("javax.el.ExpressionFactory"). }
-false;public;0;5;;@Test public void getObjectShouldUseFallback() {     MessageInterpolator interpolator = new MessageInterpolatorFactory().getObject().     assertThat(interpolator).isInstanceOf(ParameterMessageInterpolator.class). }

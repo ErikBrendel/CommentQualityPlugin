@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;2;1;/**  * Provides a list of valid option names for a did you mean function.  *  * @param names         valid names  * @param unknownOption unknown option name  * @return a list of suggested names (did you mean)  */ ;/**  * Provides a list of valid option names for a did you mean function.  *  * @param names         valid names  * @param unknownOption unknown option name  * @return a list of suggested names (did you mean)  */ String[] suggestEndpointOptions(Set<String> names, String unknownOption).

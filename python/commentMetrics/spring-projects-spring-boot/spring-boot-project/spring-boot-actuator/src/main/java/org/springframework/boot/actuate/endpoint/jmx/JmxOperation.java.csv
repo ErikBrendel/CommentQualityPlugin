@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;0;1;/**  * Returns the name of the operation.  * @return the operation name  */ ;/**  * Returns the name of the operation.  * @return the operation name  */ String getName().
-true;;0;1;/**  * Returns the type of the output of the operation.  * @return the output type  */ ;/**  * Returns the type of the output of the operation.  * @return the output type  */ Class<?> getOutputType().
-true;;0;1;/**  * Returns the description of the operation.  * @return the operation description  */ ;/**  * Returns the description of the operation.  * @return the operation description  */ String getDescription().
-true;;0;1;/**  * Returns the parameters the operation expects in the order that they should be  * provided.  * @return the operation parameter names  */ ;/**  * Returns the parameters the operation expects in the order that they should be  * provided.  * @return the operation parameter names  */ List<JmxOperationParameter> getParameters().

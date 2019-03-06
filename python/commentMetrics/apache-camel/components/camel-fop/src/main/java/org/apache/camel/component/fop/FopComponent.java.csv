@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;3;9;;protected Endpoint createEndpoint(String uri, String remaining, Map<String, Object> parameters) throws Exception {     FopOutputType type = FopOutputType.asFooOutputType(remaining).     if (type == null) {         type = getCamelContext().getTypeConverter().mandatoryConvertTo(FopOutputType.class, remaining).     }     FopEndpoint endpoint = new FopEndpoint(uri, this, type).     setProperties(endpoint, parameters).     return endpoint. }

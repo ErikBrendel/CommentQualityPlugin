@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;15;;@Override public void run() {     try {         Await.ready(actorSystem.whenTerminated(), terminationTimeout).     } catch (Exception e) {         if (e instanceof TimeoutException) {             log.error("Actor system shut down timed out.", e).         } else {             log.error("Failure during actor system shut down.", e).         }     } finally {         log.info("Shutdown completed. Stopping JVM.").         System.exit(0).     } }

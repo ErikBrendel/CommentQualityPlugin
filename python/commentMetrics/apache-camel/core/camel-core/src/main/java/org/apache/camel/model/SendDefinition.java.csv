@@ -1,8 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;7;;@Override public String getEndpointUri() {     if (uri != null) {         return uri.     }     return null. }
-false;public;0;3;;public String getUri() {     return uri. }
-true;public;1;3;/**  * Sets the uri of the endpoint to send to.  *  * @param uri the uri of the endpoint  */ ;/**  * Sets the uri of the endpoint to send to.  *  * @param uri the uri of the endpoint  */ public void setUri(String uri) {     this.uri = uri. }
-true;public;0;3;/**  * Gets tne endpoint if an {@link Endpoint} instance was set.  * <p/>  * This implementation may return <tt>null</tt> which means you need to use  * {@link #getUri()} to get information about the endpoint.  *  * @return the endpoint instance, or <tt>null</tt>  */ ;/**  * Gets tne endpoint if an {@link Endpoint} instance was set.  * <p/>  * This implementation may return <tt>null</tt> which means you need to use  * {@link #getUri()} to get information about the endpoint.  *  * @return the endpoint instance, or <tt>null</tt>  */ public Endpoint getEndpoint() {     return endpoint. }
-false;public;1;7;;public void setEndpoint(Endpoint endpoint) {     this.endpoint = endpoint.     this.uri = null.     if (endpoint != null) {         this.uri = endpoint.getEndpointUri().     } }
-false;public;0;3;;public ExchangePattern getPattern() {     return null. }
-false;public;0;4;;@Override public String getLabel() {     return FromDefinition.description(getUri(), getEndpoint()). }

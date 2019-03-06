@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;6;;@Test public void injectsOnlyConfig() {     assertThat(this.context.getBean(Config.class)).isNotNull().     assertThatExceptionOfType(NoSuchBeanDefinitionException.class).isThrownBy(() -> this.context.getBean(AdditionalConfig.class)). }

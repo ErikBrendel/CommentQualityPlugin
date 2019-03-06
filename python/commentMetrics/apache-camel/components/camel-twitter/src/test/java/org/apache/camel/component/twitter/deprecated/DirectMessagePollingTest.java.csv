@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;14;;@Override @Before public void setUp() throws Exception {     super.setUp(). /* Uncomment when you need a test direct message         TwitterConfiguration properties = new TwitterConfiguration().         properties.setConsumerKey(consumerKey).         properties.setConsumerSecret(consumerSecret).         properties.setAccessToken(accessToken).         properties.setAccessTokenSecret(accessTokenSecret).         Twitter twitter = properties.getTwitter().         twitter.sendDirectMessage(twitter.getScreenName(), "Test Direct Message: " + new Date().toString()).         */ }
-false;protected;0;4;;@Override protected String getUri() {     return "twitter://directmessage?type=polling&". }
-false;protected;0;4;;@Override protected Logger getLogger() {     return LoggerFactory.getLogger(DirectMessagePollingTest.class). }

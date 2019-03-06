@@ -1,5 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;static;0;12;;@Deployment static Archive<?> createTestArchive() {     return ShrinkWrap.create(JavaArchive.class).addPackage(CdiCamelExtension.class.getPackage()).addClasses(CdiCamelConfigurationTest.class).addClass(EndpointInjectRoute.class).addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml"). }
-false;static;1;4;;static void configuration(@Observes CdiCamelConfiguration configuration) {     configMethodHasBeenCalled = true.     configuration.autoConfigureRoutes(false). }
-false;public;0;4;;@Test public void checkThatConfigMethodHasBeenCalled() {     assertTrue("Config method has not been called", configMethodHasBeenCalled). }
-false;public;0;4;;@Test public void checkThatNoRouteBuildersAddedToContext() {     assertTrue("There are RouteBuilder instances in context", camelContext.getRoutes().isEmpty()). }

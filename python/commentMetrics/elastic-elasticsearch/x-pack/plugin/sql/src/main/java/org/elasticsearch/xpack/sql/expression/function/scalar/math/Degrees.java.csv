@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected NodeInfo<Degrees> info() {     return NodeInfo.create(this, Degrees::new, field()). }
-false;protected;1;4;;@Override protected Degrees replaceChild(Expression newChild) {     return new Degrees(source(), newChild). }
-false;protected;0;4;;@Override protected MathOperation operation() {     return MathOperation.DEGREES. }

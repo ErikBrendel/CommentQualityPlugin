@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected RefreshStats createTestInstance() {     return new RefreshStats(randomNonNegativeLong(), randomNonNegativeLong(), between(0, Integer.MAX_VALUE)). }
-false;protected;0;4;;@Override protected RefreshStats createBlankInstance() {     return new RefreshStats(). }
-false;protected;1;19;;@Override protected RefreshStats mutateInstance(RefreshStats instance) {     long total = instance.getTotal().     long totalInMillis = instance.getTotalTimeInMillis().     int listeners = instance.getListeners().     switch(randomInt(2)) {         case 0:             total += between(1, 2000).             break.         case 1:             totalInMillis += between(1, 2000).             break.         case 2:         default:             listeners += between(1, 2000).             break.     }     return new RefreshStats(total, totalInMillis, listeners). }

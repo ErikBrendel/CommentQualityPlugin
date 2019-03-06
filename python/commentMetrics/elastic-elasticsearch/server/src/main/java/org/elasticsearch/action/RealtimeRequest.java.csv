@@ -1,2 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;;1;1;/**  * @param realtime Controls whether this request should be realtime by reading from the translog.  */ ;/**  * @param realtime Controls whether this request should be realtime by reading from the translog.  */ <R extends RealtimeRequest> R realtime(boolean realtime).

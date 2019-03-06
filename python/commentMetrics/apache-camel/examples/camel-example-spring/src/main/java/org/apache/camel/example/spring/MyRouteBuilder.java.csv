@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-true;public,static;1;3;/**  * Allow this route to be run as an application  */ ;/**  * Allow this route to be run as an application  */ public static void main(String[] args) throws Exception {     new Main().run(args). }
-false;public;0;12;;public void configure() {     // populate the message queue with some messages     from("file:src/data?noop=true").to("jms:test.MyQueue").     from("jms:test.MyQueue").to("file://target/test").     // set up a listener on the file component     from("file://target/test?noop=true").bean(new SomeBean()). }
-false;public;1;3;;public void someMethod(String body) {     System.out.println("Received: " + body). }

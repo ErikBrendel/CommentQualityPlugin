@@ -1,4 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;public;0;5;;@Test public void name() {     param.setName("name").     assertEquals("name", param.getName()). }
-false;public;0;5;;@Test public void value() {     param.setValue("value").     assertEquals("value", param.getValue()). }
-false;public;0;5;;@Test public void nullDefaults() {     assertNull(param.getName()).     assertNull(param.getValue()). }

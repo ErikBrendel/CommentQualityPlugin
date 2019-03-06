@@ -1,7 +1,0 @@
-commented;modifiers;parameterAmount;loc;comment;code
-false;protected;0;4;;@Override protected boolean ignoreExternalCluster() {     return true. }
-false;protected;0;4;;@Override protected boolean addMockTransportService() {     return false. }
-false;protected;1;11;;@Override protected Settings nodeSettings(int nodeOrdinal) {     Settings.Builder builder = Settings.builder().put(super.nodeSettings(nodeOrdinal)).     // randomize netty settings     if (randomBoolean()) {         builder.put(Netty4Transport.WORKER_COUNT.getKey(), random().nextInt(3) + 1).     }     builder.put(NetworkModule.TRANSPORT_TYPE_KEY, Netty4Plugin.NETTY_TRANSPORT_NAME).     builder.put(NetworkModule.HTTP_TYPE_KEY, Netty4Plugin.NETTY_HTTP_TRANSPORT_NAME).     return builder.build(). }
-false;protected;0;6;;@Override protected Settings transportClientSettings() {     Settings.Builder builder = Settings.builder().put(super.transportClientSettings()).     builder.put(NetworkModule.TRANSPORT_TYPE_KEY, Netty4Plugin.NETTY_TRANSPORT_NAME).     return builder.build(). }
-false;protected;0;4;;@Override protected Collection<Class<? extends Plugin>> nodePlugins() {     return Arrays.asList(Netty4Plugin.class). }
-false;protected;0;4;;@Override protected Collection<Class<? extends Plugin>> transportClientPlugins() {     return Arrays.asList(Netty4Plugin.class). }
