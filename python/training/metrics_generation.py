@@ -36,7 +36,7 @@ def add_metrics_to(frame: DataFrame, *, read_cache) -> DataFrame:
 
 if __name__ == '__main__':
     l = lizard.analyze_file.analyze_source_code("placeholder.java",
-                                                'private int doneAreYou(int i){\nreturn 4\n}')
+                                                'public int doneAreYou(int i)')
     l2 = lizard.analyze_file.analyze_source_code("placeholder.java",
                                                  '/**\n*This is a a comment\n*@param int '
                                                  'done mach dings\n*/\nprivate int '

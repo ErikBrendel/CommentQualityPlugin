@@ -17,7 +17,7 @@ def classify_by_dTree(x_train: DataFrame, y_train: DataFrame, x_test: DataFrame,
     clf = tree.DecisionTreeClassifier()
     clf.fit(x_train, y_train)
     predicted = clf.predict(x_test)
-    print(x_train.keys())
+    print(x_train.keys().to_list())
     print(clf.feature_importances_)
     if should_print:
         dot_data = tree.export_graphviz(clf, out_file=None)
@@ -39,7 +39,7 @@ def classify_by_randomF(x_train: DataFrame, y_train: DataFrame, x_test: DataFram
     print('Training Random Forest')
     clf = RandomForestClassifier(n_estimators=10)
     clf.fit(x_train, y_train.values.ravel())
-    print(x_train.keys())
+    print(x_train.keys().to_list())
     print(clf.feature_importances_)
     return clf.predict(x_test)
 
@@ -48,7 +48,7 @@ def classify_by_extra_tree(x_train: DataFrame, y_train: DataFrame, x_test: DataF
     print('Training Extra Tree')
     clf = ExtraTreesClassifier(n_estimators=10)
     clf.fit(x_train, y_train.values.ravel())
-    print(x_train.keys())
+    print(x_train.keys().to_list())
     print(clf.feature_importances_)
     return clf.predict(x_test)
 

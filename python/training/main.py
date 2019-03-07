@@ -18,12 +18,14 @@ if __name__ == '__main__':
     # Most likely interface methods if no modifier
     frame['modifiers'].fillna("anInterface", inplace=True)
 
-    FEATURES = ['parameterAmount', 'loc', 'tc', 'cc', 'modifiers', 'loctoc']
+    FEATURES = ['parameterAmount', 'loc', 'tc', 'cc', 'modifiers', 'loctoc',
+                'method_name_length', 'method_name_word_count']
     CLASS_LABEL = 'should_comment'
 
     frame = relabel_data(frame, CLASS_LABEL, FEATURES)
     frame = balance(frame, CLASS_LABEL)
-    # show_plot(frame, y_axis='modifiers')
+    show_plot(frame, y_axis='method_name_length', label=CLASS_LABEL, log_scale_x=False,
+              remove_outliers=True)
     frame['modifiers'] = frame['modifiers'].astype('category').cat.codes
     labels = frame[[CLASS_LABEL]]
     X = frame[FEATURES]
@@ -38,12 +40,12 @@ if __name__ == '__main__':
                        y_train,
                        x_test, y_test)
 
-    preprocessor = get_preprocessor(x_train)
-    x_train_scaled = preprocessor.transform(x_train)
-    x_test_scaled = preprocessor.transform(
-        x_test)  # Is not really having an impact for tree-type classifiers
-
-    train_and_evaluate([classify_by_nn],
-                       x_train_scaled,
-                       y_train,
-                       x_test_scaled, y_test)
+    # preprocessor = get_preprocessor(x_train)
+    # x_train_scaled = preprocessor.transform(x_train)
+    # x_test_scaled = preprocessor.transform(
+    #     x_test)  # Is not really having an impact for tree-type classifiers
+    #
+    # train_and_evaluate([classify_by_nn],
+    #                    x_train_scaled,
+    #                    y_train,
+    #                    x_test_scaled, y_test)
