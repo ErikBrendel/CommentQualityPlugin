@@ -1,3 +1,5 @@
+from typing import List
+
 from pandas import DataFrame
 import pandas as pd
 from sklearn import preprocessing
@@ -21,10 +23,17 @@ def balance(frame: DataFrame, label: str)-> DataFrame:
     print(frame[label].value_counts())
     return frame
 
-def encode_labels(frame:DataFrame):
-    pass
+
+def relabel_data(frame: DataFrame, new_label: str, features: List[str]) -> DataFrame:
+    group_by_identical = frame.groupby(features).mean()
+    comment_percentag_df = frame.merge(group_by_identical,
+                                       on=features,
+                                       how='inner', suffixes=('_x', '_percentage'))
+    comment_percentag_df[new_label] = comment_percentag_df['commented_percentage'] >= 0.5
+    shuffled_frame = comment_percentag_df.sample(frac=1).reset_index(drop=True)
+    return shuffled_frame
+
 
 def get_preprocessor(x_train: DataFrame):
-
     scaled = preprocessing.StandardScaler().fit(x_train)
     return scaled
