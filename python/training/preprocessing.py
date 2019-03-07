@@ -4,7 +4,7 @@ from sklearn import preprocessing
 from sklearn.utils import resample
 
 def balance(frame: DataFrame, label: str)-> DataFrame:
-    df_majority: DataFrame = frame[frame[label] == False]
+    df_majority = frame[frame[label] == False]
     df_minority = frame[frame[label] == True]
 
     # Upsample minority class

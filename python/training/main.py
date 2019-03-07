@@ -14,7 +14,9 @@ if __name__ == '__main__':
     REPO_ROOT = os.getenv('CSV_ROOT', "../commentMetrics")
     SHOULD_CACHE = True
     frame = read_and_cache_csv(read_cache=SHOULD_CACHE, repo_root=REPO_ROOT)
+    print("start metrics")
     frame = add_metrics_to(frame, read_cache=SHOULD_CACHE)
+    print("end metrics")
     frame['modifiers'].fillna("constructorOrInterface", inplace=True) # No modifier is likely a
     group = frame.groupby(['parameterAmount', 'loc', 'tc', 'cc',  'modifiers']).mean()
     frame_2 = frame.merge(group, on=['parameterAmount', 'loc', 'tc', 'cc', 'modifiers'],
@@ -28,7 +30,6 @@ if __name__ == '__main__':
     #frame = frame.drop_duplicates(['parameterAmount', 'loc', 'tc', 'cc',  'modifiers'])
     frame['modifiers'] = frame['modifiers'].astype('category').cat.codes
 
-    frame['loctoc'] = frame['loc']/frame['tc']
 
     labels = frame[['new_cls']]
     X = frame[['parameterAmount', 'loc', 'tc', 'cc',  'modifiers', 'loctoc']]
