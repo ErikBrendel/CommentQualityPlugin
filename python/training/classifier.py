@@ -6,6 +6,7 @@ from sklearn.linear_model import SGDClassifier
 from typing import List, Callable
 
 from sklearn.neighbors import KNeighborsClassifier
+from sklearn.neural_network import MLPClassifier
 
 from training.evaluation import performance_report
 
@@ -51,9 +52,18 @@ def classify_by_extra_tree(x_train: DataFrame, y_train: DataFrame, x_test: DataF
     print(clf.feature_importances_)
     return clf.predict(x_test)
 
+
 def classify_by_knn(x_train: DataFrame, y_train: DataFrame, x_test: DataFrame) -> DataFrame:
     print('Training Knn')
     clf = KNeighborsClassifier()
+    clf.fit(x_train, y_train.values.ravel())
+    return clf.predict(x_test)
+
+
+def classify_by_nn(x_train: DataFrame, y_train: DataFrame, x_test: DataFrame) -> DataFrame:
+    print('Training NN')
+    clf = MLPClassifier(alpha=1e-5,
+                        hidden_layer_sizes=(100, 100, 10), random_state=42, max_iter=1000)
     clf.fit(x_train, y_train.values.ravel())
     return clf.predict(x_test)
 
