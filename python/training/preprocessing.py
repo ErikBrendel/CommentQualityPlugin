@@ -3,9 +3,9 @@ import pandas as pd
 from sklearn import preprocessing
 from sklearn.utils import resample
 
-def balance(frame: DataFrame)-> DataFrame:
-    df_majority: DataFrame = frame[frame.commented == False]
-    df_minority = frame[frame.commented == True]
+def balance(frame: DataFrame, label: str)-> DataFrame:
+    df_majority: DataFrame = frame[frame[label] == False]
+    df_minority = frame[frame[label] == True]
 
     # Upsample minority class
     df_majority_downsampled = resample(df_majority,
@@ -18,7 +18,7 @@ def balance(frame: DataFrame)-> DataFrame:
         drop=True)
 
     # Display new class counts
-    print(frame.commented.value_counts())
+    print(frame[label].value_counts())
     return frame
 
 def encode_labels(frame:DataFrame):

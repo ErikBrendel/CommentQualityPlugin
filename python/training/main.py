@@ -23,14 +23,14 @@ if __name__ == '__main__':
     frame_3['new_cls'] = frame_3['commented_percentage'] >= 0.5
 
     # constructor or an Interface
-    # frame = balance(frame)
+    frame = balance(frame_3, 'new_cls')
     #show_plot(frame, y_axis='modifiers')
     #frame = frame.drop_duplicates(['parameterAmount', 'loc', 'tc', 'cc',  'modifiers'])
     frame['modifiers'] = frame['modifiers'].astype('category').cat.codes
 
     frame['loctoc'] = frame['loc']/frame['tc']
 
-    labels = frame[['commented']]
+    labels = frame[['new_cls']]
     X = frame[['parameterAmount', 'loc', 'tc', 'cc',  'modifiers', 'loctoc']]
 
     # eventually we should use cross-validation here to prevent overfitting
