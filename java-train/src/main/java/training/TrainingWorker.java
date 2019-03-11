@@ -6,11 +6,17 @@ import com.github.javaparser.Range;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.Node;
 import com.github.javaparser.ast.body.MethodDeclaration;
+import com.github.javaparser.ast.comments.BlockComment;
+import com.github.javaparser.ast.comments.Comment;
+import com.github.javaparser.ast.comments.LineComment;
+import com.github.javaparser.ast.stmt.IfStmt;
 import com.github.javaparser.ast.visitor.VoidVisitor;
 import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 
 import java.io.File;
+import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class TrainingWorker extends Thread {
@@ -60,7 +66,7 @@ public class TrainingWorker extends Thread {
                 String repoName = rootDirectory.getName();
                 CsvWriter export = new CsvWriter(new File(rootDirectory, "../__commentMetrics/" + repoName + "/" + filename + ".csv"));
                 export.writeCell("commented").writeCell("modifiers").writeCell("parameterAmount").writeCell("loc")
-                        .writeCell("comment").writeCell("code")
+                        .writeCell("comment").writeCell("code").writeCell("commentType")
                         .endLine();
 
                 VoidVisitor<CsvWriter> visitor = new VoidVisitorAdapter<CsvWriter>() {
@@ -75,7 +81,37 @@ public class TrainingWorker extends Thread {
                         String code = method.toString();
 
                         writer.writeCell(commented).writeCell(modifiers).writeCell(parameterAmount).writeCell(loc);
-                        writer.writeCell(comment).writeCell(code).endLine();
+                        writer.writeCell(comment).writeCell(code).writeCell("method").endLine();
+                    }
+
+                    @Override
+                    public void visit(final BlockComment comment, final CsvWriter writer) {
+                        super.visit(comment, writer);
+                        visitComment(comment, writer, "block");
+                    }
+
+                    @Override
+                    public void visit(final LineComment comment, final CsvWriter writer) {
+                        super.visit(comment, writer);
+                        visitComment(comment, writer, "line");
+                    }
+
+                    private void visitComment(Comment comment, CsvWriter writer, String type) {
+                        boolean commented = true;
+                        List<String> modifiers = Collections.emptyList();
+                        int parameterAmount = 0;
+                        String commentStr = comment.getContent();
+
+                        int loc = 0;
+                        String code = "";
+                        Optional<Node> relatedCode = comment.getCommentedNode();
+                        if (relatedCode.isPresent()) {
+                            loc = relatedCode.get().getRange().map(Range::getLineCount).orElse(0);
+                            code = relatedCode.get().toString();
+                        }
+
+                        writer.writeCell(commented).writeCell(modifiers).writeCell(parameterAmount).writeCell(loc);
+                        writer.writeCell(commentStr).writeCell(code).writeCell(type).endLine();
                     }
                 };
                 cu.accept(visitor, export);
