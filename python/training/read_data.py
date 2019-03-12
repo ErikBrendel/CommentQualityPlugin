@@ -10,11 +10,11 @@ from math import log10 as log
 from math import inf as INFINITY
 
 
-def read_and_cache_csv(number_of_items=INFINITY, *, repo_root, read_cache) -> DataFrame:
+def read_and_cache_csv(number_of_items=INFINITY, *, cache_name, repo_root, read_cache) -> DataFrame:
     metrics_files = os.path.join(repo_root, "**", "*.csv")
-    if os.path.isfile('frame_cache') and read_cache:
-        df = pd.read_pickle('frame_cache')
-        print('Cache: read date from cache')
+    if os.path.isfile(cache_name) and read_cache:
+        df = pd.read_pickle(cache_name)
+        print('Cache: read date from cache', cache_name)
         return df
     df_list = []
     for filename in glob.iglob(metrics_files, recursive=True):
@@ -23,6 +23,6 @@ def read_and_cache_csv(number_of_items=INFINITY, *, repo_root, read_cache) -> Da
         print(filename)
         df_list.append(pd.read_csv(filename, sep=';'))
     df = pd.concat(df_list, ignore_index=True)
-    df.to_pickle('frame_cache')
-    print('done')
+    df.to_pickle(cache_name)
+    print('Updated Cache ', cache_name)
     return df

@@ -5,6 +5,8 @@ import com.github.javaparser.ParseResult;
 import com.github.javaparser.Range;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.Node;
+import com.github.javaparser.ast.stmt.IfStmt;
+
 import com.github.javaparser.ast.body.MethodDeclaration;
 import com.github.javaparser.ast.comments.BlockComment;
 import com.github.javaparser.ast.comments.Comment;
@@ -30,28 +32,71 @@ public class TrainingWorker extends Thread {
 
     @Override
     public void run() {
-        while (!taskList.isFinished()) {
-            try {
+        while(!taskList.isFinished()){
+            try{
                 TrainingTaskList.Task nextTask = taskList.next();
-                if (nextTask == null) {
-                    try {
+                if(nextTask == null){
+                    try{
                         Thread.sleep(10);
-                    } catch (InterruptedException e) {
+                    } catch(InterruptedException e){
                         e.printStackTrace();
                     }
-                } else {
-                    try {
-                        extractComments(nextTask);
-                    } catch (Exception e) {
+                } else{
+                    try{
+                        extractLineComments(nextTask);
+                    } catch(Exception e){
                         e.printStackTrace();
                     }
                     taskList.done();
                 }
-            } catch (Exception ex) {
+            } catch(Exception ex){
                 ex.printStackTrace();
             }
         }
         running = false;
+    }
+
+    private static void extractLineComments(TrainingTaskList.Task task) {
+        String filename = task.filename;
+        File rootDirectory = task.rootDirectory;
+
+        try{
+            ParseResult<CompilationUnit> parsed = new JavaParser().parse(new File(rootDirectory, filename));
+            parsed.ifSuccessful(cu -> {
+
+                String repoName = rootDirectory.getName();
+                CsvWriter export = new CsvWriter(new File(rootDirectory, "../__commentMetrics/" + repoName + "/" + filename + ".csv"));
+                export.writeCell("commented").writeCell("loc").writeCell("condition").writeCell("conditionChildren")
+                        .writeCell("comment").writeCell("code")
+                        .endLine();
+
+                VoidVisitor<CsvWriter> visitor = new VoidVisitorAdapter<CsvWriter>() {
+                    @Override
+                    public void visit(final IfStmt ifElseStmt, final CsvWriter writer) {
+                        super.visit(ifElseStmt, writer);
+                        boolean commented = false;
+                        if(ifElseStmt.getComment().isPresent()){
+                            commented = true;
+                        }
+                        int loc = ifElseStmt.getRange().map(Range::getLineCount).orElse(0);
+                        String comment = ifElseStmt.getComment().map(Node::toString).orElse("");
+                        String code = ifElseStmt.toString();
+                        String condition = ifElseStmt.getCondition().toString();
+                        int conditionChildren = ifElseStmt.getCondition().getChildNodes().size();
+                        writer.writeCell(commented).writeCell(loc).writeCell(condition).writeCell(conditionChildren);
+                        writer.writeCell(comment).writeCell(code).endLine();
+                    }
+
+                };
+                cu.accept(visitor, export);
+                export.close();
+                if(export.getRowsWritten() < 2){
+                    export.abort();
+                }
+            });
+        } catch(Exception ex){
+            throw new RuntimeException(ex);
+        }
     }
 
 
@@ -59,7 +104,7 @@ public class TrainingWorker extends Thread {
         String filename = task.filename;
         File rootDirectory = task.rootDirectory;
 
-        try {
+        try{
             ParseResult<CompilationUnit> parsed = new JavaParser().parse(new File(rootDirectory, filename));
             parsed.ifSuccessful(cu -> {
 
@@ -84,11 +129,13 @@ public class TrainingWorker extends Thread {
                         writer.writeCell(comment).writeCell(code).writeCell("method").endLine();
                     }
 
+                    /* Blockcomments are mostly licenses
                     @Override
                     public void visit(final BlockComment comment, final CsvWriter writer) {
                         super.visit(comment, writer);
                         visitComment(comment, writer, "block");
-                    }
+                    }*/
+
 
                     @Override
                     public void visit(final LineComment comment, final CsvWriter writer) {
@@ -105,7 +152,7 @@ public class TrainingWorker extends Thread {
                         int loc = 0;
                         String code = "";
                         Optional<Node> relatedCode = comment.getCommentedNode();
-                        if (relatedCode.isPresent()) {
+                        if(relatedCode.isPresent()){
                             loc = relatedCode.get().getRange().map(Range::getLineCount).orElse(0);
                             code = relatedCode.get().toString();
                         }
@@ -116,11 +163,11 @@ public class TrainingWorker extends Thread {
                 };
                 cu.accept(visitor, export);
                 export.close();
-                if (export.getRowsWritten() < 2) {
+                if(export.getRowsWritten() < 2){
                     export.abort();
                 }
             });
-        } catch (Exception ex) {
+        } catch(Exception ex){
             throw new RuntimeException(ex);
         }
     }

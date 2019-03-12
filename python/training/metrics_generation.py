@@ -7,11 +7,11 @@ from pandas import DataFrame
 from training.cluster import show_plot
 
 
-def add_metrics_to(frame: DataFrame, *, read_cache) -> DataFrame:
+def add_metrics_to(frame: DataFrame, *, read_cache, cache_name) -> DataFrame:
     """modifies dataframe in place"""
-    if os.path.isfile('additional_metrics_cache') and read_cache:
-        cached_frame = pd.read_pickle('additional_metrics_cache')
-        print('CACHE: Read metrics from cache')
+    if os.path.isfile(cache_name) and read_cache:
+        cached_frame = pd.read_pickle(cache_name)
+        print('CACHE: Read metrics from cache ', cache_name)
         return cached_frame
 
     frame['lizard'] = frame.apply(
@@ -29,8 +29,8 @@ def add_metrics_to(frame: DataFrame, *, read_cache) -> DataFrame:
 
     frame['loctoc'] = frame['loc'] / frame['tc']
 
-    frame.to_pickle('additional_metrics_cache')
-    print('done adding metrics')
+    frame.to_pickle(cache_name)
+    print('done adding metrics. Stored in cache: ', cache_name)
     return frame
 
 

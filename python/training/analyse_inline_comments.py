@@ -10,12 +10,12 @@ from training.metrics_generation import add_metrics_to
 from training.preprocessing import get_preprocessor, balance, relabel_data
 from training.read_data import read_and_cache_csv
 
-def analyse_method_comments():
-    REPO_ROOT = os.getenv('CSV_ROOT', "../commentMetrics")
+def analyse_inline_comments():
+    REPO_ROOT = os.getenv('CSV_ROOT', "../../qualityCommentRepos/__commentMetrics")
     SHOULD_CACHE = True
     frame = read_and_cache_csv(read_cache=SHOULD_CACHE, repo_root=REPO_ROOT,
-                               cache_name='frame_cache')
-    frame = add_metrics_to(frame, read_cache=SHOULD_CACHE, cache_name='additional_metrics_cache')
+                               cache_name='inline_frame_cache')
+    frame = add_metrics_to(frame, read_cache=SHOULD_CACHE, cache_name='inline_metrics_cache')
     # Most likely interface methods if no modifier
     frame['modifiers'].fillna("anInterface", inplace=True)
 
@@ -40,17 +40,3 @@ def analyse_method_comments():
                        x_train,
                        y_train,
                        x_test, y_test)
-
-    # preprocessor = get_preprocessor(x_train)
-    # x_train_scaled = preprocessor.transform(x_train)
-    # x_test_scaled = preprocessor.transform(
-    #     x_test)  # Is not really having an impact for tree-type classifiers
-    #
-    # train_and_evaluate([classify_by_nn],
-    #                    x_train_scaled,
-    #                    y_train,
-    #                    x_test_scaled, y_test)
-
-
-if __name__ == '__main__':
-    analyse_method_comments()
