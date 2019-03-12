@@ -11,6 +11,8 @@ def add_metrics_to_inline_comments(frame: DataFrame, *, read_cache, cache_name) 
         print('CACHE: Read metrics from cache ', cache_name)
         return cached_frame
     frame['condition_length'] = [len(cond) for cond in frame['condition']]
+    frame['code_length'] = [len(code) for code in frame['code']]
+
     frame.to_pickle(cache_name)
     print('done adding metrics. Stored in cache: ', cache_name)
     return frame

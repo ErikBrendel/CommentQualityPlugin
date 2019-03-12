@@ -12,7 +12,7 @@ from training.evaluation import performance_report
 
 
 def classify_by_dTree(x_train: DataFrame, y_train: DataFrame, x_test: DataFrame,
-                      should_print=False) -> DataFrame:
+                      should_print=True) -> DataFrame:
     print('Training dTree')
     clf = tree.DecisionTreeClassifier()
     clf.fit(x_train, y_train)

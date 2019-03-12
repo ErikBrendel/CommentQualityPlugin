@@ -15,10 +15,11 @@ def analyse_inline_comments():
     SHOULD_CACHE = True
     frame = read_and_cache_csv(read_cache=SHOULD_CACHE, repo_root=REPO_ROOT,
                                cache_name='inline_frame_cache')
-    frame = add_metrics_to_inline_comments(frame, read_cache=SHOULD_CACHE, cache_name='inline_metrics_cache')
-
-    FEATURES = ['loc', 'conditionChildren', 'condition_length']
-    CLASS_LABEL = 'commented'
+    frame = add_metrics_to_inline_comments(frame, read_cache=False,
+                                           cache_name='inline_metrics_cache')
+    print(frame.shape)
+    FEATURES = ['loc', 'conditionChildren', 'condition_length', 'code_length']
+    CLASS_LABEL = 'shoule_comment'
 
     frame = relabel_data(frame, CLASS_LABEL, FEATURES)
     #frame = balance(frame, CLASS_LABEL)
