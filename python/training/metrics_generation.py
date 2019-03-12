@@ -4,10 +4,20 @@ import pandas as pd
 import lizard
 from pandas import DataFrame
 
-from training.cluster import show_plot
+
+def add_metrics_to_inline_comments(frame: DataFrame, *, read_cache, cache_name) -> DataFrame:
+    if os.path.isfile(cache_name) and read_cache:
+        cached_frame = pd.read_pickle(cache_name)
+        print('CACHE: Read metrics from cache ', cache_name)
+        return cached_frame
+    frame['condition_length'] = [len(cond) for cond in frame['condition']]
+    frame.to_pickle(cache_name)
+    print('done adding metrics. Stored in cache: ', cache_name)
+    return frame
 
 
-def add_metrics_to(frame: DataFrame, *, read_cache, cache_name) -> DataFrame:
+
+def add_metrics_to_method_comments(frame: DataFrame, *, read_cache, cache_name) -> DataFrame:
     """modifies dataframe in place"""
     if os.path.isfile(cache_name) and read_cache:
         cached_frame = pd.read_pickle(cache_name)

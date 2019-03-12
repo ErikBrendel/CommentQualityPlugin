@@ -18,7 +18,7 @@ def normalize(df):
     return result
 
 
-def show_plot(frame: DataFrame, y_axis: str, label: str, x_axis='loc', log_scale_y=False,
+def show_plot(frame: DataFrame, y_axis: str, label: str, x_axis='loc', log_scale_y=True,
               log_scale_x=True, remove_outliers=False):
     plt.figure(figsize=(20, 20))
     if remove_outliers:

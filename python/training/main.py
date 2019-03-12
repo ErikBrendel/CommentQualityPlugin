@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 from training.classifier import *
 from training.cluster import show_plot
 from training.evaluation import performance_report
-from training.metrics_generation import add_metrics_to
+from training.metrics_generation import add_metrics_to_method_comments
 from training.preprocessing import get_preprocessor, balance, relabel_data
 from training.read_data import read_and_cache_csv
 
@@ -15,7 +15,7 @@ def analyse_method_comments():
     SHOULD_CACHE = True
     frame = read_and_cache_csv(read_cache=SHOULD_CACHE, repo_root=REPO_ROOT,
                                cache_name='frame_cache')
-    frame = add_metrics_to(frame, read_cache=SHOULD_CACHE, cache_name='additional_metrics_cache')
+    frame = add_metrics_to_method_comments(frame, read_cache=SHOULD_CACHE, cache_name='additional_metrics_cache')
     # Most likely interface methods if no modifier
     frame['modifiers'].fillna("anInterface", inplace=True)
 
