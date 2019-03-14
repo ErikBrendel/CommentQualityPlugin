@@ -19,12 +19,15 @@ def analyse_inline_comments():
                                            cache_name='inline_metrics_cache')
     print(frame.shape)
     FEATURES = ['loc', 'conditionChildren', 'condition_length', 'code_length']
-    CLASS_LABEL = 'shoule_comment'
+    CLASS_LABEL = 'should_comment'
 
     frame = relabel_data(frame, CLASS_LABEL, FEATURES)
-    #frame = balance(frame, CLASS_LABEL)
-    show_plot(frame, y_axis='condition_length', label=CLASS_LABEL,
-              remove_outliers=False)
+    frame = balance(frame, CLASS_LABEL)
+
+    show_plot(frame, y_axis='condition_length', label=CLASS_LABEL, log_scale_x=False,
+              remove_outliers=True)
+
+
     labels = frame[[CLASS_LABEL]]
     X = frame[FEATURES]
 

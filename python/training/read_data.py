@@ -18,10 +18,12 @@ def read_and_cache_csv(number_of_items=INFINITY, *, cache_name, repo_root, read_
         return df
     df_list = []
     for filename in glob.iglob(metrics_files, recursive=True):
-        if 'test' in filename:
+        if '/test/' in filename:
             continue
         print(filename)
-        df_list.append(pd.read_csv(filename, sep=';'))
+        new_frame = pd.read_csv(filename, sep=';')
+        new_frame['filename'] = filename[len(repo_root)+1:-4]
+        df_list.append(new_frame)
     df = pd.concat(df_list, ignore_index=True)
     df.to_pickle(cache_name)
     print('Updated Cache ', cache_name)

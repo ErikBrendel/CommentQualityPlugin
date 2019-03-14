@@ -19,17 +19,22 @@ def normalize(df):
 
 
 def show_plot(frame: DataFrame, y_axis: str, label: str, x_axis='loc', log_scale_y=True,
-              log_scale_x=True, remove_outliers=False):
+              log_scale_x=True, remove_outliers=False, jitter=True):
     plt.figure(figsize=(20, 20))
     if remove_outliers:
         frame = frame.copy()
         frame = frame[frame[x_axis] < frame[x_axis].quantile(.95)]
     alpha = 0.2
     frame['color'] = [[0, 0.8, 0, alpha] if c else [1, 0, 0, alpha] for c in frame[label]]
-    frame['x_rnd'] = [1 + x + random.uniform(-0.4, 0.4) for x in frame[x_axis]]
-    if y_axis is not 'modifiers':
-        frame['y_rnd'] = [1 + x + random.uniform(-0.4, 0.4) for x in frame[y_axis]]
+    if jitter:
+        # Ad some space between the points
+        frame['x_rnd'] = [1 + x + random.uniform(-0.4, 0.4) for x in frame[x_axis]]
+        if y_axis is not 'modifiers':
+            frame['y_rnd'] = [1 + x + random.uniform(-0.4, 0.4) for x in frame[y_axis]]
+        else:
+            frame['y_rnd'] = frame[y_axis]
     else:
+        frame['x_rnd'] = frame[x_axis]
         frame['y_rnd'] = frame[y_axis]
     if log_scale_x:
         plt.xscale('log')

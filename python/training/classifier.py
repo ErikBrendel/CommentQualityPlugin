@@ -11,66 +11,68 @@ from sklearn.neural_network import MLPClassifier
 from training.evaluation import performance_report
 
 
-def classify_by_dTree(x_train: DataFrame, y_train: DataFrame, x_test: DataFrame,
-                      should_print=True) -> DataFrame:
+def classify_by_dTree(x_train: DataFrame, y_train: DataFrame, should_print=False):
     print('Training dTree')
     clf = tree.DecisionTreeClassifier()
     clf.fit(x_train, y_train)
-    predicted = clf.predict(x_test)
     print(x_train.keys().to_list())
     print(clf.feature_importances_)
     if should_print:
         dot_data = tree.export_graphviz(clf, out_file=None)
         graph = graphviz.Source(dot_data)
         graph.render("iris")
-    return predicted
+    return clf
 
 
-def classify_by_SGD(x_train: DataFrame, y_train: DataFrame, x_test: DataFrame) -> DataFrame:
+def classify_by_SGD(x_train: DataFrame, y_train: DataFrame):
     print('Training SGD')
     # Really bad for some reason
     clf = SGDClassifier(max_iter=1000)
     clf.fit(x_train, y_train.values.ravel())
-    predicted = clf.predict(x_test)
-    return predicted
+    return clf
 
 
-def classify_by_randomF(x_train: DataFrame, y_train: DataFrame, x_test: DataFrame) -> DataFrame:
+def classify_by_randomF(x_train: DataFrame, y_train: DataFrame):
     print('Training Random Forest')
     clf = RandomForestClassifier(n_estimators=10)
     clf.fit(x_train, y_train.values.ravel())
     print(x_train.keys().to_list())
     print(clf.feature_importances_)
-    return clf.predict(x_test)
+    return clf
 
-
-def classify_by_extra_tree(x_train: DataFrame, y_train: DataFrame, x_test: DataFrame) -> DataFrame:
+def classify_by_extra_tree(x_train: DataFrame, y_train: DataFrame):
     print('Training Extra Tree')
     clf = ExtraTreesClassifier(n_estimators=10)
     clf.fit(x_train, y_train.values.ravel())
     print(x_train.keys().to_list())
     print(clf.feature_importances_)
-    return clf.predict(x_test)
+    return clf
 
 
-def classify_by_knn(x_train: DataFrame, y_train: DataFrame, x_test: DataFrame) -> DataFrame:
+def classify_by_knn(x_train: DataFrame, y_train: DataFrame):
     print('Training Knn')
     clf = KNeighborsClassifier()
     clf.fit(x_train, y_train.values.ravel())
-    return clf.predict(x_test)
+    return clf
 
 
-def classify_by_nn(x_train: DataFrame, y_train: DataFrame, x_test: DataFrame) -> DataFrame:
+def classify_by_nn(x_train: DataFrame, y_train: DataFrame):
     print('Training NN')
     clf = MLPClassifier(alpha=1e-5,
                         hidden_layer_sizes=(100, 100, 10), random_state=42, max_iter=1000)
     clf.fit(x_train, y_train.values.ravel())
-    return clf.predict(x_test)
+    return clf
+
 
 
 def train_and_evaluate(classifiers: List[Callable[[DataFrame, DataFrame, DataFrame], DataFrame]],
                        x_train: DataFrame, y_train: DataFrame, x_test: DataFrame,
-                       y_test: DataFrame):
+                       y_test: DataFrame, eval_df: DataFrame = None):
+    eval_predictions = []
     for func in classifiers:
-        predicted = func(x_train, y_train, x_test)
+        classifier = func(x_train, y_train)
+        predicted = classifier.predict(x_test)
+        if eval_df is not None:
+            eval_predictions.append(classifier.predict(eval_df))
         performance_report(predicted=predicted, ground_truth=y_test)
+    return eval_predictions
