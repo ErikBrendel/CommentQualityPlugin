@@ -14,7 +14,8 @@ from training.evaluation import performance_report
 
 
 def print_feature_importance(x_train: DataFrame, clf: ForestClassifier):
-    print(list(zip(x_train.keys().to_list(), clf.feature_importances_)))
+    print(list(zip(x_train.keys().to_list(), map(lambda x: round(x*100, 3),
+                                                 clf.feature_importances_))))
 
 
 def classify_by_dTree(x_train: DataFrame, y_train: DataFrame, should_print=False):
@@ -50,8 +51,7 @@ def classify_by_extra_tree(x_train: DataFrame, y_train: DataFrame):
     print('Training Extra Tree')
     clf = ExtraTreesClassifier(n_estimators=10)
     clf.fit(x_train, y_train.values.ravel())
-    print(x_train.keys().to_list())
-    print(clf.feature_importances_)
+    print_feature_importance(x_train, clf)
     return clf
 
 
