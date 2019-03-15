@@ -1,7 +1,9 @@
 from pandas import DataFrame
 from sklearn import tree
 import graphviz
+from sklearn.base import ClassifierMixin
 from sklearn.ensemble import RandomForestClassifier, ExtraTreesClassifier
+from sklearn.ensemble.forest import ForestClassifier
 from sklearn.linear_model import SGDClassifier
 from typing import List, Callable
 
@@ -9,6 +11,10 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.neural_network import MLPClassifier
 
 from training.evaluation import performance_report
+
+
+def print_feature_importance(x_train: DataFrame, clf: ForestClassifier):
+    print(list(zip(x_train.keys().to_list(), clf.feature_importances_)))
 
 
 def classify_by_dTree(x_train: DataFrame, y_train: DataFrame, should_print=False):
@@ -36,9 +42,9 @@ def classify_by_randomF(x_train: DataFrame, y_train: DataFrame):
     print('Training Random Forest')
     clf = RandomForestClassifier(n_estimators=10)
     clf.fit(x_train, y_train.values.ravel())
-    print(x_train.keys().to_list())
-    print(clf.feature_importances_)
+    print_feature_importance(x_train, clf)
     return clf
+
 
 def classify_by_extra_tree(x_train: DataFrame, y_train: DataFrame):
     print('Training Extra Tree')
@@ -65,14 +71,17 @@ def classify_by_nn(x_train: DataFrame, y_train: DataFrame):
 
 
 
-def train_and_evaluate(classifiers: List[Callable[[DataFrame, DataFrame, DataFrame], DataFrame]],
-                       x_train: DataFrame, y_train: DataFrame, x_test: DataFrame,
-                       y_test: DataFrame, eval_df: DataFrame = None):
-    eval_predictions = []
+
+def train_and_evaluate(
+        classifiers: List[Callable[[DataFrame, DataFrame, DataFrame], ForestClassifier]],
+        x_train: DataFrame, y_train: DataFrame, x_test: DataFrame,
+        y_test: DataFrame) -> List[ForestClassifier]:
+    """Potentially returns something other than a Forest Classifier, but this is useful for type
+    annotations"""
+    trained_models = []
     for func in classifiers:
         classifier = func(x_train, y_train)
         predicted = classifier.predict(x_test)
-        if eval_df is not None:
-            eval_predictions.append(classifier.predict(eval_df))
+        trained_models.append(classifier)
         performance_report(predicted=predicted, ground_truth=y_test)
-    return eval_predictions
+    return trained_models

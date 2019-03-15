@@ -33,9 +33,9 @@ def add_metrics_to_method_comments(frame: DataFrame, *, read_cache, cache_name) 
         axis=1)
     frame['cc'] = [l.CCN for l in frame['lizard']]
     frame['tc'] = [l.token_count for l in frame['lizard']]
-    frame['method_name'] = [l.function_list[0].name if len(l.function_list) > 0 else "" for l in frame['lizard']]
-    frame['method_name_length'] = [len(name) for name in frame['method_name']]
-    frame['method_name_word_count'] = [sum(1 for c in name if c.isupper()) for name in frame['method_name']]
+    # frame['method_name'] = [l.function_list[0].name if len(l.function_list) > 0 else "" for l in frame['lizard']]
+    # frame['method_name_length'] = [len(name) for name in frame['method_name']]
+    # frame['method_name_word_count'] = [sum(1 for c in name if c.isupper()) for name in frame['method_name']]
 
     frame.drop('lizard', axis=1, inplace=True)
 

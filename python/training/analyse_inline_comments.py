@@ -13,7 +13,7 @@ from training.read_data import read_and_cache_csv
 def analyse_inline_comments():
     REPO_ROOT = os.getenv('CSV_ROOT', "../../../qualityCommentRepos/__commentMetrics")
     SHOULD_CACHE = True
-    frame = read_and_cache_csv(read_cache=SHOULD_CACHE, repo_root=REPO_ROOT,
+    frame = read_and_cache_csv(read_cache=SHOULD_CACHE, root_of_repos=REPO_ROOT,
                                cache_name='inline_frame_cache')
     frame = add_metrics_to_inline_comments(frame, read_cache=False,
                                            cache_name='inline_metrics_cache')
