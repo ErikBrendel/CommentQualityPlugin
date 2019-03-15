@@ -5,10 +5,11 @@ import java.util.List;
 
 public class TrainingMain {
 
-    public static String REPO_CLONE_PATH = "../../qualityCommentRepos/";
+    public static String REPO_CLONE_PATH = "../../CommentRepos/";
     public static String REPO_URL_START = "https://github.com/";
     public static String REPO_URL_END = ".git";
     private static String[] REPOS = { // their clone url is REPO_URL_START + this string + REPO_URL_END
+            "eclipse/che",
             "apache/flink",
             "apache/camel",
             "elastic/elasticsearch",

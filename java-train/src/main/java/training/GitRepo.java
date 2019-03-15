@@ -23,7 +23,6 @@ public class GitRepo {
 
     public void enqueueTasks(TrainingTaskList tasks) {
         List<String> foundFiles = new ExternalProgram(rootDirectory()).runArgs("find", ".", "-name", "*.java");
-
         for (String filename : foundFiles) {
             if ("".equals(filename)) continue;
 
@@ -52,6 +51,6 @@ public class GitRepo {
 
     private boolean isCloned() {
         File root = rootDirectory();
-        return root.exists() && root.isDirectory();
+        return root.exists() && root.isDirectory() && root.list().length > 0;
     }
 }

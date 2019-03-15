@@ -43,7 +43,7 @@ public class TrainingWorker extends Thread {
                     }
                 } else{
                     try{
-                        extractLineComments(nextTask);
+                        extractComments(nextTask);
                     } catch(Exception e){
                         e.printStackTrace();
                     }
@@ -111,8 +111,9 @@ public class TrainingWorker extends Thread {
                 String repoName = rootDirectory.getName();
                 CsvWriter export = new CsvWriter(new File(rootDirectory, "../__commentMetrics/" + repoName + "/" + filename + ".csv"));
                 export.writeCell("commented").writeCell("modifiers").writeCell("parameterAmount").writeCell("loc")
-                        .writeCell("comment").writeCell("code").writeCell("commentType")
-                        .endLine();
+                        .writeCell("declaration").writeCell("comment").writeCell("code").writeCell("commentType")
+                        .writeCell("annotations").writeCell("methodName").writeCell("methodNameLength")
+                        .writeCell("methodNameWordCount").writeCell("nrInlineComments").endLine();
 
                 VoidVisitor<CsvWriter> visitor = new VoidVisitorAdapter<CsvWriter>() {
                     @Override
@@ -123,10 +124,17 @@ public class TrainingWorker extends Thread {
                         int parameterAmount = method.getParameters().size();
                         int loc = method.getRange().map(Range::getLineCount).orElse(0);
                         String comment = method.getComment().map(Node::toString).orElse("");
-                        String code = method.toString();
-
-                        writer.writeCell(commented).writeCell(modifiers).writeCell(parameterAmount).writeCell(loc);
-                        writer.writeCell(comment).writeCell(code).writeCell("method").endLine();
+                        String code = method.toString().replace(comment, "");
+                        String declaration = method.getDeclarationAsString();
+                        String annotations = method.getAnnotations().toString();
+                        String methodName = method.getNameAsString();
+                        int nrInlineComments = method.getAllContainedComments().size();
+                        writer.writeCell(commented).writeCell(modifiers).writeCell(parameterAmount)
+                                .writeCell(loc - nrInlineComments)
+                                .writeCell(declaration).writeCell(comment).writeCell(code).writeCell("method")
+                                .writeCell(annotations).writeCell(methodName).writeCell(methodName.length())
+                                .writeCell(methodName.split("(?<=[a-z])(?=[A-Z])").length)
+                                .writeCell(nrInlineComments).endLine();
                     }
 
                     /* Blockcomments are mostly licenses
@@ -137,11 +145,11 @@ public class TrainingWorker extends Thread {
                     }*/
 
 
-                    @Override
+                   /* @Override
                     public void visit(final LineComment comment, final CsvWriter writer) {
                         super.visit(comment, writer);
                         visitComment(comment, writer, "line");
-                    }
+                    }*/
 
                     private void visitComment(Comment comment, CsvWriter writer, String type) {
                         boolean commented = true;
