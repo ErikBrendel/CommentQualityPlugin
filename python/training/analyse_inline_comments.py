@@ -1,45 +1,32 @@
 import os
 
-from pandas import DataFrame
-from sklearn.model_selection import train_test_split
-
-from training.classifier import *
-from training.cluster import show_plot
-from training.evaluation import performance_report
 from training.metrics_generation import add_metrics_to_inline_comments
-from training.preprocessing import get_preprocessor, balance, relabel_data
 from training.read_data import read_and_cache_csv
+from training.training_and_evaluation import train_for, evaluate_repo_with
+
 
 def analyse_inline_comments():
-    REPO_ROOT = os.getenv('CSV_ROOT', "../../../qualityCommentRepos/__commentMetrics")
+    training_repos = os.getenv('CSV_ROOT', "../../../CommentRepos/__commentLineMetrics")
     SHOULD_CACHE = True
-    frame = read_and_cache_csv(read_cache=SHOULD_CACHE, root_of_repos=REPO_ROOT,
-                               cache_name='inline_frame_cache')
-    frame = add_metrics_to_inline_comments(frame, read_cache=False,
-                                           cache_name='inline_metrics_cache')
-    print(frame.shape)
-    FEATURES = ['loc', 'conditionChildren', 'condition_length', 'code_length']
-    CLASS_LABEL = 'should_comment'
+    ## "commented";"loc";"comment";"code";"containedComments";"condition";"conditionChildren";"condition_length";"type"
+    FEATURES = ['loc', 'conditionChildren', 'condition_length', 'nloc', 'cc', 'tc', 'type']
+    FEATURES_TO_ENCODE = ['type']
+    train_test_frame = prepare_inline_comment_df(training_repos, SHOULD_CACHE, 'train_inline_c',
+                                               'train_inline_add_c')
+    models, encoders = train_for(train_test_frame, FEATURES, FEATURES_TO_ENCODE)
 
-    frame = relabel_data(frame, CLASS_LABEL, FEATURES)
-    frame = balance(frame, CLASS_LABEL)
-
-    show_plot(frame, y_axis='condition_length', label=CLASS_LABEL, log_scale_x=False,
-              remove_outliers=True)
+    # eval_repo = os.getenv('CSV_ROOT', '')
+    # eval_frame = prepare_inline_comment_df(eval_repo, SHOULD_CACHE, 'eval_inline_c',
+    #                                        'eval_inline_add_c')
+    # evaluate_repo_with(eval_frame, models[0], FEATURES, encoders)
 
 
-    labels = frame[[CLASS_LABEL]]
-    X = frame[FEATURES]
-
-    # eventually we should use cross-validation here to prevent overfitting
-    x_train, x_test, y_train, y_test = train_test_split(X, labels,
-                                                        test_size=0.33,
-                                                        random_state=43)
-
-    train_and_evaluate([classify_by_dTree, classify_by_randomF, classify_by_extra_tree],
-                       x_train,
-                       y_train,
-                       x_test, y_test)
+def prepare_inline_comment_df(data_env, SHOULD_CACHE, cache_name, cache_name_additional):
+    frame = read_and_cache_csv(read_cache=SHOULD_CACHE, root_of_repos=data_env,
+                               cache_name=cache_name)
+    frame = add_metrics_to_inline_comments(frame, read_cache=SHOULD_CACHE,
+                                           cache_name=cache_name_additional)
+    return frame
 
 if __name__ == '__main__':
     analyse_inline_comments()

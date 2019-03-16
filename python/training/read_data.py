@@ -12,9 +12,7 @@ from math import log10 as log
 from math import inf as INFINITY
 
 
-def read_and_cache_csv(*, cache_name, root_of_repos,
-                       read_cache) -> DataFrame:
-    filename_offset = len(root_of_repos) + 1
+def read_and_cache_csv(*, cache_name, root_of_repos, read_cache) -> DataFrame:
     if os.path.isfile(cache_name) and read_cache:
         df = pd.read_pickle(cache_name)
         print('Cache: read date from cache', cache_name)

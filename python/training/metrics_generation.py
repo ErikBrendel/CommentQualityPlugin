@@ -1,3 +1,4 @@
+import datetime
 import os
 import pandas as pd
 
@@ -6,15 +7,24 @@ from pandas import DataFrame
 
 
 def add_metrics_to_inline_comments(frame: DataFrame, *, read_cache, cache_name) -> DataFrame:
+    start = datetime.datetime.now()
     if os.path.isfile(cache_name) and read_cache:
         cached_frame = pd.read_pickle(cache_name)
         print('CACHE: Read metrics from cache ', cache_name)
         return cached_frame
-    frame['condition_length'] = [len(cond) for cond in frame['condition']]
-    frame['code_length'] = [len(code) for code in frame['code']]
+    frame['lizard'] = [lizard.analyze_file.analyze_source_code("pl.java", code) for code in
+                       frame['code']]
+    frame['cc'] = [l.CCN for l in frame['lizard']]
+    frame['tc'] = [l.token_count for l in frame['lizard']]
+    frame['nloc'] = [l.nloc for l in frame['lizard']]
+
+    frame.drop('lizard', axis=1, inplace=True)
+
 
     frame.to_pickle(cache_name)
     print('done adding metrics. Stored in cache: ', cache_name)
+    end = datetime.datetime.now()
+    print('took', end - start)
     return frame
 
 
@@ -55,6 +65,11 @@ if __name__ == '__main__':
                                                  'doneAreYou(int '
                                                  'i){'
                                                  '\n\treturn 4\n}')
+    l3 = lizard.analyze_file.analyze_source_code("placeholder.java", """// Explicit reference equality is added here just in case Arrays.equals does not have one
+if (primaryConstructorArgTypes == argumentTypes || Arrays.equals(primaryConstructorArgTypes, argumentTypes)) {
+    // This skips "get constructors" machinery
+    return ReflectUtils.newInstance(primaryConstructor, arguments);
+}""")
 
     frame = DataFrame({'code': ['public void do(){}', 'private int done(int i){return 4}',
                                 'private int indent(int i){\nif(i>10)\n\treturn '

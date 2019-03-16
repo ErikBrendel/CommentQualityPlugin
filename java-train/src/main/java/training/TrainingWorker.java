@@ -5,7 +5,7 @@ import com.github.javaparser.ParseResult;
 import com.github.javaparser.Range;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.Node;
-import com.github.javaparser.ast.stmt.IfStmt;
+import com.github.javaparser.ast.stmt.*;
 
 import com.github.javaparser.ast.body.MethodDeclaration;
 import com.github.javaparser.ast.comments.BlockComment;
@@ -14,6 +14,7 @@ import com.github.javaparser.ast.comments.LineComment;
 import com.github.javaparser.ast.stmt.IfStmt;
 import com.github.javaparser.ast.visitor.VoidVisitor;
 import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
+import javassist.compiler.ast.Stmnt;
 
 import java.io.File;
 import java.util.Collections;
@@ -43,7 +44,7 @@ public class TrainingWorker extends Thread {
                     }
                 } else{
                     try{
-                        extractComments(nextTask);
+                        extractLineComments(nextTask);
                     } catch(Exception e){
                         e.printStackTrace();
                     }
@@ -56,6 +57,7 @@ public class TrainingWorker extends Thread {
         running = false;
     }
 
+
     private static void extractLineComments(TrainingTaskList.Task task) {
         String filename = task.filename;
         File rootDirectory = task.rootDirectory;
@@ -65,27 +67,81 @@ public class TrainingWorker extends Thread {
             parsed.ifSuccessful(cu -> {
 
                 String repoName = rootDirectory.getName();
-                CsvWriter export = new CsvWriter(new File(rootDirectory, "../__commentMetrics/" + repoName + "/" + filename + ".csv"));
-                export.writeCell("commented").writeCell("loc").writeCell("condition").writeCell("conditionChildren")
-                        .writeCell("comment").writeCell("code")
+                CsvWriter export = new CsvWriter(new File(rootDirectory, "../__commentLineMetrics/" + repoName + "/" + filename + ".csv"));
+                export.writeCell("commented").writeCell("loc").writeCell("comment").writeCell("code").writeCell("containedComments")
+                        .writeCell("condition").writeCell("conditionChildren").writeCell("condition_length").writeCell("type")
                         .endLine();
 
                 VoidVisitor<CsvWriter> visitor = new VoidVisitorAdapter<CsvWriter>() {
+
+                    private void writeBasics(final Statement stmt, final CsvWriter writer){
+                        boolean commented = false;
+                        if(stmt.getComment().isPresent()){
+                            commented = true;
+                        }
+                        int loc = stmt.getRange().map(Range::getLineCount).orElse(0);
+                        String comment = stmt.getComment().map(Node::toString).orElse("");
+                        String code = stmt.toString();
+                        int containedComments = stmt.getAllContainedComments().size();
+                        writer.writeCell(commented).writeCell(loc).writeCell(comment).writeCell(code).writeCell(containedComments);
+                    }
+
                     @Override
                     public void visit(final IfStmt ifElseStmt, final CsvWriter writer) {
                         super.visit(ifElseStmt, writer);
-                        boolean commented = false;
-                        if(ifElseStmt.getComment().isPresent()){
-                            commented = true;
-                        }
-                        int loc = ifElseStmt.getRange().map(Range::getLineCount).orElse(0);
-                        String comment = ifElseStmt.getComment().map(Node::toString).orElse("");
-                        String code = ifElseStmt.toString();
+                        this.writeBasics(ifElseStmt, writer);
                         String condition = ifElseStmt.getCondition().toString();
+                        // Todo: some sort of how many blocks follow would be good
                         int conditionChildren = ifElseStmt.getCondition().getChildNodes().size();
-                        writer.writeCell(commented).writeCell(loc).writeCell(condition).writeCell(conditionChildren);
-                        writer.writeCell(comment).writeCell(code).endLine();
+                        writer.writeCell(condition).writeCell(conditionChildren).writeCell(condition.length()).writeCell("if").endLine();
                     }
+
+                    @Override
+                    public void visit(final TryStmt tryStmt, final CsvWriter writer) {
+                        super.visit(tryStmt, writer);
+                        this.writeBasics(tryStmt, writer);
+                        String condition = "";
+                        int conditionChildren = 0;
+                        writer.writeCell(condition).writeCell(conditionChildren).writeCell(condition.length()).writeCell("try").endLine();
+                    }
+
+                    @Override
+                    public void visit(final ForStmt forStmt, final CsvWriter writer) {
+                        super.visit(forStmt, writer);
+                        this.writeBasics(forStmt, writer);
+                        String condition =  forStmt.getCompare().toString();
+                        int conditionChildren = 0;
+                        writer.writeCell(condition).writeCell(conditionChildren).writeCell(condition.length()).writeCell("for").endLine();
+                    }
+
+                    @Override
+                    public void visit(final WhileStmt whileStmt, final CsvWriter writer) {
+                        super.visit(whileStmt, writer);
+                        this.writeBasics(whileStmt, writer);
+                        String condition =  whileStmt.getCondition().toString();
+                        int conditionChildren = whileStmt.getCondition().getChildNodes().size();
+                        writer.writeCell(condition).writeCell(conditionChildren).writeCell(condition.length()).writeCell("while").endLine();
+                    }
+
+                    @Override
+                    public void visit(final SwitchStmt switchStmt, final CsvWriter writer) {
+                        super.visit(switchStmt, writer);
+                        this.writeBasics(switchStmt, writer);
+                        String condition = "";
+                        int conditionChildren = 0;
+                        writer.writeCell(condition).writeCell(conditionChildren).writeCell(condition.length()).writeCell("switch").endLine();
+                    }
+
+                    @Override
+                    public void visit(final SynchronizedStmt synchronizedStmt, final CsvWriter writer) {
+                        super.visit(synchronizedStmt, writer);
+                        this.writeBasics(synchronizedStmt, writer);
+                        String condition = synchronizedStmt.getExpression().toString();
+                        int conditionChildren = synchronizedStmt.getExpression().getChildNodes().size();
+                        writer.writeCell(condition).writeCell(conditionChildren).writeCell(condition.length()).writeCell("sync").endLine();
+                    }
+
+
 
                 };
                 cu.accept(visitor, export);
