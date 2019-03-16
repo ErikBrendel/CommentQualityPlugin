@@ -22,12 +22,22 @@ def classify_by_dTree(x_train: DataFrame, y_train: DataFrame, should_print=False
     print('Training dTree')
     clf = tree.DecisionTreeClassifier()
     clf.fit(x_train, y_train)
-    print(x_train.keys().to_list())
-    print(clf.feature_importances_)
+    print_feature_importance(x_train, clf)
     if should_print:
-        dot_data = tree.export_graphviz(clf, out_file=None)
+        dot_data = tree.export_graphviz(clf, feature_names= x_train.keys().values, out_file=None)
         graph = graphviz.Source(dot_data)
-        graph.render("iris")
+        graph.render("dtree")
+    return clf
+
+def classify_by_short_dTree(x_train: DataFrame, y_train: DataFrame, should_print=False):
+    print('Training short 3 depth dTree')
+    clf = tree.DecisionTreeClassifier(max_depth=5)
+    clf.fit(x_train, y_train)
+    print_feature_importance(x_train, clf)
+    if should_print:
+        dot_data = tree.export_graphviz(clf, feature_names= x_train.keys().values, out_file=None)
+        graph = graphviz.Source(dot_data)
+        graph.render("short_tree")
     return clf
 
 

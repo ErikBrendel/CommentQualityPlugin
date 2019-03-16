@@ -68,7 +68,8 @@ def train_for_method_comments(use_cache: bool, training_repos: str, features: Li
     encoders, x_train = create_encoder_and_encode(x_train, features_to_encode)
     x_test = encode_frame_with(encoders, x_test)
 
-    models = train_and_evaluate([classify_by_dTree, classify_by_randomF, classify_by_extra_tree],
+    models = train_and_evaluate([classify_by_short_dTree, classify_by_dTree, classify_by_randomF,
+                                 classify_by_extra_tree],
                                 x_train,
                                 y_train,
                                 x_test, y_test)
@@ -96,7 +97,7 @@ def evaluate_repo_with(classifier, repo_path: str, use_cache: bool, features: Li
     eval_frame['missing_comment'] = eval_frame.predicted & ~ eval_frame.commented
 
     missing_comments: DataFrame = eval_frame.loc[eval_frame['missing_comment']]
-    print_decisions(classifier, eval_X, eval_frame)
+    print_decisions(classifier, eval_X, eval_frame, missing_comments.index.values)
     sum_eval: DataFrame = eval_frame.groupby('filename').sum()
     sum_eval['comment_conformance'] = sum_eval.commented - sum_eval.predicted
     sum_eval.to_csv('complete_result.csv')
@@ -107,8 +108,9 @@ def evaluate_repo_with(classifier, repo_path: str, use_cache: bool, features: Li
 def main():
     # FEATURES = ['parameterAmount', 'loc', 'tc', 'cc', 'modifiers', 'loctoc',
     #             'method_name_length', 'method_name_word_count']
-    FEATURES = ['parameterAmount', 'loc', 'tc', 'cc', 'modifiers', 'loctoc', 'annotations',
-                'methodNameWordCount', 'methodNameLength', 'nrInlineComments']
+    # FEATURES = ['parameterAmount', 'loc', 'tc', 'cc', 'modifiers', 'loctoc', 'annotations',
+    #             'methodNameWordCount', 'methodNameLength', 'nrInlineComments']
+    FEATURES = ['parameterAmount', 'loc', 'modifiers', 'annotations', 'methodNameWordCount', 'methodNameLength']
     FEATURES_TO_ENCODE = ['modifiers', 'annotations']
     SHOULD_CACHE = True
 
@@ -122,34 +124,25 @@ def main():
     evaluate_repo_with(models[0], repo_path, SHOULD_CACHE, FEATURES, encoders)
 
 
-def print_decisions(classifier: DecisionTreeClassifier, eval_X, eval_frame):
+def print_decisions(classifier: DecisionTreeClassifier, eval_X, eval_frame, indexes):
     node_indicator = classifier.decision_path(eval_X)
     result = classifier.predict(eval_X)
     leave_id = classifier.apply(eval_X)
-    get_path(classifier, eval_X, eval_frame, node_indicator, result, leave_id, 1)
+    for index in indexes:
+        get_decision_path(classifier, eval_X, eval_frame, node_indicator, result, leave_id, index)
 
-def get_path(estimator: DecisionTreeClassifier, X_test, eval_frame, node_indicator, result,
-             leave_id, sample_id):
-    # First let's retrieve the decision path of each sample. The decision_path
-    # method allows to retrieve the node indicator functions. A non zero element of
-    # indicator matrix at the position (i, j) indicates that the sample i goes
-    # through the node j.
-
+def get_decision_path(estimator: DecisionTreeClassifier, X_test, eval_frame, node_indicator, result,
+                      leave_id, sample_id):
 
     feature = estimator.tree_.feature
     threshold = estimator.tree_.threshold
-    n_nodes = estimator.tree_.node_count
-
-    # Similarly, we can also have the leaves ids reached by each sample.
-
-
-    # Now, it's possible to get the tests that were used to predict a sample or
-    # a group of samples. First, let's make it for the sample.
 
     node_index = node_indicator.indices[node_indicator.indptr[sample_id]:
                                         node_indicator.indptr[sample_id + 1]]
-
-    print('Rules used to predict sample', eval_frame.iloc[sample_id], 'id:', sample_id, '\n')
+    print('\n')
+    print(eval_frame.iloc[sample_id])
+    print('Rules used to predict sample id:', sample_id)
+    print('\n')
     for node_id in node_index:
         if leave_id[sample_id] == node_id:
             continue
