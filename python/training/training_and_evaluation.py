@@ -32,7 +32,7 @@ def train_for(train_test_frame: DataFrame, features: List[str], features_to_enco
                                                         test_size=0.33,
                                                         random_state=43)
 
-    x_train, y_train = balance_train(x_train, y_train, CLASS_LABEL, 0.5)
+    x_train, y_train = balance_train(x_train, y_train, CLASS_LABEL, 0)
 
     encoders, x_train, features = create_encoder_and_encode(x_train, features_to_encode, features)
     x_test = encode_frame_with(encoders, x_test)
