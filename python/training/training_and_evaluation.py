@@ -7,7 +7,7 @@ from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 from sklearn.tree import DecisionTreeClassifier
 
 from training.classifier import *
-from training.preprocessing import balance, relabel_data
+from training.preprocessing import balance, relabel_data, balance_train
 
 
 def train_for(train_test_frame: DataFrame, features: List[str], features_to_encode: List[str]) \
@@ -15,7 +15,7 @@ def train_for(train_test_frame: DataFrame, features: List[str], features_to_enco
     CLASS_LABEL = 'should_comment'
 
     train_test_frame = relabel_data(train_test_frame, CLASS_LABEL, features)
-    train_test_frame = balance(train_test_frame, CLASS_LABEL)
+    # train_test_frame = balance(train_test_frame, CLASS_LABEL)
     # show_plot(train_test_frame, y_axis='method_name_length', label=CLASS_LABEL, log_scale_x=False,
     #          remove_outliers=True)
 
@@ -25,11 +25,14 @@ def train_for(train_test_frame: DataFrame, features: List[str], features_to_enco
     x_train, x_test, y_train, y_test = train_test_split(X, labels,
                                                         test_size=0.33,
                                                         random_state=43)
+
+    x_train, y_train = balance_train(x_train, y_train, CLASS_LABEL, 0.5)
+
     encoders, x_train, features = create_encoder_and_encode(x_train, features_to_encode, features)
     x_test = encode_frame_with(encoders, x_test)
 
     models = train_and_evaluate([classify_by_short_dTree, classify_by_dTree, classify_by_randomF,
-                                 classify_by_extra_tree],
+                                 classify_by_extra_tree, classify_by_knn],
                                 x_train,
                                 y_train,
                                 x_test, y_test)
@@ -47,7 +50,7 @@ def create_encoder_and_encode(df: DataFrame, features_to_encode: List[str], feat
         labels = np.array(list(df[feature])).reshape(-1, 1)
         encoder.fit(labels)
         new_keys = encoder.get_feature_names()
-        values =np.array(list(df[feature])).reshape(-1, 1)
+        values = np.array(list(df[feature])).reshape(-1, 1)
         new_frame = DataFrame(encoder.transform(values).toarray(), index=df.index, columns=new_keys)
         df = pd.concat([df, new_frame], axis=1, join_axes=[df.index])
         encoders[feature] = encoder

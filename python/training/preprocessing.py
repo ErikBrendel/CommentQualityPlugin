@@ -10,19 +10,37 @@ def balance(frame: DataFrame, label: str) -> DataFrame:
     df_majority = frame[frame[label] == False]
     df_minority = frame[frame[label] == True]
 
-    # Upsample minority class
     df_majority_downsampled = resample(df_majority,
                                        replace=False,
                                        n_samples=df_minority.shape[0],
                                        random_state=42)
 
-    # Combine majority class with upsampled minority class
-    frame = pd.concat([df_minority, df_majority_downsampled]).sample(frac=1).reset_index(
-        drop=True)
+    frame = pd.concat([df_minority, df_majority_downsampled]).sample(frac=1).reset_index(drop=True)
 
     # Display new class counts
     print(frame[label].value_counts())
     return frame
+
+
+def balance_train(x_train, y_train, label: str, amount: float):
+    df_majority = x_train[y_train[label] == False]
+    df_minority = x_train[y_train[label] == True]
+    dfy_majority = y_train[y_train[label] == False]
+    dfy_minority = y_train[y_train[label] == True]
+
+    target_amount = int(df_minority.shape[0] + (1.0 - amount) * (df_majority.shape[0] - df_minority.shape[0]))
+    df_majority_downsampled = resample(df_majority, replace=False,
+                                       n_samples=target_amount, random_state=42)
+    dfy_majority_downsampled = resample(dfy_majority, replace=False,
+                                        n_samples=target_amount, random_state=42)
+
+    x_train = pd.concat([df_minority, df_majority_downsampled]).sample(frac=1).reset_index(drop=True)
+    y_train = pd.concat([dfy_minority, dfy_majority_downsampled]).sample(frac=1).reset_index(drop=True)
+
+    # Display new class counts
+    print("balanced by amount " + str(amount))
+    print(y_train[label].value_counts())
+    return x_train, y_train
 
 
 def relabel_data(frame: DataFrame, new_label: str, features: List[str]) -> DataFrame:

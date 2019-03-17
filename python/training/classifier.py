@@ -5,6 +5,7 @@ from sklearn.base import ClassifierMixin
 from sklearn.ensemble import RandomForestClassifier, ExtraTreesClassifier
 from sklearn.ensemble.forest import ForestClassifier
 from sklearn.linear_model import SGDClassifier
+from sklearn.tree._tree import TREE_LEAF
 from typing import List, Callable
 
 from sklearn.neighbors import KNeighborsClassifier
@@ -24,7 +25,8 @@ def classify_by_dTree(x_train: DataFrame, y_train: DataFrame, should_print=False
     clf.fit(x_train, y_train)
     print_feature_importance(x_train, clf)
     if should_print:
-        dot_data = tree.export_graphviz(clf, feature_names=x_train.keys().values, out_file=None)
+        dot_data = tree.export_graphviz(clf, feature_names=x_train.keys().values, class_names=['no', 'comment'],
+                                        out_file=None, rounded=True, filled=True)
         graph = graphviz.Source(dot_data)
         graph.render("dtree")
     return clf
@@ -37,7 +39,7 @@ def classify_by_short_dTree(x_train: DataFrame, y_train: DataFrame, should_print
     print_feature_importance(x_train, clf)
     if should_print:
         dot_data = tree.export_graphviz(clf, feature_names=x_train.keys().values, class_names=['no', 'comment'],
-                                        out_file=None)
+                                        out_file=None, rounded=True, filled=True)
         graph = graphviz.Source(dot_data)
         graph.render("short_tree")
     return clf
