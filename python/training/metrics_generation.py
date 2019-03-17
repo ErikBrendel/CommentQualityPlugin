@@ -34,13 +34,12 @@ def add_metrics_to_method_comments(frame: DataFrame, *, read_cache, cache_name) 
         print('CACHE: Read metrics from cache ', cache_name)
         return cached_frame
 
-    frame['lizard'] = frame.apply(
-        lambda row: lizard.analyze_file.analyze_source_code(
-            "placeholder.java",
-            row['code']),
-        axis=1)
+    frame['lizard'] = [lizard.analyze_file.analyze_source_code("pl.java", code) for code in
+                       frame['code']]
     frame['cc'] = [l.CCN for l in frame['lizard']]
     frame['tc'] = [l.token_count for l in frame['lizard']]
+
+
     # frame['method_name'] = [l.function_list[0].name if len(l.function_list) > 0 else "" for l in frame['lizard']]
     # frame['method_name_length'] = [len(name) for name in frame['method_name']]
     # frame['method_name_word_count'] = [sum(1 for c in name if c.isupper()) for name in frame['method_name']]

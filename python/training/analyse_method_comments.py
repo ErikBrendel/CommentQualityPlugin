@@ -17,14 +17,12 @@ def prepare_method_comment_df(data_env, SHOULD_CACHE, cache_name, cache_name_add
 
 
 def analyse_method_comments():
-    # FEATURES = ['parameterAmount', 'loc', 'tc', 'cc', 'modifiers', 'tocloc',
+    # FEATURES = ['parameterAmount', 'loc', 'tc', 'cc', 'modifiers', 'loctoc',
     #             'method_name_length', 'method_name_word_count']
-    FEATURES = ['parameterAmount', 'loc', 'tc', 'cc', 'modifierCount', 'tocloc',
-                'annotationCount',
-                'methodNameWordCount', 'methodNameLength', 'nrInlineComments', 'hasBody',
-                'modifierVisibility', 'modifierStatic', 'modifierFinal', 'modifierAbstract', 'modifierSynchronized']
+    FEATURES = ['parameterAmount', 'loc', 'tc', 'cc', 'modifiers', 'loctoc', 'annotationNames',
+                'methodNameWordCount', 'methodNameLength', 'nrInlineComments']
     # FEATURES = ['parameterAmount', 'loc', 'modifiers', 'annotations', 'methodNameWordCount', 'methodNameLength']
-    FEATURES_TO_ENCODE = []
+    FEATURES_TO_ENCODE = ['modifiers', 'annotationNames']
     SHOULD_CACHE = True
 
     training_repos = os.getenv('CSV_ROOT', "../../../CommentRepos/__commentMetrics")
