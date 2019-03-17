@@ -3,7 +3,7 @@ from typing import Tuple, Dict
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelEncoder, OneHotEncoder, MultiLabelBinarizer
+from sklearn.preprocessing import LabelEncoder, MultiLabelBinarizer
 from sklearn.tree import DecisionTreeClassifier
 
 from training.classifier import *
@@ -15,7 +15,7 @@ def flat_list(list_of_lists):
 
 
 def train_for(train_test_frame: DataFrame, features: List[str], features_to_encode: List[str]) \
-        -> Tuple[List[ForestClassifier], Dict[str, OneHotEncoder]]:
+        -> Tuple[List[ForestClassifier], Dict[str, MultiLabelBinarizer]]:
     CLASS_LABEL = 'should_comment'
 
     train_test_frame = relabel_data(train_test_frame, CLASS_LABEL, features)
@@ -47,38 +47,37 @@ def train_for(train_test_frame: DataFrame, features: List[str], features_to_enco
 
 
 def create_encoder_and_encode(df: DataFrame, features_to_encode: List[str], features: List[str]) \
-        -> Tuple[Dict[str, OneHotEncoder], DataFrame, List[str]]:
+        -> Tuple[Dict[str, MultiLabelBinarizer], DataFrame, List[str]]:
     encoders = {}
     new_feature_names = [f for f in features if f not in features_to_encode]
     df = df.copy()
     for feature in features_to_encode:
-        encoder = OneHotEncoder(handle_unknown='ignore')
-        labels = np.array(list(df[feature])).reshape(-1, 1)
+        encoder = MultiLabelBinarizer()
+        labels = [x.split(',') for x in list(df[feature])]
         encoder.fit(labels)
-        new_keys = encoder.get_feature_names()
-        values = np.array(list(df[feature])).reshape(-1, 1)
-        new_frame = DataFrame(encoder.transform(values).toarray(), index=df.index, columns=new_keys)
+        new_keys = encoder.classes_
+        new_frame = DataFrame(encoder.transform(labels), index=df.index, columns=new_keys)
         df = pd.concat([df, new_frame], axis=1, join_axes=[df.index])
         encoders[feature] = encoder
-        new_feature_names.extend(list(new_keys))
+        new_feature_names.extend(new_keys)
         df.drop(feature, axis=1, inplace=True)
     return encoders, df, new_feature_names
 
 
-def encode_frame_with(encoders: Dict[str, OneHotEncoder], df: DataFrame) -> DataFrame:
+def encode_frame_with(encoders: Dict[str, MultiLabelBinarizer], df: DataFrame) -> DataFrame:
     df = df.copy()
     for feature in encoders.keys():
         encoder = encoders[feature]
-        values = np.array(list(df[feature])).reshape(-1, 1)
-        new_keys = encoder.get_feature_names()
-        new_frame = DataFrame(encoder.transform(values).toarray(), index=df.index, columns=new_keys)
+        values = [x.split(',') for x in list(df[feature])]
+        new_keys = encoder.classes_
+        new_frame = DataFrame(encoder.transform(values), index=df.index, columns=new_keys)
         df = pd.concat([df, new_frame], axis=1, join_axes=[df.index])
         df.drop(feature, axis=1, inplace=True)
     return df
 
 
 def evaluate_repo_with(eval_frame, classifier, features: List[str], encoders: Dict[str,
-                                                                                   OneHotEncoder]):
+                                                                                   MultiLabelBinarizer]):
     eval_X = eval_frame[features]
     eval_X = encode_frame_with(encoders, eval_X)
     result = classifier.predict(eval_X)
