@@ -166,10 +166,17 @@ public class TrainingWorker extends Thread {
 
                 String repoName = rootDirectory.getName();
                 CsvWriter export = new CsvWriter(new File(rootDirectory, "../__commentMetrics/" + repoName + "/" + filename + ".csv"));
-                export.writeCell("commented").writeCell("modifiers").writeCell("parameterAmount").writeCell("loc")
+                export.writeCell("commented").writeCell("modifiers").writeCell("modifierCount")
+                        .writeCell("parameterAmount").writeCell("loc")
                         .writeCell("declaration").writeCell("comment").writeCell("code").writeCell("commentType")
-                        .writeCell("annotations").writeCell("annotationNames").writeCell("methodName").writeCell("methodNameLength")
-                        .writeCell("methodNameWordCount").writeCell("nrInlineComments").endLine();
+                        .writeCell("annotations").writeCell("annotationNames").writeCell("annotationCount")
+                        .writeCell("methodName").writeCell("methodNameLength")
+                        .writeCell("methodNameWordCount").writeCell("nrInlineComments")
+                        .writeCell("modifierVisibility").writeCell("modifierStatic")
+                        .writeCell("modifierFinal").writeCell("modifierAbstract")
+                        .writeCell("modifierSynchronized")
+                        .writeCell("hasBody")
+                        .endLine();
 
                 VoidVisitor<CsvWriter> visitor = new VoidVisitorAdapter<CsvWriter>() {
                     @Override
@@ -177,6 +184,8 @@ public class TrainingWorker extends Thread {
                         super.visit(method, writer);
                         boolean commented = method.getComment().isPresent();
                         List<String> modifiers = method.getModifiers().stream().map(Node::toString).map(String::trim).collect(Collectors.toList());
+                        boolean hasBody = method.getBody().isPresent();
+                        boolean isInterfaceMethod = !hasBody && !modifiers.contains("abstract");
                         int parameterAmount = method.getParameters().size();
                         int loc = method.getRange().map(Range::getLineCount).orElse(0);
                         String comment = method.getComment().map(Node::toString).orElse("");
@@ -186,12 +195,29 @@ public class TrainingWorker extends Thread {
                         List<String> annotationNames = method.getAnnotations().stream().map(n -> n.getName().toString()).sorted(String::compareTo).collect(Collectors.toList());
                         String methodName = method.getNameAsString();
                         int nrInlineComments = method.getAllContainedComments().size();
-                        writer.writeCell(commented).writeCell(modifiers).writeCell(parameterAmount)
-                                .writeCell(loc - nrInlineComments)
+                        writer.writeCell(commented).writeCell(modifiers).writeCell(modifiers.size())
+                                .writeCell(parameterAmount).writeCell(loc)
                                 .writeCell(declaration).writeCell(comment).writeCell(code).writeCell("method")
-                                .writeCell(annotations).writeCell(annotationNames).writeCell(methodName).writeCell(methodName.length())
+                                .writeCell(annotations).writeCell(annotationNames).writeCell(annotationNames.size())
+                                .writeCell(methodName).writeCell(methodName.length())
                                 .writeCell(methodName.split("(?<=[a-z])(?=[A-Z])").length)
-                                .writeCell(nrInlineComments).endLine();
+                                .writeCell(nrInlineComments)
+                                .writeCell(visibilityValue(modifiers, isInterfaceMethod)).writeCell(modifiers.contains("static"))
+                                .writeCell(modifiers.contains("final")).writeCell(modifiers.contains("abstract"))
+                                .writeCell(modifiers.contains("synchronized"))
+                                .writeCell(hasBody)
+                                .endLine();
+                    }
+
+                    private int visibilityValue(List<String> modifiers, boolean isInterfaceMethod) {
+                        if (modifiers.contains("public") || isInterfaceMethod) {
+                            return 3;
+                        } else if (modifiers.contains("private")) {
+                            return 0;
+                        } else if (modifiers.contains("protected")) {
+                            return 1;
+                        }
+                        return 2;//package local
                     }
 
                     /* Blockcomments are mostly licenses
