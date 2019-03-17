@@ -21,7 +21,7 @@ def print_feature_importance(x_train: DataFrame, clf: ForestClassifier):
 
 def classify_by_dTree(x_train: DataFrame, y_train: DataFrame, should_print=False):
     print('Training dTree')
-    clf = tree.DecisionTreeClassifier()
+    clf = tree.DecisionTreeClassifier(min_samples_leaf=10)
     clf.fit(x_train, y_train)
     print_feature_importance(x_train, clf)
     if should_print:
