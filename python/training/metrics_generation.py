@@ -20,13 +20,11 @@ def add_metrics_to_inline_comments(frame: DataFrame, *, read_cache, cache_name) 
 
     frame.drop('lizard', axis=1, inplace=True)
 
-
     frame.to_pickle(cache_name)
     print('done adding metrics. Stored in cache: ', cache_name)
     end = datetime.datetime.now()
     print('took', end - start)
     return frame
-
 
 
 def add_metrics_to_method_comments(frame: DataFrame, *, read_cache, cache_name) -> DataFrame:
@@ -49,7 +47,7 @@ def add_metrics_to_method_comments(frame: DataFrame, *, read_cache, cache_name) 
 
     frame.drop('lizard', axis=1, inplace=True)
 
-    frame['loctoc'] = frame['loc'] / frame['tc']
+    frame['tocloc'] = frame['tc'] / frame['loc']
 
     frame.to_pickle(cache_name)
     print('done adding metrics. Stored in cache: ', cache_name)
