@@ -27,7 +27,7 @@ def train_for(train_test_frame: DataFrame, features: List[str], features_to_enco
     x_test = encode_frame_with(encoders, x_test)
 
     models = train_and_evaluate([classify_by_short_dTree, classify_by_dTree, classify_by_randomF,
-                                 classify_by_extra_tree, classify_by_knn],
+                                 classify_by_extra_tree],
                                 x_train,
                                 y_train,
                                 x_test, y_test)
