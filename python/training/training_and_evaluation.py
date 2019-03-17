@@ -23,7 +23,7 @@ def train_for(train_test_frame: DataFrame, features: List[str], features_to_enco
     # show_plot(train_test_frame, y_axis='method_name_length', label=CLASS_LABEL, log_scale_x=False,
     #          remove_outliers=True)
 
-    train_test_frame = train_test_frame.sample(frac=1)  # shuffle all our data!
+    train_test_frame = train_test_frame.sample(frac=1, random_state=42)  # shuffle all our data!
 
     labels = train_test_frame[[CLASS_LABEL]]
     X = train_test_frame[features]
