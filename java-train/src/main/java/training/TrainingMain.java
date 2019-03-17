@@ -17,7 +17,23 @@ public class TrainingMain {
             "apache/camel",
             "elastic/elasticsearch",
             "spring-projects/spring-boot",
-            "spring-projects/spring-framework"};
+            "spring-projects/spring-framework",
+            "ReactiveX/RxJava",
+            "kdn251/interviews",
+            "square/retrofit",
+            "google/guava",
+            "PhilJay/MPAndroidChart",
+            "owncloud/android",
+            "nextcloud/android",
+            "owntracks/android",
+            // "duckduckgo/Android", // that's all just kotlin!
+            "netty/netty",
+            "skylot/jadx",
+            "libgdx/libgdx", // really big
+            "chrisbanes/PhotoView",
+            "jenkinsci/jenkins",
+            "TheAlgorithms/Java",
+    };
     private static String[] smallRepoCollection = {"square/okhttp"};
     private static String[] REPOS = repoCollection;
     // find more at:
