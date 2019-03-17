@@ -14,7 +14,7 @@ from training.evaluation import performance_report
 
 
 def print_feature_importance(x_train: DataFrame, clf: ForestClassifier):
-    print(list(zip(x_train.keys().to_list(), map(lambda x: round(x*100, 3),
+    print(list(zip(x_train.keys().to_list(), map(lambda x: round(x * 100, 3),
                                                  clf.feature_importances_))))
 
 
@@ -24,18 +24,20 @@ def classify_by_dTree(x_train: DataFrame, y_train: DataFrame, should_print=False
     clf.fit(x_train, y_train)
     print_feature_importance(x_train, clf)
     if should_print:
-        dot_data = tree.export_graphviz(clf, feature_names= x_train.keys().values, out_file=None)
+        dot_data = tree.export_graphviz(clf, feature_names=x_train.keys().values, out_file=None)
         graph = graphviz.Source(dot_data)
         graph.render("dtree")
     return clf
 
+
 def classify_by_short_dTree(x_train: DataFrame, y_train: DataFrame, should_print=False):
-    print('Training short 3 depth dTree')
+    print('Training short 5 depth dTree')
     clf = tree.DecisionTreeClassifier(max_depth=5)
     clf.fit(x_train, y_train)
     print_feature_importance(x_train, clf)
     if should_print:
-        dot_data = tree.export_graphviz(clf, feature_names= x_train.keys().values, out_file=None)
+        dot_data = tree.export_graphviz(clf, feature_names=x_train.keys().values, class_names=['no', 'comment'],
+                                        out_file=None)
         graph = graphviz.Source(dot_data)
         graph.render("short_tree")
     return clf
@@ -78,8 +80,6 @@ def classify_by_nn(x_train: DataFrame, y_train: DataFrame):
                         hidden_layer_sizes=(100, 100, 10), random_state=42, max_iter=1000)
     clf.fit(x_train, y_train.values.ravel())
     return clf
-
-
 
 
 def train_and_evaluate(
