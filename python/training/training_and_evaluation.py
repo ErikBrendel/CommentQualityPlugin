@@ -1,7 +1,9 @@
 from typing import Tuple, Dict
 
+import pandas as pd
+import numpy as np
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 from sklearn.tree import DecisionTreeClassifier
 
 from training.classifier import *
@@ -9,7 +11,7 @@ from training.preprocessing import balance, relabel_data
 
 
 def train_for(train_test_frame: DataFrame, features: List[str], features_to_encode: List[str]) \
-        -> Tuple[List[ForestClassifier], Dict[str, LabelEncoder]]:
+        -> Tuple[List[ForestClassifier], Dict[str, OneHotEncoder]]:
     CLASS_LABEL = 'should_comment'
 
     train_test_frame = relabel_data(train_test_frame, CLASS_LABEL, features)
@@ -23,7 +25,7 @@ def train_for(train_test_frame: DataFrame, features: List[str], features_to_enco
     x_train, x_test, y_train, y_test = train_test_split(X, labels,
                                                         test_size=0.33,
                                                         random_state=43)
-    encoders, x_train = create_encoder_and_encode(x_train, features_to_encode)
+    encoders, x_train, features = create_encoder_and_encode(x_train, features_to_encode, features)
     x_test = encode_frame_with(encoders, x_test)
 
     models = train_and_evaluate([classify_by_short_dTree, classify_by_dTree, classify_by_randomF,
@@ -35,25 +37,34 @@ def train_for(train_test_frame: DataFrame, features: List[str], features_to_enco
     return models, encoders
 
 
-def create_encoder_and_encode(df: DataFrame, features_to_encode: List[str]) \
-        -> Tuple[Dict[str, LabelEncoder], DataFrame]:
+def create_encoder_and_encode(df: DataFrame, features_to_encode: List[str], features: List[str]) \
+        -> Tuple[Dict[str, OneHotEncoder], DataFrame, List[str]]:
     encoders = {}
+    new_feature_names = [f for f in features if f not in features_to_encode]
     df = df.copy()
     for feature in features_to_encode:
-        encoder = LabelEncoder()
-        labels = list(set(df[feature])) + ['<unknown>']
+        encoder = OneHotEncoder(handle_unknown='ignore')
+        labels = np.array(list(df[feature])).reshape(-1, 1)
         encoder.fit(labels)
-        df[feature] = encoder.transform(df[feature])
+        new_keys = encoder.get_feature_names()
+        values =np.array(list(df[feature])).reshape(-1, 1)
+        new_frame = DataFrame(encoder.transform(values).toarray(), index=df.index, columns=new_keys)
+        df = pd.concat([df, new_frame], axis=1, join_axes=[df.index])
         encoders[feature] = encoder
-    return encoders, df
+        new_feature_names.append(list(new_keys))
+        df.drop(feature, axis=1, inplace=True)
+    return encoders, df, new_feature_names
 
 
-def encode_frame_with(encoders: Dict[str, LabelEncoder], df: DataFrame) -> DataFrame:
+def encode_frame_with(encoders: Dict[str, OneHotEncoder], df: DataFrame) -> DataFrame:
     df = df.copy()
     for feature in encoders.keys():
         encoder = encoders[feature]
-        df[feature] = [val if val in encoder.classes_ else '<unknown>' for val in df[feature]]
-        df[feature] = encoder.transform(df[feature])
+        values = np.array(list(df[feature])).reshape(-1, 1)
+        new_keys = encoder.get_feature_names()
+        new_frame = DataFrame(encoder.transform(values).toarray(), index=df.index, columns=new_keys)
+        df = pd.concat([df, new_frame], axis=1, join_axes=[df.index])
+        df.drop(feature, axis=1, inplace=True)
     return df
 
 
