@@ -54,7 +54,7 @@ def create_encoder_and_encode(df: DataFrame, features_to_encode: List[str], feat
         new_frame = DataFrame(encoder.transform(values).toarray(), index=df.index, columns=new_keys)
         df = pd.concat([df, new_frame], axis=1, join_axes=[df.index])
         encoders[feature] = encoder
-        new_feature_names.append(list(new_keys))
+        new_feature_names.extend(list(new_keys))
         df.drop(feature, axis=1, inplace=True)
     return encoders, df, new_feature_names
 
@@ -72,7 +72,7 @@ def encode_frame_with(encoders: Dict[str, OneHotEncoder], df: DataFrame) -> Data
 
 
 def evaluate_repo_with(eval_frame, classifier, features: List[str], encoders: Dict[str,
-                                                                                   LabelEncoder]):
+                                                                                   OneHotEncoder]):
     eval_X = eval_frame[features]
     eval_X = encode_frame_with(encoders, eval_X)
     result = classifier.predict(eval_X)
