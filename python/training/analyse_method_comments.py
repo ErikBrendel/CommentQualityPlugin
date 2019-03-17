@@ -17,9 +17,9 @@ def prepare_method_comment_df(data_env, SHOULD_CACHE, cache_name, cache_name_add
 
 
 def analyse_method_comments():
-    # FEATURES = ['parameterAmount', 'loc', 'tc', 'cc', 'modifiers', 'loctoc',
+    # FEATURES = ['parameterAmount', 'loc', 'tc', 'cc', 'modifiers', 'tocloc',
     #             'method_name_length', 'method_name_word_count']
-    FEATURES = ['parameterAmount', 'loc', 'tc', 'cc', 'modifiers', 'loctoc', 'annotationNames',
+    FEATURES = ['parameterAmount', 'loc', 'tc', 'cc', 'modifiers', 'tocloc', 'annotationNames',
                 'methodNameWordCount', 'methodNameLength', 'nrInlineComments']
     # FEATURES = ['parameterAmount', 'loc', 'modifiers', 'annotations', 'methodNameWordCount', 'methodNameLength']
     FEATURES_TO_ENCODE = ['modifiers', 'annotationNames']
