@@ -11,7 +11,7 @@ def prepare_method_comment_df(data_env, SHOULD_CACHE, cache_name, cache_name_add
     frame = add_metrics_to_method_comments(frame, read_cache=SHOULD_CACHE,
                                            cache_name=cache_name_additional)
     # Most likely interface methods if no modifier
-    frame['modifiers'].fillna("anInterface", inplace=True)
+    frame['modifiers'].fillna("no-modifier", inplace=True)
     frame['annotationNames'].fillna("", inplace=True)
     return frame
 
@@ -20,7 +20,7 @@ def analyse_method_comments():
     # FEATURES = ['parameterAmount', 'loc', 'tc', 'cc', 'modifiers', 'tocloc',
     #             'method_name_length', 'method_name_word_count']
     FEATURES = ['parameterAmount', 'loc', 'tc', 'cc', 'modifiers', 'tocloc', 'annotationNames',
-                'methodNameWordCount', 'methodNameLength', 'nrInlineComments']
+                'methodNameWordCount', 'methodNameLength', 'modifierVisibility']
     # FEATURES = ['parameterAmount', 'loc', 'modifiers', 'annotations', 'methodNameWordCount', 'methodNameLength']
     FEATURES_TO_ENCODE = ['modifiers', 'annotationNames']
     SHOULD_CACHE = True

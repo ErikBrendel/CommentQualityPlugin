@@ -46,4 +46,7 @@ def read_repo(repo_root) -> DataFrame:
         repo_df = pd.concat(df_list, ignore_index=True)
         return repo_df
     else:
+        if not df_list:
+            print('no files to evaluate in repo')
+            exit()
         return df_list[0]
