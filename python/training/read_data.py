@@ -23,7 +23,7 @@ def read_and_cache_csv(*, cache_name, root_of_repos, read_cache) -> DataFrame:
     with Pool() as p:
         df_list = p.map(read_repo, repo_list)
     if len(df_list) > 1:
-        df = pd.concat(df_list, ignore_index=True)
+        df = pd.concat(df_list, ignore_index=True, sort=False)
     else:
         df = df_list[0]
     df.to_pickle(cache_name)
@@ -43,7 +43,7 @@ def read_repo(repo_root) -> DataFrame:
         new_frame['filename'] = filename[filename.find(repo_root[1]):-4]
         df_list.append(new_frame)
     if len(df_list) > 1:
-        repo_df = pd.concat(df_list, ignore_index=True)
+        repo_df = pd.concat(df_list, ignore_index=True, sort=False)
         return repo_df
     else:
         if not df_list:
