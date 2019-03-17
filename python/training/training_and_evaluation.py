@@ -27,7 +27,7 @@ def train_for(train_test_frame: DataFrame, features: List[str], features_to_enco
     x_test = encode_frame_with(encoders, x_test)
 
     models = train_and_evaluate([classify_by_short_dTree, classify_by_dTree, classify_by_randomF,
-                                 classify_by_extra_tree],
+                                 classify_by_extra_tree, classify_by_knn],
                                 x_train,
                                 y_train,
                                 x_test, y_test)
@@ -65,9 +65,9 @@ def evaluate_repo_with(eval_frame, classifier, features: List[str], encoders: Di
     eval_frame['predicted'] = result
     eval_frame['missing_comment'] = eval_frame.predicted & ~ eval_frame.commented
 
-    missing_comments: DataFrame = eval_frame.loc[eval_frame['missing_comment']]
+    missing_comments = eval_frame.loc[eval_frame['missing_comment']]
     print_decisions(classifier, eval_X, eval_frame, missing_comments.index.values)
-    sum_eval: DataFrame = eval_frame.groupby('filename').sum()
+    sum_eval = eval_frame.groupby('filename').sum()
     sum_eval['comment_conformance'] = sum_eval.commented - sum_eval.predicted
     sum_eval.to_csv('complete_result.csv')
     evaluation_result = sum_eval[['loc', 'cc', 'missing_comment']]

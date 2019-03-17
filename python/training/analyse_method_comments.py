@@ -18,15 +18,15 @@ def prepare_method_comment_df(data_env, SHOULD_CACHE, cache_name, cache_name_add
 def analyse_method_comments():
     # FEATURES = ['parameterAmount', 'loc', 'tc', 'cc', 'modifiers', 'loctoc',
     #             'method_name_length', 'method_name_word_count']
-    # FEATURES = ['parameterAmount', 'loc', 'tc', 'cc', 'modifiers', 'loctoc', 'annotations',
-    #             'methodNameWordCount', 'methodNameLength', 'nrInlineComments']
-    FEATURES = ['parameterAmount', 'loc', 'modifiers', 'annotations', 'methodNameWordCount', 'methodNameLength']
-    FEATURES_TO_ENCODE = ['modifiers', 'annotations']
+    FEATURES = ['parameterAmount', 'loc', 'tc', 'cc', 'modifiers', 'loctoc', 'annotations', 'annotationNames',
+                'methodNameWordCount', 'methodNameLength', 'nrInlineComments']
+    # FEATURES = ['parameterAmount', 'loc', 'modifiers', 'annotations', 'methodNameWordCount', 'methodNameLength']
+    FEATURES_TO_ENCODE = ['modifiers', 'annotations', 'annotationNames']
     SHOULD_CACHE = True
 
     training_repos = os.getenv('CSV_ROOT', "../../../CommentRepos/__commentMetrics")
     train_test_frame = prepare_method_comment_df(training_repos, SHOULD_CACHE, 'train_cache', 'train_additional_c')
-    models, encoders = train_for(train_test_frame, FEATURES,FEATURES_TO_ENCODE)
+    models, encoders = train_for(train_test_frame, FEATURES, FEATURES_TO_ENCODE)
 
     repo_path = os.getenv('CSV_ROOT', "../../../OneEval")
 

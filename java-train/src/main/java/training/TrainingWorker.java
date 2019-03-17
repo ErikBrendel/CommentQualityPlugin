@@ -44,7 +44,7 @@ public class TrainingWorker extends Thread {
                     }
                 } else{
                     try{
-                        extractLineComments(nextTask);
+                        extractComments(nextTask);
                     } catch(Exception e){
                         e.printStackTrace();
                     }
@@ -168,7 +168,7 @@ public class TrainingWorker extends Thread {
                 CsvWriter export = new CsvWriter(new File(rootDirectory, "../__commentMetrics/" + repoName + "/" + filename + ".csv"));
                 export.writeCell("commented").writeCell("modifiers").writeCell("parameterAmount").writeCell("loc")
                         .writeCell("declaration").writeCell("comment").writeCell("code").writeCell("commentType")
-                        .writeCell("annotations").writeCell("methodName").writeCell("methodNameLength")
+                        .writeCell("annotations").writeCell("annotationNames").writeCell("methodName").writeCell("methodNameLength")
                         .writeCell("methodNameWordCount").writeCell("nrInlineComments").endLine();
 
                 VoidVisitor<CsvWriter> visitor = new VoidVisitorAdapter<CsvWriter>() {
@@ -183,12 +183,13 @@ public class TrainingWorker extends Thread {
                         String code = method.toString().replace(comment, "");
                         String declaration = method.getDeclarationAsString();
                         String annotations = method.getAnnotations().toString();
+                        List<String> annotationNames = method.getAnnotations().stream().map(n -> n.getName().toString()).sorted(String::compareTo).collect(Collectors.toList());
                         String methodName = method.getNameAsString();
                         int nrInlineComments = method.getAllContainedComments().size();
                         writer.writeCell(commented).writeCell(modifiers).writeCell(parameterAmount)
                                 .writeCell(loc - nrInlineComments)
                                 .writeCell(declaration).writeCell(comment).writeCell(code).writeCell("method")
-                                .writeCell(annotations).writeCell(methodName).writeCell(methodName.length())
+                                .writeCell(annotations).writeCell(annotationNames).writeCell(methodName).writeCell(methodName.length())
                                 .writeCell(methodName.split("(?<=[a-z])(?=[A-Z])").length)
                                 .writeCell(nrInlineComments).endLine();
                     }
