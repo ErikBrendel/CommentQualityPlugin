@@ -1,3 +1,5 @@
+import copy
+
 from pandas import DataFrame
 from sklearn import tree
 import graphviz
@@ -13,6 +15,25 @@ from sklearn.neural_network import MLPClassifier
 
 from training.evaluation import performance_report
 
+def prune(tree):
+    tree = copy.deepcopy(tree)
+    dat = tree.tree_
+    nodes = range(0, dat.node_count)
+    ls = dat.children_left
+    rs = dat.children_right
+    classes = [[list(e).index(max(e)) for e in v] for v in dat.value]
+
+    leaves = [(ls[i] == rs[i]) for i in nodes]
+
+    LEAF = -1
+    for i in reversed(nodes):
+        if leaves[i]:
+            continue
+        if leaves[ls[i]] and leaves[rs[i]] and classes[ls[i]] == classes[rs[i]]:
+            ls[i] = rs[i] = LEAF
+            leaves[i] = True
+    return tree
+
 
 def print_feature_importance(x_train: DataFrame, clf: ForestClassifier):
     print(list(zip(x_train.keys().to_list(), map(lambda x: round(x * 100, 3),
@@ -23,6 +44,7 @@ def classify_by_dTree(x_train: DataFrame, y_train: DataFrame, should_print=False
     print('Training dTree')
     clf = tree.DecisionTreeClassifier(min_samples_leaf=10)
     clf.fit(x_train, y_train)
+    # clf = prune(clf)
     print_feature_importance(x_train, clf)
     if should_print:
         dot_data = tree.export_graphviz(clf, feature_names=x_train.keys().values, class_names=['no', 'comment'],
@@ -36,6 +58,7 @@ def classify_by_short_dTree(x_train: DataFrame, y_train: DataFrame, should_print
     print('Training short 5 depth dTree')
     clf = tree.DecisionTreeClassifier(max_depth=5, min_samples_leaf=100)
     clf.fit(x_train, y_train)
+    # clf = prune(clf)
     print_feature_importance(x_train, clf)
     if should_print:
         dot_data = tree.export_graphviz(clf, feature_names=x_train.keys().values, class_names=['no', 'comment'],
