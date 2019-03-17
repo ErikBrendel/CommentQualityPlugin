@@ -34,8 +34,8 @@ def balance_train(x_train, y_train, label: str, amount: float):
     dfy_majority_downsampled = resample(dfy_majority, replace=False,
                                         n_samples=target_amount, random_state=42)
 
-    x_train = pd.concat([df_minority, df_majority_downsampled]).sample(frac=1).reset_index(drop=True)
-    y_train = pd.concat([dfy_minority, dfy_majority_downsampled]).sample(frac=1).reset_index(drop=True)
+    x_train = pd.concat([df_minority, df_majority_downsampled]).reset_index(drop=True)
+    y_train = pd.concat([dfy_minority, dfy_majority_downsampled]).reset_index(drop=True)
 
     # Display new class counts
     print("balanced by amount " + str(amount))

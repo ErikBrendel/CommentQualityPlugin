@@ -3,11 +3,15 @@ from typing import Tuple, Dict
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelEncoder, OneHotEncoder
+from sklearn.preprocessing import LabelEncoder, OneHotEncoder, MultiLabelBinarizer
 from sklearn.tree import DecisionTreeClassifier
 
 from training.classifier import *
 from training.preprocessing import balance, relabel_data, balance_train
+
+
+def flat_list(list_of_lists):
+    return [item for sublist in list_of_lists for item in sublist]
 
 
 def train_for(train_test_frame: DataFrame, features: List[str], features_to_encode: List[str]) \
@@ -18,6 +22,8 @@ def train_for(train_test_frame: DataFrame, features: List[str], features_to_enco
     # train_test_frame = balance(train_test_frame, CLASS_LABEL)
     # show_plot(train_test_frame, y_axis='method_name_length', label=CLASS_LABEL, log_scale_x=False,
     #          remove_outliers=True)
+
+    train_test_frame = train_test_frame.sample(frac=1)  # shuffle all our data!
 
     labels = train_test_frame[[CLASS_LABEL]]
     X = train_test_frame[features]
@@ -31,8 +37,8 @@ def train_for(train_test_frame: DataFrame, features: List[str], features_to_enco
     encoders, x_train, features = create_encoder_and_encode(x_train, features_to_encode, features)
     x_test = encode_frame_with(encoders, x_test)
 
-    models = train_and_evaluate([classify_by_short_dTree, classify_by_dTree, classify_by_randomF,
-                                 classify_by_extra_tree, classify_by_knn],
+    models = train_and_evaluate([classify_by_short_dTree, classify_by_dTree,
+                                 classify_by_randomF, classify_by_extra_tree],
                                 x_train,
                                 y_train,
                                 x_test, y_test)

@@ -34,7 +34,7 @@ def classify_by_dTree(x_train: DataFrame, y_train: DataFrame, should_print=False
 
 def classify_by_short_dTree(x_train: DataFrame, y_train: DataFrame, should_print=True):
     print('Training short 5 depth dTree')
-    clf = tree.DecisionTreeClassifier(max_depth=5)
+    clf = tree.DecisionTreeClassifier(max_depth=5, min_samples_split=10, min_samples_leaf=4)
     clf.fit(x_train, y_train)
     print_feature_importance(x_train, clf)
     if should_print:
