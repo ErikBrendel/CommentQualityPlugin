@@ -42,7 +42,7 @@ def print_feature_importance(x_train: DataFrame, clf: ForestClassifier):
 
 def classify_by_dTree(x_train: DataFrame, y_train: DataFrame, should_print=False):
     print('Training dTree')
-    clf = tree.DecisionTreeClassifier(min_samples_leaf=10)
+    clf = tree.DecisionTreeClassifier(class_weight='balanced',min_samples_leaf=10)
     clf.fit(x_train, y_train)
     # clf = prune(clf)
     print_feature_importance(x_train, clf)
@@ -56,7 +56,7 @@ def classify_by_dTree(x_train: DataFrame, y_train: DataFrame, should_print=False
 
 def classify_by_short_dTree(x_train: DataFrame, y_train: DataFrame, should_print=True):
     print('Training short 5 depth dTree')
-    clf = tree.DecisionTreeClassifier(max_depth=5, min_samples_leaf=100)
+    clf = tree.DecisionTreeClassifier(class_weight='balanced',max_depth=5, min_samples_leaf=100)
     clf.fit(x_train, y_train)
     # clf = prune(clf)
     print_feature_importance(x_train, clf)
@@ -84,9 +84,16 @@ def classify_by_randomF(x_train: DataFrame, y_train: DataFrame):
     return clf
 
 
+def classify_by_extra_tree_balanced(x_train: DataFrame, y_train: DataFrame):
+    print('Training Balancing Extra Tree')
+    clf = ExtraTreesClassifier(class_weight='balanced',n_estimators=100)
+    clf.fit(x_train, y_train.values.ravel())
+    print_feature_importance(x_train, clf)
+    return clf
+
 def classify_by_extra_tree(x_train: DataFrame, y_train: DataFrame):
     print('Training Extra Tree')
-    clf = ExtraTreesClassifier(n_estimators=10)
+    clf = ExtraTreesClassifier(n_estimators=100)
     clf.fit(x_train, y_train.values.ravel())
     print_feature_importance(x_train, clf)
     return clf
