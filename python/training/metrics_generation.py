@@ -5,8 +5,13 @@ import pandas as pd
 import lizard
 from pandas import DataFrame
 
+def create_cache_dir(cache_name):
+    cache_name = 'caches/' + cache_name
+    os.makedirs('caches', exist_ok=True)
+    return cache_name
 
 def add_metrics_to_inline_comments(frame: DataFrame, *, read_cache, cache_name) -> DataFrame:
+    cache_name = create_cache_dir(cache_name)
     start = datetime.datetime.now()
     if os.path.isfile(cache_name) and read_cache:
         cached_frame = pd.read_pickle(cache_name)
@@ -19,7 +24,6 @@ def add_metrics_to_inline_comments(frame: DataFrame, *, read_cache, cache_name) 
     frame['nloc'] = [l.nloc for l in frame['lizard']]
 
     frame.drop('lizard', axis=1, inplace=True)
-
     frame.to_pickle(cache_name)
     print('done adding metrics. Stored in cache: ', cache_name)
     end = datetime.datetime.now()
@@ -29,6 +33,7 @@ def add_metrics_to_inline_comments(frame: DataFrame, *, read_cache, cache_name) 
 
 def add_metrics_to_method_comments(frame: DataFrame, *, read_cache, cache_name) -> DataFrame:
     """modifies dataframe in place"""
+    cache_name = create_cache_dir(cache_name)
     if os.path.isfile(cache_name) and read_cache:
         cached_frame = pd.read_pickle(cache_name)
         print('CACHE: Read metrics from cache ', cache_name)

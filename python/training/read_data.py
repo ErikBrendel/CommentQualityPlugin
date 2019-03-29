@@ -1,18 +1,16 @@
 import os
 from multiprocessing.pool import Pool
 
-from pandas import DataFrame
 import glob
 import os
-import sys
 import pandas as pd
 from pandas import DataFrame
-import difflib
-from math import log10 as log
-from math import inf as INFINITY
+from training.metrics_generation import create_cache_dir
 
 
 def read_and_cache_csv(*, cache_name, root_of_repos, read_cache) -> DataFrame:
+    cache_name = create_cache_dir(cache_name)
+
     if os.path.isfile(cache_name) and read_cache:
         df = pd.read_pickle(cache_name)
         print('Cache: read date from cache', cache_name)

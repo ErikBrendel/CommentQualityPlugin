@@ -2,7 +2,7 @@ import copy
 
 from pandas import DataFrame
 from sklearn import tree
-import graphviz
+import graphviz as graphviz
 from sklearn.base import ClassifierMixin
 from sklearn.ensemble import RandomForestClassifier, ExtraTreesClassifier
 from sklearn.ensemble.forest import ForestClassifier

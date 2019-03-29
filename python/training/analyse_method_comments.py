@@ -29,10 +29,11 @@ def analyse_method_comments():
     train_test_frame = prepare_method_comment_df(training_repos, SHOULD_CACHE, 'train_cache', 'train_additional_c')
     models, encoders = train_for(train_test_frame, FEATURES, FEATURES_TO_ENCODE)
 
-    repo_path = os.getenv('CSV_ROOT', "../../../OneEval")
-
-    eval_frame = prepare_method_comment_df(repo_path, SHOULD_CACHE, 'eval_cache', 'eval_additional_c')
-    evaluate_repo_with(eval_frame, models[0], FEATURES, encoders)
+    # repo_path = os.getenv('CSV_ROOT', "../../../OneEval")
+    #
+    # eval_frame = prepare_method_comment_df(repo_path, SHOULD_CACHE, 'eval_cache',
+    #                                        'eval_additional_c')
+    # evaluate_repo_with(eval_frame, models[0], FEATURES, encoders)
 
 
 

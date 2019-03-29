@@ -1,5 +1,4 @@
-import os
-
+import os as os
 from training.metrics_generation import add_metrics_to_inline_comments
 from training.read_data import read_and_cache_csv
 from training.training_and_evaluation import train_for, evaluate_repo_with
