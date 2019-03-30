@@ -37,6 +37,7 @@ public class TrainingWorker extends Thread {
                 } else {
                     try {
                         extractComments(nextTask);
+                        extractLineComments(nextTask);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }

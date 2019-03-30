@@ -4,6 +4,7 @@ from pandas import DataFrame
 from sklearn import tree
 import graphviz as graphviz
 from sklearn.base import ClassifierMixin
+from sklearn.dummy import DummyClassifier
 from sklearn.ensemble import RandomForestClassifier, ExtraTreesClassifier
 from sklearn.ensemble.forest import ForestClassifier
 from sklearn.linear_model import SGDClassifier
@@ -113,6 +114,12 @@ def classify_by_nn(x_train: DataFrame, y_train: DataFrame):
     clf.fit(x_train, y_train.values.ravel())
     return clf
 
+def classify_by_dummy(x_train: DataFrame, y_train: DataFrame):
+    print('Training Dummy classifier')
+    clf = DummyClassifier(random_state=42)
+    clf.fit(x_train, y_train.should_comment.to_numpy())
+    return clf
+
 
 def train_and_evaluate(
         classifiers: List[Callable[[DataFrame, DataFrame, DataFrame], ForestClassifier]],
@@ -122,6 +129,7 @@ def train_and_evaluate(
     annotations"""
     trained_models = []
     for func in classifiers:
+        print('\n')
         classifier = func(x_train, y_train)
         predicted = classifier.predict(x_test)
         trained_models.append(classifier)

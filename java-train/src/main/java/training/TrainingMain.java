@@ -32,10 +32,18 @@ public class TrainingMain {
             "libgdx/libgdx", // really big
             "chrisbanes/PhotoView",
             "jenkinsci/jenkins",
-            "TheAlgorithms/Java",
+            //"TheAlgorithms/Java",
     };
+    private static String[] mediumRepoCollection = { "square/okhttp",
+            "eclipse/che",
+            "apache/flink",
+            "apache/camel",
+            "elastic/elasticsearch",
+            "spring-projects/spring-boot",
+            "spring-projects/spring-framework",
+            "ReactiveX/RxJava",};
     private static String[] smallRepoCollection = {"square/okhttp"};
-    private static String[] REPOS = repoCollection;
+    private static String[] REPOS = mediumRepoCollection;
     // find more at:
     // https://github.com/search?l=Java&o=desc&q=pushed%3A%3E2019-02-25&s=stars&type=Repositories
 

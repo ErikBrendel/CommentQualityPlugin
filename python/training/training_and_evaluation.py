@@ -2,7 +2,7 @@ from typing import Tuple, Dict
 
 import pandas as pd
 import numpy as np
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import train_test_split, StratifiedKFold
 from sklearn.preprocessing import LabelEncoder, MultiLabelBinarizer
 from sklearn.tree import DecisionTreeClassifier
 
@@ -32,18 +32,39 @@ def train_for(train_test_frame: DataFrame, features: List[str], features_to_enco
                                                         test_size=0.33,
                                                         random_state=43)
 
-    x_train, y_train = balance_train(x_train, y_train, CLASS_LABEL, 0)
+    models_to_train = [classify_by_short_dTree, classify_by_dTree,
+                                 classify_by_randomF, classify_by_extra_tree, classify_by_extra_tree_balanced]
+    #cross_validate(4, x_train, y_train, models_to_train)
+    x_train, y_train = balance_train(x_train, y_train, CLASS_LABEL, 1)
 
     encoders, x_train, features = create_encoder_and_encode(x_train, features_to_encode, features)
     x_test = encode_frame_with(encoders, x_test)
 
-    models = train_and_evaluate([classify_by_short_dTree, classify_by_dTree,
+    models = train_and_evaluate([classify_by_short_dTree, classify_by_dTree, classify_by_dummy,
                                  classify_by_randomF, classify_by_extra_tree, classify_by_extra_tree_balanced],
                                 x_train,
                                 y_train,
                                 x_test, y_test)
 
     return models, encoders
+
+def cross_validate(n, original_x_train, original_y_train, models_to_train, balance=False):
+    X = original_x_train
+    y = original_y_train
+    skf = StratifiedKFold(n_splits=n)
+    acc = []
+    for train_index, test_index in skf.split(X, y):
+        x_train = X.iloc[train_index]
+        y_train = y.iloc[train_index]
+        x_test = X.iloc[test_index]
+        y_test = y.iloc[test_index]
+        models, encoder = train_and_evaluate(models_to_train,
+                                    x_train,
+                                    y_train,
+                                    x_test, y_test)
+        acc.append([model.score(encode_frame_with(enc, x_test), y_test) for model, enc in zip(models,
+                                                                                    encoder)])
+    print(acc)
 
 
 def create_encoder_and_encode(df: DataFrame, features_to_encode: List[str], features: List[str]) \
