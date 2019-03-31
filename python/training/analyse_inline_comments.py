@@ -12,14 +12,13 @@ def analyse_inline_comments():
         'containingMethodHasComment', 'containedComments'
     ]
     FEATURES_TO_ENCODE = ['type']
-    train_test_frame = prepare_inline_comment_df(training_repos, SHOULD_CACHE, 'train_inline_c',
-                                                 'train_inline_add_c')
+    train_test_frame = prepare_inline_comment_df(training_repos, SHOULD_CACHE, 'i_train', 'i_train_add')
     models, encoders = train_for(train_test_frame, FEATURES, FEATURES_TO_ENCODE)
 
-    eval_repo = os.getenv('CSV_ROOT', '../../../OneEvalLine')
-    eval_frame = prepare_inline_comment_df(eval_repo, SHOULD_CACHE, 'eval_inline_c',
-                                           'eval_inline_add_c')
-    evaluate_repo_with(eval_frame, models[0], FEATURES, encoders)
+    # generating software quality metrics:
+    # eval_repo = '../../../OneEvalLine'
+    # eval_frame = prepare_inline_comment_df(eval_repo, SHOULD_CACHE, 'i_eval', 'i_eval_add')
+    # evaluate_repo_with(eval_frame, models[0], FEATURES, encoders)
 
 
 def prepare_inline_comment_df(data_env, SHOULD_CACHE, cache_name, cache_name_additional):

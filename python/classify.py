@@ -1,13 +1,19 @@
 #!venv/bin/python3
 
 """
-Should print one line containing 'GOOD' or 'BAD'.
+Should print one line containing 'YES' or 'NO', depicting, whether the given code snippet
+should have a comment or not, according to the classifier.
 Can print additional lines with more information.
 """
 
 import sys
 
-[my_name, comment_text, code_text, comment_words, code_words] = sys.argv
+[_, code_snippet, *metrics] = sys.argv
 
-print('GOOD')
-print('Because it is linked to python')
+# TODO:
+#  compute the additional metrics,
+#  load the classifier from a pickle,
+#  classify the given code snippet
+
+print('YES')
+print('[Stub] All code snippets should have comments!')
