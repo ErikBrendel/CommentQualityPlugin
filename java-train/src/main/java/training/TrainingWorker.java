@@ -14,6 +14,9 @@ import java.io.File;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * This object takes care of one task after another, extracting data from the java files and saving it as csv
+ */
 public class TrainingWorker extends Thread {
 
     private final TrainingTaskList taskList;

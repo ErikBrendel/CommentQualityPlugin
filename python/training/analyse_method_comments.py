@@ -36,7 +36,5 @@ def analyse_method_comments():
     # evaluate_repo_with(eval_frame, models[0], FEATURES, encoders)
 
 
-
-
 if __name__ == '__main__':
     analyse_method_comments()

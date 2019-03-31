@@ -1,12 +1,7 @@
 import random
 
-import numpy as np
 import matplotlib.pyplot as plt
 from pandas import DataFrame
-
-from sklearn.cluster import KMeans
-from sklearn.datasets import make_blobs
-from sklearn import preprocessing
 
 
 def normalize(df):
@@ -45,7 +40,3 @@ def show_plot(frame: DataFrame, y_axis: str, label: str, x_axis='loc', log_scale
     plt.title(x_axis + ' ' + y_axis)
 
     plt.show()
-
-
-if __name__ == '__main__':
-    show_plot(None)

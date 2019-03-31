@@ -33,7 +33,7 @@ def train_for(train_test_frame: DataFrame, features: List[str], features_to_enco
                                                         random_state=43)
 
     models_to_train = [classify_by_short_dTree, classify_by_dTree,
-                                 classify_by_randomF, classify_by_extra_tree, classify_by_extra_tree_balanced]
+                       classify_by_randomF, classify_by_extra_tree, classify_by_extra_tree_balanced]
     #cross_validate(4, x_train, y_train, models_to_train)
     x_train, y_train = balance_train(x_train, y_train, CLASS_LABEL, 1)
 
@@ -47,6 +47,7 @@ def train_for(train_test_frame: DataFrame, features: List[str], features_to_enco
                                 x_test, y_test)
 
     return models, encoders
+
 
 def cross_validate(n, original_x_train, original_y_train, models_to_train, balance=False):
     X = original_x_train

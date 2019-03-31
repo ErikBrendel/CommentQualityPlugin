@@ -5,10 +5,12 @@ import pandas as pd
 import lizard
 from pandas import DataFrame
 
+
 def create_cache_dir(cache_name):
     cache_name = 'caches/' + cache_name
     os.makedirs('caches', exist_ok=True)
     return cache_name
+
 
 def add_metrics_to_inline_comments(frame: DataFrame, *, read_cache, cache_name) -> DataFrame:
     cache_name = create_cache_dir(cache_name)

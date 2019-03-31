@@ -1,9 +1,15 @@
 package training;
 
 import java.io.File;
-import java.util.*;
+import java.util.List;
 
+/**
+ * Representation of a locally cloned git repository.
+ */
 public class GitRepo {
+
+    public static String REPO_URL_START = "https://github.com/";
+    public static String REPO_URL_END = ".git";
 
     private final String name;
 
@@ -21,6 +27,11 @@ public class GitRepo {
         }
     }
 
+    /**
+     * find all the java files in that repository and add them as task into the given list
+     *
+     * @param tasks the list to add the tasks to
+     */
     public void enqueueTasks(TrainingTaskList tasks) {
         List<String> foundFiles = new ExternalProgram(rootDirectory()).runArgs("find", ".", "-name", "*.java");
         for (String filename : foundFiles) {
@@ -37,11 +48,12 @@ public class GitRepo {
     private void cloneRepo() {
         File root = rootDirectory();
         FileUtil.mkdirs(root);
-        String gitUrl = TrainingMain.REPO_URL_START + name + TrainingMain.REPO_URL_END;
+        String gitUrl = REPO_URL_START + name + REPO_URL_END;
         System.out.println(ExternalProgram.Anywhere.runArgsJoined("git", "clone", gitUrl, root.getAbsolutePath()));
     }
 
     private File _rootDirectory = null;
+
     private File rootDirectory() {
         if (_rootDirectory == null) {
             _rootDirectory = new File(TrainingMain.REPO_CLONE_PATH + name.replaceAll("/", "-") + "/");

@@ -3,6 +3,10 @@ package training;
 import java.io.*;
 import java.util.List;
 
+/**
+ * Utility class for writing data into csv files.
+ * All write functions return this, for chaining.
+ */
 public class CsvWriter {
 
     private final BufferedWriter writer;
@@ -27,11 +31,11 @@ public class CsvWriter {
         return writeCell(stringifyList(wordList));
     }
 
-    public static String stringifyList(List<String> wordList) {
+    private static String stringifyList(List<String> wordList) {
         StringBuilder s = new StringBuilder();
 
         boolean firstDone = false;
-        for (String word: wordList) {
+        for (String word : wordList) {
             if (firstDone) {
                 s.append(",");
             }
