@@ -10,10 +10,7 @@ import core.CommentQualityAnalysisResult;
 import core.QualityComment;
 import core.Utils;
 import org.jetbrains.annotations.NotNull;
-import training.CsvWriter;
-import training.ExternalProgram;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,6 +25,8 @@ import java.util.List;
  * https://upsource.jetbrains.com/idea-ce/file/idea-ce-a7b3d4e9e48efbd4ac75105e9737cea25324f11e/platform/analysis-api/src/com/intellij/codeInspection/ProblemsHolder.java?nav=stub:21:focused
  */
 public class BadCommentsInspection extends LocalInspectionTool {
+
+    private static final PsiComment[] EMPTY_COMMENT_ARRAY = new PsiComment[0];
 
     @Override
     @NotNull
@@ -61,7 +60,8 @@ public class BadCommentsInspection extends LocalInspectionTool {
                 if (qualityComment.position != QualityComment.Position.BeforeMethod) return;
 
                 CommentQualityAnalysisResult result = analyzeQualityOf(qualityComment);
-                holder.registerProblem(element, result.fullMessage(), ProblemHighlightType.WEAK_WARNING);
+                if (result.isBad())
+                    holder.registerProblem(element, result.fullMessage(), ProblemHighlightType.WEAK_WARNING);
             }
 
             private boolean isPartOfComment(PsiComment comment) {
@@ -82,29 +82,15 @@ public class BadCommentsInspection extends LocalInspectionTool {
                     current = Utils.nextNonWhitespaceElement(current);
                     currentLine++;
                 }
-                return comments.toArray(new PsiComment[0]);
+                return comments.toArray(EMPTY_COMMENT_ARRAY);
             }
         };
     }
 
-    private static final ExternalProgram PythonProgram = new ExternalProgram(new File("/home/erik/projects/CommentQualityPlugin/python"));
-
     @NotNull
     private CommentQualityAnalysisResult analyzeQualityOf(QualityComment comment) {
-        List<String> classification = PythonProgram.runArgs(
-                "venv/bin/python3",
-                "classify.py",
-                comment.fullCommentText(),
-                comment.relatedCodeText(),
-                CsvWriter.stringifyList(comment.commentWordList()),
-                CsvWriter.stringifyList(comment.relatedCodeWordList())
-        );
-
-        CommentQualityAnalysisResult.Result result = CommentQualityAnalysisResult.Result.valueOf(classification.remove(0));
-
-        String msg = String.join("\n", classification).trim();
-        if (msg.isEmpty()) msg = null;
-
-        return new CommentQualityAnalysisResult(result, msg);
+        return new CommentQualityAnalysisResult(
+                CommentQualityAnalysisResult.Result.BAD,
+                "This comment might be not needed");
     }
 }
