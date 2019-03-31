@@ -20,7 +20,7 @@ def normalize(df):
 
 def show_plot(frame: DataFrame, y_axis: str, label: str, x_axis='loc', log_scale_y=True,
               log_scale_x=True, remove_outliers=False, jitter=True):
-    plt.figure(figsize=(20, 20))
+    plt.figure(figsize=(18, 9))
     if remove_outliers:
         frame = frame.copy()
         frame = frame[frame[x_axis] < frame[x_axis].quantile(.95)]
