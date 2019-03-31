@@ -2,19 +2,19 @@ from typing import Tuple, Dict
 
 import pandas as pd
 import numpy as np
-from sklearn.model_selection import train_test_split, StratifiedKFold
+from sklearn import model_selection
+from sklearn.base import BaseEstimator, TransformerMixin
+from sklearn.model_selection import train_test_split, StratifiedKFold, cross_val_score
 from sklearn.preprocessing import LabelEncoder, MultiLabelBinarizer
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.pipeline import make_pipeline
 
 from training.classifier import *
 from training.preprocessing import balance, relabel_data, balance_train
 
 
-def flat_list(list_of_lists):
-    return [item for sublist in list_of_lists for item in sublist]
-
-
-def train_for(train_test_frame: DataFrame, features: List[str], features_to_encode: List[str]) \
+def train_and_validate_classifiers(train_test_frame: DataFrame, features: List[str],
+                                   features_to_encode: List[str]) \
         -> Tuple[List[ForestClassifier], Dict[str, MultiLabelBinarizer]]:
     CLASS_LABEL = 'should_comment'
 
@@ -32,40 +32,41 @@ def train_for(train_test_frame: DataFrame, features: List[str], features_to_enco
                                                         test_size=0.33,
                                                         random_state=43)
 
-    models_to_train = [classify_by_short_dTree, classify_by_dTree,
-                                 classify_by_randomF, classify_by_extra_tree, classify_by_extra_tree_balanced]
-    #cross_validate(4, x_train, y_train, models_to_train)
-    x_train, y_train = balance_train(x_train, y_train, CLASS_LABEL, 1)
-
-    encoders, x_train, features = create_encoder_and_encode(x_train, features_to_encode, features)
-    x_test = encode_frame_with(encoders, x_test)
-
-    models = train_and_evaluate([classify_by_short_dTree, classify_by_dTree, classify_by_dummy,
-                                 classify_by_randomF, classify_by_extra_tree, classify_by_extra_tree_balanced],
-                                x_train,
-                                y_train,
-                                x_test, y_test)
-
+    results, best = cross_validate(10, x_train, y_train, CLASS_LABEL, features, features_to_encode,
+                                 1.0)
+    print(best)
+    models, encoders = train_and_evaluate([best[0]])
     return models, encoders
 
-def cross_validate(n, original_x_train, original_y_train, models_to_train, balance=False):
+
+def train_models_and_encoders(x_train: DataFrame, y_train: DataFrame, label: str,
+                              features: List[str], features_to_encode: List[str],
+                              balance_percentage=0.0):
+    x_train, y_train = balance_train(x_train, y_train, label, balance_percentage)
+
+    encoders, x_train, features = create_encoder_and_encode(x_train, features_to_encode, features)
+
+    models = train_models([classify_by_short_dTree, classify_by_dTree, classify_by_dummy],
+                          x_train,
+                          y_train)
+    return models, encoders
+
+
+def cross_validate(n, original_x_train, original_y_train, label, features: List[str],
+                   features_to_encode: List[str], balance: float):
     X = original_x_train
     y = original_y_train
     skf = StratifiedKFold(n_splits=n)
-    acc = []
-    for train_index, test_index in skf.split(X, y):
-        x_train = X.iloc[train_index]
-        y_train = y.iloc[train_index]
-        x_test = X.iloc[test_index]
-        y_test = y.iloc[test_index]
-        models, encoder = train_and_evaluate(models_to_train,
-                                    x_train,
-                                    y_train,
-                                    x_test, y_test)
-        acc.append([model.score(encode_frame_with(enc, x_test), y_test) for model, enc in zip(models,
-                                                                                    encoder)])
-    print(acc)
-
+    val_scores = []
+    models = [StratifiedDummy(), ShortDecisionTree(), DecisionTree(), RandomForest(),
+              ExtraTreeBalanced(), ExtraTree(), KNN()]
+    for model in models:
+        print('Doing ', model.__class__)
+        clf = make_pipeline(FeatureEncoder(features_to_encode, features), model)
+        val_scores.append((model.__class__, model_selection.cross_validate(clf, X, y,
+                                                                                cv=skf, n_jobs=-1)))
+    print(val_scores)
+    return val_scores, max([(mod, max(res['test_score'])) for mod, res in val_scores], key=lambda x: x[1])
 
 def create_encoder_and_encode(df: DataFrame, features_to_encode: List[str], features: List[str]) \
         -> Tuple[Dict[str, MultiLabelBinarizer], DataFrame, List[str]]:
@@ -83,6 +84,36 @@ def create_encoder_and_encode(df: DataFrame, features_to_encode: List[str], feat
         new_feature_names.extend(new_keys)
         df.drop(feature, axis=1, inplace=True)
     return encoders, df, new_feature_names
+
+
+class FeatureEncoder():
+    def __init__(self, features_to_encode: List[str], features: List[str]):
+        self.features_to_encode = features_to_encode
+        self.features = features
+        self.encoders = {}
+        self.new_feature_names = [f for f in features if f not in features_to_encode]
+
+    def fit(self, df_x: DataFrame, df_y:DataFrame, **fit_params):
+        df_x = df_x.copy()
+        for feature in self.features_to_encode:
+            encoder = MultiLabelBinarizer()
+            labels = [x.split(',') for x in list(df_x[feature])]
+            encoder.fit(labels)
+            new_keys = encoder.classes_
+            self.encoders[feature] = encoder
+            self.new_feature_names.extend(new_keys)
+        return self
+
+    def transform(self, df: DataFrame):
+        df = df.copy()
+        for feature in self.encoders.keys():
+            encoder = self.encoders[feature]
+            values = [x.split(',') for x in list(df[feature])]
+            new_keys = encoder.classes_
+            new_frame = DataFrame(encoder.transform(values), index=df.index, columns=new_keys)
+            df = pd.concat([df, new_frame], axis=1, join_axes=[df.index])
+            df.drop(feature, axis=1, inplace=True)
+        return df
 
 
 def encode_frame_with(encoders: Dict[str, MultiLabelBinarizer], df: DataFrame) -> DataFrame:

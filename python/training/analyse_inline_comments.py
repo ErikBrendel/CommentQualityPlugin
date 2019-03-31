@@ -1,7 +1,7 @@
 import os as os
 from training.metrics_generation import add_metrics_to_inline_comments
 from training.read_data import read_and_cache_csv
-from training.training_and_evaluation import train_for, evaluate_repo_with
+from training.training_and_evaluation import train_and_validate_classifiers, evaluate_repo_with
 
 
 def analyse_inline_comments():
@@ -14,7 +14,7 @@ def analyse_inline_comments():
     FEATURES_TO_ENCODE = ['type']
     train_test_frame = prepare_inline_comment_df(training_repos, SHOULD_CACHE, 'train_inline_c',
                                                  'train_inline_add_c')
-    models, encoders = train_for(train_test_frame, FEATURES, FEATURES_TO_ENCODE)
+    models, encoders = train_and_validate_classifiers(train_test_frame, FEATURES, FEATURES_TO_ENCODE)
 
     eval_repo = os.getenv('CSV_ROOT', '../../../OneEvalLine')
     eval_frame = prepare_inline_comment_df(eval_repo, SHOULD_CACHE, 'eval_inline_c',

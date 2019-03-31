@@ -2,7 +2,7 @@ import os
 
 from training.metrics_generation import add_metrics_to_method_comments
 from training.read_data import read_and_cache_csv
-from training.training_and_evaluation import train_for, evaluate_repo_with
+from training.training_and_evaluation import train_and_validate_classifiers, evaluate_repo_with
 
 
 def prepare_method_comment_df(data_env, SHOULD_CACHE, cache_name, cache_name_additional):
@@ -27,7 +27,7 @@ def analyse_method_comments():
 
     training_repos = os.getenv('CSV_ROOT', "../../../CommentRepos/__commentMetrics")
     train_test_frame = prepare_method_comment_df(training_repos, SHOULD_CACHE, 'train_cache', 'train_additional_c')
-    models, encoders = train_for(train_test_frame, FEATURES, FEATURES_TO_ENCODE)
+    models, encoders = train_and_validate_classifiers(train_test_frame, FEATURES, FEATURES_TO_ENCODE)
 
     # repo_path = os.getenv('CSV_ROOT', "../../../OneEval")
     #
