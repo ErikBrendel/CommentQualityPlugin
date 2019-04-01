@@ -8,6 +8,7 @@ from sklearn.dummy import DummyClassifier
 from sklearn.ensemble import RandomForestClassifier, ExtraTreesClassifier
 from sklearn.ensemble.forest import ForestClassifier
 from sklearn.linear_model import SGDClassifier
+from sklearn.pipeline import make_pipeline
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.tree._tree import TREE_LEAF
 from typing import List, Callable
