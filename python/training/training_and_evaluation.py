@@ -1,39 +1,33 @@
-from typing import Tuple, Dict
 from statistics import median
+from typing import List
+
 import pandas as pd
-import numpy as np
 from sklearn import model_selection
-from sklearn.base import BaseEstimator, TransformerMixin
-from sklearn.model_selection import train_test_split, StratifiedKFold, cross_val_score
-from sklearn.preprocessing import LabelEncoder, MultiLabelBinarizer
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.pipeline import make_pipeline, Pipeline
+from sklearn.base import ClassifierMixin
+from sklearn.model_selection import train_test_split, StratifiedKFold
+from sklearn.pipeline import Pipeline, make_pipeline
+from sklearn.preprocessing import MultiLabelBinarizer
 
 from training.classifier import *
-from training.preprocessing import balance, relabel_data, balance_train
+from training.evaluation import performance_report
+from training.preprocessing import balance_train
 
 
 def train_and_validate_classifiers(train_test_frame: DataFrame, features: List[str],
-                                   features_to_encode: List[str])  -> Pipeline:
-    CLASS_LABEL = 'should_comment'
-
-    train_test_frame = relabel_data(train_test_frame, CLASS_LABEL, features)
-    # train_test_frame = balance(train_test_frame, CLASS_LABEL)
-    # show_plot(train_test_frame, y_axis='method_name_length', label=CLASS_LABEL, log_scale_x=False,
-    #          remove_outliers=True)
-
+                                   features_to_encode: List[str], class_label: str,
+                                   classifiers: List[ClassifierMixin]) -> Pipeline:
     train_test_frame = train_test_frame.sample(frac=1, random_state=42)  # shuffle all our data!
 
-    labels = train_test_frame[[CLASS_LABEL]]
+    labels = train_test_frame[[class_label]]
     X = train_test_frame[features]
     x_train, x_test, y_train, y_test = train_test_split(X, labels,
                                                         test_size=0.33,
                                                         random_state=43)
 
-    scores, best = cross_validate(3, x_train, y_train, CLASS_LABEL, features,
-                                  features_to_encode, 1.0)
+    scores, best = cross_validate(3, x_train, y_train, 'CLASS_LABEL', features,
+                                  features_to_encode, 1, classifiers)
     print(scores)
-    print(best)
+    print('Best classifier was:', best)
     clf_pipeline = make_pipeline(FeatureEncoder(features_to_encode, features), best())
     clf_pipeline = clf_pipeline.fit(x_train, y_train)
     predicted = clf_pipeline.predict(x_test)
@@ -41,23 +35,19 @@ def train_and_validate_classifiers(train_test_frame: DataFrame, features: List[s
     return clf_pipeline
 
 
-
 def cross_validate(n, original_x_train, original_y_train, label, features: List[str],
-                   features_to_encode: List[str], balance_ratio: float):
+                   features_to_encode: List[str], balance_ratio: float,
+                   classifiers: List[ClassifierMixin]):
     X, y = balance_train(original_x_train, original_y_train, label, balance_ratio)
     skf = StratifiedKFold(n_splits=n)
     val_scores = []
-    models = [StratifiedDummy(), ShortDecisionTree(), DecisionTree(), RandomForest(),
-              ExtraTreeBalanced(), ExtraTree(), KNN()]
-    models = [StratifiedDummy(), ShortDecisionTree(), DecisionTree(), RandomForest()]
-    for model in models:
-        print('Doing ', model.__class__)
-        clf = make_pipeline(FeatureEncoder(features_to_encode, features), model)
-        val_scores.append((model.__class__, model_selection.cross_validate(clf, X, y,
+    for classifier in classifiers:
+        print('Doing ', classifier.__class__)
+        clf = make_pipeline(FeatureEncoder(features_to_encode, features), classifier)
+        val_scores.append((classifier.__class__, model_selection.cross_validate(clf, X, y,
                                                                            cv=skf, n_jobs=-1)))
     return val_scores, max([(mod, median(res['test_score'])) for mod, res in val_scores],
                            key=lambda x: x[1])[0]
-
 
 
 class FeatureEncoder():
@@ -91,21 +81,6 @@ class FeatureEncoder():
 
 
 
-def evaluate_repo_with(eval_frame, classifier, features: List[str], encoders: Dict[str,
-                                                                                   MultiLabelBinarizer]):
-    eval_X = eval_frame[features]
-    eval_X = encode_frame_with(encoders, eval_X)
-    result = classifier.predict(eval_X)
-    eval_frame['predicted'] = result
-    eval_frame['missing_comment'] = eval_frame.predicted & ~ eval_frame.commented
-
-    missing_comments = eval_frame.loc[eval_frame['missing_comment']]
-    print_decisions(classifier, eval_X, eval_frame, missing_comments.index.values)
-    sum_eval = eval_frame.groupby('filename').sum()
-    sum_eval['comment_conformance'] = sum_eval.commented - sum_eval.predicted
-    sum_eval.to_csv('complete_result.csv')
-    evaluation_result = sum_eval[['loc', 'cc', 'missing_comment']]
-    evaluation_result.to_csv('eval_result.csv')
 
 
 def print_decisions(classifier: DecisionTreeClassifier, eval_X, eval_frame, indexes):
