@@ -5,6 +5,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Utility class for executing external programs (like python scripts).
+ * One can specify a working directory, or just use the "Anywhere" - constant.
+ * All "run" - methods take command line parameters and return the stdout of the program.
+ */
 public class ExternalProgram {
 
     public static final ExternalProgram Anywhere = new ExternalProgram(null);
@@ -45,5 +50,4 @@ public class ExternalProgram {
     public String runJoined(String command) {
         return String.join("\n", run(command));
     }
-
 }

@@ -26,16 +26,13 @@ def analyse_method_comments():
     SHOULD_CACHE = True
 
     training_repos = os.getenv('CSV_ROOT', "../../../CommentRepos/__commentMetrics")
-    train_test_frame = prepare_method_comment_df(training_repos, SHOULD_CACHE, 'train_cache', 'train_additional_c')
+    train_test_frame = prepare_method_comment_df(training_repos, SHOULD_CACHE, 'm_train', 'm_train_add')
     models, encoders = train_and_validate_classifiers(train_test_frame, FEATURES, FEATURES_TO_ENCODE)
 
-    # repo_path = os.getenv('CSV_ROOT', "../../../OneEval")
-    #
-    # eval_frame = prepare_method_comment_df(repo_path, SHOULD_CACHE, 'eval_cache',
-    #                                        'eval_additional_c')
+    # generating software quality metrics:
+    # repo_path = '../../../OneEval'
+    # eval_frame = prepare_method_comment_df(repo_path, SHOULD_CACHE, 'm_eval', 'm_eval_add')
     # evaluate_repo_with(eval_frame, models[0], FEATURES, encoders)
-
-
 
 
 if __name__ == '__main__':

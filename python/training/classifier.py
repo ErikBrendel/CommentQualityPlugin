@@ -17,6 +17,7 @@ from sklearn.neural_network import MLPClassifier
 
 from training.evaluation import performance_report
 
+
 def prune(tree):
     tree = copy.deepcopy(tree)
     dat = tree.tree_
@@ -172,6 +173,7 @@ def classify_by_nn(x_train: DataFrame, y_train: DataFrame):
                         hidden_layer_sizes=(100, 100, 10), random_state=42, max_iter=1000)
     clf.fit(x_train, y_train.values.ravel())
     return clf
+
 
 def classify_by_dummy(x_train: DataFrame, y_train: DataFrame):
     print('Training Dummy classifier')

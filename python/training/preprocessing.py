@@ -29,12 +29,10 @@ def balance_train(x_train, y_train, label: str, amount: float):
 
 
 def relabel_data(frame: DataFrame, new_label: str, features: List[str]) -> DataFrame:
-
-
     group_by_identical = frame.groupby(features).mean()
     comment_percentage_df = frame.merge(group_by_identical,
-                                       on=features,
-                                       how='inner', suffixes=('_x', '_percentage'))
+                                        on=features,
+                                        how='inner', suffixes=('_x', '_percentage'))
     comment_percentage_df[new_label] = comment_percentage_df['commented_percentage'] >= 0.5
     shuffled_frame = comment_percentage_df.sample(frac=1).reset_index(drop=True)
 
@@ -47,9 +45,9 @@ def relabel_data(frame: DataFrame, new_label: str, features: List[str]) -> DataF
     print("Previously trues that became false ", now_false_df.count().comment)
     print("Previously false that became true ",now_true_df.shape[0] - now_true_df.count().comment)
     print('Pure trues: ', comment_percentage_df.loc[comment_percentage_df['commented_percentage']
-                                                   >= 1.0].shape[0])
+                                                    >= 1.0].shape[0])
     print('Pure False: ', comment_percentage_df.loc[comment_percentage_df['commented_percentage']
-                                                   <= 0].shape[0])
+                                                    <= 0].shape[0])
 
     return shuffled_frame
 

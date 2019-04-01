@@ -34,7 +34,7 @@ public class LanguageProcessor {
         while (matcher.find()) {
             String identified = matcher.group(0);
             for (String word : CamelCasePattern.split(identified)) {
-                String normalized = NormalizeWord(word);
+                String normalized = normalizeWord(word);
                 if (normalized != null) words.add(normalized);
             }
         }
@@ -42,7 +42,7 @@ public class LanguageProcessor {
     }
 
     @Nullable
-    private static String NormalizeWord(String word) {
+    private static String normalizeWord(String word) {
         if (word.contains("'")) {
             word = word.split("'")[0];
         }

@@ -7,8 +7,14 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
+/**
+ * A thread safe queue of Task-Objects.
+ */
 public class TrainingTaskList {
 
+    /**
+     * A file that needs to get handled
+     */
     public static class Task {
         public final File rootDirectory;
         public final String filename;
@@ -29,6 +35,9 @@ public class TrainingTaskList {
         totalCount.incrementAndGet();
     }
 
+    /**
+     * only after calling this, the task list is considered to have all elements
+     */
     public void setListComplete() {
         listComplete.set(true);
     }
@@ -43,6 +52,9 @@ public class TrainingTaskList {
         return task;
     }
 
+    /**
+     * @return true, iff all tasks have been added to this list, but there are no more tasks open
+     */
     public boolean isFinished() {
         return listComplete.get() && tasks.isEmpty();
     }
