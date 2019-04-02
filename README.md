@@ -13,8 +13,10 @@ This project consists of three parts so far: the java program that finds ground 
  - adjust the constants in `java-train / TrainingMain` (your desired clone path, number of parallel workers or which repos to check)
  - run `java-train`
  - _you should now have some data csv files at your given `REPO_CLONE_PATH`_
- - run either `analys_method_comments` or `analys_inline_comments` from `python/training` (you might need to adjust the environment variable `CSV_ROOT`, so that the script can find the csv files). This takes some time on the first run, but further analytics should be faster (since data aggregation and completion get cached, however, the cache is not updated if the items in `CSV_ROOT` are changed. In that case delete the cache manually). Runing either `analys_method_comments` or `analys_inline_comments` will also generate a persisted model in the `python/training` directory. Which can then be used from `run_cached_model`. This generates metrics (like the amount of methods in a file that should be commented according to the classifier but are not), aggregated into both `eval_result` and `complete_result` csv files, which can be further used in e.g. visualization software.
+ - run either `analys_method_comments` or `analys_inline_comments` from `python/training` (you might need to adjust the environment variable `CSV_ROOT`, so that the script can find the csv files). This takes some time on the first run, but further analytics should be faster (since data aggregation and completion get cached, however, the cache is not updated if the items in `CSV_ROOT` are changed. In that case delete the cache manually). 
  - _you should see ML performance output_
+ - Runing either `analys_method_comments` or `analys_inline_comments` will also generate a persisted model in the `python/training` directory. Which can then be used from `run_cached_model`. This generates metrics (like the amount of methods in a file that should be commented according to the classifier but are not), aggregated into both `eval_result` and `complete_result` csv files, which can be further used in e.g. visualization software.
+ - _you should see the reasons for the decsions that were made (note that if the model is very large > 100mb this might need excessive amounts of Memory and should be turned of)._
 
 ### Understanding the output
 
@@ -22,7 +24,7 @@ Multiple classifier types are tested and evaluated against the training set thro
 
 ### Additional outputs
 
-A `short_tree.pdf` is generated, showing how the depth-5 classifier tree internally works. Node colors represent the tendency towards a class (needs comment / needs no comment) for all the test data samples that reached that node.
+A `dtree.pdf` can be generated, showing how the decision tree classifier works internally. Node colors represent the tendency towards a class (needs comment / needs no comment) for all the test data samples that reached that node. Note that you should use the `ShortTree` for this or create you own small tree as it will be to big to view and understand otherwise. 
 
 
 ### The Plugin
