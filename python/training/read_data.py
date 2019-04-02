@@ -1,10 +1,10 @@
+import glob
 import os
 from multiprocessing.pool import Pool
 
-import glob
-import os
 import pandas as pd
 from pandas import DataFrame
+
 from training.metrics_generation import create_cache_dir
 
 
@@ -24,8 +24,10 @@ def read_and_cache_csv(*, cache_name, root_of_repos, read_cache) -> DataFrame:
         df = pd.concat(df_list, ignore_index=True, sort=False)
     else:
         df = df_list[0]
-    df.to_pickle(cache_name)
-    print('Updated Cache ', cache_name)
+
+    if read_cache:
+        df.to_pickle(cache_name)
+        print('Updated Cache ', cache_name)
     return df
 
 

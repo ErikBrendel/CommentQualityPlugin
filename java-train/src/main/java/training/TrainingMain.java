@@ -47,7 +47,7 @@ public class TrainingMain {
             "ReactiveX/RxJava",
     };
     private static String[] smallRepoCollection = {"square/okhttp"};
-    private static String[] REPOS = mediumRepoCollection;
+    private static String[] REPOS = bigRepoCollection;
 
     // find more at:
     // https://github.com/search?l=Java&o=desc&q=pushed%3A%3E2019-02-25&s=stars&type=Repositories
