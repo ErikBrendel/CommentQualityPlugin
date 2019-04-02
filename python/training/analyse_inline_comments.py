@@ -4,6 +4,7 @@ from joblib import dump
 
 from training.classifier import *
 from training.metrics_generation import add_metrics_to_inline_comments
+from training.plot import show_plot
 from training.preprocessing import relabel_data
 from training.read_data import read_and_cache_csv
 from training.training_and_evaluation import train_and_validate_classifiers
@@ -39,8 +40,10 @@ def prepare_inline_comment_df(data_env, should_cache, class_label, features, cac
 
     if relabel:
         frame = relabel_data(frame, class_label, features)
-    # show_plot(train_test_frame, y_axis='method_name_length', label=CLASS_LABEL, log_scale_x=False,
-    #          remove_outliers=True)
+    for feature in features:
+        show_plot(frame, y_axis=feature, label=class_label, log_scale_x=False,
+                  log_scale_y=False, jitter=True,
+                  remove_outliers=True, should_balance=True)
     return frame
 
 

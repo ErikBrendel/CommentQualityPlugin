@@ -5,6 +5,7 @@ from pandas import DataFrame
 from sklearn.pipeline import Pipeline
 
 from training.analyse_method_comments import prepare_method_comment_df
+from training.training_and_evaluation import print_decisions
 
 
 def run_method_comment_analysis():
@@ -23,7 +24,7 @@ def run_method_comment_analysis():
     eval_frame['missing_comment'] = eval_frame.predicted & ~ eval_frame.commented
 
     missing_comments = eval_frame.loc[eval_frame['missing_comment']]
-    # print_decisions(pipeline.steps[1], eval_X, eval_frame, missing_comments.index.values)
+    print_decisions(pipeline, eval_X, eval_frame, missing_comments.index.values)
     sum_eval: DataFrame = eval_frame.groupby('filename').sum()
     sum_eval['comment_conformance'] = sum_eval.commented - sum_eval.predicted
     sum_eval.to_csv('complete_result.csv')
