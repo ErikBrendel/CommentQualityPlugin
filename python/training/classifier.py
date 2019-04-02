@@ -95,7 +95,7 @@ class DecisionTree(DecisionTreeClassifier):
 
 class NeuralNetwork(MLPClassifier):
     def __init__(self):
-        self._scaler: StandardScaler = None
+        self._scaler = None
         super().__init__(alpha=1e-5, hidden_layer_sizes=(100, 100, 10),
                          random_state=42, max_iter=1000)
 

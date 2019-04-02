@@ -6,7 +6,7 @@ from pandas import DataFrame
 from training.preprocessing import balance
 
 
-def show_plot(frame: DataFrame, y_axis: str, label: str, x_axis='loc', log_scale_y=True,
+def show_plot(title: str, frame: DataFrame, y_axis: str, label: str, x_axis='loc', log_scale_y=True,
               log_scale_x=True, remove_outliers=False, jitter=True, should_balance=False):
     frame = frame.copy()
     plt.figure(dpi=400)
@@ -16,6 +16,7 @@ def show_plot(frame: DataFrame, y_axis: str, label: str, x_axis='loc', log_scale
     plt.xlabel(x_axis)
     plt.ylabel(y_axis)
     plt.rc('font', **font)
+    plt.title(title + ': ' + x_axis + " - " + y_axis)
     if should_balance:
         frame = balance(frame, label, 1)
 

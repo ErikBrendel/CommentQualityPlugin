@@ -10,7 +10,7 @@ from training.training_and_evaluation import print_decisions
 
 def run_method_comment_analysis():
     filename = 'method_comment_pipeline.joblib'
-    pipeline: Pipeline = load(filename)
+    pipeline = load(filename)
     print(pipeline.steps)
     FEATURES = ['parameterAmount', 'loc', 'tc', 'cc', 'modifiers', 'tocloc', 'annotationNames',
                 'methodNameWordCount', 'methodNameLength', 'modifierVisibility']
@@ -25,7 +25,7 @@ def run_method_comment_analysis():
 
     missing_comments = eval_frame.loc[eval_frame['missing_comment']]
     print_decisions(pipeline, eval_X, eval_frame, missing_comments.index.values)
-    sum_eval: DataFrame = eval_frame.groupby('filename').sum()
+    sum_eval = eval_frame.groupby('filename').sum()
     sum_eval['comment_conformance'] = sum_eval.commented - sum_eval.predicted
     sum_eval.to_csv('complete_result.csv')
     evaluation_result = sum_eval[['loc', 'cc', 'missing_comment']]

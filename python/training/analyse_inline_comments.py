@@ -40,8 +40,9 @@ def prepare_inline_comment_df(data_env, should_cache, class_label, features, cac
 
     if relabel:
         frame = relabel_data(frame, class_label, features)
+
     for feature in features:
-        show_plot(frame, y_axis=feature, label=class_label, log_scale_x=False,
+        show_plot('inline comments', frame, y_axis=feature, label=class_label, log_scale_x=False,
                   log_scale_y=False, jitter=True,
                   remove_outliers=True, should_balance=True)
     return frame

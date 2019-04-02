@@ -42,7 +42,7 @@ def analyse_method_comments():
                                                  FEATURES)
 
     # for feature in FEATURES:
-    #     show_plot(train_test_frame, y_axis=feature, label=CLASS_LABEL, log_scale_x=False,
+    #     show_plot('method comments', train_test_frame, y_axis=feature, label=CLASS_LABEL, log_scale_x=False,
     #               log_scale_y=False, jitter=True,
     #               remove_outliers=True)
 
