@@ -67,10 +67,6 @@ class RandomForest(RandomForestClassifier):
     def fit(self, x_train, y_train):
         return super().fit(x_train, y_train.values.ravel())
 
-class ShortDecisionTree(DecisionTreeClassifier):
-    def __init__(self):
-        super().__init__(class_weight='balanced',max_depth=5, min_samples_leaf=100)
-        self.name = 'Short Decision Tree'
 
 
 class StratifiedDummy(DummyClassifier):
@@ -82,20 +78,28 @@ class StratifiedDummy(DummyClassifier):
 
 
 class DecisionTree(DecisionTreeClassifier):
-    def __init__(self):
-        super().__init__(min_samples_leaf=100)
+    def __init__(self, **kwargs):
+        super().__init__(min_samples_leaf=100, **kwargs)
         self.name = 'Decision Tree'
+        self.feature_names = []
 
     def fit(self, x_train, y_train, **kwargs):
-        self.features = x_train.keys().values
+        self.feature_names = x_train.keys().values
         return super().fit(x_train,y_train,**kwargs)
 
-    def print_tree(self, x_train):
-        dot_data = tree.export_graphviz(self, feature_names=x_train.keys().values,
+    def print_tree(self):
+        dot_data = tree.export_graphviz(self, feature_names=self.feature_names,
                                         class_names=['no', 'comment'],
                                         out_file=None, rounded=True, filled=True)
         graph = graphviz.Source(dot_data)
-        graph.render("short_tree")
+        graph.render("dtree")
+
+
+class ShortDecisionTree(DecisionTree):
+
+    def __init__(self):
+        super().__init__(class_weight='balanced', max_depth=5)
+        self.name = 'Short Decision Tree'
 
 
 class NeuralNetwork(MLPClassifier):

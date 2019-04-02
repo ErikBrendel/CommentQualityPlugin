@@ -42,7 +42,10 @@ def train_and_validate_classifiers(train_test_frame: DataFrame, features: List[s
 
     scores, best = cross_validate(3, x_train, y_train, 'CLASS_LABEL', features,
                                   features_to_encode, 0, classifiers)
-    print(scores)
+
+    for score in scores:
+        print(score, '\n')
+
     print('Best classifier was:', best)
     clf_pipeline = make_pipeline(FeatureEncoder(features_to_encode, features), best())
     clf_pipeline = clf_pipeline.fit(x_train, y_train)
