@@ -8,6 +8,22 @@ from training.preprocessing import balance
 
 def show_plot(title: str, frame: DataFrame, y_axis: str, label: str, x_axis='loc', log_scale_y=True,
               log_scale_x=True, remove_outliers=False, jitter=True, should_balance=False):
+    """
+    Plots any two features plus the class as color as a scatter plot
+
+    :param title: Name of the plot
+    :param frame: data to plot
+    :param y_axis: feature name for y-axis
+    :param label: name of class label
+    :param x_axis: feature name of x-axis
+    :param log_scale_y: use log scale for y-axis
+    :param log_scale_x: use log scale for x-axis
+    :param remove_outliers: remove anything that is not below the 95-percentile
+    :param jitter: Slightly move each dot for better visibility
+    :param should_balance: Equalize amount of items for each class
+    :return:
+    """
+
     frame = frame.copy()
     plt.figure(dpi=400)
     # frame = frame.sample(frac=0.5, random_state=42)

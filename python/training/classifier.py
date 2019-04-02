@@ -1,3 +1,8 @@
+"""
+Contains classifier classes which inherit from scikit classifiers learn and mostly just contain
+some convenience functionality to make instantiation and training more easy to use.
+"""
+
 import copy
 from typing import List
 

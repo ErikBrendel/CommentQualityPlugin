@@ -6,6 +6,13 @@ from sklearn.utils import resample
 
 
 def balance(frame: DataFrame, label: str, amount: float) -> DataFrame:
+    """
+    :param frame: Data which should be balanced for a label
+    :param label: label name for which data should be balanced
+    :param amount: a ratio for balancing 0 => data is not balanced, 1 => both classes are
+    represented equally.
+    :return: New balanced DataFrame with reset index
+    """
     df_majority = frame[frame[label] == False]
     df_minority = frame[frame[label] == True]
 
@@ -28,6 +35,11 @@ def balance_train(x_train, y_train, label: str, amount: float):
 
 
 def relabel_data(frame: DataFrame, new_label: str, features: List[str]) -> DataFrame:
+    """
+    If items have the same feature values but different labels, this function will make a
+    majority decision which label is correct.
+    """
+
     group_by_identical = frame.groupby(features).mean()
     comment_percentage_df = frame.merge(group_by_identical,
                                         on=features,

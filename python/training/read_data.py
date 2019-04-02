@@ -19,7 +19,7 @@ def read_and_cache_csv(*, cache_name, root_of_repos, read_cache) -> DataFrame:
     repo_list = [(root_of_repos, repo) for repo in os.listdir(root_of_repos) if os.path.isdir(
         root_of_repos + '/' + repo)]
     with Pool() as p:
-        df_list = p.map(read_repo, repo_list)
+        df_list = p.map(_read_repo, repo_list)
     if len(df_list) > 1:
         df = pd.concat(df_list, ignore_index=True, sort=False)
     else:
@@ -31,7 +31,7 @@ def read_and_cache_csv(*, cache_name, root_of_repos, read_cache) -> DataFrame:
     return df
 
 
-def read_repo(repo_root) -> DataFrame:
+def _read_repo(repo_root) -> DataFrame:
     repo_path = repo_root[0] + '/' + repo_root[1]
     df_list = []
     metrics_files = os.path.join(repo_path, "**", "*.csv")

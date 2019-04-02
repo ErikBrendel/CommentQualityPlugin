@@ -3,8 +3,13 @@ from sklearn import metrics
 
 
 def performance_report(*, predicted: DataFrame, ground_truth: DataFrame):
+    """
+    Print a performance report for a predicted and a ground truth dataset
+    """
+
     print(metrics.classification_report(ground_truth, predicted, target_names=['no comment',
                                                                                'comment']))
+
     # print('Actual class\nno_comment|comment')
     # print(metrics.confusion_matrix(ground_truth, predicted))
     tn, fp, fn, tp = metrics.confusion_matrix(ground_truth, predicted).ravel()

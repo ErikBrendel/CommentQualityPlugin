@@ -1,3 +1,7 @@
+"""
+Contains the function to analyse method comments, generate and persist a classifier
+"""
+
 import os
 
 from joblib import dump
@@ -35,7 +39,7 @@ def analyse_method_comments():
     CLASS_LABEL = 'CLASS_LABEL'
     CLASSIFIERS = [StratifiedDummy(), ShortDecisionTree(), DecisionTree(), RandomForest(),
                    ExtraTreeBalanced(), ExtraTree(), KNN()]
-    CLASSIFIERS = [RandomForest()]
+    # CLASSIFIERS = [ShortDecisionTree()]
 
     training_repos = os.getenv('CSV_ROOT', "../../../CommentRepos/__commentMetrics")
     train_test_frame = prepare_method_comment_df(training_repos, SHOULD_CACHE, CLASS_LABEL,

@@ -1,3 +1,7 @@
+"""
+Contains the function to analyse inline comments, generate and persist a classifier
+"""
+
 import os as os
 
 from joblib import dump
@@ -31,7 +35,8 @@ def analyse_inline_comments():
 
 
 def prepare_inline_comment_df(data_env, should_cache, class_label, features, cache_name='i_train',
-                              cache_name_additional='i_train_add', relabel=True):
+                              cache_name_additional='i_train_add', relabel=True,
+                              visualize_features=False):
     frame = read_and_cache_csv(read_cache=should_cache, root_of_repos=data_env,
                                cache_name=cache_name)
 
@@ -41,10 +46,11 @@ def prepare_inline_comment_df(data_env, should_cache, class_label, features, cac
     if relabel:
         frame = relabel_data(frame, class_label, features)
 
-    for feature in features:
-        show_plot('inline comments', frame, y_axis=feature, label=class_label, log_scale_x=False,
-                  log_scale_y=False, jitter=True,
-                  remove_outliers=True, should_balance=True)
+    if visualize_features:
+        for feature in features:
+            show_plot('inline comments', frame, y_axis=feature, label=class_label,
+                      log_scale_x=False,
+                      log_scale_y=False, jitter=True, remove_outliers=True, should_balance=True)
     return frame
 
 

@@ -1,8 +1,8 @@
 import datetime
 import os
-import pandas as pd
 
 import lizard
+import pandas as pd
 from pandas import DataFrame
 
 
@@ -13,6 +13,9 @@ def create_cache_dir(cache_name):
 
 
 def add_metrics_to_inline_comments(frame: DataFrame, *, read_cache, cache_name) -> DataFrame:
+    """
+    Add cyclomatic complexity and token count to dataframe in place
+    """
     cache_name = create_cache_dir(cache_name)
     start = datetime.datetime.now()
     if os.path.isfile(cache_name) and read_cache:
@@ -23,7 +26,6 @@ def add_metrics_to_inline_comments(frame: DataFrame, *, read_cache, cache_name) 
                        frame['code']]
     frame['cc'] = [l.CCN for l in frame['lizard']]
     frame['tc'] = [l.token_count for l in frame['lizard']]
-    frame['nloc'] = [l.nloc for l in frame['lizard']]
 
     frame.drop('lizard', axis=1, inplace=True)
     frame.to_pickle(cache_name)
@@ -34,7 +36,10 @@ def add_metrics_to_inline_comments(frame: DataFrame, *, read_cache, cache_name) 
 
 
 def add_metrics_to_method_comments(frame: DataFrame, *, read_cache, cache_name) -> DataFrame:
-    """modifies dataframe in place"""
+    """
+    Add token count, cyclomatic complexity and ratio of tokens to lines of code to dataframe in
+    place
+    """
     cache_name = create_cache_dir(cache_name)
     if os.path.isfile(cache_name) and read_cache:
         cached_frame = pd.read_pickle(cache_name)
@@ -45,11 +50,6 @@ def add_metrics_to_method_comments(frame: DataFrame, *, read_cache, cache_name) 
                        frame['code']]
     frame['cc'] = [l.CCN for l in frame['lizard']]
     frame['tc'] = [l.token_count for l in frame['lizard']]
-
-
-    # frame['method_name'] = [l.function_list[0].name if len(l.function_list) > 0 else "" for l in frame['lizard']]
-    # frame['method_name_length'] = [len(name) for name in frame['method_name']]
-    # frame['method_name_word_count'] = [sum(1 for c in name if c.isupper()) for name in frame['method_name']]
 
     frame.drop('lizard', axis=1, inplace=True)
 
