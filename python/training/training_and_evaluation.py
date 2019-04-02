@@ -131,7 +131,7 @@ class FeatureEncoder:
 def print_decisions(pipeline: Pipeline, features, eval_frame, indexes):
     """
     Print decisions of the pipeline. The pipeline must contain a Tree/Forest like classifier for
-    this to work. Warning: This can consume a large amount of Memory if the classifier was
+    this to work. Warning: This can consume a large amounts of Memory if the classifier was
     trained on a large dataset.
 
     :param pipeline: The pipeline to evaluate
@@ -140,6 +140,8 @@ def print_decisions(pipeline: Pipeline, features, eval_frame, indexes):
     :param indexes: Rows to evaluate
     :return:
     """
+    print('Warning: This can consume a large amounts of Memory if the '
+          'classifier was trained on a large dataset.')
     encoder = pipeline.steps[0][1]
     classifier = pipeline.steps[1][1]
     if not 'decision_path' in dir(classifier):
