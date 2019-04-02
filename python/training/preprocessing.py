@@ -1,8 +1,7 @@
 from typing import List
 
-from pandas import DataFrame
 import pandas as pd
-from sklearn import preprocessing
+from pandas import DataFrame
 from sklearn.utils import resample
 
 
@@ -51,7 +50,3 @@ def relabel_data(frame: DataFrame, new_label: str, features: List[str]) -> DataF
 
     return shuffled_frame
 
-
-def get_preprocessor(x_train: DataFrame):
-    scaled = preprocessing.StandardScaler().fit(x_train)
-    return scaled

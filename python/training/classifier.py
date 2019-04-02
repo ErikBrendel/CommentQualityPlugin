@@ -1,7 +1,7 @@
 import copy
+from typing import List
 
 import graphviz as graphviz
-from pandas import DataFrame
 from sklearn import tree
 from sklearn.dummy import DummyClassifier
 from sklearn.ensemble import RandomForestClassifier, ExtraTreesClassifier
@@ -32,9 +32,9 @@ def prune(tree):
     return tree
 
 
-def print_feature_importance(x_train: DataFrame, clf: ForestClassifier):
-    print(list(zip(x_train.keys().to_list(), map(lambda x: round(x * 100, 3),
-                                                 clf.feature_importances_))))
+def print_feature_importance(keys: List[str], clf: ForestClassifier):
+    print(len(clf.feature_importances_))
+    print(list(zip(keys, map(lambda x: round(x * 100, 3), clf.feature_importances_))))
 
 
 

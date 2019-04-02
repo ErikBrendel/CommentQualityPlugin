@@ -1,5 +1,4 @@
 from statistics import median
-from typing import List
 
 import pandas as pd
 from sklearn import model_selection
@@ -30,7 +29,8 @@ def train_and_validate_classifiers(train_test_frame: DataFrame, features: List[s
     print('Best classifier was:', best)
     clf_pipeline = make_pipeline(FeatureEncoder(features_to_encode, features), best())
     clf_pipeline = clf_pipeline.fit(x_train, y_train)
-    print_feature_importance(x_train, clf_pipeline.steps[1][1])
+    print_feature_importance(clf_pipeline.steps[0][1].transform(x_train).keys().to_list(),
+                             clf_pipeline.steps[1][1])
     predicted = clf_pipeline.predict(x_test)
     performance_report(predicted=predicted, ground_truth=y_test)
     return clf_pipeline
@@ -39,6 +39,7 @@ def train_and_validate_classifiers(train_test_frame: DataFrame, features: List[s
 def cross_validate(n, original_x_train, original_y_train, label, features: List[str],
                    features_to_encode: List[str], balance_ratio: float,
                    classifiers: List[ClassifierMixin]):
+
     X, y = balance_train(original_x_train, original_y_train, label, balance_ratio)
     skf = StratifiedKFold(n_splits=n)
     val_scores = []
@@ -88,7 +89,7 @@ def print_decisions(pipeline: Pipeline, eval_X, eval_frame, indexes):
         print(classifier, ' Does not support printing decision path')
         return
     eval_X = encoder.transform(eval_X)
-    node_indicator = classifier[1].decision_path(eval_X)
+    node_indicator = classifier.decision_path(eval_X)
     result = classifier.predict(eval_X)
     for index in indexes:
         if type(classifier) == RandomForest:
@@ -132,37 +133,3 @@ def get_decision_path(estimator: DecisionTreeClassifier, X_test, eval_frame, nod
     print('predicted %s' % result[sample_id])
 
 
-def get_decision_path_forest(random_forest: RandomForest, X_train):
-    sample_id = 0
-
-    for j, tree in enumerate(random_forest.estimators_):
-
-        n_nodes = tree.tree_.node_count
-        children_left = tree.tree_.children_left
-        children_right = tree.tree_.children_right
-        feature = tree.tree_.feature
-        threshold = tree.tree_.threshold
-
-        print("Decision path for DecisionTree {0}".format(j))
-        node_indicator = tree.decision_path(X_train)
-        leave_id = tree.apply(X_train)
-        node_index = node_indicator.indices[node_indicator.indptr[sample_id]:
-                                            node_indicator.indptr[sample_id + 1]]
-
-        print('Rules used to predict sample %s: ' % sample_id)
-        for node_id in node_index:
-            if leave_id[sample_id] != node_id:
-                continue
-
-            if (X_train[sample_id, feature[node_id]] <= threshold[node_id]):
-                threshold_sign = "<="
-            else:
-                threshold_sign = ">"
-
-            print("decision id node %s : (X_train[%s, %s] (= %s) %s %s)"
-                  % (node_id,
-                     sample_id,
-                     feature[node_id],
-                     X_train[sample_id, feature[node_id]],
-                     threshold_sign,
-                     threshold[node_id]))
