@@ -17,7 +17,7 @@ from training.training_and_evaluation import train_and_validate_classifiers
 def analyse_inline_comments():
     training_repos = os.getenv('CSV_ROOT', "../../../CommentRepos/__commentLineMetrics")
     SHOULD_CACHE = True
-    FEATURES = ['loc', 'conditionChildren', 'condition_length', 'nloc', 'cc', 'tc', 'type',
+    FEATURES = ['loc', 'conditionChildren', 'condition_length', 'cc', 'tc', 'type',
                 'containingMethodHasComment', 'containedComments']
 
     FEATURES_TO_ENCODE = ['type']
