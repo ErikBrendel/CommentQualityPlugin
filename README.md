@@ -30,3 +30,6 @@ A `dtree.pdf` can be generated, showing how the decision tree classifier works i
 ### The Plugin
 
 The JetBrains-Plugin is currently only a prototype and marks each comment as bad. It could, however, trigger a python script instead to use the cached trained classifier to actually check, whether code snippets would need a comment or not. A basis for this is already implemented. _(you might need to enable the inspection first under File > Settings > Editor > Inspections > Comment Quality)_
+
+### Requriements 
+The Python part requires Python 3.5 or newer. You should run `pip install requirements.txt` to install all dependencies. 
